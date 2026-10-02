@@ -33,6 +33,7 @@ from pathlib import Path
 notebook_started = time.perf_counter()
 
 CODE_ZIP = Path("/kaggle/input/datasets/YOUR_USERNAME/rsna-knee-code/rsna-knee-code.zip")
+CODE_ROOT = None  # Alternatively, Path to an extracted Input containing src/ and configs/.
 CHECKPOINT = Path("/kaggle/input/datasets/YOUR_USERNAME/rsna-knee-checkpoint/best.pt")
 WHEELS = None  # Optional Path to Linux/Python-compatible wheels attached as an Input.
 
@@ -42,13 +43,18 @@ candidates = [
 ]
 DATA_ROOT = next((p for p in candidates if (p / "test.csv").exists()), None)
 assert DATA_ROOT is not None, "Attach the competition Input"
-assert CODE_ZIP.is_file() and CHECKPOINT.is_file(), "Edit code/checkpoint Input paths"
+assert CHECKPOINT.is_file(), "Edit CHECKPOINT to the attached weight file"
+if CODE_ROOT is None:
+    assert CODE_ZIP.is_file(), "Edit CODE_ZIP, or set CODE_ROOT if the Input was extracted"
+else:
+    assert (CODE_ROOT / "src" / "rsna_knee").is_dir() and (CODE_ROOT / "configs" / "baseline.json").is_file()
 WORK = Path("/kaggle/working")
 """,
     ),
     cell(
         "code",
         """import importlib.util
+import shutil
 import subprocess
 import sys
 import zipfile
@@ -77,10 +83,17 @@ for name in ["numpy", "pydicom", "PIL", "torch", "torchvision"]:
     assert importlib.util.find_spec(name), f"Missing {name}; attach compatible wheels"
 
 code_dir = WORK / "rsna-code"
-with zipfile.ZipFile(CODE_ZIP) as archive:
-    for entry in archive.namelist():
-        (code_dir / entry).resolve().relative_to(code_dir.resolve())
-    archive.extractall(code_dir)
+if CODE_ROOT is None:
+    with zipfile.ZipFile(CODE_ZIP) as archive:
+        for entry in archive.namelist():
+            (code_dir / entry).resolve().relative_to(code_dir.resolve())
+        archive.extractall(code_dir)
+else:
+    sources = sorted((CODE_ROOT / "src" / "rsna_knee").glob("*.py")) + [CODE_ROOT / "configs" / "baseline.json"]
+    for source in sources:
+        target = code_dir / source.relative_to(CODE_ROOT)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, target)
 sys.path.insert(0, str(code_dir / "src"))
 """,
     ),

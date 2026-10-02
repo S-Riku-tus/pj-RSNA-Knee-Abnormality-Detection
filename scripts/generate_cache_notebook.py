@@ -34,6 +34,7 @@ from pathlib import Path
 
 started = time.perf_counter()
 CODE_ZIP = Path("/kaggle/input/datasets/YOUR_USERNAME/rsna-knee-code/rsna-knee-code.zip")
+CODE_ROOT = None  # Alternatively, Path to an extracted Input containing src/ and configs/.
 WHEELS = None  # Optional attached Linux/Python-compatible decoder wheels.
 LIMIT = 10  # Set to None only after inspecting the ten-study cache.
 EXPORT_NAME = "rsna-cache-v1"  # Use a new name for changed code/config/inputs.
@@ -49,7 +50,10 @@ candidates = [
 ]
 DATA_ROOT = next((p for p in candidates if (p / "train.csv").is_file()), None)
 assert DATA_ROOT is not None, "Attach the competition Input after accepting its rules"
-assert CODE_ZIP.is_file(), "Attach the repository code bundle and edit CODE_ZIP"
+if CODE_ROOT is None:
+    assert CODE_ZIP.is_file(), "Edit CODE_ZIP, or set CODE_ROOT if the Input was extracted"
+else:
+    assert (CODE_ROOT / "src" / "rsna_knee").is_dir() and (CODE_ROOT / "configs" / "baseline.json").is_file()
 assert INPUT_VERSION.strip() and INPUT_VERSION != "TODO", "Record the Input snapshot/date"
 """,
     ),
@@ -85,10 +89,17 @@ for name in ["numpy", "pydicom", "PIL"]:
 
 # Preserve the exact preprocessing source alongside the cache for the Windows GPU terminal.
 code_dir = EXPORT / "code"
-with zipfile.ZipFile(CODE_ZIP) as archive:
-    for entry in archive.namelist():
-        (code_dir / entry).resolve().relative_to(code_dir.resolve())
-    archive.extractall(code_dir)
+if CODE_ROOT is None:
+    with zipfile.ZipFile(CODE_ZIP) as archive:
+        for entry in archive.namelist():
+            (code_dir / entry).resolve().relative_to(code_dir.resolve())
+        archive.extractall(code_dir)
+else:
+    sources = sorted((CODE_ROOT / "src" / "rsna_knee").glob("*.py")) + [CODE_ROOT / "configs" / "baseline.json"]
+    for source in sources:
+        target = code_dir / source.relative_to(CODE_ROOT)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, target)
 sys.path.insert(0, str(code_dir / "src"))
 """,
     ),
@@ -157,7 +168,8 @@ record = {
     "studies_total": len(studies),
     "debug_limit": LIMIT,
     "competition_input_version": INPUT_VERSION,
-    "code_zip_sha256": sha256(CODE_ZIP),
+    "code_input_format": "zip" if CODE_ROOT is None else "directory",
+    "code_zip_sha256": sha256(CODE_ZIP) if CODE_ROOT is None else None,
     "source_sha256": source_hashes(),
     "config": config,
     "cache": cache_result,

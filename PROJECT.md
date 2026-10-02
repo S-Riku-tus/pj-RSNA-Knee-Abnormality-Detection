@@ -13,6 +13,7 @@
 - 現在の端末はRTX 4090、VRAM 24,564MiB、ドライバ591.86。Cドライブの空き約485GBに対して公式元画像は569.76GBのため、全取得しない。
 - この端末にPython 3.12.13の `.venv` を新規準備。numpy 2.5.3、pydicom 3.0.2、Pillow 12.3.0、ruff 0.16.10を導入済み。torch/torchvisionは未導入で、CUDAのPython利用は未確認。
 - [00_prepare_cache.ipynb](notebooks/00_prepare_cache.ipynb) と転送確認用 [verify_cache_export.py](scripts/verify_cache_export.py) を追加。Notebookは未実行テンプレート。
+- 手順1〜3の具体的な操作を整理。両Notebookはコードzipと展開済みInputの両形式に対応し、GPU開始手順へ版を固定したPyTorch導入例を追記した。実データ処理・CUDA導入は未実施のまま。
 
 ## 次にすること
 

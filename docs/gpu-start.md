@@ -34,6 +34,12 @@ uv --no-config --cache-dir .uv-cache pip install --python .venv/Scripts/python.e
 
 この端末では選択画面をWindows・Pip・CUDAに合わせ、表示された `pip install ...` のパッケージとindex指定を `uv --cache-dir .uv-cache pip install --python .venv/Scripts/python.exe ...` に渡す。PyTorchをソースからbuildする必要はない。Windowsでの確認:
 
+初回の環境を固定する例は、公式に配布されているtorch 2.10.0とtorchvision 0.25.0のCUDA 12.8 wheel。これは実装の最小要件を満たす導入候補で、本端末での導入・CUDA動作はまだ確認していない。[公式の版対応とインストールコマンド](https://pytorch.org/get-started/previous-versions/)
+
+```powershell
+uv --cache-dir .uv-cache pip install --python .venv/Scripts/python.exe torch==2.10.0 torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu128
+```
+
 ```powershell
 .\.venv\Scripts\python.exe -m rsna_knee doctor
 .\.venv\Scripts\python.exe -c "import torch, torchvision; print(torch.__version__, torchvision.__version__); assert torch.cuda.is_available(); print(torch.cuda.get_device_name(0))"
@@ -62,7 +68,7 @@ CUDA確認後、実学習の前に人工画像のforwardを行う:
 ## Kaggleのキャッシュでローカル学習する
 
 1. このPCでコードを梱包する: `.venv/Scripts/python.exe scripts/build_kaggle_bundle.py --output-dir artifacts/kaggle/cache-v1`。新しい版では出力先も変える。
-2. Kaggle画面でコードzipをInput Datasetへ手動で追加し、[00_prepare_cache.ipynb](../notebooks/00_prepare_cache.ipynb) を読み込む。競技InputをAttachし、CODE_ZIPとINPUT_VERSIONを記入する。NotebookとOutputはprivateで保存する。
+2. Kaggle画面でコードzipをInput Datasetへ手動で追加し、[00_prepare_cache.ipynb](../notebooks/00_prepare_cache.ipynb) を読み込む。競技InputをAttachし、実際のInputツリーでパスを確認する。zipファイルがあればCODE_ZIPを指定する。展開済みのsrc/とconfigs/があれば、その親ディレクトリをCODE_ROOTへ指定する。INPUT_VERSIONも記入する。NotebookとOutputはprivateで保存する。
 3. CPU環境でLIMIT=10を実行する。decoder不足はKaggleのLinux/Pythonに合う依存で解決し、coverage.jsonと原画像・縮小画像を目視する。RTX 4090をこのNotebookから使用することはない。
 4. 問題なければLIMIT=Noneで全件を作り、保存版のOutputを手動でダウンロードする。`export.json` のcompleteがtrueであることを確認する。Output内に追加zipを作らない。時間切れ時は保存できたprivate OutputをInputとしてAttachし、RESUME_CACHEをそのtrain-v1へ指定して再開する。
 5. ダウンロードした `rsna-cache-v1/` を `data/exports/rsna-cache-v1/` へ展開する。コード・configを変更したときは別名にし、前のexportを上書きしない。

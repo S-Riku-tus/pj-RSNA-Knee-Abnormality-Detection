@@ -15,7 +15,7 @@ python scripts/build_kaggle_bundle.py
 1. コードzipをKaggleの入力Datasetへ追加する。
 2. 学習した `best.pt` を別の入力Datasetへ追加する。必要に応じprivateで保持する。
 3. 提出Notebookへ競技入力、コードDataset、checkpoint DatasetをAttachする。
-4. NotebookのCODE_ZIP、CHECKPOINT、必要ならWHEELSを実際のmount pathへ変更する。
+4. NotebookのCHECKPOINTとコードInputを実際のmount pathへ変更する。zipが残っていればCODE_ZIP、展開済みのsrc/とconfigs/があればその親ディレクトリをCODE_ROOTに指定する。必要ならWHEELSも指定する。
 5. GPUを有効にし、インターネットを無効にする。
 6. 実行して `submission.csv` を検査し、Save and Run All後にSubmitする。
 7. 採点成功とNotebook版を確認し、台帳へ記録する。
