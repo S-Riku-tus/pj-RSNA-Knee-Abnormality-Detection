@@ -1,17 +1,18 @@
 # RSNA Knee Abnormality Detection
 
-2026年のRSNA膝MRIコンペを進めるためのリポジトリです。**このPCでは編集・調査・軽量チェック、別のCUDA GPU端末ではデータ準備と学習、Kaggleでは提出推論**を行います。データ・重み・認証情報はGitに入れません。
+2026年のRSNA膝MRIコンペを進めるためのリポジトリです。**Kaggleで画像キャッシュを作成、このPCのRTX 4090で学習、Kaggleで提出推論**を行います。Cドライブの空き約485GBに対して公式元画像は約570GBのため、元画像は全取得せずキャッシュを移します。データ・重み・認証情報はGitに入れません。
 
 現状は、調査資料、実験方針、CSV監査、ラベルの取り込みと検証分割、DICOMキャッシュ、画像モデルの学習・推論、提出Notebookのひな形まで用意しています。**実データの取得、実MRIでの検証、学習、Kaggle採点は未実施**です。
 
 ## 最初に読む資料
 
 1. [PROJECT.md](PROJECT.md) — 現状、次にすること、完了条件。
-2. [大会と調査結果](docs/competition.md) — 公式に確認した条件、添付分析との照合、未確認事項。
-3. [GPU端末での開始手順](docs/gpu-start.md) — LinuxとWindowsでの環境準備、データ取得後のコマンド。
-4. [公開モデルの再現手順](docs/public-baselines.md) — 最初の採点に使う候補と記録項目。
-5. [モデルと検証の設計](docs/experiment-design.md) — ラベル、前処理、分割、改善の順序。
-6. [Kaggleへの提出手順](docs/kaggle-submit.md) — オフライン推論の準備。
+2. [今後の参加計画](docs/roadmap.md) — 環境の判断、最初の二日間、締め切りまでの優先順位。
+3. [GPU端末での開始手順](docs/gpu-start.md) — Windows環境とKaggleキャッシュを使った学習手順。
+4. [大会と調査結果](docs/competition.md) — 公式に確認した条件、添付分析との照合、未確認事項。
+5. [公開モデルの再現手順](docs/public-baselines.md) — 最初の採点に使う候補と記録項目。
+6. [モデルと検証の設計](docs/experiment-design.md) — ラベル、前処理、分割、改善の順序。
+7. [Kaggleへの提出手順](docs/kaggle-submit.md) — オフライン推論の準備。
 
 ## 大会の要点
 
@@ -23,17 +24,15 @@ MRI検査ごとに12所見の連続値を予測し、12項目の平均ROC-AUCで
 
 ## このPCでできるチェック
 
-Python 3.11〜3.13を使用してください。基本パッケージは標準ライブラリだけで動き、GPUライブラリの導入は不要です。
+Python 3.11〜3.13を使用してください。基本パッケージは標準ライブラリだけで動きます。この端末には `.venv` を新しく用意済みで、Python 3.12.13と人工DICOMチェック用の依存を導入しました。CUDA版torchは未導入です。以下は準備済み環境で実行できます。
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e .
 .\.venv\Scripts\python.exe -m rsna_knee doctor
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
-.\.venv\Scripts\python.exe scripts/build_kaggle_bundle.py
+.\.venv\Scripts\python.exe scripts/build_kaggle_bundle.py --output-dir artifacts/kaggle/cache-v1
 ```
 
-`python` がpyenvの未設定エラーになる場合は、インストール済みPythonの実体を指定してvenvを作成します。GPU端末の準備は [gpu-start.md](docs/gpu-start.md) を参照してください。
+新しい端末でのvenv作成と、Windowsの `python` がアプリ実行エイリアスになる場合の対処は [gpu-start.md](docs/gpu-start.md) を参照してください。
 
 ## 構成
 
@@ -41,7 +40,7 @@ python -m venv .venv
 configs/             再現可能なJSON設定
 src/rsna_knee/       軽量なCSVツールとGPU用パイプライン
 scripts/             提出コードの梱包
-notebooks/           Kaggle提出Notebookのひな形
+notebooks/           Kaggleキャッシュ作成・提出Notebookのひな形
 docs/                調査、実行手順、設計判断
 docs/research/       ユーザー提供分析の原文と出典一覧
 experiments/         実験台帳と記入用テンプレート

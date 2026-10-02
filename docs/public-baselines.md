@@ -8,6 +8,8 @@
 
 配布説明では、`raptor_ft_coatnet_v4_full.pt` がその成績を出したcheckpoint。CoAtNet、384px、隣接3スライス、所見別Attention、レポート由来soft labelsの構成で、提供ラベル付き58件を学習から除外したと説明する。SWA版もあるが、作者は元のcheckpointを使用した。[作者のモデル説明](https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-widedense)
 
+追加調査で取得できた配布ページは **Version 2、585.66MB、CC0** と表示していた。これは索引が持つ表示版で、現在のライブ版や再現するNotebookのInput版と一致する保証はない。Notebookの厳密な版は未確定のため、Kaggleで再現前に記録する。
+
 ここまでが作者の報告。本プロジェクトでは重みの取得・ソース再実行・採点をしていない。物理座標の切り出し、正規化、Attention実装、ラベル順が一致しないまま重みだけ使わない。
 
 ## 再現の手順

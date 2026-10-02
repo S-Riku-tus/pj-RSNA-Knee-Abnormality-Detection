@@ -27,9 +27,9 @@ RSNA公式紹介は、世界19施設、5,000件超のMRI、約12言語の読影�
 
 添付分析と公開モデル作者の説明では、学習検査4,407件、提供ラベル付き58件、レポートから教師信号を作る4,349件という内訳。配布データの実測値はGPU端末で `audit` を実行して確定する。58件をコードへ固定しない。[作者によるデータと学習の説明](https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-widedense)
 
-想定するデータ構造は、`train.csv` に検査ID・Report・12ラベル、`train_series.csv` にシリーズID・断面・液体強調・脂肪抑制、`train_series/<StudyInstanceUID>/<SeriesInstanceUID>/*.dcm` に画像。`test.csv`、`test_series.csv`、`test_series/`、`sample_submission.csv` が推論側の入力。公開Notebookログではこの構造を確認できたが、CSV本文と実ファイルは未取得。[配布データページ](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data)、[公開実行ログ](https://www.kaggle.com/code/vigneshguguloth/version1/log)
+公式Dataページの索引本文を追加調査で取得できた。`train.csv` に検査ID・Report・12ラベル、`train_series.csv` にシリーズID・断面・液体強調・脂肪抑制、`train_series/<StudyInstanceUID>/<SeriesInstanceUID>/*.dcm` に画像。`test.csv`、`test_series.csv`、`test_series/`、`sample_submission.csv` が推論側の入力で、テスト時にReportは提供されない。例示testは3検査、本採点は約1,300検査。サイズは569.76GB、819,640ファイルと表示される。transfer syntaxには非圧縮、JPEG Lossless、JPEG 2000などがある。CSV本文と実ファイルは取得していない。[公式データ説明](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data?select=test_series)
 
-添付分析と複数の公開実装は、テスト時にReportがないこと、goldラベルがレポート抽出と一致しない場合があることを示している。今回、Dataページと主催者回答の本文はWeb取得で表示されなかったため、原文の再確認はGPU端末での初動項目に残す。実装はReportを推論入力にしない設計とし、後から依存を除く必要がないようにした。[主催者回答の確認先](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733491)
+goldラベルがレポート抽出と一致しない場合があるという主催者回答は、今回も本文を取得できなかったため原文の確認項目に残す。Reportなしのテスト仕様は上記公式データ説明で再確認できた。実装はReportを推論入力にしない。[主催者回答の確認先](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733491)
 
 ## 添付分析から採用する戦略
 
@@ -41,13 +41,13 @@ RSNA公式紹介は、世界19施設、5,000件超のMRI、約12言語の読影�
 4. 独立性の確認された検証を持ち、ラベル・画像・モデルの変更を一要因ずつ比較する。
 5. 単体モデルの安定後に、間違い方の異なる少数モデルを組み合わせる。
 
-CPUノートPCは編集端末、外部GPUは学習端末、Kaggleは最終推論端末とする。学習を提出Notebookに含める必要はない。
+現在の端末はRTX 4090デスクトップ。ユーザーの選択に従い、Kaggleでキャッシュ作成、ローカルGPUで学習、Kaggleで最終推論とする。学習を提出Notebookに含める必要はない。[実行場所と計画](roadmap.md)
 
 ## まだ確定していない項目
 
 - 最新のLeaderboard全行、参加チーム数、銅メダル境界、最新首位スコア。
 - Public/Privateの比率、日次提出回数、最終選択数、チーム人数の最新制限。添付や他実装の数値を固定しない。
-- 配布データの現在の実サイズ・件数・CSV本文、欠損や不正DICOMの件数。
+- 配布CSVの実測件数・本文、欠損や不正DICOMの件数。Data Explorerの表示規模は確認したが、ダウンロード時の実測ではない。
 - 特定の公開Notebook版のソース、完全な入力バージョンと再現性。
 - 外部LLM・特定外部医療データの利用に関する最新ルール本文。
 

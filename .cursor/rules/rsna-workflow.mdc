@@ -1,10 +1,11 @@
 ---
-description: RSNA Knee development and remote GPU workflow
+description: RSNA Knee Kaggle preprocessing and local GPU workflow
 alwaysApply: true
 ---
 
 - Follow AGENTS.md and read PROJECT.md before work.
-- This laptop is for editing and lightweight checks. Data acquisition, MRI processing and training run on another GPU terminal.
+- The main terminal is a Windows desktop with RTX 4090. Build image caches on Kaggle, train locally from caches, and run submission inference on Kaggle.
+- Do not download the entire raw MRI dataset locally. Workflow preparation does not start competition data/model acquisition, real MRI decoding or training.
 - Keep Report out of inference inputs; share preprocessing between training and prediction.
 - Preserve missing labels and the official-label holdout. Never select checkpoints on gold.
 - Record evidence, source versions, config, fold, seed and runtime for experiments.
