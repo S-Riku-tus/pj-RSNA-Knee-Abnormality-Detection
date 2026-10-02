@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "seed": 20261002,
+  "n_folds": 5,
+  "preprocess": {
+    "version": "v1",
+    "image_size": 192,
+    "max_series": 3,
+    "windows_per_series": 8,
+    "percentiles": [1, 99]
+  },
+  "model": {"backbone": "resnet18", "dropout": 0.2},
+  "train": {
+    "epochs": 5,
+    "batch_size": 1,
+    "accumulation_steps": 4,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "num_workers": 0,
+    "amp": true
+  }
+}

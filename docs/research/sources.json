@@ -1,0 +1,16 @@
+{
+  "checked_at_jst": "2026-10-02",
+  "sources": [
+    {"url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview", "kind": "official", "status": "full indexed text retrieved", "supports": "task, metric, submission columns, timeline, notebook constraints"},
+    {"url": "https://www.rsna.org/artificial-intelligence/ai-image-challenge/knee-mri-ai-challenge", "kind": "official", "status": "full indexed text retrieved", "supports": "global dataset context: 19 sites, 5000+ exams, dozen languages"},
+    {"url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data", "kind": "official", "status": "page opened but body unavailable", "supports": "reference link only; CSV content not independently inspected"},
+    {"url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733343", "kind": "host label definitions", "status": "indexed text retrieved", "supports": "label description and clinical MRI context"},
+    {"url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733491", "kind": "host clarification", "status": "page opened but body unavailable", "supports": "reference from attachment; independently verify gold/report mismatch"},
+    {"url": "https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-widedense", "kind": "model author", "status": "full indexed data card retrieved", "supports": "author-reported architecture, checkpoint, score, train/gold split, license"},
+    {"url": "https://www.kaggle.com/code/dreaddevelopment/knee-mri-training-the-twelve-finding-model", "kind": "model author", "status": "indexed metadata retrieved", "supports": "training notebook reference; source not replayed"},
+    {"url": "https://www.kaggle.com/code/vigneshguguloth/version1/log", "kind": "public notebook execution log", "status": "indexed text retrieved", "supports": "author-observed CSV schemas and counts, DICOM path layout"},
+    {"url": "https://www.kaggle.com/code/pilkwang/rsna-knee-baseline-v1", "kind": "public baseline", "status": "page body unavailable", "supports": "attachment reference; exact version/score not reverified"},
+    {"url": "https://pytorch.org/get-started/locally/", "kind": "official software documentation", "status": "page retrieved", "supports": "choose compatible torch/torchvision and GPU wheel by platform"}
+  ],
+  "limitations": "No competition data/weights downloaded. No training or Kaggle reproduction. Live Rules and full leaderboard not retrieved. Original attachment citation markers cannot be resolved."
+}

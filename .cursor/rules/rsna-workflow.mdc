@@ -1,0 +1,12 @@
+---
+description: RSNA Knee development and remote GPU workflow
+alwaysApply: true
+---
+
+- Follow AGENTS.md and read PROJECT.md before work.
+- This laptop is for editing and lightweight checks. Data acquisition, MRI processing and training run on another GPU terminal.
+- Keep Report out of inference inputs; share preprocessing between training and prediction.
+- Preserve missing labels and the official-label holdout. Never select checkpoints on gold.
+- Record evidence, source versions, config, fold, seed and runtime for experiments.
+- Keep data, reports, caches, weights and credentials outside Git.
+- Update project status without claiming unrun training or Kaggle reproduction succeeded.

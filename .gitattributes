@@ -1,0 +1,10 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.ipynb text eol=lf
+*.mdc text eol=lf
+*.toml text eol=lf
+*.csv text eol=lf
+# Preserve the pasted original, including its intentional Markdown hard line break.
+docs/research/user-analysis-20261002.txt -whitespace

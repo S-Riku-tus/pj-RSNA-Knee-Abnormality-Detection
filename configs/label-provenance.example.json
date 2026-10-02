@@ -1,0 +1,9 @@
+{
+  "source_url": "TODO",
+  "source_version": "TODO",
+  "license": "UNCONFIRMED",
+  "method": "TODO",
+  "created_at": "TODO",
+  "gold_used_for_tuning": false,
+  "notes": "Copy to data/labels/provenance.json. Verify every field, including gold usage, before prepare."
+}

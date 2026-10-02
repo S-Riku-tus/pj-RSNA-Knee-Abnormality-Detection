@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=75,<83"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rsna-knee"
+version = "0.1.0"
+description = "Portable, offline-first RSNA Knee MRI experiment pipeline"
+requires-python = ">=3.11,<3.14"
+dependencies = []
+
+[project.optional-dependencies]
+imaging = ["numpy>=1.26,<3", "pydicom>=3,<4", "Pillow>=11,<13", "pylibjpeg>=2,<3", "pylibjpeg-libjpeg>=2,<3", "pylibjpeg-openjpeg>=2,<3"]
+dev = ["pytest>=8,<10", "ruff>=0.12,<1"]
+
+[project.scripts]
+rsna-knee = "rsna_knee.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
