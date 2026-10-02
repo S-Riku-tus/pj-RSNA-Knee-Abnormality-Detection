@@ -7,7 +7,8 @@
 - GitHubの既存リポジトリに、実データなしで開発できる構成を追加。
 - 調査の正本は [docs/competition.md](docs/competition.md)。原文は [ユーザー提供分析](docs/research/user-analysis-20261002.txt)。
 - 今後の判断と三週間の計画は [docs/roadmap.md](docs/roadmap.md)。ユーザーはKaggleでキャッシュを作成し、ローカルGPUで学習する経路を選択済み。
-- データ取得・ラベル取得・重み取得・学習・提出は未実施。
+- ユーザー報告で初回Notebookの提出受付に成功。採点の完了・Publicスコア・Notebook版はまだ未確認。
+- 自作パイプライン向けの画像キャッシュ取得、weakラベル取得、ローカル学習は未実施として管理する。公開Notebook上の入力取得状況は未確認。
 - 自作コードの検証範囲は [validation.md](docs/validation.md) に記録。
 - ベースライン設定は [configs/baseline.json](configs/baseline.json)。学習コマンドはCUDAがなければ停止する。
 - 現在の端末はRTX 4090、VRAM 24,564MiB、ドライバ591.86。Cドライブの空き約485GBに対して公式元画像は569.76GBのため、全取得しない。
@@ -19,7 +20,7 @@
 ## 次にすること
 
 1. 大会ルールに同意し、参加登録を済ませる。登録期限は10月16日08:59 JST。
-2. [公開モデル再現](docs/public-baselines.md) に従い、Kaggle上で最初の採点成功を確保する。
+2. 受付済みの初回提出をMy Submissionsで確認し、採点成功、実測Publicスコア、Notebook版、Input版、実行時間を記録する。提出受付と採点成功を区別する。
 3. この端末の専用venvへCUDA対応のtorch/torchvisionを導入し、[環境手順](docs/gpu-start.md)でCUDAと人工画像forwardを確認する。
 4. KaggleでCSV監査と10検査のキャッシュ・目視確認を行い、問題がなければ全件を作る。
 5. private Outputを手動でダウンロードし、検査数、ファイルhash、ソース、configを検査する。元DICOMは移さない。
