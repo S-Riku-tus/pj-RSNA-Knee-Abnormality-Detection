@@ -14,6 +14,7 @@
 - この端末にPython 3.12.13の `.venv` を新規準備。numpy 2.5.3、pydicom 3.0.2、Pillow 12.3.0、ruff 0.16.10を導入済み。torch/torchvisionは未導入で、CUDAのPython利用は未確認。
 - [00_prepare_cache.ipynb](notebooks/00_prepare_cache.ipynb) と転送確認用 [verify_cache_export.py](scripts/verify_cache_export.py) を追加。Notebookは未実行テンプレート。
 - 手順1〜3の具体的な操作を整理。両Notebookはコードzipと展開済みInputの両形式に対応し、GPU開始手順へ版を固定したPyTorch導入例を追記した。実データ処理・CUDA導入は未実施のまま。
+- 続く [手順4〜9](docs/after-cache.md) を追加。キャッシュ転送検査、weakラベルの選定・出所監査、固定fold、1 epochと5 epochの別run、自作モデルの採点、改善比較、最終選択を具体化した。公開ラベルの採用元は未確定であり、手順の実行結果はまだない。
 
 ## 次にすること
 
@@ -24,6 +25,8 @@
 5. private Outputを手動でダウンロードし、検査数、ファイルhash、ソース、configを検査する。元DICOMは移さない。
 6. 公開ラベルの版・ライセンス・方法・gold使用状況を記録してprepareし、ローカルのfold 0学習へ進む。
 7. 学習後の重みと対応コードを手動でKaggleへ追加し、オフライン提出推論・採点を確認する。
+
+キャッシュ作成後の実行コマンドと段階ごとの完了条件は [after-cache.md](docs/after-cache.md) を使う。改善はfold 0の比較基準と自作提出の採点成功が揃ってから進め、10月20〜22日は最終候補の再実行・選択に充てる。
 
 ## 次へ進む条件
 

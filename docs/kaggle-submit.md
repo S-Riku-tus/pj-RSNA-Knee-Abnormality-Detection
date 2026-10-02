@@ -5,10 +5,10 @@
 ## コードを梱包する
 
 ```bash
-python scripts/build_kaggle_bundle.py
+python scripts/build_kaggle_bundle.py --output-dir artifacts/kaggle/e002-baseline-fold0
 ```
 
-`artifacts/kaggle/rsna-knee-code.zip` とhash一覧を生成する。zipはsrcとconfigsの許可リストから作り、データ・重み・認証情報を入れない。Notebookひな形は `notebooks/01_submit.ipynb`。実行済みNotebookではない。
+`artifacts/kaggle/e002-baseline-fold0/rsna-knee-code.zip` とhash一覧を生成する。実際のrun名に合わせて新しい出力先を使い、前の版を上書きしない。学習に使ったsrcで梱包する。zipはsrcのPythonファイルとbaseline.jsonの許可リストから作り、データ・重み・認証情報を入れない。Notebookひな形は `notebooks/01_submit.ipynb`。実行済みNotebookではない。転送と学習からの一連の操作は [手順4〜9](after-cache.md) を参照する。
 
 ## GPU端末とKaggle画面での準備
 

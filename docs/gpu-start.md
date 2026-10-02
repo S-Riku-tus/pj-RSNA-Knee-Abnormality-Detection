@@ -88,7 +88,7 @@ CUDA確認後、実学習の前に人工画像のforwardを行う:
 .\.venv\Scripts\python.exe -m rsna_knee train --manifest-dir data/manifests/v1 --cache-dir data/exports/rsna-cache-v1/train-v1 --run-dir artifacts/runs/e001-fold0 --config data/exports/rsna-cache-v1/code/configs/baseline.json --fold 0
 ```
 
-この経路ではローカルにDICOMもtest cacheも不要。現行5epochは動作確認の出発点で、まずfold 0だけを実行する。学習再開は未対応なので、長いrunの前に実データの小規模学習を別run・別configで確認する。epoch数など学習側だけを変える場合、前処理設定は維持し、新しいconfigを保存する。
+この経路ではローカルにDICOMもtest cacheも不要。現行5epochは比較基準の出発点で、まずfold 0だけを実行する。長いrunの前にepoch数だけ1へ変更した別config・別runで動作を確認する。1epochでも全fold学習・検証検査を処理し、学習CLIには少数検査の指定がない。学習再開は未対応。具体的なconfig作成と結果の読み方は [手順4〜9](after-cache.md) を参照する。
 
 学習後はbest.ptと対応するコードzipをKaggleへ手動で追加し、[01_submit.ipynb](../notebooks/01_submit.ipynb) で隠しtestのキャッシュを新しく作る。[提出手順](kaggle-submit.md) を参照。公開CoAtNetの重みはこの経路のKneeMILへ読み込めない。
 

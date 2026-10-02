@@ -9,10 +9,11 @@
 1. [PROJECT.md](PROJECT.md) — 現状、次にすること、完了条件。
 2. [今後の参加計画](docs/roadmap.md) — 環境の判断、最初の二日間、締め切りまでの優先順位。
 3. [GPU端末での開始手順](docs/gpu-start.md) — Windows環境とKaggleキャッシュを使った学習手順。
-4. [大会と調査結果](docs/competition.md) — 公式に確認した条件、添付分析との照合、未確認事項。
-5. [公開モデルの再現手順](docs/public-baselines.md) — 最初の採点に使う候補と記録項目。
-6. [モデルと検証の設計](docs/experiment-design.md) — ラベル、前処理、分割、改善の順序。
-7. [Kaggleへの提出手順](docs/kaggle-submit.md) — オフライン推論の準備。
+4. [キャッシュ作成後の手順4〜9](docs/after-cache.md) — 転送検査、ラベル監査、fold 0学習、採点、改善、最終選択の操作と完了条件。
+5. [大会と調査結果](docs/competition.md) — 公式に確認した条件、添付分析との照合、未確認事項。
+6. [公開モデルの再現手順](docs/public-baselines.md) — 最初の採点に使う候補と記録項目。
+7. [モデルと検証の設計](docs/experiment-design.md) — ラベル、前処理、分割、改善の順序。
+8. [Kaggleへの提出手順](docs/kaggle-submit.md) — オフライン推論の準備。
 
 ## 大会の要点
 
