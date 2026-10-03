@@ -1,6 +1,6 @@
 # GPU端末で開始する手順
 
-現在の主端末はWindowsデスクトップのRTX 4090。ユーザーは **Kaggleで画像キャッシュを作り、ローカルで学習する** 経路を選択した。以下は利用者が順に実行する手順であり、実データの取得・キャッシュ作成・学習はまだ実行していない。元画像を扱える別端末向けの手順も後半に残す。
+現在の主端末はWindowsデスクトップのRTX 4090。ユーザーは **Kaggleで画像キャッシュを作り、ローカルで学習する** 経路を選択した。10月3日時点で全件画像キャッシュの作成・ローカル転送検査、CUDA版PyTorchの導入、人工画像CUDA forwardは完了。weakラベル準備・実学習は未実施。以下には別端末での環境準備と、元画像を扱える別端末向けの手順も残す。
 
 ## 環境準備
 
@@ -28,13 +28,13 @@ uv --no-config --cache-dir .uv-cache venv --python .python/cpython-3.12.13-windo
 uv --no-config --cache-dir .uv-cache pip install --python .venv/Scripts/python.exe -e ".[imaging,dev]"
 ```
 
-このPCでの `python` はMicrosoft Storeのアプリ実行エイリアスで動かなかったため、`.python/` にPython 3.12.13、`.venv/` に専用環境を用意した。numpy、pydicom、Pillow、ruffを導入済みで、torchとtorchvisionはまだない。上記のvenv再作成は既存環境がない端末でのみ行う。uvで作った環境のパッケージ操作は `uv pip --python` を使える。
+このPCでの `python` はMicrosoft Storeのアプリ実行エイリアスで動かなかったため、`.python/` にPython 3.12.13、`.venv/` に専用環境を用意した。numpy、pydicom、Pillow、ruffに加え、torch 2.10.0+cu128とtorchvision 0.25.0+cu128を導入済み。上記のvenv再作成は既存環境がない端末でのみ行う。uvで作った環境のパッケージ操作は `uv pip --python` を使える。
 
 次に [PyTorch公式インストール選択画面](https://pytorch.org/get-started/locally/) でOSとGPUに適した **torchとtorchvisionの対応する組** をインストールする。`torch>=2.4` のAPIを使用する。CUDA wheelは端末依存のため、このプロジェクトの通常インストールには含めていない。
 
 この端末では選択画面をWindows・Pip・CUDAに合わせ、表示された `pip install ...` のパッケージとindex指定を `uv --cache-dir .uv-cache pip install --python .venv/Scripts/python.exe ...` に渡す。PyTorchをソースからbuildする必要はない。Windowsでの確認:
 
-初回の環境を固定する例は、公式に配布されているtorch 2.10.0とtorchvision 0.25.0のCUDA 12.8 wheel。これは実装の最小要件を満たす導入候補で、本端末での導入・CUDA動作はまだ確認していない。[公式の版対応とインストールコマンド](https://pytorch.org/get-started/previous-versions/)
+初回の環境を固定する例は、公式に配布されているtorch 2.10.0とtorchvision 0.25.0のCUDA 12.8 wheel。本端末ではこの組の導入、CUDA利用可、RTX 4090の認識、人工画像forwardを確認済み。以下の導入例は環境が未準備の端末向けである。[公式の版対応とインストールコマンド](https://pytorch.org/get-started/previous-versions/)
 
 ```powershell
 uv --cache-dir .uv-cache pip install --python .venv/Scripts/python.exe torch==2.10.0 torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu128
