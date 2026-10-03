@@ -1,8 +1,24 @@
 # 準備内容の検証範囲
 
-更新日 2026年10月3日 JST。今回はユーザーの明示的な取得依頼により、Kaggleの全件画像キャッシュのローカル取得・検査を完了した。元DICOM・学習済みモデルを取得したり、実MRIをデコードしたり、実学習を始めたりしていない。以下では以前の検証と今回の確認を分ける。
+更新日 2026年10月3日 JST。全件キャッシュ転送後、ユーザーの「進められるところまで進める」依頼により研究用weakラベルの取得・監査・分割とローカル実学習へ進んだ。元DICOM・公開モデルは取得せず、既存npzを学習に使用した。以下では以前の検証と今回の確認を分ける。
 
-## 次工程に向けた確認（10月3日）
+## ラベル監査・固定分割・ローカル研究（10月3日）
+
+- 認証済み公式APIから自分の提出履歴を読み、既存の1提出がCOMPLETE・Public 0.924と確認。提出日時は10月2日05:57:22 UTC、提出URLのscriptVersionId=354569007。該当Notebookの最新版metadataはVersion 1で、Inputはraptor-knee-widedense、Internet OFF。APIが返すInput参照は版なしなので、保存Input版・実行時間・global IDと表示版の直接照合は未確認。新規提出はしていない。結果はp001として台帳へ保存。
+- 公開7候補のDataset版、metadata、ライセンス、生成方法とgold利用を公式CLI/SDKで監査。作者の学習コードはDreaddevelopment Version 8、Pilkwang Version 15を取得して読み、実行していない。前者のgold AUCによるcheckpoint選択、後者の学習分岐での公式ラベル混合を確認した。公開重みの厳密な履歴まで証明したものではない。
+- vmohitrao Dataset Version 3を非商用研究候補として取得。元train.csv hash、weak_labels・weights・states・provenanceの4つの公開hash、4,349行のUID集合、全セルのstate/value/maskが一致。goldのUIDは含まれない。作者READMEが58検査を抽出・prompt開発から除外したと宣言しており、その根拠のhashを保存した。開発ログを独立監査してはいない。CC BY-NC 4.0の大会提出への利用可否は未確認。
+- prepareでweak 4,207検査・gold 58検査を作成。全欠損138件、goldと同一レポート・groupで連結される4件を除外。供給report_groupを保った5-foldは821・891・888・778・829件。fold 0は学習3,386／検証821件。元入力hash、元ラベルとの一致、gold予約、group連結、fold別・所見別分布を追加監査した。
+- fold 0のSynovitisは観測101件のうち陽性100／陰性1、欠損率87.7%。CSV整合性の成功はラベルの臨床的正確さやクラス分布の妥当性を保証しない。患者独立性も未確認。
+- 新規の標準ライブラリunittest 12件でUNK→欠損、0とsoft labelの保持、出所hash・state/mask不一致、gold宣言不足、改ざんgroup、除外行を橋渡しにするgold漏洩、未観測クラス等を検査。既存を含む31件が成功。srcは変更しておらず、exportのsource hashと前処理fingerprintを維持。
+- ユーザーはKaggleで元画像とcacheを目視比較し、見た範囲では問題なしと回答。件数とUIDは未報告であり、全画像の品質確認や医学的判定として扱わない。
+- 人工ノイズ22検査とtest 3検査を独立したQAディレクトリに生成。192px・24 windowの設定でCUDA/AMP/backward/optimizer、1 epoch完走、checkpoint保存・再読込、Reportなしの提出契約を確認。全3行×12所見の契約がvalid=true。最大torch割当467,144,192 bytes。人工データの精度・時間・VRAMを実コンペ性能として記録しない。結果は `artifacts/qa/20261003-synthetic-cuda/checks.json`。
+- 実キャッシュでe001-smoke-fold0が完了。weak検証BCE 0.4304814244、選択後のgold macro AUC 0.4871779862。checkpointは44,830,657 bytesで保存。historyの205.33秒はepoch内の経過時間で、cache事前検査と最後のgold評価を除く。コマンド全体の所要時間は未計測。
+- e002-baseline-fold0は同じラベル・fold・seedでepoch数だけ5へ変更し、新規runで完了。weak検証BCEはepoch順に0.430481、0.430906、0.447424、0.502899、0.448503。最小のepoch 1を選択し、その後にgoldを評価した。gold macro AUCはe001と同じ0.487178。train関数は事前検査・最後のgold評価を含め1,082.83秒、Python importは計測外。epoch部分は1,034.21秒。実行環境・入力hash・config・全history・checkpoint hashはrunと共有可能な実験JSONへ保存した。Public LBは未測定。
+- `artifacts/kaggle/e002-baseline-fold0/` を新規作成。code zipは許可されたsrc 9ファイルとbaseline.jsonだけで、SHA-256は9fd958c4585d3bced5552cb1c949a103ba6209fc4ddaa3e18b6d07219d49545f。別ファイルで置いたbest.ptのSHA-256は903cce571904a8e74ff54d3242e3cb6293db747b293475be378578767eb3f29b。展開zipのsource hashと学習記録が一致した。
+- 新しいPythonプロセスで展開zipのsrcを読み込み、実e002 checkpointと人工test cacheで予測。Reportなしの3行×12所見について、UID集合・順序・列・有限値・0〜1範囲の提出契約がvalid=true。結果は `artifacts/qa/20261003-e002-submission/checks.json`。実MRI/testのdecodeとKaggle実行は未検証。bundleにRESEARCH-ONLY.jsonを追加し、アップロード・提出はしていない。
+- 最終資料のローカルリンク48件、PowerShell手順ブロック15個、実験JSONと台帳3行の構造、保存run configと元configの一致を確認。run configのhashと元ファイルのhashは記録上区別した。Ruff・全31 unittest・差分の空白検査が成功。data/・artifacts/の追跡対象は各READMEだけで、ラベル・画像・分割・予測・重みはGit除外を確認した。
+
+## 実学習へ移る前の確認（10月3日、以下は当時の状態）
 
 - 取得済みのcoverage.jsonを集計。4,407検査すべて24 valid windows、選択された13,221シリーズすべてphysical_position順であり、記録された読み取りエラーとinstance_number fallbackは0。元画像やnpzの画像内容をこの確認でデコード・目視していないため、品質の確認とはしない。
 - UIDやレポート本文を含まない集計を、Git除外の `data/exports/rsraki-rsna-knee-sv354838181/train-coverage-summary.json` へ新規保存した。

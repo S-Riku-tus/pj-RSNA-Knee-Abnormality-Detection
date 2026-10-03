@@ -2,13 +2,15 @@
 
 公開モデルを使う場合は作者Notebookをそのまま再現する。以下は、このリポジトリの自作モデルで学習を終えた後の経路。提出Notebookには学習コードの呼び出しを含めない。
 
+10月3日時点でe002のローカル梱包は完了。`artifacts/kaggle/e002-baseline-fold0/` に `best.pt`、`rsna-knee-code.zip`、`bundle-manifest.json`、`RESEARCH-ONLY.json` がある。学習時とコード・重みのhashが一致し、展開コード＋実checkpointから人工test 3検査の提出契約が成功した。Kaggleで実行した結果ではない。使用ラベルはCC BY-NC 4.0の非商用研究用で、大会利用の条件をまだ確認できていない。Rulesと利用条件を照合してから、以下の手動アップロードへ進む。既存公開モデルの実測Public 0.924とは別の資産である。
+
 ## コードを梱包する
 
 ```bash
 python scripts/build_kaggle_bundle.py --output-dir artifacts/kaggle/e002-baseline-fold0
 ```
 
-`artifacts/kaggle/e002-baseline-fold0/rsna-knee-code.zip` とhash一覧を生成する。実際のrun名に合わせて新しい出力先を使い、前の版を上書きしない。学習に使ったsrcで梱包する。zipはsrcのPythonファイルとbaseline.jsonの許可リストから作り、データ・重み・認証情報を入れない。Notebookひな形は `notebooks/01_submit.ipynb`。実行済みNotebookではない。転送と学習からの一連の操作は [手順4〜9](after-cache.md) を参照する。
+`artifacts/kaggle/e002-baseline-fold0/rsna-knee-code.zip` とhash一覧を生成する。e002は作成済みなので上記コマンドを同じ出力先へ再実行しない。別のrunでは新しい出力先を使い、前の版を上書きしない。学習に使ったsrcで梱包する。zipはsrcのPythonファイルとbaseline.jsonの許可リストから作り、データ・重み・認証情報を入れない。学習したbest.ptは別ファイルとして用意する。Notebookひな形は `notebooks/01_submit.ipynb`。実行済みNotebookではない。転送と学習からの一連の操作は [手順4〜9](after-cache.md) を参照する。
 
 ## GPU端末とKaggle画面での準備
 

@@ -1,0 +1,122 @@
+{
+  "checked_at_jst": "2026-10-03T20:55:25.593539+09:00",
+  "access_method": "Official Kaggle CLI 2.2.4 / SDK metadata and pinned-version files; author statements distinguished from verified CSV facts",
+  "sources": [
+    {
+      "url": "https://www.kaggle.com/datasets/stevenleehans/rsna-knee-llm-report-labels/versions/6",
+      "version": 6,
+      "licenses": [
+        {
+          "name": "CC0-1.0"
+        }
+      ],
+      "metadata_sha256": "0f582ba2c1c69a4d070d20f2535d7de8e7ec4879cac4abebfb2af61f393d3cfb",
+      "gold_exposure": "tuned for v2/v4; v1 development exposure unknown",
+      "finding": "Do not use v2/v4 gold AUC as independent evaluation; v2 fills Synovitis from Effusion after gold comparison."
+    },
+    {
+      "url": "https://www.kaggle.com/datasets/pilkwang/rsna-knee-llm-labels/versions/1",
+      "version": 1,
+      "licenses": [
+        {
+          "name": "CC0-1.0"
+        }
+      ],
+      "metadata_sha256": "20b9c5ab7c930e0b323966055531d38e0872bc9d932e22928aa9f513d4ca0917",
+      "gold_exposure": "unknown",
+      "finding": "YES/NO/UNK and scores; api_labeler imports unpublished llm_labeler scoring/spec; gold-assisted prompt development not ruled out."
+    },
+    {
+      "url": "https://www.kaggle.com/datasets/lixin73/rsna-knee-llm-report-labels-sol56/versions/1",
+      "version": 1,
+      "licenses": [
+        {
+          "name": "CC0-1.0"
+        }
+      ],
+      "metadata_sha256": "4d7907f2083b4af54e2b4b90c3d6b4a9ffdca00b368e3cb8d7106cc70b51d2d0",
+      "gold_exposure": "unknown",
+      "finding": "Empty API description; generation/prompt/unknown semantics not established."
+    },
+    {
+      "url": "https://www.kaggle.com/datasets/yehezkielhaganta/psuedo-labeling-knee/versions/7",
+      "version": 7,
+      "licenses": [
+        {
+          "name": "MIT"
+        }
+      ],
+      "metadata_sha256": "da3d31d1fe1ef103e51347ccdcf340983166de22a02a6a9ffa8a53c84947cd57",
+      "gold_exposure": "unknown",
+      "finding": "Data card defines 1/0/-1; preserve -1 as missing if later adopted. Prompt development and use of original labels not established."
+    },
+    {
+      "url": "https://www.kaggle.com/datasets/laymond/rsna-knee-abnormality-qwen3-8b-weak-labels/versions/2",
+      "version": 2,
+      "licenses": [
+        {
+          "name": "CC0-1.0"
+        }
+      ],
+      "metadata_sha256": "8e35b7698f693f7f06200f3e0dbc898e2478d04a6c85368792a50fe0dd54aaf8",
+      "gold_exposure": "gold-informed v2 development",
+      "finding": "Data card describes rewritten prompt and co-occurrence priors evaluated against gold. Raw file avoids filling but does not establish prompt independence."
+    },
+    {
+      "url": "https://www.kaggle.com/datasets/nartaa/rsna-knee-hpo-assets/versions/9",
+      "version": 9,
+      "licenses": [
+        {
+          "name": "CC0-1.0"
+        }
+      ],
+      "metadata_sha256": "acbf453defccf08398fcb156af774c51a33f232e3a19364b51d4a57046f5ab09",
+      "gold_exposure": "tuned for blended/per-label variants; gemlow exposure unknown",
+      "finding": "Per-label selection explicitly uses gold; v4 baseline inherits tuning; independent generation history for gemlow not provided."
+    },
+    {
+      "url": "https://www.kaggle.com/datasets/vmohitrao/rsna-knee-report-labels/versions/3",
+      "version": 3,
+      "licenses": [
+        {
+          "name": "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)"
+        }
+      ],
+      "metadata_sha256": "97f6b4d9cc4ca78af9fafb143cc3cd9038ad8c3dcb8876dc5e904820ae53d123",
+      "gold_exposure": "author declares non-use",
+      "finding": "README declares 58 expert studies excluded from extraction/prompt development; actual four CSV hashes and source train hash verified. Research candidate; competition eligibility unresolved."
+    }
+  ],
+  "notebooks": {
+    "dreaddevelopment/knee-mri-training-the-twelve-finding-model": {
+      "version": 8
+    },
+    "pilkwang/rsna-knee-baseline-v1": {
+      "version": 15
+    }
+  },
+  "source_code_sha256": {
+    "dreaddevelopment_training_v8": "9f7055ef5dbec5227bd904290690f97f2aaa6447167c7d800acd961bf61f1045",
+    "pilkwang_baseline_v15": "b32a9155fcc73c519e75e78c08e07d30393efc591c2798a3e40ca92f39832bb8",
+    "pilkwang_api_labeler_v1": "045f0f858b20ee477869c999c4bc9b484154cb5ddfd507b79e7c732632abc52e"
+  },
+  "training_code_audit": "Dreaddevelopment training Version 8 selects checkpoint/top-k on gold AUC. Do not copy this selection strategy. Exact distributed checkpoint history was not independently verified.",
+  "selected_research_candidate": {
+    "source": "vmohitrao/rsna-knee-report-labels",
+    "version": 3,
+    "license": "CC BY-NC 4.0",
+    "weak_labels_sha256": "aad1eec5424692acd48355193bc142b06a300623a43f502430de96f22e0bf7c9",
+    "weak_studies": 4207,
+    "gold_reserved": 58,
+    "fold_counts": {
+      "0": 821,
+      "1": 891,
+      "2": 888,
+      "3": 778,
+      "4": 829
+    },
+    "gold_usage_basis": "Author declaration in README; private development logs not independently audited",
+    "competition_eligibility": "Not established; research candidate only"
+  },
+  "limitations": "No clinical-label accuracy or patient independence established. Live competition Rules body unavailable in web retrieval. No MRI/report/UID data included here."
+}

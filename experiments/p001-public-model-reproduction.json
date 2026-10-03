@@ -1,0 +1,22 @@
+{
+  "experiment_id": "p001-public-model-reproduction",
+  "status": "scored",
+  "checked_at_utc": "2026-10-03T12:14:07.312029+00:00",
+  "verification": "authenticated official Kaggle API",
+  "submitted_at_utc": "2026-10-02T05:57:22.690Z",
+  "submission_ref": 56766978,
+  "public_lb": 0.924,
+  "submission_url": "https://www.kaggle.com/code/rsraki/knee-mri-twelve-findings-from-a-single-model?scriptVersionId=354569007",
+  "submitted_script_version_id": 354569007,
+  "notebook_latest_version_number": 1,
+  "input_dataset_urls": [
+    "https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-widedense"
+  ],
+  "input_versions_at_submission": null,
+  "runtime_seconds": null,
+  "label_source_version": null,
+  "gold_macro_auc_12": null,
+  "model_origin": "public Dreaddevelopment CoAtNet checkpoint; user already submitted before this work",
+  "decision": "keep as scored reference; distinct from our locally trained ResNet18",
+  "limitations": "Submission score/status/date/URL verified. API metadata gives latest Notebook Version1 but not a direct scriptVersionId mapping or saved Input versions; runtime and exact source history not established. No new submission made."
+}

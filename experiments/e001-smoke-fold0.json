@@ -1,0 +1,153 @@
+{
+  "experiment_id": "e001-smoke-fold0",
+  "status": "completed",
+  "config": "configs/experiments/e001-smoke.json",
+  "seed": 20261002,
+  "fold": 0,
+  "epochs_completed": 1,
+  "best_epoch": 1,
+  "initialization": "random ResNet18; no pretrained weights",
+  "change": "operational 1 epoch check",
+  "label_source": "https://www.kaggle.com/datasets/vmohitrao/rsna-knee-report-labels/versions/3",
+  "license": "CC BY-NC 4.0",
+  "scope": "non-commercial local research; Kaggle submission eligibility not established",
+  "gold_exposure_basis": "Author README declares expert studies excluded from extraction/prompt development; private logs not audited",
+  "patient_independence_verified": false,
+  "train_studies": 3386,
+  "valid_studies": 821,
+  "gold_studies": 58,
+  "git_head_at_execution": "f90fc3b77510cb1ca2a1bbec1c37100e0935e9e6",
+  "source_sha256": {
+    "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "cli.py": "5358c11b5bebe9bfe6b0887c683e2a1b2f2c072d2186ac7a7fa6a20b06cc67ef",
+    "contracts.py": "272d7afe33a691474acd0247a1e05f1dced84a1aaebf5491a97365971d8b37c1",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+    "model.py": "e5886481fc9fe0e10e626149b2ebebef2c5d7fbcb1fe70fe5a37b52be4042bc2",
+    "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+    "runtime.py": "e0a8152c38ccd9428b009ec26baef3d7e2fbd3105bf89234af28468ca3dcb360"
+  },
+  "inputs_sha256": {
+    "train": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+    "weak": "aad1eec5424692acd48355193bc142b06a300623a43f502430de96f22e0bf7c9",
+    "provenance": "fac0445d7416921c94553eb450cda6666d0431398888b081925216f8dd4908ac",
+    "groups": "8b7755c5bc76531fb0bb7a86e16eade4a487fd000fdb20ea2c76172770d96e19"
+  },
+  "manifest_sha256": {
+    "manifest.json": "976abfe212ce23ad8112f16cb61d2c8172bb837ad50aed7ac88886760fc2cabf",
+    "weak.csv": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+    "gold.csv": "f86a67cf9c5704c37bbe0d7912b308cd7497a2804918c0cc5e8e2008a0b16bad"
+  },
+  "config_sha256": "0a04dab8ae8d9361a15fae8752dc541fc6bb5a71fbb578d540d74c3567fed33d",
+  "preprocess_fingerprint": "c382a673469a75c9eb5fd20b953579a5ea5d4a3ad696de1dbd5cec4740ef2850",
+  "runtime": {
+    "torch": "2.10.0+cu128",
+    "torchvision": "0.25.0+cu128",
+    "numpy": "2.5.3",
+    "pydicom": "3.0.2",
+    "Pillow": "12.3.0"
+  },
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "checkpoint_sha256": "7d1c19520ebdca7c4bea20a77d63931f0ad46c62624511865b8883ca7101456b",
+  "checkpoint_bytes": 44830657,
+  "checkpoint_selection": "minimum weak validation masked BCE; gold never used for selection",
+  "weak_valid_bce": 0.43048142436621845,
+  "gold_macro_auc_12": 0.487177986159391,
+  "gold_defined_classes": 12,
+  "gold_per_target": {
+    "ACL": {
+      "auc": 0.4178921568627451,
+      "binary_observed": 58,
+      "positive": 24.0,
+      "soft_excluded": 0
+    },
+    "MCL": {
+      "auc": 0.46485260770975056,
+      "binary_observed": 58,
+      "positive": 9.0,
+      "soft_excluded": 0
+    },
+    "Medial Meniscus": {
+      "auc": 0.6862980769230769,
+      "binary_observed": 58,
+      "positive": 26.0,
+      "soft_excluded": 0
+    },
+    "Lateral Meniscus": {
+      "auc": 0.48198757763975153,
+      "binary_observed": 58,
+      "positive": 23.0,
+      "soft_excluded": 0
+    },
+    "Medial OA": {
+      "auc": 0.4170542635658915,
+      "binary_observed": 58,
+      "positive": 15.0,
+      "soft_excluded": 0
+    },
+    "Lateral OA": {
+      "auc": 0.3984526112185687,
+      "binary_observed": 58,
+      "positive": 11.0,
+      "soft_excluded": 0
+    },
+    "PF OA": {
+      "auc": 0.6422136422136422,
+      "binary_observed": 58,
+      "positive": 21.0,
+      "soft_excluded": 0
+    },
+    "Effusion": {
+      "auc": 0.4919254658385093,
+      "binary_observed": 58,
+      "positive": 35.0,
+      "soft_excluded": 0
+    },
+    "Synovitis": {
+      "auc": 0.5997610513739546,
+      "binary_observed": 58,
+      "positive": 27.0,
+      "soft_excluded": 0
+    },
+    "Baker's": {
+      "auc": 0.4166666666666667,
+      "binary_observed": 58,
+      "positive": 12.0,
+      "soft_excluded": 0
+    },
+    "Contusion": {
+      "auc": 0.4331983805668016,
+      "binary_observed": 58,
+      "positive": 19.0,
+      "soft_excluded": 0
+    },
+    "Fracture": {
+      "auc": 0.3958333333333333,
+      "binary_observed": 58,
+      "positive": 18.0,
+      "soft_excluded": 0
+    }
+  },
+  "public_lb": null,
+  "notebook_version": null,
+  "training_function_elapsed_seconds": null,
+  "epoch_elapsed_seconds": 205.33438169999863,
+  "peak_torch_allocated_bytes": null,
+  "history": [
+    {
+      "epoch": 1,
+      "train_batch_mean_bce": 0.45151611252996476,
+      "weak_valid_masked_bce": 0.43048142436621845,
+      "elapsed_seconds": 205.33438169999863
+    }
+  ],
+  "decision": "pipeline works; complete planned baseline",
+  "limitations": [
+    "Synovitis fold0 has 100 positives, 1 negative, 87.7% missing",
+    "Gold58 is small; no Public LB measured",
+    "Cache visual review is user-reported for unspecified sample"
+  ],
+  "config_sha256_basis": "Saved run/config.json file bytes; source config file recorded separately",
+  "config_source_file_sha256": "7b679f3e06abae48ec9fb6f13ca58c1999289cde1841301b54f82b4a0f8de7a1"
+}

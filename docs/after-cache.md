@@ -1,6 +1,6 @@
 # キャッシュ作成後の学習と提出手順
 
-更新日 2026年10月3日 JST。先に説明した「1. 公開Notebookで採点を通す、2. ローカルCUDA環境を整える、3. Kaggleで画像キャッシュを作る」に続く作業を説明する。10月3日にCUDA利用可とKaggleの全件exportを確認し、ローカル取得・全件hash検査を完了した。実学習と自作モデルの採点は未実施。段階ごとの現状は [PROJECT.md](../PROJECT.md)、確認範囲は [validation.md](validation.md) を参照する。
+更新日 2026年10月3日 JST。先に説明した「1. 公開Notebookで採点を通す、2. ローカルCUDA環境を整える、3. Kaggleで画像キャッシュを作る」に続く作業を説明する。全件キャッシュの取得・検証後、研究用ラベルの監査・固定fold・1 epochの動作確認・5 epochの基準実験・提出用bundleのローカル検査が完了した。自作モデルのKaggle採点は未実施。段階ごとの現状は [PROJECT.md](../PROJECT.md)、確認範囲は [validation.md](validation.md) を参照する。
 
 元MRIの前処理と提出推論はKaggle、キャッシュからの学習はこのPCのRTX 4090を使う。ブラウザでKaggleを開いても、このPCのGPUでは計算されない。ローカルに全DICOMや例示testのキャッシュを置く必要はない。
 
@@ -97,7 +97,9 @@ uv --cache-dir .uv-cache pip install --python artifacts/tools/kaggle-venv/Script
 
 ### 公開ラベルの採用元を決める
 
-現在のリポジトリには、学習に使えるweakラベルを取得した記録も、ラベル生成器もない。`label-template` は空欄を作るだけなので、その出力で学習はできない。
+10月3日、[公開ラベルの採用監査](public-baselines.md#公開ラベルと学習コードの採用監査10月3日) を行い、vmohitrao Dataset Version 3を非商用の研究用候補として取得・監査した。元CSVは `data/labels/sources/vmohitrao-v3/`、取り込み済みラベル・groups・provenanceは `data/labels/vmohitrao-v3/`、固定した分割は `data/manifests/v1-vmohitrao-research/` にある。Kaggle提出への利用可否は未確定。
+
+既存候補を使う場合、以降の `data/labels/weak_labels.csv` と `data/labels/provenance.json` は上のラベルディレクトリ内へ、`data/manifests/v1` は上のmanifestディレクトリへ読み替える。prepareは実施済みなので同じ出力先へ再実行しない。`label-template` は空欄を作るだけで、その出力は学習に使えない。
 
 まず [公開モデルの再現手順](public-baselines.md) に挙げた作者の学習NotebookとInputsを確認する。候補を探す入口として [Pilkwang baselineのInputs](https://www.kaggle.com/code/pilkwang/rsna-knee-baseline-v1/input) も使えるが、この資料では特定CSVの版・ライセンス・gold非使用を確認して採用したわけではない。
 
@@ -136,7 +138,13 @@ StudyInstanceUID,ACL,MCL,Medial Meniscus,Lateral Meniscus,Medial OA,Lateral OA,P
 
 `manifest.json` でfold別件数と除外理由を確認する。欠損ラベルしかない行やgoldとつながる検査の除外により、weak件数は元CSVの件数より少なくなる。
 
-現行foldはgroupとseedからのhash分割で、ラベルの層化分割ではない。各fold・各所見の観測数、欠損率、0/1ラベルの陽性・陰性数、soft labelの分布を別途集計して偏りを確認する。fold件数以外の分布集計は現行CLIにはない。偏りが大きければ学習前に分割方法を改善し、新しいmanifest版にする。全foldを埋めるために欠損を0へ変換しない。
+現行foldはgroupとseedからのhash分割で、ラベルの層化分割ではない。各fold・各所見の観測数、欠損率、0/1ラベルの陽性・陰性数、soft labelの分布を確認する。純粋なCSV監査用の `scripts/audit_training_labels.py` を追加した。元入力のhash、gold予約、元ラベルとの一致、除外行を橋渡しにした同一レポート・供給groupの連結も検査する。
+
+```powershell
+.\.venv\Scripts\python.exe scripts/audit_training_labels.py folds --train-csv data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/raw/train.csv --weak-labels data/labels/vmohitrao-v3/weak_labels.csv --provenance data/labels/vmohitrao-v3/provenance.json --groups data/labels/vmohitrao-v3/groups.csv --manifest-dir data/manifests/v1-vmohitrao-research --config configs/experiments/e001-smoke.json --output artifacts/qa/fold-audit-new.json
+```
+
+既存の詳細集計はmanifestディレクトリの `fold-audit-v2.json`。監査のready_for_trainingはCSVの整合性と観測ラベルの存在だけを表し、画像品質や利用条件の承認ではない。fold 0のSynovitis陰性は1件と少ない。分布を記録し、将来分割を改善する場合は新しいmanifest版として比較する。全foldを埋めるために欠損を0へ変換しない。
 
 出所、分割、gold除外、各クラスの観測数を確認したら、このmanifestを比較実験の間は固定する。ラベルやgroupを変えた場合は `data/manifests/v2/` など新しい版を作り、旧版を残す。
 
@@ -146,17 +154,10 @@ StudyInstanceUID,ACL,MCL,Medial Meniscus,Lateral Meniscus,Medial OA,Lateral OA,P
 
 先に [CUDAと人工画像forwardの確認](gpu-start.md#環境準備) を終える。現行モデルはランダム初期化ResNet18と所見別Attentionで、公開CoAtNet/DINOの再現モデルではない。最初の目的は、画像・ラベル・分割・学習・推論が接続されていることと、時間・VRAM・lossを確認すること。
 
-キャッシュに保存したconfigをコピーし、学習epochだけ1へ変更する。次の例は新しいconfigへ保存し、既存ファイルがあれば止める。
+キャッシュに保存したconfigから学習epochだけ1へ変更した `configs/experiments/e001-smoke.json` を用意済み。前処理、seed、fold数、学習率などはbaselineと一致する。以下は実行方法の記録であり、実施済みrunへ再実行しない。
 
 ```powershell
-New-Item -ItemType Directory -Force configs/experiments | Out-Null
-$smokeConfigPath = "configs/experiments/e001-smoke.json"
-if (Test-Path -LiteralPath $smokeConfigPath) { throw "新しい実験IDのconfigを指定してください" }
-$smokeConfig = Get-Content -Raw -Encoding UTF8 data/exports/rsna-cache-v1/code/configs/baseline.json | ConvertFrom-Json
-$smokeConfig.train.epochs = 1
-$smokeConfig | ConvertTo-Json -Depth 10 | Set-Content -Encoding UTF8 -LiteralPath $smokeConfigPath
-
-.\.venv\Scripts\python.exe -m rsna_knee train --manifest-dir data/manifests/v1 --cache-dir data/exports/rsna-cache-v1/train-v1 --run-dir artifacts/runs/e001-smoke-fold0 --config configs/experiments/e001-smoke.json --fold 0
+.\.venv\Scripts\python.exe -m rsna_knee train --manifest-dir data/manifests/v1-vmohitrao-research --cache-dir data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/train-v1 --run-dir artifacts/runs/e001-smoke-fold0 --config configs/experiments/e001-smoke.json --fold 0
 ```
 
 この1 epochもfold 0以外の全weak学習検査とfold 0の全検証検査を処理する。学習CLIには少数検査だけの `--limit` はない。数検査のbackwardだけで済ませたい場合は、groupとgold除外を保った人工データ検証や専用の動作確認処理を別途用意する必要がある。Kaggleの10検査debug exportをこの学習へ渡す手順にはしない。
@@ -167,8 +168,10 @@ OOMなどで失敗した場合はログを残し、新しいrun名で直した�
 
 ### 問題なければ5 epochの比較基準を作る
 
+e002は10月3日に完了済み。以下は実行方法の記録であり、同じrunへ再実行しない。5 epochを約18分で完了したが、weak検証の最良はepoch 1で、e001からの改善はなかった。詳細は [e002の実験記録](../experiments/e002-baseline-fold0.json)。
+
 ```powershell
-.\.venv\Scripts\python.exe -m rsna_knee train --manifest-dir data/manifests/v1 --cache-dir data/exports/rsna-cache-v1/train-v1 --run-dir artifacts/runs/e002-baseline-fold0 --config data/exports/rsna-cache-v1/code/configs/baseline.json --fold 0
+.\.venv\Scripts\python.exe -m rsna_knee train --manifest-dir data/manifests/v1-vmohitrao-research --cache-dir data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/train-v1 --run-dir artifacts/runs/e002-baseline-fold0 --config configs/baseline.json --fold 0
 ```
 
 これは1 epochのrunを再開するコマンドではなく、同じseed・分割で最初から行う5 epochのrun。学習再開は未実装であり、既存runを上書きしない。途中停止したrunの `best.pt` だけからoptimizer状態を復元することもできない。
@@ -201,13 +204,13 @@ fold 0の動作確認後、長い改善実験の前に、少なくとも一つ�
 
 ### コードと重みを準備する
 
-学習に使ったsrcと一致する状態で、コードzipを新しい出力先へ作る。
+学習に使ったsrcと一致する状態で、コードzipを新しい出力先へ作る。e002の梱包と人工入力の提出契約確認は完了済みであり、以下を同じ出力先へ再実行しない。
 
 ```powershell
 .\.venv\Scripts\python.exe scripts/build_kaggle_bundle.py --output-dir artifacts/kaggle/e002-baseline-fold0
 ```
 
-手動でKaggleのprivate Input Datasetへ次を追加し、版とhashを記録する。
+今回のラベルは非商用のローカル研究用で、大会利用の条件は未確認。RulesとCC BY-NC 4.0を照合して採用版を確定してから、手動でKaggleのprivate Input Datasetへ次を追加し、版とhashを記録する。
 
 - `artifacts/kaggle/e002-baseline-fold0/rsna-knee-code.zip`
 - `artifacts/runs/e002-baseline-fold0/best.pt`
@@ -268,4 +271,4 @@ checkpointにはその学習で使ったconfigとラベル順が入っている�
 
 最終メモには、成功したSubmission ID、Notebook/Inputの版、Git commit、config、seed・fold、ラベル由来、checkpoint hash、実測スコア、全体時間、採用理由を残す。データ・レポート・UID一覧・cache・重みはGitへ入れず、共有できるコード・設定・集計・手順だけをmainに残す。
 
-現時点で未確認なのは、実ラベルの採用元、実MRIのdecoderと画像品質、CUDAの学習動作、実測精度・時間、Kaggle採点結果である。各段階の完了条件を実際の結果で埋めてから次へ進む。
+10月3日時点で、研究用ラベルの採用監査、ユーザーによる画像目視、CUDA/AMP実学習と実測時間、既存公開モデルのKaggle採点成功は確認済み。e002は約18分で5 epochを完了し、weak検証最良はepoch 1（BCE 0.430481）、選択後のgold macro AUCは0.487178だった。epoch増加によるweak検証の改善はなかった。未確認なのは研究用ラベルの大会利用条件、自作提出の実test decode・Kaggle全体時間・採点結果である。次は利用条件と自作提出を確認し、その後に汎用事前学習encoderを一要因の改善候補として比較する。
