@@ -25,17 +25,18 @@
 - e001-smoke-fold0が完了。学習3,386／検証821件、weak検証BCE 0.430481、選択後のgold 12クラスmacro AUC 0.487178、epoch時間205.33秒。checkpointはweak BCEで選択。これはPublic LBではない。
 - e002-baseline-fold0の5 epoch基準実験が完了。変更はepoch数1→5だけであり、再開せず同じseed・foldで初期化から実行。最良はepoch 1で、weak検証BCE 0.430481、選択後のgold macro AUC 0.487178。事前検査と最後のgold評価を含むtrain関数の所要時間は1,082.83秒（約18分、Python importを除く）。epoch数を増やしてもweak検証は改善せず、現行ランダム初期化モデルは実装上の比較基準として保存する。
 - `artifacts/kaggle/e002-baseline-fold0/` にbest.pt、コードzip、hash manifest、RESEARCH-ONLY.jsonを保存。展開したzipのsrcが学習時のhashと一致し、実checkpointを使った人工test 3検査×12所見の提出契約がvalid=true。Reportを使わず予測できる。実testのDICOM decode、Kaggle全体時間、新規アップロード・提出は未実施。
+- 提出の優先順位を判断する追加CSV診断を実施。学習側の所見別陽性率だけを全検査へ出す定数予測は、同じ検証821件・観測5,727セルのBCEが0.415327で、自作モデルの0.430481より低い。一方、自作モデルのweak macro AUCは0.557023、定数予測は0.5であり、画像の順位付け信号が全くないとは断定しない。e001/e002のweak・gold予測CSVはそれぞれhashが完全一致。集計は [提出判断の追加診断](experiments/e002-submission-review-20261003.json)。
 
 ## 次にすること
 
 1. 研究用ラベルのCC BY-NC 4.0とKaggle Rulesを照合し、大会利用の条件を確認する。今回の調査ではRules本文を取得できなかった。条件が合わなければ、gold開発非使用と大会利用の条件を確認できる別のラベル版を新manifestへ用意する。
-2. 利用条件を確認したモデルをKaggleへ手動追加し、Internet OFFの推論・採点・全体時間を確認する。今回のbundleは研究用として保持し、未確認を許可済みとして提出しない。
-3. 次の実装候補は、goldやこの競技の検証画像に合わせて開発した重みを避けた汎用事前学習encoder。ラベル・fold・seed・前処理を固定し、初期化だけ変える新runを比較する。単純なepoch増加は今回weak検証を改善しなかったため優先しない。事前学習の効果は未検証であり、重みの出所監査とGPU契約確認が必要。
+2. e002の精度向上を期待した提出は一旦保留。入力・ラベル・maskの対応と少数の学習側検査での学習動作を診断した後、汎用事前学習ResNet18への初期化変更を一条件だけ試す。goldやこの競技の検証画像に合わせて開発した重みを避け、ラベル・fold・seed・前処理を固定する。事前学習の効果は未検証であり、重みの出所監査とGPU契約確認が必要。公式の入力正規化を取り入れる場合は、初期化と同時に条件を変えず別の比較として記録する。
+3. 利用条件を確認した自作モデルで、早い段階にInternet OFFのKaggle実行・採点・全体時間を確認する。大規模な調整が終わるまで延期しない。初期改善が得られなくても、利用可能な現行モデルの一回の提出は提出経路の確認として価値がある。今回のbundleは研究用として保持し、未確認を許可済みとしてアップロード・提出しない。
 4. 有望条件だけを追加foldで確認する。Synovitisの欠損・クラス偏り、weakレポートラベルと画像goldの違いを制約として記録し、goldをcheckpoint選択やprompt調整に使わない。
 
 初回提出の採点成功と実測PublicはAPIで確認済み。My Submissionsと保存NotebookでInput版・実行時間を補完する。以後のprepare・trainには `data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/` を使用する。
 
-キャッシュ作成後の実行コマンドと段階ごとの完了条件は [after-cache.md](docs/after-cache.md) を使う。fold 0の比較基準は完成。自作提出の利用条件・採点を先に確認し、10月20〜22日は最終候補の再実行・選択に充てる。
+キャッシュ作成後の実行コマンドと段階ごとの完了条件は [after-cache.md](docs/after-cache.md) を使う。fold 0の比較基準は完成。利用条件と短い初期改善を先に確認し、自作提出の動作確認も早期に行う。10月20〜22日は最終候補の再実行・選択に充てる。
 
 ## 次へ進む条件
 

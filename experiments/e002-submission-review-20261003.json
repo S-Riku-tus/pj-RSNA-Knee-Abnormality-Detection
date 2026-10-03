@@ -1,0 +1,109 @@
+{
+  "checked_at_jst": "2026-10-03",
+  "parent_experiment": "e002-baseline-fold0",
+  "scope": "Saved CSV analysis only; no MRI decode, GPU inference, training, upload or submission",
+  "fold": 0,
+  "train_studies": 3386,
+  "valid_studies": 821,
+  "observed_validation_cells": 5727,
+  "constant_predictor_method": "Per-target mean of observed training labels; same value for every validation study; no validation/gold labels used to fit",
+  "bce_aggregation": "Mean over the same observed validation cells as infer_loader; missing targets excluded; probabilities clipped to [1e-7, 1-1e-7]",
+  "model_weak_valid_bce_from_saved_predictions": 0.4304814254837613,
+  "constant_train_prior_weak_valid_bce": 0.41532686152445875,
+  "model_weak_macro_auc_12": 0.5570226156558825,
+  "constant_weak_macro_auc_12": 0.5,
+  "weak_per_target": {
+    "ACL": {
+      "auc": 0.6420880913539967,
+      "binary_observed": 693,
+      "positive": 80.0,
+      "soft_excluded": 0
+    },
+    "MCL": {
+      "auc": 0.525974025974026,
+      "binary_observed": 683,
+      "positive": 11.0,
+      "soft_excluded": 0
+    },
+    "Medial Meniscus": {
+      "auc": 0.554454791625388,
+      "binary_observed": 750,
+      "positive": 309.0,
+      "soft_excluded": 0
+    },
+    "Lateral Meniscus": {
+      "auc": 0.5253482243694315,
+      "binary_observed": 717,
+      "positive": 104.0,
+      "soft_excluded": 0
+    },
+    "Medial OA": {
+      "auc": 0.47648153069359556,
+      "binary_observed": 442,
+      "positive": 71.0,
+      "soft_excluded": 0
+    },
+    "Lateral OA": {
+      "auc": 0.5351222145115275,
+      "binary_observed": 426,
+      "positive": 33.0,
+      "soft_excluded": 0
+    },
+    "PF OA": {
+      "auc": 0.5244107744107744,
+      "binary_observed": 466,
+      "positive": 88.0,
+      "soft_excluded": 0
+    },
+    "Effusion": {
+      "auc": 0.5707350096711798,
+      "binary_observed": 617,
+      "positive": 100.0,
+      "soft_excluded": 0
+    },
+    "Synovitis": {
+      "auc": 0.65,
+      "binary_observed": 101,
+      "positive": 100.0,
+      "soft_excluded": 0
+    },
+    "Baker's": {
+      "auc": 0.5850911216194676,
+      "binary_observed": 378,
+      "positive": 59.0,
+      "soft_excluded": 0
+    },
+    "Contusion": {
+      "auc": 0.6357587854593842,
+      "binary_observed": 266,
+      "positive": 99.0,
+      "soft_excluded": 0
+    },
+    "Fracture": {
+      "auc": 0.4588068181818182,
+      "binary_observed": 188,
+      "positive": 44.0,
+      "soft_excluded": 0
+    }
+  },
+  "e001_e002_weak_predictions_identical": true,
+  "e001_e002_gold_predictions_identical": true,
+  "inputs_sha256": {
+    "weak_manifest": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+    "model_weak_predictions": "ad8b08ac5cb4c2c75f354cdbe82490b0c4c7c2e1c599de263cf77d7212d6c825",
+    "model_gold_predictions": "bd84854faf9f11ae08d5c7ae3c28c9ccad37786a091b87124a16ae3d18dfe599",
+    "analysis_script": "54ac2b961051e8433f74fca0d4a748fd096aa897784a3921447da83ef301dce8"
+  },
+  "decision": "Defer e002 score-seeking submission; confirm label eligibility, diagnose training, run one controlled pretrained-initialization experiment; verify own Kaggle execution early without waiting for extensive tuning",
+  "limitations": [
+    "BCE and AUC measure different properties; lower constant-predictor BCE does not prove that the image model learned no ranking signal",
+    "Weak AUC uses report-derived labels; Synovitis has 100 positives and 1 negative in fold0 and is unstable",
+    "Gold58 AUC is 0.487178, but the sample is small and does not predict the hidden-test score",
+    "No gold-based checkpoint selection or tuning performed",
+    "Label CC BY-NC 4.0 competition eligibility and own Kaggle hidden-test runtime remain unverified"
+  ],
+  "references": [
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview",
+    "https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.resnet18.html"
+  ]
+}

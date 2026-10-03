@@ -2,6 +2,16 @@
 
 更新日 2026年10月3日 JST。全件キャッシュ転送後、ユーザーの「進められるところまで進める」依頼により研究用weakラベルの取得・監査・分割とローカル実学習へ進んだ。元DICOM・公開モデルは取得せず、既存npzを学習に使用した。以下では以前の検証と今回の確認を分ける。
 
+## e002の提出判断のための追加診断（10月3日）
+
+- 今回の質問には保存済みCSVの再集計で対応し、GPU推論・実MRIデコード・追加学習・モデル取得・アップロード・提出は行っていない。学習や推論コードも変更していない。
+- fold 0の学習3,386件で観測された所見別陽性率を定数予測として計算。検証やgoldから定数をfitしていない。同じ検証821件・観測5,727セルに欠損maskを適用したBCEは0.415326862。e002の保存予測からのBCEは0.430481425で、記録されたtorch集計値との差は1.2e-9未満。定数予測のBCEが低いことから、BCE単独を画像学習の有効性の証拠とはしない。
+- 観測されたbinary weakラベルのmacro AUCは自作モデル0.557022616、定数予測0.5。BCEとAUCは異なる性質を測るため、「画像信号を全く学習していない」とは断定しない。特にSynovitisは陽性100・陰性1であり、weak macro AUCも不安定な指標を含む。gold 58件のAUCを隠しtestの予測値へ読み替えない。
+- e001/e002のweak予測CSV同士、gold予測CSV同士のSHA-256がそれぞれ一致。5 epoch実験から提出するbest.ptはepoch 1が選ばれており、新しい予測改善はない。
+- 識別子やレポートを含まない集計・元ファイルhash・計算方法・判断は `experiments/e002-submission-review-20261003.json`。学習側だけの陽性率計算、UID集合一致、BCEの再現、定数予測AUC=0.5をassertで確認した。
+- 公式Overviewの検索索引で評価が12所見平均ROC-AUC、Internet OFF・9時間制限を再確認。Rules本文と採用ラベルのページ本文は今回のWeb取得でも開けず、大会利用の許可・禁止を確定していない。汎用事前学習候補について [Torchvision ResNet18の公式資料](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.resnet18.html) を確認。実装・重み取得・効果検証は次工程。
+- 診断JSONの構造と比較結果、ローカルリンク49件、差分の空白を確認。学習・推論・Notebook・設定・既存チェックの実装には変更がなく、全31 unittestは前回の成功結果を維持している。今回のCSV診断には上記assertを使用し、GPUテストは再実行していない。
+
 ## ラベル監査・固定分割・ローカル研究（10月3日）
 
 - 認証済み公式APIから自分の提出履歴を読み、既存の1提出がCOMPLETE・Public 0.924と確認。提出日時は10月2日05:57:22 UTC、提出URLのscriptVersionId=354569007。該当Notebookの最新版metadataはVersion 1で、Inputはraptor-knee-widedense、Internet OFF。APIが返すInput参照は版なしなので、保存Input版・実行時間・global IDと表示版の直接照合は未確認。新規提出はしていない。結果はp001として台帳へ保存。
