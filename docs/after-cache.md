@@ -1,6 +1,6 @@
 # キャッシュ作成後の学習と提出手順
 
-更新日 2026年10月2日 JST。先に説明した「1. 公開Notebookで採点を通す、2. ローカルCUDA環境を整える、3. Kaggleで画像キャッシュを作る」に続く作業を説明する。これらを実行済みと確認した記録はまだない。以下のコマンドは利用者が実行する手順であり、この資料の作成時には実データ取得・実MRI処理・学習・提出を行っていない。
+更新日 2026年10月3日 JST。先に説明した「1. 公開Notebookで採点を通す、2. ローカルCUDA環境を整える、3. Kaggleで画像キャッシュを作る」に続く作業を説明する。10月3日にCUDA利用可とKaggleの全件exportを確認し、ローカル取得・全件hash検査を完了した。実学習と自作モデルの採点は未実施。段階ごとの現状は [PROJECT.md](../PROJECT.md)、確認範囲は [validation.md](validation.md) を参照する。
 
 元MRIの前処理と提出推論はKaggle、キャッシュからの学習はこのPCのRTX 4090を使う。ブラウザでKaggleを開いても、このPCのGPUでは計算されない。ローカルに全DICOMや例示testのキャッシュを置く必要はない。
 
@@ -41,6 +41,37 @@ data/exports/rsna-cache-v1/
 ```
 
 `export.json` がこの直下にあることを確認する。zipの外側にもう一段フォルダが付いた場合は、実際に `export.json` があるフォルダを検査コマンドへ指定する。元DICOMはこの転送に含めない。
+
+### 大きいZIPを取得できない場合のファイル単位転送
+
+10月3日、ユーザーのprivate Notebook `rsraki/rsna-knee`、Version 1（URLのscriptVersionIdは354838181）から、CLI/APIで全件exportを取得・検査した。4,407検査、4,423ファイル、7,785,521,448 bytes。Notebook本体のダウンロードには画像キャッシュは含まれないため、Outputを別途取得する。
+
+Kaggle公式CLIの `kernels output` はOutputをファイル単位で取得する。大きいZIPを使う必要はない。ただし、確認したCLI 2.2.4では版のsuffixを解析してもOutput要求へ渡していなかった。また、このNotebookにSDKの `version_label=1` を渡すと404になった。単に `/354838181` をCLIのslug末尾へ付ける方法にはしない。URLのscriptVersionIdとNotebookのVersion番号は別である。[公式CLI資料](https://github.com/Kaggle/kaggle-cli/blob/main/docs/kernels.md)
+
+このリポジトリの [download_cache_output.py](../scripts/download_cache_output.py) は、取得前後に最新版が要求したVersion番号であることを確認する。最新版が異なれば停止するため、対象版の取得が完了するまでは新しいNotebook版を保存しない。すでに最新版が変わった場合は、対象版のOutputからprivate Datasetを作成するなど、対象を固定できる別の経路を検討する。
+
+CLIは学習環境と分け、Git除外の `artifacts/tools/kaggle-venv/` に導入済み。新しい端末で準備する場合は次を実行する。
+
+```powershell
+uv --cache-dir .uv-cache venv --python .venv/Scripts/python.exe artifacts/tools/kaggle-venv
+uv --cache-dir .uv-cache pip install --python artifacts/tools/kaggle-venv/Scripts/python.exe kaggle==2.2.4
+.\artifacts\tools\kaggle-venv\Scripts\kaggle.exe auth login
+```
+
+ログインは利用者がブラウザで行う。CLIは通常の認証機構を使い、スクリプトは認証値を表示・コピーしない。APIキーやトークンをチャットやGitへ保存しない。[公式認証資料](https://github.com/Kaggle/kaggle-cli/blob/main/skills/references/auth.md)
+
+まずmetadataだけを確認し、その後に全ファイルを取得する。Version番号とscriptVersionIdはこの保存版専用の値であり、別の実行では実際の値へ変える。
+
+```powershell
+.\artifacts\tools\kaggle-venv\Scripts\python.exe scripts/download_cache_output.py --kernel rsraki/rsna-knee --version 1 --script-version-id 354838181 --dest data/exports/rsraki-rsna-knee-sv354838181 --metadata-only
+.\artifacts\tools\kaggle-venv\Scripts\python.exe scripts/download_cache_output.py --kernel rsraki/rsna-knee --version 1 --script-version-id 354838181 --dest data/exports/rsraki-rsna-knee-sv354838181 --workers 4
+```
+
+取得先は `data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/`。転送の記録はその一つ上の `transfer.json` に保存する。対象版・export hashが同じ場合、同じコマンドを再実行してSHA-256が一致する取得済みファイルを再利用できる。不一致のファイルは再取得し、検証した `.part` を置き換える。ファイル途中からのHTTP Range再開ではなく、完成したファイルを単位とする再開である。
+
+取得器はexportの列挙ファイルだけを4並列で取得し、全ページの一覧、サイズ・hash、保存先の範囲、空き容量を検査する。元DICOM・モデルの取得、MRIデコード、学習、外部へのアップロード・提出は行わない。全件取得後に既存のexport検査器も実行し、成功した場合のみ `transfer_complete=true` を記録する。
+
+この取得先を使う場合、以降に記載した `data/exports/rsna-cache-v1/` はすべて `data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/` に読み替える。移動して既存版を上書きする必要はない。
 
 ### ローカルで転送の検査を行う
 

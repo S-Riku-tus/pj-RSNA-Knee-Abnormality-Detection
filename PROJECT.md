@@ -1,6 +1,6 @@
 # RSNA Knee プロジェクトの現在地
 
-更新日 2026年10月2日 JST。目的は膝MRIの12所見を予測するKaggleコンペに参加し、採点に通る比較基準から段階的に改善することです。
+更新日 2026年10月3日 JST。目的は膝MRIの12所見を予測するKaggleコンペに参加し、採点に通る比較基準から段階的に改善することです。
 
 ## 現在の状態
 
@@ -8,22 +8,25 @@
 - 調査の正本は [docs/competition.md](docs/competition.md)。原文は [ユーザー提供分析](docs/research/user-analysis-20261002.txt)。
 - 今後の判断と三週間の計画は [docs/roadmap.md](docs/roadmap.md)。ユーザーはKaggleでキャッシュを作成し、ローカルGPUで学習する経路を選択済み。
 - ユーザー報告で初回Notebookの提出受付に成功。採点の完了・Publicスコア・Notebook版はまだ未確認。
-- 自作パイプライン向けの画像キャッシュ取得、weakラベル取得、ローカル学習は未実施として管理する。公開Notebook上の入力取得状況は未確認。
+- weakラベル取得とローカル学習は未実施。Kaggleで作成済みの自作パイプライン用全件画像キャッシュのローカル転送・検査は完了。
+- 10月3日、ユーザーの依頼でprivate Notebook `rsraki/rsna-knee` のVersion 1（ユーザー提示のscriptVersionIdは354838181）へAPIでアクセス。全件exportのcomplete=true、4,407検査、4,423ファイル、7,785,521,448 bytes、現在のsrcとのhash一致を確認した。
+- 大きいZIPを避ける [download_cache_output.py](scripts/download_cache_output.py) を追加。取得先は `data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/`。版確認、4並列、ファイル単位のhash検証・再開、取得後のexport検査に対応する。
+- 全4,423ファイルを取得し、4,407検査のexport検査がvalid=trueで成功。サイズ・hash・UID・元CSV・src・前処理が一致。取得記録は親ディレクトリのtransfer.jsonでtransfer_complete=true。元DICOM、モデルは取得せず、実学習も始めていない。
 - 自作コードの検証範囲は [validation.md](docs/validation.md) に記録。
 - ベースライン設定は [configs/baseline.json](configs/baseline.json)。学習コマンドはCUDAがなければ停止する。
 - 現在の端末はRTX 4090、VRAM 24,564MiB、ドライバ591.86。Cドライブの空き約485GBに対して公式元画像は569.76GBのため、全取得しない。
-- この端末にPython 3.12.13の `.venv` を新規準備。numpy 2.5.3、pydicom 3.0.2、Pillow 12.3.0、ruff 0.16.10を導入済み。torch/torchvisionは未導入で、CUDAのPython利用は未確認。
+- Python 3.12.13の専用 `.venv` にtorch 2.10.0+cu128、torchvision 0.25.0+cu128が導入され、CUDA利用可・RTX 4090認識を10月3日に確認。学習環境とは別の `artifacts/tools/kaggle-venv/` にKaggle CLI 2.2.4を導入。人工データのunittest 19件が成功した。実学習は開始していない。
 - [00_prepare_cache.ipynb](notebooks/00_prepare_cache.ipynb) と転送確認用 [verify_cache_export.py](scripts/verify_cache_export.py) を追加。Notebookは未実行テンプレート。
 - 手順1〜3の具体的な操作を整理。両Notebookはコードzipと展開済みInputの両形式に対応し、GPU開始手順へ版を固定したPyTorch導入例を追記した。実データ処理・CUDA導入は未実施のまま。
-- 続く [手順4〜9](docs/after-cache.md) を追加。キャッシュ転送検査、weakラベルの選定・出所監査、固定fold、1 epochと5 epochの別run、自作モデルの採点、改善比較、最終選択を具体化した。公開ラベルの採用元は未確定であり、手順の実行結果はまだない。
+- 続く [手順4〜9](docs/after-cache.md) にファイル単位転送の実行方法を追記。weakラベルの採用元は未確定であり、ラベル監査、固定fold、学習、採点はこれから行う。
 
 ## 次にすること
 
 1. 大会ルールに同意し、参加登録を済ませる。登録期限は10月16日08:59 JST。
 2. 受付済みの初回提出をMy Submissionsで確認し、採点成功、実測Publicスコア、Notebook版、Input版、実行時間を記録する。提出受付と採点成功を区別する。
-3. この端末の専用venvへCUDA対応のtorch/torchvisionを導入し、[環境手順](docs/gpu-start.md)でCUDAと人工画像forwardを確認する。
-4. KaggleでCSV監査と10検査のキャッシュ・目視確認を行い、問題がなければ全件を作る。
-5. private Outputを手動でダウンロードし、検査数、ファイルhash、ソース、configを検査する。元DICOMは移さない。
+3. CUDA利用は確認済み。[環境手順](docs/gpu-start.md)の人工画像CUDA forwardを終えていなければ確認する。実学習はラベルと分割の監査後に行う。
+4. 全件exportの転送検査は完了。以後のprepare・trainでは取得済みの `data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/` を使用する。
+5. 原画像とcacheの目視、coverageの失敗・fallbackを確認した記録を残す。今回の転送検査だけで画像品質が確認済みとはしない。
 6. 公開ラベルの版・ライセンス・方法・gold使用状況を記録してprepareし、ローカルのfold 0学習へ進む。
 7. 学習後の重みと対応コードを手動でKaggleへ追加し、オフライン提出推論・採点を確認する。
 

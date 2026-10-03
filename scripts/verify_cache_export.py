@@ -6,6 +6,11 @@ from pathlib import Path
 
 from rsna_knee.contracts import ID, preprocess_fingerprint, read_csv, sha256, source_hashes
 
+try:
+    from .export_paths import comparable_path
+except ImportError:  # Running directly as python scripts/verify_cache_export.py.
+    from export_paths import comparable_path
+
 
 def verify(root):
     root = Path(root).resolve()
@@ -21,7 +26,7 @@ def verify(root):
         raise ValueError("Export file inventory differs from the recorded hash list")
     for name, metadata in record["files"].items():
         path = (root / name).resolve()
-        path.relative_to(root)
+        comparable_path(path).relative_to(comparable_path(root))
         if path.stat().st_size != metadata["bytes"] or sha256(path) != metadata["sha256"]:
             raise ValueError(f"Transferred file hash/size mismatch: {name}")
     if record["source_sha256"] != source_hashes():
