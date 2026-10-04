@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-04T07:39:58Z",
+  "checked_date_jst": "2026-10-04",
+  "status": "conditional_proposal_not_implemented_or_executed",
+  "scope": "既存の実装、取得済み公開ソース、小さいキャッシュ metadata の読み取りによる条件整理。実 MRI デコード、元 DICOM 取得、GPU 操作、学習、外部アップロード・提出は行っていない。検査・シリーズ識別子は記録しない。",
+  "repository_evidence": {
+    "imaging": {
+      "path": "src/rsna_knee/imaging.py",
+      "sha256": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+      "normalized_lf_sha256": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+      "bytes": 8848,
+      "matches_exported_imaging_hash": true
+    },
+    "contracts": {
+      "path": "src/rsna_knee/contracts.py",
+      "sha256": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+    },
+    "cache_notebook_generator": {
+      "path": "scripts/generate_cache_notebook.py",
+      "sha256": "16cc1fb6eb8fb520f61b634b6d3aab36630306a1e2df3fa556f35b05643908d3"
+    },
+    "cache_transfer_validator": {
+      "path": "scripts/download_cache_output.py",
+      "sha256": "f93a2b74b5cc22fa017ffe5dede302db2f5b0d8717b952f75304976345fdaa2b"
+    },
+    "cache_export_verifier": {
+      "path": "scripts/verify_cache_export.py",
+      "sha256": "db8ecb94009628c2479d74342d6fd0504d3d7c22103241d3324cf438c91c42a8"
+    },
+    "baseline_config": {
+      "path": "configs/baseline.json",
+      "sha256": "b11fac2b0389772aebff615602ecdcd6d5ebda4b0f3d736a5e36fcb529813f05",
+      "purpose": "現在の画素前処理の参照。次の学習条件は e008/e009 の完了後に別途固定する。"
+    }
+  },
+  "current_cache": {
+    "root": "data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1",
+    "metadata": {
+      "path": "data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/train-v1/cache.json",
+      "sha256": "46cd2fb927c611bd00fcad30efdeba5afbc38c4fd32b1152d85013bb2080707c",
+      "schema_version": 1,
+      "split": "train",
+      "preprocess_fingerprint": "c382a673469a75c9eb5fd20b953579a5ea5d4a3ad696de1dbd5cec4740ef2850",
+      "raw_train_csv_sha256": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+      "train_series_csv_sha256": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3"
+    },
+    "coverage": {
+      "path": "data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/train-v1/coverage.json",
+      "sha256": "0fe345ed3377c7513c11685e80b27ab3d73c27725d60d720799524641d08926a",
+      "studies": 4407,
+      "valid_windows_per_study": 24,
+      "valid_series_per_study": 3,
+      "physical_position_ordered_series": 13221,
+      "recorded_errors_total": 0,
+      "geometry_metadata_available": false,
+      "geometry_limitation": "記録はシリーズの並び順方式、有効 window 数、エラーのみ。PixelSpacing、元 matrix、FOV、物理 crop 境界は保存されていない。"
+    },
+    "export": {
+      "path": "data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/export.json",
+      "sha256": "4e5c42ab1039dfcee859d0c65f3c47ea72c9fd68257de080555ec406eddffde7",
+      "complete": true,
+      "studies_requested": 4407,
+      "studies_total": 4407,
+      "recorded_output_bytes": 7785521448,
+      "recorded_runtime": {
+        "numpy": "2.1.3",
+        "pydicom": "3.0.2",
+        "Pillow": "12.3.0"
+      }
+    },
+    "rebuild_required": true,
+    "rebuild_reason": "既存 192 px の全画面 resize 済み cache から、元の PixelSpacing と元画素に基づく 140 mm crop を再現できない。元 DICOM は Kaggle に置いたまま、新しい cache を生成する。"
+  },
+  "one_factor_comparison": {
+    "hypothesis": "同じ 192 px 入力で画像中心の物理 crop を導入すると、取得 FOV の差を減らせる可能性がある。Medial Meniscus などの改善は未検証で、周辺構造の切り落としによる悪化もあり得る。",
+    "single_changed_factor": "全画面を resize する前に、元解像度の正規化済み uint8 画像を指定 mm の画像中心領域へ crop すること。",
+    "candidate_requested_crop_mm": [140.0, 140.0],
+    "candidate_is_optimality_claim": false,
+    "fixed_preprocessing": {
+      "legacy_version": "v1",
+      "image_size": [192, 192],
+      "max_series": 3,
+      "series_selection": "Fluid_Sensitive、Fat_Suppression の優先順位と既存の決定的な tie-break を維持。異なる Anatomical_Plane を一つずつ選び、足りない slot は既存順に補う。",
+      "geometric_order": "ImageOrientationPatient の共通法線へ ImagePositionPatient を投影し、既存の幾何検証と並び順を維持。幾何が全て欠ける場合に限る InstanceNumber fallback も維持。",
+      "decoded_slice_contract": "2D、同一 matrix の series。RescaleSlope/Intercept と MONOCHROME1 の max+min-pixel 変換を維持。",
+      "normalization_domain": "選択された各 series の全 slice 全画素。crop より前に計算する。",
+      "percentiles": [1, 99],
+      "normalization": "clip((volume-lo)/(hi-lo),0,1) の後に np.rint(...*255).astype(uint8)。",
+      "crop_insertion_point": "既存 full-volume 正規化と uint8 量子化の後、既存 PIL resize の前。",
+      "resize_library": "Pillow",
+      "resize_interpolation": "Image.Resampling.BILINEAR",
+      "windows_per_series": 8,
+      "center_selection": "np.rint(np.linspace(0,N-1,8)).astype(int)",
+      "slice_span_fraction": [0.0, 1.0],
+      "channels": "各中心 i に対する [i-1,i,i+1]。端では既存の clip を維持。",
+      "windows_per_study": 24,
+      "images_shape_per_study": [24, 3, 192, 192],
+      "images_dtype": "uint8",
+      "mask_shape": [24],
+      "mask_dtype": "bool",
+      "window_mask_and_failed_series_policy": "crop 導入を理由に series/slice/window の選択や既存の失敗扱いを暗黙に変えない。coverage 差は別途監査する。",
+      "model_input_conversion": "比較する既存モデルの uint8-to-tensor 変換を維持。公開 CoAt の ImageNet normalization は同時に導入しない。"
+    },
+    "fixed_training_conditions": [
+      "同じ元 CSV と weak label manifest/hash、gold 除外と欠損ラベル mask。",
+      "同じ study/report/供給 group の fold assignment、seed、fold、初期重み hash。患者独立性は確認なしに断定しない。",
+      "同じ backbone、pooling、BN 条件、loss、optimizer、scheduler、augmentation、epoch 上限、batch/accumulation。",
+      "e008/e009 完了後に固定する事前定義の weak validation checkpoint 選択規則。gold 値や public LB は checkpoint 選択に使わない。",
+      "同じ training/validation 検査集合と対象ラベル順、学習・推論で共通の前処理、Report 不要の推論契約。",
+      "両 arm は同じ初期化から学習する。crop arm だけを既存学習済み checkpoint から fine-tune する比較は行わない。"
+    ]
+  },
+  "physical_geometry_contract_to_freeze_before_pixels_or_training": {
+    "crop_center": "画像 matrix の中心。解剖学的位置推定や検出器は導入しない。",
+    "row_spacing_mm": "DICOM PixelSpacing[0]",
+    "column_spacing_mm": "DICOM PixelSpacing[1]",
+    "requested_rows": "round(requested_height_mm / row_spacing_mm)",
+    "requested_columns": "round(requested_width_mm / column_spacing_mm)",
+    "independent_axes": true,
+    "rounding_and_center_convention": "pixel 数の丸め、偶数/奇数時の中心と整数境界を事前に固定し、train/inference で一致させる。",
+    "border_policy": "native FOV が要求 mm より小さい軸の clamp または pad を prototype 前に明記して一つに固定。現在は未選択。clamp 時は実際の mm サイズを記録し、140 mm 達成とは扱わない。pad 時は埋める値と配置を固定する。",
+    "spacing_policy": "欠損、非有限、非正値、非正方 pixel、series 内で変動する spacing の扱いを事前に決める。0.5 mm の暗黙 fallback はしない。変動 spacing の読み替えや series 除外で比較要因を増やさない。",
+    "required_private_metadata": [
+      "native rows/columns と row/column PixelSpacing、各軸 FOV。",
+      "要求 crop mm、中心、実際の整数境界、実際の mm サイズ、clamp/pad/failure の分類。",
+      "series 内 spacing の一貫性、選択 series/中心 slice の baseline との一致、window coverage。",
+      "Notebook saved version、Input の版、source/config/manifest/hash、decode/resize ライブラリの版。"
+    ],
+    "unresolved_anatomical_risks": "画像中心と膝中心は一致するとは限らない。140 mm で側副靱帯、半月板、骨端や Baker's cyst を切る可能性を少数 QC で確認する。"
+  },
+  "small_kaggle_pilot": {
+    "status": "proposal_only_not_started",
+    "training_studies_target_range": [24, 32],
+    "selection": "固定済み weak training partition から事前に選択し、gold 検査とその study/report/供給 group を除外する。検証 fold の症例や gold ラベル値・gold metric による crop 調整をしない。対象を private manifest と hash で固定する。",
+    "representation": "Kaggle 上の header audit で plane、matrix、row/column spacing、FOV、小 FOV/非正方 pixel/画像中心ずれ等を確認する。必要な層の存在・実数は未確認。",
+    "first_step": "画素を読む前に header だけで spacing/FOV と border policy の成立を確認する。この記録作成では header 取得も画素デコードも行っていない。",
+    "paired_qc": "将来の Kaggle 試作では同じ検査・series・slice の全画面版と crop 版を並べ、各 plane の中心と端側 window で周辺構造の保持、mask、切れ方を確認する。これは画質・入力 QC であり精度検証ではない。",
+    "pretraining_validation_requirements": [
+      "crop OFF で旧 cache の pixels/masks と一致する回帰確認。",
+      "人工の非正方 pixel、境界、小 FOV、欠損/異常 spacing、奇数/偶数 matrix の crop 契約確認。",
+      "train/inference 共通の前処理と Report 不要の提出入力契約の確認。",
+      "既存 CUDA 学習チェックの維持。",
+      "所要時間、圧縮 NPZ サイズ、最大 RAM/working 容量、coverage 差を測り、全面 cache の見積りを更新。"
+    ],
+    "incomplete_export": "pilot は complete=false の QA 用成果物として扱う。現 transfer/verify は全件 complete schema-1 のみ受理するため、この pilot を学習用の complete export として偽装しない。任意の 24-32 件を選ぶ機能と pilot 専用検証/必要時の取得契約は将来別途準備する。",
+    "gold_in_full_cache": "全件 cache が gold 画像を含むことと、pilot QC・学習・checkpoint 選択への gold 使用を分ける。全件 cache を生成しても gold/group 除外は学習 manifest で維持する。"
+  },
+  "capacity": {
+    "units": "bytes は十進整数、GB は 10^9 bytes、GiB は 2^30 bytes。以下は画像 tensor の raw bytes のみ。",
+    "formula": "studies * 3 series * 8 windows * 3 channels * 192 * 192 * 1 byte",
+    "image_raw_bytes_per_study": 2654208,
+    "studies_24_single_arm_raw_bytes": 63700992,
+    "studies_32_single_arm_raw_bytes": 84934656,
+    "studies_32_paired_full_and_crop_raw_bytes": 169869312,
+    "studies_4407_single_arm_raw_bytes": 11697094656,
+    "studies_4407_paired_full_and_crop_raw_bytes": 23394189312,
+    "current_generator_raw_image_guard_bytes": 18000000000,
+    "current_generator_working_free_margin_bytes": 1000000000,
+    "current_generator_output_guard_bytes": 18000000000,
+    "guard_is_verified_current_account_quota": false,
+    "interpretation": "192 px と 24 windows を維持すれば crop で tensor 形状や raw 容量は増えない。1 arm 全 4407 件の raw bytes は現 18 GB guard 内。全画面と crop の 2 arm 全件を同一 Output に置く raw 合計は guard を超える。旧 full-frame export を保持し、新 crop は別 Output/転送先へ保存する。",
+    "compressed_size_unknown": "旧 export 約 7.786 GB は参考値のみ。背景除去後の圧縮率は未測定であり、旧値から crop の Output 容量を保証しない。cache metadata、code、manifest と account の現在の保存容量・working 空きも別途確認する。",
+    "sharding": "通常の 192 px 単 arm はまず一つの全件 export を検討する。計測または account 制約で分割する場合のみ、明示した private 検査集合の disjoint な shard と全 4407 件の union、同一前処理 fingerprint、元 CSV hash、全ファイル hash を検証する新しい契約が必要。cache shard は fold と独立し、group/fold assignment は変更しない。"
+  },
+  "compatibility_and_transfer_constraints": {
+    "current_fingerprint_algorithm": "SHA256(json.dumps({settings: config.preprocess, implementation: SHA256(imaging.py の UTF-8/LF 正規化全文)}, sort_keys=True))。",
+    "whole_imaging_source_hash_dependency": true,
+    "inactive_branch_change_breaks_legacy_fingerprint": true,
+    "cache_checkpoint_contract": "load_cached、cache origin、checkpoint/inference は前処理 fingerprint の一致を要求する。画像 shape の一致だけでは互換とみなせない。",
+    "export_verifier_contract": "verify_cache_export は export の source/file/hash 整合性と現在の imaging.py hash/preprocess settings/fingerprint を検証する。model/logging の変更とは異なり imaging.py の変更は旧 cache に非互換。",
+    "configuration_only_is_insufficient": "現在の imaging.py は物理 crop key を解釈しない。config に crop key を加えるだけでは crop が実行されず、fingerprint だけが変わる。将来の実装では前処理 version/mode と許可 key の明示検証が必要。",
+    "future_design_requirement": "現実験が完了するまで src を維持する。その後、旧 v1 pixel 契約と新 crop 契約を区別した version dispatch と fingerprint/validator を設計し、旧 v1 の回帰一致を確かめる。候補は旧 imaging.py を不変に保ち、crop 実装を別 module として version ごとに hash する方式。具体的な実装はまだ未確定で、整合性チェックを単に緩めない。",
+    "baseline_cache_reuse_condition": "旧 full-frame cache をそのまま再利用するには、上記の明示的で検証済みな legacy 互換性が必要。成立しない場合は新 contract で full-frame arm も再生成し、旧画素との一致を先に検証する。",
+    "current_full_export_paths": ["train-v1", "code/configs/baseline.json"],
+    "current_full_export_cardinality": 4407,
+    "current_limit_semantics": "LIMIT は元 train.csv の prefix を選び、任意の QC 検査や shard 集合を指定する機能ではない。LIMIT 付き export は complete=false。",
+    "current_transfer_requires_complete": true,
+    "current_verifier_requires_all_raw_train_studies": true,
+    "pilot_or_shards_are_supported_by_current_transfer": false,
+    "prohibited_shortcuts": "complete=true への書換え、raw/train.csv の切詰め、hash/fingerprint 検証の無効化、旧 export や run の上書きで pilot/shard を全件契約へ合わせない。"
+  },
+  "public_reference": {
+    "notebook_ref": "dreaddevelopment/knee-mri-twelve-findings-from-a-single-model",
+    "url": "https://www.kaggle.com/code/dreaddevelopment/knee-mri-twelve-findings-from-a-single-model",
+    "observed_version_number": 7,
+    "source_obtained_date_jst": "2026-10-04",
+    "source_path": "artifacts/research/20261004-public-contract/dreaddevelopment/knee-mri-twelve-findings-from-a-single-model-latest/source.py",
+    "source_sha256": "9a86329225c8f975967bfa563fadc9ed06ce9d44c83c232439b0f5a1116a623e",
+    "source_normalized_lf_sha256": "859aae12ecea593b45ab0a5f6463fa573cd3083f340c161e920f10fbba29e81b",
+    "source_bytes": 22446,
+    "source_metadata_sha256": "3cbb4c26bb6d10eba4ce5952ff4a496dd3bdcd41ce4714c3ae20ed4ae994708b",
+    "provenance_record": "docs/research/public-reproduction-contract-20261004.json",
+    "actual_crop": "PixelSpacing[0] 一つから round(140/max(ps,1e-3)) の正方 pixel 数を作り、min(cpx,min(h,w)) に clamp して画像中心を crop。欠損 spacing は 0.5 mm fallback。",
+    "geometry_difference_from_proposed_contract": "提案は row/column spacing を別々に扱い、欠損値と FOV 不足を明示する。公開実装そのものの完全再現を目的とした contract ではない。",
+    "other_public_changes_not_to_import": {
+      "render_image_size": [336, 336],
+      "encoder_image_size": [384, 384],
+      "series_slots": 5,
+      "slices_by_slot": [18, 14, 12, 8, 12],
+      "selected_slices_total": 64,
+      "slice_span_fraction": [0.06, 0.94],
+      "evaluation_windows": 42,
+      "normalization": "選択 slice のみで percentile 2/98、float 正規化、crop/INTER_AREA resize の後に uint8 truncate。",
+      "resize_interpolation": "cv2.INTER_AREA",
+      "model_normalization": "ImageNet mean/std",
+      "model_and_selection": "CoAtNet と公開重み。取得 source には gold を使う model/blend 選択の履歴説明があり、こちらの gold 除外実験へ導入しない。"
+    },
+    "interpretation": "公開 source には物理 crop 以外の複数の変更が含まれるため、公開スコアから 140 mm crop 単独の効果を帰属できない。作者報告と自分の再現値は別に扱う。"
+  },
+  "conditional_next_stage_decision": {
+    "first_wait_for": ["e008 C 20 epoch の最終結果・診断", "e009 BN freeze 20 epoch の最終結果・診断"],
+    "interim_medial_meniscus_decline_is_crop_causal_evidence": false,
+    "order": [
+      "完了済みの時間/BN 比較から、事前の weak 検証規則に従って次の学習時間と BN 条件を固定する。",
+      "物理 crop の version/hash/legacy 互換性、spacing と border、pilot 検証契約を先に具体化する。",
+      "Kaggle 上で固定した非 gold/group training 24-32 件の header audit と paired QC、時間/容量/coverage 計測を行う。",
+      "QC と互換性・容量の条件が満たされる場合に限り、新しい全件 crop cache を Kaggle で作り、別ディレクトリへ転送・検証する。",
+      "192 px の matched full-frame/crop 学習を同じ初期化・fold・seed・時間・BN 条件で比較する。",
+      "事前定義した weak macro AUC、対象別 AUC/BCE、coverage を比較し、弱いクラスを含む悪化を確認する。有望なら同じ条件をもう一つの group fold で確かめる。"
+    ],
+    "proceed_gates": [
+      "旧 v1 の pixel/mask 回帰一致と新 version の人工 geometry/提出契約検証が成立。",
+      "spacing/FOV の監査、事前固定した border policy、QC での周辺構造保持が成立。",
+      "crop arm が想定外の series/window 欠損を増やしていないか確認され、比較集合の一致が成立。",
+      "Kaggle の current account 容量と見積りが成立し、新しい export に source/config/Input 版と全ファイル hash を保存可能。"
+    ],
+    "stop_or_revise_gates": "QC で重要構造が切れる、spacing/FOV 不明が多い、coverage が変わる、legacy 互換性を説明できない場合は全面 cache/学習へ進まず、その原因を解決する。",
+    "prediction_of_improvement": "未確定。20 epoch/BN 結果を待っても前処理の有利性は直接証明されず、matched 実験が必要。",
+    "gold_and_public_lb_policy": "gold は学習・checkpoint/crop 選択に使用しない。必要な固定後の評価や手動採点は weak 選択と区別して別途記録し、公開作者スコアを自分の再現値として記載しない。"
+  }
+}

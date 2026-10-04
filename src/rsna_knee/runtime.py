@@ -15,6 +15,7 @@ import torch
 from torch.nn import functional as F
 from torch.utils.data import DataLoader, Dataset
 
+from .checkpoints import CheckpointTracker, OptimizerStepCounter, selection_criterion, write_progress
 from .contracts import (
     ID,
     SUBMISSION_COLUMNS,
@@ -202,6 +203,7 @@ def train(manifest_dir, cache_dir, run_dir, config, fold, *, diagnostic_studies=
     training, validation = check_split(weak, gold, fold, config["n_folds"])
     diagnostics = diagnostic_settings(config)
     diagnostic_mode = diagnostic_studies is not None
+    criterion = selection_criterion(config, diagnostic_mode=diagnostic_mode)
     if diagnostic_mode:
         if type(diagnostic_studies) is not int or diagnostic_studies < 1:
             raise ValueError("diagnostic_studies must be a positive integer")
@@ -254,7 +256,9 @@ def train(manifest_dir, cache_dir, run_dir, config, fold, *, diagnostic_studies=
         model.parameters(), lr=settings["learning_rate"], weight_decay=settings["weight_decay"]
     )
     scaler = torch.amp.GradScaler("cuda", enabled=settings["amp"])
+    step_counter = OptimizerStepCounter(optimizer)
     out.mkdir(parents=True, exist_ok=True)
+    checkpoints = CheckpointTracker(out, config, fold, diagnostic_mode=diagnostic_mode)
     dump_json(out / "config.json", config)
     dump_json(
         out / "run.json",
@@ -286,8 +290,17 @@ def train(manifest_dir, cache_dir, run_dir, config, fold, *, diagnostic_studies=
             "checkpoint_selection": (
                 "minimum selected training-subset BCE; memorization diagnostic, not holdout evaluation"
                 if diagnostic_mode
-                else "minimum weak validation masked BCE; gold never used for selection"
+                else (
+                    "maximum weak validation macro AUC over all 12 targets; ties minimum masked BCE then earliest epoch; "
+                    "gold never used for selection"
+                    if criterion == "auc"
+                    else "minimum weak validation masked BCE; gold never used for selection"
+                )
             ),
+            "checkpoint_selection_criterion": criterion,
+            "checkpoint_milestones": checkpoints.milestones,
+            "checkpoint_resume_supported": False,
+            "optimizer_step_tracking": "Optimizer post-step hook counts actual calls; GradScaler skipped calls excluded",
         },
     )
     if train_eval_rows or diagnostic_mode:
@@ -303,8 +316,22 @@ def train(manifest_dir, cache_dir, run_dir, config, fold, *, diagnostic_studies=
                 "note": "Training partition only; not an independent validation set",
             },
         )
-    history, best, start_time = [], float("inf"), time.perf_counter()
+    history, start_time = [], time.perf_counter()
     extra_eval_seconds = 0.0
+
+    def progress(epoch, completed, status):
+        write_progress(
+            out,
+            epoch,
+            settings["epochs"],
+            completed,
+            len(training_loader),
+            step_counter,
+            time.perf_counter() - start_time,
+            status,
+        )
+
+    progress(1, 0, "training")
     if diagnostic_mode:
         initial_predictions, _, details = diagnostic_inference(model, valid_loader, "cuda")
         dump_json(
@@ -312,6 +339,8 @@ def train(manifest_dir, cache_dir, run_dir, config, fold, *, diagnostic_studies=
             prediction_diagnostics(index_studies(validation), index_studies(initial_predictions), details),
         )
     for epoch in range(settings["epochs"]):
+        previous_steps, previous_opportunities = step_counter.steps, step_counter.opportunities
+        progress(epoch + 1, 0, "training")
         model.train()
         optimizer.zero_grad(set_to_none=True)
         losses = []
@@ -329,9 +358,13 @@ def train(manifest_dir, cache_dir, run_dir, config, fold, *, diagnostic_studies=
             if (step + 1) % accumulation == 0 or step + 1 == len(training_loader):
                 scaler.unscale_(optimizer)
                 torch.nn.utils.clip_grad_norm_(model.parameters(), 1)
+                step_counter.opportunity()
                 scaler.step(optimizer)
                 scaler.update()
                 optimizer.zero_grad(set_to_none=True)
+            if (step + 1) % 500 == 0 or step + 1 == len(training_loader):
+                progress(epoch + 1, step + 1, "training")
+        progress(epoch + 1, len(training_loader), "validating")
         if log_diagnostics:
             predictions, valid_loss, details = infer_loader(model, valid_loader, "cuda", return_details=True)
         else:
@@ -343,16 +376,26 @@ def train(manifest_dir, cache_dir, run_dir, config, fold, *, diagnostic_studies=
             "train_batch_mean_bce": sum(losses) / len(losses),
             "diagnostic_train_masked_bce" if diagnostic_mode else "weak_valid_masked_bce": valid_loss,
             "elapsed_seconds": time.perf_counter() - start_time,
+            "optimizer_steps": step_counter.steps - previous_steps,
+            "optimizer_step_opportunities": step_counter.opportunities - previous_opportunities,
+            "amp_skipped_steps": (
+                (step_counter.opportunities - previous_opportunities) - (step_counter.steps - previous_steps)
+            ),
+            "cumulative_optimizer_steps": step_counter.steps,
+            "cumulative_optimizer_step_opportunities": step_counter.opportunities,
+            "cumulative_amp_skipped_steps": step_counter.skipped,
         }
+        epoch_dir = out / "epochs" / f"{epoch + 1:03d}"
+        write_csv(epoch_dir / "predictions.csv", SUBMISSION_COLUMNS, predictions)
+        metrics = prediction_diagnostics(
+            index_studies(validation), index_studies(predictions), details if log_diagnostics else None
+        )
+        dump_json(epoch_dir / "metrics.json", metrics)
+        record["diagnostic_train_macro_auc_12" if diagnostic_mode else "weak_valid_macro_auc_12"] = metrics[
+            "macro_auc_12"
+        ]
+        record["defined_auc_classes"] = metrics["defined_classes"]
         if log_diagnostics:
-            epoch_dir = out / "epochs" / f"{epoch + 1:03d}"
-            write_csv(epoch_dir / "predictions.csv", SUBMISSION_COLUMNS, predictions)
-            metrics = prediction_diagnostics(index_studies(validation), index_studies(predictions), details)
-            dump_json(epoch_dir / "metrics.json", metrics)
-            record["diagnostic_train_macro_auc_12" if diagnostic_mode else "weak_valid_macro_auc_12"] = metrics[
-                "macro_auc_12"
-            ]
-            record["defined_auc_classes"] = metrics["defined_classes"]
             record[
                 "diagnostic_train_observed_target_mean_bce"
                 if diagnostic_mode
@@ -375,27 +418,21 @@ def train(manifest_dir, cache_dir, run_dir, config, fold, *, diagnostic_studies=
         history.append(record)
         dump_json(out / "history.json", history)
         print(json.dumps(record), flush=True)
-        if valid_loss < best:
-            best = valid_loss
-            torch.save(
-                {
-                    "schema_version": 1,
-                    "model": model.state_dict(),
-                    "config": config,
-                    "targets": list(TARGETS),
-                    "epoch": epoch + 1,
-                    "fold": fold,
-                    "preprocess_fingerprint": preprocess_fingerprint(config),
-                    "input_normalization": model_settings.get("input_normalization", "legacy"),
-                },
-                out / "best.pt",
-            )
-            write_csv(
-                out / ("diagnostic_train_predictions.csv" if diagnostic_mode else "weak_valid_predictions.csv"),
-                SUBMISSION_COLUMNS,
-                predictions,
-            )
+        checkpoints.update(
+            model,
+            epoch + 1,
+            valid_loss,
+            metrics["macro_auc_12"],
+            epoch_dir / "predictions.csv",
+            epoch_dir / "metrics.json",
+            steps=step_counter.steps,
+            opportunities=step_counter.opportunities,
+        )
+        progress(epoch + 1, len(training_loader), "epoch_completed")
+    selected = checkpoints.selected
+    step_counter.close()
     if gold and audit_gold:
+        progress(settings["epochs"], len(training_loader), "auditing_gold")
         checkpoint = torch.load(out / "best.pt", map_location="cpu", weights_only=True)
         model.load_state_dict(checkpoint["model"], strict=True)
         predictions, _ = infer_loader(model, loader(gold), "cuda")
@@ -403,10 +440,21 @@ def train(manifest_dir, cache_dir, run_dir, config, fold, *, diagnostic_studies=
         scores = evaluate_rows(index_studies(gold), index_studies(predictions))
         scores["independence"] = metadata["gold_independence"]
         dump_json(out / "gold_metrics.json", scores)
+    progress(settings["epochs"], len(training_loader), "completed")
     return {
         "run_dir": str(out),
-        "best_diagnostic_train_bce" if diagnostic_mode else "best_weak_valid_bce": best,
+        "best_diagnostic_train_bce" if diagnostic_mode else "best_weak_valid_bce": checkpoints.index["checkpoints"][
+            "best_bce"
+        ]["masked_bce"],
+        "selected_epoch": selected["epoch"],
+        "selected_masked_bce": selected["masked_bce"],
+        "selected_macro_auc_12": selected["macro_auc_12"],
+        "checkpoint_selection": criterion,
+        "optimizer_steps": step_counter.steps,
+        "optimizer_step_opportunities": step_counter.opportunities,
+        "amp_skipped_steps": step_counter.skipped,
         "checkpoint": str(out / "best.pt"),
+        "checkpoint_index": str(out / "checkpoint_index.json"),
         "diagnostic_mode": diagnostic_mode,
     }
 

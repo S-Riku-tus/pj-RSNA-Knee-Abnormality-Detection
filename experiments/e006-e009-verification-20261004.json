@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "recorded_on_jst": "2026-10-04",
+  "validation": {
+    "valid": true,
+    "completed_training_runs": 4,
+    "source_files_match_trained_frozen_source": 12,
+    "source_pixel_contract_unchanged": true,
+    "gold_and_new_public_columns_blank": true,
+    "ledger_unique": true,
+    "data_artifacts_git_tracking_only_existing_readmes": true
+  },
+  "unittest": {
+    "tests_run": 97,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 14.462,
+    "scope": "Full repository suite run after the4 completed training runs; later edits only docs, records and private artifact packaging",
+    "repeated_after_documentation_only_edits": false
+  },
+  "ruff": {
+    "check_passed": true,
+    "format_check_passed": true,
+    "python_files_checked": 38,
+    "scope": "Repository code after training; standalone private rank helper also checked separately"
+  },
+  "qa_records_sha256": {
+    "artifacts/qa/20261004-extended-pipeline-v2/checks.json": "0d8293517d62be0adb1cc8daac90c673c851181d9e490293a2597cc32d117668",
+    "artifacts/qa/20261004-e008-frozen-cpu/checks.json": "e776e38e752717c5f3edacd084bc107d8b5fdeb91df69ba8fac2c73d65c22fd9",
+    "artifacts/qa/20261004-e009-frozen-cpu/checks.json": "fb4c66d225e83e891dc811aeb5ed80456dda4b09210013320fa3b7e3554b90cf",
+    "artifacts/qa/20261004-extended-candidates-cuda-v2/checks.json": "c21b9b8455a9a8da6e0c4aba32efe1dc1200984c7ee426465cb6f376dfffefdb",
+    "artifacts/qa/20261004-rank50-contract/checks.json": "a6c3e1f433fb5c7461b4d6d7ac617413949b8cef718ef5a9c114adfbe1685e12",
+    "artifacts/qa/20261004-e009-bundle-v2-metadata/checks.json": "9bda45e2bb85042823db2ea4b7e2148790bb336f7e8260a7920ab584ac71d8e4"
+  },
+  "root_independent_artifact_check": {
+    "performed": "No model forward, no gold, no external writes",
+    "rank_diagnostic_csv_score_cells_exactly_matched": 9852,
+    "rank_helper_file_sha256": "02bf93907ffbf817bb4f8a2ef1f43cc207f3c121e86ab377cbdb8cf7a34939b9",
+    "rank_helper_entry_text_sha256": "c6a0da9776071e798e50bde92a2769fda941b8b5e77e0b59e5f12deec49417a4",
+    "frozen_zip_members_byte_match_current_source_and_baseline": 13,
+    "r001_and_e009_v2_notebook_code_cells_compiled": 8,
+    "notebooks_unexecuted_outputs_empty": true,
+    "e009_v2_code_cells_unchanged": true,
+    "r001_notebook_sha256": "2f970b9952c174740e3889e4f15b42a6323f3c57ccb794ad45103fb490d4e6d9",
+    "r001_asset_manifest_sha256": "1fa003d231a496c5fe175fa7dcf607d546d5827ed09f7ecdb290144c800ab6f9",
+    "e009_v2_notebook_sha256": "196de144364b60817f93ab528c9061237b6cb5a5c2ca5ce6cfe4f07f8b1db856",
+    "e009_v2_asset_manifest_sha256": "082d3211aa1d993ddc710d75a103192dcc76feaf5c980149d6362c73cf81e5a4"
+  },
+  "independent_reviews": {
+    "scientific_claims_and_numbers_match_records": true,
+    "submission_document_matches_prepared_asset_paths_and_notebook_contract": true,
+    "reviews_read_only": true
+  },
+  "records_and_docs": {
+    "existing_shared_json_files_strictly_parsed": 27,
+    "updated_markdown_files": 6,
+    "local_markdown_file_and_directory_links_checked": 98,
+    "self_reference_links_checked_after_creation": 3,
+    "ledger_rows": 12,
+    "new_batch_rows": 5,
+    "rank_candidate_has_no_training_runtime": true,
+    "git_diff_check_passed": true,
+    "source_sha256": {
+      "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+      "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+      "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+      "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+      "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+      "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+      "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+      "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+      "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+      "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+      "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+      "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05"
+    },
+    "markdown_sha256": {
+      "README.md": "9f5677c4cf974d6625494b2660a9c0f13af803df1677aa93553ba822c0d5acd9",
+      "PROJECT.md": "34895154612a54a0aa89ba1dab00674ecde2abf918f7ea1693e6345313b4aab0",
+      "docs/controlled-experiments.md": "3fc70a76691b41655e63a74acf818e48b61f6592713a98e8d58b51daf42f0dee",
+      "docs/kaggle-submit.md": "f227b52728b9f6f6bd9320c036b1e2395b7a9da18a0d15f80f480bf9c77805b3",
+      "docs/public-baselines.md": "41a47d770364dbb72bfaabb66de4f0a1093add22a6826c1240146b3354013c7a",
+      "docs/validation.md": "1890c27d8478ece60e66e416d14a2132624d2dc97569a40bd13b69d625551ed0"
+    },
+    "ledger_sha256": "ff6c2cff946dafabeda3c50806c72c29ae376404e061ab42dc538eac993f0e57",
+    "decision_sha256": "c2e487c5d3649d5674a0bd199c0311847001adf05c2b475e3a36bf6fe52d4e82"
+  },
+  "limits": [
+    "No real test MRI decode or Kaggle run was performed for the self-trained candidates",
+    "No new external upload or submission",
+    "No gold selection or evaluation in this batch",
+    "No independent patient-level or image-truth performance claim",
+    "Rank ensemble was chosen posthoc on the same validation fold; fold1 and real Public remain pending",
+    "No training resume state in model-only checkpoints"
+  ],
+  "historical_failures_preserved": {
+    "extended_pipeline_v1": "Wrong ImageNet checkpoint passed into a legacy-only QA helper; v2 used the correct existing e002 checkpoint without production code changes",
+    "candidate_cuda_v1": "Both forwards succeeded; final comparison used the wrong frozen-BN CPU filename; existing GPU outputs rechecked and copied into new v2 record without a further forward",
+    "e009_original_bundle": "Markdown epoch typo corrected only in new v2; original code and assets preserved"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "prepared_at_jst": "2026-10-04",
+  "status": "completed; all four runs audited; candidate validation recorded separately",
+  "manifest_dir": "data/manifests/v1-vmohitrao-research",
+  "cache_dir": "data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/train-v1",
+  "manifest_sha256": {
+    "manifest.json": "976abfe212ce23ad8112f16cb61d2c8172bb837ad50aed7ac88886760fc2cabf",
+    "weak.csv": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+    "gold.csv": "f86a67cf9c5704c37bbe0d7912b308cd7497a2804918c0cc5e8e2008a0b16bad"
+  },
+  "preprocess_fingerprint": "c382a673469a75c9eb5fd20b953579a5ea5d4a3ad696de1dbd5cec4740ef2850",
+  "gold_policy": "No gold cache loading or gold evaluation; identity/group leak guard only",
+  "selection": {
+    "fold1": "original minimum weak masked BCE",
+    "long_runs": "maximum defined weak macro12 AUC; tie minimum BCE; further tie earliest epoch"
+  },
+  "fresh_initialization": true,
+  "resume_supported": false,
+  "existing_runs_preserved": true,
+  "experiments": [
+    {
+      "id": "e006-random-imagenet-fold1",
+      "fold": 1,
+      "config": "configs/experiments/e004-random-imagenet.json",
+      "config_sha256": "3eadc90536be553352cb573e9fd8fb213030712c2b7d5dab683cc53df78661d4",
+      "run_dir": "artifacts/runs/e006-random-imagenet-fold1",
+      "reason": "B fold1: paired initialization control, unchanged BCE selection"
+    },
+    {
+      "id": "e007-pretrained-imagenet-fold1",
+      "fold": 1,
+      "config": "configs/experiments/e005-pretrained-imagenet.json",
+      "config_sha256": "4934cbc928659f8bbedb5c677f70f2161342f5c4cc7bb103ce24002f284c4d96",
+      "run_dir": "artifacts/runs/e007-pretrained-imagenet-fold1",
+      "reason": "C fold1: initialization-only paired comparison against B fold1"
+    },
+    {
+      "id": "e008-pretrained20-auc",
+      "fold": 0,
+      "config": "configs/experiments/e008-pretrained20-auc.json",
+      "config_sha256": "08f0b8a1ba2577d33e6e794793653be24d3e9d5e6994632e82919142beb3bdbb",
+      "run_dir": "artifacts/runs/e008-pretrained20-auc",
+      "reason": "C20 fresh: duration-only trajectory extension, predeclared AUC selection"
+    },
+    {
+      "id": "e009-pretrained20-auc-bnfreeze",
+      "fold": 0,
+      "config": "configs/experiments/e009-pretrained20-auc-bnfreeze.json",
+      "config_sha256": "738ed6c576cb5691686c629c94e0759d64d6fd3f43cc3f5fc9ffcc65b533ac7b",
+      "run_dir": "artifacts/runs/e009-pretrained20-auc-bnfreeze",
+      "reason": "C20 BN: running statistics freeze only, affine training unchanged"
+    }
+  ],
+  "external_upload_or_submission": false,
+  "source_snapshot": "Record immutable code bundle and source hashes after implementation verification, before real training",
+  "source_sha256": {
+    "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+    "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+    "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+    "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+    "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+    "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+    "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05"
+  },
+  "frozen_code_zip": "artifacts/kaggle/20261004-extended-source-v1/rsna-knee-code.zip",
+  "frozen_code_zip_sha256": "9c85e2f120ba2eb9f0b3fc44b99ad328783f78026e46a52e8073b377d9bd496f",
+  "verification": {
+    "unittest_passed": 89,
+    "unittest_seconds": 8.699,
+    "ruff_check": "passed",
+    "ruff_format_check": "36 files passed",
+    "diff_check": "passed",
+    "synthetic_gpu_record": "artifacts/qa/20261004-extended-pipeline-v2/checks.json",
+    "synthetic_gpu_record_sha256": "0d8293517d62be0adb1cc8daac90c673c851181d9e490293a2597cc32d117668",
+    "synthetic_gpu_seconds": 3.2476162999955704,
+    "prior_qa_failure": "v1 legacy-only helper was supplied an ImageNet-normalized C checkpoint; corrected input in v2, no production source change"
+  },
+  "completion": {
+    "summary": "experiments/e006-e009-extended-summary-20261004.json",
+    "all_runs_source_unchanged": true,
+    "all_runs_gold_disabled": true,
+    "public_lb_measured": false,
+    "total_train_function_seconds": 10025.703023900016
+  }
+}

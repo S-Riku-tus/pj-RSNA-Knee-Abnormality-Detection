@@ -2,15 +2,19 @@
 
 公開モデルを使う場合は作者Notebookをそのまま再現する。以下は、このリポジトリの自作モデルで学習を終えた後の経路。提出Notebookには学習コードの呼び出しを含めない。
 
-2026年10月4日 JST。A/B/Cの対照実験が完了し、C（ImageNet事前学習）のepoch 2を次の自作比較基準に暫定採用した。weak AUCは0.766895でPublicではない。[結果と採用理由](controlled-experiments.md)。凍結コードと実checkpointの人工提出契約も成功し、Cのローカル提出資産を準備済み。新しいアップロード、自作NotebookのKaggle実行・提出はまだ行っていない。
+2026年10月4日 JST。4本の追加学習が完了し、通常BNのepoch 8と固定BNのepoch 9を組み合わせる固定50:50 rank候補 `r001` の提出資産を準備した。fold 0のweak AUCは0.830249、補助11平均は0.815727。所見別の入れ替わりを見た後の追加診断であり、別foldと自作Publicの改善は未確認。[結果と判断範囲](controlled-experiments.md#固定5050-rank候補と次の判断)。新しいアップロード、自作NotebookのKaggle実行・提出はまだ行っていない。
 
-今回使うフォルダは `artifacts/kaggle/e005-pretrained-imagenet-fold0/`。以下の3段階で進める。
+今回使うフォルダは [r001-bn-rank50-fold0](../artifacts/kaggle/r001-bn-rank50-fold0/)。以下の3段階で進める。
 
-1. privateコードDatasetを作り、`rsna-knee-code.zip` と `bundle-manifest.json` を追加する。提案名は `rsna-knee-code-e005`。
-2. private重みDatasetを作り、`best.pt` と `asset-manifest.json` を追加する。提案名は `rsna-knee-e005`。manifestにラベル作者・版・CC URL・加工内容・初期化出所を保存してある。ImageNet初期化ファイルの追加は不要。
-3. 同フォルダの未実行 `01_submit_e005.ipynb` をKaggleへImportし、競技入力と上の2 InputをAttachする。提案名とrsrakiのpathを仮設定済みなので、実mountと照合する。zipが自動展開された場合は `CODE_ROOT` を `src/` と `configs/` の親へ指定する。GPU有効・Internet OFFで実行し、完走後にSave and Run All・Submit・採点確認へ進む。
+1. privateコードDatasetを作り、`rsna-knee-code.zip`、`rank50.py`、`bundle-manifest.json` を追加する。提案名は `rsna-knee-code-r001`。共通rank関数はweak診断と同じファイルで、Notebookがzip・展開source・helperのhashを照合する。
+2. private重みDatasetを作り、`best_bn_update.pt`、`best_bn_freeze.pt`、`asset-manifest.json` を追加する。提案名は `rsna-knee-r001`。config・checkpoint indexのコピーも版記録として同梱できる。manifestにラベル作者・版・CC URL・加工内容・初期化出所・2モデルのepochとhashを保存済み。推論にImageNet初期化ファイルは不要。
+3. 未実行の [01_submit_r001.ipynb](../artifacts/kaggle/r001-bn-rank50-fold0/01_submit_r001.ipynb) をKaggleへImportし、競技入力と上の2 InputをAttachする。初めのcellの `CODE_ZIP`、`RANK_MODULE`、`CHECKPOINTS` を実mountと照合する。zipが自動展開された場合は `CODE_ROOT` を `src/` と `configs/` の親へ指定し、`RANK_MODULE` を実helperのpathへ合わせる。GPU有効・Internet OFFで実行し、完走後にSave and Run All・Submit・採点確認へ進む。
 
-Input名はまだ作成しておらず提案値である。例示testの完走と本採点の成功は分け、Notebook/Input版・全体時間・Submission ID・実測スコアを台帳へ追記する。
+Input名はまだ作成しておらず提案値である。Notebookは同じpixel fingerprintを確認してtest cacheを1個作り、2モデルを順に推論し、**その回の全test検査**を所見別に順位化して50:50で合わせる。係数・所見別weightを調整するcellはない。testを独立に順位化するbatchへ分割しない。rank scoreは未校正なので、BCEを確率校正改善の証拠にしない。
+
+ローカルでは両実重みの人工CPU/GPU契約と、保存された人工CSVから共通helperを使うrank契約が成功した。rank専用6契約チェック、helper同一性、Notebook全code cellのcompile・空outputも確認済み。実testのDICOM decode・全体時間・Kaggle採点は別に確認する。Notebook/Input版・全体時間・Submission ID・実測スコアを [台帳](../experiments/ledger.csv) へ追記する。
+
+固定BN単体の比較候補は [e009のv2資産](../artifacts/kaggle/e009-pretrained20-auc-bnfreeze-fold0-v2/) と未実行 `01_submit_e009.ipynb`。weak AUCは0.803614。2モデル候補の実行時間や動作に問題があれば、別の単体比較として実行できる。v2は元のNotebook説明文に残ったepoch誤記を直した版で、code cell・重み・凍結zipは同一。元のe009資産とe005/e008の旧候補は履歴として保持する。
 
 e002の旧資産は `artifacts/kaggle/e002-baseline-fold0/` に `best.pt`、`rsna-knee-code.zip`、`bundle-manifest.json`、`RESEARCH-ONLY.json` として保存する。学習時とコード・重みのhashが一致し、展開コード＋実checkpointから人工test 3検査の提出契約が成功した。これはKaggle実行の結果ではない。`RESEARCH-ONLY.json` は当時の採用範囲の記録として残し、新しい候補は別のbundleへその学習に対応するsrcと重みを梱包する。既存公開モデルの実測Public 0.924も別の採点済み比較基準として保持する。
 
@@ -22,14 +26,14 @@ e002の旧資産は `artifacts/kaggle/e002-baseline-fold0/` に `best.pt`、`rsn
 python scripts/build_kaggle_bundle.py --output-dir artifacts/kaggle/NEXT_RUN
 ```
 
-新しいrunで使う場合に `NEXT_RUN` を未使用の名前へ変更し、code zipとhash一覧を生成する。e002とe005は作成済みなので再実行不要。前の版を上書きせず、学習に使ったsrcで梱包する。zipはsrcのPythonファイルとbaseline.jsonの許可リストから作り、データ・重み・認証情報を入れない。学習したbest.ptは別ファイルとして用意する。Notebookひな形は `notebooks/01_submit.ipynb`。転送と学習からの操作は [手順4〜9](after-cache.md) を参照する。
+新しいrunで使う場合に `NEXT_RUN` を未使用の名前へ変更し、code zipとhash一覧を生成する。今回のr001/e009 v2は既に学習時の凍結zipをコピー済みなので再梱包不要。凍結zip SHA-256は `9c85e2f120ba2eb9f0b3fc44b99ad328783f78026e46a52e8073b377d9bd496f`、共通helperは `02bf93907ffbf817bb4f8a2ef1f43cc207f3c121e86ab377cbdb8cf7a34939b9`。前の版を上書きせず、学習に使ったsrcで梱包する。zipはsrcのPythonファイルとbaseline.jsonの許可リストから作り、データ・重み・認証情報を入れない。r001専用Notebookは2重みとzip外のhelperを要求するため、単体ひな形へ置き換えない。転送と学習からの操作は [手順4〜9](after-cache.md) を参照する。
 
 ## GPU端末とKaggle画面での準備
 
-1. コードzipをKaggleの入力Datasetへ追加する。
-2. 学習した `best.pt` を別の入力Datasetへ追加する。必要に応じprivateで保持する。
+1. コードzip・共通rank helperをKaggleの入力Datasetへ追加する。
+2. 学習した2重みを別の入力Datasetへ追加する。privateで保持し、帰属/版記録も付ける。
 3. 提出Notebookへ競技入力、コードDataset、checkpoint DatasetをAttachする。
-4. NotebookのCHECKPOINTとコードInputを実際のmount pathへ変更する。zipが残っていればCODE_ZIP、展開済みのsrc/とconfigs/があればその親ディレクトリをCODE_ROOTに指定する。必要ならWHEELSも指定する。
+4. NotebookのCHECKPOINTSとコード/helper Inputを実際のmount pathへ変更する。zipが残っていればCODE_ZIP、展開済みのsrc/とconfigs/があればその親ディレクトリをCODE_ROOTに指定する。必要ならWHEELSも指定する。hash guardを削除せず、Input版を照合する。
 5. GPUを有効にし、インターネットを無効にする。
 6. 実行して `submission.csv` を検査し、Save and Run All後にSubmitする。
 7. 採点成功とNotebook版を確認し、台帳へ記録する。
@@ -50,6 +54,6 @@ python -m pip download --only-binary=:all: --dest artifacts/wheels numpy pydicom
 
 checkpoint内のconfigを使って、その採点回のtest.csvとDICOMから新しいcacheを作る。固定件数・固定UID・GPU端末のtest cacheを使わない。列順・UID集合・行順・欠損・有限値・0〜1範囲を検査する。
 
-Notebook全体の起動、ローカル依存インストール、モデル読み込み、DICOM decode、推論、CSV作成を時間に含める。例示3検査だけで9時間内に収まるとは判断しない。GPU端末でtrainから大きい検査も含む代表例を選び、前処理込みの時間を別途測る。現時点で隠しテスト規模に対する所要時間は未測定。
+Notebook全体の起動、ローカル依存インストール、2モデル読み込み、DICOM decode、両推論、順位化、CSV作成を時間に含める。例示3検査だけで9時間内に収まるとは判断しない。元DICOMの時間測定はKaggleの学習側で大きい検査も含め、実testの全体時間も記録する。現時点で隠しテスト規模に対する所要時間は未測定。
 
 10月4日に取得したRulesでは日次提出は5回、最終選択は2件。提出時のKaggle画面でも確認する。締め切り直前は新しい構成を増やさず、採点成功済みの候補を確保する。[公式Rules](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/rules)

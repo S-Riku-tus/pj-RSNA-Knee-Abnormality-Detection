@@ -1,0 +1,234 @@
+{
+  "checked_at_utc": "2026-10-04T05:49:43.456911+00:00",
+  "checked_date_jst": "2026-10-04",
+  "scope": "Follow-up read-only source/version audit. No credentials manually opened or copied; no learned weights, MRI, labelCSV or prediction payloads obtained; no uploaded artifacts or submissions; existing source/scripts/docs preserved.",
+  "supersedes_only": "Earlier investigation statement that V32 source was unobtained. Exact saved Input-version mapping and own competition score remain unverified.",
+  "successful_request": {
+    "user_name": "romantamrazov",
+    "kernel_slug": "rsna-knee-dinosaur-v4",
+    "version_label": "v32"
+  },
+  "confirmed_response_version_number": 32,
+  "notebook_ref": "romantamrazov/rsna-knee-dinosaur-v4",
+  "source": {
+    "path": "artifacts/research/20261004-public-contract/v32-label-prefixed/source.ipynb",
+    "sha256": "ba9491ac1e214ba55ca181de55118c9a793fe7f6163fc221fe1e68d596259dca",
+    "bytes": 362657,
+    "code_only_path": "artifacts/research/20261004-public-contract/v32-label-prefixed/source-code.py",
+    "code_only_sha256": "1e3054d7f817a7bbae67cb3204d17b610f40c767a65364e0cba183253e071421",
+    "metadata_path": "artifacts/research/20261004-public-contract/v32-label-prefixed/metadata.json",
+    "metadata_sha256": "7a37aa7369c68d6f93e2e5cf810f67ecc52fb5e7f1e00073b39216472d595dd5"
+  },
+  "version_label_fix": {
+    "installed_cli": "2.2.4",
+    "observed_installed_pull_behavior": "kernels_pull appends /<number> to kernel_slug. This failed. Bare version_label=32 also failed404. Correct read-only SDK request keeps plain slug and uses version_label=v32. No installed package or repo code was changed.",
+    "primary_source": "https://github.com/Kaggle/kaggle-cli/issues/1200",
+    "source_description": "Issue and follow-up fix describe v<N> format and bare-number404; independently verified here by metadata.currentVersionNumber32."
+  },
+  "score_status": {
+    "author_displayed_best": 0.937,
+    "author_displayed_best_version": 32,
+    "primary_source": "https://www.kaggle.com/code/romantamrazov/rsna-knee-dinosaur-v4/output",
+    "own_reproduction_score": null,
+    "source_obtained_is_not_scored_reproduction": true
+  },
+  "source32_vs35": {
+    "v32_cells": 13,
+    "v35_cells": 23,
+    "matching_cells": [
+      {
+        "v32_cell": 0,
+        "cell_type": "markdown",
+        "source_sha256": "e46dff1457df683d5744be8bf7e985caf18b9b2e5f55986970f9fdf80baf9e93",
+        "identical_v35_cells": []
+      },
+      {
+        "v32_cell": 1,
+        "cell_type": "markdown",
+        "source_sha256": "2652b93b82acbbb72168ae67cb854c5f0086496b8bd4de67c48473d4e901b704",
+        "identical_v35_cells": []
+      },
+      {
+        "v32_cell": 2,
+        "cell_type": "code",
+        "source_sha256": "3c43a93051b20f062cf19ca918fc4151f2e4adc42d9420a00bad333e7688c7bc",
+        "identical_v35_cells": [
+          2
+        ]
+      },
+      {
+        "v32_cell": 3,
+        "cell_type": "code",
+        "source_sha256": "231eb5bb82bfb401dc9a828b51a647862a2760a8fbdd3c5e28ad7e5948e96454",
+        "identical_v35_cells": [
+          3
+        ]
+      },
+      {
+        "v32_cell": 4,
+        "cell_type": "code",
+        "source_sha256": "3fca4c817d299c669477e71494e0464f1572e5fa4c59e2815de024b31673437b",
+        "identical_v35_cells": [
+          4
+        ]
+      },
+      {
+        "v32_cell": 5,
+        "cell_type": "code",
+        "source_sha256": "8f35d00089e7d2e0a1cafe00c1d8909ad3c1c864ac8408c27a3e7b0c8e2f08f0",
+        "identical_v35_cells": [
+          5
+        ]
+      },
+      {
+        "v32_cell": 6,
+        "cell_type": "code",
+        "source_sha256": "01e7067e04251a38ef8d7065f7d7b47336beaa320738d3402d69de227a01c11e",
+        "identical_v35_cells": [
+          7
+        ]
+      },
+      {
+        "v32_cell": 7,
+        "cell_type": "code",
+        "source_sha256": "15aafcbc7b4ed2a04acde8c3ee3a305aa15b2faeabb47c3e1fe0eb99369a0b6c",
+        "identical_v35_cells": [
+          8
+        ]
+      },
+      {
+        "v32_cell": 8,
+        "cell_type": "code",
+        "source_sha256": "38984001416f5d64b967e2d3b4bd44ecb2282e5ed804d3616d2560c3c7f061b6",
+        "identical_v35_cells": [
+          9
+        ]
+      },
+      {
+        "v32_cell": 9,
+        "cell_type": "code",
+        "source_sha256": "d816e29b062d9ec15f9b933b7192e9cb50f7e97426d2605b733fd9d0a926f609",
+        "identical_v35_cells": [
+          10
+        ]
+      },
+      {
+        "v32_cell": 10,
+        "cell_type": "code",
+        "source_sha256": "1358fb39443097745b66a79fde5dc28fa7638c2298564b97b55e1f125a6eb4ed",
+        "identical_v35_cells": [
+          11
+        ]
+      },
+      {
+        "v32_cell": 11,
+        "cell_type": "markdown",
+        "source_sha256": "6b74f7e5e4d4aa9ea5866d0c88067be24c895c3c2ec5b683bf37783d9314e032",
+        "identical_v35_cells": []
+      },
+      {
+        "v32_cell": 12,
+        "cell_type": "code",
+        "source_sha256": "d17c96d4a6aeee0b7fb44c07c1f115e7ebe33eaaca18c90dfca0cf0a63744ca7",
+        "identical_v35_cells": []
+      }
+    ],
+    "shared_core": "V32 code cells2-10 are byte-identical to V35 core cells2-5 and7-11. V35 adds a pre-Rad snapshot and laterPublicDual/Synovitis/PublicCoAt experiments.",
+    "v32_final_output": "Cell10 preserves submission_dinosaur_v4_0937_control.csv. Cell12 adds V6 outer weights to5 targets, atomically replaces submission.csv and copies it to submission_dinosaur_v4_v6_candidate.csv. Exact author scoreV32 corresponds to saved version32, but which output was manually selected for its reported submission was not independently retrieved.",
+    "v32_v6_outer_raptor_weights": {
+      "ACL": 0.8,
+      "Lateral OA": 0.35,
+      "PF OA": 0.35,
+      "Synovitis": 0.35,
+      "Baker's": 0.375
+    },
+    "v32_unchanged_route": "Medial Meniscus and other6 targets preserve the pre-overlay strings; the Medial Meniscus residual remains0.30transformer+0.60Raptor+0.10Renta bag.",
+    "v35_final_output": "PublicCoAt main alpha0.16, separate from V32 V6/default and preserved0.937control. Do not replace V32 with V35 and claim score reproduction."
+  },
+  "input_version_status": {
+    "version_scoped_sdk_dataset_refs": [
+      "dreaddevelopment/raptor-knee-maxspan",
+      "dreaddevelopment/raptor-knee-native384",
+      "dreaddevelopment/raptor-knee-native384dense",
+      "mattiaangeli/knee-mri-fold-weights",
+      "mattiaangeli/opencv-python-headless-4120088-x86",
+      "marwanmath/resnet-50-radimagenet-marwan",
+      "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+      "tonylica/rsna-knee-bend-dinov3-0917-repro-assets",
+      "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+      "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+      "pilkwang/rsna-knee-llm-labels",
+      "renta0426/rsna-knee-public0033-meniscus-bag-v1",
+      "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+      "pilkwang/rsna-knee-weights"
+    ],
+    "version_scoped_sdk_notebook_refs": [
+      "sofiaanjenje/rsna-knee-e11-train",
+      "sofiaanjenje/rsna-knee-e13-train",
+      "romantamrazov/rsna-knee-dinosaur-v5-train"
+    ],
+    "version_scoped_sdk_model_refs": [
+      "metaresearch/dinov2/PyTorch/small/1"
+    ],
+    "competition_refs": [
+      "rsna-knee-abnormality-detection"
+    ],
+    "returned_refs_include_dataset_or_notebook_version_numbers": false,
+    "exact_saved_input_versions_fixed": false,
+    "model_ref_explicit_version": "metaresearch/dinov2/PyTorch/small/1",
+    "embedded_kaggle_data_source_counts": {
+      "competition": 1,
+      "datasetVersion": 5,
+      "modelInstanceVersion": 1,
+      "kernelVersion": 0
+    },
+    "embedded_metadata_is_insufficient": "Embedded ipynb metadata only lists5 datasetVersion IDs and no kernelVersion records, compared with14dataset/3Notebook refs returned withV32. It retains inherited source metadata. Do not pair IDs with refs by ordinal. Previously observed Dataset latest versions are live observations, not historicalV32 pins.",
+    "docker_image_from_v32_response": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+    "internet_enabled_from_v32_response": false
+  },
+  "saved_output_listing": {
+    "checked_at_utc": "2026-10-04T05:49:43.456911+00:00",
+    "request": {
+      "user_name": "romantamrazov",
+      "kernel_slug": "rsna-knee-dinosaur-v4",
+      "version_label": "v32"
+    },
+    "listed_files": 9,
+    "has_next_page": false,
+    "file_names": [
+      "dinosaur_v4_v6_receipt.json",
+      "infra0021_runtime_receipt.json",
+      "public0033_bag_raw.csv",
+      "public0033_cached_inference_receipt.json",
+      "public0033_overlay_receipt.json",
+      "submission.csv",
+      "submission_dinosaur_v4_0937_control.csv",
+      "submission_dinosaur_v4_v6_candidate.csv",
+      "submission_parent_exact.csv"
+    ],
+    "output_object_path_prefix_ids": [
+      347433881
+    ],
+    "script_version_id_explicit_response_field": null,
+    "signed_urls_saved": false,
+    "output_payloads_downloaded": false
+  },
+  "global_script_version_id": {
+    "confirmed_id": null,
+    "api_explicit_script_version_id_field": null,
+    "output_object_path_prefix_id": 347433881,
+    "status": "Opaque /kf/<id>/ prefix observed consistently in all9 V32 output URLs. It is not promoted to confirmed scriptVersionId without an explicit response field or UI mapping. Public page lookup using it did not reveal version metadata. No signed URL token is saved in this record."
+  },
+  "next_step": "Use successful SDKv32 source for a frozen candidate, then obtain saved Input versions/file manifests and effective payload hashes before manual Kaggle execution. Choose and record the exact V32 outputCSV (V6 default vs preservedcontrol); save/run and score remain manual and unperformed here.",
+  "checks": {
+    "metadata_response_equals_requested_version": true,
+    "source_hash_local_verified": true,
+    "source_and_version35_hashes_differ": true,
+    "shared_core_cell_hashes_verified": true,
+    "output_listing_pinned_v32": true,
+    "output_payload_downloaded": false,
+    "existing_docs_modified_in_followup": false,
+    "training_source_changed": false,
+    "submitted_or_uploaded": false
+  }
+}

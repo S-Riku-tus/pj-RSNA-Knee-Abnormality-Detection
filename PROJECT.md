@@ -29,14 +29,24 @@
 - 10月4日、追加ログの学習不変性、cache互換性、共通正規化、ImageNet初期化、BN統計固定を実装。全71 unittestと人工CUDA検証が成功。少数train診断q001は初期eval BCE 0.694520→最良0.124106（epoch 32）、最後のtrain-mode BCE 0.000188。適合は進むがevalとの差が残り、画像ラベルの正確さや汎化の証明ではない。
 - A/B/Cの5 epoch対照実験が完了。Aは旧e002の全epoch BCE・採用予測を完全再現。正規化だけを変えたBはweak BCE 0.411992／AUC 0.644652、encoder初期化だけを変えたCはepoch 2で0.371395／0.766895。CはBより12/12所見のAUCが改善し、次のローカル比較基準に暫定採用した。各約17〜18分、gold監査は無効・Public未測定。[比較集計](experiments/e003-e005-controlled-summary-20261004.json)、[採用理由](experiments/e005-decision-20261004.json)。
 - Cの `artifacts/kaggle/e005-pretrained-imagenet-fold0/` にcode zip・best.pt・hash/帰属記録・未実行提出Notebookを準備済み。凍結コード＋実A/B/C重みで人工3検査×12所見・Reportなしの契約が成功し、CのImageNet初期化ファイル不要も確認。Kaggleへの新規アップロード・実test decode・採点は未実施。
+- 続行の依頼を受け、BCE/AUC/last/milestone保存、実optimizer更新・AMP skip、進捗記録を実装。全97 unittest・Ruff・凍結コードの人工CPU/GPU提出契約が成功。e006〜e009の4本を新規runで完了し、CSV・入力/保存hash・選択規則・実更新の監査がvalid=true。[完成集計](experiments/e006-e009-extended-summary-20261004.json)。実checkpoint内部も別途CPUで照合した。合計約2時間47分（cache事前検査込み、import除く）。モデル保存は推論専用で、正確な学習再開は未対応。
+- fold 1でもB→CのAUCは0.638538→0.732050、10/12所見が改善。通常BNの20 epochはAUC最良epoch 8で0.784410、BN固定はepoch 9で0.803614。ただしBNの補助11平均差の95%区間は0を跨ぎ、ACL・PF OA・Lateral Meniscusの大きな悪化とMedial Meniscus等の改善が入れ替わる。[対照実験と判断範囲](docs/controlled-experiments.md)。通常BN e008の最初5 epochの旧C予測は全hash完全一致。両20 epochの終点は最良値を下回り、単純な長期化の継続を優先しない。
+- 上記の所見別の入れ替わりを見た後、2モデルの固定50:50 rank平均を一度だけCSV診断。weak AUC 0.830249、補助11平均0.815727で両単体を上回った。[固定比率診断](experiments/e008-e009-rank50-review-20261004.json)。BN単体との差の補助11区間は[+0.015129,+0.043443]だが、同じfoldの選択済みモデルによる後付け診断で、別fold・画像ラベル・Publicの改善は未確認。係数/所見weightの探索とgold利用はしていない。
+- [r001提出資産](artifacts/kaggle/r001-bn-rank50-fold0/) に2重み・凍結zip・共通rank helper・hash/帰属記録・未実行Notebookを保存。確定weak診断と同じ関数で保存済み人工CPU/GPU出力を合わせ、提出契約とrank専用6チェックが成功した。[提出手順](docs/kaggle-submit.md)。固定BN単体の [e009 v2](artifacts/kaggle/e009-pretrained20-auc-bnfreeze-fold0-v2/) も用意した。元の資産を保持し、新規アップロード・Kaggle実行・採点は未実施。
+- 今回の採用範囲・不確実性・次の順序と資産hashは [判断記録](experiments/e006-e009-decision-20261004.json)、検査結果は [完了時の検証記録](experiments/e006-e009-verification-20261004.json)。台帳のr001は追加学習ではなくCSV診断として記録した。
+- 公開方式の固定契約を追加監査。DINOsaur V35の最終出力はV32の0.937候補と異なり、一部公開資産にはgold学習/選択と混在ライセンスがある。現在のgold除外方針へそのまま移植しない。[再現契約](docs/research/public-reproduction-contract-20261004.json)。重み・MRI・新ラベルの取得や外部書き込みは行っていない。
 
 ## 次にすること
 
-1. B/Cをfold 1でも初期化から対照学習する。fold以外は同じ192px・seed・5 epoch・weak BCE選択・gold無効。Synovitis陰性25件の別分割で、多数所見の改善が保たれるか調べる。両runはまだ未実行で、新しい出力先を用意した。[次段階のコマンド](docs/controlled-experiments.md#次の比較をどう進めるか)。
-2. 準備済みC bundleでInternet OFFのKaggle実行・採点・全体時間を早期に確認する。手動Input追加とNotebookのmount path確認から始める。Public 0.924の既存公開モデル提出を保存し、自作weak指標をその採点値へ読み替えない。
-3. ラベル利用条件の本文確認は完了。通常ライセンスによる研究・学習用途を維持し、出所・版・変更点・帰属を提出Inputにも記録する。作者への追加許可を新たな必須条件にしない。実際に入賞した場合はWinner公開条文の不整合を確認し、商用化へ目的を変える場合は利用条件を再検討する。
-4. 別foldと学習曲線を見て、必要ならCからBN running statistics固定だけを変更する。affine学習条件はCと同じにする。BCEとAUCの選択epoch差は記録済みなので、選択規則の変更も新規runで事前設定して比較する。batch変更はlossの検査重みをそろえてから比較し、epoch数を増やすだけの実験を優先しない。
-5. その後にラベル版か画像入力を一条件ずつ改善する。画像は224px全体像、その同解像度の物理cropの順。256px以上の全件化は容量試作とUID分割・統合検査が先に必要。有望な条件だけ追加fold・seedへ広げ、10月20〜22日は採点成功済み候補の再実行・最終選択に充てる。
+1. 固定50:50 rank候補をKaggle Internet OFFで手動実行・採点し、自作weak評価と画像由来の採点がどれだけ対応するかを先に測る。[提出手順](docs/kaggle-submit.md)。実測Public 0.924の既存提出を保持し、Input/Notebook版・全体時間・採点値を別記録する。rank候補のBCEは未校正順位値の補助計算で、確率校正の改善とは扱わない。
+2. 通常BN／固定BNの20 epochをfold 1でも同じ条件から対照実行し、固定50:50も再確認する。fold 0だけでBNやensembleの全面採用を決めず、goldを選択に使わない。旧fold 1の5 epochを再開せず新規runとし、最初5 epochの一致も確認する。先に追加学習時間だけを50/100 epochへ増やさない。
+3. 192pxの全体像と140mm物理cropだけを変える入力比較を、Kaggleの学習側24〜32件QCから準備する。[入力・容量・互換性の契約](docs/research/physical-crop-contract-20261004.json)。PixelSpacingのない既存cacheから物理cropを後付けせず、元DICOMから別cacheを作る。旧前処理hashを維持する版設計を先に行う。
+4. DINOsaur V4の作者報告Best 0.937はV32。SDKの版指定を修正してV32ソースを取得・hash固定できたが、保存Input版と採点された出力CSVは未確認。[追補](docs/research/public-reproduction-v32-followup-20261004.json)。CoAtNetの140mm crop・系列選択等を参考にするが、公開Training V8の未配布softラベルとgold選択をそのまま移植しない。新たな学習比較は汎用事前学習重みから行う。
+5. 次は物理cropを同じ解像度で比較し、解像度・系列/window密度・scheduler・ラベルを一要因ずつ検討する。入力試作はKaggleで少数検査から始め、256px以上の全件化は容量試作とUID分割・統合検査を先に整える。学習seed比較は分割seedとの分離後に行う。10月20〜22日は採点成功済み候補の再実行・最終選択に充てる。
+
+10月4日の添付分析の再監査は、続行依頼前の調査履歴である。HEAD 05b0710と保存済みweak評価を照合し、C2−B1の補助11所見差+0.120629の95%区間[+0.078707,+0.162513]、C5−C2差+0.010232の区間[−0.005521,+0.025498]を計算した。後者を追加実験の根拠とし、その後に上記4本の実学習へ進んだ。公式Hostは画像由来の正解とReportの不一致を認めており、weak AUCとKaggle採点を区別する。[当時の調査記録](docs/research/strategy-audit-20261004.json)。
+
+ラベル利用条件の本文確認は完了。研究・学習目的と帰属等を維持し、出所・版・変更点を提出Inputにも記録する。現在の目的で作者への追加許可を新たな必須条件にしない。実際に入賞した場合はWinner公開条文の不整合を確認し、商用化へ目的を変える場合は利用条件を再検討する。
 
 初回提出の採点成功と実測PublicはAPIで確認済み。My Submissionsと保存NotebookでInput版・実行時間を補完する。以後のprepare・trainには `data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/` を使用する。
 

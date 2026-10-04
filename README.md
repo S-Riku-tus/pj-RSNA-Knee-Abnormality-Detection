@@ -17,7 +17,7 @@
 7. [モデルと検証の設計](docs/experiment-design.md) — ラベル、前処理、分割、改善の順序。
 8. [Kaggleへの提出手順](docs/kaggle-submit.md) — オフライン推論の準備。
 
-10月4日の再分析後、評価ログ・cache互換性・共通正規化・事前学習を実装し、少数train診断とA/B/Cの5 epoch比較を完了しました。**ImageNet事前学習を使うCの採用epoch 2はweak BCE 0.371395、macro AUC 0.766895**。goldは今回評価せず、Publicは未測定です。全71 unittestと凍結コード＋実checkpointの人工提出契約が成功し、Cのローカル提出bundleを準備しました。結果・採用理由・次のfold 1比較と操作は [対照実験](docs/controlled-experiments.md) を参照してください。原案は [次の実験計画](docs/research/next-experiments-20261004.md)。
+10月4日の再分析後、A/B/C比較に加えてfold 1のB/C、通常BN／固定BNの20 epoch対照を完了しました。事前学習の改善は別foldでも確認。fold 0のAUC選択は通常BN 0.784410、固定BN 0.803614で、所見別の改善・悪化が入れ替わります。**2モデルの固定50:50 rank平均はweak AUC 0.830249**ですが、同じfoldを使った後付け診断で、自作Publicは未測定です。全97 unittest・Ruff・凍結コード＋実重みの人工CPU/GPU提出契約が成功。結果・不確かさ・次の採点と入力比較は [対照実験](docs/controlled-experiments.md)、操作は [提出手順](docs/kaggle-submit.md) を参照してください。goldは今回の学習・選択・診断・評価に使っていません。
 
 ## 大会の要点
 

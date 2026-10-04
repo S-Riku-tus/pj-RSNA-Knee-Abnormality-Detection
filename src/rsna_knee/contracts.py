@@ -115,6 +115,13 @@ def load_config(path):
     if not 0 <= lo < hi <= 100 or config["model"]["backbone"] != "resnet18":
         raise ValueError("Invalid normalization or unsupported backbone")
     validate_model_config(config)
+    if t.get("checkpoint_selection", "bce") not in ("bce", "auc"):
+        raise ValueError("Checkpoint selection must be bce or auc")
+    milestones = t.get("checkpoint_milestones", [5, 10, 15, 20])
+    if not isinstance(milestones, list) or any(type(value) is not int or value < 1 for value in milestones):
+        raise ValueError("Checkpoint milestones must be a list of positive integers")
+    if len(set(milestones)) != len(milestones):
+        raise ValueError("Checkpoint milestones must not contain duplicates")
     return config
 
 

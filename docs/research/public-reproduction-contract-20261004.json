@@ -1,0 +1,555 @@
+{
+  "checked_at_utc": "2026-10-04T05:12:19.093346+00:00",
+  "checked_date_jst": "2026-10-04",
+  "scope": "Read-only official Kaggle SDK metadata, public Notebook source, file listings and explicitly selected small source/provenance documents. No MRI, label table, learned weight or prediction dataset download; no code execution of public models, upload or submission. Credentials only used through standard SDK authentication, never printed, manually opened or copied.",
+  "access_method": "Kaggle CLI/SDK 2.2.4, normal authenticate() and read-only get_kernel/get_dataset/list_files/download of allowlisted py/md/json provenance documents; web primary author pages.",
+  "evidence_records": {
+    "source-observations.json": "f9110e5f536fefa276315e242eb2d8d7e2773c3f3712c5a7707df770f58a8238",
+    "version-label-attempts.json": "21ae7f37bf5e0ff2aae9cacc56014b645ea54947ca862b572bcb337bb1a3f1a0",
+    "input-observations.json": "f2a11513d1b0e8a39440df26682b45867a524399bd9be60f833a7f190c10911f",
+    "source-documents-observations.json": "e4a147edb6561599774e258d8875535a1fd99928b35e11352c85e8825542942a"
+  },
+  "notebooks_obtained": {
+    "romantamrazov/rsna-knee-dinosaur-v4": {
+      "observed_version_number": 35,
+      "source_path": "artifacts/research/20261004-public-contract/romantamrazov/rsna-knee-dinosaur-v4-latest/source.ipynb",
+      "source_sha256": "f7dcf67ed3e47e02b018ba05a27f312b6530947aabe863008d201f8d81cffdbd",
+      "source_bytes": 448594,
+      "metadata_sha256": "ae0416e53bfa6d2f10eee6e84371a6013603cb152d7a8bd93b6fe43d5a99daf9",
+      "internet_enabled": false,
+      "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+      "dataset_refs": [
+        "dreaddevelopment/raptor-knee-maxspan",
+        "dreaddevelopment/raptor-knee-native384",
+        "dreaddevelopment/raptor-knee-native384dense",
+        "mattiaangeli/knee-mri-fold-weights",
+        "mattiaangeli/opencv-python-headless-4120088-x86",
+        "marwanmath/resnet-50-radimagenet-marwan",
+        "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+        "tonylica/rsna-knee-bend-dinov3-0917-repro-assets",
+        "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+        "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+        "pilkwang/rsna-knee-llm-labels",
+        "renta0426/rsna-knee-public0033-meniscus-bag-v1",
+        "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+        "pilkwang/rsna-knee-weights"
+      ],
+      "notebook_refs": [
+        "sofiaanjenje/rsna-knee-e11-train",
+        "sofiaanjenje/rsna-knee-e13-train",
+        "romantamrazov/rsna-knee-dinosaur-v5-train"
+      ],
+      "model_refs": [
+        "metaresearch/dinov2/PyTorch/small/1"
+      ],
+      "historical_score_source_match_verified": false
+    },
+    "dreaddevelopment/knee-mri-twelve-findings-from-a-single-model": {
+      "observed_version_number": 7,
+      "source_path": "artifacts/research/20261004-public-contract/dreaddevelopment/knee-mri-twelve-findings-from-a-single-model-latest/source.py",
+      "source_sha256": "9a86329225c8f975967bfa563fadc9ed06ce9d44c83c232439b0f5a1116a623e",
+      "source_bytes": 22446,
+      "metadata_sha256": "3cbb4c26bb6d10eba4ce5952ff4a496dd3bdcd41ce4714c3ae20ed4ae994708b",
+      "internet_enabled": false,
+      "docker_image": "gcr.io/kaggle-images/python@sha256:dafd4ce5668bbf1ad422e4c109e0f18c9623c3a7c7f48b0235f13142755c40b9",
+      "dataset_refs": [
+        "dreaddevelopment/raptor-knee-widedense"
+      ],
+      "notebook_refs": [],
+      "model_refs": [],
+      "historical_score_source_match_verified": false
+    },
+    "sofiaanjenje/rsna-knee-e11-train": {
+      "observed_version_number": 2,
+      "source_path": "artifacts/research/20261004-public-contract/sofiaanjenje/rsna-knee-e11-train-latest/source.ipynb",
+      "source_sha256": "cd37c4747ba32a9c2725007436aa639ab14557d7e4cda60f409bfff555efd264",
+      "source_bytes": 293432,
+      "metadata_sha256": "bed1562b94832ad66ccfcb4f121a5e68189106dae89e456c336233c24cce422a",
+      "internet_enabled": false,
+      "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+      "dataset_refs": [
+        "mattiaangeli/knee-mri-fold-weights",
+        "marwanmath/resnet-50-radimagenet-marwan",
+        "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+        "stevenleehans/rsna-knee-llm-report-labels",
+        "lixin73/rsna-knee-llm-report-labels-sol56",
+        "pilkwang/rsna-knee-llm-labels",
+        "mattiaangeli/rsna-knee-radimagenet-foldsv1-heads",
+        "pilkwang/rsna-knee-weights",
+        "tonylica/rsna2026-models"
+      ],
+      "notebook_refs": [],
+      "model_refs": [
+        "metaresearch/dinov2/PyTorch/small/1",
+        "metaresearch/dinov2/PyTorch/base/1"
+      ],
+      "historical_score_source_match_verified": false
+    },
+    "sofiaanjenje/rsna-knee-e13-train": {
+      "observed_version_number": 1,
+      "source_path": "artifacts/research/20261004-public-contract/sofiaanjenje/rsna-knee-e13-train-latest/source.ipynb",
+      "source_sha256": "5d882688f0ca96782f0e8aebbcc82d78cf79e9ac9d7ccc8b55f66b17689c054f",
+      "source_bytes": 293426,
+      "metadata_sha256": "93231061d0e2530680b05cbe70b40302be3ac6ea1b9f540183dc771c86385943",
+      "internet_enabled": false,
+      "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+      "dataset_refs": [
+        "mattiaangeli/knee-mri-fold-weights",
+        "marwanmath/resnet-50-radimagenet-marwan",
+        "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+        "stevenleehans/rsna-knee-llm-report-labels",
+        "lixin73/rsna-knee-llm-report-labels-sol56",
+        "pilkwang/rsna-knee-llm-labels",
+        "mattiaangeli/rsna-knee-radimagenet-foldsv1-heads",
+        "pilkwang/rsna-knee-weights",
+        "tonylica/rsna2026-models"
+      ],
+      "notebook_refs": [],
+      "model_refs": [
+        "metaresearch/dinov2/PyTorch/base/1",
+        "metaresearch/dinov2/PyTorch/small/1"
+      ],
+      "historical_score_source_match_verified": false
+    },
+    "romantamrazov/rsna-knee-dinosaur-v5-train": {
+      "observed_version_number": 15,
+      "source_path": "artifacts/research/20261004-public-contract/romantamrazov/rsna-knee-dinosaur-v5-train-latest/source.ipynb",
+      "source_sha256": "bf740e70922f5f757710dd3ae2bbae59330729d320454b1605d990058b96d2d4",
+      "source_bytes": 53410,
+      "metadata_sha256": "c8ba94ab91c3ffcc0af1645430cee9d4d28e5f6c0ccdc21146d05ff79d3ded63",
+      "internet_enabled": true,
+      "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+      "dataset_refs": [
+        "dreaddevelopment/raptor-knee-maxspan",
+        "dreaddevelopment/raptor-knee-native384",
+        "dreaddevelopment/raptor-knee-native384dense",
+        "mattiaangeli/knee-mri-fold-weights",
+        "mattiaangeli/opencv-python-headless-4120088-x86",
+        "marwanmath/resnet-50-radimagenet-marwan",
+        "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+        "mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+        "mattiaangeli/rsna-knee-coatnet-global96-top3",
+        "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+        "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+        "pilkwang/rsna-knee-llm-labels",
+        "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+        "pilkwang/rsna-knee-weights"
+      ],
+      "notebook_refs": [
+        "sofiaanjenje/rsna-knee-e11-train",
+        "sofiaanjenje/rsna-knee-e13-train"
+      ],
+      "model_refs": [
+        "ambrosm/convnext-tiny-fb-in22k-ft-in1k/PyTorch/default/1",
+        "metaresearch/dinov2/PyTorch/small/1"
+      ],
+      "historical_score_source_match_verified": false
+    }
+  },
+  "historical_version_attempts": [
+    {
+      "ref": "romantamrazov/rsna-knee-dinosaur-v4",
+      "requested_version_label": "32",
+      "error_type": "HTTPError",
+      "http_status": 404
+    },
+    {
+      "ref": "romantamrazov/rsna-knee-dinosaur-v4",
+      "requested_version_label": "348017647",
+      "error_type": "HTTPError",
+      "http_status": 404
+    }
+  ],
+  "datasets_observed_latest": {
+    "dreaddevelopment/raptor-knee-maxspan": {
+      "observed_latest_version": 1,
+      "url": "https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-maxspan/versions/1",
+      "license_declaration": "CC0: Public Domain",
+      "files_listed": 1,
+      "file_listing_complete": true,
+      "file_names": [
+        "raptor_ft_coatnet_v5_full_swa.pt"
+      ],
+      "historical_v32_attachment_verified": false
+    },
+    "dreaddevelopment/raptor-knee-native384": {
+      "observed_latest_version": 1,
+      "url": "https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-native384/versions/1",
+      "license_declaration": "CC0: Public Domain",
+      "files_listed": 1,
+      "file_listing_complete": true,
+      "file_names": [
+        "raptor_ft_coatnet_v8_full_swa.pt"
+      ],
+      "historical_v32_attachment_verified": false
+    },
+    "dreaddevelopment/raptor-knee-native384dense": {
+      "observed_latest_version": 1,
+      "url": "https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-native384dense/versions/1",
+      "license_declaration": "CC0: Public Domain",
+      "files_listed": 1,
+      "file_listing_complete": true,
+      "file_names": [
+        "raptor_ft_coatnet_v10_full.pt"
+      ],
+      "historical_v32_attachment_verified": false
+    },
+    "mattiaangeli/knee-mri-fold-weights": {
+      "observed_latest_version": 2,
+      "url": "https://www.kaggle.com/datasets/mattiaangeli/knee-mri-fold-weights/versions/2",
+      "license_declaration": "CC0: Public Domain",
+      "files_listed": 6,
+      "file_listing_complete": true,
+      "file_names": [
+        "m_f0.pt",
+        "m_f1.pt",
+        "m_f2.pt",
+        "m_f3.pt",
+        "m_f4.pt",
+        "timm-1.0.22-py3-none-any.whl"
+      ],
+      "historical_v32_attachment_verified": false
+    },
+    "mattiaangeli/opencv-python-headless-4120088-x86": {
+      "observed_latest_version": 1,
+      "url": "https://www.kaggle.com/datasets/mattiaangeli/opencv-python-headless-4120088-x86/versions/1",
+      "license_declaration": "Unknown",
+      "files_listed": 1,
+      "file_listing_complete": true,
+      "file_names": [
+        "opencv_python_headless-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      ],
+      "historical_v32_attachment_verified": false
+    },
+    "marwanmath/resnet-50-radimagenet-marwan": {
+      "observed_latest_version": 1,
+      "url": "https://www.kaggle.com/datasets/marwanmath/resnet-50-radimagenet-marwan/versions/1",
+      "license_declaration": "CC BY-NC-SA 4.0",
+      "files_listed": 1,
+      "file_listing_complete": true,
+      "file_names": [
+        "ResNet50.pt"
+      ],
+      "historical_v32_attachment_verified": false
+    },
+    "mattiaangeli/rsna-knee-coat-resgated-ep10-top3": {
+      "observed_latest_version": 3,
+      "url": "https://www.kaggle.com/datasets/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/versions/3",
+      "license_declaration": "CC0: Public Domain",
+      "files_listed": 21,
+      "file_listing_complete": true,
+      "file_names": [
+        "coat_resgated_gold_e04.pt",
+        "coat_resgated_gold_e06.pt",
+        "coat_resgated_gold_e08.pt"
+      ],
+      "historical_v32_attachment_verified": false
+    },
+    "tonylica/rsna-knee-bend-dinov3-0917-repro-assets": {
+      "observed_latest_version": 5,
+      "url": "https://www.kaggle.com/datasets/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/versions/5",
+      "license_declaration": "Other (specified in description)",
+      "files_listed": 84,
+      "file_listing_complete": true,
+      "file_names": [
+        "kernel-sources/rsna-knee-e13-train/rsna_rad_e11/v52_e11_heads.pt",
+        "knee-mri-fold-weights/m_f0.pt",
+        "knee-mri-fold-weights/m_f1.pt",
+        "knee-mri-fold-weights/m_f2.pt",
+        "knee-mri-fold-weights/m_f3.pt",
+        "knee-mri-fold-weights/m_f4.pt",
+        "opencv-python-headless-4120088-x86/opencv_python_headless-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "raptor-knee-maxspan/raptor_ft_coatnet_v5_full_swa.pt",
+        "raptor-knee-native384/raptor_ft_coatnet_v8_full_swa.pt",
+        "raptor-knee-native384dense/raptor_ft_coatnet_v10_full.pt",
+        "resnet-50-radimagenet-marwan/ResNet50.pt",
+        "rsna-knee-coat-resgated-ep10-top3/coat_resgated_gold_e04.pt",
+        "rsna-knee-coat-resgated-ep10-top3/coat_resgated_gold_e06.pt",
+        "rsna-knee-coat-resgated-ep10-top3/coat_resgated_gold_e08.pt",
+        "rsna-knee-e9-radimagenet-heads-v15/v52_radimagenet_heads.pt",
+        "rsna-knee-weights/m_013dc75703.pt",
+        "rsna-knee-weights/m_1e553ba481.pt",
+        "rsna-knee-weights/m_2dce50ebd9.pt",
+        "rsna-knee-weights/m_2f7e785e82.pt",
+        "rsna-knee-weights/m_3d1f4c48fc.pt",
+        "rsna-knee-weights/m_44128e3ff3.pt",
+        "rsna-knee-weights/m_44bc3c6f14.pt",
+        "rsna-knee-weights/m_5f8ba4c5ea.pt",
+        "rsna-knee-weights/m_72081758ce.pt",
+        "rsna-knee-weights/m_7f8321affc.pt",
+        "rsna-knee-weights/m_84079fe8cb.pt",
+        "rsna-knee-weights/m_8476b29285.pt",
+        "rsna-knee-weights/m_8baecb9d1b.pt",
+        "rsna-knee-weights/m_91f171fe6f.pt",
+        "rsna-knee-weights/m_b7c37cc80e.pt",
+        "rsna-knee-weights/m_d47313baef.pt",
+        "rsna-knee-weights/m_e5427d6c21.pt",
+        "rsna-knee-weights/m_ea3fbf6edf.pt",
+        "rsna-knee-weights/m_ed427aa10a.pt",
+        "rsna-knee-weights/m_f335c812fe.pt"
+      ],
+      "historical_v32_attachment_verified": false
+    },
+    "antoinegg1/rsna-knee-e11-diverse-heads-v20": {
+      "observed_latest_version": 1,
+      "url": "https://www.kaggle.com/datasets/antoinegg1/rsna-knee-e11-diverse-heads-v20/versions/1",
+      "license_declaration": "CC BY-NC-SA 4.0",
+      "files_listed": 9,
+      "file_listing_complete": true,
+      "file_names": [
+        "v52_e11_heads.pt"
+      ],
+      "historical_v32_attachment_verified": false
+    },
+    "antoinegg1/rsna-knee-e9-radimagenet-heads-v15": {
+      "observed_latest_version": 3,
+      "url": "https://www.kaggle.com/datasets/antoinegg1/rsna-knee-e9-radimagenet-heads-v15/versions/3",
+      "license_declaration": "CC BY-NC-SA 4.0",
+      "files_listed": 9,
+      "file_listing_complete": true,
+      "file_names": [
+        "v52_radimagenet_heads.pt"
+      ],
+      "historical_v32_attachment_verified": false
+    },
+    "pilkwang/rsna-knee-llm-labels": {
+      "observed_latest_version": 1,
+      "url": "https://www.kaggle.com/datasets/pilkwang/rsna-knee-llm-labels/versions/1",
+      "license_declaration": "CC0: Public Domain",
+      "files_listed": 2,
+      "file_listing_complete": true,
+      "file_names": [],
+      "historical_v32_attachment_verified": false
+    },
+    "renta0426/rsna-knee-public0033-meniscus-bag-v1": {
+      "observed_latest_version": 2,
+      "url": "https://www.kaggle.com/datasets/renta0426/rsna-knee-public0033-meniscus-bag-v1/versions/2",
+      "license_declaration": "Apache 2.0",
+      "files_listed": 9,
+      "file_listing_complete": true,
+      "file_names": [
+        "checkpoint_epoch30.safetensors"
+      ],
+      "historical_v32_attachment_verified": false
+    },
+    "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812": {
+      "observed_latest_version": 1,
+      "url": "https://www.kaggle.com/datasets/prvsiyan/rsna-knee-v52-radimagenet-heads-20260812/versions/1",
+      "license_declaration": "Other (specified in description)",
+      "files_listed": 2,
+      "file_listing_complete": true,
+      "file_names": [
+        "v52_radimagenet_heads.pt"
+      ],
+      "historical_v32_attachment_verified": false
+    },
+    "pilkwang/rsna-knee-weights": {
+      "observed_latest_version": 1,
+      "url": "https://www.kaggle.com/datasets/pilkwang/rsna-knee-weights/versions/1",
+      "license_declaration": "CC0: Public Domain",
+      "files_listed": 23,
+      "file_listing_complete": true,
+      "file_names": [
+        "m_013dc75703.pt",
+        "m_1e553ba481.pt",
+        "m_2dce50ebd9.pt",
+        "m_2f7e785e82.pt",
+        "m_3d1f4c48fc.pt",
+        "m_44128e3ff3.pt",
+        "m_44bc3c6f14.pt",
+        "m_5f8ba4c5ea.pt",
+        "m_72081758ce.pt",
+        "m_7f8321affc.pt",
+        "m_84079fe8cb.pt",
+        "m_8476b29285.pt",
+        "m_8baecb9d1b.pt",
+        "m_91f171fe6f.pt",
+        "m_b7c37cc80e.pt",
+        "m_d47313baef.pt",
+        "m_e5427d6c21.pt",
+        "m_ea3fbf6edf.pt",
+        "m_ed427aa10a.pt",
+        "m_f335c812fe.pt"
+      ],
+      "historical_v32_attachment_verified": false
+    },
+    "dreaddevelopment/raptor-knee-widedense": {
+      "observed_latest_version": 2,
+      "url": "https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-widedense/versions/2",
+      "license_declaration": "CC0: Public Domain",
+      "files_listed": 2,
+      "file_listing_complete": true,
+      "file_names": [
+        "raptor_ft_coatnet_v4_full.pt",
+        "raptor_ft_coatnet_v4_full_swa.pt"
+      ],
+      "historical_v32_attachment_verified": false
+    }
+  },
+  "source_documents_obtained": [
+    {
+      "ref": "tonylica/rsna-knee-bend-dinov3-0917-repro-assets",
+      "version": 5,
+      "name": "SOURCE_AND_LICENSES.md",
+      "listed_bytes": 2210,
+      "sha256": "133a4ed74813aac7c9f72ab5d3ce95f694052dfa01de11e842d50810b72ae8cd",
+      "bytes": 2210,
+      "path": "artifacts/research/20261004-public-contract/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/SOURCE_AND_LICENSES.md"
+    },
+    {
+      "ref": "tonylica/rsna-knee-bend-dinov3-0917-repro-assets",
+      "version": 5,
+      "name": "recipe.json",
+      "listed_bytes": 1247,
+      "sha256": "5084d16494acc3d403dfe0e38b5a8554ee31ff620736363e963be5855798f205",
+      "bytes": 1247,
+      "path": "artifacts/research/20261004-public-contract/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/recipe.json"
+    },
+    {
+      "ref": "tonylica/rsna-knee-bend-dinov3-0917-repro-assets",
+      "version": 5,
+      "name": "bundle_manifest.json",
+      "listed_bytes": 26322,
+      "sha256": "3b6279ab50ca8c3ce100644eadda9bc14e0359c05120990e28a43edc6a5364a8",
+      "bytes": 26322,
+      "path": "artifacts/research/20261004-public-contract/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json"
+    },
+    {
+      "ref": "renta0426/rsna-knee-public0033-meniscus-bag-v1",
+      "version": 2,
+      "name": "public0033_runtime.py",
+      "listed_bytes": 42887,
+      "sha256": "9541f82a993d7dc2942ca2a5112e110471285f8d80701846079a3dc708761683",
+      "bytes": 42887,
+      "path": "artifacts/research/20261004-public-contract/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/public0033_runtime.py"
+    },
+    {
+      "ref": "renta0426/rsna-knee-public0033-meniscus-bag-v1",
+      "version": 2,
+      "name": "run_contract.json",
+      "listed_bytes": 6607,
+      "sha256": "107ef5133238dc514eb990bf75e05a0c5d8262873c95158957565bdc7278e11f",
+      "bytes": 6607,
+      "path": "artifacts/research/20261004-public-contract/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/run_contract.json"
+    },
+    {
+      "ref": "renta0426/rsna-knee-public0033-meniscus-bag-v1",
+      "version": 2,
+      "name": "bundle_manifest.json",
+      "listed_bytes": 9163,
+      "sha256": "b610229f046fe0f27ec8dcf661c5532d4991427428378975d0443da671607945",
+      "bytes": 9163,
+      "path": "artifacts/research/20261004-public-contract/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/bundle_manifest.json"
+    },
+    {
+      "ref": "renta0426/rsna-knee-public0033-meniscus-bag-v1",
+      "version": 2,
+      "name": "checkpoint_epoch30.safetensors.json",
+      "listed_bytes": 564,
+      "sha256": "42d1e4de3c19b00d891732441e8cd8be155848c1558ba7963361098986c7126c",
+      "bytes": 564,
+      "path": "artifacts/research/20261004-public-contract/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/checkpoint_epoch30.safetensors.json"
+    },
+    {
+      "ref": "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+      "version": 3,
+      "name": "README.md",
+      "listed_bytes": 2951,
+      "sha256": "347e8c02c391b537ed8dda97d403cd0b6a32c6f156d4eb9eb5dd8d764ba4f517",
+      "bytes": 2951,
+      "path": "artifacts/research/20261004-public-contract/source-documents/antoinegg1/rsna-knee-e9-radimagenet-heads-v15/3/README.md"
+    },
+    {
+      "ref": "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+      "version": 3,
+      "name": "e10_contract.json",
+      "listed_bytes": 15221,
+      "sha256": "219c91f40905181c222e2966b3fed01a96570ddfb64862357d5fd6cad500cd45",
+      "bytes": 15221,
+      "path": "artifacts/research/20261004-public-contract/source-documents/antoinegg1/rsna-knee-e9-radimagenet-heads-v15/3/e10_contract.json"
+    },
+    {
+      "ref": "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+      "version": 3,
+      "name": "radimagenet_arm_v15.py",
+      "listed_bytes": 31200,
+      "sha256": "a10044a3e8f87fb5583a2eb91cdc6f607936b5e7201f18293e2561132fe44fc6",
+      "bytes": 31200,
+      "path": "artifacts/research/20261004-public-contract/source-documents/antoinegg1/rsna-knee-e9-radimagenet-heads-v15/3/radimagenet_arm_v15.py"
+    },
+    {
+      "ref": "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+      "version": 1,
+      "name": "README.md",
+      "listed_bytes": 1472,
+      "sha256": "ac4efd8637473a08a343a3bc01e61e368dba7043a116a441199b0fc40448a8e8",
+      "bytes": 1472,
+      "path": "artifacts/research/20261004-public-contract/source-documents/antoinegg1/rsna-knee-e11-diverse-heads-v20/1/README.md"
+    },
+    {
+      "ref": "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+      "version": 1,
+      "name": "e11_contract.json",
+      "listed_bytes": 21305,
+      "sha256": "7f91e189ccc472b710791730bbbc2d26b3a1d04b45f60a0166445be158a093d3",
+      "bytes": 21305,
+      "path": "artifacts/research/20261004-public-contract/source-documents/antoinegg1/rsna-knee-e11-diverse-heads-v20/1/e11_contract.json"
+    },
+    {
+      "ref": "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+      "version": 1,
+      "name": "README.md",
+      "listed_bytes": 1432,
+      "sha256": "d7e0ff7c5389013645272ce387710a91e6c6bc2669c886362d231b54d3d71edd",
+      "bytes": 1432,
+      "path": "artifacts/research/20261004-public-contract/source-documents/prvsiyan/rsna-knee-v52-radimagenet-heads-20260812/1/README.md"
+    }
+  ],
+  "findings": {
+    "score_version": "Author page displays Best 0.937 at V32; official SDK latest source is V35. Requests for V32 through slug/32 and version_label=32 returned HTTP errors; the latter was404. Search-index scriptVersionId348017647 was not mapped to V32 and also returned404 when used as version_label. V32 exact source and attached Input versions remain unverified.",
+    "v35_output": "V35 preserves submission_dinosaur_v4_0937_control.csv in cell11. Later cells rebuild PublicDual, then Synovitis and CoAt residual variants. Final cell22 copies PublicCoAt main alpha0.16 to submission.csv. V35 default CSV is not the preserved0.937 control and is not confirmed scored here.",
+    "v35_inputs": "Official live metadata lists14 datasets,3 Notebook outputs,1 DINOv2-small model version and competition. Embedded ipynb kaggle.dataSources also contains opaque IDs but has only2 kernelVersion records, unlike3 live Notebook refs, plus inherited source metadata. Never map opaque IDs by ordinal or treat the observed latest Dataset versions below as the historical V32 attachment.",
+    "v35_runtime": "Multiple model families and four Raptor views, source-specific ranks/blends, frozen calibration and a Renta Medial Meniscus residual. DINO requires all public-frontier votes; CoAt branches can report failure while preserving a prior submission. Schema-valid output alone does not prove every intended branch ran. Inspect component counts, fingerprints, input hash gates, residual receipts and final-file choice.",
+    "asset_version_drift": "tonylica asset Dataset latestV5 now reproduces evgendvorkin/rsna-baseline V15 with41 unique checkpoints and residual CoAt epochs4/6/8. Its card separates original source score0.941 from an unscored repackaging target0.942. These are author reports, not our measurements. This asset's own recipe differs from DINOsaurV4; it is not interchangeable without source/file/hash verification.",
+    "offline_contract": "CoAtNet V7 imports numpy/torch/timm/pandas/pydicom/cv2, sets offline HuggingFace variables, constructs pretrained=False and expects raptor_ft_coatnet_v4_full.pt. V35 additionally requires torchvision/transformers/safetensors and local DINO config/weights plus bundled runtime and checkpoint files. Wheel availability and Kaggle hidden-test container execution were not tested here. No new automatic downloads/uploads/submissions were added to repository code.",
+    "coat_v7_geometry": "Fixed140mm crop,336px rendered images,64 slices in five slots18/14/12/8/12,6-94percent span,384px encoder,ImageNet normalization,K_EVAL42. Preserve actual source geometry and code hash instead of swapping a later maxspan checkpoint into it; v5 maxspan source card requires2-98percent span and62windows.",
+    "training_v8": "Previously saved TrainingV8 source hash verified. It consumes unprovided labels_llm_soft.parquet,44x336 corpus and selects best/top-k on gold AUC, even when a fold hook creates an OOF output. This is not independently reproducible gold-free retraining of the distributed.924 checkpoint.",
+    "renta_training": "Pinned DatasetV2 run_contract declares4349 weak studies,58 official-label studies excluded,no gold label values/metrics read,30epoch final-only selection,seed2027. Training teacher is Pilkwang report_labels_v2. We verified document hashes and consistency with sidecar, not private execution or teacher-generation independence. fold_safe_oof=false is explicit.",
+    "rad_gold": "Pinned Antoine E9 DatasetV3 README explicitly states official gold labels override weak labels during training and E10 blend-weight selection uses the58 gold rows via nested grouped folds. Published training source confirms gold assignment and grouped validation. Public scores can be reproduced as external references; these weights or their local OOF must not be presented as our gold-independent validation.",
+    "v5_train_gold": "Latest DINOsaurV5 trainingV15 source assigns gold into training targets, boosts its weight to2, trains heads on non-gold plus other gold folds, and selects epoch by held-out gold AUC. This source is an attached latest input candidate; exact relation to a historicalV32/V35 deployed checkpoint is unverified. Do not transplant its training/selection workflow into our gold-excluded runs.",
+    "licenses": "Mixed upstream licenses apply. Tonylica DatasetV5 SOURCE_AND_LICENSES lists CC0 DINO/Raptor/residual declarations,Apache DINOv2,CC-BY-NC-SA4.0 Rad encoder/reference heads,underlying DINOv3 terms,E13 redistribution license not independently established,and OpenCV third-party notices. Other is not a blanketCC0 grant. Renta original artifacts areApache2.0; that does not relicense images/reports or separate third-party assets."
+  },
+  "next_manual_reproduction_contract": [
+    {
+      "candidate": "Locally trained ResNet bundle prepared by main task",
+      "priority": 1,
+      "recipe": "Pin fresh code zip+selected checkpoint+Notebook+manifest/attribution by hash; attach competition and private bundle as Kaggle Inputs. InternetOFF,GPU,Save&RunAll,inspect sample rows and logs,then explicitly select submission.csv in UI. Record saved Notebook/Input version,runtime,status,measuredPublic in ledger after the user performs the external action.",
+      "reason": "This tests our local weak improvement against image labels without conflating it with public weights."
+    },
+    {
+      "candidate": "DINOsaurV4 historical scoredV32",
+      "priority": 2,
+      "status": "Await exact V32 Notebook/UI snapshot and attached versions; no local ready-to-score bundle claimed",
+      "recipe": "Open Version32 from author history,Copy&Edit with original Inputs,record global scriptVersionId and every Dataset/Notebook/Model version. Keep the original pixel and rank path. Preserve the existing.924 submission. InternetOFF GPU T4x2 if supported; inspect all branches then save/run and manually submit. Author .937 remains a claim until own score obtained."
+    },
+    {
+      "candidate": "DINOsaurV4 observedV35 as a separate public-method experiment",
+      "priority": 3,
+      "status": "Source frozen locally; not a V32 reproduction and not execution verified",
+      "recipe": "Prefer author Copy&Edit retaining the14 dataset/3Notebook/model attachments,then pin each effective file by manifest/hash. Confirm Tonylica version satisfies required payload hashes despite changed dataset recipe. Before manual scoring choose and record the exact CSV: preserved.937-control vs latestPublicCoAt main are distinct candidates. Do not mix outputs from different saved Notebook versions or silently bank a failed branch."
+    }
+  ],
+  "checks": {
+    "public_weight_payloads_downloaded": false,
+    "mri_or_label_tables_downloaded": false,
+    "public_code_executed": false,
+    "external_writes_or_submissions": false,
+    "actual_checkpoint_hashes_locally_verified": false,
+    "historical_v32_exact_input_versions_verified": false
+  },
+  "previous_training_v8": {
+    "path": "artifacts/research/20261003-label-audit/dreaddevelopment/knee-mri-training-the-twelve-finding-model.py",
+    "sha256": "9f7055ef5dbec5227bd904290690f97f2aaa6447167c7d800acd961bf61f1045",
+    "matches_previous_audit": true
+  }
+}

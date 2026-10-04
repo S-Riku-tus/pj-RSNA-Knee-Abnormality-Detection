@@ -1,6 +1,36 @@
 # 準備内容の検証範囲
 
-更新日 2026年10月4日 JST。10月3日までに全件キャッシュ転送、weakラベルの監査・分割とローカル実学習を実施した。10月4日は再分析後の依頼で評価・cache互換性・正規化・事前学習を実装し、人工検証、少数train診断、A/B/Cの実学習とCのローカル提出準備を完了した。以下では各作業の確認範囲を分ける。
+更新日 2026年10月4日 JST。全件キャッシュ転送、weakラベルの監査・固定分割、A/B/C対照に続き、fold 1の初期化対照2本とfold 0の20 epoch対照2本を完了した。固定50:50 rank ensembleの追加診断とローカル提出準備も進めた。以下は新しい確認から順に記し、過去の「未実施」は各作業時点の履歴として残す。
+
+## 続行依頼後の保存・更新計測と長期実験（10月4日、完了）
+
+- 推論互換schema 1のbest_bce・best_auc・last・5/10/15/20 milestone保存を実装し、best.ptと選択予測CSVを設定した規則へのaliasにした。checkpoint indexにepoch・BCE/AUC・予測/metrics/重みhashを対応付ける。旧configのBCE規則、diagnosticのBCE強制、AUC未定義の非採用、gold非選択を維持する。lastはoptimizer/scaler/RNGを含まず、resume非対応を明示。
+- optimizer post-step hookでAMP skipを除いた実更新を測定。機会・実更新・skipをepoch別と累積で記録する。500 microbatch毎、検証前、epoch保存後、完了時にprogress.jsonを更新する。追加forwardや学習lossの変更はない。
+- checkpoint 7件・config 3件・extended集計8件・weak bootstrap 8件を含む全97 unittest成功（14.462秒）。CPU/CUDAで追加保存前後のRNG・sample順・BN・optimizer・scalerが完全一致し、AMP overflow skip、Reportなし推論、人工cache CUDA学習全経路を確認。Ruff check/formatは38対象ファイル、git diff --checkも成功。CSV比較のAUCは独立の人工5,400ケースでもpairwise定義と一致した。
+- `artifacts/qa/20261004-extended-pipeline-v2/checks.json`で人工ノイズCUDAのAMP/backward/save/mask/提出3×12契約と旧e002 checkpoint互換を確認。QA 3.25秒、最大torch割当246,000,128 bytes。v1はlegacy専用補助チェックへImageNet正規化Cを渡す引数誤りで停止し、正しい旧e002を指定したv2で成功。productionコードはこの修正で変更していない。
+- `artifacts/kaggle/20261004-extended-source-v1/rsna-knee-code.zip`を凍結（SHA-256 `9c85e2f120ba2eb9f0b3fc44b99ad328783f78026e46a52e8073b377d9bd496f`）。zip全ファイルが学習開始前の現sourceと一致し、imaging.pyのhashと既存cache fingerprintは不変。実学習中のsrc変更を行わない。
+- [事前計画](../experiments/e006-e009-plan-20261004.json)に選択規則とconfig/input/source hashを保存して、fold 1のB/C各5 epoch、fold 0のC20 epochとBN統計固定20 epochを新規runで完了した。[完成集計](../experiments/e006-e009-extended-summary-20261004.json) は全4本valid=true。config・開始/終了/現source・入力hash、各epoch予測/mask/metrics、checkpoint/indexと選択、実更新数を照合し、CPUの実checkpoint読み込みでも内部epoch/fold/config/所見順/fingerprintを確認した。全体時間合計10,025.703秒、既存run上書きなし、gold cache/評価は無効、自作Public未測定。
+- 実更新/機会/AMP skipはe006が4,142/4,145/3、e007が4,143/4,145/2、e008が16,932/16,940/8、e009が16,930/16,940/10。e008の最初5 epochのBCE・AUC・予測CSV hashは旧e005と全て完全一致した。BN固定モデルの20 BN module・60 running bufferは初期状態と完全一致し、affine 40/40・encoder 60/60のparameter tensorは学習で変化した。
+- fold 1の事前学習差は12平均+0.093513、95%区間[+0.060727,+0.127135]。通常BNの5→8 epoch差は+0.009802、区間[−0.004061,+0.024398]。通常BN8→固定BN9は+0.019204、区間[−0.006118,+0.041423]で、平均優位は未確定。固定BNの5→9 epoch差は+0.024807、区間[+0.008788,+0.042459]。両20 epochとも終点は選択epochを下回った。[詳細と所見別の入れ替わり](controlled-experiments.md#続行後の実行結果e006e009実行完了)。
+- weak CSV・供給groupだけのpaired bootstrapはPCG64、seed 20261004、3,000反復。fold 0の12平均はSynovitis陰性1groupの不在により1,124反復未定義で、区間は1,876反復に条件付き。補助11平均は全3,000反復で定義される。同foldのepoch/config選択・患者独立性・画像ラベルの正確さは保証しない。入力hashの解析前後一致を確認し、新規共有JSONには検査/group/Report識別子を保存しない。
+- e008/e009の凍結コード・実重みから人工192px/24窓/3検査×12所見のCPU提出契約が成功。初期ImageNetファイル、Report、URL取得、CUDA初期化をCPU検査で禁止しても推論可能。実GPUでも同じ人工cacheから契約を確認し、CPUとの差は最大2.8313e-5/1.9849e-5。`artifacts/qa/20261004-extended-candidates-cuda-v2/checks.json` がvalid=true。最初のGPU検査は両forward成功後、CPU比較CSVのファイル名を誤って停止した。既存GPU出力の比較先だけを修正し、追加forwardやproduction変更なしでv2記録を作成、v1失敗記録は保持した。
+- 所見別の入れ替わりを見た後の固定50:50 rank診断は12平均0.830249307、補助11平均0.815726517。gold・画像・モデルを読まず、係数/所見weight探索はしていない。全821検査を所見別に順位化し、欠損maskは評価時だけ適用。exact tieの二倍平均順位を整数のまま加算してから一度だけfloat化し、数学的な同順位を保った。[診断記録](../experiments/e008-e009-rank50-review-20261004.json) の共通helperと確定CSV全9,852値が完全一致、独立人工34拒否ケースと行順/左右交換/順位不変性も成功。固定BNとの差は補助11平均+0.029057、区間[+0.015129,+0.043443]だが、後付け候補選択の偏りを区間へ織り込んだものではない。順位値のBCEを確率校正の改善とは扱わない。
+- [r001提出資産](../artifacts/kaggle/r001-bn-rank50-fold0/) は実選択2重み・凍結zip・診断とbyte同一の共通helper・未実行Notebookを含む。`artifacts/qa/20261004-rank50-contract/checks.json` で標準ライブラリ6契約チェックが成功し、保存済みCPU/GPU人工出力を各3×12で合わせたCSV契約もvalid=true。既存人工UIDだけを新QA内でnumericの架空UIDへ同じ対応で置換し、scoreと元CSVを保持した。モデルforwardやtorch importは行っていない。Notebookは2 checkpoint/source/helper hash、共通pixel fingerprint、cache1個・推論2回・全test一括rank・提出契約を確認する構成で、全code cellのcompileと未実行状態を検査した。
+- 固定BN単体の [e009 v2資産](../artifacts/kaggle/e009-pretrained20-auc-bnfreeze-fold0-v2/) は元bundleに残った説明文のepoch誤記だけを修正した。`artifacts/qa/20261004-e009-bundle-v2-metadata/checks.json` でcode cell完全一致、重み/zip/index/config同一、旧6資産hash保持を確認した。追加モデルforwardは行わず、元Notebookと履歴を保持する。
+- 公開方式の追加監査は [再現契約](research/public-reproduction-contract-20261004.json)。取得は公開code・metadata・小さい説明文書だけで、重み・MRI・ラベル表・予測配列取得、公開コード実行、外部書き込みはしていない。
+- SDK版指定を`version_label="v32"`へ修正し、DINOsaur V32ソースを取得・hash固定した。[V32追補](research/public-reproduction-v32-followup-20261004.json)。表示0.937は作者報告で、歴史的Inputの厳密版と採点CSVは未確認。物理cropは [入力契約](research/physical-crop-contract-20261004.json) を調査しただけで、元MRIの追加取得・実decode・crop cache再生成はしていない。新しいKaggleアップロード・実test実行・提出も未実施。
+- [完了時の検証記録](../experiments/e006-e009-verification-20261004.json) にテスト・各QA・主担当のrank9,852値再照合・Notebook/asset hash・JSON/文書リンク/台帳の確認をまとめた。[判断記録](../experiments/e006-e009-decision-20261004.json) は実施済みと次の提案を区別する。新しい台帳5行のgold/Public列は空欄で、r001へ学習時間を割り当てていない。
+
+## 追加の添付分析と優先順位の再監査（10月4日）
+
+- 新しい添付分析をHEAD `05b0710`、runtime/model/imaging/config、保存済み集計/epoch評価・予測CSVと照合した。原文を [user-analysis-review-20261004.txt](research/user-analysis-review-20261004.txt)、識別子を含まない数値/入力hash/調査根拠を [strategy-audit-20261004.json](research/strategy-audit-20261004.json) に新規保存した。
+- C epoch 2→5は12所見AUC+0.007713、Synovitisは0.98→0.96、補助11平均+0.010232。7所見改善/5所見悪化で、Medial MeniscusはAUC−0.048177。同所見の悪化が全セルBCE増加の約77.8%を占める。添付の「Synovitis以外も改善」は支持するが、全所見の改善や長期化の成功を証明しない。
+- goldを読まず、weak fold 0の812供給group/821検査を単位にpaired bootstrap（3,000回、seed20261004）。補助11所見C2−B1差+0.120629、percentile 95%区間[+0.078707,+0.162513]。C5−C2差+0.010232、区間[−0.005521,+0.025498]。12平均はSynovitis陰性1groupの不在で1,124回未定義となり、有効標本だけの区間を全体の確証に使わない。同じfoldでのepoch/config選択バイアス・患者独立性・教師誤差はこの区間の対象外。
+- 現実装はBCE改善時のbest.ptだけ保存し、optimizer/scaler/RNG/Generatorの再開状態は保存しないことを確認。Cのepoch 5モデルも未保存。蓄積末尾はgroup_sizeで正しく補正され、fold 0の847回は更新機会でありAMPの実更新数の実測ではない。batch変更でmasked lossの検査重みも変わり得ること、config seedとmanifest seedの分離が未対応であることを確認した。
+- 公式Overviewの検索索引でmacro12 AUC・Internet OFF/9時間・最終10月22日23:59 UTC（10月23日08:59 JST）を再確認。Host733826の索引本文で画像由来の正解とReportの不一致を確認。DINOsaur V4は表示Best 0.937 V32/最新V35、V32の厳密Inputは未取得。CoAtNet Training V8の未配布softラベルとgold選択は既存監査済みsourceを再読して確認し、gold選択を移植しない判断とした。
+- 次の提案はAUC/BCE/lastモデル保存→fold 1のB/C各5 epoch→Cの20 epoch→BN固定だけの20 epoch比較。公開方式監査と自作Kaggle動作確認を並行させる。詳細は [対照実験の追加分析](controlled-experiments.md#追加分析に基づく優先順位10月4日)。
+- 今回は調査とCSV/JSON再集計、文書更新のみ。src/config/script/test/Notebook/実験台帳を変更せず、学習・MRIデコード・GPU推論・データ/重み取得・外部アップロード・提出は実施していない。新しい提案を実装済み/学習済みと扱わない。
+- 主担当も同じweak CSVと固定予測からbootstrapを独立に再計算し、上記区間を1e-12以内で再現した。調査JSONの厳密parse、保存source/添付hash、変更資料のローカルリンク40件とgit diff --checkが成功。GPUコード変更がないためunittest/人工CUDA検証は再実行せず、以前の71件成功と今回の調査検査を区別する。
 
 ## 対照実験の実装と診断（10月4日、再分析後）
 

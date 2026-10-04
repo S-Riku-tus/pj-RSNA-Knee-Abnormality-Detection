@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "recorded_on_jst": "2026-10-04",
+  "scope": "Decision after the authorized e006-e009 local training batch; fixed rank50 is a posthoc scoring candidate, not a confirmed independent winner",
+  "completed_training_runs": 4,
+  "total_training_function_seconds": 10025.703023900016,
+  "source_sha256": {
+    "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+    "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+    "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+    "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+    "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+    "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+    "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05"
+  },
+  "cache_fingerprint": "c382a673469a75c9eb5fd20b953579a5ea5d4a3ad696de1dbd5cec4740ef2850",
+  "code_zip_sha256": "9c85e2f120ba2eb9f0b3fc44b99ad328783f78026e46a52e8073b377d9bd496f",
+  "evidence_sha256": {
+    "experiments/e006-e009-plan-20261004.json": "e537020c45b97a60db8e293486e92510429c8d7efcb9c9ef37c20f181050a0e1",
+    "experiments/e006-e009-extended-summary-20261004.json": "f94f1c5a9e549a1e0cfd0d22b8fbd325e4960953d3c0aa3bd8195296c18d5772",
+    "experiments/e006-e007-fold1-bootstrap-20261004.json": "a832efb53145ed82800e089c93c276738eae0372a67746b9059521c064915b15",
+    "experiments/e008-duration-bootstrap-20261004.json": "6236a3004227241f16a03174ab4b86ebef3c701b16d5407a6462fab553825982",
+    "experiments/e008-e009-bn-bootstrap-20261004.json": "9c63b84eed6ed7f23154c32aa617a01659f30ad162d063c956d3df60683b8c18",
+    "experiments/e009-duration-bootstrap-20261004.json": "ec5cf94e97522dd8ffda169f58860d39801c58c9f85c8eb8b6b2b5298140319d",
+    "experiments/e008-e009-rank50-review-20261004.json": "34a699b97863571d6c03a16e3b5286003f1903f858cb10569c4163413a68b821",
+    "experiments/e009-rank50-bootstrap-20261004.json": "ad36b5f252075a9be3f25bb219eac4dac619f0e1ca658509a83186e97549e466",
+    "docs/research/public-reproduction-v32-followup-20261004.json": "4cfc47832ec77a37f5690afbd0ce90ffe251b8996142ad0d57b4e0bec9f0d668",
+    "docs/research/physical-crop-contract-20261004.json": "57b83b60e0312c1216eb3b3ac7e5977827e1348355e3dde2501c13ab6624a45c"
+  },
+  "findings": {
+    "initialization": {
+      "comparison": "B5 to C3 on fold1, predeclared BCE selection",
+      "macro_auc_12_delta": 0.09351253841155856,
+      "ci95": [
+        0.06072692855516013,
+        0.127134581921647
+      ],
+      "auxiliary_11_delta": 0.1084991515567518,
+      "ci95_auxiliary_11": [
+        0.07455422585495476,
+        0.14321740768815874
+      ],
+      "interpretation": "Supports ImageNet initialization as the local baseline on a second grouped fold; not all targets improve"
+    },
+    "duration_normal_bn": {
+      "comparison": "First5 AUC-best epoch5 to full20 AUC-best epoch8",
+      "macro_auc_12_delta": 0.009801984175405435,
+      "ci95_defined_draws": [
+        -0.004061022122451632,
+        0.024397682157697376
+      ],
+      "auxiliary_11_delta": 0.008874891827715019,
+      "ci95_auxiliary_11": [
+        -0.006410513650803365,
+        0.023781166447565085
+      ],
+      "interpretation": "Average duration gain uncertain; last20 is worse than selected8; do not prioritize simple 50/100 epoch continuation under the same settings"
+    },
+    "bn_freeze": {
+      "comparison": "Normal BN epoch8 to frozen BN epoch9",
+      "macro_auc_12_delta": 0.019204196716145844,
+      "ci95_defined_draws": [
+        -0.006117550388100704,
+        0.04142293914744794
+      ],
+      "auxiliary_11_delta": 0.0200409418721591,
+      "ci95_auxiliary_11": [
+        -0.005828430911896434,
+        0.044932876117073015
+      ],
+      "interpretation": "Average superiority uncertain; major target tradeoffs preclude replacing normal BN solely on this fold"
+    },
+    "duration_frozen_bn": {
+      "comparison": "First5 AUC-best epoch5 to full20 AUC-best epoch9",
+      "auxiliary_11_delta": 0.022516293439199486,
+      "ci95_auxiliary_11": [
+        0.004782770716342198,
+        0.041190578729036725
+      ],
+      "interpretation": "Observed improvement beyond5 under frozen BN; selected-epoch descriptive interval does not include selection bias"
+    },
+    "implementation_neutrality": {
+      "normal_bn_first5_matches_e005_all_bce_auc_and_prediction_sha": true,
+      "all4_source_launch_finish_current_match": true,
+      "checkpoint_internal_metadata_checked_separately_on_cpu": true
+    }
+  },
+  "provisional_scoring_candidate": {
+    "id": "r001-bn-rank50-fold0",
+    "bundle": "artifacts/kaggle/r001-bn-rank50-fold0",
+    "notebook": "artifacts/kaggle/r001-bn-rank50-fold0/01_submit_r001.ipynb",
+    "components": {
+      "normal_bn": {
+        "run": "e008-pretrained20-auc",
+        "epoch": 8,
+        "checkpoint_sha256": "1626d00ca2f8f16d3c37612d2b6bcbc1756ebdd34b722b84f5c4f7a865cc85a9"
+      },
+      "frozen_bn": {
+        "run": "e009-pretrained20-auc-bnfreeze",
+        "epoch": 9,
+        "checkpoint_sha256": "b147d4c9746d25bdac97b7de9ae880e3a6a64e7b7608514226b5fc361c87b08b"
+      }
+    },
+    "method": "Fixed equally weighted mean of per-model per-target full-cohort normalized midranks; exact integer doubled ranks before one float division",
+    "coefficients": [
+      0.5,
+      0.5
+    ],
+    "predeclared_before_training": false,
+    "posthoc_after_bn_tradeoff_review": true,
+    "coefficient_or_per_target_weight_search_performed": false,
+    "rank_helper_sha256": "02bf93907ffbf817bb4f8a2ef1f43cc207f3c121e86ab377cbdb8cf7a34939b9",
+    "weak_macro_auc_12": 0.8302493068964057,
+    "weak_auxiliary_11_auc": 0.8157265166142609,
+    "rank_score_masked_bce": 0.6257563351469493,
+    "bce_interpretation": "Uncalibrated cohort ranking scores; not evidence of improved probability calibration",
+    "delta_vs_frozen_auxiliary_11": 0.029056652395771557,
+    "ci95_vs_frozen_auxiliary_11": [
+      0.01512931537743788,
+      0.043443105004533356
+    ],
+    "status": "Prepared offline candidate; same-fold posthoc diagnostic; fold1 and real Public pending",
+    "single_model_fallback": "artifacts/kaggle/e009-pretrained20-auc-bnfreeze-fold0-v2",
+    "existing_scored_public_reference": {
+      "experiment_id": "p001-public-model-reproduction",
+      "public_lb": 0.924,
+      "separate_public_model": true
+    },
+    "self_trained_public_lb": null,
+    "gold_evaluation_for_this_batch": null
+  },
+  "uncertainty": {
+    "paired_bootstrap": "Supplied group unit, PCG64, seed20261004, 3000 draws, fixed prediction CSVs",
+    "fold0_macro12_defined_draws": 1876,
+    "fold0_macro12_undefined_draws": 1124,
+    "fold0_auxiliary11_defined_draws": 3000,
+    "macro12_ci_conditional_on_definition": true,
+    "not_included_in_intervals": [
+      "same-fold epoch and configuration selection",
+      "posthoc ensemble candidate selection",
+      "uncertain report-derived teacher accuracy",
+      "patient independence",
+      "migration of cohort rank blending to hidden test distribution"
+    ],
+    "patient_independence_verified": false,
+    "gold_seen_in_earlier_work_not_pristine_holdout": true
+  },
+  "next_actions_in_priority_order": [
+    {
+      "order": 1,
+      "action": "Manually run and score r001 on Kaggle Internet OFF; keep existing scored reference",
+      "record": [
+        "Notebook and Input versions",
+        "actual mount paths",
+        "full wall time including test decode and both models",
+        "submission identifier and measured score"
+      ],
+      "external_run_started": false
+    },
+    {
+      "order": 2,
+      "action": "Run fresh normal and frozen BN20 paired experiments on fold1, then apply the locked 50:50 helper",
+      "lock": [
+        "same seed, input, source, 20epochs and AUC selection",
+        "only BN running statistics changes between the pair",
+        "no gold or coefficient tuning"
+      ],
+      "exact_resume_from_previous_fold1_models_supported": false,
+      "started": false
+    },
+    {
+      "order": 3,
+      "action": "Pilot a192px physical center-crop cache on Kaggle training-side24-32 studies, before a full one-factor input experiment",
+      "requirements": [
+        "record PixelSpacing and actual physical bounds",
+        "preserve all other pixel/window settings",
+        "exclude gold-linked groups from QC",
+        "explicit preprocessing version and strict old-cache compatibility",
+        "measure RAM, runtime and output before scaling"
+      ],
+      "started": false
+    },
+    {
+      "order": 4,
+      "action": "Resolve historical V32 Input versions and the scored output identity if reproducing the author0.937 candidate",
+      "source_obtained": true,
+      "exact_historical_inputs_and_scored_csv_confirmed": false
+    }
+  ],
+  "gold_used_for_training_checkpoint_selection_or_rank_weights": false,
+  "new_kaggle_upload_execution_or_submission_performed": false,
+  "existing_runs_and_assets_preserved": true,
+  "documentation": [
+    "PROJECT.md",
+    "docs/controlled-experiments.md",
+    "docs/kaggle-submit.md",
+    "docs/validation.md"
+  ]
+}
