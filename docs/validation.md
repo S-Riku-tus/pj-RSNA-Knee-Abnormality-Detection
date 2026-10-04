@@ -1,6 +1,19 @@
 # 準備内容の検証範囲
 
-更新日 2026年10月3日 JST。全件キャッシュ転送後、ユーザーの「進められるところまで進める」依頼により研究用weakラベルの取得・監査・分割とローカル実学習へ進んだ。元DICOM・公開モデルは取得せず、既存npzを学習に使用した。以下では以前の検証と今回の確認を分ける。
+更新日 2026年10月4日 JST。10月3日までに全件キャッシュ転送、研究用weakラベルの監査・分割とローカル実学習を実施した。10月4日は添付分析と実装・一次資料の照合、次工程の計画更新のみ。以下では各日の確認範囲を分ける。
+
+## 添付分析の照合と次工程の調査（10月4日）
+
+- 添付原文を [user-analysis-20261004.txt](research/user-analysis-20261004.txt) へ保存。SHA-256は `ee844f85bf1281db9d8e3a1a1f0261249ea887414c472dfd97a60e927fcb9f97`。判断は [次の実験計画](research/next-experiments-20261004.md)、出典・既存記録hash・容量計算は [調査記録](research/reanalysis-20261004.json)。
+- 今回は実データ・重み取得、実MRIデコード、GPU推論、追加学習、Kaggle実行・アップロード・提出を行っていない。src・config・Notebook・script・test・実験台帳に変更はない。新しい学習結果を記録していない。
+- runtime/model/imaging/contractsと現行設定を照合。所見別Attentionは既存、ResNet18はrandom、画像正規化は[-1,1]。batch 1でもencoderは同じ検査の24 windowを処理する。batch変更はBNだけでなく欠損mask付きlossの検査寄与も変える。学習と検証のloss集計方法も異なり、train-valid差を純粋な過学習量と解釈しない。
+- installed PyTorch 2.10のDataLoader/RandomSamplerソースで、shuffle=Falseでもiterator生成がGeneratorを消費することを確認。train/valid共有Generatorに追加評価を入れると次epochの順序が変わり得る。専用評価GeneratorとRNG・module状態の復元、人工データでの学習不変性の確認は次工程の設計であり、まだ実装していない。
+- export検査器が現在のsrc全体のhash一致を要求し、画像fingerprintがimaging.pyとpreprocess設定から決まることを確認。画像を変えないログ・モデル変更でのcache再利用には検査の分離が必要。既存hash保護を緩めていない。
+- Notebook generatorの未圧縮容量式を再計算。4,407検査×3系列×8 window×3 channelで192/224/256/288/336pxはそれぞれ11,697,094,656／15,921,045,504／20,794,834,944／26,318,462,976／35,822,352,384 bytes。現行18,000,000,000 bytes未満の事前ガードは256px以上を止める。この値はrepoの保守的予算で、現在のKaggle公式枠や最大RAM使用量ではない。LIMITはprefix制限で全件shard処理ではない。
+- Torchvision 0.25とPyTorch 2.10の公式資料、作者のsoft/hard比較、EfficientNet入力比較、既存CoAtNet model card、別Notebookのスコア表示、2024腰椎優勝者の記述を照合した。作者報告を自分の再現値と区別し、別条件の改善幅を現在の期待値へ転用しない。別NotebookのPublic 0.942は表示確認のみで、内部処理・Input・重みの来歴は未監査。
+- 公式Overviewの索引本文で12所見平均AUC、Internet OFF・9時間、期限を再確認。最終期限は10月23日08:59 JST。CC公式資料とHostの別データへの回答から、提供元の条件と大会の条件を分けて確認する計画とした。Rules・外部LLM案内本文は取得できず、採用ラベルの許可・禁止は未確定。外部への問い合わせは送っていない。
+- goldは既に監査値を見ているため完全未観測の最終holdoutとは呼ばない。学習・checkpoint選択・prompt・ensemble係数の調整には使わない。公開重みを後付けfoldで評価しても独立OOFとは主張しない。
+- 調査JSONのparse、添付原文・保存コピー・既存2記録のSHA-256、全解像度の容量式、Markdown 11ファイルのローカルリンク、差分の空白を確認。実装・台帳に差分がないことも確認した。コード変更がないため31 unittestやGPU契約を再実行しておらず、10月3日の成功結果と今回の文書検査を区別する。Gitで追跡されるdata/artifacts配下は従来のREADMEだけ。
 
 ## e002の提出判断のための追加診断（10月3日）
 

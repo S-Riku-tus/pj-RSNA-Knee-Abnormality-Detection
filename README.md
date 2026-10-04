@@ -15,6 +15,8 @@
 7. [モデルと検証の設計](docs/experiment-design.md) — ラベル、前処理、分割、改善の順序。
 8. [Kaggleへの提出手順](docs/kaggle-submit.md) — オフライン推論の準備。
 
+10月4日の添付分析を照合した最新の判断は [次の実験計画](docs/research/next-experiments-20261004.md)。評価記録の整備、正規化と初期化を分けた比較、必要なBN診断、ラベル・入力の改善を順に進めます。高解像度キャッシュの容量条件も記録しています。今回の変更は調査と計画のみで、新しい学習は行っていません。
+
 ## 大会の要点
 
 MRI検査ごとに12所見の連続値を予測し、12項目の平均ROC-AUCで評価されます。提出はKaggle Notebookで、インターネット無効、実行9時間以内、出力名は `submission.csv` です。[公式概要](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview)

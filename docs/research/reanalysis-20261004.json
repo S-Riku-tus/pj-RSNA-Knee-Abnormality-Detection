@@ -1,0 +1,103 @@
+{
+  "checked_at_jst": "2026-10-04",
+  "scope": "Repository and primary-source review only; no training, real MRI decode, data/model acquisition, upload or submission",
+  "user_analysis_copy": "docs/research/user-analysis-20261004.txt",
+  "user_analysis_sha256": "ee844f85bf1281db9d8e3a1a1f0261249ea887414c472dfd97a60e927fcb9f97",
+  "baseline_record_sha256": "191adff9bcae75487296a5c4eefe78fd1c561714e8df36593c62e9b8ae84dd5e",
+  "diagnostic_record_sha256": "955f298c78f1e64b29faf672d61f997fd27bf71e65877d7fd690585d9b9e5e36",
+  "cache_capacity": {
+    "studies": 4407,
+    "series": 3,
+    "windows_per_series": 8,
+    "channels": 3,
+    "dtype_bytes": 1,
+    "formula": "studies * series * windows_per_series * channels * image_size^2 * dtype_bytes",
+    "raw_image_bytes_by_size": {
+      "192": 11697094656,
+      "224": 15921045504,
+      "256": 20794834944,
+      "288": 26318462976,
+      "336": 35822352384
+    },
+    "repository_preflight_guard_bytes": 18000000000,
+    "measured_192_export_bytes": 7785521448,
+    "notes": "Raw image estimate is distinct from compressed export size and peak RAM. The 18GB guard is a repository budget, not verification of current Kaggle limits. LIMIT selects a prefix and does not implement full-data sharding."
+  },
+  "primary_sources": [
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview",
+      "status": "official overview indexed article reviewed; direct open empty",
+      "supports": "macro12 AUC, internet-off Notebook <=9h, public external data/models, UTC deadline October22 23:59"
+    },
+    {
+      "url": "https://github.com/pytorch/vision/blob/v0.25.0/torchvision/models/resnet.py",
+      "status": "version-pinned official source and installed 0.25 API reviewed without downloading weights",
+      "supports": "ResNet18 ImageNet1K V1 initialization and documented normalization"
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/2.10/generated/torch.nn.BatchNorm2d.html",
+      "status": "official full body reviewed",
+      "supports": "forward minibatch statistics vs eval running statistics; gradient accumulation does not merge BN batches"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/734105",
+      "status": "author experiment indexed article reviewed by research agent; direct open empty; not reproduced",
+      "supports": "soft/hard3 seeds, gold rank-ensemble delta +0.0143 CI[-0.0041,+0.0330]; hard unmentioned0 vs soft.28 differs from missing mask"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/737597",
+      "status": "author experiment indexed article reviewed by research agent; direct open empty; not reproduced",
+      "supports": "EfficientNetB0 center vs spaced slices +.018 in other preprocessing/split; 60epoch +.0008; no promised gain for this repo"
+    },
+    {
+      "url": "https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-widedense",
+      "status": "author card indexed article reviewed; own .924 reproduction is previously authenticated API record",
+      "supports": "CoAtNet2,140mm crop,cache336 to input384,5 series slots64 images; strict source/gold history remains unresolved"
+    },
+    {
+      "url": "https://www.kaggle.com/code/evgendvorkin/rsna-baseline",
+      "status": "search-index score/version display only; implementation and Input history unverified; not reproduced",
+      "supports": "author/displayed Public.942 at V16 only; not a method adoption or medal forecast"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-2024-lumbar-spine-degenerative-classification/writeups/avengers-1st-place-solution",
+      "status": "winner-authored article reviewed by research agent",
+      "supports": "localization/crop then severity, MIL/BiLSTM in different coordinate-supervised competition"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/741819",
+      "status": "indexed Host reply reviewed; direct open empty",
+      "supports": "OAI availability under competition rules distinguished from provider terms; does not decide vmohitrao license"
+    },
+    {
+      "url": "https://creativecommons.org/faq/#does-my-use-violate-the-noncommercial-clause-of-the-licenses",
+      "status": "official FAQ reviewed",
+      "supports": "NC depends on use and context; rights holder may grant separate permission; competition-specific eligibility unresolved"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/legalcode.en",
+      "status": "official license body reviewed by research agent",
+      "supports": "NonCommercial definition and availability of separate permission; no competition-specific eligibility conclusion"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/rules",
+      "status": "body unavailable",
+      "supports": null
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733965",
+      "status": "Host external-LLM guidance body unavailable",
+      "supports": null
+    }
+  ],
+  "research_conclusions": [
+    "Instrument epoch weak predictions/AUC/distributions and comparable eval losses before judging initialization or BN",
+    "Compare random+legacy, random+ImageNetNorm, pretrained+ImageNetNorm on the same192px cache; keep selection rule fixed",
+    "If BN comparison is needed, first isolate running-stat freeze; changing real batch also changes current missing-label loss weighting",
+    "Audit label observation bias and competition definitions alongside model work; missing is not zero or arbitrary .5",
+    "Separate model-only source changes from image preprocessing compatibility; preserve export integrity checks",
+    "Test resolution and physical crop separately; implement full UID sharding/merge verification before256+full cache",
+    "Keep gold out of train/selection; prior gold inspection means not a pristine final blind holdout; do not claim independent OOF for public weights",
+    "Verify own Kaggle execution early after source eligibility; maintain scored public baseline"
+  ]
+}
