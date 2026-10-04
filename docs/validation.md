@@ -2,6 +2,20 @@
 
 更新日 2026年10月4日 JST。全件キャッシュ転送、weakラベルの監査・固定分割、A/B/C対照に続き、fold 1の初期化対照2本とfold 0の20 epoch対照2本を完了した。固定50:50 rank ensembleの追加診断とローカル提出準備も進めた。以下は新しい確認から順に記し、過去の「未実施」は各作業時点の履歴として残す。
 
+## Kaggle Version 3の表示用test実行（10月4日、完了）
+
+- ユーザーの提示ログを構造化して候補asset-manifestと照合した。表示用test 3検査の前処理はwarnings=0・debug_limit=None。通常BN／固定BNのCUDA推論は各3検査×12所見、最終rank ensembleもvalid=true。両checkpoint・全source・rank helperファイル/関数・pixel fingerprintのhashが一致し、RANK_MODULEはInput直下のrank50.pyを参照した。[確認記録](../experiments/r001-kaggle-v3-review-20261004.json)。
+- 公式SDKのread-only確認でもNotebook `rsraki/rsna-knee-r001-rank50` はVersion 3・COMPLETE・GPU有効・Internet OFF。Output一覧に最終submission.csv（852 bytes）、単体予測2 CSV（各885 bytes）、submission.meta.json（871 bytes）を確認。Output本体は取得せず、CSVのvalidは実行ログの検査結果に基づく。Notebook内計測47.9549秒、提示ログは起動/変換を含み68.2秒まで。Debugger・mistune・nbconvertの警告は完走を妨げていない。
+- [公式データ説明](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data)のtest.csvは3検査の例で、Submit時に本番testへ差し替わる。現時点の提出履歴は旧公開モデルのPublic 0.924の1件だけで、r001の本番採点・全体時間・Publicは未確認。Version 3のOutputからsubmission.csvをユーザーがSubmitし、その結果を別途記録する。今回のレビューではMRI/重み/ラベル取得・decode・forward・学習・外部書込・代理提出は行っていない。
+
+## Kaggleのrank helper参照先の修正（10月4日、再依頼）
+
+- ユーザーの再実行ログは最初のcode cellのrank helper確認で停止し、直前の2 checkpointの存在/SHA検査は通過した。公式SDKの通常認証・read-only要求で実際の保存済みNotebook `rsraki/rsna-knee-r001-rank50` Version 2とInputを確認した。GPU有効・Internet OFF・競技Inputは設定済み。保存NotebookのInput参照は得られるが、厳密な添付版番号はAPI metadataに含まれない。[原因・根拠](../experiments/r001-kaggle-pathfix-20261004.json)。
+- 現在のコードDataset Version 1から小さいcode/manifestだけ75,459 bytesを取得し、全15ファイルのSHAが候補資産と一致。ZIPの展開13ファイルと別添rank50.pyは正しい。保存コードのCODE_ROOTは`.../rsna-knee-code`だが、元の条件分岐はhelperもその中にあると仮定する。実際はInput直下のrank50.pyなので、ZIPを更新しても参照先は直らない。Debugger・nbconvertの警告は停止原因ではない。
+- [修正版Notebook](../artifacts/kaggle/r001-bn-rank50-pathfix-20261004/01_submit_r001_pathfix.ipynb) はRANK_MODULEを`CODE_ZIP.parent / "rank50.py"`へ変更し、欠損とhash不一致を別メッセージで示す。実保存版のCODE_ROOT・後続code cell・全期待hash/provenance・前処理・重み・rank係数は保持。元のローカル資産を上書きせず、修正済み未実行Notebookを新フォルダに保存した。
+- `artifacts/qa/20261004-r001-pathfix-v1/checks.json`で取得した実コードInputを人工mountへ配置し、元Notebookの同じ参照先エラーを再現。修正Notebookの初め2 cellを実行し、全source/hash確認・frozenコード配置・共通helper importが成功した。4 code cellのcompileと空output、実2 checkpointのepoch/config/所見順/共通fingerprintをCPUで照合。共通rank関数の対向順位が厳密に0.5になることも確認。
+- CUDA初期化・forward・実MRI decode・追加学習・gold/ラベル読取・新しい重み取得・代理アップロード/保存実行/提出は行っていない。検査環境はローカルPython 3.12.13で、KaggleログのPython 3.13による全MRI処理と実採点は修正後の実行で確認する。元の97 unittest/GPU契約は以前の結果で、今回は設定・配置変更の検査を追加した。
+
 ## 続行依頼後の保存・更新計測と長期実験（10月4日、完了）
 
 - 推論互換schema 1のbest_bce・best_auc・last・5/10/15/20 milestone保存を実装し、best.ptと選択予測CSVを設定した規則へのaliasにした。checkpoint indexにepoch・BCE/AUC・予測/metrics/重みhashを対応付ける。旧configのBCE規則、diagnosticのBCE強制、AUC未定義の非採用、gold非選択を維持する。lastはoptimizer/scaler/RNGを含まず、resume非対応を明示。

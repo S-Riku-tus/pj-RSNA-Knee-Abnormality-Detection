@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "recorded_on_jst": "2026-10-04",
+  "scope": "Read-only inspection of current own Kaggle Input and saved notebook, followed by a local notebook path-only fix",
+  "saved_notebook": {
+    "ref": "rsraki/rsna-knee-r001-rank50",
+    "version": 2,
+    "source_sha256": "f6a2eb89bd1db1b56e4c06cd5c127497f3ca83ca464d2325cd089a60a900da45",
+    "status_observed": "KernelWorkerStatus.ERROR",
+    "enable_gpu": true,
+    "enable_internet": false,
+    "competition_sources": [
+      "rsna-knee-abnormality-detection"
+    ],
+    "dataset_sources": [
+      "rsraki/rsna-knee-code-r001",
+      "rsraki/rsna-knee-r001"
+    ],
+    "saved_input_version_numbers_available": false
+  },
+  "current_code_input": {
+    "ref": "rsraki/rsna-knee-code-r001",
+    "dataset_id": 12363388,
+    "version": 1,
+    "all_15_files_match": true,
+    "all_13_source_members_match_frozen_zip": true,
+    "standalone_helper_matches": true,
+    "small_code_bytes_downloaded": 75459,
+    "files": [
+      {
+        "file": "bundle-manifest.json",
+        "bytes": 1559,
+        "sha256": "a2b5f422c7008e5d7c8e2b86ebf5d5a9cf46cf7ca4dc7e508cf687a4a42a58f0",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rank50.py",
+        "bytes": 3755,
+        "sha256": "02bf93907ffbf817bb4f8a2ef1f43cc207f3c121e86ab377cbdb8cf7a34939b9",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rsna-knee-code/configs/baseline.json",
+        "bytes": 437,
+        "sha256": "b11fac2b0389772aebff615602ecdcd6d5ebda4b0f3d736a5e36fcb529813f05",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rsna-knee-code/src/rsna_knee/__init__.py",
+        "bytes": 97,
+        "sha256": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rsna-knee-code/src/rsna_knee/__main__.py",
+        "bytes": 30,
+        "sha256": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rsna-knee-code/src/rsna_knee/checkpoints.py",
+        "bytes": 7207,
+        "sha256": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rsna-knee-code/src/rsna_knee/cli.py",
+        "bytes": 5848,
+        "sha256": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rsna-knee-code/src/rsna_knee/contracts.py",
+        "bytes": 7720,
+        "sha256": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rsna-knee-code/src/rsna_knee/diagnostics.py",
+        "bytes": 1947,
+        "sha256": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rsna-knee-code/src/rsna_knee/imaging.py",
+        "bytes": 8848,
+        "sha256": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rsna-knee-code/src/rsna_knee/inputs.py",
+        "bytes": 950,
+        "sha256": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rsna-knee-code/src/rsna_knee/metrics.py",
+        "bytes": 2030,
+        "sha256": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rsna-knee-code/src/rsna_knee/model.py",
+        "bytes": 4052,
+        "sha256": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rsna-knee-code/src/rsna_knee/prepare.py",
+        "bytes": 7858,
+        "sha256": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+        "matches_frozen_candidate": true
+      },
+      {
+        "file": "rsna-knee-code/src/rsna_knee/runtime.py",
+        "bytes": 23121,
+        "sha256": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05",
+        "matches_frozen_candidate": true
+      }
+    ]
+  },
+  "confirmed_cause": {
+    "configured_code_root": "/kaggle/input/datasets/rsraki/rsna-knee-code-r001/rsna-knee-code",
+    "wrong_computed_rank_path": "/kaggle/input/datasets/rsraki/rsna-knee-code-r001/rsna-knee-code/rank50.py",
+    "actual_rank_path": "/kaggle/input/datasets/rsraki/rsna-knee-code-r001/rank50.py",
+    "wrong_condition": "CODE_ROOT is not None makes the original notebook look inside the extracted ZIP folder for a separately uploaded helper",
+    "zip_processing_not_yet_reached_at_stop": true,
+    "source_code_reupload_only_does_not_change_the_notebook_path": true,
+    "debugger_and_nbconvert_warnings_not_the_cause": true
+  },
+  "minimum_manual_fix": "RANK_MODULE = CODE_ZIP.parent / \"rank50.py\"",
+  "prepared_notebook": {
+    "path": "artifacts\\kaggle\\r001-bn-rank50-pathfix-20261004\\01_submit_r001_pathfix.ipynb",
+    "bytes": 20632,
+    "sha256": "30c4b7b6c5983b31060435242e5197c383d602e81c16ccaf9a735f10fd5b139f",
+    "code_root_preserved": true,
+    "additional_changes": "Separate missing-helper from helper hash mismatch messages; print validated Input paths; clarify comment",
+    "all_later_cells_unchanged": true,
+    "expected_hashes_checkpoint_preprocess_and_rank_formula_unchanged": true,
+    "local_source_assets_preserved": true
+  },
+  "verification": {
+    "qa": "artifacts\\qa\\20261004-r001-pathfix-v1\\checks.json",
+    "qa_sha256": "a3d75b22fac4fff365a0ab1be45d35b25d26431e3a708b77ac649d1c05bc859a",
+    "original_first_cell_failure_reproduced": true,
+    "corrected_first_two_cells_passed": true,
+    "local_real_checkpoint_metadata_checked_on_cpu": 2,
+    "common_pixel_fingerprint": "c382a673469a75c9eb5fd20b953579a5ea5d4a3ad696de1dbd5cec4740ef2850",
+    "code_cells_compiled": 4,
+    "cuda_initialized": false,
+    "real_mri_decode_or_model_forward_performed": false,
+    "gold_or_labels_read": false
+  },
+  "user_next_actions": [
+    "Replace the RANK_MODULE line in the existing first code cell, or import the prepared fixed notebook",
+    "Keep the existing correct CODE_ROOT and weight paths; attach current code Input, weights Input and competition Input",
+    "Save a new notebook version with Save & Run All, GPU enabled and Internet disabled",
+    "After successful execution submit submission.csv and record measured runtime and score"
+  ],
+  "kaggle_upload_write_execution_or_submission_performed_by_agent": false,
+  "weight_or_code_input_reupload_required_for_this_path_fix": false,
+  "limitations": [
+    "Read-only API gives source refs but not exact saved Input version numbers",
+    "Local setup checks used Python3.12.13; full Kaggle Python3.13 MRI inference and scoring await the corrected run",
+    "The current mounted code must match the retained source/hash guards; a stale saved Input will be rejected"
+  ]
+}

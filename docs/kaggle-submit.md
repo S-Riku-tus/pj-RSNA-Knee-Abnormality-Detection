@@ -2,15 +2,25 @@
 
 公開モデルを使う場合は作者Notebookをそのまま再現する。以下は、このリポジトリの自作モデルで学習を終えた後の経路。提出Notebookには学習コードの呼び出しを含めない。
 
-2026年10月4日 JST。4本の追加学習が完了し、通常BNのepoch 8と固定BNのepoch 9を組み合わせる固定50:50 rank候補 `r001` の提出資産を準備した。fold 0のweak AUCは0.830249、補助11平均は0.815727。所見別の入れ替わりを見た後の追加診断であり、別foldと自作Publicの改善は未確認。[結果と判断範囲](controlled-experiments.md#固定5050-rank候補と次の判断)。新しいアップロード、自作NotebookのKaggle実行・提出はまだ行っていない。
+2026年10月4日 JST。4本の追加学習が完了し、通常BNのepoch 8と固定BNのepoch 9を組み合わせる固定50:50 rank候補 `r001` の提出資産を準備した。fold 0のweak AUCは0.830249、補助11平均は0.815727。所見別の入れ替わりを見た後の追加診断であり、別foldと自作Publicの改善は未確認。[結果と判断範囲](controlled-experiments.md#固定5050-rank候補と次の判断)。ユーザーの保存実行がrank helper参照で停止したため、実保存版と現在のInputを確認して修正版を用意した。
 
-今回使うフォルダは [r001-bn-rank50-fold0](../artifacts/kaggle/r001-bn-rank50-fold0/)。以下の3段階で進める。
+Version 3の保存実行はCOMPLETEで、表示用3検査の前処理・両GPU推論・最終CSV検査が成功した。GPU有効・Internet OFF、Outputにsubmission.csv（852 bytes）を公式APIで確認済み。[確認記録](../experiments/r001-kaggle-v3-review-20261004.json)。現在のNotebook/Inputを変更せず、Version 3のOutputで**最終submission.csvを選択してSubmit**する。predictions_bn_update.csv／predictions_bn_freeze.csvは単体予測なので、今回のrank候補の提出には選ばない。表示用3検査の完走は本番採点の完了ではなく、隠しtestはSubmit時に差し替わる。Publicと全体時間は提出後に記録する。
+
+以下はVersion 2の参照先エラーを修正したときの手順。現在のコードInput全15ファイルはhashが正しく、ZIPや重みの再アップロード・再学習は不要。保存済みNotebook Version 2の最初のcode cellで、RANK_MODULEの行を次へ置き換えれば今回の参照先を修正できる。
+
+```python
+RANK_MODULE = CODE_ZIP.parent / "rank50.py"
+```
+
+CODE_ROOTは現在の`.../rsna-knee-code`設定を使う。rank50.pyはその展開フォルダの中ではなくInput直下にある。[原因・確認記録](../experiments/r001-kaggle-pathfix-20261004.json)。自分で編集しない場合は [01_submit_r001_pathfix.ipynb](../artifacts/kaggle/r001-bn-rank50-pathfix-20261004/01_submit_r001_pathfix.ipynb) をImportする。こちらは欠損/hash不一致の表示も改善し、後続推論・全期待hash・予測方式は同じ。修正後、既存InputとGPU有効/Internet OFFを確認し、新しいVersionでSave & Run Allする。
+
+Inputファイルの元フォルダは [r001-bn-rank50-fold0](../artifacts/kaggle/r001-bn-rank50-fold0/)。以下は初めてInputを準備するときの3段階で、現在は1・2のアップロードが済んでいる。
 
 1. privateコードDatasetを作り、`rsna-knee-code.zip`、`rank50.py`、`bundle-manifest.json` を追加する。提案名は `rsna-knee-code-r001`。共通rank関数はweak診断と同じファイルで、Notebookがzip・展開source・helperのhashを照合する。
 2. private重みDatasetを作り、`best_bn_update.pt`、`best_bn_freeze.pt`、`asset-manifest.json` を追加する。提案名は `rsna-knee-r001`。config・checkpoint indexのコピーも版記録として同梱できる。manifestにラベル作者・版・CC URL・加工内容・初期化出所・2モデルのepochとhashを保存済み。推論にImageNet初期化ファイルは不要。
-3. 未実行の [01_submit_r001.ipynb](../artifacts/kaggle/r001-bn-rank50-fold0/01_submit_r001.ipynb) をKaggleへImportし、競技入力と上の2 InputをAttachする。初めのcellの `CODE_ZIP`、`RANK_MODULE`、`CHECKPOINTS` を実mountと照合する。zipが自動展開された場合は `CODE_ROOT` を `src/` と `configs/` の親へ指定し、`RANK_MODULE` を実helperのpathへ合わせる。GPU有効・Internet OFFで実行し、完走後にSave and Run All・Submit・採点確認へ進む。
+3. 未実行の [01_submit_r001_pathfix.ipynb](../artifacts/kaggle/r001-bn-rank50-pathfix-20261004/01_submit_r001_pathfix.ipynb) をKaggleへImportし、競技入力と上の2 InputをAttachする。初めのcellの `CODE_ZIP`、`CODE_ROOT`、`RANK_MODULE`、`CHECKPOINTS` を実mountと照合する。zipが自動展開された場合は `CODE_ROOT` を `src/` と `configs/` の親へ指定し、rank helperはInput直下のまま参照する。GPU有効・Internet OFFでSave and Run Allし、完走後にSubmit・採点確認へ進む。
 
-Input名はまだ作成しておらず提案値である。Notebookは同じpixel fingerprintを確認してtest cacheを1個作り、2モデルを順に推論し、**その回の全test検査**を所見別に順位化して50:50で合わせる。係数・所見別weightを調整するcellはない。testを独立に順位化するbatchへ分割しない。rank scoreは未校正なので、BCEを確率校正改善の証拠にしない。
+コードInput `rsraki/rsna-knee-code-r001` と重みInput `rsraki/rsna-knee-r001` は作成済みでread-only確認した。再保存するNotebookに現在のInputがAttachされていることも確認する。Notebookは同じpixel fingerprintを確認してtest cacheを1個作り、2モデルを順に推論し、**その回の全test検査**を所見別に順位化して50:50で合わせる。係数・所見別weightを調整するcellはない。testを独立に順位化するbatchへ分割しない。rank scoreは未校正なので、BCEを確率校正改善の証拠にしない。
 
 ローカルでは両実重みの人工CPU/GPU契約と、保存された人工CSVから共通helperを使うrank契約が成功した。rank専用6契約チェック、helper同一性、Notebook全code cellのcompile・空outputも確認済み。実testのDICOM decode・全体時間・Kaggle採点は別に確認する。Notebook/Input版・全体時間・Submission ID・実測スコアを [台帳](../experiments/ledger.csv) へ追記する。
 

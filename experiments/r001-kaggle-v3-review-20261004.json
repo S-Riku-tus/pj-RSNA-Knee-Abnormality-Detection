@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "review_date_jst": "2026-10-04",
+  "candidate": "r001-bn-rank50-fold0",
+  "status": "visible_test_completed_scoring_pending",
+  "evidence": {
+    "user_log_sha256": "8f4b670e69a0502e31a76c7567c6b3cef6c1eed8b7369744c356baa040cb71b4",
+    "user_log_attachment_id": "141e132e-f707-45dc-8594-751f6a25f84d",
+    "api": "Kaggle official Python SDK 2.2.4; read-only status, metadata, output listing and submission listing"
+  },
+  "notebook": {
+    "reference": "rsraki/rsna-knee-r001-rank50",
+    "version": 3,
+    "api_status": "COMPLETE",
+    "gpu": true,
+    "internet": false
+  },
+  "visible_test": {
+    "preparation": {
+      "requested": 3,
+      "cache_dir": "/kaggle/working/test-cache-r001",
+      "studies_with_warnings": 0,
+      "debug_limit": null,
+      "fingerprint": "c382a673469a75c9eb5fd20b953579a5ea5d4a3ad696de1dbd5cec4740ef2850"
+    },
+    "studies": 3,
+    "targets": 12,
+    "valid": true,
+    "individual_inference": {
+      "bn_update": {
+        "studies": 3,
+        "targets": 12,
+        "valid": true,
+        "seconds": 2.0325770699999737,
+        "seconds_per_study": 0.6775256899999912,
+        "checkpoint_sha256": "1626d00ca2f8f16d3c37612d2b6bcbc1756ebdd34b722b84f5c4f7a865cc85a9",
+        "source_sha256": {
+          "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+          "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+          "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+          "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+          "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+          "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+          "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+          "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+          "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+          "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+          "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+          "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05"
+        },
+        "device": "cuda"
+      },
+      "bn_freeze": {
+        "studies": 3,
+        "targets": 12,
+        "valid": true,
+        "seconds": 0.4035700409999947,
+        "seconds_per_study": 0.13452334699999824,
+        "checkpoint_sha256": "b147d4c9746d25bdac97b7de9ae880e3a6a64e7b7608514226b5fc361c87b08b",
+        "source_sha256": {
+          "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+          "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+          "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+          "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+          "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+          "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+          "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+          "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+          "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+          "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+          "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+          "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05"
+        },
+        "device": "cuda"
+      }
+    },
+    "notebook_seconds": 47.95493436000001,
+    "last_user_log_elapsed_seconds": 68.2
+  },
+  "provenance_checked": {
+    "source_sha256": {
+      "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+      "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+      "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+      "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+      "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+      "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+      "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+      "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+      "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+      "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+      "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+      "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05"
+    },
+    "checkpoint_sha256": {
+      "bn_update": "1626d00ca2f8f16d3c37612d2b6bcbc1756ebdd34b722b84f5c4f7a865cc85a9",
+      "bn_freeze": "b147d4c9746d25bdac97b7de9ae880e3a6a64e7b7608514226b5fc361c87b08b"
+    },
+    "rank_module_sha256": "02bf93907ffbf817bb4f8a2ef1f43cc207f3c121e86ab377cbdb8cf7a34939b9",
+    "rank_function_text_sha256": "c6a0da9776071e798e50bde92a2769fda941b8b5e77e0b59e5f12deec49417a4",
+    "preprocess_fingerprint": "c382a673469a75c9eb5fd20b953579a5ea5d4a3ad696de1dbd5cec4740ef2850",
+    "mounted_inputs": {
+      "code_zip": null,
+      "code_root": "/kaggle/input/datasets/rsraki/rsna-knee-code-r001/rsna-knee-code",
+      "rank_module": "/kaggle/input/datasets/rsraki/rsna-knee-code-r001/rank50.py",
+      "checkpoints": {
+        "bn_update": "/kaggle/input/datasets/rsraki/rsna-knee-r001/best_bn_update.pt",
+        "bn_freeze": "/kaggle/input/datasets/rsraki/rsna-knee-r001/best_bn_freeze.pt"
+      },
+      "competition": "/kaggle/input/competitions/rsna-knee-abnormality-detection"
+    }
+  },
+  "api_output_files": [
+    {
+      "name": "submission.csv",
+      "bytes": 852
+    },
+    {
+      "name": "predictions_bn_update.csv",
+      "bytes": 885
+    },
+    {
+      "name": "predictions_bn_freeze.csv",
+      "bytes": 885
+    },
+    {
+      "name": "submission.meta.json",
+      "bytes": 871
+    }
+  ],
+  "scoring": {
+    "candidate_public_lb": null,
+    "candidate_submission_found": false,
+    "existing_submission_count": 1,
+    "existing_public_lb": "0.924",
+    "existing_submission_ref": 56766978,
+    "existing_script_version_id": 354569007,
+    "existing_score_belongs_to": "public model comparison notebook; not r001"
+  },
+  "next_action": "User selects Version 3 Output submission.csv and presses Submit; record new submission status, runtime and score separately.",
+  "limits": [
+    "Visible test contains only three example studies; hidden scoring has not been executed.",
+    "Output files were listed, not downloaded; valid refers to checks reported by the executed notebook.",
+    "Exact attached Dataset version numbers are not exposed by the notebook metadata used here.",
+    "No local MRI decode, training, gold-label read, external write or automatic submission was performed during this review."
+  ]
+}
