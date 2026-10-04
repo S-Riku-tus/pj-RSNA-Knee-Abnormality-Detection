@@ -2,6 +2,8 @@
 
 調査基準日 2026年10月2日 JST。添付分析を出発点に公式概要、RSNA公式紹介、公開資産の配布ページを照合した。実データを取得していないため、配布CSVの件数は本リポジトリでの実測ではない。
 
+10月4日追記：下記の初回調査後、キャッシュ4,407検査とCSVを実取得・監査し、ローカル学習へ進んだ。現状は [PROJECT.md](../PROJECT.md)。公式SDKでRulesと[外部LLMに関するHost案内](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733965)の本文・全コメントも確認できた。reportからのラベル抽出は条件付き許可、NC制限だけでデータを禁止しない。公開READMEとCC本文を照合し、研究・学習目的と帰属等を守ってvmohitrao Version 3を採用する判断とした。[本文の確認記録](research/kaggle-source-eligibility-20261004.json)
+
 ## 競技の目的と評価
 
 2026年のRSNA Knee Abnormality Detectionは、MRI検査から12の所見を予測する研究コードコンペ。複数所見が同時に存在する多ラベル分類であり、検査ごとの予測を出す。評価は各ラベルのROC-AUCを等しく平均する。AUCは順位付けの尺度で、診断正解率ではない。[Kaggle公式概要](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview)
@@ -46,9 +48,9 @@ goldラベルがレポート抽出と一致しない場合があるという主�
 ## まだ確定していない項目
 
 - 最新のLeaderboard全行、参加チーム数、銅メダル境界、最新首位スコア。
-- Public/Privateの比率、日次提出回数、最終選択数、チーム人数の最新制限。添付や他実装の数値を固定しない。
-- 配布CSVの実測件数・本文、欠損や不正DICOMの件数。Data Explorerの表示規模は確認したが、ダウンロード時の実測ではない。
+- Public/Privateの比率、チーム人数の最新制限。日次提出5回・最終選択2件は10月4日取得のRulesで確認したが、提出前にライブ画面を再確認する。
+- 元DICOM全体の欠損・不正ファイル件数。キャッシュの選択13,221シリーズでは読み取りエラー0を確認したが、元DICOM全件の独立監査ではない。
 - 特定の公開Notebook版のソース、完全な入力バージョンと再現性。
-- 外部LLM・特定外部医療データの利用に関する最新ルール本文。
+- 個別の外部医療データの追加条件。外部LLMの一般条件と今回採用ラベルの通常利用判断は上の10月4日追記で更新済み。
 
 [Rules](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/rules)、[Leaderboard](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/leaderboard)、[Discussion](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion) のライブ表示を参加・提出前に確認する。公開0.924や添付の0.94台は、メダル保証や自分の再現値ではない。

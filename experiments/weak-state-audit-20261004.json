@@ -1,0 +1,2022 @@
+{
+  "checked_at_jst": "2026-10-04T12:17:55.745763+09:00",
+  "scope": "Read-only state/label/mask audit of prepared weak4207, fold0 train3386/valid821 and five weak validation folds. No expert labels, images, models or report texts were read or used for calculations.",
+  "source": {
+    "source_url": "https://www.kaggle.com/datasets/vmohitrao/rsna-knee-report-labels/versions/3",
+    "source_version": "Dataset Version 3",
+    "license": "CC BY-NC 4.0",
+    "adoption_scope": "Non-commercial research candidate; Kaggle submission eligibility not established"
+  },
+  "state_meanings_basis": "Saved author README/provenance; not clinical re-annotation or private development-log verification.",
+  "state_meanings": {
+    "P": "Positive report-derived finding; target1, mask1.",
+    "N": "Explicit absence in report-derived extraction; target0, mask1.",
+    "B": "Below finding threshold in report-derived extraction; target0, mask1. Distinct from N; not necessarily absence of all related imaging change.",
+    "U": "Uncertain or disputed; missing target, mask0.",
+    "M": "Unmentioned or withheld; missing target, mask0."
+  },
+  "input_sha256": {
+    "states": "7b20796e52354702c429f16204f434d533586694b527a79e02fa34583d653a58",
+    "labels": "aad1eec5424692acd48355193bc142b06a300623a43f502430de96f22e0bf7c9",
+    "weights": "5ceb2cea85c39e2de1fd08dfdb60439c699aad5f20664ac3100066d13e8870ca",
+    "prepared_weak": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+    "provenance": "fac0445d7416921c94553eb450cda6666d0431398888b081925216f8dd4908ac",
+    "source_manifest": "af12e2df6e81c048fcd07a715b9f69c1509d78978bfc98a1ee1296778f4d6462",
+    "source_readme": "58063206bb76fa5cade36c195acf1c2406cc7d246f957ed1e0400b780250304b"
+  },
+  "checks": {
+    "published_source_hashes_match": true,
+    "author_readme_and_manifest_hashes_match_provenance": true,
+    "prepared_uids_unique_and_subset_of_report_labels": true,
+    "prepared_label_state_value_mask_all_cells_match": true,
+    "train_valid_states_sum_to_all_weak": true,
+    "five_fold_states_sum_to_all_weak": true,
+    "gold_values_used": false,
+    "uids_groups_reports_in_this_artifact": false
+  },
+  "prepared_weak": {
+    "studies": 4207,
+    "per_target": {
+      "ACL": {
+        "states": {
+          "P": 418,
+          "N": 2658,
+          "B": 478,
+          "U": 397,
+          "M": 256
+        },
+        "positive": 418,
+        "negative": 3136,
+        "missing": 653,
+        "observed": 3554,
+        "positive_fraction_all_studies": 0.09935821250297124,
+        "negative_fraction_all_studies": 0.7454242928452579,
+        "missing_fraction_all_studies": 0.15521749465177087,
+        "positive_fraction_observed": 0.11761395610579628,
+        "negative_N_fraction": 0.8475765306122449,
+        "negative_B_fraction": 0.1524234693877551
+      },
+      "MCL": {
+        "states": {
+          "P": 69,
+          "N": 2972,
+          "B": 401,
+          "U": 401,
+          "M": 364
+        },
+        "positive": 69,
+        "negative": 3373,
+        "missing": 765,
+        "observed": 3442,
+        "positive_fraction_all_studies": 0.016401236035179463,
+        "negative_fraction_all_studies": 0.8017589731400048,
+        "missing_fraction_all_studies": 0.18183979082481577,
+        "positive_fraction_observed": 0.020046484601975594,
+        "negative_N_fraction": 0.8811147346575748,
+        "negative_B_fraction": 0.11888526534242515
+      },
+      "Medial Meniscus": {
+        "states": {
+          "P": 1519,
+          "N": 1644,
+          "B": 610,
+          "U": 320,
+          "M": 114
+        },
+        "positive": 1519,
+        "negative": 2254,
+        "missing": 434,
+        "observed": 3773,
+        "positive_fraction_all_studies": 0.3610648918469218,
+        "negative_fraction_all_studies": 0.5357737104825291,
+        "missing_fraction_all_studies": 0.10316139767054909,
+        "positive_fraction_observed": 0.4025974025974026,
+        "negative_N_fraction": 0.7293700088731144,
+        "negative_B_fraction": 0.2706299911268855
+      },
+      "Lateral Meniscus": {
+        "states": {
+          "P": 524,
+          "N": 2697,
+          "B": 416,
+          "U": 281,
+          "M": 289
+        },
+        "positive": 524,
+        "negative": 3113,
+        "missing": 570,
+        "observed": 3637,
+        "positive_fraction_all_studies": 0.12455431423817447,
+        "negative_fraction_all_studies": 0.7399572141668648,
+        "missing_fraction_all_studies": 0.13548847159496077,
+        "positive_fraction_observed": 0.14407478691229034,
+        "negative_N_fraction": 0.8663668486990042,
+        "negative_B_fraction": 0.13363315130099582
+      },
+      "Medial OA": {
+        "states": {
+          "P": 328,
+          "N": 1404,
+          "B": 531,
+          "U": 938,
+          "M": 1006
+        },
+        "positive": 328,
+        "negative": 1935,
+        "missing": 1944,
+        "observed": 2263,
+        "positive_fraction_all_studies": 0.07796529593534585,
+        "negative_fraction_all_studies": 0.4599477062039458,
+        "missing_fraction_all_studies": 0.46208699786070834,
+        "positive_fraction_observed": 0.1449403446752099,
+        "negative_N_fraction": 0.7255813953488373,
+        "negative_B_fraction": 0.2744186046511628
+      },
+      "Lateral OA": {
+        "states": {
+          "P": 136,
+          "N": 1579,
+          "B": 439,
+          "U": 782,
+          "M": 1271
+        },
+        "positive": 136,
+        "negative": 2018,
+        "missing": 2053,
+        "observed": 2154,
+        "positive_fraction_all_studies": 0.0323270739244117,
+        "negative_fraction_all_studies": 0.4796767292607559,
+        "missing_fraction_all_studies": 0.4879961968148324,
+        "positive_fraction_observed": 0.06313834726090993,
+        "negative_N_fraction": 0.7824578790882062,
+        "negative_B_fraction": 0.21754212091179387
+      },
+      "PF OA": {
+        "states": {
+          "P": 435,
+          "N": 1239,
+          "B": 654,
+          "U": 1043,
+          "M": 836
+        },
+        "positive": 435,
+        "negative": 1893,
+        "missing": 1879,
+        "observed": 2328,
+        "positive_fraction_all_studies": 0.1033990967435227,
+        "negative_fraction_all_studies": 0.449964345139054,
+        "missing_fraction_all_studies": 0.44663655811742337,
+        "positive_fraction_observed": 0.18685567010309279,
+        "negative_N_fraction": 0.6545166402535658,
+        "negative_B_fraction": 0.34548335974643424
+      },
+      "Effusion": {
+        "states": {
+          "P": 544,
+          "N": 1230,
+          "B": 1444,
+          "U": 716,
+          "M": 273
+        },
+        "positive": 544,
+        "negative": 2674,
+        "missing": 989,
+        "observed": 3218,
+        "positive_fraction_all_studies": 0.1293082956976468,
+        "negative_fraction_all_studies": 0.6356073211314476,
+        "missing_fraction_all_studies": 0.23508438317090563,
+        "positive_fraction_observed": 0.16904909881914232,
+        "negative_N_fraction": 0.4599850411368736,
+        "negative_B_fraction": 0.5400149588631264
+      },
+      "Synovitis": {
+        "states": {
+          "P": 522,
+          "N": 49,
+          "B": 0,
+          "U": 345,
+          "M": 3291
+        },
+        "positive": 522,
+        "negative": 49,
+        "missing": 3636,
+        "observed": 571,
+        "positive_fraction_all_studies": 0.12407891609222724,
+        "negative_fraction_all_studies": 0.011647254575707155,
+        "missing_fraction_all_studies": 0.8642738293320656,
+        "positive_fraction_observed": 0.9141856392294221,
+        "negative_N_fraction": 1.0,
+        "negative_B_fraction": 0.0
+      },
+      "Baker's": {
+        "states": {
+          "P": 294,
+          "N": 1051,
+          "B": 526,
+          "U": 471,
+          "M": 1865
+        },
+        "positive": 294,
+        "negative": 1577,
+        "missing": 2336,
+        "observed": 1871,
+        "positive_fraction_all_studies": 0.06988352745424292,
+        "negative_fraction_all_studies": 0.3748514380793915,
+        "missing_fraction_all_studies": 0.5552650344663655,
+        "positive_fraction_observed": 0.15713522180652056,
+        "negative_N_fraction": 0.6664552948636652,
+        "negative_B_fraction": 0.33354470513633483
+      },
+      "Contusion": {
+        "states": {
+          "P": 440,
+          "N": 813,
+          "B": 89,
+          "U": 724,
+          "M": 2141
+        },
+        "positive": 440,
+        "negative": 902,
+        "missing": 2865,
+        "observed": 1342,
+        "positive_fraction_all_studies": 0.10458759210839078,
+        "negative_fraction_all_studies": 0.2144045638222011,
+        "missing_fraction_all_studies": 0.6810078440694082,
+        "positive_fraction_observed": 0.32786885245901637,
+        "negative_N_fraction": 0.9013303769401331,
+        "negative_B_fraction": 0.09866962305986696
+      },
+      "Fracture": {
+        "states": {
+          "P": 202,
+          "N": 675,
+          "B": 28,
+          "U": 451,
+          "M": 2851
+        },
+        "positive": 202,
+        "negative": 703,
+        "missing": 3302,
+        "observed": 905,
+        "positive_fraction_all_studies": 0.04801521274067031,
+        "negative_fraction_all_studies": 0.16710244830045162,
+        "missing_fraction_all_studies": 0.784882338958878,
+        "positive_fraction_observed": 0.22320441988950276,
+        "negative_N_fraction": 0.9601706970128022,
+        "negative_B_fraction": 0.03982930298719772
+      }
+    }
+  },
+  "fold0_training": {
+    "studies": 3386,
+    "per_target": {
+      "ACL": {
+        "states": {
+          "P": 338,
+          "N": 2141,
+          "B": 382,
+          "U": 323,
+          "M": 202
+        },
+        "positive": 338,
+        "negative": 2523,
+        "missing": 525,
+        "observed": 2861,
+        "positive_fraction_all_studies": 0.09982279976373302,
+        "negative_fraction_all_studies": 0.745126993502658,
+        "missing_fraction_all_studies": 0.15505020673360898,
+        "positive_fraction_observed": 0.11814051031108004,
+        "negative_N_fraction": 0.8485929449068569,
+        "negative_B_fraction": 0.1514070550931431
+      },
+      "MCL": {
+        "states": {
+          "P": 58,
+          "N": 2390,
+          "B": 311,
+          "U": 333,
+          "M": 294
+        },
+        "positive": 58,
+        "negative": 2701,
+        "missing": 627,
+        "observed": 2759,
+        "positive_fraction_all_studies": 0.017129356172474897,
+        "negative_fraction_all_studies": 0.7976963969285292,
+        "missing_fraction_all_studies": 0.18517424689899586,
+        "positive_fraction_observed": 0.021022109459949256,
+        "negative_N_fraction": 0.884857460199926,
+        "negative_B_fraction": 0.11514253980007405
+      },
+      "Medial Meniscus": {
+        "states": {
+          "P": 1210,
+          "N": 1319,
+          "B": 494,
+          "U": 271,
+          "M": 92
+        },
+        "positive": 1210,
+        "negative": 1813,
+        "missing": 363,
+        "observed": 3023,
+        "positive_fraction_all_studies": 0.35735380980507975,
+        "negative_fraction_all_studies": 0.5354400472533963,
+        "missing_fraction_all_studies": 0.10720614294152392,
+        "positive_fraction_observed": 0.4002646377770427,
+        "negative_N_fraction": 0.7275234418091561,
+        "negative_B_fraction": 0.27247655819084393
+      },
+      "Lateral Meniscus": {
+        "states": {
+          "P": 420,
+          "N": 2165,
+          "B": 335,
+          "U": 237,
+          "M": 229
+        },
+        "positive": 420,
+        "negative": 2500,
+        "missing": 466,
+        "observed": 2920,
+        "positive_fraction_all_studies": 0.12404016538688718,
+        "negative_fraction_all_studies": 0.7383343177790904,
+        "missing_fraction_all_studies": 0.13762551683402244,
+        "positive_fraction_observed": 0.14383561643835616,
+        "negative_N_fraction": 0.866,
+        "negative_B_fraction": 0.134
+      },
+      "Medial OA": {
+        "states": {
+          "P": 257,
+          "N": 1125,
+          "B": 439,
+          "U": 762,
+          "M": 803
+        },
+        "positive": 257,
+        "negative": 1564,
+        "missing": 1565,
+        "observed": 1821,
+        "positive_fraction_all_studies": 0.0759007678676905,
+        "negative_fraction_all_studies": 0.4619019492025989,
+        "missing_fraction_all_studies": 0.4621972829297106,
+        "positive_fraction_observed": 0.1411312465678199,
+        "negative_N_fraction": 0.719309462915601,
+        "negative_B_fraction": 0.28069053708439895
+      },
+      "Lateral OA": {
+        "states": {
+          "P": 103,
+          "N": 1268,
+          "B": 357,
+          "U": 643,
+          "M": 1015
+        },
+        "positive": 103,
+        "negative": 1625,
+        "missing": 1658,
+        "observed": 1728,
+        "positive_fraction_all_studies": 0.030419373892498523,
+        "negative_fraction_all_studies": 0.47991730655640874,
+        "missing_fraction_all_studies": 0.4896633195510927,
+        "positive_fraction_observed": 0.05960648148148148,
+        "negative_N_fraction": 0.7803076923076923,
+        "negative_B_fraction": 0.2196923076923077
+      },
+      "PF OA": {
+        "states": {
+          "P": 347,
+          "N": 989,
+          "B": 526,
+          "U": 853,
+          "M": 671
+        },
+        "positive": 347,
+        "negative": 1515,
+        "missing": 1524,
+        "observed": 1862,
+        "positive_fraction_all_studies": 0.10248080330773775,
+        "negative_fraction_all_studies": 0.44743059657412876,
+        "missing_fraction_all_studies": 0.4500886001181335,
+        "positive_fraction_observed": 0.18635875402792695,
+        "negative_N_fraction": 0.6528052805280528,
+        "negative_B_fraction": 0.3471947194719472
+      },
+      "Effusion": {
+        "states": {
+          "P": 444,
+          "N": 988,
+          "B": 1169,
+          "U": 576,
+          "M": 209
+        },
+        "positive": 444,
+        "negative": 2157,
+        "missing": 785,
+        "observed": 2601,
+        "positive_fraction_all_studies": 0.13112817483756645,
+        "negative_fraction_all_studies": 0.6370348493797992,
+        "missing_fraction_all_studies": 0.23183697578263437,
+        "positive_fraction_observed": 0.1707035755478662,
+        "negative_N_fraction": 0.45804357904496984,
+        "negative_B_fraction": 0.5419564209550302
+      },
+      "Synovitis": {
+        "states": {
+          "P": 422,
+          "N": 48,
+          "B": 0,
+          "U": 277,
+          "M": 2639
+        },
+        "positive": 422,
+        "negative": 48,
+        "missing": 2916,
+        "observed": 470,
+        "positive_fraction_all_studies": 0.12463083284111046,
+        "negative_fraction_all_studies": 0.014176018901358535,
+        "missing_fraction_all_studies": 0.861193148257531,
+        "positive_fraction_observed": 0.8978723404255319,
+        "negative_N_fraction": 1.0,
+        "negative_B_fraction": 0.0
+      },
+      "Baker's": {
+        "states": {
+          "P": 235,
+          "N": 843,
+          "B": 415,
+          "U": 394,
+          "M": 1499
+        },
+        "positive": 235,
+        "negative": 1258,
+        "missing": 1893,
+        "observed": 1493,
+        "positive_fraction_all_studies": 0.06940342587123449,
+        "negative_fraction_all_studies": 0.37152982870643825,
+        "missing_fraction_all_studies": 0.5590667454223273,
+        "positive_fraction_observed": 0.15740120562625587,
+        "negative_N_fraction": 0.6701112877583466,
+        "negative_B_fraction": 0.3298887122416534
+      },
+      "Contusion": {
+        "states": {
+          "P": 341,
+          "N": 667,
+          "B": 68,
+          "U": 599,
+          "M": 1711
+        },
+        "positive": 341,
+        "negative": 735,
+        "missing": 2310,
+        "observed": 1076,
+        "positive_fraction_all_studies": 0.10070880094506793,
+        "negative_fraction_all_studies": 0.21707028942705256,
+        "missing_fraction_all_studies": 0.6822209096278795,
+        "positive_fraction_observed": 0.31691449814126393,
+        "negative_N_fraction": 0.9074829931972789,
+        "negative_B_fraction": 0.09251700680272108
+      },
+      "Fracture": {
+        "states": {
+          "P": 158,
+          "N": 537,
+          "B": 22,
+          "U": 373,
+          "M": 2296
+        },
+        "positive": 158,
+        "negative": 559,
+        "missing": 2669,
+        "observed": 717,
+        "positive_fraction_all_studies": 0.04666272888363851,
+        "negative_fraction_all_studies": 0.1650915534554046,
+        "missing_fraction_all_studies": 0.7882457176609569,
+        "positive_fraction_observed": 0.2203626220362622,
+        "negative_N_fraction": 0.960644007155635,
+        "negative_B_fraction": 0.03935599284436494
+      }
+    }
+  },
+  "fold0_validation": {
+    "studies": 821,
+    "per_target": {
+      "ACL": {
+        "states": {
+          "P": 80,
+          "N": 517,
+          "B": 96,
+          "U": 74,
+          "M": 54
+        },
+        "positive": 80,
+        "negative": 613,
+        "missing": 128,
+        "observed": 693,
+        "positive_fraction_all_studies": 0.09744214372716199,
+        "negative_fraction_all_studies": 0.7466504263093788,
+        "missing_fraction_all_studies": 0.1559074299634592,
+        "positive_fraction_observed": 0.11544011544011544,
+        "negative_N_fraction": 0.8433931484502447,
+        "negative_B_fraction": 0.1566068515497553
+      },
+      "MCL": {
+        "states": {
+          "P": 11,
+          "N": 582,
+          "B": 90,
+          "U": 68,
+          "M": 70
+        },
+        "positive": 11,
+        "negative": 672,
+        "missing": 138,
+        "observed": 683,
+        "positive_fraction_all_studies": 0.013398294762484775,
+        "negative_fraction_all_studies": 0.8185140073081608,
+        "missing_fraction_all_studies": 0.16808769792935443,
+        "positive_fraction_observed": 0.016105417276720352,
+        "negative_N_fraction": 0.8660714285714286,
+        "negative_B_fraction": 0.13392857142857142
+      },
+      "Medial Meniscus": {
+        "states": {
+          "P": 309,
+          "N": 325,
+          "B": 116,
+          "U": 49,
+          "M": 22
+        },
+        "positive": 309,
+        "negative": 441,
+        "missing": 71,
+        "observed": 750,
+        "positive_fraction_all_studies": 0.3763702801461632,
+        "negative_fraction_all_studies": 0.5371498172959805,
+        "missing_fraction_all_studies": 0.08647990255785627,
+        "positive_fraction_observed": 0.412,
+        "negative_N_fraction": 0.7369614512471655,
+        "negative_B_fraction": 0.26303854875283444
+      },
+      "Lateral Meniscus": {
+        "states": {
+          "P": 104,
+          "N": 532,
+          "B": 81,
+          "U": 44,
+          "M": 60
+        },
+        "positive": 104,
+        "negative": 613,
+        "missing": 104,
+        "observed": 717,
+        "positive_fraction_all_studies": 0.12667478684531058,
+        "negative_fraction_all_studies": 0.7466504263093788,
+        "missing_fraction_all_studies": 0.12667478684531058,
+        "positive_fraction_observed": 0.14504881450488144,
+        "negative_N_fraction": 0.867862969004894,
+        "negative_B_fraction": 0.13213703099510604
+      },
+      "Medial OA": {
+        "states": {
+          "P": 71,
+          "N": 279,
+          "B": 92,
+          "U": 176,
+          "M": 203
+        },
+        "positive": 71,
+        "negative": 371,
+        "missing": 379,
+        "observed": 442,
+        "positive_fraction_all_studies": 0.08647990255785627,
+        "negative_fraction_all_studies": 0.4518879415347138,
+        "missing_fraction_all_studies": 0.46163215590742995,
+        "positive_fraction_observed": 0.16063348416289594,
+        "negative_N_fraction": 0.7520215633423181,
+        "negative_B_fraction": 0.24797843665768193
+      },
+      "Lateral OA": {
+        "states": {
+          "P": 33,
+          "N": 311,
+          "B": 82,
+          "U": 139,
+          "M": 256
+        },
+        "positive": 33,
+        "negative": 393,
+        "missing": 395,
+        "observed": 426,
+        "positive_fraction_all_studies": 0.040194884287454324,
+        "negative_fraction_all_studies": 0.47868453105968334,
+        "missing_fraction_all_studies": 0.48112058465286234,
+        "positive_fraction_observed": 0.07746478873239436,
+        "negative_N_fraction": 0.7913486005089059,
+        "negative_B_fraction": 0.20865139949109415
+      },
+      "PF OA": {
+        "states": {
+          "P": 88,
+          "N": 250,
+          "B": 128,
+          "U": 190,
+          "M": 165
+        },
+        "positive": 88,
+        "negative": 378,
+        "missing": 355,
+        "observed": 466,
+        "positive_fraction_all_studies": 0.1071863580998782,
+        "negative_fraction_all_studies": 0.46041412911084045,
+        "missing_fraction_all_studies": 0.43239951278928135,
+        "positive_fraction_observed": 0.1888412017167382,
+        "negative_N_fraction": 0.6613756613756614,
+        "negative_B_fraction": 0.3386243386243386
+      },
+      "Effusion": {
+        "states": {
+          "P": 100,
+          "N": 242,
+          "B": 275,
+          "U": 140,
+          "M": 64
+        },
+        "positive": 100,
+        "negative": 517,
+        "missing": 204,
+        "observed": 617,
+        "positive_fraction_all_studies": 0.1218026796589525,
+        "negative_fraction_all_studies": 0.6297198538367844,
+        "missing_fraction_all_studies": 0.24847746650426308,
+        "positive_fraction_observed": 0.1620745542949757,
+        "negative_N_fraction": 0.46808510638297873,
+        "negative_B_fraction": 0.5319148936170213
+      },
+      "Synovitis": {
+        "states": {
+          "P": 100,
+          "N": 1,
+          "B": 0,
+          "U": 68,
+          "M": 652
+        },
+        "positive": 100,
+        "negative": 1,
+        "missing": 720,
+        "observed": 101,
+        "positive_fraction_all_studies": 0.1218026796589525,
+        "negative_fraction_all_studies": 0.001218026796589525,
+        "missing_fraction_all_studies": 0.876979293544458,
+        "positive_fraction_observed": 0.9900990099009901,
+        "negative_N_fraction": 1.0,
+        "negative_B_fraction": 0.0
+      },
+      "Baker's": {
+        "states": {
+          "P": 59,
+          "N": 208,
+          "B": 111,
+          "U": 77,
+          "M": 366
+        },
+        "positive": 59,
+        "negative": 319,
+        "missing": 443,
+        "observed": 378,
+        "positive_fraction_all_studies": 0.07186358099878197,
+        "negative_fraction_all_studies": 0.38855054811205847,
+        "missing_fraction_all_studies": 0.5395858708891595,
+        "positive_fraction_observed": 0.15608465608465608,
+        "negative_N_fraction": 0.6520376175548589,
+        "negative_B_fraction": 0.34796238244514105
+      },
+      "Contusion": {
+        "states": {
+          "P": 99,
+          "N": 146,
+          "B": 21,
+          "U": 125,
+          "M": 430
+        },
+        "positive": 99,
+        "negative": 167,
+        "missing": 555,
+        "observed": 266,
+        "positive_fraction_all_studies": 0.12058465286236297,
+        "negative_fraction_all_studies": 0.20341047503045068,
+        "missing_fraction_all_studies": 0.6760048721071864,
+        "positive_fraction_observed": 0.37218045112781956,
+        "negative_N_fraction": 0.874251497005988,
+        "negative_B_fraction": 0.12574850299401197
+      },
+      "Fracture": {
+        "states": {
+          "P": 44,
+          "N": 138,
+          "B": 6,
+          "U": 78,
+          "M": 555
+        },
+        "positive": 44,
+        "negative": 144,
+        "missing": 633,
+        "observed": 188,
+        "positive_fraction_all_studies": 0.0535931790499391,
+        "negative_fraction_all_studies": 0.1753958587088916,
+        "missing_fraction_all_studies": 0.7710109622411693,
+        "positive_fraction_observed": 0.23404255319148937,
+        "negative_N_fraction": 0.9583333333333334,
+        "negative_B_fraction": 0.041666666666666664
+      }
+    }
+  },
+  "five_fold_validation": {
+    "0": {
+      "studies": 821,
+      "per_target": {
+        "ACL": {
+          "states": {
+            "P": 80,
+            "N": 517,
+            "B": 96,
+            "U": 74,
+            "M": 54
+          },
+          "positive": 80,
+          "negative": 613,
+          "missing": 128,
+          "observed": 693,
+          "positive_fraction_all_studies": 0.09744214372716199,
+          "negative_fraction_all_studies": 0.7466504263093788,
+          "missing_fraction_all_studies": 0.1559074299634592,
+          "positive_fraction_observed": 0.11544011544011544,
+          "negative_N_fraction": 0.8433931484502447,
+          "negative_B_fraction": 0.1566068515497553
+        },
+        "MCL": {
+          "states": {
+            "P": 11,
+            "N": 582,
+            "B": 90,
+            "U": 68,
+            "M": 70
+          },
+          "positive": 11,
+          "negative": 672,
+          "missing": 138,
+          "observed": 683,
+          "positive_fraction_all_studies": 0.013398294762484775,
+          "negative_fraction_all_studies": 0.8185140073081608,
+          "missing_fraction_all_studies": 0.16808769792935443,
+          "positive_fraction_observed": 0.016105417276720352,
+          "negative_N_fraction": 0.8660714285714286,
+          "negative_B_fraction": 0.13392857142857142
+        },
+        "Medial Meniscus": {
+          "states": {
+            "P": 309,
+            "N": 325,
+            "B": 116,
+            "U": 49,
+            "M": 22
+          },
+          "positive": 309,
+          "negative": 441,
+          "missing": 71,
+          "observed": 750,
+          "positive_fraction_all_studies": 0.3763702801461632,
+          "negative_fraction_all_studies": 0.5371498172959805,
+          "missing_fraction_all_studies": 0.08647990255785627,
+          "positive_fraction_observed": 0.412,
+          "negative_N_fraction": 0.7369614512471655,
+          "negative_B_fraction": 0.26303854875283444
+        },
+        "Lateral Meniscus": {
+          "states": {
+            "P": 104,
+            "N": 532,
+            "B": 81,
+            "U": 44,
+            "M": 60
+          },
+          "positive": 104,
+          "negative": 613,
+          "missing": 104,
+          "observed": 717,
+          "positive_fraction_all_studies": 0.12667478684531058,
+          "negative_fraction_all_studies": 0.7466504263093788,
+          "missing_fraction_all_studies": 0.12667478684531058,
+          "positive_fraction_observed": 0.14504881450488144,
+          "negative_N_fraction": 0.867862969004894,
+          "negative_B_fraction": 0.13213703099510604
+        },
+        "Medial OA": {
+          "states": {
+            "P": 71,
+            "N": 279,
+            "B": 92,
+            "U": 176,
+            "M": 203
+          },
+          "positive": 71,
+          "negative": 371,
+          "missing": 379,
+          "observed": 442,
+          "positive_fraction_all_studies": 0.08647990255785627,
+          "negative_fraction_all_studies": 0.4518879415347138,
+          "missing_fraction_all_studies": 0.46163215590742995,
+          "positive_fraction_observed": 0.16063348416289594,
+          "negative_N_fraction": 0.7520215633423181,
+          "negative_B_fraction": 0.24797843665768193
+        },
+        "Lateral OA": {
+          "states": {
+            "P": 33,
+            "N": 311,
+            "B": 82,
+            "U": 139,
+            "M": 256
+          },
+          "positive": 33,
+          "negative": 393,
+          "missing": 395,
+          "observed": 426,
+          "positive_fraction_all_studies": 0.040194884287454324,
+          "negative_fraction_all_studies": 0.47868453105968334,
+          "missing_fraction_all_studies": 0.48112058465286234,
+          "positive_fraction_observed": 0.07746478873239436,
+          "negative_N_fraction": 0.7913486005089059,
+          "negative_B_fraction": 0.20865139949109415
+        },
+        "PF OA": {
+          "states": {
+            "P": 88,
+            "N": 250,
+            "B": 128,
+            "U": 190,
+            "M": 165
+          },
+          "positive": 88,
+          "negative": 378,
+          "missing": 355,
+          "observed": 466,
+          "positive_fraction_all_studies": 0.1071863580998782,
+          "negative_fraction_all_studies": 0.46041412911084045,
+          "missing_fraction_all_studies": 0.43239951278928135,
+          "positive_fraction_observed": 0.1888412017167382,
+          "negative_N_fraction": 0.6613756613756614,
+          "negative_B_fraction": 0.3386243386243386
+        },
+        "Effusion": {
+          "states": {
+            "P": 100,
+            "N": 242,
+            "B": 275,
+            "U": 140,
+            "M": 64
+          },
+          "positive": 100,
+          "negative": 517,
+          "missing": 204,
+          "observed": 617,
+          "positive_fraction_all_studies": 0.1218026796589525,
+          "negative_fraction_all_studies": 0.6297198538367844,
+          "missing_fraction_all_studies": 0.24847746650426308,
+          "positive_fraction_observed": 0.1620745542949757,
+          "negative_N_fraction": 0.46808510638297873,
+          "negative_B_fraction": 0.5319148936170213
+        },
+        "Synovitis": {
+          "states": {
+            "P": 100,
+            "N": 1,
+            "B": 0,
+            "U": 68,
+            "M": 652
+          },
+          "positive": 100,
+          "negative": 1,
+          "missing": 720,
+          "observed": 101,
+          "positive_fraction_all_studies": 0.1218026796589525,
+          "negative_fraction_all_studies": 0.001218026796589525,
+          "missing_fraction_all_studies": 0.876979293544458,
+          "positive_fraction_observed": 0.9900990099009901,
+          "negative_N_fraction": 1.0,
+          "negative_B_fraction": 0.0
+        },
+        "Baker's": {
+          "states": {
+            "P": 59,
+            "N": 208,
+            "B": 111,
+            "U": 77,
+            "M": 366
+          },
+          "positive": 59,
+          "negative": 319,
+          "missing": 443,
+          "observed": 378,
+          "positive_fraction_all_studies": 0.07186358099878197,
+          "negative_fraction_all_studies": 0.38855054811205847,
+          "missing_fraction_all_studies": 0.5395858708891595,
+          "positive_fraction_observed": 0.15608465608465608,
+          "negative_N_fraction": 0.6520376175548589,
+          "negative_B_fraction": 0.34796238244514105
+        },
+        "Contusion": {
+          "states": {
+            "P": 99,
+            "N": 146,
+            "B": 21,
+            "U": 125,
+            "M": 430
+          },
+          "positive": 99,
+          "negative": 167,
+          "missing": 555,
+          "observed": 266,
+          "positive_fraction_all_studies": 0.12058465286236297,
+          "negative_fraction_all_studies": 0.20341047503045068,
+          "missing_fraction_all_studies": 0.6760048721071864,
+          "positive_fraction_observed": 0.37218045112781956,
+          "negative_N_fraction": 0.874251497005988,
+          "negative_B_fraction": 0.12574850299401197
+        },
+        "Fracture": {
+          "states": {
+            "P": 44,
+            "N": 138,
+            "B": 6,
+            "U": 78,
+            "M": 555
+          },
+          "positive": 44,
+          "negative": 144,
+          "missing": 633,
+          "observed": 188,
+          "positive_fraction_all_studies": 0.0535931790499391,
+          "negative_fraction_all_studies": 0.1753958587088916,
+          "missing_fraction_all_studies": 0.7710109622411693,
+          "positive_fraction_observed": 0.23404255319148937,
+          "negative_N_fraction": 0.9583333333333334,
+          "negative_B_fraction": 0.041666666666666664
+        }
+      }
+    },
+    "1": {
+      "studies": 891,
+      "per_target": {
+        "ACL": {
+          "states": {
+            "P": 101,
+            "N": 556,
+            "B": 92,
+            "U": 83,
+            "M": 59
+          },
+          "positive": 101,
+          "negative": 648,
+          "missing": 142,
+          "observed": 749,
+          "positive_fraction_all_studies": 0.11335578002244669,
+          "negative_fraction_all_studies": 0.7272727272727273,
+          "missing_fraction_all_studies": 0.15937149270482603,
+          "positive_fraction_observed": 0.1348464619492657,
+          "negative_N_fraction": 0.8580246913580247,
+          "negative_B_fraction": 0.1419753086419753
+        },
+        "MCL": {
+          "states": {
+            "P": 16,
+            "N": 628,
+            "B": 72,
+            "U": 89,
+            "M": 86
+          },
+          "positive": 16,
+          "negative": 700,
+          "missing": 175,
+          "observed": 716,
+          "positive_fraction_all_studies": 0.017957351290684626,
+          "negative_fraction_all_studies": 0.7856341189674523,
+          "missing_fraction_all_studies": 0.19640852974186307,
+          "positive_fraction_observed": 0.0223463687150838,
+          "negative_N_fraction": 0.8971428571428571,
+          "negative_B_fraction": 0.10285714285714286
+        },
+        "Medial Meniscus": {
+          "states": {
+            "P": 328,
+            "N": 360,
+            "B": 120,
+            "U": 62,
+            "M": 21
+          },
+          "positive": 328,
+          "negative": 480,
+          "missing": 83,
+          "observed": 808,
+          "positive_fraction_all_studies": 0.3681257014590348,
+          "negative_fraction_all_studies": 0.5387205387205387,
+          "missing_fraction_all_studies": 0.0931537598204265,
+          "positive_fraction_observed": 0.40594059405940597,
+          "negative_N_fraction": 0.75,
+          "negative_B_fraction": 0.25
+        },
+        "Lateral Meniscus": {
+          "states": {
+            "P": 105,
+            "N": 575,
+            "B": 86,
+            "U": 62,
+            "M": 63
+          },
+          "positive": 105,
+          "negative": 661,
+          "missing": 125,
+          "observed": 766,
+          "positive_fraction_all_studies": 0.11784511784511785,
+          "negative_fraction_all_studies": 0.7418630751964085,
+          "missing_fraction_all_studies": 0.14029180695847362,
+          "positive_fraction_observed": 0.1370757180156658,
+          "negative_N_fraction": 0.869894099848714,
+          "negative_B_fraction": 0.13010590015128592
+        },
+        "Medial OA": {
+          "states": {
+            "P": 59,
+            "N": 316,
+            "B": 121,
+            "U": 192,
+            "M": 203
+          },
+          "positive": 59,
+          "negative": 437,
+          "missing": 395,
+          "observed": 496,
+          "positive_fraction_all_studies": 0.06621773288439955,
+          "negative_fraction_all_studies": 0.4904601571268238,
+          "missing_fraction_all_studies": 0.44332210998877664,
+          "positive_fraction_observed": 0.11895161290322581,
+          "negative_N_fraction": 0.7231121281464531,
+          "negative_B_fraction": 0.2768878718535469
+        },
+        "Lateral OA": {
+          "states": {
+            "P": 22,
+            "N": 350,
+            "B": 79,
+            "U": 175,
+            "M": 265
+          },
+          "positive": 22,
+          "negative": 429,
+          "missing": 440,
+          "observed": 451,
+          "positive_fraction_all_studies": 0.024691358024691357,
+          "negative_fraction_all_studies": 0.48148148148148145,
+          "missing_fraction_all_studies": 0.49382716049382713,
+          "positive_fraction_observed": 0.04878048780487805,
+          "negative_N_fraction": 0.8158508158508159,
+          "negative_B_fraction": 0.18414918414918416
+        },
+        "PF OA": {
+          "states": {
+            "P": 78,
+            "N": 274,
+            "B": 143,
+            "U": 219,
+            "M": 177
+          },
+          "positive": 78,
+          "negative": 417,
+          "missing": 396,
+          "observed": 495,
+          "positive_fraction_all_studies": 0.08754208754208755,
+          "negative_fraction_all_studies": 0.468013468013468,
+          "missing_fraction_all_studies": 0.4444444444444444,
+          "positive_fraction_observed": 0.15757575757575756,
+          "negative_N_fraction": 0.657074340527578,
+          "negative_B_fraction": 0.34292565947242204
+        },
+        "Effusion": {
+          "states": {
+            "P": 108,
+            "N": 274,
+            "B": 334,
+            "U": 120,
+            "M": 55
+          },
+          "positive": 108,
+          "negative": 608,
+          "missing": 175,
+          "observed": 716,
+          "positive_fraction_all_studies": 0.12121212121212122,
+          "negative_fraction_all_studies": 0.6823793490460157,
+          "missing_fraction_all_studies": 0.19640852974186307,
+          "positive_fraction_observed": 0.15083798882681565,
+          "negative_N_fraction": 0.4506578947368421,
+          "negative_B_fraction": 0.5493421052631579
+        },
+        "Synovitis": {
+          "states": {
+            "P": 97,
+            "N": 25,
+            "B": 0,
+            "U": 79,
+            "M": 690
+          },
+          "positive": 97,
+          "negative": 25,
+          "missing": 769,
+          "observed": 122,
+          "positive_fraction_all_studies": 0.10886644219977554,
+          "negative_fraction_all_studies": 0.028058361391694726,
+          "missing_fraction_all_studies": 0.8630751964085297,
+          "positive_fraction_observed": 0.7950819672131147,
+          "negative_N_fraction": 1.0,
+          "negative_B_fraction": 0.0
+        },
+        "Baker's": {
+          "states": {
+            "P": 51,
+            "N": 235,
+            "B": 109,
+            "U": 103,
+            "M": 393
+          },
+          "positive": 51,
+          "negative": 344,
+          "missing": 496,
+          "observed": 395,
+          "positive_fraction_all_studies": 0.05723905723905724,
+          "negative_fraction_all_studies": 0.38608305274971944,
+          "missing_fraction_all_studies": 0.5566778900112234,
+          "positive_fraction_observed": 0.1291139240506329,
+          "negative_N_fraction": 0.6831395348837209,
+          "negative_B_fraction": 0.3168604651162791
+        },
+        "Contusion": {
+          "states": {
+            "P": 87,
+            "N": 199,
+            "B": 16,
+            "U": 157,
+            "M": 432
+          },
+          "positive": 87,
+          "negative": 215,
+          "missing": 589,
+          "observed": 302,
+          "positive_fraction_all_studies": 0.09764309764309764,
+          "negative_fraction_all_studies": 0.24130190796857465,
+          "missing_fraction_all_studies": 0.6610549943883277,
+          "positive_fraction_observed": 0.28807947019867547,
+          "negative_N_fraction": 0.9255813953488372,
+          "negative_B_fraction": 0.07441860465116279
+        },
+        "Fracture": {
+          "states": {
+            "P": 34,
+            "N": 152,
+            "B": 5,
+            "U": 99,
+            "M": 601
+          },
+          "positive": 34,
+          "negative": 157,
+          "missing": 700,
+          "observed": 191,
+          "positive_fraction_all_studies": 0.038159371492704826,
+          "negative_fraction_all_studies": 0.17620650953984288,
+          "missing_fraction_all_studies": 0.7856341189674523,
+          "positive_fraction_observed": 0.17801047120418848,
+          "negative_N_fraction": 0.9681528662420382,
+          "negative_B_fraction": 0.03184713375796178
+        }
+      }
+    },
+    "2": {
+      "studies": 888,
+      "per_target": {
+        "ACL": {
+          "states": {
+            "P": 80,
+            "N": 567,
+            "B": 104,
+            "U": 83,
+            "M": 54
+          },
+          "positive": 80,
+          "negative": 671,
+          "missing": 137,
+          "observed": 751,
+          "positive_fraction_all_studies": 0.09009009009009009,
+          "negative_fraction_all_studies": 0.7556306306306306,
+          "missing_fraction_all_studies": 0.15427927927927929,
+          "positive_fraction_observed": 0.10652463382157124,
+          "negative_N_fraction": 0.8450074515648286,
+          "negative_B_fraction": 0.15499254843517138
+        },
+        "MCL": {
+          "states": {
+            "P": 14,
+            "N": 629,
+            "B": 94,
+            "U": 84,
+            "M": 67
+          },
+          "positive": 14,
+          "negative": 723,
+          "missing": 151,
+          "observed": 737,
+          "positive_fraction_all_studies": 0.015765765765765764,
+          "negative_fraction_all_studies": 0.8141891891891891,
+          "missing_fraction_all_studies": 0.17004504504504506,
+          "positive_fraction_observed": 0.018995929443690638,
+          "negative_N_fraction": 0.8699861687413555,
+          "negative_B_fraction": 0.13001383125864455
+        },
+        "Medial Meniscus": {
+          "states": {
+            "P": 310,
+            "N": 346,
+            "B": 137,
+            "U": 70,
+            "M": 25
+          },
+          "positive": 310,
+          "negative": 483,
+          "missing": 95,
+          "observed": 793,
+          "positive_fraction_all_studies": 0.3490990990990991,
+          "negative_fraction_all_studies": 0.543918918918919,
+          "missing_fraction_all_studies": 0.10698198198198199,
+          "positive_fraction_observed": 0.39092055485498106,
+          "negative_N_fraction": 0.7163561076604554,
+          "negative_B_fraction": 0.2836438923395445
+        },
+        "Lateral Meniscus": {
+          "states": {
+            "P": 108,
+            "N": 569,
+            "B": 92,
+            "U": 65,
+            "M": 54
+          },
+          "positive": 108,
+          "negative": 661,
+          "missing": 119,
+          "observed": 769,
+          "positive_fraction_all_studies": 0.12162162162162163,
+          "negative_fraction_all_studies": 0.7443693693693694,
+          "missing_fraction_all_studies": 0.134009009009009,
+          "positive_fraction_observed": 0.14044213263979194,
+          "negative_N_fraction": 0.8608169440242057,
+          "negative_B_fraction": 0.13918305597579425
+        },
+        "Medial OA": {
+          "states": {
+            "P": 75,
+            "N": 287,
+            "B": 121,
+            "U": 205,
+            "M": 200
+          },
+          "positive": 75,
+          "negative": 408,
+          "missing": 405,
+          "observed": 483,
+          "positive_fraction_all_studies": 0.08445945945945946,
+          "negative_fraction_all_studies": 0.4594594594594595,
+          "missing_fraction_all_studies": 0.4560810810810811,
+          "positive_fraction_observed": 0.15527950310559005,
+          "negative_N_fraction": 0.7034313725490197,
+          "negative_B_fraction": 0.2965686274509804
+        },
+        "Lateral OA": {
+          "states": {
+            "P": 25,
+            "N": 331,
+            "B": 104,
+            "U": 175,
+            "M": 253
+          },
+          "positive": 25,
+          "negative": 435,
+          "missing": 428,
+          "observed": 460,
+          "positive_fraction_all_studies": 0.028153153153153154,
+          "negative_fraction_all_studies": 0.48986486486486486,
+          "missing_fraction_all_studies": 0.481981981981982,
+          "positive_fraction_observed": 0.05434782608695652,
+          "negative_N_fraction": 0.7609195402298851,
+          "negative_B_fraction": 0.23908045977011494
+        },
+        "PF OA": {
+          "states": {
+            "P": 84,
+            "N": 264,
+            "B": 150,
+            "U": 229,
+            "M": 161
+          },
+          "positive": 84,
+          "negative": 414,
+          "missing": 390,
+          "observed": 498,
+          "positive_fraction_all_studies": 0.0945945945945946,
+          "negative_fraction_all_studies": 0.46621621621621623,
+          "missing_fraction_all_studies": 0.4391891891891892,
+          "positive_fraction_observed": 0.1686746987951807,
+          "negative_N_fraction": 0.6376811594202898,
+          "negative_B_fraction": 0.36231884057971014
+        },
+        "Effusion": {
+          "states": {
+            "P": 129,
+            "N": 240,
+            "B": 303,
+            "U": 159,
+            "M": 57
+          },
+          "positive": 129,
+          "negative": 543,
+          "missing": 216,
+          "observed": 672,
+          "positive_fraction_all_studies": 0.14527027027027026,
+          "negative_fraction_all_studies": 0.6114864864864865,
+          "missing_fraction_all_studies": 0.24324324324324326,
+          "positive_fraction_observed": 0.19196428571428573,
+          "negative_N_fraction": 0.4419889502762431,
+          "negative_B_fraction": 0.5580110497237569
+        },
+        "Synovitis": {
+          "states": {
+            "P": 119,
+            "N": 7,
+            "B": 0,
+            "U": 73,
+            "M": 689
+          },
+          "positive": 119,
+          "negative": 7,
+          "missing": 762,
+          "observed": 126,
+          "positive_fraction_all_studies": 0.134009009009009,
+          "negative_fraction_all_studies": 0.007882882882882882,
+          "missing_fraction_all_studies": 0.8581081081081081,
+          "positive_fraction_observed": 0.9444444444444444,
+          "negative_N_fraction": 1.0,
+          "negative_B_fraction": 0.0
+        },
+        "Baker's": {
+          "states": {
+            "P": 61,
+            "N": 191,
+            "B": 115,
+            "U": 106,
+            "M": 415
+          },
+          "positive": 61,
+          "negative": 306,
+          "missing": 521,
+          "observed": 367,
+          "positive_fraction_all_studies": 0.0686936936936937,
+          "negative_fraction_all_studies": 0.34459459459459457,
+          "missing_fraction_all_studies": 0.5867117117117117,
+          "positive_fraction_observed": 0.16621253405994552,
+          "negative_N_fraction": 0.6241830065359477,
+          "negative_B_fraction": 0.3758169934640523
+        },
+        "Contusion": {
+          "states": {
+            "P": 99,
+            "N": 151,
+            "B": 22,
+            "U": 162,
+            "M": 454
+          },
+          "positive": 99,
+          "negative": 173,
+          "missing": 616,
+          "observed": 272,
+          "positive_fraction_all_studies": 0.11148648648648649,
+          "negative_fraction_all_studies": 0.19481981981981983,
+          "missing_fraction_all_studies": 0.6936936936936937,
+          "positive_fraction_observed": 0.3639705882352941,
+          "negative_N_fraction": 0.8728323699421965,
+          "negative_B_fraction": 0.12716763005780346
+        },
+        "Fracture": {
+          "states": {
+            "P": 48,
+            "N": 129,
+            "B": 9,
+            "U": 96,
+            "M": 606
+          },
+          "positive": 48,
+          "negative": 138,
+          "missing": 702,
+          "observed": 186,
+          "positive_fraction_all_studies": 0.05405405405405406,
+          "negative_fraction_all_studies": 0.1554054054054054,
+          "missing_fraction_all_studies": 0.7905405405405406,
+          "positive_fraction_observed": 0.25806451612903225,
+          "negative_N_fraction": 0.9347826086956522,
+          "negative_B_fraction": 0.06521739130434782
+        }
+      }
+    },
+    "3": {
+      "studies": 778,
+      "per_target": {
+        "ACL": {
+          "states": {
+            "P": 83,
+            "N": 486,
+            "B": 98,
+            "U": 65,
+            "M": 46
+          },
+          "positive": 83,
+          "negative": 584,
+          "missing": 111,
+          "observed": 667,
+          "positive_fraction_all_studies": 0.10668380462724936,
+          "negative_fraction_all_studies": 0.7506426735218509,
+          "missing_fraction_all_studies": 0.14267352185089974,
+          "positive_fraction_observed": 0.12443778110944528,
+          "negative_N_fraction": 0.8321917808219178,
+          "negative_B_fraction": 0.1678082191780822
+        },
+        "MCL": {
+          "states": {
+            "P": 10,
+            "N": 539,
+            "B": 81,
+            "U": 72,
+            "M": 76
+          },
+          "positive": 10,
+          "negative": 620,
+          "missing": 148,
+          "observed": 630,
+          "positive_fraction_all_studies": 0.012853470437017995,
+          "negative_fraction_all_studies": 0.7969151670951157,
+          "missing_fraction_all_studies": 0.19023136246786632,
+          "positive_fraction_observed": 0.015873015873015872,
+          "negative_N_fraction": 0.8693548387096774,
+          "negative_B_fraction": 0.13064516129032258
+        },
+        "Medial Meniscus": {
+          "states": {
+            "P": 288,
+            "N": 288,
+            "B": 119,
+            "U": 59,
+            "M": 24
+          },
+          "positive": 288,
+          "negative": 407,
+          "missing": 83,
+          "observed": 695,
+          "positive_fraction_all_studies": 0.37017994858611825,
+          "negative_fraction_all_studies": 0.5231362467866324,
+          "missing_fraction_all_studies": 0.10668380462724936,
+          "positive_fraction_observed": 0.4143884892086331,
+          "negative_N_fraction": 0.7076167076167076,
+          "negative_B_fraction": 0.29238329238329236
+        },
+        "Lateral Meniscus": {
+          "states": {
+            "P": 94,
+            "N": 493,
+            "B": 79,
+            "U": 48,
+            "M": 64
+          },
+          "positive": 94,
+          "negative": 572,
+          "missing": 112,
+          "observed": 666,
+          "positive_fraction_all_studies": 0.12082262210796915,
+          "negative_fraction_all_studies": 0.7352185089974294,
+          "missing_fraction_all_studies": 0.14395886889460155,
+          "positive_fraction_observed": 0.14114114114114115,
+          "negative_N_fraction": 0.8618881118881119,
+          "negative_B_fraction": 0.1381118881118881
+        },
+        "Medial OA": {
+          "states": {
+            "P": 65,
+            "N": 254,
+            "B": 88,
+            "U": 174,
+            "M": 197
+          },
+          "positive": 65,
+          "negative": 342,
+          "missing": 371,
+          "observed": 407,
+          "positive_fraction_all_studies": 0.08354755784061697,
+          "negative_fraction_all_studies": 0.43958868894601544,
+          "missing_fraction_all_studies": 0.4768637532133676,
+          "positive_fraction_observed": 0.1597051597051597,
+          "negative_N_fraction": 0.7426900584795322,
+          "negative_B_fraction": 0.2573099415204678
+        },
+        "Lateral OA": {
+          "states": {
+            "P": 25,
+            "N": 276,
+            "B": 91,
+            "U": 140,
+            "M": 246
+          },
+          "positive": 25,
+          "negative": 367,
+          "missing": 386,
+          "observed": 392,
+          "positive_fraction_all_studies": 0.032133676092544985,
+          "negative_fraction_all_studies": 0.4717223650385604,
+          "missing_fraction_all_studies": 0.4961439588688946,
+          "positive_fraction_observed": 0.06377551020408163,
+          "negative_N_fraction": 0.7520435967302452,
+          "negative_B_fraction": 0.24795640326975477
+        },
+        "PF OA": {
+          "states": {
+            "P": 79,
+            "N": 209,
+            "B": 117,
+            "U": 204,
+            "M": 169
+          },
+          "positive": 79,
+          "negative": 326,
+          "missing": 373,
+          "observed": 405,
+          "positive_fraction_all_studies": 0.10154241645244216,
+          "negative_fraction_all_studies": 0.4190231362467866,
+          "missing_fraction_all_studies": 0.4794344473007712,
+          "positive_fraction_observed": 0.19506172839506172,
+          "negative_N_fraction": 0.6411042944785276,
+          "negative_B_fraction": 0.3588957055214724
+        },
+        "Effusion": {
+          "states": {
+            "P": 109,
+            "N": 230,
+            "B": 247,
+            "U": 147,
+            "M": 45
+          },
+          "positive": 109,
+          "negative": 477,
+          "missing": 192,
+          "observed": 586,
+          "positive_fraction_all_studies": 0.14010282776349614,
+          "negative_fraction_all_studies": 0.6131105398457584,
+          "missing_fraction_all_studies": 0.2467866323907455,
+          "positive_fraction_observed": 0.18600682593856654,
+          "negative_N_fraction": 0.48218029350104824,
+          "negative_B_fraction": 0.5178197064989518
+        },
+        "Synovitis": {
+          "states": {
+            "P": 94,
+            "N": 10,
+            "B": 0,
+            "U": 67,
+            "M": 607
+          },
+          "positive": 94,
+          "negative": 10,
+          "missing": 674,
+          "observed": 104,
+          "positive_fraction_all_studies": 0.12082262210796915,
+          "negative_fraction_all_studies": 0.012853470437017995,
+          "missing_fraction_all_studies": 0.8663239074550129,
+          "positive_fraction_observed": 0.9038461538461539,
+          "negative_N_fraction": 1.0,
+          "negative_B_fraction": 0.0
+        },
+        "Baker's": {
+          "states": {
+            "P": 63,
+            "N": 197,
+            "B": 95,
+            "U": 99,
+            "M": 324
+          },
+          "positive": 63,
+          "negative": 292,
+          "missing": 423,
+          "observed": 355,
+          "positive_fraction_all_studies": 0.08097686375321336,
+          "negative_fraction_all_studies": 0.37532133676092544,
+          "missing_fraction_all_studies": 0.5437017994858612,
+          "positive_fraction_observed": 0.17746478873239438,
+          "negative_N_fraction": 0.6746575342465754,
+          "negative_B_fraction": 0.3253424657534247
+        },
+        "Contusion": {
+          "states": {
+            "P": 83,
+            "N": 159,
+            "B": 15,
+            "U": 139,
+            "M": 382
+          },
+          "positive": 83,
+          "negative": 174,
+          "missing": 521,
+          "observed": 257,
+          "positive_fraction_all_studies": 0.10668380462724936,
+          "negative_fraction_all_studies": 0.2236503856041131,
+          "missing_fraction_all_studies": 0.6696658097686375,
+          "positive_fraction_observed": 0.3229571984435798,
+          "negative_N_fraction": 0.9137931034482759,
+          "negative_B_fraction": 0.08620689655172414
+        },
+        "Fracture": {
+          "states": {
+            "P": 41,
+            "N": 122,
+            "B": 4,
+            "U": 92,
+            "M": 519
+          },
+          "positive": 41,
+          "negative": 126,
+          "missing": 611,
+          "observed": 167,
+          "positive_fraction_all_studies": 0.05269922879177378,
+          "negative_fraction_all_studies": 0.16195372750642673,
+          "missing_fraction_all_studies": 0.7853470437017995,
+          "positive_fraction_observed": 0.24550898203592814,
+          "negative_N_fraction": 0.9682539682539683,
+          "negative_B_fraction": 0.031746031746031744
+        }
+      }
+    },
+    "4": {
+      "studies": 829,
+      "per_target": {
+        "ACL": {
+          "states": {
+            "P": 74,
+            "N": 532,
+            "B": 88,
+            "U": 92,
+            "M": 43
+          },
+          "positive": 74,
+          "negative": 620,
+          "missing": 135,
+          "observed": 694,
+          "positive_fraction_all_studies": 0.08926417370325694,
+          "negative_fraction_all_studies": 0.7478890229191797,
+          "missing_fraction_all_studies": 0.16284680337756333,
+          "positive_fraction_observed": 0.10662824207492795,
+          "negative_N_fraction": 0.8580645161290322,
+          "negative_B_fraction": 0.14193548387096774
+        },
+        "MCL": {
+          "states": {
+            "P": 18,
+            "N": 594,
+            "B": 64,
+            "U": 88,
+            "M": 65
+          },
+          "positive": 18,
+          "negative": 658,
+          "missing": 153,
+          "observed": 676,
+          "positive_fraction_all_studies": 0.021712907117008445,
+          "negative_fraction_all_studies": 0.7937273823884198,
+          "missing_fraction_all_studies": 0.18455971049457176,
+          "positive_fraction_observed": 0.026627218934911243,
+          "negative_N_fraction": 0.9027355623100304,
+          "negative_B_fraction": 0.0972644376899696
+        },
+        "Medial Meniscus": {
+          "states": {
+            "P": 284,
+            "N": 325,
+            "B": 118,
+            "U": 80,
+            "M": 22
+          },
+          "positive": 284,
+          "negative": 443,
+          "missing": 102,
+          "observed": 727,
+          "positive_fraction_all_studies": 0.3425814234016888,
+          "negative_fraction_all_studies": 0.53437876960193,
+          "missing_fraction_all_studies": 0.12303980699638119,
+          "positive_fraction_observed": 0.390646492434663,
+          "negative_N_fraction": 0.7336343115124153,
+          "negative_B_fraction": 0.26636568848758463
+        },
+        "Lateral Meniscus": {
+          "states": {
+            "P": 113,
+            "N": 528,
+            "B": 78,
+            "U": 62,
+            "M": 48
+          },
+          "positive": 113,
+          "negative": 606,
+          "missing": 110,
+          "observed": 719,
+          "positive_fraction_all_studies": 0.13630880579010857,
+          "negative_fraction_all_studies": 0.7310012062726177,
+          "missing_fraction_all_studies": 0.13268998793727382,
+          "positive_fraction_observed": 0.1571627260083449,
+          "negative_N_fraction": 0.8712871287128713,
+          "negative_B_fraction": 0.12871287128712872
+        },
+        "Medial OA": {
+          "states": {
+            "P": 58,
+            "N": 268,
+            "B": 109,
+            "U": 191,
+            "M": 203
+          },
+          "positive": 58,
+          "negative": 377,
+          "missing": 394,
+          "observed": 435,
+          "positive_fraction_all_studies": 0.06996381182147166,
+          "negative_fraction_all_studies": 0.45476477683956573,
+          "missing_fraction_all_studies": 0.4752714113389626,
+          "positive_fraction_observed": 0.13333333333333333,
+          "negative_N_fraction": 0.7108753315649867,
+          "negative_B_fraction": 0.2891246684350133
+        },
+        "Lateral OA": {
+          "states": {
+            "P": 31,
+            "N": 311,
+            "B": 83,
+            "U": 153,
+            "M": 251
+          },
+          "positive": 31,
+          "negative": 394,
+          "missing": 404,
+          "observed": 425,
+          "positive_fraction_all_studies": 0.03739445114595899,
+          "negative_fraction_all_studies": 0.4752714113389626,
+          "missing_fraction_all_studies": 0.4873341375150784,
+          "positive_fraction_observed": 0.07294117647058823,
+          "negative_N_fraction": 0.7893401015228426,
+          "negative_B_fraction": 0.21065989847715735
+        },
+        "PF OA": {
+          "states": {
+            "P": 106,
+            "N": 242,
+            "B": 116,
+            "U": 201,
+            "M": 164
+          },
+          "positive": 106,
+          "negative": 358,
+          "missing": 365,
+          "observed": 464,
+          "positive_fraction_all_studies": 0.1278648974668275,
+          "negative_fraction_all_studies": 0.43184559710494574,
+          "missing_fraction_all_studies": 0.44028950542822676,
+          "positive_fraction_observed": 0.22844827586206898,
+          "negative_N_fraction": 0.6759776536312849,
+          "negative_B_fraction": 0.3240223463687151
+        },
+        "Effusion": {
+          "states": {
+            "P": 98,
+            "N": 244,
+            "B": 285,
+            "U": 150,
+            "M": 52
+          },
+          "positive": 98,
+          "negative": 529,
+          "missing": 202,
+          "observed": 627,
+          "positive_fraction_all_studies": 0.11821471652593486,
+          "negative_fraction_all_studies": 0.638118214716526,
+          "missing_fraction_all_studies": 0.2436670687575392,
+          "positive_fraction_observed": 0.15629984051036683,
+          "negative_N_fraction": 0.4612476370510397,
+          "negative_B_fraction": 0.5387523629489603
+        },
+        "Synovitis": {
+          "states": {
+            "P": 112,
+            "N": 6,
+            "B": 0,
+            "U": 58,
+            "M": 653
+          },
+          "positive": 112,
+          "negative": 6,
+          "missing": 711,
+          "observed": 118,
+          "positive_fraction_all_studies": 0.13510253317249699,
+          "negative_fraction_all_studies": 0.007237635705669481,
+          "missing_fraction_all_studies": 0.8576598311218335,
+          "positive_fraction_observed": 0.9491525423728814,
+          "negative_N_fraction": 1.0,
+          "negative_B_fraction": 0.0
+        },
+        "Baker's": {
+          "states": {
+            "P": 60,
+            "N": 220,
+            "B": 96,
+            "U": 86,
+            "M": 367
+          },
+          "positive": 60,
+          "negative": 316,
+          "missing": 453,
+          "observed": 376,
+          "positive_fraction_all_studies": 0.07237635705669482,
+          "negative_fraction_all_studies": 0.38118214716525933,
+          "missing_fraction_all_studies": 0.5464414957780458,
+          "positive_fraction_observed": 0.1595744680851064,
+          "negative_N_fraction": 0.6962025316455697,
+          "negative_B_fraction": 0.3037974683544304
+        },
+        "Contusion": {
+          "states": {
+            "P": 72,
+            "N": 158,
+            "B": 15,
+            "U": 141,
+            "M": 443
+          },
+          "positive": 72,
+          "negative": 173,
+          "missing": 584,
+          "observed": 245,
+          "positive_fraction_all_studies": 0.08685162846803378,
+          "negative_fraction_all_studies": 0.20868516284680338,
+          "missing_fraction_all_studies": 0.7044632086851629,
+          "positive_fraction_observed": 0.2938775510204082,
+          "negative_N_fraction": 0.9132947976878613,
+          "negative_B_fraction": 0.08670520231213873
+        },
+        "Fracture": {
+          "states": {
+            "P": 35,
+            "N": 134,
+            "B": 4,
+            "U": 86,
+            "M": 570
+          },
+          "positive": 35,
+          "negative": 138,
+          "missing": 656,
+          "observed": 173,
+          "positive_fraction_all_studies": 0.04221954161640531,
+          "negative_fraction_all_studies": 0.16646562123039807,
+          "missing_fraction_all_studies": 0.7913148371531966,
+          "positive_fraction_observed": 0.2023121387283237,
+          "negative_N_fraction": 0.9710144927536232,
+          "negative_B_fraction": 0.028985507246376812
+        }
+      }
+    }
+  },
+  "fold0_validation_minus_training": {
+    "ACL": {
+      "positive_fraction_all_studies": -0.0023806560365710328,
+      "negative_fraction_all_studies": 0.001523432806720848,
+      "missing_fraction_all_studies": 0.0008572232298502125,
+      "positive_fraction_observed": -0.002700394870964601,
+      "weak_negative_count_proportional_to_valid_study_share": 611.9933444259567,
+      "note": "Descriptive comparison only; not an independence or significance test."
+    },
+    "MCL": {
+      "positive_fraction_all_studies": -0.0037310614099901225,
+      "negative_fraction_all_studies": 0.02081761037963159,
+      "missing_fraction_all_studies": -0.01708654896964143,
+      "positive_fraction_observed": -0.0049166921832289046,
+      "weak_negative_count_proportional_to_valid_study_share": 658.2441169479439,
+      "note": "Descriptive comparison only; not an independence or significance test."
+    },
+    "Medial Meniscus": {
+      "positive_fraction_all_studies": 0.019016470341083447,
+      "negative_fraction_all_studies": 0.0017097700425842133,
+      "missing_fraction_all_studies": -0.020726240383667646,
+      "positive_fraction_observed": 0.01173536222295729,
+      "weak_negative_count_proportional_to_valid_study_share": 439.8702163061564,
+      "note": "Descriptive comparison only; not an independence or significance test."
+    },
+    "Lateral Meniscus": {
+      "positive_fraction_all_studies": 0.0026346214584234,
+      "negative_fraction_all_studies": 0.008316108530288413,
+      "missing_fraction_all_studies": -0.010950729988711855,
+      "positive_fraction_observed": 0.001213198066525284,
+      "weak_negative_count_proportional_to_valid_study_share": 607.504872830996,
+      "note": "Descriptive comparison only; not an independence or significance test."
+    },
+    "Medial OA": {
+      "positive_fraction_all_studies": 0.010579134690165776,
+      "negative_fraction_all_studies": -0.010014007667885128,
+      "missing_fraction_all_studies": -0.0005651270222806204,
+      "positive_fraction_observed": 0.01950223759507605,
+      "weak_negative_count_proportional_to_valid_study_share": 377.6170667934395,
+      "note": "Descriptive comparison only; not an independence or significance test."
+    },
+    "Lateral OA": {
+      "positive_fraction_all_studies": 0.009775510394955802,
+      "negative_fraction_all_studies": -0.0012327754967254023,
+      "missing_fraction_all_studies": -0.008542734898230375,
+      "positive_fraction_observed": 0.017858307250912878,
+      "weak_negative_count_proportional_to_valid_study_share": 393.8145947230806,
+      "note": "Descriptive comparison only; not an independence or significance test."
+    },
+    "PF OA": {
+      "positive_fraction_all_studies": 0.004705554792140451,
+      "negative_fraction_all_studies": 0.012983532536711695,
+      "missing_fraction_all_studies": -0.01768908732885216,
+      "positive_fraction_observed": 0.0024824476888112568,
+      "weak_negative_count_proportional_to_valid_study_share": 369.4207273591633,
+      "note": "Descriptive comparison only; not an independence or significance test."
+    },
+    "Effusion": {
+      "positive_fraction_all_studies": -0.009325495178613946,
+      "negative_fraction_all_studies": -0.007314995543014735,
+      "missing_fraction_all_studies": 0.01664049072162871,
+      "positive_fraction_observed": -0.0086290212528905,
+      "weak_negative_count_proportional_to_valid_study_share": 521.8336106489185,
+      "note": "Descriptive comparison only; not an independence or significance test."
+    },
+    "Synovitis": {
+      "positive_fraction_all_studies": -0.0028281531821579553,
+      "negative_fraction_all_studies": -0.012957992104769011,
+      "missing_fraction_all_studies": 0.01578614528692701,
+      "positive_fraction_observed": 0.09222666947545821,
+      "weak_negative_count_proportional_to_valid_study_share": 9.562396006655574,
+      "note": "Descriptive comparison only; not an independence or significance test."
+    },
+    "Baker's": {
+      "positive_fraction_all_studies": 0.002460155127547478,
+      "negative_fraction_all_studies": 0.01702071940562022,
+      "missing_fraction_all_studies": -0.019480874533167714,
+      "positive_fraction_observed": -0.001316549541599793,
+      "weak_negative_count_proportional_to_valid_study_share": 307.7530306631804,
+      "note": "Descriptive comparison only; not an independence or significance test."
+    },
+    "Contusion": {
+      "positive_fraction_all_studies": 0.019875851917295045,
+      "negative_fraction_all_studies": -0.013659814396601883,
+      "missing_fraction_all_studies": -0.006216037520693107,
+      "positive_fraction_observed": 0.05526595298655562,
+      "weak_negative_count_proportional_to_valid_study_share": 176.0261468980271,
+      "note": "Descriptive comparison only; not an independence or significance test."
+    },
+    "Fracture": {
+      "positive_fraction_all_studies": 0.006930450166300589,
+      "negative_fraction_all_studies": 0.010304305253486995,
+      "missing_fraction_all_studies": -0.017234755419787584,
+      "positive_fraction_observed": 0.01367993115522717,
+      "weak_negative_count_proportional_to_valid_study_share": 137.1911100546708,
+      "note": "Descriptive comparison only; not an independence or significance test."
+    }
+  },
+  "source_release_synovitis_author_manifest": {
+    "studies": 4349,
+    "states": {
+      "P": 522,
+      "N": 49,
+      "B": 0,
+      "U": 367,
+      "M": 3411
+    },
+    "basis": "Previously saved author aggregate manifest; source rows outside prepared weak were not included in study-level calculations."
+  },
+  "interpretation": [
+    "The source itself has49 observed Synovitis negatives, all N and no B. Prepared weak retains all49, so negative scarcity predates splitting.",
+    "Fold0 further concentrates the scarcity: validation100 positive/1 negative; training422 positive/48 negative. Five validation-fold negative counts are1,25,7,10,6.",
+    "Fold0 Synovitis observed-positive rate100/101 makes AUC strongly dependent on one negative rank; it is not a stable standalone image-discrimination estimate.",
+    "U/M stays missing. Replacing it with0 or forcing prevalence toward expert labels changes supervision and is not justified by these counts.",
+    "N and B are distinct extraction states even though both train as0. Preserve them in training-side report-only audits of explicit denial versus threshold interpretation.",
+    "State consistency/model agreement does not prove clinical image-label correctness, patient independence, competition eligibility or absence of unseen development exposure.",
+    "Keep the current split for initial controlled model comparisons. If grouping-preserving observed-positive/negative balancing is introduced later, create a new split version and rerun its baseline."
+  ],
+  "computation": "Python standard-library csv/Counter with assertions; P=1,N/B=0,U/M=missing; no threshold fitting or statistical independence claim."
+}

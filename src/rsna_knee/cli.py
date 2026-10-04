@@ -45,6 +45,15 @@ def main(argv=None):
     p.add_argument("--run-dir", required=True)
     p.add_argument("--config", default="configs/baseline.json")
     p.add_argument("--fold", type=int, default=0)
+    p = sub.add_parser(
+        "diagnose-train", help="CUDA-only memorization diagnostic on training partition; no gold evaluation"
+    )
+    p.add_argument("--manifest-dir", required=True)
+    p.add_argument("--cache-dir", required=True)
+    p.add_argument("--run-dir", required=True)
+    p.add_argument("--config", required=True)
+    p.add_argument("--fold", type=int, default=0)
+    p.add_argument("--studies", type=int, default=16)
     p = sub.add_parser("predict")
     p.add_argument("--test-csv", required=True)
     p.add_argument("--cache-dir", required=True)
@@ -100,10 +109,17 @@ def main(argv=None):
             from .imaging import build_cache
 
             result = build_cache(args.data_root, args.split, args.cache_dir, load_config(args.config), args.limit)
-        elif args.command == "train":
+        elif args.command in ("train", "diagnose-train"):
             from .runtime import train
 
-            result = train(args.manifest_dir, args.cache_dir, args.run_dir, load_config(args.config), args.fold)
+            result = train(
+                args.manifest_dir,
+                args.cache_dir,
+                args.run_dir,
+                load_config(args.config),
+                args.fold,
+                diagnostic_studies=args.studies if args.command == "diagnose-train" else None,
+            )
         elif args.command == "predict":
             from .runtime import predict
 

@@ -1,14 +1,14 @@
 # キャッシュ作成後の学習と提出手順
 
-更新日 2026年10月3日 JST。先に説明した「1. 公開Notebookで採点を通す、2. ローカルCUDA環境を整える、3. Kaggleで画像キャッシュを作る」に続く作業を説明する。全件キャッシュの取得・検証後、研究用ラベルの監査・固定fold・1 epochの動作確認・5 epochの基準実験・提出用bundleのローカル検査が完了した。自作モデルのKaggle採点は未実施。段階ごとの現状は [PROJECT.md](../PROJECT.md)、確認範囲は [validation.md](validation.md) を参照する。
+更新日 2026年10月4日 JST。先に説明した「1. 公開Notebookで採点を通す、2. ローカルCUDA環境を整える、3. Kaggleで画像キャッシュを作る」に続く作業を説明する。全件キャッシュの取得・検証、ラベル監査・固定fold、e001/e002の学習と梱包は完了済み。続くA/B/Cの5 epoch比較も完了し、C（ImageNet事前学習）のepoch 2を暫定比較基準に採用した。確定結果と追加foldの操作は [対照実験の記録と手順](controlled-experiments.md) を参照する。Cの提出bundleをローカルに準備したが、新しいアップロード・自作モデルのKaggle実行・提出は行っていない。現状は [PROJECT.md](../PROJECT.md)、確認範囲は [validation.md](validation.md) に記録する。
 
 元MRIの前処理と提出推論はKaggle、キャッシュからの学習はこのPCのRTX 4090を使う。ブラウザでKaggleを開いても、このPCのGPUでは計算されない。ローカルに全DICOMや例示testのキャッシュを置く必要はない。
 
-10月4日の再分析による次の改善は [次の実験計画](research/next-experiments-20261004.md) を参照する。既存段階4〜6を再実行する必要はない。先に評価ログと互換性を整え、既存192px cacheで正規化・初期化の対照比較を行う。以下のコマンドは現行実装の手順であり、提案中の事前学習やBN条件を実装済みとは扱わない。
+10月4日の再分析による改善方針は [次の実験計画](research/next-experiments-20261004.md)、追加実装後の操作は [対照実験の実行手順](controlled-experiments.md) を参照する。既存段階4〜6を再実行する必要はない。共通正規化・明示ローカル事前学習・BN統計固定・epoch別評価・gold監査の無効化を実装し、既存192px cacheで条件を分けて比較する。A/Bでは正規化の変更だけでbestのweak AUCが0.557023から0.644652へ、BCEが0.430481から0.411992へ改善した。同じfold・seedの一比較であり、追加foldの再現や隠しtestの改善は未確認。以下の従来コマンドはrandom＋legacyの基準手順として保持する。
 
 | 段階 | 作業場所 | 作るもの | 次へ進む条件 |
 |---|---|---|---|
-| 4 | Kaggle → このPC | 検査済みの全件画像キャッシュ | 完全性・hash・ソース・前処理が一致 |
+| 4 | Kaggle → このPC | 検査済みの全件画像キャッシュ | 完全性・保存ソースのhash・画像前処理互換性を確認 |
 | 5 | このPC | 監査済みweakラベルと固定fold | 出所が確認でき、goldとgroupの混入がない |
 | 6 | このPCのGPU | fold 0の学習結果とcheckpoint | loss・時間・出力を確認し、比較基準が残る |
 | 7 | Kaggle | 自作モデルの採点成功 | Internet OFFで隠しtestの採点が完了 |
@@ -80,7 +80,7 @@ uv --cache-dir .uv-cache pip install --python artifacts/tools/kaggle-venv/Script
 以降のPowerShellコマンドは、リポジトリのルートで実行する。
 
 ```powershell
-.\.venv\Scripts\python.exe scripts/verify_cache_export.py data/exports/rsna-cache-v1
+.\.venv\Scripts\python.exe scripts/verify_cache_export.py data/exports/rsna-cache-v1 --config configs/baseline.json
 ```
 
 成功すると `valid: true`、検査数、検査したファイル数が表示される。検査器は次を確認する。
@@ -88,10 +88,11 @@ uv --cache-dir .uv-cache pip install --python artifacts/tools/kaggle-venv/Script
 - `complete=true` の全件exportである。10検査のdebug exportは受け付けない。
 - ファイル一覧・サイズ・SHA-256がexport記録と一致する。
 - 元CSVと画像キャッシュの検査ID集合・件数が一致する。
-- 現在の `src/rsna_knee/` のPythonソースがexportに記録したソースと一致する。
-- 学習用cacheの前処理fingerprintが記録したconfigと一致する。
+- 保存された全Pythonソースの改行正規化hashがexportのsource記録と一致し、保存configもファイル一覧に含まれてexport記録と一致する。
+- 学習用cacheの前処理fingerprintが保存imaging.pyと保存configから求めた値に一致する。
+- 現在のimaging.pyと選択configの画像前処理が保存cacheと互換である。現在のモデル・ログの変更は、全sourceの差分を表示して区別する。
 
-不一致はチェックを外して進めず、転送欠落なら再取得、ソース違いならキャッシュ生成時のコードへ合わせる。資料だけを更新したcommitではsrcのhashは変わらないが、srcを変更した場合は初回検査にも影響する。キャッシュ生成時のGit commitも手動で残しておく。
+成功時は `export_integrity=true`、`source_integrity=true`、`preprocess_compatible=true` が必要。モデル・ログだけの変更による `source_matches_repository=false` は、`source_differences` を確認して同じ画像cacheを利用できる。画像前処理の不一致なら新しいcacheを作り、転送欠落や保存物の改変なら取得・完全性を修復する。従来どおり全sourceの一致まで求める確認では `--require-source-match` を追加する。保存exportやhash記録を現在のコードへ書き換えず、キャッシュ生成時のcommitと新runのコードhashをそれぞれ残す。
 
 検査後に `audit.json` と `train-v1/coverage.json` を読む。CSV件数、空のレポート、公式ラベルの欠損、シリーズ失敗・fallbackを確認する。hashの一致は画像内容の正しさを保証しないため、手順3で原画像とキャッシュを目視した結果も残す。完全性・前処理・目視の確認が揃えば手順5へ進む。
 
@@ -99,7 +100,9 @@ uv --cache-dir .uv-cache pip install --python artifacts/tools/kaggle-venv/Script
 
 ### 公開ラベルの採用元を決める
 
-10月3日、[公開ラベルの採用監査](public-baselines.md#公開ラベルと学習コードの採用監査10月3日) を行い、vmohitrao Dataset Version 3を非商用の研究用候補として取得・監査した。元CSVは `data/labels/sources/vmohitrao-v3/`、取り込み済みラベル・groups・provenanceは `data/labels/vmohitrao-v3/`、固定した分割は `data/manifests/v1-vmohitrao-research/` にある。Kaggle提出への利用可否は未確定。
+10月3日、[公開ラベルの採用監査](public-baselines.md#公開ラベルと学習コードの採用監査10月3日) を行い、vmohitrao Dataset Version 3を取得・監査した。元CSVは `data/labels/sources/vmohitrao-v3/`、取り込み済みラベル・groups・provenanceは `data/labels/vmohitrao-v3/`、固定した分割は `data/manifests/v1-vmohitrao-research/` にある。
+
+10月4日に公式SDKでRulesと [Hostの外部LLM案内](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733965) の本文・返信を取得した。大会側はNC制限だけでデータを禁止せず、賞金があるだけで商用利用とは扱わない。採用ラベルは本大会の画像学習を想定して公開されており、研究・学習目的を維持し、CC BY-NC 4.0の帰属・ライセンス表示等の通常条件に従って採用を進める。追加の個別許可を一律に必須とする根拠は確認されていない。将来の商用転用を許可した判断ではなく、入賞時の成果物公開条件との不整合はその時に確認する。根拠と判断範囲は [利用条件の一次資料確認](research/kaggle-source-eligibility-20261004.json) に記録した。
 
 既存候補を使う場合、以降の `data/labels/weak_labels.csv` と `data/labels/provenance.json` は上のラベルディレクトリ内へ、`data/manifests/v1` は上のmanifestディレクトリへ読み替える。prepareは実施済みなので同じ出力先へ再実行しない。`label-template` は空欄を作るだけで、その出力は学習に使えない。
 
@@ -146,7 +149,7 @@ StudyInstanceUID,ACL,MCL,Medial Meniscus,Lateral Meniscus,Medial OA,Lateral OA,P
 .\.venv\Scripts\python.exe scripts/audit_training_labels.py folds --train-csv data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/raw/train.csv --weak-labels data/labels/vmohitrao-v3/weak_labels.csv --provenance data/labels/vmohitrao-v3/provenance.json --groups data/labels/vmohitrao-v3/groups.csv --manifest-dir data/manifests/v1-vmohitrao-research --config configs/experiments/e001-smoke.json --output artifacts/qa/fold-audit-new.json
 ```
 
-既存の詳細集計はmanifestディレクトリの `fold-audit-v2.json`。監査のready_for_trainingはCSVの整合性と観測ラベルの存在だけを表し、画像品質や利用条件の承認ではない。fold 0のSynovitis陰性は1件と少ない。分布を記録し、将来分割を改善する場合は新しいmanifest版として比較する。全foldを埋めるために欠損を0へ変換しない。
+既存の詳細集計はmanifestディレクトリの `fold-audit-v2.json`。監査のready_for_trainingはCSVの整合性と観測ラベルの存在だけを表し、画像品質や利用条件の承認ではない。[state別の追加監査](../experiments/weak-state-audit-20261004.json) では、Synovitisのweak全体の陰性は49件で、fold別は1・25・7・10・6件。元ラベルにも陰性が少なく、fold 0でさらに偏っている。Nは明示的否定、Bは基準未満で、両者は0でも意味を区別する。分布を記録し、将来分割を改善する場合は新しいmanifest版として比較する。全foldを埋めるために欠損を0へ変換しない。
 
 出所、分割、gold除外、各クラスの観測数を確認したら、このmanifestを比較実験の間は固定する。ラベルやgroupを変えた場合は `data/manifests/v2/` など新しい版を作り、旧版を残す。
 
@@ -202,7 +205,7 @@ goldで陽性または陰性がない所見のAUCは未定義。`macro_auc_12` �
 
 ## 7. 自作モデルをKaggleで採点する
 
-fold 0の動作確認後、長い改善実験の前に、少なくとも一つの自作checkpointで提出経路を確認する。公開Notebookでの採点成功と、自作 `01_submit.ipynb` の採点成功は別の確認である。10月3日の追加診断では、e002のweak BCEは画像を使わない学習側の陽性率予測より高かった。現行モデルの精度向上を期待した提出は保留し、利用条件・学習診断・一条件の初期改善を先に確認する。ただし、提出経路の確認を大規模な調整の完了まで延期しない。
+fold 0の動作確認後、長い改善実験の前に、少なくとも一つの自作checkpointで提出経路を確認する。公開Notebookでの採点成功と、自作 `01_submit.ipynb` の採点成功は別の確認である。学習診断とA/B/C比較を終え、C epoch 2でweak BCE 0.371395・AUC 0.766895を確認した。`artifacts/kaggle/e005-pretrained-imagenet-fold0/` に重み・コード・未実行Notebook・帰属記録を準備済みで、[Cの提出操作](kaggle-submit.md) に従って早期の手動Kaggle実行へ進む。非商用の研究・学習目的で通常のCC条件を守る採用判断は済んでおり、追加個別許可を一律に必須ブロックにしない。提出経路の確認を大規模な調整の完了まで延期しない。
 
 ### コードと重みを準備する
 
@@ -212,7 +215,7 @@ fold 0の動作確認後、長い改善実験の前に、少なくとも一つ�
 .\.venv\Scripts\python.exe scripts/build_kaggle_bundle.py --output-dir artifacts/kaggle/e002-baseline-fold0
 ```
 
-今回のラベルは非商用のローカル研究用で、大会利用の条件は未確認。RulesとCC BY-NC 4.0を照合して採用版を確定してから、手動でKaggleのprivate Input Datasetへ次を追加し、版とhashを記録する。
+e002の次の資産は過去の比較基準として保存する。新しい採用runでは、その学習に対応するコード・重みを別のbundleへ梱包し、人工入力の契約を確認する。その後、手動でKaggleのprivate Input Datasetへ追加し、版とhash、ラベルの出所・Dataset Version 3・CC BY-NC 4.0・変更内容を説明へ残す。今までに新規アップロード・提出は行っていない。
 
 - `artifacts/kaggle/e002-baseline-fold0/rsna-knee-code.zip`
 - `artifacts/runs/e002-baseline-fold0/best.pt`
@@ -237,20 +240,20 @@ checkpointにはその学習で使ったconfigとラベル順が入っている�
 
 ## 8. 同じ条件で一要因ずつ改善する
 
-最初から5foldと大量の条件を回す必要はない。fold 0の比較基準とローカル実測時間は揃っている。短い対照比較を進めつつ、利用条件が確認できたら自作提出の成功と全体時間を早期に確認し、残り日数で実行できる候補数を決める。比較元のconfig・manifest・seed・foldを固定し、変更理由と採用条件を実行前に一行書く。
+最初から5foldと大量の条件を回す必要はない。fold 0の比較基準とローカル実測時間は揃っている。短い対照比較を進めつつ、現在の採用判断と通常のCC条件に従って自作提出の成功と全体時間を早期に確認し、残り日数で実行できる候補数を決める。比較元のconfig・manifest・seed・foldを固定し、変更理由と採用条件を実行前に一行書く。
 
 以下は一般的な改善候補一覧で、番号は優先順位ではない。10月4日時点の優先順は [次の実験計画](research/next-experiments-20261004.md) に従い、評価整備とA/B/C比較の診断結果からラベル・入力へ分岐する。
 
 | 候補 | 試す内容 | 理由と条件 | 現行実装 |
 |---|---|---|---|
 | 1 | 入力画像・シリーズ失敗・ラベル対応の修正 | 所見が消える入力や誤ラベルがあるとモデル比較が成立しない | 監査・cacheはある。修正内容によって追加実装 |
-| 2 | 汎用事前学習encoder | ランダム初期化だけでの少量データ学習を改善する候補 | 未実装。重みの由来・学習対象を確認して追加 |
+| 2 | 汎用事前学習encoder | ランダム初期化だけでの少量データ学習を改善する候補 | ResNet18 ImageNet初期化をCで比較済み。採用weak AUC 0.766895、結果は対照実験記録を参照 |
 | 3 | epoch数またはlearning rate | 同じ入力で学習曲線に応じて調整 | configで変更可能。変更は一つずつ |
 | 4 | シリーズ数、窓数、解像度、crop | 見せる情報と推論時間の交換条件を比較 | 数・解像度はconfig、cropは追加実装。新しいcacheが必要 |
 | 5 | ラベル版・抽出方法 | 弱教師の誤りや未言及の扱いを改善する候補 | ラベル生成器は未実装。新manifestで旧版と区別 |
 | 6 | 少数モデルのensemble | 誤りが異なる候補を組み合わせる | 未実装。予測の整合・速度・採用根拠を別途検証 |
 
-同じcacheを再利用できるのは、epoch数・learning rateなど画像前処理を変えない条件。tensorへの正規化やモデルだけの変更でも現在のsrc全体hash検査が停止するため、保存exportの完全性と画像前処理互換性を分ける整備が先に必要。解像度・series・windows・画像前処理ソースを変える場合は、新しいcache版と対応する提出コードをKaggleで作る。公開作者のcacheは形状と前処理契約が異なる可能性があるため、このcacheとしてそのまま扱わない。
+同じcacheを再利用できるのは、epoch数・learning rate・tensor正規化・モデルなど、保存uint8画像の前処理を変えない条件。`verify_cache_export.py --config <使用config>` は保存exportの全件完全性と現在コードの画像前処理互換性を分けて検査するため、モデル・ログのみのsource差分で停止しない。解像度・series・windows・imaging.pyを変える場合は、新しいcache版と対応する提出コードをKaggleで作る。公開作者のcacheは形状と前処理契約が異なる可能性があるため、このcacheとしてそのまま扱わない。
 
 公開競技checkpointがすでに全weak検査を学習していたら、自分のfoldの検証画像にも露出している可能性がある。その重みからfine-tuneして自分のfoldを評価しても独立したCVとは呼べない。汎用事前学習からfoldごとに学習する経路と、公開競技重みの提出再現を記録上区別する。
 
@@ -264,13 +267,13 @@ checkpointにはその学習で使ったconfigとラベル順が入っている�
 
 提案する進行は次のとおり。遅れた場合は実験数を減らし、提出確認の時間を確保する。
 
-- 10月5〜8日：転送検査、ラベル監査、固定分割、fold 0学習、自作モデルの初回採点。
+- 10月4〜8日：完了した転送・ラベル・固定分割を保ち、A/B/C比較を終え、自作モデルの初回採点を準備する。
 - 10月9〜15日：一要因ずつ少数の改善。未確認の入力や分割の問題があれば先に解決する。
 - 10月16〜19日：有望条件を追加foldで確認し、必要な場合だけ少数ensembleを実装・計測する。
 - 10月20〜22日：重み・コード・依存の版を固定し、Internet OFFで再実行・採点。10月22日中に最終選択を終える。
 
-最終選択数、日次提出回数、残りGPU枠はアカウントの現在の画面で確認する。採点成功済みの予備候補を残し、未採点の変更を最後の候補にしない。提出ボタンを押したことと採点完了は別である。
+10月4日に取得したRulesでは日次提出は5回、最終選択は2件。提出時のライブ画面と残りGPU枠も確認する。採点成功済みの予備候補を残し、未採点の変更を最後の候補にしない。提出ボタンを押したことと採点完了は別である。[公式Rules](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/rules)
 
 最終メモには、成功したSubmission ID、Notebook/Inputの版、Git commit、config、seed・fold、ラベル由来、checkpoint hash、実測スコア、全体時間、採用理由を残す。データ・レポート・UID一覧・cache・重みはGitへ入れず、共有できるコード・設定・集計・手順だけをmainに残す。
 
-10月3日時点で、研究用ラベルの採用監査、ユーザーによる画像目視、CUDA/AMP実学習と実測時間、既存公開モデルのKaggle採点成功は確認済み。e002は約18分で5 epochを完了し、weak検証最良はepoch 1（BCE 0.430481）、選択後のgold macro AUCは0.487178だった。epoch増加によるweak検証の改善はなかった。未確認なのは研究用ラベルの大会利用条件、自作提出の実test decode・Kaggle全体時間・採点結果である。次は利用条件・学習診断・汎用事前学習初期化の一条件比較を先に進め、自作提出の動作確認も早期に行う。
+10月4日時点で、ラベル・画像目視・CUDA/AMP・従来baselineに加え、cache互換性の実装、A/B/C比較、Cのローカル提出準備が完了した。e002の重み・bundleと既存公開モデルの実測Public 0.924は保存する。Host本文と通常のCC条件を踏まえた採用判断も更新済み。未確認なのは新しい自作提出の実test decode、Kaggle全体時間、採点結果。結果と候補判断、B/Cの追加fold 1手順は [対照実験の記録](controlled-experiments.md) へ集約した。次は追加fold比較と自作提出の動作確認を進める。

@@ -1,0 +1,135 @@
+{
+  "checked_at_jst": "2026-10-04T12:46:18.252090+09:00",
+  "checked_at_utc": "2026-10-04T03:46:18.252090+00:00",
+  "scope": "Official Kaggle SDK read-only Rules/topic retrieval; no submissions, posts, notebook execution, data or model download",
+  "retrieval": {
+    "cli_version": "2.2.4",
+    "sdk_version": "0.1.37",
+    "methods": [
+      "KaggleApi.competition_list_pages('rsna-knee-abnormality-detection', page_name='rules')",
+      "KaggleApi.forums_topic_show(topic_id=733965, page_size=None)"
+    ],
+    "authentication": "Standard SDK OAuth and automatic refresh only; no credential values read manually, copied or displayed",
+    "raw_evidence_directory": "artifacts/qa/20261004-rules-readonly/",
+    "all_comment_pages_retrieved": true,
+    "raw_evidence_sha256": {
+      "attempt.json": "7b190f573d00421c96055e7f3a766f2d9ff0d89c748603022484b0cf13025370",
+      "host-733965.json": "b76f1a3c7551cd1818f0696872970e887c67eb1565b3b1f362f165591d81d22b",
+      "rules.json": "5414907b375a9bd6fd66320094de9965328b43d8a6202b241a877ff1bade9e1a"
+    }
+  },
+  "sources": [
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/rules",
+      "source_kind": "Competition Rules body returned by official ListCompetitionPages",
+      "publisher": "RSNA / Kaggle",
+      "source_revision_timestamp": null,
+      "body_characters": 37384,
+      "summary": "External data/models are permitted subject to equal/reasonable access and minimal cost. Participants must protect competition data and follow provider licenses. Winners must supply reproducible training/inference code, weights and environment information; weights must be a public Kaggle dataset. Section 2.5 names CC-BY-NC 4.0 but retains inconsistent generic language about OSI approval and unrestricted commercial use; do not silently resolve this inconsistency. Incompatible-license input data/pretrained models need not receive the winner license. Daily submissions are limited to five and final selections to two.",
+      "sections": [
+        "Competition-specific 2: submission limits",
+        "Competition-specific 4.b: Data Security",
+        "Competition-specific 5: Winner License",
+        "Competition-specific 6.a/b: External Data and Tools",
+        "Competition-specific 8: Winner's Obligations"
+      ],
+      "short_quotes": [
+        {
+          "section": "6.a",
+          "text": "publicly available and equally accessible to use by all Participants"
+        },
+        {
+          "section": "5.a.2",
+          "text": "in no event limits commercial use"
+        }
+      ],
+      "quote_words_total": 16,
+      "metadata_limit": "ApiCompetitionPage.is_published defaults to false when absent; its returned false does not establish that these are unpublished draft rules"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733965",
+      "source_kind": "Host topic and replies returned by official GetTopic/ListComments",
+      "title": "Use of Commercially Hosted LLMs",
+      "author": "Po-Hao \"Howard\" Chen",
+      "author_url": "https://www.kaggle.com/javaduke95",
+      "post_date_as_returned": "2026-08-09 09:52:50.447000",
+      "timestamp_timezone_not_returned_by_sdk": true,
+      "summary": "Hosted LLM inference, including report label extraction, is allowed when rules, service terms, accessibility and cost requirements are met. Such processing alone is not forbidden private sharing. On August 27 the author confirmed report-label API usage. The Host explained that prize money alone does not make dataset use commercial from the competition's perspective; accessible non-commercial datasets are not banned solely for their license restriction. Dataset owners retain authority over licenses. Teams remain responsible for prize participation and required code/model release. Substantial institutional approvals or credentialing may create accessibility barriers.",
+      "relevant_author_replies": [
+        {
+          "comment_id": 3517694,
+          "post_date_as_returned": "2026-08-27 21:59:45.243000",
+          "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733965",
+          "subject": "Report-to-label LLM API use permitted"
+        },
+        {
+          "comment_id": 3517696,
+          "post_date_as_returned": "2026-08-27 22:14:33.257000",
+          "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733965",
+          "subject": "Non-commercial restrictions, prize money, owner licensing and accessibility"
+        }
+      ],
+      "short_quotes": [
+        {
+          "location": "Topic body",
+          "text": "Use of commercially hosted LLMs and other external inference services is permitted"
+        },
+        {
+          "location": "Author reply comment 3517696",
+          "text": "datasets with non-commercial restrictions are not prohibited on that basis alone"
+        }
+      ],
+      "quote_words_total": 23
+    },
+    {
+      "url": "https://www.kaggle.com/datasets/vmohitrao/rsna-knee-report-labels/versions/3",
+      "source_kind": "Pinned source README/manifest and previously retrieved official Dataset metadata",
+      "author": "vmohitrao",
+      "metadata_checked_date_jst": "2026-10-03",
+      "documents_rechecked_date_jst": "2026-10-04",
+      "license": "CC BY-NC 4.0",
+      "summary": "The README identifies these labels as a companion to RSNA competition inputs and recommends masked image training. It declares exclusion of all 58 expert studies from extraction and prompt development, no redistribution of original reports/images, and confirmed hosted-API free-quota use. The manifest identifies DashScope model revisions. The README does not contain an explicit prize-bearing-competition authorization or an explicit research-only sentence; the non-commercial restriction comes from Dataset license metadata. This project's non-commercial-research scope is our recorded adoption decision, not an additional author statement.",
+      "short_quotes": [],
+      "quote_words_total": 0,
+      "evidence_paths": [
+        "data/labels/vmohitrao-v3/SOURCE-README.md",
+        "data/labels/vmohitrao-v3/source-manifest.json",
+        "artifacts/research/20261003-label-audit/vmohitrao/dataset-metadata.json"
+      ],
+      "limits": "Author assertions establish provenance claims, not an independent audit of private development logs or provider terms",
+      "evidence_sha256": {
+        "data/labels/vmohitrao-v3/SOURCE-README.md": "58063206bb76fa5cade36c195acf1c2406cc7d246f957ed1e0400b780250304b",
+        "data/labels/vmohitrao-v3/source-manifest.json": "af12e2df6e81c048fcd07a715b9f69c1509d78978bfc98a1ee1296778f4d6462",
+        "artifacts/research/20261003-label-audit/vmohitrao/dataset-metadata.json": "97f6b4d9cc4ca78af9fafb143cc3cd9038ad8c3dcb8876dc5e904820ae53d123"
+      }
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/legalcode.en",
+      "source_kind": "Creative Commons official legal code",
+      "publisher": "Creative Commons",
+      "checked_date_jst": "2026-10-04",
+      "summary": "The license itself grants non-commercial reproduction, sharing and adaptation rights, subject to attribution and other terms. NonCommercial depends on primary commercial advantage or monetary compensation. Attribution/source/license notices and modification notices are required when sharing licensed material; adaptation licensing must allow compliance with the original license. A separate permission is not automatically required for every use already within the license. Whether model weights are adapted material is not determined here.",
+      "short_quotes": [],
+      "quote_words_total": 0
+    },
+    {
+      "url": "https://creativecommons.org/faq/#does-my-use-violate-the-noncommercial-clause-of-the-licenses",
+      "source_kind": "Creative Commons official FAQ",
+      "publisher": "Creative Commons",
+      "checked_date_jst": "2026-10-04",
+      "summary": "Commercial character depends on the particular use and intent, not only whether the user is a business or nonprofit. CC does not decide every borderline case. If intended use remains unclear, owner clarification or a commercially permitted alternative can resolve it. A research-only label on released results does not by itself establish that every preceding use was non-commercial.",
+      "short_quotes": [],
+      "quote_words_total": 0
+    }
+  ],
+  "interpretation_ja": "外部LLMによるレポートラベル抽出と、賞金受領やNC制限だけで大会側が排除しない点はHost本文で確認できた。採用ラベルは本競技の画像学習を想定して公開され、CC BY-NC 4.0自体が非商用利用を許諾している。研究・学習目的を維持し、帰属・ライセンス表示等の条件を守る現在の使い方で採用を進めるのが合理的である。作者への追加許可が一律必須という根拠は見つからず、新たな問い合わせを必須ブロックにしない。",
+  "practical_assessment_ja": "従来の『Rulesと外部LLM許可を未取得』という不確実性は解消した。研究目的の大会参加について通常のCC BY-NC条件とHost説明に基づき進めるという、条件付きの実用判断を記録する。あらゆる商用転用を許可した結論ではない。元レポート・MRIを再配布せず、source・版・CC表示を提出資産の説明へ残す。勝者要件の条文不整合は、実際の入賞時の成果物公開条件として区別する。",
+  "eligibility_assessment": "Reasonable to proceed for the current non-commercial research/learning purpose with attribution and applicable CC BY-NC conditions; not unconditional approval of future commercial uses",
+  "provider_terms_scope": "The author declares Free Quota Only and model provenance. Historical provider terms were not independently audited, but no rule was found requiring downstream participants to audit every provider transaction as a separate mandatory gate; no specific violation was established.",
+  "remaining_questions": [
+    "Reassess the license if intended use changes to commercial deployment or monetization",
+    "If awarded a prize, resolve actual winning-solution release requirements and the internal wording inconsistency in section 5.a.2"
+  ],
+  "external_actions_performed": false,
+  "analysis_completed_at_utc": "2026-10-04T03:56:30.296503+00:00"
+}

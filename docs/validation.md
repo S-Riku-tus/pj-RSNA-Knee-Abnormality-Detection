@@ -1,6 +1,24 @@
 # 準備内容の検証範囲
 
-更新日 2026年10月4日 JST。10月3日までに全件キャッシュ転送、研究用weakラベルの監査・分割とローカル実学習を実施した。10月4日は添付分析と実装・一次資料の照合、次工程の計画更新のみ。以下では各日の確認範囲を分ける。
+更新日 2026年10月4日 JST。10月3日までに全件キャッシュ転送、weakラベルの監査・分割とローカル実学習を実施した。10月4日は再分析後の依頼で評価・cache互換性・正規化・事前学習を実装し、人工検証、少数train診断、A/B/Cの実学習とCのローカル提出準備を完了した。以下では各作業の確認範囲を分ける。
+
+## 対照実験の実装と診断（10月4日、再分析後）
+
+- 共通tensor正規化、明示ローカルImageNet初期化、BN running statistics固定、epoch別weak CSV・所見別AUC/BCE/観測数/予測分布、固定train subsetのeval、gold監査無効化を実装。旧config/checkpointはrandom＋legacyを維持し、推論が初期重みを要求する経路はない。
+- 追加評価でglobal Python/NumPy/torch CPU/CUDA RNG、DataLoader/sampler Generator、mixed train/eval modeを復元。人工CPU/CUDAでログ有無のsample順、model state、BN buffers、AdamW state/step、乱数状態が完全一致。詳細loss集計を付けても元のcanonicalセル平均BCEが完全一致した。
+- 全71 unittestが成功。以前の31件にcache互換性13、model/input12、epoch診断3、対照集計7、実行記録5を追加。Ruff check/format（49 Pythonファイル）と差分の空白確認も成功。テストでは人工DICOMとノイズを使う。
+- `scripts/check_synthetic_gpu.py`を追加。新規private QAに24架空weak＋予約2goldを用意し、gold cacheを作らず全cache readでgold UIDがないことをassert。両正規化でAMP/backward/optimizer/save、欠損mask、無効windowの予測不変、Reportなし3×12提出契約、メタデータ不整合の拒否を確認。実e002 checkpointも独立人工192px入力で契約がvalid=true。最大torch割当246,000,128 bytes、QA関数2.86秒で、実コンペ時間・性能とは区別する。
+- 保存exportの完全性とpixel互換性を別検査するよう変更。実4,407検査・4,423ファイルのhash/CSV/UID/保存src/configが一致し、現repoのモデル・ログ変更を差分として明示しながら既存画像を再利用できた。保存exportを変更せず、imaging.pyのhashは従来と同じ。
+- 公式URLからResNet18 ImageNet1K V1だけを明示取得。46,830,571 bytes、SHA-256 `f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec`。公式prefixを照合しfull hashをローカル計算。コードlicenseと重みの条件を区別して記録した。実公式重みのfc込みstrict load、head/CPU RNG保持、人工CPU forwardを確認。元DICOMや新ラベルを取得していない。
+- q001は原manifestを変えずfold 0学習側から16検査を選択し、dropout=0・100 epochで診断。初期同一subset eval BCE 0.694520、最良0.124106（epoch 32）、最終train-mode BCE 0.000188／eval BCE 0.179478、146.78秒。goldはpreflight/評価とも無効。定義可能AUCは7所見だけでmacro12は未定義。記録は [q001](../experiments/q001-train-fit.json)。これは少数trainへの適合診断で、独立CV・画像ラベルの正確さ・Publicの証明ではない。
+- 公式SDKの通常認証とread-only要求でRules全文、Hostの外部LLM案内と全コメントを取得。認証値の表示・手動読み出し・コピー、外部投稿は行っていない。HostはreportからのLLMラベル抽出を条件付き許可し、NC制限だけでデータを禁止せず、賞金受領だけで商用とは扱わないと説明。公開READMEの想定用途とCC本文も照合し、現在の研究・学習目的と帰属等を維持して通常ライセンスで採用を進める判断に更新した。作者への追加許可を一律必須とはしない。確認UTC・URL・短い引用・根拠hashは [利用条件監査](research/kaggle-source-eligibility-20261004.json)。入賞時のWinner公開条文の不整合はその段階で確認する。
+- [weak state監査](../experiments/weak-state-audit-20261004.json) でP/N/B/U/Mをweak全体・train・各foldに集計。Synovitisの全weak陰性は49件、fold別は1/25/7/10/6件で、全体の不足とfold 0の偏りを区別した。Effusion陰性2,674件はN 1,230＋B 1,444。N/Bは現行で同じ0でも意味が異なる。gold値・UID・group・reportは共有集計へ保存していない。既存分割とラベルは変更していない。
+- e003/e004/e005を同じ192px・fold 0・seed・5 epochで新規実行。A→Bは正規化、B→Cはencoder初期化だけを変更し、MIL head初期hashも全て一致。Aの全5 BCEとbest予測CSVは旧e002と完全一致した。BCE選択の結果はA epoch 1: 0.430481/AUC 0.557023、B epoch 1: 0.411992/0.644652、C epoch 2: 0.371395/0.766895。cache事前検査込み・import除外の所要時間は1,104.29/1,043.59/1,039.36秒。gold cacheのpreflightと評価を無効にし、Publicは未測定。
+- CSV/JSONのみの集計器でsource/config/manifest/input/subset/hash、全epochのUID集合・所見順・観測数・AUC/分布・historyとのBCE整合、first minimum-BCE選択とbest予測hashを監査しvalid=true。実checkpointのepoch/config/foldは別のCPU読み込みでも照合した。[比較集計](../experiments/e003-e005-controlled-summary-20261004.json)。CはBより12/12所見AUCが改善し、補助11所見平均も0.626893→0.747522。Cを暫定比較基準としたが、C epoch 5のAUC最大値0.774608を後付け採用していない。[判断記録](../experiments/e005-decision-20261004.json)。追加fold 1のB/C学習は未実行。
+- 凍結code zipを新しいPythonプロセスで読み込み、実A/B/C checkpointと既存の独立人工192px・24窓cacheでReportなし3検査×12所見の提出契約が全てvalid=true。初期化関数とtorch.hub取得関数を呼べないようpatchし、Cの初期化pathを不存在に変えたQAコピーでもCSV hash一致。code zip SHA-256 `5f4f7a016225beec5e30d1696030f4ee879e7db1ceb600575396c436c6cacd78`、C checkpoint `677f5e793ebc9cfbb8eb76ab267582d7916b23034056af0bc3ac7c68bd448084`。[提出契約集計](../experiments/controlled-submit-contract-20261004.json)。実testのDICOM decode・Kaggle実行時間・新規採点を検証した結果ではない。
+- `artifacts/kaggle/e005-pretrained-imagenet-fold0/` に上記code zipとbest.pt、hash/帰属記録、未実行の専用Notebookを新規保存。Input名は提案名で実mountは手動追加後に確認する。元MRI・レポート・ラベルCSV・認証値はbundleに含めず、アップロード・提出はしていない。過去e002/run/cacheを上書きしていない。
+- C終了後、wrapperのKeyboardInterrupt/SystemExit記録とsource変更時のstatusを修正し、mockで中断/通常失敗/不一致/成功/再実行拒否/CUDA guardを確認。学習処理は変更せず、旧runの記録も書き換えない。今後は終了hashもcompleted保存前に確認し、対照集計器は記録済みの場合だけ追加照合する。
+- 最終確認で共有JSON 21ファイル、Markdown 12ファイルのローカルリンク104件、PowerShellブロック22件を検査。台帳7行のID重複がなく、A/B/Cのgold/Public列は空欄。現sourceと実run、C bundleのコード・重みhash、専用Notebookの未実行状態と全コードcellのcompileが一致した。Gitで追跡されるdata/artifacts配下は従来の各READMEのみ。
 
 ## 添付分析の照合と次工程の調査（10月4日）
 

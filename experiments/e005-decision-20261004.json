@@ -1,0 +1,246 @@
+{
+  "checked_at_utc": "2026-10-04T04:10:16.547047+00:00",
+  "scope": "Completed fold0 local weak-label comparison; no gold evaluation or Kaggle scoring",
+  "comparison_record": "experiments\\e003-e005-controlled-summary-20261004.json",
+  "comparison_sha256": "c62afea6febcf8dca6cbf1b13c21a0b153f8388c5c66cd276f34037fd776b6a2",
+  "e003_reproduces_e002_all_epoch_bce_and_selected_prediction_csv": true,
+  "e002_e003_selected_prediction_csv_sha256": "ad8b08ac5cb4c2c75f354cdbe82490b0c4c7c2e1c599de263cf77d7212d6c825",
+  "checkpoint_selection": "First minimum weak validation masked BCE; unchanged for all A/B/C",
+  "provisional_local_baseline": "e005-pretrained-imagenet",
+  "selected_epoch": 2,
+  "reason": "C improves masked BCE and ranking across multiple findings at fixed fold, seed, pixels and training conditions",
+  "best_metrics": [
+    {
+      "condition": "A",
+      "epoch": 1,
+      "weak_bce": 0.43048142436621845,
+      "weak_macro_auc_12": 0.5570226156558825,
+      "auxiliary_macro_auc_excluding_synovitis": 0.5485701261700536,
+      "execution_seconds": 1104.2883881999878
+    },
+    {
+      "condition": "B",
+      "epoch": 1,
+      "weak_bce": 0.4119921188007293,
+      "weak_macro_auc_12": 0.6446520158045393,
+      "auxiliary_macro_auc_excluding_synovitis": 0.6268931081504064,
+      "execution_seconds": 1043.5872320000053
+    },
+    {
+      "condition": "C",
+      "epoch": 2,
+      "weak_bce": 0.3713948995737489,
+      "weak_macro_auc_12": 0.7668950458344722,
+      "auxiliary_macro_auc_excluding_synovitis": 0.7475218681830605,
+      "execution_seconds": 1039.358229599995
+    }
+  ],
+  "per_target_changes": {
+    "A_to_B": {
+      "improved_auc_targets": 9,
+      "per_target": {
+        "ACL": {
+          "auc_delta": -0.04830750407830342,
+          "bce_delta": 0.030109990210760218,
+          "positive": 80.0,
+          "negative": 613,
+          "missing": 128
+        },
+        "MCL": {
+          "auc_delta": 0.034496753246753276,
+          "bce_delta": -0.00026166334333740937,
+          "positive": 11.0,
+          "negative": 672,
+          "missing": 138
+        },
+        "Medial Meniscus": {
+          "auc_delta": -0.0010273796681563585,
+          "bce_delta": -0.008669586896896342,
+          "positive": 309.0,
+          "negative": 441,
+          "missing": 71
+        },
+        "Lateral Meniscus": {
+          "auc_delta": 0.08332287614506217,
+          "bce_delta": -0.01911274841473526,
+          "positive": 104.0,
+          "negative": 613,
+          "missing": 104
+        },
+        "Medial OA": {
+          "auc_delta": 0.22945218480695495,
+          "bce_delta": -0.06389560904438135,
+          "positive": 71.0,
+          "negative": 371,
+          "missing": 379
+        },
+        "Lateral OA": {
+          "auc_delta": 0.0710926054437504,
+          "bce_delta": -0.0045015418753378,
+          "positive": 33.0,
+          "negative": 393,
+          "missing": 395
+        },
+        "PF OA": {
+          "auc_delta": 0.10639129389129387,
+          "bce_delta": -0.019000551603382765,
+          "positive": 88.0,
+          "negative": 378,
+          "missing": 355
+        },
+        "Effusion": {
+          "auc_delta": 0.19735009671179893,
+          "bce_delta": -0.0823366062374517,
+          "positive": 100.0,
+          "negative": 517,
+          "missing": 204
+        },
+        "Synovitis": {
+          "auc_delta": 0.18999999999999995,
+          "bce_delta": -0.0004265877501209159,
+          "positive": 100.0,
+          "negative": 1,
+          "missing": 720
+        },
+        "Baker's": {
+          "auc_delta": 0.08060145582062583,
+          "bce_delta": -0.03383733206009737,
+          "positive": 59.0,
+          "negative": 319,
+          "missing": 443
+        },
+        "Contusion": {
+          "auc_delta": -0.008770338111655507,
+          "bce_delta": -0.0069744211614579665,
+          "positive": 99.0,
+          "negative": 167,
+          "missing": 555
+        },
+        "Fracture": {
+          "auc_delta": 0.11695075757575762,
+          "bce_delta": -0.009922737295323225,
+          "positive": 44.0,
+          "negative": 144,
+          "missing": 633
+        }
+      }
+    },
+    "B_to_C": {
+      "improved_auc_targets": 12,
+      "per_target": {
+        "ACL": {
+          "auc_delta": 0.27116639477977167,
+          "bce_delta": -0.11317784832669547,
+          "positive": 80.0,
+          "negative": 613,
+          "missing": 128
+        },
+        "MCL": {
+          "auc_delta": 0.11742424242424243,
+          "bce_delta": 0.006501476726280653,
+          "positive": 11.0,
+          "negative": 672,
+          "missing": 138
+        },
+        "Medial Meniscus": {
+          "auc_delta": 0.14205725440122108,
+          "bce_delta": -0.039230364531278594,
+          "positive": 309.0,
+          "negative": 441,
+          "missing": 71
+        },
+        "Lateral Meniscus": {
+          "auc_delta": 0.09391077926966995,
+          "bce_delta": -0.01456130785423343,
+          "positive": 104.0,
+          "negative": 613,
+          "missing": 104
+        },
+        "Medial OA": {
+          "auc_delta": 0.10717132986598832,
+          "bce_delta": -0.05629445180903736,
+          "positive": 71.0,
+          "negative": 371,
+          "missing": 379
+        },
+        "Lateral OA": {
+          "auc_delta": 0.026601896830904526,
+          "bce_delta": -0.015358702117848289,
+          "positive": 33.0,
+          "negative": 393,
+          "missing": 395
+        },
+        "PF OA": {
+          "auc_delta": 0.13636363636363635,
+          "bce_delta": -0.02714248832970728,
+          "positive": 88.0,
+          "negative": 378,
+          "missing": 355
+        },
+        "Effusion": {
+          "auc_delta": 0.08189555125725334,
+          "bce_delta": -0.07107154022739232,
+          "positive": 100.0,
+          "negative": 517,
+          "missing": 204
+        },
+        "Synovitis": {
+          "auc_delta": 0.14,
+          "bce_delta": -0.06834229590062348,
+          "positive": 100.0,
+          "negative": 1,
+          "missing": 720
+        },
+        "Baker's": {
+          "auc_delta": 0.08277987354550775,
+          "bce_delta": -0.028784694652708775,
+          "positive": 59.0,
+          "negative": 319,
+          "missing": 443
+        },
+        "Contusion": {
+          "auc_delta": 0.09030424000483883,
+          "bce_delta": -0.035959315255172375,
+          "positive": 99.0,
+          "negative": 167,
+          "missing": 555
+        },
+        "Fracture": {
+          "auc_delta": 0.17724116161616155,
+          "bce_delta": -0.017938534630105862,
+          "positive": 44.0,
+          "negative": 144,
+          "missing": 633
+        }
+      }
+    }
+  },
+  "C_auc_maximum_epoch_diagnostic_only": {
+    "epoch": 5,
+    "weak_valid_bce": 0.4157413752569746,
+    "weak_macro_auc_12": 0.7746078613087306,
+    "available_class_macro_auc": 0.7746078613087306,
+    "defined_classes": 12,
+    "observed_target_mean_bce": 0.4051455164471378,
+    "observed_cells": 5727,
+    "elapsed_seconds": 994.2501258999982,
+    "extra_train_eval_seconds": 17.49270620000607,
+    "metrics_sha256": "7196ca07dce54df9ce34c847e9f838a962a50b1a74ada6a95ddbf7dec6409731",
+    "predictions_sha256": "723bd9f4374b28eb63b63f184845f35674b59af2f6c9d9983a003d85ed690b8f"
+  },
+  "next_priority": [
+    "Paired B/C fold1 fresh training, same selection rule; not executed yet",
+    "Early manual Kaggle Internet-OFF submission-path check with the prepared C bundle",
+    "Then one-factor BN statistics/selection-rule or input/label experiments justified by results"
+  ],
+  "label_eligibility_record": "docs/research/kaggle-source-eligibility-20261004.json",
+  "limitations": [
+    "Weak labels are report-derived, not independent image gold",
+    "Synovitis fold0 has only one observed negative; 11-class mean is auxiliary, not official scoring",
+    "Patient independence remains unverified",
+    "BCE-best C epoch2 retained despite larger epoch5 AUC; no post-hoc checkpoint selection",
+    "Gold/public scores unmeasured; existing Public .924 belongs to a separate public model"
+  ],
+  "gold_macro_auc_12": null,
+  "public_lb": null
+}

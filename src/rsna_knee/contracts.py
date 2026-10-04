@@ -6,6 +6,7 @@ import csv
 import hashlib
 import json
 import math
+import re
 from pathlib import Path
 
 ID = "StudyInstanceUID"
@@ -26,6 +27,8 @@ TARGETS = (
 )
 SUBMISSION_COLUMNS = (ID, *TARGETS)
 SERIES_COLUMNS = (ID, SERIES_ID, "Fluid_Sensitive", "Fat_Suppression", "Anatomical_Plane")
+RESNET18_V1_URL = "https://download.pytorch.org/models/resnet18-f37072fd.pth"
+RESNET18_V1_SHA256_PREFIX = "f37072fd"
 
 
 def read_csv(path, required=()):
@@ -111,7 +114,35 @@ def load_config(path):
     lo, hi = p["percentiles"]
     if not 0 <= lo < hi <= 100 or config["model"]["backbone"] != "resnet18":
         raise ValueError("Invalid normalization or unsupported backbone")
+    validate_model_config(config)
     return config
+
+
+def validate_model_config(config):
+    """Validate optional model conditions without changing legacy config contents."""
+    model = config["model"]
+    if model.get("initialization", "random") not in ("random", "imagenet1k_v1"):
+        raise ValueError("Unsupported encoder initialization")
+    if model.get("input_normalization", "legacy") not in ("legacy", "imagenet"):
+        raise ValueError("Unsupported input normalization")
+    if model.get("bn_running_stats", "update") not in ("update", "freeze"):
+        raise ValueError("Unsupported BatchNorm running-statistics mode")
+    dropout = model.get("dropout", 0.2)
+    if type(dropout) not in (int, float) or not math.isfinite(dropout) or not 0 <= dropout < 1:
+        raise ValueError("Dropout must be a finite number in [0, 1)")
+    path, digest = model.get("pretrained_path"), model.get("pretrained_sha256")
+    if model.get("initialization", "random") == "imagenet1k_v1":
+        if not isinstance(path, str) or not path.strip() or "://" in path:
+            raise ValueError("ImageNet initialization requires an explicit local pretrained_path")
+        if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-fA-F]{64}", digest):
+            raise ValueError("ImageNet initialization requires a full pretrained_sha256")
+        if not digest.lower().startswith(RESNET18_V1_SHA256_PREFIX):
+            raise ValueError("Pretrained SHA-256 is not the official ResNet18 ImageNet1K V1 weight hash")
+        if not Path(path).is_file():
+            raise ValueError("Local pretrained_path does not exist or is not a file")
+    elif path not in (None, "") or digest not in (None, ""):
+        raise ValueError("Random initialization must not specify pretrained weights")
+    return model
 
 
 def preprocess_fingerprint(config):

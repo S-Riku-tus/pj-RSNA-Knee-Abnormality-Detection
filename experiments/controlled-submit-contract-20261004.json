@@ -1,0 +1,94 @@
+{
+  "scope": "Artificial noise cache, ID-only test CSV, frozen source ZIP, real local A/B/C checkpoints; no MRI decode or Kaggle execution",
+  "frozen_source_matches_training": true,
+  "checkpoint_epoch_config_and_fold_match_selection": true,
+  "encoder_initialization_and_torch_hub_downloads_blocked": true,
+  "C_missing_initialization_file_predictions_identical": true,
+  "checks": [
+    {
+      "condition": "A",
+      "best_epoch": 1,
+      "checkpoint_sha256": "21b5242d2e9beefd0e982d3332fdda85ad848cbb50a32fdc68186efcca36685e",
+      "contract": {
+        "studies": 3,
+        "targets": 12,
+        "valid": true,
+        "seconds": 0.4027440999925602,
+        "seconds_per_study": 0.13424803333085342,
+        "checkpoint_sha256": "21b5242d2e9beefd0e982d3332fdda85ad848cbb50a32fdc68186efcca36685e",
+        "source_sha256": {
+          "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+          "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+          "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+          "contracts.py": "cd62110391beb229d80f4cf336b5bdd994752d30f824b9df3ea795138d80c0bc",
+          "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+          "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+          "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+          "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+          "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+          "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+          "runtime.py": "342ccb89e7a2edcc1356c12590df2b72f0a7ec831f640a1a0a69258674634005"
+        },
+        "device": "cuda"
+      }
+    },
+    {
+      "condition": "B",
+      "best_epoch": 1,
+      "checkpoint_sha256": "095b1d91d71673f07f1f22e609027aaa0c608853ce93ba82ad1530b5751fdba1",
+      "contract": {
+        "studies": 3,
+        "targets": 12,
+        "valid": true,
+        "seconds": 0.1261839999933727,
+        "seconds_per_study": 0.04206133333112424,
+        "checkpoint_sha256": "095b1d91d71673f07f1f22e609027aaa0c608853ce93ba82ad1530b5751fdba1",
+        "source_sha256": {
+          "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+          "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+          "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+          "contracts.py": "cd62110391beb229d80f4cf336b5bdd994752d30f824b9df3ea795138d80c0bc",
+          "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+          "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+          "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+          "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+          "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+          "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+          "runtime.py": "342ccb89e7a2edcc1356c12590df2b72f0a7ec831f640a1a0a69258674634005"
+        },
+        "device": "cuda"
+      }
+    },
+    {
+      "condition": "C",
+      "best_epoch": 2,
+      "checkpoint_sha256": "677f5e793ebc9cfbb8eb76ab267582d7916b23034056af0bc3ac7c68bd448084",
+      "contract": {
+        "studies": 3,
+        "targets": 12,
+        "valid": true,
+        "seconds": 0.1286617000005208,
+        "seconds_per_study": 0.042887233333506934,
+        "checkpoint_sha256": "677f5e793ebc9cfbb8eb76ab267582d7916b23034056af0bc3ac7c68bd448084",
+        "source_sha256": {
+          "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+          "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+          "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+          "contracts.py": "cd62110391beb229d80f4cf336b5bdd994752d30f824b9df3ea795138d80c0bc",
+          "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+          "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+          "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+          "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+          "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+          "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+          "runtime.py": "342ccb89e7a2edcc1356c12590df2b72f0a7ec831f640a1a0a69258674634005"
+        },
+        "device": "cuda"
+      }
+    }
+  ],
+  "prepared_bundle": "artifacts\\kaggle\\e005-pretrained-imagenet-fold0",
+  "code_zip_sha256": "5f4f7a016225beec5e30d1696030f4ee879e7db1ceb600575396c436c6cacd78",
+  "C_checkpoint_sha256": "677f5e793ebc9cfbb8eb76ab267582d7916b23034056af0bc3ac7c68bd448084",
+  "public_lb": null
+}

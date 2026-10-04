@@ -1,6 +1,6 @@
 # RSNA Knee の参加計画と次の作業
 
-10月4日時点では、全件cache取得・CUDA環境・研究用ラベル監査・1/5 epoch実験・提出bundle検査は完了し、公開モデルの実測Public 0.924もAPI確認済み。現在の判断は [PROJECT.md](../PROJECT.md) と [次の実験計画](research/next-experiments-20261004.md) を参照する。以下の「最初の二日間」などは10月2日時点の準備計画であり、未着手の現状として読み替えない。
+10月4日時点では、全件cache取得・CUDA環境・ラベル監査・基準学習・提出bundle検査は完了し、公開モデルの実測Public 0.924もAPI確認済み。再分析後の実装・実行は [対照実験](controlled-experiments.md)、利用条件の本文確認は [監査記録](research/kaggle-source-eligibility-20261004.json)、現在の優先順位は [PROJECT.md](../PROJECT.md) を参照する。以下の「最初の二日間」などは10月2日時点の準備計画であり、未着手の現状として読み替えない。
 
 2026年10月2日 JST時点の判断。リポジトリの資料、ソース、設定、テスト、Notebook、実験台帳を確認し、公式競技説明と公開資産を再調査した。現在の端末はRTX 4090を搭載する。ユーザーの選択に従い、**Kaggleで画像キャッシュを作り、このデスクトップで学習し、Kaggleで提出推論する**。まず公開モデルで採点を通し、比較基準を確保する。
 
@@ -36,7 +36,7 @@
 
 Kaggle Notebookはクラウドの計算機であり、ブラウザをこのPCで開いてもRTX 4090は使われない。このGPUを使うにはローカルPythonから学習を実行する。Windows PowerShellで開始できるため、初回実験の前提としてWSLやLinuxへの移行は求めない。
 
-提出の9時間制限は提出Notebookの実行条件であり、学習と提出を一つのNotebookへまとめる設計は必要ない。ただし、今回WebではRules本文を取得できなかった。参加時にローカル学習・競技由来キャッシュのprivate保存・利用資産の条件を競技画面で確認する。[Code Requirements](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview/code-requirements)、[Rules](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/rules)
+提出の9時間制限は提出Notebookの実行条件であり、学習と提出を一つのNotebookへまとめる設計は必要ない。10月4日にRules本文を公式SDKで取得した。競技由来キャッシュはprivateで保持し、公開Inputには元MRI・レポートを入れない。研究目的と利用資産の帰属等を守る。[Code Requirements](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview/code-requirements)、[Rules](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/rules)
 
 ## 最初の二日間にすること
 
