@@ -1,0 +1,128 @@
+{
+  "checked_date_jst": "2026-10-05",
+  "candidate_id": "p002-dinosaur-v32-final",
+  "scope_ja": "保存済みV32の10 code cellとRenta V2公開runtimeを静的解析し、公開一次資料の依存・利用条件を照合した。公開推論コードの実行、MRI・モデル・ラベル・予測の取得、アップロード、提出は行っていない。",
+  "status_ja": "Kaggle手動実行用の環境要件を特定。実際のKaggle環境・重み読み込み・MRI decoder・隠しtestの成功は未検証。",
+  "source_evidence": {
+    "notebook": "artifacts/research/20261005-public-candidate/kaggle/romantamrazov/rsna-knee-dinosaur-v4-v32/source.ipynb",
+    "metadata": "artifacts/research/20261005-public-candidate/kaggle/romantamrazov/rsna-knee-dinosaur-v4-v32/metadata.json",
+    "runtime": "artifacts/research/20261004-public-contract/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/public0033_runtime.py",
+    "runtime_sha256": "9541f82a993d7dc2942ca2a5112e110471285f8d80701846079a3dc708761683",
+    "component_notices": "artifacts/research/20261004-public-contract/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/SOURCE_AND_LICENSES.md",
+    "prior_rules_audit": "docs/research/kaggle-source-eligibility-20261004.json",
+    "static_analysis": "artifacts/research/20261005-p002-environment/static-analysis.json"
+  },
+  "required_kaggle_settings": {
+    "accelerator": "GPU T4 x2",
+    "internet": false,
+    "visibility": "private",
+    "fresh_session": true,
+    "original_docker_image_as_returned": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+    "historical_python_and_package_versions_verified": false,
+    "current_availability_of_original_docker_image_verified": false,
+    "evidence_ja": "V32 cell 8行317-325の監査とRenta runtime行582-589が、CUDA利用可・GPU数2・両名にT4を含むことを必須にする。RTX 4090 1枚やP100へ置き換えない。"
+  },
+  "imports": {
+    "direct_packages": ["numpy", "pandas", "pydicom", "torch", "torchvision", "timm", "transformers", "safetensors"],
+    "opencv_module": "cv2",
+    "timm_transitive_packages": ["torch", "torchvision", "pyyaml", "huggingface_hub", "safetensors"],
+    "transformers_classes": ["AutoModel", "Dinov2Config", "Dinov2Model"],
+    "decoder_ja": "pydicom.pixel_arrayを使う。圧縮Transfer Syntaxに応じてpylibjpeg系またはGDCM等が必要であり、import成功だけでは全実MRI decode成功を意味しない。初回実行でdecoder可用性と各処理の成功を記録する。",
+    "decoder_reference": "https://pydicom.github.io/pydicom/stable/guides/user/image_data_handlers.html",
+    "default_environment_ja": "元Notebookはpip installを含まず、Kaggleイメージの既存ライブラリを前提にしている。Python/torch/torchvision/transformers/pydicom/numpy等の版は今回の保存metadataから確定しない。起動時にimportと実版を記録する。"
+  },
+  "offline_wheels": [
+    {
+      "package": "timm",
+      "version": "1.0.22",
+      "input": "mattiaangeli/knee-mri-fold-weights/2",
+      "filename": "timm-1.0.22-py3-none-any.whl",
+      "pypi_bytes": 2530238,
+      "pypi_sha256": "888981753e65cbaacfc07494370138b1700a27b1f0af587f4f9b47bc024161d0",
+      "metadata_url": "https://pypi.org/pypi/timm/1.0.22/json",
+      "requires_python": ">=3.8",
+      "kaggle_payload_hash_verified_locally": false,
+      "use_ja": "Input wheelの実hashをPyPI宣言と照合し、必要な場合に--no-index --no-depsで導入する。これを使うと現在の構成で版を固定できるが、作者の歴史的環境が同版だった証明ではない。"
+    },
+    {
+      "package": "opencv-python-headless",
+      "version": "4.12.0.88",
+      "input": "tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5",
+      "filename": "opencv_python_headless-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "relative_path": "opencv-python-headless-4120088-x86/opencv_python_headless-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "pypi_bytes": 54023419,
+      "pypi_sha256": "236c8df54a90f4d02076e6f9c1cc763d794542e886c576a6fee46ec8ff75a7a9",
+      "metadata_url": "https://pypi.org/pypi/opencv-python-headless/4.12.0.88/json",
+      "numpy_requirement_python_ge_39": ">=2,<2.3.0",
+      "kaggle_payload_hash_verified_locally": false,
+      "use_ja": "元セルにはwheel導入処理がない。cv2既存版を記録し、導入が必要ならhash・Linux x86_64・numpy条件を確認してオフライン導入する。既存numpyを無記録に変更しない。"
+    }
+  ],
+  "static_network_and_execution_audit": {
+    "top_level_code_cells": 10,
+    "pip_wget_curl_requests_calls_found": false,
+    "direct_exec_or_eval_calls_found": false,
+    "dynamic_module_execution": [
+      {
+        "location": "V32 cell 4 lines 129-140",
+        "target": "public0033_runtime.py",
+        "binding": "Renta V2 bundle_manifest.runtime SHA-256 is checked before spec.loader.exec_module",
+        "note_ja": "動的import先も文字列として静的解析済み。Renta runtime内にも自身をhash確認後importするhelperがあるが、通常のrun_cached_inference経路からそのhelperは呼ばれない。"
+      }
+    ],
+    "huggingface_ja": "DINOv2 smallは明示ローカルディレクトリのAutoModel.from_pretrainedを使う。Renta DINOv2 baseはローカルJSONからDinov2Modelを構築しsafetensorsをstrict loadする。timm.create_modelはpretrained=False。必要なローカルモデルをInputへ追加する。",
+    "offline_environment_ja": "HF_HUB_OFFLINE=1、TRANSFORMERS_OFFLINE=1、HF_HUB_DISABLE_TELEMETRY=1を元セル実行前に設定する。元コードではRaptor cellまで設定が遅い。Kaggle本体のInternet OFFも維持する。",
+    "encoded_payload_ja": "Rad校正部分にはbase64/zlibからJSONを読む処理がある。コード文字列のexecではなく、元方式の校正データとして扱い変更しない。",
+    "torch_serialization_ja": "元コードは一部checkpointでweights_only=Falseを明示する。公開元・版・ファイルhashを固定し、同名の無関係checkpointを拾わない。今回checkpoint自体は取得・展開していない。"
+  },
+  "minimal_preparation_changes_ja": [
+    "最初の追加セルで5 Inputsのmountとhash、2xT4、必要import、パッケージ版を確認する。元10 code cellの数値処理を保持する。",
+    "必要なwheelの導入はローカルInputだけから行い、--no-index --no-depsを付ける。インストール前の依存読み込みを避け、新規セッションで実行する。",
+    "既存torch/transformersを推測で更新しない。元Docker情報を保存し、実際に使われた環境はOutputへ記録する。",
+    "A5 cellはAMP_PREF='bf16'を明示し、RentaはFP32・RaptorはFP16を使う。互換性問題が出ても無記録のdtype変更で通さず、失敗ログを確認して別の準備版で修正する。",
+    "最終CSVだけでなく、元の各receiptと全構成成功条件を確認してからユーザーが手動提出する。"
+  ],
+  "license_review": {
+    "assessment_ja": "現状の研究・学習目的で公開InputをKaggleへ接続し、private Notebookで比較する準備を進める。混在ライセンスを一括CC0と扱わず、出所と条件を残す。通常許諾の範囲について作者の追加許可を一律必須にする根拠はなく、新しい一律承認フローは設けない。",
+    "competition_rules_basis": "docs/research/kaggle-source-eligibility-20261004.json",
+    "components": [
+      {
+        "name": "DINOv2 small/base and Renta original artifacts",
+        "terms": "Apache-2.0 declarations; retain applicable source/license notices",
+        "upstream_url": "https://github.com/facebookresearch/dinov2/blob/main/LICENSE"
+      },
+      {
+        "name": "DINOv3 members from Mattia, incorporated in Tonylica V5",
+        "terms": "Dataset CC0 declaration does not replace underlying Meta DINOv3 License",
+        "upstream_url": "https://github.com/facebookresearch/dinov3/blob/main/LICENSE.md",
+        "checked_date_jst": "2026-10-05",
+        "concrete_conditions_ja": "Meta本文は利用・複製・改変等を許諾する。DINO素材/派生物を第三者へ配布する場合は同契約とそのコピーを保持し、研究成果公開時はDINO利用を謝辞等で示す。今回のprivate比較を別途許可待ちにはしない。"
+      },
+      {
+        "name": "RadImageNet encoder and Antoine reference heads",
+        "terms": "CC BY-NC-SA 4.0",
+        "upstream_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en",
+        "checked_date_jst": "2026-10-05",
+        "concrete_conditions_ja": "研究目的・非商用の範囲で用い、出所/作者/ライセンスを保持する。素材・改変物を公開する際は適用される帰属・変更表示・ShareAlike条件を確認する。賞金だけで大会側がNCデータを排除するものではないという既存Host回答と、提供者ライセンスは区別する。"
+      },
+      {
+        "name": "E13 heads included in Tonylica V5",
+        "terms": "Tonylica SOURCE_AND_LICENSES says no separate redistribution license recorded by the historical audit",
+        "upstream_url": "https://www.kaggle.com/code/sofiaanjenje/rsna-knee-e13-train",
+        "concrete_conditions_ja": "出所を明示して既存の公開Inputから利用する。別Datasetへ転載する許諾や商用再利用を今回の資料から断定しない。今回新規の重み再配布は不要。"
+      },
+      {
+        "name": "OpenCV wheel and timm code",
+        "terms": "PyPI declares Apache-2.0 for both; wheel third-party notices remain applicable",
+        "upstream_url": "https://pypi.org/project/opencv-python-headless/4.12.0.88/",
+        "concrete_conditions_ja": "KaggleのOpenCV Dataset表示Unknownだけでwheelが無許諾と断定せず、公式packageと同じhashを確認して同梱ライセンスを保持する。"
+      }
+    ],
+    "remaining_questions_ja": [
+      "将来、E13等の重みを別Datasetや配布物へ転載する場合は、その再配布条件を具体的に確認する。",
+      "研究目的から商用提供へ用途が変わる場合はNC成分の扱いを再検討する。",
+      "入賞時には実際の成果物公開要件と混在する上流条件を照合する。"
+    ],
+    "gold_ja": "公開重みにはgold学習/選択に由来するものがあるという既存監査を保持する。p002は公開競技用方式の比較であり、自分たちのgold非利用の学習や独立holdout再現とは呼ばない。"
+  }
+}

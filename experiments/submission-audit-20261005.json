@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "review_date_jst": "2026-10-05",
+  "checked_at_utc": "2026-10-05T01:47:54.490020+00:00",
+  "evidence_method": "Authenticated official Kaggle Python SDK 2.2.4; ListSubmissions, GetSubmission, GetKernel with explicit version_label, GetKernelSessionStatus and ListKernelSessionOutput. Standard SDK authentication; no credential values read manually or printed.",
+  "scope": "Read-only remote metadata and Notebook source; no outputs, predictions, MRI, model weights or labels downloaded, no model/source execution, no training, no external write or submission.",
+  "submissions": {
+    "p001": {
+      "experiment_id": "p001-public-model-reproduction",
+      "submission_ref": 56766978,
+      "submission_status": "COMPLETE",
+      "public_lb": 0.924,
+      "score_origin": "Own existing scored submission, verified by authenticated official API; distinct from author-reported score.",
+      "submitted_at_utc": "2026-10-02T05:57:22.690Z",
+      "submitted_at_jst": "2026-10-02T14:57:22.690000+09:00",
+      "submission_url": "https://www.kaggle.com/code/rsraki/knee-mri-twelve-findings-from-a-single-model?scriptVersionId=354569007",
+      "submitted_script_version_id": 354569007,
+      "notebook_ref": "rsraki/knee-mri-twelve-findings-from-a-single-model",
+      "notebook_version": 1,
+      "notebook_request_version_label": "v1",
+      "notebook_session_status": "COMPLETE",
+      "version_mapping": {
+        "method": "Version-specific Output listing URL paths contain a numeric object component exactly matching the scriptVersionId in the scored-submission URL. Version-specific GetKernel returns the requested display version.",
+        "observed_output_object_path_component": 354569007,
+        "matches_submission_script_version_id": true,
+        "explicit_typed_script_version_id_field_in_kernel_metadata": null,
+        "interpretation": "Independent matching identifiers in official API responses support the correspondence. Numeric URL-path convention is not a documented typed mapping field."
+      },
+      "source": {
+        "path": "artifacts/research/20261005-submission-audit/p001-v1.py",
+        "sha256": "3ec3a18fd97746e4ee44bf424775e902362ea45a25483861bbb78767c9d4b68e",
+        "bytes": 21998
+      },
+      "source_syntax_check": {
+        "python_parse": true,
+        "source_executed": false
+      },
+      "metadata": {
+        "path": "artifacts/research/20261005-submission-audit/p001-v1-metadata.json",
+        "sha256": "645ec582b90dccd1cbd888d0395c559d7f6dca4b80ee79a97248bd6ea3fb9cc0",
+        "bytes": 785
+      },
+      "input_dataset_refs": [
+        "dreaddevelopment/raptor-knee-widedense"
+      ],
+      "input_dataset_versions_at_submission": null,
+      "competition_refs": [
+        "rsna-knee-abnormality-detection"
+      ],
+      "gpu_enabled": true,
+      "internet_enabled": false,
+      "machine_shape": "NvidiaTeslaT4",
+      "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+      "runtime_seconds_hidden_scoring": null,
+      "runtime_limitations": "Submission/metadata/status schemas do not expose hidden-scoring duration. Metadata lastRunTime is not a duration and was not substituted for submission time. Previous three-example visible-test timing does not establish hidden-test duration.",
+      "submitted_file_bytes": 247103,
+      "prediction_file_downloaded": false,
+      "listed_output_files": 1
+    },
+    "r001": {
+      "experiment_id": "r001-bn-rank50-fold0",
+      "submission_ref": 56826389,
+      "submission_status": "COMPLETE",
+      "public_lb": 0.749,
+      "score_origin": "Own existing scored submission, verified by authenticated official API; distinct from author-reported score.",
+      "submitted_at_utc": "2026-10-04T14:27:19.083Z",
+      "submitted_at_jst": "2026-10-04T23:27:19.083000+09:00",
+      "submission_url": "https://www.kaggle.com/code/rsraki/rsna-knee-r001-rank50?scriptVersionId=355188174",
+      "submitted_script_version_id": 355188174,
+      "notebook_ref": "rsraki/rsna-knee-r001-rank50",
+      "notebook_version": 3,
+      "notebook_request_version_label": "v3",
+      "notebook_session_status": "COMPLETE",
+      "version_mapping": {
+        "method": "Version-specific Output listing URL paths contain a numeric object component exactly matching the scriptVersionId in the scored-submission URL. Version-specific GetKernel returns the requested display version.",
+        "observed_output_object_path_component": 355188174,
+        "matches_submission_script_version_id": true,
+        "explicit_typed_script_version_id_field_in_kernel_metadata": null,
+        "interpretation": "Independent matching identifiers in official API responses support the correspondence. Numeric URL-path convention is not a documented typed mapping field."
+      },
+      "source": {
+        "path": "artifacts/research/20261005-submission-audit/r001-v3.ipynb",
+        "sha256": "b650c1cf56d3a38b189f8babb4b3a1abf486b761f3af3e591fba9f987c2d37c2",
+        "bytes": 19601
+      },
+      "source_syntax_check": {
+        "code_cells": 4,
+        "code_cells_parse": true,
+        "saved_output_items": 0,
+        "source_executed": false
+      },
+      "metadata": {
+        "path": "artifacts/research/20261005-submission-audit/r001-v3-metadata.json",
+        "sha256": "f0201365d456f140cc36a77248671b3e0c0af8d7692c0a3f64836f884a6e4a65",
+        "bytes": 700
+      },
+      "input_dataset_refs": [
+        "rsraki/rsna-knee-code-r001",
+        "rsraki/rsna-knee-r001"
+      ],
+      "input_dataset_versions_at_submission": null,
+      "competition_refs": [
+        "rsna-knee-abnormality-detection"
+      ],
+      "gpu_enabled": true,
+      "internet_enabled": false,
+      "machine_shape": "NvidiaTeslaT4",
+      "docker_image": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+      "runtime_seconds_hidden_scoring": null,
+      "runtime_limitations": "Submission/metadata/status schemas do not expose hidden-scoring duration. Metadata lastRunTime is not a duration and was not substituted for submission time. Previous three-example visible-test timing does not establish hidden-test duration.",
+      "submitted_file_bytes": 380218,
+      "prediction_file_downloaded": false,
+      "listed_output_files": 35
+    }
+  },
+  "comparison": {
+    "p001_public_lb": 0.924,
+    "r001_public_lb": 0.749,
+    "r001_minus_p001_public_auc_points": -0.175,
+    "r001_weak_macro_auc_12": 0.8302493068964057,
+    "weak_and_public_same_measurement": false,
+    "interpretation": "The observed Public gap supports retaining p001 as the scored reference and auditing its exact inference/input provenance before improvement. It does not identify a single cause or prove a weak-to-image-label generalization mechanism. No per-target Public scores are available in these responses."
+  },
+  "p001_source_contract": {
+    "weights_filename": "raptor_ft_coatnet_v4_full.pt",
+    "weights_sha256": null,
+    "weights_downloaded": false,
+    "arms": 1,
+    "fallback_arch": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+    "fallback_model_resolution": 384,
+    "slice_preprocess_resolution": 336,
+    "physical_crop_mm": 140.0,
+    "slots": [
+      [
+        "Sagittal",
+        1,
+        18
+      ],
+      [
+        "Sagittal",
+        0,
+        14
+      ],
+      [
+        "Coronal",
+        1,
+        12
+      ],
+      [
+        "Coronal",
+        0,
+        8
+      ],
+      [
+        "Axial",
+        -1,
+        12
+      ]
+    ],
+    "max_slices": 64,
+    "evaluation_windows": 42,
+    "normalization": "imagenet",
+    "labels": [
+      "ACL",
+      "MCL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Synovitis",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ],
+    "gold_provenance": {
+      "source_comment_lines": [
+        107,
+        108,
+        109,
+        110,
+        111,
+        124,
+        125,
+        126
+      ],
+      "observed_text": "Author comments describe historical arm selection using greedy/exhaustive search on 45 gold studies and later model comparisons on a 58-study gold gate. Header claims the gold studies were excluded from training.",
+      "evidence_type": "Author's source-code comments / self-reported history, not independently reproduced training or checkpoint-selection logs.",
+      "decision": "Do not treat this public checkpoint as independently verified gold-free development, and do not treat a posthoc local split as independent OOF. Exact released-weight provenance remains unverified without historical Input version and hashes."
+    }
+  },
+  "evidence_files": [
+    {
+      "path": "artifacts/research/20261005-submission-audit/submissions.json",
+      "sha256": "64326fbd70549a4e3cb1a08acf7c7590cccc5cca17599e3dfc7607bc318d60eb",
+      "bytes": 657
+    },
+    {
+      "path": "artifacts/research/20261005-submission-audit/notebook-observations.json",
+      "sha256": "9a8f5a001e4d51072d058916532693b49cee54bce414cc43cbc6a1cf43702916",
+      "bytes": 2631
+    },
+    {
+      "path": "artifacts/research/20261005-submission-audit/link-observations.json",
+      "sha256": "f3dae25aab4dae9ba79ed016cd775200b1c1d3b10dd91a3a14d4554fb360bbaf",
+      "bytes": 1534
+    }
+  ],
+  "unresolved": [
+    "Historical attached Dataset versions are absent from GetKernel metadata; current/latest Input metadata was not substituted.",
+    "Released weight hashes and independently verified training/selection provenance are not established.",
+    "Hidden-test full runtime and classwise scores are not available from these API responses.",
+    "No new inference reproduction was run; this records existing successful submissions and preserved source."
+  ]
+}

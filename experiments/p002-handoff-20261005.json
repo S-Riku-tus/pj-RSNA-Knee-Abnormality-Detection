@@ -1,0 +1,124 @@
+{
+  "schema_version": "p002_manual_handoff_v1",
+  "checked_date_jst": "2026-10-05",
+  "candidate_id": "p002-dinosaur-v32-current-pins-v1",
+  "status": "prepared_for_manual_saved_run_not_executed",
+  "phase_1_preparation_complete": true,
+  "next_step": "Owner imports Notebook and runs Save Version / Save & Run All; manually submits final submission.csv only after successful READY check.",
+  "handoff_directory": "artifacts/kaggle/p002-dinosaur-v32-handoff-v2",
+  "manifest": {
+    "candidate_id": "p002-dinosaur-v32-current-pins-v1",
+    "status": "prepared_for_manual_saved_run_not_executed",
+    "historical_author_score_reproduction_claimed": false,
+    "original_source": {
+      "path": "artifacts/research/20261005-public-candidate/kaggle/romantamrazov/rsna-knee-dinosaur-v4-v32/source.ipynb",
+      "sha256": "ba9491ac1e214ba55ca181de55118c9a793fe7f6163fc221fe1e68d596259dca",
+      "ref": "romantamrazov/rsna-knee-dinosaur-v4",
+      "version": 32,
+      "cell_indices_are_zero_based": true,
+      "runtime_source": "artifacts/research/20261004-public-contract/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/public0033_runtime.py",
+      "runtime_source_sha256": "9541f82a993d7dc2942ca2a5112e110471285f8d80701846079a3dc708761683"
+    },
+    "notebook": {
+      "path": "artifacts\\kaggle\\p002-dinosaur-v32-handoff-v2\\02_submit_p002.ipynb",
+      "sha256": "f5075c34fd389277d2aa6acb3dd3f87275485d60a8796a91d22060a46c4d70b4"
+    },
+    "generator_sha256": "b26348bb082521fe41529a141cdbc25e7d40251d3a756522bfcf167ac3261fc8",
+    "guard_sha256": "8a505e7e5befbf1f34d97af3305f990948e5e1467c44d3689081ccab38600e33",
+    "input_contract_sha256": "f620953bc6a2a20a384e8d4ef97d76ef5f64dfa1ae11dc132125d5428fba922d",
+    "effective_input_audit_sha256": "fae1a2b154d2a24dacb26e2cd2fe1e0d75dc59161c0a6e1b536b6396ff4029ec",
+    "output_contract_audit_sha256": "e40fe4a43519f7e92e5dbc4631382799b8f00e54e521277832dd7e7baa396d6f",
+    "original_code_cells": {
+      "2": "3c43a93051b20f062cf19ca918fc4151f2e4adc42d9420a00bad333e7688c7bc",
+      "3": "231eb5bb82bfb401dc9a828b51a647862a2760a8fbdd3c5e28ad7e5948e96454",
+      "4": "3fca4c817d299c669477e71494e0464f1572e5fa4c59e2815de024b31673437b",
+      "5": "8f35d00089e7d2e0a1cafe00c1d8909ad3c1c864ac8408c27a3e7b0c8e2f08f0",
+      "6": "01e7067e04251a38ef8d7065f7d7b47336beaa320738d3402d69de227a01c11e",
+      "7": "15aafcbc7b4ed2a04acde8c3ee3a305aa15b2faeabb47c3e1fe0eb99369a0b6c",
+      "8": "38984001416f5d64b967e2d3b4bd44ecb2282e5ed804d3616d2560c3c7f061b6",
+      "9": "d816e29b062d9ec15f9b933b7192e9cb50f7e97426d2605b733fd9d0a926f609",
+      "10": "1358fb39443097745b66a79fde5dc28fa7638c2298564b97b55e1f125a6eb4ed",
+      "12": "d17c96d4a6aeee0b7fb44c07c1f115e7ebe33eaaca18c90dfca0cf0a63744ca7"
+    },
+    "number_of_inputs": 5,
+    "public_files_with_hash_gates": 47,
+    "inference_source_modified": false,
+    "added_checks": [
+      "preflight",
+      "per-cell completion observer",
+      "final receipt/CSV check"
+    ],
+    "real_data_or_model_downloaded": false,
+    "real_decode_or_forward_run": false,
+    "uploaded_or_submitted": false,
+    "own_public_score": null
+  },
+  "source_audits": [
+    "docs/research/p002-effective-inputs-20261005.json",
+    "docs/research/p002-environment-20261005.json",
+    "docs/research/p002-output-contract-20261005.json"
+  ],
+  "manual_guide": "docs/public-baselines.md",
+  "gpu": "T4 x2",
+  "internet": false,
+  "checks": {
+    "unittest": {
+      "command": ".venv/Scripts/python.exe -m unittest discover -s tests",
+      "passed": 141,
+      "new_guard_tests": 44,
+      "seconds": 13.08,
+      "failures": 0
+    },
+    "ruff_check": "passed for 3 added Python files",
+    "ruff_format": "passed for 3 added Python files",
+    "git_diff_check": "passed",
+    "notebook_static_checks": {
+      "valid": true,
+      "notebook_sha256": "f5075c34fd389277d2aa6acb3dd3f87275485d60a8796a91d22060a46c4d70b4",
+      "original_sources_equal": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12
+      ],
+      "unexecuted_code_cells": 12,
+      "public_file_hash_gates": 47,
+      "pinned_inputs": 5,
+      "embedded_guard_and_contract_match": true,
+      "rebuild_notebook_byte_identical": true,
+      "overwrite_refused": true,
+      "public_source_executed": false,
+      "real_data_or_model_loaded": false
+    }
+  },
+  "review_resolutions": [
+    "Require all DINO members before moved frontier CSV is accepted",
+    "Reject all unlisted Input mounts to prevent Raptor weight shadowing",
+    "Validate mount/file containment",
+    "Preserve existing outputs and reject non-fresh run",
+    "Require exact member completion events and finite predictions",
+    "Validate final receipt / CSV hash chain; raw bag order may differ from test"
+  ],
+  "public_payload_hashes_verified_locally": false,
+  "public_payload_hashes_checked_at": "Kaggle preflight",
+  "real_mri_decoded": false,
+  "public_models_executed": false,
+  "new_training_run": false,
+  "uploaded_or_submitted": false,
+  "own_public_score": null,
+  "author_public_score": 0.937,
+  "author_score_reproduction_claimed": false,
+  "remaining_runtime_checks": [
+    "Kaggle package and GPU compatibility",
+    "All public branches on real MRI",
+    "Hidden-test runtime and successful scoring",
+    "Own Public score vs retained p001 0.924"
+  ],
+  "gold_policy": "No new gold-based training, checkpoint selection or coefficient fitting. Public weight development provenance remains separate; this is not independent OOF."
+}

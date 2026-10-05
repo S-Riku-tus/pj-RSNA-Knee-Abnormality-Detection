@@ -1,6 +1,16 @@
 # RSNA Knee プロジェクトの現在地
 
-更新日 2026年10月4日 JST。目的は膝MRIの12所見を予測するKaggleコンペに参加し、採点に通る比較基準から段階的に改善することです。
+更新日 2026年10月5日 JST。目的は膝MRIの12所見を予測するKaggleコンペに参加し、採点済み公開モデルのPublic 0.924を基準に改善することです。
+
+## 今回の方針変更
+
+**開発の主軸を公開学習済みモデルへ移します。** r001のPublic 0.749を公式APIで確認し、0.924の成功版ソースも保存しました。自作ResNet18は補完効果を調べる副系統として保持し、BNの別fold追試・50/100 epoch化・全fold展開・192px物理crop全件化を先に進めません。[提出監査](experiments/submission-audit-20261005.json)、[段階別計画と採否条件](docs/research/public-model-strategy-20261005.md)。
+
+最初の新候補p002はDINOsaur V4のV32です。**第1段階の準備を完了し、ユーザーが第2段階のKaggle保存実行・手動提出へ進める状態にしました。** [提出用Notebook](artifacts/kaggle/p002-dinosaur-v32-handoff-v2/02_submit_p002.ipynb)を新しいprivate NotebookへImportし、[操作手順](docs/public-baselines.md#ユーザーが行う操作)に従って指定5 Inputs・T4 x2・Internet OFFでSave & Run Allします。実行成功と`P002_READY.json`を確認して最終`submission.csv`を手動Submitします。実MRIでの互換性・完走・本番所要時間・Publicは未確認です。
+
+元19参照を有効5 Inputsへ整理し、公開資産47ファイルの期待サイズ・SHA-256を固定しました。元10セルの推論ソース・前処理・係数を保持し、ファイル検査・各モデルの完走・fallback拒否・最終CSV検査を追加しています。重みpayloadのhashはKaggleで実行時に照合します。[Input対応表](docs/research/p002-effective-inputs-20261005.json)、[引渡し・検査記録](experiments/p002-handoff-20261005.json)。歴史的Input版と作者の採点CSVは未確認で、今回固定した組合せを作者0.937の再現済みモデルとは扱いません。公開0.940/0.941系は保存コード等の不一致があり、参考候補に留めます。[候補選定](docs/research/public-candidate-review-20261005.json)。
+
+公開重みのgold履歴は競技用候補の監査として記録し、自分の学習・checkpoint選択・係数調整にgoldを使わない方針は維持します。公開モデルの学習に露出した検査を後から分割しても独立OOFにはなりません。今回は調査・未実行Notebookの準備・人工データでの検査・手順更新を実施しました。実データ/モデル取得・実MRI処理・追加学習・アップロード・代理提出は行っていません。以下の10月4日までの未測定・次工程の記述は当時の履歴です。
 
 ## 現在の状態
 
@@ -40,11 +50,11 @@
 
 ## 次にすること
 
-1. 正常完了した固定50:50 rank候補のVersion 3で、Outputのsubmission.csvを手動Submitし、自作weak評価と画像由来の採点がどれだけ対応するかを先に測る。[提出手順](docs/kaggle-submit.md)。実測Public 0.924の既存提出を保持し、Input/Notebook版・隠しtest全体時間・採点値を別記録する。rank候補のBCEは未校正順位値の補助計算で、確率校正の改善とは扱わない。
-2. 通常BN／固定BNの20 epochをfold 1でも同じ条件から対照実行し、固定50:50も再確認する。fold 0だけでBNやensembleの全面採用を決めず、goldを選択に使わない。旧fold 1の5 epochを再開せず新規runとし、最初5 epochの一致も確認する。先に追加学習時間だけを50/100 epochへ増やさない。
-3. 192pxの全体像と140mm物理cropだけを変える入力比較を、Kaggleの学習側24〜32件QCから準備する。[入力・容量・互換性の契約](docs/research/physical-crop-contract-20261004.json)。PixelSpacingのない既存cacheから物理cropを後付けせず、元DICOMから別cacheを作る。旧前処理hashを維持する版設計を先に行う。
-4. DINOsaur V4の作者報告Best 0.937はV32。SDKの版指定を修正してV32ソースを取得・hash固定できたが、保存Input版と採点された出力CSVは未確認。[追補](docs/research/public-reproduction-v32-followup-20261004.json)。CoAtNetの140mm crop・系列選択等を参考にするが、公開Training V8の未配布softラベルとgold選択をそのまま移植しない。新たな学習比較は汎用事前学習重みから行う。
-5. 次は物理cropを同じ解像度で比較し、解像度・系列/window密度・scheduler・ラベルを一要因ずつ検討する。入力試作はKaggleで少数検査から始め、256px以上の全件化は容量試作とUID分割・統合検査を先に整える。学習seed比較は分割seedとの分離後に行う。10月20〜22日は採点成功済み候補の再実行・最終選択に充てる。
+1. p001 0.924とr001 0.749の提出ID・成功版ソースを基準として保持する。保存Input版・隠しtest時間など未確認値だけを補完し、同じr001を再提出しない。現在のInput版を過去の提出版へ転記しない。
+2. 準備済みp002をユーザーが新規private NotebookへImportし、[公開モデル手順](docs/public-baselines.md#ユーザーが行う操作)に従って保存実行する。Input版・有効ファイル・係数と最終submission.csvは固定済み。全member完走と最終検査を通過した保存Versionから手動Submitする。
+3. 手動の保存実行・採点でp002の実測Publicと隠しtest時間を記録する。0.924を上回れば競技用の暫定主力へ進め、未達ならp001を維持する。作者の元学習ラベルが未配布でも公開重みの推論比較は進められる。
+4. 採用モデル専用の実装経路を作り、Kaggleの学習側24〜32検査で元Notebookとの入力・予測同値性を確認する。その後、必要なら公開方式互換cacheを分割生成する。既存192pxの拡大は互換cacheとせず、元DICOMはKaggle内で処理する。
+5. 推論設定、公開重みからの追加学習、教師ラベル、補完モデルを別実験として一要因ずつ比較する。再学習は評価への露出と改善仮説を先に定める。r001系は主力への補完根拠がある場合に継続し、無根拠な50:50混合を行わない。10月20〜22日は成功候補の再実行・最終選択に充てる。
 
 10月4日の添付分析の再監査は、続行依頼前の調査履歴である。HEAD 05b0710と保存済みweak評価を照合し、C2−B1の補助11所見差+0.120629の95%区間[+0.078707,+0.162513]、C5−C2差+0.010232の区間[−0.005521,+0.025498]を計算した。後者を追加実験の根拠とし、その後に上記4本の実学習へ進んだ。公式Hostは画像由来の正解とReportの不一致を認めており、weak AUCとKaggle採点を区別する。[当時の調査記録](docs/research/strategy-audit-20261004.json)。
 
@@ -52,7 +62,7 @@
 
 初回提出の採点成功と実測PublicはAPIで確認済み。My Submissionsと保存NotebookでInput版・実行時間を補完する。以後のprepare・trainには `data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/` を使用する。
 
-キャッシュ作成後の既存コマンドは [after-cache.md](docs/after-cache.md)、添付分析を照合した判断・比較設計・容量条件は [次の実験計画](docs/research/next-experiments-20261004.md) を使う。10月4日の再分析は調査のみで、その後の依頼を受けて上記の実装・診断へ進んだ。現行全件Notebookの18GB容量ガードでは256px以上が事前停止する。224pxのraw画像量は約15.92GB、288pxは約26.32GBで、実測192px圧縮export約7.79GBとは区別する。
+キャッシュ作成後の既存コマンドは [after-cache.md](docs/after-cache.md)、現在の判断・比較設計は [10月5日の計画](docs/research/public-model-strategy-20261005.md) を使う。[10月4日の実験計画](docs/research/next-experiments-20261004.md) は履歴として保持する。現行全件Notebookの18GB容量ガードでは256px以上が事前停止する。224pxのraw画像量は約15.92GB、288pxは約26.32GBで、実測192px圧縮export約7.79GBとは区別する。
 
 goldの結果は既に見ているため完全未観測の最終holdoutとは呼ばず、学習・checkpoint選択・prompt調整・ensemble係数合わせには使わない。10月20〜22日は最終候補の再実行・選択に充てる。
 

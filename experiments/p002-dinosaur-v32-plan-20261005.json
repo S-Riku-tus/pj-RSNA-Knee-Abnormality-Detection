@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "experiment_id": "p002-dinosaur-v32-final",
+  "planned_date_jst": "2026-10-05",
+  "status": "source_only_prepared_not_executed",
+  "ready_for_scoring": false,
+  "hypothesis": "An unchanged public multi-model inference recipe may improve the scored p001 reference; this compares whole recipes, not a causal one-factor training ablation.",
+  "baseline": {
+    "experiment_id": "p001-public-model-reproduction",
+    "public_lb": 0.924,
+    "submission_ref": 56766978
+  },
+  "candidate_source": {
+    "path": "artifacts/research/20261005-public-candidate/kaggle/romantamrazov/rsna-knee-dinosaur-v4-v32/source.ipynb",
+    "sha256": "ba9491ac1e214ba55ca181de55118c9a793fe7f6163fc221fe1e68d596259dca"
+  },
+  "candidate_notebook": {
+    "path": "artifacts/research/20261005-public-candidate/dinosaur-v32-final-candidate.ipynb",
+    "sha256": "67658518d6bc172873991e1bf725a7896ed276a6942d7ac9375520f091df19c7",
+    "changes": "JSON reserialization and code cell outputs=[] / execution_count=null only; metadata and source retained"
+  },
+  "input_manifest": {
+    "path": "artifacts/research/20261005-public-candidate/candidate-manifest.json",
+    "sha256": "4abe195f8a735c4d271297d9c7bacb2f6a3dd0c6c28891cf278e1618a2bf7ce9"
+  },
+  "selected_output": {
+    "path": "/kaggle/working/submission.csv",
+    "recipe": "V32 final V6 five-target outer-weight overlay; the preserved control is a distinct output",
+    "must_match": "submission_dinosaur_v4_v6_candidate.csv",
+    "receipt": "dinosaur_v4_v6_receipt.json",
+    "fixed_outer_weights": {
+      "ACL": 0.8,
+      "Lateral OA": 0.35,
+      "PF OA": 0.35,
+      "Synovitis": 0.35,
+      "Baker's": 0.375
+    },
+    "do_not_submit_by_accident": "submission_dinosaur_v4_0937_control.csv"
+  },
+  "candidate_author_best_score": 0.937,
+  "author_scored_csv_identity_verified": false,
+  "author_source_version": 32,
+  "own_submission_ref": null,
+  "own_public_lb": null,
+  "hidden_test_runtime_seconds": null,
+  "training_config": null,
+  "training_seed": null,
+  "local_fold": null,
+  "seed_fold_note": "No new training; preserve all author inference settings. No independent OOF claim.",
+  "environment_contract": {
+    "required_enable_gpu": true,
+    "required_enable_internet": false,
+    "source_metadata_machine_shape": "NvidiaTeslaT4",
+    "source_metadata_docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+    "embedded_notebook_gpu_flag_conflicts_with_live_metadata": true,
+    "note": "Explicitly select GPU T4 x2 and Internet OFF in Kaggle UI; source metadata is retained as evidence and is not a substitute for saved-run settings"
+  },
+  "fixed_factors": [
+    "Source code cells, preprocessing, checkpoints recipe, TTA and ensemble weights",
+    "V32 final submission.csv including V6 overlay; not the preserved control CSV"
+  ],
+  "remaining_gates": [
+    "Inspect saved V32 Input view and map Notebook/Dataset/Model refs to exact versions; embedded inherited opaque IDs must not be assigned by order.",
+    "Verify public-weight and upstream conditions. Treat this as external public model; no gold-independent validation claim.",
+    "Record effective weight/runtime/manifest hashes and offline dependencies at Kaggle runtime.",
+    "After user-authorized manual saved run, inspect component counts, fingerprints, degradation/fallback warnings, all receipts and the final output hash. A schema-valid CSV does not prove the full recipe ran.",
+    "Before manual submission, final CSV must match candidate CSV and receipt output_sha256; save actual Notebook/Input versions, hidden-test runtime, status and own Public after scoring.",
+    "Confirm test_series mount exists and actual runtime hashes; audit code loaded from Inputs before treating source-only checks as full execution audit."
+  ],
+  "adoption": [
+    "Own Public greater than 0.924",
+    "All intended members complete with receipts and final hash",
+    "Offline saved run and hidden-test scoring complete with runtime margin",
+    "Asset versions, effective file hashes and applicable terms recorded"
+  ],
+  "stop_or_hold": [
+    "Missing required assets or unresolved use terms",
+    "Silent fallback or incomplete branch while producing a schema-valid CSV",
+    "Own score at or below 0.924: retain p001",
+    "Unverified time margin or hidden-test failure"
+  ],
+  "budget": {
+    "new_training_runs": 0,
+    "initial_new_scored_recipe_comparisons": 1,
+    "competition_runtime_limit_hours": 9,
+    "automatic_submission": false
+  },
+  "evaluation_constraints": [
+    "Do not use gold for local training, checkpoint or blending decisions",
+    "Pretrained exposure is not removed by posthoc folds or frozen encoders",
+    "Public improvement is not evidence of independent gold validation or guaranteed Private gain"
+  ],
+  "observed_result": null,
+  "decision_after_execution": null,
+  "decision_document": "docs/research/public-model-strategy-20261005.md",
+  "static_runtime_data_audit": {
+    "scope": "V32 source plus previously audited external Renta V2 source; selected live runtime hashes still need verification",
+    "gold_metric_fit_or_checkpoint_selection_found": false,
+    "training_optimizer_backward_found": false,
+    "calibration": "Apply embedded fixed mean/scale/coef/intercept/gate and fixed V6 weights; no runtime fit found",
+    "report_column_required": false,
+    "train_csv_required": true,
+    "train_csv_use": "cell3 line95 reads all train.csv columns with pandas but only uses len() for cache capacity planning; do not claim zero gold/Report reads",
+    "fallback": "cell5 lines134-135 uses train_series.csv when test_series directory is absent; confirm correct test mount before run",
+    "past_gold_exposure": "Public weights and embedded calibration provenance remain separate from runtime fitting"
+  },
+  "current_input_version_inventory": {
+    "path": "docs/research/public-current-inputs-20261005.json",
+    "sha256": "1f4cd1625bc99630ad52191a100d3ef925e24f8d1c7077990ba0c36af6fd1037",
+    "status": "Current version inventory only; selected effective assets remain unverified. Not an execution-ready pin set."
+  }
+}

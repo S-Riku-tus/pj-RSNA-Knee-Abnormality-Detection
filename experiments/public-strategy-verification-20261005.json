@@ -1,0 +1,36 @@
+{
+  "checked_at_utc": "2026-10-05T02:04:52.182402+00:00",
+  "checked_date_jst": "2026-10-05",
+  "valid": true,
+  "scope": "Static checks only; no public code execution, model loading, GPU, MRI decode or training.",
+  "submission_evidence_files_verified": 7,
+  "public_source_files_verified": 9,
+  "candidate_code_cells_identical_parsed_unexecuted": 10,
+  "candidate_input_refs": 19,
+  "current_input_inventory_metadata_only_verified": true,
+  "candidate_ready_for_scoring": false,
+  "ledger_rows": 12,
+  "verified_scores": {
+    "p001": 0.924,
+    "r001": 0.749
+  },
+  "changed_json_files_parsed": 5,
+  "local_markdown_file_links_checked": 156,
+  "attachment_sha256": "6e11c3a947a0420b6203fb6ad0736cf4194865f2431a37cbde9c47eb5e7581fc",
+  "uint8_stack_bytes_4407_by_64_by_336_by_336": 31842091008,
+  "production_code_unchanged": true,
+  "git_diff_check": true,
+  "unit_and_cuda_tests_rerun": false,
+  "test_rationale": "Production/GPU code unchanged; previous 97-test and CUDA results remain historical, not claimed as rerun.",
+  "review_corrections": [
+    "Restored damaged Japanese research text as UTF-8",
+    "Distinguished p001 checkpoint-overridable arch/res fallback from verified effective values"
+  ],
+  "source_and_plan_hashes": {
+    "docs/research/public-candidate-review-20261005.json": "aa328c04f7167264e70aaa415979bc6981de00de7c4194ece92f81e0543312ae",
+    "docs/research/public-current-inputs-20261005.json": "1f4cd1625bc99630ad52191a100d3ef925e24f8d1c7077990ba0c36af6fd1037",
+    "docs/research/user-analysis-public-model-20261005.txt": "6e11c3a947a0420b6203fb6ad0736cf4194865f2431a37cbde9c47eb5e7581fc",
+    "experiments/p002-dinosaur-v32-plan-20261005.json": "d78c681bb63d817044d4e7b768d715a1d5b572cde2f5599df04db1c95f56e9d3",
+    "experiments/submission-audit-20261005.json": "8bca049868c9b7a57cccd2e8758df16f72f1177bfd870d9f9b79afdc8853be5c"
+  }
+}

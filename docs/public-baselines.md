@@ -1,8 +1,47 @@
 # 公開ベースラインを最初の比較基準にする
 
-まずKaggle上で作者のNotebookを再現し、採点に通るモデルを確保する。このリポジトリの自作ResNetへ別アーキテクチャの重みを読み込むことはできない。
+10月5日から、採点済みp001 Public 0.924を正式な比較基準にし、公開学習済みモデルの推論比較を最優先にする。r001 Public 0.749も公式APIで確認済み。[提出監査](../experiments/submission-audit-20261005.json)、[判断・段階別計画](research/public-model-strategy-20261005.md)。このリポジトリの自作ResNetへ別アーキテクチャの重みを読み込むことはできない。
 
-## 優先する単体モデル
+## 10月5日の次候補p002
+
+**第1段階の準備を完了し、第2段階のKaggle保存実行へ渡す。** DINOsaur V4のV32を基に、現在使うInputの版を5件へ固定した。これは新しい組合せの候補p002であり、作者Best 0.937の厳密再現や自己スコアの確認ではない。[選定根拠](research/public-candidate-review-20261005.json)、[引渡し・検査記録](../experiments/p002-handoff-20261005.json)。
+
+使用するファイルは [02_submit_p002.ipynb](../artifacts/kaggle/p002-dinosaur-v32-handoff-v2/02_submit_p002.ipynb)。元V32の10セルの推論ソースを文字列として保持し、同じ実行環境の変数を共有して順番に実行する。追加した前後検査がInputの内容・各モデルの完走・最終CSVを確認する。元の予測処理、前処理、固定係数は変更していない。旧source-only候補とhandoff-v1は準備履歴として残し、今回の操作には使わない。
+
+### ユーザーが行う操作
+
+1. **新しいprivate Notebookを作る。** [競技ページ](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection)からNotebookを作り、Import Notebookで上記`.ipynb`を読み込む。名前は例えば`rsna-knee-p002-dinosaur-v32`とする。
+2. **Inputを次表の5件にする。** 競技が既に追加されていれば、追加する公開Inputは4件。Add Inputで表のURLまたは所有者・名前を検索し、指定Versionを選ぶ。重みのローカル取得や自作コードZIPのアップロードは不要。別のRaptor Datasetや元Notebookから継承した19参照を追加しない。
+3. **SettingsでAcceleratorをGPU T4 x2、InternetをOFFにする。** この元方式と専門モデルruntimeは2台のT4を要求する。設定はImport後に画面で確認する。
+4. **Save Version → Save & Run Allを選ぶ。** 新しいセッションで最初から最後まで実行する。保存前に同じ全処理を手動で一度実行する必要はない。保存実行と`/kaggle/working`の出力保存は[Kaggle公式Notebookガイド](https://www.kaggle.com/docs/notebooks)を参照。
+5. **完了後にログとOutputを確認する。** 最初に`P002 PREFLIGHT PASSED`、最後に`P002 READY FOR MANUAL SUBMISSION`が表示され、Outputに`P002_READY.json`と`submission.csv`があることを確認する。Notebookの実行も成功していることが条件。
+6. **その保存Versionの最終`submission.csv`を選んで手動Submitする。** `submission_dinosaur_v4_0937_control.csv`や`submission_parent_exact.csv`は選ばない。採点完了後、Notebook URL・Version・Public score・実行時間・提出IDを残す。
+
+| Add Inputで選ぶもの | 固定版 | 役割 |
+|---|---:|---|
+| [公式競技 rsna-knee-abnormality-detection](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data) | 競技入力 | test画像・CSV |
+| [tonylica / rsna-knee-bend-dinov3-0917-repro-assets](https://www.kaggle.com/datasets/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/versions/5) | Dataset 5 | 主モデル群・校正器 |
+| [renta0426 / rsna-knee-public0033-meniscus-bag-v1](https://www.kaggle.com/datasets/renta0426/rsna-knee-public0033-meniscus-bag-v1/versions/2) | Dataset 2 | 半月板の専門モデル・runtime |
+| [metaresearch / dinov2 / PyTorch / small](https://www.kaggle.com/models/metaresearch/dinov2/PyTorch/small/1) | Model 1 | DINOv2モデル定義・基礎重み |
+| [mattiaangeli / knee-mri-fold-weights](https://www.kaggle.com/datasets/mattiaangeli/knee-mri-fold-weights/versions/2) | Dataset 2 | オフライン用timm 1.0.22 wheel |
+
+**途中でエラーになった場合は提出しない。** エラーの末尾とNotebook URLを保存して原因を確認する。Inputの版やGPUを直した後は、新しいセッションでSave & Run Allする。途中セルだけの再実行や、検査を消しての提出はしない。検査開始後の失敗では、この実行で生成したCSVを`.disabled`へ移し、提出用ファイルとして残さない。既存CSVがあるセッションは開始時に拒否する。
+
+### 準備で確認したことと残る実行確認
+
+元19参照から有効ファイルを追跡し、上記5 Inputsに集約した。[対応表](research/p002-effective-inputs-20261005.json)には公開資産47ファイルの期待サイズ・SHA-256と、除外した参照の理由がある。重みpayloadはローカルで取得しておらず、配布manifest等に基づく期待hashとの照合はKaggleの開始セルで行う。[環境調査](research/p002-environment-20261005.json)、[出力契約](research/p002-output-contract-20261005.json)。
+
+NotebookはDINO 20 member、DINOv3 5 fold、Raptor 4 armの予測形状・値域と完走、専門モデルのreceipt、固定校正器の適用、test UIDと12列、V6候補CSVとreceiptのhash一致を検査する。timmはhash確認済みの添付wheelからネット接続なしで固定版を導入し、他パッケージの版は実行時に記録する。全モデルの実MRI実行、Kaggle環境との互換性、本番の所要時間・Publicはまだ未確認。表示用testの成功だけで本番採点の完了とはしない。
+
+最終V6の外側係数はACL=0.80、Lateral OA/PF OA/Synovitis=0.35、Baker's=0.375に固定している。`P002_READY.json`は保存実行の検査記録であり、0.937や0.924超えの保証ではない。
+
+採用条件は0.924を上回る自己実測、意図した全分岐の完走、時間余裕。未達ならp001を維持し、係数探索を連続して行わない。公開重みのgold利用は別途監査し、ここでの結果を独立gold/OOF評価とは呼ばない。未配布の作者softラベルは推論比較の前提条件にしない。
+
+V32と固定したRenta runtimeを静的に確認した範囲では、実行時のgold AUC計算・係数fit・checkpoint選択・学習処理はなく、calibratorとV6係数は固定値の適用だった。ただし容量計画の件数取得に`pd.read_csv(train.csv)`で全列を一度読み込むため、「gold/Reportを一切読み込まない」とは言わない。Report列への依存はないが、競技の`train.csv`ファイルは必要である。`test_series`不存在時のtrain側fallbackを防ぐため、追加した開始検査は正しいtest mountを要求する。公開資産の帰属と利用条件は元Notebookと環境調査へ残し、作者Inputをそのまま参照する。
+
+[NTejasの公開実装](https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection/tree/1c386ac71385ba7683f550b87a465386ba6c36a8) も確認した。作者0.940/0.941は自己再現ではなく、参照Notebookのスコア版/Input固定が未解決で、実混合係数とreceipt説明にも不一致がある。今回は開発構造の参考に留め、追加腕やgold由来係数を先に移植しない。
+
+## 保持する単体モデルp001
 
 [Knee MRI twelve findings from a single model](https://www.kaggle.com/code/dreaddevelopment/knee-mri-twelve-findings-from-a-single-model) と [重みの配布ページ](https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-widedense) が第一候補。2026年10月2日のWeb調査では、作者は単体・TTAなしのPublic 0.924を報告していた。
 
@@ -10,7 +49,9 @@
 
 追加調査で取得できた配布ページは **Version 2、585.66MB、CC0** と表示していた。これは索引が持つ表示版で、現在のライブ版や再現するNotebookのInput版と一致する保証はない。Notebookの厳密な版は未確定のため、Kaggleで再現前に記録する。
 
-ここまでの説明は作者の報告。10月3日、ユーザーが既に提出した `rsraki/knee-mri-twelve-findings-from-a-single-model` を公式APIで確認し、status=COMPLETE・実測Public 0.924を記録した。今回の作業で公開重み取得・再実行・新規提出は行っていない。保存Input版・実行時間・厳密な生成履歴は未確認。物理座標の切り出し、正規化、Attention実装、ラベル順が一致しないまま重みだけ使わない。
+ここまでの配布説明は作者の報告。10月3日に既存提出の実測Public 0.924を公式API確認し、10月5日に提出ref 56766978・scriptVersionId 354569007を再確認した。V1を指定して成功版Pythonソースを保存し、版別Output一覧の識別子との一致も確認した。ソースhashは`3ec3a18fd97746e4ee44bf424775e902362ea45a25483861bbb78767c9d4b68e`。当該ソースでも140mm/336px/64枚/42窓と12所見順を確認したが、384px等のfallback値をcheckpoint内部の実測値へ読み替えない。歴史的Input版、重みhash、隠しtest時間は未確認。[監査](../experiments/submission-audit-20261005.json)。
+
+成功版のコメントにはgoldを使った過去のarm選択や比較の記述があり、「goldを学習から除いた」という説明だけで開発全体がgold非使用とは扱えない。これは作者の沿革自己申告で、重み生成・選択ログの独立監査ではない。今回の作業で公開重み取得・再実行・新規提出は行っていない。
 
 ## 再現の手順
 
@@ -92,9 +133,9 @@ V35はDINO／DINOv3／Rad／Raptorの推論とrank変換を重ね、途中CSVを
 - Antoine E9 Dataset V3のREADMEは公式goldでweakを上書きして学習すると明記し、E10のblend係数選択もgold 58件を使うと説明する。配布学習ソースにもgold代入と係数探索がある。latest DINOsaur V5 train V15にもgoldを学習targetへ入れ、gold検証AUCでepochを選ぶ処理がある。historical V32重みとの厳密な生成対応は未確認で、これらを本リポジトリのgold除外学習へ移植しない。
 - Tonylica V5の `SOURCE_AND_LICENSES.md` は一括CC0ではなく、CC0／Apache／CC BY-NC-SA／DINOv3の元条件等が混在すると説明する。E13の再配布licenseは過去監査で別途確定していない。公開Datasetの表示が「Other」であることを、条件なしの再配布許可と解釈しない。公開NotebookをKaggle上で参照する経路と、第三者重みを自作bundleへ再配布する経路を区別する。
 
-### 次に作る採点候補
+### 10月4日時点の候補準備の履歴
 
-まず、自作モデルの比較結果から選択規則が確定したcheckpointを、凍結code zip・提出Notebook・hash manifest・帰属記録とともに新しいbundleへ保存する。競技入力とprivate bundleをKaggleで手動追加し、Internet OFF・GPUでSave and Run All、例示testとログの確認、手動採点へ進む。既存の実測0.924提出を保持し、自作候補のPublicは採点後に記録する。
+当時は自作モデルの比較結果から確定したcheckpointを、新しいbundleへ保存して手動採点する方針だった。この経路はr001 Public 0.749の採点まで完了した。現在の次工程は冒頭のp002であり、同じr001の再提出は不要。
 
 公開方式の次候補は、取得済みV32ソースと作者の保存Input画面を照合し、その版をCopy and Editして入力版と提出CSVを固定する経路を優先する。V32のscriptVersionId、Dataset／Notebook／Modelの版、runtime、実測Publicを揃えるまでは「0.937再現済み」としない。SDKの版指定metadataには14 Dataset／3 Notebookの参照があるが、それらの版番号がない。embedded metadataの少ないInput ID一覧から補完しない。V35を実行する場合は独立した新しい候補として記録し、保存0.937 controlと最新PublicCoAt mainのどちらを採点するかを先に固定する。今回、DINOsaurの採点可能な新規bundleを作ったとは扱わない。
 

@@ -1,0 +1,278 @@
+{
+  "checked_date_jst": "2026-10-05",
+  "scope": "公開コードとmetadataだけの取得・静的監査。Notebookと公開コードは実行せず、重み・実MRI・ラベル表・予測payloadを取得していない。通常SDK認証を使用し、認証値を直接読んだりコピー・表示していない。外部書込なし。",
+  "recommendation": {
+    "first_public_candidate": "p002-dinosaur-v32-final",
+    "decision": "DINOsaur V4 Version 32の元コードを保った最終submission.csv候補を先に準備する。Input版と有効資産hashの固定完了、手動実行と採点は次段階。",
+    "reason": "作者のBest 0.937とV32の対応が公開ページで確認でき、指定版ソースが前日取得hashと一致した。NTejasの0.940/0.941は作者の報告として有用だが、採点した保存版・Inputとの対応が不足し、参照recipeが完全完走したかを末尾receiptだけでは確認できない。高い表示スコアだけで新基準にしない。",
+    "our_public_lb": null,
+    "ready_for_scoring": false,
+    "separate_from_existing_p001": "既存実測0.924は保持する。p002はソース準備段階で、採点済みrunとして台帳へ追加しない。",
+    "selected_output": "/kaggle/working/submission.csv (V32 V6 five-target final overlay)",
+    "author_scored_csv_identity_verified": false,
+    "candidate_manifest": "artifacts/research/20261005-public-candidate/candidate-manifest.json",
+    "candidate_notebook": {
+      "path": "artifacts/research/20261005-public-candidate/dinosaur-v32-final-candidate.ipynb",
+      "sha256": "67658518d6bc172873991e1bf725a7896ed276a6942d7ac9375520f091df19c7",
+      "changes": "JSON reserialization and code cell outputs=[] / execution_count=null only; metadata and source retained"
+    },
+    "next_manual_contract": [
+      "Inspect saved V32 Input view and map Notebook/Dataset/Model refs to exact versions; embedded inherited opaque IDs must not be assigned by order.",
+      "Verify public-weight and upstream conditions. Treat this as external public model; no gold-independent validation claim.",
+      "Record effective weight/runtime/manifest hashes and offline dependencies at Kaggle runtime.",
+      "After user-authorized manual saved run, inspect component counts, fingerprints, degradation/fallback warnings, all receipts and the final output hash. A schema-valid CSV does not prove the full recipe ran.",
+      "Before manual submission, final CSV must match candidate CSV and receipt output_sha256; save actual Notebook/Input versions, hidden-test runtime, status and own Public after scoring."
+    ]
+  },
+  "dinosaur_v32": {
+    "url": "https://www.kaggle.com/code/romantamrazov/rsna-knee-dinosaur-v4/output",
+    "source_request": {
+      "user_name": "romantamrazov",
+      "kernel_slug": "rsna-knee-dinosaur-v4",
+      "version_label": "v32"
+    },
+    "confirmed_response_version": 32,
+    "source_sha256": "ba9491ac1e214ba55ca181de55118c9a793fe7f6163fc221fe1e68d596259dca",
+    "matches_20261004_source": true,
+    "author_displayed_best": 0.937,
+    "author_displayed_best_version": 32,
+    "our_reproduction_score": null,
+    "code_cells": 10,
+    "candidate_code_cells_unchanged": true,
+    "candidate_ast_parse_success": true,
+    "no_execution_performed": true,
+    "input_reference_counts": {
+      "dataset": 14,
+      "notebook_output": 3,
+      "model": 1,
+      "competition": 1
+    },
+    "input_reference_caveat": "SDKのV32応答には参照名があるが保存Input版がない。embedded Kaggle metadataは継承された少数IDを含む。配列順からIDを参照名へ割り当てない。model参照はV1を含む。",
+    "final_output_contract": {
+      "path": "/kaggle/working/submission.csv",
+      "recipe": "V32 final V6 five-target outer-weight overlay; the preserved control is a distinct output",
+      "must_match": "submission_dinosaur_v4_v6_candidate.csv",
+      "receipt": "dinosaur_v4_v6_receipt.json",
+      "fixed_outer_weights": {
+        "ACL": 0.8,
+        "Lateral OA": 0.35,
+        "PF OA": 0.35,
+        "Synovitis": 0.35,
+        "Baker's": 0.375
+      },
+      "do_not_submit_by_accident": "submission_dinosaur_v4_0937_control.csv"
+    },
+    "source_only_does_not_prove_all_branches_succeeded": true,
+    "gold_and_licenses": "前日監査で関連公開資産のgold学習・選択とCC0、Apache、CC BY-NC-SA、DINOv3由来条件の混在を確認。V32 historical重みへの厳密対応は未確認。公開方式の比較用推論候補として扱い、自分のgold非使用学習や独立holdoutとは称さない。",
+    "previous_evidence": "docs/research/public-reproduction-contract-20261004.json",
+    "environment_note": "Explicitly select GPU T4 x2 and Internet OFF in Kaggle UI; source metadata is retained as evidence and is not a substitute for saved-run settings"
+  },
+  "ntejas": {
+    "repository": "https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection",
+    "commit": "1c386ac71385ba7683f550b87a465386ba6c36a8",
+    "commit_date_utc": "2026-09-27T16:54:09Z",
+    "author_reported_public_scores": {
+      "reference_only": 0.94,
+      "two_extra_arms_full": 0.941,
+      "two_extra_arms_halved": 0.941
+    },
+    "our_reproduction_scores": null,
+    "author_score_url": "https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection/blob/1c386ac71385ba7683f550b87a465386ba6c36a8/README.md",
+    "frozen_reference": {
+      "repository_path": "ref_kernel/rsna-knee-speedy-raptors-coatnet-d4-sota.ipynb",
+      "local_path": "artifacts/research/20261005-public-candidate/ntejas/ref_kernel/rsna-knee-speedy-raptors-coatnet-d4-sota.ipynb",
+      "url": "https://raw.githubusercontent.com/NTejas-1/RSNA-Knee-Abnormality-Detection/1c386ac71385ba7683f550b87a465386ba6c36a8/ref_kernel/rsna-knee-speedy-raptors-coatnet-d4-sota.ipynb",
+      "sha256": "13b1897adb197988c1ae30954c8d6c4d83c20f854213519d7963902d0b6ce66a",
+      "bytes": 223566
+    },
+    "frozen_full_blend": {
+      "repository_path": "out/notebook_blend_full.ipynb",
+      "local_path": "artifacts/research/20261005-public-candidate/ntejas/out/notebook_blend_full.ipynb",
+      "url": "https://raw.githubusercontent.com/NTejas-1/RSNA-Knee-Abnormality-Detection/1c386ac71385ba7683f550b87a465386ba6c36a8/out/notebook_blend_full.ipynb",
+      "sha256": "f420373460efe356acd1e5069e686515d353d55e38d450d5eedc8afb430a6b45",
+      "bytes": 245981
+    },
+    "reference_and_push_notebooks_same_sha256": true,
+    "source_cells": {
+      "reference_total": 24,
+      "reference_code": 23,
+      "full_total": 25,
+      "full_code": 24
+    },
+    "source_metadata_inputs": {
+      "datasets": 13,
+      "notebook_outputs": 2,
+      "model_sources": 1,
+      "competition_sources": 1,
+      "dataset_and_notebook_versions_encoded": false
+    },
+    "live_reference_observation": {
+      "metadata": {
+        "id": 135281507,
+        "ref": "beraterolelk/rsna-knee-speedy-raptors-coatnet-d4-sota",
+        "title": "RSNA Knee Speedy Raptors & CoAtNet D4 SOTA",
+        "author": "Berat Erol ÇELİK",
+        "slug": "rsna-knee-speedy-raptors-coatnet-d4-sota",
+        "lastRunTime": "2026-10-02T01:48:04.247Z",
+        "language": "python",
+        "kernelType": "notebook",
+        "isPrivate": false,
+        "enableGpu": false,
+        "enableInternet": true,
+        "totalVotes": 1,
+        "enableTpu": false,
+        "currentVersionNumber": 1,
+        "dockerImage": "gcr.io/kaggle-images/python@sha256:dafd4ce5668bbf1ad422e4c109e0f18c9623c3a7c7f48b0235f13142755c40b9",
+        "machineShape": "None"
+      },
+      "source_path": "artifacts/research/20261005-public-candidate/kaggle/beraterolelk/rsna-knee-speedy-raptors-coatnet-d4-sota-latest/source.ipynb",
+      "sha256": "2e39d504217c7fcca36187119056498f814a8ebcd1ceec55c52a6e5b8723b161",
+      "bytes": 224918
+    },
+    "github_metadata_id": 134980094,
+    "live_metadata_id": 135281507,
+    "live_reference_code_cells_equal_to_github_reference": true,
+    "live_metadata_caveat": "ライブURLのSDK応答はV1・GPU無効・Internet有効・Input参照なし。GitHubには別idのmetadataと13 Dataset・2 Notebook参照を保存。ソースの23 code cells自体は一致し、liveではmarkdownが1 cell追加されている。採点されたNotebook版・実行設定・Inputsとの対応を確定できない。",
+    "observed_code_findings": [
+      {
+        "finding": "CoAt residualとD4の子処理は例外をcatchして未完走の枝を除外し、そのままfinal CSVへ進める。末尾CSV契約・DINO20・calibratorのgateだけで両CoAt枝の成功を認定しない。",
+        "source": "https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection/blob/1c386ac71385ba7683f550b87a465386ba6c36a8/ref_kernel/rsna-knee-speedy-raptors-coatnet-d4-sota.ipynb",
+        "zero_based_cells": [
+          22,
+          23
+        ]
+      },
+      {
+        "finding": "CoAtの実処理はprivate_alpha=0.45だが末尾監査summaryのinner_public_coat_mix=[0.6,0.4]と一致しない。枝のreceiptは実alphaを記録するので、最終summaryをそのままrecipeの正本にしない。",
+        "source": "https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection/blob/1c386ac71385ba7683f550b87a465386ba6c36a8/ref_kernel/rsna-knee-speedy-raptors-coatnet-d4-sota.ipynb",
+        "zero_based_cells": [
+          22,
+          23
+        ]
+      },
+      {
+        "finding": "Notebookの末尾監査summaryにはscore_recovery_claimed=Falseを含む。READMEの0.940報告と、この保存ソースを採点した実行receipt・提出履歴の直接対応は確認できない。",
+        "source": "https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection/blob/1c386ac71385ba7683f550b87a465386ba6c36a8/ref_kernel/rsna-knee-speedy-raptors-coatnet-d4-sota.ipynb",
+        "zero_based_cells": [
+          23
+        ]
+      },
+      {
+        "finding": "追加腕のblend_weights.pyはgold 58件の所見別AUCとLLMラベルとの差を用いて所見別比率を設定・改訂したと明記する。gold非使用の自作選択経路へ移植しない。",
+        "source": "https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection/blob/1c386ac71385ba7683f550b87a465386ba6c36a8/submit/blend_weights.py"
+      },
+      {
+        "finding": "train_armA.pyでは乱数permutationによる5-foldで、供給report/groupを保つ処理がない。goldが付く検査を全体から除外せず、毎epoch gold AUCをログ表示する。checkpoint保存条件そのものはthresholdしたsoft weak targetに対するmacro AUCであり、gold AUCによる保存と誤記しない。",
+        "source": "https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection/blob/1c386ac71385ba7683f550b87a465386ba6c36a8/train/train_armA.py",
+        "line_ranges": [
+          [
+            349,
+            369
+          ],
+          [
+            383,
+            394
+          ],
+          [
+            456,
+            481
+          ]
+        ]
+      },
+      {
+        "finding": "追加腕は参照アンサンブルと同じRadImageNet系encoderを重ねる。既存系に対する相補性を測らず増設したという作者の反省は検討材料になるが、丸めたPublic 0.941が同じことだけから効果ゼロやnoise floor=0.003を実証したとは扱わない。",
+        "source": "https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection/blob/1c386ac71385ba7683f550b87a465386ba6c36a8/README.md"
+      }
+    ],
+    "license": {
+      "repository_original_code_and_checkpoints": "MIT, per LICENSE",
+      "third_party_components_not_relicensed": true,
+      "reference_notebook": "Repository LICENSE describes upstream Apache 2.0; complete Kaggle historical lineage license not newly established here",
+      "weights": "RadImageNet/DINOv2/CoAtNet/Raptor/head inputs keep their own upstream terms; no redistribution bundle prepared",
+      "source": "https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection/blob/1c386ac71385ba7683f550b87a465386ba6c36a8/LICENSE"
+    },
+    "decision": "現時点では設計・監査資料とする。0.940参照の元Inputs・実行版・全枝receiptが揃った段階で、DINOsaurと別候補として準備する。0.941追加腕やgold由来所見別比率を先に移植しない。"
+  },
+  "files_obtained": [
+    {
+      "repository_path": "README.md",
+      "local_path": "artifacts/research/20261005-public-candidate/ntejas/README.md",
+      "url": "https://raw.githubusercontent.com/NTejas-1/RSNA-Knee-Abnormality-Detection/1c386ac71385ba7683f550b87a465386ba6c36a8/README.md",
+      "sha256": "ec4113c40d25d36c281b80e507964696bad4b1d1f97d1951c994f54b2315e631",
+      "bytes": 31734
+    },
+    {
+      "repository_path": "LICENSE",
+      "local_path": "artifacts/research/20261005-public-candidate/ntejas/LICENSE",
+      "url": "https://raw.githubusercontent.com/NTejas-1/RSNA-Knee-Abnormality-Detection/1c386ac71385ba7683f550b87a465386ba6c36a8/LICENSE",
+      "sha256": "cfd081aca06bd17f9b2a1989f1839d2a3a0615340cc5d20cd75fe441d657bb33",
+      "bytes": 1924
+    },
+    {
+      "repository_path": "ref_kernel/kernel-metadata.json",
+      "local_path": "artifacts/research/20261005-public-candidate/ntejas/ref_kernel/kernel-metadata.json",
+      "url": "https://raw.githubusercontent.com/NTejas-1/RSNA-Knee-Abnormality-Detection/1c386ac71385ba7683f550b87a465386ba6c36a8/ref_kernel/kernel-metadata.json",
+      "sha256": "ad01e2125ed756bc8c20455a5f0d66ab490154ffe94beb59425813d7028554ec",
+      "bytes": 1468
+    },
+    {
+      "repository_path": "ref_kernel/rsna-knee-speedy-raptors-coatnet-d4-sota.ipynb",
+      "local_path": "artifacts/research/20261005-public-candidate/ntejas/ref_kernel/rsna-knee-speedy-raptors-coatnet-d4-sota.ipynb",
+      "url": "https://raw.githubusercontent.com/NTejas-1/RSNA-Knee-Abnormality-Detection/1c386ac71385ba7683f550b87a465386ba6c36a8/ref_kernel/rsna-knee-speedy-raptors-coatnet-d4-sota.ipynb",
+      "sha256": "13b1897adb197988c1ae30954c8d6c4d83c20f854213519d7963902d0b6ce66a",
+      "bytes": 223566
+    },
+    {
+      "repository_path": "push/kernel-metadata.json",
+      "local_path": "artifacts/research/20261005-public-candidate/ntejas/push/kernel-metadata.json",
+      "url": "https://raw.githubusercontent.com/NTejas-1/RSNA-Knee-Abnormality-Detection/1c386ac71385ba7683f550b87a465386ba6c36a8/push/kernel-metadata.json",
+      "sha256": "55220b6192861126ac14431388fe1f950e757ccb74d6b3df8fa67d2b1a360bda",
+      "bytes": 1290
+    },
+    {
+      "repository_path": "push/rsna-knee-dinov2-coatnet-repro.ipynb",
+      "local_path": "artifacts/research/20261005-public-candidate/ntejas/push/rsna-knee-dinov2-coatnet-repro.ipynb",
+      "url": "https://raw.githubusercontent.com/NTejas-1/RSNA-Knee-Abnormality-Detection/1c386ac71385ba7683f550b87a465386ba6c36a8/push/rsna-knee-dinov2-coatnet-repro.ipynb",
+      "sha256": "13b1897adb197988c1ae30954c8d6c4d83c20f854213519d7963902d0b6ce66a",
+      "bytes": 223566
+    },
+    {
+      "repository_path": "out/notebook_blend_full.ipynb",
+      "local_path": "artifacts/research/20261005-public-candidate/ntejas/out/notebook_blend_full.ipynb",
+      "url": "https://raw.githubusercontent.com/NTejas-1/RSNA-Knee-Abnormality-Detection/1c386ac71385ba7683f550b87a465386ba6c36a8/out/notebook_blend_full.ipynb",
+      "sha256": "f420373460efe356acd1e5069e686515d353d55e38d450d5eedc8afb430a6b45",
+      "bytes": 245981
+    },
+    {
+      "repository_path": "submit/blend_weights.py",
+      "local_path": "artifacts/research/20261005-public-candidate/ntejas/submit/blend_weights.py",
+      "url": "https://raw.githubusercontent.com/NTejas-1/RSNA-Knee-Abnormality-Detection/1c386ac71385ba7683f550b87a465386ba6c36a8/submit/blend_weights.py",
+      "sha256": "63cee596edd042b6246b1324b98a6a1f3b43bc8c4762cde8ee718d27d3bbbdbb",
+      "bytes": 5384
+    },
+    {
+      "repository_path": "train/train_armA.py",
+      "local_path": "artifacts/research/20261005-public-candidate/ntejas/train/train_armA.py",
+      "url": "https://raw.githubusercontent.com/NTejas-1/RSNA-Knee-Abnormality-Detection/1c386ac71385ba7683f550b87a465386ba6c36a8/train/train_armA.py",
+      "sha256": "f6f5d9eae3591fa25c9f54ecc73ece18997e922e2b4110ae3ed71d10cd8bfd02",
+      "bytes": 20268
+    }
+  ],
+  "current_action_boundaries": {
+    "model_payloads_downloaded": false,
+    "mri_decoded": false,
+    "label_or_prediction_tables_downloaded": false,
+    "public_notebook_executed": false,
+    "training_started": false,
+    "external_upload_or_submission": false,
+    "credentials_manually_read_copied_or_printed": false
+  },
+  "static_checks_file": "artifacts/research/20261005-public-candidate/static-checks.json",
+  "limitations": [
+    "作者スコアを自己再現値としていない。",
+    "historical Input版・global scriptVersionId・採点CSVとの対応・実効重みhashの全件固定は未完了。",
+    "人工forwardも今回の公開コードでは実行していない。AST構文検査は依存・型・runtime・全枝完走の保証ではない。",
+    "隠しtest推論時間、GPU容量、Kaggleオフライン依存は未実測。例示3件の時間を単純比例しない。",
+    "公開既学習モデルのtrain検査予測を独立OOFと扱わず、相関のみで汎化改善を主張しない。"
+  ]
+}

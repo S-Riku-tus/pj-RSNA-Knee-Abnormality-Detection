@@ -17,7 +17,9 @@
 7. [モデルと検証の設計](docs/experiment-design.md) — ラベル、前処理、分割、改善の順序。
 8. [Kaggleへの提出手順](docs/kaggle-submit.md) — オフライン推論の準備。
 
-10月4日の再分析後、A/B/C比較に加えてfold 1のB/C、通常BN／固定BNの20 epoch対照を完了しました。事前学習の改善は別foldでも確認。fold 0のAUC選択は通常BN 0.784410、固定BN 0.803614で、所見別の改善・悪化が入れ替わります。**2モデルの固定50:50 rank平均はweak AUC 0.830249**ですが、同じfoldを使った後付け診断で、自作Publicは未測定です。全97 unittest・Ruff・凍結コード＋実重みの人工CPU/GPU提出契約が成功。結果・不確かさ・次の採点と入力比較は [対照実験](docs/controlled-experiments.md)、操作は [提出手順](docs/kaggle-submit.md) を参照してください。goldは今回の学習・選択・診断・評価に使っていません。
+10月5日、固定50:50 rank候補r001の**Public 0.749を公式APIで確認**しました。weak AUC 0.830249とは対象・正解が異なります。今後は**Public 0.924の公開学習済みモデルを基準に、公開候補一つの推論比較を最優先**にします。次候補DINOsaur V32は指定5 Inputsを固定し、元の推論ソースに開始・完了検査を加えた[提出用Notebook](artifacts/kaggle/p002-dinosaur-v32-handoff-v2/02_submit_p002.ipynb)を準備済みです。次はユーザーが[操作手順](docs/public-baselines.md#ユーザーが行う操作)に沿ってT4 x2・Internet OFFで保存実行し、成功後に手動提出します。実MRIでの完走と自己採点は未確認です。[段階別計画](docs/research/public-model-strategy-20261005.md)、[提出監査](experiments/submission-audit-20261005.json)。自作ResNet18の追加学習は補完根拠が得られるまで保留します。
+
+10月4日までのA/B/C・fold 1対照・通常BN／固定BNの20 epochは完了済みです。当時の全97 unittest・Ruff・人工CPU/GPU提出契約の成功は [検証履歴](docs/validation.md)、weak評価の詳細は [対照実験](docs/controlled-experiments.md) に残します。公開重みのgold履歴を監査し、自分の学習・選択にgoldを使わない方針を維持します。
 
 ## 大会の要点
 

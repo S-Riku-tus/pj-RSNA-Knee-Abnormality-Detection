@@ -1,0 +1,386 @@
+{
+  "checked_date_jst": "2026-10-05",
+  "checked_at_utc": "2026-10-05T02:01:48.151643+00:00",
+  "candidate_id": "p002-dinosaur-v32-final",
+  "purpose": "Current accessible version candidates for a new pinned configuration. These are NOT historical saved V32 Input versions. No payload downloads, no public-code execution, no uploads or submissions.",
+  "historical_v32_versions_verified": false,
+  "effective_weight_hashes_verified": false,
+  "summary": {
+    "dataset_queries_succeeded": 14,
+    "notebook_output_queries_succeeded": 3,
+    "explicit_model_version_file_listing_succeeded": true,
+    "competition_payload_inventory_queried": false,
+    "nonpublic_or_missing_ref_observed": false,
+    "all_dataset_and_notebook_versions_stable_across_listing": true,
+    "required_artifact_hashes_verified": false,
+    "effective_input_path_resolution_verified": false,
+    "source_filename_check": "All non-glob .pt/.bin/.safetensors/.py/.json literal basenames referring to input assets were found in at least one current inventory. Unmatched JSON names are generated output receipts. This is a basename/text heuristic, not dependency completeness, correct mount resolution, or content compatibility.",
+    "fold_checkpoint_glob_matches": {
+      "dreaddevelopment/raptor-knee-maxspan": [
+        "raptor_ft_coatnet_v5_full_swa.pt"
+      ],
+      "dreaddevelopment/raptor-knee-native384": [
+        "raptor_ft_coatnet_v8_full_swa.pt"
+      ],
+      "dreaddevelopment/raptor-knee-native384dense": [
+        "raptor_ft_coatnet_v10_full.pt"
+      ],
+      "mattiaangeli/knee-mri-fold-weights": [
+        "m_f0.pt",
+        "m_f1.pt",
+        "m_f2.pt",
+        "m_f3.pt",
+        "m_f4.pt"
+      ],
+      "tonylica/rsna-knee-bend-dinov3-0917-repro-assets": [
+        "knee-mri-fold-weights/m_f0.pt",
+        "knee-mri-fold-weights/m_f1.pt",
+        "knee-mri-fold-weights/m_f2.pt",
+        "knee-mri-fold-weights/m_f3.pt",
+        "knee-mri-fold-weights/m_f4.pt",
+        "raptor-knee-maxspan/raptor_ft_coatnet_v5_full_swa.pt",
+        "raptor-knee-native384/raptor_ft_coatnet_v8_full_swa.pt",
+        "raptor-knee-native384dense/raptor_ft_coatnet_v10_full.pt",
+        "rsna-knee-weights/m_f335c812fe.pt"
+      ],
+      "pilkwang/rsna-knee-weights": [
+        "m_f335c812fe.pt"
+      ]
+    },
+    "version_drift": [
+      {
+        "ref": "romantamrazov/rsna-knee-dinosaur-v5-train",
+        "previous_observed_latest": 15,
+        "previous_audit_date_jst": "2026-10-04",
+        "current_observed_latest": 17,
+        "candidate_filename_mentions_current_outputs": false,
+        "interpretation": "This live attachment has changed; no direct current output basename is mentioned in the pinned V32 code. Do not treat live metadata references as proof of an effective V32 dependency."
+      }
+    ],
+    "remaining_blockers": [
+      "Historical V32 saved Input version mapping remains unknown.",
+      "Current files were not downloaded: weight/source/calibration hashes and shape compatibility are unverified.",
+      "Multiple Inputs provide the same checkpoint basenames; full mounted path and expected hash must identify the effective provider.",
+      "All-current Input versions define a new pinned configuration until shown equivalent to the historical recipe; no author-score reproduction claim.",
+      "A model source version was explicitly requested as V1; latest model version was not queried."
+    ],
+    "source_named_file_candidates_note": "Literal basename mentions only; may include generated prediction filenames or unused inherited input references. Not a list of mandatory consumed files."
+  },
+  "evidence": {
+    "path": "artifacts/research/20261005-public-candidate/current-input-inventory.json",
+    "sha256": "2fced34ee82f4d5d91e04d2e32ab36530c9c383baf7bb4efd775000144e6823a"
+  },
+  "inputs": [
+    {
+      "kind": "dataset",
+      "ref": "dreaddevelopment/raptor-knee-maxspan",
+      "current_version": 1,
+      "candidate_pin": "dreaddevelopment/raptor-knee-maxspan/1",
+      "url": "https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-maxspan/versions/1",
+      "license_declaration": "CC0: Public Domain",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 1,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": [
+        "raptor_ft_coatnet_v5_full_swa.pt"
+      ]
+    },
+    {
+      "kind": "dataset",
+      "ref": "dreaddevelopment/raptor-knee-native384",
+      "current_version": 1,
+      "candidate_pin": "dreaddevelopment/raptor-knee-native384/1",
+      "url": "https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-native384/versions/1",
+      "license_declaration": "CC0: Public Domain",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 1,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": [
+        "raptor_ft_coatnet_v8_full_swa.pt"
+      ]
+    },
+    {
+      "kind": "dataset",
+      "ref": "dreaddevelopment/raptor-knee-native384dense",
+      "current_version": 1,
+      "candidate_pin": "dreaddevelopment/raptor-knee-native384dense/1",
+      "url": "https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-native384dense/versions/1",
+      "license_declaration": "CC0: Public Domain",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 1,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": [
+        "raptor_ft_coatnet_v10_full.pt"
+      ]
+    },
+    {
+      "kind": "dataset",
+      "ref": "mattiaangeli/knee-mri-fold-weights",
+      "current_version": 2,
+      "candidate_pin": "mattiaangeli/knee-mri-fold-weights/2",
+      "url": "https://www.kaggle.com/datasets/mattiaangeli/knee-mri-fold-weights/versions/2",
+      "license_declaration": "CC0: Public Domain",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 6,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": []
+    },
+    {
+      "kind": "dataset",
+      "ref": "mattiaangeli/opencv-python-headless-4120088-x86",
+      "current_version": 1,
+      "candidate_pin": "mattiaangeli/opencv-python-headless-4120088-x86/1",
+      "url": "https://www.kaggle.com/datasets/mattiaangeli/opencv-python-headless-4120088-x86/versions/1",
+      "license_declaration": "Unknown",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 1,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": []
+    },
+    {
+      "kind": "dataset",
+      "ref": "marwanmath/resnet-50-radimagenet-marwan",
+      "current_version": 1,
+      "candidate_pin": "marwanmath/resnet-50-radimagenet-marwan/1",
+      "url": "https://www.kaggle.com/datasets/marwanmath/resnet-50-radimagenet-marwan/versions/1",
+      "license_declaration": "CC BY-NC-SA 4.0",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 1,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": [
+        "ResNet50.pt"
+      ]
+    },
+    {
+      "kind": "dataset",
+      "ref": "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+      "current_version": 3,
+      "candidate_pin": "mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3",
+      "url": "https://www.kaggle.com/datasets/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/versions/3",
+      "license_declaration": "CC0: Public Domain",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 21,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": []
+    },
+    {
+      "kind": "dataset",
+      "ref": "tonylica/rsna-knee-bend-dinov3-0917-repro-assets",
+      "current_version": 5,
+      "candidate_pin": "tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5",
+      "url": "https://www.kaggle.com/datasets/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/versions/5",
+      "license_declaration": "Other (specified in description)",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 84,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": [
+        "bundle_manifest.json",
+        "dinov2-small/config.json",
+        "kernel-sources/rsna-knee-e13-train/rsna_rad_e11/v52_e11_heads.pt",
+        "raptor-knee-maxspan/raptor_ft_coatnet_v5_full_swa.pt",
+        "raptor-knee-native384/raptor_ft_coatnet_v8_full_swa.pt",
+        "raptor-knee-native384dense/raptor_ft_coatnet_v10_full.pt",
+        "resnet-50-radimagenet-marwan/ResNet50.pt",
+        "rsna-knee-e9-radimagenet-heads-v15/v52_radimagenet_heads.pt",
+        "rsna-knee-weights/manifest.json"
+      ]
+    },
+    {
+      "kind": "dataset",
+      "ref": "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+      "current_version": 1,
+      "candidate_pin": "antoinegg1/rsna-knee-e11-diverse-heads-v20/1",
+      "url": "https://www.kaggle.com/datasets/antoinegg1/rsna-knee-e11-diverse-heads-v20/versions/1",
+      "license_declaration": "CC BY-NC-SA 4.0",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 9,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": [
+        "v52_e11_heads.pt"
+      ]
+    },
+    {
+      "kind": "dataset",
+      "ref": "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+      "current_version": 3,
+      "candidate_pin": "antoinegg1/rsna-knee-e9-radimagenet-heads-v15/3",
+      "url": "https://www.kaggle.com/datasets/antoinegg1/rsna-knee-e9-radimagenet-heads-v15/versions/3",
+      "license_declaration": "CC BY-NC-SA 4.0",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 9,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": [
+        "v52_radimagenet_heads.pt"
+      ]
+    },
+    {
+      "kind": "dataset",
+      "ref": "pilkwang/rsna-knee-llm-labels",
+      "current_version": 1,
+      "candidate_pin": "pilkwang/rsna-knee-llm-labels/1",
+      "url": "https://www.kaggle.com/datasets/pilkwang/rsna-knee-llm-labels/versions/1",
+      "license_declaration": "CC0: Public Domain",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 2,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": []
+    },
+    {
+      "kind": "dataset",
+      "ref": "renta0426/rsna-knee-public0033-meniscus-bag-v1",
+      "current_version": 2,
+      "candidate_pin": "renta0426/rsna-knee-public0033-meniscus-bag-v1/2",
+      "url": "https://www.kaggle.com/datasets/renta0426/rsna-knee-public0033-meniscus-bag-v1/versions/2",
+      "license_declaration": "Apache 2.0",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 9,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": [
+        "bundle_manifest.json",
+        "public0033_runtime.py"
+      ]
+    },
+    {
+      "kind": "dataset",
+      "ref": "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+      "current_version": 1,
+      "candidate_pin": "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812/1",
+      "url": "https://www.kaggle.com/datasets/prvsiyan/rsna-knee-v52-radimagenet-heads-20260812/versions/1",
+      "license_declaration": "Other (specified in description)",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 2,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": [
+        "v52_radimagenet_heads.pt"
+      ]
+    },
+    {
+      "kind": "dataset",
+      "ref": "pilkwang/rsna-knee-weights",
+      "current_version": 1,
+      "candidate_pin": "pilkwang/rsna-knee-weights/1",
+      "url": "https://www.kaggle.com/datasets/pilkwang/rsna-knee-weights/versions/1",
+      "license_declaration": "CC0: Public Domain",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 23,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": [
+        "manifest.json"
+      ]
+    },
+    {
+      "kind": "notebook_output",
+      "ref": "sofiaanjenje/rsna-knee-e11-train",
+      "current_version": 2,
+      "candidate_pin": {
+        "ref": "sofiaanjenje/rsna-knee-e11-train",
+        "display_version": 2,
+        "version_label": "v2"
+      },
+      "url": "https://www.kaggle.com/code/sofiaanjenje/rsna-knee-e11-train",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 7,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": [
+        "rsna_rad_e11/v52_e11_heads.pt",
+        "submission.csv",
+        "submission_public_0899.csv"
+      ]
+    },
+    {
+      "kind": "notebook_output",
+      "ref": "sofiaanjenje/rsna-knee-e13-train",
+      "current_version": 1,
+      "candidate_pin": {
+        "ref": "sofiaanjenje/rsna-knee-e13-train",
+        "display_version": 1,
+        "version_label": "v1"
+      },
+      "url": "https://www.kaggle.com/code/sofiaanjenje/rsna-knee-e13-train",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 7,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": [
+        "rsna_rad_e11/v52_e11_heads.pt",
+        "submission.csv",
+        "submission_public_0899.csv"
+      ]
+    },
+    {
+      "kind": "notebook_output",
+      "ref": "romantamrazov/rsna-knee-dinosaur-v5-train",
+      "current_version": 17,
+      "candidate_pin": {
+        "ref": "romantamrazov/rsna-knee-dinosaur-v5-train",
+        "display_version": 17,
+        "version_label": "v17"
+      },
+      "url": "https://www.kaggle.com/code/romantamrazov/rsna-knee-dinosaur-v5-train",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 6,
+      "file_listing_complete": true,
+      "version_observation_matches_after_listing": true,
+      "source_named_file_candidates": []
+    },
+    {
+      "kind": "model",
+      "ref": "metaresearch/dinov2/PyTorch/small/1",
+      "current_version": null,
+      "candidate_pin": "metaresearch/dinov2/PyTorch/small/1",
+      "url": "https://www.kaggle.com/models/metaresearch/dinov2/PyTorch/small/1",
+      "available_for_metadata_query": true,
+      "query_performed": true,
+      "file_count": 5,
+      "file_listing_complete": true,
+      "source_named_file_candidates": [
+        "config.json"
+      ]
+    },
+    {
+      "kind": "competition",
+      "ref": "rsna-knee-abnormality-detection",
+      "current_version": null,
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data",
+      "available_for_metadata_query": null,
+      "query_performed": false,
+      "file_count": 0,
+      "file_listing_complete": false,
+      "source_named_file_candidates": []
+    }
+  ],
+  "status": "Current version inventory only; selected effective assets remain unverified. Not an execution-ready pin set.",
+  "notable_change": "DINOsaur V5 train latest is now V17 (V15 observed 2026-10-04); do not equate live refs with saved V32 effective dependencies."
+}

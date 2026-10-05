@@ -1,0 +1,849 @@
+{
+  "schema_version": "p002_effective_inputs_v1",
+  "checked_date_jst": "2026-10-05",
+  "configuration_id": "p002-v32-current-inputs-20261005",
+  "historical_v32_input_reproduction_claimed": false,
+  "scope": "公開metadata・小さいmanifest/runtimeのみ取得して静的照合。MRI・重み・ラベル表・予測payloadを取得せず、公開コードも実行しない。",
+  "source": {
+    "path": "artifacts/research/20261005-public-candidate/kaggle/romantamrazov/rsna-knee-dinosaur-v4-v32/source.ipynb",
+    "sha256": "ba9491ac1e214ba55ca181de55118c9a793fe7f6163fc221fe1e68d596259dca",
+    "display_version": 32,
+    "code_cells": 10
+  },
+  "effective_inputs": [
+    {
+      "key": "consolidated",
+      "kind": "dataset",
+      "ref": "tonylica/rsna-knee-bend-dinov3-0917-repro-assets",
+      "version": 5,
+      "url": "https://www.kaggle.com/datasets/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/versions/5",
+      "root_candidates": [
+        "/kaggle/input/rsna-knee-bend-dinov3-0917-repro-assets",
+        "/kaggle/input/datasets/tonylica/rsna-knee-bend-dinov3-0917-repro-assets"
+      ],
+      "files": [
+        {
+          "path": "bundle_manifest.json",
+          "bytes": 26322,
+          "sha256": "3b6279ab50ca8c3ce100644eadda9bc14e0359c05120990e28a43edc6a5364a8",
+          "role": "publisher_hash_manifest",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": true,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/manifest.json",
+          "bytes": 42477,
+          "sha256": "496949a3a3e789bc1f4ccff595205c911e471c5b5ef669366a2dd0a58e125844",
+          "role": "dino20_member_manifest",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/rsna-knee-weights/manifest.json",
+          "payload_verified_locally": true,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_44128e3ff3.pt",
+          "bytes": 89295866,
+          "sha256": "4b49cac5102e66cbf96210c29b17e35501b4cf8b69d058a8e791199aea25e89a",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_1e553ba481.pt",
+          "bytes": 89286714,
+          "sha256": "72b293b7199bedc038d26fa5453360752541714f5b023b8910e7e90dd435f8e4",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_e5427d6c21.pt",
+          "bytes": 89306234,
+          "sha256": "7223cd50ae5e7bdc8d3ffe888ab207bdbb2256d06e33f96e7a709eca5d86ab33",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_7f8321affc.pt",
+          "bytes": 89296634,
+          "sha256": "ee66cea7f13b09fb8b710decce196ef0a8dc072dc0a9bccd65554f9014dc40c2",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_013dc75703.pt",
+          "bytes": 89293562,
+          "sha256": "36d513243ebb22f2e8c5ded08cdb36932537bd700c49497a158ab7b3883d09b5",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_2dce50ebd9.pt",
+          "bytes": 89295866,
+          "sha256": "0b8d57e7d6e160f95f9525d9a46a643691478fe63d25429cd4755e8d5567fcd4",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_91f171fe6f.pt",
+          "bytes": 89286970,
+          "sha256": "fb40a77c1f19b70cbff241f1570adabc5517f0b11fabae30c5ca142bbfc7af19",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_d47313baef.pt",
+          "bytes": 89306554,
+          "sha256": "f79e7202e94cd15f057becb0f7f86123ae90472f625397b95a6a00d6ff34fa1f",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_72081758ce.pt",
+          "bytes": 89296634,
+          "sha256": "e895398d69fab80eff3a93be93e1c5673d87291abd1fb421e6210c82847b7423",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_8baecb9d1b.pt",
+          "bytes": 89293818,
+          "sha256": "321de45924ceed510d51a23cc6d462591e02825a6f5ff06beac48adc570c7621",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_44bc3c6f14.pt",
+          "bytes": 89295866,
+          "sha256": "2cbdee353893131b73148b446f1e9b3fb4ee61595ab6145e854968125f47f20e",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_8476b29285.pt",
+          "bytes": 89286970,
+          "sha256": "ea81c3eabc916286b6d73a26645b1feefb1b6511ff6e84e1a1559933a27786ae",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_5f8ba4c5ea.pt",
+          "bytes": 89306554,
+          "sha256": "6267820f18b5ee7ab4672f7f8868949a86b1d5801224820927b9555304261fde",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_b7c37cc80e.pt",
+          "bytes": 89296634,
+          "sha256": "f54e85607e55ea8da5cc4582d6d9a3fec1ee3852f57a11f63a27db88f5824c2d",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_2f7e785e82.pt",
+          "bytes": 89293818,
+          "sha256": "7090a090d38bb82dac4aad78b98f0cb3a54960ff5a009adc2a6718478b5fa32c",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_ed427aa10a.pt",
+          "bytes": 89295866,
+          "sha256": "ee8fe9a48061f0f6215bf7766dc0b705fbac2afe753e57828ab8842ee7f683b3",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_f335c812fe.pt",
+          "bytes": 89286970,
+          "sha256": "dfc23ad8dbdf636ad72a19dbbf6cfa5434379d30d4d94caba8b33a56425b92c3",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_ea3fbf6edf.pt",
+          "bytes": 89306554,
+          "sha256": "5558228ee3099311a5ab9ad573b0861773428cf1ed537bd6f388d866be292d7c",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_84079fe8cb.pt",
+          "bytes": 89296634,
+          "sha256": "ad3e21e73ae400b5c536936d2acbe8344487345b5358cdfb655758eceef41958",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-weights/m_3d1f4c48fc.pt",
+          "bytes": 89293818,
+          "sha256": "c913e392c89e406123efbaeea5fa3048101621947eebd77c206d7ec5682c7e35",
+          "role": "dino20_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "knee-mri-fold-weights/m_f0.pt",
+          "bytes": 94000039,
+          "sha256": "b447a665a92ed65e0f4cacf6800940ba7a6d585d0c36154ce18dee60ec48d5cd",
+          "role": "dinov3_fold_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "knee-mri-fold-weights/m_f1.pt",
+          "bytes": 94000039,
+          "sha256": "30bbe5f9afa24af57fd69bad293a4b9fe3ca2e1d737381bc06e469c5ed380e76",
+          "role": "dinov3_fold_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "knee-mri-fold-weights/m_f2.pt",
+          "bytes": 94000039,
+          "sha256": "5bdc4f72471e7c5db01f2f919ba39212087cbb5f2f76b619e4ba38446800b782",
+          "role": "dinov3_fold_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "knee-mri-fold-weights/m_f3.pt",
+          "bytes": 94000039,
+          "sha256": "f757ddc9531f903c6cd0729cadc7051fcdca03b281c89c39cc7957ab44fc2243",
+          "role": "dinov3_fold_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "knee-mri-fold-weights/m_f4.pt",
+          "bytes": 94000039,
+          "sha256": "066490a5c17b3887d1bfda1427f45b14cab416e7b1dcc16afc9a003cdcc08aad",
+          "role": "dinov3_fold_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "resnet-50-radimagenet-marwan/ResNet50.pt",
+          "bytes": 94345733,
+          "sha256": "08629f7e7bd3e29b8ee9522ca3f65ce4d010a7ddf74f0ea3c7e3f3d0bbab0734",
+          "role": "radimagenet_encoder",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "rsna-knee-e9-radimagenet-heads-v15/v52_radimagenet_heads.pt",
+          "bytes": 63525150,
+          "sha256": "0f465649799ecfbccaac1767844639e7ced44e1bc9babde6e4bac7c5d9b89eaa",
+          "role": "rad_v15_five_heads",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "kernel-sources/rsna-knee-e13-train/rsna_rad_e11/v52_e11_heads.pt",
+          "bytes": 63534726,
+          "sha256": "ad9f19af73bfdf4e49263c0e45060dc3cb239e1195039b26dc8c0a3a6bcd1a8a",
+          "role": "rad_e13_five_heads",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "raptor-knee-maxspan/raptor_ft_coatnet_v5_full_swa.pt",
+          "bytes": 292831426,
+          "sha256": "20d45e0732a0e9120025d0172a4d2dd0170900bc250b06742dfb7ae08a63786a",
+          "role": "raptor_maxspan_and_reverse_shared_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "raptor-knee-native384/raptor_ft_coatnet_v8_full_swa.pt",
+          "bytes": 292831426,
+          "sha256": "3db77388662d516bb0ce790dafd24e36f4991f6089af26daf546817fe1c21862",
+          "role": "raptor_native384_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "raptor-knee-native384dense/raptor_ft_coatnet_v10_full.pt",
+          "bytes": 292829892,
+          "sha256": "5add8816a47e040efca89bb44480e1cbd01f92db1253831ff7ceb6c65ee02b1d",
+          "role": "raptor_native384dense_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "opencv-python-headless-4120088-x86/opencv_python_headless-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+          "bytes": 54023419,
+          "sha256": "236c8df54a90f4d02076e6f9c1cc763d794542e886c576a6fee46ec8ff75a7a9",
+          "role": "offline_opencv_wheel",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        }
+      ],
+      "role": "V32 ASSET: DINO20、DINOv3 5fold、Rad encoder/heads、Raptor 3重み、OpenCV wheel"
+    },
+    {
+      "key": "specialist",
+      "kind": "dataset",
+      "ref": "renta0426/rsna-knee-public0033-meniscus-bag-v1",
+      "version": 2,
+      "url": "https://www.kaggle.com/datasets/renta0426/rsna-knee-public0033-meniscus-bag-v1/versions/2",
+      "root_candidates": [
+        "/kaggle/input/rsna-knee-public0033-meniscus-bag-v1",
+        "/kaggle/input/datasets/renta0426/rsna-knee-public0033-meniscus-bag-v1"
+      ],
+      "files": [
+        {
+          "path": "bundle_manifest.json",
+          "bytes": 9163,
+          "sha256": "b610229f046fe0f27ec8dcf661c5532d4991427428378975d0443da671607945",
+          "role": "specialist_bundle_manifest",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/bundle_manifest.json",
+          "payload_verified_locally": true,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "checkpoint_epoch30.safetensors",
+          "bytes": 347965736,
+          "sha256": "e1443bb0f518418a31428cd7eb153f15af4c48c7175baf1f9d21c84f1c2a93e7",
+          "role": "specialist_checkpoint",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "checkpoint_epoch30.safetensors.json",
+          "bytes": 564,
+          "sha256": "42d1e4de3c19b00d891732441e8cd8be155848c1558ba7963361098986c7126c",
+          "role": "specialist_contract_or_configuration",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/bundle_manifest.json",
+          "payload_verified_locally": true,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "dinov2_config.json",
+          "bytes": 548,
+          "sha256": "f7ff4cfa73d2f70647dbf6950541ad25d73082d54c2e7e9bded160c7656b2a70",
+          "role": "specialist_contract_or_configuration",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/bundle_manifest.json",
+          "payload_verified_locally": true,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "fullfit0033_meniscus_bag.yaml",
+          "bytes": 5854,
+          "sha256": "142dc28a42d419583bd1355877b17d02154b8df391a71b6361320b2c3c1e9c71",
+          "role": "specialist_contract_or_configuration",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "public0033_meniscus10_residual.yaml",
+          "bytes": 8131,
+          "sha256": "460442d3c093b8d393b344b2ccca989621482f650de5d8966599086b6d9e5e11",
+          "role": "specialist_contract_or_configuration",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "public0033_runtime.py",
+          "bytes": 42887,
+          "sha256": "9541f82a993d7dc2942ca2a5112e110471285f8d80701846079a3dc708761683",
+          "role": "specialist_runtime",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/bundle_manifest.json",
+          "payload_verified_locally": true,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "run_contract.json",
+          "bytes": 6607,
+          "sha256": "107ef5133238dc514eb990bf75e05a0c5d8262873c95158957565bdc7278e11f",
+          "role": "specialist_contract_or_configuration",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/bundle_manifest.json",
+          "payload_verified_locally": true,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "task_complete.json",
+          "bytes": 979,
+          "sha256": "ec97ee4064d8b3219b8ba677719d80d31b25968d3737100887a88da7610a9528",
+          "role": "specialist_contract_or_configuration",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/bundle_manifest.json",
+          "payload_verified_locally": true,
+          "verify_payload_at_kaggle_preflight": true
+        }
+      ],
+      "role": "半月板specialist、唯一の外部実行runtime、2枚T4上のFP32推論",
+      "optional_control_plane_file": "dataset-metadata.json: Kaggleはmountしない。V2 runtimeは欠落を許容し、存在すればhash検査する。"
+    },
+    {
+      "key": "dinov2_base",
+      "kind": "model",
+      "ref": "metaresearch/dinov2/PyTorch/small/1",
+      "version": 1,
+      "url": "https://www.kaggle.com/models/metaresearch/dinov2/frameworks/PyTorch/variations/small/versions/1",
+      "root_candidates": [
+        "/kaggle/input/models/metaresearch/dinov2/pytorch/small/1"
+      ],
+      "files": [
+        {
+          "path": "config.json",
+          "bytes": 547,
+          "sha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "role": "dinov2_base_local_asset",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "pytorch_model.bin",
+          "bytes": 88297097,
+          "sha256": "1051e25b2ed69ddad24f3c41e7b6eed6e7f7d012103ea227e47eb82e87dc2050",
+          "role": "dinov2_base_local_asset",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "preprocessor_config.json",
+          "bytes": 436,
+          "sha256": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828",
+          "role": "dinov2_base_local_asset",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        }
+      ],
+      "role": "V32の固定DINOパス。AutoModel.from_pretrainedでローカル初期モデルをロードする。",
+      "hash_provenance_caveat": "Tonylica V5 manifestが同じMeta Model V1由来と宣言するコピーのhashを期待値にする。Meta model payload自体は取得しておらず、Kaggleで一致必須。"
+    },
+    {
+      "key": "offline_timm",
+      "kind": "dataset",
+      "ref": "mattiaangeli/knee-mri-fold-weights",
+      "version": 2,
+      "url": "https://www.kaggle.com/datasets/mattiaangeli/knee-mri-fold-weights/versions/2",
+      "root_candidates": [
+        "/kaggle/input/knee-mri-fold-weights",
+        "/kaggle/input/datasets/mattiaangeli/knee-mri-fold-weights"
+      ],
+      "files": [
+        {
+          "path": "timm-1.0.22-py3-none-any.whl",
+          "bytes": 2530238,
+          "sha256": "888981753e65cbaacfc07494370138b1700a27b1f0af587f4f9b47bc024161d0",
+          "role": "offline_timm_wheel",
+          "required": true,
+          "payload_verified_locally": false,
+          "hash_evidence": "https://pypi.org/pypi/timm/1.0.22/json の同名wheel SHA-256。Kaggle V2一覧と名前・bytes一致。Kaggle実行で一致必須。"
+        }
+      ],
+      "role": "追加setup cellのtimm 1.0.22 offline wheel。V32本体はこのmountの5重みを使わない。",
+      "collision_analysis": "DINOv3 CKPT globはASSET/knee-mri-fold-weights/*_f*.ptに限定。追加Datasetのm_f*.ptは選択されない。Raptor basenameやspecialist manifestとも衝突しない。"
+    },
+    {
+      "key": "competition",
+      "kind": "competition",
+      "ref": "rsna-knee-abnormality-detection",
+      "version": null,
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data",
+      "root_candidates": [
+        "/kaggle/input/rsna-knee-abnormality-detection",
+        "/kaggle/input/competitions/rsna-knee-abnormality-detection"
+      ],
+      "files": [
+        {
+          "path": "train.csv",
+          "bytes": null,
+          "sha256": null,
+          "role": "capacity_planning_row_count_only_no_label_selection",
+          "required": true
+        },
+        {
+          "path": "test.csv",
+          "bytes": null,
+          "sha256": null,
+          "role": "test_study_identity",
+          "required": true
+        },
+        {
+          "path": "test_series.csv",
+          "bytes": null,
+          "sha256": null,
+          "role": "test_series_geometry",
+          "required": true
+        },
+        {
+          "path": "sample_submission.csv",
+          "bytes": null,
+          "sha256": null,
+          "role": "submission_target_order",
+          "required": true
+        }
+      ],
+      "required_directories": [
+        "test_series"
+      ],
+      "role": "競技入力。DINO cellはtest_series直下を使うため、test_imagesだけの代替mountを承認しない。",
+      "runtime_identity_note": "visibleとhidden testの件数・hashは異なる。モデル資産hashと別記録しhidden testをvisible値で拒否しない。"
+    }
+  ],
+  "effective_input_count": 5,
+  "prediction_input_minimum_count": 4,
+  "omitted_original_references": [
+    {
+      "ref": "dreaddevelopment/raptor-knee-maxspan",
+      "reason": "Tonylica V5内の同名重みをhash固定。単体mountを外してdirect-firstの選択先を一つにする。"
+    },
+    {
+      "ref": "dreaddevelopment/raptor-knee-native384",
+      "reason": "Tonylica V5内の同名重みをhash固定。"
+    },
+    {
+      "ref": "dreaddevelopment/raptor-knee-native384dense",
+      "reason": "Tonylica V5内の同名重みをhash固定。"
+    },
+    {
+      "ref": "mattiaangeli/opencv-python-headless-4120088-x86",
+      "reason": "同wheelがTonylica V5内にありhash宣言もある。"
+    },
+    {
+      "ref": "marwanmath/resnet-50-radimagenet-marwan",
+      "reason": "V32はASSET/resnet-50-radimagenet-marwan/ResNet50.ptを直接選択。"
+    },
+    {
+      "ref": "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+      "reason": "V32の10 code cellsでresgatedモデル/runtimeは未使用。V35など別recipeと混同しない。"
+    },
+    {
+      "ref": "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+      "reason": "V32はASSET内E13頭をhashで指定。独立E11 Datasetは参照しない。"
+    },
+    {
+      "ref": "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+      "reason": "V32はASSET内E9頭をhashで指定。"
+    },
+    {
+      "ref": "pilkwang/rsna-knee-llm-labels",
+      "reason": "推論でreport_labels_v2.csv/api_labeler.pyを開かない。"
+    },
+    {
+      "ref": "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+      "reason": "V32はASSET内E9頭をhashで指定。"
+    },
+    {
+      "ref": "pilkwang/rsna-knee-weights",
+      "reason": "V32はASSET/rsna-knee-weightsだけを参照。"
+    },
+    {
+      "ref": "sofiaanjenje/rsna-knee-e11-train",
+      "reason": "Notebook Outputを動的探索しない。ASSET内E13を使用。"
+    },
+    {
+      "ref": "sofiaanjenje/rsna-knee-e13-train",
+      "reason": "ASSET内コピーを固定するので元Notebook Outputを別追加しない。"
+    },
+    {
+      "ref": "romantamrazov/rsna-knee-dinosaur-v5-train",
+      "reason": "V32内にdinov5_adapt等の利用なし。V5学習Outputは不要。"
+    }
+  ],
+  "original_reference_count": 19,
+  "dino20_members": [
+    {
+      "id": "44128e3ff3",
+      "file": "m_44128e3ff3.pt",
+      "fold": 0,
+      "seed": 2026,
+      "source_run": "base-s336x12"
+    },
+    {
+      "id": "1e553ba481",
+      "file": "m_1e553ba481.pt",
+      "fold": 1,
+      "seed": 2026,
+      "source_run": "base-s336x12"
+    },
+    {
+      "id": "e5427d6c21",
+      "file": "m_e5427d6c21.pt",
+      "fold": 2,
+      "seed": 2026,
+      "source_run": "base-s336x12"
+    },
+    {
+      "id": "7f8321affc",
+      "file": "m_7f8321affc.pt",
+      "fold": 3,
+      "seed": 2026,
+      "source_run": "base-s336x12"
+    },
+    {
+      "id": "013dc75703",
+      "file": "m_013dc75703.pt",
+      "fold": 4,
+      "seed": 2026,
+      "source_run": "base-s336x12"
+    },
+    {
+      "id": "2dce50ebd9",
+      "file": "m_2dce50ebd9.pt",
+      "fold": 0,
+      "seed": 7717,
+      "source_run": "base-s336x12-seed2"
+    },
+    {
+      "id": "91f171fe6f",
+      "file": "m_91f171fe6f.pt",
+      "fold": 1,
+      "seed": 7717,
+      "source_run": "base-s336x12-seed2"
+    },
+    {
+      "id": "d47313baef",
+      "file": "m_d47313baef.pt",
+      "fold": 2,
+      "seed": 7717,
+      "source_run": "base-s336x12-seed2"
+    },
+    {
+      "id": "72081758ce",
+      "file": "m_72081758ce.pt",
+      "fold": 3,
+      "seed": 7717,
+      "source_run": "base-s336x12-seed2"
+    },
+    {
+      "id": "8baecb9d1b",
+      "file": "m_8baecb9d1b.pt",
+      "fold": 4,
+      "seed": 7717,
+      "source_run": "base-s336x12-seed2"
+    },
+    {
+      "id": "44bc3c6f14",
+      "file": "m_44bc3c6f14.pt",
+      "fold": 0,
+      "seed": 20260808,
+      "source_run": "base-s336x12-seed3"
+    },
+    {
+      "id": "8476b29285",
+      "file": "m_8476b29285.pt",
+      "fold": 1,
+      "seed": 20260808,
+      "source_run": "base-s336x12-seed3"
+    },
+    {
+      "id": "5f8ba4c5ea",
+      "file": "m_5f8ba4c5ea.pt",
+      "fold": 2,
+      "seed": 20260808,
+      "source_run": "base-s336x12-seed3"
+    },
+    {
+      "id": "b7c37cc80e",
+      "file": "m_b7c37cc80e.pt",
+      "fold": 3,
+      "seed": 20260808,
+      "source_run": "base-s336x12-seed3"
+    },
+    {
+      "id": "2f7e785e82",
+      "file": "m_2f7e785e82.pt",
+      "fold": 4,
+      "seed": 20260808,
+      "source_run": "base-s336x12-seed3"
+    },
+    {
+      "id": "ed427aa10a",
+      "file": "m_ed427aa10a.pt",
+      "fold": 0,
+      "seed": 31337,
+      "source_run": "base-s336x12-seed4"
+    },
+    {
+      "id": "f335c812fe",
+      "file": "m_f335c812fe.pt",
+      "fold": 1,
+      "seed": 31337,
+      "source_run": "base-s336x12-seed4"
+    },
+    {
+      "id": "ea3fbf6edf",
+      "file": "m_ea3fbf6edf.pt",
+      "fold": 2,
+      "seed": 31337,
+      "source_run": "base-s336x12-seed4"
+    },
+    {
+      "id": "84079fe8cb",
+      "file": "m_84079fe8cb.pt",
+      "fold": 3,
+      "seed": 31337,
+      "source_run": "base-s336x12-seed4"
+    },
+    {
+      "id": "3d1f4c48fc",
+      "file": "m_3d1f4c48fc.pt",
+      "fold": 4,
+      "seed": 31337,
+      "source_run": "base-s336x12-seed4"
+    }
+  ],
+  "dynamic_resolution": [
+    {
+      "function": "find_dinov2",
+      "selection": "固定Meta Model V1 path。Tonylica内dinov2-smallは本体から未参照。"
+    },
+    {
+      "function": "infer_from_package",
+      "selection": "ASSET/rsna-knee-weights/manifest.jsonの20 membersのみ。"
+    },
+    {
+      "function": "CKPT.glob('*_f*.pt')",
+      "selection": "ASSET/knee-mri-fold-weightsにm_f0..m_f4だけが必要。余分な一致ファイルを拒否。"
+    },
+    {
+      "function": "_rad_find_file",
+      "selection": "埋込み3 SHAとASSET内の明示パスの固定対応。env/独立mountでは上書きしない。"
+    },
+    {
+      "function": "find_weight_file",
+      "selection": "direct mount優先後に/kaggle/input/*配下再帰glob。推奨5 Inputでは各Raptor basenameの一致がTonylica内一つだけ。"
+    },
+    {
+      "function": "_p33_find_bundle",
+      "selection": "bundle_manifest schema=public0033_meniscus10_bundle_v1の一致が1つのみ。Renta V2をruntime sha確認後exec_module。Tonylica manifestはschemaが異なるので対象外。"
+    },
+    {
+      "function": "public0033_runtime.verify_bundle",
+      "selection": "Renta V2のmanifest記載全9ファイル（manifest自身を除く8+任意dataset-metadata）のうち公開mountにある8を確認。学習コードimportなし。"
+    },
+    {
+      "function": "V18 calibrator",
+      "selection": "V32 codeに埋込みbase64/zlib JSON。Tonylica calibration.json/pipeline/recipe.jsonは実行に不使用。"
+    }
+  ],
+  "mandatory_preflight_gates": [
+    "推奨5 Inputsだけをmountし、版選択を記録。現在版pinを過去V32保存Input版と呼ばない。",
+    "2枚Tesla T4、CUDA、Internet OFF。Renta runtimeが2xT4/FP32を要求する。",
+    "全有効モデル・manifest・runtime/configをbytes+SHAで照合。公開宣言hashとローカル実測hashを区別。",
+    "DINO20 manifestは20一意member、DINOv3 globは厳密に5ファイル、Raptor basenameは一意、specialist bundleは一意。",
+    "競技test.csv/test_series.csv/test_seriesを確認し、train側fallbackを許可しない。Report内容へ依存しない。",
+    "timm 1.0.22と必要module/decoderのオフライン準備を終える。環境不足時は推論前に停止。"
+  ],
+  "mandatory_completion_gates": [
+    "DINO20全public-frontier票、fingerprint tolerance成功、途中window短縮・member放棄なし。",
+    "specialist status=passed、2GPU FP32の全検査完了。",
+    "DINOv3 5fold全studyが有限、_a5_ok全true。Rad2系統各5heads読込とV18 calibrator適用。",
+    "Raptor4armの各study完走。sourceはcatchして0.5に残すためFALLBACKログがないことを追加検査。",
+    "infra0021/public0033_overlay/dinosaur_v4_v6 receipt成功。最終CSVとV6 candidateとreceipt hash一致。",
+    "12対象順、UID順、有限値、0〜1範囲。visible採点準備とhidden本番成功を区別。"
+  ],
+  "local_static_verification": {
+    "weight_payloads_downloaded": false,
+    "mri_decoded": false,
+    "third_party_runtime_executed": false,
+    "kaggle_run_completed": false,
+    "current_configuration_scored": false
+  },
+  "metadata_download_record": "artifacts/research/20261005-p002-inputs/metadata-download-record.json"
+}

@@ -1,6 +1,30 @@
 # 準備内容の検証範囲
 
-更新日 2026年10月4日 JST。全件キャッシュ転送、weakラベルの監査・固定分割、A/B/C対照に続き、fold 1の初期化対照2本とfold 0の20 epoch対照2本を完了した。固定50:50 rank ensembleの追加診断とローカル提出準備も進めた。以下は新しい確認から順に記し、過去の「未実施」は各作業時点の履歴として残す。
+更新日 2026年10月5日 JST。r001のPublic採点を確認し、公開モデル中心の計画へ更新した。以下は新しい確認から順に記し、過去の「未実施」は各作業時点の履歴として残す。
+
+## p002の手動保存実行へ渡す準備（10月5日、完了）
+
+- ユーザーが提出を担当する方針に従い、[handoff-v2 Notebook](../artifacts/kaggle/p002-dinosaur-v32-handoff-v2/02_submit_p002.ipynb)と[操作手順](public-baselines.md#ユーザーが行う操作)を作成した。状態は`prepared_for_manual_saved_run_not_executed`で、Kaggle実行成功や採点準備の検査通過を意味しない。元source-only候補とhandoff-v1は上書きせず履歴として保持する。[今回の記録](../experiments/p002-handoff-20261005.json)。
+- 元19 Input参照を元V32の実ファイル解決まで追跡し、Tonylica Dataset 5、Renta Dataset 2、Meta DINOv2-small Model 1、Mattia fold Dataset 2のtimm wheel、公式競技の5 Inputsへ固定した。[対応表](research/p002-effective-inputs-20261005.json)には公開資産47件の期待bytes/hashと除外理由がある。配布manifest等のhash宣言であり、未取得の重みpayloadをローカルで検証したとは扱わない。公開した小さいコード・manifest等だけ取得し、モデル・MRI・予測payloadは取得しなかった。
+- 固定したRenta runtimeも静的確認し、T4 x2・FP32・2partitionを要求することを確認した。元Notebookの数値処理とBF16設定を保持し、timm 1.0.22だけhash検査済み添付wheelから`--no-index --no-deps`で固定する構成。他ライブラリはimport/APIを検査して実版を保存する。[環境・利用条件](research/p002-environment-20261005.json)。実際のKaggleイメージとの互換性は未確認。
+- [生成スクリプト](../scripts/build_public_candidate.py)はネット接続や公開推論ソースの実行を行わず、元10セルのソースをそのまま文字列として埋め込み、[追加検査](../scripts/public_candidate_guard.py)から共通globalsで順番に実行する。開始・完了の2セルを加え、計12 code cells。NotebookをASTから逆に読んで元ソース10本との完全一致、埋込みguard/contractの一致、全コードの構文、未実行状態を確認した。再生成Notebookのbyte一致と既存ディレクトリ上書き拒否も確認。[静的QA](../artifacts/qa/20261005-p002-handoff-v2/checks.json)。
+- 追加検査はfresh working、指定Inputのhash、余分なInput拒否、test mount、DINO 20 member・A5 5 fold・Raptor 4 armの完走とraw値、fallback拒否、固定校正器の適用、4 receipt、UID/所見順/値域、親・control・V6出力のhash連鎖を確認する。元のCSVを途中で生成しても、必須分岐が欠ければ成功としない。失敗時はこの実行で作ったCSVを`.disabled`へ退避し、既存実験の成果物は保持する。指定mount内のMRI treeを追加のmount検査で走査しないことも人工テストで確認した。
+- 新規44件を含む**全141 unittestが成功（13.080秒）**。新規テストは人工CSV・配列・ソースstubだけで、公開モデルは実行していない。既存成果物保持、hash/パス/順序の拒否、member不足・NaN/Inf・fallback・重複イベント、receipt型/形状/UID/hash、変更禁止列を検査した。追加3 PythonファイルのRuff check/formatとgit diff --checkも成功。
+- 最終NotebookのSHA-256は`f5075c34fd389277d2aa6acb3dd3f87275485d60a8796a91d22060a46c4d70b4`。元V32 SHAは`ba9491ac1e214ba55ca181de55118c9a793fe7f6163fc221fe1e68d596259dca`で不変。GPUモデルの実装・ローカル学習コード・既存run/cacheを変更していない。実MRI処理・公開モデルforward・学習・アップロード・代理提出は行っていない。
+- 残る確認はユーザーのKaggle保存実行での全分岐完走と、手動Submit後の隠しtest時間・実測Public。`P002_READY.json`は保存実行の検査結果であり、隠しtestの完走や作者0.937再現、p001 0.924超えの証拠ではない。自己Publicはnull、台帳のpublic_lbは空欄のまま記録する。
+
+## 公開モデルへの主軸変更と候補準備（10月5日）
+
+- 添付分析をHEAD `ea27fbdc37f4b4119332bb83af22fce0b31b15bc`の実装・台帳・公開監査と照合し、[原文](research/user-analysis-public-model-20261005.txt)を保存した。[現行計画](research/public-model-strategy-20261005.md)に、既存0.924保持→公開候補一つ→元方式との同値性→互換cache→一要因改善の順序と採否条件を記録した。BNの別fold追試、長期化、192px crop全件化は当面保留。既存run/cache/重みを変更していない。
+- 公式SDKのread-only要求でp001 Public 0.924（ref 56766978、scriptVersionId 354569007）とr001 Public 0.749（ref 56826389、scriptVersionId 355188174）をCOMPLETEとして確認。r001提出は10月4日23:27:19 JST。台帳へ追記し、[監査記録](../experiments/submission-audit-20261005.json)に詳細を保存した。weak 0.830249とPublic 0.749は別の評価である。
+- p001 V1とr001 V3を明示指定してソースを新規保存した。版別Output URLの識別子も提出URLのglobal IDと一致するが、型付きの直接対応フィールドではないことを明示。p001成功ソースのhashは`3ec3a18fd97746e4ee44bf424775e902362ea45a25483861bbb78767c9d4b68e`。140mm/336px/64枚/42窓を確認し、384pxとCoAtNet型はcheckpoint情報で上書きされ得るfallbackとして記録した。歴史的Input版、配布重みhash、隠しtest時間は未確認で、取得済みのように扱わない。
+- p001ソースのgoldによる過去のarm選択・比較の記述は作者の沿革自己申告として保存した。公開重みの競技利用と独立評価を分け、自分のgold学習・checkpoint/混合係数選択は禁止を維持。後付けfold、encoder凍結、pseudo-labelでも既学習検査への露出は消えない。
+- [NTejas一次資料](https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection/tree/1c386ac71385ba7683f550b87a465386ba6c36a8)を固定commitで確認し、0.940/0.941は作者報告と記録。参照コードの実混合比と末尾summaryの不一致、失敗分岐継続、保存版/Input不明を確認した。DINOsaur V32は既存保存sourceと再取得SHA-256が一致し、最初の候補p002に選定。[候補監査](research/public-candidate-review-20261005.json)。
+- [未実行候補Notebook](../artifacts/research/20261005-public-candidate/dinosaur-v32-final-candidate.ipynb)は元の10 code cellが完全一致し、変更は出力履歴・実行番号の消去とJSON再保存のみ。最終`submission.csv`はV6 overlay候補に固定し、保存0.937 controlと区別した。[manifest](../artifacts/research/20261005-public-candidate/candidate-manifest.json)に19 Input参照と未確認版、必要receipt、GPU metadata矛盾を記録。`ready_for_scoring=false`、自己Publicはnull。作者が採点したCSVと歴史的Input版が未確定なので、0.937再現済みとはしない。[実験計画](../experiments/p002-dinosaur-v32-plan-20261005.json)。
+- V32を静的に確認した範囲では、実行時のgold評価・係数fit・checkpoint選択・学習はなく固定係数を適用する。容量計画にはtrain.csv全列を読んだ件数だけを使い、Report列は参照しない。test_series不存在時のtrain側CSV fallbackを確認し、test mountと実効runtimeのhash確認を次の条件に追加した。外部Inputの版未固定のため、全依存の実行時挙動を監査完了とはしていない。
+- [現在のInput版一覧](research/public-current-inputs-20261005.json)を追加取得。14 Dataset・3 Notebook Outputは取得前後の版が一致し、Model V1を含む195ファイルの名前・サイズを確認した。payloadは未取得。DINOsaur V5 trainは前日V15→V17で、live参照とV32の実効依存を同一視しない。歴史版・有効ファイルhash・実互換性は未確認のまま明記した。
+- 今回の検査はソースhash、構文、候補code不変性、未実行状態、JSON/CSV、資料リンク・差分の確認。結果は [今回の検査記録](../experiments/public-strategy-verification-20261005.json)。調査JSONの日本語破損をレビューで発見してUTF-8で修正し、ソースhash不変を確認した。GPUコードを変更していないため97 unittestや人工CUDAを再実行せず、10月4日の成功履歴と区別する。
+- 認証情報の手動読取り/コピー、実画像・ラベル・モデル・予測payloadの取得、実MRI decode、学習、公開コード実行、アップロード、代理提出は行っていない。取得はNotebook/公開コード・metadataのみ。今後の実行操作は [公開モデル手順](public-baselines.md) を参照する。
 
 ## Kaggle Version 3の表示用test実行（10月4日、完了）
 

@@ -1,0 +1,108 @@
+{
+  "schema_version": "p002_v32_static_output_contract_v1",
+  "checked_date_jst": "2026-10-05",
+  "scope": "静的なソース・既存マニフェスト調査。公開推論コードの実行、MRIデコード、重み取得、学習、アップロード、提出は実施していない。ここに記す追加guardは設計であり、実装・テストの結果は別記録とする。",
+  "source": {
+    "path": "artifacts/research/20261005-public-candidate/kaggle/romantamrazov/rsna-knee-dinosaur-v4-v32/source.ipynb",
+    "sha256": "ba9491ac1e214ba55ca181de55118c9a793fe7f6163fc221fe1e68d596259dca",
+    "ref": "romantamrazov/rsna-knee-dinosaur-v4",
+    "version": 32,
+    "cell_indices_are_zero_based": true,
+    "runtime_source": "artifacts/research/20261004-public-contract/source-documents/renta0426/rsna-knee-public0033-meniscus-bag-v1/2/public0033_runtime.py",
+    "runtime_source_sha256": "9541f82a993d7dc2942ca2a5112e110471285f8d80701846079a3dc708761683"
+  },
+  "csv_contract": {
+    "columns": ["StudyInstanceUID", "ACL", "MCL", "Medial Meniscus", "Lateral Meniscus", "Medial OA", "Lateral OA", "PF OA", "Effusion", "Synovitis", "Baker's", "Contusion", "Fracture"],
+    "raw_bag_columns": ["StudyInstanceUID", "Medial Meniscus", "Lateral Meniscus"],
+    "test_source": "Competition test.csv の StudyInstanceUID 列だけを読む。Report は参照しない。",
+    "row_identity": "最終CSV/parent/control/candidateはtest.csvのUID順に一致。空UID・重複UID・余分/不足行・13列以外・非有限値・[0,1]外を拒否。bagはtestと同じUID集合で順序が異なってよい。",
+    "uid_sha256": "各UIDに改行を1個付けて連結しUTF-8 encodeしたbytesのSHA-256。receiptごとのUID順を使う。",
+    "visible_uid_sha256": "f8308447b47011121885d31b754b690b1bd3b51a78e8f07c0b148161f8396ea0",
+    "visible_parent_submission_sha256": "1b03ce7f093efaffdf9acb9e8af05946bdd60b4fec1e0b1fc536b8198abb513b",
+    "visible_sha_scope": "上記static hashはcell8時点のparentのみ。最終V6 CSVのhashではない。隠しtestではstatic出力hashを要求せずUID/recipe/receiptの動的整合性を検査する。"
+  },
+  "stage_outputs": [
+    {"cell": 2, "purpose": "DINO cache割当を観測するshim", "state": "builtins._public0033_cache_capture_v1。cache=(N,6,12,336,336) uint8、mask=(N,6) float32。"},
+    {"cell": 3, "purpose": "DINO 20 member", "outputs": ["submission.csv"], "note": "20 member全window完走時だけsubmission_public_0899.csvを生成し、run_dinov2がsubmission.csvへ移動。旧CSVがあると完走判定を偽装し得るのでfresh workingが必須。"},
+    {"cell": 4, "purpose": "weak fullfit0033 bag推論", "outputs": ["public0033_bag_raw.csv", "public0033_cached_inference_receipt.json"], "note": "例外は伝播。runtime hash・全bundle file hash・strict load・T4 x2・各partitionを検査。cache参照とshimをfinally解放。"},
+    {"cell": 5, "purpose": "A5 5 fold推論と0.45 blend", "outputs": ["submission.csv"], "state": "models:list長5、preds ndarray(5,N,12)、_a5_ok bool ndarray(N,)。全finite、全_a5_ok=true必須。"},
+    {"cell": 6, "purpose": "Rad 3経路と88-feature calibrator", "outputs": ["submission.csv"], "state": "V18_CALIBRATOR_APPLIED is True、V18_CAL_GATE固定7所見。calibrator例外は元コードで握り潰すがcell8は拒否。"},
+    {"cell": 7, "purpose": "Raptor 4 armと0.60 outer blend", "outputs": ["submission.csv"], "state": "_blend_transformer/_blend_coatnet/_blend_output DataFrame(N,13)、_blend_tr/_blend_cr DataFrame(N,12)。一時submission_coatnet.csvは元コードが削除。"},
+    {"cell": 8, "purpose": "parent audit", "outputs": ["submission_parent_exact.csv", "infra0021_runtime_receipt.json"], "note": "CSVをbyte copyして親の同一性検査。DINOはmanifest20件のみで実完走数を見ず、Raptorは定義4armと最終frameのみでstudy fallbackを見ない。追加observerが必要。"},
+    {"cell": 9, "purpose": "Medial MeniscusだけT0.30/R0.60/bag0.10、再rank", "outputs": ["submission.csv", "public0033_overlay_receipt.json"], "note": "他11所見はparentの数値文字列をbyte保持。bag UID集合をparentと照合。"},
+    {"cell": 10, "purpose": "weak overlay control保存", "outputs": ["submission_dinosaur_v4_0937_control.csv"], "note": "overlay status/hash一致後にsubmission.csvをbyte copy。"},
+    {"cell": 12, "purpose": "V6 5所見outer weight変更と再rank", "outputs": ["submission.csv", "submission_dinosaur_v4_v6_candidate.csv", "dinosaur_v4_v6_receipt.json"], "note": "最終提出はsubmission.csv。candidateとbyte同一。controlとparentは別候補なので提出しない。"}
+  ],
+  "dino_completion_observer": {
+    "trigger": "cell3の final submission.csv = weighted rank mean of メッセージをtee.writeで観測",
+    "frame": "compileしたcell3のfilenameを持つinfer_from_package frameをread-only参照。関数名だけでなくfilenameも照合。",
+    "locals": {
+      "members": "manifestのlist[dict]。長20、id非空・unique。",
+      "per_member": "list[dict] keys: id,fold,ids,pred,weight,target_weight,holdout",
+      "public_frontier_members": "list[dict] keys: id,fold,ids,pred,soft_pred",
+      "ids": "cache順のlist[str]。test.csvとは順が異なり得るがUID集合・件数・一意性は同一。",
+      "pred_and_soft_pred": "np.ndarray shape(N,12)。float値全finite、[0,1]内。"
+    },
+    "required": ["両member listのid集合と件数がmanifestの20個と一致", "全memberのidsがtest集合と一致", "pred/soft_predのshape・値域検査", "観測イベントがちょうど1回", "cell3が例外なく終了"],
+    "source_fallbacks": ["MEMBER ... failed ... dropped -- costs one vote, not the run", "degenerate predictions; not banked", "surrendering ... member(s)", "public-frontier vote omitted because only ... windows completed"],
+    "note": "一部device retryが成功したケースはraw observerの完全性で判定可能。MEMBER failedという文字だけで全retryを失敗にしなくてもよい。fresh directory、20uniqueの完全性、元publicCSV必須を併用する。"
+  },
+  "raptor_completion_observer": {
+    "arms": [
+      {"index": 0, "name": "maxspan-v5", "weight": 0.55, "windows": 62},
+      {"index": 1, "name": "native384dense-v10", "weight": 0.10, "windows": 62},
+      {"index": 2, "name": "maxspan-v5-reverse", "weight": 0.15, "windows": 62},
+      {"index": 3, "name": "native384-v8", "weight": 0.20, "windows": 42}
+    ],
+    "stdout_required": [
+      "[arm {a}] {name} | img ... がa=0..3それぞれ1回",
+      "[arm {a}] {N}/{N} | ... がa=0..3それぞれ1回",
+      "[arm {a}] done + freed | ... がa=0..3それぞれ1回",
+      "wrote /kaggle/working/submission_coatnet.csv | {N} rows x 13 cols が1回"
+    ],
+    "stdout_forbidden": ["[arm {a}] study {i} ... FALLBACK (", "CoAtNet branch failed; retaining transformer submission:", "CoAtNet output unavailable; submission.csv remains"],
+    "raw_trigger": "wrote /kaggle/working/submission_coatnet.csv を出力するcell7 main frame",
+    "raw_locals": {"N": "test件数", "A": 4, "test_ids": "test.csv順UID", "arm_probs": "list長4、各np.ndarray(N,12) float32。全finite、[0,1]内。"},
+    "need_raw_check": "元コードはarm study例外時に初期0.5を維持し、非finite rankも0.5へ置換する。最終CSVのfinite/shapeだけでは欠けた枝を判別できない。ログfallback拒否とraw値検査を併用。",
+    "implementation_note": "stdoutを行単位buffer化して分割writeへ対応。印字呼出しのframeを観測し、集計したshape/hash/counterだけ保持してframe参照をfinally解放。observer失敗は記録し、元cell終了直後にraiseする。数値・tensor・乱数を変更しない。"
+  },
+  "receipts": {
+    "infra0021_runtime_receipt.json": {
+      "required_values": {"schema_version": "infra0021_runtime_receipt_v1", "status": "passed", "prediction_recipe_changed": false, "competition_submission_performed": false, "gates.gpu_t4x2": true, "gates.dino.member_count": 20, "gates.a5.model_count": 5, "gates.a5.all_studies_complete": true, "gates.rad.calibrator_applied": true, "gates.raptor.outer_weight": 0.6, "gates.raptor.branch_output_present": true, "gates.submission_schema_uid_range": true},
+      "shape_values": {"output.shape": ["N",13], "gates.a5.prediction_shape": [5,"N",12], "gates.raptor.final_shape": ["N",12]},
+      "equalities": ["output.submission_sha256 == output.backup_sha256 == sha256(submission_parent_exact.csv)", "input.test_csv_sha256 == mounted test.csv hash", "input.test_series_csv_sha256 == mounted test_series.csv hash", "input.study_count == N", "input.uid_sha256 == test order UID hash", "gates.dino.manifest_sha256 == mounted rsna-knee-weights/manifest.json hash", "output.max_abs_csv_vs_memory <= 1e-12", "gates.raptor.arm_contract == expected four arms"],
+      "rad_gate": ["ACL", "Baker's", "Contusion", "Effusion", "Lateral OA", "Medial OA", "PF OA"]
+    },
+    "public0033_cached_inference_receipt.json": {
+      "required_values": {"schema_version": "public0033_cached_inference_receipt_v1", "status": "passed", "bundle_schema_version": "public0033_meniscus10_bundle_v1", "runtime_sha256": "9541f82a993d7dc2942ca2a5112e110471285f8d80701846079a3dc708761683", "checkpoint.sha256": "e1443bb0f518418a31428cd7eb153f15af4c48c7175baf1f9d21c84f1c2a93e7", "checkpoint.bytes": 347965736, "checkpoint.state_tensor_count": 233, "checkpoint.strict_load": true, "precision": "fp32", "autocast": false, "batch_studies": 32, "window_starts": [0,1,2,3,4,5,6,7,8,9], "window_pooling": "overlap10_probability_mean", "cache.dtype": "uint8", "fallback": 0, "neutralized_predictions": 0},
+      "shape_values": {"cache.shape": ["N",6,12,336,336]},
+      "equalities": ["bundle_manifest_sha256 == mounted bundle_manifest.json hash", "study_count == N", "study_uid_sha256 == bag CSV order UID hash (not necessarily test order)", "raw_output.sha256 == sha256(public0033_bag_raw.csv)", "raw_output.columns == raw_bag_columns", "source_hashes fields == bundle manifest artifacts hashes"],
+      "partitions": "2件、device_index 0/1、device_name T4、strict_load/checkpoint_replicated true、index_start/stopで[0,N)を重複なく連続被覆。study_count=stop-start。"
+    },
+    "public0033_overlay_receipt.json": {
+      "required_values": {"schema_version": "public0033_medial_t30_r60_b10_overlay_v1", "status": "passed", "targets_changed": ["Medial Meniscus"], "custom_route.target": "Medial Meniscus", "custom_route.transformer_rank_weight": 0.3, "custom_route.raptor_rank_weight": 0.6, "custom_route.bag_rank_weight": 0.1, "custom_route.final_rerank": true, "legacy_post_parent_residual.enabled": false, "rank": "float64_average_tie_percentile_rank_over_all_test_studies", "csv_vs_memory_max_abs": 0.0},
+      "equalities": ["parent_submission_sha256 == sha256(submission_parent_exact.csv)", "parent_uid_sha256 == test order UID hash", "bag_raw_sha256 == sha256(public0033_bag_raw.csv)", "output_sha256 == sha256(submission_dinosaur_v4_0937_control.csv)", "untouched_targets == 11 labels excluding Medial Meniscus", "controlの他11所見tokenはparentと同一"]
+    },
+    "dinosaur_v4_v6_receipt.json": {
+      "required_values": {"schema_version": "dinosaur_v4_v6_outer_weights_v1", "status": "passed", "new_models_loaded": false, "new_datasets_added": false, "medial_meniscus_route_preserved": true},
+      "fixed_outer_weights": {"ACL":0.8,"Lateral OA":0.35,"PF OA":0.35,"Synovitis":0.35,"Baker's":0.375},
+      "equalities": ["output_sha256 == sha256(submission.csv) == sha256(submission_dinosaur_v4_v6_candidate.csv)", "changed_targets == fixed_outer_weightsの5所見", "Medial Meniscusと他6所見tokenはcontrolと同一", "変更5所見は平均tie percentile rank((1-w)*_blend_tr[target]+w*_blend_cr[target])と一致。計算式・dtype float64・rank範囲は元source通り。"]
+    }
+  },
+  "runtime": {
+    "gpu": "Tesla T4 x2を明示必須。GPU名と個数を元runtime/parent auditが検査。単GPU/RTX4090/P100へ読み替え不可。",
+    "internet": false,
+    "metadata_docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+    "embedded_python_version": "3.12.13",
+    "imports": ["numpy", "pandas", "pydicom", "torch", "torchvision", "timm", "cv2", "transformers", "safetensors"],
+    "package_version_status": "個別package版はsourceで固定されておらず保存outputsも空。timm 1.0.22とopencv-python-headless 4.12.0.88のwheelは添付候補内に存在するが作者runtimeの使用版の証明ではない。preflightで実import/API/CUDA/版を記録し、visible parent exactSHAも通す。",
+    "minimum_api_note": "torch.load(weights_only=True)、torch.inference_mode、transformers.AutoModel.from_pretrained、safetensors.torch.load_file、pydicom.pixel_data_handlers.util.apply_modality_lutを使用。import成功だけで実MRI decoder対応やhidden-test時間を証明しない。"
+  },
+  "wrapper_design": {
+    "source_preservation": "元code cell bytesを変更せずcompile/execし同じglobalsへ元順序で実行。__name__='__main__'とinspect/linecache参照を維持する。",
+    "freshness": "開始前にこの候補の出力/receipt/READYが存在すれば停止し、新規sessionを案内。古い成功CSVを使わない。",
+    "failure": "source例外、observer失敗、receipt不整合は全て最終READYを作らずsubmission.csvを非提出名へ退避してraise。artifact再利用による成功偽装を防ぐ。",
+    "completion": "全元cell・observer・各receipt/hash・CSV・overlay契約が成功した後だけ独自READY receiptを保存。提出CSVの数値/文字列は変更しない。",
+    "limits": "wrapperとguardの人工テストは元公開モデルのforward、実デコード、Kaggle採点・時間・作者score再現の代わりにはならない。"
+  }
+}
