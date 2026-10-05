@@ -1,4 +1,8 @@
-"""Build the pinned, unexecuted p002 handoff. No network, weights or public-code execution."""
+"""Rebuild the scored p002 source from repository files without executing public code.
+
+The generated notebook is unexecuted; its cell sources match the 2026-10-05
+scored handoff. Reproduction requires the separately pinned Kaggle Inputs.
+"""
 
 import argparse
 import ast
@@ -133,7 +137,10 @@ def build(output_dir):
     }
     output_dir.mkdir(parents=True)
     notebook_path = output_dir / "02_submit_p002.ipynb"
-    notebook_path.write_text(json.dumps(notebook, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    # The scored handoff was generated on Windows. Keep its bytes on every OS.
+    notebook_path.write_text(
+        json.dumps(notebook, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\r\n"
+    )
     (output_dir / "input-contract.json").write_text(
         json.dumps(contract, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )

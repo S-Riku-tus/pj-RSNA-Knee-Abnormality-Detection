@@ -1,0 +1,566 @@
+{
+  "checked_date_jst": "2026-10-05",
+  "scope": "公開Notebook指定版・Dataset metadata・小さいmanifest/runtimeだけを取得して静的監査。実MRI・モデル・ラベルCSV・予測payloadを取得/実行していない。",
+  "recommendation": {
+    "candidate_id": "p003-haideptry-v2-current-pins-20261005",
+    "decision": "haideptry V2を独立した公開recipe全体の比較候補にする。元係数・4 CoAt系統・A5 BF16・DINO20を保ち、全系統完走と統合方式の停止検査を追加する。",
+    "not_a_single_component_causal_experiment": true,
+    "not_a_guaranteed_0945_or_0955_result": true,
+    "author_public_lb": 0.943,
+    "own_public_lb": null,
+    "author_page_url": "https://www.kaggle.com/code/haideptry/rsna-knee-speedy-raptors-coatnet-d4-0943/comments",
+    "author_page_displayed_version": 2,
+    "author_page_public_and_best_match": true,
+    "author_page_visible_saved_run_seconds": 267,
+    "author_hidden_test_runtime_seconds": null,
+    "source_score_csv_identity_verified": false,
+    "historical_author_input_versions_verified": false,
+    "current_input_contract": "docs/research/p003-input-contract-20261005.json"
+  },
+  "source_observations": {
+    "checked_at_utc": "2026-10-05T12:50:57.985295+00:00",
+    "sources": [
+      {
+        "owner": "haideptry",
+        "slug": "rsna-knee-speedy-raptors-coatnet-d4-0943",
+        "requested_version": "v2",
+        "metadata": {
+          "id": 135043204,
+          "ref": "haideptry/rsna-knee-speedy-raptors-coatnet-d4-0943",
+          "title": "RSNA Knee Speedy Raptors CoAtNet D4 0943+",
+          "author": "haideptry",
+          "slug": "rsna-knee-speedy-raptors-coatnet-d4-0943",
+          "lastRunTime": "2026-10-02T12:50:58.290Z",
+          "language": "python",
+          "kernelType": "notebook",
+          "isPrivate": false,
+          "enableGpu": true,
+          "enableInternet": false,
+          "categoryIds": [
+            "gpu"
+          ],
+          "datasetDataSources": [
+            "dreaddevelopment/raptor-knee-maxspan",
+            "dreaddevelopment/raptor-knee-native384",
+            "dreaddevelopment/raptor-knee-native384dense",
+            "mattiaangeli/knee-mri-fold-weights",
+            "mattiaangeli/opencv-python-headless-4120088-x86",
+            "marwanmath/resnet-50-radimagenet-marwan",
+            "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+            "mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+            "mattiaangeli/rsna-knee-coatnet-global96-top3",
+            "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+            "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+            "pilkwang/rsna-knee-llm-labels",
+            "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+            "pilkwang/rsna-knee-weights"
+          ],
+          "kernelDataSources": [
+            "sofiaanjenje/rsna-knee-e11-train",
+            "sofiaanjenje/rsna-knee-e13-train"
+          ],
+          "competitionDataSources": [
+            "rsna-knee-abnormality-detection"
+          ],
+          "totalVotes": 76,
+          "modelDataSources": [
+            "metaresearch/dinov2/PyTorch/small/1"
+          ],
+          "enableTpu": false,
+          "currentVersionNumber": 2,
+          "dockerImage": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+          "machineShape": "NvidiaTeslaT4"
+        },
+        "sha256": "b5f1e12ae3f8171aae716e53c779d0bc218b8631884238c2a182c937ade75c1c",
+        "bytes": 242781,
+        "source_path": "artifacts/research/20261005-p003-investigate/haideptry/v2/source.ipynb"
+      },
+      {
+        "owner": "skarin",
+        "slug": "rsna-knee-reproducing-the-0-943-public-stack",
+        "requested_version": "v1",
+        "metadata": {
+          "id": 136598849,
+          "ref": "skarin/rsna-knee-reproducing-the-0-943-public-stack",
+          "title": "RSNA Knee: Reproducing the 0.943 Public Stack",
+          "author": "Arin",
+          "slug": "rsna-knee-reproducing-the-0-943-public-stack",
+          "lastRunTime": "2026-10-02T12:50:59.352Z",
+          "language": "python",
+          "kernelType": "notebook",
+          "isPrivate": false,
+          "enableGpu": true,
+          "enableInternet": false,
+          "categoryIds": [
+            "gpu"
+          ],
+          "datasetDataSources": [
+            "dreaddevelopment/raptor-knee-maxspan",
+            "dreaddevelopment/raptor-knee-native384",
+            "dreaddevelopment/raptor-knee-native384dense",
+            "mattiaangeli/knee-mri-fold-weights",
+            "mattiaangeli/opencv-python-headless-4120088-x86",
+            "marwanmath/resnet-50-radimagenet-marwan",
+            "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+            "mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+            "mattiaangeli/rsna-knee-coatnet-global96-top3",
+            "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+            "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+            "pilkwang/rsna-knee-llm-labels",
+            "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+            "pilkwang/rsna-knee-weights"
+          ],
+          "kernelDataSources": [
+            "sofiaanjenje/rsna-knee-e11-train",
+            "sofiaanjenje/rsna-knee-e13-train"
+          ],
+          "competitionDataSources": [
+            "rsna-knee-abnormality-detection"
+          ],
+          "totalVotes": 28,
+          "modelDataSources": [
+            "metaresearch/dinov2/PyTorch/small/1"
+          ],
+          "enableTpu": false,
+          "currentVersionNumber": 1,
+          "dockerImage": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+          "machineShape": "NvidiaTeslaT4"
+        },
+        "sha256": "c7326deb3a03a18212f64cfe8558409920ad0d443bfd60425bcb911b4672b446",
+        "bytes": 242770,
+        "source_path": "artifacts/research/20261005-p003-investigate/skarin/v1/source.ipynb"
+      }
+    ]
+  },
+  "crosscheck": {
+    "skarin_url": "https://www.kaggle.com/code/skarin/rsna-knee-reproducing-the-0-943-public-stack",
+    "skarin_best_public": 0.943,
+    "skarin_best_version": 1,
+    "skarin_page_current_version": 3,
+    "skarin_v1_source_downloaded": true,
+    "skarin_v1_code_cells_equal_haideptry_v2": false,
+    "policy": "版違いを混同せずhaideptry V2だけをp003の正本にする。"
+  },
+  "components": {
+    "dino": "20 members、前半6 transformer blocks共有。共通state SHA検査とsplit/direct forward allcloseを元ソースが実装。",
+    "a5": "5 fold、AMP_PREF=bf16を維持。T4速度比較は独立した後続実験。",
+    "rad": "RadImageNet encoder、reference E9とE13 heads、既存V18校正器。",
+    "raptor": "maxspan-v5 / maxspan-v5 reverse / native384dense-v10 / native384-v8 の4 view。",
+    "coats": {
+      "resgated_top3": {
+        "epochs": [
+          4,
+          6,
+          8
+        ],
+        "models": 3,
+        "dataset": "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+        "version": 3,
+        "status": "VALID_COAT_RESGATED_EP10_TOP3_RANK_SUBMISSION"
+      },
+      "global96_top3": {
+        "epochs": [
+          16,
+          23,
+          18
+        ],
+        "models": 3,
+        "dataset": "mattiaangeli/rsna-knee-coatnet-global96-top3",
+        "version": 1,
+        "status": "VALID_COATNET_GLOBAL96_TOP3_T4X2_SUBMISSION"
+      },
+      "d4_swa3": {
+        "parent_swa_epochs": [
+          15,
+          16
+        ],
+        "adapter_swa_epochs": [
+          11,
+          9,
+          5
+        ],
+        "models": 1,
+        "dataset": "mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+        "version": 2,
+        "status": "VALID_COATNET_D4_DEPTHZONE_SWA3_T4X2_SUBMISSION"
+      },
+      "repairv1_top3": {
+        "epochs": [
+          12,
+          7,
+          11
+        ],
+        "models": 3,
+        "dataset": "mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+        "subdirectory": "repairv1",
+        "version": 2,
+        "status": "VALID_COATNET_REPAIRV1_TOP3_PROBABILITY_RANK_SUBMISSION"
+      }
+    },
+    "family_reduction": "rank_of_member_probability_mean",
+    "inner_public_raptor_private_coat_weights": [
+      0.6,
+      0.4
+    ],
+    "inner_rerank": false,
+    "outer_coat_raptor_weights": {
+      "default": 0.6,
+      "ACL": 0.75,
+      "Medial Meniscus": 0.8,
+      "Lateral Meniscus": 1.0,
+      "Lateral OA": 0.75,
+      "Fracture": 0.75
+    },
+    "final_rank": "全test検査について各所見のaverage-percentile rank。chunk/GPU別rankは不可。"
+  },
+  "contract_findings": [
+    "現行V2末尾は全graph成功後publishというコメントを持つが、cell27は4 CoAt子処理の例外をcatchしてcontinueする。各*_okやmember数4を末尾で必須化していない。",
+    "CoAt子処理fallback_studies>0はevent記録だけで除外しない場合がある。新候補では全4 receiptのzero fallbackとUID全件を要求する。",
+    "生確率欠落ではrank_sum_fallback_probabilities_unavailableへ、member不足ではsingle_member_rankまたはpublic_raptor_onlyへ進み得る。4member+生確率+rank_of_member_probability_meanを要求する。",
+    "全4 NPZはlabelsキーを保存しない。各manifest labelsを固定12順と比較する。study_uidsとraw_probabilitiesは全系統にあり、Global96/D4/Repairにはprobability_meanもある。",
+    "Residualはraw_probabilities(3,N,12)をfloat64へ変換してmean(axis=0)。他3系統は保存probability_mean(N,12)優先。平均後rankを検査する際もこの計算順を保つ。",
+    "同名runtimeがD4とGlobal96で別hashを持つ。別子プロセス/別asset rootを維持し、ファイル名だけで共通化しない。"
+  ],
+  "runtime_risks": [
+    "公開ページ4m27sは見える小testの保存実行であり隠しtest実行時間ではない。p002ユーザー報告約8hも時間区分未確定で、単純な差引き余裕を保証しない。",
+    "RSNA_PARALLEL_COAT_READERS未指定ではtest件数<=48だけ2系統を並行、それ以上は逐次。64件以上の代表pilotが少数test分岐を抜ける動作確認に必要。",
+    "各CoAt子処理自体がT4 x2を使う。強制並行化はGPU/CPU/メモリ競合があり、ここでは変更しない。",
+    "DINO前半共有はp003ソースに既に実装済み。実MRIでの予測同等性・9h以内完走は今回未検証。"
+  ],
+  "gold_provenance": {
+    "audit_complete_for_public_model_selection_claims_only": true,
+    "findings": "追加CoAt4系統のmanifestはofficial Gold58 macro-AUCによるepoch/親SWA/adapter選択を明記。D4は複数adapter arm比較にもGold58を利用。gold未使用の公開モデル、独立OOF、独立gold評価とは呼ばない。",
+    "our_policy": "作者の既存選択を凍結した公開重み候補の推論比較。自分の学習・checkpoint選択・係数調整にgoldは使わない。歴史goldファイルはpackage整合hashチェック以外に読み込まない。",
+    "evidence": [
+      {
+        "path": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+        "sha256": "98511a8fdeb9da0e6e70c78d013ff636e1476f31c80b5dc134d294b18c3f284e",
+        "contract": "rsna_coat_resgated_ep10_top3_gold_rank_package_v2",
+        "selection": {
+          "criterion": "top three official Gold58 macro-AUC by epoch 10",
+          "epochs": [
+            4,
+            6,
+            8
+          ],
+          "individual_gold_auc": [
+            0.9004583452460247,
+            0.8975532362766714,
+            0.8968762056250612
+          ],
+          "gold58_rank_ensemble_auc": 0.9094696373252056,
+          "gold58_probability_mean_diagnostic_auc": 0.9115587340639862,
+          "submitted_reduction": "equal mean of per-checkpoint per-finding average-percentile ranks"
+        },
+        "training": null,
+        "labels": [
+          "ACL",
+          "MCL",
+          "Medial Meniscus",
+          "Lateral Meniscus",
+          "Medial OA",
+          "Lateral OA",
+          "PF OA",
+          "Effusion",
+          "Synovitis",
+          "Baker's",
+          "Contusion",
+          "Fracture"
+        ],
+        "checkpoints": [
+          {
+            "name": "coat_resgated_gold_e04.pt",
+            "epoch": 4,
+            "sha256": "cefaf007415b5e45ce2a720d5e211a183a4e90f160710ba1f72b1ce7c46239a2",
+            "selection_metric": "official_gold58_macro_auc"
+          },
+          {
+            "name": "coat_resgated_gold_e06.pt",
+            "epoch": 6,
+            "sha256": "56eca1f61651362ecfae8aecdd9327125713b95653344b8ad62ef8cff17d08f4",
+            "selection_metric": "official_gold58_macro_auc"
+          },
+          {
+            "name": "coat_resgated_gold_e08.pt",
+            "epoch": 8,
+            "sha256": "8d3159102046c127dc0d084fb69c9304ffcbd4b98d1333f9811d4d613fea1b12",
+            "selection_metric": "official_gold58_macro_auc"
+          }
+        ]
+      },
+      {
+        "path": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+        "sha256": "7ada0605bca6b0530569c6454e988ace479606a3328ed591d090e5764fea661d",
+        "contract": "rsna_coatnet_d4_selected_probability_package_v1",
+        "selection": {
+          "description": "d4_depthzone_swa3",
+          "selected_kind": "d4_depthzone_swa3",
+          "epochs": [
+            11,
+            9,
+            5
+          ],
+          "individual_gold_auc": [
+            0.930171388800367
+          ],
+          "gold58_probability_mean_auc": 0.930171388800367,
+          "gold58_checkpoint_rank_mean_auc": 0.930171388800367,
+          "submitted_reduction": "single_sigmoid_probability_then_single_percentile_rank",
+          "ensemble": "one selected model then one per-finding average-percentile rank"
+        },
+        "training": {
+          "status": "complete",
+          "history": "training_history_d4.json",
+          "completion": "training_completion_d4.json",
+          "selector": "official Gold58 macro-AUC",
+          "selected_gold_auc": 0.930171388800367,
+          "selected_members": [
+            11,
+            9,
+            5
+          ],
+          "source_provenance": {
+            "executed_coatnet_slice_depth_adapters.py": "fb24c03b7554f4acf02cfa40dfd7492e72bf1e9fde6ae8e19ff3868727cfa37c",
+            "executed_test_coatnet_slice_depth_adapters.py": "e2d59850c36e2d80e9bc663f2f042a3b0d608902257cb6ed67af3181edd05b5e",
+            "executed_train_coatnet_slice_depth_ablation.py": "826aec545a22c708e08b6489615c9dc2664e5bee9795dcd2857b1747a43459ad",
+            "executed_CODEX_SLICE_CENTER_DEPTH_5_ABLATIONS_20260909.md": "92a50ec523d4a183f043f7b286a680ea011ca6a86f69a02b33593393a60c9dc7",
+            "executed_anchored_adaptive_patch_pool.py": "0ae316a4c0b970bdb6386769eb47d25cd0cb4e765293cf1354e3dbfd9848ae11",
+            "executed_train_coatnet_adaptive_patch_guard.py": "19d8a52917c056b15567d1c1431e903860e919220e4efe2edafb3ad91e988fce",
+            "executed_train_coatnet_global96_joint_mha_k12_effb24_e24_full_gold_swa.py": "f3cbfb85e1824c5172ab53d2497559492b1d97ae0cbfabd96a84817d4539245d",
+            "executed_coatnet_finding_slot_cross_attention_lr.py": "69d197571af8e971c618bc004839f07162a27636761c2b22b6f2585bd4ea5a59",
+            "executed_finding_slot_cross_attention_lr.py": "e0e609f6e268fdd8134b08ae93f433f25ecdb79b57699886f7ed1e7f24d5846e",
+            "executed_convnext_cross_slot_finding_head.py": "a8dde3cb4df2158a73db5ace7faefbafe5b08b34ebabf8384842df4e43f78fcb",
+            "executed_coatnet_joint_slot_finding_mha.py": "b899e9e020305c963ebeabe905e79802a006806761fbb08da569ff88e70fbcc3",
+            "executed_convnext_head_ablation_k32.py": "ea59169fa4297b9e1760cc21a61335864843a98af55b11e933fd0349890dcaa1",
+            "executed_coatnet_residual_gated_k32.py": "23bbf2625ae23a12c49bef8295d298aca1cff233bff7fe4bf34e540849e8f57a",
+            "executed_coatnet_q2l_bagmatch.py": "a3303a724e95cf3d9f13b67ef52529adf854b0cbe580b896ef42382cc740d932",
+            "executed_raptor_global_stack_smart336.py": "c73d84cfb385215c6c987bf9dcde73d1fe47e25806538dee0da04c407466b802",
+            "executed_raptor_global_stack_slot_coverage.py": "2e00a97ed4b83f9a1dcf96a24d0fecf923468da5aea1ae10ef93474aa448de22",
+            "executed_raptor_k6_surgical.py": "cc525db3bb67f0fde9db8dcfbbd33ff5bf5200d0c3c92251b368101314ae647f",
+            "executed_raptor_light224.py": "d8f533df336f097910cd8c9ed7ae2248783554c9c797b661ee89406b5041cde5",
+            "executed_triplet_physical_crop.py": "b84826fede9fa4195774e208e829ad60f189cfee90dce8a2c9528349b18717cf"
+          }
+        },
+        "labels": [
+          "ACL",
+          "MCL",
+          "Medial Meniscus",
+          "Lateral Meniscus",
+          "Medial OA",
+          "Lateral OA",
+          "PF OA",
+          "Effusion",
+          "Synovitis",
+          "Baker's",
+          "Contusion",
+          "Fracture"
+        ],
+        "checkpoints": [
+          {
+            "name": "coatnet_d4_parent_rank8_swa2.pt",
+            "epoch": null,
+            "sha256": "5de38e333e3184d7b52fb068183f0cc198d6cbabb6ffbe36b26338622e82d297",
+            "selection_metric": "official_gold58_macro_auc"
+          }
+        ]
+      },
+      {
+        "path": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+        "sha256": "99288a9a42f36ba544d7b0ad2fe645e3b1fc9c507c23802c16ca0d2e5085f684",
+        "contract": "rsna_coatnet_repairv1_e18_top3_probability_rank_package_v1",
+        "selection": {
+          "criterion": "terminal top three official Gold58 macro-AUC",
+          "epochs": [
+            12,
+            7,
+            11
+          ],
+          "individual_gold_auc": [
+            0.9042195775738434,
+            0.9016175724807871,
+            0.8982895646060981
+          ],
+          "gold58_probability_mean_auc": 0.9103562853180026,
+          "gold58_checkpoint_rank_mean_auc": 0.9084529682919512,
+          "submitted_reduction": "probability_mean_then_average_percentile_rank",
+          "why": "probability mean exceeds independent checkpoint-rank mean by 0.0019033170 Gold AUC; final ranking preserves its ordering"
+        },
+        "training": null,
+        "labels": [
+          "ACL",
+          "MCL",
+          "Medial Meniscus",
+          "Lateral Meniscus",
+          "Medial OA",
+          "Lateral OA",
+          "PF OA",
+          "Effusion",
+          "Synovitis",
+          "Baker's",
+          "Contusion",
+          "Fracture"
+        ],
+        "checkpoints": [
+          {
+            "name": "coatnet_repairv1_gold_e12.pt",
+            "epoch": 12,
+            "sha256": "45f34ec036a6b2dfb75239343f1dc33bc815bacd8c2d996235035d2602b5b2e7",
+            "selection_metric": "official_gold58_macro_auc"
+          },
+          {
+            "name": "coatnet_repairv1_gold_e07.pt",
+            "epoch": 7,
+            "sha256": "4f36e9aff09986fcf4f130203e3fbf391b95e0a466ed9c6f656dafd01c349cdf",
+            "selection_metric": "official_gold58_macro_auc"
+          },
+          {
+            "name": "coatnet_repairv1_gold_e11.pt",
+            "epoch": 11,
+            "sha256": "2ec451b03e4c1da5048aee91d4358fa2efa2900619d9dfd5b75dadce659e2f21",
+            "selection_metric": "official_gold58_macro_auc"
+          }
+        ]
+      },
+      {
+        "path": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+        "sha256": "015f09030e76f86274cadae40777b3c3cf5c19f8c835d5ad88e15db41903779e",
+        "contract": "rsna_coatnet_global96_top3_probability_rank_package_v1",
+        "selection": {
+          "criterion": "top three official Gold58 macro-AUC epochs",
+          "epochs": [
+            16,
+            23,
+            18
+          ],
+          "individual_gold_auc": [
+            0.9274041461096929,
+            0.9267289932102192,
+            0.9249550137927351
+          ],
+          "gold58_probability_mean_auc": 0.9305011145436436,
+          "gold58_checkpoint_rank_mean_auc": 0.9289836804382087,
+          "submitted_reduction": "probability_mean_then_average_percentile_rank",
+          "gain_over_checkpoint_rank_mean": 0.0015174341054349227
+        },
+        "training": null,
+        "labels": [
+          "ACL",
+          "MCL",
+          "Medial Meniscus",
+          "Lateral Meniscus",
+          "Medial OA",
+          "Lateral OA",
+          "PF OA",
+          "Effusion",
+          "Synovitis",
+          "Baker's",
+          "Contusion",
+          "Fracture"
+        ],
+        "checkpoints": [
+          {
+            "name": "coatnet_global96_gold_e16.pt",
+            "epoch": 16,
+            "sha256": "f824d16bd506f442cc5a37b054663963e5461a59a0c42ad480f3fe515dd9408f",
+            "selection_metric": null
+          },
+          {
+            "name": "coatnet_global96_gold_e23.pt",
+            "epoch": 23,
+            "sha256": "c177a8a9240c7d55465fea83bb27b1ab400274722095b2895b689092a804bfdb",
+            "selection_metric": null
+          },
+          {
+            "name": "coatnet_global96_gold_e18.pt",
+            "epoch": 18,
+            "sha256": "629f0d10ebc1946a25577b8dc0fa1d83d65d8a607961d146b53b7a36dc2c5c2e",
+            "selection_metric": null
+          }
+        ]
+      }
+    ]
+  },
+  "licenses": {
+    "dataset_declarations": [
+      {
+        "ref": "dreaddevelopment/raptor-knee-maxspan",
+        "version": 1,
+        "license_declaration": "CC0: Public Domain"
+      },
+      {
+        "ref": "dreaddevelopment/raptor-knee-native384",
+        "version": 1,
+        "license_declaration": "CC0: Public Domain"
+      },
+      {
+        "ref": "dreaddevelopment/raptor-knee-native384dense",
+        "version": 1,
+        "license_declaration": "CC0: Public Domain"
+      },
+      {
+        "ref": "mattiaangeli/knee-mri-fold-weights",
+        "version": 2,
+        "license_declaration": "CC0: Public Domain"
+      },
+      {
+        "ref": "mattiaangeli/opencv-python-headless-4120088-x86",
+        "version": 1,
+        "license_declaration": "Unknown"
+      },
+      {
+        "ref": "marwanmath/resnet-50-radimagenet-marwan",
+        "version": 1,
+        "license_declaration": "CC BY-NC-SA 4.0"
+      },
+      {
+        "ref": "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+        "version": 3,
+        "license_declaration": "CC0: Public Domain"
+      },
+      {
+        "ref": "mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+        "version": 2,
+        "license_declaration": "CC0: Public Domain"
+      },
+      {
+        "ref": "mattiaangeli/rsna-knee-coatnet-global96-top3",
+        "version": 1,
+        "license_declaration": "CC0: Public Domain"
+      },
+      {
+        "ref": "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+        "version": 3,
+        "license_declaration": "CC BY-NC-SA 4.0"
+      },
+      {
+        "ref": "pilkwang/rsna-knee-weights",
+        "version": 1,
+        "license_declaration": "CC0: Public Domain"
+      },
+      {
+        "ref": "sofiaanjenje/rsna-knee-e13-train",
+        "version": 1,
+        "license_declaration": "Upstream public Notebook license and RadImageNet terms; see previous source audit."
+      },
+      {
+        "ref": "metaresearch/dinov2/PyTorch/small/1",
+        "version": 1,
+        "license_declaration": null
+      }
+    ],
+    "upstream_conditions": "Dataset CC0表記はDINOv3等の基盤重みや第三者コードの条件を消さない。RadImageNet/headsはCC BY-NC-SA 4.0表記。",
+    "opencv": "Dataset license=Unknown。配布wheelのOpenCV/第三者ライセンスnoticeは別条件。",
+    "e13": "既存の公開source監査は出力重みの別個の再配布許諾を記録していない。Kaggleの公開Inputとして使い、こちらから重みを再配布しない。",
+    "notebook_source_license": "haideptryの今回API metadataはlicenseを返さず、Web本文から本文ライセンスを独立取得できなかった。skarin公開ページのApache2.0をhaideptry指定版へ自動転記しない。",
+    "previous_notice": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/SOURCE_AND_LICENSES.md"
+  },
+  "verification": {
+    "local_small_text_files": 13,
+    "all_verified_against_expected_sha_and_size": true,
+    "record": "artifacts/research/20261005-p003-investigate/locally-verified-contract-text-files.json",
+    "model_payloads_downloaded": false,
+    "real_mri_decoded": false,
+    "training_started": false,
+    "external_write_or_submission": false
+  }
+}

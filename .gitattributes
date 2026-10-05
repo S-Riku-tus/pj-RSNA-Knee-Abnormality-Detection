@@ -8,3 +8,6 @@
 *.csv text eol=lf
 # Preserve the pasted original, including its intentional Markdown hard line break.
 docs/research/user-analysis-20261002.txt -whitespace
+# Preserve the exact audited source bytes and the Windows-built scored handoff.
+notebooks/public/vendor/romantamrazov-dinosaur-v32.ipynb -text
+notebooks/public/01_submit_p002_scored.ipynb -text

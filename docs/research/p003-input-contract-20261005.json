@@ -1,0 +1,1748 @@
+{
+  "schema_version": "p003_input_contract_v1",
+  "checked_date_jst": "2026-10-05",
+  "configuration_id": "p003-haideptry-v2-current-pins-20261005",
+  "source_version": 2,
+  "source_sha256": "b5f1e12ae3f8171aae716e53c779d0bc218b8631884238c2a182c937ade75c1c",
+  "historical_author_input_versions_verified": false,
+  "own_public_lb": null,
+  "author_displayed_public_lb": 0.943,
+  "source_score_csv_identity_verified": false,
+  "inputs": [
+    {
+      "key": "raptor_knee_maxspan",
+      "kind": "dataset",
+      "ref": "dreaddevelopment/raptor-knee-maxspan",
+      "version": 1,
+      "url": "https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-maxspan/versions/1",
+      "mounts": [
+        "datasets/dreaddevelopment/raptor-knee-maxspan",
+        "raptor-knee-maxspan"
+      ],
+      "license_declaration": "CC0: Public Domain",
+      "files": [
+        {
+          "path": "raptor_ft_coatnet_v5_full_swa.pt",
+          "bytes": 292831426,
+          "sha256": "20d45e0732a0e9120025d0172a4d2dd0170900bc250b06742dfb7ae08a63786a",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        }
+      ]
+    },
+    {
+      "key": "raptor_knee_native384",
+      "kind": "dataset",
+      "ref": "dreaddevelopment/raptor-knee-native384",
+      "version": 1,
+      "url": "https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-native384/versions/1",
+      "mounts": [
+        "datasets/dreaddevelopment/raptor-knee-native384",
+        "raptor-knee-native384"
+      ],
+      "license_declaration": "CC0: Public Domain",
+      "files": [
+        {
+          "path": "raptor_ft_coatnet_v8_full_swa.pt",
+          "bytes": 292831426,
+          "sha256": "3db77388662d516bb0ce790dafd24e36f4991f6089af26daf546817fe1c21862",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        }
+      ]
+    },
+    {
+      "key": "raptor_knee_native384dense",
+      "kind": "dataset",
+      "ref": "dreaddevelopment/raptor-knee-native384dense",
+      "version": 1,
+      "url": "https://www.kaggle.com/datasets/dreaddevelopment/raptor-knee-native384dense/versions/1",
+      "mounts": [
+        "datasets/dreaddevelopment/raptor-knee-native384dense",
+        "raptor-knee-native384dense"
+      ],
+      "license_declaration": "CC0: Public Domain",
+      "files": [
+        {
+          "path": "raptor_ft_coatnet_v10_full.pt",
+          "bytes": 292829892,
+          "sha256": "5add8816a47e040efca89bb44480e1cbd01f92db1253831ff7ceb6c65ee02b1d",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        }
+      ]
+    },
+    {
+      "key": "knee_mri_fold_weights",
+      "kind": "dataset",
+      "ref": "mattiaangeli/knee-mri-fold-weights",
+      "version": 2,
+      "url": "https://www.kaggle.com/datasets/mattiaangeli/knee-mri-fold-weights/versions/2",
+      "mounts": [
+        "datasets/mattiaangeli/knee-mri-fold-weights",
+        "knee-mri-fold-weights"
+      ],
+      "license_declaration": "CC0: Public Domain",
+      "files": [
+        {
+          "path": "m_f0.pt",
+          "bytes": 94000039,
+          "sha256": "b447a665a92ed65e0f4cacf6800940ba7a6d585d0c36154ce18dee60ec48d5cd",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_f1.pt",
+          "bytes": 94000039,
+          "sha256": "30bbe5f9afa24af57fd69bad293a4b9fe3ca2e1d737381bc06e469c5ed380e76",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_f2.pt",
+          "bytes": 94000039,
+          "sha256": "5bdc4f72471e7c5db01f2f919ba39212087cbb5f2f76b619e4ba38446800b782",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_f3.pt",
+          "bytes": 94000039,
+          "sha256": "f757ddc9531f903c6cd0729cadc7051fcdca03b281c89c39cc7957ab44fc2243",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_f4.pt",
+          "bytes": 94000039,
+          "sha256": "066490a5c17b3887d1bfda1427f45b14cab416e7b1dcc16afc9a003cdcc08aad",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "timm-1.0.22-py3-none-any.whl",
+          "bytes": 2530238,
+          "sha256": "888981753e65cbaacfc07494370138b1700a27b1f0af587f4f9b47bc024161d0",
+          "role": "offline_dependency",
+          "hash_evidence": "https://pypi.org/pypi/timm/1.0.22/json の同名wheel SHA-256。Kaggle V2一覧と名前・bytes一致。Kaggle実行で一致必須。",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        }
+      ]
+    },
+    {
+      "key": "opencv_python_headless_4120088_x86",
+      "kind": "dataset",
+      "ref": "mattiaangeli/opencv-python-headless-4120088-x86",
+      "version": 1,
+      "url": "https://www.kaggle.com/datasets/mattiaangeli/opencv-python-headless-4120088-x86/versions/1",
+      "mounts": [
+        "datasets/mattiaangeli/opencv-python-headless-4120088-x86",
+        "opencv-python-headless-4120088-x86"
+      ],
+      "license_declaration": "Unknown",
+      "files": [
+        {
+          "path": "opencv_python_headless-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+          "bytes": 54023419,
+          "sha256": "236c8df54a90f4d02076e6f9c1cc763d794542e886c576a6fee46ec8ff75a7a9",
+          "role": "offline_dependency",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        }
+      ]
+    },
+    {
+      "key": "resnet_50_radimagenet_marwan",
+      "kind": "dataset",
+      "ref": "marwanmath/resnet-50-radimagenet-marwan",
+      "version": 1,
+      "url": "https://www.kaggle.com/datasets/marwanmath/resnet-50-radimagenet-marwan/versions/1",
+      "mounts": [
+        "datasets/marwanmath/resnet-50-radimagenet-marwan",
+        "resnet-50-radimagenet-marwan"
+      ],
+      "license_declaration": "CC BY-NC-SA 4.0",
+      "files": [
+        {
+          "path": "ResNet50.pt",
+          "bytes": 94345733,
+          "sha256": "08629f7e7bd3e29b8ee9522ca3f65ce4d010a7ddf74f0ea3c7e3f3d0bbab0734",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        }
+      ]
+    },
+    {
+      "key": "rsna_knee_coat_resgated_ep10_top3",
+      "kind": "dataset",
+      "ref": "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+      "version": 3,
+      "url": "https://www.kaggle.com/datasets/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/versions/3",
+      "mounts": [
+        "datasets/mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+        "rsna-knee-coat-resgated-ep10-top3"
+      ],
+      "license_declaration": "CC0: Public Domain",
+      "files": [
+        {
+          "path": "coat_resgated_ep10_top3_manifest.json",
+          "bytes": 7409,
+          "sha256": "98511a8fdeb9da0e6e70c78d013ff636e1476f31c80b5dc134d294b18c3f284e",
+          "role": "publisher_manifest",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "locally_verified_small_manifest",
+          "payload_verified_locally": true,
+          "required": true
+        },
+        {
+          "path": "cnx_dicom_geometry.py",
+          "bytes": 42634,
+          "sha256": "1e6e46ca40828aec8e68d93dea3676c68ee4803a10b349ad092861006e8301d4",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coat_resgated_ep10_gold58_geometry_contract.json",
+          "bytes": 27508,
+          "sha256": "e4160563f96bdd7513605628294c23dc93aa03e47278f4f6668a951ede522796",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coat_resgated_ep10_t4_gold58_rank_portability.json",
+          "bytes": 7890,
+          "sha256": "a11f5d37d877727f5d1d348ee2d5bfbcc144859c0459ced6b4a0d37eb76f2f21",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coat_resgated_ep10_t4_gold58_rank_portability_predictions.npz",
+          "bytes": 26635,
+          "sha256": "a5ec6b5c56ea25efb850d3b2eab34462587850e4f28beb8345558be0aae5e4c4",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coat_resgated_gold_e04.pt",
+          "bytes": 293989431,
+          "sha256": "cefaf007415b5e45ce2a720d5e211a183a4e90f160710ba1f72b1ce7c46239a2",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coat_resgated_gold_e06.pt",
+          "bytes": 293989431,
+          "sha256": "56eca1f61651362ecfae8aecdd9327125713b95653344b8ad62ef8cff17d08f4",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coat_resgated_gold_e08.pt",
+          "bytes": 293989367,
+          "sha256": "8d3159102046c127dc0d084fb69c9304ffcbd4b98d1333f9811d4d613fea1b12",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_q2l_bagmatch.py",
+          "bytes": 21977,
+          "sha256": "a3303a724e95cf3d9f13b67ef52529adf854b0cbe580b896ef42382cc740d932",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_resgated_ep10_top3_inference.py",
+          "bytes": 49679,
+          "sha256": "b11e58f8d7cabe9e264ac70b01e811dc6a846aa01248ace1f0e6536d0d4094d9",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": true,
+          "required": true
+        },
+        {
+          "path": "coatnet_residual_gated_k32.py",
+          "bytes": 16639,
+          "sha256": "83735f535235bfd575767b9ac9b12ca0a77a6b11adf14343ca5c2466257f3374",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "gold58_top3_predictions.npz",
+          "bytes": 19046,
+          "sha256": "9b6541a643a5f9eccabc2b9414784ee3f82c3f0049c330ec237e2f0835ddeb32",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "raptor_k6_surgical.py",
+          "bytes": 29665,
+          "sha256": "cc525db3bb67f0fde9db8dcfbbd33ff5bf5200d0c3c92251b368101314ae647f",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "raptor_light224.py",
+          "bytes": 43176,
+          "sha256": "d8f533df336f097910cd8c9ed7ae2248783554c9c797b661ee89406b5041cde5",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "raptor_light_inference.py",
+          "bytes": 112310,
+          "sha256": "3ce34aba32b44509bda7fe37a9b9b62c68028ea9a4d1364a5b4db3d97640b318",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "smart_crop224.py",
+          "bytes": 14344,
+          "sha256": "31b66d1a687fb9de3d01c10f31baf8b728903b6ed9e9effedec6fc8e77c4e424",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "trainer_a6000_epochs01_06.py",
+          "bytes": 58679,
+          "sha256": "bc4bd65893b99214b06ebd19055cf0db85427ed1bbe6c901ba78aec82f037b9e",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "trainer_h100_epochs07_10.py",
+          "bytes": 61532,
+          "sha256": "88cdd6d343b43e94f3539bbcdeff0c77eed6359c3c95457aff8d2593c7b4e4a7",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "training_history_through_epoch10.json",
+          "bytes": 46434,
+          "sha256": "45fc2fd5983b434cce633d3f90e5c363bda267c02fa583ab7f04d29c7c45ca49",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "triplet_physical_crop.py",
+          "bytes": 7784,
+          "sha256": "b84826fede9fa4195774e208e829ad60f189cfee90dce8a2c9528349b18717cf",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coat-resgated-ep10-top3/3/coat_resgated_ep10_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        }
+      ]
+    },
+    {
+      "key": "rsna_knee_coatnet_d4_depthzone_swa3_b2",
+      "kind": "dataset",
+      "ref": "mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+      "version": 2,
+      "url": "https://www.kaggle.com/datasets/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/versions/2",
+      "mounts": [
+        "datasets/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+        "rsna-knee-coatnet-d4-depthzone-swa3-b2"
+      ],
+      "license_declaration": "CC0: Public Domain",
+      "files": [
+        {
+          "path": "coatnet_pairfilm_manifest.json",
+          "bytes": 14155,
+          "sha256": "7ada0605bca6b0530569c6454e988ace479606a3328ed591d090e5764fea661d",
+          "role": "publisher_manifest",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "locally_verified_small_manifest",
+          "payload_verified_locally": true,
+          "required": true
+        },
+        {
+          "path": "audit_coatnet_d4_serving_equivalence.py",
+          "bytes": 12178,
+          "sha256": "d1aa41f568f06691a368923eafb9067fe9f590deed1a03e8aa7de0798c8c4424",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "cnx_dicom_geometry.py",
+          "bytes": 42634,
+          "sha256": "1e6e46ca40828aec8e68d93dea3676c68ee4803a10b349ad092861006e8301d4",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_d4_depthzone_swa3_adapter.pt",
+          "bytes": 43258,
+          "sha256": "b7c48b19997bc7ecb7e997f8dcf491ec5701ff917d1dac4b369eb85ac97ae89a",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_d4_depthzone_swa_inference.py",
+          "bytes": 10937,
+          "sha256": "fedf2053d5cdd5ad6fb3793c33bdb226a42cf9eddfb3667f91b33e34670b7a1f",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": true,
+          "required": true
+        },
+        {
+          "path": "coatnet_d4_parent_rank8_swa2.pt",
+          "bytes": 303275707,
+          "sha256": "5de38e333e3184d7b52fb068183f0cc198d6cbabb6ffbe36b26338622e82d297",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_fsxfilm_inference_model.py",
+          "bytes": 25914,
+          "sha256": "290688a0b063e03a7c4f7eefebeb7923dfac795ef2c342498e6803b48f056bcf",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_fsxfilm_swa_inference.py",
+          "bytes": 37044,
+          "sha256": "c05738825546649d69c8eefb17696bcc4881699d36d6a4ec59ddec566aa704fe",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_global96_baseline_top3_inference.py",
+          "bytes": 56308,
+          "sha256": "7c6a8df50e269b9aa69077b64f7296acb4ad5bf3792ec2523b645b2a42778acb",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_global96_inference_model.py",
+          "bytes": 11214,
+          "sha256": "d2ca34d5b1538ce42642efa0d34937f0d8a98719130dd76cc5bfa8944a2288ae",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_pairfilm_swa_inference.py",
+          "bytes": 20184,
+          "sha256": "60d016489aaca485ea94a33048238cd37ab284174c118c2e668006ded3cd0dd9",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_slice_depth_adapters.py",
+          "bytes": 38168,
+          "sha256": "fb24c03b7554f4acf02cfa40dfd7492e72bf1e9fde6ae8e19ff3868727cfa37c",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "d4_gold58_reference.npz",
+          "bytes": 9626,
+          "sha256": "ef4c66c212cec2ed7b8b3b9da44e2a0e7d8bcd1a85567563c32eef70dacce6d6",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "d4_train_serving_equivalence.json",
+          "bytes": 2851,
+          "sha256": "58c0e36e9dd530f11b2e8625c4a907be9762aa49791c02abc83432216e4840c6",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_CODEX_SLICE_CENTER_DEPTH_5_ABLATIONS_20260909.md",
+          "bytes": 12362,
+          "sha256": "92a50ec523d4a183f043f7b286a680ea011ca6a86f69a02b33593393a60c9dc7",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_anchored_adaptive_patch_pool.py",
+          "bytes": 21303,
+          "sha256": "0ae316a4c0b970bdb6386769eb47d25cd0cb4e765293cf1354e3dbfd9848ae11",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_coatnet_finding_slot_cross_attention_lr.py",
+          "bytes": 34570,
+          "sha256": "69d197571af8e971c618bc004839f07162a27636761c2b22b6f2585bd4ea5a59",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_coatnet_joint_slot_finding_mha.py",
+          "bytes": 26122,
+          "sha256": "b899e9e020305c963ebeabe905e79802a006806761fbb08da569ff88e70fbcc3",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_coatnet_q2l_bagmatch.py",
+          "bytes": 21977,
+          "sha256": "a3303a724e95cf3d9f13b67ef52529adf854b0cbe580b896ef42382cc740d932",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_coatnet_residual_gated_k32.py",
+          "bytes": 43181,
+          "sha256": "23bbf2625ae23a12c49bef8295d298aca1cff233bff7fe4bf34e540849e8f57a",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_coatnet_slice_depth_adapters.py",
+          "bytes": 38168,
+          "sha256": "fb24c03b7554f4acf02cfa40dfd7492e72bf1e9fde6ae8e19ff3868727cfa37c",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_convnext_cross_slot_finding_head.py",
+          "bytes": 18263,
+          "sha256": "a8dde3cb4df2158a73db5ace7faefbafe5b08b34ebabf8384842df4e43f78fcb",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_convnext_head_ablation_k32.py",
+          "bytes": 35161,
+          "sha256": "ea59169fa4297b9e1760cc21a61335864843a98af55b11e933fd0349890dcaa1",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_finding_slot_cross_attention_lr.py",
+          "bytes": 29181,
+          "sha256": "e0e609f6e268fdd8134b08ae93f433f25ecdb79b57699886f7ed1e7f24d5846e",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_raptor_global_stack_slot_coverage.py",
+          "bytes": 9402,
+          "sha256": "2e00a97ed4b83f9a1dcf96a24d0fecf923468da5aea1ae10ef93474aa448de22",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_raptor_global_stack_smart336.py",
+          "bytes": 28204,
+          "sha256": "c73d84cfb385215c6c987bf9dcde73d1fe47e25806538dee0da04c407466b802",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_raptor_k6_surgical.py",
+          "bytes": 29665,
+          "sha256": "cc525db3bb67f0fde9db8dcfbbd33ff5bf5200d0c3c92251b368101314ae647f",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_raptor_light224.py",
+          "bytes": 43176,
+          "sha256": "d8f533df336f097910cd8c9ed7ae2248783554c9c797b661ee89406b5041cde5",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_test_coatnet_slice_depth_adapters.py",
+          "bytes": 9682,
+          "sha256": "e2d59850c36e2d80e9bc663f2f042a3b0d608902257cb6ed67af3181edd05b5e",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_train_coatnet_adaptive_patch_guard.py",
+          "bytes": 52367,
+          "sha256": "19d8a52917c056b15567d1c1431e903860e919220e4efe2edafb3ad91e988fce",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_train_coatnet_global96_joint_mha_k12_effb24_e24_full_gold_swa.py",
+          "bytes": 241473,
+          "sha256": "f3cbfb85e1824c5172ab53d2497559492b1d97ae0cbfabd96a84817d4539245d",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_train_coatnet_slice_depth_ablation.py",
+          "bytes": 47062,
+          "sha256": "826aec545a22c708e08b6489615c9dc2664e5bee9795dcd2857b1747a43459ad",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "executed_triplet_physical_crop.py",
+          "bytes": 7784,
+          "sha256": "b84826fede9fa4195774e208e829ad60f189cfee90dce8a2c9528349b18717cf",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "finding_slot_cross_attention_lr.py",
+          "bytes": 29181,
+          "sha256": "e0e609f6e268fdd8134b08ae93f433f25ecdb79b57699886f7ed1e7f24d5846e",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "inherited_coatnet_fsxfilm_swa_train_submission_parity_gold58.json",
+          "bytes": 42936,
+          "sha256": "105dfb703bf29d0bcbfe6236589f582a91ef60ce336685ccd522315bbd996a5a",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "inherited_coatnet_fsxfilm_train36_cache_reference.json",
+          "bytes": 4824,
+          "sha256": "2b143a323d586840e5e852c3d18f550db27859df1e6ad44accaa1d21b929999d",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "inherited_coatnet_global96_train_submission_parity_gold58.json",
+          "bytes": 49078,
+          "sha256": "c96290d0bea1511f7feb662b40c370fc21369747daef12748a24485db8e4c382",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "raptor_global_stack_slot_coverage.py",
+          "bytes": 9402,
+          "sha256": "2e00a97ed4b83f9a1dcf96a24d0fecf923468da5aea1ae10ef93474aa448de22",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "raptor_global_stack_smart336.py",
+          "bytes": 28204,
+          "sha256": "c73d84cfb385215c6c987bf9dcde73d1fe47e25806538dee0da04c407466b802",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "raptor_light224.py",
+          "bytes": 43176,
+          "sha256": "d8f533df336f097910cd8c9ed7ae2248783554c9c797b661ee89406b5041cde5",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "raptor_light_inference.py",
+          "bytes": 112836,
+          "sha256": "2bd1f9f85d6895442825d6440ef9e2cffe6ad002f2f1bff484a35769443e4328",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "smart_crop224.py",
+          "bytes": 14344,
+          "sha256": "31b66d1a687fb9de3d01c10f31baf8b728903b6ed9e9effedec6fc8e77c4e424",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "timm-1.0.22-py3-none-any.whl",
+          "bytes": 2530238,
+          "sha256": "888981753e65cbaacfc07494370138b1700a27b1f0af587f4f9b47bc024161d0",
+          "role": "offline_dependency",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "training_completion_d4.json",
+          "bytes": 4557,
+          "sha256": "fdb25f9e72fe2e8a76d3ec9b7d1c6d971ee3524f6c395a54f9273abca9ff9e9b",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": true,
+          "required": true
+        },
+        {
+          "path": "training_history_d4.json",
+          "bytes": 47630,
+          "sha256": "23b25b198ff79cd7e24e88e15d62622b74d85604451ffc20c1058b5b45529d50",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "triplet_physical_crop.py",
+          "bytes": 7784,
+          "sha256": "b84826fede9fa4195774e208e829ad60f189cfee90dce8a2c9528349b18717cf",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/coatnet_pairfilm_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/coatnet_repairv1_top3_manifest.json",
+          "bytes": 10483,
+          "sha256": "99288a9a42f36ba544d7b0ad2fe645e3b1fc9c507c23802c16ca0d2e5085f684",
+          "role": "publisher_manifest",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "locally_verified_small_manifest",
+          "payload_verified_locally": true,
+          "required": true
+        },
+        {
+          "path": "repairv1/COATNET_REPAIRV1_SUBMISSION_GATES_20260904.md",
+          "bytes": 6175,
+          "sha256": "f206514f349f49a74d7a3b092ee192c87845fdc1f21b42d402e6a24edfb3ec73",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/COATNET_REPAIRV1_T4_RENDERER_SELECTION_20260904.md",
+          "bytes": 1920,
+          "sha256": "7ae46fa0a90cb700b00b73cff7e0317549d7674ef6d0b311b06c29bf35a422f3",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/cnx_dicom_geometry.py",
+          "bytes": 42634,
+          "sha256": "1e6e46ca40828aec8e68d93dea3676c68ee4803a10b349ad092861006e8301d4",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/coatnet_q2l_bagmatch.py",
+          "bytes": 21977,
+          "sha256": "a3303a724e95cf3d9f13b67ef52529adf854b0cbe580b896ef42382cc740d932",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/coatnet_repairv1_full_gold58_t4_cv412_audit.json",
+          "bytes": 22712,
+          "sha256": "97359a7ad9dd8a8ee6a4499850b6e8aaf0fc440e7a40de38dba2b9a60470d752",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/coatnet_repairv1_full_gold58_t4_cv412_audit_source.py",
+          "bytes": 19222,
+          "sha256": "6f60df836df5ff7f0eb61f0747e6a7e25688cb1abd174c94b4ee0b6ec7b370a9",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/coatnet_repairv1_full_gold58_t4_cv412_predictions.npz",
+          "bytes": 26157,
+          "sha256": "3786c3f45cc86edbc4e46c37bd92ccd66bc84eed9cca32b404b10d05ae4fc39e",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/coatnet_repairv1_gold58_top3_predictions.npz",
+          "bytes": 20411,
+          "sha256": "d47364a441bcfa23fd9c1778f49432b33bb45713b34e2e4e3d0da04791d1671e",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/coatnet_repairv1_gold_e07.pt",
+          "bytes": 292939604,
+          "sha256": "4f36e9aff09986fcf4f130203e3fbf391b95e0a466ed9c6f656dafd01c349cdf",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/coatnet_repairv1_gold_e11.pt",
+          "bytes": 292939604,
+          "sha256": "2ec451b03e4c1da5048aee91d4358fa2efa2900619d9dfd5b75dadce659e2f21",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/coatnet_repairv1_gold_e12.pt",
+          "bytes": 292939668,
+          "sha256": "45f34ec036a6b2dfb75239343f1dc33bc815bacd8c2d996235035d2602b5b2e7",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/coatnet_repairv1_top3_inference.py",
+          "bytes": 54159,
+          "sha256": "4f3e5cca50c048955fed1d6dcaf57bc3ccf7c45e143d75267550a3f53596aa69",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": true,
+          "required": true
+        },
+        {
+          "path": "repairv1/coatnet_repairv1_train_submission_parity_gold58.json",
+          "bytes": 34531,
+          "sha256": "424ce4c85159e40aa11797aa8ef35ed4b84c3f6e0bdbbbd1a17fdf8bda9079de",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/coatnet_residual_gated_k32.py",
+          "bytes": 37342,
+          "sha256": "4bc148bf21420076678aaad3187b0b457b45f6cebd6f5374e404232ab6536f36",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/historical_k12_t4_microbatch36.json",
+          "bytes": 3173,
+          "sha256": "501bf6fb7b46b125b7c57df2a93bf832be9330f79cb0d6987f6d151bea6a9ff5",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/historical_k12_t4_precision_audit.json",
+          "bytes": 3752,
+          "sha256": "e4eb7ab5d98908818d78151f3664039e597542ec5ef30e235352a0724e555cd2",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/historical_k12_t4x2_receipt.json",
+          "bytes": 3843,
+          "sha256": "ac6d5cdef99a3859de32aa12eeee55d8b4fd3c387c43a8b5522fa3488c899833",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/historical_resgated_top3_t4x2_receipt.json",
+          "bytes": 3709,
+          "sha256": "41d163dc88fd685c02c0222bd10b4e29353911016bd16516bf2b6bd1b89a8f32",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/raptor_k6_surgical.py",
+          "bytes": 29665,
+          "sha256": "cc525db3bb67f0fde9db8dcfbbd33ff5bf5200d0c3c92251b368101314ae647f",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/raptor_light224.py",
+          "bytes": 43176,
+          "sha256": "d8f533df336f097910cd8c9ed7ae2248783554c9c797b661ee89406b5041cde5",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/raptor_light_inference.py",
+          "bytes": 112310,
+          "sha256": "3ce34aba32b44509bda7fe37a9b9b62c68028ea9a4d1364a5b4db3d97640b318",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/runpod_retrieval_receipt.json",
+          "bytes": 770,
+          "sha256": "1982c9b86a955e37e433309f9640a2c53128c3d4c35c5d7ceaa351be4c11b3ff",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/smart_crop224.py",
+          "bytes": 14344,
+          "sha256": "31b66d1a687fb9de3d01c10f31baf8b728903b6ed9e9effedec6fc8e77c4e424",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/train_coatnet_repairv1_exact.py",
+          "bytes": 112594,
+          "sha256": "123f2eb49536fee60beb97c4dd6b12f90e28cb9a9d30ad2c1758a5ba444928c3",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/training_history_terminal_epoch18.json",
+          "bytes": 125886,
+          "sha256": "fb825bb22a5c0e7a10ef4561247a5c9fabb14c02059cf854b44d81b06ede1a43",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "repairv1/triplet_physical_crop.py",
+          "bytes": 7784,
+          "sha256": "b84826fede9fa4195774e208e829ad60f189cfee90dce8a2c9528349b18717cf",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2/2/repairv1/coatnet_repairv1_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        }
+      ]
+    },
+    {
+      "key": "rsna_knee_coatnet_global96_top3",
+      "kind": "dataset",
+      "ref": "mattiaangeli/rsna-knee-coatnet-global96-top3",
+      "version": 1,
+      "url": "https://www.kaggle.com/datasets/mattiaangeli/rsna-knee-coatnet-global96-top3/versions/1",
+      "mounts": [
+        "datasets/mattiaangeli/rsna-knee-coatnet-global96-top3",
+        "rsna-knee-coatnet-global96-top3"
+      ],
+      "license_declaration": "CC0: Public Domain",
+      "files": [
+        {
+          "path": "coatnet_global96_top3_manifest.json",
+          "bytes": 7486,
+          "sha256": "015f09030e76f86274cadae40777b3c3cf5c19f8c835d5ad88e15db41903779e",
+          "role": "publisher_manifest",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "locally_verified_small_manifest",
+          "payload_verified_locally": true,
+          "required": true
+        },
+        {
+          "path": "cnx_dicom_geometry.py",
+          "bytes": 42634,
+          "sha256": "1e6e46ca40828aec8e68d93dea3676c68ee4803a10b349ad092861006e8301d4",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_global96_baseline_top3_inference.py",
+          "bytes": 55963,
+          "sha256": "8beec87f648f298d348679e8812a0ca278e6c040cba9f797dbbc7efa0ed5d4b1",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": true,
+          "required": true
+        },
+        {
+          "path": "coatnet_global96_gold58_reference.npz",
+          "bytes": 20511,
+          "sha256": "05651c1ec0980f31fea95d95c116e8e7d7d86eeaf95e43cae80639e36fe40ddc",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_global96_gold_e16.pt",
+          "bytes": 300400663,
+          "sha256": "f824d16bd506f442cc5a37b054663963e5461a59a0c42ad480f3fe515dd9408f",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_global96_gold_e18.pt",
+          "bytes": 300400663,
+          "sha256": "629f0d10ebc1946a25577b8dc0fa1d83d65d8a607961d146b53b7a36dc2c5c2e",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_global96_gold_e23.pt",
+          "bytes": 300400663,
+          "sha256": "c177a8a9240c7d55465fea83bb27b1ab400274722095b2895b689092a804bfdb",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_global96_inference_model.py",
+          "bytes": 11214,
+          "sha256": "d2ca34d5b1538ce42642efa0d34937f0d8a98719130dd76cc5bfa8944a2288ae",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "coatnet_global96_train_submission_parity_gold58.json",
+          "bytes": 49078,
+          "sha256": "c96290d0bea1511f7feb662b40c370fc21369747daef12748a24485db8e4c382",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "minimal_model_equivalence.json",
+          "bytes": 215,
+          "sha256": "90bf1d03596af0696fbe95415c8909ac5f75a9852f3457975b27e04a6f3192e0",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "raptor_global_stack_smart336.py",
+          "bytes": 26372,
+          "sha256": "96d9f2475438771bcdd937a7747fb54b62ecb4ece74f9f0f0b5d6b71db99d7c0",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "raptor_light224.py",
+          "bytes": 43176,
+          "sha256": "d8f533df336f097910cd8c9ed7ae2248783554c9c797b661ee89406b5041cde5",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "raptor_light_inference.py",
+          "bytes": 112310,
+          "sha256": "3ce34aba32b44509bda7fe37a9b9b62c68028ea9a4d1364a5b4db3d97640b318",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "smart_crop224.py",
+          "bytes": 14344,
+          "sha256": "31b66d1a687fb9de3d01c10f31baf8b728903b6ed9e9effedec6fc8e77c4e424",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "timm-1.0.22-py3-none-any.whl",
+          "bytes": 2530238,
+          "sha256": "888981753e65cbaacfc07494370138b1700a27b1f0af587f4f9b47bc024161d0",
+          "role": "offline_dependency",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "train_coatnet_global96_exact.py",
+          "bytes": 162797,
+          "sha256": "413e67c6ead41765a0662888fd9a40176df1e0a0eec02dd1c6200e5fe0dbaa1a",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "training_history_global96_e24.json",
+          "bytes": 253853,
+          "sha256": "3795b033ce2a26c11bad0bf655ec36f7076c32400c330999419dc0fba472970f",
+          "role": "provenance_only_hash_check",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "triplet_physical_crop.py",
+          "bytes": 7784,
+          "sha256": "b84826fede9fa4195774e208e829ad60f189cfee90dce8a2c9528349b18717cf",
+          "role": "runtime_source",
+          "hash_evidence": "artifacts/research/20261005-p003-investigate/source-documents/mattiaangeli/rsna-knee-coatnet-global96-top3/1/coatnet_global96_top3_manifest.json",
+          "hash_evidence_kind": "public_manifest_declaration",
+          "payload_verified_locally": false,
+          "required": true
+        }
+      ]
+    },
+    {
+      "key": "rsna_knee_e9_radimagenet_heads_v15",
+      "kind": "dataset",
+      "ref": "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+      "version": 3,
+      "url": "https://www.kaggle.com/datasets/antoinegg1/rsna-knee-e9-radimagenet-heads-v15/versions/3",
+      "mounts": [
+        "datasets/antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+        "rsna-knee-e9-radimagenet-heads-v15"
+      ],
+      "license_declaration": "CC BY-NC-SA 4.0",
+      "files": [
+        {
+          "path": "v52_radimagenet_heads.pt",
+          "bytes": 63525150,
+          "sha256": "0f465649799ecfbccaac1767844639e7ced44e1bc9babde6e4bac7c5d9b89eaa",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        }
+      ]
+    },
+    {
+      "key": "rsna_knee_weights",
+      "kind": "dataset",
+      "ref": "pilkwang/rsna-knee-weights",
+      "version": 1,
+      "url": "https://www.kaggle.com/datasets/pilkwang/rsna-knee-weights/versions/1",
+      "mounts": [
+        "datasets/pilkwang/rsna-knee-weights",
+        "rsna-knee-weights"
+      ],
+      "license_declaration": "CC0: Public Domain",
+      "files": [
+        {
+          "path": "m_013dc75703.pt",
+          "bytes": 89293562,
+          "sha256": "36d513243ebb22f2e8c5ded08cdb36932537bd700c49497a158ab7b3883d09b5",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_1e553ba481.pt",
+          "bytes": 89286714,
+          "sha256": "72b293b7199bedc038d26fa5453360752541714f5b023b8910e7e90dd435f8e4",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_2dce50ebd9.pt",
+          "bytes": 89295866,
+          "sha256": "0b8d57e7d6e160f95f9525d9a46a643691478fe63d25429cd4755e8d5567fcd4",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_2f7e785e82.pt",
+          "bytes": 89293818,
+          "sha256": "7090a090d38bb82dac4aad78b98f0cb3a54960ff5a009adc2a6718478b5fa32c",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_3d1f4c48fc.pt",
+          "bytes": 89293818,
+          "sha256": "c913e392c89e406123efbaeea5fa3048101621947eebd77c206d7ec5682c7e35",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_44128e3ff3.pt",
+          "bytes": 89295866,
+          "sha256": "4b49cac5102e66cbf96210c29b17e35501b4cf8b69d058a8e791199aea25e89a",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_44bc3c6f14.pt",
+          "bytes": 89295866,
+          "sha256": "2cbdee353893131b73148b446f1e9b3fb4ee61595ab6145e854968125f47f20e",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_5f8ba4c5ea.pt",
+          "bytes": 89306554,
+          "sha256": "6267820f18b5ee7ab4672f7f8868949a86b1d5801224820927b9555304261fde",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_72081758ce.pt",
+          "bytes": 89296634,
+          "sha256": "e895398d69fab80eff3a93be93e1c5673d87291abd1fb421e6210c82847b7423",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_7f8321affc.pt",
+          "bytes": 89296634,
+          "sha256": "ee66cea7f13b09fb8b710decce196ef0a8dc072dc0a9bccd65554f9014dc40c2",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_84079fe8cb.pt",
+          "bytes": 89296634,
+          "sha256": "ad3e21e73ae400b5c536936d2acbe8344487345b5358cdfb655758eceef41958",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_8476b29285.pt",
+          "bytes": 89286970,
+          "sha256": "ea81c3eabc916286b6d73a26645b1feefb1b6511ff6e84e1a1559933a27786ae",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_8baecb9d1b.pt",
+          "bytes": 89293818,
+          "sha256": "321de45924ceed510d51a23cc6d462591e02825a6f5ff06beac48adc570c7621",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_91f171fe6f.pt",
+          "bytes": 89286970,
+          "sha256": "fb40a77c1f19b70cbff241f1570adabc5517f0b11fabae30c5ca142bbfc7af19",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_b7c37cc80e.pt",
+          "bytes": 89296634,
+          "sha256": "f54e85607e55ea8da5cc4582d6d9a3fec1ee3852f57a11f63a27db88f5824c2d",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_d47313baef.pt",
+          "bytes": 89306554,
+          "sha256": "f79e7202e94cd15f057becb0f7f86123ae90472f625397b95a6a00d6ff34fa1f",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_e5427d6c21.pt",
+          "bytes": 89306234,
+          "sha256": "7223cd50ae5e7bdc8d3ffe888ab207bdbb2256d06e33f96e7a709eca5d86ab33",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_ea3fbf6edf.pt",
+          "bytes": 89306554,
+          "sha256": "5558228ee3099311a5ab9ad573b0861773428cf1ed537bd6f388d866be292d7c",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_ed427aa10a.pt",
+          "bytes": 89295866,
+          "sha256": "ee8fe9a48061f0f6215bf7766dc0b705fbac2afe753e57828ab8842ee7f683b3",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "m_f335c812fe.pt",
+          "bytes": 89286970,
+          "sha256": "dfc23ad8dbdf636ad72a19dbbf6cfa5434379d30d4d94caba8b33a56425b92c3",
+          "role": "checkpoint",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 42477,
+          "sha256": "496949a3a3e789bc1f4ccff595205c911e471c5b5ef669366a2dd0a58e125844",
+          "role": "publisher_manifest",
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/rsna-knee-weights/manifest.json",
+          "hash_evidence_kind": "prior_public_manifest_expected_identity",
+          "payload_verified_locally": false,
+          "required": true
+        }
+      ]
+    },
+    {
+      "key": "rad_e13_notebook",
+      "kind": "notebook_output",
+      "ref": "sofiaanjenje/rsna-knee-e13-train",
+      "version": 1,
+      "url": "https://www.kaggle.com/code/sofiaanjenje/rsna-knee-e13-train",
+      "mounts": [
+        "notebooks/sofiaanjenje/rsna-knee-e13-train",
+        "rsna-knee-e13-train"
+      ],
+      "license_declaration": "Upstream public Notebook license and RadImageNet terms; see previous source audit.",
+      "files": [
+        {
+          "path": "rsna_rad_e11/v52_e11_heads.pt",
+          "bytes": 63534726,
+          "sha256": "ad9f19af73bfdf4e49263c0e45060dc3cb239e1195039b26dc8c0a3a6bcd1a8a",
+          "role": "rad_e13_five_heads",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true,
+          "hash_evidence_kind": "public_p002_manifest_and_p003_source_agree"
+        }
+      ]
+    },
+    {
+      "key": "dinov2_base",
+      "kind": "model",
+      "ref": "metaresearch/dinov2/PyTorch/small/1",
+      "version": 1,
+      "url": "https://www.kaggle.com/models/metaresearch/dinov2/frameworks/PyTorch/variations/small/versions/1",
+      "files": [
+        {
+          "path": "config.json",
+          "bytes": 547,
+          "sha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "role": "dinov2_base_local_asset",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "pytorch_model.bin",
+          "bytes": 88297097,
+          "sha256": "1051e25b2ed69ddad24f3c41e7b6eed6e7f7d012103ea227e47eb82e87dc2050",
+          "role": "dinov2_base_local_asset",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        },
+        {
+          "path": "preprocessor_config.json",
+          "bytes": 436,
+          "sha256": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828",
+          "role": "dinov2_base_local_asset",
+          "required": true,
+          "hash_evidence": "artifacts/research/20261005-p002-inputs/source-documents/tonylica/rsna-knee-bend-dinov3-0917-repro-assets/5/bundle_manifest.json",
+          "payload_verified_locally": false,
+          "verify_payload_at_kaggle_preflight": true
+        }
+      ],
+      "mounts": [
+        "models/metaresearch/dinov2/PyTorch/small/1",
+        "models/metaresearch/dinov2/pytorch/small/1",
+        "dinov2/PyTorch/small/1",
+        "dinov2/pytorch/small/1"
+      ]
+    },
+    {
+      "key": "competition",
+      "kind": "competition",
+      "ref": "rsna-knee-abnormality-detection",
+      "version": null,
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data",
+      "files": [
+        {
+          "path": "train.csv",
+          "bytes": null,
+          "sha256": null,
+          "role": "capacity_planning_row_count_only_no_label_selection",
+          "required": true
+        },
+        {
+          "path": "test.csv",
+          "bytes": null,
+          "sha256": null,
+          "role": "test_study_identity",
+          "required": true
+        },
+        {
+          "path": "test_series.csv",
+          "bytes": null,
+          "sha256": null,
+          "role": "test_series_geometry",
+          "required": true
+        },
+        {
+          "path": "sample_submission.csv",
+          "bytes": null,
+          "sha256": null,
+          "role": "submission_target_order",
+          "required": true
+        }
+      ],
+      "mounts": [
+        "rsna-knee-abnormality-detection",
+        "competitions/rsna-knee-abnormality-detection"
+      ]
+    }
+  ],
+  "omitted_original_inputs": [
+    {
+      "ref": "pilkwang/rsna-knee-llm-labels",
+      "reason": "Label CSV unused by inference; do not add a Report dependency."
+    },
+    {
+      "ref": "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+      "reason": "Alternate E11 file is not the requested E13 checkpoint."
+    },
+    {
+      "ref": "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+      "reason": "Alternate heads unused; E9 supplies the requested reference SHA."
+    },
+    {
+      "ref": "sofiaanjenje/rsna-knee-e11-train",
+      "reason": "Alternate E11 output unused; E13 exact expected SHA is required."
+    }
+  ],
+  "evidence": {
+    "source_observations": "artifacts/research/20261005-p003-investigate/source-observations.json",
+    "dataset_inventory": "artifacts/research/20261005-p003-investigate/input-observations.json",
+    "notebook_inventory": "artifacts/research/20261005-p003-investigate/notebook-input-observations.json",
+    "small_source_downloads": "artifacts/research/20261005-p003-investigate/contract-download-record.json"
+  },
+  "limits": [
+    "Version pins are current accessible Inputs, not author historical saved Input versions.",
+    "Weight hashes are public expected identities and will be verified against Kaggle mounted bytes before inference; no weights were downloaded locally.",
+    "Provenance-only historical gold artifacts may be checked by digest for package integrity; do not load them as validation labels or fit checkpoint/blend choices.",
+    "No real MRI, public checkpoint execution, training, upload or submission was performed."
+  ]
+}

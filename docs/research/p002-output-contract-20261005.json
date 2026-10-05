@@ -3,7 +3,7 @@
   "checked_date_jst": "2026-10-05",
   "scope": "静的なソース・既存マニフェスト調査。公開推論コードの実行、MRIデコード、重み取得、学習、アップロード、提出は実施していない。ここに記す追加guardは設計であり、実装・テストの結果は別記録とする。",
   "source": {
-    "path": "artifacts/research/20261005-public-candidate/kaggle/romantamrazov/rsna-knee-dinosaur-v4-v32/source.ipynb",
+    "path": "notebooks/public/vendor/romantamrazov-dinosaur-v32.ipynb",
     "sha256": "ba9491ac1e214ba55ca181de55118c9a793fe7f6163fc221fe1e68d596259dca",
     "ref": "romantamrazov/rsna-knee-dinosaur-v4",
     "version": 32,

@@ -26,6 +26,9 @@ pythonpath = ["src"]
 [tool.ruff]
 target-version = "py311"
 line-length = 120
+# Frozen and generated public Notebooks keep exact embedded source strings.
+# Generators/runtimes are linted; notebook syntax, hashes and regeneration are tested.
+extend-exclude = ["notebooks/public/vendor/*.ipynb", "notebooks/public/*.ipynb"]
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I"]

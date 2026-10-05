@@ -1,0 +1,94 @@
+{
+  "checked_date_jst": "2026-10-05",
+  "status": "prepared_not_executed_on_real_mri",
+  "unittest": {
+    "tests_run": 177,
+    "passed": 176,
+    "failures": 0,
+    "errors": 0,
+    "skipped": [
+      {
+        "test": "test_real_symlink_cleanup_preserves_target_when_os_permits (test_p003_profile.P003ProfileTests.test_real_symlink_cleanup_preserves_target_when_os_permits)",
+        "reason": "Windows WinError 1314: actual symlink creation requires an unavailable OS privilege; mocked unlink/target-preservation tests passed."
+      }
+    ],
+    "successful": true,
+    "seconds": 11.3822966000007
+  },
+  "lint": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "files_formatted": 73
+  },
+  "notebooks": {
+    "notebooks/public/01_submit_p002_scored.ipynb": {
+      "sha256": "f5075c34fd389277d2aa6acb3dd3f87275485d60a8796a91d22060a46c4d70b4",
+      "code_cells": 12,
+      "regenerated_byte_equal": true,
+      "syntax_valid": true,
+      "outputs_empty": true
+    },
+    "notebooks/public/02_submit_p003.ipynb": {
+      "sha256": "0daa0c309cfd7c031c77be99488d0df0379e8190d548f566f111245b2101aeac",
+      "code_cells": 25,
+      "regenerated_byte_equal": true,
+      "syntax_valid": true,
+      "outputs_empty": true
+    },
+    "notebooks/public/03_a5_precision_probe.ipynb": {
+      "sha256": "b52bc14a20ab2b5d90adb139ab664cf2feb811576cc0d330bf899db74fa2f4b7",
+      "code_cells": 2,
+      "regenerated_byte_equal": true,
+      "syntax_valid": true,
+      "outputs_empty": true
+    },
+    "notebooks/public/04_profile_p003_64.ipynb": {
+      "sha256": "67786bf2b96c24d61f2e2b75b524d1c43ff8dc9d985ebbc6fb36d433ccb11629",
+      "code_cells": 24,
+      "regenerated_byte_equal": true,
+      "syntax_valid": true,
+      "outputs_empty": true
+    }
+  },
+  "p003": {
+    "original_code_cells_preserved": 23,
+    "effective_inputs": 14,
+    "public_files_with_expected_hash": 148,
+    "competition_csv_runtime_hashes": 4,
+    "self_public_score": null,
+    "hidden_test_runtime": null
+  },
+  "profile": {
+    "studies": 64,
+    "seed": 20261005,
+    "source_cells_modified": [
+      6
+    ],
+    "source_cells_omitted": [
+      29
+    ],
+    "change": "Competition resolver uses the train-image shadow; publication cell omitted.",
+    "manifest_path": "experiments/p003-profile64-20261005.json",
+    "submission_csv_generated": false,
+    "labels_used": false
+  },
+  "a5_synthetic_gpu_scope": "RTX 4090 artificial inputs and small replacement encoders exercise BF16/FP16/FP32 runtime paths; not real A5 full-architecture weights, MRI accuracy, or T4 timings.",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "numpy": "2.5.3",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "real_mri_decoded": false,
+  "new_weight_payloads_downloaded": false,
+  "training_performed": false,
+  "uploaded_or_submitted": false,
+  "local_links": {
+    "documents": 4,
+    "links_checked": 126,
+    "missing": 0
+  },
+  "git_diff_check": "passed"
+}

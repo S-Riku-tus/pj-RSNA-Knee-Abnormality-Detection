@@ -4,6 +4,8 @@
 
 全件画像キャッシュ（4,407検査、約7.79GB）の取得・検証、weakラベルの監査と固定分割、RTX 4090での基準学習を完了しています。**weak 4,207検査・gold 58検査、fold 0の学習3,386／検証821検査**です。10月3日の5 epoch基準実験は約18分、最良checkpointはepoch 1でした。公開モデルを使った既存提出の実測Public 0.924は公式APIで確認済みで、自作モデルのスコアとは区別します。
 
+**最新：p002のPublic 0.937・COMPLETEを公式APIで確認しました。** [成功版](notebooks/public/01_submit_p002_scored.ipynb)を固定し、次の[p003提出候補](notebooks/public/02_submit_p003.ipynb)、[64検査の時間診断](notebooks/public/04_profile_p003_64.ipynb)、[A5精度診断](notebooks/public/03_a5_precision_probe.ipynb)を用意しました。ユーザーが実行した64検査診断は、提供JSON上で23分47.8秒・完了と確認でき、次はp003提出候補の保存実行へ進めます。[診断レビュー](experiments/p003-profile-review-20261005.json)、[操作手順と0.945／0.955への比較計画](docs/p003-next-step.md)を参照してください。隠しtestの完走・自己Publicは未確認です。以下の0.924基準・p002未採点記述は以前の履歴です。
+
 10月4日に公式RulesとHost回答を取得し、vmohitrao Version 3ラベルを研究・学習目的とCC BY-NC 4.0の帰属等を守って採用する判断に更新しました。[利用条件の根拠](docs/research/kaggle-source-eligibility-20261004.json) に本文の確認日と出典を保存しています。
 
 ## 最初に読む資料

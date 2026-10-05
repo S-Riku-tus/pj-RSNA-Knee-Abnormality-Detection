@@ -1,0 +1,676 @@
+{
+  "schema_version": "p002_scored_baseline_audit_v1",
+  "checked_date_jst": "2026-10-05",
+  "candidate_id": "p002-dinosaur-v32-current-pins-v1",
+  "status": "scored",
+  "official_submission": {
+    "ref": 56840796,
+    "date": "2026-10-05T03:07:34.870Z",
+    "publicScore": "0.937",
+    "status": "COMPLETE",
+    "url": "/submissions/56840796/56840796.raw",
+    "fileName": "submission.csv",
+    "totalBytes": 385317,
+    "status_enum": "SubmissionStatus.COMPLETE",
+    "checked_at_utc": "2026-10-05T12:52:19.514416+00:00"
+  },
+  "notebook": {
+    "ref": "rsraki/notebook3beaf8c48b",
+    "version": 1,
+    "script_version_id": 355324155,
+    "source_url": "https://www.kaggle.com/code/rsraki/notebook3beaf8c48b?scriptVersionId=355324155",
+    "saved_source_sha256": "e1c80f46e5b3b09d944a8cab3a97a89d567b082c69b0ad7c600245b5aae4c4e2",
+    "fixed_handoff_path": "notebooks/public/01_submit_p002_scored.ipynb",
+    "fixed_handoff_sha256": "f5075c34fd389277d2aa6acb3dd3f87275485d60a8796a91d22060a46c4d70b4",
+    "all_16_cell_sources_equal": true,
+    "all_other_cell_fields_and_metadata_equal": true,
+    "serialization_only_differences": {
+      "cell_indices": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "description": "Kaggle API source strings versus handoff line lists, JSON serialization, and handoff CRLF. No source-code changes."
+    },
+    "cells": [
+      {
+        "index": 0,
+        "cell_type": "markdown",
+        "source_sha256": "6f647f83e0fc424ce4dc1741c2bc9dd548143e5576e0217bfab942520b2a9ac0"
+      },
+      {
+        "index": 1,
+        "cell_type": "code",
+        "source_sha256": "1bd61a82277ba5739eb9e907a34fb1c7bc900b4d949bd3875d7938a2acbea2a6"
+      },
+      {
+        "index": 2,
+        "cell_type": "markdown",
+        "source_sha256": "e46dff1457df683d5744be8bf7e985caf18b9b2e5f55986970f9fdf80baf9e93"
+      },
+      {
+        "index": 3,
+        "cell_type": "markdown",
+        "source_sha256": "2652b93b82acbbb72168ae67cb854c5f0086496b8bd4de67c48473d4e901b704"
+      },
+      {
+        "index": 4,
+        "cell_type": "code",
+        "source_sha256": "3bb8adc447ea7c399c48f4e5915ba1708fe56d9804ea3a30999bfc7e87d38051"
+      },
+      {
+        "index": 5,
+        "cell_type": "code",
+        "source_sha256": "d99d6a12f7e14fc55d0b87507632e3c2478e044b52c1714d8ab2148fc68c0b18"
+      },
+      {
+        "index": 6,
+        "cell_type": "code",
+        "source_sha256": "436c97c5719c459f752dce6b65f54a934263d32c490b0848cf5c01072b6ba50c"
+      },
+      {
+        "index": 7,
+        "cell_type": "code",
+        "source_sha256": "5339e238f6e9a9dbf5f232e724c4f26e25f7c48efd0e8a4c30ec1a3cfb1d1f79"
+      },
+      {
+        "index": 8,
+        "cell_type": "code",
+        "source_sha256": "fe618bc86385600bbaf00ef2be0c71420e87024c64bbfb6c47671ada3ef36358"
+      },
+      {
+        "index": 9,
+        "cell_type": "code",
+        "source_sha256": "adf23f5a4b0a73ad2bf1727bce7f80409a899d9e9f6a09b65a7a7432cb403f18"
+      },
+      {
+        "index": 10,
+        "cell_type": "code",
+        "source_sha256": "1a3d40dc3184510fbd5f918b3d087570a55f9789fe9ffd5d3e2c272e9f02961f"
+      },
+      {
+        "index": 11,
+        "cell_type": "code",
+        "source_sha256": "77cff876d87a417cec7195cd9c1ede834bc693db16ce4b5dfd77a923e4604ec7"
+      },
+      {
+        "index": 12,
+        "cell_type": "code",
+        "source_sha256": "f67d35f8d5bda0bd5c67902a2702a71a6f86b113de9d945b1e0212313644386a"
+      },
+      {
+        "index": 13,
+        "cell_type": "markdown",
+        "source_sha256": "6b74f7e5e4d4aa9ea5866d0c88067be24c895c3c2ec5b683bf37783d9314e032"
+      },
+      {
+        "index": 14,
+        "cell_type": "code",
+        "source_sha256": "7ffb7fadd5eef965fe0185129df4dc76fffdff0c02dfab4ec4f531f2cf82fe90"
+      },
+      {
+        "index": 15,
+        "cell_type": "code",
+        "source_sha256": "25856817c2f14e188c5d4a393fa6a059bc4945135f40101a816acc0d188ba05b"
+      }
+    ],
+    "source_contains_saved_outputs": false,
+    "metadata": {
+      "id": 137114840,
+      "ref": "rsraki/notebook3beaf8c48b",
+      "title": "notebook3beaf8c48b",
+      "author": "rsraki",
+      "slug": "notebook3beaf8c48b",
+      "lastRunTime": "2026-10-02T12:52:19.751Z",
+      "language": "python",
+      "kernelType": "notebook",
+      "isPrivate": true,
+      "enableGpu": true,
+      "enableInternet": false,
+      "categoryIds": [
+        "gpu"
+      ],
+      "datasetDataSources": [
+        "mattiaangeli/knee-mri-fold-weights",
+        "tonylica/rsna-knee-bend-dinov3-0917-repro-assets",
+        "renta0426/rsna-knee-public0033-meniscus-bag-v1"
+      ],
+      "competitionDataSources": [
+        "rsna-knee-abnormality-detection"
+      ],
+      "modelDataSources": [
+        "metaresearch/dinov2/PyTorch/small/1"
+      ],
+      "enableTpu": false,
+      "currentVersionNumber": 1,
+      "dockerImage": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+      "machineShape": "NvidiaTeslaT4"
+    },
+    "metadata_last_run_time_note": "API lastRunTime conflicts with dated saved receipts; not used as submitted/saved runtime evidence."
+  },
+  "output_version_link": {
+    "files": [
+      "P002_READY.json",
+      "dinosaur_v4_v6_receipt.json",
+      "infra0021_runtime_receipt.json",
+      "p002-preflight.json",
+      "public0033_bag_raw.csv",
+      "public0033_cached_inference_receipt.json",
+      "public0033_overlay_receipt.json",
+      "submission.csv",
+      "submission_dinosaur_v4_0937_control.csv",
+      "submission_dinosaur_v4_v6_candidate.csv",
+      "submission_parent_exact.csv"
+    ],
+    "numeric_output_object_path_components": [
+      355324155
+    ],
+    "submission_script_version_id": 355324155,
+    "output_path_contains_submission_version_id": true,
+    "output_payloads_downloaded": false,
+    "signed_urls_saved": false,
+    "hidden_runtime_seconds": null,
+    "runtime_reason": "Official submission/status/metadata schemas do not expose hidden-test runtime. User reports approximately eight hours; saved-run runtime is separate."
+  },
+  "visible_saved_run": {
+    "scope": "Three visible test studies. These are not hidden-test outputs.",
+    "receipt_download": {
+      "scope": "visible saved run only; not hidden-test receipts",
+      "prediction_image_weight_payloads_downloaded": false,
+      "receipts": [
+        {
+          "name": "P002_READY.json",
+          "bytes": 831,
+          "sha256": "562909a703c1ab326fc2db94bc1608b3d8631aa444ce925f8bd7ecd372e5d712",
+          "status": "passed",
+          "schema_version": null
+        },
+        {
+          "name": "dinosaur_v4_v6_receipt.json",
+          "bytes": 775,
+          "sha256": "7cfaffd80ef38747de34faf6f95378daf420522e02364a5067eacee6519c2ab0",
+          "status": "passed",
+          "schema_version": "dinosaur_v4_v6_outer_weights_v1"
+        },
+        {
+          "name": "infra0021_runtime_receipt.json",
+          "bytes": 3041,
+          "sha256": "874dc91dffd8c30a691b98434fc82201fb333242e11644c77985d4b3606ce1b6",
+          "status": "passed",
+          "schema_version": "infra0021_runtime_receipt_v1"
+        },
+        {
+          "name": "p002-preflight.json",
+          "bytes": 8969,
+          "sha256": "d2fdf2fdf139de21a012af931b4cd89253aa2d8e680a3df930213ae3c1c81ebe",
+          "status": "passed",
+          "schema_version": null
+        },
+        {
+          "name": "public0033_cached_inference_receipt.json",
+          "bytes": 2869,
+          "sha256": "efd8183278563012b4466295c86c1166a4d05ab18ab4ed51800cb4d2a44246df",
+          "status": "passed",
+          "schema_version": "public0033_cached_inference_receipt_v1"
+        },
+        {
+          "name": "public0033_overlay_receipt.json",
+          "bytes": 2338,
+          "sha256": "e04266351e5e210b18a811c05f14fbb1f7d57b54de4dfb6211f17a6a6ceed4df",
+          "status": "passed",
+          "schema_version": "public0033_medial_t30_r60_b10_overlay_v1"
+        }
+      ]
+    },
+    "all_six_receipts_passed": true,
+    "all_47_required_input_hashes_match_pinned_contract": true,
+    "ready": {
+      "status": "passed",
+      "candidate_id": "p002-dinosaur-v32-current-pins-v1",
+      "studies": 3,
+      "source_cells": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12
+      ],
+      "output": "submission.csv",
+      "sha256": "2cac0e299962c28589656de5254ce2e2511b56c4b9e0e6a9faf0a82c2930480d",
+      "elapsed_seconds": 164.69929810399998,
+      "observed_members": {
+        "dino_raw_valid": true,
+        "dino_observations": 1,
+        "a5_raw_valid": true,
+        "a5_observations": 1,
+        "raptor_full_progress": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "raptor_done": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "raptor_raw_valid": true,
+        "raptor_observations": 1
+      },
+      "public_score": null,
+      "scoring_performed": false,
+      "note": "This saved-run check is not evidence of hidden-test scoring or author-score reproduction."
+    },
+    "environment": {
+      "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+      "packages": {
+        "numpy": "2.1.3",
+        "pandas": "2.3.3",
+        "pydicom": "3.0.2",
+        "torch": "2.11.0+cu128",
+        "torchvision": "0.26.0+cu128",
+        "timm": "1.0.22",
+        "cv2": "4.14.0",
+        "transformers": "5.16.1",
+        "safetensors": "0.8.0"
+      },
+      "gpu": [
+        "Tesla T4",
+        "Tesla T4"
+      ],
+      "torch_cuda": "12.8"
+    },
+    "verified_input_files": [
+      {
+        "input": "consolidated",
+        "path": "bundle_manifest.json",
+        "sha256": "3b6279ab50ca8c3ce100644eadda9bc14e0359c05120990e28a43edc6a5364a8"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/manifest.json",
+        "sha256": "496949a3a3e789bc1f4ccff595205c911e471c5b5ef669366a2dd0a58e125844"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_44128e3ff3.pt",
+        "sha256": "4b49cac5102e66cbf96210c29b17e35501b4cf8b69d058a8e791199aea25e89a"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_1e553ba481.pt",
+        "sha256": "72b293b7199bedc038d26fa5453360752541714f5b023b8910e7e90dd435f8e4"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_e5427d6c21.pt",
+        "sha256": "7223cd50ae5e7bdc8d3ffe888ab207bdbb2256d06e33f96e7a709eca5d86ab33"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_7f8321affc.pt",
+        "sha256": "ee66cea7f13b09fb8b710decce196ef0a8dc072dc0a9bccd65554f9014dc40c2"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_013dc75703.pt",
+        "sha256": "36d513243ebb22f2e8c5ded08cdb36932537bd700c49497a158ab7b3883d09b5"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_2dce50ebd9.pt",
+        "sha256": "0b8d57e7d6e160f95f9525d9a46a643691478fe63d25429cd4755e8d5567fcd4"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_91f171fe6f.pt",
+        "sha256": "fb40a77c1f19b70cbff241f1570adabc5517f0b11fabae30c5ca142bbfc7af19"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_d47313baef.pt",
+        "sha256": "f79e7202e94cd15f057becb0f7f86123ae90472f625397b95a6a00d6ff34fa1f"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_72081758ce.pt",
+        "sha256": "e895398d69fab80eff3a93be93e1c5673d87291abd1fb421e6210c82847b7423"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_8baecb9d1b.pt",
+        "sha256": "321de45924ceed510d51a23cc6d462591e02825a6f5ff06beac48adc570c7621"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_44bc3c6f14.pt",
+        "sha256": "2cbdee353893131b73148b446f1e9b3fb4ee61595ab6145e854968125f47f20e"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_8476b29285.pt",
+        "sha256": "ea81c3eabc916286b6d73a26645b1feefb1b6511ff6e84e1a1559933a27786ae"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_5f8ba4c5ea.pt",
+        "sha256": "6267820f18b5ee7ab4672f7f8868949a86b1d5801224820927b9555304261fde"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_b7c37cc80e.pt",
+        "sha256": "f54e85607e55ea8da5cc4582d6d9a3fec1ee3852f57a11f63a27db88f5824c2d"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_2f7e785e82.pt",
+        "sha256": "7090a090d38bb82dac4aad78b98f0cb3a54960ff5a009adc2a6718478b5fa32c"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_ed427aa10a.pt",
+        "sha256": "ee8fe9a48061f0f6215bf7766dc0b705fbac2afe753e57828ab8842ee7f683b3"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_f335c812fe.pt",
+        "sha256": "dfc23ad8dbdf636ad72a19dbbf6cfa5434379d30d4d94caba8b33a56425b92c3"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_ea3fbf6edf.pt",
+        "sha256": "5558228ee3099311a5ab9ad573b0861773428cf1ed537bd6f388d866be292d7c"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_84079fe8cb.pt",
+        "sha256": "ad3e21e73ae400b5c536936d2acbe8344487345b5358cdfb655758eceef41958"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-weights/m_3d1f4c48fc.pt",
+        "sha256": "c913e392c89e406123efbaeea5fa3048101621947eebd77c206d7ec5682c7e35"
+      },
+      {
+        "input": "consolidated",
+        "path": "knee-mri-fold-weights/m_f0.pt",
+        "sha256": "b447a665a92ed65e0f4cacf6800940ba7a6d585d0c36154ce18dee60ec48d5cd"
+      },
+      {
+        "input": "consolidated",
+        "path": "knee-mri-fold-weights/m_f1.pt",
+        "sha256": "30bbe5f9afa24af57fd69bad293a4b9fe3ca2e1d737381bc06e469c5ed380e76"
+      },
+      {
+        "input": "consolidated",
+        "path": "knee-mri-fold-weights/m_f2.pt",
+        "sha256": "5bdc4f72471e7c5db01f2f919ba39212087cbb5f2f76b619e4ba38446800b782"
+      },
+      {
+        "input": "consolidated",
+        "path": "knee-mri-fold-weights/m_f3.pt",
+        "sha256": "f757ddc9531f903c6cd0729cadc7051fcdca03b281c89c39cc7957ab44fc2243"
+      },
+      {
+        "input": "consolidated",
+        "path": "knee-mri-fold-weights/m_f4.pt",
+        "sha256": "066490a5c17b3887d1bfda1427f45b14cab416e7b1dcc16afc9a003cdcc08aad"
+      },
+      {
+        "input": "consolidated",
+        "path": "resnet-50-radimagenet-marwan/ResNet50.pt",
+        "sha256": "08629f7e7bd3e29b8ee9522ca3f65ce4d010a7ddf74f0ea3c7e3f3d0bbab0734"
+      },
+      {
+        "input": "consolidated",
+        "path": "rsna-knee-e9-radimagenet-heads-v15/v52_radimagenet_heads.pt",
+        "sha256": "0f465649799ecfbccaac1767844639e7ced44e1bc9babde6e4bac7c5d9b89eaa"
+      },
+      {
+        "input": "consolidated",
+        "path": "kernel-sources/rsna-knee-e13-train/rsna_rad_e11/v52_e11_heads.pt",
+        "sha256": "ad9f19af73bfdf4e49263c0e45060dc3cb239e1195039b26dc8c0a3a6bcd1a8a"
+      },
+      {
+        "input": "consolidated",
+        "path": "raptor-knee-maxspan/raptor_ft_coatnet_v5_full_swa.pt",
+        "sha256": "20d45e0732a0e9120025d0172a4d2dd0170900bc250b06742dfb7ae08a63786a"
+      },
+      {
+        "input": "consolidated",
+        "path": "raptor-knee-native384/raptor_ft_coatnet_v8_full_swa.pt",
+        "sha256": "3db77388662d516bb0ce790dafd24e36f4991f6089af26daf546817fe1c21862"
+      },
+      {
+        "input": "consolidated",
+        "path": "raptor-knee-native384dense/raptor_ft_coatnet_v10_full.pt",
+        "sha256": "5add8816a47e040efca89bb44480e1cbd01f92db1253831ff7ceb6c65ee02b1d"
+      },
+      {
+        "input": "consolidated",
+        "path": "opencv-python-headless-4120088-x86/opencv_python_headless-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "sha256": "236c8df54a90f4d02076e6f9c1cc763d794542e886c576a6fee46ec8ff75a7a9"
+      },
+      {
+        "input": "specialist",
+        "path": "bundle_manifest.json",
+        "sha256": "b610229f046fe0f27ec8dcf661c5532d4991427428378975d0443da671607945"
+      },
+      {
+        "input": "specialist",
+        "path": "checkpoint_epoch30.safetensors",
+        "sha256": "e1443bb0f518418a31428cd7eb153f15af4c48c7175baf1f9d21c84f1c2a93e7"
+      },
+      {
+        "input": "specialist",
+        "path": "checkpoint_epoch30.safetensors.json",
+        "sha256": "42d1e4de3c19b00d891732441e8cd8be155848c1558ba7963361098986c7126c"
+      },
+      {
+        "input": "specialist",
+        "path": "dinov2_config.json",
+        "sha256": "f7ff4cfa73d2f70647dbf6950541ad25d73082d54c2e7e9bded160c7656b2a70"
+      },
+      {
+        "input": "specialist",
+        "path": "fullfit0033_meniscus_bag.yaml",
+        "sha256": "142dc28a42d419583bd1355877b17d02154b8df391a71b6361320b2c3c1e9c71"
+      },
+      {
+        "input": "specialist",
+        "path": "public0033_meniscus10_residual.yaml",
+        "sha256": "460442d3c093b8d393b344b2ccca989621482f650de5d8966599086b6d9e5e11"
+      },
+      {
+        "input": "specialist",
+        "path": "public0033_runtime.py",
+        "sha256": "9541f82a993d7dc2942ca2a5112e110471285f8d80701846079a3dc708761683"
+      },
+      {
+        "input": "specialist",
+        "path": "run_contract.json",
+        "sha256": "107ef5133238dc514eb990bf75e05a0c5d8262873c95158957565bdc7278e11f"
+      },
+      {
+        "input": "specialist",
+        "path": "task_complete.json",
+        "sha256": "ec97ee4064d8b3219b8ba677719d80d31b25968d3737100887a88da7610a9528"
+      },
+      {
+        "input": "dinov2_base",
+        "path": "config.json",
+        "sha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d"
+      },
+      {
+        "input": "dinov2_base",
+        "path": "pytorch_model.bin",
+        "sha256": "1051e25b2ed69ddad24f3c41e7b6eed6e7f7d012103ea227e47eb82e87dc2050"
+      },
+      {
+        "input": "dinov2_base",
+        "path": "preprocessor_config.json",
+        "sha256": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828"
+      },
+      {
+        "input": "offline_timm",
+        "path": "timm-1.0.22-py3-none-any.whl",
+        "sha256": "888981753e65cbaacfc07494370138b1700a27b1f0af587f4f9b47bc024161d0"
+      }
+    ],
+    "infra_gates": {
+      "a5": {
+        "all_studies_complete": true,
+        "model_count": 5,
+        "prediction_shape": [
+          5,
+          3,
+          12
+        ]
+      },
+      "dino": {
+        "manifest_sha256": "496949a3a3e789bc1f4ccff595205c911e471c5b5ef669366a2dd0a58e125844",
+        "member_count": 20
+      },
+      "gpu_t4x2": true,
+      "rad": {
+        "calibrator_applied": true,
+        "gate": [
+          "ACL",
+          "Baker's",
+          "Contusion",
+          "Effusion",
+          "Lateral OA",
+          "Medial OA",
+          "PF OA"
+        ]
+      },
+      "raptor": {
+        "arm_contract": [
+          {
+            "name": "maxspan-v5",
+            "weight": 0.55,
+            "windows": 62
+          },
+          {
+            "name": "native384dense-v10",
+            "weight": 0.1,
+            "windows": 62
+          },
+          {
+            "name": "maxspan-v5-reverse",
+            "weight": 0.15,
+            "windows": 62
+          },
+          {
+            "name": "native384-v8",
+            "weight": 0.2,
+            "windows": 42
+          }
+        ],
+        "branch_output_present": true,
+        "final_shape": [
+          3,
+          12
+        ],
+        "outer_weight": 0.6
+      },
+      "submission_schema_uid_range": true,
+      "visible_exact_sha256": true
+    },
+    "v6": {
+      "base": "exact public 0.937 weak-label Medial Meniscus residual",
+      "candidate_path": "/kaggle/working/submission_dinosaur_v4_v6_candidate.csv",
+      "changed_targets": [
+        "ACL",
+        "Lateral OA",
+        "PF OA",
+        "Synovitis",
+        "Baker's"
+      ],
+      "fixed_outer_weights": {
+        "ACL": 0.8,
+        "Baker's": 0.375,
+        "Lateral OA": 0.35,
+        "PF OA": 0.35,
+        "Synovitis": 0.35
+      },
+      "medial_meniscus_route_preserved": true,
+      "new_datasets_added": false,
+      "new_models_loaded": false,
+      "output_sha256": "2cac0e299962c28589656de5254ce2e2511b56c4b9e0e6a9faf0a82c2930480d",
+      "schema_version": "dinosaur_v4_v6_outer_weights_v1",
+      "status": "passed",
+      "visible_changed_rows": {
+        "ACL": 3,
+        "Baker's": 3,
+        "Lateral OA": 3,
+        "PF OA": 3,
+        "Synovitis": 3
+      }
+    },
+    "ready_and_v6_receipt_output_hashes_equal": true,
+    "prediction_csv_payload_downloaded_or_locally_validated": false,
+    "expected_dino_members": 20,
+    "expected_a5_models": 5,
+    "expected_raptor_arms": 4
+  },
+  "runtime": {
+    "user_report": "Approximately eight hours until execution finished and Public 0.937 was reported.",
+    "hidden_test_seconds": null,
+    "hidden_test_runtime_verified": false,
+    "visible_guard_elapsed_seconds": 164.69929810399998,
+    "visible_time_is_not_hidden_test_runtime": true,
+    "limitation": "Submission and kernel SDK schemas do not provide hidden-test execution duration or queue time. No hidden-test throughput or 9-hour margin is inferred from the three-study saved run."
+  },
+  "reproducibility": {
+    "original_v32_path": "notebooks/public/vendor/romantamrazov-dinosaur-v32.ipynb",
+    "original_v32_sha256": "ba9491ac1e214ba55ca181de55118c9a793fe7f6163fc221fe1e68d596259dca",
+    "attribution_path": "notebooks/public/vendor/P002_ATTRIBUTION.md",
+    "build_command": ".venv/Scripts/python.exe scripts/build_public_candidate.py --output-dir artifacts/kaggle/p002-new-rebuild",
+    "ignored_research_sources_required_for_build": false,
+    "generator_sha256": "e873ccf6dba9be12e4e24002de10e11e4b5c153064deb376dec00e88be8997a3",
+    "guard_sha256": "8a505e7e5befbf1f34d97af3305f990948e5e1467c44d3689081ccab38600e33",
+    "generated_handoff_is_byte_identical_to_scored_handoff": true,
+    "byte_preservation": "Exact notebook snapshots have -text Git attributes; generator explicitly emits original handoff CRLF on every platform.",
+    "tests": {
+      "new_standard_library_unittest": 3,
+      "passed": 3,
+      "ruff_check": "passed",
+      "ruff_format_check": "passed"
+    }
+  },
+  "decision": "Retain 0.937 as the measured primary baseline. Compare each next candidate as a separate run. Targets 0.945 and 0.955 remain unmeasured goals, not promised results.",
+  "score_scope": {
+    "own_public_lb": 0.937,
+    "own_weak_auc": null,
+    "own_gold_auc": null,
+    "historical_author_score_reproduction_claimed": false
+  },
+  "gold_policy": "No new gold fitting, checkpoint selection or coefficient search. Public asset gold history is a separate existing audit; this is not independent OOF.",
+  "actions_this_audit": {
+    "official_sdk_read_only": true,
+    "normal_authentication_only": true,
+    "images_downloaded": false,
+    "weights_downloaded": false,
+    "prediction_csvs_downloaded": false,
+    "real_mri_decoded": false,
+    "training_started": false,
+    "uploaded_or_submitted": false
+  }
+}

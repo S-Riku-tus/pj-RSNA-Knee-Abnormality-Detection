@@ -1,0 +1,151 @@
+{
+  "checked_at_utc": "2026-10-05T14:37:08Z",
+  "evidence": "user-provided P003_PROFILE.json; no Kaggle API or raw Output retrieval in this review",
+  "input_file_sha256": "a9e655ca6949f63724e267f13d98543c6246aa34c6b0dbf78e1f46b3f55fd98b",
+  "immutable_evidence_copy": "artifacts/research/p003-profile-review-20261005T143708Z/P003_PROFILE.json",
+  "decision": "proceed_to_unchanged_p003_saved_run_then_manual_submission_after_ready",
+  "profile_status": "profile_complete_not_for_submission",
+  "candidate_id": "p003-haideptry-v2-current-pins-20261005",
+  "seed": 20261005,
+  "studies": 64,
+  "series_rows": 366,
+  "study_uids_sha256": "ef00a0936cb59a52d04e00c691369da2d171402a169adcd3b3b0e3527b546834",
+  "source_hash_maps_match_local_manifest": true,
+  "execution_order_matches": true,
+  "dino_shared_parity_members": 20,
+  "dino_max_absolute_difference": 0,
+  "events": {
+    "cache_complete": 4,
+    "dino_shared_path_parity": 20,
+    "raptor_checkpoint": 3
+  },
+  "coat_families": 4,
+  "sequential_coat_path": true,
+  "completion_gate_interpretation": "The shipped finish function emits this status only after all source cells, input gates, DINO/A5 checks, Rad calibrator gate, complete CoAt receipts, fallback rejection and blend replay pass. Raw receipts and prediction payloads are not embedded in the attachment and were not independently rechecked.",
+  "elapsed_seconds_including_preflight": 1427.762560537,
+  "timings": [
+    {
+      "cell": 2,
+      "seconds": 0.006318559999954232
+    },
+    {
+      "cell": 3,
+      "seconds": 0.002377953999939564
+    },
+    {
+      "cell": 4,
+      "seconds": 2.3495018979999713
+    },
+    {
+      "cell": 6,
+      "seconds": 0.34943885699999555
+    },
+    {
+      "cell": 7,
+      "seconds": 0.0023053260000551745
+    },
+    {
+      "cell": 8,
+      "seconds": 0.0002735010000378679
+    },
+    {
+      "cell": 9,
+      "seconds": 0.002969108000002052
+    },
+    {
+      "cell": 10,
+      "seconds": 0.00014036000004580274
+    },
+    {
+      "cell": 11,
+      "seconds": 0.0015898960000413354
+    },
+    {
+      "cell": 12,
+      "seconds": 0.0005589660000850927
+    },
+    {
+      "cell": 13,
+      "seconds": 0.0006300559999772304
+    },
+    {
+      "cell": 14,
+      "seconds": 0.0006256769999026801
+    },
+    {
+      "cell": 15,
+      "seconds": 0.009225536000030843
+    },
+    {
+      "cell": 16,
+      "seconds": 0.00045874399995682325
+    },
+    {
+      "cell": 17,
+      "seconds": 145.2423325860001
+    },
+    {
+      "cell": 19,
+      "seconds": 1.9587082450000253
+    },
+    {
+      "cell": 20,
+      "seconds": 0.043649651000009726
+    },
+    {
+      "cell": 21,
+      "seconds": 3.6873949229999425
+    },
+    {
+      "cell": 22,
+      "seconds": 45.44443489399998
+    },
+    {
+      "cell": 23,
+      "seconds": 0.009738163999941207
+    },
+    {
+      "cell": 25,
+      "seconds": 62.20771584800002
+    },
+    {
+      "cell": 27,
+      "seconds": 948.144774172
+    }
+  ],
+  "outside_cell_timing_seconds": 218.2973976149999,
+  "extrapolation_scenarios": {
+    "assumed_studies": 1300,
+    "full_elapsed_scaled_hours": 8.05595194747439,
+    "outside_cell_time_held_fixed_hours": 6.884877366518923,
+    "interpretation": "Illustrative linear scenarios only; not a confidence interval, upper bound, or hidden-test measurement. Dataset composition, I/O, cache strategy and memory may change at scale; no guarantee within the official 9-hour limit."
+  },
+  "environment": {
+    "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpu_names": [
+      "Tesla T4",
+      "Tesla T4"
+    ]
+  },
+  "labels_used": false,
+  "reports_used": false,
+  "public_score": null,
+  "independent_oof": false,
+  "hidden_test_runtime_verified": false,
+  "notebook_saved_version": null,
+  "input_preflight_sha256_reported": "d9b0c59279c74d36bd85abb78d557e412c9eb6bd9dbd4fee212d5427a107927f",
+  "profile_predictions_sha256_reported": "94cdcab82e1094983c544da42221960eb498d46c7b65cb51ad73a15491577b83",
+  "source_notebook_sha256": "b5f1e12ae3f8171aae716e53c779d0bc218b8631884238c2a182c937ade75c1c",
+  "limitations": [
+    "Only the provided JSON and local implementation were reviewed.",
+    "Input preflight contents, child logs, raw model receipts and predictions were not attached.",
+    "Notebook saved version and current Inputs were not independently inspected.",
+    "Runtime profile does not measure AUC or score improvement."
+  ],
+  "official_runtime_limit_source": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview",
+  "code_modified": false,
+  "real_inference_or_training_run_by_assistant": false,
+  "uploaded_or_submitted": false
+}

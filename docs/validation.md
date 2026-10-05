@@ -1,6 +1,32 @@
 # 準備内容の検証範囲
 
-更新日 2026年10月5日 JST。r001のPublic採点を確認し、公開モデル中心の計画へ更新した。以下は新しい確認から順に記し、過去の「未実施」は各作業時点の履歴として残す。
+更新日 2026年10月5日 JST。p002のPublic 0.937を確認し、次候補p003と診断Notebookを準備した。以下は新しい確認から順に記し、過去の「未実施」は各作業時点の履歴として残す。
+
+## p003・64検査診断のユーザーOutput確認（10月5日23:37 JST）
+
+- 添付`P003_PROFILE.json`を読み、status=`profile_complete_not_for_submission`、seed 20261005、64検査・366系列、T4×2を確認しました。添付は新しい調査runへbyte同一で保存し、元ファイルhash・実行環境・判断を[監査記録](../experiments/p003-profile-review-20261005.json)に残しました。Kaggleへの新たなアクセスや実画像処理は行っていません。
+- UIDの重複・集合hash、元Notebookと全元セルのhash、cell6だけを変更した派生セルhash、cell29除外、実行22セルの順序をassertで照合しました。DINO20の人工forward比較は全てmax_abs=0、29種類の予測記録のshapeが整合し、4つのcache完了イベントは全slotが充足しています。degraded／再試行イベントはありません。
+- 完了JSONを書き出す実装ではDINO20・A5全5fold・Rad校正器・Raptor全UID・追加CoAt4系統・fallback拒否・確率統合の再計算を要求します。この完了記録を次の保存実行へ進む根拠とします。ただし添付は要約JSONであり、個別receipt／子ログ／CSV・NPZ実体／P003_PREFLIGHTを今回独立に再検査したわけではありません。Kaggle保存版も未確認です。
+- 総時間は事前検査込み1,427.763秒（23分47.8秒）。主なセルはDINO145.24秒、A5推論45.44秒、Rad62.21秒、Raptor＋追加CoAt948.14秒。全セル計1,209.465秒との差218.297秒は事前検査等です。仮に1,300件として総時間を単純比例すると約8時間3分、セル外時間を固定すると約6時間53分ですが、どちらも粗い条件付き計算で、予測区間や上限ではありません。隠しtestの画像構成・I/O・cache挙動により変わり、[公式9時間制限](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview)内の完走を保証しません。
+- 判断は、係数・計算精度・Inputsを変えずに02_submit_p003の保存実行へ進むことです。A5の精度診断は先行必須にしません。P003_READYとsubmission.csvの確認後にユーザーが手動提出し、自己Publicと本番時間を記録します。今回は記録・説明のみの変更で、過去の177 unittestを再実行したとは扱いません。JSON／台帳／リンク・差分の検査を実施しました。
+
+## p002 Public 0.937の確定とp003の準備（10月5日）
+
+- Input追加の補足：Kaggle公式のInput種類別説明とTU DelftのURL貼り付け手順を確認し、操作手順へ追記しました。配布p003の`metadata.kaggle.dataSources`が空であることをローカルJSONで確認。ユーザーのKaggle画面でのURL検索・Input追加・Import時の挙動は未実測です。今回は説明だけの変更で、Notebook・モデル・係数・Input契約を変更せず、過去の177 unittestを再実行したとは扱いません。
+- 公式SDKのread-only確認でp002はCOMPLETE／Public 0.937。保存版1の16セルが前回handoffと一致し、可視実行の47資産hashと各receiptを照合しました。可視3検査164.699秒とユーザー報告の約8時間を区別し、隠しtest時間は不明と記録しました。[採点監査](../experiments/p002-scored-20261005.json)。
+- 成功版p002と元V32をGit追跡先へ固定。生成器のGit除外調査フォルダ依存を解消し、隔離ディレクトリでも成功handoffと同一byteを再生成する検査が成功しています。旧runは変更していません。
+- haideptry V2の公式SDK取得ソースを固定し、元23コードセルを保持するp003を作成しました。実効14 Inputs・公開148ファイルは期待hashを宣言し、大会CSV4件は実行時hashを記録します。公開重みpayloadをローカルで実照合したという意味ではありません。[Input契約](research/p003-input-contract-20261005.json)、[調査](research/p003-candidate-review-20261005.json)。
+- p003 guardは全4 CoAt系統・DINO20・A5 5fold・Rad校正器・Raptor準備UIDを確認し、系統省略・定数埋め・dense前処理fallback・確率欠落を拒否します。確率平均後の全体rankと最終係数を再計算し、CSV再読時の浮動小数丸めを維持した照合を行います。独立レビューで子処理logだけに出るfallbackとCSV roundtripを発見し、検査に反映しました。
+- A5診断はp002の元定義を抽出し、Kaggleの固定64検査で同じcache・5重み・3精度を比較する未実行Notebookです。RTX 4090では人工入力と小さい代替encoderでBF16／FP16／FP32の実行経路を検査しました。これはA5本体の全architectureやT4上の公開重み／実MRIの精度・速度確認ではありません。
+- 64検査のp003診断も、train画像をラベルなしで測るための準備です。最終提出セルを除外し、提出用CSVは生成しません。train診断を独立OOFやPublic改善の証拠にはしません。
+- 全177 unittestは176件成功、失敗0。実symlink作成の1件はWindows権限不足でskipし、模擬リンクの解除と元target保持は成功しました。Ruff check／format、Notebook再生成・構文・空出力・hash、ローカルリンク、差分の空白を確認しました。[検査記録](../experiments/p003-verification-20261005.json)。実MRI、新たな公開重み取得、実学習、アップロード、代理提出は行っていません。新候補の実Public／本番時間は未測定です。[次の操作](p003-next-step.md)。
+
+## p002提出後の待機状態確認（10月5日19:29 JST）
+
+- ユーザーの「約7時間後もNotebook running」を受け、公式SDKのListSubmissions/GetSubmissionをread-onlyで確認。提出ref 56840796は12:07:34 JST、最終ファイル名submission.csv、Publicはnull、SDKの型付きstatusはPENDING。JSONはdefault enumを省略するため、statusキー欠落を状態不明やエラーと解釈せず型付き属性を確認した。[一覧](../artifacts/research/p002-status-20261005T102826Z/submissions.json)、[詳細](../artifacts/research/p002-status-20261005T102826Z/submission-detail.json)。
+- 提出URLは`rsraki/notebook3beaf8c48b?scriptVersionId=355324155`。今回の状態照会では保存ソースとhandoffのbyte同一性や隠しtestログを取得していない。PENDINGは待機・実行を区別できず、経過26,530.96秒は実推論時間ではない。成功・失敗・正常な進捗のいずれも断定しない。
+- [公式要件](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview)の実行上限9時間と、[公式データ説明](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data?select=test_series)の約1,300 test検査を再確認。保存時の少数testと隠しtestの処理量は違う。元コードにはDINO段の8時間予算があるが、後続モデルもあるため全体8時間以内の保証ではない。実測の本番所要時間は未確定。
+- コード・係数・提出を変更せず、停止・再提出は行わなかった。実データ・モデル・予測取得、学習や新たな推論も未実施。変更は状態記録のみで、141 unittestの過去結果を再実行したとは扱わない。
 
 ## p002の手動保存実行へ渡す準備（10月5日、完了）
 

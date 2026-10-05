@@ -1,0 +1,651 @@
+{
+  "status": "profile_complete_not_for_submission",
+  "candidate_id": "p003-haideptry-v2-current-pins-20261005",
+  "studies": 64,
+  "selection": {
+    "selection": "ascending SHA256(str(seed) + ':' + UID), then UID",
+    "seed": 20261005,
+    "studies": 64,
+    "train_studies": 4407,
+    "series_rows": 366,
+    "study_uids": [
+      "1.2.826.0.1.3680043.8.498.71753603955749189961638324806586359888",
+      "1.2.826.0.1.3680043.8.498.62782163204193388751869649423542931657",
+      "1.2.826.0.1.3680043.8.498.20023559426196341254845485444587607391",
+      "1.2.826.0.1.3680043.8.498.75773447415943537938555952303103557864",
+      "1.2.826.0.1.3680043.8.498.12642641661988102031826128876502303807",
+      "1.2.826.0.1.3680043.8.498.11625598825018422177242262569319579378",
+      "1.2.826.0.1.3680043.8.498.72495677804641720406765749568114476096",
+      "1.2.826.0.1.3680043.8.498.10252163031705285141538200795896549203",
+      "1.2.826.0.1.3680043.8.498.45865541491386404818767748310365919685",
+      "1.2.826.0.1.3680043.8.498.62192347880785177732202565414591408086",
+      "1.2.826.0.1.3680043.8.498.58366682083795592678613986311570432419",
+      "1.2.826.0.1.3680043.8.498.63360204391136938955220146755331421179",
+      "1.2.826.0.1.3680043.8.498.63069333313670617776227577192591993067",
+      "1.2.826.0.1.3680043.8.498.11776647434143676427722616249587614803",
+      "1.2.826.0.1.3680043.8.498.48780598610511011488578963416186905560",
+      "1.2.826.0.1.3680043.8.498.10499265498716562276605625682538326716",
+      "1.2.826.0.1.3680043.8.498.12697859103448296208701081683487338111",
+      "1.2.826.0.1.3680043.8.498.14959561028578335448289993045623217861",
+      "1.2.826.0.1.3680043.8.498.11912276256810863127132294167870461707",
+      "1.2.826.0.1.3680043.8.498.10541215772904358938061268226270989801",
+      "1.2.826.0.1.3680043.8.498.71355457409240695394093233905149541215",
+      "1.2.826.0.1.3680043.8.498.11045459770905584149950259201414074545",
+      "1.2.826.0.1.3680043.8.498.22985467719058223198642920273233975053",
+      "1.2.826.0.1.3680043.8.498.80146250663015309456767479960653638934",
+      "1.2.826.0.1.3680043.8.498.46745172905542117506863575411125924241",
+      "1.2.826.0.1.3680043.8.498.79829033430619597320769579608450393290",
+      "1.2.826.0.1.3680043.8.498.10434135978927658622039675788413759069",
+      "1.2.826.0.1.3680043.8.498.73891117356545433634964184054304516063",
+      "1.2.826.0.1.3680043.8.498.12626383124142146001532197239671686442",
+      "1.2.826.0.1.3680043.8.498.12071998470084955703027522152040042364",
+      "1.2.826.0.1.3680043.8.498.79977436705480715175480363175316375576",
+      "1.2.826.0.1.3680043.8.498.74872419726042767543822107291861307866",
+      "1.2.826.0.1.3680043.8.498.64652085172505930317660036583152917472",
+      "1.2.826.0.1.3680043.8.498.28295265939946677460838974253299313798",
+      "1.2.826.0.1.3680043.8.498.91839696756303525362262251587171486273",
+      "1.2.826.0.1.3680043.8.498.12026457191304650188547548517205757122",
+      "1.2.826.0.1.3680043.8.498.69002590469755721401448924002989552840",
+      "1.2.826.0.1.3680043.8.498.74362364640190722036251935797260325860",
+      "1.2.826.0.1.3680043.8.498.60924385750386872880015870524131415592",
+      "1.2.826.0.1.3680043.8.498.59073122184069676919857712290159511305",
+      "1.2.826.0.1.3680043.8.498.11316091466685605758061778045311969672",
+      "1.2.826.0.1.3680043.8.498.13116941594523500503401720636978356127",
+      "1.2.826.0.1.3680043.8.498.52520288400853832269613213204540385687",
+      "1.2.826.0.1.3680043.8.498.56915079210789596803972894081756325026",
+      "1.2.826.0.1.3680043.8.498.98081486779628580946589119341754353354",
+      "1.2.826.0.1.3680043.8.498.10155611590208164695256621422536643320",
+      "1.2.826.0.1.3680043.8.498.12507957850103916926719601413279798696",
+      "1.2.826.0.1.3680043.8.498.13152690996267297597178587721720788387",
+      "1.2.826.0.1.3680043.8.498.85108719393967663738580518985514195538",
+      "1.2.826.0.1.3680043.8.498.11159546221032123495135103648570690656",
+      "1.2.826.0.1.3680043.8.498.15486463042236628073590077209793828847",
+      "1.2.826.0.1.3680043.8.498.24012076387083114283116476459425015413",
+      "1.2.826.0.1.3680043.8.498.27192678730060203972082511503480566620",
+      "1.2.826.0.1.3680043.8.498.65356758967883114612797250487949537460",
+      "1.2.826.0.1.3680043.8.498.89720428711655200442262503508409163392",
+      "1.2.826.0.1.3680043.8.498.32910372391370203605482772577821971133",
+      "1.2.826.0.1.3680043.8.498.10765617676329232046176300833850901740",
+      "1.2.826.0.1.3680043.8.498.12322760603170246518010233325038530097",
+      "1.2.826.0.1.3680043.8.498.43483537125776347707929354413013709736",
+      "1.2.826.0.1.3680043.8.498.55583505147281684100202399148099429721",
+      "1.2.826.0.1.3680043.8.498.22357754074308826479280023393343731000",
+      "1.2.826.0.1.3680043.8.498.13179829911816163852815103052496326166",
+      "1.2.826.0.1.3680043.8.498.25766673238950703352855821505938941878",
+      "1.2.826.0.1.3680043.8.498.58550899000434548218916895907938175917"
+    ],
+    "study_uids_sha256": "ef00a0936cb59a52d04e00c691369da2d171402a169adcd3b3b0e3527b546834",
+    "train_series_csv_sha256": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3",
+    "shadow_csv_sha256": {
+      "train.csv": "efc63afee30345f94a916f98ba6b30f266fccfe2976b8475fa86653b2c510513",
+      "test.csv": "d9a5a75165d9741f6df07b2eb845e466ab406eb2ae1e6e9841176068e3f25e07",
+      "test_series.csv": "f09f770ba1a99270a30185ecc94007d9581a56f37f3c1b28b5a4ab7109328fb7",
+      "sample_submission.csv": "b2fdede85b2a887b2fb11c984c5940a535cb3a10de631238db4b19c7c6811314"
+    },
+    "labels_used": false,
+    "reports_used": false,
+    "mri_pixels_read_during_selection": false,
+    "sample_submission_values": "constant 0.5 schema placeholders, not labels"
+  },
+  "elapsed_seconds_including_preflight": 1427.762560537,
+  "timings": [
+    {
+      "cell": 2,
+      "seconds": 0.006318559999954232
+    },
+    {
+      "cell": 3,
+      "seconds": 0.002377953999939564
+    },
+    {
+      "cell": 4,
+      "seconds": 2.3495018979999713
+    },
+    {
+      "cell": 6,
+      "seconds": 0.34943885699999555
+    },
+    {
+      "cell": 7,
+      "seconds": 0.0023053260000551745
+    },
+    {
+      "cell": 8,
+      "seconds": 0.0002735010000378679
+    },
+    {
+      "cell": 9,
+      "seconds": 0.002969108000002052
+    },
+    {
+      "cell": 10,
+      "seconds": 0.00014036000004580274
+    },
+    {
+      "cell": 11,
+      "seconds": 0.0015898960000413354
+    },
+    {
+      "cell": 12,
+      "seconds": 0.0005589660000850927
+    },
+    {
+      "cell": 13,
+      "seconds": 0.0006300559999772304
+    },
+    {
+      "cell": 14,
+      "seconds": 0.0006256769999026801
+    },
+    {
+      "cell": 15,
+      "seconds": 0.009225536000030843
+    },
+    {
+      "cell": 16,
+      "seconds": 0.00045874399995682325
+    },
+    {
+      "cell": 17,
+      "seconds": 145.2423325860001
+    },
+    {
+      "cell": 19,
+      "seconds": 1.9587082450000253
+    },
+    {
+      "cell": 20,
+      "seconds": 0.043649651000009726
+    },
+    {
+      "cell": 21,
+      "seconds": 3.6873949229999425
+    },
+    {
+      "cell": 22,
+      "seconds": 45.44443489399998
+    },
+    {
+      "cell": 23,
+      "seconds": 0.009738163999941207
+    },
+    {
+      "cell": 25,
+      "seconds": 62.20771584800002
+    },
+    {
+      "cell": 27,
+      "seconds": 948.144774172
+    }
+  ],
+  "source_phase_audit": {
+    "contract": "btkd_speedy_v558_input_uniform",
+    "events": [
+      {
+        "kind": "cache_complete",
+        "tag": "test g1",
+        "studies": 64,
+        "slot_jobs": 298,
+        "filled": 298,
+        "order_cache_hits": 0,
+        "bytes": 520224768
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "e5427d6c21",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "d47313baef",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "ea3fbf6edf",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "5f8ba4c5ea",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "013dc75703",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "2f7e785e82",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "8baecb9d1b",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "44bc3c6f14",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "44128e3ff3",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "84079fe8cb",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "ed427aa10a",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "2dce50ebd9",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "3d1f4c48fc",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "91f171fe6f",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "8476b29285",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "72081758ce",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "7f8321affc",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "1e553ba481",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "b7c37cc80e",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "dino_shared_path_parity",
+        "member": "f335c812fe",
+        "max_abs": 0.0
+      },
+      {
+        "kind": "cache_complete",
+        "tag": "rad_e10",
+        "studies": 64,
+        "slot_jobs": 184,
+        "filled": 184,
+        "order_cache_hits": 0,
+        "bytes": 77070336
+      },
+      {
+        "kind": "cache_complete",
+        "tag": "rad_e13",
+        "studies": 64,
+        "slot_jobs": 244,
+        "filled": 244,
+        "order_cache_hits": 184,
+        "bytes": 102760448
+      },
+      {
+        "kind": "cache_complete",
+        "tag": "rad_legacy_second",
+        "studies": 64,
+        "slot_jobs": 194,
+        "filled": 194,
+        "order_cache_hits": 120,
+        "bytes": 102760448
+      },
+      {
+        "kind": "raptor_checkpoint",
+        "file": "/kaggle/input/datasets/dreaddevelopment/raptor-knee-maxspan/raptor_ft_coatnet_v5_full_swa.pt",
+        "sha256": "20d45e0732a0e9120025d0172a4d2dd0170900bc250b06742dfb7ae08a63786a",
+        "arch": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+        "res": 384
+      },
+      {
+        "kind": "raptor_checkpoint",
+        "file": "/kaggle/input/datasets/dreaddevelopment/raptor-knee-native384dense/raptor_ft_coatnet_v10_full.pt",
+        "sha256": "5add8816a47e040efca89bb44480e1cbd01f92db1253831ff7ceb6c65ee02b1d",
+        "arch": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+        "res": 384
+      },
+      {
+        "kind": "raptor_checkpoint",
+        "file": "/kaggle/input/datasets/dreaddevelopment/raptor-knee-native384/raptor_ft_coatnet_v8_full_swa.pt",
+        "sha256": "3db77388662d516bb0ce790dafd24e36f4991f6089af26daf546817fe1c21862",
+        "arch": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+        "res": 384
+      }
+    ],
+    "phases": {
+      "dino_e5427d6c21": {
+        "path": "/kaggle/working/diagnostics/dino_e5427d6c21.npz",
+        "sha256": "40e7df81879f15c7a1ec76cc269199fdb3ac758ed1c557f9d6b741e512fabfd5",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_d47313baef": {
+        "path": "/kaggle/working/diagnostics/dino_d47313baef.npz",
+        "sha256": "f31689bc6495294bb81582b96f3a0973bcf1390f3b5330ba5983977e8bc7e089",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_ea3fbf6edf": {
+        "path": "/kaggle/working/diagnostics/dino_ea3fbf6edf.npz",
+        "sha256": "f68ab97f4a4750f237058ea97f0006f69fb39950aeae884239396f45eba80c60",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_5f8ba4c5ea": {
+        "path": "/kaggle/working/diagnostics/dino_5f8ba4c5ea.npz",
+        "sha256": "ff84cab379c9644cd59c566da5e62e1e7b3996305a43d48814ce68603afa1239",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_013dc75703": {
+        "path": "/kaggle/working/diagnostics/dino_013dc75703.npz",
+        "sha256": "722ef7eb525cd3079c44a0e9463cbb04aec2b2b194c1854e899829b0d1eb0337",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_2f7e785e82": {
+        "path": "/kaggle/working/diagnostics/dino_2f7e785e82.npz",
+        "sha256": "1ae014ee722eb964077fe2a8b039e62e6832dcd075654c5835272291f57c05f0",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_8baecb9d1b": {
+        "path": "/kaggle/working/diagnostics/dino_8baecb9d1b.npz",
+        "sha256": "009ca1abf3700b5db09aa3d7b561fa8f53ccf8127d96bbfce30e9658f2e78a1c",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_44bc3c6f14": {
+        "path": "/kaggle/working/diagnostics/dino_44bc3c6f14.npz",
+        "sha256": "d72fd8fe0890ab1e0388e55c772cdee7e972ccc7dcd275d051027cc4928b175b",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_44128e3ff3": {
+        "path": "/kaggle/working/diagnostics/dino_44128e3ff3.npz",
+        "sha256": "08e460a8b5ff31fb2b0b16119dcecaf06b0c000ebb76f6d6d35f65cee1032884",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_84079fe8cb": {
+        "path": "/kaggle/working/diagnostics/dino_84079fe8cb.npz",
+        "sha256": "790e4d9b31b909f07d89bf8c79786c11a0eb15a1d469f0e0e3207078adf16264",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_ed427aa10a": {
+        "path": "/kaggle/working/diagnostics/dino_ed427aa10a.npz",
+        "sha256": "ae1d1a032f7ae3e095f28452e94e3c174556fd3f73c314218080d1416bad6710",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_2dce50ebd9": {
+        "path": "/kaggle/working/diagnostics/dino_2dce50ebd9.npz",
+        "sha256": "959e64be6726e10c2e6dbf57104913c5fda27d54ce20cba9886c836dc5d4611c",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_3d1f4c48fc": {
+        "path": "/kaggle/working/diagnostics/dino_3d1f4c48fc.npz",
+        "sha256": "1056bd083500c2047932aa1bb9589ebc66ff7b262365861f117ffca2b21a23b5",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_91f171fe6f": {
+        "path": "/kaggle/working/diagnostics/dino_91f171fe6f.npz",
+        "sha256": "fe8bd0567628de9eae21644e44ba3844098b5adaacb1beda0ab86dd35a04c87f",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_8476b29285": {
+        "path": "/kaggle/working/diagnostics/dino_8476b29285.npz",
+        "sha256": "f17d5cbbce021edc145f7d975da133818edd0bc7868b9a4c367a5ab4c05a7622",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_72081758ce": {
+        "path": "/kaggle/working/diagnostics/dino_72081758ce.npz",
+        "sha256": "792a1d54919d86c6cf588fef5a4dc1882fe8d84d55dfddde356c8a582fc1c1e7",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_7f8321affc": {
+        "path": "/kaggle/working/diagnostics/dino_7f8321affc.npz",
+        "sha256": "446e87a5dc2a0b9a01a6b055a74fca8e318ef0c72ed3d23c2be018dfb6105cf4",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_1e553ba481": {
+        "path": "/kaggle/working/diagnostics/dino_1e553ba481.npz",
+        "sha256": "0f3b1f84cdc7304840378f65de1b3f233d369b37d122eb43026e582909d073bd",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_b7c37cc80e": {
+        "path": "/kaggle/working/diagnostics/dino_b7c37cc80e.npz",
+        "sha256": "beb8d3e121823dba5b664e83aaa561419cd02245bcabb631c1ea9e53f82d13cb",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "dino_f335c812fe": {
+        "path": "/kaggle/working/diagnostics/dino_f335c812fe.npz",
+        "sha256": "dc09f15333e8ce6a6bf79644143649bb4c537b119da5ef638fc4a91f1b0c8d77",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "a5_rank_mean": {
+        "path": "/kaggle/working/diagnostics/a5_rank_mean.npz",
+        "sha256": "d122d49d66923a65b62913723f50f0080c86fa96ba1fef702bb67c32a513dc1b",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "rad_e10_raw": {
+        "path": "/kaggle/working/diagnostics/rad_e10_raw.npz",
+        "sha256": "14fe667cab929618c9d816569d02abf8b004b559ff96bbcfa784e393e9650ba1",
+        "shape": [
+          5,
+          64,
+          12
+        ]
+      },
+      "rad_e13_raw": {
+        "path": "/kaggle/working/diagnostics/rad_e13_raw.npz",
+        "sha256": "a916f1a45a48565959c11f8a6d1bcc2f15c21f305f64d790174392bc6f098ce1",
+        "shape": [
+          5,
+          64,
+          12
+        ]
+      },
+      "rad_legacy_second_raw": {
+        "path": "/kaggle/working/diagnostics/rad_legacy_second_raw.npz",
+        "sha256": "4586773bee617b7e833cdf852762784e28cd1112b958c9e287f5b1b1399fbde0",
+        "shape": [
+          5,
+          64,
+          12
+        ]
+      },
+      "btkd_parent_after_rad": {
+        "path": "/kaggle/working/diagnostics/btkd_parent_after_rad.npz",
+        "sha256": "d37d9a1636292cadb3f31f92491ccdf72cbb9051da092f670ac848b81fedd2fb",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "coat_resgated_rank": {
+        "path": "/kaggle/working/diagnostics/coat_resgated_rank.npz",
+        "sha256": "74c96f9f1a8686020686f064cd966069d3d656d277f1d4dbeee157f9132a34fe",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "coat_global96_rank": {
+        "path": "/kaggle/working/diagnostics/coat_global96_rank.npz",
+        "sha256": "9f4f42662ff8fe7cef6cbaa018c1f0316a5cf4b9c337e9660ee41e318f40c7ec",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "coat_d4_rank": {
+        "path": "/kaggle/working/diagnostics/coat_d4_rank.npz",
+        "sha256": "6287b8537816e2d9f3ea6e0c786d8a36129322cc1c5128ad75863806e4a100d6",
+        "shape": [
+          64,
+          12
+        ]
+      },
+      "coat_repairv1_rank": {
+        "path": "/kaggle/working/diagnostics/coat_repairv1_rank.npz",
+        "sha256": "f5405f6565ccbb66bc9a54aef2046c2753da38f8dab1575ad00d543ca89a06d0",
+        "shape": [
+          64,
+          12
+        ]
+      }
+    },
+    "cohort": 64,
+    "environment": {
+      "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+      "torch": "2.11.0+cu128",
+      "cuda": "12.8",
+      "gpu_names": [
+        "Tesla T4",
+        "Tesla T4"
+      ]
+    }
+  },
+  "coat_readers_parallel_pairs": false,
+  "original_source_notebook_sha256": "b5f1e12ae3f8171aae716e53c779d0bc218b8631884238c2a182c937ade75c1c",
+  "original_source_cells": {
+    "2": "25e69f00b3cebe2fdca50e18fa911f1c287b9f45836dd4cd80a459956033b20d",
+    "3": "5815eed58685ad17392c9c5b13dfb0fb43fb54ec32b7834f4c2c66439cd3ea5a",
+    "4": "32c4445b136e86d744ed5e2c465ad60cbc6fa781f06511280bf38c3dd634f2b7",
+    "6": "61f911b3b024f870718f1eb123e051f2cd9f3718b4473a62d4b211fd151ea555",
+    "7": "a773890aca786656f025af0f008fd97bcd0736eb143698d71cd16448bb8fce76",
+    "8": "a554f7d0f44a197e371a0ce3ce734466c2658bae27c09d6ffd7855cb4210f1a5",
+    "9": "0d2a6d71963ae849b3e39ea27ee739a769e33d1e0779b4ff2be9b0e7f50821fa",
+    "10": "ba17bd3298fc57f07ef581794ee274b5d4990b62a999086881ed6f57bcd882aa",
+    "11": "a1334e4b2174f1512d3dcd7f46ba257d698b83a6e399b8c1e6c2fa0901f29b8a",
+    "12": "6878773f8ffa7883670b9bfceed886f80465514cea3ab30057c7378406531507",
+    "13": "17434f44700a37e344f33040cf12618806370b438c0f2b2f8fe3caa8b42af065",
+    "14": "0cee81943e6bfbb987380cf9c88b2ed961acde926d96211154c4b2946f6e849e",
+    "15": "a816bbcb91c3f8645f847d921a7e387df9ba7301c546ed151299a050c6e1e56c",
+    "16": "9006955666c6c5f89bd87d606b83d5fba2d446c42168e223491e11b8b8f95102",
+    "17": "cd7a8762ef90ccf507eaf4588e350402a4f8b1f0f58b7f6687b135eee684d357",
+    "19": "6fffd33cf27daf23afcae0616f5fac9ffc7e869e08cd7827f3d4f141276f2611",
+    "20": "f1fa6aa2130ce82d2efb84793f47c50c97b71e3e61c68ffc5840c4431e7a5f5e",
+    "21": "a0f7ec9a6a26310a246fef4d3349a1af1e853e99cd2ecbc2b819d96aa9071a1e",
+    "22": "c6126a20146a0853e11afe37c522b9e149495d0fe9e9450394a858c52532cab3",
+    "23": "5c31acb1019dd9de97103d9a68cb0fc0db6aa1032fb00af5b483b3a67ed1b08b",
+    "25": "8a5b323bada53d4ddfa913f8257042292ac6b92d31bbe2f2590c8a92b1bd1ab5",
+    "27": "e885d5241bdd5e5f4d7871033229a0a3dcef6e42ebc1363a61f3529238ecd747",
+    "29": "e2bf22f86a89808e0c3a1869d7daf735bfcd789e8fd8012ee938112c3f779e48"
+  },
+  "executed_source_cells": {
+    "2": "25e69f00b3cebe2fdca50e18fa911f1c287b9f45836dd4cd80a459956033b20d",
+    "3": "5815eed58685ad17392c9c5b13dfb0fb43fb54ec32b7834f4c2c66439cd3ea5a",
+    "4": "32c4445b136e86d744ed5e2c465ad60cbc6fa781f06511280bf38c3dd634f2b7",
+    "6": "ba78e1d7b7f7865fb288db9d6907c4991afae4a10de18b1acba36de4abcba1f5",
+    "7": "a773890aca786656f025af0f008fd97bcd0736eb143698d71cd16448bb8fce76",
+    "8": "a554f7d0f44a197e371a0ce3ce734466c2658bae27c09d6ffd7855cb4210f1a5",
+    "9": "0d2a6d71963ae849b3e39ea27ee739a769e33d1e0779b4ff2be9b0e7f50821fa",
+    "10": "ba17bd3298fc57f07ef581794ee274b5d4990b62a999086881ed6f57bcd882aa",
+    "11": "a1334e4b2174f1512d3dcd7f46ba257d698b83a6e399b8c1e6c2fa0901f29b8a",
+    "12": "6878773f8ffa7883670b9bfceed886f80465514cea3ab30057c7378406531507",
+    "13": "17434f44700a37e344f33040cf12618806370b438c0f2b2f8fe3caa8b42af065",
+    "14": "0cee81943e6bfbb987380cf9c88b2ed961acde926d96211154c4b2946f6e849e",
+    "15": "a816bbcb91c3f8645f847d921a7e387df9ba7301c546ed151299a050c6e1e56c",
+    "16": "9006955666c6c5f89bd87d606b83d5fba2d446c42168e223491e11b8b8f95102",
+    "17": "cd7a8762ef90ccf507eaf4588e350402a4f8b1f0f58b7f6687b135eee684d357",
+    "19": "6fffd33cf27daf23afcae0616f5fac9ffc7e869e08cd7827f3d4f141276f2611",
+    "20": "f1fa6aa2130ce82d2efb84793f47c50c97b71e3e61c68ffc5840c4431e7a5f5e",
+    "21": "a0f7ec9a6a26310a246fef4d3349a1af1e853e99cd2ecbc2b819d96aa9071a1e",
+    "22": "c6126a20146a0853e11afe37c522b9e149495d0fe9e9450394a858c52532cab3",
+    "23": "5c31acb1019dd9de97103d9a68cb0fc0db6aa1032fb00af5b483b3a67ed1b08b",
+    "25": "8a5b323bada53d4ddfa913f8257042292ac6b92d31bbe2f2590c8a92b1bd1ab5",
+    "27": "e885d5241bdd5e5f4d7871033229a0a3dcef6e42ebc1363a61f3529238ecd747"
+  },
+  "omitted_source_cells": [
+    29
+  ],
+  "profile_predictions_sha256": "94cdcab82e1094983c544da42221960eb498d46c7b65cb51ad73a15491577b83",
+  "input_preflight_sha256": "d9b0c59279c74d36bd85abb78d557e412c9eb6bd9dbd4fee212d5427a107927f",
+  "public_score": null,
+  "independent_oof": false,
+  "hidden_test_runtime_verified": false,
+  "note": "Train images without labels; possible public-model training exposure. Measures 64 studies above the 48-study scheduling threshold. This timing does not guarantee hidden-test completion or improved accuracy.",
+  "shadow_image_links_removed": 64
+}
