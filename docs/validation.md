@@ -1,6 +1,19 @@
 # 準備内容の検証範囲
 
-更新日 2026年10月5日 JST。p002のPublic 0.937を確認し、次候補p003と診断Notebookを準備した。以下は新しい確認から順に記し、過去の「未実施」は各作業時点の履歴として残す。
+更新日 2026年10月6日 JST。p003の隠し再実行例外を確認し、速度改善候補・独自の凍結特徴学習経路・教師監査を追加した。以下は新しい確認から順に記し、過去の「未実施」は各作業時点の履歴として残す。
+
+## p003例外監査・速度改善・新しい学習経路（10月6日）
+
+- 公式SDKのread-only照会で提出56855132はPublic null・errorDescriptionあり。ユーザー画面もNotebook Threw Exception。SDK COMPLETEを採点成功と解釈せず、9時間超過は未確定と記録した。保存版1の全セルが配布02と一致し、Outputの版ID355483987も提出と対応。可視3検査のP003_READYはpassed・332.005950176秒。取得は保存コード・metadata・2つの小さいJSONのみで、隠しtracebackや隠し実時間は不明。[監査](../experiments/p003-failure-review-20261006.json)
+- 新05はRaptor GPU1のnative384dense/native384を検査単位で交互実行。元02/04/vendor/guardを変更せず、全モデル・前処理・元forward・数値精度・microbatch・混合式・8時間内部予算を保持する。元のFP32再試行とイベントも同じ関数を通る。profileで全64検査の旧経路入力hash・生予測・順位差を比較し、phase時間・2モデル常駐のGPUメモリ・例外tracebackを記録する。reference再計算の時間は本番候補と区別する。
+- 新05の人工CUDA試験は凍結元の`_ke_infer_input`関数を抽出し、小さいTinyRaptorだけを代替した。実行順変更前後で入力hash・生予測が完全一致。これは実公開重み・T4×2・実MRIの同等性/速度/VRAMの確認ではない。新規7テストは全成功。p003関連30件は29成功・既存Windows symlink権限の1件skip。Notebook再生成、構文、空出力、変更セルの限定を検査した。
+- 新しいf001/f002は汎用DINOv2 ViT-S/14の凍結特徴とmean/attention head。元DICOM→392px・物理順・PixelSpacingを反映したletterbox・隣接3枚→384次元FP16特徴を共通経路とした。CUDAなしの学習を拒否し、Reportなし提出契約、欠損mask、無効slice不変性、encoder出所と特徴hashを確認する。checkpointはBCEで選択し、所見別weak AUC/supportを併記する。gold非使用とgroup分割は監査済みCSVのhashに結び付ける。
+- 独立レビューで、特徴cacheが教師CSV全体hashに結び付いて教師だけの変更を拒否する点、head実装hash未固定、既import DINOv2の混入可能性を発見。UID/group/foldの構造hashと教師履歴を分離し、head実装hashの保存/照合とローカルencoder sourceの整合検査を追加した。検証DataLoaderは専用Generatorを使う。汎用事前学習画像との重複を独立排除したとは主張しない。
+- ラベル根拠キューは学習側のみ・保護fold0/1・gold/推移的group除外・1group1検査・希少層優先・seed付きで作成する。N/B/U/Mと欠損を維持し、原Report/UIDをGit除外runへ保存する。新規10件と既存ラベル監査12件のstdlib unittestが成功。実レポート抽出や教師の変更はまだ行っていない。
+- 最終の全204 unittestは**203成功・失敗0・既存Windows symlinkの1件skip（14.769秒）**。凍結特徴の新規10件には人工GPU1 epoch→checkpoint→Reportなし提出、shard結合と重複/欠落拒否、教師だけ変更した際のcache identity、古いfold監査とhead hash不一致の拒否を含む。Ruff checkと全90 Pythonファイルのformat checkが成功。新4 Notebookの構文・未実行状態、05のbyte同一再生成、f001/f002のpoolingだけの差、台帳19行、ローカルリンク165件を確認した。元p002/02/04/vendorおよび既存学習・画像・モデルの9ファイルはHEADと不変。
+- 添付原文をhash付きで保存し、Kaggle公式条件、Meta DINOv2/DINOv3、KneePreMの一次資料を調査した。[判断と出典](research/p003-improvement-20261006.md)。元p003の自己0.943、速度改善幅、学習精度を記録していない。実データ/モデルの追加取得・実MRI decode・実学習・外部アップロード・代理提出は未実施。
+
+実行手順は[05速度診断](p003-speed.md)、[凍結特徴学習](frozen-features.md)、[教師監査](label-review.md)。検査の集計は[今回の検証記録](../experiments/p003-improvement-verification-20261006.json)に残す。
 
 ## p003・64検査診断のユーザーOutput確認（10月5日23:37 JST）
 

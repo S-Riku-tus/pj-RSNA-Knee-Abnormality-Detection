@@ -1,0 +1,55 @@
+{
+  "checked_date_jst": "2026-10-06",
+  "status": "hidden_rerun_exception_confirmed_cause_unresolved",
+  "submission": {
+    "ref": 56855132,
+    "submitted_at_utc": "2026-10-05T14:57:17.297Z",
+    "script_version_id": 355483987,
+    "url": "https://www.kaggle.com/code/rsraki/notebook8c3cf52bde?scriptVersionId=355483987",
+    "api_status_enum": "SubmissionStatus.COMPLETE",
+    "public_lb": null,
+    "error_description": "Your notebook hit an unhandled error while rerunning your code. Note that the hidden dataset can be larger/smaller/different than the public dataset",
+    "user_reported_ui_status": "Notebook Threw Exception",
+    "successful_scoring": false,
+    "time_limit_exceeded_confirmed": false,
+    "hidden_runtime_seconds": null,
+    "hidden_traceback_available": false
+  },
+  "saved_source": {
+    "requested_version": 1,
+    "all_cell_sources_match_local_02_submit_p003": true,
+    "retrieved_source_sha256": "05a0a446c4e298229c804ff8e68db08ffb7964742080c36cc2acc6319794e965",
+    "output_object_path_contains_submitted_script_version_id": true,
+    "gpu_enabled": true,
+    "internet_enabled": false,
+    "input_reference_count": 14,
+    "historical_input_versions_verified_this_audit": false
+  },
+  "visible_run": {
+    "ready_status": "passed",
+    "studies": 3,
+    "elapsed_seconds": 332.005950176,
+    "ready_json_sha256": "6213837a7f54756668f8618e919d3e819f41a14e03ae40d238dead28591871c7",
+    "timings_json_sha256": "c49ce5c7521c6fa64ea3d1a75867cd9fa6fc796acf856ab27f0962bbbb4a9fe8",
+    "submission_sha256_as_reported_in_ready": "8f0c5e7b2b561538dae55439a4d2e9173141096da3defd9bc0a4bac351eef37a",
+    "submission_payload_independently_downloaded": false,
+    "does_not_establish_hidden_completion": true
+  },
+  "cause_candidates_not_confirmed": [
+    "Original source has an eight-hour internal deadline and child process timeout; this may raise a normal exception before the official nine-hour limit",
+    "Hidden-data-specific preparation, series coverage, nonfinite output or fallback rejection",
+    "Resource pressure or other unhandled child process error"
+  ],
+  "decision": {
+    "scored_fallback": "p002 Public 0.937",
+    "author_recipe_score_as_planning_reference": 0.943,
+    "own_p003_score": null,
+    "next_speed_candidate": "Raptor GPU1 native-arm traversal interleaving; same weights and mathematical recipe; validate real-MRI parity, T4 memory and timing before adoption",
+    "next_accuracy_work": "Generic frozen DINOv2 high-resolution features plus locally trained mean/attention heads; training-only report evidence audit",
+    "do_not_resubmit_unchanged_p003_as_confirmed_fix": true,
+    "do_not_relax_missing_model_or_fallback_guards": true
+  },
+  "local_evidence_directory": "artifacts/research/p003-status-20261006",
+  "methods": "Read-only official Kaggle SDK with standard authentication; exact saved source and two bounded visible-run JSON receipts. No manual credential reads/copies, model/image/label/prediction payload download or external write.",
+  "limits": "COMPLETE is an SDK terminal status, not proof of scoring when errorDescription is present. Hidden cause and runtime are unavailable. Own Public 0.943 and successful speedup are not claimed."
+}

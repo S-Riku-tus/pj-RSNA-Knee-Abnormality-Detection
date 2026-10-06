@@ -1,0 +1,13 @@
+{
+  "source_url": "https://github.com/facebookresearch/dinov2",
+  "source_revision": "TODO exact immutable commit of manually obtained source",
+  "source_tree_sha256": "TODO use frozen_features.py inspect-encoder",
+  "weights_url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth",
+  "weights_sha256": "TODO full SHA256 of manually obtained official generic checkpoint",
+  "license": "Apache-2.0; retain original notices; review pinned source and weights terms",
+  "pretraining": "generic_dinov2_lvd142m",
+  "competition_finetuned": false,
+  "gold_used_for_tuning": false,
+  "reviewed_at": "TODO YYYY-MM-DD JST",
+  "exposure_audit": "TODO audit initialization origin and known competition exposure; generic pretraining alone does not establish patient independence"
+}

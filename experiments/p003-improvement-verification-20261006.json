@@ -1,0 +1,87 @@
+{
+  "checked_date_jst": "2026-10-06",
+  "status": "implementation_and_synthetic_checks_complete_real_evaluation_pending",
+  "unittest": {
+    "discovered": 204,
+    "passed": 203,
+    "failed": 0,
+    "skipped": 1,
+    "seconds": 14.769,
+    "skip_reason": "Existing Windows actual symlink test lacks permission; mock-link checks pass",
+    "log": "artifacts/qa/20261006-p003-improvements/unittest.log",
+    "log_sha256": "acc5779aa0eb671fd093ee1b6153b127774e6cc7626c1fe40e18829c9492fbf9"
+  },
+  "lint": {
+    "ruff_check_all": "passed",
+    "ruff_format_check_all": "passed",
+    "python_files": 90
+  },
+  "static_assets": {
+    "valid": true,
+    "local_links": 165,
+    "ledger_rows": 19,
+    "new_speed_notebooks_regenerate_exactly": true,
+    "f001_f002_pooling_only": true,
+    "record": "artifacts/qa/20261006-p003-improvements/assets.json"
+  },
+  "new_tests": {
+    "p003_speed": 7,
+    "label_review_queue": 10,
+    "frozen_features": 10
+  },
+  "gpu_scope": [
+    "RTX4090 artificial TinyRaptor using the frozen original forward function: old/new input hashes and raw outputs equal",
+    "Synthetic features: both pooling heads forward/backward and missing mask checks",
+    "Synthetic four-study one-epoch CUDA head training, checkpoint save/load, two-study Report-free submission contract",
+    "Artificial DICOM physical ordering, non-square pixel spacing, adjacent slices; synthetic encoder feature extraction"
+  ],
+  "review_fixes": [
+    "Frozen feature identity separates UID/group/fold structure from label values",
+    "Current manifest hashes are bound to successful original-label/group/gold reservation audit",
+    "Head implementation hash stored in checkpoints and checked at inference",
+    "Reject prior DINOv2 imports; load only hash-reviewed local backbone source and weights",
+    "Validation DataLoader uses a separate Generator",
+    "Code Input discovery never scans the Competition tree"
+  ],
+  "protected_sources_unchanged": [
+    "notebooks/public/01_submit_p002_scored.ipynb",
+    "notebooks/public/02_submit_p003.ipynb",
+    "notebooks/public/04_profile_p003_64.ipynb",
+    "notebooks/public/vendor/haideptry-speedy-v2.ipynb",
+    "scripts/build_p003_candidate.py",
+    "scripts/p003_guard.py",
+    "src/rsna_knee/runtime.py",
+    "src/rsna_knee/imaging.py",
+    "src/rsna_knee/model.py"
+  ],
+  "notebook_sha256": {
+    "05_profile_p003_speed_64.ipynb": "47d08cccfb019ea74844981422192c9a28801e8894a973c46c5764dc58145f6b",
+    "05_submit_p003_speed.ipynb": "f070cc83e7a75d72aaf13afbcfbb6ca6d44563d8af777707a6fd720ee886c83d",
+    "06_prepare_frozen_features.ipynb": "1d69bd5755896a3c39ce3f212dd09d4ea1895ab47dbd681d079e9bee5ae16f92",
+    "07_predict_frozen_features.ipynb": "5ca6a575608ab59571f97af45b9504796244f755ed96060dd024b01bf443f151"
+  },
+  "feature_code_bundle": {
+    "path": "artifacts/kaggle/frozen-features-v1-20261006-final/rsna-frozen-features-code.zip",
+    "sha256": "6c8731cfc34489c5ce1cccb60c163829d39e84c482dac64cffcaf0db882a6cce"
+  },
+  "source_sha256": {
+    "src/rsna_knee/feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "src/rsna_knee/feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "src/rsna_knee/feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "src/rsna_knee/feature_runtime.py": "bfa9c7d075f342bd45fcdf2152e7560587972923a1e37e6d915f7e617399e01e",
+    "scripts/build_p003_speed.py": "6e21f3d3eb55f543e17bc7c0af59b29842af762cec05aecad0762810b7eac9a2",
+    "scripts/p003_speed_runtime.py": "b8270a84a2deaa1587bc6acc5232b6158772888acc2a9f04fb52d69a8f58a355",
+    "scripts/p003_speed_guard.py": "a89ae71e3462c3d948ca9aa99cd7eb51412b702489eb23ea9eefa9be21b6ff0b",
+    "scripts/build_label_review_queue.py": "4d20620a283576faf5eed4c8338288db74c71abc17c7794e4c4b9cb76f1606e9",
+    "scripts/frozen_features.py": "a7e56b6391f0f3c358d1d412aec487b91c879cd03a6775dc3559ceb26daee387",
+    "scripts/build_frozen_feature_handoff.py": "b70a040832af368a558285ad28b83fb69f102a3cef90b44365e41601ad606f6e"
+  },
+  "real_model_or_mri_payloads_downloaded": false,
+  "real_mri_decoded": false,
+  "real_training_performed": false,
+  "uploaded_or_submitted": false,
+  "public_score": null,
+  "real_speedup_verified": false,
+  "p003_hidden_exception_fixed": false,
+  "scope_note": "Failure is confirmed but cause remains unresolved. Prepared candidates require real-MRI/T4 parity, memory, runtime and later scoring. Synthetic success is not accuracy evidence."
+}

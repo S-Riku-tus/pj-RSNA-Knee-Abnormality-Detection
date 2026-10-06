@@ -1,0 +1,35 @@
+{
+  "schema_version": "frozen_features_v1",
+  "seed": 20261002,
+  "n_folds": 5,
+  "reason": "Change only mean pooling to finding-specific two-level attention relative to f001; all data, generic encoder, geometry, seed, folds, epochs and BCE selection fixed.",
+  "preprocess": {
+    "version": "physical_letterbox_triplet_v1",
+    "image_size": 392,
+    "max_series": 3,
+    "slices_per_series": 48,
+    "percentiles": [
+      1,
+      99
+    ]
+  },
+  "encoder": {
+    "model_name": "dinov2_vits14",
+    "feature_dim": 384,
+    "batch_size": 16,
+    "precision": "fp16"
+  },
+  "head": {
+    "hidden_dim": 192,
+    "dropout": 0.2,
+    "pooling": "attention"
+  },
+  "train": {
+    "epochs": 12,
+    "batch_size": 16,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "num_workers": 0,
+    "selection": "bce"
+  }
+}
