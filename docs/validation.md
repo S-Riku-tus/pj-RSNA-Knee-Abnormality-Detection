@@ -2,6 +2,20 @@
 
 更新日 2026年10月6日 JST。p003の隠し再実行例外を確認し、速度改善候補・独自の凍結特徴学習経路・教師監査を追加した。以下は新しい確認から順に記し、過去の「未実施」は各作業時点の履歴として残す。
 
+## 新05・64検査診断のユーザーOutput確認（10月6日）
+
+- ユーザー提供の`P003_SPEED_SUMMARY.json`を新しいrunへbyte同一で保存し、SHA-256 `a8c1868d007b6ad00de1b018b590a6bd472ac357d36b0a5e2cd41c32d50c1974`を記録した。[監査](../experiments/p003-speed-profile-review-20261006.json)の32項目が成功。ローカルmanifestとのsource hash・contract一致、実行順、seed/64 UID集合hash、366系列、29予測shape、全5 phase完了、4 CoAt系統のfallback 0・子処理終了0を確認した。最初の監査スクリプトではRadのshapeを二次元と誤って想定したため停止し、既存仕様どおりの5-fold×64×12へ確認条件を修正して完了した。推論コードの変更はない。
+- T4×2、Python 3.13.15、torch 2.11.0+cu128、CUDA 12.8は旧04と一致。変更したRaptor 2系統は入力hash・生予測が完全一致、最大差0・順位差0。DINO20の共有経路差も0。最終診断CSVの報告hashは旧04と一致するが、実CSV/NPZや個別tensorから今回再計算したわけではない。添付内のCoAt receiptは確認したが、子ログ・PREFLIGHT本体・Kaggle保存Notebook/Input版は未取得。
+- 総時間1,832.3586秒、追加reference 423.7238秒。単純差引き1,408.6348秒（23分28.6秒）は旧04の1,427.7626秒とほぼ同程度。cell27も差引き966.4636秒に対し旧948.1448秒で、大幅高速化の根拠はない。差引きは並行処理・cache・診断hash計算の影響を含む概算で、提出版の実測ではない。referenceはprefetchなしのため候補との比も公平な高速化率にしない。
+- native処理のPyTorch最大予約メモリ1.55GiB、CoAt各worker最大2.72GiB。今回64検査の完走は確認できたが、GPU全体やホストメモリの最大値、隠しtestの時間内完走は保証しない。`raptor.status=started`は未更新の初期値、`speedup_verified=false`は固定値と現行コードで確認した。
+- 次は追加学習なしで提出用05の保存実行へ進み、READY/SUMMARY確認後に手動提出する。自己Public・隠し時間・元例外の解消は未確認。今回はJSON監査・記録更新のみで、MRI処理・学習・ネットワークアクセス・アップロード・提出は行っていない。過去のunittest/GPU検査は再実行していない。
+
+## 05診断実行後の手順整理（10月6日）
+
+- ユーザーによる新05診断の実行報告を記録した。今回のOutputは未提供で、完走・実MRIでの一致・速度・メモリは未確認のままとした。
+- 現行の速度guard・runtime・Notebook生成コードと照合し、最初に確認するファイルを`P003_SPEED_SUMMARY.json`へ絞った。[手順](p003-speed.md#05の診断を実行した後にすること)に、診断結果確認→提出用05の保存実行→手動提出→採点確認の順を明記した。06/07と独自学習は今回の提出の前提ではない。
+- 今回は文書のみの変更。コード・Notebook・実験結果は変更せず、学習・MRI処理・Kaggleアクセスや提出は実施していない。過去のテスト結果を今回再実行したとは扱わない。
+
 ## p003例外監査・速度改善・新しい学習経路（10月6日）
 
 - 公式SDKのread-only照会で提出56855132はPublic null・errorDescriptionあり。ユーザー画面もNotebook Threw Exception。SDK COMPLETEを採点成功と解釈せず、9時間超過は未確定と記録した。保存版1の全セルが配布02と一致し、Outputの版ID355483987も提出と対応。可視3検査のP003_READYはpassed・332.005950176秒。取得は保存コード・metadata・2つの小さいJSONのみで、隠しtracebackや隠し実時間は不明。[監査](../experiments/p003-failure-review-20261006.json)

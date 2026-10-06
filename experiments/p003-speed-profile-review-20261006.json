@@ -1,0 +1,150 @@
+{
+  "checked_at_utc": "2026-10-06T04:16:13.618289+00:00",
+  "evidence": "User-provided summary and local source/manifests; no Kaggle access or raw prediction retrieval",
+  "input_file_sha256": "a8c1868d007b6ad00de1b018b590a6bd472ac357d36b0a5e2cd41c32d50c1974",
+  "immutable_evidence_copy": "artifacts/research/p003-speed-profile-review-20261006/P003_SPEED_SUMMARY.json",
+  "checks_passed": [
+    "profile completed",
+    "speed contract matches local manifest",
+    "profile notebook hash matches local manifest",
+    "source maps match",
+    "executed source maps match local manifest",
+    "original notebook hash unchanged",
+    "execution order and omitted publication cell",
+    "preflight receipt hash consistent",
+    "64 studies and 366 series",
+    "same deterministic selection",
+    "no labels or reports used",
+    "both native arms exactly equal",
+    "final profile CSV reported hash matches old profile",
+    "DINO20 parity and cache completion",
+    "event kinds contain no fallback or retry",
+    "29 diagnostic arrays have full shape including five-fold Rad",
+    "same software and T4x2 environment",
+    "all four CoAt families present",
+    "_coat_arm_receipt.json completed without fallback",
+    "_coat_arm_receipt.json shard coverage",
+    "_coat_g96_receipt.json completed without fallback",
+    "_coat_g96_receipt.json shard coverage",
+    "d4_input/d4.receipt.json completed without fallback",
+    "d4_input/d4.receipt.json shard coverage",
+    "_coat_repairv1_receipt.json completed without fallback",
+    "_coat_repairv1_receipt.json shard coverage",
+    "public_raptor phase completed",
+    "residual_coat phase completed",
+    "global96_coat phase completed",
+    "d4 phase completed",
+    "repairv1_coat phase completed",
+    "profile mode no score or hidden runtime claim"
+  ],
+  "decision": "proceed_to_05_submit_saved_run_as_unscored_candidate; manual submission only after completion receipts; no extra training needed",
+  "profile_status": "completed_unscored",
+  "candidate_id": "p003-native-raptor-interleave-v1-20261006",
+  "seed": 20261005,
+  "studies": 64,
+  "series_rows": 366,
+  "study_uids_sha256": "ef00a0936cb59a52d04e00c691369da2d171402a169adcd3b3b0e3527b546834",
+  "environment": {
+    "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpu_names": [
+      "Tesla T4",
+      "Tesla T4"
+    ]
+  },
+  "native_parity": [
+    {
+      "exact_equal": true,
+      "max_absolute_difference": 0.0,
+      "rank_changed_values": 0,
+      "arm": "native384dense-v10",
+      "all_input_tensor_hashes_equal": true
+    },
+    {
+      "exact_equal": true,
+      "max_absolute_difference": 0.0,
+      "rank_changed_values": 0,
+      "arm": "native384-v8",
+      "all_input_tensor_hashes_equal": true
+    }
+  ],
+  "profile_csv_reported_sha256": "94cdcab82e1094983c544da42221960eb498d46c7b65cb51ad73a15491577b83",
+  "profile_csv_reported_hash_matches_old": true,
+  "event_counts": {
+    "cache_complete": 4,
+    "dino_shared_path_parity": 20,
+    "raptor_checkpoint": 5
+  },
+  "native_peak_reserved_bytes": 1665138688,
+  "native_peak_reserved_gib": 1.55078125,
+  "coat_receipts": [
+    {
+      "receipt": "_coat_arm_receipt.json",
+      "status": "VALID_COAT_RESGATED_EP10_TOP3_RANK_SUBMISSION",
+      "models": 3,
+      "fallback_studies": 0,
+      "elapsed_seconds": 197.38512539499993,
+      "max_shard_peak_reserved_bytes": 2919235584
+    },
+    {
+      "receipt": "_coat_g96_receipt.json",
+      "status": "VALID_COATNET_GLOBAL96_TOP3_T4X2_SUBMISSION",
+      "models": 3,
+      "fallback_studies": 0,
+      "elapsed_seconds": 198.2188829390002,
+      "max_shard_peak_reserved_bytes": 2300575744
+    },
+    {
+      "receipt": "d4_input/d4.receipt.json",
+      "status": "VALID_COATNET_D4_DEPTHZONE_SWA3_T4X2_SUBMISSION",
+      "models": 1,
+      "fallback_studies": 0,
+      "elapsed_seconds": 110.90867380999998,
+      "max_shard_peak_reserved_bytes": 2243952640
+    },
+    {
+      "receipt": "_coat_repairv1_receipt.json",
+      "status": "VALID_COATNET_REPAIRV1_TOP3_PROBABILITY_RANK_SUBMISSION",
+      "models": 3,
+      "fallback_studies": 0,
+      "elapsed_seconds": 160.294652907,
+      "max_shard_peak_reserved_bytes": 2491416576
+    }
+  ],
+  "phase_seconds": {
+    "public_raptor": 690.079648047,
+    "residual_coat": 202.5280158600001,
+    "global96_coat": 205.38050002399996,
+    "d4": 124.15126603299996,
+    "repairv1_coat": 165.6598135229999
+  },
+  "timing": {
+    "profile_elapsed_seconds": 1832.3586145840002,
+    "native_candidate_seconds": 265.979470183,
+    "reference_seconds": 423.72383974799993,
+    "total_minus_reference_seconds_approximation_only": 1408.6347748360004,
+    "old_profile_elapsed_seconds": 1427.762560537,
+    "cell27_seconds": 1390.1873996000002,
+    "cell27_minus_reference_seconds_approximation_only": 966.4635598520002,
+    "old_cell27_seconds": 948.144774172,
+    "interpretation": "No demonstrated substantial speedup. Subtraction is a rough counterfactual, not measured submission runtime; concurrent GPU work, caches, hashing and run variability differ. Reference lacks prefetch, so candidate/reference ratio is not a fair speedup comparison."
+  },
+  "diagnostic_field_notes": {
+    "raptor.status": "started is initialized and never changed in this implementation; overall finish status and parity_passed establish completion",
+    "speedup_verified": "hardcoded false; no measured speedup claim",
+    "memory": "PyTorch peak reserved in the measured worker/phase, not total GPU or host memory"
+  },
+  "public_score": null,
+  "hidden_test_runtime_verified": false,
+  "notebook_saved_version": null,
+  "limitations": [
+    "Raw tensor hashes/predictions/logs and input preflight contents were not attached; embedded claims cannot be independently recomputed.",
+    "Saved Kaggle Notebook/Input versions were not inspected.",
+    "64-study diagnostic success does not resolve the old hidden exception or guarantee runtime/score.",
+    "Public asset gold-selection history is inherited provenance, not an independent evaluation here."
+  ],
+  "code_modified": false,
+  "real_inference_or_training_run_by_assistant": false,
+  "uploaded_or_submitted": false
+}

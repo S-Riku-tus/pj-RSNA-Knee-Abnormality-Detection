@@ -4,9 +4,11 @@
 
 ## 最新：p003の例外確認と速度・独自学習の改善
 
+ユーザー提供の`P003_SPEED_SUMMARY.json`を確認しました。新05診断はT4×2・64検査/366系列で完了し、変更したRaptor 2系統の入力・生予測・順位が完全一致、追加CoAt 4系統のfallbackは0でした。最終診断CSVの報告hashも旧04と一致します。総時間30分32.4秒には照合用の7分3.7秒が含まれ、単純差引き約23分28.6秒は旧04の23分47.8秒とほぼ同程度です。**大幅高速化や隠し例外解消は未確認**です。次は提出用05の保存実行へ進み、完了記録を確認して手動提出・採点を待ちます。追加学習や06/07は不要です。[今回の診断監査](experiments/p003-speed-profile-review-20261006.json)、[次の操作](docs/p003-speed.md#05の診断を実行した後にすること)
+
 提出`56855132`（scriptVersionId `355483987`）は自己Public未測定で、公式SDKとユーザー画面の双方で隠し再実行の未処理例外を確認しました。**9時間超過とは未確定**です。SDKのCOMPLETEは処理終了を表し、errorDescriptionがある今回は採点成功を意味しません。保存版1の全セルは配布02と一致し、可視3検査のP003_READYはpassed・332.006秒。隠しtracebackと実時間は取得できていません。[失敗監査](experiments/p003-failure-review-20261006.json)
 
-次は新しい[05・64検査診断](notebooks/public/05_profile_p003_speed_64.ipynb)です。Raptor GPU1の二つの入力方式を検査ごとに続けて処理してdecode cacheを再利用し、元経路の入力tensor・生予測との一致、GPUメモリ、処理時間を記録します。[提出候補05](notebooks/public/05_submit_p003_speed.ipynb)は別Notebookです。全モデル・係数・精度・失敗拒否・8時間内部予算を保持します。2モデル常駐のT4メモリと実効速度は未検証で、これだけで隠し例外を解消したとは扱いません。
+新しい[05・64検査診断](notebooks/public/05_profile_p003_speed_64.ipynb)は、Raptor GPU1の二つの入力方式を検査ごとに続けて処理してdecode cacheを再利用し、元経路の入力tensor・生予測との一致、GPUメモリ、処理時間を記録します。[提出候補05](notebooks/public/05_submit_p003_speed.ipynb)は別Notebookです。全モデル・係数・精度・失敗拒否・8時間内部予算を保持します。今回のnative処理のPyTorch最大予約メモリは1.55GiB、CoAt各worker最大は2.72GiBでした。これは各処理の計測で、GPU全体使用量や隠しtestのメモリ上限を保証しません。
 
 精度改善は[凍結DINOv2特徴の学習経路](docs/frozen-features.md)を追加しました。Kaggleの元DICOMから392px・最大3系列×48枚の特徴を作り、4090で平均集約f001とAttention集約f002を一要因比較します。汎用encoderの出所・hash、特徴と前処理の共通契約、固定fold、gold非使用、欠損mask、CUDA必須、Report不要推論を維持します。新しい[ラベル監査キュー](docs/label-review.md)ではfold0/1とgold連結groupを保護して学習側の根拠を確認します。
 
@@ -76,8 +78,8 @@ Input追加で名前検索に出ない場合のため、[最新手順](docs/p003
 
 ## 次にすること
 
-1. p002 Public 0.937と元p003を保持し、新05診断を同じ14 Inputs・T4×2・Internet OFFで実行する。数値一致、2モデル常駐メモリ、失敗traceback、phase時間を確認する。旧04の再実行を指すものではない。
-2. 予測一致と速度・メモリを確認できた05だけを新規保存実行・手動提出する。一般的な例外を時間超過と決めつけず、モデル省略やfallback許容で完了扱いにしない。
+1. 新05診断の確認は完了。p002 Public 0.937と元p003を保持し、提出用`05_submit_p003_speed.ipynb`を別のprivate NotebookへImportして、同じ14 Inputs・T4×2・Internet OFFで保存実行する。追加学習は不要。
+2. READY/SUMMARYとsubmission.csvを確認して手動提出し、隠しtestの成否・自己Publicを記録する。大幅高速化や元例外の解消はまだ未確認。一般的な例外を時間超過と決めつけず、モデル省略やfallback許容で完了扱いにしない。
 3. 06で汎用DINOv2・392px特徴の小規模品質確認を行う。元コード/重みを手動で用意し出所とhashを固定する。確認後にweak全件特徴を作り、ローカルでexportを検証する。
 4. f001 meanとf002 attentionを同一特徴・教師・seed・fold0で学習し、BCE選択・所見別AUC/supportを記録する。別runでfold1も比較する。実学習はまだ開始していない。
 5. 教師監査は事前にfold0/1を保護した150検査キューから始める。規則を固定した別版教師との比較を、集約やencoder変更と混ぜない。

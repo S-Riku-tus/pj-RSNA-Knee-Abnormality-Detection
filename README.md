@@ -4,7 +4,7 @@
 
 全件画像キャッシュ（4,407検査、約7.79GB）の取得・検証、weakラベルの監査と固定分割、RTX 4090での基準学習を完了しています。**weak 4,207検査・gold 58検査、fold 0の学習3,386／検証821検査**です。10月3日の5 epoch基準実験は約18分、最良checkpointはepoch 1でした。公開モデルを使った既存提出の実測Public 0.924は公式APIで確認済みで、自作モデルのスコアとは区別します。
 
-**最新（10月6日）：p003は隠し再実行の例外で採点に失敗しました。時間超過とは未確定です。** 自己採点済みの基準は[p002 Public 0.937](notebooks/public/01_submit_p002_scored.ipynb)。公開0.943を設計上の基準に、[Raptor実行順の高速化診断](notebooks/public/05_profile_p003_speed_64.ipynb)、[高速化提出候補](notebooks/public/05_submit_p003_speed.ipynb)、[392px凍結特徴からの独自学習](docs/frozen-features.md)、[教師の根拠監査](docs/label-review.md)を追加しました。まず新05診断で予測一致・メモリ・時間を確認します。[失敗監査](experiments/p003-failure-review-20261006.json)、[調査と採否条件](docs/research/p003-improvement-20261006.md)。新候補の実MRI・実学習・Public改善は未検証です。以下は以前の履歴を含みます。
+**最新（10月6日）：新05の64検査診断が完了し、変更した2系統の入力・予測は完全一致しました。次は[提出用05](notebooks/public/05_submit_p003_speed.ipynb)の保存実行です。追加学習は不要です。** 診断時間は照合用再計算を含め30分32.4秒で、単純差引き約23分28.6秒は旧04とほぼ同程度。大幅高速化は確認できていません。[診断監査](experiments/p003-speed-profile-review-20261006.json)、[次の操作](docs/p003-speed.md)。元p003の隠し例外は時間超過とは未確定で、新05の隠し完走・Publicも未確認です。自己採点済みの基準は[p002 Public 0.937](notebooks/public/01_submit_p002_scored.ipynb)。公開0.943を設計上の基準に、[392px凍結特徴からの独自学習](docs/frozen-features.md)と[教師の根拠監査](docs/label-review.md)は別経路として準備済みで、実学習・精度改善は未検証です。以下は以前の履歴を含みます。
 
 10月4日に公式RulesとHost回答を取得し、vmohitrao Version 3ラベルを研究・学習目的とCC BY-NC 4.0の帰属等を守って採用する判断に更新しました。[利用条件の根拠](docs/research/kaggle-source-eligibility-20261004.json) に本文の確認日と出典を保存しています。
 
