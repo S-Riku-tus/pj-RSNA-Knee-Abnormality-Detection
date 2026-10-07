@@ -1,0 +1,251 @@
+{
+  "reviewed_at_utc": "2026-10-07T04:35:29.125181+00:00",
+  "status": "hidden_failure_confirmed_root_cause_unconfirmed",
+  "submission": {
+    "ref": 56897486,
+    "date": "2026-10-07T02:16:41.160Z",
+    "status": "COMPLETE",
+    "status_enum": "SubmissionStatus.COMPLETE",
+    "public_score": null,
+    "error_description": "Your notebook hit an unhandled error while rerunning your code. Note that the hidden dataset can be larger/smaller/different than the public dataset",
+    "file_name": "submission.csv",
+    "list_url": "/code/rsraki/notebookdd86797040?scriptVersionId=355923367",
+    "script_version_id": [
+      "355923367"
+    ],
+    "description": ""
+  },
+  "submission_checked_at_utc": "2026-10-07T04:04:22.290741+00:00",
+  "saved_visible_version": {
+    "checked_at_utc": "2026-10-07T04:08:16.516625+00:00",
+    "saved_run_status": {
+      "status": "COMPLETE"
+    },
+    "source_cells_equal_previously_audited_v2": true,
+    "saved_source_sha256": "aa39949450dc0aa6e632afd60c1b5fbebc58273e04b232557b03a1e53a2b8de0",
+    "log_sha256": "bbb917685a7ebca46b4387c086a7d83380e36a41754d43d7cc02e2fea3335aeb",
+    "log_bytes": 13930,
+    "gpu_enabled": true,
+    "internet_enabled": false,
+    "current_version_number": 2,
+    "output_names": [
+      "F002_INFERENCE_SUMMARY.json",
+      "frozen-test-f002-fold0-v1/1.2.826.0.1.3680043.8.498.10047035057544427318018579121635276191.npz",
+      "frozen-test-f002-fold0-v1/1.2.826.0.1.3680043.8.498.10062861783145312629332250977456991776.npz",
+      "frozen-test-f002-fold0-v1/1.2.826.0.1.3680043.8.498.10067514707072572280263481548497591402.npz",
+      "frozen-test-f002-fold0-v1/export.json",
+      "frozen-test-f002-fold0-v1/studies.csv",
+      "submission.csv",
+      "submission.receipt.json"
+    ],
+    "scope": "Saved visible Version2 log only; competition API returned no private traceback or compute duration"
+  },
+  "confirmed": [
+    "Submitted source matches audited Version2; errorDescription present and Public null",
+    "Visible GPU enabled/Internet OFF, three studies passed; private traceback not returned",
+    "Submitted11:16JST and already failed at13:04JST; elapsed includes queue and is not compute duration",
+    "No fixed-three-study or Report requirement found in test inference",
+    "Original16 core modules and fixed f002fold0epoch11 checkpoint remain unchanged"
+  ],
+  "candidates_in_investigation_order": [
+    {
+      "candidate": "Compressed DICOM dependency/format differences",
+      "confirmed": false,
+      "evidence": "Baseline lacks exhaustive decoder preflight; competition may include JPEG Lossless/JPEG2000, requiring compatible plugins",
+      "counterevidence": "Visible three studies and existing4207 weak extraction completed; no failing hidden syntax observed"
+    },
+    {
+      "candidate": "Input-specific physical geometry/series assumptions",
+      "confirmed": false,
+      "evidence": "Missing PixelSpacing, multiframe, changing matrix or no selected usable series can raise and abort; synthetic missing-geometry case reproduced"
+    },
+    {
+      "candidate": "Resources, scale, setup or CSV/platform assumptions",
+      "confirmed": false,
+      "evidence": "Old staging stores per-study NPZ and rewrites growing metadata; hidden peak resources unknown",
+      "limit": "Old encoder already runs serially per study; removing staging does not establish an encoder peak-memory fix"
+    }
+  ],
+  "new_package": {
+    "status": "prepared_unexecuted",
+    "notebooks_sha256": {
+      "08_profile_f002_serving_256.ipynb": "036220032d9bb94a686ffeb8df816fa25009cd9860a508410e7a7f2dbc960c71",
+      "09_submit_f002_streaming.ipynb": "26dd4be0b493899d946a5b4ee55202930015cd35f18ecf79188ea19d3000bd07"
+    },
+    "runtime_sha256": "a0d13ea7a93916dc6e7acd52ffe68a9a09e21bbe889d830746f7f9ed46d87f37",
+    "core_sources_unchanged": {
+      "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+      "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+      "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+      "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+      "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+      "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+      "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+      "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+      "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+      "feature_runtime.py": "bfa9c7d075f342bd45fcdf2152e7560587972923a1e37e6d915f7e617399e01e",
+      "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+      "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+      "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+      "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+      "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+      "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05"
+    },
+    "training_started": false,
+    "decoder_input": "rsraki/rsna-dicom-decoders-py313-v1",
+    "hidden_failure_cause_confirmed": false,
+    "path": "artifacts/kaggle/f002-streaming-v3-20261007",
+    "profile": "notebooks/public/08_profile_f002_serving_256.ipynb",
+    "candidate": "notebooks/public/09_submit_f002_streaming.ipynb",
+    "decoder_zip": "artifacts/kaggle/dicom-decoders-py313-v2-20261007/rsna-dicom-decoders-py313-v1.zip",
+    "decoder_zip_sha256": "c2ffb2735fec93586ee568c23a4c1785e8d5a79093de1c2db95db0cdaff25674",
+    "decoder_zip_bytes": 5331559
+  },
+  "changes": [
+    "Pinned offline libjpeg/openjpeg decoder installation without changing torch/numpy/pydicom",
+    "Startup compressed numerical phantom checks before any MRI",
+    "One-study feature-to-head inference with no NPZ staging; constant-size summary plus events journal",
+    "256-study fixed gold-excluded weak profile; no Report requirement and no submission output",
+    "Dynamic full test coverage and finite12-target CSV; optional sample header contract",
+    "Failure phase, UID/series/header/traceback and resources retained during visible diagnostic runs"
+  ],
+  "verification": {
+    "focused_unittest_count": 21,
+    "focused_unittest_passed": true,
+    "actual_f002_head_artificial_gpu": {
+      "status": "passed",
+      "artificial_studies": 17,
+      "features_shape": [
+        17,
+        3,
+        48,
+        384
+      ],
+      "seed": 20261007,
+      "maximum_absolute_probability_difference": 1.1920928955078125e-07,
+      "absolute_tolerance": 2e-06,
+      "checkpoint_sha256": "189ecab25e0d1c029e974ee23f3c46239e5eceef290b5dca33f6831dcb8e1b03",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "torch": "2.10.0+cu128",
+      "numpy": "2.5.3",
+      "python": "3.12.13",
+      "source_sha256": {
+        "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+        "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+        "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+        "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+        "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+        "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+        "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+        "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+        "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+        "feature_runtime.py": "bfa9c7d075f342bd45fcdf2152e7560587972923a1e37e6d915f7e617399e01e",
+        "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+        "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+        "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+        "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+        "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+        "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05"
+      },
+      "real_images_read": false,
+      "training_performed": false,
+      "limitation": "Artificial full-shape head inference only; Kaggle encoder/private DICOM not executed"
+    },
+    "compressed_phantoms_windows": {
+      "status": "passed",
+      "scope": "Own numerical phantom; Windows cp312 plugins, not Linux cp313 execution",
+      "python": "3.12.13",
+      "platform": "win32",
+      "packages": {
+        "numpy": "2.1.3",
+        "pydicom": "3.0.2",
+        "pylibjpeg": "2.1.0",
+        "pylibjpeg-libjpeg": "2.4.0",
+        "pylibjpeg-openjpeg": "2.6.0"
+      },
+      "results": [
+        {
+          "transfer_syntax": "1.2.840.10008.1.2.4.57",
+          "default_and_pylibjpeg_exact_pixels": true
+        },
+        {
+          "transfer_syntax": "1.2.840.10008.1.2.4.70",
+          "default_and_pylibjpeg_exact_pixels": true
+        },
+        {
+          "transfer_syntax": "1.2.840.10008.1.2.4.90",
+          "default_and_pylibjpeg_exact_pixels": true
+        },
+        {
+          "transfer_syntax": "1.2.840.10008.1.2.4.91",
+          "default_and_pylibjpeg_exact_pixels": true
+        }
+      ],
+      "inventory": {
+        "1.2.840.10008.1.2.4.57": {
+          "available": true,
+          "plugins": [
+            "pylibjpeg"
+          ],
+          "missing_dependencies": [
+            "gdcm - requires gdcm>=3.0.10"
+          ]
+        },
+        "1.2.840.10008.1.2.4.70": {
+          "available": true,
+          "plugins": [
+            "pylibjpeg"
+          ],
+          "missing_dependencies": [
+            "gdcm - requires gdcm>=3.0.10"
+          ]
+        },
+        "1.2.840.10008.1.2.4.90": {
+          "available": true,
+          "plugins": [
+            "pylibjpeg"
+          ],
+          "missing_dependencies": [
+            "gdcm - requires gdcm>=3.0.10",
+            "pillow - requires numpy and pillow>=10.0"
+          ]
+        },
+        "1.2.840.10008.1.2.4.91": {
+          "available": true,
+          "plugins": [
+            "pylibjpeg"
+          ],
+          "missing_dependencies": [
+            "gdcm - requires gdcm>=3.0.10",
+            "pillow - requires numpy and pillow>=10.0"
+          ]
+        }
+      },
+      "real_mri_decoded": false
+    },
+    "kaggle_linux_py313_execution_verified": false
+  },
+  "next_actions": [
+    "Manually add the5.33MB decoder ZIP as a private Dataset",
+    "Run08 with the four Inputs, T4 GPU and Internet OFF; review256-study summary/events",
+    "Only after08 succeeds, run09 in a fresh Notebook with the same Inputs",
+    "Only after visible09 CSV contract passes, manually submit its saved version",
+    "If visible diagnosis fails, repair the recorded cause before any further submission"
+  ],
+  "limitations": [
+    "Private scoring logs are not exposed; adding logs does not make them downloadable",
+    "256weak studies cannot guarantee hidden distribution/scale coverage or private completion",
+    "No measured speedup or private exception resolution yet; Linux wheels require Kaggle execution",
+    "Decoder availability does not validate every real DICOM pixel representation",
+    "f002 and p003 sharing a generic error does not establish a common root cause",
+    "No actual training/MRI decoding/model data acquisition or external upload/submission this turn"
+  ],
+  "primary_sources_checked_20261007": [
+    "https://www.kaggle.com/code-competition-debugging",
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data",
+    "https://pydicom.github.io/pydicom/stable/guides/user/image_data_handlers.html",
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733343"
+  ],
+  "public_lb": null,
+  "hidden_failure_cause_confirmed": false
+}

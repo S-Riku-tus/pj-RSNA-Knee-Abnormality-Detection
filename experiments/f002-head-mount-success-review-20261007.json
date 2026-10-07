@@ -1,0 +1,57 @@
+{
+  "reviewed_at_utc": "2026-10-07T05:12:15.852575+00:00",
+  "status": "supplied_head_mount_and_payload_checks_verified",
+  "attachment_sha256": "d77e6f241e9573298cd87319d66805e3474630241d29e5df95e9d3c68e295969",
+  "evidence_scope": "User-supplied JSON; original Kaggle saved probe source/version/log not independently retrieved",
+  "summary": {
+    "status": "passed",
+    "phase": "complete",
+    "python": "3.13.15",
+    "head_slug": "rsna-f002-head-fold0-v1",
+    "model_loaded": false,
+    "training_performed": false,
+    "note": "If Dataset mounting fails before Python, this JSON cannot be created",
+    "mount_path": "/kaggle/input/datasets/rsraki/rsna-f002-head-fold0-v1",
+    "checks": {
+      "best.pt": {
+        "bytes": 340745,
+        "sha256": "189ecab25e0d1c029e974ee23f3c46239e5eceef290b5dca33f6831dcb8e1b03",
+        "matches": true
+      },
+      "config.json": {
+        "bytes": 855,
+        "sha256": "f2e98efbb73accd3053032cac811e203d8a4d0570e26e2e32ea9d4eaaaba7280",
+        "matches": true
+      },
+      "checkpoint-provenance.json": {
+        "bytes": 5959,
+        "sha256": "918231230cfdd21fbae9c766ddf585d17daeef6a6cff9dc14fbf46e2b6ccada6",
+        "matches": true
+      }
+    }
+  },
+  "checks_passed": [
+    "Summary passed/complete",
+    "Original head slug retained",
+    "Expected modern head mount path",
+    "No model loading or training reported",
+    "Original immutable archive SHA256",
+    "Exact three-file coverage",
+    "best.pt size and SHA256 independently match local archive",
+    "config.json size and SHA256 independently match local archive",
+    "checkpoint-provenance.json size and SHA256 independently match local archive",
+    "Supplied evidence preserved byte-identically"
+  ],
+  "conclusion": "In the reported probe session, the original head Input mounted and all3 audited file bytes matched",
+  "prior_failure_interpretation": "Mount failure was not reproduced here. Persistent head content corruption is not supported; detailed host/cache cause remains unknown",
+  "not_verified": [
+    "GPU08 mounting with all4 Inputs",
+    "decoder install and compressed pixel checks",
+    "model load or MRI inference",
+    "256-study completion",
+    "09 visible/hidden completion or ownPublic"
+  ],
+  "next_action": "Return to08 with original4 Inputs, fresh GPU session, InternetOFF; Save&RunAll as a new version; reviewF002_STREAMING_SUMMARY.json before09",
+  "no_head_reupload_or_retraining_needed_for_this_result": true,
+  "public_lb": null
+}

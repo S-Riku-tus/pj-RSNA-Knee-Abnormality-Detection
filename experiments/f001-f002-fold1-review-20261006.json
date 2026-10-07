@@ -1,0 +1,899 @@
+{
+  "checked_at_utc": "2026-10-06T11:05:19.766058+00:00",
+  "checked_date_jst": "2026-10-06",
+  "status": "completed_pair_verified_attention_selected_for_single_model_serving_evaluation",
+  "checks_passed": [
+    "f001: unchanged expected config",
+    "f001: complete twelve epochs and expected fold/seed/split",
+    "f001: fixed weak BCE selection and no gold fitting/evaluation",
+    "f001: source and feature cache bindings",
+    "f001: current manifest and fold audit bindings",
+    "f001: 208 optimizer steps per epoch and finite training metrics",
+    "f001: epoch 1 prediction hash",
+    "f001: epoch 1 weak metrics and UID order",
+    "f001: epoch 1 BCE from observed probabilities",
+    "f001: epoch 1 elapsed increases",
+    "f001: epoch 2 prediction hash",
+    "f001: epoch 2 weak metrics and UID order",
+    "f001: epoch 2 BCE from observed probabilities",
+    "f001: epoch 2 elapsed increases",
+    "f001: epoch 3 prediction hash",
+    "f001: epoch 3 weak metrics and UID order",
+    "f001: epoch 3 BCE from observed probabilities",
+    "f001: epoch 3 elapsed increases",
+    "f001: epoch 4 prediction hash",
+    "f001: epoch 4 weak metrics and UID order",
+    "f001: epoch 4 BCE from observed probabilities",
+    "f001: epoch 4 elapsed increases",
+    "f001: epoch 5 prediction hash",
+    "f001: epoch 5 weak metrics and UID order",
+    "f001: epoch 5 BCE from observed probabilities",
+    "f001: epoch 5 elapsed increases",
+    "f001: epoch 6 prediction hash",
+    "f001: epoch 6 weak metrics and UID order",
+    "f001: epoch 6 BCE from observed probabilities",
+    "f001: epoch 6 elapsed increases",
+    "f001: epoch 7 prediction hash",
+    "f001: epoch 7 weak metrics and UID order",
+    "f001: epoch 7 BCE from observed probabilities",
+    "f001: epoch 7 elapsed increases",
+    "f001: epoch 8 prediction hash",
+    "f001: epoch 8 weak metrics and UID order",
+    "f001: epoch 8 BCE from observed probabilities",
+    "f001: epoch 8 elapsed increases",
+    "f001: epoch 9 prediction hash",
+    "f001: epoch 9 weak metrics and UID order",
+    "f001: epoch 9 BCE from observed probabilities",
+    "f001: epoch 9 elapsed increases",
+    "f001: epoch 10 prediction hash",
+    "f001: epoch 10 weak metrics and UID order",
+    "f001: epoch 10 BCE from observed probabilities",
+    "f001: epoch 10 elapsed increases",
+    "f001: epoch 11 prediction hash",
+    "f001: epoch 11 weak metrics and UID order",
+    "f001: epoch 11 BCE from observed probabilities",
+    "f001: epoch 11 elapsed increases",
+    "f001: epoch 12 prediction hash",
+    "f001: epoch 12 weak metrics and UID order",
+    "f001: epoch 12 BCE from observed probabilities",
+    "f001: epoch 12 elapsed increases",
+    "f001: selection is earliest minimum BCE",
+    "f001: selected saved artifact hashes",
+    "f001: checkpoint config/fold/epoch and tensors finite",
+    "f002: unchanged expected config",
+    "f002: complete twelve epochs and expected fold/seed/split",
+    "f002: fixed weak BCE selection and no gold fitting/evaluation",
+    "f002: source and feature cache bindings",
+    "f002: current manifest and fold audit bindings",
+    "f002: 208 optimizer steps per epoch and finite training metrics",
+    "f002: epoch 1 prediction hash",
+    "f002: epoch 1 weak metrics and UID order",
+    "f002: epoch 1 BCE from observed probabilities",
+    "f002: epoch 1 elapsed increases",
+    "f002: epoch 2 prediction hash",
+    "f002: epoch 2 weak metrics and UID order",
+    "f002: epoch 2 BCE from observed probabilities",
+    "f002: epoch 2 elapsed increases",
+    "f002: epoch 3 prediction hash",
+    "f002: epoch 3 weak metrics and UID order",
+    "f002: epoch 3 BCE from observed probabilities",
+    "f002: epoch 3 elapsed increases",
+    "f002: epoch 4 prediction hash",
+    "f002: epoch 4 weak metrics and UID order",
+    "f002: epoch 4 BCE from observed probabilities",
+    "f002: epoch 4 elapsed increases",
+    "f002: epoch 5 prediction hash",
+    "f002: epoch 5 weak metrics and UID order",
+    "f002: epoch 5 BCE from observed probabilities",
+    "f002: epoch 5 elapsed increases",
+    "f002: epoch 6 prediction hash",
+    "f002: epoch 6 weak metrics and UID order",
+    "f002: epoch 6 BCE from observed probabilities",
+    "f002: epoch 6 elapsed increases",
+    "f002: epoch 7 prediction hash",
+    "f002: epoch 7 weak metrics and UID order",
+    "f002: epoch 7 BCE from observed probabilities",
+    "f002: epoch 7 elapsed increases",
+    "f002: epoch 8 prediction hash",
+    "f002: epoch 8 weak metrics and UID order",
+    "f002: epoch 8 BCE from observed probabilities",
+    "f002: epoch 8 elapsed increases",
+    "f002: epoch 9 prediction hash",
+    "f002: epoch 9 weak metrics and UID order",
+    "f002: epoch 9 BCE from observed probabilities",
+    "f002: epoch 9 elapsed increases",
+    "f002: epoch 10 prediction hash",
+    "f002: epoch 10 weak metrics and UID order",
+    "f002: epoch 10 BCE from observed probabilities",
+    "f002: epoch 10 elapsed increases",
+    "f002: epoch 11 prediction hash",
+    "f002: epoch 11 weak metrics and UID order",
+    "f002: epoch 11 BCE from observed probabilities",
+    "f002: epoch 11 elapsed increases",
+    "f002: epoch 12 prediction hash",
+    "f002: epoch 12 weak metrics and UID order",
+    "f002: epoch 12 BCE from observed probabilities",
+    "f002: epoch 12 elapsed increases",
+    "f002: selection is earliest minimum BCE",
+    "f002: selected saved artifact hashes",
+    "f002: checkpoint config/fold/epoch and tensors finite",
+    "paired condition equality except hypothesis and head pooling",
+    "paired runtime and input/source/fold identities",
+    "bootstrap input bindings and fixed resampling setup",
+    "previous fold0 review binds unchanged runs",
+    "f001: same features, config, source and seed across folds",
+    "f002: same features, config, source and seed across folds",
+    "independent weighted-rank bootstrap agrees with selected CSV metrics"
+  ],
+  "runs": {
+    "f001": {
+      "run": "artifacts/runs/f001-dinov2-frozen-fold1",
+      "status": "complete",
+      "run_sha256": "d4040267e8520b7289bc4d7bd87c9786bd73641b480aae36f9c64811531228a7",
+      "config_sha256": "89c6f412cf4ac355d782012e86e155d6533ea6045381923f5f80aba87d13e086",
+      "head": {
+        "hidden_dim": 192,
+        "dropout": 0.2,
+        "pooling": "mean"
+      },
+      "seed": 20261002,
+      "fold": 1,
+      "training_seconds": 190.74393549998058,
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "runtime": {
+        "torch": "2.10.0+cu128",
+        "numpy": "2.5.3"
+      },
+      "train_studies": 3316,
+      "valid_studies": 891,
+      "optimizer_steps_total": 2496,
+      "selected_epoch": 12,
+      "selected_train_bce": 0.32429737800213915,
+      "selected_weak_bce": 0.3342345956852802,
+      "selected_weak_macro_auc_12": 0.7925708578139519,
+      "selected_weak_macro_auc_11_without_synovitis": 0.7830857342975069,
+      "selected_prediction_sha256": "793acbe440d6fa3d4c83d1a4071a4e82ed81803685339491ef1b7c2100d0435e",
+      "best_checkpoint_sha256": "9c7067d8e91ee094523395e751cfd85701f959f70c9fc1e80a1b52680b1ed1bb",
+      "last_checkpoint_sha256": "0fb055a705dd0f027bb0ff068b885c7a89512f7c435b6982df7004fffc67aea2",
+      "checkpoint_state_elements": 83352,
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "train_bce": 0.42977319083758025,
+          "weak_bce": 0.39613707963541084,
+          "weak_macro_auc_12": 0.7077759451726471,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 16.001530000008643
+        },
+        {
+          "epoch": 2,
+          "train_bce": 0.38954070523595774,
+          "weak_bce": 0.3723297875938121,
+          "weak_macro_auc_12": 0.7510574735794812,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 31.92568659997778
+        },
+        {
+          "epoch": 3,
+          "train_bce": 0.3690174123870847,
+          "weak_bce": 0.35915171760127645,
+          "weak_macro_auc_12": 0.7664527671019599,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 47.89122009999119
+        },
+        {
+          "epoch": 4,
+          "train_bce": 0.35624046095700596,
+          "weak_bce": 0.3539440407688844,
+          "weak_macro_auc_12": 0.7702206622262735,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 63.797527899965644
+        },
+        {
+          "epoch": 5,
+          "train_bce": 0.3493323516739541,
+          "weak_bce": 0.35342880571658664,
+          "weak_macro_auc_12": 0.7736850335151259,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 79.65892969997367
+        },
+        {
+          "epoch": 6,
+          "train_bce": 0.34333571791388023,
+          "weak_bce": 0.349923545844278,
+          "weak_macro_auc_12": 0.77728299231197,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 95.31116390001262
+        },
+        {
+          "epoch": 7,
+          "train_bce": 0.3394364154291625,
+          "weak_bce": 0.3459550786444736,
+          "weak_macro_auc_12": 0.7793376855550301,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 111.18157419998897
+        },
+        {
+          "epoch": 8,
+          "train_bce": 0.33455700279821127,
+          "weak_bce": 0.34624556175114857,
+          "weak_macro_auc_12": 0.7828534962076312,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 126.99136749998434
+        },
+        {
+          "epoch": 9,
+          "train_bce": 0.33239092337858767,
+          "weak_bce": 0.3381173018145834,
+          "weak_macro_auc_12": 0.7871220385877522,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 142.89744289999362
+        },
+        {
+          "epoch": 10,
+          "train_bce": 0.32992683979078413,
+          "weak_bce": 0.33643234038249253,
+          "weak_macro_auc_12": 0.7883040359865875,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 158.7783003000077
+        },
+        {
+          "epoch": 11,
+          "train_bce": 0.32727220879332053,
+          "weak_bce": 0.3429860310775753,
+          "weak_macro_auc_12": 0.790460285988492,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 174.77988579997327
+        },
+        {
+          "epoch": 12,
+          "train_bce": 0.32429737800213915,
+          "weak_bce": 0.3342345956852802,
+          "weak_macro_auc_12": 0.7925708578139519,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 190.72012969997013
+        }
+      ]
+    },
+    "f002": {
+      "run": "artifacts/runs/f002-dinov2-attention-fold1",
+      "status": "complete",
+      "run_sha256": "fa0e890da40e2745f002ba63695960f18cda4433f9f79d265bace621221d0847",
+      "config_sha256": "f2e98efbb73accd3053032cac811e203d8a4d0570e26e2e32ea9d4eaaaba7280",
+      "head": {
+        "hidden_dim": 192,
+        "dropout": 0.2,
+        "pooling": "attention"
+      },
+      "seed": 20261002,
+      "fold": 1,
+      "training_seconds": 198.85277629998745,
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "runtime": {
+        "torch": "2.10.0+cu128",
+        "numpy": "2.5.3"
+      },
+      "train_studies": 3316,
+      "valid_studies": 891,
+      "optimizer_steps_total": 2496,
+      "selected_epoch": 12,
+      "selected_train_bce": 0.28213807723463863,
+      "selected_weak_bce": 0.31746868302813663,
+      "selected_weak_macro_auc_12": 0.8154302698313463,
+      "selected_weak_macro_auc_11_without_synovitis": 0.808135739534852,
+      "selected_prediction_sha256": "fcc2aa4f7f4a89916e149d7df96b6fb97654e20a9c6f2f0515e711aeac72748b",
+      "best_checkpoint_sha256": "b2d45b6e27b042165f983ab1977081cba7a9312e1f3d09ad1aa76ce0624dfdc3",
+      "last_checkpoint_sha256": "5fb2a5c41fc049ddfe97d7227b3fff84d982348d195a7f2110476a3aa4701f42",
+      "checkpoint_state_elements": 83352,
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "train_bce": 0.4285742232553923,
+          "weak_bce": 0.3960437902519625,
+          "weak_macro_auc_12": 0.7141537668454422,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 17.20317300001625
+        },
+        {
+          "epoch": 2,
+          "train_bce": 0.3881549847008107,
+          "weak_bce": 0.37162799118931444,
+          "weak_macro_auc_12": 0.7449714408115202,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 34.24755740002729
+        },
+        {
+          "epoch": 3,
+          "train_bce": 0.36633431045543513,
+          "weak_bce": 0.3578224632116606,
+          "weak_macro_auc_12": 0.7597795301291012,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 51.18187020003097
+        },
+        {
+          "epoch": 4,
+          "train_bce": 0.34956526352179595,
+          "weak_bce": 0.3463448758994936,
+          "weak_macro_auc_12": 0.7664313577132109,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 67.55058350000763
+        },
+        {
+          "epoch": 5,
+          "train_bce": 0.3386580571444216,
+          "weak_bce": 0.34429811166165164,
+          "weak_macro_auc_12": 0.7752356027040942,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 83.87709319998976
+        },
+        {
+          "epoch": 6,
+          "train_bce": 0.3288024114292016,
+          "weak_bce": 0.34209418024094146,
+          "weak_macro_auc_12": 0.7824668759886642,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 100.23357109999051
+        },
+        {
+          "epoch": 7,
+          "train_bce": 0.3199279450822735,
+          "weak_bce": 0.33161362410023804,
+          "weak_macro_auc_12": 0.788601401337326,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 116.67337580001913
+        },
+        {
+          "epoch": 8,
+          "train_bce": 0.31015937398622073,
+          "weak_bce": 0.33564122087937803,
+          "weak_macro_auc_12": 0.795151194205105,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 133.06253430002835
+        },
+        {
+          "epoch": 9,
+          "train_bce": 0.3037627973805256,
+          "weak_bce": 0.3244030864890386,
+          "weak_macro_auc_12": 0.8021895187533051,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 149.45345820003422
+        },
+        {
+          "epoch": 10,
+          "train_bce": 0.29566315435253604,
+          "weak_bce": 0.3207543824430401,
+          "weak_macro_auc_12": 0.8064956909994366,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 165.97064680000767
+        },
+        {
+          "epoch": 11,
+          "train_bce": 0.2902067419438074,
+          "weak_bce": 0.3302994242383025,
+          "weak_macro_auc_12": 0.8113218439667144,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 182.4429767000256
+        },
+        {
+          "epoch": 12,
+          "train_bce": 0.28213807723463863,
+          "weak_bce": 0.31746868302813663,
+          "weak_macro_auc_12": 0.8154302698313463,
+          "optimizer_steps": 208,
+          "elapsed_seconds": 198.83547109999927
+        }
+      ]
+    }
+  },
+  "same_input_manifest_source_environment_and_fold": true,
+  "selection_rule": "minimum weak BCE, earliest epoch on exact tie; both selected epoch 12 without changing the rule",
+  "per_target": [
+    {
+      "target": "ACL",
+      "f001_auc": 0.7114961496149615,
+      "f002_auc": 0.796678278939005,
+      "delta": 0.08518212932404345,
+      "positive": 101,
+      "negative": 648,
+      "missing": 142,
+      "fold0_delta": 0.06368270799347475,
+      "paired_group_bootstrap_95_interval": [
+        0.038357172055436956,
+        0.1331148042839768
+      ]
+    },
+    {
+      "target": "MCL",
+      "f001_auc": 0.6919642857142857,
+      "f002_auc": 0.6645535714285714,
+      "delta": -0.027410714285714288,
+      "positive": 16,
+      "negative": 700,
+      "missing": 175,
+      "fold0_delta": -0.09780844155844148,
+      "paired_group_bootstrap_95_interval": [
+        -0.10135351197364904,
+        0.05417354663431098
+      ]
+    },
+    {
+      "target": "Medial Meniscus",
+      "f001_auc": 0.7077870934959349,
+      "f002_auc": 0.7777502540650406,
+      "delta": 0.06996316056910568,
+      "positive": 328,
+      "negative": 480,
+      "missing": 83,
+      "fold0_delta": 0.035870227271059374,
+      "paired_group_bootstrap_95_interval": [
+        0.046648933016147226,
+        0.0929868457555244
+      ]
+    },
+    {
+      "target": "Lateral Meniscus",
+      "f001_auc": 0.6844751819033211,
+      "f002_auc": 0.7111015056552121,
+      "delta": 0.026626323751891,
+      "positive": 105,
+      "negative": 661,
+      "missing": 125,
+      "fold0_delta": 0.007152716777512835,
+      "paired_group_bootstrap_95_interval": [
+        0.001001484395774094,
+        0.053065769647898886
+      ]
+    },
+    {
+      "target": "Medial OA",
+      "f001_auc": 0.8739091649536517,
+      "f002_auc": 0.8832176240158244,
+      "delta": 0.009308459062172703,
+      "positive": 59,
+      "negative": 437,
+      "missing": 395,
+      "fold0_delta": 0.015489161383394734,
+      "paired_group_bootstrap_95_interval": [
+        -0.015950439516687197,
+        0.03333141588424782
+      ]
+    },
+    {
+      "target": "Lateral OA",
+      "f001_auc": 0.8269760542487815,
+      "f002_auc": 0.8292011019283747,
+      "delta": 0.002225047679593195,
+      "positive": 22,
+      "negative": 429,
+      "missing": 440,
+      "fold0_delta": 0.02852957051430327,
+      "paired_group_bootstrap_95_interval": [
+        -0.048219065221108054,
+        0.04166666666666663
+      ]
+    },
+    {
+      "target": "PF OA",
+      "f001_auc": 0.7964705158949763,
+      "f002_auc": 0.7721207649265204,
+      "delta": -0.02434975096845593,
+      "positive": 78,
+      "negative": 417,
+      "missing": 396,
+      "fold0_delta": -0.008026695526695438,
+      "paired_group_bootstrap_95_interval": [
+        -0.04008977188984829,
+        -0.008966576169552138
+      ]
+    },
+    {
+      "target": "Effusion",
+      "f001_auc": 0.921235380116959,
+      "f002_auc": 0.9333120126705653,
+      "delta": 0.012076632553606248,
+      "positive": 108,
+      "negative": 608,
+      "missing": 175,
+      "fold0_delta": 0.00736943907156673,
+      "paired_group_bootstrap_95_interval": [
+        -0.006039519585652517,
+        0.029791377165508996
+      ]
+    },
+    {
+      "target": "Synovitis",
+      "f001_auc": 0.8969072164948454,
+      "f002_auc": 0.8956701030927835,
+      "delta": -0.0012371134020618957,
+      "positive": 97,
+      "negative": 25,
+      "missing": 769,
+      "fold0_delta": 0.37999999999999995,
+      "paired_group_bootstrap_95_interval": [
+        -0.06159798982379622,
+        0.08429328304597707
+      ]
+    },
+    {
+      "target": "Baker's",
+      "f001_auc": 0.8116165070679434,
+      "f002_auc": 0.8898768809849521,
+      "delta": 0.07826037391700869,
+      "positive": 51,
+      "negative": 344,
+      "missing": 496,
+      "fold0_delta": 0.04845651134371176,
+      "paired_group_bootstrap_95_interval": [
+        0.036541364348808884,
+        0.12288396198935418
+      ]
+    },
+    {
+      "target": "Contusion",
+      "f001_auc": 0.757177225340818,
+      "f002_auc": 0.7864207431168136,
+      "delta": 0.029243517775995653,
+      "positive": 87,
+      "negative": 215,
+      "missing": 589,
+      "fold0_delta": 0.03375068045726726,
+      "paired_group_bootstrap_95_interval": [
+        -0.013077551944623955,
+        0.069916890834833
+      ]
+    },
+    {
+      "target": "Fracture",
+      "f001_auc": 0.8308355189209442,
+      "f002_auc": 0.8452603971524916,
+      "delta": 0.014424878231547367,
+      "positive": 34,
+      "negative": 157,
+      "missing": 700,
+      "fold0_delta": -0.005366161616161658,
+      "paired_group_bootstrap_95_interval": [
+        -0.03115228847030429,
+        0.05869017094017099
+      ]
+    }
+  ],
+  "differences": {
+    "f002_minus_f001_weak_bce": -0.016765912657143556,
+    "macro_auc_12": 0.022859412017394387,
+    "auxiliary_macro_auc_11_without_synovitis": 0.02505000523734502,
+    "targets_improved": 9
+  },
+  "bootstrap": {
+    "artifact": "experiments/f001-f002-fold1-bootstrap-20261006.json",
+    "sha256": "b00b4cc1b643b38fd1bb67bd642ddcc884646db6e347ec6ccc165ff77ce13936",
+    "groups": 861,
+    "seed": 20261006,
+    "requested_resamples": 3000,
+    "macro_12": {
+      "point": 0.02285941201739432,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        0.010083239508773328,
+        0.03573637080948184
+      ]
+    },
+    "auxiliary_macro_11": {
+      "point": 0.025050005237344887,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        0.012249186761791668,
+        0.03704848766299303
+      ]
+    },
+    "interpretation": "Both fold1 intervals are positive with all 3000 draws defined. Descriptive fixed selected-prediction uncertainty, excludes checkpoint selection and does not establish patient independence or Public gain."
+  },
+  "cross_fold": {
+    "previous_review": "experiments/f001-f002-fold0-review-20261006.json",
+    "sha256": "39d2b2c77420e5d9377093c9d187e491248a524b0d2286f275d3e36dd4bb05db",
+    "fold0_runs": {
+      "f001": {
+        "run": "artifacts/runs/f001-dinov2-frozen-fold0",
+        "status": "complete",
+        "run_sha256": "10d4fd7e843abaf85411f38870569bde68651a8169b87ec2b31193cece417618",
+        "config_sha256": "89c6f412cf4ac355d782012e86e155d6533ea6045381923f5f80aba87d13e086",
+        "head": {
+          "hidden_dim": 192,
+          "dropout": 0.2,
+          "pooling": "mean"
+        },
+        "seed": 20261002,
+        "fold": 0,
+        "training_seconds": 164.68117870000424,
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "runtime": {
+          "torch": "2.10.0+cu128",
+          "numpy": "2.5.3"
+        },
+        "train_studies": 3386,
+        "valid_studies": 821,
+        "optimizer_steps_total": 2544,
+        "selected_epoch": 11,
+        "selected_train_bce": 0.3268199138613817,
+        "selected_weak_bce": 0.3324748722565451,
+        "selected_weak_macro_auc_12": 0.7708652311247572,
+        "selected_weak_macro_auc_11_without_synovitis": 0.8000347975906442,
+        "last_weak_bce": 0.33399818673982284,
+        "last_weak_macro_auc_12": 0.774027252873458,
+        "selected_prediction_sha256": "510258a55ff07f94f5004801fc0e1fa962164ffd11c1e8d9f4ab1822c89bcaf5",
+        "best_checkpoint_sha256": "8856eaffe6efcadea02552cad011145ed57743e4bd297530231076b268edc006",
+        "last_checkpoint_sha256": "ef5accd95d4b36d2453ef7bf4c710b7e15470b4c63a3531df7e3d29c10f656c5",
+        "checkpoint_state_elements": 83352,
+        "epoch_history": [
+          {
+            "epoch": 1,
+            "train_bce": 0.4267473643494196,
+            "weak_bce": 0.4000584354456003,
+            "weak_macro_auc_12": 0.7425163077002304,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 13.421395000012126
+          },
+          {
+            "epoch": 2,
+            "train_bce": 0.3858327710732232,
+            "weak_bce": 0.3793106544896198,
+            "weak_macro_auc_12": 0.7362977487338694,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 27.365150200028438
+          },
+          {
+            "epoch": 3,
+            "train_bce": 0.3666959968208117,
+            "weak_bce": 0.36460608647759307,
+            "weak_macro_auc_12": 0.7180781124018646,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 41.679866300022695
+          },
+          {
+            "epoch": 4,
+            "train_bce": 0.35473999081202734,
+            "weak_bce": 0.3565125900953462,
+            "weak_macro_auc_12": 0.7262019210648907,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 55.712163600022905
+          },
+          {
+            "epoch": 5,
+            "train_bce": 0.3484140892118429,
+            "weak_bce": 0.365977559109227,
+            "weak_macro_auc_12": 0.733812973463747,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 70.15080040000612
+          },
+          {
+            "epoch": 6,
+            "train_bce": 0.3421819829666417,
+            "weak_bce": 0.35142880271237537,
+            "weak_macro_auc_12": 0.740082587352382,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 83.81663090002257
+          },
+          {
+            "epoch": 7,
+            "train_bce": 0.3372474114841013,
+            "weak_bce": 0.3535335541073306,
+            "weak_macro_auc_12": 0.7477778059273849,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 97.59504400001606
+          },
+          {
+            "epoch": 8,
+            "train_bce": 0.33488656600438993,
+            "weak_bce": 0.3431461816560916,
+            "weak_macro_auc_12": 0.7543554873894786,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 110.90272910002386
+          },
+          {
+            "epoch": 9,
+            "train_bce": 0.331451728775868,
+            "weak_bce": 0.3390462782051169,
+            "weak_macro_auc_12": 0.759154674315818,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 124.40363030001754
+          },
+          {
+            "epoch": 10,
+            "train_bce": 0.3280289154387201,
+            "weak_bce": 0.3401207962553601,
+            "weak_macro_auc_12": 0.7701587026217686,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 137.71146570000565
+          },
+          {
+            "epoch": 11,
+            "train_bce": 0.3268199138613817,
+            "weak_bce": 0.3324748722565451,
+            "weak_macro_auc_12": 0.7708652311247572,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 151.1851760999998
+          },
+          {
+            "epoch": 12,
+            "train_bce": 0.32478011993324957,
+            "weak_bce": 0.33399818673982284,
+            "weak_macro_auc_12": 0.774027252873458,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 164.50044070003787
+          }
+        ]
+      },
+      "f002": {
+        "run": "artifacts/runs/f002-dinov2-attention-fold0",
+        "status": "complete",
+        "run_sha256": "cf04c5c7807206510a1eb17658b9c986312be437c4e111d5543c8a3c514ee448",
+        "config_sha256": "f2e98efbb73accd3053032cac811e203d8a4d0570e26e2e32ea9d4eaaaba7280",
+        "head": {
+          "hidden_dim": 192,
+          "dropout": 0.2,
+          "pooling": "attention"
+        },
+        "seed": 20261002,
+        "fold": 0,
+        "training_seconds": 179.8933283999795,
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "runtime": {
+          "torch": "2.10.0+cu128",
+          "numpy": "2.5.3"
+        },
+        "train_studies": 3386,
+        "valid_studies": 821,
+        "optimizer_steps_total": 2544,
+        "selected_epoch": 11,
+        "selected_train_bce": 0.2908794573261471,
+        "selected_weak_bce": 0.31913023519697087,
+        "selected_weak_macro_auc_12": 0.8132902074673399,
+        "selected_weak_macro_auc_11_without_synovitis": 0.8117711354189162,
+        "last_weak_bce": 0.3262453299553706,
+        "last_weak_macro_auc_12": 0.8138216090247617,
+        "selected_prediction_sha256": "31641bdd18543414b472c5ce496d0b8824569d7b7c1cfb0f125d4e005a8bd697",
+        "best_checkpoint_sha256": "189ecab25e0d1c029e974ee23f3c46239e5eceef290b5dca33f6831dcb8e1b03",
+        "last_checkpoint_sha256": "0cf952acadd286c64b34b9f476faee1fa608bd8a8e8921114be25d371d4b62b4",
+        "checkpoint_state_elements": 83352,
+        "epoch_history": [
+          {
+            "epoch": 1,
+            "train_bce": 0.4252325676879443,
+            "weak_bce": 0.39990046442918425,
+            "weak_macro_auc_12": 0.7406622119558901,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 14.455785400001332
+          },
+          {
+            "epoch": 2,
+            "train_bce": 0.3856946182454845,
+            "weak_bce": 0.3784709833503831,
+            "weak_macro_auc_12": 0.7504916717567558,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 29.122518700023647
+          },
+          {
+            "epoch": 3,
+            "train_bce": 0.3641842923715783,
+            "weak_bce": 0.36088378093870016,
+            "weak_macro_auc_12": 0.7591434230615975,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 44.0046386999893
+          },
+          {
+            "epoch": 4,
+            "train_bce": 0.3485202715532129,
+            "weak_bce": 0.34976114384974405,
+            "weak_macro_auc_12": 0.7799487400716093,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 59.20940549997613
+          },
+          {
+            "epoch": 5,
+            "train_bce": 0.33645012175488587,
+            "weak_bce": 0.3562875876038283,
+            "weak_macro_auc_12": 0.7821348694155965,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 74.03173300001072
+          },
+          {
+            "epoch": 6,
+            "train_bce": 0.32656947348323845,
+            "weak_bce": 0.3394341485801533,
+            "weak_macro_auc_12": 0.7913137457860816,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 88.99333759996807
+          },
+          {
+            "epoch": 7,
+            "train_bce": 0.3177910977139852,
+            "weak_bce": 0.33767483594302256,
+            "weak_macro_auc_12": 0.7945003474392224,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 103.9300201999722
+          },
+          {
+            "epoch": 8,
+            "train_bce": 0.3103688408260477,
+            "weak_bce": 0.3319191027394302,
+            "weak_macro_auc_12": 0.8033552187022542,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 118.94153140002163
+          },
+          {
+            "epoch": 9,
+            "train_bce": 0.3027375197690072,
+            "weak_bce": 0.3252523281571335,
+            "weak_macro_auc_12": 0.8101431215906251,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 133.85592140001245
+          },
+          {
+            "epoch": 10,
+            "train_bce": 0.2964147686598095,
+            "weak_bce": 0.33738901366608004,
+            "weak_macro_auc_12": 0.811155555931252,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 148.78173320001224
+          },
+          {
+            "epoch": 11,
+            "train_bce": 0.2908794573261471,
+            "weak_bce": 0.31913023519697087,
+            "weak_macro_auc_12": 0.8132902074673399,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 163.82505699998
+          },
+          {
+            "epoch": 12,
+            "train_bce": 0.2837897402255811,
+            "weak_bce": 0.3262453299553706,
+            "weak_macro_auc_12": 0.8138216090247617,
+            "optimizer_steps": 212,
+            "elapsed_seconds": 179.88369330001296
+          }
+        ]
+      }
+    },
+    "both_folds_improved": [
+      "ACL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "Effusion",
+      "Baker's",
+      "Contusion"
+    ],
+    "both_folds_worsened": [
+      "MCL",
+      "PF OA"
+    ],
+    "note": "Paired comparisons within each fold; no pooled OOF AUC or selection by raw score across different folds. Models use overlapping training data and one seed."
+  },
+  "decision": {
+    "head": "f002 attention",
+    "reason": "Weak BCE, 12-target macro and auxiliary11 improve on both folds; fold1 benefit is not driven by Synovitis, while MCL and PF OA worsen on both folds.",
+    "next_step": "Prepare and run 07 as a separate single-model Kaggle candidate, check serving time/receipt, then measure own Public score; retain p002Public0.937",
+    "first_serving_checkpoint": "artifacts/runs/f002-dinov2-attention-fold0/best.pt",
+    "first_serving_fold_choice_reason": "Keep the initial fold0 baseline training convention; fold1 is the stability check, not a highest-validation-score selector. Freeze this choice before any new Public result.",
+    "increase_epochs_or_change_labels_now": false,
+    "classwise_mix_or_p002_blend_now": false,
+    "p003_resubmit_unchanged": false,
+    "scored_baseline": "p002 Public0.937"
+  },
+  "gold_labels_evaluated": false,
+  "patient_independence_verified": false,
+  "public_lb": null,
+  "methods": "Read-only completed run/checkpoint/weak CSV audit. Every epoch CSV hash, UID coverage, AUC/support and observed-cell BCE recomputed. Saved checkpoints checked on CPU, no MRI decode or forward inference.",
+  "limitations": [
+    "Report-derived weak truth is different from competition image truth; scores cannot predict Public0.943.",
+    "Checkpoint selection on each validation fold and one seed; fold1 is a stability check, not nested untouched evaluation.",
+    "Fold1 MCL has16 positives; fold0 MCL11 positives and Synovitis1 negative. No classwise validation-driven tuning.",
+    "Supplied-group bootstrap assumes group independence; patient independence is unknown.",
+    "Selected epoch12 is the boundary of the fixed schedule, so training convergence is not established.",
+    "Head fitting time excludes Kaggle feature extraction and does not predict MRI test inference time."
+  ],
+  "training_started_or_uploaded_by_assistant": false
+}

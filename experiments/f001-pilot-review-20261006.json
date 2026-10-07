@@ -1,0 +1,147 @@
+{
+  "checked_at_utc": "2026-10-06T04:58:33.370611+00:00",
+  "checked_date_jst": "2026-10-06",
+  "evidence": "user-provided pilot export.json plus existing local Input package metadata and audited CSVs",
+  "input_sha256": "fdbeb8cd4b340969e97bc2070bce7aefb45e82273d56935a8ad53219f9e837b9",
+  "immutable_evidence_copy": "artifacts/research/f001-pilot-review-20261006/export.json",
+  "checks_passed": [
+    "complete 32-study training pilot",
+    "encoder provenance matches locally packaged Input",
+    "configuration and implementation hashes match",
+    "feature fingerprint matches",
+    "packaged manifest hashes match current files",
+    "pilot exactly matches deterministic training selection",
+    "selection structure hash matches",
+    "pilot CSV hash reconstructed from local manifest",
+    "study ID CSV hash reconstructed",
+    "no fold0 validation or gold studies/groups",
+    "train and series CSV hashes match local export",
+    "32 unique feature file entries",
+    "file metadata has valid sizes and digest syntax",
+    "total payload bytes is consistent",
+    "32 studies each have three distinct planes",
+    "all selected series belong to the correct study and plane",
+    "physical slice ordering and valid positive spacing",
+    "native image dimensions valid",
+    "centers cover native span and obey 48-slice cap",
+    "physical spans positive finite",
+    "timings finite and total covers per-study time"
+  ],
+  "decision": "proceed_to_new_full_weak_feature_export_with_PILOT_false_SHARD_COUNT_1_SHARD_INDEX_0; verify_full_payload_before_training",
+  "visual_qc": {
+    "source": "user report",
+    "response": "明らかな崩れは見当たらない",
+    "assistant_viewed_images": false,
+    "scope": "Notebook displays the first selected series of the first three pilot studies; not all 96 series"
+  },
+  "pilot": {
+    "complete": true,
+    "limited": true,
+    "requested": 32,
+    "seed": 20261002,
+    "excluded_validation_fold": 0,
+    "fold_counts": {
+      "3": 9,
+      "2": 11,
+      "4": 5,
+      "1": 7
+    },
+    "selected_series": 96,
+    "plane_counts": {
+      "Axial": 32,
+      "Sagittal": 32,
+      "Coronal": 32
+    },
+    "selected_centers": 2953,
+    "physical_order_series": 96,
+    "series_pixel_spacing_mm_min_max": [
+      0.1367,
+      0.7031
+    ],
+    "feature_tensor_shape_from_implementation": [
+      3,
+      48,
+      384
+    ],
+    "feature_dtype_from_implementation": "float16; unfilled slots masked",
+    "elapsed_seconds": 83.01774153899999,
+    "per_study_seconds_min_median_max": [
+      1.0711786949999578,
+      1.9891607429999567,
+      8.814614765999977
+    ],
+    "total_payload_bytes": 2152567
+  },
+  "contract": {
+    "schema_version": "frozen_features_v1",
+    "preprocess": {
+      "version": "physical_letterbox_triplet_v1",
+      "image_size": 392,
+      "max_series": 3,
+      "slices_per_series": 48,
+      "percentiles": [
+        1,
+        99
+      ]
+    },
+    "encoder": {
+      "model_name": "dinov2_vits14",
+      "feature_dim": 384,
+      "batch_size": 16,
+      "precision": "fp16"
+    },
+    "encoder_provenance": {
+      "source_url": "https://github.com/facebookresearch/dinov2",
+      "source_revision": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+      "source_tree_sha256": "4a5a3cfbd4185dd4955c1de2f2f26e3b4ba3fa88cccae503b9f93ceb08fed818",
+      "weights_url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth",
+      "weights_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+      "license": "Apache-2.0 for generic DINOv2 code/weights; original archive notices retained",
+      "pretraining": "generic_dinov2_lvd142m",
+      "competition_finetuned": false,
+      "gold_used_for_tuning": false,
+      "reviewed_at": "2026-10-06 JST; official README, model card and pinned commit reviewed",
+      "exposure_audit": "Intended input is the unmodified generic ViT-S/14 checkpoint manually obtained from the official URL. Competition fine-tuning and gold selection are not part of the official generic recipe. LVD-142M overlap with competition patients/images is unknown. Local hashes pin supplied bytes; no publisher checksum or independent origin authentication was performed."
+    },
+    "implementation_sha256": {
+      "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+      "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+      "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+      "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+    }
+  },
+  "fingerprint": "1f1726d4381135581983ba2740e16651e0ca39b7d8df037f1acf4b0a5f3b5185",
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.1.3",
+    "pydicom": "3.0.2",
+    "Pillow": "12.3.0"
+  },
+  "gpu": "Tesla T4",
+  "input_hashes": {
+    "studies_csv_sha256": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+    "series_csv_sha256": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3",
+    "selection_csv_sha256": "15b217cc9000ede5e1ebaf61fab1d8fcd0015afa020c004ed2d531b39cc867b7",
+    "selection_structure_sha256": "4b0ee2874f005ee8a82abd9fd42e08b9346d4b39f4d89b8f1a2c8e99426dbc40",
+    "study_ids_sha256": "a119860b7ffb2c74859d718270d612ff3cfc9c9f44b2b0e6c1bd93b76d3cb323"
+  },
+  "full_export_plan": {
+    "studies": 4207,
+    "pilot": false,
+    "fold": 0,
+    "shard_count": 1,
+    "shard_index": 0,
+    "expected_output": "frozen-weak-v1-shard0",
+    "linear_estimate_hours": 3.0317329744320567,
+    "linear_estimate_payload_bytes": 282995292.78125,
+    "interpretation": "Rough linear planning estimate, not measured full-set duration/capacity or an upper bound; encoder setup, code unpacking, initial hashing and final QC are outside this timer; series composition and I/O can differ."
+  },
+  "limitations": [
+    "NPZ files were not attached: recorded hashes, tensor shape/dtype and finite values were not independently rechecked against payloads.",
+    "complete=true is written before verify_feature_cache and the final visualization; user reports completion but full execution log was not provided.",
+    "Kaggle saved Notebook/Input versions were not independently queried.",
+    "No accuracy, weak validation AUC or Public LB is measured by this pilot; limited cache cannot be used for training."
+  ],
+  "training_or_mri_processing_by_assistant": false,
+  "uploaded_or_submitted": false
+}

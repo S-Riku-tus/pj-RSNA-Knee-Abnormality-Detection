@@ -1,0 +1,83 @@
+{
+  "review_date_jst": "2026-10-07",
+  "purpose": "繰り返す起動前mount失敗、隠し再実行例外、公開0.943の再現期待を分ける一次資料調査",
+  "scope": {
+    "implementation_modified": false,
+    "real_data_or_models_downloaded": false,
+    "real_mri_decoded": false,
+    "training_started": false,
+    "uploaded_or_submitted": false,
+    "method": "既存資料・公式Web検索キャッシュ・インストール済み公式SDKの静的確認"
+  },
+  "findings": [
+    {
+      "id": "code_competition_rerun",
+      "classification": "official_documentation",
+      "url": "https://www.kaggle.com/code-competition-debugging",
+      "observation": "採点時は競技入力を隠し版へ交換してNotebook全体を再実行し、制約検査とCSV抽出の後に採点する。通常保存実行でCSVができても隠し実行成功は確定しない。隠しデータの漏洩を防ぐため詳細例外情報を公開しない。"
+    },
+    {
+      "id": "error_classes_differ",
+      "classification": "official_documentation",
+      "url": "https://www.kaggle.com/code-competition-debugging",
+      "observation": "Timeout、Threw Exception、Exceeded Allowed Computeは別分類。同じエラー分類の二つのNotebookでも根本原因が同じとは限らない。Threw Exceptionだけから9時間超過やGPUメモリ不足を断定できない。"
+    },
+    {
+      "id": "competition_limits",
+      "classification": "official_competition_page",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview",
+      "observation": "競技提出はCPU/GPUとも9時間以内、Internet無効、ファイル名submission.csv。公開された外部データ・事前学習モデルが認められる。一般NotebookドキュメントのCPU/GPU12時間とは別の提出制限。"
+    },
+    {
+      "id": "actual_test_differs",
+      "classification": "official_competition_page",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data?select=test_series",
+      "observation": "可視test.csvは3検査で、採点時は実testへ交換され、公式説明は約1300検査とする。testにReportはない。MRIは強度・方向・解像度・系列長が異なり、非圧縮Explicit/Implicit VR Little Endian、JPEG Lossless、JPEG2000が混在する。",
+      "limitation": "約1300は公開説明上の概数で、隠し入力の固定件数を意味しない。"
+    },
+    {
+      "id": "read_only_parent",
+      "classification": "official_posix_specification",
+      "url": "https://pubs.opengroup.org/onlinepubs/7908799/xsh/mkdir.html",
+      "observation": "mkdirのEROFSは親がread-onlyファイルシステム上にある場合で、権限拒否EACCESや容量不足ENOSPCと区別される。",
+      "case_inference": "提示されたKaggle管理下の/tmp/kgltへのmkdir失敗はユーザーPython開始前の接続処理であり、Notebook内のdecoder変更や学習をやり直してもこの処理へ到達しない。",
+      "unconfirmed": "内部の特定host/cache/storage故障の種類、故障した責任範囲、Kaggle全体障害の有無はログだけでは確定しない。"
+    },
+    {
+      "id": "author_0943",
+      "classification": "original_author_notebook_page",
+      "url": "https://www.kaggle.com/code/haideptry/rsna-knee-speedy-raptors-coatnet-d4-0943/comments",
+      "observation": "調査時の検索キャッシュでVersion2、Public0.943、Best0.943 V2、保存実行の表示4分27秒/T4x2を再確認した。",
+      "limitation": "作者表示は自分の再現採点ではない。表示runtimeは隠し全testの測定時間として使わない。歴史的Inputの版や採点CSVとの完全な同一性は既存監査でも未確定。"
+    },
+    {
+      "id": "clean_saved_run",
+      "classification": "official_documentation",
+      "url": "https://www.kaggle.com/docs/notebooks",
+      "observation": "Save & Run Allは完全に新しい状態のセッションで最初から最後まで実行する。一般Notebookに保存できる/kaggle/working出力は最大20GB。",
+      "limitation": "20GBは出力上限で、Notebookソースのサイズ上限ではない。"
+    },
+    {
+      "id": "source_size_report",
+      "classification": "first_person_platform_error_report_not_official_policy",
+      "url": "https://www.kaggle.com/general/565447",
+      "observation": "投稿者が保存時のサーバーエラーとしてkernel sourceは1megabyte未満という文面を報告している。",
+      "recommendation": "約340KBの自作headを埋め込む場合、空のoutputsにして、実際のUTF-8ソース/Notebookバイト数を測り1000000未満の保守的ガードを置く。",
+      "limitation": "現在の一律ソース上限を公式仕様として確認したものではない。"
+    }
+  ],
+  "embedded_head_delivery": {
+    "assessment": "同じ自作checkpointの輸送方法のみをNotebookコード内へ移し、復元後SHA256で完全一致を確認する案は、問題のhead Dataset接続への依存を除ける。元Inputが接続一覧に残っていればPython以前のmount処理は再び起こるので、Kaggle UIのInputから削除する必要がある。",
+    "rule_assessment": "当該競技の取得できた公式ページに小さい自作headのコード内埋込みを直接禁止する記載は確認できなかった。ただし『当該方式を運営が個別承認済み』とは扱わない。既存の学習由来・外部encoder・ライセンス・gold非利用の監査を維持する。",
+    "limits": [
+      "他のDataset・競技Inputのmountは依然必要で、Kaggle起動を必ず成功させる保証ではない。",
+      "輸送方法の修正はp003の0.943再現を意味しない。",
+      "旧f002の隠し再実行例外は別の未確定問題で、埋込みだけで解消したとしない。"
+    ]
+  },
+  "service_wide_incident": {
+    "official_incident_confirmed": false,
+    "assessment": "当該mountエラーに対応する現在のKaggle全体障害の公式発表は確認できなかった。全体が正常と確認した意味でもない。",
+    "method_limit": "status.kaggle.comは閲覧ツールで取得できず、公式フォーラム検索でも一致する現障害の公式声明が見つからなかった。第三者のサイト疎通監視だけではDataset mountの正常性を判定できない。"
+  }
+}

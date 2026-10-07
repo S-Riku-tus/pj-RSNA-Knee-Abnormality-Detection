@@ -1,0 +1,159 @@
+{
+  "checked_at_utc": "2026-10-06T09:10:44.182641+00:00",
+  "checked_date_jst": "2026-10-06",
+  "evidence": "official Kaggle SDK saved Version 2 source, output export/CSV and execution log; existing local packaged Input and audited CSVs",
+  "kernel": "rsraki/notebookbd6efc1cf7",
+  "version_number": 2,
+  "output_object_script_version_id": 355640726,
+  "export_sha256": "aa164be29b14813b9793c51b9924ef2e4019f4f01c2aa1ec35d17fdf536e1f5a",
+  "evidence_directory": "artifacts/research/20261006-p003-second-failure",
+  "checks_passed": [
+    "current independent fold audit and input bindings valid",
+    "complete unrestricted single-shard training feature export",
+    "encoder provenance matches packaged generic Input",
+    "configuration and feature implementation hashes match",
+    "feature fingerprint matches",
+    "packaged manifest hashes match current files",
+    "exact 4207 weak UID coverage",
+    "selection structure hash matches fixed UID/group/fold",
+    "selected weak CSV matches unchanged audited labels",
+    "study ID CSV reconstructed and downloaded hash matches",
+    "no gold UIDs or connected groups in export",
+    "official train and series CSV hashes match existing cache",
+    "exact 4207 unique feature entries",
+    "file metadata valid sizes and digests",
+    "total payload bytes equals sum",
+    "series selection matches shared training/inference policy",
+    "one to three distinct series per study",
+    "selected series belong to correct study and plane",
+    "physical ordering and finite positive pixel spacing",
+    "native dimensions valid",
+    "centers unique spanning source and obey 48 cap",
+    "finite physical spans consistent with slice count",
+    "valid timing and aggregate",
+    "saved source differs only by PILOT False",
+    "saved Version 2 run completed",
+    "final full extraction reached in saved execution log"
+  ],
+  "decision": "full transfer and all NPZ verification passed; user may run paired local f001/f002 head training",
+  "full_export": {
+    "complete": true,
+    "limited": false,
+    "studies": 4207,
+    "selected_series": 12621,
+    "series_per_study_counts": {
+      "3": 4207
+    },
+    "plane_counts": {
+      "Sagittal": 4207,
+      "Axial": 4207,
+      "Coronal": 4207
+    },
+    "selected_centers": 386196,
+    "native_slice_count_min_max": [
+      12,
+      320
+    ],
+    "fold_counts": {
+      "1": 891,
+      "0": 821,
+      "3": 778,
+      "4": 829,
+      "2": 888
+    },
+    "fold0_train": 3386,
+    "fold0_valid": 821,
+    "elapsed_seconds": 12548.213008387,
+    "total_payload_bytes": 281589228,
+    "per_study_seconds_min_median_max": [
+      0.9675257429998965,
+      2.223078385000008,
+      17.967070663000413
+    ]
+  },
+  "contract": {
+    "schema_version": "frozen_features_v1",
+    "preprocess": {
+      "version": "physical_letterbox_triplet_v1",
+      "image_size": 392,
+      "max_series": 3,
+      "slices_per_series": 48,
+      "percentiles": [
+        1,
+        99
+      ]
+    },
+    "encoder": {
+      "model_name": "dinov2_vits14",
+      "feature_dim": 384,
+      "batch_size": 16,
+      "precision": "fp16"
+    },
+    "encoder_provenance": {
+      "source_url": "https://github.com/facebookresearch/dinov2",
+      "source_revision": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+      "source_tree_sha256": "4a5a3cfbd4185dd4955c1de2f2f26e3b4ba3fa88cccae503b9f93ceb08fed818",
+      "weights_url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth",
+      "weights_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+      "license": "Apache-2.0 for generic DINOv2 code/weights; original archive notices retained",
+      "pretraining": "generic_dinov2_lvd142m",
+      "competition_finetuned": false,
+      "gold_used_for_tuning": false,
+      "reviewed_at": "2026-10-06 JST; official README, model card and pinned commit reviewed",
+      "exposure_audit": "Intended input is the unmodified generic ViT-S/14 checkpoint manually obtained from the official URL. Competition fine-tuning and gold selection are not part of the official generic recipe. LVD-142M overlap with competition patients/images is unknown. Local hashes pin supplied bytes; no publisher checksum or independent origin authentication was performed."
+    },
+    "implementation_sha256": {
+      "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+      "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+      "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+      "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+    }
+  },
+  "fingerprint": "1f1726d4381135581983ba2740e16651e0ca39b7d8df037f1acf4b0a5f3b5185",
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.1.3",
+    "pydicom": "3.0.2",
+    "Pillow": "12.3.0"
+  },
+  "gpu": "Tesla T4",
+  "input_hashes": {
+    "studies_csv_sha256": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+    "series_csv_sha256": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3",
+    "selection_csv_sha256": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+    "selection_structure_sha256": "cf400b297af0470af716fd3ecbb13f68b7248a09bbe75f5425cafa303d3c2051",
+    "study_ids_sha256": "a99b29514edf2e70e84ca05dfff8cad09787c6e511436f5d74334c2e53c917e9"
+  },
+  "payload_verification": {
+    "checked_at_utc": "2026-10-06T09:13:38.399935+00:00",
+    "valid": true,
+    "cache": "data/features/f001-weak-sv355640726",
+    "studies": 4207,
+    "checks": [
+      "complete nonpilot cache",
+      "every NPZ byte size and SHA256",
+      "every NPZ feature/mask/positions/planes/flags shape, dtype and finite values",
+      "every NPZ fingerprint and valid mask",
+      "shared encoder/preprocessing/implementation contract",
+      "exact weak UID/group/fold structure",
+      "f001/f002 differ only in pooling and recorded hypothesis",
+      "fold0 split and gold exclusion"
+    ],
+    "export_sha256": "aa164be29b14813b9793c51b9924ef2e4019f4f01c2aa1ec35d17fdf536e1f5a",
+    "fingerprint": "1f1726d4381135581983ba2740e16651e0ca39b7d8df037f1acf4b0a5f3b5185",
+    "fold0_train": 3386,
+    "fold0_valid": 821,
+    "models_loaded": false,
+    "mri_decoded": false,
+    "training_started": false
+  },
+  "head_training_completed": false,
+  "accuracy_measured": false,
+  "gold_used_for_training_or_selection": false,
+  "limitations": [
+    "This run extracts label-free features, not a trained head/checkpoint; no weak AUC or Public LB is available.",
+    "Notebook metadata identifies Input references but not the historical Dataset version; content identity is bound by the saved feature contract and packaged hashes.",
+    "Patient independence and generic pretraining image overlap are not established."
+  ],
+  "uploaded_or_submitted_by_assistant": false
+}

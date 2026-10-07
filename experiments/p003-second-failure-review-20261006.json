@@ -1,0 +1,78 @@
+{
+  "checked_at_utc": "2026-10-06T09:16:28.825537+00:00",
+  "checked_date_jst": "2026-10-06",
+  "status": "second_hidden_rerun_exception_confirmed_cause_unresolved",
+  "submission": {
+    "ref": 56870280,
+    "submitted_at_utc": "2026-10-06T04:31:47.710Z",
+    "script_version_id": 355633504,
+    "url": "https://www.kaggle.com/code/rsraki/notebook59f34ce4e6?scriptVersionId=355633504",
+    "api_status": "COMPLETE",
+    "error_description": "Your notebook hit an unhandled error while rerunning your code. Note that the hidden dataset can be larger/smaller/different than the public dataset",
+    "public_lb": null,
+    "user_reported_elapsed_hours": 4,
+    "user_report_is_hidden_inference_runtime": false,
+    "hidden_traceback_available": false,
+    "hidden_runtime_seconds": null,
+    "successful_scoring": false,
+    "nine_hour_limit_exceeded_confirmed": false
+  },
+  "saved_source": {
+    "kernel": "rsraki/notebook59f34ce4e6",
+    "version_number": 1,
+    "all_cell_sources_match_local_05": true,
+    "cell_count": 32,
+    "sha256": "8f75263e63b5ec469c233ca2ac5b756434189723b987b0ea6c98692e49097a84",
+    "gpu_enabled": true,
+    "internet_enabled": false,
+    "input_reference_count": 14,
+    "output_object_id_matches_submission": true,
+    "historical_author_input_versions_verified": false
+  },
+  "visible_run": {
+    "saved_run_status": "COMPLETE",
+    "ready_status": "passed",
+    "studies": 3,
+    "guard_elapsed_seconds": 256.538361281,
+    "speed_summary_status": "completed_unscored",
+    "all_four_coats_completed_without_fallback": true,
+    "submission_sha256_as_reported": "8f0c5e7b2b561538dae55439a4d2e9173141096da3defd9bc0a4bac351eef37a",
+    "same_visible_csv_hash_as_failed_original_p003": true,
+    "phase_cgroup_memory_current_snapshot_max_bytes": 16758984704,
+    "phase_cgroup_memory_snapshot_is_not_full_run_peak_or_hidden_measurement": true,
+    "submission_payload_independently_downloaded": false
+  },
+  "static_checks": {
+    "internal_global_budget_seconds": 28800,
+    "child_wait_uses_remaining_global_budget": true,
+    "large_cohort_coat_readers_sequential_above_studies": 48,
+    "branch_already_exercised_by_prior_64_profile": true,
+    "no_verified_four_hour_timeout_found": true,
+    "fallback_nonfinite_and_incomplete_family_rejection_preserved": true
+  },
+  "cause_candidates_unconfirmed": [
+    "hidden-data-specific series/decoding/preparation fallback rejected by strict completion checks",
+    "required CoAt child process error or CPU/GPU resource pressure at greater scale",
+    "internal eight-hour deadline; elapsed user report is not a verified execution clock"
+  ],
+  "decision": {
+    "do_not_resubmit_unchanged_05": true,
+    "no_fixed_submission_candidate_claimed": true,
+    "scored_baseline": "p002 Public 0.937",
+    "author_p003_reference": 0.943,
+    "own_p003_score": null,
+    "priority": "verified full frozen features -> local paired f001/f002 training -> fold1 comparison -> own inference candidate",
+    "p003_next_diagnostic": "label-free larger stress cohort, then isolate added CoAt families; log failed UID/preparation, child return code, CPU/GPU memory, phase and traceback before modifying the serving recipe",
+    "do_not_relax_fallback_or_missing_model_gates": true
+  },
+  "evidence_directory": "artifacts/research/20261006-p003-second-failure",
+  "retrieved_artifact_hashes": {
+    "submission-list-item.json": "e16c612985e06c63905b05ee2bbbc88f7b59fbce1890f674ccfe37d44293afdb",
+    "submission-saved-run.log": "6d2817b4e154b79344117c300b0616ef3612270ad04e9adc090d1f5ee2deb330",
+    "submission/P003_READY.json": "79c883de177a43210117dba94f3fe76adb8f3ab590d874d5ee7f01bde6afdf46",
+    "submission/P003_SPEED_SUMMARY.json": "be4fc9082cb7822682b8a6845756294b34d8ee6e74e64a24177176bb00526949",
+    "submission-notebook-metadata.json": "d9533577ccd8f6d2e787c1744b77e33708d1783b471aa9f44cfa2c8f84b8b906"
+  },
+  "limits": "Saved Output and API execution logs are the visible three-study run; private scoring traceback was not retrieved. Wall time until UI error is not an inference timer. 64-study parity does not establish scale reliability or reproduce author's Public.",
+  "uploaded_submitted_trained_or_mri_decoded_by_assistant": false
+}

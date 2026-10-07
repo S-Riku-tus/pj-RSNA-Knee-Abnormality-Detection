@@ -1,0 +1,246 @@
+{
+  "checked_date_jst": "2026-10-07",
+  "status": "static_scale_and_policy_audited_stress_prepared_not_executed",
+  "failure_root_cause_confirmed": false,
+  "own_p003_public_score": null,
+  "author_reference_public_score": 0.943,
+  "own_scored_baseline": "p002 Public 0.937",
+  "score_reproduction_limits": {
+    "historical_author_input_versions_verified": false,
+    "author_score_csv_identity_verified": false,
+    "numerical_source_copy_does_not_prove_own_score": true,
+    "source": "docs/research/p003-candidate-review-20261005.json"
+  },
+  "scale_paths": {
+    "default_ram_threshold_bytes": 1073741824,
+    "bytes_per_study": {
+      "dino6x12x336": 8128512,
+      "rad3x8x224": 1204224,
+      "rad4x8x224": 1605632
+    },
+    "first_memmap_study_count": {
+      "dino6x12x336": 133,
+      "rad3x8x224": 892,
+      "rad4x8x224": 669
+    },
+    "saved64_cache_evidence": [
+      {
+        "kind": "cache_complete",
+        "tag": "test g1",
+        "studies": 64,
+        "slot_jobs": 298,
+        "filled": 298,
+        "order_cache_hits": 0,
+        "bytes": 520224768
+      },
+      {
+        "kind": "cache_complete",
+        "tag": "rad_e10",
+        "studies": 64,
+        "slot_jobs": 184,
+        "filled": 184,
+        "order_cache_hits": 0,
+        "bytes": 77070336
+      },
+      {
+        "kind": "cache_complete",
+        "tag": "rad_e13",
+        "studies": 64,
+        "slot_jobs": 244,
+        "filled": 244,
+        "order_cache_hits": 184,
+        "bytes": 102760448
+      },
+      {
+        "kind": "cache_complete",
+        "tag": "rad_legacy_second",
+        "studies": 64,
+        "slot_jobs": 194,
+        "filled": 194,
+        "order_cache_hits": 120,
+        "bytes": 102760448
+      }
+    ],
+    "saved64_exercised_dino_memmap": false,
+    "saved64_exercised_large_coat_sequential_branch": true,
+    "stress256_dino_cache_bytes": 2080899072,
+    "stress256_dino_cache_gib": 1.93798828125,
+    "stress256_exercises_rad_memmap": false,
+    "conditional_1300_studies": {
+      "actual_hidden_count_verified": false,
+      "dino_cache_bytes": 10567065600,
+      "dino_cache_gib": 9.841346740722656,
+      "maximum_rad_two_layout_overlap_bytes": 4174643200,
+      "maximum_rad_two_layout_overlap_gib": 3.887939453125,
+      "stages_are_sequential_not_a_sum": true,
+      "twenty_gib_disk_exceeded_by_cache_alone_proven": false
+    },
+    "coat_queue": {
+      "prep_workers_per_gpu": 2,
+      "pending_studies_per_gpu": 16,
+      "maximum_rendered_windows_per_study": 94,
+      "one_uint8_window_bag_bytes": 41582592,
+      "two_gpu_sixteen_bag_payload_bytes": 1330642944,
+      "whole_process_rss_upper_bound_claimed": false,
+      "note": "Bounded prepared bag payload excludes working copies, original MRI volumes, Python libraries, checkpoint loaders, models, features, CUDA, futures/ready batches."
+    },
+    "scratch_risk": "rsna_array uses /kaggle/temp or fallback /tmp, zero-touches the entire memmap, and checks free disk. A large free /tmp is not proof of cgroup memory safety; filesystem kind and cgroup counters must be observed.",
+    "zero_initialization_removed": false,
+    "possible_next_factor": "Only after stress evidence, examine removing the redundant full-file zero pass for a fresh w+ mapping while proving missing/masked pixel zeros and written-index coverage. Not a verified hidden-error fix."
+  },
+  "original_source_vs_added_guard": {
+    "original_cell27_catches_required_coat_child_failures_and_continues": true,
+    "original_cell27_can_build_partial_coat_family": true,
+    "original_cell29_publishes_without_enforcing_four_members_or_all_event_kinds": true,
+    "added_guard_rejects_partial_family_fallback_count_or_bad_events": true,
+    "hidden_failure_from_added_guard_confirmed": false,
+    "normal_missing_layout_events_already_allowed": [
+      "empty_study_rows",
+      "a5_no_metadata",
+      "a5_empty_study"
+    ],
+    "normal_a5_absence_policy": "Metadata-supported absence retains explicit missing raw probabilities and uses parent-only contribution; separate source decode/model error events remain rejected.",
+    "coat_fallback_count_meaning": "Resgated/repair fallback_studies counts preparation/inference exceptions that set all 12 model predictions to 0.5, not simply a missing anatomical plane.",
+    "missing_plane_representation": "Where supported, normal absent slots use explicit zero/masked positions or quota redistribution; they are not automatically counted as failed studies.",
+    "do_not_relax_catchall_fake_prediction_or_missing_model_gates": true,
+    "typed_diagnostics_added": [
+      "layout_absence_observed_check_other_errors",
+      "selected_source_missing",
+      "decoding_or_pixel_preparation",
+      "ordering_or_geometry",
+      "model_or_required_component_failure",
+      "recipe_degraded",
+      "numeric_precision_retry"
+    ]
+  },
+  "other_static_findings": {
+    "source_internal_global_budget_seconds": 28800,
+    "child_wait_uses_remaining_global_budget": true,
+    "verified_four_hour_timeout_found": false,
+    "offline_pixel_decoder_contract_in_p003": false,
+    "decoder_as_hidden_failure_cause_confirmed": false,
+    "p002_decoder_dependency_also_not_fully_pinned": true,
+    "current_head_premount_error_and_p003_hidden_exception_same_cause_confirmed": false,
+    "p003_adds_required_four_coat_families_and_dense94_window_work": true,
+    "p003_and_p002_are_single_factor_accuracy_comparison": false
+  },
+  "prepared_diagnostic": {
+    "notebook": "notebooks/public/11_profile_p003_stress_256.ipynb",
+    "package_directory": "artifacts/kaggle/p003-stress256-v2-20261007",
+    "notebook_sha256": "d6ea88692faa5957712efa812ce86eb5505ace3947361e36b4ed1ff266e77308",
+    "notebook_bytes": 398454,
+    "input_count": 14,
+    "input_refs_and_versions": [
+      {
+        "ref": "dreaddevelopment/raptor-knee-maxspan",
+        "version": 1
+      },
+      {
+        "ref": "dreaddevelopment/raptor-knee-native384",
+        "version": 1
+      },
+      {
+        "ref": "dreaddevelopment/raptor-knee-native384dense",
+        "version": 1
+      },
+      {
+        "ref": "mattiaangeli/knee-mri-fold-weights",
+        "version": 2
+      },
+      {
+        "ref": "mattiaangeli/opencv-python-headless-4120088-x86",
+        "version": 1
+      },
+      {
+        "ref": "marwanmath/resnet-50-radimagenet-marwan",
+        "version": 1
+      },
+      {
+        "ref": "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+        "version": 3
+      },
+      {
+        "ref": "mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+        "version": 2
+      },
+      {
+        "ref": "mattiaangeli/rsna-knee-coatnet-global96-top3",
+        "version": 1
+      },
+      {
+        "ref": "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+        "version": 3
+      },
+      {
+        "ref": "pilkwang/rsna-knee-weights",
+        "version": 1
+      },
+      {
+        "ref": "sofiaanjenje/rsna-knee-e13-train",
+        "version": 1
+      },
+      {
+        "ref": "metaresearch/dinov2/PyTorch/small/1",
+        "version": 1
+      },
+      {
+        "ref": "rsna-knee-abnormality-detection",
+        "version": null
+      }
+    ],
+    "input_contract_sha256": "4e139aeb23f508352c38db8244c98ff52d04ab7fe00c170719f6efb9024321cf",
+    "all_inference_cell_sources_byte_equal_05_profile": true,
+    "inference_cell_count": 22,
+    "selected_count": 256,
+    "selection_seed": 20261005,
+    "reference_replay_performed": false,
+    "submission_publication_cell_included": false,
+    "cohort_full_ranks_preserved": true,
+    "report_or_finding_labels_used": false,
+    "runtime_sha256": {
+      "p003_guard": "41e2f7e735bc5ea37ceff3394cae06d92d273f836418f5769811c412dda6a9be",
+      "p003_profile": "0ea629512147c212131abcba1ce7d8a2704b690b283b053b1d785be9addd912e",
+      "p003_speed_runtime": "b8270a84a2deaa1587bc6acc5232b6158772888acc2a9f04fb52d69a8f58a355",
+      "p003_speed_guard": "a89ae71e3462c3d948ca9aa99cd7eb51412b702489eb23ea9eefa9be21b6ff0b",
+      "p003_stress_runtime": "b0a45f47c929ca76382ff8a122986868dc3a29a540b8c9b7e6f4f49cc52777a0"
+    },
+    "observations": "Parent RSS/HWM; cgroup v2/v1 current/limit/kernel peak/events; 2-second samples; initial/final/minimum-free disk; mount filesystem; allocation storage; zero-copy full-cache range/SHA; child return/exception tail; typed source events.",
+    "observability_failure_policy": "Missing counters become null with availability flags and measurement_status=incomplete; they do not turn a completed model profile into an exception or imply safe memory use.",
+    "gpu_memory_limitation": "Parent CUDA phase memory excludes child allocations; per-GPU child receipt peaks supplement it, not aggregate driver/device monitoring.",
+    "success_output": "P003_STRESS_SUMMARY.json",
+    "failure_outputs": [
+      "P003_STRESS_FAILURE.json",
+      "P003_STRESS_EVENTS.jsonl",
+      "per-CoAt runtime logs"
+    ],
+    "priority": "Separate p003 diagnosis after main f002 embedded-head serving recovery; not required to run10."
+  },
+  "verification": {
+    "artificial_unittest_count": 11,
+    "unittest_passed": true,
+    "checks": [
+      "Original allocator scaled132/133 boundary and missing/masked zero pixels",
+      "RAM/memmap range+hash agreement without mutation",
+      "Child return and exception identity preserved",
+      "Cache tuple/tensor/mask identity preserved",
+      "Source events and typed diagnosis preserved",
+      "cgroupv2 counters+OOM events",
+      "cgroupv1 counters",
+      "missing counters explicit",
+      "model profile completion survives missing measurements",
+      "same05 inference source contracts/non-submission/referenceOFF",
+      "only profile count and audit message derivation"
+    ],
+    "ruff_check_and_format_check_passed": true,
+    "actual_gpu_inference_or_mri_stress_run_performed": false,
+    "gpu_math_implementation_changed": false
+  },
+  "limits": [
+    "No private traceback or exact failed UID; no root cause confirmed.",
+    "256 exposes DINO memmap but not Rad4slots>=669 or Rad3slots>=892 paths and not full hidden cohort geometry/compression.",
+    "Full-cache hash/range add profiling I/O overhead; not a fair measured speedup or author-score reproduction.",
+    "Train images may overlap the public model's training exposure; no independent accuracy assessment.",
+    "Dataset Input mounting remains a Kaggle prerequisite before any diagnostic cell runs."
+  ],
+  "trained_downloaded_models_or_mri_decoded_uploaded_submitted": false
+}

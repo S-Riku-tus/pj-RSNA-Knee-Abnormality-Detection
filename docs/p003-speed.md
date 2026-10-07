@@ -1,8 +1,30 @@
 # p003の実行順改善候補
 
-2026年10月6日。元02は隠し再実行で例外になりました。9時間制限超過とは確定していません。[失敗監査](../experiments/p003-failure-review-20261006.json)
+更新日2026年10月7日。元02と05は隠し再実行で例外になりました。9時間制限超過とは確定していません。[失敗監査](../experiments/p003-failure-review-20261006.json)
 
-**今回の結果確認は完了しました。次は下記の手順2、提出用05の保存実行です。** 提供JSONでは64検査・366系列の診断が完走し、変更した2系統の入力hash・生予測・順位が完全一致しました。追加CoAt 4系統のfallbackは0、最終診断CSVの報告hashも旧04と一致します。[確認記録](../experiments/p003-speed-profile-review-20261006.json)
+## 新たに確認した規模分岐と元作者版との差
+
+64件診断では通らなかったcache分岐を静的確認しました。DINO画像cacheは最大1検査8,128,512byte（6×12×336²・uint8）、既定1GiBまでRAM、**133件以上ではmemmap**です。元のmemmap経路は全領域をゼロで初期化し、CPU/cgroup memoryとscratchの負荷が増える候補になります。1300件ならDINO約9.841GiB、Radの2layout重複は最大約3.888GiBという算定ですが、これだけでディスク上限超過やOOMが起きたとは証明できません。Rad4slot cacheの別境界669件は256件では通りません。実FS種別・free・全processのmemoryは診断で確認します。
+
+元作者V2のcell27はCoAt子失敗を捕捉し、残りmemberで継続する箇所があります。こちらのP003GuardはそのeventとCoAt全4系統/fallback0の不成立を停止させます。つまり**通常時の予測式が一致しても、失敗時の挙動は元版と完全同一ではありません**。正常な欠損layoutは既に許容しますが、CoAt fallbackは実処理例外の予測代替であり、単なる不足planeではありません。これが自分の隠し例外の原因かはログがなく未確定です。失敗familyと対象入力を特定するための観測を追加します。
+
+新しい[11_profile_p003_stress_256.ipynb](../notebooks/public/11_profile_p003_stress_256.ipynb)を用意しました。全モデル・05の推論セル・前処理・精度・microbatch・混合式・Raptor実行順は維持し、ラベル不要trainコホートをseed20261005のSHA順256件へ増やします。以前64件で比較済みのreference再計算はOFFにし、DINO memmap到達・cache range/hash・親RSS/cgroup/初終と最小diskfree・子処理成否・元eventの型を記録します。hash計算の追加負荷があるため公平な速度比較ではありません。実MRI実行・隠し完走・自己Publicは未確認です。
+
+人工検査11件・Ruffが成功し、全22推論セルは旧05診断とbyte一致です。cgroupはv1/v2に対応し、取得不能な資源情報はnull/availabilityと`measurement_status=incomplete`で記録します。観測できなかったことをメモリ安全の証拠やモデル失敗とは扱いません。固定Input版・cache算定・元作者/追加guard差・Notebook SHAと未確認事項は[静的監査](../experiments/p003-scale-audit-20261007.json)に保存しました。
+
+ユーザーの直近操作は[f002の10・3 Inputs](frozen-features.md#head接続の再発後は10を使う)です。11はp003の独立診断であり、10の前提ではありません。並行して行うなら、別private Notebookへ11をImportし、[従来14 Inputsの指定版](p003-next-step.md#p003でユーザーが行う操作)・**T4×2・Internet OFF・新しいセッション**でSave & Run Allします。f002のhead/decoder Inputsは追加しません。GPU割当て/quotaに余裕がなければ10の後に回します。
+
+完走後は`P003_STRESS_SUMMARY.json`の`status=profile_complete_not_for_submission`・studies256・DINO memmap到達・CoAt全系統成功/fallback0を確認。失敗時は`P003_STRESS_FAILURE.json`と`P003_STRESS_EVENTS.jsonl`、該当CoAt logを使い、最後のphase/元例外/child returncodeと資源を照合します。`profile_predictions.csv`は提出しません。256件成功でも約1300件の全cache分岐・隠し入力の網羅ではなく、同じ05再提出へ自動で進む判断にはしません。[公式Dataの件数/入力差](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data?select=test_series)
+
+## 履歴：05の2回目の失敗と64件診断
+
+**最新：05も隠し再実行の例外で失敗しました。同じ05の再提出は保留します。** 提出ref `56870280`、scriptVersionId `355633504`、自己Publicなし。保存版の全セルが配布05と一致し、可視3件はREADY passed・256.538秒、全4 CoAtのfallback 0でした。取得ログは保存時の可視実行で、隠しtracebackと正味時間は未取得です。ユーザー報告の約4時間だけから、9時間超過や8時間内部予算を原因とは決められません。[2回目の失敗監査](../experiments/p003-second-failure-review-20261006.json)
+
+64件の診断結果は正しいものの、**予測一致と少数データの完走だけでは、隠し例外の解消を確認できませんでした。** 当時は64件を上回る規模診断と追加CoAt各系統の切り分けが未準備でした。10月7日に上記11を追加しました。失敗UID・前処理条件・子処理returncode・CPU/GPUメモリ・到達phaseを確認してから提出版を変更します。
+
+10月7日、f002の08は256件完走後、09でhead接続が再発停止。現在は[head接続を外した10](frozen-features.md#head接続の再発後は10を使う)を使います。f003の24 epoch比較は両fold完了し、fold0改善・fold1予測不変で延長の利得は揃っていません。p002の採点済み0.937を保持します。f002とp003の共通原因は未確認で、10はp003の修正版ではありません。以下の05提出手順は再失敗より前の履歴で、今すぐの再提出案内ではありません。
+
+提供JSONでは64検査・366系列の診断が完走し、変更した2系統の入力hash・生予測・順位が完全一致しました。追加CoAt 4系統のfallbackは0、最終診断CSVの報告hashも旧04と一致します。[確認記録](../experiments/p003-speed-profile-review-20261006.json)
 
 所要時間は30分32.4秒で、照合用再計算が7分3.7秒含まれます。単純に差し引くと約23分28.6秒ですが、これは提出版の実測ではありません。旧04の23分47.8秒とほぼ同程度で、**大幅な高速化は確認できていません**。並行処理やcache、診断用hash計算の影響があるため、差分を厳密な高速化率にはしません。今回の予測一致と完走を根拠に提出候補の保存実行へ進み、隠しtestの成否・時間・自己Publicは別途確認します。
 

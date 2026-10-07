@@ -1,0 +1,96 @@
+{
+  "reviewed_at_utc": "2026-10-07T04:55:44.229468+00:00",
+  "status": "pre_python_dataset_mount_failure_confirmed",
+  "notebook": "rsraki/notebook245423d388",
+  "notebook_version": 1,
+  "saved_version_id_from_user_and_api_failure_path": 355951711,
+  "source_sha256": "bd44a2972883f484046529f9104cdd6c65f17937ca5028d392287491c70251e0",
+  "all_source_cells_match_prepared08": true,
+  "input_refs": [
+    "rsraki/rsna-dicom-decoders-py313-v1",
+    "rsraki/rsna-f002-head-fold0-v1",
+    "rsraki/rsna-frozen-feature-inputs-v1"
+  ],
+  "competition_ref": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "gpu_enabled": true,
+  "internet_enabled": false,
+  "failure_phase": "mount data: ERRORED_MOUNTING_DATASET",
+  "failing_head_dataset": "rsraki/rsna-f002-head-fold0-v1",
+  "dataset_id": 12402506,
+  "internal_dataset_version_id": 20385564,
+  "error": "mkdir of Kaggle-managed /tmp/kglt/... source directory failed: Read-only file system",
+  "output_files": 0,
+  "python_log_bytes": 2,
+  "python_execution_started": false,
+  "head_dataset_status": {
+    "status": "ready",
+    "current_version_number": 1
+  },
+  "head_file_metadata": {
+    "best.pt": 340745,
+    "checkpoint-provenance.json": 5959,
+    "config.json": 855
+  },
+  "local_archive": {
+    "best.pt": {
+      "bytes": 340745,
+      "sha256": "189ecab25e0d1c029e974ee23f3c46239e5eceef290b5dca33f6831dcb8e1b03"
+    },
+    "config.json": {
+      "bytes": 855,
+      "sha256": "f2e98efbb73accd3053032cac811e203d8a4d0570e26e2e32ea9d4eaaaba7280"
+    },
+    "checkpoint-provenance.json": {
+      "bytes": 5959,
+      "sha256": "918231230cfdd21fbae9c766ddf585d17daeef6a6cff9dc14fbf46e2b6ccada6"
+    }
+  },
+  "local_zip": "artifacts/kaggle/f002-fold0-single-v1-20261006/rsna-f002-head-fold0-v1.zip",
+  "local_zip_sha256": "3cce03fda576e4af3d6e36b9dee99ab541afc6949dd807f81f7bdf5b44dad24a",
+  "local_zip_bytes": 317253,
+  "confirmed": [
+    "Platform startup/source mounting failed before notebook Python",
+    "Prepared08 source, GPU enabled/InternetOFF and all4 required Inputs confirmed",
+    "Head Dataset APIready andversion1; accessible3-file metadata same sizes as audited ZIP",
+    "CPU/GPU model loading, decoder install, MRI decoding and prediction were not reached",
+    "No startup/failure summary can execute before a successful mount"
+  ],
+  "inference": "Kaggle-managed source storage/cache/mount environment failure; transient host issue versus Dataset-version materialization remains unknown",
+  "not_established": [
+    "Current Kaggle-wide outage",
+    "Dataset weight corruption",
+    "GPU compute or timeout cause",
+    "Connection failure cause identical to prior hidden Notebook Threw Exception",
+    "APIready proves all runtime replicas can mount",
+    "Fresh session guarantees another host"
+  ],
+  "recovery_order": [
+    "Stop the current session, remove/re-add only the head Input reference pinnedversion1; save unchanged08 as a new Save&RunAll version",
+    "If the same mount failure repeats, run08a in a new CPU Notebook with only the head Input",
+    "If08a passes, return to08 using the same4 Inputs and a fresh GPU session",
+    "If only this Dataset keeps failing, optionally upload the existing byte-identical0.32MB ZIP as a separately named private replica, then update only HEAD_INPUT paths",
+    "If failure persists or spans several Inputs, report to Kaggle Support with the saved error and IDs; do not send automatically"
+  ],
+  "probe": {
+    "path": "notebooks/public/08a_check_f002_head_mount.ipynb",
+    "sha256": "f8d742327aeaded83eed471661d0ff4b3b08b778866d1bba90fb359b5431a4c1",
+    "status": "prepared_unexecuted",
+    "accelerator": "NoneCPU",
+    "required_inputs": [
+      "rsraki/rsna-f002-head-fold0-v1"
+    ],
+    "expected_checkpoint_sha256": "189ecab25e0d1c029e974ee23f3c46239e5eceef290b5dca33f6831dcb8e1b03",
+    "real_mri_or_training": false
+  },
+  "support_message": "Saved Notebook rsraki/notebook245423d388 Version1 (script355951711) fails before Python at Dataset mounting. Head Input rsraki/rsna-f002-head-fold0-v1, Dataset12402506/internal version20385564. mkdir on Kaggle-managed /tmp/kglt/... source path fails with Read-only file system. Output0; API Dataset statusready/version1; three file metadata entries accessible. Please investigate the input storage/cache mount failure. No attempt to write /kaggle/input from notebook code.",
+  "primary_references_checked_20261007": [
+    "https://www.kaggle.com/docs/notebooks",
+    "https://pubs.opengroup.org/onlinepubs/009695299/functions/mkdir.html"
+  ],
+  "no_automatic_upload_submission_or_support_message": true,
+  "prior_hidden_failure_resolved": false,
+  "kaggle_probe_or_retry_verified": false,
+  "public_lb": null
+}

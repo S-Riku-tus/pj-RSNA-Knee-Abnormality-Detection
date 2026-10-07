@@ -1,0 +1,74 @@
+{
+  "checked_at_utc": "2026-10-07T02:04:04.851289+00:00",
+  "checked_date_jst": "2026-10-07",
+  "status": "saved_visible_run_failed_gpu_disabled_before_inference",
+  "notebook": "rsraki/notebookdd86797040",
+  "saved_version": 1,
+  "checks": {
+    "requested_notebook_and_pinned_version1": true,
+    "saved_run_error": true,
+    "gpu_disabled": true,
+    "internet_enabled_needs_off_for_intended_submission": true,
+    "expected_three_input_references_present": true,
+    "saved_source_exactly_matches_configured07": true,
+    "first_executable_cell_cuda_guard_is_failure": true,
+    "all_output_pages_listed_zero_files": true,
+    "no_summary_or_submission_created_by_earlier_cells": true,
+    "captured_raw_source_metadata_log_hashes_match": true
+  },
+  "api_status": "ERROR",
+  "gpu_enabled": false,
+  "machine_shape": "None",
+  "internet_enabled": true,
+  "source_matches_distributed_notebook": true,
+  "local_notebook_sha256": "51e858eca2223bc9a25950ab996e73d771fc43957a64c58ba87303fe8aa9a450",
+  "expected_input_references_attached": true,
+  "remote_input_payload_hashes_verified": false,
+  "failure": {
+    "cell": "first executable code cell / In[1]",
+    "statement": "assert torch.cuda.is_available(), 'CUDA GPU required'",
+    "exception": "AssertionError: CUDA GPU required",
+    "log_timestamp_seconds": 16.248801858,
+    "stage": "code setup and CUDA requirement; before encoder/head checkpoint loading and test feature extraction",
+    "cause": "Saved run configured with GPU disabled; CUDA availability guard rejected this CPU run"
+  },
+  "outputs": {
+    "listed_files": 0,
+    "summary_json_available": false,
+    "submission_csv_available": false,
+    "explanation": "The first code cell stopped before the later inference cell starts/writes F002_INFERENCE_SUMMARY.json. API output enumeration also returns zero files; this is not only a UI display symptom."
+  },
+  "evidence": {
+    "scope": "Saved visible Version1 only, not hidden competition rerun",
+    "observation_sha256": "7a162ffaea25992c43ac8d6952456c6bb63e9a15c6dd5846b837dda51b986a34",
+    "source_sha256": "6ea0e5d4f6a61949cbb319a2e4aa70c08a565ecab4bb91ef0a9a0903134e98f7",
+    "metadata_sha256": "deeaf567e254af965ee926044bc5eb03c0e073e8c6dd7c3b3a8834ece0374c8f",
+    "raw_log_sha256": "f97b79ba9b7b36ca5bd0889b2ffac0753ae089df8a9f31cf77d829c85a78a51c",
+    "raw_log_bytes": 4859,
+    "readable_log_sha256": "91074c265d36d79a8ae37cb924e2639ad0a5fa01e5dc4f2cdfbf823c781485e2",
+    "raw_directory": "artifacts/research/20261007-f002-empty-output"
+  },
+  "next_step": {
+    "notebook": "Edit existing rsraki/notebookdd86797040; keep current source and three attached Inputs",
+    "settings": "Accelerator GPU T4 x2; Internet OFF",
+    "execution": "Save Version / Save and Run All as a new saved version; do not use a Quick Save only",
+    "success": "F002_INFERENCE_SUMMARY.json status passed, cache_complete true, studies equals cached_studies, receipt.valid true",
+    "then": "Review actual saved-run time and summary; manual competition submission after successful saved run",
+    "new_training_or_input_upload_required_for_this_failure": false,
+    "code_change_or_cpu_fallback_required": false
+  },
+  "unmeasured": [
+    "Real MRI/encoder/head inference on Kaggle T4",
+    "Hidden-test completion/runtime",
+    "Own Public score"
+  ],
+  "relation_to_p003": "Different saved run and explicit GPU configuration failure; does not diagnose or resolve p003 hidden-rerun exception",
+  "public_lb": null,
+  "scored_baseline": "p002 Public0.937 retained",
+  "external_reference": {
+    "url": "https://github.com/Kaggle/kaggle-cli/blob/main/docs/kernels.md",
+    "checked_date_jst": "2026-10-07",
+    "claim": "kernels output downloads existing generated files; kernels status reports saved-run status; --no-run is Quick Save equivalent"
+  },
+  "performed": "Official SDK status/source/metadata/output-list/log retrieval and local aggregate documentation only. Standard SDK OAuth refreshed normally; no credential values inspected, copied or displayed. No new MRI/model data download, decoding, training, forward inference, Kaggle write or submission."
+}

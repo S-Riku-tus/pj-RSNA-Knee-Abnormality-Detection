@@ -1,0 +1,35 @@
+{
+  "schema_version": "frozen_features_v1",
+  "seed": 20261002,
+  "n_folds": 5,
+  "reason": "Change only the training limit from 12 to 24 epochs relative to f002; fold1 selected the last scheduled epoch. Keep cached features, generic encoder, attention head, weak labels, fixed folds, seed, learning rate and minimum weak BCE checkpoint selection unchanged. Test a bounded extension without assuming Public improvement.",
+  "preprocess": {
+    "version": "physical_letterbox_triplet_v1",
+    "image_size": 392,
+    "max_series": 3,
+    "slices_per_series": 48,
+    "percentiles": [
+      1,
+      99
+    ]
+  },
+  "encoder": {
+    "model_name": "dinov2_vits14",
+    "feature_dim": 384,
+    "batch_size": 16,
+    "precision": "fp16"
+  },
+  "head": {
+    "hidden_dim": 192,
+    "dropout": 0.2,
+    "pooling": "attention"
+  },
+  "train": {
+    "epochs": 24,
+    "batch_size": 16,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "num_workers": 0,
+    "selection": "bce"
+  }
+}

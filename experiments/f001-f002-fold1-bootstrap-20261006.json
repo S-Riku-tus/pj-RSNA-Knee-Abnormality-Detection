@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "scope": "Descriptive paired comparison of fixed weak prediction CSVs; no model selection or submission",
+  "validation": {
+    "valid": true,
+    "same_validation_study_set": true,
+    "shared_observation_mask": true,
+    "binary_observed_weak_truth_only": true,
+    "finite_probability_scores": true,
+    "supplied_groups_do_not_cross_folds": true,
+    "gold_read": false
+  },
+  "fold": 1,
+  "left_epoch_user_supplied": 12,
+  "right_epoch_user_supplied": 12,
+  "difference_direction": "right minus left",
+  "inputs_sha256": {
+    "manifest_json": "976abfe212ce23ad8112f16cb61d2c8172bb837ad50aed7ac88886760fc2cabf",
+    "weak_csv": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+    "left_predictions_csv": "793acbe440d6fa3d4c83d1a4071a4e82ed81803685339491ef1b7c2100d0435e",
+    "right_predictions_csv": "fcc2aa4f7f4a89916e149d7df96b6fb97654e20a9c6f2f0515e711aeac72748b",
+    "observation_mask": "68f901b4e93b3911cd2a235cc64cc7f363f3b42ab92bf3160334bd4e0ffab655"
+  },
+  "manifest_inputs_sha256": {
+    "train": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+    "weak": "aad1eec5424692acd48355193bc142b06a300623a43f502430de96f22e0bf7c9",
+    "provenance": "fac0445d7416921c94553eb450cda6666d0431398888b081925216f8dd4908ac",
+    "groups": "8b7755c5bc76531fb0bb7a86e16eade4a487fd000fdb20ea2c76172770d96e19"
+  },
+  "algorithm": {
+    "resampling_unit": "supplied group_id; retain all member studies with the same weight",
+    "group_order": "lexicographically sorted supplied group_id",
+    "draws_per_resample": 861,
+    "replacement": true,
+    "pairing": "same group multiplicities for left and right predictions in every draw",
+    "rng": "NumPy default_rng PCG64; one multinomial(K, full(K, 1/K)) draw per resample",
+    "auc": "weighted Mann-Whitney ranks using original score order; equal scores contribute 0.5",
+    "interval": "percentile 2.5/97.5; linear interpolation at (n-1)*fraction; defined draws only",
+    "macro_auc_12_denominator": 12,
+    "auxiliary_denominator": 11,
+    "auxiliary_excluded_target": "Synovitis",
+    "undefined_policy": "macro undefined if any required target lacks either class; count and exclude that draw"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "implementation": "CPython",
+    "numpy_version_installed": "2.5.3",
+    "numpy_used": true
+  },
+  "studies": 891,
+  "supplied_groups": 861,
+  "observed_cells": 6207,
+  "seed": 20261006,
+  "requested_resamples": 3000,
+  "left_macro_auc_12": 0.7925708578139519,
+  "right_macro_auc_12": 0.8154302698313463,
+  "left_macro_auc_11_without_synovitis": 0.7830857342975069,
+  "right_macro_auc_11_without_synovitis": 0.808135739534852,
+  "macro_auc_12_difference": {
+    "point": 0.02285941201739432,
+    "valid_resamples": 3000,
+    "undefined_resamples": 0,
+    "percentile_95_interval": [
+      0.010083239508773328,
+      0.03573637080948184
+    ]
+  },
+  "macro_auc_11_without_synovitis_difference": {
+    "point": 0.025050005237344887,
+    "valid_resamples": 3000,
+    "undefined_resamples": 0,
+    "percentile_95_interval": [
+      0.012249186761791668,
+      0.03704848766299303
+    ]
+  },
+  "per_target": {
+    "ACL": {
+      "left_auc": 0.7114961496149615,
+      "right_auc": 0.796678278939005,
+      "difference": 0.08518212932404345,
+      "observed": 749,
+      "positive": 101,
+      "negative": 648,
+      "missing": 142,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        0.038357172055436956,
+        0.1331148042839768
+      ]
+    },
+    "MCL": {
+      "left_auc": 0.6919642857142857,
+      "right_auc": 0.6645535714285714,
+      "difference": -0.027410714285714288,
+      "observed": 716,
+      "positive": 16,
+      "negative": 700,
+      "missing": 175,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        -0.10135351197364904,
+        0.05417354663431098
+      ]
+    },
+    "Medial Meniscus": {
+      "left_auc": 0.7077870934959349,
+      "right_auc": 0.7777502540650406,
+      "difference": 0.06996316056910568,
+      "observed": 808,
+      "positive": 328,
+      "negative": 480,
+      "missing": 83,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        0.046648933016147226,
+        0.0929868457555244
+      ]
+    },
+    "Lateral Meniscus": {
+      "left_auc": 0.6844751819033211,
+      "right_auc": 0.7111015056552121,
+      "difference": 0.026626323751891,
+      "observed": 766,
+      "positive": 105,
+      "negative": 661,
+      "missing": 125,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        0.001001484395774094,
+        0.053065769647898886
+      ]
+    },
+    "Medial OA": {
+      "left_auc": 0.8739091649536517,
+      "right_auc": 0.8832176240158244,
+      "difference": 0.009308459062172703,
+      "observed": 496,
+      "positive": 59,
+      "negative": 437,
+      "missing": 395,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        -0.015950439516687197,
+        0.03333141588424782
+      ]
+    },
+    "Lateral OA": {
+      "left_auc": 0.8269760542487815,
+      "right_auc": 0.8292011019283747,
+      "difference": 0.002225047679593195,
+      "observed": 451,
+      "positive": 22,
+      "negative": 429,
+      "missing": 440,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        -0.048219065221108054,
+        0.04166666666666663
+      ]
+    },
+    "PF OA": {
+      "left_auc": 0.7964705158949763,
+      "right_auc": 0.7721207649265204,
+      "difference": -0.02434975096845593,
+      "observed": 495,
+      "positive": 78,
+      "negative": 417,
+      "missing": 396,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        -0.04008977188984829,
+        -0.008966576169552138
+      ]
+    },
+    "Effusion": {
+      "left_auc": 0.921235380116959,
+      "right_auc": 0.9333120126705653,
+      "difference": 0.012076632553606248,
+      "observed": 716,
+      "positive": 108,
+      "negative": 608,
+      "missing": 175,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        -0.006039519585652517,
+        0.029791377165508996
+      ]
+    },
+    "Synovitis": {
+      "left_auc": 0.8969072164948454,
+      "right_auc": 0.8956701030927835,
+      "difference": -0.0012371134020618957,
+      "observed": 122,
+      "positive": 97,
+      "negative": 25,
+      "missing": 769,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        -0.06159798982379622,
+        0.08429328304597707
+      ]
+    },
+    "Baker's": {
+      "left_auc": 0.8116165070679434,
+      "right_auc": 0.8898768809849521,
+      "difference": 0.07826037391700869,
+      "observed": 395,
+      "positive": 51,
+      "negative": 344,
+      "missing": 496,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        0.036541364348808884,
+        0.12288396198935418
+      ]
+    },
+    "Contusion": {
+      "left_auc": 0.757177225340818,
+      "right_auc": 0.7864207431168136,
+      "difference": 0.029243517775995653,
+      "observed": 302,
+      "positive": 87,
+      "negative": 215,
+      "missing": 589,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        -0.013077551944623955,
+        0.069916890834833
+      ]
+    },
+    "Fracture": {
+      "left_auc": 0.8308355189209442,
+      "right_auc": 0.8452603971524916,
+      "difference": 0.014424878231547367,
+      "observed": 191,
+      "positive": 34,
+      "negative": 157,
+      "missing": 700,
+      "valid_resamples": 3000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        -0.03115228847030429,
+        0.05869017094017099
+      ]
+    }
+  },
+  "gold_macro_auc_12": null,
+  "public_lb": null,
+  "limitations": [
+    "Patient independence is unverified; supplied group independence is assumed for this bootstrap",
+    "Weak labels are report-derived; these intervals do not establish image-label or Kaggle performance",
+    "Checkpoint, epoch and configuration selection on the same fold are outside interval coverage",
+    "Intervals use defined draws only; an interval conditional on definition is not evidence that all draws are valid",
+    "Gold is not read; gold exclusion and report linkage rely on the separate fixed-manifest audit",
+    "Optional epoch numbers are supplied by the caller; checkpoint/index selection is audited separately",
+    "Input hashes are checked before and after computation; this is not continuous filesystem monitoring and does not detect an input changed and restored between checks"
+  ]
+}

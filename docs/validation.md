@@ -1,6 +1,147 @@
 # 準備内容の検証範囲
 
-更新日 2026年10月6日 JST。p003の隠し再実行例外を確認し、速度改善候補・独自の凍結特徴学習経路・教師監査を追加した。以下は新しい確認から順に記し、過去の「未実施」は各作業時点の履歴として残す。
+更新日 2026年10月7日 JST。09の再発接続失敗を公式SDK・21項目で確認。元headを同一byteで埋め込む10を準備し、旧head Inputを不要にする。08 Version2の256件成功・以前の未実施/次工程は各作業時点の履歴。
+
+## 09の起動前接続失敗の再発と全体状況の再監査（10月7日）
+
+- 公式SDKの05:58:56Z（14:58 JST）で、ユーザー指定`rsraki/notebook6372fe6490` Version1/script355963229はERROR。全source cellは配布09と一致、GPU有効・Internet OFF・Competitionと3Datasetsの4 Inputsが揃う。同じhead Dataset12402506/内部版20385564のKaggle管理下`/tmp/kglt/192.168.5.2/...`でmkdirがRead-only file systemとなり、Output0・visiblelog`[]`。Python・decoder・画像・モデル処理は未開始。[21項目の確認](../experiments/f002-recurrent-mount-review-20261007.json)
+- 08失敗355951711→CPU確認355955526→GPU256完走355957807→09失敗355963229の経過を保存metadata/source/status/logから照合。今回初めて取得したCPU確認の保存sourceは配布08aと一致したが、実設定はCPU・全4 Inputs・Internet ONだった。従来の添付JSONのファイル内容監査は有効だが、head単独/Internet OFFの切り分けを実施したという証拠にはならない。古い添付監査は変更せず新記録で補足した。
+- 公式提出一覧でp002 ref56840796・Public0.937を再確認し、成功保存版sourceも維持。p003の2提出と旧f002 ref56897486はerrorDescriptionあり・Publicなし。一般例外を9時間超過や共通原因と断定しない。DatasetのAPIreadyは各runtimeのmount成功を保証せず、exact backend欠陥とKaggle全体障害の公式根拠は未確認。[一次資料の調査](../experiments/kaggle-runtime-primary-research-20261007.json)
+- 元head340,745byte/SHA256、16core moduleを再検査し不変。今回の取得は保存source/log/metadataのみで、重み・MRIの追加取得、MRI処理、実学習、外部アップロード/提出は行っていない。元台帳を新規research directoryへ保存し、以前の実験/失敗/完走記録を保持した。
+
+## head Datasetを接続せずに復元する10の準備・検証（10月7日）
+
+- [10_submit_f002_embedded_head.ipynb](../notebooks/public/10_submit_f002_embedded_head.ipynb)と生成スクリプト/stdlib復元helperを新規作成。元head ZIP3ファイルをbase64で埋め込み、全件のallowlist・サイズ・SHA256を検証して新規workingディレクトリへ復元。497,221 UTF-8 bytes、Notebook SHA256`8ca99ca50a5ddd60eef67ce7ec5a1c606d23194686b515e94f481b97680dc8ba`。1,000,000byte未満の保守的生成guardを置いた。ソース1MB制約は実サーバーエラーの一次体験報告であり、現在の公式一律上限確認とは区別する。[準備監査](../experiments/f002-embedded-head-handoff-20261007.json)
+- 09のsetup/runtime/decoder cellは不変。run_streamingの引数はhead pathのbindingのみ変更し、summaryへdelivery情報を追加。固定fold0 epoch11/checkpointSHAと16core source、featurefingerprintを維持。手動Inputs manifestはCompetition＋元encoder/code＋元decoderの3つ。旧head Datasetを接続しない手順をNotebookとdocsに明記した。metadataだけではUIのInput参照が削除されない点も確認。
+- 新規unittest6件が成功。復元byte一致、base64/hash/サイズ破損で書込み前に拒否、path allowlist、既存成果物保護、Notebook構文/空outputs/元cell不変/固定引数、core変更拒否、実checkpointを使った人工GPU提出契約を検査。RTX4090・人工17×3×48×384特徴で元headと復元headの確率最大差0、17×12・finite[0,1]・target順一致。MRIなし・実学習なし。Ruff3ファイル成功。
+- rootの独立静的監査16項目も成功。Notebookのコピー/hash/サイズ/3Inputs、oldhead codebindingなし、固定call/cell/runtime/core、空outputs、検証記録を照合。元08/09は変更せず、新規`artifacts/kaggle/f002-embedded-head-v1-20261007/`へmanifest/検証記録を保存。head含有10は`.gitignore`へ個別登録してGit除外を確認。GPU演算は変更せず、旧21テスト群の再実行は行っていない。
+- Kaggleの10可視/隠し実行と自己Publicは未確認。他Inputsの起動障害や旧07隠し例外の真因はこの配送変更では確定しない。[現在の操作](frozen-features.md#head接続の再発後は10を使う)。今回assistantは実モデル/MRI取得・実MRI処理・実学習・外部upload/submitを開始していない。
+
+## p003の規模/失敗経路監査と新11の準備（10月7日）
+
+- 旧64件のDINOcache520,224,768byteはRAM経路のみ。既定1GiB境界からDINO133件、Rad4slot669件/3slot892件でmemmapへ切り替わることをsourceと整数算定で確認した。1300件ならDINO9.841GiB、最大Rad2layout重複3.888GiBだがstageは逐次で、合計を全体peakや20GiB超過の証拠にしない。CoAt ready bagの有界payloadも全process RSS上限ではない。[静的監査](../experiments/p003-scale-audit-20261007.json)
+- 元作者cell27はCoAt失敗を捕捉し残りで継続し得る。追加guardは全4系統/fallback0・不良eventを拒否するため、失敗時の完全再現ではない。正常な欠損layoutは既に許容し、予測代替を発生させるpreparation/inference例外とは区別した。この差が自分の隠し例外の真因とは未確定。過去Input版・作者採点CSVの同一性も未確認。
+- [11_profile_p003_stress_256.ipynb](../notebooks/public/11_profile_p003_stress_256.ipynb)を新規作成、398,454byte・SHA256`d6ea88692faa5957712efa812ce86eb5505ace3947361e36b4ed1ff266e77308`。05の全22推論セル・14Inputs・モデル・前処理・AMP・microbatch・混合式・Raptor順は保持し、seed20261005/256件コホート・観測だけを変更。reference再計算と提出cell29は除き、profileのみ。元08/09/05/vendor/coreを変更せず`artifacts/kaggle/p003-stress256-v2-20261007/`へ保存。
+- 2秒の親RSS/HWM・cgroup current/limit/kernelpeak/OOMevents・disk初終/最小空き・FS種類、array storage/range/SHA、child成否/例外tail、元event分類を記録。cgroupv1/v2/missingを分け、観測不能ならnull/availability/measurement_status=incompleteを保存して、完走モデルを観測不足だけで例外にしない。親CUDA統計はchildを含まず、worker receiptもGPU全体監視ではない。
+- 新規人工unittest11件と3ファイルRuff check/formatが成功。縮小した元allocator132/133bytesでRAM/memmap/ゼロ画素、pixel hash/range非変更、tuple/mask/child例外identity、typed source event、cgroupv1/v2/missing・観測欠損時の完走summary、元推論cell/非提出/referenceOFFを検査。GPU演算コードを変更せず、実MRI/モデルを使うforwardやstressは実施していない。rootもNotebook/copy/hash/22cell一致/空outputs/構文を独立確認。
+- 256件ではDINO1.938GiB memmapは通るがRad669/892境界・約1300件全体・隠しgeometry/compressionを保証しない。全cachehashの診断負荷を実測高速化率にしない。11は10の前提ではなく独立したp003診断で、出力CSVを提出しない。実MRI取得/処理・実学習・外部upload/submitは未実施。
+- 今回の台帳追加は09再発/10準備/11準備の3eventで、14列44一意ID。作業前41行はbyte prefix/CSV内容とも保持。PROJECT/README/手順と検証範囲を更新し、旧手順を履歴表示・現在10へのリンクに整理した。
+
+## 08・256件診断の完走と添付summary/CSV監査（10月7日）
+
+- 添付`F002_STREAMING_SUMMARY.json`を新規 `artifacts/research/20261007-f002-streaming-profile-review/`へbyte同一で保存。SHA256 `a1d5ebc7151cf8bcb11bc2f7c0c4a8d0723962e23591d0a7774456d76299a786`。公式SDKの05:35:20Z（14:35 JST）確認で`rsraki/notebook245423d388` Version2・COMPLETE・GPU有効・Internet OFF、全source cellが配布08と一致。保存Output5件のobject版ID355957807、添付とroot保存summaryのbyte一致を確認。saved source/metadata/logと小さい4 JSON/CSVだけを取得し、MRI/重みは取得していない。[32項目の監査](../experiments/f002-streaming-profile-review-20261007.json)
+- Summaryはprofile_complete_not_for_submission/complete、profile_train、studies=processed=256、seed20261007、skip/fallback/intermediate feature file0、Report不要、trainingfalse/Publicnull。f002 fold0 epoch11 checkpointSHA・featurefingerprintと学習記録が一致、ローカル16core sourceも維持。root summaryとnested summaryはdecoder_installの追加以外同一。元Version1のmount失敗は今回GPU保存実行で再現していないが、詳細な一時障害原因は未確定。
+- decoder manifestSHAと全3wheel metadataがローカル固定版に一致。報告されたtorch2.11.0+cu128/NumPy2.1.3/pydicom3.0.2が導入前後で維持され、4形式のavailable/pylibjpeg利用とdefault/pylibjpeg両経路の人工画素完全一致が成功。Kaggle Linuxで導入・人工圧縮decodeを実行した保存結果を確認できた。別pluginのGDCM不足表示は利用可能decoder不足を意味しない。
+- 保存`profile-studies.csv`と`profile_predictions.csv`の実byte SHAを再計算しsummaryに一致。前者SHA`42e4d2577f8ca2e06b29ff957606b8949406781823e93361586e0553b2435a93`、後者SHA`997878342b38ef4418beedbe74afd82fe43c10d177a39622e0d53c085c8be86d`。固定gold除外weakリストのseed20261007 SHA順先頭256 UIDを再構成し、両CSVのUID/順序と一致。12所見header・3,072有限[0,1]確率、全所見非定数、独立validate_submission receipt={studies256,targets12,validtrue}が成功。Outputにsubmission.csvはなく、profile CSVは提出しない。
+- Tesla T4、計測748.383202601秒、平均2.923373852秒/検査。CPU peak RSS4.426090GiB、選択GPU PyTorch peak reserved364MiB、最後のdiskfree19.500645GiB。run_streamingの計測はencoder読込み/画像処理/head/診断IOを含み、前段code/decoder installとqueueを含まない。elapsedとperstudyは別時点のtimerで約0.0005秒ずれることを実装から確認し、監査は0.1秒以内の読み取り差を許容した。全GPU/driver/processメモリや旧版比のspeedupとは扱わない。
+- transfer_syntax_countsは各selected series先頭headerの集計で、768件すべてExplicitVRLittleEndian（非圧縮）。圧縮decoderの動作確認は人工数値画像であり、今回の256件で実圧縮MRIを読んだとは主張しない。weak trainの256件はhidden分布/規模・Public accuracyの検証ではなく、09可視実行・隠し完走と旧07例外解消は未確認。
+- 台帳へ新しいVersion2完走eventを追加し14列41一意ID。元失敗版・head単独確認・前台帳・添付を保持。Notebook/前処理/GPU/学習コードを変更していないため、既存21 unittest/人工GPUforwardは繰り返していない。assistantは既存source/logと小さいJSON/CSVのread-only取得・監査・記録更新のみで、実MRI decode・実学習・モデル取得・外部アップロード/実行/提出を開始していない。次工程は同じInputs/重みで09を新規private Notebookに保存実行し、CSV契約を確認後にユーザーが手動提出すること。
+
+## 添付head単独接続チェックの成功確認（10月7日）
+
+- Downloadsの`F002_HEAD_MOUNT_CHECK.json`を新規`artifacts/research/20261007-f002-head-mount-success/`へbyte同一で保存し、添付SHAを記録。passed/complete、元head slug、期待mount path、model_loaded=false/training_performed=false、元ZIP SHA、全3ファイルのcoverage/size/SHA、添付copy一致の10項目を確認した。[監査](../experiments/f002-head-mount-success-review-20261007.json)。probe保存版URL/Versionと実ログは未取得で、出所はユーザー添付JSONと区別する。
+- best.pt340745 bytes/SHA`189ecab25e0d1c029e974ee23f3c46239e5eceef290b5dca33f6831dcb8e1b03`、config.json855 bytes、checkpoint-provenance.json5959 bytesの全SHAを、ローカルの変更していない元ZIP payloadから独立に再計算して一致。matches=trueを読むだけにせず元bytesのhashと照合した。
+- この報告された確認実行では元head Inputを接続し全3ファイルを読めた。前のmountエラーはこの実行で再現しなかったが、一時障害の詳細原因や全GPU環境の復旧を証明しない。head再アップロード・再学習は不要として、同じ4 Inputs/新しいGPUセッション/Internet OFFで08へ戻る手順に更新した。
+- Python3.13.15は以前のKaggle runtime版と同じだが、今回model load・decoder・MRI推論・256件処理は行っていない。08全Inputs接続、09完走、隠し例外解消、自己Publicは未確認。assistantは添付JSONと既存archiveの検査のみで、実データ/モデルの取得・MRI処理・学習・アップロード・Kaggle実行/提出を行っていない。Notebook/GPU/学習コードを変更せず、既存テストを繰り返していない。台帳は14列40一意ID、元の失敗記録と前台帳を保持した。
+
+## 08のhead Dataset接続失敗と復旧準備（10月7日）
+
+- ユーザー提供URL `rsraki/notebook245423d388`の保存Version1を公式SDKでread-only取得。04:53:09Z（13:53 JST）にERROR・failureMessage mount data: ERRORED_MOUNTING_DATASET、Output0、実行logは`[]`（2 bytes）を確認。failure pathのscript355951711、Dataset12402506/内部版20385564はユーザーの貼付と一致した。[監査](../experiments/f002-input-mount-failure-review-20261007.json)
+- 保存source全cellは配布08と一致、GPU有効・Internet OFF、Competitionとencoder/code/head/decoderの4 Inputsが揃っている。Kaggle管理下の`/tmp/kglt/.../datasets/12402506/20385564`にmkdirする処理がRead-only file systemで停止。Notebook Python・重みロード・decoder導入・MRI処理・予測に未到達なので、コード内try/exceptでもsummaryは生成できない。07の隠し推論例外と共通原因とは断定しない。
+- head Inputの公式API状態はready/current_version_number1。metadataのDataset ID12402506、private・owner rsrakiを確認し、best.pt340745 bytes、checkpoint-provenance.json5959 bytes、config.json855 bytesの3-file metadata取得が成功。これでremote payload hashや全runtime replicaのmountを確認したとは扱わない。Datasetや重みは追加取得していない。
+- 既存head ZIP317253 bytes、SHA256 `3cce03fda576e4af3d6e36b9dee99ab541afc6949dd807f81f7bdf5b44dad24a`のCRC・allowlist・全payload hashとAPIのファイル名/サイズ一致を確認。best.pt SHA256は従来f002 fold0 epoch11の`189ecab25e0d1c029e974ee23f3c46239e5eceef290b5dca33f6831dcb8e1b03`。元ZIPを保持し、必要時だけ同一内容の別private Datasetを手動作成する回避案を記載した。
+- 新規[08a_check_f002_head_mount.ipynb](../notebooks/public/08a_check_f002_head_mount.ipynb)はCPU/Internet OFF、head Input一つのみ。標準ライブラリで接続・3ファイルサイズ/hashを確認し、F002_HEAD_MOUNT_CHECK.jsonを保存する。重みロード・MRI・学習・推論・提出は行わない。Notebook outputsなし・execution_count空・code compile成功、immutable copyとhashを保存。Kaggle上では未実行。
+- 前処理/GPU/学習コードと元08/09、run/checkpointは変更していないので、既存人工GPUテストや21 unittestを繰り返していない。新規研究dir `artifacts/research/20261007-f002-input-mount-failure/`へsaved source/metadata/log/API観測、既存ZIP確認、新規probe copy、変更前台帳を保存した。台帳は14列39一意ID。実データ/モデル取得・MRI decode・実学習・再実行・外部アップロード/提出・サポート連絡の送信はassistantが行っていない。
+- [POSIX mkdirのEROFS説明](https://pubs.opengroup.org/onlinepubs/009695299/functions/mkdir.html)と[Kaggle Notebook文書](https://www.kaggle.com/docs/notebooks)を確認。現在の同一mount障害のKaggle全体発生を裏付ける公式情報は得ていない。内部host/cache/storageの詳細原因、fresh session/再追加/別名Datasetで復旧するかは未確認。復旧後に08の256件診断、さらに09で隠し成否を確認する必要がある。
+
+## f002隠し例外の調査・08/09準備・f003完成・教師根拠監査（10月7日）
+
+- 公式SDKの04:04:22Z（13:04 JST）照会で、提出ref56897486・scriptVersionId355923367・file_name=submission.csv、COMPLETEだがerrorDescriptionあり・Public nullを確認。04:08Zに保存Version2のsource/metadata/logを新規取得し、全source cellが監査済みV2と一致、GPU有効・Internet OFF、Output8件・公開3検査完走を確認。ログ13930 bytes、SHA-256 `bbb917685a7ebca46b4387c086a7d83380e36a41754d43d7cc02e2fea3335aeb`。private traceback/正味時間は取得できず、原因は未確定。提出から確認の約1時間48分はqueue込みで、9時間超過の証拠ではない。[失敗と対処の監査](../experiments/f002-hidden-failure-review-20261007.json)
+- 元推論を静的に調べ、Report必須・公開3検査固定は認めず、圧縮decoderの網羅的事前確認がないこと、strict geometry等の例外が全体停止となること、NPZ stagingと全件metadataの繰返し書込みを確認。これらは調査候補で、隠し原因を確定していない。Kaggleの[公式エラー分類](https://www.kaggle.com/code-competition-debugging)、[大会データ説明](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data)、[pydicom対応表](https://pydicom.github.io/pydicom/stable/guides/user/image_data_handlers.html)を10月7日に確認した。
+- 新規[scripts/frozen_streaming_runtime.py](../scripts/frozen_streaming_runtime.py)と[Notebook作成script](../scripts/build_frozen_serving_diagnostics.py)を追加。元16 core moduleとencoder/feature契約・f002 fold0 epoch11 checkpoint SHAを保持し、検査単位の特徴→head予測、decoder preflight、CSV全件coverage、phase/header/traceback/resources記録を実装。Report不要、NPZ中間ファイル0、skip/偽予測なし。08は固定weakからseed20261007・256検査のprofileで提出CSVを作らず、09はtest全件。元の訓練CLI CUDA guardを維持する。
+- [08](../notebooks/public/08_profile_f002_serving_256.ipynb)と[09](../notebooks/public/09_submit_f002_streaming.ipynb)は未実行・outputsなし、全code cell compile成功、profileのcompetition-rerun guard、固定checkpoint/weak/source hash、root summary保存を確認。[最新Notebook梱包v3](../artifacts/kaggle/f002-streaming-v3-20261007/package.json)を保存し、過去の梱包v1/v2と元07を上書きしていない。
+- 新しい[decoder ZIP](../artifacts/kaggle/dicom-decoders-py313-v2-20261007/rsna-dicom-decoders-py313-v1.zip)は5,331,559 bytes。公式PyPI Linux x86_64/Python3.13 wheel（pylibjpeg2.1.0、libjpeg2.4.0、openjpeg2.6.0）のpublisher SHA256とlicense filesを確認し、`--no-index --no-deps`でtorch/NumPy/pydicomを維持する。依存wheelだけを取得し、実データ/重みを取得していない。元NumPy2.5.3/torch2.10.0の訓練venvは変更せず、Windowsの人工decoder確認はNumPy2.1.3/pydicom3.0.2を入れた別venvで実行した。
+- 自作16×16・uint16の数値画像をJPEG Lossless2形式とJPEG2000表記2形式に包み、Windows Python3.12の対応pluginでdefault/pylibjpegの両読み込みが元画素に完全一致した。患者画像ではない。[確認記録](../artifacts/research/20261007-f002-hidden-failure/windows-default-and-plugin-phantom-verification.json)。Kaggle Linux binary実行は未検証で、08/09の最初に同じ人工画素チェックを必須にした。実MRI画素/feature parityや全圧縮表現の正しさをこの4例で保証しない。
+- `python -m unittest discover -s tests -p 'test_frozen*.py' -v`は**21件成功**。新規6件で、17人工検査のCUDA streaming/バッチ予測・Reportなし提出CSV、missing decoder/geometry/wrong checkpointで最終CSVを出さずfailure summaryを残すこと、profile subsetと非提出契約、Notebook compileを確認した。既存15件も成功し、含まれる学習は人工データの1 epochのみ。Ruff check/formatは新規3ファイルで成功。
+- 既存**実f002 checkpoint**をGPUへ読み込み、人工17検査×3系列×48中心×384次元・可変maskを従来batch16+1と検査ごとのheadで比較。最大確率差**1.1920928955e-7**、絶対許容2e-6、finite/[0,1]が成功。RTX4090/torch2.10.0+cu128/NumPy2.5.3/Python3.12.13。[実重み・人工特徴の記録](../artifacts/research/20261007-f002-hidden-failure/actual-head-streaming-artificial-verification.json)。encoder/MRI/Kaggle/privateの実行やspeedup測定ではない。
+- ユーザーが完成したf003 fold0/1のrun.jsonを別保存し、config一要因・環境/入力/source/fold一致、48 epoch CSVのhash/UID/順序/metrics/masked BCE、最初の12 epochの予測byte一致、BCE最低/最初tie選択、best/last CPU checkpointのfinite/契約等**136項目**を確認。fold0 selectedepoch15、BCE0.316232・AUC12 0.823060・aux11 0.820611。fold1 selectedepoch12で元f002の予測/model tensorと同一、BCE0.317469・AUC12 0.815430・aux11 0.808136。goldは学習/選択/評価に不使用。[完成比較](../experiments/f002-f003-fold01-review-20261007.json)
+- fold0の供給group paired bootstrap3,000回、seed20261007でaux11差+0.008839677の95%区間[+0.001516712,+0.016844273]、全抽出で定義可能。AUC12は1,061抽出未定義、1,939定義可能への条件付き区間なので頑健性を断定しない。fold1はselected予測が同一なので同じbootstrapを繰り返していない。両foldで延長利得が揃わないと判断し、09はf002を維持する。[bootstrap](../experiments/f002-f003-fold0-bootstrap-20261007.json)
+- 現行CSVだけから、goldと保護fold0/1・同一Report/供給groupの推移的連結を先に除き、学習側150検査/1,800セルを実抽出。gold/holdout混入0、原queue出力hashを保持。重点30セル（MCL9、PF OA7、Effusion7、Synovitis7）の原文部分文字列と一次判断を別private CSVに保存し、proposed_label全空欄・教師変更なし。[集計](../experiments/training-report-evidence-review-20261007.json)。17セルは未確定で誤ラベル数ではない。[Host定義](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733343)の低度MCL/古い変化、OA程度＋範囲、Effusionの量等を確認し、言語/閾値を再確認してから教師だけの比較とする。
+- [f004設定](../configs/experiments/f004-dinov2-attention24-dropout40.json)は完成f003に対してreasonとhead.dropout0.2→0.4だけ変更、validatorとfeature契約一致が成功。24 epoch/seed/教師/入力/source/LR/fold/BCE選択を固定し、両foldの新規runが未作成と確認。[未実行計画](../experiments/f004-dropout40-plan-20261007.json)へbaseline checkpoint/予測/環境/hashを固定した。
+- 最終handoffは9項目が成功：16 core hash、Notebook生成内容/未実行状態/梱包copy/hash、decoder ZIPのCRCと全wheel/phantom hash、元教師queue hashと30提案空欄、台帳14列38一意ID、変更6資料の全ローカルファイルリンク、git diff --check、f004両run未作成。[検査記録](../artifacts/research/20261007-f002-hidden-failure/handoff-verification.json)
+- 既存run/checkpoint/元教師/元queue/過去evidenceを上書きせず、新規研究dir `artifacts/research/20261007-f002-hidden-failure/`にraw SDK source/log/状態、監査script、変更前台帳を保存。今回assistantは実MRI decode・実学習・gold評価・元DICOM/モデル追加取得・アップロード・Kaggle提出を行っていない。Kaggle08/09・隠し完走・自己Public・実測高速化は未確認で、追加ログがprivate実行から取得できるとは約束しない。
+
+## f002提出の確認とf003・24 epoch比較の準備（10月7日）
+
+- 公式SDKのread-only状態照会で提出ref56897486、2026-10-07T02:16:41.160Z、監査済みVersion2/scriptVersionId355923367を確認。02:20:31Z（11:20 JST）時点でPENDING・Publicなし・errorDescriptionなし。queue/正味実行時間やhidden完走は分からない。スナップショットは`artifacts/research/20261007-f002-waiting-plan/submission-status.json`に新規保存した。
+- [f003 config](../configs/experiments/f003-dinov2-attention24.json)はf002とのdiffが`reason`と`train.epochs`の12→24だけで、既存validatorが成功。complete/非limited/4,207件のexport metadataと前処理/encoder契約、両baselineのconfig、12 epoch/fold、全16実装hash、現行torch/numpy版、export/manifest/weak/gold/fold-auditのbyte hashが一致した。goldはhashのみ照合し、学習/選択/評価に用いない。両baselineのbest.ptとselected予測CSVのhash、gold非使用宣言、新規run保存先の不存在も確認した。[12項目と比較計画](../experiments/f003-attention24-plan-20261007.json)
+- 現行CLIはresume非対応なので、新しいfold0/1のrunへ24 epochを最初から学習する手順を記した。CUDA必須とBCE最低/同値時最初のcheckpoint選択は変更しない。実行後は最初の12 epochの一致を確認してから同一foldのBCE/12平均/補助11平均/所見別supportを比較する。selected BCE単独や既使用foldのbootstrapを独立した汎化証明に使わない。既存ラベル監査ツールは未実施のまま、fold0/1とgoldを保護する手順を維持した。
+- 実装/GPUコード・Notebook・既存checkpoint/実験runは変更せず、実MRI decode・モデル/実データの追加取得・実学習・gold評価・外部アップロード・代理提出は行っていない。全NPZの再走査や人工GPU forward/全unittestはconfig/手順だけの変更に対して繰り返していない。台帳の更新前コピーと準備検査scriptは上記の新規artifact runへ保存した。
+
+## f002のVersion2完走と、添付summary/CSVの監査（10月7日）
+
+- ユーザーが設定修正後に添付したsummaryを新しいrunへbyte同一で保存。SHA-256 `d419437450ce8a6fa4b09d6e9b821abf8eb6a42e1c9bb2ba8f398ed1a99d7b0c`。公式SDKで同じNotebookのVersion2がCOMPLETE、GPU有効・Internet OFF、期待する3 Inputs、全5 source cellが配布07と一致と確認した。全Output8件とオブジェクト版ID355923367を取得し、summary/receipt/CSV/exportの小さい4ファイルだけをダウンロードした。添付summaryはこの保存版とbyte同一だった。[19項目の監査](../experiments/f002-visible-inference-review-20261007.json)
+- Summaryはcandidate=f002-fold0-single-v1、passed/complete、training_performed=false、公開test3検査、cache_complete=true、cached_studies=3、receipt.valid=true、Tesla T4・torch2.11.0+cu128・Python3.13.15・CUDA12.8。checkpoint SHA-256 `189ecab25e0d1c029e974ee23f3c46239e5eceef290b5dca33f6831dcb8e1b03`はローカルfold0 BCE選択epoch11のbest.ptと一致し、feature contract/fingerprint/encoder出所/前処理実装も学習時と一致した。
+- CSV本体を独立に検査し、StudyInstanceUIDと所定12所見の順、3 UIDの重複なし・export coverageとの集合/順一致、36確率すべてfinite・[0,1]、所見ごとに非定数、receiptとsummaryの一致を確認した。CSV SHA-256 `f7b7fb3ca6c2f5cf17764838993f9fd0a1e5779becac2fda71ddcf4794883449`はreceiptと一致。exportはunrestricted test全3検査・9系列で物理順を報告している。NPZ本体は取得せず、元test/sample CSVとの一致は同じsourceによる実行時receiptが根拠であり、今回の独立UID照合はexport coverageに対して行った。
+- 推論セルのタイマーはpreflight0.1434秒・extract31.2499秒・head/validation0.3927秒・total31.7866秒。encoder読込みと特徴抽出を含むが、前段code import/setupやKaggle queue/起動を含むNotebook全体時間ではない。可視3検査から隠しtest時間へ外挿して完走を保証しない。自己Publicはnullで、手動提出後に測る。
+- 今回は既存保存版source/metadata/log・JSON/CSVのread-only取得とローカル監査、手順/台帳更新。GPU/学習/推論コードとNotebook、元checkpointは変更せず、MRI decode/encoder/head forward・追加学習・gold評価・モデル/NPZ取得・外部アップロード/提出をassistantは行っていない。変更が記録/手順だけなので過去のunittest/人工GPU forwardは再実行していない。生ログ/添付コピーと監査scriptは`artifacts/research/20261007-f002-summary-review/`へ保存した。
+
+## 07のOutput0件とGPU無効の原因確認（10月7日・Version1の履歴）
+
+- ユーザー指定`rsraki/notebookdd86797040` Version1を公式SDKで取得。ERROR、enableGpu=false、machineShape=None、Internet ON、Output一覧0件。GPU guard前までのcode読込みは進み、ログはIn[1]の`assert torch.cuda.is_available(), 'CUDA GPU required'`でAssertionError。ログの停止行timestampは16.2488秒で、推論時間ではない。後段推論セルのsummary/CSV作成へ到達していなかった。[10項目の監査](../experiments/f002-saved-run-failure-review-20261007.json)
+- source全5 cellは設定済み07と一致、Input参照もCompetitionと既存encoder/codeと新headの3件。モデル/特徴の問題やp003隠し例外と混同せず、CPU fallback/CUDAチェック削除を加えず、実行設定のGPU有効・Internet OFFで再保存する方針とした。標準SDK OAuth更新がsandboxの保存権限で一度停止したが、許可されたSDK通常認証の再実行で成功した。認証情報の値を直接読んだりコピー/表示したりしていない。
+- raw source/metadata/約4.9KBのlogを新規runへ保存し、同じfailed runから生成されていないsummary/CSVを取得できるとは説明していない。次のVersion2で可視停止が解消したことを上記に記録し、Version1 evidenceを上書きしていない。
+
+## f001/f002のfold1完成runと、07単独推論候補の確認（10月6日）
+
+- ユーザー提供の二つのrun.jsonと全24 epochの保存予測、best/last checkpointをread-only監査し121項目が成功。status complete、12 epoch・各208 optimizer steps、seed20261002、fold1、学習3,316/検証891、RTX4090、weak BCE選択、encoder凍結、gold学習/選択/評価なし。config差はpoolingと仮説文だけで、source/教師/特徴/固定fold監査/環境が一致した。fold0の原runとhash、fold間のconfig/source/入力一致も確認した。[比較監査](../experiments/f001-f002-fold1-review-20261006.json)
+- 全CSVのhash・891 UID/order・所見別AUC/supportを再計算して一致。欠損を除く6,207観測セルのBCEは予測確率から再計算し差1e-6未満、clippingなし。best.ptのhashは選択記録と一致し、CPU上で両checkpointのconfig/fold/epoch/source契約・全tensor finiteを確認。両方BCE最良epoch12でbest/lastも12、AUCも12で最大だった。監査scriptの初回はcheckpoint hashをhistoryにあると想定、次はconfigをrun.json内にあると想定して停止した。実際のselected/config.jsonを参照する検査へ修正して完了し、学習実装・元成果物は変更していない。
+- f001はweak BCE0.334234596、12所見AUC0.792570858、補助11平均0.783085734、head fitting190.744秒。f002はBCE0.317468683、12平均0.815430270、補助11平均0.808135740、198.853秒。9/12所見で改善、Synovitisは差-0.001237113。MCLとPF OAは両foldで低下し、ACL・Medial Meniscus・Baker's等8所見で改善が続いた。epoch12は固定日程末尾で、収束完了やepoch延長の妥当性は未検証。
+- 固定selected epoch12予測に、861 supplied groups・PCG64 seed20261006・3,000回のpaired bootstrapを適用。全抽出で12/11平均が定義され、12平均差+0.022859412の95%区間[+0.010083240,+0.035736371]、補助11平均差+0.025050005の区間[+0.012249187,+0.037048488]。固定予測の記述的不確実性で、同じfoldでのcheckpoint選択や患者独立性、Publicへの一般化は対象外。[bootstrap記録](../experiments/f001-f002-fold1-bootstrap-20261006.json)
+- f002を単独Kaggle評価へ進める。初回はfold0基準のBCE選択epoch11を固定し、異なる検証集合のAUCの大小でfoldを選ばない。既存encoder/code Inputと同じ実装を使う設定済み07と317,253 bytesのprivate head ZIPを新規handoffへ準備。ZIPはbest.pt/config.json/checkpoint-provenance.jsonのみ、全bytesとcheckpoint hash一致を確認。所見別係数・fold混合・p002混合・教師/学習変更は加えず、ラベルの帰属/版/条件と採用理由を記録した。
+- 設定済み07は学習/推論実装を変えず、Inputパス・checkpoint/source hash・fold/epochの固定と、phase/時間/例外tracebackを小さい`F002_INFERENCE_SUMMARY.json`へ保存する処理を追加した。実行前の全セル構文と空outputを確認。実Inputのcodeとprovenanceだけを写した人工環境で3 code cellを実行し、既存f002 headのRTX4090 forwardから、Reportのない人工2検査の12列CSV/UID/order/finite確率/receipt/hash検査が成功。違うcheckpoint hashの拒否と人工抽出例外の再送出も確認し、failed phase/tracebackを保存して代替CSVを生成しない。[handoff検証](../experiments/f002-fold0-single-handoff-20261006.json)
+- 今回は既存成果物/weak CSVの監査・CPU bootstrap・梱包・人工特徴でのhead GPU推論・文書/台帳更新のみ。実MRIのdecode/encoder forward、モデル/実データ取得、追加学習、gold評価、外部アップロード/提出はしていない。実Kaggle T4/MRIの時間と自己Public/隠し完走は未確認。元runを上書きせず、原JSONコピー・監査/梱包/人工検査scriptを`artifacts/research/20261006-f001-f002-fold1-review/`へ保存した。
+
+## f001/f002のfold0完成runと予測・checkpointの監査（10月6日）
+
+- ユーザー提供の二つのrun.jsonと同じrun内の保存成果物をread-only監査。両方status complete、12 epoch、各epoch 212 optimizer steps、seed20261002、fold0、学習3,386/検証821、RTX4090、BCE選択、汎用encoder凍結、gold学習/評価/選択なし。固定CSV/fold-audit/特徴export/source/runtime/hashが一致し、config差はhead poolingと仮説文のみだった。[117項目の監査記録](../experiments/f001-f002-fold0-review-20261006.json)
+- 全24 epochのCSV hash・821 UID/order・所見別AUC/supportを再計算して一致。欠損を除いた5,727観測セルのBCEも予測確率から再計算し、各run記録との差は1e-6未満、確率0/1のclippingなし。best.ptのhashは選択記録と一致し、CPU上でbest/lastのconfig/fold/epoch/source契約・全tensor finite値を確認した。bestは両方epoch11、lastはepoch12。BCE最低/同値時最初の選択規則を確認し、AUC最良epoch12へ後付け変更していない。
+- f001はweak BCE0.332474872、12所見AUC0.770865231、補助11平均0.800034798、学習164.681秒。f002はBCE0.319130235、12所見AUC0.813290207、補助11平均0.811771135、179.893秒。9/12所見でAUC改善。12平均差+0.042424976の74.64%はSynovitis差+0.38（陰性1/陽性100）由来。MCLは陽性11、差-0.097808442、PF OAとFractureも小幅低下した。
+- 既存CSV-only bootstrapをselected epoch11の固定予測に適用。812 supplied groups・同一group多重度で両モデルをpaired抽出、PCG64 seed20261006・3,000回。補助11平均差+0.011736338の95%区間[-0.002762089,+0.024256004]は0を跨いだ。12平均は1,127回が未定義で、区間[+0.027034037,+0.056546934]は定義可能な1,873回に条件付けられる。checkpoint選択の不確実性や患者独立性、画像由来正解/Publicへの一般化を含まない。[bootstrap記録](../experiments/f001-f002-fold0-bootstrap-20261006.json)
+- 暫定候補はf002、次は同じconfig/seed/12 epoch/特徴/教師/BCE選択のfold1 paired比較とした。fold1学習3,316/検証891、Synovitis陽性97/陰性25を既存weak CSVから確認した。歴史的e009/rank50との比較は同じweak manifest上の記述比較で、異なるencoder/解像度/学習/選択方式の一要因効果とは呼ばない。
+- 今回は既存runとweak予測の監査、CPU checkpoint検査、CSV bootstrap、実験台帳と手順の更新のみ。追加学習・モデル/実データ取得・MRI decode・画像からのforward・gold評価・外部アップロード/提出は行っていない。学習/GPUコードを変更していないため過去のunittest/人工GPU forwardは再実行していない。既存の学習runは上書きせず、原run.jsonコピーと検査scriptは`artifacts/research/20261006-f001-f002-fold0-review/`へ保存した。
+
+## 05の再提出失敗と06全件Outputの取得・検証（10月6日）
+
+- 公式SDKで提出ref `56870280`、2026-10-06T04:31:47.710Z、scriptVersionId `355633504`、errorDescriptionあり・Public nullを確認。保存`rsraki/notebook59f34ce4e6` Version 1の全セルは配布05と一致、出力オブジェクトの版IDも提出と一致した。READY passed・可視3件256.538秒、4 CoAt完了・fallback 0、可視CSVの報告hashは旧失敗02と同じ。可視実行ログ約21KBも保存した。[2回目の監査](../experiments/p003-second-failure-review-20261006.json)
+- 元ソースを文字列として抽出して調べ、8時間全体予算と、その残り時間を子処理waitへ渡す構造、48件超でCoAtを逐次実行する分岐を再確認。4時間の専用timeoutは確認していない。取得ログは保存時の可視実行であり、隠しtraceback/時間は未取得。CPU/GPU資源、データ依存の前処理/fallback、子処理失敗などは原因候補で、修正・9時間超過を確定していない。
+- ユーザー指定の`kaggle kernels pull rsraki/notebookbd6efc1cf7`でコードを取得し、Outputは別途公式SDKで取得。Version 2・出力scriptVersionId `355640726`、GPU有効・Internet OFF、保存版sourceは梱包06からPILOT=Falseのみ変更。保存実行status COMPLETE、約406KBのログでFeatures 4207/4207とcomplete=Trueを確認した。Inputはcompetitionとprivate feature Inputの二つで、Datasetの歴史的版番号はmetadataから確定していない。
+- 全件exportのSHA-256 `aa164be29b14813b9793c51b9924ef2e4019f4f01c2aa1ec35d17fdf536e1f5a`。metadata 26項目が成功し、4,207 weak UID・固定group/fold・元CSV・汎用encoder出所・前処理/config/実装hash・系列選択が一致。gold UID/group混入なし。12,621系列・386,196中心、全系列物理順、元slice数12～320、特徴作成12,548.213秒、NPZ 281,589,228 bytes。[全件監査](../experiments/f001-full-feature-review-20261006.json)
+- `data/features/f001-weak-sv355640726/`へ新規転送し、4,207 NPZとstudies.csvの全サイズ/SHA-256を照合。続いて既存verify_feature_cacheで全NPZのshape/dtype/finite値・mask・位置/plane/flag・fingerprintをCPU検証した。f001/f002の共通feature契約と、pooling以外の学習条件一致、fold0学習3,386/検証821も確認した。検証記録は`artifacts/research/20261006-p003-second-failure/full-payload-verification.json`。
+- ローカルdoctorはPython 3.12.13、torch 2.10.0+cu128、必要な画像/学習moduleあり、CUDA trueで成功。f001/f002の既定outputは未作成で、手順には検証済みcacheの実パスを反映した。実学習は開始していない。
+- 今回はユーザーが許可した保存済み特徴・JSON/CSV・コード・ログの取得と検査を実施。元DICOM/モデル重みの追加取得・MRI decode・実学習・外部アップロード・提出は行っていない。GPU/学習/推論コードは変更せず、過去のunittestや人工GPU forwardは再実行していない。実学習時間・weak AUC・独自Publicは未測定。公式CLIの[pull/outputの区別](https://github.com/Kaggle/kaggle-cli/blob/main/docs/kernels.md)も確認した。
+
+## 06・32検査特徴pilotのユーザーOutput確認（10月6日）
+
+- 添付`export.json`を新しいrunへbyte同一で保存し、SHA-256 `fdbeb8cd4b340969e97bc2070bce7aefb45e82273d56935a8ad53219f9e837b9`を記録した。[監査](../experiments/f001-pilot-review-20261006.json)の21項目が成功。complete/limited/32件、config/実装hash、特徴fingerprint、ローカル梱包済みInputのencoder出所・manifest hash、元train/series CSV hashが一致した。
+- 既存の監査済みweak CSVからseed 20261002・fold0学習側の32件を再構成し、UID集合・構造hash・pilot CSVとstudies.csvのhashを再計算して一致。fold0とgold/groupは含まず、pilotのfold内訳は1:7、2:11、3:9、4:5。教師値は変更していない。
+- 32検査すべてが3方向を含み、96系列・2,953中心。全系列physical_position順、PixelSpacingは0.1367～0.7031mmで正の有限値、中心数16～48、元slice数16～128、中心は全範囲を覆う。32 NPZの記録サイズ合計は2,152,567 bytes。NPZ本体は未提供で、shape/finite値とpayload hashはこのレビューで独立に再検証していない。現行コードは各特徴の生成時にfinite値を検査し、export保存後にverifyする構成。
+- Tesla T4、torch 2.11.0+cu128、numpy 2.1.3、pydicom 3.0.2、Pillow 12.3.0。特徴作成83.0177秒、検査ごとの最小/中央値/最大は1.071/1.989/8.815秒。4,207件への単純換算は3.032時間・NPZ約283MBで、初期化などを除く目安であり全件実測・上限ではない。
+- ユーザーは末尾の画像について「明らかな崩れは見当たらない」と回答。現行Notebookの表示対象は最初の3検査の各先頭系列であり、96系列全部の目視検証ではない。assistant自身は画像を見ていない。Kaggle保存Notebook/Input版・全実行ログも未取得で、complete=trueだけから最後の検証・表示セルの完了を断定しない。
+- 全件特徴へ進む判断とし、同じInput、PILOT=False・1 shard・新しい保存実行を案内した。実学習は全件cache転送・検証後。今回実行したのは添付JSONとローカルCSV/metadataの監査だけで、モデル取得・MRI処理・学習・外部アップロード/提出は行っていない。推論/学習コードは変更せず、過去のunittest/GPU検査は再実行していない。
+
+## 06開始手順とローカルInput梱包（10月6日）
+
+- 公式DINOv2 commit `7764ea0f912e53c92e82eb78a2a1631e92725fc8`、ViT-S/14 registerなしの配布リンク、公式README/MODEL_CARDの出所説明を確認した。GitHub APIのWeb取得は失敗したが、公式commitページから完全なSHAを確認できた。source/重みの実payloadは取得していない。
+- `package_frozen_feature_inputs.py`は手動取得した公式ZIP/重みを受け取り、source-tree/重みhashと出所JSON、固定コード、監査済みmanifest四ファイルを一つのprivate Input ZIPへ梱包する。元Notebookは変更せず、Inputパスだけ設定した06のコピーを新規runへ出力する。source import・モデル読込み・ネット通信・自動アップロードはない。出所の自己申告とローカルhashを独立した配布元認証とは扱わない。
+- 標準ライブラリの人工fixture 5テストが成功。梱包後に展開してsource/重みhash一致、manifest allowlist、推論/QCセルの不変性、PILOT設定、構文・未実行状態、既存出力/古いfold監査/変更コードZIP/不正archiveの拒否を確認した。実画像・実重み・GPUを使わない検査である。
+- 手順を公式2ファイルの取得→ローカル梱包→private Dataset→設定済み06の32検査保存実行→export.json確認へ具体化した。今回は手順整備と人工テストだけで、実モデル取得・実MRI処理・学習・外部書込みは未実施。全件特徴作成・学習はpilotの結果確認後に進める。
+
+## 提出待ち中の独自モデル準備の確認（10月6日）
+
+- 既存コードbundleの存在とSHA-256 `6c8731cfc34489c5ce1cccb60c163829d39e84c482dac64cffcaf0db882a6cce`、manifest四ファイルの存在を確認した。所定パスの汎用DINOv2 source・重み・記入済provenance・全件特徴cacheは存在しなかった。これは既知パスの確認で、PC全体やKaggle Inputの検索ではない。
+- 06のInputパスはひな形、`PILOT=True`、`SHARD_COUNT=1`であることと現行手順を照合した。05の採点待ちにInput準備を進め、その後32検査pilot→全件特徴→4090学習比較と進む順序を追記した。公式DINOv2 READMEで汎用ViT-S/14と凍結特徴利用の説明も再確認した。
+- 今回は準備状況の確認と文書整理のみ。元DICOM/モデル取得、MRI処理、実学習、外部アップロード・提出は開始していない。コード・Notebook・実験台帳は変更せず、過去のunittest/GPU検査は再実行していない。
 
 ## 新05・64検査診断のユーザーOutput確認（10月6日）
 

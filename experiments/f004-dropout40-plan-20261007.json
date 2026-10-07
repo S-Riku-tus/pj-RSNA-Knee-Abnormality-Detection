@@ -1,0 +1,122 @@
+{
+  "created_at_utc": "2026-10-07T04:35:29.125181+00:00",
+  "status": "prepared_not_executed",
+  "hypothesis": "Change only head.dropout0.2to0.4 relative to completed f00324; late training BCE fell while weak validation BCE rose on both folds. Test stronger regularization without assuming label noise or Public improvement. Keep24 epochs, features, encoder, weak labels, folds, seed, LR and minimum masked weak BCE checkpoint selection fixed.",
+  "changed_config_paths": [
+    "reason",
+    "head.dropout"
+  ],
+  "baseline_config": "configs/experiments/f003-dinov2-attention24.json",
+  "baseline_config_sha256": "f90f843a362e3238f21faaf8c0e2e519aca6cae745b238f3e07beea055ea4f9d",
+  "candidate_config": "configs/experiments/f004-dinov2-attention24-dropout40.json",
+  "candidate_config_sha256": "8080648bd9c399bb40a19a2f9a832dee587f4d0b543ff9ef1046f574d26c9c95",
+  "seed": 20261002,
+  "folds": [
+    0,
+    1
+  ],
+  "source_sha256": {
+    "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+    "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+    "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "feature_runtime.py": "bfa9c7d075f342bd45fcdf2152e7560587972923a1e37e6d915f7e617399e01e",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+    "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+    "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+    "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+    "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05"
+  },
+  "input_sha256": {
+    "data/features/f001-weak-sv355640726/export.json": "aa164be29b14813b9793c51b9924ef2e4019f4f01c2aa1ec35d17fdf536e1f5a",
+    "data/features/f001-weak-sv355640726/studies.csv": "a99b29514edf2e70e84ca05dfff8cad09787c6e511436f5d74334c2e53c917e9",
+    "data/manifests/v1-vmohitrao-research/manifest.json": "976abfe212ce23ad8112f16cb61d2c8172bb837ad50aed7ac88886760fc2cabf",
+    "data/manifests/v1-vmohitrao-research/weak.csv": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+    "data/manifests/v1-vmohitrao-research/gold.csv": "f86a67cf9c5704c37bbe0d7912b308cd7497a2804918c0cc5e8e2008a0b16bad",
+    "data/manifests/v1-vmohitrao-research/fold-audit-v2.json": "bca25c48af792853ff1c19eac8e728462696dd869681bd8a3285dc7fcdbc4e24"
+  },
+  "feature_fingerprint": "1f1726d4381135581983ba2740e16651e0ca39b7d8df037f1acf4b0a5f3b5185",
+  "planned_environment": {
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "numpy": "2.5.3",
+    "gpu": "NVIDIA GeForce RTX 4090; CUDA required by unchanged training CLI"
+  },
+  "selection": "Minimum masked weak validation BCE, earliest tie; never gold or posthoc max AUC",
+  "runs": [
+    {
+      "fold": 0,
+      "baseline_run": "artifacts/runs/f003-dinov2-attention24-fold0",
+      "baseline_run_sha256": "767cd1cf6c2ac4d71493dcad0a320ff9eae7eb07c90f777d58b9a33b7e970030",
+      "baseline_checkpoint_sha256": "7ff361eaa22a9dac57acf63e67da98ea293ab34b44b259cfff80b2f3877f7e68",
+      "baseline_prediction_sha256": "9db8c2d94772c66371f3241d276b6c6fba80baccb7ba968ff232b383b2fbdf87",
+      "baseline_selected_epoch": 15,
+      "baseline_weak_bce": 0.3162323486431327,
+      "baseline_weak_auc12": 0.8230599111025677,
+      "new_output": "artifacts/runs/f004-dinov2-attention24-dropout40-fold0",
+      "command_args": [
+        ".venv/Scripts/python.exe",
+        "scripts/frozen_features.py",
+        "train",
+        "--manifest",
+        "data/manifests/v1-vmohitrao-research",
+        "--fold-audit",
+        "data/manifests/v1-vmohitrao-research/fold-audit-v2.json",
+        "--cache",
+        "data/features/f001-weak-sv355640726",
+        "--config",
+        "configs/experiments/f004-dinov2-attention24-dropout40.json",
+        "--fold",
+        "0",
+        "--output",
+        "artifacts/runs/f004-dinov2-attention24-dropout40-fold0"
+      ]
+    },
+    {
+      "fold": 1,
+      "baseline_run": "artifacts/runs/f003-dinov2-attention24-fold1",
+      "baseline_run_sha256": "8315ad8b0b060a9c790014c96e0a4dcf4cb90ba61b490d5b4e373e04ce201db3",
+      "baseline_checkpoint_sha256": "47d29f38ea846c23bc0375d8ed3d740d7f22611f18f71ad585af7f1a679ee353",
+      "baseline_prediction_sha256": "fcc2aa4f7f4a89916e149d7df96b6fb97654e20a9c6f2f0515e711aeac72748b",
+      "baseline_selected_epoch": 12,
+      "baseline_weak_bce": 0.31746868302813663,
+      "baseline_weak_auc12": 0.8154302698313463,
+      "new_output": "artifacts/runs/f004-dinov2-attention24-dropout40-fold1",
+      "command_args": [
+        ".venv/Scripts/python.exe",
+        "scripts/frozen_features.py",
+        "train",
+        "--manifest",
+        "data/manifests/v1-vmohitrao-research",
+        "--fold-audit",
+        "data/manifests/v1-vmohitrao-research/fold-audit-v2.json",
+        "--cache",
+        "data/features/f001-weak-sv355640726",
+        "--config",
+        "configs/experiments/f004-dinov2-attention24-dropout40.json",
+        "--fold",
+        "1",
+        "--output",
+        "artifacts/runs/f004-dinov2-attention24-dropout40-fold1"
+      ]
+    }
+  ],
+  "decision": "Optional bounded local comparison, separate from serving diagnosis; do not change09weights yet",
+  "adoption_rule": "Review both BCE-selected folds versus f003. Require consistent useful BCE/aux11 behavior and inspect PF OA/MCL supports. A fold0-only gain or lower selected BCE alone is insufficient. Record uncertainty before promotion.",
+  "teacher_followup": "Second-check the30 preliminary training-side evidence cells and freeze definitions before a separate teacher-only experiment; no missing-to0 or automatic relabeling",
+  "spatial_followup": "Only after a working scored serving path and teacher review: consider patch/spatial features in a separately budgeted Kaggle extraction experiment; existing CLS cache cannot supply them",
+  "limits": [
+    "Late BCE rise is compatible with overconfidence/overfitting, not proof of label errors",
+    "Higher dropout can underfit; value0.4 is an explicit candidate, not an established optimum",
+    "Folds already inform model choices; no independent patient holdout or Public guarantee",
+    "No actual training, MRI/model acquisition, upload or submission started by this preparation"
+  ],
+  "training_started": false,
+  "public_lb": null
+}

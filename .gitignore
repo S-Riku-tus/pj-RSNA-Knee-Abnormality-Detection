@@ -26,3 +26,5 @@ artifacts/*
 *.zip
 *.tar.gz
 submission.csv
+# This generated Notebook embeds a trained checkpoint; keep weights out of Git.
+notebooks/public/10_submit_f002_embedded_head.ipynb

@@ -1,0 +1,85 @@
+{
+  "checked_date_jst": "2026-10-06",
+  "status": "prepared_artificial_cuda_verified_real_kaggle_not_executed",
+  "head": "f002 attention single fold0, seed20261002, BCE-selected epoch11",
+  "fixed_choice_reason": "Keep the initial fold0 baseline training convention; fold1 is the stability check, not a highest-validation-score selector. Freeze this choice before any new Public result.",
+  "handoff": "artifacts/kaggle/f002-fold0-single-v1-20261006",
+  "notebook_sha256": "51e858eca2223bc9a25950ab996e73d771fc43957a64c58ba87303fe8aa9a450",
+  "head_zip_sha256": "3cce03fda576e4af3d6e36b9dee99ab541afc6949dd807f81f7bdf5b44dad24a",
+  "head_zip_bytes": 317253,
+  "checkpoint_sha256": "189ecab25e0d1c029e974ee23f3c46239e5eceef290b5dca33f6831dcb8e1b03",
+  "feature_fingerprint": "1f1726d4381135581983ba2740e16651e0ca39b7d8df037f1acf4b0a5f3b5185",
+  "source_sha256": {
+    "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+    "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+    "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "feature_runtime.py": "bfa9c7d075f342bd45fcdf2152e7560587972923a1e37e6d915f7e617399e01e",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+    "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+    "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+    "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+    "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05"
+  },
+  "training_run_sha256": "cf04c5c7807206510a1eb17658b9c986312be437c4e111d5543c8a3c514ee448",
+  "fold1_review_sha256": "559add53f05c5b884b6a41befdd187654543ee4ca60811d41b12c6a73078ad02",
+  "package_sha256": "dd617e45bc23bcd51a809d5fd5cdec254168daf1e1121d9455b3434654b9e51a",
+  "existing_encoder_input_package_sha256": "adb0bc329e51ec5ab271d1756ba58fc49d50970b3b318c20d6a4665dc7400f27",
+  "required_inputs": [
+    "rsna-knee-abnormality-detection Competition",
+    "rsraki/rsna-frozen-feature-inputs-v1 (existing immutable code/encoder Input)",
+    "rsraki/rsna-f002-head-fold0-v1 (new private checkpoint Input)"
+  ],
+  "settings": "T4 GPU; Internet OFF; private inputs/notebook; manually save/run and submit",
+  "payloads": [
+    "best.pt",
+    "config.json",
+    "checkpoint-provenance.json"
+  ],
+  "attribution": {
+    "author": "vmohitrao",
+    "source_url": "https://www.kaggle.com/datasets/vmohitrao/rsna-knee-report-labels/versions/3",
+    "source_version": "Dataset Version3",
+    "license": "CC BY-NC 4.0",
+    "method": "Report-only weak labels; P=1, N/B=0, U/M=missing",
+    "local_changes": "Fixed supplied-group folds; gold/group exclusions and all-missing exclusions; fit an independent frozen-DINOv2 attention head. No gold fitting/selection/evaluation in f001/f002.",
+    "use": "Non-commercial research; adopted after the local 2026-10-04 Rules/Host review; maintain attribution and original license conditions.",
+    "policy_review": "docs/research/kaggle-source-eligibility-20261004.json",
+    "policy_review_sha256": "9fc63a33089c112574d8121ef3843b2600ee31b4218ead94d1d6c514ccddbb45"
+  },
+  "package_checks": [
+    "CPU checkpoint load and finite tensors already audited",
+    "Fixed initial fold0 epoch11, selected by weak BCE",
+    "Archive allowlist and every byte verified",
+    "Code cells compile, outputs empty, no placeholder Input assignments",
+    "Inference implementation unchanged; added path bindings, immutable hashes and phase/time/exception summary"
+  ],
+  "synthetic_gpu_qa": {
+    "status": "passed",
+    "checks": [
+      "Configured three code cells executed, actual selected f002 head inferred on RTX4090 artificial features; Report-free two-study/12-target submission and receipt validated",
+      "wrong_checkpoint: exception reraised with failed phase/traceback summary; no fallback predictions or submission",
+      "extraction_exception: exception reraised with failed phase/traceback summary; no fallback predictions or submission"
+    ],
+    "cuda_gpu": "NVIDIA GeForce RTX 4090",
+    "notebook_sha256": "51e858eca2223bc9a25950ab996e73d771fc43957a64c58ba87303fe8aa9a450",
+    "model": "existing fixed f002fold0 epoch11 head, no training or weight modifications",
+    "scope": "Artificial feature extraction substituted; actual head CUDA inference. No real encoder/MRI extraction, uploads or Public/hidden-runtime verification."
+  },
+  "synthetic_gpu_qa_sha256": "f3335dc7e8c2bafd7484733bf68cecce7d3ea8dc6ecccb8f3af858a6280da9be",
+  "scope": "Existing actual head checkpoint forward on artificial features; unchanged numerical inference. Notebook bindings/hash checks and phase/runtime/exception summary added; no training/real encoder/MRI inference or automatic uploads/submission.",
+  "not_measured": [
+    "real Kaggle T4 forward",
+    "MRI inference runtime",
+    "hidden test completion",
+    "own Public"
+  ],
+  "gold_evaluated": false,
+  "public_lb": null
+}

@@ -1,0 +1,117 @@
+{
+  "checked_at_utc": "2026-10-07T02:10:57.524619+00:00",
+  "checked_date_jst": "2026-10-07",
+  "status": "saved_visible_inference_passed_ready_for_manual_submission",
+  "checks_passed": [
+    "Attachment is byte-identical to saved Version2 summary",
+    "Requested notebook Version2 complete and version unchanged during retrieval",
+    "GPU enabled and Internet disabled",
+    "Same five source cells as configured07",
+    "Expected three Input references attached",
+    "Version-bound eight Outputs include summary, CSV and receipt",
+    "Summary candidate complete passed with no training or Public score",
+    "Runtime GPU T4, torch CUDA12.8 and Python3.13",
+    "Selected checkpoint bytes match audited local fold0 epoch11 best",
+    "Feature contract matches trained head and current implementation",
+    "Feature fingerprints agree and equal contract hash",
+    "Complete unrestricted test cache has three studies",
+    "CSV UID set and order match exported test coverage",
+    "CSV header has exact Study UID then twelve ordered targets",
+    "All 36 CSV scores finite in [0,1] and nonconstant across studies",
+    "Downloaded receipt equals summary and CSV hash matches",
+    "All downloaded selected-file bytes and hashes match the retrieval record",
+    "Timers are positive finite with total covering all phases",
+    "Three-series-per-study test coverage and physical slice order"
+  ],
+  "notebook": "rsraki/notebookdd86797040",
+  "saved_version": 2,
+  "script_version_id": 355923367,
+  "settings": {
+    "gpu_enabled": true,
+    "internet_enabled": false,
+    "gpu": "Tesla T4"
+  },
+  "scope": "Saved visible test3 run; own Public and hidden completion are unmeasured",
+  "attachment_sha256": "d419437450ce8a6fa4b09d6e9b821abf8eb6a42e1c9bb2ba8f398ed1a99d7b0c",
+  "saved_source_sha256": "aa39949450dc0aa6e632afd60c1b5fbebc58273e04b232557b03a1e53a2b8de0",
+  "saved_log_sha256": "634fe9078fbf61f9de929614fa6be65a36853ecee62b886cad62092f4379011b",
+  "metadata_sha256": "cb1fc1a09e1a9fcd5dceb1f5e9aadd74bcc6128a020a10e6745e609a3367133b",
+  "source_cells_match_configured07": true,
+  "output_files": 8,
+  "checkpoint_sha256": "189ecab25e0d1c029e974ee23f3c46239e5eceef290b5dca33f6831dcb8e1b03",
+  "feature_fingerprint": "1f1726d4381135581983ba2740e16651e0ca39b7d8df037f1acf4b0a5f3b5185",
+  "feature_contract": {
+    "schema_version": "frozen_features_v1",
+    "preprocess": {
+      "version": "physical_letterbox_triplet_v1",
+      "image_size": 392,
+      "max_series": 3,
+      "slices_per_series": 48,
+      "percentiles": [
+        1,
+        99
+      ]
+    },
+    "encoder": {
+      "model_name": "dinov2_vits14",
+      "feature_dim": 384,
+      "batch_size": 16,
+      "precision": "fp16"
+    },
+    "encoder_provenance": {
+      "source_url": "https://github.com/facebookresearch/dinov2",
+      "source_revision": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+      "source_tree_sha256": "4a5a3cfbd4185dd4955c1de2f2f26e3b4ba3fa88cccae503b9f93ceb08fed818",
+      "weights_url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth",
+      "weights_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+      "license": "Apache-2.0 for generic DINOv2 code/weights; original archive notices retained",
+      "pretraining": "generic_dinov2_lvd142m",
+      "competition_finetuned": false,
+      "gold_used_for_tuning": false,
+      "reviewed_at": "2026-10-06 JST; official README, model card and pinned commit reviewed",
+      "exposure_audit": "Intended input is the unmodified generic ViT-S/14 checkpoint manually obtained from the official URL. Competition fine-tuning and gold selection are not part of the official generic recipe. LVD-142M overlap with competition patients/images is unknown. Local hashes pin supplied bytes; no publisher checksum or independent origin authentication was performed."
+    },
+    "implementation_sha256": {
+      "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+      "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+      "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+      "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+    }
+  },
+  "test_studies": 3,
+  "test_series": 9,
+  "timers_seconds": {
+    "preflight_seconds": 0.14341382399999247,
+    "extract_seconds": 31.24987846700003,
+    "head_and_validation_seconds": 0.39268612899996924,
+    "total_seconds": 31.786593746999984
+  },
+  "timing_interpretation": "31.7866 seconds is the inference code-cell timer; includes encoder loading/extraction and head/CSV checks, excludes earlier code import/setup cells and Kaggle queue/runtime startup. Three visible studies cannot establish hidden-test runtime.",
+  "csv": {
+    "sha256": "f7b7fb3ca6c2f5cf17764838993f9fd0a1e5779becac2fda71ddcf4794883449",
+    "studies": 3,
+    "targets": 12,
+    "valid": true,
+    "uid_set_and_order_match_exported_coverage": true,
+    "finite_probability_cells": 36,
+    "minimum_probability": 0.004870201461017132,
+    "maximum_probability": 0.986233115196228
+  },
+  "previous_failure": {
+    "review": "experiments/f002-saved-run-failure-review-20261007.json",
+    "version": 1,
+    "cause": "GPU disabled; CUDA GPU required in first code cell",
+    "resolved_for_visible_run": true,
+    "p003_hidden_exception_resolved": false
+  },
+  "next_step": "User manually submits Version2 submission.csv from rsraki/notebookdd86797040 without changing code/checkpoint/Inputs. Record own Public or exact error. Do not mix with p002 or change training/labels before measuring this single candidate.",
+  "scored_baseline": "p002 Public0.937 retained",
+  "public_lb": null,
+  "limitations": [
+    "Weak validation AUC is not competition Public AUC and cannot guarantee0.943.",
+    "Hidden dataset differs from visible3; no runtime/completion guarantee.",
+    "Feature NPZ payloads and original test/sample CSVs were not downloaded; UID consistency independently checked against export coverage and original test checks supported by exact-source runtime receipt.",
+    "Remote dataset historical version numbers were not established; the executed source and feature/checkpoint hashes bind the used recipe."
+  ],
+  "performed": "Read-only source/metadata/log and selected JSON/CSV retrieval; local summary/CSV audit and record updates. No new MRI/encoder inference, training, gold evaluation, uploads or submissions by assistant."
+}

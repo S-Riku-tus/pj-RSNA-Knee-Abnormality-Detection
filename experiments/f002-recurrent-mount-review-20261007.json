@@ -1,0 +1,194 @@
+{
+  "schema_version": "f002_recurrent_pre_python_mount_audit_v1",
+  "checked_at_utc": "2026-10-07T05:58:56.553437+00:00",
+  "checked_date_jst": "2026-10-07",
+  "status": "recurrent_same_head_mount_failure_independently_confirmed",
+  "checks": [
+    {
+      "name": "saved_version1",
+      "passed": true
+    },
+    {
+      "name": "saved_all_cells_equal09",
+      "passed": true
+    },
+    {
+      "name": "saved_status_ERROR",
+      "passed": true
+    },
+    {
+      "name": "mount_failure_precedes_notebook",
+      "passed": true
+    },
+    {
+      "name": "same_dataset_id_and_internal_version",
+      "passed": true
+    },
+    {
+      "name": "same_head_input_slug",
+      "passed": true
+    },
+    {
+      "name": "provided_script_version355963229",
+      "passed": true
+    },
+    {
+      "name": "managed_mkdir_readonly",
+      "passed": true
+    },
+    {
+      "name": "no_visible_outputs",
+      "passed": true
+    },
+    {
+      "name": "no_python_log_events",
+      "passed": true
+    },
+    {
+      "name": "gpu_enabled_internet_off",
+      "passed": true
+    },
+    {
+      "name": "exact_required_input_sources",
+      "passed": true
+    },
+    {
+      "name": "own_p002_public0937_retained",
+      "passed": true
+    },
+    {
+      "name": "own_p002_saved_source_retained",
+      "passed": true
+    },
+    {
+      "name": "p003_both_public_unscored",
+      "passed": true
+    },
+    {
+      "name": "old_f002_public_unscored",
+      "passed": true
+    },
+    {
+      "name": "prior256_success_source_retained",
+      "passed": true
+    },
+    {
+      "name": "previous_mount_failure_record_preserved",
+      "passed": true
+    },
+    {
+      "name": "core16_unchanged",
+      "passed": true
+    },
+    {
+      "name": "selected_head_unchanged",
+      "passed": true
+    },
+    {
+      "name": "saved_CPU_probe_source_matches",
+      "passed": true
+    }
+  ],
+  "check_count": 21,
+  "notebook": {
+    "ref": "rsraki/notebook6372fe6490",
+    "version": 1,
+    "script_version_id": 355963229,
+    "url": "https://www.kaggle.com/code/rsraki/notebook6372fe6490?scriptVersionId=355963229",
+    "source_sha256": "2e362b695e279478de8e40c6bb1ef29bd84a96cdf4d985e05c4e4f4b3e120ae6",
+    "metadata": {
+      "id": 137436745,
+      "ref": "rsraki/notebook6372fe6490",
+      "title": "notebook6372fe6490",
+      "author": "rsraki",
+      "slug": "notebook6372fe6490",
+      "lastRunTime": "2026-10-04T05:58:58.184Z",
+      "language": "python",
+      "kernelType": "notebook",
+      "isPrivate": true,
+      "enableGpu": true,
+      "enableInternet": false,
+      "datasetDataSources": [
+        "rsraki/rsna-dicom-decoders-py313-v1",
+        "rsraki/rsna-f002-head-fold0-v1",
+        "rsraki/rsna-frozen-feature-inputs-v1"
+      ],
+      "competitionDataSources": [
+        "rsna-knee-abnormality-detection"
+      ],
+      "enableTpu": false,
+      "currentVersionNumber": 1,
+      "machineShape": "NvidiaTeslaT4"
+    },
+    "all_cells_match_prepared09": true,
+    "output_count": 0,
+    "visible_log": "[]"
+  },
+  "failure_message": "mount data: ERRORED_MOUNTING_DATASET: DataSourceUrl.addDataset(gs://kagglesdsdata/datasets/12402506/20385564 => /tmp/fs/kaggle_cTTew3c9eWSsFXb6G31PkHElQAp58kcT5ZQxjQnE2qU-355963229-webtier/ctrfs/kaggle/input/datasets/rsraki/rsna-f002-head-fold0-v1): non-zero exit code: 1, stderr: + SOURCE=/tmp/kglt/192.168.5.2/data/kagglesdsdata/datasets/12402506/20385564/dly8m35h98d0\n+ TARGET=/tmp/fs/kaggle_cTTew3c9eWSsFXb6G31PkHElQAp58kcT5ZQxjQnE2qU-355963229-webtier/ctrfs/kaggle/input/datasets/rsraki/rsna-f002-head-fold0-v1\n+ mkdir -p /tmp/kglt/192.168.5.2/data/kagglesdsdata/datasets/12402506/20385564/dly8m35h98d0\nmkdir: cannot create directory '/tmp/kglt/192.168.5.2/data/kagglesdsdata/datasets/12402506/20385564': Read-only file system\n",
+  "timeline": [
+    {
+      "script": 355951711,
+      "notebook": "rsraki/notebook245423d388",
+      "version": 1,
+      "outcome": "pre_python_head_mount_readonly"
+    },
+    {
+      "script": 355955526,
+      "notebook": "rsraki/notebookb1f7bfaac7",
+      "version": 1,
+      "outcome": "CPU_probe_complete_originalhead",
+      "actual_saved_inputs": [
+        "rsraki/rsna-dicom-decoders-py313-v1",
+        "rsraki/rsna-f002-head-fold0-v1",
+        "rsraki/rsna-frozen-feature-inputs-v1",
+        "rsna-knee-abnormality-detection"
+      ],
+      "actual_internet_enabled": true,
+      "single_input_isolation_established": false,
+      "note": "Source is 08a; actual saved settings were CPU, all4Inputs, InternetON. Previous attachment-only audit did not verify settings."
+    },
+    {
+      "script": 355957807,
+      "notebook": "rsraki/notebook245423d388",
+      "version": 2,
+      "outcome": "GPU256_profile_complete_originalhead",
+      "details": "experiments/f002-streaming-profile-review-20261007.json"
+    },
+    {
+      "script": 355963229,
+      "notebook": "rsraki/notebook6372fe6490",
+      "version": 1,
+      "outcome": "pre_python_same_head_mount_readonly_again"
+    }
+  ],
+  "confirmed": [
+    "User used the prepared09 source, GPU and InternetOFF with all4Inputs; no workflow mixup found",
+    "The same Dataset12402506/internalversion20385564 mount failed twice with successful originalhead runs in between",
+    "The latest failure occurs before any Notebook Python code; changing a Python exception handler/decoder/training cannot repair that mount",
+    "API Datasetready Version1 and correct files do not establish every runtime mount is healthy",
+    "Own p002 Public0.937 remains scored; p00302/05 and originalf00207 have no own Public"
+  ],
+  "not_established": [
+    "Kaggle global outage or exact backend host/cache/storage defect",
+    "Common cause with p003 or originalf002 hidden rerun exceptions",
+    "Actual hidden runtime, a9hour timeout, or successful hidden completion of09",
+    "Author0.943 reproduced by our p003 or obtainable by the independentf002 model"
+  ],
+  "decision": "Replace dependency on the failing headDataset with a byte-identical small head embedded in new10; preserve09 and original models",
+  "required_user_action": "Create new privateNotebook with10 and exactly competition+encoder/code+decoder Inputs; do not attach old headDataset",
+  "limits": "Avoids this exact head mount dependency only. Other Inputs still mount. Same-head visible/hidden serving and Public remain to be measured.",
+  "sources": [
+    "https://www.kaggle.com/code-competition-debugging",
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data?select=test_series",
+    "https://pubs.opengroup.org/onlinepubs/7908799/xsh/mkdir.html"
+  ],
+  "support_draft_manual_only": "Kaggle managed headDataset mount repeatedly fails before Python with Read-only file system. Failed runs355951711 and355963229, successful CPU355955526 andGPU256355957807 between failures. Dataset12402506/version20385564, owner rsraki, APIreadyV1. Latesthttps://www.kaggle.com/code/rsraki/notebook6372fe6490?scriptVersionId=355963229, Output0 and log[]. Please investigate the managed /tmp/kglt/192.168.5.2 source cache/storage materialization. No evidence identifies a global outage.",
+  "scope": {
+    "MRI_read_or_decoded": false,
+    "model_downloaded": false,
+    "actual_training": false,
+    "external_upload_or_submission": false,
+    "existing_local_checkpoint_hash_only": true,
+    "saved_source_log_and_metadata_downloaded": true
+  }
+}

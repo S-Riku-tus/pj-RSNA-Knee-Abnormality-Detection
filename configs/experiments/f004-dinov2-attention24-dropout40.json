@@ -1,0 +1,35 @@
+{
+  "schema_version": "frozen_features_v1",
+  "seed": 20261002,
+  "n_folds": 5,
+  "reason": "Change only head.dropout0.2to0.4 relative to completed f00324; late training BCE fell while weak validation BCE rose on both folds. Test stronger regularization without assuming label noise or Public improvement. Keep24 epochs, features, encoder, weak labels, folds, seed, LR and minimum masked weak BCE checkpoint selection fixed.",
+  "preprocess": {
+    "version": "physical_letterbox_triplet_v1",
+    "image_size": 392,
+    "max_series": 3,
+    "slices_per_series": 48,
+    "percentiles": [
+      1,
+      99
+    ]
+  },
+  "encoder": {
+    "model_name": "dinov2_vits14",
+    "feature_dim": 384,
+    "batch_size": 16,
+    "precision": "fp16"
+  },
+  "head": {
+    "hidden_dim": 192,
+    "dropout": 0.4,
+    "pooling": "attention"
+  },
+  "train": {
+    "epochs": 24,
+    "batch_size": 16,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "num_workers": 0,
+    "selection": "bce"
+  }
+}

@@ -4,7 +4,13 @@
 
 全件画像キャッシュ（4,407検査、約7.79GB）の取得・検証、weakラベルの監査と固定分割、RTX 4090での基準学習を完了しています。**weak 4,207検査・gold 58検査、fold 0の学習3,386／検証821検査**です。10月3日の5 epoch基準実験は約18分、最良checkpointはepoch 1でした。公開モデルを使った既存提出の実測Public 0.924は公式APIで確認済みで、自作モデルのスコアとは区別します。
 
-**最新（10月6日）：新05の64検査診断が完了し、変更した2系統の入力・予測は完全一致しました。次は[提出用05](notebooks/public/05_submit_p003_speed.ipynb)の保存実行です。追加学習は不要です。** 診断時間は照合用再計算を含め30分32.4秒で、単純差引き約23分28.6秒は旧04とほぼ同程度。大幅高速化は確認できていません。[診断監査](experiments/p003-speed-profile-review-20261006.json)、[次の操作](docs/p003-speed.md)。元p003の隠し例外は時間超過とは未確定で、新05の隠し完走・Publicも未確認です。自己採点済みの基準は[p002 Public 0.937](notebooks/public/01_submit_p002_scored.ipynb)。公開0.943を設計上の基準に、[392px凍結特徴からの独自学習](docs/frozen-features.md)と[教師の根拠監査](docs/label-review.md)は別経路として準備済みで、実学習・精度改善は未検証です。以下は以前の履歴を含みます。
+**最新（10月7日）：09も同じhead Inputの起動前接続で再発停止しました。** 公式SDKで配布09全cell一致・4 Inputs・GPU・Internet OFFを確認しましたが、Dataset12402506/内部版20385564でRead-only file system、Output0・Python未開始。接続の再試行だけでは安定化していません。[再発監査](experiments/f002-recurrent-mount-review-20261007.json)。次は同じheadをNotebookへ埋め込んだ[10・3 Inputsの手順](docs/frozen-features.md#head接続の再発後は10を使う)です。旧head Datasetを接続せず、既存Competition/encoder/decoderを使います。重み・推論は変更せず、再学習・新Inputのアップロードは不要。Kaggle可視/隠し完走は未確認です。
+
+08 Version2の256件診断は実際に完走済みで、その証拠は保持します。[32項目の監査](experiments/f002-streaming-profile-review-20261007.json)。旧f002提出Version2の隠し例外は別の未解決問題（ref56897486/script355923367・Publicなし）です。[失敗監査](experiments/f002-hidden-failure-review-20261007.json)。p003も自己採点なしで、作者0.943を保証しません。p002自己Public0.937を今回も公式APIで確認・保持。追加学習より、10の提出経路とp003の大規模分岐の確認を優先します。生成10は重みを含むためGit除外です。
+
+f003の24 epoch学習はユーザーが両foldを完了し、136項目の監査が成功しました。fold0 weak AUC12は0.813290→0.823060、fold1のBCE選択予測は元f002と同一で、延長の利得は揃っていません。[完成比較](experiments/f002-f003-fold01-review-20261007.json)。次の[f004はdropoutだけ0.2→0.4](configs/experiments/f004-dinov2-attention24-dropout40.json)とする準備までで、実学習は未開始です。教師の実150検査キュー・重点30セルの一次レビューも進め、17セルは条件/言語等が未確定、教師未変更です。[根拠監査](docs/label-review.md)。実データ/モデル追加取得・MRI処理・外部アップロード/提出をassistantは行っていません。
+
+**提出の最新（10月6日）：05も隠し再実行で例外になりました。同じ05の再提出は保留します。** 提出ref `56870280`、scriptVersionId `355633504`、自己Publicなし。保存版の全セルは配布05と一致し、可視3件は256.538秒で完走しましたが、隠しtracebackは取得できず原因は未確定です。ユーザー報告の約4時間は隠し推論の実測時間ではなく、9時間超過とは断定しません。[2回目の失敗監査](experiments/p003-second-failure-review-20261006.json)、[診断の方針](docs/p003-speed.md)。自己採点済みの基準は[p002 Public 0.937](notebooks/public/01_submit_p002_scored.ipynb)。作者0.943は設計上の参考値で、自己再現値として扱いません。以下は以前の履歴を含みます。
 
 10月4日に公式RulesとHost回答を取得し、vmohitrao Version 3ラベルを研究・学習目的とCC BY-NC 4.0の帰属等を守って採用する判断に更新しました。[利用条件の根拠](docs/research/kaggle-source-eligibility-20261004.json) に本文の確認日と出典を保存しています。
 

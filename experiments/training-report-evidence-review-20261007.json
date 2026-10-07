@@ -1,0 +1,65 @@
+{
+  "checked_at_utc": "2026-10-07T04:25:16.762883+00:00",
+  "status": "preliminary_text_evidence_review_no_teacher_change",
+  "queue_path": "artifacts/label-review/20261007-training-evidence-v1",
+  "queue_manifest_sha256": "d6147285f48c2cf25cf1643b11bb5436f3042f704954b9d8ba4e5ea8d14c3741",
+  "selected_studies": 150,
+  "review_cells": 1800,
+  "preliminary_reviewed_cells": 30,
+  "reviewed_target_counts": {
+    "Synovitis": 7,
+    "MCL": 9,
+    "Effusion": 7,
+    "PF OA": 7
+  },
+  "reviewed_state_counts": {
+    "explicit_negative": 2,
+    "unresolved": 17,
+    "not_mentioned": 4,
+    "positive": 5,
+    "below_threshold": 2
+  },
+  "patterns": {
+    "explicit_absence": 2,
+    "severity_or_acuity_unspecified": 2,
+    "language_and_anatomic_scope_review": 1,
+    "no_direct_synovitis_evidence": 1,
+    "unmentioned_remains_missing": 3,
+    "historical_vs_current": 1,
+    "oa_area_threshold_unspecified": 3,
+    "explicit_positive_mention": 5,
+    "oa_grade_and_area_review": 2,
+    "effusion_severity_unspecified": 1,
+    "compartment_specific_scope": 1,
+    "scope_of_normal_cartilage": 1,
+    "small_fluid_below_threshold": 1,
+    "scope_of_normal_ligaments": 1,
+    "effusion_is_not_synovitis": 2,
+    "normal_synovial_morphology_phrase": 1,
+    "low_grade_healing_injury": 1,
+    "conflicting_normal_and_periligament_edema": 1
+  },
+  "holdout_folds": [
+    0,
+    1
+  ],
+  "gold_selected": 0,
+  "holdout_selected": 0,
+  "private_review_sha256": "6becb42df0202d591f7fefa96e6c96982608d319514fa46e30d2bdf61bc7b75f",
+  "labels_changed": false,
+  "primary_definition_source": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733343",
+  "next_actions": [
+    "Second-check30cells against original report and language; resolve thresholds before any label proposal",
+    "MCL low-grade and remote changes can legitimately be0; do not mark every sprain positive",
+    "PF OA needs compartment/high-grade/extent together; grade alone does not establish the target",
+    "Effusion needs moderate/large amount; N and B are different text states even if both currently0",
+    "Synovitis requires its own evidence; do not substitute Effusion or fill missing0",
+    "Freeze an auditable teacher rule only after evidence review; new teacher-only run with fixed image/model/folds"
+  ],
+  "limitations": [
+    "Purposive sample, no population error-rate or accuracy estimate",
+    "Report evidence is not image ground truth",
+    "Non-English interpretations and unresolved clinical thresholds require independent review",
+    "Fold0/1 protected from report/rule development, but already used for model selection; patient independence unverified"
+  ]
+}
