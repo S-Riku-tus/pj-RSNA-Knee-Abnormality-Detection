@@ -1,8 +1,24 @@
 # 392px凍結DINOv2から独自headを学習する
 
-更新日：2026年10月7日 JST。**09は同じhead Datasetの接続で再発停止。現在の提出候補は10・3 Inputsです。** 08 Version2の256件診断は完走済みで再実行を前提にしません。以前の接続再試行・09手順は履歴です。旧07の隠し例外は別件のまま。f003の両fold学習、教師の150検査キュー・30セル一次レビューは完了済み。p002 Public0.937を保持します。
+更新日：2026年10月8日 JST。**p005は18:03 JSTに自己Public0.950で採点成功を確認。待機中のf004両fold実学習・教師17セル二次レビューも完了しました。** [f004完成比較](../experiments/f003-f004-fold01-review-20261008.json)は両foldに揃う改善がなく差し替え見送り、[教師再確認](label-review.md#17セルの二次レビュー結果10月8日)は訂正採用0件です。新しい主軸は[0.950基盤の一要因改善計画](../experiments/p005-improvement-roadmap-20261008.json)。以下の[f004コマンド](#次の学習候補f004と教師監査)は実行履歴で、同じrunを再実行する必要はありません。10の再提出は保留、13は独自f002の任意診断です。
 
-## head接続の再発後は10を使う
+## 10月8日以降のf002診断
+
+添付summaryと保存Outputはbyte同一。提出ref56904146/Version1/script355977821の全sourceは配布10と一致し、3 Inputs・GPU・Internetも正常です。可視3件とCSVは22項目で正常ですが、隠し一般例外・自己Publicなしでした。**f002は独自headであり、作者0.943を再現するp003とは別モデル**です。[今回の事実と限界](../experiments/f002-embedded-head-hidden-failure-review-20261008.json)
+
+件数固定やReport依存は人工1,300検査で否定できた範囲があります。残る問題候補は、選択されたMRI系列の条件と資源です。元readerは全スライスのfloat32配列・stack・percentile作業配列・float64全体正規化を持ちます。既存exportの最大系列はfloat32一枚のvolumeだけで約605MiBでした。不適合なspacing/位置/強度で全体停止する経路も人工再現しました。ただし元readerは実4,207学習検査を既に完走しており、どちらも今回の隠し真因とは未確定です。欠損値・物理尺度・予測確率を作って回避しません。
+
+[13_profile_f002_memory_1300.ipynb](../notebooks/public/13_profile_f002_memory_1300.ipynb)は、**メモリ配送だけを変更した診断**です。原head・encoder・decoder・系列選択・geometry条件・全volumeのpercentile・letterbox・12所見順を保ち、native/scratchをtemporary memmapにして必要スライスのみ正規化します。元16core file/runtimeは改変せず、新readerのruntime binding/source hashを明記します。人工DICOMの入力窓・位置・特徴配列はbyte一致、実学習済みheadのRTX4090人工予測差0。実MRI/Kaggleでは未実行です。memmap partitionのページがRSSを増やす可能性とdisk/IO増加は残ります。
+
+1. p004の固定対照とは**別の新しいprivate Notebook**へ13をImportします。13は診断用で、提出用CSVは作りません。
+2. Inputsは10と同じ3つ：Competition `rsna-knee-abnormality-detection`、`rsraki/rsna-frozen-feature-inputs-v1`、`rsraki/rsna-dicom-decoders-py313-v1`。旧head Datasetは追加しません。
+3. 10と同じPython3.13系の環境・GPU T4×2・Internet OFFでSave & Run Allします。これはp004のPython3.12とは別の系統で、環境を混ぜません。
+4. fixed gold除外weak4,207件からseed20261007で1,300 UIDを固定選択して処理します。教師値のfit・精度評価・checkpoint選択は行いません。無作為に固定したcohortなので、最大nativeサイズや全protocolを必ず含むとは扱いません。
+5. root `F002_STREAMING_SUMMARY.json`、通常events、readerの資源events、完了時`profile_predictions.csv`を確認します。`profile_complete_not_for_submission`・`phase=complete`・`processed=studies=1300`・receipt valid・skip/fallback0、新readerのhashを確認します。失敗時は最後のphase/header/資源/tracebackを分類します。**profile CSVは提出しません。**
+
+13が成功しても隠しtest固有の不適合系列・環境差を網羅したとは扱いません。次のf002提出候補はこの診断結果を確認してから一要因ずつ決めます。別に準備したroot選択helperや系列の代替policyを同じ13へ混ぜません。以下の「次は10/09」は以前の作業時点の履歴です。
+
+## 履歴：head接続の再発後は10を使う
 
 `rsraki/notebook6372fe6490` **Version1/script355963229**を公式SDKで確認し、配布09と全cell一致・必要4 Inputs・GPU有効・Internet OFFでした。同じhead Dataset12402506/内部版20385564を接続するKaggle管理処理が`mkdir ... Read-only file system`となり、Python開始前にERROR・Output0・log`[]`です。08 Version1の接続失敗と同じ箇所で、間にCPU確認/08 Version2が成功しても再発しています。操作違いやMRI処理中の例外とは区別します。[21項目の再発監査](../experiments/f002-recurrent-mount-review-20261007.json)
 
@@ -154,7 +170,11 @@ head fittingはfold0 355.92秒、fold1 358.13秒（cache事前検査等を除く
 
 ## 次の学習候補f004と教師監査
 
-[f004設定](../configs/experiments/f004-dinov2-attention24-dropout40.json)は完成f003に対して**dropoutだけ0.2→0.4**に変更します。24 epoch・特徴・教師・LR・seed・fold・BCE選択を固定し、正則化で検証BCEの後半悪化を抑えられるかを調べます。最適値やPublic改善が分かった設定ではありません。[新規run・input/source/環境・比較条件](../experiments/f004-dropout40-plan-20261007.json)を準備済みで、実学習は開始していません。08は再実行不要で、現在は10の提出経路を優先します。f004は任意の独立比較として保留し、10の採点確認後に必要性を判断します。
+[f004設定](../configs/experiments/f004-dinov2-attention24-dropout40.json)は完成f003に対して**dropoutだけ0.2→0.4**に変更し、24 epoch・特徴・教師・LR・seed・fold・BCE選択を固定して両foldの実学習を完了しました。事前の[run・input/source/環境・比較条件](../experiments/f004-dropout40-plan-20261007.json)を照合し、新規runへ保存。head fitting計767.04秒・CLI全体計796.26秒、事前検査/解析は別です。p005の学習・重みではなく独自f002/f003系の比較なので、提出例外の修正やApexへの追加を意味しません。
+
+[完成比較](../experiments/f003-f004-fold01-review-20261008.json)：fold0 BCE0.316232→0.315904/AUC12 0.823060→0.815188、fold1 BCE0.317469→0.320704/AUC12 0.815430→0.814692。補助11差は−0.002223/−0.000543、3000回group bootstrapの95%区間は両方0をまたぎ、事前採用条件を満たさないので差し替えません。PF OAは点改善したものの、MCLはfold間で方向が異なり、全体を置き換える根拠にはしません。236項目で96epochのCSV/metrics/BCE/更新数、4run×best/lastの計8 CPU checkpoint、固定入力/source/過去run不変を確認。rootの選択4CSV独立再計算も一致しました。
+
+以下のコマンドは今回の実行履歴です。fold0・1の同名runは完成済みで、繰り返し実行しません。
 
 ```powershell
 .\.venv\Scripts\python.exe scripts/frozen_features.py train `
@@ -174,9 +194,9 @@ head fittingはfold0 355.92秒、fold1 358.13秒（cache事前検査等を除く
   --output artifacts/runs/f004-dinov2-attention24-dropout40-fold1
 ```
 
-前者が失敗すればその原因を確認してから進み、既存runは上書きしません。完成後に両run.jsonとBCE選択予測を完成f003に対して比較します。fold0だけの改善やselected BCEだけで採用せず、補助11平均、PF OA/MCLのsupportと差も確認します。f004の教師は現行版のままです。
+両[fold0 run.json](../artifacts/runs/f004-dinov2-attention24-dropout40-fold0/run.json)・[fold1 run.json](../artifacts/runs/f004-dinov2-attention24-dropout40-fold1/run.json)とBCE選択予測を保存しています。最大AUC epochへの選び直しはせず、元教師のまま評価しました。goldを学習/選択せず、f002提出head/p005保存提出版も保持しています。
 
-教師側は[150検査・重点30セルの一次監査](label-review.md)まで進みました。MCL低度捻挫、PF OAの重症度＋範囲、Effusionの量、Synovitis固有の根拠を大会定義と照合します。17セルは未確定であり誤ラベル17件ではありません。再確認して規則を固定し、教師だけを変えた別実験へ進む順です。goldとfold0/1の連結groupを先に除外し、欠損→0やEffusion→Synovitisを行いません。
+教師側は[17セルの二次レビュー](label-review.md#17セルの二次レビュー結果10月8日)まで進み、6セルの原文状態は既存0/欠損と整合、11未確定、教師訂正の採用0でした。程度/範囲/部位/言語の根拠不足を埋める教師版や教師だけの学習は作りません。goldと保護fold0/1の連結groupを読む前に除外し、欠損→0やEffusion→Synovitisを行っていません。
 
 新encoderやpatch特徴は別実験で、現cacheのCLS特徴からは復元できず新たなKaggle画像処理と推論予算が必要です。まず提出経路の成功と教師の根拠を確認します。f002とp002の混合も補完性・追加時間を評価してから行います。fold0/1の検証予測を別foldのheadと平均すると相手が当該検査を学習済みなのでOOF改善の根拠にはできません。p003は[別の例外診断](p003-speed.md)として保持します。
 

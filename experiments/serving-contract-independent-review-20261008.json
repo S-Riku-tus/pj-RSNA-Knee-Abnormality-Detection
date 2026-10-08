@@ -1,0 +1,179 @@
+{
+  "reviewed_at_jst": "2026-10-08",
+  "attachment_sha256": "c47acbf313c0f18db0daeca781648f89e86012cae603055fa5f4d308cb03ee98",
+  "source_sha256": {
+    "notebooks/public/10_submit_f002_embedded_head.ipynb": "8ca99ca50a5ddd60eef67ce7ec5a1c606d23194686b515e94f481b97680dc8ba",
+    "notebooks/public/01_submit_p002_scored.ipynb": "f5075c34fd389277d2aa6acb3dd3f87275485d60a8796a91d22060a46c4d70b4",
+    "notebooks/public/05_submit_p003_speed.ipynb": "f070cc83e7a75d72aaf13afbcfbb6ca6d44563d8af777707a6fd720ee886c83d",
+    "scripts/frozen_streaming_runtime.py": "a0d13ea7a93916dc6e7acd52ffe68a9a09e21bbe889d830746f7f9ed46d87f37",
+    "src/rsna_knee/feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "src/rsna_knee/imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff"
+  },
+  "visible_evidence": {
+    "status": "passed",
+    "phase": "complete",
+    "mode": "test",
+    "studies": 3,
+    "processed": 3,
+    "elapsed_seconds": 20.29997129200001,
+    "checkpoint_sha256": "189ecab25e0d1c029e974ee23f3c46239e5eceef290b5dca33f6831dcb8e1b03",
+    "embedded_head_delivery": {
+      "mode": "embedded_notebook_bytes",
+      "checkpoint_path": "/kaggle/working/embedded-f002-head/best.pt",
+      "files": {
+        "best.pt": {
+          "bytes": 340745,
+          "sha256": "189ecab25e0d1c029e974ee23f3c46239e5eceef290b5dca33f6831dcb8e1b03"
+        },
+        "checkpoint-provenance.json": {
+          "bytes": 5959,
+          "sha256": "918231230cfdd21fbae9c766ddf585d17daeef6a6cff9dc14fbf46e2b6ccada6"
+        },
+        "config.json": {
+          "bytes": 855,
+          "sha256": "f2e98efbb73accd3053032cac811e203d8a4d0570e26e2e32ea9d4eaaaba7280"
+        }
+      },
+      "head_dataset_required": false,
+      "downloaded": false
+    },
+    "receipt": {
+      "studies": 3,
+      "targets": 12,
+      "valid": true
+    },
+    "actual_series_first_header_syntax_counts": {
+      "1.2.840.10008.1.2.1": 9
+    },
+    "scope": "Supplied visible summary; root agent independently binds SDK saved source/version/submission. No hidden traceback is available here."
+  },
+  "invariants_audited": {
+    "test_uid_count_dynamic": true,
+    "test_uid_order_dynamic": true,
+    "report_not_read": true,
+    "weak_manifest_not_read_in_test": true,
+    "no_public_test_hash_fixed": true,
+    "submission_path": "/kaggle/working/submission.csv",
+    "template_checks_header_not_fixed_3_uid_rows": true,
+    "prediction_memory_study_bound_except_small_final_rows": true,
+    "model_checkpoint_fingerprint_fixed_intentionally": true,
+    "head_mount_dependency_removed_only": true
+  },
+  "scale_contract_stress": {
+    "checks": {
+      "processed_1300": true,
+      "original_uid_order": true,
+      "exact_13_columns": true,
+      "all_15600_finite_probabilities": true,
+      "complete_receipt": true,
+      "no_train_or_report_requirement": true,
+      "no_intermediate_feature_files": true,
+      "no_skips_or_constant_replacements": true,
+      "restored_imaging_functions": true
+    },
+    "seconds": 5.664022399985697,
+    "studies": 1300,
+    "series_metadata_rows": 5842,
+    "events": 3904,
+    "submission_bytes": 312999,
+    "mocked": [
+      "encoder load",
+      "MRI decode",
+      "preprocess/feature extraction",
+      "decoder availability"
+    ],
+    "actual": [
+      "read CSV",
+      "UID/series grouping",
+      "checkpoint contract",
+      "synthetic random head CPU forward",
+      "complete output CSV contract"
+    ],
+    "limits": "This isolates row-count/output behavior. It does not validate actual head, encoder, MRI, compressed decoding, T4, RAM peaks or hidden completion."
+  },
+  "synthetic_geometry_cases": {
+    "valid_single_slice": {
+      "outcome": "accepted",
+      "order": [
+        0
+      ],
+      "method": "physical_position"
+    },
+    "duplicate_physical_position": {
+      "outcome": "rejected",
+      "error": "Nonfinite or duplicate slice positions"
+    },
+    "mixed_orientation": {
+      "outcome": "rejected",
+      "error": "Mixed orientation in a series"
+    },
+    "incomplete_geometry": {
+      "outcome": "rejected",
+      "error": "Incomplete geometry; slice order is ambiguous"
+    },
+    "instance_only": {
+      "outcome": "accepted",
+      "order": [
+        0,
+        1
+      ],
+      "method": "instance_number_fallback",
+      "feature_read_would_reject_nonphysical_method": true
+    }
+  },
+  "synthetic_root_layout": {
+    "modern_empty_directory_exists": true,
+    "legacy_test_csv_exists": true,
+    "current_selection_lacks_test_csv": true,
+    "status": "synthetic robustness weakness demonstrated; private layout unknown",
+    "recommendation": "Choose a candidate containing test.csv and test_series.csv, bind to that same root for all reads; never select by directory existence alone."
+  },
+  "uncertain_failure_candidates": [
+    {
+      "candidate": "Rare selected-series header/decode exceptions",
+      "basis": "The first invalid selected series aborts the whole study; alternate valid acquisitions are not attempted.",
+      "not_proven": "No hidden traceback or MRI content audit"
+    },
+    {
+      "candidate": "Strict physical geometry/spacing/intensity/matrix requirements",
+      "basis": "Duplicate positions, incomplete geometry, mixed orientations/spacing/matrix sizes, constant intensity and multi-frame arrays raise.",
+      "not_proven": "Training selected-series extraction previously passed 4207, but hidden population is different."
+    },
+    {
+      "candidate": "Long-tail matrix/slice RAM",
+      "basis": "read_feature_windows retains float32 native slices and full stacked/normalized volumes before fixed 392px encode.",
+      "not_proven": "Streaming bounds number of studies held, not largest native series size."
+    },
+    {
+      "candidate": "Scoring environment/input namespace difference",
+      "basis": "Directory-existence root choice and CP313 decoder guard",
+      "not_proven": "Visible runtime does not expose private container/mount layout."
+    }
+  ],
+  "next_validation_design": [
+    "First pin/bind the actual submitted Notebook version and saved Outputs; do not assume the requested source was submitted.",
+    "Audit full train selected-series metadata in Kaggle with current reader requirements, without labels/gold tuning; aggregate unsupported cases and native-size resource extremes.",
+    "Choose a diverse profile by header/shape/slice/resource extremes instead of another arbitrary small random sample; classify series exceptions and attempt only valid same-policy replacement acquisitions.",
+    "Exercise approximately 1300 label-free training studies in the exact test path with proxy test.csv/test_series.csv/sample_submission.csv and Report column absent; preserve fixed model and mathematical preprocessing, and treat any failure as evidence before submission.",
+    "Use the author scored source/version and required Inputs unchanged as a reproducibility control, keeping existing own scored p0020.937 as successful evidence; do not use constant score/timing probes to extract hidden information."
+  ],
+  "primary_sources": [
+    {
+      "url": "https://www.kaggle.com/code-competition-debugging",
+      "supports": "full private rerun with replaced data; generic failures not identical causes; exception distinct from timeout/CSV format; private detail withheld"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data",
+      "supports": "3 public sample studies replaced by approximately1300, noReport, variable international protocols/sizes/transfersyntax"
+    },
+    {
+      "url": "https://www.kaggle.com/product-feedback/379362",
+      "supports": "Kaggle staff explicitly says private stack trace/run details cannot be supplied because of hidden-data leakage"
+    }
+  ],
+  "no_verified_hidden_cause_or_fix": true,
+  "real_data_download": false,
+  "real_mri_decode": false,
+  "real_fit": false,
+  "upload_or_submit": false
+}

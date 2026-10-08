@@ -1,0 +1,975 @@
+{
+  "schema": "rsna_public_candidate_primary_audit_v1",
+  "checked_at_jst": "2026-10-08T15:52:15.734270+09:00",
+  "scope": "Read-only public Kaggle source/metadata/log and dataset file metadata. No MRI/checkpoint content download, fitting, real inference, uploads, submissions or author contacts.",
+  "source_of_instructions": "User task and repo AGENTS; downloaded author documents treated as evidence, not instructions.",
+  "own_baseline": {
+    "candidate": "p002",
+    "public_score": 0.937,
+    "decision": "preserve"
+  },
+  "search_method": [
+    "Web official-page search (new releases incompletely indexed)",
+    "Official SDK competition kernels scoreDescending first100",
+    "Anonymous read-only official public UI GetKernel then version-specific GetKernelViewModel and ListKernelVersions; requests derived from publicly served Kaggle UI source"
+  ],
+  "candidates": [
+    {
+      "ref": "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+      "page_url": "https://www.kaggle.com/code/sujanmajhisuzan/rsna-knee-apex-grandmaster-stack?scriptVersionId=356192954",
+      "version": 1,
+      "script_version_id": 356192954,
+      "submission_id": 56930357,
+      "source_script_version_id": 356192954,
+      "public_score": 0.95,
+      "score_evidence": "Official Kaggle public UI view model linked submission for this saved version, independently of title/body claims",
+      "own_score": null,
+      "source_path": "artifacts/research/20261008-public-candidates/sujanmajhisuzan-rsna-knee-apex-grandmaster-stack-v1/source.ipynb",
+      "source_sha256": "c3b62e2f8be016abe541e9d5e537217fec73edce41f6fef15d95527c2dbfc75a",
+      "source_bytes": 130237,
+      "internet_enabled": false,
+      "gpu_enabled": true,
+      "docker_image": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+      "source_license": "Not returned by accessed public metadata; do not infer from reader Dataset licence",
+      "visible_runtime_seconds": 84.563499,
+      "hidden_runtime_seconds": null,
+      "input_count": 3,
+      "input_refs": {
+        "datasetDataSources": [
+          "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+          "nartaa/rsna-knee-publication-swa-weights-20261007"
+        ],
+        "kernelDataSources": [],
+        "modelDataSources": [],
+        "competitionDataSources": [
+          "rsna-knee-abnormality-detection"
+        ]
+      },
+      "pinned_input_metadata": [
+        {
+          "sourceId": 154281,
+          "databundleVersionId": 20902466,
+          "mountSlug": "competitions/rsna-knee-abnormality-detection"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 20325538,
+          "datasetId": 12371725,
+          "mountSlug": "datasets/goodpjw2008/rsna-knee-2-5d-convnext-reader"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 20440357,
+          "datasetId": 12431568,
+          "mountSlug": "datasets/nartaa/rsna-knee-publication-swa-weights-20261007"
+        }
+      ],
+      "private_inputs": [],
+      "saved_source_verified": true,
+      "real_inference_performed_by_assistant": false,
+      "decision": "hold_for_external_model_eligibility_and_model_use_terms_audit",
+      "model_history": "Author model card explicitly states masked external supervision on 2399 OAI knees. Gold58 reused for selection/development. Public pretrained checkpoints and direct controlled-data use are distinct cases; Host did not specifically adjudicate these released checkpoints.",
+      "license_notes": "Weights Dataset declares other; card permits research/education including competition but does not grant source OAI-data rights; verify winning-model grant and public-model eligibility separately.",
+      "weights_dataset_ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+      "weights_dataset_version": 1
+    },
+    {
+      "ref": "nartaa/rsna-knee-0949-anatomical-mirror",
+      "page_url": "https://www.kaggle.com/code/nartaa/rsna-knee-0949-anatomical-mirror?scriptVersionId=356175397",
+      "version": 2,
+      "script_version_id": 356175397,
+      "submission_id": 56921226,
+      "source_script_version_id": 356175397,
+      "public_score": 0.949,
+      "score_evidence": "Official Kaggle public UI view model linked submission for this saved version, independently of title/body claims",
+      "own_score": null,
+      "source_path": "artifacts/research/20261008-public-candidates/nartaa-rsna-knee-0949-anatomical-mirror-v2/source.ipynb",
+      "source_sha256": "8f1f96530b08543bd6caeed48489eea7c01657d6994f22e21a8400047fd4e100",
+      "source_bytes": 103465,
+      "internet_enabled": false,
+      "gpu_enabled": true,
+      "docker_image": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+      "source_license": "Not returned by accessed public metadata; do not infer from reader Dataset licence",
+      "visible_runtime_seconds": 65.207586,
+      "hidden_runtime_seconds": null,
+      "input_count": 2,
+      "input_refs": {
+        "datasetDataSources": [
+          "nartaa/rsna-knee-publication-swa-weights-20261007"
+        ],
+        "kernelDataSources": [],
+        "modelDataSources": [],
+        "competitionDataSources": [
+          "rsna-knee-abnormality-detection"
+        ]
+      },
+      "pinned_input_metadata": [
+        {
+          "sourceId": 154281,
+          "databundleVersionId": 20902466,
+          "mountSlug": "competitions/rsna-knee-abnormality-detection"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 20440357,
+          "datasetId": 12431568,
+          "mountSlug": "datasets/nartaa/rsna-knee-publication-swa-weights-20261007"
+        }
+      ],
+      "private_inputs": [],
+      "saved_source_verified": true,
+      "real_inference_performed_by_assistant": false,
+      "decision": "hold_for_external_model_eligibility_and_model_use_terms_audit",
+      "model_history": "Author model card explicitly states masked external supervision on 2399 OAI knees. Gold58 reused for selection/development. Public pretrained checkpoints and direct controlled-data use are distinct cases; Host did not specifically adjudicate these released checkpoints.",
+      "license_notes": "Weights Dataset declares other; card permits research/education including competition but does not grant source OAI-data rights; verify winning-model grant and public-model eligibility separately.",
+      "weights_dataset_ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+      "weights_dataset_version": 1
+    },
+    {
+      "ref": "pjmathematician/rsna-knee-d4-blend",
+      "page_url": "https://www.kaggle.com/code/pjmathematician/rsna-knee-d4-blend?scriptVersionId=353440703",
+      "version": 3,
+      "script_version_id": 353440703,
+      "submission_id": 56623920,
+      "source_script_version_id": 353440703,
+      "public_score": 0.946,
+      "score_evidence": "Official Kaggle public UI view model linked submission for this saved version, independently of title/body claims",
+      "own_score": null,
+      "source_path": "artifacts/research/20261008-public-candidates/pjmathematician-rsna-knee-d4-blend-v3/source.ipynb",
+      "source_sha256": "6fd1a3d61a15ad5922972fb6589d372a88d428442950d21740f304ae77fa6b72",
+      "source_bytes": 254213,
+      "internet_enabled": false,
+      "gpu_enabled": true,
+      "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+      "source_license": "Not returned by accessed public metadata; do not infer from reader Dataset licence",
+      "visible_runtime_seconds": 358.7845,
+      "hidden_runtime_seconds": null,
+      "input_count": 21,
+      "input_refs": {
+        "datasetDataSources": [
+          "",
+          "",
+          "",
+          "dreaddevelopment/raptor-knee-maxspan",
+          "dreaddevelopment/raptor-knee-native384",
+          "dreaddevelopment/raptor-knee-native384dense",
+          "mattiaangeli/knee-mri-fold-weights",
+          "mattiaangeli/opencv-python-headless-4120088-x86",
+          "marwanmath/resnet-50-radimagenet-marwan",
+          "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+          "mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+          "mattiaangeli/rsna-knee-coatnet-global96-top3",
+          "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+          "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+          "pilkwang/rsna-knee-llm-labels",
+          "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+          "pilkwang/rsna-knee-weights"
+        ],
+        "kernelDataSources": [
+          "sofiaanjenje/rsna-knee-e11-train",
+          "sofiaanjenje/rsna-knee-e13-train"
+        ],
+        "modelDataSources": [
+          "metaresearch/dinov2/PyTorch/small/1"
+        ],
+        "competitionDataSources": [
+          "rsna-knee-abnormality-detection"
+        ]
+      },
+      "pinned_input_metadata": [
+        {
+          "sourceId": 154281,
+          "databundleVersionId": 20902466,
+          "mountSlug": "rsna-knee-abnormality-detection"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18229736,
+          "datasetId": 11290369,
+          "mountSlug": "resnet-50-radimagenet-marwan"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18673450,
+          "datasetId": 11529209,
+          "mountSlug": "rsna-knee-llm-labels"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18716507,
+          "datasetId": 11552334,
+          "mountSlug": "rsna-knee-weights"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18839182,
+          "datasetId": 11608090,
+          "mountSlug": "rsna-knee-e9-radimagenet-heads-v15"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18842180,
+          "datasetId": 11610725,
+          "mountSlug": "rsna-knee-e11-diverse-heads-v20"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18879001,
+          "datasetId": 11628770,
+          "mountSlug": "rsna-knee-v52-radimagenet-heads-20260812"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18956429,
+          "datasetId": 11611423,
+          "mountSlug": "knee-mri-fold-weights"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19120128,
+          "datasetId": 11745616,
+          "mountSlug": "raptor-knee-maxspan"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19122845,
+          "datasetId": 11746763,
+          "mountSlug": "raptor-knee-native384"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19134209,
+          "datasetId": 11752181,
+          "mountSlug": "raptor-knee-native384dense"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19395055,
+          "datasetId": 11887453,
+          "mountSlug": "opencv-python-headless-4120088-x86"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19395706,
+          "datasetId": 11887000,
+          "mountSlug": "rsna-knee-coat-resgated-ep10-top3"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19459763,
+          "datasetId": 11920427,
+          "mountSlug": "rsna-knee-coatnet-global96-top3"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19720705,
+          "datasetId": 12041943,
+          "mountSlug": "private-data-source"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19858040,
+          "datasetId": 12106597,
+          "mountSlug": "private-data-source"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19862359,
+          "datasetId": 11970384,
+          "mountSlug": "rsna-knee-coatnet-d4-depthzone-swa3-b2"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 20073931,
+          "datasetId": 12197694,
+          "mountSlug": "private-data-source"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_KERNEL_VERSION",
+          "sourceId": 342671664,
+          "mountSlug": "rsna-knee-e11-train"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_KERNEL_VERSION",
+          "sourceId": 342849430,
+          "mountSlug": "rsna-knee-e13-train"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_MODEL_INSTANCE_VERSION",
+          "sourceId": 4533,
+          "mountSlug": "models/metaresearch/dinov2/pytorch/small/1",
+          "modelInstanceId": 3325,
+          "modelId": 986
+        }
+      ],
+      "private_inputs": [
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 19720705
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        },
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 19858040
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        },
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 20073931
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        }
+      ],
+      "saved_source_verified": true,
+      "real_inference_performed_by_assistant": false,
+      "decision": "hold_not_currently_fully_public_reproducible",
+      "model_history": "Public stack plus independent student/fleet legs; three attached Dataset versions officially flagged private. Do not remove private legs and label it score-preserving reproduction.",
+      "license_notes": "Private assets contents/training history/licences not accessible; public stack includes gold-selected components."
+    },
+    {
+      "ref": "pjmathematician/rsna-knee-d4-lite",
+      "page_url": "https://www.kaggle.com/code/pjmathematician/rsna-knee-d4-lite?scriptVersionId=352859223",
+      "version": 1,
+      "script_version_id": 352859223,
+      "submission_id": 56567867,
+      "source_script_version_id": 352859223,
+      "public_score": 0.945,
+      "score_evidence": "Official Kaggle public UI view model linked submission for this saved version, independently of title/body claims",
+      "own_score": null,
+      "source_path": "artifacts/research/20261008-public-candidates/pjmathematician-rsna-knee-d4-lite-v1/source.ipynb",
+      "source_sha256": "b131ab872fb42fa94aaf4684b21bba7c0d1c6c7f1af0a2a0ac3031bc73a00db7",
+      "source_bytes": 252598,
+      "internet_enabled": false,
+      "gpu_enabled": true,
+      "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+      "source_license": "Not returned by accessed public metadata; do not infer from reader Dataset licence",
+      "visible_runtime_seconds": 304.544922,
+      "hidden_runtime_seconds": null,
+      "input_count": 21,
+      "input_refs": {
+        "datasetDataSources": [
+          "",
+          "",
+          "",
+          "dreaddevelopment/raptor-knee-maxspan",
+          "dreaddevelopment/raptor-knee-native384",
+          "dreaddevelopment/raptor-knee-native384dense",
+          "mattiaangeli/knee-mri-fold-weights",
+          "mattiaangeli/opencv-python-headless-4120088-x86",
+          "marwanmath/resnet-50-radimagenet-marwan",
+          "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+          "mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+          "mattiaangeli/rsna-knee-coatnet-global96-top3",
+          "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+          "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+          "pilkwang/rsna-knee-llm-labels",
+          "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+          "pilkwang/rsna-knee-weights"
+        ],
+        "kernelDataSources": [
+          "sofiaanjenje/rsna-knee-e11-train",
+          "sofiaanjenje/rsna-knee-e13-train"
+        ],
+        "modelDataSources": [
+          "metaresearch/dinov2/PyTorch/small/1"
+        ],
+        "competitionDataSources": [
+          "rsna-knee-abnormality-detection"
+        ]
+      },
+      "pinned_input_metadata": [
+        {
+          "sourceId": 154281,
+          "databundleVersionId": 20902466,
+          "mountSlug": "competitions/rsna-knee-abnormality-detection"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18229736,
+          "datasetId": 11290369,
+          "mountSlug": "datasets/marwanmath/resnet-50-radimagenet-marwan"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18673450,
+          "datasetId": 11529209,
+          "mountSlug": "datasets/pilkwang/rsna-knee-llm-labels"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18716507,
+          "datasetId": 11552334,
+          "mountSlug": "datasets/pilkwang/rsna-knee-weights"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18839182,
+          "datasetId": 11608090,
+          "mountSlug": "datasets/antoinegg1/rsna-knee-e9-radimagenet-heads-v15"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18842180,
+          "datasetId": 11610725,
+          "mountSlug": "datasets/antoinegg1/rsna-knee-e11-diverse-heads-v20"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18879001,
+          "datasetId": 11628770,
+          "mountSlug": "datasets/prvsiyan/rsna-knee-v52-radimagenet-heads-20260812"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18956429,
+          "datasetId": 11611423,
+          "mountSlug": "datasets/mattiaangeli/knee-mri-fold-weights"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19120128,
+          "datasetId": 11745616,
+          "mountSlug": "datasets/dreaddevelopment/raptor-knee-maxspan"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19122845,
+          "datasetId": 11746763,
+          "mountSlug": "datasets/dreaddevelopment/raptor-knee-native384"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19134209,
+          "datasetId": 11752181,
+          "mountSlug": "datasets/dreaddevelopment/raptor-knee-native384dense"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19395055,
+          "datasetId": 11887453,
+          "mountSlug": "datasets/mattiaangeli/opencv-python-headless-4120088-x86"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19395706,
+          "datasetId": 11887000,
+          "mountSlug": "datasets/mattiaangeli/rsna-knee-coat-resgated-ep10-top3"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19459763,
+          "datasetId": 11920427,
+          "mountSlug": "datasets/mattiaangeli/rsna-knee-coatnet-global96-top3"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19720705,
+          "datasetId": 12041943,
+          "mountSlug": "private-data-source"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19858040,
+          "datasetId": 12106597,
+          "mountSlug": "private-data-source"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19862359,
+          "datasetId": 11970384,
+          "mountSlug": "datasets/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 20005129,
+          "datasetId": 12197694,
+          "mountSlug": "private-data-source"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_KERNEL_VERSION",
+          "sourceId": 342671664,
+          "mountSlug": "notebooks/sofiaanjenje/rsna-knee-e11-train"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_KERNEL_VERSION",
+          "sourceId": 342849430,
+          "mountSlug": "notebooks/sofiaanjenje/rsna-knee-e13-train"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_MODEL_INSTANCE_VERSION",
+          "sourceId": 4533,
+          "mountSlug": "models/metaresearch/dinov2/pytorch/small/1",
+          "modelInstanceId": 3325,
+          "modelId": 986
+        }
+      ],
+      "private_inputs": [
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 19720705
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        },
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 19858040
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        },
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 20005129
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        }
+      ],
+      "saved_source_verified": true,
+      "real_inference_performed_by_assistant": false,
+      "decision": "hold_not_currently_fully_public_reproducible",
+      "model_history": "Public stack plus independent student/fleet legs; three attached Dataset versions officially flagged private. Do not remove private legs and label it score-preserving reproduction.",
+      "license_notes": "Private assets contents/training history/licences not accessible; public stack includes gold-selected components."
+    },
+    {
+      "ref": "goodpjw2008/rsna-knee-stack-2-5d-convnext-mil-lb-0-944",
+      "page_url": "https://www.kaggle.com/code/goodpjw2008/rsna-knee-stack-2-5d-convnext-mil-lb-0-944?scriptVersionId=355300588",
+      "version": 2,
+      "script_version_id": 355300588,
+      "submission_id": 56837602,
+      "source_script_version_id": 355300588,
+      "public_score": 0.944,
+      "score_evidence": "Official Kaggle public UI view model linked submission for this saved version, independently of title/body claims",
+      "own_score": null,
+      "source_path": "artifacts/research/20261008-public-candidates/goodpjw2008-rsna-knee-stack-2-5d-convnext-mil-lb-0-944-v2/source.ipynb",
+      "source_sha256": "582f4a1c768cb4b347483797cfff4dc2a3e7648f0bb603d8e878eeb9ccc2695f",
+      "source_bytes": 273661,
+      "internet_enabled": false,
+      "gpu_enabled": true,
+      "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+      "source_license": "Not returned by accessed public metadata; do not infer from reader Dataset licence",
+      "visible_runtime_seconds": 317.1346705,
+      "hidden_runtime_seconds": null,
+      "input_count": 19,
+      "input_refs": {
+        "datasetDataSources": [
+          "dreaddevelopment/raptor-knee-maxspan",
+          "dreaddevelopment/raptor-knee-native384",
+          "dreaddevelopment/raptor-knee-native384dense",
+          "mattiaangeli/knee-mri-fold-weights",
+          "mattiaangeli/opencv-python-headless-4120088-x86",
+          "marwanmath/resnet-50-radimagenet-marwan",
+          "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+          "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+          "mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+          "mattiaangeli/rsna-knee-coatnet-global96-top3",
+          "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+          "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+          "pilkwang/rsna-knee-llm-labels",
+          "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+          "pilkwang/rsna-knee-weights"
+        ],
+        "kernelDataSources": [
+          "sofiaanjenje/rsna-knee-e11-train",
+          "sofiaanjenje/rsna-knee-e13-train"
+        ],
+        "modelDataSources": [
+          "metaresearch/dinov2/PyTorch/small/1"
+        ],
+        "competitionDataSources": [
+          "rsna-knee-abnormality-detection"
+        ]
+      },
+      "pinned_input_metadata": [
+        {
+          "sourceId": 154281,
+          "databundleVersionId": 20902466,
+          "mountSlug": "competitions/rsna-knee-abnormality-detection"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18229736,
+          "datasetId": 11290369,
+          "mountSlug": "datasets/marwanmath/resnet-50-radimagenet-marwan"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18673450,
+          "datasetId": 11529209,
+          "mountSlug": "datasets/pilkwang/rsna-knee-llm-labels"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18716507,
+          "datasetId": 11552334,
+          "mountSlug": "datasets/pilkwang/rsna-knee-weights"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18839182,
+          "datasetId": 11608090,
+          "mountSlug": "datasets/antoinegg1/rsna-knee-e9-radimagenet-heads-v15"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18842180,
+          "datasetId": 11610725,
+          "mountSlug": "datasets/antoinegg1/rsna-knee-e11-diverse-heads-v20"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18879001,
+          "datasetId": 11628770,
+          "mountSlug": "datasets/prvsiyan/rsna-knee-v52-radimagenet-heads-20260812"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 18956429,
+          "datasetId": 11611423,
+          "mountSlug": "datasets/mattiaangeli/knee-mri-fold-weights"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19120128,
+          "datasetId": 11745616,
+          "mountSlug": "datasets/dreaddevelopment/raptor-knee-maxspan"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19122845,
+          "datasetId": 11746763,
+          "mountSlug": "datasets/dreaddevelopment/raptor-knee-native384"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19134209,
+          "datasetId": 11752181,
+          "mountSlug": "datasets/dreaddevelopment/raptor-knee-native384dense"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19395055,
+          "datasetId": 11887453,
+          "mountSlug": "datasets/mattiaangeli/opencv-python-headless-4120088-x86"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19395706,
+          "datasetId": 11887000,
+          "mountSlug": "datasets/mattiaangeli/rsna-knee-coat-resgated-ep10-top3"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19459763,
+          "datasetId": 11920427,
+          "mountSlug": "datasets/mattiaangeli/rsna-knee-coatnet-global96-top3"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 19862359,
+          "datasetId": 11970384,
+          "mountSlug": "datasets/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 20325538,
+          "datasetId": 12371725,
+          "mountSlug": "datasets/goodpjw2008/rsna-knee-2-5d-convnext-reader"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_KERNEL_VERSION",
+          "sourceId": 342671664,
+          "mountSlug": "notebooks/sofiaanjenje/rsna-knee-e11-train"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_KERNEL_VERSION",
+          "sourceId": 342849430,
+          "mountSlug": "notebooks/sofiaanjenje/rsna-knee-e13-train"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_MODEL_INSTANCE_VERSION",
+          "sourceId": 4533,
+          "mountSlug": "models/metaresearch/dinov2/pytorch/small/1",
+          "modelInstanceId": 3325,
+          "modelId": 986
+        }
+      ],
+      "private_inputs": [],
+      "saved_source_verified": true,
+      "real_inference_performed_by_assistant": false,
+      "decision": "highest_priority_available_public_reproduction_candidate_after_serving_path_control",
+      "model_history": "Public .943 stack plus three independently trained ConvNeXt-Tiny fold checkpoints. Reader author declares report-grouped folds and gold58 excluded from fitting; public stack has gold-based historical selection. Reader training/selection details are claims not independently rerun.",
+      "blend": "70 percent public stack +30 percent reader by column percentile rank, fixed global coefficient",
+      "license_notes": "Reader Dataset Apache 2.0; stack Dataset declarations vary including CC0, CC BY-NC-SA 4.0 and Unknown wheel Dataset. Upstream component notices retained. Source Notebook licence unreturned; preserve full source/attribution and use official Copy & Edit.",
+      "reader_dataset_ref": "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+      "reader_dataset_version": 1,
+      "reader_checkpoint_uncompressed_bytes": 369105813,
+      "author_reported_hidden_turnaround_hours": [
+        6.5,
+        8.0
+      ],
+      "runtime_limitation": "Author range is submit-to-score including orchestration, not official hidden worker runtime; this heavy stack may recreate scale-dependent failures and is not an immediate root-cause fix.",
+      "pinned_runtime_reason": "Container31430 / Python3.12; decoder Input ships cp311/cp312 wheels. LatestPython3.13 substitution does not reproduce the scored environment.",
+      "latest_source_version": 5,
+      "latest_source_sha256": "941802c45fbc21a763c259d54d35f5fe1600f3a269a39d6773edcbf4185f457e",
+      "best_scored_version": 2,
+      "latest_is_best_source": false
+    }
+  ],
+  "selected_next_candidate": "goodpjw2008/rsna-knee-stack-2-5d-convnext-mil-lb-0-944",
+  "selected_source_version": 2,
+  "selected_submission": 56837602,
+  "selected_script_version_id": 355300588,
+  "practical_priority": "Fix/diagnose current hidden-serving failure and retain successfulp002; then one exact author-scored Copy & Edit control with fixed source/Input versions/environment, no added guards/weights/training changes. Do not promise hidden completion or samescore.",
+  "primary_links": [
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection",
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/741819",
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/737950",
+    "https://www.kaggle.com/datasets/goodpjw2008/rsna-knee-2-5d-convnext-reader",
+    "https://www.kaggle.com/datasets/nartaa/rsna-knee-publication-swa-weights-20261007"
+  ],
+  "external_resource_eligibility": "Host OAI reply permits direct external data conditional on generally accessible free access without institutional/legal escalation. Direct-data ruling does not resolve every derivative publicly accessible pretrained-checkpoint case. No illegal-use assertion made.",
+  "rejected_title_only_example": {
+    "ref": "nikhil00718/rsna-knee-0-95-dinov2-v2",
+    "title_claim": 0.95,
+    "official_page_public_score": 0.809,
+    "version": 3,
+    "reason": "Notebook title is not a scored evidence field."
+  },
+  "additional_public_candidate": {
+    "ref": "bliverrigpdoge/rsna-knee-raptor-student-blend-lb-0-944",
+    "version": 1,
+    "script_version_id": 355268991,
+    "submission_id": 56837327,
+    "public_score": 0.944,
+    "source_sha256": "0494d785572eccf8b04f797da810fd501cb67a9f48f8c3c78bb350003c95d673",
+    "decision": "secondary; model card is blank, teacher/gold provenance less documented than ConvNeXt candidate"
+  },
+  "evidence_root": "artifacts/research/20261008-public-candidates",
+  "selected_input_current_listing": [
+    {
+      "ref": "dreaddevelopment/raptor-knee-maxspan",
+      "listing": [
+        {
+          "id": 11745616,
+          "ref": "dreaddevelopment/raptor-knee-maxspan",
+          "totalBytes": 271659195,
+          "licenseName": "CC0: Public Domain",
+          "currentVersionNumber": 1,
+          "lastUpdated": "2026-08-22T20:14:47.093Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "dreaddevelopment/raptor-knee-native384",
+      "listing": [
+        {
+          "id": 11746763,
+          "ref": "dreaddevelopment/raptor-knee-native384",
+          "totalBytes": 271660739,
+          "licenseName": "CC0: Public Domain",
+          "currentVersionNumber": 1,
+          "lastUpdated": "2026-08-23T00:35:34.303Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "dreaddevelopment/raptor-knee-native384dense",
+      "listing": [
+        {
+          "id": 11752181,
+          "ref": "dreaddevelopment/raptor-knee-native384dense",
+          "totalBytes": 271657808,
+          "licenseName": "CC0: Public Domain",
+          "currentVersionNumber": 1,
+          "lastUpdated": "2026-08-23T13:17:23.333Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "mattiaangeli/knee-mri-fold-weights",
+      "listing": [
+        {
+          "id": 11611423,
+          "ref": "mattiaangeli/knee-mri-fold-weights",
+          "totalBytes": 439183537,
+          "licenseName": "CC0: Public Domain",
+          "currentVersionNumber": 2,
+          "lastUpdated": "2026-08-15T16:02:22.423Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "mattiaangeli/opencv-python-headless-4120088-x86",
+      "listing": [
+        {
+          "id": 11887453,
+          "ref": "mattiaangeli/opencv-python-headless-4120088-x86",
+          "totalBytes": 53707377,
+          "licenseName": "Unknown",
+          "currentVersionNumber": 1,
+          "lastUpdated": "2026-09-03T15:09:48.663Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "marwanmath/resnet-50-radimagenet-marwan",
+      "listing": [
+        {
+          "id": 11290369,
+          "ref": "marwanmath/resnet-50-radimagenet-marwan",
+          "totalBytes": 87446837,
+          "licenseName": "CC BY-NC-SA 4.0",
+          "currentVersionNumber": 1,
+          "lastUpdated": "2026-07-21T14:26:57.200Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+      "listing": [
+        {
+          "id": 12371725,
+          "ref": "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+          "totalBytes": 353235670,
+          "licenseName": "Apache 2.0",
+          "currentVersionNumber": 1,
+          "lastUpdated": "2026-10-05T00:09:57.943Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+      "listing": [
+        {
+          "id": 11887000,
+          "ref": "mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+          "totalBytes": 818330860,
+          "licenseName": "CC0: Public Domain",
+          "currentVersionNumber": 3,
+          "lastUpdated": "2026-09-03T15:47:01.507Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+      "listing": [
+        {
+          "id": 11970384,
+          "ref": "mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+          "totalBytes": 1098712582,
+          "licenseName": "CC0: Public Domain",
+          "currentVersionNumber": 2,
+          "lastUpdated": "2026-09-21T18:34:04.307Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "mattiaangeli/rsna-knee-coatnet-global96-top3",
+      "listing": [
+        {
+          "id": 11920427,
+          "ref": "mattiaangeli/rsna-knee-coatnet-global96-top3",
+          "totalBytes": 838503690,
+          "licenseName": "CC0: Public Domain",
+          "currentVersionNumber": 1,
+          "lastUpdated": "2026-09-06T13:13:46.887Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+      "listing": [
+        {
+          "id": 11610725,
+          "ref": "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+          "totalBytes": 58918610,
+          "licenseName": "CC BY-NC-SA 4.0",
+          "currentVersionNumber": 1,
+          "lastUpdated": "2026-08-11T17:20:10.690Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+      "listing": [
+        {
+          "id": 11608090,
+          "ref": "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+          "totalBytes": 58895880,
+          "licenseName": "CC BY-NC-SA 4.0",
+          "currentVersionNumber": 3,
+          "lastUpdated": "2026-08-11T15:14:09.957Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "pilkwang/rsna-knee-llm-labels",
+      "listing": [
+        {
+          "id": 11529209,
+          "ref": "pilkwang/rsna-knee-llm-labels",
+          "totalBytes": 145577,
+          "licenseName": "CC0: Public Domain",
+          "currentVersionNumber": 1,
+          "lastUpdated": "2026-08-06T10:31:34.133Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+      "listing": [
+        {
+          "id": 11628770,
+          "ref": "prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+          "totalBytes": 58531930,
+          "licenseName": "Other (specified in description)",
+          "currentVersionNumber": 1,
+          "lastUpdated": "2026-08-12T20:46:25.603Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    },
+    {
+      "ref": "pilkwang/rsna-knee-weights",
+      "listing": [
+        {
+          "id": 11552334,
+          "ref": "pilkwang/rsna-knee-weights",
+          "totalBytes": 1657083403,
+          "licenseName": "CC0: Public Domain",
+          "currentVersionNumber": 1,
+          "lastUpdated": "2026-08-08T02:49:55.307Z"
+        }
+      ],
+      "status_query_error": "404 Client Error: Not Found for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus"
+    }
+  ],
+  "selected_dataset_listing_bytes_sum": 6337673695,
+  "input_size_limitation": "Public listing totalBytes may differ from uncompressed per-file sizes; current-version list, not historical payload-byte validation. Notebook outputs and genericmodel not included. DatasetStatus404 on others'publicresources is not proof the Dataset is unavailable; metadata/listing succeeds."
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": "p005_public_control_handoff_review_v1",
+  "reviewed_at_jst": "2026-10-08",
+  "status": "prepared_conditional_public_checkpoint_adoption_source_environment_input_binding_verified_not_executed",
+  "notebook": "notebooks/public/14_submit_p005_public950_control.ipynb",
+  "notebook_bytes": 133344,
+  "notebook_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "source_ref": "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+  "source_version": 1,
+  "source_script_version_id": 356192954,
+  "source_sha256": "c3b62e2f8be016abe541e9d5e537217fec73edce41f6fef15d95527c2dbfc75a",
+  "author_submission_id": 56930357,
+  "author_public_lb": 0.95,
+  "own_public_lb": null,
+  "own_visible_or_hidden_execution": false,
+  "eligibility_status": "conditional_proceed_public_frozen_checkpoint_inference",
+  "eligibility_audit": "experiments/public-pretrained-eligibility-20261008.json",
+  "eligibility_audit_sha256": "ff24345edc94aa3f986bee5dc73b91fca60cc14cacdae03ba9d9428f35de61f5",
+  "adoption_scope": "Fixed public learned checkpoints for original inference only. Retain exact inputs/attribution/model terms; no new gold adjustment, direct restricted OAI access, retraining or redistribution. Not an individual Host approval or a guarantee of upstream DUA compliance.",
+  "input_count": 3,
+  "private_input_count": 0,
+  "input_snapshots": [
+    {
+      "ref": "rsna-knee-abnormality-detection",
+      "source_id": 154281,
+      "databundle_version_id": 20902466,
+      "mount": "competitions/rsna-knee-abnormality-detection"
+    },
+    {
+      "ref": "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+      "dataset_id": 12371725,
+      "dataset_version_id": 20325538,
+      "public_dataset_version": 1,
+      "mount": "datasets/goodpjw2008/rsna-knee-2-5d-convnext-reader"
+    },
+    {
+      "ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+      "dataset_id": 12431568,
+      "dataset_version_id": 20440357,
+      "public_dataset_version": 1,
+      "mount": "datasets/nartaa/rsna-knee-publication-swa-weights-20261007"
+    }
+  ],
+  "original_container_id": 31481,
+  "original_container_digest": "2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+  "original_python": "3.13 visible-log paths",
+  "accelerator": "NvidiaTeslaT4",
+  "internet": false,
+  "matching_original_code_cells": 7,
+  "code_changes": [],
+  "non_code_changes": [
+    "Japanese eligibility/provenance preface in the existing first markdown cell",
+    "clear saved outputs and execution_count"
+  ],
+  "syntax_checks": {
+    "normal_python_cells": 4,
+    "ipython_writefile_python_bodies": 3,
+    "code_execution": false
+  },
+  "generator": "scripts/build_p005_public_control.py",
+  "tests": "tests/test_p005_public_control.py",
+  "tests_passed": 5,
+  "ruff_check_and_format": "passed",
+  "package": "artifacts/kaggle/p005-public950-control-v1-20261008",
+  "package_manual_notes": "artifacts/kaggle/p005-public950-control-v1-20261008/manual-notes.txt",
+  "package_and_repository_hash_checks_passed": 12,
+  "p004_notebook12_unchanged": true,
+  "author_visible_evidence": {
+    "runtime_seconds": 84.563499,
+    "test_studies": 3,
+    "reader3_checkpoints_found": true,
+    "reader_csv_written": true,
+    "apex_fusion_success": true,
+    "apex_exception_or_fallback_message_absent": true,
+    "libjpeg_wheel_install_failed": true,
+    "failure_message": "No matching distribution found for pylibjpeg-libjpeg",
+    "decoder_explanation": "Attached CP311/312 libjpeg wheel is unavailable on CP313. Original installation check=False and series decode exception/mask handling remain unchanged. Preinstalled decoder availability and compressed-series skip rates are not independently measured.",
+    "hidden_runtime": null
+  },
+  "manual_quality_gate": [
+    "Copy and Edit author scoredV1, preserve Original Container31481/digest, T4x2, InternetOFF and exact3Input snapshots.",
+    "Import14 into that copied Notebook is a proposed code-version lock, with Inputs/Original state rechecked afterward because GUI setting preservation is unverified.",
+    "If Original cannot be preserved, stop before worker launch and record the configuration state.",
+    "After saved execution check Found3checkpoints, _own.csv written and Apex Fusion SUCCESS; no Apex EXCEPTION/FALLBACK.",
+    "Share the saved-version URL for independent7cell/InputVersion/container binding before manual submission from that same version. This is quality verification rather than an added authorization request."
+  ],
+  "gold_scope": "Upstream model gold58 selection/development is acknowledged and is not independent CV. No own gold label fitting/checkpoint/crop/blend selection is performed.",
+  "source_license_scope": "Original source credits and NDA acknowledgement preserved; whole Notebook independent license unconfirmed, reader Apache2.0 not assigned to all source.",
+  "nine_hour_completion_or_same_public_guarantee": false,
+  "model_or_mri_download": false,
+  "real_mri_decode": false,
+  "training_performed": false,
+  "external_upload_or_submission": false,
+  "automatic_upload_or_submission_code_added": false
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": "p005_submitted_saved_version_review_v1",
+  "checked_at_utc": "2026-10-08T08:02:55.625362+00:00",
+  "status": "visible_source_environment_and_CSV_verified_private_submission_state_unreported",
+  "initial_submission": {
+    "ref": 56943135,
+    "totalBytes": 0,
+    "date": "2026-10-08T07:55:21.190Z",
+    "description": "",
+    "fileName": "submission.csv",
+    "submittedBy": "rsraki",
+    "submittedByRef": "rsraki",
+    "teamName": "rsraki",
+    "url": "/code/rsraki/rsna-knee-apex-grandmaster-stack?scriptVersionId=356323020"
+  },
+  "initial_submission_status": null,
+  "initial_submission_public_score": null,
+  "initial_submission_error": null,
+  "initial_submission_fields_absent": [
+    "status",
+    "publicScore",
+    "errorDescription"
+  ],
+  "submission_state_warning": "Absent fields are not proof of success, failure, or worker running state; source/status read-only check is not hidden scoring.",
+  "saved_notebook": "rsraki/rsna-knee-apex-grandmaster-stack",
+  "saved_version": 1,
+  "submitted_script_version_id": 356323020,
+  "saved_source_sha256": "13cf71aa2ae13ec8c2e1900c796e9c772bfd0efef9f3b60b9ca46b86b917f853",
+  "saved_source_bytes": 130457,
+  "raw_notebook_hash_diff_explanation": "All cell types and source text match author; serialization or Notebook/cell metadata differ. Seven code cells exactly match 14; 14 has an extra Japanese provenance markdown preface.",
+  "author_ref": "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+  "author_script_version_id": 356192954,
+  "author_public_score": 0.95,
+  "own_public_score": null,
+  "container_digest": "2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+  "author_original_container_id": 31481,
+  "saved_container_numeric_id": null,
+  "visible_gpu_count": 2,
+  "saved_input_slugs": {
+    "competition": [
+      "rsna-knee-abnormality-detection"
+    ],
+    "datasets": [
+      "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+      "nartaa/rsna-knee-publication-swa-weights-20261007"
+    ]
+  },
+  "public_dataset_metadata": [
+    {
+      "ref": "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+      "dataset_id": 12371725,
+      "current_public_version_number": 1,
+      "available_public_version_numbers": [
+        1
+      ]
+    },
+    {
+      "ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+      "dataset_id": 12431568,
+      "current_public_version_number": 1,
+      "available_public_version_numbers": [
+        1
+      ]
+    }
+  ],
+  "saved_input_internal_version_ids_directly_observed": false,
+  "user_reported_input_versions": {
+    "source": "User reply in this session on2026-10-08; not an API internal-ID observation",
+    "goodpjw2008/rsna-knee-2-5d-convnext-reader": 1,
+    "nartaa/rsna-knee-publication-swa-weights-20261007": 1
+  },
+  "saved_input_version_limit": "Official SDK saved metadata exposes slugs, not internal pinned IDs. Own private version-specific UI request through SDK authenticated session returned404. Both public datasets remain version1 only; matching original V1 is supported by public metadata, but saved competition bundle20902466 and dataset internal20325538/20440357 are not directly independently bound.",
+  "author_expected_input_internal_ids": {
+    "competition_bundle": 20902466,
+    "reader": 20325538,
+    "SWA_weights": 20440357
+  },
+  "visible_csv": {
+    "name": "submission.csv",
+    "bytes": 830,
+    "sha256": "381253ef942b8f7da0488b13f9e6aabed6a9b660ae40e68b17533a9eba14b37b"
+  },
+  "visible_csv_target_rank_fusion_max_abs_difference": 0.0,
+  "visible_last_submission_write_event_seconds": 89.466835704,
+  "visible_log_sha256": "93f55b954779dd7c164088af2b3f343279799cf85236e5b709be1624a33187a0",
+  "visible_log_wheel_install_failed": true,
+  "wheel_failure_interpretation": "Same message as scored author visible log. Original check=False continuation, decoder exceptions/masks and fusion fallback were unchanged. Actual compressed MRI coverage remains unmeasured; no new hidden failure is inferred.",
+  "checks": {
+    "submitted_output_version_bound": true,
+    "seven_author_code_cells_exact": true,
+    "all_author_source_cells_exact": true,
+    "prepared14_code_cells_exact": true,
+    "original_container_digest_exact": true,
+    "gpu_enabled": true,
+    "internet_disabled": true,
+    "T4_machine_shape_matches": true,
+    "expected_competition_slug_exact": true,
+    "expected_two_dataset_slugs_exact": true,
+    "no_other_kernel_or_model_inputs": true,
+    "visible_session_complete": true,
+    "found3_reader_checkpoints": true,
+    "reader_csv_written": true,
+    "fusion_success_logged": true,
+    "no_apex_fallback_or_exception_logged": true,
+    "exact13_columns": true,
+    "visible_three_rows": true,
+    "unique_nonempty_uids": true,
+    "all_output_headers_equal": true,
+    "all_output_uid_order_equal": true,
+    "final36_probabilities_finite_and_in_unit_interval": true,
+    "reader36_probabilities_finite_and_in_unit_interval": true,
+    "all_reader_columns_nonconstant": true,
+    "all_final_columns_nonconstant": true,
+    "saved_csv_matches_exact_author_target_rank_fusion": true,
+    "two_GPUs_visible": true,
+    "SWA_checkpoint_SHA_visible_exact": true,
+    "Python313_visible": true
+  },
+  "checks_passed": 29,
+  "checks_total": 29,
+  "private_inference_time_known": false,
+  "model_or_mri_downloaded": false,
+  "real_MRI_decoded": false,
+  "new_training_started": false,
+  "remote_upload_launch_or_submission": false,
+  "immutable_artifact_directory": "artifacts/research/20261008-p005-submitted-review-v1",
+  "recommended_waiting_work": "Keep this submitted control immutable. Prepare independent weak grouped-CV analysis and real-image diagnostic plan; do not infer accuracy from three visible test rows or change fallback/coefficients before this result."
+}

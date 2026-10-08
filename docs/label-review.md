@@ -1,6 +1,31 @@
 # 学習側のレポート根拠監査
 
-更新日2026年10月7日。現行weakラベルを変更する前に、学習側150検査の原文と判定根拠を確認するための手順です。[作成ツール](../scripts/build_label_review_queue.py)はCSVだけを処理します。**実150検査の抽出と重点30セルの一次レビューを完了し、再ラベル付け・実学習は行っていません。**
+更新日2026年10月8日。現行weakラベルを変更する前に、学習側150検査の原文と判定根拠を確認するための手順です。[作成ツール](../scripts/build_label_review_queue.py)はCSVだけを処理します。**150検査・重点30セルの一次レビューに続き、未確定17セルの二次レビューを完了しました。教師訂正の採用は0件です。** 元教師でのf004比較学習は別作業として両foldを完了しました。
+
+## 17セルの二次レビュー結果（10月8日）
+
+原Reportと対象部位・否定範囲・現在/既往・程度/範囲を再確認し、[主催者定義](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733343)、[ICRSの軟骨grading](https://cartilage.org/wp-content/uploads/2024/07/ICRS_evaluation1-1.pdf)、[AAOSの靱帯損傷の説明](https://www.orthoinfo.org/diseases--conditions/collateral-ligament-injuries/)と照合しました。[二次レビュー集計](../experiments/training-report-second-pass-review-20261008.json)
+
+| 原文から整理した状態 | 件数 | 現行教師との関係 |
+| --- | ---: | --- |
+| 閾値未満の根拠 | 2 | 既存0と整合 |
+| 明示的正常 | 1 | 既存0と整合 |
+| 対象所見への直接言及なし | 3 | 既存欠損と整合、0へ埋めない |
+| 根拠不足で未確定 | 11 | 元の値を保持、二値訂正を採用しない |
+
+未確定11はMCL3・PF OA5・Effusion2・Synovitis1です。急性/程度、膝蓋大腿部位と欠損深さ/範囲、関節内の液量、滑膜自体の根拠、多言語や文字化けが確認不足の理由です。**6セルの状態を整理できたことは、教師6件の訂正を意味しません。今回、新しい教師版を作る根拠は得られませんでした。** 不足している情報を推測で補ったラベルでは教師だけの比較にも進みません。
+
+新規[reviewed17.csv](../artifacts/label-review/20261008-second-pass-evidence-v1/reviewed17.csv)と[cell-evidence.json](../artifacts/label-review/20261008-second-pass-evidence-v1/cell-evidence.json)へ、原文の部分文字列、解釈範囲、理由、AI reviewer、text confidence、出典/hashを保存しました。原packet・教師・goldのbyte不変、gold/保護fold0・1除外、原値保持、全proposed_label空欄など20項目と独立整合確認/Ruffが成功。教師と画像は変更していません。
+
+これはAIによるテキスト根拠の整理で、画像由来正解や独立した臨床/言語判定ではありません。将来教師訂正を検討する際は、残る範囲/言語の根拠を確かめてから判断します。今回の未確定件数を母集団の誤り率やPublicスコアの証拠には使いません。
+
+## p005の採点待ちに使える17セルの再確認資料
+
+[todo-unresolved17.csv](../artifacts/label-review/20261008-waiting-second-pass-v1/todo-unresolved17.csv)に元の未確定17セルと所見ごとの確認事項をまとめ、[studies-unresolved.csv](../artifacts/label-review/20261008-waiting-second-pass-v1/studies-unresolved.csv)へ対応する原Reportを保存しました。MCL5・PF OA7・Effusion2・Synovitis3、17検査です。[review-instructions.txt](../artifacts/label-review/20261008-waiting-second-pass-v1/review-instructions.txt)を読み、別コピーへsecond_pass欄だけを記入します。元の列と値は保持し、proposed_labelと新しい9記入欄は空欄のままです。
+
+調べるのは、否定の作用範囲、現在/既往、程度/範囲、部位、言語、Reportに情報があるかです。大会所見の閾値を原文から判断できなければ未確定のまま残します。未記載を陰性にする、EffusionをSynovitisへ流用する、語だけから重症度を補う処理はしません。**17は誤ラベル件数ではなく、この再確認を画像由来正解やPublic向上と扱いません。** [Hostの定義](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733343)を10月8日にも再確認しました。
+
+元manifest/30セルCSV/150検査CSV/source/固定入力のhash、gold/保護fold0・1のUID/group除外、17組の一意性、原値保持、記入欄空欄、書込み後の元ファイル不変等13項目を確認。原文・UIDはprivate artifactのみで、[集計監査](../experiments/training-report-second-pass-handoff-20261008.json)には含めていません。新しい教師判断・翻訳・ラベル変更・MRI処理・学習は実行していません。
 
 f002のMCL/PF OAの両foldでの低下、Synovitisの少数陰性、EffusionのN/Bの違いを調べる動機はありますが、モデルの弱点を教師誤りと断定しません。goldとfold0/1の連結groupを**読む前に除外**し、キュー150検査・1,800セルでgold_selected=holdout_selected=0を確認しました。患者独立性は未確認です。これは教師規則の検討資料であり、画像由来正解ではありません。
 

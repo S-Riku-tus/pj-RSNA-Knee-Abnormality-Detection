@@ -1,0 +1,98 @@
+{
+  "schema_version": "p005_waiting_work_priority_plan_v1",
+  "created_date_jst": "2026-10-08",
+  "status": "analysis_and_readiness_prepared_no_new_training",
+  "submitted_control": {
+    "submission_ref": 56943135,
+    "notebook": "rsraki/rsna-knee-apex-grandmaster-stack",
+    "version": 1,
+    "script_version_id": 356323020,
+    "source_and_visible_checks_passed": 29,
+    "author_public_lb": 0.95,
+    "own_public_lb": null,
+    "private_scoring_state": "SDK status/score/error fields absent; no success/failure or worker duration inferred",
+    "audit": "experiments/p005-submitted-review-20261008.json",
+    "inputs_limit": "Three slugs match; public Datasets have only V1 and user confirms both selected V1; internal IDs and competition bundle are not directly exposed"
+  },
+  "priority": [
+    {
+      "rank": 1,
+      "work": "Preserve and bind actual submitted source, original environment and visible fusion",
+      "status": "completed_read_only_with_input_id_limit",
+      "gpu_required": false,
+      "value": "Distinguishes implementation/configuration mismatch from private rerun behavior regardless of final score"
+    },
+    {
+      "rank": 2,
+      "work": "Organize existing17 unresolved training-side report cells for a second evidence review",
+      "gpu_required": false,
+      "value": "Tests label-definition uncertainty relevant to persistent MCL/PF OA weakness before model changes",
+      "limits": "17 is unresolved count, not errors; Report evidence is not image ground truth; retain missing/uncertain values and protect gold/folds0and1; no automatic relabeling"
+    },
+    {
+      "rank": 3,
+      "work": "Optional local f004 dropout0.2to0.4 comparison on both completed f003 baseline folds",
+      "gpu_required": "Local RTX4090 only",
+      "status": "not_started; both new run directories absent",
+      "config": "configs/experiments/f004-dinov2-attention24-dropout40.json",
+      "plan_and_commands": "experiments/f004-dropout40-plan-20261007.json",
+      "steps": "Run fold0 then fold1 using existing CLI; inspect failures before continuing; preserve previous runs",
+      "fixed_factors": ["24 epochs", "features", "encoder", "weak labels", "folds", "seed20261002", "learning rate", "minimum masked weak BCE checkpoint selection"],
+      "reference_fitting_seconds": {"f003_fold0": 355.92, "f003_fold1": 358.13},
+      "timing_scope": "Prior head fitting only; startup/cache verification separate; not a f004 duration guarantee",
+      "adoption_condition": "Review both BCE-selected folds against f003: weak BCE, official12 diagnostic AUC, auxiliary11, MCL/PF OA/Fracture supports and paired differences. Single-fold or BCE-only benefit insufficient",
+      "purpose_limit": "Own frozen-feature head experiment, not an Apex training step, submission exception fix or proven Public improvement; do not insert into submitted control"
+    },
+    {
+      "rank": 4,
+      "work": "Optional13 real1300 memory profile only if continuing own f002 serving and Kaggle GPU quota permits",
+      "gpu_required": "Kaggle GPU",
+      "status": "prepared_unexecuted_not_submission",
+      "audit": "experiments/f002-memory-reader-review-20261008.json",
+      "limits": "Memmap adds disk/IO; no constant RSS or hidden completion guarantee; unrelated to p005 scoring requirement; never submit profile CSV"
+    }
+  ],
+  "defer": [
+    "Simultaneous second public-control submission before understanding p005 result",
+    "Posthoc Public/gold coefficient fitting",
+    "Adding own f002 head without hidden-completion and complementarity evidence",
+    "Longer epoch schedule without consistent two-fold evidence",
+    "New backbone/spatial extraction requiring MRI work before fixed scored serving and teacher-review evidence"
+  ],
+  "evidence": {
+    "f003_twofold_review": "experiments/f002-f003-fold01-review-20261007.json",
+    "f003_gain_not_uniform": "Fold0 extension improved auxiliary11; fold1 selected predictions are unchanged; fracture deterioration also observed",
+    "teacher_first_review": "experiments/training-report-evidence-review-20261007.json",
+    "small_class_limit": "MCL weak positive supports small; Synovitis negatives especially sparse. No patient independent holdout or Public generalization claim"
+  },
+  "result_branches": {
+    "scored_above_own0937": "Keep exact scored saved version as stronger own baseline; use evidence-backed single-factor own-model comparisons before adding a model",
+    "scored_not_above_own0937": "Preserve own0937; recheck reproduction inputs/environment and record actual gap; only then evaluate alternate public control",
+    "private_exception": "Preserve submitted source/error/version; do not repeat identical submission; separate mounting/runtime/input-dependent failure and inspect reproduction differences",
+    "fields_still_absent": "No score or failure inferred from missing SDK fields; continue independent small work"
+  },
+  "local_readiness_checked": {
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "CUDA_available": true,
+    "training_CLI_help_matches_documented_arguments": true,
+    "CUDA_training_guard_preserved": true,
+    "f004_fold0_output_exists": false,
+    "f004_fold1_output_exists": false
+  },
+  "primary_sources": [
+    {"url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733343", "checked_date_jst": "2026-10-08", "supports": "Challenge thresholds differ from generic report words; report ambiguity does not justify inventing the target"},
+    {"url": "https://www.kaggle.com/docs/efficient-gpu-usage", "checked_date_jst": "2026-10-08", "supports": "Account GPU quota is finite and can be monitored; no fixed current quota amount assumed"}
+  ],
+  "actions_performed": {
+    "saved_status_source_log_smallCSV_read_only_review": true,
+    "existing_metadata_and_model_result_review": true,
+    "CUDA_doctor_and_CLI_help_only": true,
+    "model_or_MRI_payload_download": false,
+    "real_MRI_decode": false,
+    "training_started": false,
+    "teacher_labels_changed": false,
+    "submitted_notebook_modified": false,
+    "external_upload_or_submission": false
+  }
+}

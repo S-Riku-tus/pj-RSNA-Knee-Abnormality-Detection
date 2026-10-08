@@ -1,0 +1,115 @@
+{
+  "schema_version": "p005_scored_improvement_roadmap_v1",
+  "date_jst": "2026-10-08",
+  "status": "research_and_experiment_spec_prepared_no_new_inference_or_training",
+  "incumbent": {
+    "candidate": "p005 Apex",
+    "own_public": 0.950,
+    "submission_ref": 56943135,
+    "script_version_id": 356323020,
+    "saved_notebook": "rsraki/rsna-knee-apex-grandmaster-stack",
+    "saved_version": 1,
+    "rank_user_reported": 271,
+    "rank_independently_verified": false,
+    "score_audit": "experiments/p005-scored-review-20261008.json",
+    "local_source": "notebooks/public/14_submit_p005_public950_control.ipynb",
+    "local_source_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "precision_limit": "Official Public text0.950 has3 decimals; unrounded or per-target Public and Private scores are not exposed",
+    "previous_scored_baseline_public": 0.937
+  },
+  "targets": {
+    "next_public": 0.955,
+    "longer_term_public_strictly_greater_than": 0.960,
+    "required_sum_class_AUC_gain_for_0955": 0.060,
+    "required_sum_class_AUC_gain_for_0960": 0.120,
+    "illustration": "Three targets each improve0.020 and all others stay fixed -> macro gain0.005. Arithmetic requirement, not a forecast.",
+    "final_priority": "Private-generalizing scored model with a functioning saved inference path, not repeated fitting to Public rank"
+  },
+  "research": {
+    "architecture_audit": "experiments/p005-growth-architecture-review-20261008.json",
+    "public_search": "experiments/post950-public-research-20261008.json",
+    "latest_constraints": "experiments/competition-constraints-20261008.json",
+    "public_0955_reproducible_recipe_verified": false,
+    "search_scope": "Official score-sorted100 Notebook refs and top17 saved score views plus web; not proof no private/other solution exists",
+    "current_structure": "CoAtNet96slice/K94 plain+anatomical mirror SWA plus3foldEMA ConvNeXt-Tiny384px k16/slot, fixed target rank fusion",
+    "less_useful_first_changes": ["Extra main-CoAt mirror already present", "Main-CoAt morewindows beyond94 of96 already dense", "Strictly monotone transformation of final per-target score preserves ROC-AUC ordering", "F004 dropout40 or longerepochs lacked consistent twofold evidence"]
+  },
+  "phases": [
+    {
+      "phase": 1,
+      "planned_window_jst": "2026-10-08 to2026-10-10",
+      "objective": "Lock scored incumbent and test one bounded inference sampling factor",
+      "candidate": "p006 ConvNeXt k_eval16to24",
+      "changed_factor": {"branch": "ConvNeXt reader", "k_eval_before": 16, "k_eval_after": 24},
+      "fixed": ["Original container", "3 Input versions", "CoAt input/crop/K94/TTA", "all checkpoint bytes", "decoder/preprocessing", "ConvNeXt3fold averaging", "per-target fusion coefficients", "UID/label order and existing fallback behavior"],
+      "training_required": false,
+      "expected_mechanism": "Denser windows might retain focal evidence missed by16 centres; duplicate/correlated windows and training sampling mismatch may also harm",
+      "resource_limit": "ConvNeXt encoder forward count increases1.5x; total runtime and VRAM not known. Do not claim wholeNotebook1.5x or9h completion",
+      "steps": [
+        "Create new serving and profile notebooks only after source binding and variable-window/model-mask contract checks; keep14 unchanged",
+        "Use artificial variableK/short-series/missing-slot inputs to verify shapes masks and target order",
+        "Kaggle run32 fixed gold-excluded training UIDs without Report/target evaluation, then same256 UIDs for k16/k24 coverage/time/memory comparison",
+        "Check both branches actually ran and UID/order/fusion integrity; report optional fallback separately instead of mistaking score success for full coverage",
+        "Only if profile supports resources, manually save/submit one k24 version; no weight grid or concurrentfactor change",
+        "Keep0.950 if gain absent, failed, or below displayed precision; investigate before expanding"
+      ],
+      "implementation_status": "specification only; no p006 Notebook built or run in this advice turn",
+      "gain_not_guaranteed": true
+    },
+    {
+      "phase": 2,
+      "planned_window_jst": "2026-10-11 to2026-10-15",
+      "objective": "Assess one representation-distinct specialist branch while preserving incumbent",
+      "public_candidate": "renta0426/rsna-knee-public0033-meniscus-bag-v1 V2",
+      "mechanism": "DINOv2-Base terminal blocks fine-tuned on336px multi-series windows may differ from CoAtNet/ConvNeXt",
+      "current_limits": ["Standalone Public and Apex blend benefit unverified", "Full weak4349fit explicitly fold_safe_oof=false", "Stock T4x2FP32 exactuint8 N6x12x336x336 runtime incompatible with current caches and generic local runner", "1300case uint8cache about10.57GB before other assets and RAM workspaces", "Gold exclusion declaration is not patient/group independence proof"],
+      "adoption_gate": "Audit source/labels/license/checkpoint versions and streaming resources first. Label-free disagreement can prioritize but not prove accuracy; no weakOOF/Gold blend optimization on fullfit public weights.",
+      "comparison": "At most one prespecified small specialist addition if runtime and provenance are adequate; otherwise omit this branch. No arbitrary coefficient sweep.",
+      "alternative_if_public_branch_unsuitable": "Develop one fold-clean generic-encoder spatial2.5D/patchMIL baseline, then terminal-layer fine-tuning as a separate factor;32-case cache and CUDA pilot before full extraction",
+      "spatial_limit": "Current392px cache contains CLS features only; patch geometry cannot be recovered from it. Old192px imagecache does not regain native detail by upsampling.",
+      "no_Apex_class_weakness_inferred_from_f002": true
+    },
+    {
+      "phase": 3,
+      "planned_window_jst": "2026-10-16 to2026-10-19",
+      "objective": "Confirm only useful factors and combine only measured compatible gains",
+      "next_inference_factor_if_needed": "ConvNeXt anatomical mirror alone at basek16, not simultaneousk24; about2x reader views but totalcostunknown",
+      "defer_main_crop": "CoAt native320to384 changes nominal FOV116.7to140mm, not sampling detail alone; requires rebuilt relative-position model and strictload/finiteGPU test. Inputarea1.44x and attentionpairs approx2.07x do not equal runtime multipliers.",
+      "own_training_protocol": "Fixed observed-label masks, generic initialization and gold/group-safe fixedfolds; beginfold0/1 before extrafolds. Select by prespecified weakmaskedBCE, no maxAUC epoch reselection",
+      "Public_role": "Bounded external comparisons with written hypothesis; repeated classweight/temperature/Gold optimization excluded",
+      "no_completion_or_0960_promise": true
+    },
+    {
+      "phase": 4,
+      "planned_window_jst": "2026-10-20 to2026-10-22",
+      "objective": "Freeze proven saved versions with headroom for hidden scoring",
+      "selection_plan": "Keep0.950 incumbent and strongest justified scored variant as up-to2 final candidates; reconsider selection on evidence beforedeadline",
+      "unscored_late_changes": "Do not replace selected scored candidate with an unverified late modification"
+    }
+  ],
+  "validation_constraints": {
+    "gold_not_for_own_fit_selection_prompt_crop_or_coefficients": true,
+    "public_fullfit_predictions_not_independent_OOF": true,
+    "weak_BCE_AUC_Public_and_Private_distinguished": true,
+    "same_study_report_supplied_group_kept_together": true,
+    "patient_independence_unverified": true,
+    "missing_not_zero": true,
+    "p005_per_target_Public_AUC_unknown": true,
+    "twofold_f004_and_teacher_review": "Do not promote f004;17secondreview has0 adopted corrections;no unsupported teacher patch",
+    "runtime_control": "Measured large-cohort time/memory/IO with internal planned margin under official9h, never extrapolate visible3-case timing as guarantee"
+  },
+  "official_constraints_current": {
+    "daily_submissions": 5,
+    "final_selection_max": 2,
+    "final_deadline_jst": "2026-10-23T08:59:00+09:00",
+    "internet_off": true,
+    "GPU_CPU_hours": 9
+  },
+  "actions_this_turn": {
+    "read_only_score_source_public_research": true,
+    "real_inference_training_MRI_decode": false,
+    "new_model_or_MRI_payload_download": false,
+    "existing_notebook_or_weights_changed": false,
+    "external_upload_or_submission": false
+  }
+}

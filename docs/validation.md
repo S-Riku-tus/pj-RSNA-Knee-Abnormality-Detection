@@ -1,6 +1,73 @@
 # 準備内容の検証範囲
 
-更新日 2026年10月7日 JST。09の再発接続失敗を公式SDK・21項目で確認。元headを同一byteで埋め込む10を準備し、旧head Inputを不要にする。08 Version2の256件成功・以前の未実施/次工程は各作業時点の履歴。
+更新日 2026年10月8日 JST。18:03 JST公式APIでp005 COMPLETE・自己Public0.950を確認。0.955/0.960超への調査と実験計画を準備。f004両fold実学習・教師17二次レビューは完了、差し替え/教師訂正は採用しない。以下の採点待ちや未開始表示は各作業時点の履歴。
+
+## 自己Public0.950確定と改善計画（10月8日）
+
+- 18:03:45 JSTの公式GetSubmission(ref56943135)でraw/typed COMPLETE・Public文字列0.950・errorなし。既存29項目の保存source/環境/CSV監査とscript356323020のbindingを維持し、8/8項目成功。[採点監査](../experiments/p005-scored-review-20261008.json)。271位はユーザー報告でAPI直接観測でなく、未丸め値/個別Public AUC/Private/hidden時間/fallback率は未取得。採点成功を旧p003/f002原因の解明と扱わない。
+- 最新公式本文/SDK制約も取得。日次5提出・最終選択2、最終10月23日08:59 JST、CPU/GPU9h・Internet OFF、12所見等重みmacro ROC-AUC。teamの残4枠は18:03のUTC当日観測で、今後の枠を保証しない。[条件監査](../experiments/competition-constraints-20261008.json)。Rules本文SHAは今朝と同一。
+- [構成監査](../experiments/p005-growth-architecture-review-20261008.json)でCoAtNet96slice/K94/SWA/解剖mirror2view、ConvNeXt3foldEMA・k16/slot・所見別rank融合を確認。native320→384はnominal FOV116.7→140mmを戻す変更で細部sampling密度だけの変更ではない。384モデル再構築/relative-position/strictload/finiteGPU未検証なので、次の窓数変更と一緒に導入しない。
+- [最新公開候補監査](../experiments/post950-public-research-20261008.json)はscore順100件・先頭17公式版・4source/log・3Dataset/小来歴5件、13/13項目とRuff成功。確認範囲の最高best0.950、公開0.955以上の採点済み版は未確認。タイトル/ログ保証と公式0.948等を分けた。Gold-Gated/比較版の自分によるgold係数選択は採用しない。
+- 公開Meniscus10 V2はDINOv2-Baseの別表現候補だが、contractにallweak4349fit/fold_safe_oof=false、T4x2FP32/厳密336px cacheを確認。既存cache/独立weakCVへの直接接続は不可、単独Public/追加利得は未確認。全体stack0.945を枝の単独値と扱わない。モデル/MRI payloadを取得していない。
+- [次段階の仕様](../experiments/p005-improvement-roadmap-20261008.json)はp006のConvNeXt k16→24だけを最初の1候補とし、人工variableK契約→32/256件資源/coverage比較→手動保存/限定採点という準備計画。Conv forward1.5倍は全体時間/VRAM倍率でなく、9h完走・0.955達成は未証明。新Notebook/新実MRI/新学習/外部提出をこの方針相談で開始していない。
+- p0050.950の元14と過去採点/研究記録を保持し、PROJ/README/ロードマップ/設計を更新。0.955/0.960は目標とし、Publicの微調整探索・gold選択・公開fullfitをOOFとする評価を除外。自作f002の弱点をApexのPublic弱点と断定しない。
+- root最終確認は新規23JSON構文・8文書localリンク381件・自己COMPLETE/score/8checks・研究13checks・制約/目標差の算術・14SHA不変を照合。台帳は旧58行のbyteを保持して採点/調査/計画3イベント追記、14列61一意ID。[整合性記録](../artifacts/research/20261008-post950-strategy-v1/verification.json)。新推論コード/GPUコードを変更していないため、人工forwardや既存学習テスト群の再実行は行っていない。
+
+## 待機中の3作業の実行と判断（10月8日）
+
+- 今回は手順整備でなくユーザーの実行依頼として、取得済み凍結特徴を使うローカルRTX4090のf004両fold実学習を実施。CUDA、計画config/16source/固定入力hash、元f003run/best/predictionhash、新規run未存在を照合。各24epoch、両CLI exit0、head fitting計767.040秒・CLI全体796.26秒。前者は起動/cache検証を除き、後者も事前監査・解析・元MRI特徴抽出/隠し推論を含まない。
+- [完成比較](../experiments/f003-f004-fold01-review-20261008.json)の236項目が成功。4run×24epochのCSVhash/13列/UID順/全metrics/再計算masked BCE/更新数、4run×best/lastの計8CPUcheckpoint契約/finite tensor、固定教師・source・過去run不変を確認。GPUコードは変更しておらず、同じ人工forward群を繰り返していない。
+- 事前の最小masked weak BCE選択を維持、epoch15/14。fold0 BCE−0.000329/AUC12−0.007871/補助11−0.002223、fold1 BCE+0.003235/AUC12−0.000738/補助11−0.000543。差はf004−f003。両fold利得が揃わず、f004へ差し替えない。各3000回group bootstrapの補助11差95%区間は両方0をまたぎ、改善も一律悪化も統計的確定とは扱わない。
+- PF OAの点改善は両fold、MCLは方向不一致、Fractureは小さい改善も区間0跨ぎ。Synovitis fold0は陰性1で12平均bootstrapの1061/3000が未定義となり、定義可能drawだけの区間を全体の確証には使わない。供給group/既使用foldでの診断で、患者独立性・選択不確実性・Public改善は未証明。
+- rootの標準ライブラリ独立検証は選択4CSVのmask/所見順/UID集合/有限確率/hash/最小BCE選択を確認し、確率から再計算したBCEが2e−6以内、AUC12が1e−12以内で一致。[独立結果](../artifacts/research/20261008-waiting-work-execution-v1/selected-prediction-verification.json)。初回の検証用header仮定を既存12項目へ修正してから成功し、学習・推論には変更していない。
+- [教師17セル二次レビュー](../experiments/training-report-second-pass-review-20261008.json)は20項目と独立整合確認/Ruffが成功。閾値未満2・明示的正常1・直接言及なし3・未確定11。整理6は既存0または欠損と整合し、教師訂正採用0件。原文はprivate新規runに保存し、元packet/固定教師/gold bytes不変、gold/保護fold0・1除外、proposed_label空欄を確認。Report不足の0化・画像GT扱い・目的標本から母集団誤り率推定をしていない。
+- p005は17:32と17:45:41 JSTに公式GetSubmissionを各1回read-only照会。raw status省略とSDK既定値PENDING=0を分けて保存し、スコア/エラー未返却、queue/worker段階は未観測。[最後の状態](../experiments/p005-status-final-20261008.json)。約50分のwall clockを隠し推論時間やtimeoutと扱わず、旧submitted/status監査を保持した。
+- root最終監査17項目が成功。source16/固定入力/元f003/教師private出力/旧提出監査/14Notebook/3000回bootstrap hashを確認し、独立CSV再計算と比較値が一致。台帳は元53行のbyteを保持して5イベント追記、14列58一意ID、自己Public/gold評価欄は空欄。[全体実行記録](../experiments/waiting-work-execution-review-20261008.json)
+- 新しいGPUコード・元DICOM/モデル取得・MRIdecode・教師変更・外部upload/実行/submitを追加していない。実行済みのf004出力を再作成せず、p005の採点結果が返った後に元保存版と実際の結果を分けて判断する。
+
+## p005の実提出と採点待ちの確認（10月8日）
+
+- 公式SDK08:02:55Z（17:02 JST）に最新提出ref56943135/`rsraki/rsna-knee-apex-grandmaster-stack` Version1/script356323020を取得。提出時刻07:55:21Z（16:55 JST）。API応答にstatus/publicScore/errorDescriptionがなく、成功・失敗・worker実行中をいずれも断定しない。[新規監査](../experiments/p005-submitted-review-20261008.json)
+- 作者採点済みV1と全7 code cell・全source cell同一、14ともcode同一。rawNotebook SHAの差はmetadata/serializationで、推論差とは扱わない。Original digest・GPU有効/T4×2・Internet OFF・3 Input参照名も一致。公開2DatasetはcurrentV1/availableV1のみ。保存Input内部IDs/competition bundleはSDKに出ず、認証済みprivateUIも404のため、内部版の直接照合済みとは書かない。
+- 可視COMPLETE、3checkpoint検出・reader CSV書込み・Apex Fusion SUCCESS、EXCEPTION/FALLBACKなし。小さい3CSVを独立検査して13列/3UID順/36有限[0,1]・非定数・所見別rank融合式maxdiff0等29項目が成功。SWA hashもログで原版一致。89.467秒は可視ログの最終CSV書込みまでで、隠しworker時間ではない。作者と同じlibjpeg導入エラーの後に融合は成功したが実圧縮系列の網羅性は未測定。
+- 元source/ログと小CSVのみread-only取得。重み/MRIの追加取得・MRIdecode・学習・外部upload/実行/submitなし。過去の準備・提出失敗・成功の記録を保持した。
+- ユーザーがreader/SWAの両InputともVersion1と回答し、ユーザー確認として監査へ追記。API内部版IDの直接観測とは区別する。
+- f004は両output directoryが未作成。現CLI `train --help`で既存手順の全引数を確認し、doctorでPython3.12.13/torch2.10+cu128/CUDA利用可を確認。CUDA必須CLIは維持、学習は開始していない。既存f003の約356/358秒はhead fittingのみで、次のf004の速度保証ではない。
+- 待ち時間の教師作業として元30セルから未確定17だけのprivate packetを新規作成。MCL5/PF OA7/Effusion2/Synovitis3、17unique studies。元CSVの列/値を維持し、proposed_labelとsecond_pass9欄は空欄。元manifest/source/入力/出力hash、gold/保護fold除外、既存component/Report hash、原値保持、書込み後の不変等13assertが成功。新しい医学的判断・翻訳・教師変更・学習は行っていない。[引渡し集計](../experiments/training-report-second-pass-handoff-20261008.json)
+- 提出結果に依存しない作業の優先順位・f004採用条件・結果後の分岐を[待機中の計画](../experiments/p005-waiting-work-plan-20261008.json)へ保存。公開3件から精度・補完性を推測せず、公開重みの既知訓練画像を独立OOFと扱わず、他foldの訓練済みheadを平均して当該foldの改善と扱わない。13は任意のf002診断で、p005採点の前提ではない。
+- rootで新規JSON・private資料hash・17組一意/記入欄空欄・f004設定hash/未実行・更新6文書のlocalリンク326件を再検査。台帳は元50行のbyteを保持して今回3イベントを追記、自己Public欄は空欄。10項目成功。[最終確認](../artifacts/research/20261008-p005-waiting-work-v1/verification.json)
+
+## 10の可視完走と隠し提出失敗の再監査（10月8日）
+
+- 公式SDK06:46:29Z（15:46 JST）、提出ref56904146/script355977821/Version1/`rsraki/notebook428d1e17f8`。全cellは配布10と一致、GPU ON・Internet OFF・Competition/feature/decoderの3 Inputs、旧head Datasetなし。可視COMPLETE、添付とroot summaryがbyte同一。一般例外・Publicなしであり、SDKのCOMPLETEだけを採点成功と扱わない。[22項目の監査](../experiments/f002-embedded-head-hidden-failure-review-20261008.json)
+- 保存CSVを独立に確認：3 UID/order、正確な13列、36個のfiniteな[0,1]確率、hash、receipt、固定checkpoint/featurefingerprint一致。元07の完了exportと入力CSV hash/UID順も一致。処理20.300秒、CPU peak RSS4.179GiB、PyTorch peak reserved364MiB、最後の空きdisk19.501GiB。可視3件の推論セル計測で、Notebook全体・queue・隠しworker時間ではない。
+- 4圧縮syntaxesの人工画像はKaggleでdefault/pylibjpeg画素完全一致。実MRIの先頭9系列headerは非圧縮。GDCM missing表示だけからdecoder欠落を断定しない。追加JPEG/JPEG-LS/RLEのlibrary availabilityは既存Windows同pin環境で確認したが、追加形式のKaggle画素/実MRI網羅性とは区別する。
+- 独立人工1,300検査・5,842系列metadata・実random CPU headでは9提出不変条件が成功、UID順/全15,600確率/Reportとtrain不要/NPZなし/skipなしを確認。MRI/encoder/decoderはmockなので時間5.664秒を実推論速度と扱わない。[独立監査](../experiments/serving-contract-independent-review-20261008.json)
+- spacing欠落・物理位置重複・一定強度で選択系列が検査全体を停止する人工ケースを再現。native形状・スライス長に応じてraw/stack/percentile/float64全体正規化配列が共存する。既存4,207件exportでは全12,621選択系列が正常に処理済みで、private真因は未確定。nonfinite header contextがstrict JSONを二重に失敗させ診断を隠す経路も観測した。これをvalid系列の失敗原因とは扱わない。
+- `frozen_test_input.py`は実test.csv/test_series.csv/test_seriesの存在を満たすrootを選び、aliasを同一視し、複数の実rootは拒否。既存Notebookのexistsだけのroot選択に弱点を人工再現した。5 unittest成功・Windows symlink1件skip。メモリ変更の診断には同時導入せず一要因を保つ。
+
+## 公開候補の採点版監査とp004の準備（10月8日）
+
+- 公式版別view-modelのlinked submission ID/sourceScriptVersionId/scoreを照合し、0.950/0.949/0.946/0.945/0.944を確認。タイトル.950だけで実採点.809の例は候補から除外。自己スコアは全候補未測定。[primary audit](../experiments/public-candidates-20261008.json)
+- p004はgoodpjw2008採点済みBest Version2/script355300588/submission56837602/0.944。元sourceSHA`582f4a1c768cb4b347483797cfff4dc2a3e7648f0bb603d8e878eeb9ccc2695f`、29 code cell・19公開Inputs・Original31430/digest`37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461`/Python3.12を固定。元CP311/CP312 wheelsを最新CP313で代用しない。推論・係数・元fallbackを変更しない12とmanual manifestを作成。Copy & EditのV2 fork保証は未確認なので保存後にcode/Input/containerを照合してから手動提出する。
+- .946/.945は必須private Inputs3つで完全再現不能。.949/.950はOAI2,399knees外部教師とGold58選択の作者記載を確認。直接データアクセス条件と公開派生checkpoint利用可否は分けて監査し、違反と断定しない。reader DatasetのApache2.0をNotebook全体へ転記しない。
+- Kaggleでのp004実MRI/隠し完走・自己Public、f002メモリ診断の実行は未検証。実モデル/MRIの取得・学習・外部upload/submitは実施していない。
+
+## f002メモリ配送だけの変更と13の検証（10月8日）
+
+- 新`bounded_feature_reader.py`とadapterを追加。nativeとquantile scratchをtemporary float32 memmapへ置き、percentileは元全volumeのlinear規則、必要スライスのみ同じfloat64算術で整数化。physical順/spacing/letterbox/triplet/系列選択/encoder/headを維持。geometry不適合のskip・架空尺度・確率代替は追加しない。16core source/runtime/featurefingerprintは不変だがruntime reader bindingは変更しており、新reader/adapter hashを明記する。[検証記録](../experiments/f002-memory-reader-review-20261008.json)
+- 人工DICOMのoblique/anisotropic/signed/負RescaleSlope/MONOCHROME1/59→48triplet/single-slice等で入力windows・位置/coverage・全5特徴配列がbyte同一。既存f002学習済みfold0 epoch11 headでRTX4090の12確率差0、提出契約valid。実DINO encoder/MRIは使用せず、実学習なし。
+- reader10＋profile adapter5の15 unittestがNumPy2.5.3とKaggle同版2.1.3の既存Windows環境で成功。人工GPU streaming5件で成功/失敗summary、reader binding復元、owned temporary cleanup、既存診断保持、test mode拒否を確認。Ruff5files成功。KaggleLinuxで新readerの実MRIは未実行。
+- 13は519,132byte/SHA`c5b0f73497a64fba20a785c10ade5951a40da2f744412782611542bf3a167515`、profile_train/seed20261007/limit1300/fixedweakmanifesthash。元10のstartup/head/runtime/decoderセルを維持、root+nestedsummaryに追加reader provenanceと資源events。既存train/weak CSVは全列を読むが、UID以外のReport/target値はfit/推論/評価へ消費しない。profile CSVは提出不可。head含有の13は個別Git除外。
+- 一時disk予算はnative float32×2＋256MiB余裕、コピーchunk≤8MiB、success/errorでworkspace掃除。file-backed percentile partitionのRSS増加やdisk/IOは残るためconstantRAM/OOM解消を保証しない。無作為固定1300は全4207/隠しprotocol/最大nativeサイズの網羅ではない。root選択helper/geometry代替/診断JSONのNaN修正を同時導入せず、一要因を保つ。
+
+## 公開pretrained例外の再監査と次のp005（10月8日）
+
+- 最新公式Rulesの本文を再取得し10月4日取得と一致、本文SHA`9105f8f81f96c02aca988197c175d699052be8c06419b21131dccdd426bc404d`。外部無料公開modelの許可と事前学習入力のwinner-license例外を確認。HostのOAI回答は元datasetアクセスの条件で、公開checkpoint個別の禁止/承認は記されていない。SWA配布cardの大会利用許可と合わせ、元OAIを取得しない公開checkpoint固定推論として条件付き採用へ更新した。[再監査](../experiments/public-pretrained-eligibility-20261008.json)
+- 作者0.950のApex V1/script356192954/submission56930357をp005固定対照14へ準備。元7 code cell、3公開Input内部版、Original31481/Python3.13/digest`2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f`を保持。元codeのdecoder pip失敗後のcontinuation/series fallbackは変更しない。作者の採点済み成績と、可視ログでのcodec網羅性は別。自己採点/隠し完走は未確認。[引渡し監査](../experiments/p005-public-control-handoff-20261008.json)
+- 14は133,344byte/SHA`75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546`。新5 unittest・Ruffが成功し、利用条件JSONのdecision/source/score/Input snapshotへのbinding、source tamper拒否、7セル保持とwritefile構文、12 hash/size（p004不変含む）を検査。原作者の可視ログにreader3checkpoint検出・`_own.csv`書込み・Apex Fusion SUCCESSを確認し、EXCEPTION/FALLBACKはなし。Kaggle実行前の静的検証であり、自分の実MRI完走ではない。
+- `.950を使える`はモデル公開条件に基づく記録された判断で、Host個別承認、作者元OAI取得の適格保証、自己Gold未利用モデルという主張ではない。独自f002/f003のgold非利用と公開重みgold選択履歴を区別し、帰属・配布条件を維持する。
+- root独立14項目で16core/元runtime/採点済みp002/失敗10の不変、12/14全code cellの原版一致、13のstartup/head/decoder不変、全新Notebookの空outputs/hash、追加したlocal document links35件を確認。台帳の既存44行をbyte prefixとして保持して6行を追記し、自己Public欄へ作者scoreは入れていない。過去run・初期prep packageも保存。[root独立記録](../artifacts/research/20261008-f002-submit-failure/final-workspace-review.json)
 
 ## 09の起動前接続失敗の再発と全体状況の再監査（10月7日）
 

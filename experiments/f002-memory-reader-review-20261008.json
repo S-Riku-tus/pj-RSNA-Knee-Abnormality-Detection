@@ -1,0 +1,223 @@
+{
+  "checked_at": "2026-10-08 JST",
+  "status": "prepared_artificial_verified_Kaggle_profile_unexecuted",
+  "notebook": "notebooks/public/13_profile_f002_memory_1300.ipynb",
+  "notebook_sha256": "c5b0f73497a64fba20a785c10ade5951a40da2f744412782611542bf3a167515",
+  "notebook_bytes": 519132,
+  "change": "One inference factor: native intermediate pixel storage moved from anonymous full-volume arrays to temporary disk-backed float32 maps, with unchanged accepted geometry, selected series, global p1/p99, quantization and triplets.",
+  "head_delivery": "Same audited embedded files as 10; separate head Dataset not attached",
+  "profile_csv_value_policy": "The baseline CSV reader reads all columns of train.csv and the fixed weak manifest; profile eligibility and inference use only StudyInstanceUID. Report and target values are not consumed by the encoder/head, checkpoint selection, scoring or training. labels_or_report_used=false means values unused, not that these CSV columns are never read.",
+  "fixed_checkpoint_sha256": "189ecab25e0d1c029e974ee23f3c46239e5eceef290b5dca33f6831dcb8e1b03",
+  "fixed_head_fold_epoch": [
+    0,
+    11
+  ],
+  "feature_fingerprint": "1f1726d4381135581983ba2740e16651e0ca39b7d8df037f1acf4b0a5f3b5185",
+  "profile": {
+    "mode": "profile_train",
+    "limit": 1300,
+    "seed": 20261007,
+    "labels_or_report_used": false,
+    "for_submission": false,
+    "reader_sha256": "95a906f7e157cf1fa6d722432e6ed913838c6f579ac352418255688a5cf49ee6",
+    "adapter_sha256": "10dc9a5caad8753111d548259b6448dff7a414bfce0677ff002359112b99e33a",
+    "baseline_streaming_runtime_sha256": "a0d13ea7a93916dc6e7acd52ffe68a9a09e21bbe889d830746f7f9ed46d87f37",
+    "base_notebook_sha256": "8ca99ca50a5ddd60eef67ce7ec5a1c606d23194686b515e94f481b97680dc8ba",
+    "change": "one factor: native intermediate pixel storage; original strict input contract retained"
+  },
+  "required_inputs": [
+    {
+      "kind": "competition",
+      "reference": "rsna-knee-abnormality-detection"
+    },
+    {
+      "kind": "dataset",
+      "reference": "rsraki/rsna-frozen-feature-inputs-v1"
+    },
+    {
+      "kind": "dataset",
+      "reference": "rsraki/rsna-dicom-decoders-py313-v1"
+    }
+  ],
+  "source_sha256": {
+    "bounded_feature_reader.py": "95a906f7e157cf1fa6d722432e6ed913838c6f579ac352418255688a5cf49ee6",
+    "bounded_streaming_adapter.py": "10dc9a5caad8753111d548259b6448dff7a414bfce0677ff002359112b99e33a",
+    "build_f002_memory_profile.py": "0d62afbc9e35a39d11d93ebe8dc2b75890e3e2be70e5c07bbdc147680f174ec8",
+    "frozen_streaming_runtime.py": "a0d13ea7a93916dc6e7acd52ffe68a9a09e21bbe889d830746f7f9ed46d87f37"
+  },
+  "core16_unchanged": {
+    "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+    "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+    "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "feature_runtime.py": "bfa9c7d075f342bd45fcdf2152e7560587972923a1e37e6d915f7e617399e01e",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+    "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+    "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+    "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+    "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05"
+  },
+  "checks": {
+    "generated_notebook_matches_builder": true,
+    "package_notebook_byte_identical": true,
+    "empty_outputs_and_compile": true,
+    "original10_startup_embedded_head_runtime_decoder_cells_preserved": true,
+    "profile1300_seed20261007_and_fixedweak_manifest_hash": true,
+    "competition_rerun_submission_guard": true,
+    "profile_only_does_not_create_submission_csv": true,
+    "artificial_actual_streaming_profile5_selected_studies_cuda_and_csv_valid": true,
+    "normal_and_error_paths_restore_original_reader": true,
+    "normal_and_error_paths_publish_root_and_nested_summary": true,
+    "fresh_guard_preserves_previous_nested_diagnostics": true,
+    "temporary_native_files_removed_on_success_and_decode_failure": true,
+    "anonymous_native_float32_stack_not_used": true,
+    "quantile_uses_inplace_scratch_memmap": true,
+    "copy_chunk_observed_within_declared_limit": true,
+    "large_shape_budget_test_without_large_RAM_allocation": true,
+    "core16_and_checkpoint_unchanged": true,
+    "ruff_check_and_format5files": true
+  },
+  "tests": [
+    {
+      "environment": "Windows Python3.12.13, NumPy2.5.3, PyTorch2.10.0+cu128, RTX4090",
+      "reader_tests": 10,
+      "adapter_notebook_tests": 5,
+      "passed": true
+    },
+    {
+      "environment": "Windows Python3.12.13, existing decoder-test NumPy2.1.3 reused with main venv torch/Pillow; no packages installed",
+      "reader_tests": 10,
+      "adapter_notebook_tests": 5,
+      "passed": true,
+      "note": "Same NumPy version as saved Kaggle runtime; this is not a Kaggle Linux test."
+    }
+  ],
+  "trained_head_artificial_proof": {
+    "record": "artifacts/research/20261008-f002-hidden-robustness/bounded-reader-verification.json",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "full_arrays_shape": [
+      3,
+      48,
+      384
+    ],
+    "arrays_masks_positions_planes_flags_byte_identical": true,
+    "maximum_probability_difference": 0.0,
+    "submission_receipt": {
+      "studies": 1,
+      "targets": 12,
+      "valid": true
+    },
+    "real_encoder_MRI_inference_or_fitting": false
+  },
+  "existing_4207_feature_metadata": {
+    "path": "data\\features\\f001-weak-sv355640726\\export.json",
+    "sha256": "aa164be29b14813b9793c51b9924ef2e4019f4f01c2aa1ec35d17fdf536e1f5a",
+    "complete": true,
+    "studies": 4207,
+    "selected_series": 12621,
+    "series_per_study_counts": {
+      "3": 4207
+    },
+    "shape_variants": 734,
+    "native_slices": {
+      "min": 12,
+      "median": 30,
+      "max": 320
+    },
+    "native_height": {
+      "min": 192,
+      "median": 512,
+      "max": 1280
+    },
+    "native_width": {
+      "min": 192,
+      "median": 512,
+      "max": 1444
+    },
+    "native_voxels": {
+      "min": 958464,
+      "median": 7291200,
+      "max": 158597120
+    },
+    "maximum_single_native_float32_bytes": 634388480,
+    "order_counts": {
+      "physical_position": 12621
+    },
+    "physical_span_mm": {
+      "min": 32.99999964832752,
+      "median": 104.39999949086993,
+      "max": 207.99865696679225
+    },
+    "spacing_row_mm": {
+      "min": 0.07280710339546,
+      "median": 0.32142856717109,
+      "max": 0.9375
+    },
+    "spacing_column_mm": {
+      "min": 0.07280710339546,
+      "median": 0.32142856717109,
+      "max": 0.9375
+    },
+    "limitation": "Export retains selected-series shape/spacing/order metadata; no all-slice transfer syntax or hidden-test metadata are available."
+  },
+  "strict_stop_reproductions": [
+    {
+      "kind": "valid",
+      "status": "extraction_completed",
+      "valid_slots": 2,
+      "encoded_series": 2
+    },
+    {
+      "kind": "missing_spacing",
+      "status": "extraction_aborted",
+      "error_type": "ValueError",
+      "error": "Missing/invalid PixelSpacing; no invented physical scale",
+      "encoded_series_before_abort": 0,
+      "otherwise_valid_series_present": true
+    },
+    {
+      "kind": "duplicate_positions",
+      "status": "extraction_aborted",
+      "error_type": "ValueError",
+      "error": "Nonfinite or duplicate slice positions",
+      "encoded_series_before_abort": 1,
+      "otherwise_valid_series_present": true
+    },
+    {
+      "kind": "constant_intensity",
+      "status": "extraction_aborted",
+      "error_type": "ValueError",
+      "error": "Constant-intensity series",
+      "encoded_series_before_abort": 1,
+      "otherwise_valid_series_present": true
+    }
+  ],
+  "resources": {
+    "copy_chunk_bytes": 8388608,
+    "minimum_disk": "two float32 native-volume files plus 268435456-byte reserve per selected series",
+    "original_maximum_native_float32_mib_in_selected_training_export": 605.0,
+    "root_and_nested_summary_key": "memory_reader",
+    "additional_log": "memory-reader-events.jsonl",
+    "sampling": "allocation/global-percentile/final-series; copy every16chunks and normalization every16slices",
+    "Linux_madvise": "optional release after bounded copying/writing; unsupported advice does not reject images",
+    "peak_RSS_measured_on_Kaggle": false
+  },
+  "hidden_root_cause": "unconfirmed; generic submission error does not identify an offending private input or exception",
+  "public_lb": null,
+  "real_MRI_decode_new_model_data_download_training_upload_submission_performed": false,
+  "limitations": [
+    "1300 seeded weak-study profiles do not cover every selected native shape among all4207 or the hidden dataset.",
+    "File-backed partition can still touch native-sized resident pages; constant peak RSS is not guaranteed.",
+    "Disk I/O and temporary file requirements increase. Disk budget is checked; out-of-budget input fails explicitly instead of fabricating predictions.",
+    "An invalid selected series still aborts its study. No skipping, geometry guessing or alternative series selection was mixed into this memory change.",
+    "Artificial window and head parity do not evaluate real MRI accuracy or prove identical effects for all future library versions/hardware.",
+    "Kaggle startup, actual1300-study runtime and private inference completion are unverified; this notebook is diagnostic only and must not be submitted.",
+    "A nonfinite diagnostic header can still cause the unmodified baseline event JSON serializer to fail. The adapter records the escaping exception; no unrelated serializer/math change was mixed in."
+  ]
+}

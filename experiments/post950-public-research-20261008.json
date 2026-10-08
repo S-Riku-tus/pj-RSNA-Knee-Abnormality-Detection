@@ -1,0 +1,759 @@
+{
+  "schema": "rsna_post950_public_primary_research_v1",
+  "checked_at_jst": "2026-10-08T18:11:57.777559+09:00",
+  "scope": "Official public Notebook score/source/metadata/log/card and selected small provenance files only. No checkpoint/MRI payloads, real MRI decode, inference, fits, launches, uploads, submissions, or contacts.",
+  "instructions_vs_documents": "User and repository instructions govern. Third-party config instructions and sample commands are recorded evidence and were not executed or adopted as instructions.",
+  "own_baseline": {
+    "candidate": "p005 Apex",
+    "public_score_user_report": 0.95,
+    "rank_user_report": 271,
+    "submission_ref": 56943135,
+    "script_version_id": 356323020,
+    "decision": "preserve exact scored incumbent; score API verification handled separately by root"
+  },
+  "search": {
+    "official_sdk_query": "competition kernels scoreDescending first 100",
+    "public_notebooks_listed": 100,
+    "official_public_ui_views_refreshed": 17,
+    "web_queries": [
+      "site:kaggle.com/code RSNA Knee 0.955",
+      "site:kaggle.com/code RSNA Knee 0.960",
+      "site:kaggle.com/code rsna-knee 0.956",
+      "site:kaggle.com/competitions/rsna-knee-abnormality-detection/discussion 0.955",
+      "site:kaggle.com/competitions/rsna-knee-abnormality-detection/discussion best single-model"
+    ],
+    "confirmed_public_notebook_0955_or_higher_found": false,
+    "confirmed_top17_max_best_public": 0.95,
+    "conclusion_ja": "今回取得できた公式score順100件の先頭17件と検索では、版別実採点済みの公開0.955以上は確認できなかった。非公開チーム解法や索引未反映の全世界不存在という主張ではない。",
+    "rounding_limit": "Notebook linked scoreFormatted is 3 decimals; do not infer differences below displayed precision, private score, or significance.",
+    "failed_request_notes": "Initial generic GetKernel kernelId=0 returned403 and versionNumber=0/id=0 view returned404. Correct version1 first, followed by actual mostRecentRunId succeeded for all17. These are read request failures, not unavailable-public-asset evidence. No bypass or credential-content reads."
+  },
+  "fresh_scored_notebook_summary": [
+    {
+      "ref": "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+      "latest_script_version_id": 356192954,
+      "latest_submission": {
+        "id": 56930357,
+        "sourceScriptVersionId": 356192954,
+        "scoreFormatted": "0.950"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.950",
+        "kernelVersionNumber": 1,
+        "kernelSessionUrl": "/code/sujanmajhisuzan/rsna-knee-apex-grandmaster-stack?scriptVersionId=356192954"
+      },
+      "private_inputs": [],
+      "input_count": 3,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python",
+        "dockerImageDigest": "2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "dockerImageId": "sha256:621b8b58b6103997bc6c1cb0a54424ec33f0afc1f40802eeb17f68af01268920",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python",
+        "outputSizeBytes": 174920,
+        "runTimeSeconds": 84.563499,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "haideptry/rsna-knee-v2-vs-apex-comparative-study",
+      "latest_script_version_id": 356305828,
+      "latest_submission": {
+        "id": 56940384,
+        "sourceScriptVersionId": 356305828,
+        "scoreFormatted": "0.948"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.950",
+        "kernelVersionNumber": 3,
+        "kernelSessionUrl": "/code/haideptry/rsna-knee-v2-vs-apex-comparative-study?scriptVersionId=356214541"
+      },
+      "private_inputs": [],
+      "input_count": 4,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "dockerImageDigest": "2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "dockerImageId": "sha256:621b8b58b6103997bc6c1cb0a54424ec33f0afc1f40802eeb17f68af01268920",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "outputSizeBytes": 175750,
+        "runTimeSeconds": 97.5333868,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "kozykappa/rsna-knee-gold-gated-triple-reader",
+      "latest_script_version_id": 356267936,
+      "latest_submission": {
+        "id": 56934257,
+        "sourceScriptVersionId": 356267936,
+        "scoreFormatted": "0.950"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.950",
+        "kernelVersionName": "Version 2",
+        "kernelVersionNumber": 2,
+        "kernelSessionUrl": "/code/kozykappa/rsna-knee-gold-gated-triple-reader?scriptVersionId=356267936"
+      },
+      "private_inputs": [],
+      "input_count": 3,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "dockerImageDigest": "2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "dockerImageId": "sha256:621b8b58b6103997bc6c1cb0a54424ec33f0afc1f40802eeb17f68af01268920",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "outputSizeBytes": 469120,
+        "runTimeSeconds": 465.8627776,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed",
+      "latest_script_version_id": 356334725,
+      "latest_submission": {
+        "id": 56944868,
+        "sourceScriptVersionId": 356334725
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.949",
+        "kernelVersionNumber": 6,
+        "kernelSessionUrl": "/code/matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed?scriptVersionId=356180772"
+      },
+      "private_inputs": [],
+      "input_count": 3,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageDigest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageId": "sha256:c72831376c5485ec652a6f4a771bf091ae0726310e1b9db3db064387e173e941",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "outputSizeBytes": 20046953,
+        "runTimeSeconds": 95.9544181,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "nartaa/rsna-knee-0949-anatomical-mirror",
+      "latest_script_version_id": 356175397,
+      "latest_submission": {
+        "id": 56921226,
+        "sourceScriptVersionId": 356175397,
+        "scoreFormatted": "0.949"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.949",
+        "kernelVersionNumber": 2,
+        "kernelSessionUrl": "/code/nartaa/rsna-knee-0949-anatomical-mirror?scriptVersionId=356175397"
+      },
+      "private_inputs": [],
+      "input_count": 2,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "dockerImageDigest": "2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "dockerImageId": "sha256:621b8b58b6103997bc6c1cb0a54424ec33f0afc1f40802eeb17f68af01268920",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "outputSizeBytes": 125359,
+        "runTimeSeconds": 65.207586,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "xianhan/rsna-knee-0949-anatomical-mirror-candidate",
+      "latest_script_version_id": 356229522,
+      "latest_submission": {
+        "id": 56928175,
+        "sourceScriptVersionId": 356229522,
+        "scoreFormatted": "0.949"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.949",
+        "kernelVersionNumber": 1,
+        "kernelSessionUrl": "/code/xianhan/rsna-knee-0949-anatomical-mirror-candidate?scriptVersionId=356229522"
+      },
+      "private_inputs": [],
+      "input_count": 2,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "dockerImageDigest": "2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "dockerImageId": "sha256:621b8b58b6103997bc6c1cb0a54424ec33f0afc1f40802eeb17f68af01268920",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "outputSizeBytes": 125359,
+        "runTimeSeconds": 79.8577957,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "pjmathematician/rsna-knee-d4-blend",
+      "latest_script_version_id": 354077227,
+      "latest_submission": null,
+      "best_submission_score": {
+        "scoreFormatted": "0.946",
+        "kernelVersionNumber": 3,
+        "kernelSessionUrl": "/code/pjmathematician/rsna-knee-d4-blend?scriptVersionId=353440703"
+      },
+      "private_inputs": [
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 19720705
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        },
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 19858040
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        },
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 20114037
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        }
+      ],
+      "input_count": 21,
+      "visible_run_info": {
+        "dockerHubUrl": "https://",
+        "failureMessage": "CancelSession called before CreateSession.",
+        "exitCode": 137,
+        "outputSizeBytes": 0,
+        "wasKilled": true
+      }
+    },
+    {
+      "ref": "pjmathematician/rsna-knee-d4-lite",
+      "latest_script_version_id": 352859223,
+      "latest_submission": {
+        "id": 56567867,
+        "sourceScriptVersionId": 352859223,
+        "scoreFormatted": "0.945"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.945",
+        "kernelVersionNumber": 1,
+        "kernelSessionUrl": "/code/pjmathematician/rsna-knee-d4-lite?scriptVersionId=352859223"
+      },
+      "private_inputs": [
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 19720705
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        },
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 19858040
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        },
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 20005129
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        }
+      ],
+      "input_count": 21,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageDigest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageId": "sha256:c72831376c5485ec652a6f4a771bf091ae0726310e1b9db3db064387e173e941",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "outputSizeBytes": 179348916,
+        "runTimeSeconds": 304.544922,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "aastikrajan15/knee-s75-w50",
+      "latest_script_version_id": 353382736,
+      "latest_submission": {
+        "id": 56617152,
+        "sourceScriptVersionId": 353382736,
+        "scoreFormatted": "0.945"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.945",
+        "kernelVersionNumber": 1,
+        "kernelSessionUrl": "/code/aastikrajan15/knee-s75-w50?scriptVersionId=353382736"
+      },
+      "private_inputs": [
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 19498437
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        }
+      ],
+      "input_count": 19,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageDigest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageId": "sha256:c72831376c5485ec652a6f4a771bf091ae0726310e1b9db3db064387e173e941",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "outputSizeBytes": 179419712,
+        "runTimeSeconds": 346.1381809,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "aastikrajan15/knee-s75-w60",
+      "latest_script_version_id": 353382757,
+      "latest_submission": {
+        "id": 56617156,
+        "sourceScriptVersionId": 353382757,
+        "scoreFormatted": "0.945"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.945",
+        "kernelVersionNumber": 1,
+        "kernelSessionUrl": "/code/aastikrajan15/knee-s75-w60?scriptVersionId=353382757"
+      },
+      "private_inputs": [
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 19498437
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        }
+      ],
+      "input_count": 19,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageDigest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageId": "sha256:c72831376c5485ec652a6f4a771bf091ae0726310e1b9db3db064387e173e941",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "outputSizeBytes": 179419834,
+        "runTimeSeconds": 363.9749534,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "sujanmajhisuzan/rsna-knee-tri-specialist-superstack",
+      "latest_script_version_id": 355742320,
+      "latest_submission": {
+        "id": 56880343,
+        "sourceScriptVersionId": 355742320,
+        "scoreFormatted": "0.945"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.945",
+        "kernelVersionNumber": 1,
+        "kernelSessionUrl": "/code/sujanmajhisuzan/rsna-knee-tri-specialist-superstack?scriptVersionId=355737240"
+      },
+      "private_inputs": [],
+      "input_count": 20,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "dockerImageDigest": "2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "dockerImageId": "sha256:621b8b58b6103997bc6c1cb0a54424ec33f0afc1f40802eeb17f68af01268920",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "outputSizeBytes": 193400268,
+        "runTimeSeconds": 374.935258,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "nartaa/rsna-knee-0945-efficient-224crop",
+      "latest_script_version_id": 356179962,
+      "latest_submission": {
+        "id": 56921671,
+        "sourceScriptVersionId": 356179962,
+        "scoreFormatted": "0.945"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.945",
+        "kernelVersionNumber": 2,
+        "kernelSessionUrl": "/code/nartaa/rsna-knee-0945-efficient-224crop?scriptVersionId=356179962"
+      },
+      "private_inputs": [],
+      "input_count": 2,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageDigest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageId": "sha256:c72831376c5485ec652a6f4a771bf091ae0726310e1b9db3db064387e173e941",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "outputSizeBytes": 124679,
+        "runTimeSeconds": 53.8275184,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "bliverrigpdoge/rsna-knee-raptor-student-blend-lb-0-944",
+      "latest_script_version_id": 355268991,
+      "latest_submission": {
+        "id": 56837327,
+        "sourceScriptVersionId": 355268991,
+        "scoreFormatted": "0.944"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.944",
+        "kernelVersionNumber": 1,
+        "kernelSessionUrl": "/code/bliverrigpdoge/rsna-knee-raptor-student-blend-lb-0-944?scriptVersionId=355268991"
+      },
+      "private_inputs": [],
+      "input_count": 20,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageDigest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageId": "sha256:c72831376c5485ec652a6f4a771bf091ae0726310e1b9db3db064387e173e941",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "outputSizeBytes": 179352930,
+        "runTimeSeconds": 340.0449986,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "goodpjw2008/rsna-knee-stack-2-5d-convnext-mil-lb-0-944",
+      "latest_script_version_id": 355603125,
+      "latest_submission": {
+        "id": 56889613,
+        "sourceScriptVersionId": 355603125,
+        "scoreFormatted": "0.944"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.944",
+        "kernelVersionNumber": 2,
+        "kernelSessionUrl": "/code/goodpjw2008/rsna-knee-stack-2-5d-convnext-mil-lb-0-944?scriptVersionId=355300588"
+      },
+      "private_inputs": [],
+      "input_count": 19,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageDigest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageId": "sha256:c72831376c5485ec652a6f4a771bf091ae0726310e1b9db3db064387e173e941",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "outputSizeBytes": 213209834,
+        "runTimeSeconds": 291.1730068,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "medvax/rsna-knee-independent-2-5d-reader-trial",
+      "latest_script_version_id": 355354994,
+      "latest_submission": {
+        "id": 56843973,
+        "sourceScriptVersionId": 355354994,
+        "scoreFormatted": "0.944"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.944",
+        "kernelVersionNumber": 1,
+        "kernelSessionUrl": "/code/medvax/rsna-knee-independent-2-5d-reader-trial?scriptVersionId=355354994"
+      },
+      "private_inputs": [],
+      "input_count": 19,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageDigest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageId": "sha256:c72831376c5485ec652a6f4a771bf091ae0726310e1b9db3db064387e173e941",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "outputSizeBytes": 213209799,
+        "runTimeSeconds": 284.1941443,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "adityakumarrai0401/rsna-knee-b03-convnext-reader-blend",
+      "latest_script_version_id": 355757612,
+      "latest_submission": {
+        "id": 56881506,
+        "sourceScriptVersionId": 355757612,
+        "scoreFormatted": "0.944"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.944",
+        "kernelVersionNumber": 1,
+        "kernelSessionUrl": "/code/adityakumarrai0401/rsna-knee-b03-convnext-reader-blend?scriptVersionId=355757612"
+      },
+      "private_inputs": [],
+      "input_count": 19,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageDigest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageId": "sha256:c72831376c5485ec652a6f4a771bf091ae0726310e1b9db3db064387e173e941",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "outputSizeBytes": 213209867,
+        "runTimeSeconds": 330.8017352,
+        "succeeded": true
+      }
+    },
+    {
+      "ref": "rahulsoftwaredev/knee-slota-v7",
+      "latest_script_version_id": 356171959,
+      "latest_submission": {
+        "id": 56921005,
+        "sourceScriptVersionId": 356171959,
+        "scoreFormatted": "0.944"
+      },
+      "best_submission_score": {
+        "scoreFormatted": "0.944",
+        "kernelVersionNumber": 1,
+        "kernelSessionUrl": "/code/rahulsoftwaredev/knee-slota-v7?scriptVersionId=356171959"
+      },
+      "private_inputs": [
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 20318967
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        },
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 20375132
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        },
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+            "sourceId": 20430337
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        },
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_KERNEL_VERSION",
+            "sourceId": 355120966
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        },
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_KERNEL_VERSION",
+            "sourceId": 355120986
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        },
+        {
+          "reference": {
+            "sourceType": "DATA_SOURCE_TYPE_KERNEL_VERSION",
+            "sourceId": 355161008
+          },
+          "name": "[Private Datasource]",
+          "isPrivate": true
+        }
+      ],
+      "input_count": 25,
+      "visible_run_info": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageDigest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dockerImageId": "sha256:c72831376c5485ec652a6f4a771bf091ae0726310e1b9db3db064387e173e941",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "outputSizeBytes": 213210726,
+        "runTimeSeconds": 352.474224,
+        "succeeded": true
+      }
+    }
+  ],
+  "shortlist": [
+    {
+      "priority": 1,
+      "ref": "renta0426/rsna-knee-public0033-meniscus-bag-v1",
+      "url": "https://www.kaggle.com/datasets/renta0426/rsna-knee-public0033-meniscus-bag-v1/versions/2",
+      "dataset_version": 2,
+      "dataset_id": 11866837,
+      "observed_attached_internal_version_id": 19356288,
+      "observed_in_notebook": "sujanmajhisuzan/rsna-knee-tri-specialist-superstack Version2/script355742320",
+      "license": "Apache2.0 checkpoint and original runtime; Meta DINOv2 underlying terms and competition images remain separate",
+      "payload_bytes_not_downloaded": 347965736,
+      "checkpoint_sha256_author_declared": "e1443bb0f518418a31428cd7eb153f15af4c48c7175baf1f9d21c84f1c2a93e7",
+      "architecture": "DINOv2-Base last6 blocks+LayerNorm fine-tuned; CLS+patch-mean, target-specific 6slot head; 336px, six rank1 series, 10 overlapping 2.5D windows",
+      "training_author_contract": {
+        "weak_studies": 4349,
+        "official_label_studies_excluded": 58,
+        "gold_values_read": false,
+        "gold_metrics_read": false,
+        "checkpoint_selection": "final epoch30 only",
+        "seed": 2027,
+        "teacher": "pilkwang report_labels_v2 confidence-weighted BCE",
+        "source_fit_payload_independently_audited": false
+      },
+      "data_group_limitation": "Fullfit no fold-safe OOF; config gold_connected_extra_exclusion=0. Raw original cohort/linked report groups were not acquired/audited. Excluding58 is an author contract claim, not proof of patient independence or held-out performance.",
+      "overlap_with_apex": "Different ViT backbone, six-slot/336px windows and teacher objective from incumbent CoAtNet384+ConvNeXt. Learned errors/statistical independence are not measured.",
+      "public_score_component": null,
+      "public_score_whole_related_stack": 0.945,
+      "public_score_limit": "0.945 is the 20-Input Tri-Specialist stack, not this single checkpoint or an Apex+Meniscus blend. No official standalone .955 evidence.",
+      "visible_integration_evidence": "TriSpecialist V2 visible3 log reports directcachedSUCCESS at120.387s and uses public0033 in medialmeniscus blend; not hidden runtime/per-target benefit proof.",
+      "runtime_requirements": "Stock runtime strictly requires TeslaT4x2, FP32, sorted UID and exact (N,6,12,336,336) uint8cache/float32mask. Cannot drop current project cache or RTX4090 into this source unchanged. Approx10.57GB uint8cache for1300 before masks/temporary copies. Separate Kaggle cache adapter and profile needed; no runtime measured by assistant.",
+      "decision": "investigate single complementary branch before implementation; never copy20Input whole stack as a claimed0.955 upgrade",
+      "evaluation_rule": "Do not fit blend coefficients or claim independent weakCV from predictions of this4349 fullfitcheckpoint on own overlappingfolds. Architecture/label-free rank disagreement can prioritize a prespecified bounded trial but cannot prove accuracy. Need true independent data or own fold-safe reproduction for local efficacy selection."
+    },
+    {
+      "priority": 2,
+      "ref": "nartaa/rsna-knee-0945-efficient-224crop",
+      "url": "https://www.kaggle.com/code/nartaa/rsna-knee-0945-efficient-224crop?scriptVersionId=356179962",
+      "notebook_version": 2,
+      "script_version_id": 356179962,
+      "submission_id": 56921671,
+      "author_public_score_formatted": "0.945",
+      "own_score": null,
+      "dataset_ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+      "dataset_version": 1,
+      "internal_dataset_version_id": 20440357,
+      "checkpoint": "raptor_ft_alldata_t16_blendjev_oai_d96_c08_r224_swa.pt",
+      "checkpoint_sha256_author_declared": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+      "checkpoint_payload_downloaded": false,
+      "license": "DatasetOther, card expressly permits research/education and RSNAcompetition; prior publicpretrained conditional eligibility applies; no OAIraw access granted",
+      "training_history": "Different224-crop-trained SWA epochs15/13/12; same seed42 and2399OAI knees masked supervision. Gold58 reused for selection. Author claims not independently verified original fits.",
+      "overlap_with_apex": "Same CoAtNetfamily and major training data as incumbent384, but trained view differs. Predicted correlation/independenterrors not measured; do not treatmirrororSWAvariants as wholly independent models.",
+      "input_count": 2,
+      "additional_input_needed_for_apex": false,
+      "original_container": 31430,
+      "docker_digest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+      "visible_run_seconds_three_studies": 53.8275184,
+      "hidden_runtime_seconds": null,
+      "decision": "lower priority bounded viewport complement, score gain unproven; do not tune on owngold58 or public sweep",
+      "counterevidence": "Gold-GatedTriple V2 evaluated224crop but visible chosen cropweight=0; its0.950 is dualreader retained, not proof adding224crop helps."
+    }
+  ],
+  "not_recommended_as_upgrade": [
+    {
+      "ref": "kozykappa/rsna-knee-gold-gated-triple-reader",
+      "version": 2,
+      "script_version_id": 356267936,
+      "author_public": 0.95,
+      "reason": "Gold58 inference chooses crop/blend/clinicalcoupling, conflicts with owngoldnonselection. Visiblecropweight0; source ownnotebookrules do not govern project."
+    },
+    {
+      "ref": "haideptry/rsna-knee-v2-vs-apex-comparative-study",
+      "version": 5,
+      "script_version_id": 356305828,
+      "author_latest_public": 0.948,
+      "author_best_v3_public": 0.95,
+      "reason": "Claims guaranteed0.950/target0.952+ unsupported by latestlinked. Reads gold58top3npz to optimize per-targetweights. Sameincumbentcores; noindependentnewmodel."
+    },
+    {
+      "ref": "matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed",
+      "latest_version": 7,
+      "latest_script_version_id": 356334725,
+      "best_v6_public": 0.949,
+      "latest_score": null,
+      "reason": "SameSWA384+ConvNeXt; newestscoreabsent does notmake0.955evidence; speeddecoderchange mayhelpengineering but scoredincumbentworks."
+    },
+    {
+      "ref": "bliverrigpdoge/rsna-knee-leg-r9all",
+      "dataset_version": 1,
+      "dataset_id": 12352815,
+      "license": "CC0",
+      "related_stack_public": 0.944,
+      "reason": "Cardblank; independentteacher/gold/group/training history and single-legscoremissing. Metadata/license alone cannot establish complementarity."
+    },
+    {
+      "ref": "pjmathematician/rsna-knee-d4-blend",
+      "best_public": 0.946,
+      "reason": "ThreeprivateInputs inauthorbest andlatest; don'tdeletelegsandclaimscorepreserving reproduction."
+    },
+    {
+      "ref": "nikhil00718/rsna-knee-0-95-dinov2-v2",
+      "title_claim": 0.95,
+      "official_v3_public": 0.809,
+      "reason": "Primarywebcurrentpage contradictstitle; title isnot scoredfield."
+    }
+  ],
+  "strategy_inference_ja": [
+    "公開検索で基準より高い再現可能.955は未確認なので、新しいタイトルを次々コピーする合理性はない。作者score＝自己scoreを分けたままp005を固定する。",
+    "同じSWA384+ConvNeXtを再混合しても新しい情報は増えにくい。次はViTなど異なる学習表現の単一枝に絞り、必要Input・前処理・速度と予測の違いを確認する。",
+    "弱教師の独立fold比較は自分の未学習foldモデルだけで行う。publicfullfitcheckpointの予測をOOFと呼ばず、疑似教師を混ぜて同じ教師へ評価する循環も避ける。",
+    "改善.005/.010を保証できない。12classmacroAUCなら総クラスAUC改善.060/.120に相当し、温度/単調calibrationやthresholdだけでは順序が変わらずAUC向上を作れない。モデルが誤った順序を入れ替える追加情報を要する。",
+    "第三者gold選択済みpubliccheckpoint条件付き利用と、自分がgoldで係数選ぶ行為は別。採点済み同点のgoldgated版を自分の改善候補にしない。"
+  ],
+  "primary_links": [
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/code",
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview",
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735304",
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/743148",
+    "https://www.kaggle.com/datasets/renta0426/rsna-knee-public0033-meniscus-bag-v1/versions/2",
+    "https://www.kaggle.com/datasets/nartaa/rsna-knee-publication-swa-weights-20261007/versions/1"
+  ],
+  "participant_discussion_limit": "First-personreported incremental0.943/OOFpseudo-label gains fromsingle-modeldiscussion are useful hypotheses, not public scoredcheckpointavailability orHostinstructions. Follow projectgoldexclusion and source/fold audit.",
+  "prior_eligibility_record": "experiments/public-pretrained-eligibility-20261008.json",
+  "raw_evidence_root": "artifacts/research/20261008-post950-public-research-v1",
+  "raw_evidence": [
+    {
+      "path": "artifacts/research/20261008-post950-public-research-v1/public-score-descending-list.json",
+      "sha256": "7393a9da0b6c72f81e2a8eef310c07269532f1dfb9b7c69990d3ed4dd5a300a2"
+    },
+    {
+      "path": "artifacts/research/20261008-post950-public-research-v1/display-summary.json",
+      "sha256": "afad1511111d8aed6750091987a227d6f569632de0daa646a076548382169b86"
+    },
+    {
+      "path": "artifacts/research/20261008-post950-public-research-v1/sdk-source-summary.json",
+      "sha256": "64b3ff45a33b9aa494a34d636da192d5d40a68f1172684974ec40ecc1a55d785"
+    },
+    {
+      "path": "artifacts/research/20261008-post950-public-research-v1/dataset-summary.json",
+      "sha256": "997e5858d18a296ca999256f91a8ae286c7d9da7d0fb12d55b04219f0d229b1a"
+    },
+    {
+      "path": "artifacts/research/20261008-post950-public-research-v1/provenance-files-summary.json",
+      "sha256": "8a46f62c83b1c54c47717286aacb7e0ed7bfafe14f9e19dfb1c8ee0015ea32b1"
+    }
+  ],
+  "verification": {
+    "checks": {
+      "official_score_sorted_listing_100_records": true,
+      "official_view_model_top17_complete": true,
+      "top17_max_best_public_equals_0950": true,
+      "all_latest_submissions_bound_to_saved_script": true,
+      "gold_gated_triple_latest_score_0950": true,
+      "v2_apex_comparative_latest_score_0948": true,
+      "public0033_contract_gold_values_not_read": true,
+      "public0033_contract_explicit_fullfit_not_oof": true,
+      "public0033_contract_and_bundle_checkpoint_hash_equal": true,
+      "small_file_download_hashes_match": true,
+      "runtime_payload_hash_matches_manifest": true,
+      "run_contract_payload_hash_matches_manifest": true,
+      "fullfit_config_payload_hash_matches_contract": true
+    },
+    "passed": 13,
+    "total": 13,
+    "all_passed": true
+  },
+  "actions": {
+    "public_metadata_source_small_provenance_read": true,
+    "model_payload_download": false,
+    "mri_download_or_decode": false,
+    "real_inference_or_training": false,
+    "notebook_launch_upload_submit": false,
+    "messages_to_others": false,
+    "credential_contents_read": false
+  }
+}

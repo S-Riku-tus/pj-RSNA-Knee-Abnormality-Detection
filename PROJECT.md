@@ -1,8 +1,65 @@
 # RSNA Knee プロジェクトの現在地
 
-更新日 2026年10月7日 JST。目的は膝MRIの12所見を予測するKaggleコンペに参加し、**採点済みp002のPublic 0.937を保持し、公開0.943を設計上の基準に、その先の精度を目指す**ことです。
+更新日 2026年10月8日 JST。目的は膝MRIの12所見を予測するKaggleコンペに参加し、**自己採点済みp005のPublic 0.950を基準に、次の0.955・最終0.960超を目指す**ことです。p002自己0.937と過去runも保持し、公開レシピ改善と独立した自作学習の評価を分けます。
 
-## 最新：09は同じheadの接続で再発停止、10はhead Inputを不要にする
+## 最新：自己Public0.950確定、基準を固定して一要因の改善へ
+
+10月8日18:03:45 JST、公式GetSubmissionでref56943135/own Version1/script356323020を**COMPLETE・Public文字列0.950・エラーなし**と確認。作者0.950の再現に加え、自分の採点済み値として確定しました。[採点監査](experiments/p005-scored-review-20261008.json)。271位はユーザー報告でAPI直接確認とは区別、未丸めAUC/個別Public AUC/Private/隠し時間・reader fallback率は未提供です。旧pending監査を履歴として保持します。
+
+[改善ロードマップ](experiments/p005-improvement-roadmap-20261008.json)を準備しました。Apexは既にCoAtNetのSWA・96slice/K94・解剖学的mirror2viewと3fold EMA ConvNeXtの所見別rank融合です。一般的なTTA追加や同じ重みの再配合から始めず、まず**ConvNeXt窓数16→24だけ**のp006を1候補として設計します。重み/主系/入力版/decoder/係数を固定し、人工variableK契約→Kaggle32/256件のcoverage/time/memory→保存版の限定比較へ進む計画です。推論・精度未測定、ConvNeXtのforward1.5倍でも全体時間/VRAM倍率は不明。[構成と変更候補](experiments/p005-growth-architecture-review-20261008.json)
+
+最新の公式スコア順100件・上位17版と公開検索では、実採点済み公開0.955以上を確認できませんでした。[候補再調査](experiments/post950-public-research-20261008.json)。中期は表現の異なる単一の専門枝を調査します。公開Meniscus10 V2のDINOv2-Baseは仮説候補ですが、全weakfitでOOF不可、既存cacheと非互換、standalonePublic/追加利得未確認。適合しなければ汎用初期化からfoldを守った空間2.5D/patchモデルを1系統作り、末尾fine-tuneを別要因にします。既存CLScacheからpatch情報は復元できず、192px画像のupscaleもnative情報を戻しません。
+
+0.950→0.955は12所見AUC差の合計+0.060、0.960には+0.120が必要です。3所見で各+0.020・他が維持なら平均+0.005という算術例で、達成予測ではありません。自作f002のMCL/PF OAの弱点をApexの隠し弱点と同一視せず、単調な最終score補正や閾値変更だけでAUC向上を作れない点も踏まえます。
+
+公式最新条件は[制約監査](experiments/competition-constraints-20261008.json)：日次5提出・最終選択最大2、最終提出**10月23日08:59 JST**、9時間/Internet OFF。10/8～10は基準固定とp006、11～15は1専門枝の監査/小規模検証、16～19は有望要因だけ確認、20～22は採点済み候補を固定する目安です。自分のgoldは学習/係数/crop選択へ使わず、公開全weakfitを独立CVと扱いません。今回の依頼は方針相談で、Notebook/重み変更・新MRI処理/取得・新学習・外部提出を開始していません。
+
+## 待機中の3作業の履歴：f004は差し替え見送り
+
+以下の採点待ち表示は18:03の採点確認前の履歴です。
+
+ユーザーの実行依頼を受け、10月8日にローカルRTX4090でf004のfold0・1を24epochずつ完了しました。f003との変更はdropout0.2→0.4だけ、特徴/教師/seed/fold/LR/BCE選択を維持。新規runへ保存し、過去run・提出重みは保持しています。BCE最小の選択epochは15/14、head fittingは383.444/383.596秒で、CLI全体の399.96/396.30秒とは区別します。
+
+| fold | f003 BCE → f004 BCE | f003 weak AUC12 → f004 | 補助11平均の差 |
+| --- | --- | --- | --- |
+| 0 | 0.316232 → 0.315904 | 0.823060 → 0.815188 | −0.002223 |
+| 1 | 0.317469 → 0.320704 | 0.815430 → 0.814692 | −0.000543 |
+
+両foldでAUC12/補助11が下がり、fold1はBCEも悪化。事前の採用条件を満たさず、f004へ差し替えません。rootは両モデル・両foldの選択CSVから標準ライブラリだけでBCE/AUCを独立再計算し一致を確認しました。[保存結果の独立確認](artifacts/research/20261008-waiting-work-execution-v1/selected-prediction-verification.json)。[完成比較](experiments/f003-f004-fold01-review-20261008.json)は236項目成功、各fold3000回のgroup bootstrapで補助11差の95%区間は両方0をまたぎます。PF OAの点改善は両foldですが全体の置換根拠にはしません。弱いReport教師での比較で、Publicスコアの比較とは別です。
+
+教師17セルの二次レビューも完了。閾値未満2・明示的正常1・対象への直接言及なし3・未確定11。整理できた6は既存0/欠損と整合し、**教師訂正の採用は0件**です。11の根拠不足を推測で補わず元教師を維持します。[二次レビュー](docs/label-review.md#17セルの二次レビュー結果10月8日)。gold/保護fold除外・原値/入力hash保持など20項目を確認し、原文はprivate artifactに保存しました。
+
+17:45:41 JSTにp005提出ref56943135を最後に公式SDKで確認。スコア/エラー未返却、raw status省略にSDKが既定値PENDINGを当てており、queue/worker実行中や隠し成否は分かりません。[最終状態](experiments/p005-status-final-20261008.json)。この結果が出るまで別公開対照・混合係数・長い学習へ広げず、自己p002の0.937と提出p005の保存版を維持します。今回実施した実学習は取得済み特徴だけで、MRIdecode/新モデル・DICOM取得/外部upload・submitはありません。台帳は旧53行を保持して実学習・比較・教師再確認・状態照会の5イベント追記、58行です。[全体実行記録](experiments/waiting-work-execution-review-20261008.json)
+
+## p005提出と待機中の準備記録
+
+以下は今回のf004実学習・二次レビュー前の準備時点の記録です。
+
+ユーザーが公開0.950原版のコピーを提出しました。10月8日17:02 JSTの公式SDK照会で、提出ref **56943135**、`rsraki/rsna-knee-apex-grandmaster-stack` **Version1/script356323020**と保存Outputを照合。作者採点済みV1の全7 code cell・全source cell、Original container digest、T4×2・Internet OFF、3 Input参照名が一致しました。可視ログの3checkpoint検出・reader CSV・Apex Fusion SUCCESS、CSV13列/UID順/36有限確率、所見別rank融合式の独立再計算差0など29項目が成功しています。両公開DatasetはV1のみですが、保存Inputの内部版ID/競技bundleはAPIに出ず直接未確認です。**自己Public・採点終了状態はまだ確認できません**。[今回の保存提出監査](experiments/p005-submitted-review-20261008.json)
+
+待ち時間は、提出済み版を保持して[教師の未確定17セルの再確認資料](docs/label-review.md#p005の採点待ちに使える17セルの再確認資料)を用意しました。原文・記入欄と所見ごとの確認事項、gold/保護fold除外を再検査し、教師は未変更です。独自headのGPU比較を行う場合は、準備済み[f004](configs/experiments/f004-dinov2-attention24-dropout40.json)のdropout0.2→0.4だけを変えた両fold比較が任意の次工程です。前回f003のhead fittingは約6分/foldで、事前検査は別です。現在f004両runは存在せず、assistantは学習を開始していません。**この独自head学習はApex提出の一部ではなく、提出例外の修正やPublic向上を証明しません。** [操作と判定](docs/frozen-features.md#次の学習候補f004と教師監査)、[優先順位と結果後の分岐](experiments/p005-waiting-work-plan-20261008.json)
+
+13のKaggle1,300件MRI診断は独自f002の提出経路を継続する場合の任意作業です。p005の採点完了の前提ではありません。別公開版の同時提出・係数探索・epoch追加は今回結果と補完性を確認してから判断します。採点成功ならその保存版を新基準候補として記録、自己0.937と比較します。一般例外なら同じ保存版を繰り返し提出せず、原版との再現条件と実行段階を再確認します。
+
+## 10の失敗後に用意した公開対照とf002診断
+
+10月8日15:46 JSTの公式SDK照会で、提出ref **56904146** は `rsraki/notebook428d1e17f8` **Version1/script355977821**を使用し、配布10と全source cell一致・GPU有効・Internet OFF・正しい3 Inputsを確認しました。添付summaryは保存Outputとbyte同一、可視3検査を20.300秒で完了、CSVのUID順・13列・36確率・hash等22項目を独立に検証しました。それでも提出は一般例外・Publicなしです。head埋込みによる接続回避は可視実行で機能しましたが、隠し推論は直っていません。同じ10の再提出は保留します。[提出版・CSV監査](experiments/f002-embedded-head-hidden-failure-review-20261008.json)
+
+件数を3に固定する実装、Report依存、可視CSVの破損は見つかりません。人工1,300検査・5,842系列metadataでは動的UID順・全15,600確率・提出契約が成功しました。ただしMRI/encoderはmockで、隠し完走の証拠ではありません。元画像系列全体の配列重複と、選択系列のspacing/物理位置/強度が不適合なら検査全体を停止する経路を再現しました。元readerは既に学習側4,207件を完走しており、**これらを今回の真因と断定しません**。隠しtracebackとworker実行時間は取得できず、9時間超過とも断定できません。[提出契約の独立監査](experiments/serving-contract-independent-review-20261008.json)、[停止経路の人工再現](experiments/serving-strict-stop-review-20261008.json)
+
+p005は **作者Public0.950の採点済みVersion1/script356192954** の固定対照です。[14の固定ソース](notebooks/public/14_submit_p005_public950_control.ipynb)、[準備手順](docs/public-baselines.md#10月8日の優先工程p005の公開0950固定対照)。ユーザーは原版をCopy & Editして上記保存Versionを提出しました。14はコードを固定/照合するコピーで、原版の正しいコピーなら追加Import・別実行は必須ではありません。作者採点と自分の再現値を分け、自己0.950や隠し完走を保証しません。
+
+最初の候補監査では0.950/0.949のOAI履歴を理由に保留しました。その後、最新公式Rulesの外部公開models許可・事前学習入力のライセンス例外・重み配布cardの大会利用許可を再確認し、**元OAIを取得せず公開checkpointを固定利用する研究として条件付き採用**へ更新しました。Hostの個別承認や作者元訓練の適格保証とは扱いません。[再監査と判断の更新](experiments/public-pretrained-eligibility-20261008.json)。0.946/0.945は必須private Inputsで完全再現不能です。[元の候補・版・利用履歴監査](experiments/public-candidates-20261008.json)
+
+**p004：作者Public0.944の採点済みVersion2/script355300588**も独立対照として用意しました。[12の固定ソース](notebooks/public/12_submit_p004_public944_control.ipynb)、[手順](docs/public-baselines.md#10月8日の次工程p004の固定対照)。元29 code cell・19 Input版・Original31430/Python3.12を維持します。CP311/CP312 wheelsのため最新Python3.13へImportするだけでは再現条件が揃いません。Copy & Editが表示中V2を確実に複製するか未確認なので保存後に照合します。現在はInput数の少ないp005を先に実測し、12を同時に提出しません。
+
+f002はメモリ配送だけを変えたreaderを別ファイルに準備しました。全系列の正規化配列をRAMへ重複生成せず、temporary memmapと必要スライスの正規化を使用します。元のpercentile/物理順/letterbox/系列選択は維持。人工画像では旧readerと入力・特徴配列がbyte同一、固定学習済みheadのRTX4090予測差0、NumPy2.5.3/2.1.3で検証しました。memmapのpartitionでRSSが増える可能性と追加disk/IOは残り、OOM解消を保証しません。[13の1,300件診断](notebooks/public/13_profile_f002_memory_1300.ipynb)は提出用ではなく、実MRI/Kaggle未実行です。[診断手順](docs/frozen-features.md#10月8日以降のf002診断)
+
+両Datasetの選択版がVersion1であることは、今回ユーザーからも確認できました。内部版IDのAPI直接観測とは区別します。長い追加学習や教師変更は提出経路と根拠の確認後へ回し、待ち時間の小さい比較は上記f004を任意で実行できます。f003のfold0のみ延長利得・fold1不変、教師150件/30セル一次レビュー・17セル未確定という状態を記録しています。今回も実モデル/MRI追加取得・実MRI処理・実学習・外部アップロード/提出をassistantは行っていません。p002自己0.937と過去runを保持します。
+
+## 履歴：09は同じheadの接続で再発停止、10はhead Inputを不要にする
+
+以下の「次は10」は10月7日時点の判断です。10は現在、可視成功後の隠し例外を確認済みで、公開p005を提出して採点結果を待っています。
 
 10月7日14:58 JSTの公式SDK照会で、ユーザー指定`rsraki/notebook6372fe6490` **Version1/script355963229**は配布09と全cell一致、必要4 Inputs・GPU有効・Internet OFFを確認しました。それでもPython開始前のhead Dataset12402506/内部版20385564接続で`mkdir ... Read-only file system`となり、ERROR・Output0・log`[]`です。08 Version1の同じ停止→CPU確認/08 Version2成功→09停止という再発を確認し、単に接続し直す対応では安定化していなかったと判断します。21項目の監査が成功しています。[再発監査](experiments/f002-recurrent-mount-review-20261007.json)
 

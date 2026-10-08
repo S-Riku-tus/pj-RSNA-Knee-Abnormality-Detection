@@ -1,0 +1,115 @@
+{
+  "checked_at_utc": "2026-10-08T06:46:29.238497+00:00",
+  "checked_date_jst": "2026-10-08",
+  "status": "visible10_passed_but_submitted_private_rerun_failed_no_score",
+  "checks": {
+    "exact_submitted_version": true,
+    "submitted_output_version": true,
+    "all_source_cells_equal_prepared10": true,
+    "visible_run_complete": true,
+    "gpu_on_internet_off": true,
+    "correct_three_inputs": true,
+    "attachment_matches_saved_root_output": true,
+    "root_summary_passed_complete_test": true,
+    "all_three_visible_studies_processed": true,
+    "exact_uid_order_vs_previous_complete_export": true,
+    "same_input_csv_hashes_as_previous_complete_export": true,
+    "exact_thirteen_csv_columns": true,
+    "all_36_finite_probabilities": true,
+    "csv_hash_matches_summary": true,
+    "valid_complete_receipt": true,
+    "fixed_checkpoint_and_features": true,
+    "embedded_head_delivery_no_head_dataset": true,
+    "no_train_or_report_or_npz": true,
+    "no_skip_or_substituted_probabilities": true,
+    "four_compressed_phantoms_exact": true,
+    "all_required_decoder_syntaxes_available": true,
+    "submitted_private_rerun_exception_no_score": true
+  },
+  "checks_passed": 22,
+  "submission_ref": 56904146,
+  "submitted_at_utc": "2026-10-07T07:33:09.630Z",
+  "notebook": "rsraki/notebook428d1e17f8",
+  "version": 1,
+  "script_version_id": 355977821,
+  "saved_source_sha256": "89c77249bfcfe0dfb48d6f4c27a93758e8747f676c3172178417e38c97f8e094",
+  "attachment_sha256": "c47acbf313c0f18db0daeca781648f89e86012cae603055fa5f4d308cb03ee98",
+  "settings": {
+    "id": 137443329,
+    "ref": "rsraki/notebook428d1e17f8",
+    "title": "notebook428d1e17f8",
+    "author": "rsraki",
+    "slug": "notebook428d1e17f8",
+    "lastRunTime": "2026-10-05T06:46:30.669Z",
+    "language": "python",
+    "kernelType": "notebook",
+    "isPrivate": true,
+    "enableGpu": true,
+    "enableInternet": false,
+    "categoryIds": [
+      "gpu"
+    ],
+    "datasetDataSources": [
+      "rsraki/rsna-dicom-decoders-py313-v1",
+      "rsraki/rsna-frozen-feature-inputs-v1"
+    ],
+    "competitionDataSources": [
+      "rsna-knee-abnormality-detection"
+    ],
+    "enableTpu": false,
+    "currentVersionNumber": 1,
+    "dockerImage": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+    "machineShape": "NvidiaTeslaT4"
+  },
+  "visible_csv": {
+    "sha256": "2513d46b5025f76ce401646262c791242a592abd85adeb514f878c31b1bdccc9",
+    "studies": 3,
+    "targets": 12,
+    "finite_cells": 36,
+    "minimum": 0.004870201461017132,
+    "maximum": 0.986233115196228
+  },
+  "visible_resources": {
+    "free_disk_bytes": 20939145216,
+    "cpu_peak_rss_bytes": 4487335936,
+    "gpu_allocated_bytes": 98129408,
+    "gpu_reserved_bytes": 381681664,
+    "gpu_peak_reserved_bytes": 381681664
+  },
+  "visible_inference_seconds": 20.29997129200001,
+  "timing_limit": "Inference-cell timer for three visible studies; excludes earlier setup/queue and is not private worker duration or a hidden-scale prediction.",
+  "private_error": "Your notebook hit an unhandled error while rerunning your code. Note that the hidden dataset can be larger/smaller/different than the public dataset",
+  "hidden_root_cause": "Unconfirmed. Private traceback, final phase, offending MRI and worker duration are not exposed in fetched status/visible log.",
+  "resolved_scope": "Separate head Dataset dependency was removed and visible embedded restoration passed; hidden serving was not fixed.",
+  "excluded_explanations": [
+    "Wrong saved Version/source",
+    "Old separate head Dataset still attached",
+    "Fixed three-study CSV loop",
+    "Report-dependent inference",
+    "Malformed visible submission CSV",
+    "All compressed decoders missing because GDCM alone is absent"
+  ],
+  "exclusion_limit": "These exclusions are established for saved source/visible evidence; private mount/content/decoder differences remain unknown.",
+  "remaining_candidates": [
+    "Largest native-series anonymous RAM copies",
+    "Selected-series strict spacing/physical order/intensity rejection",
+    "Different private mount/container/codec conditions"
+  ],
+  "counterevidence": "The original feature reader previously completed 4207 real training studies. Memory and strict malformed-series reproductions are hypotheses, not proof of this hidden failure.",
+  "linked_audits": [
+    "experiments/serving-contract-independent-review-20261008.json",
+    "experiments/serving-strict-stop-review-20261008.json",
+    "experiments/public-candidates-20261008.json"
+  ],
+  "next_action": "After the separate public-pretrained rule audit, run unchanged author-scored public950 Version1 with original container and three fixed public Inputs first. Public944 Version2 remains a separate control; f002 memory-only1300 is diagnostic, not for submission.",
+  "own_public_baseline": 0.937,
+  "public_model_score_scope": "Other authors' verified scores are not our reproduction scores.",
+  "operations": {
+    "fetched_saved_source_logs_json_csv_only": true,
+    "model_or_MRI_download": false,
+    "real_MRI_decode": false,
+    "training": false,
+    "upload_or_submit": false
+  },
+  "follow_up_decision_reference": "experiments/public-pretrained-eligibility-20261008.json"
+}

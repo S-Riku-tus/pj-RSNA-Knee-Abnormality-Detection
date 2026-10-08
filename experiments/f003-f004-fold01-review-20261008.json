@@ -1,0 +1,814 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-08T08:46:28.406673+00:00",
+  "status": "completed_twofold_weak_comparison_not_promoted_for_submission",
+  "changed_factor": "head.dropout0.2to0.4",
+  "training_execution": "Authorized local RTX4090 cached-feature head fitting;24 epochs each fold;no encoder update or MRI processing",
+  "plan_sha256": "6a6c3ecc257e7f8e3101fce3abe968e42cced408d7b0dc24a2ae0ec90dda71d7",
+  "candidate_config_sha256": "8080648bd9c399bb40a19a2f9a832dee587f4d0b543ff9ef1046f574d26c9c95",
+  "baseline_config_sha256": "f90f843a362e3238f21faaf8c0e2e519aca6cae745b238f3e07beea055ea4f9d",
+  "source_sha256": {
+    "__init__.py": "a6f06061df2e890790f44c5ba4af472dd0abc6f465ad48044e6cee53ae0f7751",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+    "cli.py": "e8d1a1267abee34101be88f744938aecb3e2f27fa4e15fd4747c3baca8d16cee",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+    "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "feature_runtime.py": "bfa9c7d075f342bd45fcdf2152e7560587972923a1e37e6d915f7e617399e01e",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+    "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+    "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a",
+    "prepare.py": "da481889af0ebe9528ff2f150e78d35c9123f2d50e475b11167b785fbd90920e",
+    "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05"
+  },
+  "input_sha256": {
+    "data/features/f001-weak-sv355640726/export.json": "aa164be29b14813b9793c51b9924ef2e4019f4f01c2aa1ec35d17fdf536e1f5a",
+    "data/features/f001-weak-sv355640726/studies.csv": "a99b29514edf2e70e84ca05dfff8cad09787c6e511436f5d74334c2e53c917e9",
+    "data/manifests/v1-vmohitrao-research/manifest.json": "976abfe212ce23ad8112f16cb61d2c8172bb837ad50aed7ac88886760fc2cabf",
+    "data/manifests/v1-vmohitrao-research/weak.csv": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+    "data/manifests/v1-vmohitrao-research/gold.csv": "f86a67cf9c5704c37bbe0d7912b308cd7497a2804918c0cc5e8e2008a0b16bad",
+    "data/manifests/v1-vmohitrao-research/fold-audit-v2.json": "bca25c48af792853ff1c19eac8e728462696dd869681bd8a3285dc7fcdbc4e24"
+  },
+  "review_implementation_sha256": {
+    "review.py": "4905e18c579c16be8d4f42db28b08538228e74ab6f369fa0ce90ffaafd67f871",
+    "bootstrap_weak_comparison.py": "beb9cb9edb872cbfc041659c80dbbd974c20131956cb25d87c466fa654e0467f",
+    "summarize_controlled_runs.py": "51a41d6814a63d1849ddd70adf11f6852ed50402bb2e63b37c6f33120daa397e",
+    "preflight.py": "ea5ab2959f5d8381db0fef77c77acd25019f45661b4f250791614908786f2f4d",
+    "launch.py": "ec3735e4bae07fa1b4ac810f8cb0bb95be096e7fec50fdf5b4d84a9afc527a29"
+  },
+  "checks_passed": [
+    "preflight plan hash remains fixed",
+    "source16 unchanged before/after training",
+    "all fixed inputs unchanged after training",
+    "baseline and candidate config files unchanged",
+    "fold0: only dropout0.2to0.4 and reason changed",
+    "fold0: original f003 artifacts preserved",
+    "fold0: command completed exit0",
+    "fold0 f003: complete24 epochs fixed fold/seed/runtime/GPU",
+    "fold0 f003: feature/source/hash contracts fixed",
+    "fold0 f003: manifest hashes/fold audit identical",
+    "fold0 f003: weak BCE selection gold unused encoder frozen",
+    "fold0 f003: partition counts fixed",
+    "fold0 f003: epoch1 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch1 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch2 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch2 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch3 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch3 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch4 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch4 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch5 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch5 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch6 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch6 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch7 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch7 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch8 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch8 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch9 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch9 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch10 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch10 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch11 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch11 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch12 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch12 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch13 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch13 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch14 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch14 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch15 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch15 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch16 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch16 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch17 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch17 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch18 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch18 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch19 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch19 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch20 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch20 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch21 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch21 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch22 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch22 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch23 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch23 observed BCE/optimizer steps finite",
+    "fold0 f003: epoch24 CSV/hash/UID/order/AUC/support",
+    "fold0 f003: epoch24 observed BCE/optimizer steps finite",
+    "fold0 f003: minimum masked weak BCE earliest tie maintained",
+    "fold0 f003: best.pt CPU tensors/contracts/epoch finite",
+    "fold0 f003: last.pt CPU tensors/contracts/epoch finite",
+    "fold0 f004: complete24 epochs fixed fold/seed/runtime/GPU",
+    "fold0 f004: feature/source/hash contracts fixed",
+    "fold0 f004: manifest hashes/fold audit identical",
+    "fold0 f004: weak BCE selection gold unused encoder frozen",
+    "fold0 f004: partition counts fixed",
+    "fold0 f004: epoch1 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch1 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch2 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch2 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch3 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch3 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch4 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch4 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch5 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch5 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch6 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch6 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch7 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch7 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch8 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch8 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch9 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch9 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch10 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch10 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch11 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch11 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch12 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch12 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch13 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch13 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch14 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch14 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch15 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch15 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch16 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch16 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch17 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch17 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch18 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch18 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch19 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch19 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch20 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch20 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch21 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch21 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch22 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch22 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch23 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch23 observed BCE/optimizer steps finite",
+    "fold0 f004: epoch24 CSV/hash/UID/order/AUC/support",
+    "fold0 f004: epoch24 observed BCE/optimizer steps finite",
+    "fold0 f004: minimum masked weak BCE earliest tie maintained",
+    "fold0 f004: best.pt CPU tensors/contracts/epoch finite",
+    "fold0 f004: last.pt CPU tensors/contracts/epoch finite",
+    "fold0: identical train/valid counts and environment",
+    "fold1: only dropout0.2to0.4 and reason changed",
+    "fold1: original f003 artifacts preserved",
+    "fold1: command completed exit0",
+    "fold1 f003: complete24 epochs fixed fold/seed/runtime/GPU",
+    "fold1 f003: feature/source/hash contracts fixed",
+    "fold1 f003: manifest hashes/fold audit identical",
+    "fold1 f003: weak BCE selection gold unused encoder frozen",
+    "fold1 f003: partition counts fixed",
+    "fold1 f003: epoch1 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch1 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch2 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch2 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch3 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch3 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch4 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch4 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch5 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch5 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch6 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch6 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch7 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch7 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch8 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch8 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch9 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch9 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch10 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch10 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch11 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch11 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch12 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch12 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch13 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch13 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch14 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch14 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch15 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch15 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch16 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch16 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch17 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch17 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch18 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch18 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch19 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch19 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch20 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch20 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch21 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch21 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch22 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch22 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch23 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch23 observed BCE/optimizer steps finite",
+    "fold1 f003: epoch24 CSV/hash/UID/order/AUC/support",
+    "fold1 f003: epoch24 observed BCE/optimizer steps finite",
+    "fold1 f003: minimum masked weak BCE earliest tie maintained",
+    "fold1 f003: best.pt CPU tensors/contracts/epoch finite",
+    "fold1 f003: last.pt CPU tensors/contracts/epoch finite",
+    "fold1 f004: complete24 epochs fixed fold/seed/runtime/GPU",
+    "fold1 f004: feature/source/hash contracts fixed",
+    "fold1 f004: manifest hashes/fold audit identical",
+    "fold1 f004: weak BCE selection gold unused encoder frozen",
+    "fold1 f004: partition counts fixed",
+    "fold1 f004: epoch1 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch1 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch2 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch2 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch3 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch3 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch4 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch4 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch5 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch5 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch6 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch6 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch7 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch7 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch8 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch8 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch9 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch9 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch10 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch10 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch11 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch11 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch12 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch12 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch13 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch13 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch14 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch14 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch15 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch15 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch16 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch16 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch17 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch17 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch18 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch18 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch19 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch19 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch20 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch20 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch21 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch21 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch22 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch22 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch23 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch23 observed BCE/optimizer steps finite",
+    "fold1 f004: epoch24 CSV/hash/UID/order/AUC/support",
+    "fold1 f004: epoch24 observed BCE/optimizer steps finite",
+    "fold1 f004: minimum masked weak BCE earliest tie maintained",
+    "fold1 f004: best.pt CPU tensors/contracts/epoch finite",
+    "fold1 f004: last.pt CPU tensors/contracts/epoch finite",
+    "fold1: identical train/valid counts and environment"
+  ],
+  "folds": [
+    {
+      "fold": 0,
+      "f003_selected_epoch": 15,
+      "f004_selected_epoch": 15,
+      "f003_bce": 0.3162323486431327,
+      "f004_bce": 0.31590373284616496,
+      "bce_delta": -0.0003286157969677461,
+      "f003_auc12": 0.8230599111025677,
+      "f004_auc12": 0.8151884174923284,
+      "auc12_delta": -0.00787149361023931,
+      "f003_aux11": 0.820610812111892,
+      "f004_aux11": 0.8183873645370856,
+      "aux11_delta": -0.002223447574806414,
+      "head_seconds": 383.44448259996716,
+      "command_wall_seconds": 399.96452850004425,
+      "train_studies": 3386,
+      "valid_studies": 821,
+      "optimizer_steps_total": 5088,
+      "per_target": {
+        "ACL": {
+          "f003_auc": 0.8211663947797716,
+          "f004_auc": 0.8160481239804241,
+          "difference": -0.0051182707993474574,
+          "positive": 80,
+          "negative": 613,
+          "observed": 693,
+          "missing": 128,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.012598492113178022,
+              0.0018911308758429543
+            ]
+          }
+        },
+        "MCL": {
+          "f003_auc": 0.7063041125541125,
+          "f004_auc": 0.6861471861471862,
+          "difference": -0.020156926406926345,
+          "positive": 11,
+          "negative": 672,
+          "observed": 683,
+          "missing": 138,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.06321214727516963,
+              0.015501154576380198
+            ]
+          }
+        },
+        "Medial Meniscus": {
+          "f003_auc": 0.8155119653039209,
+          "f004_auc": 0.8170677116585577,
+          "difference": 0.0015557463546368444,
+          "positive": 309,
+          "negative": 441,
+          "observed": 750,
+          "missing": 71,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.0038785163379272125,
+              0.007059287068864832
+            ]
+          }
+        },
+        "Lateral Meniscus": {
+          "f003_auc": 0.6872882419375078,
+          "f004_auc": 0.6988643493537458,
+          "difference": 0.011576107416237935,
+          "positive": 104,
+          "negative": 613,
+          "observed": 717,
+          "missing": 104,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.002924684014234621,
+              0.026935715431288473
+            ]
+          }
+        },
+        "Medial OA": {
+          "f003_auc": 0.9117725219239968,
+          "f004_auc": 0.9065715044986903,
+          "difference": -0.005201017425306542,
+          "positive": 71,
+          "negative": 371,
+          "observed": 442,
+          "missing": 379,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.011247114850560833,
+              -0.0001238881076763637
+            ]
+          }
+        },
+        "Lateral OA": {
+          "f003_auc": 0.8507209499575912,
+          "f004_auc": 0.8436271108026833,
+          "difference": -0.0070938391549079105,
+          "positive": 33,
+          "negative": 393,
+          "observed": 426,
+          "missing": 395,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.019533958110447874,
+              0.003969425661631194
+            ]
+          }
+        },
+        "PF OA": {
+          "f003_auc": 0.8193843193843194,
+          "f004_auc": 0.8258177008177008,
+          "difference": 0.006433381433381347,
+          "positive": 88,
+          "negative": 378,
+          "observed": 466,
+          "missing": 355,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.0037605353240005657,
+              0.01739211385976466
+            ]
+          }
+        },
+        "Effusion": {
+          "f003_auc": 0.938742746615087,
+          "f004_auc": 0.9408510638297872,
+          "difference": 0.0021083172147001727,
+          "positive": 100,
+          "negative": 517,
+          "observed": 617,
+          "missing": 204,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.004409070005432083,
+              0.00849121008499179
+            ]
+          }
+        },
+        "Synovitis": {
+          "f003_auc": 0.85,
+          "f004_auc": 0.78,
+          "difference": -0.06999999999999995,
+          "positive": 100,
+          "negative": 1,
+          "observed": 101,
+          "missing": 720,
+          "bootstrap_difference": {
+            "valid_resamples": 1939,
+            "undefined_resamples": 1061,
+            "percentile_95_interval": [
+              -0.1224489795918367,
+              -0.025000000000000022
+            ]
+          }
+        },
+        "Baker's": {
+          "f003_auc": 0.8616970405398225,
+          "f004_auc": 0.8580840550448967,
+          "difference": -0.0036129854949258355,
+          "positive": 59,
+          "negative": 319,
+          "observed": 378,
+          "missing": 443,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.01275304037311054,
+              0.0049581940811780165
+            ]
+          }
+        },
+        "Contusion": {
+          "f003_auc": 0.8191495796286216,
+          "f004_auc": 0.8110445775116434,
+          "difference": -0.008105002116978177,
+          "positive": 99,
+          "negative": 167,
+          "observed": 266,
+          "missing": 555,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.020409457979341617,
+              0.003884870871777628
+            ]
+          }
+        },
+        "Fracture": {
+          "f003_auc": 0.7949810606060606,
+          "f004_auc": 0.7981376262626263,
+          "difference": 0.0031565656565657463,
+          "positive": 44,
+          "negative": 144,
+          "observed": 188,
+          "missing": 633,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.009826358079463585,
+              0.016194742174585334
+            ]
+          }
+        }
+      },
+      "last_epoch_weak_bce": 0.3324454408135738,
+      "last_epoch_train_bce": 0.2233396313969886,
+      "selected_epoch_train_bce": 0.26927313921735757,
+      "late_weak_bce_minus_selected": 0.016541707967408836,
+      "run_sha256": "cf94259ed2f0dda44a9daca22435be3153d91c1d0a06c648be49b96f4e39fbfe",
+      "checkpoint_sha256": "3ccd3545a13693e27024a8343b31db2b79c7cec8cf15e7ae4e930abcfa7c97f3",
+      "prediction_sha256": "45270c04f17b9fd67b31925278fb7fe4ab5b9ee015077015ef52264ed1c8a100",
+      "bootstrap": {
+        "artifact": "experiments/f003-f004-fold0-bootstrap-20261008.json",
+        "sha256": "78fbc7bcde2ef35a2f1b5666eb103495999347813998b1222c5cc4a66b7bf3a1",
+        "seed": 20261007,
+        "resamples": 3000,
+        "supplied_groups": 812,
+        "macro_auc_12_difference": {
+          "point": -0.00787149361023918,
+          "valid_resamples": 1939,
+          "undefined_resamples": 1061,
+          "percentile_95_interval": [
+            -0.013690544553946363,
+            -0.002445510951286449
+          ]
+        },
+        "auxiliary11_difference": {
+          "point": -0.002223447574806384,
+          "valid_resamples": 3000,
+          "undefined_resamples": 0,
+          "percentile_95_interval": [
+            -0.006846176498051862,
+            0.002137181619264479
+          ]
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "f003_selected_epoch": 12,
+      "f004_selected_epoch": 14,
+      "f003_bce": 0.31746868302813663,
+      "f004_bce": 0.32070407038036897,
+      "bce_delta": 0.003235387352232333,
+      "f003_auc12": 0.8154302698313463,
+      "f004_auc12": 0.8146921895601814,
+      "auc12_delta": -0.0007380802711648426,
+      "f003_aux11": 0.808135739534852,
+      "f004_aux11": 0.8075929790515943,
+      "aux11_delta": -0.0005427604832576316,
+      "head_seconds": 383.595930600015,
+      "command_wall_seconds": 396.3004360999912,
+      "train_studies": 3316,
+      "valid_studies": 891,
+      "optimizer_steps_total": 4992,
+      "per_target": {
+        "ACL": {
+          "f003_auc": 0.796678278939005,
+          "f004_auc": 0.7816740007334066,
+          "difference": -0.015004278205598354,
+          "positive": 101,
+          "negative": 648,
+          "observed": 749,
+          "missing": 142,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.037881535381471,
+              0.006980396585230205
+            ]
+          }
+        },
+        "MCL": {
+          "f003_auc": 0.6645535714285714,
+          "f004_auc": 0.6761607142857143,
+          "difference": 0.011607142857142927,
+          "positive": 16,
+          "negative": 700,
+          "observed": 716,
+          "missing": 175,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.01416895558160541,
+              0.036820061046021015
+            ]
+          }
+        },
+        "Medial Meniscus": {
+          "f003_auc": 0.7777502540650406,
+          "f004_auc": 0.7768864329268292,
+          "difference": -0.0008638211382113736,
+          "positive": 328,
+          "negative": 480,
+          "observed": 808,
+          "missing": 83,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.010239134887859366,
+              0.008365370861742542
+            ]
+          }
+        },
+        "Lateral Meniscus": {
+          "f003_auc": 0.7111015056552121,
+          "f004_auc": 0.7018082270729774,
+          "difference": -0.00929327858223472,
+          "positive": 105,
+          "negative": 661,
+          "observed": 766,
+          "missing": 125,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.02218056321721451,
+              0.0027283983241689082
+            ]
+          }
+        },
+        "Medial OA": {
+          "f003_auc": 0.8832176240158244,
+          "f004_auc": 0.8736764534770973,
+          "difference": -0.00954117053872705,
+          "positive": 59,
+          "negative": 437,
+          "observed": 496,
+          "missing": 395,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.019000754147812972,
+              -0.000931372698318487
+            ]
+          }
+        },
+        "Lateral OA": {
+          "f003_auc": 0.8292011019283747,
+          "f004_auc": 0.8313201949565586,
+          "difference": 0.002119093028183916,
+          "positive": 22,
+          "negative": 429,
+          "observed": 451,
+          "missing": 440,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.01224986867963538,
+              0.015556456966575821
+            ]
+          }
+        },
+        "PF OA": {
+          "f003_auc": 0.7721207649265204,
+          "f004_auc": 0.7844801082211155,
+          "difference": 0.012359343294595093,
+          "positive": 78,
+          "negative": 417,
+          "observed": 495,
+          "missing": 396,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              0.002151910321846132,
+              0.023069300549364187
+            ]
+          }
+        },
+        "Effusion": {
+          "f003_auc": 0.9333120126705653,
+          "f004_auc": 0.9293981481481481,
+          "difference": -0.003913864522417154,
+          "positive": 108,
+          "negative": 608,
+          "observed": 716,
+          "missing": 175,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.016824917240053215,
+              0.007206218503144262
+            ]
+          }
+        },
+        "Synovitis": {
+          "f003_auc": 0.8956701030927835,
+          "f004_auc": 0.8927835051546392,
+          "difference": -0.0028865979381442752,
+          "positive": 97,
+          "negative": 25,
+          "observed": 122,
+          "missing": 769,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.023078231292517033,
+              0.032308625336927285
+            ]
+          }
+        },
+        "Baker's": {
+          "f003_auc": 0.8898768809849521,
+          "f004_auc": 0.8926128590971272,
+          "difference": 0.002735978112175075,
+          "positive": 51,
+          "negative": 344,
+          "observed": 395,
+          "missing": 496,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.012065071982824393,
+              0.01739542636197281
+            ]
+          }
+        },
+        "Contusion": {
+          "f003_auc": 0.7864207431168136,
+          "f004_auc": 0.7885592087677091,
+          "difference": 0.0021384656508954825,
+          "positive": 87,
+          "negative": 215,
+          "observed": 302,
+          "missing": 589,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.0143431289404154,
+              0.016933697303763026
+            ]
+          }
+        },
+        "Fracture": {
+          "f003_auc": 0.8452603971524916,
+          "f004_auc": 0.8469464218808542,
+          "difference": 0.0016860247283626562,
+          "positive": 34,
+          "negative": 157,
+          "observed": 191,
+          "missing": 700,
+          "bootstrap_difference": {
+            "valid_resamples": 3000,
+            "undefined_resamples": 0,
+            "percentile_95_interval": [
+              -0.012459367590792459,
+              0.015990442827848863
+            ]
+          }
+        }
+      },
+      "last_epoch_weak_bce": 0.3437316147230934,
+      "last_epoch_train_bce": 0.22108181365250676,
+      "selected_epoch_train_bce": 0.274768505625133,
+      "late_weak_bce_minus_selected": 0.023027544342724415,
+      "run_sha256": "97f9dfb37f22ecd5c3f81472716cba6eac66a68cb51a0d5ddbacbdc1c7d9bbea",
+      "checkpoint_sha256": "6d2e05f972ef41614a1a268da930ab97080c26f2e6abc814ad82d63872a0c672",
+      "prediction_sha256": "c2b147799f734c4a7265dbf0b280194650398b41a4c55922140bc145677a3038",
+      "bootstrap": {
+        "artifact": "experiments/f003-f004-fold1-bootstrap-20261008.json",
+        "sha256": "17897a099a03a434786023ee133b8230c019558ed0122adc1219601192742453",
+        "seed": 20261007,
+        "resamples": 3000,
+        "supplied_groups": 861,
+        "macro_auc_12_difference": {
+          "point": -0.0007380802711648149,
+          "valid_resamples": 3000,
+          "undefined_resamples": 0,
+          "percentile_95_interval": [
+            -0.005232392502297881,
+            0.004419971416435811
+          ]
+        },
+        "auxiliary11_difference": {
+          "point": -0.0005427604832575913,
+          "valid_resamples": 3000,
+          "undefined_resamples": 0,
+          "percentile_95_interval": [
+            -0.005106064424237671,
+            0.0040239325539584685
+          ]
+        }
+      }
+    }
+  ],
+  "consistent_BCE_and_aux11_point_gain": false,
+  "both_aux11_bootstrap_intervals_strictly_positive": false,
+  "selection_rule": "Fixed minimum masked weak validation BCE, earliest exact tie; no max-AUC/Gold/Public checkpoint reselection",
+  "decision": "Do not promote f004: the prespecified consistent twofold BCE and auxiliary11 improvement criterion is not established. Keep f003 as the local24epoch reference, original f002 serving diagnosis weights unchanged, and scored p002/p005 references separate. Do not expand dropout/epoch/class-coefficient search from this result.",
+  "gold_used_for_training_or_selection": false,
+  "gold_metrics_evaluated": false,
+  "public_lb": null,
+  "MRI_decode_new_data_model_download_upload_remote_submission_performed": false,
+  "limits": [
+    "Weak report-derived targets differ from image-derived competition truth and cannot establish Public improvement",
+    "Folds already informed model/config/checkpoint choices; bootstrap covers fixed selected prediction pairs, not selection uncertainty",
+    "Supplied groups are the resampling unit; patient independence is unverified",
+    "Synovitis fold0 has one negative, so12-target intervals may be undefined in many draws; auxiliary11 is supplementary, not the competition metric",
+    "No classwise coefficients, blended folds, label changes orPublic-driven tuning were introduced",
+    "Head fitting excludes feature extraction, MRI decoding and remote notebook inference; timing does not estimate hidden submission runtime",
+    "An invalid MRI serving series or platform Input mount failure is not repaired by this head regularization experiment"
+  ]
+}

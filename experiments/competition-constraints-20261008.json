@@ -1,0 +1,64 @@
+{
+  "schema_version": "rsna_knee_live_competition_constraints_v1",
+  "checked_at_utc": "2026-10-08T09:04:52.945372+00:00",
+  "reviewed_at_utc": "2026-10-08T09:06:05.344429+00:00",
+  "method": "Official SDK competition_list_pages without filter; public page text/metadata only",
+  "official_page_raw_snapshot": "artifacts/research/20261008-p005-scored-v1/current-official-pages.json",
+  "official_page_raw_snapshot_sha256": "1c9c62605260bfbc52a92b13709367a4c0caeb3abf353e8d52651bf6b02369f6",
+  "sources": {
+    "rules": {
+      "official_url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/rules",
+      "page_name": "rules",
+      "body_sha256": "9105f8f81f96c02aca988197c175d699052be8c06419b21131dccdd426bc404d",
+      "body_characters": 37384
+    },
+    "Timeline": {
+      "official_url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview/timeline",
+      "page_name": "Timeline",
+      "body_sha256": "077c171707c413423852a1d7155ac3784aaf3ffa5f3ad20c6b946deb1100d3f3",
+      "body_characters": 667
+    },
+    "Code Requirements": {
+      "official_url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview/code-requirements",
+      "page_name": "Code Requirements",
+      "body_sha256": "7717ab86668081aa7813ca9aa3067f8ed20b539515fa23129f65cd40b848cc8e",
+      "body_characters": 833
+    },
+    "Evaluation": {
+      "official_url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview/evaluation",
+      "page_name": "Evaluation",
+      "body_sha256": "2abd98e6882a9493ea19e0582acfe21b8fdeff6a3cb5c04575271245e8d539ba",
+      "body_characters": 794
+    }
+  },
+  "daily_submission_limit": 5,
+  "daily_submission_period": "UTC calendar day per official SDK allowance field descriptions",
+  "final_submissions_selectable": 2,
+  "entry_and_team_merger_deadline_utc": "2026-10-15T23:59:00+00:00",
+  "entry_and_team_merger_deadline_jst": "2026-10-16T08:59:00+09:00",
+  "final_submission_deadline_utc": "2026-10-22T23:59:00+00:00",
+  "final_submission_deadline_jst": "2026-10-23T08:59:00+09:00",
+  "winner_requirement_deadline_utc": "2026-11-05T23:59:00+00:00",
+  "winner_requirement_deadline_jst": "2026-11-06T08:59:00+09:00",
+  "runtime_limit_hours_CPU_and_GPU": 9,
+  "internet_access_disabled": true,
+  "output_filename": "submission.csv",
+  "freely_public_external_data_and_pretrained_models_allowed": true,
+  "evaluation": "Equal-weight mean ROC-AUC over twelve target findings",
+  "eligibility_scope": "General rules allowance is not a guarantee that arbitrary external medical data or upstream training history satisfies provider or competition terms; model-specific source audit remains separate.",
+  "current_user_allowance_evidence": "artifacts/research/20261008-p005-scored-v1/SDK-limits-with-defaults.json",
+  "current_user_allowance": {
+    "numToday": 1,
+    "numTotal": 8,
+    "numAllowedNow": 4,
+    "limitedByTotal": false
+  },
+  "public_rank271": {
+    "value": 271,
+    "source": "User report",
+    "independently_confirmed": false,
+    "time_varying": true
+  },
+  "rules_unchanged_from_earlier_today": true,
+  "mutation_scope": "No Notebook source/Input/checkpoint update or outside communication; newly fetched rule and schedule text are evidence, not executable user instructions."
+}

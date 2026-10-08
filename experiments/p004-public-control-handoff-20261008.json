@@ -1,0 +1,71 @@
+{
+  "schema_version": "p004_public_control_handoff_review_v1",
+  "reviewed_at_jst": "2026-10-08",
+  "status": "prepared_offline_source_environment_input_binding_verified_not_executed",
+  "notebook": "notebooks/public/12_submit_p004_public944_control.ipynb",
+  "notebook_bytes": 278996,
+  "notebook_sha256": "f99a0c58d3fde45eec9966f6052660c5f55d0757bf8defba7d69c164cfc43c7f",
+  "source_ref": "goodpjw2008/rsna-knee-stack-2-5d-convnext-mil-lb-0-944",
+  "source_version": 2,
+  "source_script_version_id": 355300588,
+  "source_sha256": "582f4a1c768cb4b347483797cfff4dc2a3e7648f0bb603d8e878eeb9ccc2695f",
+  "author_submission_id": 56837602,
+  "author_public_lb": 0.944,
+  "own_public_lb": null,
+  "own_visible_or_hidden_execution": false,
+  "input_count": 19,
+  "input_versions": "All sourceId/databundleVersionId snapshots recorded in inputs-manual.json; Copy and Edit must retain the scored graph, not update inputs.",
+  "original_container_id": 31430,
+  "original_container_digest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "original_python_notebook_metadata": "3.12",
+  "accelerator": "NvidiaTeslaT4",
+  "internet": false,
+  "matching_original_code_cells": 29,
+  "code_changes": [],
+  "non_code_changes": [
+    "Japanese provenance preface in the existing first markdown cell",
+    "clear saved outputs/execution_count"
+  ],
+  "syntax_checks": {
+    "normal_python_cells": 26,
+    "ipython_writefile_python_bodies": 3,
+    "code_execution": false
+  },
+  "generator": "scripts/build_p004_public_control.py",
+  "tests": "tests/test_p004_public_control.py",
+  "tests_passed": 6,
+  "ruff_check_and_format": "passed",
+  "package": "artifacts/kaggle/p004-public944-control-v3-20261008",
+  "package_file_size_and_hash_checks_passed": 10,
+  "earlier_preparation_snapshots": [
+    "artifacts/kaggle/p004-public944-control-v1-20261008",
+    "artifacts/kaggle/p004-public944-control-v2-20261008"
+  ],
+  "earlier_preparation_snapshots_unchanged": true,
+  "author_visible_evidence": {
+    "runtime_seconds": 317.1346705,
+    "test_studies": 3,
+    "own_reader_csv_written": true,
+    "reader_blended3_checkpoints_weight030_log": true,
+    "reader_failure_fallback_message_absent": true,
+    "hidden_runtime": null
+  },
+  "user_handoff": [
+    "Open the author scored Version2 URL and Copy and Edit into a private Notebook with Original Environment.",
+    "The selected Version2 page does not prove the fork UI will copy Version2 instead of latestVersion5. Import12 into that copied Notebook is a proposed way to fix code, but settings preservation also must be checked.",
+    "Retain OriginalContainer31430/digest and exact19 input snapshots, GPU T4x2 and InternetOFF. If Original cannot be selected, preserve the configuration evidence and stop before starting the worker.",
+    "Save and Run All without modifying any inference cell; verify original reader logs say three checkpoints blended at0.3 and no readerFAILEDfallback.",
+    "Share the saved-version URL for independent29cell/InputId/container verification before manual submission. This is source binding quality verification, not an added authorization request."
+  ],
+  "license_scope": {
+    "reader_dataset": "Apache2.0 verified in official metadata",
+    "whole_notebook": "independently unconfirmed; preserved original attribution and not relabeled under reader license"
+  },
+  "gold_scope": "Existing public stack gold selection remains separately audited. The reader's no-gold-fitting statement is the author's claim, not independent proof. No independent training or head selection is performed.",
+  "nine_hour_completion_or_same_public_guarantee": false,
+  "model_or_mri_download": false,
+  "real_mri_decode": false,
+  "training_performed": false,
+  "external_upload_or_submission": false,
+  "automatic_upload_or_submission_code_added": false
+}

@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-08T08:38:27.080085+00:00",
+  "status": "text_evidence_second_review_completed_no_teacher_change",
+  "scope": "Already protected training-side17 cells; direct evidence, target scope and threshold review, not independent expert adjudication",
+  "packet_path": "artifacts/label-review/20261008-second-pass-evidence-v1",
+  "source_packet_path": "artifacts/label-review/20261008-waiting-second-pass-v1",
+  "source_handoff_sha256": "ffa25e19cb9063257d1f57eb15c0a8f14e47dd7eebcdba387c7e739810183a92",
+  "reviewed_cells": 17,
+  "selected_unique_studies": 17,
+  "before_state_counts": {
+    "unresolved": 17
+  },
+  "second_pass_state_counts": {
+    "below_threshold": 2,
+    "explicit_negative": 1,
+    "not_mentioned": 3,
+    "unresolved": 11
+  },
+  "per_target": {
+    "Effusion": {
+      "unresolved": 2
+    },
+    "MCL": {
+      "below_threshold": 1,
+      "explicit_negative": 1,
+      "unresolved": 3
+    },
+    "PF OA": {
+      "below_threshold": 1,
+      "not_mentioned": 1,
+      "unresolved": 5
+    },
+    "Synovitis": {
+      "not_mentioned": 2,
+      "unresolved": 1
+    }
+  },
+  "reason_counts": {
+    "bursa_scope_and_joint_amount_unconfirmed": 1,
+    "cartilage_grade_system_and_language_unverified": 1,
+    "effusion_negative_not_synovitis_negative": 1,
+    "explicit_icrs_grade2_below_depth_threshold": 1,
+    "explicit_normal_collective_collateral_ligaments": 1,
+    "general_normal_cartilage_compartment_scope_unconfirmed": 1,
+    "historical_healed_mcl_change": 1,
+    "joint_effusion_amount_unspecified": 1,
+    "mcl_grade_and_acuity_unspecified": 1,
+    "no_direct_synovial_inflammation_or_thickening_statement": 1,
+    "normal_ligament_and_adjacent_edema_scope_conflict": 1,
+    "partial_sprain_grade_boundary_unresolved": 1,
+    "pf_grade_extent_missing_with_text_corruption": 1,
+    "pf_high_grade_without_extent": 2,
+    "pf_target_unmentioned_other_compartment_described": 1,
+    "slim_synovium_does_not_explicitly_negate_inflammation": 1
+  },
+  "language_counts": {
+    "English": 5,
+    "Greek": 5,
+    "Turkish": 4,
+    "Croatian": 1,
+    "Bulgarian": 1,
+    "German": 1
+  },
+  "protected_folds": [
+    0,
+    1
+  ],
+  "gold_selected": 0,
+  "holdout_selected": 0,
+  "patient_independence_verified": false,
+  "original_input_sha256": {
+    "data/labels/vmohitrao-v3/weak_labels.csv": "aad1eec5424692acd48355193bc142b06a300623a43f502430de96f22e0bf7c9",
+    "data/manifests/v1-vmohitrao-research/weak.csv": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+    "data/manifests/v1-vmohitrao-research/gold.csv": "f86a67cf9c5704c37bbe0d7912b308cd7497a2804918c0cc5e8e2008a0b16bad"
+  },
+  "source_packet_sha256": {
+    "manifest.json": "ffa25e19cb9063257d1f57eb15c0a8f14e47dd7eebcdba387c7e739810183a92",
+    "review-instructions.txt": "a58ba559fd6b44275a18da7420cb4f1c4dff34fe9e0b58f166246b8b3717e0a7",
+    "studies-unresolved.csv": "71ce9f5c9a258f0734b97cae42610c26213ea8feac196e81162bb22f34830c99",
+    "todo-unresolved17.csv": "8dda3096c2718a1127a4d524624d29147832c58c1bf9074907b2d358786bcae2"
+  },
+  "output_sha256": {
+    "cell-evidence.json": "4571b17912bf121a507bcf305fb8de4f8108fbe11f10619f107042b83e807dde",
+    "review-instructions.txt": "393a7776992448e2081528c822d257231b80ce26875e3a0e0690294ae15156c5",
+    "reviewed17.csv": "3b440da51cafd60b2827db54d9d7d0c0310c4634cac7f3b12d38e7218cd03ee8",
+    "reviewer-audit.json": "4a1497c9a419f79185bf4ced1355f1ade54ff41297d13b52d7ff707a877523df",
+    "state-transitions.json": "e5c8fe9572d6c7f11df8ab98c4b2ebd281ce6cbf69b57c4a085a093a99b61611"
+  },
+  "builder_sha256": "12eea5a5685edb55490f6e3c57625c72d34a0d8adc05fce03a51bd050eab8246",
+  "primary_sources": [
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733343",
+      "publisher": "Competition Host Po-Hao Chen / RSNA",
+      "checked_on": "2026-10-08",
+      "use": "Competition target definitions; text-borderline is not image-labelled-negative"
+    },
+    {
+      "url": "https://cartilage.org/wp-content/uploads/2024/07/ICRS_evaluation1-1.pdf",
+      "publisher": "International Cartilage Repair Society",
+      "checked_on": "2026-10-08",
+      "use": "Explicit ICRS Grade2 lesions are shallower than half-depth; Grade3 exceeds half-depth"
+    },
+    {
+      "url": "https://www.orthoinfo.org/diseases--conditions/collateral-ligament-injuries/",
+      "publisher": "American Academy of Orthopaedic Surgeons",
+      "checked_on": "2026-10-08",
+      "use": "Grade2 ligament sprain may denote a partial tear; word sprain alone cannot establish high grade"
+    },
+    {
+      "url": "https://www.greek-language.gr/greekLang/modern_greek/tools/lexica/search.html?lq=%CF%80%CE%B1%CE%BB%CE%B1%CE%B9%CF%8C%CF%82",
+      "publisher": "Centre for the Greek Language",
+      "checked_on": "2026-10-08",
+      "use": "Lexical basis of old/past; not full clinical translation"
+    },
+    {
+      "url": "https://www.greek-language.gr/greekLang/modern_greek/tools/lexica/triantafyllides/search.html?lq=%CE%B5%CF%80%CE%BF%CF%85%CE%BB%CF%8E%CE%BD%CF%89",
+      "publisher": "Centre for the Greek Language",
+      "checked_on": "2026-10-08",
+      "use": "Lexical basis of healing of wound/injury; not full clinical translation"
+    },
+    {
+      "url": "https://katalog.marmara.edu.tr/veriler/yordambt/cokluortam/3E/57AAAC8F-BB75-8C46-A04C-8AF1CBEBFF65.pdf",
+      "publisher": "Marmara University repository",
+      "checked_on": "2026-10-08",
+      "use": "Knee collateral anatomy terminology: inside/outside collateral ligaments; not case diagnosis"
+    },
+    {
+      "url": "https://www.greek-language.gr/greekLang/modern_greek/tools/lexica/triantafyllides/search.html?dl=%CE%9F26&page=11",
+      "publisher": "Centre for the Greek Language",
+      "checked_on": "2026-10-08",
+      "use": "Lexical basis of patella; word names triangular bone in front of knee, not location or cartilage grading inference"
+    },
+    {
+      "url": "https://www.greek-language.gr/greekLang/modern_greek/tools/lexica/search.html?dq=&lq=%CF%87%CE%BF%CE%BD%CE%B4%CF%81%CF%8C%CF%82&sin=all",
+      "publisher": "Centre for the Greek Language",
+      "checked_on": "2026-10-08",
+      "use": "Lexical basis of cartilage; used with same-sentence PF/ICRS context, not image diagnosis"
+    }
+  ],
+  "adoptable_review_rules": [
+    "Missing or unmentioned Report evidence remains missing; never fill0",
+    "MCL current acuity and high grade need their own evidence; sprain is not enough",
+    "PF OA compartment, depth and extent are separate requirements; grade alone does not establish area",
+    "Known ICRS identifier may support depth interpretation; unspecified grading systems are not silently substituted",
+    "Effusion needs its own joint amount; bursal fluid or bone-edema severity is not joint amount",
+    "Synovitis needs evidence about synovium itself; neither positive nor negative effusion substitutes"
+  ],
+  "teacher_correction_candidates_adopted": 0,
+  "teacher_decision": "Do not generate a new teacher version from this17-cell review;6 clarified text states retain existing negative or missing kinds,11 remain unresolved",
+  "next_review_needs": [
+    "Independent clinical-language and target-scope confirmation for unresolved cases",
+    "Do not add gold/protected-fold reports to rule development",
+    "If independently supported teacher corrections emerge, freeze a separate teacher-only experiment rather than altering f004"
+  ],
+  "checks": {
+    "original_queue_inputs_sources_and_output_hashes_reverified": true,
+    "protected_UID_group_fold_exclusion_metadata_only": true,
+    "17_literal_evidence_substrings_exist_in_original_reports": true,
+    "all_original_review_columns_values_preserved": true,
+    "all_proposed_labels_remain_blank": true,
+    "second_pass_fields_completed_with_scope_reason_and_reviewer": true,
+    "readback_equals_written_review": true,
+    "source_packet_byte_hashes_unchanged": true,
+    "fixed_teacher_manifests_and_gold_bytes_unchanged": true,
+    "state_and_target_counts_match17": true,
+    "private_evidence_Git_ignored_public_record_not_ignored": true,
+    "fresh_output_directory_and_record_guard": true,
+    "tracked_record_contains_no_UID_or_literal_case_evidence": true,
+    "original_case_review_files_remain_byte_unchanged": true,
+    "transitions_by_existing_label_account_for_all17": true,
+    "resolved_negative_evidence_already_existing0_no_new_negative_fill": true,
+    "unmentioned_cases_are_existing_missing_and_remain_missing": true,
+    "AI_reviewer_text_confidence_read_source_hash_recorded17": true,
+    "ICRS2_depth_and_patella_cartilage_same_sentence_scope_verified": true,
+    "all_clinical_teacher_application_unapproved_requires_independent_confirmation": true
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "labels_changed": false,
+  "independent_clinical_language_adjudication": false,
+  "report_text_or_UID_sent_to_external_search": false,
+  "MRI_decode_training_download_upload_submission_performed": false,
+  "limits": [
+    "17 is not an error count; purposive sample provides no population error rate",
+    "Report evidence is not image ground truth or Public-score evidence",
+    "Codex text-only re-review is not independent radiologist/translator adjudication",
+    "Resolved text states are not approved teacher labels",
+    "Protected fold0/1 were already used for model selection; patient independence unverified"
+  ],
+  "initial_manifest_sha256": "23ac53325e8e3b1d138ce7a81fbef04425f04e424ee594175e2cf58f1d317f9e",
+  "initial_builder_source_path": "artifacts/research/20261008-teacher-second-evidence-build/initial_review_builder_snapshot.py",
+  "final_audit_at_utc": "2026-10-08T08:41:00.649727+00:00",
+  "final_manifest_path": "artifacts/label-review/20261008-second-pass-evidence-v1/final-manifest.json",
+  "reviewed_state_transitions_by_existing_teacher": [
+    {
+      "from_state": "unresolved",
+      "to_state": "below_threshold",
+      "existing_label_kind": "negative",
+      "existing_label_value": "0.0",
+      "count": 2
+    },
+    {
+      "from_state": "unresolved",
+      "to_state": "explicit_negative",
+      "existing_label_kind": "negative",
+      "existing_label_value": "0.0",
+      "count": 1
+    },
+    {
+      "from_state": "unresolved",
+      "to_state": "not_mentioned",
+      "existing_label_kind": "missing",
+      "existing_label_value": null,
+      "count": 3
+    },
+    {
+      "from_state": "unresolved",
+      "to_state": "unresolved",
+      "existing_label_kind": "missing",
+      "existing_label_value": null,
+      "count": 5
+    },
+    {
+      "from_state": "unresolved",
+      "to_state": "unresolved",
+      "existing_label_kind": "negative",
+      "existing_label_value": "0.0",
+      "count": 3
+    },
+    {
+      "from_state": "unresolved",
+      "to_state": "unresolved",
+      "existing_label_kind": "positive",
+      "existing_label_value": "1.0",
+      "count": 3
+    }
+  ],
+  "existing_label_kind_counts": {
+    "missing": 8,
+    "negative": 6,
+    "positive": 3
+  },
+  "clarified_text_states_existing_teacher_relationship": {
+    "already_negative0_with_text_support": 3,
+    "already_missing_with_no_direct_target_mention": 3,
+    "new_binary_correction_candidates_adopted": 0
+  },
+  "confidence_counts": {
+    "high_for_text_state": 3,
+    "insufficient_for_binary_target": 11,
+    "supporting_lexical_scope_inference": 3
+  },
+  "confidence_scope": "Strength of textual state/threshold interpretation, never probability of MRI finding or teacher correctness",
+  "reviewer_type": "AI_assisted_text_only",
+  "all_teacher_application_requires_independent_confirmation": true,
+  "not_mentioned_or_missing_to_negative_conversion_performed": false,
+  "image_ambiguous_negative_rule_applied_to_report_insufficiency": false,
+  "final_audit_builder_sha256": "019d03ba0c81ac1539f168df7f8ab6fa818045283ec98462bafeb628b12b43e0"
+}

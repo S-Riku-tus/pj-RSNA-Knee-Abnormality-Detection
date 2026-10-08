@@ -1,5 +1,51 @@
 # 公開ベースラインを最初の比較基準にする
 
+<a id="10月8日の優先工程p005の公開0950固定対照"></a>
+
+## 10月8日の優先工程p005の公開0.950固定対照
+
+**現在はown Version1/script356323020/ref56943135がCOMPLETE・自己Public0.950で採点成功しました。** 18:03 JSTの[公式採点確認](../experiments/p005-scored-review-20261008.json)。作者の全code/source cell、Original digest、3 Input参照、可視融合/CSVも29項目で確認済み。[保存提出の監査](../experiments/p005-submitted-review-20261008.json)。両Dataset選択V1はユーザー確認済みで、内部Input版IDのAPI直接観測は未完です。14は照合・復元用コピーなので追加Import/再提出は不要。この保存版を[0.955/0.960超への改善基準](../experiments/p005-improvement-roadmap-20261008.json)として保持します。以下は提出前と採点待ちの履歴です。
+
+17:45:41 JSTの[最後の状態照会](../experiments/p005-status-final-20261008.json)でもスコア/エラー未返却。raw statusの省略にSDKがPENDINGの既定値を当てており、queue/worker実行中は区別できません。両Dataset選択V1はユーザー確認済み、内部版IDの直接API観測は未完です。待機中のf004比較と教師二次レビューは完了し、両方ともモデル/教師差し替えを採用しません。[現在の判断](../PROJECT.md)
+
+最新の公式Rulesを再取得し、外部公開modelsの許可・事前学習入力のライセンス例外・配布cardの大会利用許可を照合しました。OAI元データの取得と、誰でも取得できる公開checkpointを固定して推論することを分け、現在の研究目的で後者を**条件付き採用**する判断です。Hostがこのcheckpointを個別承認したという意味ではなく、作者の元訓練の利用条件を保証しません。自分ではOAIを取得・学習せず、公開重みのGold選択履歴を記録します。[今回の再監査](../experiments/public-pretrained-eligibility-20261008.json)
+
+この判断を踏まえ、次は[作者Public0.950のApex Version1](https://www.kaggle.com/code/sujanmajhisuzan/rsna-knee-apex-grandmaster-stack?scriptVersionId=356192954)を固定対照として実測します。script356192954/submission56930357の公式採点、7 code cell、3公開Inputsを確認しました。[14_submit_p005_public950_control.ipynb](../notebooks/public/14_submit_p005_public950_control.ipynb)は元推論code・係数・fallbackを変更しないコピーです。作者0.950は自分の再現値ではありません。12の0.944対照は準備済みですが、先に14の結果を確認します。
+
+1. 上の**採点済みVersion1**を開いて**Copy & Edit**し、自分のコピーをprivateにします。必要なら、そのコピー内へローカル**14**をImportしてcodeを固定します。Import後のInputs/環境の保持を前提にせず、画面で確認します。
+2. **Original Environment（作者Python3.13、Container31481）・GPU T4×2・Internet OFF**を保ちます。3 Inputsは公式Competition、`goodpjw2008/rsna-knee-2-5d-convnext-reader`、`nartaa/rsna-knee-publication-swa-weights-20261007`です。元の選択版を維持し、Update allを押しません。自作f002のhead/decoder、12の残りInputsは追加しません。
+3. 推論・係数・decoder例外時の元policyを編集せず、**Save Version → Save & Run All**します。作者の可視版にはdecoder pip失敗のwarningもあり、元sourceは失敗時に既存decoderや利用可能系列で続行する仕様です。可視完走を全圧縮MRI正常の証明とは扱いません。今回の対照では追加wheel/guardを入れて条件を変えません。
+4. 保存実行が正常完了し、最終`submission.csv`と全モデルbranchの完了を確認します。**保存版URL/Versionを共有して、元7 code cell・3 Input内部版・containerを照合してから、その同じ保存Versionのsubmission.csvを手動提出**します。可視CSVだけを根拠に同じ失敗版を繰り返し提出しません。
+5. 自己Publicが出たらp002自己0.937と比較し、採点成功した保存版を固定します。隠し例外なら元作者版との再現差を確認し、ソースを変更しない状態でも同じ問題が起きた証拠として保存します。隠しtracebackやworker所要時間は、取得できると保証しません。
+
+原版の7 code cell/Input snapshot/container照合、帰属・利用条件・限界は[p005引渡し監査](../experiments/p005-public-control-handoff-20261008.json)へ記録します。[manual-notes.txt](../artifacts/kaggle/p005-public950-control-v1-20261008/manual-notes.txt)に画面操作と完了ログの具体的文面を保存しました。readerとSWA DatasetはともにVersion1です。手順の整備であり、assistantは重み/MRI取得、MRI処理、実学習、外部upload/submitを行っていません。
+
+## 10月8日の次工程p004の固定対照
+
+自己採点済みの基準はp002 Public **0.937**です。10のhead接続回避は可視実行で機能しましたが、正しい10保存版を提出した隠し再実行も例外でした。同じ10の再提出・追加学習を先に行わず、**他作者の採点済み原版をcode・Inputs・環境ごと固定する対照**へ進みます。[10の監査](../experiments/f002-embedded-head-hidden-failure-review-20261008.json)
+
+この別対照は[goodpjw2008のPublic0.944採点済みVersion2](https://www.kaggle.com/code/goodpjw2008/rsna-knee-stack-2-5d-convnext-mil-lb-0-944?scriptVersionId=355300588)。script355300588/submission56837602の採点を公式表示JSONで確認し、全19 Inputsが公開されていることも確認しました。ローカルの[12_submit_p004_public944_control.ipynb](../notebooks/public/12_submit_p004_public944_control.ipynb)は元29 code cellを完全に保持します。作者0.944は自己再現値ではなく、可視317.135秒は隠し実行時間ではありません。現在は上の14を先に行います。
+
+1. 上の**Version2**のページを開き、Version表示を確認して**Copy & Edit**します。自分のコピーをprivateにします。ページがV2でもCopyが最新版V5を複製するかは未検証なので、最新版を原版とみなしません。
+2. そのコピー内で必要ならローカル**12をImportしてV2のcodeを固定**します。Import後もSettingsとInputsを再確認します。新規Latest NotebookへのImportだけでは再現条件は揃いません。
+3. **Original Environment（Python3.12、Container31430）・GPU T4×2・Internet OFF・元19 Inputsの同じ選択版**を保ちます。Update allを押しません。decoderのバイナリwheelsはCP311/CP312用なので最新Python3.13へ切り替えません。元環境を選択・保持できなければ、実行を始めずその設定状態を記録します。f002のhead/decoderはこの対照へ追加しません。
+4. code・係数・モデル・元fallbackは編集せず、**Save Version → Save & Run All**します。保存実行が完了し、最終`submission.csv`、ログの`own reader: blended 3 checkpoints at weight 0.3`と`_own.csv`書込みがあること、`own reader FAILED`がないことを確認します。新しいreaderが失敗して古いstackだけでCSVが出るケースを正常再現と扱いません。
+5. **この保存版のURL/Versionを記録して提出前に照合**します。元29 code cell・19 Input内部版ID・container digestが一致したと確認してから、**同じ保存Versionのsubmission.csvを手動提出**します。Copy/Importがどの版を継承するか未確認なための品質確認で、追加の推論guardを実装したものではありません。
+
+全Inputs・内部版ID・container digest・照合証拠は[新規packageのmanual-notes.txt](../artifacts/kaggle/p004-public944-control-v3-20261008/manual-notes.txt)と[provenance.json](../artifacts/kaggle/p004-public944-control-v3-20261008/provenance.json)へ保存しました。内部IDとUIのVersion番号は別です。rootで照合できるよう、Notebook URLは保存版から記録します。作者原版の帰属とGold選択履歴を維持し、自分のweak/gold非利用の学習評価とは区別します。
+
+より高い候補も確認しました。以下は全て**作者の採点値**で、自分の値ではありません。[版別採点・Input監査](../experiments/public-candidates-20261008.json)
+
+| 候補 | 作者Public | 現時点の判断 |
+| --- | ---: | --- |
+| [Apex Grandmaster Stack V1](https://www.kaggle.com/code/sujanmajhisuzan/rsna-knee-apex-grandmaster-stack?scriptVersionId=356192954) | 0.950 | 公開pretrained利用を条件付き採用へ更新。原版固定の14を次に実測 |
+| [Anatomical Mirror V2](https://www.kaggle.com/code/nartaa/rsna-knee-0949-anatomical-mirror?scriptVersionId=356175397) | 0.949 | 同じ公開重みの別recipe。最初は14だけを比較 |
+| [D4 Blend V3](https://www.kaggle.com/code/pjmathematician/rsna-knee-d4-blend?scriptVersionId=353440703) | 0.946 | 必須private Inputs3つがあり完全再現できない |
+| [D4 Lite V1](https://www.kaggle.com/code/pjmathematician/rsna-knee-d4-lite?scriptVersionId=352859223) | 0.945 | 同上 |
+| [Stack＋ConvNeXt MIL V2](https://www.kaggle.com/code/goodpjw2008/rsna-knee-stack-2-5d-convnext-mil-lb-0-944?scriptVersionId=355300588) | 0.944 | 原版29セル・公開19 Inputs・Original環境を固定する別対照12 |
+
+以前のp001/p002の準備手順は以下に履歴として残します。現在の基準0.937を以前の0.924へ戻しません。
+
 10月5日から、採点済みp001 Public 0.924を正式な比較基準にし、公開学習済みモデルの推論比較を最優先にする。r001 Public 0.749も公式APIで確認済み。[提出監査](../experiments/submission-audit-20261005.json)、[判断・段階別計画](research/public-model-strategy-20261005.md)。このリポジトリの自作ResNetへ別アーキテクチャの重みを読み込むことはできない。
 
 ## 10月5日の次候補p002

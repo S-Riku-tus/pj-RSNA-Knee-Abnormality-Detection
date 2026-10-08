@@ -1,0 +1,17 @@
+{
+  "reviewed_at_jst": "2026-10-08",
+  "source_review": "experiments/serving-contract-independent-review-20261008.json",
+  "synthetic_strict_study_stop": {
+    "status": "failed",
+    "phase": "decode_and_preprocess_series",
+    "processed": 0,
+    "error_type": "ValueError",
+    "error": "Missing/invalid PixelSpacing; no invented physical scale",
+    "no_submission_written": true,
+    "description": "Existing full runtime synthetic missing-PixelSpacing test reproduced study-wide abort before predictions; fixture is artificial and has no patient MRI."
+  },
+  "verified_private_cause": false,
+  "real_mri_decode": false,
+  "fit": false,
+  "upload_or_submit": false
+}

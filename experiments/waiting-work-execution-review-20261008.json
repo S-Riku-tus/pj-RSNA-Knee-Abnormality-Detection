@@ -1,0 +1,52 @@
+{
+  "schema_version": "waiting_work_execution_completed_v1",
+  "checked_at_utc": "2026-10-08T08:51:42.497201+00:00",
+  "status": "authorized_work_completed_training_and_text_review_no_promotion_scoring_unreturned",
+  "f004_review": "experiments/f003-f004-fold01-review-20261008.json",
+  "teacher_review": "experiments/training-report-second-pass-review-20261008.json",
+  "submission_state": "experiments/p005-status-final-20261008.json",
+  "artifact_audit_sha256": {
+    "experiments/f003-f004-fold01-review-20261008.json": "2687ff3abdb89f8b54d0a6678c5aefad156be4f3c9c19343493cea5df0091dce",
+    "experiments/training-report-second-pass-review-20261008.json": "6718783926d7076eeefd529b944ef0a3e1fa8a5a41aec034fb26fde8996a1012",
+    "experiments/p005-status-final-20261008.json": "4c6a8359ea9ff8e5341289b776eaf4608425b42390638335504961e10dfa6a24"
+  },
+  "checks": {
+    "f004_completed_review236": true,
+    "teacher_second_review20_passed": true,
+    "independent_selected_four_CSVs_passed": true,
+    "gold_not_used_in_training_selection_or_evaluation": true,
+    "source16_files_unchanged": true,
+    "fixed_input_hashes_unchanged": true,
+    "original_f003_run_hashes_unchanged": true,
+    "teacher_state_counts17_and_corrections0": true,
+    "teacher_outputs_hashes_match": true,
+    "teacher_source_packet_and_original_teacher_hashes_unchanged": true,
+    "prior_submitted_and_status_audits_unchanged": true,
+    "submitted_control14_not_modified": true,
+    "independent_vs_review_deltas_match": true,
+    "twofold_bootstrap_artifacts_match": true,
+    "fold0_new_run_and_checkpoint_prediction_hashes": true,
+    "fold1_new_run_and_checkpoint_prediction_hashes": true,
+    "ledger5_events_added_prior53_rows_preserved": true
+  },
+  "ledger_rows_before": 53,
+  "ledger_rows_after": 58,
+  "f004_adopted": false,
+  "teacher_corrections_adopted": 0,
+  "teacher_decision_basis": "Six clarified text states agree with existing0/missing;11 lack sufficient scope/language evidence. No supported correction; no permission request is pending.",
+  "f004_timing": {
+    "head_fit_seconds": 767.0404131999821,
+    "CLI_wall_seconds": 796.2649646000355,
+    "excludes": "preflight analysis MRI extraction and hidden inference"
+  },
+  "actions": {
+    "real_local_head_training": true,
+    "real_MRI_decode": false,
+    "new_model_or_DICOM_download": false,
+    "teacher_changed": false,
+    "external_upload_or_submission": false,
+    "submitted_control_modified": false
+  },
+  "next_action": "Preserve submitted p005 and own0937; compare actual outcome when returned, investigate saved-version stage if error; no unsupported label patch or broad dropout scan",
+  "verification_note": "Initial root verifier had incorrect header literals; corrected to existing approved12-label order before successful four-CSV verification. GPU training and inference source unchanged."
+}

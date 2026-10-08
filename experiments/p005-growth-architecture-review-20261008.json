@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "review_date_jst": "2026-10-08",
+  "purpose": "自己Public 0.950のApexを固定し、0.955/0.960超へ進む改善候補の構造・検証条件・計算費用を整理する。実装/実学習/提出の記録ではない。",
+  "new_result": {
+    "own_public_auc": 0.950,
+    "own_rank_user_reported": 271,
+    "evidence_at_creation": "今回のユーザー報告。公式APIによる自己採点再確認はroot側で別途行う。",
+    "target_1_public_auc": 0.955,
+    "target_2_public_auc_strictly_greater_than": 0.960,
+    "private_auc_unknown": true,
+    "no_public_or_private_improvement_guarantee": true
+  },
+  "read_only_evidence": [
+    {
+      "path": "notebooks/public/14_submit_p005_public950_control.ipynb",
+      "sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+      "role": "7コードセルの固定対照。今回提出の保存版そのものはsubmitted-reviewの別証拠で照合済み。"
+    },
+    {
+      "path": "artifacts/research/20261008-public-candidates/sujanmajhisuzan-rsna-knee-apex-grandmaster-stack-v1/source-readable.py",
+      "sha256": "f4f2abce4a918e8f9abb1916acdac051156357409b76aaa88c08140c3fd95097",
+      "role": "保存取得済み作者Version1を読みやすく展開したソース。重み/MRI未取得。"
+    },
+    {
+      "path": "artifacts/research/20261008-pretrained-eligibility/datasets-final/nartaa/rsna-knee-publication-swa-weights-20261007/dataset-metadata.json",
+      "sha256": "17d2a4eb0728391227be2db9a565bb78213bea2f924a6d24cfe302c11bd9d3d1",
+      "role": "作者公開card: seed42 SWA、OAI 2399 knees、Gold58の選択履歴、研究/大会利用条件。"
+    },
+    {
+      "path": "artifacts/research/20261008-pretrained-eligibility/datasets-final/goodpjw2008/rsna-knee-2-5d-convnext-reader/dataset-metadata.json",
+      "sha256": "664f5ed9998339b4a84da9267ffb5128af8c12c6ddbfa4b1ee2287eff5da276c",
+      "role": "作者公開card: 5fold中3fold EMA、report由来soft label、Gold58は訓練除外、単独Public0.929。"
+    },
+    {
+      "path": "configs/experiments/f002-dinov2-attention.json",
+      "sha256": "f2e98efbb73accd3053032cac811e203d8a4d0570e26e2e32ea9d4eaaaba7280",
+      "role": "独自392px凍結DINO CLS特徴とhead。ApexのCoAt/ConvNeXtとは別経路。"
+    },
+    {
+      "path": "experiments/f003-f004-fold01-review-20261008.json",
+      "sha256": "2687ff3abdb89f8b54d0a6678c5aefad156be4f3c9c19343493cea5df0091dce",
+      "role": "dropout40の両fold利得が揃わず不採用。単純なhead追加学習を優先しない根拠。"
+    }
+  ],
+  "baseline_architecture": {
+    "coatnet_branch": {
+      "architecture": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k + LayerNorm + 所見別MIL Attention",
+      "checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+      "models_in_probability_ensemble": 1,
+      "training_seed": 42,
+      "averaged_epochs": [14, 11, 12],
+      "swa_distinction": "同じseed/訓練軌跡の重み平均を一つのcheckpointとして推論。独立3モデルの予測ensembleではない。",
+      "native_cache_resolution": 384,
+      "inference_resolution": 320,
+      "inference_resolution_mode": "native384から中心320を切り出す。320へ全体resizeする方式ではない。",
+      "physical_field_of_view_mm_before_native_crop": 140.0,
+      "nominal_cropped_fov_mm_if_original140mm_crop_is_not_limited": 116.66666666666667,
+      "slice_slots": [
+        ["Sagittal", "Fluid_Sensitive=1 preferred", 26],
+        ["Sagittal", "Fluid_Sensitive=0 preferred", 22],
+        ["Coronal", "Fluid_Sensitive=1 preferred", 18],
+        ["Coronal", "Fluid_Sensitive=0 preferred", 12],
+        ["Axial", "either", 18]
+      ],
+      "slice_total": 96,
+      "series_selection": "同plane/Fluid_Sensitive候補の元CSV順の先頭、既選択seriesを再利用しない。slot不在は0 volume/mask。",
+      "slice_selection": "ImagePositionPatientをIOP normalへ投影してソート、系列の2〜98%に等間隔。位置欠損ではInstanceNumber fallback。",
+      "eval_windows": 94,
+      "views": ["plain", "anatomical left/right mirror"],
+      "view_probability_weights": [0.5, 0.5],
+      "anatomical_mirror": "sagittalは3sliceチャンネルを逆順、coronal/axialは画像幅を反転。uint8段階で実施しImageNet per-channel正規化より前。全planeへの単純horizontal flipとは異なる。",
+      "intensity": "選択sliceの系列percentile2/98→uint8→ImageNet正規化。実行はbyte互換study_lut fast reader。",
+      "resource_policy": "backbone flatten windowsを16ずつforward、各GPUに同checkpointを載せ検査を分担、prep process pool→bounded queue。",
+      "amp": "CUDA fp16 autocast。ライブinfer_probsは失敗時fp32再試行せず、consumerの例外で初期0.5が残る。冒頭の古いdocstring記述を現実装と混同しない。",
+      "coverage_risks_to_observe": [
+        "pixel decode失敗は0 slice、prep失敗は検査volume0、GPU失敗は初期0.5 predictionのまま処理済み数へ加算される。",
+        "eval中心は有効maskのmin/max間を走査し、全tripletの個別mask検査やslot境界除外はしていない。slot境界を跨ぐtripletがあるが、学習互換性と有益性は未確認。",
+        "rankpctはargsort二重で同点にも異なる順番を与える。変更はbaselineのtie orderingへ影響するためcoverage観測と数学的契約を先に分ける。"
+      ]
+    },
+    "convnext_branch": {
+      "architecture": "ConvNeXt-Tiny→384dim投影+6slot embedding+slice position embedding→2layer Transformer→所見別Attention",
+      "checkpoint_count": 3,
+      "checkpoint_type": "cnxt_v0_fold0/1/2.pt EMA",
+      "training_reference": "作者記載14epochs/256px、5fold report text group、public4表由来soft教師。実推論resはcheckpoint args[res]を使用。今回はcheckpoint bytes/argsを追加取得していない。",
+      "model_average": "sigmoid確率の3fold単純平均。",
+      "series_slots": "Sagittal/Coronal/Axial × Fat_Suppression有無の6slot。各slotはslice数最多のseries、反対Fat_Suppressionを同plane fallbackとして再利用することがある。",
+      "preprocessing": "DICOM IOP/LPSでcanonical reorientation、0.4mm/pixel、153.6mm field of viewの384px、必要時zero pad、native64slice上限。系列全体の間引きpixel 1/99.5 percentile。",
+      "window_selection": "4〜96%の系列内中心点、k16/slot、3隣接slice、slice positionをheadに伝える。異なる系列をtriplet内で混ぜない。",
+      "views": "native canonical入力からfov0.92のcenter crop/resizeを一つ。ApexではConvNeXtへの左右TTAなし。",
+      "decode_failure": "slice単位skip、series単位例外はslot mask0。",
+      "checkpoint_family_independence": "CoAtNetとは別encoder/前処理/報告soft教師/fold学習なので構造上の多様性あり。ただし対象studyは同じ競技weakで、データ露出の独立性とは別。"
+    },
+    "fusion": {
+      "type": "各所見のCoAt rankとConvNeXt rankの加重和→再rank。",
+      "convnext_weights": {
+        "Baker's": 0.35,
+        "Contusion": 0.30,
+        "Medial OA": 0.25,
+        "ACL": 0.25,
+        "Medial Meniscus": 0.20,
+        "MCL": 0.20,
+        "Lateral Meniscus": 0.08,
+        "Fracture": 0.08,
+        "Lateral OA": 0.08,
+        "PF OA": 0.08,
+        "Effusion": 0.04,
+        "Synovitis": 0.03
+      },
+      "fallback": "ConvNeXt subprocess/融合が例外ならCoAtだけのCSVへ戻す。完成CSV存在だけでは全branch成功の証拠でない。今回可視実行の融合成功は別監査で確認済み。",
+      "weight_origin": "作者コメントにはgold58の所見別AUCを引用。自分のgoldを使う係数再最適化には転用しない。",
+      "calibration_note": "ROC-AUCは順位の指標。各所見でstrictly monotonicな変換だけを施しても順位は変わらず改善しない。閾値最適化はこの目的の改善ではない。"
+    }
+  },
+  "target_arithmetic": {
+    "definition": "12所見の平均ROC-AUC。丸められた0.950からの概算。各クラス同じ重み。",
+    "delta_sum_auc_for_0_955": 0.06,
+    "delta_sum_auc_for_0_960": 0.12,
+    "example_not_forecast": "3所見を各+0.02、他9所見不変なら平均+0.005。頻度が高い所見だけを良くしても特別なmacro重みはない。",
+    "private_and_per_class_scores_unknown": true
+  },
+  "priority_sequence": [
+    {
+      "order": 0,
+      "action": "自己0.950保存版を固定し、訓練露出とcoverageの評価基盤を作る。",
+      "why": "成功版を保持し、改善候補とcoverage破壊を区別する。public重みall-weakで後付けfoldを作っても独立評価にならない。",
+      "allowed_now": "取得済みsource/card/summaryの静的監査、label-free診断configやreceipt設計。MRI decode/重み取得/学習は手順整備では開始しない。",
+      "measurements_before_accuracy_claim": ["checkpoint訓練UID/fold/teacher/gold-selectionの追跡可能性", "series-slot選択/欠損/重複/decoded-slice率/全検査成功phase", "同一UID順のbranch raw scoreとview raw score", "壁時計/GPUforward/IO/peak RAM-VRAMを分ける"]
+    },
+    {
+      "order": 1,
+      "candidate": "ConvNeXtだけk16→k24",
+      "single_factor": "ConvNeXtの推論window密度のみ変更。CoAt/SWA/TTA/reader/series selection/融合12係数固定。",
+      "rationale": "6slotごとに16窓の支系で細かい病変のサンプリングを増やせる。主CoAtは既に96slice/K94で、主系の窓数を増やすより変更位置が明確。",
+      "accuracy_evidence": "未実測の仮説。作者の256px/12窓訓練は異なる窓数のMIL入力を想定するが、24窓が上昇する保証はない。",
+      "implementation": "run(data_dir, split, ckpts, k=16,...)のkだけ変更、比較receipt追加は別準備版に限定。",
+      "new_training_needed": false,
+      "cost": "ConvNeXt backbone windowsが約1.5倍。total wall time1.5倍という意味ではなく、IO共有/CoAt支系/3models/batchingで異なる。ピークx/activationsも増えるのでbs4固定なら実測gate必須。",
+      "gate": "人工forward+UID/finite contract→ラベルを用いない代表cohortで時間/VRAM/coverage→固定一候補だけのPublic比較。連続k探索をしない。",
+      "adoption": "自己Publicが改善してもPrivate優位は未確認。改善なし/資源契約失敗なら0.950へ戻す。"
+    },
+    {
+      "order": 2,
+      "candidate": "ConvNeXtにanatomical left/right mirrorの1追加view",
+      "single_factor": "ConvNeXtの1view→plain/mirror等率確率平均のみ。slot/pos/3checkpoint/融合を維持。",
+      "rationale": "主CoAtに鏡映が既にあり、支系にはない。ただしcanonical座標と3slice順をplaneごとに正しく変換する必要がある。",
+      "accuracy_evidence": "未実測。mirrorが読影対象の左右/面/series順と整合すること、training augmentationとの互換性を確認する。generic horizontal flipをそのまま足さない。",
+      "new_training_needed": false,
+      "cost": "ConvNeXtforwardは約2倍。k24と同時実施しない。",
+      "priority_reason": "k24より入力意味の誤変換リスクが大きい。候補を増やす前にk24の結果と予算を判断する。"
+    },
+    {
+      "order": 3,
+      "candidate": "補完する専門系をclean foldsで自前学習",
+      "single_factor_sequence": ["新しい高解像度canonical/物理crop cacheと基準の画像契約を先に固定", "競技weak/goldへ未露出のgeneric pretrained encoderで凍結基準を作る", "spatial patch又はfeature-mapを残すheadだけを比較", "支持されればencoderの末尾fine-tuneだけ追加", "有望な条件だけfold/seedを拡張"],
+      "rationale": "0.955/0.960へは既存global MILが見落とす局所病変・系列/sequence差への補完を狙う。大きなbackboneや全3Dへ直ちに移らない。",
+      "suggested_focus_hypotheses": ["MCL peripheral coronal coverageと急性高gradeの教師定義", "PF OA axial cartilage spatial resolution/extent", "Fracture/Contusionの骨髄信号とfat-suppression", "synovitisはEffusionと独立した教師・視覚根拠が不足しやすい"],
+      "class_priority_caveat": "これらは構造/教師監査からの仮説で、p005隠し所見別弱点の観測ではない。f002弱点をApex弱点と同一視しない。",
+      "current_cache_limit": "既存DINO392特徴は1windowの384dim normalized CLSだけ。spatial patch tokenを後から復元できず、細部改善には新画像/patch抽出が必要。旧192pxキャッシュのupsampleも原細部を復元しない。",
+      "new_training_needed": true,
+      "runtime_risk": "Kaggle画像cache生成→4090 fit→Kaggle推論の全工程が必要。GPU hours/容量/9h予算を小cohortで実測後に全件化。",
+      "blend_gate": "独自foldに未露出の学習/教師/選択を固定し、両foldのpredictionを同一UIDで比較。単独AUCとdisagreementだけでは足りず、どの正負ペアを補正するかと固定融合のdelta/CIを示す。Apexのvalidation側訓練露出が不明なら融合評価はin-sample/proxyと明記。",
+      "no_immediate_blend": "既存0.937/f002/f004を無根拠にApexへ足さない。p002もCoAt由来branchが含まれ、既存checkpoint重複が独立多様性と同義ではない。"
+    }
+  ],
+  "coatnet_native384_candidate_detail": {
+    "status": "構造を一次ソースで確認した提案。checkpoint strict-load/GPU forward/実MRI/精度は今回未実測。",
+    "factor_definition": "native384中心320cropをnative384全fieldへ変更。重み/IMG384の元volume/series/96slice/K94/mirror2views/ConvNeXt/融合係数は固定。",
+    "not_pure_sampling_density": "同じnative384 volumeの外周を戻す変更なので、native pixel当たりの物理sampling密度は変わらない。140mm full fieldからnominal116.7mmのcropを戻す。より細かい元画素を生成する変更と説明しない。",
+    "training_compatibility": "checkpointはfull384で訓練されたので入力寸法を戻す方向ではあるが、採点済み選択はnative320であり、field/background/病変coverage/相対位置分布が変わる。訓練寸法と同じならスコアが上がるとは言えない。",
+    "timm_qualified_version": "1.0.29（作者実行記録）。local .venvにtimm sourceがなく、一次GitHub tagで静的確認。",
+    "relative_position_structure": "coatnet_rmlp_2_rwのrel_pos_typeはmlp。MLPパラメータshapeは入力寸法によらず、relative position index/log coordinatesはnonpersistent。img_size384でmodelを再構築して同checkpointをstrict loadする適合は構造上有望だが未検証。320構築済みmodelへ384tensorだけを渡す方法はgrid不一致になり得る。",
+    "implementation_contracts": ["INPUT_RES384でmodel再構築", "infer_pair_probsの固定(94,3,320,320)assertを宣言res由来へ整合", "eval_windows/gpu_windowsのcropは384field全体へ整合", "strict=Trueでmissing/unexpected/shape driftを拒否", "比較前に人工GPU forwardでfinite出力、入力crop一致、94window順、2viewのanatomical mirror、slot/allmissing契約を確認"],
+    "compute": {
+      "input_area_ratio": 1.44,
+      "global_attention_score_area_ratio_approx": 2.0736,
+      "interpretation": "stage空間token数が約1.44倍ならattention pair数は約2.07倍。forward wall time/peak VRAMはconv/SDPA実装/chunk16/2GPUで異なるので未測定。全体1.44倍とも2.07倍とも断定しない。"
+    },
+    "decoders_separate_factor": "既存pip decode wheel失敗の修正は独立要因。現CoAtのdecode失敗は0 slice/mask、Convはslot mask/fallback、main GPU失敗は0.5に残る。成功.950でも隠しcoverageを直接観測できていない。decode環境変更を今回『失敗fix』や384化へ混ぜない。",
+    "relative_priority": "ConvNeXt k16→24を先に費用測定・固定比較。native384はその結果/余裕を見て別試行として検討。"
+  },
+  "lower_priority_or_defer": [
+    {"candidate": "CoAt入力320→384又はmulti-crop", "reason": "上の詳細通りFOV変化と相対位置gridの再構築を伴う。時間/VRAMと精度は未測定、同時k増/TTA増/decoder変更をしない。作者320crop訓練変種0.946は別checkpointの報告であり、この384推論候補の実測ではない。"},
+    {"candidate": "CoAt K94→さらに多く", "reason": "96sliceの有効中心は既にほぼ全coverage。重複窓を増やしても新しいnative情報は増えない。native slice allocation変更ならtraining input分布も変わる。"},
+    {"candidate": "series選択やslot境界tripletの修正", "reason": "潜在coverage問題は観測対象だが、学習時と同じ構造を変えるため精度利得と安全性は別。まずlabel-free incidence/coverageを調べ、他候補と混ぜない。"},
+    {"candidate": "SWA member再混合/追加epoch重み", "reason": "公開提供は選択済みSWA checkpointだけ。member snapshotsがないと分解不能。同じseed/encoder/teacherの派生を多数足しても多様性は小さくなる可能性。"},
+    {"candidate": "所見別融合係数12個のPublic/Gold探索", "reason": "gold fit/selection禁止。public繰り返し最適化では隠しgeneralization根拠が弱い。まず原12係数固定のモデル変更を比較する。"},
+    {"candidate": "確率校正/閾値変更だけ", "reason": "単一モデルのstrict monotonicな校正は順位AUCを変えない。blend前校正は順位を変え得るが、別要因として有効な未露出検証が必要。"},
+    {"candidate": "大型3D backboneの全探索", "reason": "anisotropic/multiple sequences/4k weak/small GPU budget、容積入力統一、学習・推論費用が重い。空間情報を残す2.5D/patch MILの対照が先。"}
+  ],
+  "predeclared_comparison_requirements": {
+    "baseline_immutable": true,
+    "one_factor_per_trial": true,
+    "new_run_and_source_ids": true,
+    "fixed_seed_groups_labels_input_hashes_environment": true,
+    "labels_missing_never_zero_filled": true,
+    "own_gold_never_fit_or_selection": true,
+    "public_training_gold_history_separate": true,
+    "public_shared_training_exposure_not_true_oof": true,
+    "descriptive_rank_correlation_not_proof_of_ensemble_gain": true,
+    "heldout_fold_predictions_not_cross_fold_training_average": true,
+    "selection_rule_and_trial_budget_before_public_feedback": true,
+    "coverage_and_runtime_gate_before_submission": true,
+    "do_not_claim_271_is_permanent_rank": true
+  },
+  "primary_technical_sources_checked_20261008": [
+    {"title": "Averaging Weights Leads to Wider Optima and Better Generalization", "url": "https://arxiv.org/abs/1803.05407", "support": "SWAは訓練軌跡の重み平均を一つのmodelとして使う方法。checkpoint平均を独立予測ensembleと区別。"},
+    {"title": "CoAtNet: Marrying Convolution and Attention for All Data Sizes", "url": "https://arxiv.org/abs/2106.04803", "support": "主backboneはconvolution/attention hybrid。一般画像の結果は膝MRI0.955達成の証拠ではない。"},
+    {"title": "A ConvNet for the 2020s", "url": "https://arxiv.org/abs/2201.03545", "support": "ConvNeXtはmodernizedConvNet family。Apex支系はTinyを用いる。"},
+    {"title": "DINOv2: Learning Robust Visual Features without Supervision", "url": "https://arxiv.org/abs/2304.07193", "support": "汎用self-supervised feature候補。CLS-only保存ではspatial patch outputは保持されないことはlocal codeで確認。"},
+    {"title": "timm1.0.29 official maxxvit implementation", "url": "https://github.com/huggingface/pytorch-image-models/blob/v1.0.29/timm/models/maxxvit.py", "support": "coatnet_rmlp2はMLP relative position、img_sizeからstage spatial gridを生成する。"},
+    {"title": "timm1.0.29 official relative position implementation", "url": "https://github.com/huggingface/pytorch-image-models/blob/v1.0.29/timm/layers/pos_embed_rel.py", "support": "RelPosMlpのlearnedMLPとnonpersistentindex/coordinatesを区別。"},
+    {"title": "RSNA Knee selected SWA weights 0949 and 0945", "url": "https://www.kaggle.com/datasets/nartaa/rsna-knee-publication-swa-weights-20261007", "access": "web本文取得エラー。今回根拠は10/8公式SDK取得済みcard hashを使用。"},
+    {"title": "RSNA Knee 2.5D ConvNeXt reader", "url": "https://www.kaggle.com/datasets/goodpjw2008/rsna-knee-2-5d-convnext-reader", "access": "webが本文を返さず。今回根拠は10/8公式SDK取得済みcard hashを使用。"}
+  ],
+  "actions_this_review": {
+    "source_or_notebook_changed": false,
+    "real_mri_decoded": false,
+    "additional_weights_or_mri_downloaded": false,
+    "training_started": false,
+    "uploaded_or_submitted": false,
+    "new_file_only": "experiments/p005-growth-architecture-review-20261008.json"
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "schema": "rsna_knee_public_pretrained_eligibility_v1",
+  "checked_at_jst": "2026-10-08T16:14:58.172689+09:00",
+  "adoption_decision": "conditional_proceed_public_frozen_checkpoint_inference",
+  "adopted_notebook_ref": "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+  "adopted_notebook_version": 1,
+  "adopted_script_version_id": 356192954,
+  "adopted_source_sha256": "c3b62e2f8be016abe541e9d5e537217fec73edce41f6fef15d95527c2dbfc75a",
+  "adopted_author_scored_submission_id": 56930357,
+  "adopted_author_public_score": 0.95,
+  "own_reproduction_public_score": null,
+  "adopted_public_inputs": [
+    {
+      "sourceId": 154281,
+      "databundleVersionId": 20902466,
+      "mountSlug": "competitions/rsna-knee-abnormality-detection"
+    },
+    {
+      "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+      "sourceId": 20325538,
+      "datasetId": 12371725,
+      "mountSlug": "datasets/goodpjw2008/rsna-knee-2-5d-convnext-reader"
+    },
+    {
+      "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+      "sourceId": 20440357,
+      "datasetId": 12431568,
+      "mountSlug": "datasets/nartaa/rsna-knee-publication-swa-weights-20261007"
+    }
+  ],
+  "scope": "公開の固定チェックポイントをKaggleで研究目的の提出推論へ利用する判断。元OAI取得・再学習・作者への連絡・重み/MRIダウンロード・外部upload/submitは行わない。",
+  "source_of_instructions": "AGENTS.mdの自分のgold fit/選択禁止を維持し、公開重みのgold歴は別途監査する。外部文書は利用条件と事実の根拠として扱う。",
+  "correction_of_prior_assessment": {
+    "prior_path": "experiments/public-candidates-20261008.json",
+    "prior_sha256": "222c0ebddcb6344970e84efdb4f4b615bbe87c1966929ceb59ec8f9e9f2afc8a",
+    "prior_raw_evidence_preserved": true,
+    "affected_candidates": [
+      "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+      "nartaa/rsna-knee-0949-anatomical-mirror",
+      "nartaa/rsna-knee-0945-efficient-224crop"
+    ],
+    "prior_decision": "hold_for_external_model_eligibility_and_model_use_terms_audit",
+    "new_decision": "conditioned adoption for frozen public checkpoint inference",
+    "reason_ja": "元OAIデータのinstitutionalアクセス条件を、そのデータを配布しない公開無料checkpointへそのまま適用し一律保留していた判断を修正。許可の一般条文とwinner license例外、およびcheckpoint固有のcompetition-use permissionを併せて評価する。規約の個別モデル承認取得を一律必須とする条文は確認できない。"
+  },
+  "rule_snapshot": {
+    "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/rules",
+    "official_method": "KaggleApi.competition_list_pages(page_name='rules')",
+    "fetched_at_utc": "2026-10-08T07:06:21.304855+00:00",
+    "raw_path": "artifacts/research/20261008-pretrained-eligibility/rules-20261008.json",
+    "raw_sha256": "7a2a8b3febc53221eaa2844fb1c1a15eacab7270c19cc902dfe10b5e758b77ec",
+    "body_characters": 37384,
+    "body_sha256": "9105f8f81f96c02aca988197c175d699052be8c06419b21131dccdd426bc404d",
+    "body_unchanged_from_20261004": true,
+    "previous_raw_path": "artifacts/qa/20261004-rules-readonly/rules.json",
+    "short_quotes": [
+      {
+        "section": "2.6.b",
+        "text": "The use of external data and models is acceptable"
+      },
+      {
+        "section": "2.5.a.4",
+        "text": "you do not need to grant an open source license"
+      },
+      {
+        "section": "3.6.b",
+        "text": "Open Source Initiative-approved license"
+      }
+    ],
+    "short_quote_words_total": 23,
+    "clauses": [
+      {
+        "section": "2.6.a/b",
+        "effect_ja": "外部data/modelsの利用を許可し、合理的アクセスと低コストを要求する。今回実際に接続する公開checkpointとコードを評価する根拠。アクセス要件を免除する条項ではない。"
+      },
+      {
+        "section": "2.5.a.4",
+        "effect_ja": "入力dataまたはpretrained modelのlicenseがwinning solutionのlicenseと互換しない場合、その外部data/modelへ同じopen source licenseを付け直す義務を免除する。モデルを自由に使える権利や、元データ取得権を新しく与える条項ではない。"
+      },
+      {
+        "section": "3.6.b/c",
+        "effect_ja": "大会の公開Notebookとして共有したCompetition CodeはOSI承認・商用制限しないlicenseで共有したとみなす。既存第三者権利を侵害しないこととnotice保持は必要。今回sourceの個別license名がSDKに未返却でも、Kaggle公開Copy & Editを必須の追加許可待ちにしない。"
+      },
+      {
+        "section": "2.5.a.2 / 2.8.a.1-2",
+        "effect_ja": "winnerにはcode/weights/environment/documentation公開と必要なgrantが残る。CC-BY-NC指定とgeneric商用制限不可表現の不整合は記録を維持する。2.5.a.4は全winner obligationsの免除ではない。"
+      }
+    ]
+  },
+  "overview_explicit_permission": {
+    "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview#code-requirements",
+    "checked_date_jst": "2026-10-08",
+    "short_quote": "Freely & publicly available external data is allowed, including pre-trained models",
+    "effect_ja": "公開・無料のpretrained modelを許可することを公式Code Requirementsで明示。原採点版にInternet OFF・9h制約を適用する。"
+  },
+  "host_interpretations": [
+    {
+      "topic_id": 741819,
+      "comment_id": 3526495,
+      "author": "Po-Hao \"Howard\" Chen",
+      "post_utc": "2026-09-21T15:34:26.963Z",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/741819#3526495",
+      "effect_ja": "OAIを外部datasetとして直接使う場合、無料で一般アクセスできinstitution/legal team signoff不要であることを条件にする。HostはOAI steward側termsの適合を判定しない。公開checkpointの歴史的training dataまで一律禁止すると明記した回答ではない。"
+    },
+    {
+      "topic_id": 734109,
+      "comment_id": 3516795,
+      "author": "Po-Hao \"Howard\" Chen",
+      "post_utc": "2026-08-25T11:00:25.950Z",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/734109#3516795",
+      "effect_ja": "KneeCoT datasetはinstitutionとのdata agreementで参加者アクセスが不均等になるため禁止する。今回のnartaa checkpointへの個別禁止と同一視しない。"
+    },
+    {
+      "topic_id": 733965,
+      "comment_id": 3517696,
+      "author": "Po-Hao \"Howard\" Chen",
+      "post_utc": "2026-08-27T22:14:33.257Z",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733965#3517696",
+      "effect_ja": "大会参加の研究利用について賞金だけで商用利用になるとは扱わず、NC条件だけで大会側は排除しない。dataset/model ownerのtermsをHostは免除しない。"
+    }
+  ],
+  "public_checkpoint_resource_audit": {
+    "swa_dataset": {
+      "ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+      "dataset_id": 12431568,
+      "dataset_version": 1,
+      "internal_version_id": 20440357,
+      "public_metadata_and_listing_access_verified": true,
+      "no_institutional_gate_in_used_checkpoint_interface": true,
+      "license": "Other (specified in description)",
+      "exact_model_use_quote": "These learned weights are provided for research and educational use, including the RSNA Knee competition.",
+      "permission_effect_ja": "公開された学習済みweightsを研究・教育目的、RSNA Knee competitionを含め利用する許可が明記。OAI raw records等の取得・再配布権は含まない。",
+      "accuracy_checkpoint": {
+        "file": "raptor_ft_alldata_t16_blendjev_oai_d96_r384_swa.pt",
+        "file_listing_bytes": 292840787,
+        "author_declared_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+        "payload_hash_independently_verified": false,
+        "training_history_author_claim": "seed42 original384 SWA epochs14,11,12;2399 baseline OAI knees masked external supervision;Gold58 reused for selection/development"
+      },
+      "efficiency_checkpoint": {
+        "file": "raptor_ft_alldata_t16_blendjev_oai_d96_c08_r224_swa.pt",
+        "file_listing_bytes": 292842755,
+        "training_history_author_claim": "seed42 224crop SWA epochs15,13,12;2399 sameOAI baseline knees;Gold58 reused for selection",
+        "used_by_selected_apex_notebook": false
+      },
+      "contains_raw_patient_records_per_card": false,
+      "private_original_training_dependency": "nartaa/rsna-knee-oai-original384-s42-pair remains private, is not attached to this public scored version"
+    },
+    "convnext_reader_dataset": {
+      "ref": "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+      "dataset_id": 12371725,
+      "dataset_version": 1,
+      "internal_version_id": 20325538,
+      "license": "Apache 2.0",
+      "public_metadata_and_listing_access_verified": true,
+      "training_history_author_claim": "Three EMAfold checkpoints trained on report-derived soft labels;gold58 excluded from fit. Private run logs/fulltraining not independently audited."
+    },
+    "public_code_use": {
+      "source": "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+      "source_version": 1,
+      "source_sha256": "c3b62e2f8be016abe541e9d5e537217fec73edce41f6fef15d95527c2dbfc75a",
+      "notebook_specific_license_name_returned_by_sdk": false,
+      "applicable_rules": [
+        "Competition Rules3.6.b/c",
+        "KaggleTerms9"
+      ],
+      "terms_url": "https://www.kaggle.com/terms",
+      "effect_ja": "Kaggleの公開NotebookのCopy & Edit機能による利用は公開UserSubmissionのサービス機能内利用許可とPublic Code Sharing条文の対象。元作者・第三者noticeを保持し、個別weightsをNotebook全体と同じlicenseへ付け替えない。"
+    }
+  },
+  "inference_and_limits": {
+    "assessment_ja": "公開無料checkpoint自体のアクセス、competition用途明示permission、外部modelsの一般許可、winner license例外を合わせ、現在の研究目的で凍結推論を準備・実施する条件付き採用は合理的。原OAIデータへアクセスする採用ではなく、作者のprivate dataを自分の学習へ取り込まない。これは一般条文からの当方の推論であり、当該checkpointのHost個別承認という事実ではない。",
+    "host_individual_checkpoint_approval_found": false,
+    "host_individual_checkpoint_prohibition_found": false,
+    "historical_author_nda_duc_compliance_independently_verified": false,
+    "unanswered_public_pretrained_edge_case": {
+      "topic_id": 737950,
+      "comment_id": 3519419,
+      "host_reply_found_in_fresh_complete_thread": false,
+      "effect_ja": "原pretraining corpusが非公開の公開checkpointについて質問はあるがHost回答なし。個別確認の未回答だけを無期限holdにせず、既存の一般条文と公開用途permissionで判断する。許可と違反のどちらもこの未回答自体から断定しない。"
+    },
+    "source_study_link_is_not_rights_certification": "モデルcardのNDA Study3407/DOI acknowledgementは出典表記。原作者のinstitutional承認やモデル配布権の独立証明として扱わない。",
+    "open_source_exception_limit": "2.5.a.4はlicense grantの例外だけ。違法取得・第三者権利侵害・明示禁止のdata/modelsを後から許可する抜け道として使わない。現資料に当該checkpointの具体的違反は確認できない。",
+    "winner_obligations_limit": "原モデルを外部pretrained inputとして固定し、既に公開されたweightsへの版固定linkと利用条件を残す。最終winning deliveryでは使用したcode/weights/environmentを再現可能に公開し、第三者資産は元条件を保持する。自己training codeがないことと原作者のpretrainingを再現したことを区別する。Sponsorが追加の歴史的training/source rights証明を要求する場合の対応は入賞時の確認事項として残る。"
+  },
+  "adoption_conditions": [
+    "上記採点済みNotebook Version1、公開Dataset各Version1とInput内部版、元containerを固定して使う。Notebookの係数・crop・TTA・fallbackを自分のgold/LBへ合わせて変更しない。",
+    "用途は研究・教育としてのRSNAcompetition参加に限定。元作者と上流作者の帰属、モデル用途条件、OAI由来とgold選択履歴を記録する。",
+    "公開checkpointを凍結して推論に使用する。元OAI images/records/labelsの取得・再配布、OAI上での自分の再学習や制度的accessをこの判断で許可しない。",
+    "自分のgold58ラベルをfit/checkpoint/crop/blend選択に使わない。作者がgold選択済みの公開重みを、gold独立な自作モデルや独立CVと呼ばない。",
+    "明示のHost禁止、model ownerの用途撤回、具体的rights矛盾が今後確認された場合は再評価する。現在の個別回答未取得だけで追加許可待ちを必須にしない。",
+    "自分のPublicは提出後の公式採点値だけを記録。作者.950/.949は保証せず、hidden runtime/完走も未検証とする。"
+  ],
+  "candidate_selection_after_audit": {
+    "next": "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+    "next_author_public_score": 0.95,
+    "backup": "goodpjw2008/rsna-knee-stack-2-5d-convnext-mil-lb-0-944",
+    "backup_version": 2,
+    "simpler_alternative": "nartaa/rsna-knee-0949-anatomical-mirror",
+    "simpler_alternative_version": 2,
+    "why_ja": ".950は公式版別採点済み・private Inputs不要・competition＋2公開Datasetsの3Inputs。多Inputheavy .944対照は保存保持し、まず.950の元版固定推論を準備する。score向上を保証せず、可視FusionSUCCESS/例外fallbackも確認する。",
+    "fallback_limit_ja": ".950sourceはreader/fusion例外時に元.949予測へ戻す。固定fallbackは維持し、その場合にreader改善が再現できたとは報告しない。"
+  },
+  "raw_evidence": {
+    "topic_records": [
+      {
+        "topic_id": 741819,
+        "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/741819",
+        "title": "Is the Osteoarthritis Initiative (OAI) permitted as external data?",
+        "original_post_utc": "2026-09-17T17:03:14.804Z",
+        "fetched_at_utc": "2026-10-08T07:06:21.304855+00:00",
+        "all_comment_pages_retrieved": true,
+        "top_level_comments": 1,
+        "comments_including_nested_replies": 5,
+        "raw_path": "artifacts/research/20261008-pretrained-eligibility/topic-741819-20261008.json",
+        "raw_sha256": "8cdc22fa4579a971881b5725ad98b68e2d4625be9602f6b98edcb0ddc15f1dd6"
+      },
+      {
+        "topic_id": 737950,
+        "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/737950",
+        "title": "External data behind an institutional data use agreement - does the KneeCoT ruling generalize?",
+        "original_post_utc": "2026-08-28T10:15:00.209Z",
+        "fetched_at_utc": "2026-10-08T07:06:21.304855+00:00",
+        "all_comment_pages_retrieved": true,
+        "top_level_comments": 4,
+        "comments_including_nested_replies": 9,
+        "raw_path": "artifacts/research/20261008-pretrained-eligibility/topic-737950-20261008.json",
+        "raw_sha256": "36ec6331e8123ee8b838c5827f27ba63f9e6e31a6f4aff133c1424a976e997a3"
+      },
+      {
+        "topic_id": 734109,
+        "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/734109",
+        "title": "Is the gated KneeCoT dataset permitted as external data?",
+        "original_post_utc": "2026-08-09T23:34:53.412Z",
+        "fetched_at_utc": "2026-10-08T07:06:21.304855+00:00",
+        "all_comment_pages_retrieved": true,
+        "top_level_comments": 1,
+        "comments_including_nested_replies": 2,
+        "raw_path": "artifacts/research/20261008-pretrained-eligibility/topic-734109-20261008.json",
+        "raw_sha256": "b9a2f2861a9ce85e474a062e4e026a6fbf27b577f7a5a2d58e02714564db8b0e"
+      },
+      {
+        "topic_id": 733965,
+        "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733965",
+        "title": "Use of Commercially Hosted LLMs",
+        "original_post_utc": "2026-08-09T09:52:50.447Z",
+        "fetched_at_utc": "2026-10-08T07:06:21.304855+00:00",
+        "all_comment_pages_retrieved": true,
+        "top_level_comments": 9,
+        "comments_including_nested_replies": 13,
+        "raw_path": "artifacts/research/20261008-pretrained-eligibility/topic-733965-20261008.json",
+        "raw_sha256": "52c8d94cc3f0b538d8f8fccb960b632ccc320900c70f276ae91f8e16bc1d4080"
+      },
+      {
+        "topic_id": 738156,
+        "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/738156",
+        "title": "External data: are ungated, openly-licensed OAI-derivative datasets allowed?",
+        "original_post_utc": "2026-08-30T05:53:48.148Z",
+        "fetched_at_utc": "2026-10-08T07:06:21.304855+00:00",
+        "all_comment_pages_retrieved": true,
+        "top_level_comments": 1,
+        "comments_including_nested_replies": 1,
+        "raw_path": "artifacts/research/20261008-pretrained-eligibility/topic-738156-20261008.json",
+        "raw_sha256": "7130d792215f431f4308b36923b0a595e1768c2bbaba50416f214fc6d9caf72c"
+      }
+    ],
+    "dataset_card_records": [
+      {
+        "ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+        "url": "https://www.kaggle.com/datasets/nartaa/rsna-knee-publication-swa-weights-20261007/versions/1",
+        "dataset_id": 12431568,
+        "dataset_version": 1,
+        "metadata_path": "artifacts/research/20261008-pretrained-eligibility/datasets-final/nartaa/rsna-knee-publication-swa-weights-20261007/dataset-metadata.json",
+        "metadata_sha256": "17d2a4eb0728391227be2db9a565bb78213bea2f924a6d24cfe302c11bd9d3d1",
+        "description_sha256": "bec0df989cdd3575ff7d65b3cb414d1034a950a64eb175f0742bcec6b9303154",
+        "description_unchanged_from_prior_20261008_review": true,
+        "file_listing_path": "artifacts/research/20261008-pretrained-eligibility/datasets-final/nartaa/rsna-knee-publication-swa-weights-20261007/files.json",
+        "file_listing_sha256": "cfb46bc278ab6547e274c83e3ab46288f78c6cd0153ff123e0c779dde2fc1fcc",
+        "files_listed": 4,
+        "license_metadata": [
+          {
+            "name": "other"
+          }
+        ],
+        "metadata_only": true,
+        "checkpoint_payload_downloaded": false
+      },
+      {
+        "ref": "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+        "url": "https://www.kaggle.com/datasets/goodpjw2008/rsna-knee-2-5d-convnext-reader/versions/1",
+        "dataset_id": 12371725,
+        "dataset_version": 1,
+        "metadata_path": "artifacts/research/20261008-pretrained-eligibility/datasets-final/goodpjw2008/rsna-knee-2-5d-convnext-reader/dataset-metadata.json",
+        "metadata_sha256": "664f5ed9998339b4a84da9267ffb5128af8c12c6ddbfa4b1ee2287eff5da276c",
+        "description_sha256": "bf5bbb9c767824872d325e3641d4049cdd70ff522a251235dd90bee860189c0f",
+        "description_unchanged_from_prior_20261008_review": true,
+        "file_listing_path": "artifacts/research/20261008-pretrained-eligibility/datasets-final/goodpjw2008/rsna-knee-2-5d-convnext-reader/files.json",
+        "file_listing_sha256": "d92f86058917993ea5296b3a8038c853949cf2977fbe28c8237a041ff3811213",
+        "files_listed": 14,
+        "license_metadata": [
+          {
+            "name": "apache-2.0"
+          }
+        ],
+        "metadata_only": true,
+        "checkpoint_payload_downloaded": false
+      }
+    ],
+    "author_scored_view_model_path": "artifacts/research/20261008-public-candidates/rsna-knee-apex-grandmaster-stack-GetKernelViewModel.json",
+    "author_scored_view_model_sha256": "baa44e74d819bfe99b936e549808363868ddfa2d62dfe462a59e61ec4845aa42",
+    "prior_candidate_review_preserved": true,
+    "credentials_contents_accessed": false,
+    "only_standard_sdk_authentication": true
+  },
+  "actions_performed": {
+    "public_rules_topics_source_metadata_read": true,
+    "checkpoint_or_mri_payload_download": false,
+    "real_mri_decode": false,
+    "training": false,
+    "author_contact": false,
+    "external_upload_or_kaggle_submit": false
+  },
+  "verification": {
+    "rule_body_matches_prior_official_snapshot": true,
+    "all_nested_replies_reviewed": true,
+    "scored_version_and_submission_match_saved_source": true,
+    "source_sha256_matches_original": true,
+    "public_input_graph_has_exactly_three_sources": true,
+    "model_card_permission_and_oai_gold_disclosures_verified": true,
+    "prior_audit_or_raw_overwritten": false
+  }
+}
