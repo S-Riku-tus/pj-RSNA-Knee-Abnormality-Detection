@@ -1,0 +1,106 @@
+{
+  "schema_version": "p007_mirror_no_grad_correction_validation_v2",
+  "checked_at_utc": "2026-10-08T10:53:38.073603+00:00",
+  "status": "passed_offline_synthetic_only_pending_root_launch_review",
+  "invalidated_unexecuted_v1": {
+    "serving_sha256": "e5a9f4692fb3206b18a53a03ec10d14b8cd2e5bb287d843f965838a5a9c924bd",
+    "serving_decorators": {
+      "anatomical_lr_mirror": [
+        "torch.no_grad()"
+      ],
+      "run": []
+    },
+    "profile_sha256": "54de4d87061df65a501fe48ce6edbd281d3cd0962052810a27ae24f554846fc6",
+    "all_v1_files_and_earlier_json_preserved": true,
+    "actual_Kaggle_execution_or_submission": false,
+    "prior_testing_limitation": "Outer inference_mode covered forward but did not exercise actual run decorator."
+  },
+  "v2": {
+    "serving_sha256": "b207fb23a729a26c7c964d28401cef146ce76bb464b05fb6673718d8b70d2d93",
+    "serving_decorators": {
+      "anatomical_lr_mirror": [],
+      "run": [
+        "torch.no_grad()"
+      ]
+    },
+    "serving_package_manifest_sha256": "063e5eee95ca0e06679e9ec2cc6263c40a200d001085f60f324ca54b4e92af45",
+    "profile_sha256": "6ac02f00e74005492a828a5e198e8c839ee336798b5e77b76bdaacb95150d2b1",
+    "profile_package_manifest_sha256": "88f71462fca12c70107190ab133ea2bdc6c7d9c430c69b85e96554292af99ccb"
+  },
+  "baseline14_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "p00615_sha256": "172d6744be6f5e1e20def4680a1e81f3253989b49f601b1b01459d0c6245a320",
+  "single_factor_verification": {
+    "changed_code_cells": [
+      8
+    ],
+    "other_code_cells_byte_identical": 6,
+    "effective_k": 16,
+    "original_run_no_grad_decorator_preserved": true
+  },
+  "artificial_tensor_and_original_head_contract": {
+    "status": "passed_artificial_only",
+    "device": "NVIDIA GeForce RTX 4090",
+    "k": 16,
+    "finite_probability_count": 24,
+    "mask_identity_preserved": true,
+    "pixel_involution_exact": true,
+    "position_involution_max_error": 2.9802322387695312e-08,
+    "all_missing_prediction_difference": 0.0,
+    "paired_mirror_symmetry_max_difference": 0.0,
+    "original_KneeNet_body": true,
+    "encoder": "tiny random synthetic8dim Conv2d; real checkpoints not tested",
+    "no_real_MRI_weights_training_or_accuracy": true
+  },
+  "direct_actual_run_gradient_and_submission_contract": {
+    "status": "passed_artificial_direct_production_run",
+    "caller_grad_initially_enabled": true,
+    "caller_grad_restored": true,
+    "models_have_trainable_parameters": true,
+    "outer_inference_mode_used": false,
+    "model_forward_calls": 12,
+    "all_forwards_grad_disabled": true,
+    "finite_probability_count": 24,
+    "original_run_dataset_KneeNet_bodies": true,
+    "submission_contract": {
+      "studies": 2,
+      "targets": 12,
+      "valid": true
+    },
+    "synthetic_encoder_and_DICOM_pandas_stubs": true,
+    "actual_cuda_cat_numpy_succeeded": true,
+    "no_real_MRI_weights_training": true
+  },
+  "unittest": {
+    "command": ".venv/Scripts/python.exe -m unittest tests.test_p007_convnext_mirror tests.test_p007_profile -v",
+    "tests": 16,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "invalid_v1_regression_rejected": true,
+    "profile_grad_enabled_load_rejected_before_model_load": true
+  },
+  "ruff": "all checks passed for two builders, runtime and two test modules",
+  "sources": {
+    "scripts\\build_p007_convnext_mirror.py": "cd5f703670ded47a2b5d80d6c385b4e07d0a2f8b4d78f206fdeb9ccd6ce03650",
+    "scripts\\build_p007_profile.py": "886dd9515dee1640bfeab15300d92f52ba7cbb82126e7f4bf3e2c7532823ae58",
+    "scripts\\p007_profile_runtime.py": "a291d826ed287683cfa15e98eb207bb15fe459b04263a2e4c5fcda8730138549",
+    "tests\\test_p007_convnext_mirror.py": "5eeebadb0d853b9a0e74aae46ef3669dbfbf3d6a29ef2bdf4506199f04533daa",
+    "tests\\test_p007_profile.py": "0af7aed2475813a95b59fcc2a8e04888f16e0a2e254189443c7bfa5af71b0008"
+  },
+  "profile_contract": {
+    "same_p006_cohort32_ordered_uid_sha256": "fb83b0b77b4539eb70b142cecc69c3cbc6a0ae4a8763381869078cc936b6fc07",
+    "CoAt_main_executions": 1,
+    "reader_plain_k16_executions": 1,
+    "reader_mirror2view_k16_executions": 1,
+    "run_no_grad_AST_and_actual_load_forward_gradient_gates": true,
+    "stale_CSV_reset_and_fallback_rejection": true,
+    "fixed_rank_fusion_12_coefficients": true,
+    "final_submission_csv_deleted": true,
+    "gold_or_Report_or_targets_used": false
+  },
+  "limitations": [
+    "No actual MRI, public checkpoint acquisition, training, remote mutation or score experiment by this agent.",
+    "Original KneeNet/head/dataset/run bodies exercised with small random encoder and synthetic DICOM/pandas stubs; real full-weight throughput/VRAM/accuracy remain unmeasured.",
+    "Fixed baseline14 and p00615 hashes preserved; the invalidated unrun p007 v1 does not explain previous Kaggle submissions."
+  ]
+}

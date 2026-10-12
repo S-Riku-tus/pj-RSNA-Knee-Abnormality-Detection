@@ -1,0 +1,49 @@
+{
+  "schema_version": "rsna_knee_actual_manual_Submit_milestone_v1",
+  "at_utc": "2026-10-10T14:08:45.038056+00:00",
+  "run_id": "p016-overlay-Submit57044321-20261010",
+  "ref": "rsraki/p016s-4a35199b8591421593d8998a9358db81",
+  "kernel_id": 138035248,
+  "saved_version": 1,
+  "submission_ref": 57044321,
+  "actual_Submit_calls": 1,
+  "automatic_retry": false,
+  "receipt": {
+    "path": "artifacts/research/20261010-p016-serving-overlay-root-v1/actual-serving-Submit-attempt-v1/receipt.json",
+    "sha256": "3012fa7b383d2d12f49d2bb5326843bc580b0f5a91e5d38ae34405d4029fd167"
+  },
+  "helper_source_sha256": "21045b67abe5967f03374d3c23073b215021dc4d18937f049cd62641a562702a",
+  "Root_final_context_sha256": "e66df38bef7658afe942f9893ce0c5822c3781a843d00f02dd38bd9813632fa6",
+  "Root_final_preparation_sha256": "60d8539d3e8f5e9e47b0a4044800b27d477dfab64e3054af885124d63282133b",
+  "Root_genuine_default_observation_sha256": "d4cea468aa1a6a754978929b25a6f724c75202e3c0de1e04b10fd4146649a097",
+  "independent_Submit_Source_peer_sha256": "21bebe3abd07d4bfa18cb2ea5dd7a375d6373338d98f55a5e48515f5ebb4346d",
+  "independent_Submit_Source_checks": 14,
+  "visible_actual_Root_acceptance_sha256": "bbf820f27082b0fe4845a58dfe0f84bf3101328b2773cc1f63f833d95375c920",
+  "submission_csv_sha256": "1facac288e4b4e765e0f8b38560e99ff521863dd49c76a988aeae1ff87088add",
+  "fresh_Source_checks": 8,
+  "fresh_status": "COMPLETE",
+  "RPC_counts": {
+    "GetKernel": 1,
+    "GetStatus": 1,
+    "GetSubmissionLimits": 1,
+    "GetAcceleratorQuota": 1,
+    "CreateCodeSubmission": 1
+  },
+  "fresh_raw_typed_allowance_before_Submit": 2,
+  "remaining_allowance_after_Submit": {
+    "inferred": 1,
+    "freshly_observed": false
+  },
+  "original_protected_own951_Notebook_modified": false,
+  "P017_Fault_qualification_reused_for_P016": false,
+  "private_dataset_update_or_CSV_upload": false,
+  "own_Gold_fit_or_selection": false,
+  "teacher_Report_inference_read": false,
+  "author_Gold_selection_reuse_audited_separately": true,
+  "accuracy_evaluated": false,
+  "hidden_completion_verified": false,
+  "official_Public": null,
+  "own_best_Public": 0.951,
+  "strict_above960_achieved": false,
+  "next": "Bounded new official P016/P017 observations; privately upload the new REG folds and qualify P018 mixed4 CPU64/256/integration before the next Submit."
+}

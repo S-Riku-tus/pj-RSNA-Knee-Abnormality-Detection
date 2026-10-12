@@ -1,17 +1,48 @@
 # RSNA Knee の参加計画と次の作業
 
-**10月8日の現行計画は[自己0.950基盤からの改善ロードマップ](../experiments/p005-improvement-roadmap-20261008.json)**です。p005 ref56943135/Version1/script356323020のCOMPLETE・Public0.950を公式APIで確認しました。[採点記録](../experiments/p005-scored-review-20261008.json)。次0.955、最終0.960超は目標で達成保証ではありません。
+**10月09日16:22 JST：S5 V9の非公開固定再現は可視実行・独立検査を完了し、公式API提出が受理されました（ref56998356）。** [実完了・検査・提出の記録](../experiments/p012-private-S5-fixed-V1-visible-complete-submission-accepted-20261009.json)。承認を受けた自分の非公開snapshot V1を接続し、Notebook24の原版5code/70:30/guardを保持。全3件・12所見を両T4で推論し、両モデルfallback0、約174秒、独立9項目・全36float32順位融合一致。保存V1から1回提出、初回APIではstatusが省略されSDK既定PENDING（採点・新自己Public未確認）。旧承認待ち／画面でのV9固定作業は不要になりました。RTX4090の独立last2は6/12epoch、BCE0.285281/AUC12 0.851437で継続。自己基準0.950を保持し、0.955／厳密な0.960超えは未達。以下は観測履歴です。
+
+**10月09日16:12 JST：具体的なユーザー承認を受け、S5 V9の非公開固定Inputを作成し、原版5コードセルの再現を保存実行しました。** [承認・実作成・保存実行の記録](../experiments/p012-private-S5-snapshot-approved-and-run-started-20261009.json)。`rsraki/rsna-knee-compact-v1`はAPIで非公開Version1・8ファイル名/サイズ・元manifest byte一致を確認。新規Notebook24はInput参照と説明だけを変更し、元5code/70:30/guardを保持。新private SaveはV1でRUNNING、可視出力検査・採点はまだ。過去のアップロード承認待ちは解消しました。独立last2は6/12epoch、weak BCE0.285281・AUC12 0.851437。固定12epochの学習を維持。自己Public最良0.950、0.955／厳密な0.960超え未達。以下は観測履歴です。
+
+**10月09日16:00 JST：S5 Version9の使用中6ファイルと元manifestを取得・ハッシュ一致まで確認しました。** [実取得と審査停止の記録](../experiments/p012-S5-private-snapshot-ready-review-rejected-20261009.json)。原版5コードセルのまま使える約885MBの非公開入力を準備。新規private Datasetへのアップロードは自動承認審査が具体的な送信内容の承認・宛先所有権確認不足として拒否したため、実アップロード0・Dataset作成0・再試行0。ユーザーへこの具体的なprivateアップロードの承認を質問済み。Kaggle画面で元Input V9をPinして保存実行する別経路も回答待ち。元last2学習は実プロセスをpollし継続、5/12epoch・weak BCE0.301530/AUC12 0.848946。固定条件を保持し、自己Public最良0.950／厳密な0.960超え未達。以下は観測履歴です。
+
+**10月9日15:26 JST：実64件・256件の入力一致診断は成功。Helios作者0.951原版の再現は、APIによる旧Input版固定が反映されず停止しました。** [実行・調査の最新記録](../experiments/public951-native256-and-next-review-20261009.json)。64件は320配列SHA一致・204秒、256件は1,280配列SHA一致・541秒、両T4のsampled peak各563MiB、代替0。同じ凍結対照headの動作検証で、精度/hidden/最後2層モデルの資格とは区別します。Heliosに合うcompactはV9（外a5/使用部分c7）で、原版guardは正しいです。しかし標準Save APIの`datasetDataSources`に`/9`を付けても実際は最新V10（209a…）が接続され、約74秒でguardが停止。Kaggle画面でV9をPinし保存実行した版の確認が次です。23は予測コード未変更、自己スコアなし・競技提出0。Ryan V70は推論モデルでなく順位表（5,374チーム、0.955以上56・0.960超え7・最大0.964）。RTX4090最後2層は4/12epoch・実848更新・AMP skip0、weak BCE0.302986/AUC12 0.835976で継続中。自己基準0.950を保持し、0.955・厳密な0.960超えは未達。過去段落は観測履歴です。
+
+**10月9日14:36 JST：新しい64件診断は入力パス指定の不備で停止。原因を実ログで確認しました。** [実エラー記録](../experiments/f005-native64-actual-mount-path-error-20261009.json)。旧flat競技rootを固定したためtrain_series.csvが見つからず、MRI処理・モデル読込前に約21秒で停止。競技Inputの実mount場所はこのログでは未観測です。構造CSV／画像ディレクトリの存在と固定CSV SHAで一意にrootを選ぶ新wrapperを準備し、同じモデル・64件で再診断します。CPUでの183ファイル一致・厳密再構築成功は保持、64／256件の資格は未取得。last2 fold0の固定12epoch学習は変更せず進行中。元p005自己0.950を保持、0.955／厳密な0.960超は未達。以下の結果待ちは過去の観測時点の履歴です。
+
+**10月9日14:20 JSTの現行計画**：[元p0050.950を固定し、比較学習と実推論診断を進行](../experiments/f005-last2-firstepoch-privateCPU-native64-root-progress-20261009.json)。
+
+1. 同teacher・group/fold・seed・head/lossで凍結対照と最終2block学習を比べる。凍結fold0は12epoch完了、last2は1epoch完了し残り実行中。固定12epoch後にBCE選択checkpointの対照をレビューし、固定fold1で同じ比較をする。
+2. 12所見別のAUC/BCE、観測・陽性数、groupごとの不確かさを確認し、次の変更を一つ選ぶ。局所patch特徴や重要スライスの選択、弱教師ラベルの根拠修正を候補とする。Goldを学習・checkpoint・配合選択に使わず、公開学習済み枝を自作OOFと呼ばない。
+3. 学習と並行して、実CPU配布/再構築→実MRI64→256→最終推論の経路を検証する。現在CPU成功、64件のprivate保存実行受理。学習時全5配列SHA・例外0・両T4使用・時間/メモリの確認後に次へ進む。
+4. 採用候補を元p005へ事前固定の配合で追加し、公式採点で改善を確認する。係数だけの多数再提出を避け、スコアが改善しなければ元0.950を保持する。0.955は中間目標、厳密な0.960超は最終目標で、現在どちらも未達。
+
+作者公式0.951の候補は取得Source/V7 manifestのID不一致が判明し、直コピー・最新Input差替を採用しない。今回の独自学習のweak値からPublic到達値は推定しない。以下は各観測時点の履歴です。
+
+**10月9日13:15 JSTの進捗**：凍結対照fold0の学習を完了、[元last2 fold0を実行中](../experiments/f005-frozen0-complete-last2-actual-start-root-review-20261009.json)。次はlast2の固定12epoch完了→fold0比較→固定fold1 pair→必要なら局所patch特徴を一要因で比較します。選択モデルの実native392推論をKaggleで64/256件検査してから元p005への事前固定配合を提出。公開枝を自作OOFとは扱わず、weak指標から0.955到達を断定しません。p011は公式0.950で非採用、自己最良は元p0050.950、目標0.955／厳密な0.960超は未達。以下は過去の観測履歴です。
+
+**10月9日12:39 JSTの進捗**：p011は[自己Public0.950](../experiments/p011-scored-review-20261009.json)で完走しましたが、追加モデルの精度gainが確認できないため元p005を維持します。次は計算一致を実GPUで確認した凍結CLSの全4,207件特徴抽出を完了し、全件CPU受入→frozen fold0実学習→last2 fold0実学習→対照比較→固定fold1 pairへ進みます。正式fitはまだ0、係数だけの再提出はしません。0.955／厳密な0.960超を目標に、局所特徴の改善はこの対照結果の後に一要因で検証します。以下は過去の観測履歴です。
+
+**10月9日12:25 JSTの進捗**：全24 shard・4,207件の取得／配列検査／index作成と[通常CUDA preflight](../experiments/native392-full-index-and-frozen0-preflight-root-review-20261009.json)を完了。次は凍結CLS特徴のFP32 cacheについて元modelとの実人工GPU計算一致を確認し、条件を保って凍結headを学習。その対照と最終2 block学習をfold0で比較し、固定済みfold1 pairへ進みます。計算一致を満たさなければ既存online凍結CLIを使います。正式fitはまだ0、p011 ref56986152のPublicは未確認、自己最良0.950は保持。以下の古い待ち状態は各観測時点の履歴です。
+
+**10月9日11:30 JSTの進捗**：認証は復旧。p011の可視出力[root12](../experiments/p011-serving-visible-output-root-review-20261009.json)・[独立33](../experiments/p011-serving-visible-output-independent-review-20261009.json)を確認して一回提出、[ref56986152](../experiments/p011-submission-accepted-20261009.json)で採点待ちです。独自モデル用cacheはremote全24 COMPLETE、PC22 shard／3,857件の検査・配置を完了。残350件の取得・配列検査・全件indexを済ませてから、予定した凍結対照／最終2blockの比較学習を始めます。以下の「再認証後」等は以前の待ち状態です。
+
+**10月9日の現行計画は、自己Public0.950のp005を固定し、補完モデルの追加と自作画像モデルの学習を並行比較すること**です。p005 ref56943135/Version1/script356323020のCOMPLETE・Public0.950を公式APIで確認しました。[採点記録](../experiments/p005-scored-review-20261008.json)。次0.955、最終0.960超は目標で達成保証ではありません。保存Notebook14、Input両Version1と過去runを保持します。
 
 | 期間 JST | 優先作業 | 次へ進む条件 |
 | --- | --- | --- |
-| 10/8～10/10 | p005固定、ConvNeXt窓16→24のp006だけを準備 | variableK/UID/所見順と両branch実行、32/256件の時間・memory・coverage確認後に保存版比較 |
-| 10/11～10/15 | 表現の違う専門枝を1つ監査、小規模検証 | 公開重み履歴・前処理・全weakfit露出・時間/容量が分かる。OOF偽装やgold係数選択をしない |
-| 10/16～10/19 | 有望要因だけ確認。必要なら汎用初期化の空間2.5D/patch系を独立fold学習 | 元教師/group/fold/seed固定、未学習foldの改善と資源余裕を確認。複数要因をまとめて変えない |
+| 10/9～10/10 | p011の独立224枝を元p005へ固定90:10で追加。実64→256件の動作・時間・資源検査後に採点 | 64件は[root24項目](../experiments/p011-profile64-completed-root-review-20261009.json)と[独立45項目](../experiments/p011-profile64-actual-results-independent-review-20261009.json)成功。256件も[root24](../experiments/p011-profile256-completed-root-review-20261009.json)・[独立47](../experiments/p011-profile256-actual-results-independent-review-20261009.json)成功。次はAPI再認証後のServing可視/隠し実行・採点。基準のCPU CSVを保持し、実例外を隠さない |
+| 10/9～10/15 | native392全4,207件キャッシュを完成し、RTX4090で同条件の凍結対照／最終2block学習を比較 | 全24 shardの配列検査・group/Gold除外・全件indexが必要。まずfold0の両arm、次にfold1。教師/seed/head/loss/epochを固定、欠損ラベルはmask |
+| 10/16～10/19 | 有望な自作モデルだけ追加foldと提出推論を準備。必要なら系列・教師・poolingのうち一要因を次に改善 | 両foldのweak BCE/AUC・各所見の陽性陰性数を確認。weak改善をPublicへ換算せず、汎用初期化から得た未学習fold予測だけを独立OOFとする |
 | 10/20～10/22 | 採点済み基準と有望改善版を固定 | 未採点の遅い変更で基準を置き換えず、最大2候補を選択 |
 
-日程は実験の所要時間未測定の提案です。10月8日最新[公式条件](../experiments/competition-constraints-20261008.json)は日次5提出・最終選択最大2、最終**10月23日08:59 JST**。Apexは既に主CoAtNetのmirror2view/密な94窓とConvNeXt3foldを融合しており、単純な追加TTA・同じcheckpointの再混合を主戦略にしません。公開0.955以上の再現レシピは今回の範囲では未確認。[調査結果](../experiments/post950-public-research-20261008.json)
+日程は実学習の全epoch時間を未測定の提案です。10月8日に取得した[公式条件](../experiments/competition-constraints-20261008.json)は日次5提出・最終選択最大2、最終**10月23日08:59 JST**。10月9日のweb再取得ではtimeline本文を読めず、日程を新たに確認したとは扱いません。Apexは既に主CoAtNetのmirror2view/密な94窓とConvNeXt3foldを融合しています。p006/p007/p008は自己0.950、p009画角変更は0.948で非採用。今後は異なる解像度・表現の補完性を測ります。追加4検索でも採点済み0.955以上の再現レシピは未確認で、不存在の証明ではありません。[調査結果](../experiments/post950-strategy-primary-update-20261009.json)
 
-独立した検証が必要な学習は汎用初期化で行います。公開allweakfitの重みを自分のfoldへ当てても独立CVではなく、Publicだけの係数探索も行いません。現在のDINO特徴はCLSだけで空間情報を取り戻せないため、必要ならKaggleの32件cache pilotから別版を作ります。手順相談のこの時点では実MRIdecode/新モデル取得/新学習/提出を開始していません。
+独立した検証が必要な学習は汎用初期化で行います。公開allweakfitの重みを自分のfoldへ当てても独立CVではありません。p011の64/256件はラベルを使わない動作検査で、Public利得を測っていません。自分のgold画像ラベルは学習・checkpoint・融合係数選択に使わず、公開重みの作者Gold58選択履歴は別に記録します。教師17セルの見直しから採用した訂正は0件で、根拠なしに欠損を陰性へ変えません。
+
+0.950→0.955は12所見AUC合計で約0.060の改善に相当します。3所見で各0.020改善しても平均の増分は0.005です。これは優先順位を考える算術で、実現予測ではありません。weakで低いMCL・Lateral Meniscus等を調べる際も、基準p005のPublic所見別誤りが判明したとは扱わず、ラベル数・ラベル欠損・画像系列・fold間の再現性を先に確認します。提出は事前に変更と採用条件を記録した候補に絞り、表示0.950の同値だけで基準を置き換えません。
+
+次の表現候補として[CLS＋16領域の部品](../experiments/regional-triplet-component-preparation-20261009.json)と[独立18項目](../experiments/regional-triplet-component-independent-review-20261009.json)を準備しました。DINOの正規化patch特徴を4×4の領域に平均し、既存所見別headへ渡します。headの学習パラメータは83,352のまま、画像cacheを再利用できます。人工CPU8＋独立2検査・既存汎用重みの人工CUDA2窓は成功していますが、精度やfull144窓の資源は未測定です。まずf005の凍結／last2対照を完了し、採用した学習条件を固定してCLS／領域追加を一要因比較します。tensor形状が同じ旧CLS checkpointも意味は異なるため、専用configとcheckpoint識別を用意してから学習器へ接続します。
 
 以下は10月5日以前の計画履歴です。
 

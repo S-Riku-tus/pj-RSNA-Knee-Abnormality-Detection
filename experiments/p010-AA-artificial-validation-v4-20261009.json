@@ -1,0 +1,98 @@
+{
+  "schema_version": "p010_AA_local_artificial_validation_v4",
+  "at_utc": "2026-10-08T15:46:27.977478+00:00",
+  "all_passed": true,
+  "checks": {
+    "protected14_19_21_and_failedV1V2V3_sources_all_unchanged": true,
+    "canonical_package_notebook_bytes_equal": true,
+    "all16_preparation_checks": true,
+    "ten_new_CPU_tests_observed_success": true,
+    "five_new_files_Ruff_observed_success": true,
+    "artificial_CUDA_three_masks_and6_base_views": true,
+    "all_GPU_validation_source_hashes_match_current": true,
+    "artificial_raw_saved_bit_exact_nativehash_unchanged_noGrad": true,
+    "same_32_cohort_ordered_SHA_and_no_teacher_labels": true,
+    "raw1e7_byteexact_contracts_preserved_no_candidate_adoption": true,
+    "phase_beforecomparison_save_and_guard_status_separated": true,
+    "real_GPU_MRI_model_API_operations_zero": true
+  },
+  "candidate_gate_passed": false,
+  "actual_T4_or_real_checkpoint_execution_gate_passed": false,
+  "CPU_tests": 10,
+  "GPU": "RTX4090 tiny untrained encoders, original Raptor classes",
+  "tiny_peak_reserved_mib": 1172.0,
+  "protected_source_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/19_submit_p009_coat_fov160.ipynb": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+    "notebooks/public/21_submit_p010_swa224_rank10.ipynb": "4adf9088b97c795cb50e382b41d4a158950352ef4d5316fda40551111c39c41c",
+    "notebooks/public/21a_profile_p010_shared224_32.ipynb": "eaa9ec444a884ccb6f5f9c1fec427a6d85febd710cbc226b20b770c68bbce960",
+    "notebooks/public/21a_profile_p010_shared224_32_v2.ipynb": "86b16a97fec35c5c345b56b2eac479b4e70f66a04afaf97921837d6274290b05",
+    "notebooks/public/21a_profile_p010_shared224_32_v3.ipynb": "b6710a91dd8fc9cb472170f324453aa28ec2fc44d46be5013ba05be271d996b3",
+    "scripts/p010_shared_runtime.py": "494685ecee58ccd98771e5e287992c598bbeea8691fd08dbceb4ebd18e2f59b7",
+    "scripts/p010_author224_runtime.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+    "scripts/p010_profile_runtime.py": "710171f0c031fda29a1b9e2292fffe715fd7bdade7a14d2fc5e32101aea24244",
+    "scripts/p010_profile_runtime_v2.py": "907ec6ff904348883080cf3288ab2b1e39bf1da2e2606988ba4cbca2309ff2fc",
+    "scripts/p010_profile_runtime_v3.py": "5cdc78fef82f083a6519527b13c1bc8e8fd86223eb9ccda1afc1ae9d164d84f8",
+    "scripts/p006_profile_runtime.py": "b61115cc92ab335273a31cf12c754097e3f0844ce2b7aaf9fd50c56f755603ca",
+    "scripts/p007_profile_runtime.py": "a291d826ed287683cfa15e98eb207bb15fe459b04263a2e4c5fcda8730138549",
+    "scripts/p009_profile_runtime.py": "a8491a62f2b33501c4db01f695cc0afcc96da353e8badf6788fd82fa1a1e0591"
+  },
+  "evidence_sha256": {
+    "experiments/p010-profile32-AA-preparation-v4-20261009.json": "2aaaec2a7e5966faad9aee1a789391eac9dc2c1bca1bf76fb894fbb7453bcaff",
+    "experiments/p010-AA-precision-diagnostic-plan-20261009.json": "3802f43033e98238ea1e0142f8a377a48551d5e20a5c6811c38369a21ec06db5",
+    "artifacts/qa/20261009-p010-AA-artificial-cuda-v4/checks.json": "dd074d134f7a82297feb031f67347df36a4013ecb2cfb10ad214a3afb2417739",
+    "notebooks/public/21a_profile_p010_AA_32_v4.ipynb": "dd22faffb31c1510eab2bf66d06a76b93d37e5491bd9db611cada9c5f6e2359a",
+    "artifacts/kaggle/p010-profile32-AA-numerics-v4-20261009/package.json": "2aaaec2a7e5966faad9aee1a789391eac9dc2c1bca1bf76fb894fbb7453bcaff",
+    "scripts/p010_aa_runtime.py": "0ff5bf6aa1ca231fc8050f5c92cc55e0d6f64b80070f853489680065a70139fc",
+    "scripts/p010_aa_transport.py": "a0519ee4462332092baf533b059f259bc08f479d7920d2ff4270679d784211a8",
+    "scripts/build_p010_profile_v4.py": "7a1cf332524fbb56e7eec6651704ff496bf0e0eef89798aecd1432fbe8de88da",
+    "scripts/check_p010_aa_artificial_cuda.py": "243f444c393656dc4434237c447d682888c83a3b4cd46877a3e70dd11abe4b85",
+    "tests/test_p010_aa_runtime.py": "4fef0023ed5887a7a2b1bc0e5beff8c2e411d88ffd276e43d3f9c503ee401453"
+  },
+  "observed_commands": [
+    {
+      "argv": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_p010_aa_runtime.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "scope": "10 tests, output observed through tool; prior stdout not separately archived"
+    },
+    {
+      "argv": [
+        ".venv/Scripts/ruff.exe",
+        "check",
+        "scripts/p010_aa_runtime.py",
+        "scripts/p010_aa_transport.py",
+        "scripts/build_p010_profile_v4.py",
+        "scripts/check_p010_aa_artificial_cuda.py",
+        "tests/test_p010_aa_runtime.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        ".venv/Scripts/python.exe",
+        "scripts/check_p010_aa_artificial_cuda.py"
+      ],
+      "exit_code": 0,
+      "saved_actual_checks": "artifacts/qa/20261009-p010-AA-artificial-cuda-v4/checks.json"
+    }
+  ],
+  "limits": [
+    "Artificial single RTX4090 cannot qualify actual T4x2 architecture, memory, dispatch reproducibility or checkpoint payload.",
+    "Fixed owned routing changes queue consumer ownership; no mapping-only causal claim.",
+    "Candidate remains unqualified regardless of diagnostics. Old gates and failed evidence remain intact."
+  ],
+  "real_MRI_or_weights_downloads": 0,
+  "optimizer_steps": 0,
+  "remote_mutations": 0,
+  "network_requests": 0
+}

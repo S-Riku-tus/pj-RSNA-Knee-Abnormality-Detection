@@ -1,0 +1,117 @@
+{
+  "schema_version": "p012_fixed_S5_V9_private_snapshot_visible_complete_actual_Submit_accepted_v1",
+  "at_utc": "2026-10-09T07:22:33.872229+00:00",
+  "this_goal_turn": "progress: actual private exact S5 snapshot upload, complete unchanged-code inference, actual official Submit",
+  "explicit_user_payload_destination_and_ownership_approval": true,
+  "previous_auto_review_rejection_resolved": true,
+  "own_private_Dataset_V1": "rsraki/rsna-knee-compact-v1",
+  "own_dataset_id": 12461292,
+  "source_dataset_V9": "heliosli/rsna-knee-compact-v1/versions/9",
+  "original_manifest_sha256": "42d3b5a502cd021d86a223b0c7982dcae1e7d7db46ead519ddf9436ba443b2ff",
+  "all_six_original_active_model_files_sha_verified": true,
+  "unused_DINO_models_included": false,
+  "original_five_code_cells_unchanged": true,
+  "fixed_weights": {
+    "raptor": 0.7,
+    "ours": 0.3
+  },
+  "operational_Input_change_only": true,
+  "baseline14_and_old23_unchanged": true,
+  "actual_visible_COMPLETE": true,
+  "actual_visible_rows": 3,
+  "both_T4_workers_exit0": true,
+  "Raptor_or_S5_fallback_rows": 0,
+  "visible_total_seconds": 174.3,
+  "original_assets_guard_reached_own_private_mount_in_actual_log": true,
+  "independent_review_path": "artifacts\\research\\20261009-p012-visible-output-review-tools-v1\\actual-visible-review-r3.json",
+  "independent_review_sha256": "7fa7cf3c9d9f900d9647f58a3fe32859340c2d02c7921b7a17e88a7561e01226",
+  "independent_checks": {
+    "official_COMPLETE_and_saved_source_environment": true,
+    "eight_GET_body_hashes": true,
+    "four_CSV_unique_UIDs_label_order_finite_range": true,
+    "two_T4_workers_exit_zero_no_fallback": true,
+    "S5_worker_source_model_geometry_bindings": true,
+    "average_percentile_ties_and_fixed70_30": true,
+    "float32_submission_bit_exact": true,
+    "Raptor_raw_submission_rank_correlations": true,
+    "parent_and_worker_completion_guards": true
+  },
+  "float32_bits_mismatched": 0,
+  "submission_csv_sha256": "c511fda098bd2201ea9799117dd9cfe3455e4682a30ea07bb693c2d14a26d7b5",
+  "actual_official_Submit": {
+    "at_utc": "2026-10-09T07:19:40.462611+00:00",
+    "ref": "rsraki/p012-s5-v9-fixed-77784060724855c8",
+    "saved_version": 1,
+    "submission_ref": 56998356,
+    "accepted": true,
+    "actual_Submit_calls": 1,
+    "competition": "rsna-knee-abnormality-detection",
+    "file_name": "submission.csv",
+    "evidence": {
+      "visible_review_sha256": "7fa7cf3c9d9f900d9647f58a3fe32859340c2d02c7921b7a17e88a7561e01226",
+      "eight_output_sha256": {
+        "submission.csv": "c511fda098bd2201ea9799117dd9cfe3455e4682a30ea07bb693c2d14a26d7b5",
+        "raptor_raw.csv": "9e08e4a576f877efe0040130ede384ed892fabc24657499c0bd51e5a1ee8f84b",
+        "raptor_sub.csv": "faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede",
+        "ours_sub.csv": "939fe413f9ef57bc5477ad07a42c67e38621d75b608a03361b08fe1e297b7323",
+        "blend_receipt.json": "9e3109a480f40818b2d8e2f641e64e30dba2b8b96a96426ee0515a254673ab69",
+        "submission_receipt.json": "f26bb72a2b5c7117ff75b1d1e2b6975951372fe03777ffad6e5d62323b0ee010",
+        "worker0_log.txt": "699cbdb21071c0445bbc38bbe31deea9953f45b470c5e6923a09891941a8d2c6",
+        "worker1_log.txt": "0e3cd1394f52199b014d5a182ec322bbe8819f9cf8af9e075863cab12da9f9d0"
+      },
+      "snapshot_review_sha256": "f4820b1dea857f4d945160aa7ecd3b9b48f277359d6e50792f9b7be84c3671d4",
+      "source_binding_sha256": "bf23091ca0b19d89d24710e820dcc85b6b6a226643b52d9ec3bcc0d135969a0d",
+      "observation_sha256": "7331b2194abe5a2668f4c87a165743e266a67f6b51b88d5ecfaa659767a32f4b",
+      "accepted_receipt_sha256": "3cad1c853165ce7cc296c86dd1a5584e4c962207145c927a27fd9005e15152bf"
+    },
+    "remaining_allowance_before_Submit": 4,
+    "own_Public": null,
+    "own_Public_best": "0.950",
+    "strict_above960_achieved": false,
+    "hidden_scoring_complete": false
+  },
+  "first_exact_submission_RPC": {
+    "raw_status_omitted": true,
+    "SDK_default_status": "PENDING",
+    "own_Public": null,
+    "held_observer_only": "Initial raw==typed status assertion rejected omission; source and scoring not changed; getter fixed conservatively"
+  },
+  "own_Public_best": "0.950",
+  "own_new_Public": null,
+  "author_Public": "0.951",
+  "hidden_scoring_complete": false,
+  "strict_above960_achieved": false,
+  "own_Gold_fit_or_selection": 0,
+  "upstream_public_Gold_selection_and_prior_separate_audit": true,
+  "last2": {
+    "status": "running",
+    "completed_epochs": 6,
+    "fixed_total_epochs": 12,
+    "last_actual_history": {
+      "epoch": 6,
+      "train_bce": 0.26277645851920656,
+      "weak_bce": 0.28528148745778076,
+      "weak_macro_auc_12": 0.8514370402294302,
+      "optimizer_steps": 212,
+      "optimizer_step_opportunities": 212,
+      "amp_skipped_steps": 0,
+      "elapsed_seconds": 10501.093071500072,
+      "prediction_sha256": "1a703855478d3222bebe12164dfb871812adf2ca6c94a0dab2e3b929ff66393b",
+      "gpu_peak_reserved_bytes": 1163919360
+    },
+    "run_snapshot_sha256": "9ec6bf95b9de9bfcc7e42b5760ea2fe79d69f3c94b7f05610bebc590a49a9621",
+    "condition_changes": 0
+  },
+  "next": [
+    "Observe official submission56998356; score/hidden errors determine own adoption",
+    "Complete fixed12 last2 fold0 and paired weak review; then unchanged fold1 contrast"
+  ],
+  "limits": [
+    "Public/hidden completion and accuracy unproved; author .951 is separate",
+    "No independent test.csv body read: four-CSV cohort checked; source asserts test.csv equality",
+    "Pandas float32 decimal CSV bytes are hashed, not independently regenerated",
+    "Mounted model guards inferred from original source completion; model bytes not read by checker",
+    "Published Raptor gold selection is existing external-weight provenance, not own clean validation",
+    "Actual official Submit accepted; score not yet returned"
+  ]
+}

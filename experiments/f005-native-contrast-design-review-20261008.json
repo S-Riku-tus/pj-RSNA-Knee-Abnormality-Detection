@@ -1,0 +1,789 @@
+{
+  "schema_version": "f005_native392_frozen_vs_last2_design_audit_v1",
+  "checked_at_utc": "2026-10-08T14:35:04.275775+00:00",
+  "scope": "Read existing aggregate weak results and local source/configs. New analysis JSON only; no config, experiment, image or model payload modifications.",
+  "known_facts": {
+    "own_reported_Public": {
+      "p005": "0.950",
+      "p006": "0.950",
+      "p007": "0.950",
+      "p008": "0.950",
+      "meaning": "Same reported three-decimal Public score; unreported fine-scale differences and hidden per-target gains/losses are unknown."
+    },
+    "weak_selected_results": {
+      "f002_fold0": {
+        "epoch": 11,
+        "weak_BCE": 0.31913023519697087,
+        "weak_AUC12": 0.8132902074673399,
+        "auxiliary_AUC11_excluding_Synovitis": 0.8117711354189162,
+        "observed_study_support": {
+          "ACL": {
+            "positive": 80,
+            "negative": 613,
+            "auc": 0.8044249592169658
+          },
+          "MCL": {
+            "positive": 11,
+            "negative": 672,
+            "auc": 0.6571969696969697
+          },
+          "Medial Meniscus": {
+            "positive": 309,
+            "negative": 441,
+            "auc": 0.804907939443307
+          },
+          "Lateral Meniscus": {
+            "positive": 104,
+            "negative": 613,
+            "auc": 0.6855941774375706
+          },
+          "Medial OA": {
+            "positive": 71,
+            "negative": 371,
+            "auc": 0.9125317945408299
+          },
+          "Lateral OA": {
+            "positive": 33,
+            "negative": 393,
+            "auc": 0.8459403192227619
+          },
+          "PF OA": {
+            "positive": 88,
+            "negative": 378,
+            "auc": 0.8115680615680616
+          },
+          "Effusion": {
+            "positive": 100,
+            "negative": 517,
+            "auc": 0.9329400386847195
+          },
+          "Synovitis": {
+            "positive": 100,
+            "negative": 1,
+            "auc": 0.83
+          },
+          "Baker's": {
+            "positive": 59,
+            "negative": 319,
+            "auc": 0.8620158333776101
+          },
+          "Contusion": {
+            "positive": 99,
+            "negative": 167,
+            "auc": 0.8011250226819089
+          },
+          "Fracture": {
+            "positive": 44,
+            "negative": 144,
+            "auc": 0.8112373737373737
+          }
+        },
+        "train_studies": 3386,
+        "valid_studies": 821,
+        "Gold_used": false,
+        "patient_independence_verified": false,
+        "Public_LB": null
+      },
+      "f002_fold1": {
+        "epoch": 12,
+        "weak_BCE": 0.31746868302813663,
+        "weak_AUC12": 0.8154302698313463,
+        "auxiliary_AUC11_excluding_Synovitis": 0.808135739534852,
+        "observed_study_support": {
+          "ACL": {
+            "positive": 101,
+            "negative": 648,
+            "auc": 0.796678278939005
+          },
+          "MCL": {
+            "positive": 16,
+            "negative": 700,
+            "auc": 0.6645535714285714
+          },
+          "Medial Meniscus": {
+            "positive": 328,
+            "negative": 480,
+            "auc": 0.7777502540650406
+          },
+          "Lateral Meniscus": {
+            "positive": 105,
+            "negative": 661,
+            "auc": 0.7111015056552121
+          },
+          "Medial OA": {
+            "positive": 59,
+            "negative": 437,
+            "auc": 0.8832176240158244
+          },
+          "Lateral OA": {
+            "positive": 22,
+            "negative": 429,
+            "auc": 0.8292011019283747
+          },
+          "PF OA": {
+            "positive": 78,
+            "negative": 417,
+            "auc": 0.7721207649265204
+          },
+          "Effusion": {
+            "positive": 108,
+            "negative": 608,
+            "auc": 0.9333120126705653
+          },
+          "Synovitis": {
+            "positive": 97,
+            "negative": 25,
+            "auc": 0.8956701030927835
+          },
+          "Baker's": {
+            "positive": 51,
+            "negative": 344,
+            "auc": 0.8898768809849521
+          },
+          "Contusion": {
+            "positive": 87,
+            "negative": 215,
+            "auc": 0.7864207431168136
+          },
+          "Fracture": {
+            "positive": 34,
+            "negative": 157,
+            "auc": 0.8452603971524916
+          }
+        },
+        "train_studies": 3316,
+        "valid_studies": 891,
+        "Gold_used": false,
+        "patient_independence_verified": false,
+        "Public_LB": null
+      },
+      "f003_fold0": {
+        "epoch": 15,
+        "weak_BCE": 0.3162323486431327,
+        "weak_AUC12": 0.8230599111025677,
+        "auxiliary_AUC11_excluding_Synovitis": 0.820610812111892,
+        "observed_study_support": {
+          "ACL": {
+            "positive": 80,
+            "negative": 613,
+            "auc": 0.8211663947797716
+          },
+          "MCL": {
+            "positive": 11,
+            "negative": 672,
+            "auc": 0.7063041125541125
+          },
+          "Medial Meniscus": {
+            "positive": 309,
+            "negative": 441,
+            "auc": 0.8155119653039209
+          },
+          "Lateral Meniscus": {
+            "positive": 104,
+            "negative": 613,
+            "auc": 0.6872882419375078
+          },
+          "Medial OA": {
+            "positive": 71,
+            "negative": 371,
+            "auc": 0.9117725219239968
+          },
+          "Lateral OA": {
+            "positive": 33,
+            "negative": 393,
+            "auc": 0.8507209499575912
+          },
+          "PF OA": {
+            "positive": 88,
+            "negative": 378,
+            "auc": 0.8193843193843194
+          },
+          "Effusion": {
+            "positive": 100,
+            "negative": 517,
+            "auc": 0.938742746615087
+          },
+          "Synovitis": {
+            "positive": 100,
+            "negative": 1,
+            "auc": 0.85
+          },
+          "Baker's": {
+            "positive": 59,
+            "negative": 319,
+            "auc": 0.8616970405398225
+          },
+          "Contusion": {
+            "positive": 99,
+            "negative": 167,
+            "auc": 0.8191495796286216
+          },
+          "Fracture": {
+            "positive": 44,
+            "negative": 144,
+            "auc": 0.7949810606060606
+          }
+        },
+        "train_studies": 3386,
+        "valid_studies": 821,
+        "Gold_used": false,
+        "patient_independence_verified": false,
+        "Public_LB": null
+      },
+      "f003_fold1": {
+        "epoch": 12,
+        "weak_BCE": 0.31746868302813663,
+        "weak_AUC12": 0.8154302698313463,
+        "auxiliary_AUC11_excluding_Synovitis": 0.808135739534852,
+        "observed_study_support": {
+          "ACL": {
+            "positive": 101,
+            "negative": 648,
+            "auc": 0.796678278939005
+          },
+          "MCL": {
+            "positive": 16,
+            "negative": 700,
+            "auc": 0.6645535714285714
+          },
+          "Medial Meniscus": {
+            "positive": 328,
+            "negative": 480,
+            "auc": 0.7777502540650406
+          },
+          "Lateral Meniscus": {
+            "positive": 105,
+            "negative": 661,
+            "auc": 0.7111015056552121
+          },
+          "Medial OA": {
+            "positive": 59,
+            "negative": 437,
+            "auc": 0.8832176240158244
+          },
+          "Lateral OA": {
+            "positive": 22,
+            "negative": 429,
+            "auc": 0.8292011019283747
+          },
+          "PF OA": {
+            "positive": 78,
+            "negative": 417,
+            "auc": 0.7721207649265204
+          },
+          "Effusion": {
+            "positive": 108,
+            "negative": 608,
+            "auc": 0.9333120126705653
+          },
+          "Synovitis": {
+            "positive": 97,
+            "negative": 25,
+            "auc": 0.8956701030927835
+          },
+          "Baker's": {
+            "positive": 51,
+            "negative": 344,
+            "auc": 0.8898768809849521
+          },
+          "Contusion": {
+            "positive": 87,
+            "negative": 215,
+            "auc": 0.7864207431168136
+          },
+          "Fracture": {
+            "positive": 34,
+            "negative": 157,
+            "auc": 0.8452603971524916
+          }
+        },
+        "train_studies": 3316,
+        "valid_studies": 891,
+        "Gold_used": false,
+        "patient_independence_verified": false,
+        "Public_LB": null
+      },
+      "f004_fold0": {
+        "epoch": 15,
+        "weak_BCE": 0.31590373284616496,
+        "weak_AUC12": 0.8151884174923284,
+        "auxiliary_AUC11_excluding_Synovitis": 0.8183873645370856,
+        "observed_study_support": {
+          "ACL": {
+            "positive": 80,
+            "negative": 613,
+            "auc": 0.8160481239804241
+          },
+          "MCL": {
+            "positive": 11,
+            "negative": 672,
+            "auc": 0.6861471861471862
+          },
+          "Medial Meniscus": {
+            "positive": 309,
+            "negative": 441,
+            "auc": 0.8170677116585577
+          },
+          "Lateral Meniscus": {
+            "positive": 104,
+            "negative": 613,
+            "auc": 0.6988643493537458
+          },
+          "Medial OA": {
+            "positive": 71,
+            "negative": 371,
+            "auc": 0.9065715044986903
+          },
+          "Lateral OA": {
+            "positive": 33,
+            "negative": 393,
+            "auc": 0.8436271108026833
+          },
+          "PF OA": {
+            "positive": 88,
+            "negative": 378,
+            "auc": 0.8258177008177008
+          },
+          "Effusion": {
+            "positive": 100,
+            "negative": 517,
+            "auc": 0.9408510638297872
+          },
+          "Synovitis": {
+            "positive": 100,
+            "negative": 1,
+            "auc": 0.78
+          },
+          "Baker's": {
+            "positive": 59,
+            "negative": 319,
+            "auc": 0.8580840550448967
+          },
+          "Contusion": {
+            "positive": 99,
+            "negative": 167,
+            "auc": 0.8110445775116434
+          },
+          "Fracture": {
+            "positive": 44,
+            "negative": 144,
+            "auc": 0.7981376262626263
+          }
+        },
+        "train_studies": 3386,
+        "valid_studies": 821,
+        "Gold_used": false,
+        "patient_independence_verified": false,
+        "Public_LB": null
+      },
+      "f004_fold1": {
+        "epoch": 14,
+        "weak_BCE": 0.32070407038036897,
+        "weak_AUC12": 0.8146921895601814,
+        "auxiliary_AUC11_excluding_Synovitis": 0.8075929790515943,
+        "observed_study_support": {
+          "ACL": {
+            "positive": 101,
+            "negative": 648,
+            "auc": 0.7816740007334066
+          },
+          "MCL": {
+            "positive": 16,
+            "negative": 700,
+            "auc": 0.6761607142857143
+          },
+          "Medial Meniscus": {
+            "positive": 328,
+            "negative": 480,
+            "auc": 0.7768864329268292
+          },
+          "Lateral Meniscus": {
+            "positive": 105,
+            "negative": 661,
+            "auc": 0.7018082270729774
+          },
+          "Medial OA": {
+            "positive": 59,
+            "negative": 437,
+            "auc": 0.8736764534770973
+          },
+          "Lateral OA": {
+            "positive": 22,
+            "negative": 429,
+            "auc": 0.8313201949565586
+          },
+          "PF OA": {
+            "positive": 78,
+            "negative": 417,
+            "auc": 0.7844801082211155
+          },
+          "Effusion": {
+            "positive": 108,
+            "negative": 608,
+            "auc": 0.9293981481481481
+          },
+          "Synovitis": {
+            "positive": 97,
+            "negative": 25,
+            "auc": 0.8927835051546392
+          },
+          "Baker's": {
+            "positive": 51,
+            "negative": 344,
+            "auc": 0.8926128590971272
+          },
+          "Contusion": {
+            "positive": 87,
+            "negative": 215,
+            "auc": 0.7885592087677091
+          },
+          "Fracture": {
+            "positive": 34,
+            "negative": 157,
+            "auc": 0.8469464218808542
+          }
+        },
+        "train_studies": 3316,
+        "valid_studies": 891,
+        "Gold_used": false,
+        "patient_independence_verified": false,
+        "Public_LB": null
+      }
+    },
+    "f003_vs_f002": "12→24 epochs improves fold0 BCE by0.002898/AUC12 by0.009770; fold1 BCE-selected epoch12 and predictions stay identical. No consistent twofold promotion.",
+    "f004_vs_f003": "Dropout0.2→0.4: both AUC12 and auxiliary11 fall; fold1 BCE worsens. Group-bootstrap auxiliary11 intervals cross0 in both folds. No promotion.",
+    "controlled_f005": {
+      "only_model_factor": "DINO blocks10/11 trainability0→2",
+      "same_conditions": "392px native 3series×48 adjacent triplets; ViT-S/14 generic initialization; finalnorm/prefix frozen; head attention192/dropout0.2; seed20261002; folds0/1;12epochs; headLR3e-4; encoderLR1e-5; windowchunk2; microbatch1/effective16; observed-cell denominator; BCE checkpoint selection",
+      "config_equal_except_reason_and_trainable_blocks": true
+    },
+    "finding_specific_attention_already_present": "feature_model.py has12 slice scores,12 series queries and12 output vectors; two-level finding-specific attention already exists.",
+    "representation": "Encoder retains patch tokens internally but returns final normalized CLS token only. f005 adapts that representation with final2 blocks; it adds no explicit spatial patch/ROI pooling.",
+    "series_selection": "imaging.select_series prioritizes Fluid_Sensitive/Fat_Suppression, chooses distinct planes, then fills to3. Multiple contrast series of one plane can be excluded; actual harm is not measured.",
+    "weak_observed_cells": 29058,
+    "observed_label_objective_shares": {
+      "ACL": {
+        "observed": 3554,
+        "share_global_BCE_cells": 0.12230710991809485,
+        "positive": 418,
+        "negative": 3136,
+        "missing": 653
+      },
+      "MCL": {
+        "observed": 3442,
+        "share_global_BCE_cells": 0.11845274967306765,
+        "positive": 69,
+        "negative": 3373,
+        "missing": 765
+      },
+      "Medial Meniscus": {
+        "observed": 3773,
+        "share_global_BCE_cells": 0.12984376075435336,
+        "positive": 1519,
+        "negative": 2254,
+        "missing": 434
+      },
+      "Lateral Meniscus": {
+        "observed": 3637,
+        "share_global_BCE_cells": 0.12516346617110607,
+        "positive": 524,
+        "negative": 3113,
+        "missing": 570
+      },
+      "Medial OA": {
+        "observed": 2263,
+        "share_global_BCE_cells": 0.07787872530800469,
+        "positive": 328,
+        "negative": 1935,
+        "missing": 1944
+      },
+      "Lateral OA": {
+        "observed": 2154,
+        "share_global_BCE_cells": 0.074127606855255,
+        "positive": 136,
+        "negative": 2018,
+        "missing": 2053
+      },
+      "PF OA": {
+        "observed": 2328,
+        "share_global_BCE_cells": 0.08011563080735082,
+        "positive": 435,
+        "negative": 1893,
+        "missing": 1879
+      },
+      "Effusion": {
+        "observed": 3218,
+        "share_global_BCE_cells": 0.11074402918301328,
+        "positive": 544,
+        "negative": 2674,
+        "missing": 989
+      },
+      "Synovitis": {
+        "observed": 571,
+        "share_global_BCE_cells": 0.01965035446348682,
+        "positive": 522,
+        "negative": 49,
+        "missing": 3636
+      },
+      "Baker's": {
+        "observed": 1871,
+        "share_global_BCE_cells": 0.06438846445040952,
+        "positive": 294,
+        "negative": 1577,
+        "missing": 2336
+      },
+      "Contusion": {
+        "observed": 1342,
+        "share_global_BCE_cells": 0.0461834950788079,
+        "positive": 440,
+        "negative": 902,
+        "missing": 2865
+      },
+      "Fracture": {
+        "observed": 905,
+        "share_global_BCE_cells": 0.03114460733705004,
+        "positive": 202,
+        "negative": 703,
+        "missing": 3302
+      }
+    },
+    "fold_rare_label_support": {
+      "0": {
+        "MCL": {
+          "positive": 11,
+          "negative": 672,
+          "observed": 683
+        },
+        "Synovitis": {
+          "positive": 100,
+          "negative": 1,
+          "observed": 101
+        },
+        "Lateral OA": {
+          "positive": 33,
+          "negative": 393,
+          "observed": 426
+        },
+        "Fracture": {
+          "positive": 44,
+          "negative": 144,
+          "observed": 188
+        }
+      },
+      "1": {
+        "MCL": {
+          "positive": 16,
+          "negative": 700,
+          "observed": 716
+        },
+        "Synovitis": {
+          "positive": 97,
+          "negative": 25,
+          "observed": 122
+        },
+        "Lateral OA": {
+          "positive": 22,
+          "negative": 429,
+          "observed": 451
+        },
+        "Fracture": {
+          "positive": 34,
+          "negative": 157,
+          "observed": 191
+        }
+      },
+      "2": {
+        "MCL": {
+          "positive": 14,
+          "negative": 723,
+          "observed": 737
+        },
+        "Synovitis": {
+          "positive": 119,
+          "negative": 7,
+          "observed": 126
+        },
+        "Lateral OA": {
+          "positive": 25,
+          "negative": 435,
+          "observed": 460
+        },
+        "Fracture": {
+          "positive": 48,
+          "negative": 138,
+          "observed": 186
+        }
+      },
+      "3": {
+        "MCL": {
+          "positive": 10,
+          "negative": 620,
+          "observed": 630
+        },
+        "Synovitis": {
+          "positive": 94,
+          "negative": 10,
+          "observed": 104
+        },
+        "Lateral OA": {
+          "positive": 25,
+          "negative": 367,
+          "observed": 392
+        },
+        "Fracture": {
+          "positive": 41,
+          "negative": 126,
+          "observed": 167
+        }
+      },
+      "4": {
+        "MCL": {
+          "positive": 18,
+          "negative": 658,
+          "observed": 676
+        },
+        "Synovitis": {
+          "positive": 112,
+          "negative": 6,
+          "observed": 118
+        },
+        "Lateral OA": {
+          "positive": 31,
+          "negative": 394,
+          "observed": 425
+        },
+        "Fracture": {
+          "positive": 35,
+          "negative": 138,
+          "observed": 173
+        }
+      }
+    },
+    "leakage_controls": "GoldUID/group exclusions precede weak teacher conversion; supplied/report groups stay intact; missing teachers stay masked; new immutable run and complete4207 cache index required. Patient independence remains unverified.",
+    "QA_does_not_measure_accuracy": "16 processed studies/176 first-shard NPZ QA verify bytes/shape/mask/resources, with artificial labels and no optimizer fitting; neither demonstrates AUC improvement."
+  },
+  "design_weaknesses": [
+    {
+      "known": "Checkpoint criterion is observation-weighted BCE; competition target is equal-weight12finding AUC.",
+      "implication": "Synovitis contributes1.97% and Fracture3.11% of global observed cells versus12.98% MedialMeniscus; each class has8.33% of macroAUC. Correct missing-mask accumulation does not resolve surrogate mismatch.",
+      "hypothesis": "Macro-balanced loss may improve neglected findings, but increasing noisy-label weight can also hurt.",
+      "action": "Preserve loss for initial f005 contrast; record per-target BCE/AUC/support. Any macro-loss change is a new prespecified single-factor experiment."
+    },
+    {
+      "known": "Synovitis has49 negatives total and fold0 only1; MCL positives are69 total,11/16 in validationfold0/1.",
+      "implication": "Large point gains can reflect a few ranks; study counts are not independent patient/group counts.",
+      "action": "Report per-class positive/negative supplied-group support, defined/undefined paired-group bootstrap counts,12macro plus auxiliary11. Do not promote on fold0 Synovitis or MCL alone; missing U/M never becomes0."
+    },
+    {
+      "known": "Fold0/1 have already been used for several configuration/checkpoint choices; only one seed and one encoderLR are planned.",
+      "implication": "Within-fold held-out predictions can be recorded, but they are not a new untouched design holdout; bootstrap excludes prior selection bias and crossfold fitted-model correlation.",
+      "action": "If f005 passes the initial twofold screen, fix architecture/hyperparameters and confirm on a previously unused weak validationfold2 in new runs. Do not change existing fold assignments. This requires a separate CLI extension; existing f005 onlypermitsfold0/1."
+    },
+    {
+      "known": "12epochs andencoderLR1e-5 are fixed; historical f002 fold1 best is at12/12.",
+      "implication": "A negative result rejects the tested setting, not fine-tuning generally; last2 and frozen can converge differently.",
+      "action": "Mark a boundary-selected epoch12 result as budget/convergence ambiguity. If further work is justified, extend both arms to24 under a new one-factor plan; do not silently reselect a maxAUC epoch or extend only the favored arm."
+    },
+    {
+      "known": "New f005 frozen uses micro1/chunk2; historical f002 used storedCLS/head batch16.",
+      "implication": "Even with matching preprocessing and exact observed-loss math, dropout RNG shape, encoder batching, AMP rounding and accumulation execution can differ.",
+      "action": "Use new f005 frozen as the causal control for last2, and historical f002 onlyas context; do not attribute old-vs-new trajectory changes entirely to encoder updates."
+    },
+    {
+      "known": "Common f005 CLS bottleneck, first10 frozen blocks and maximum3series remain fixed.",
+      "hypothesis": "Localized ligament/meniscus/OA cues or excluded contrast coverage can limit both arms.",
+      "action": "Use existing coverage/mask/series metadata to quantify exclusions and systematic failure first. High-resolution bytes alone do not establish lesion information retention."
+    },
+    {
+      "known": "Public baselines include publicly released allweak-trained checkpoints.",
+      "implication": "Comparing/fusing them on the same weak validation labels does not create an independent OOF ensemble, even if f005 is held-out.",
+      "action": "Use legitimate new-arm OOF comparisons for research screening. Public ensemble benefit remains a separately measured frozen-candidate submission; do not tune blend weights on contaminated weak accuracy."
+    }
+  ],
+  "proposed_adoption_rules_before_real_fit": {
+    "technical_gate": "All24shards complete and exactly4207/wholegroup/Gold exclusion/hash/array checks pass; CUDA/resource gate and strict suffix/head Report-free reload pass. Until then no real fit.",
+    "initial_research_promote": "Compare BCE-selected frozen vs last2 in folds0/1. Advance only when weakBCE improves and auxiliary11 AUC increases in both folds, with supported-target regressions and paired-group uncertainty explicitly reviewed. No mandatory every-class increase and no Public claim.",
+    "inconclusive": "Onefold-only gain, a single rare-class spike, both bootstrap intervals crossing0, or epoch12 boundary selection: preserve results and baseline; decide one prespecified confirmatory factor rather than an LR/dropout/epoch sweep.",
+    "reject_this_setting": "Consistent worsening of both weakBCE and auxiliary11 or technical failure. Preserve the frozen reference; no promotion and no general claim that all fine-tuning fails.",
+    "confirmation": "After fixing the proposedcandidate, extend CLI via a separate reviewed plan to fixedfold2; checkpoint selection remains weakBCE. Morefolds/seeds only for the shortlisted candidate and adequate time.",
+    "serving_and_Public": "Only a candidate surviving research and Report-free source/resource gates gets a standalone/previouslyfixed small blend evaluation. Publicscore is recorded as its own outcome, not converted from weakAUC or a guaranteed target."
+  },
+  "candidate_priorities": [
+    {
+      "priority": 1,
+      "candidate": "Current f005 frozen-vs-last2",
+      "why": "Ready controlled implementation addresses representation adaptation rather than repeating head dropout; it gives interpretable evidence with one model factor.",
+      "status": "Cache completion then realfit stillpending."
+    },
+    {
+      "priority": 2,
+      "candidate": "Teacher and selected-series coverage diagnosis",
+      "why": "Measure rare support/explicit-denial or ambiguous label errors and excluded contrasts before spending on a new backbone.",
+      "status": "No validated corrected teacher here; prior17cell review adopted0. New labels require training-side report evidence and reserved group exclusion; no inference Report requirement."
+    },
+    {
+      "priority": 3,
+      "candidate": "One information-driven factor: sequence coverage or explicit localpatch pooling",
+      "why": "If metadata shows missing relevant series, contrast slots3→6 is a distinct cache/preprocess factor. If series are adequate but localization is weak, CLS→finding-specific spatialpatch pooling is distinct from the already-existing finding-specific slice/series attention.",
+      "status": "Hypothesis; do not combine6series, patchpool,loss andbackbone in one change. New cache for omittedseries is required."
+    },
+    {
+      "priority": 4,
+      "candidate": "Stronger audited genericbackbone",
+      "why": "ViT-B/14 or other genericinitialization may add capacity, but small noisy rare-label support and Kaggle9h budget can dominate; source/Gold provenance,cachecompatibility,head dimensions and realT4 resources must be requalified.",
+      "status": "No claim that a named backbone beats0.950. Prefer a single largerbackbone contrast onlyafter f005/coverage diagnosis gives a reason."
+    }
+  ],
+  "nominal_Public_AUC_arithmetic": {
+    "formula": "mean(AUC_1..AUC_12); change=sum(per-finding changes)/12",
+    "basis": "Nominal reported baseline0.950; actual undisplayed precision/per-finding AUC unknown.",
+    "to_0955": {
+      "macro_delta": 0.005,
+      "required_sum_delta": 0.06,
+      "illustration": "3findings×0.020, or6×0.010, with allothers preserved."
+    },
+    "to_0960_exact": {
+      "macro_delta": 0.01,
+      "required_sum_delta": 0.12,
+      "illustration": "6findings×0.020, or3×0.040, with allothers preserved."
+    },
+    "strict_greater_than_0960": "Requires sum gain>0.120 against nominal0.950; exactly0.120 onlyreaches0.960. Any regressions subtract from the gains. Rounded API score precision must be respected.",
+    "not_prediction": "These are arithmetic illustrations, not forecasts, and weakAUC has no numerical mapping to PublicAUC."
+  },
+  "evidence_sha256": {
+    "configs/experiments/f005-dinov2-native-frozen-control.json": "a25cf2bc7a738c44f9c7b447c179840cc07ae6526592241dcf8298f4e6700953",
+    "configs/experiments/f005-dinov2-native-last2.json": "c488579507b87d6eed32d7bfba7b74e18fafbfff3d6a203f0f6ab81311cfc844",
+    "src/rsna_knee/native_training.py": "0c470e265332e14e31b1942996f37efd7861f9932eb9ded117253b689b97bf26",
+    "src/rsna_knee/finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "src/rsna_knee/feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "src/rsna_knee/imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "src/rsna_knee/triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "src/rsna_knee/feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "experiments/weak-state-audit-20261004.json": "1862625c80bbbe9f5a01b127f20239aff8df8a45f123e8fba377a432cd5ba6ba",
+    "experiments/f002-f003-fold01-review-20261007.json": "abf6f9b301b8db7ac057b9c01cdd328fe591d56a1eb5ac7cd8e096de1a11dc9f",
+    "experiments/f003-f004-fold01-review-20261008.json": "2687ff3abdb89f8b54d0a6678c5aefad156be4f3c9c19343493cea5df0091dce",
+    "experiments/f005-native-training-independent-review-20261008.json": "f2b77b8d48015177f7a9c2d3645c838c7d100b65fee3a7fdcf269fc1ee04400d",
+    "experiments/native392-pixel16-completed-review-20261008.json": "372b8c41bc1686dace46a2b18304c1eaeef7237b757ed8fecc70671e38703477",
+    "experiments/native392-shard01-completed-cache-review-20261008.json": "53e2ea61a6c28b9a557d1123f9dfe6e91f37ed95b541a2e3e89366c5e671fdc8",
+    "experiments/p005-scored-review-20261008.json": "74a32741f229612be6161404dd55b3f8e1fac2910c473b75b4d8d1a9b4fc54b2",
+    "experiments/p006-scored-review-20261008.json": "9cddd5c207071747de83f132d8d42dd690465b44e1052a6301015e778a55caa3",
+    "experiments/p007-scored-review-20261008.json": "2701a433e778be0680327e6d0ee062018bd6729be33d80327e19cb6570eff14e",
+    "experiments/p008-scored-review-20261008.json": "0643620c4241112b09f57c17e6bbd6e5fa93cf840aa8ec7ff2cec3c8e28d3b44",
+    "artifacts/runs/f002-dinov2-attention-fold0/run.json": "cf04c5c7807206510a1eb17658b9c986312be437c4e111d5543c8a3c514ee448",
+    "artifacts/runs/f002-dinov2-attention-fold1/run.json": "fa0e890da40e2745f002ba63695960f18cda4433f9f79d265bace621221d0847",
+    "artifacts/runs/f003-dinov2-attention24-fold0/run.json": "767cd1cf6c2ac4d71493dcad0a320ff9eae7eb07c90f777d58b9a33b7e970030",
+    "artifacts/runs/f003-dinov2-attention24-fold1/run.json": "8315ad8b0b060a9c790014c96e0a4dcf4cb90ba61b490d5b4e373e04ce201db3",
+    "artifacts/runs/f004-dinov2-attention24-dropout40-fold0/run.json": "cf94259ed2f0dda44a9daca22435be3153d91c1d0a06c648be49b96f4e39fbfe",
+    "artifacts/runs/f004-dinov2-attention24-dropout40-fold1/run.json": "97f9dfb37f22ecd5c3f81472716cba6eac66a68cb51a0d5ddbacbdc1c7d9bbea"
+  },
+  "all_read_sources_unchanged_after_review": true,
+  "operations": {
+    "config_writes": 0,
+    "existing_artifact_writes": 0,
+    "training": 0,
+    "model_payload_reads": 0,
+    "MRI_decode_or_download": 0,
+    "API_or_network": 0,
+    "new_teacher_fitting": 0
+  }
+}

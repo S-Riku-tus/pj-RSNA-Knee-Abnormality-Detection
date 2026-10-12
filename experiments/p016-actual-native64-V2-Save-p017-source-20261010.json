@@ -1,0 +1,44 @@
+{
+  "schema_version": "p016_actual_native64_V2_private_Save_root_record_v1",
+  "at_utc": "2026-10-10T10:55:26.639855+00:00",
+  "root_actual_call_chunk": "2196d0",
+  "accepted": {
+    "path": "artifacts/research/20261010-p016-native64-root-launch-source-preparation-v2/actual-native64-Save-attempt-v1/accepted.json",
+    "sha256": "3dbf3579eb422158569eb71e04e3d6645985351e4b85d3380337f4c9e0ad42c1"
+  },
+  "actual_private_Save": {
+    "ref": "rsraki/p016n64-c7706576a7224c28941455284b4e5fa8",
+    "kernel_id": 138015216,
+    "saved_version": 1,
+    "saved_at_utc": "2026-10-10T10:43:38.832397+00:00",
+    "Save_calls": 1,
+    "Input_metadata_calls": 4,
+    "GPUquota_calls": 1,
+    "fresh_available_GPU_seconds": "106748.302"
+  },
+  "source_precheck": {
+    "path": "artifacts/research/20261010-p016-direct224-native64-root-v2/root-Save-precheck.json",
+    "sha256": "5e304764c634ce654d417e44fb33a0e1504ac6d4996880d705f82721d09ebf0b"
+  },
+  "materialized_Save_peer26_sha256": "eb57187a38ea00e46fd54c80c0fb3d12ea14238b641a3dc9557acbbf737e98cd",
+  "result_collector_peer12_sha256": "f59293e02e37b0714d6ede102b6cf06a5306a998f3435e30e0da2259a4bcaabe",
+  "genuine_API_source_bytes": 695688,
+  "source_raw_sha256": "61a211f8cc528febc3424582c2c18dff9c2384d87693ba1f1646654845121e77",
+  "minimal_repair": "Remove legacy baseline-only sitecustomize PYTHONPATH entry from new child. CPU/core21/model/original5/math unchanged.",
+  "actual_native64_or_256_or_Serving_qualified": false,
+  "competition_Submit_calls": 0,
+  "no_automatic_retry_or_prior_failed_job_resave": true,
+  "own_best_public": 0.951,
+  "strictly_above_0_960_achieved": false,
+  "Regional_latest_reference": {
+    "path": "experiments/p016-native64-v2-materialized-regional-E7E8-20261010.json",
+    "sha256": "6ee40d6ea3c088d1a6bad1a6864aab63a3108923a17cc8a27d840f1211bd8bb6"
+  },
+  "P017_genuine_source_binding": {
+    "materialization_context_path": "artifacts/research/20261010-p017-native-serving-root-v1/materialization-context.json",
+    "sha256": "abee68d3d74a7463bef76181b8ff0e41b62f98d068144eea9e4ad80a1421e82d",
+    "source_bytes": 949769,
+    "new_actual_runtime_qualified": false,
+    "Save_Submit": 0
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "schema_version": "p012_originalS5_V9_private_snapshot_actual_verified_upload_review_rejected_v1",
+  "at_utc": "2026-10-09T07:00:34.951238+00:00",
+  "own_Public_best": "0.950",
+  "strict_above960_achieved": false,
+  "previous_goal_turn_classification": "progress: actual native256 completion and Helios Input mismatch proved",
+  "this_turn_progress": "actual5 model file GETs plus existing matching metadata; all6 payload SHA verified",
+  "source_version": 9,
+  "source_ref": "heliosli/rsna-knee-compact-v1",
+  "planned_destination": "rsraki/rsna-knee-compact-v1",
+  "active_bytes": 885065206,
+  "verified_assets": [
+    {
+      "name": "E_lrprior_s0_f0.pt",
+      "bytes": 199949763,
+      "sha256": "4073c563c06f57d46034b642ad55e4320116115fcdafb48df7f9953a1889ef9f",
+      "HTTP_bytes": 199949763,
+      "single_file_zip_wrapper": false
+    },
+    {
+      "name": "E_lrprior_s0_f1.pt",
+      "bytes": 199949763,
+      "sha256": "8c81de2beda32a637ed4b52df6c80bbac282805bad59dc888b56b19635d9b23b",
+      "HTTP_bytes": 199949763,
+      "single_file_zip_wrapper": false
+    },
+    {
+      "name": "E_lrprior_s0_f2.pt",
+      "bytes": 199949763,
+      "sha256": "504bebbaed859b4537357e3d20c85544b5d5c9ff0af63d2d6cd757cdf662c3f2",
+      "HTTP_bytes": 199949763,
+      "single_file_zip_wrapper": false
+    },
+    {
+      "name": "E_lrprior_s0_f3.pt",
+      "bytes": 199949763,
+      "sha256": "b8c5e1146c024168c5133ad1dc355ac976fee7054704a508cc2b980de5cf809e",
+      "HTTP_bytes": 199949763,
+      "single_file_zip_wrapper": false
+    },
+    {
+      "name": "state_spec.json",
+      "bytes": 7814,
+      "sha256": "e342034a17d084f3378c04b43e0b622ecab4b052d40ca90199f344c185382d78",
+      "source": "already captured matching S5 metadata"
+    },
+    {
+      "name": "side_cls.pt",
+      "bytes": 85255211,
+      "sha256": "ab623e2b619db4917639220fed15202e8c8aedd07c8e298a66a2afc0f153650a",
+      "HTTP_bytes": 85255211,
+      "single_file_zip_wrapper": false
+    }
+  ],
+  "manifest_sha256": "42d3b5a502cd021d86a223b0c7982dcae1e7d7db46ead519ddf9436ba443b2ff",
+  "original5_code_cells_can_be_retained": true,
+  "own_Dataset_created": false,
+  "upload_process_started": false,
+  "external_upload_API_calls": 0,
+  "automatic_approval_review_rejected": true,
+  "review_stated_reason": "Third-party model assets approx885MB require explicit approval of this concrete payload/destination and confirmation of destination ownership.",
+  "approval_request_pending": true,
+  "automatic_retry_or_workaround_after_rejection": false,
+  "safe_alternative": "Existing user UI compactV9 Pin and SaveRunAll request remains pending; no model snapshot upload needed for that route",
+  "MRI_Report_credentials_in_payload": false,
+  "own_training_Gold_selection_in_snapshot": 0,
+  "upstream_licences_and_credits_retained": true,
+  "unused_DINO_weights_copied": 0,
+  "last2": {
+    "authoritative_session": 88754,
+    "live_session_polled_this_turn": true,
+    "snapshot_sha256": "a0429933c0caab9aa48727c4de5b9920d5731ae4345c329edbf1731b2b27cd0d",
+    "completed_epochs": 5,
+    "fixed_total_epochs": 12,
+    "last_actual_history": {
+      "epoch": 5,
+      "train_bce": 0.279595100476595,
+      "weak_bce": 0.30153026230410795,
+      "weak_macro_auc_12": 0.8489457522213807,
+      "metrics": {
+        "per_target": {
+          "ACL": {
+            "auc": 0.8177202283849918,
+            "binary_observed": 693,
+            "positive": 80.0,
+            "soft_excluded": 0
+          },
+          "MCL": {
+            "auc": 0.7206439393939394,
+            "binary_observed": 683,
+            "positive": 11.0,
+            "soft_excluded": 0
+          },
+          "Medial Meniscus": {
+            "auc": 0.8242300156308479,
+            "binary_observed": 750,
+            "positive": 309.0,
+            "soft_excluded": 0
+          },
+          "Lateral Meniscus": {
+            "auc": 0.730659430292383,
+            "binary_observed": 717,
+            "positive": 104.0,
+            "soft_excluded": 0
+          },
+          "Medial OA": {
+            "auc": 0.9056603773584906,
+            "binary_observed": 442,
+            "positive": 71.0,
+            "soft_excluded": 0
+          },
+          "Lateral OA": {
+            "auc": 0.8063073482920812,
+            "binary_observed": 426,
+            "positive": 33.0,
+            "soft_excluded": 0
+          },
+          "PF OA": {
+            "auc": 0.8227813852813853,
+            "binary_observed": 466,
+            "positive": 88.0,
+            "soft_excluded": 0
+          },
+          "Effusion": {
+            "auc": 0.9425918762088975,
+            "binary_observed": 617,
+            "positive": 100.0,
+            "soft_excluded": 0
+          },
+          "Synovitis": {
+            "auc": 0.88,
+            "binary_observed": 101,
+            "positive": 100.0,
+            "soft_excluded": 0
+          },
+          "Baker's": {
+            "auc": 0.91796397640933,
+            "binary_observed": 378,
+            "positive": 59.0,
+            "soft_excluded": 0
+          },
+          "Contusion": {
+            "auc": 0.9052803483941209,
+            "binary_observed": 266,
+            "positive": 99.0,
+            "soft_excluded": 0
+          },
+          "Fracture": {
+            "auc": 0.913510101010101,
+            "binary_observed": 188,
+            "positive": 44.0,
+            "soft_excluded": 0
+          }
+        },
+        "macro_auc_12": 0.8489457522213807,
+        "available_class_macro_auc": 0.8489457522213807,
+        "defined_classes": 12,
+        "note": "Soft targets are excluded from ROC-AUC; use masked BCE for weak-label validation."
+      },
+      "optimizer_steps": 212,
+      "optimizer_step_opportunities": 212,
+      "amp_skipped_steps": 0,
+      "elapsed_seconds": 8739.191518300097,
+      "prediction_sha256": "ee220c033d2962ab78388af650c4b9f158e37b5532a9c15072fd45a24af3d5e3",
+      "gpu_peak_reserved_bytes": 1163919360
+    },
+    "condition_changes": 0,
+    "final_selection_Public_qualified": false
+  },
+  "future_UI_saved_version_reader_prepared": "artifacts/research/20261009-f005-native-runtime-root-v1/get_public951_pinned_version_once.py",
+  "limits": [
+    "Downloaded matching weights are not a forward or score proof",
+    "No ownS5 Public measured",
+    "Training incomplete; weak AUC is not Public AUC"
+  ]
+}

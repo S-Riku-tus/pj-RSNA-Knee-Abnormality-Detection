@@ -1,0 +1,49 @@
+{
+  "schema_version": "regional_dinov2_primary_hypothesis_v1",
+  "at_utc": "2026-10-08T18:32:17.747497+00:00",
+  "primary_sources": [
+    {
+      "url": "https://github.com/facebookresearch/dinov2/blob/main/dinov2/models/vision_transformer.py",
+      "verified_content": "Official forward_features exposes normalized CLS and normalized patch tokens separately. Current main inspected; no local dependency/model replacement."
+    },
+    {
+      "url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002699",
+      "verified_content": "MRNet primary paper combines predictions from sagittal/coronal/axial series; it studies three tasks and a different dataset, not this twelve-finding competition."
+    }
+  ],
+  "local_code": {
+    "path": "src/rsna_knee/finetune_model.py",
+    "sha256": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "observed": "NativeTripletMIL selects normalized token0 only; all patch features are computed internally and not supplied to head."
+  },
+  "hypothesis_only": "Keep the same pixelcache, encoder, trainability, head parameter shapes, teacher and split; expose CLS plus fixed4x4 regional patch averages (17 instances per MRIwindow) to the existing finding-specific MIL head. Test after f005 paired training, no accuracy claim.",
+  "not_inferred": [
+    "CLS cannot contain localized information",
+    "Patch pooling guarantees better MRI or Public AUC",
+    "MRNet score transfers to this competition",
+    "Three anatomical planes in cache always have identical acquisition protocols"
+  ],
+  "single_future_factor": "Feature representation and per-window instance count; no extra head parameters or crop/teacher change.",
+  "size_arithmetic_only": {
+    "image_size": 392,
+    "patch_size": 14,
+    "patch_grid": [
+      28,
+      28
+    ],
+    "regional_grid": [
+      4,
+      4
+    ],
+    "patches_per_region": 49,
+    "max_valid_windows": 144,
+    "head_instances_fullstudy": 2448,
+    "regional_features_float32_bytes": 3760128,
+    "allpatch_features_float16_bytes": 86704128,
+    "excludes": "Encoder/head activations, gradient/checkpoint/optimizer/CPU and whole-process overhead; not a resource gate."
+  },
+  "actual_fitting_or_new_model_MRI_download_performed": false,
+  "ownGold_fit_selection": false,
+  "Public_score": null,
+  "serving_qualified": false
+}

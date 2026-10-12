@@ -1,0 +1,1986 @@
+{
+  "checked_at_utc": "2026-10-08T15:28:18.389949+00:00",
+  "status": "actual_whole_shard_processed_cache_independently_verified",
+  "ref": "rsraki/n392s02-e01c6c7f3fa0ca87e4be0672a5d58193",
+  "shard_index": 1,
+  "saved_version": 1,
+  "checks": {
+    "summary_independent_gates_passed": true,
+    "same_summary_bytes_as_review_and_download": true,
+    "complete_wholegroup_canonical": true,
+    "processed_only_download": true,
+    "no_labels_gold_Report_or_fit": true,
+    "source_bound_reference_QC_skip_cleanup0": true,
+    "independent_archive_bytes_SHA": true,
+    "unique_safe_STORED_NPZ_inventory": true,
+    "all_member_bytes_SHA": true,
+    "all_array_bytes_SHA": true,
+    "all_shape_dtype_metadata_fingerprint_no_pickle": true,
+    "actual_mask_position_plane_flag_coverage_zero_padding": true,
+    "no_archive_extraction_or_raw_DICOM_decode": true
+  },
+  "all_passed": true,
+  "studies": 176,
+  "processed": 176,
+  "files_verified": 176,
+  "arrays_verified": 880,
+  "archive_bytes": 4684805955,
+  "archive_GiB": 4.363065543584526,
+  "archive_sha256": "b382a5b451e383b1aa506fb72e888b13a646dfbb64b5c40df5b29c5ee1888136",
+  "summary_sha256": "7093b35e690f551a15cfdf1aa9c3d7e737393fbee086df02fdbccc511055cca6",
+  "summary_review_sha256": "93e77a8c30f15c9ea07214ecf0a1f3863e3a306a914644807359e55caaf50a6c",
+  "elapsed_Kaggle_export_seconds": 1733.2605229409999,
+  "Kaggle_CPU_peak_RSS_bytes": 1453387776,
+  "local_read_decode_validate_total_seconds": 62.27419359999476,
+  "valid_windows": {
+    "min": 51,
+    "max": 141,
+    "sum": 15786
+  },
+  "study_records": [
+    {
+      "study_id_sha256": "70f03179436a312ee37e8a66c3b3fab983cb2e3364ff9328e0dd41d86bd4109d",
+      "valid_windows": 59,
+      "valid_windows_by_slot": [
+        19,
+        24,
+        16
+      ],
+      "member_bytes": 19229894,
+      "read_decode_validate_seconds": 0.3776168000185862
+    },
+    {
+      "study_id_sha256": "36b2505669b43f567b32a55d40cd24e9486f141b14ea45661812eb53c23eca49",
+      "valid_windows": 77,
+      "valid_windows_by_slot": [
+        25,
+        25,
+        27
+      ],
+      "member_bytes": 25518374,
+      "read_decode_validate_seconds": 0.4019673999864608
+    },
+    {
+      "study_id_sha256": "2f51d2135396203c40da1557fcfc3eb3e7a6382a9bb97e658af45b64ea543f0e",
+      "valid_windows": 110,
+      "valid_windows_by_slot": [
+        36,
+        38,
+        36
+      ],
+      "member_bytes": 36889937,
+      "read_decode_validate_seconds": 0.4318603000137955
+    },
+    {
+      "study_id_sha256": "95a1c992dff3a481a54122a91f476ad6e2514ac25490b82726888c5a037d9b9a",
+      "valid_windows": 62,
+      "valid_windows_by_slot": [
+        22,
+        16,
+        24
+      ],
+      "member_bytes": 17430618,
+      "read_decode_validate_seconds": 0.3169888000120409
+    },
+    {
+      "study_id_sha256": "44c78c7f9b32840f49c6bbf7a49ab7c12126abfa9f22a1293e2d077f41118e7d",
+      "valid_windows": 62,
+      "valid_windows_by_slot": [
+        18,
+        16,
+        28
+      ],
+      "member_bytes": 18704265,
+      "read_decode_validate_seconds": 0.30339409998850897
+    },
+    {
+      "study_id_sha256": "0195f5d7a5488e2f3a48bd8d77b458437b1e0e47930d677405e60a03bb8b2b68",
+      "valid_windows": 67,
+      "valid_windows_by_slot": [
+        23,
+        23,
+        21
+      ],
+      "member_bytes": 20016962,
+      "read_decode_validate_seconds": 0.3123931000009179
+    },
+    {
+      "study_id_sha256": "933c1cae27ba946c8f450c5c5967f3a7cde16107a2e7cfa667fc852c97e79908",
+      "valid_windows": 98,
+      "valid_windows_by_slot": [
+        40,
+        28,
+        30
+      ],
+      "member_bytes": 25380421,
+      "read_decode_validate_seconds": 0.33540799998445436
+    },
+    {
+      "study_id_sha256": "83076f5bdef9825e8bbf2a568465c16fddaf4552fd817562e78a13340d68f92c",
+      "valid_windows": 62,
+      "valid_windows_by_slot": [
+        19,
+        24,
+        19
+      ],
+      "member_bytes": 22450888,
+      "read_decode_validate_seconds": 0.32491740002296865
+    },
+    {
+      "study_id_sha256": "3e7093cd51f4a86ee73a3d9b4742d22e6cb54a2d8bfdc95c8a40f3fe644be2e5",
+      "valid_windows": 102,
+      "valid_windows_by_slot": [
+        34,
+        38,
+        30
+      ],
+      "member_bytes": 30066960,
+      "read_decode_validate_seconds": 0.3609950999962166
+    },
+    {
+      "study_id_sha256": "d55b9aeb6c04a5561ca2eddabeda442106a5455d1ff6eb18192890bb84a63de2",
+      "valid_windows": 91,
+      "valid_windows_by_slot": [
+        30,
+        32,
+        29
+      ],
+      "member_bytes": 25231276,
+      "read_decode_validate_seconds": 0.3375520000117831
+    },
+    {
+      "study_id_sha256": "7a12699763550e1588c27575161a9aaadc39e359c49bda65167f21d4c14b77a1",
+      "valid_windows": 99,
+      "valid_windows_by_slot": [
+        30,
+        29,
+        40
+      ],
+      "member_bytes": 22189551,
+      "read_decode_validate_seconds": 0.30655699997441843
+    },
+    {
+      "study_id_sha256": "fe70c104be418951048beae472512c64fcb936ce9db78b65a6dc4a24de793595",
+      "valid_windows": 95,
+      "valid_windows_by_slot": [
+        30,
+        36,
+        29
+      ],
+      "member_bytes": 27990366,
+      "read_decode_validate_seconds": 0.33672900003148243
+    },
+    {
+      "study_id_sha256": "c686f639025c5f8dea27873c563dc61e9ee225fa7d803834e465865b48bb3a6e",
+      "valid_windows": 91,
+      "valid_windows_by_slot": [
+        30,
+        31,
+        30
+      ],
+      "member_bytes": 27271698,
+      "read_decode_validate_seconds": 0.348741699999664
+    },
+    {
+      "study_id_sha256": "49d54f2955c8a03e9e5de6dbd695129740c102dde9214bc355e1fd57c8da54aa",
+      "valid_windows": 86,
+      "valid_windows_by_slot": [
+        28,
+        32,
+        26
+      ],
+      "member_bytes": 21290682,
+      "read_decode_validate_seconds": 0.3137974999845028
+    },
+    {
+      "study_id_sha256": "767f2c91f0efd87154e7fff00e92bfa4345e5b64646560c0c7971bf67bbf2a99",
+      "valid_windows": 96,
+      "valid_windows_by_slot": [
+        34,
+        32,
+        30
+      ],
+      "member_bytes": 29872351,
+      "read_decode_validate_seconds": 0.3713215999887325
+    },
+    {
+      "study_id_sha256": "889a63e16db04226c92408ddf287cf93b46d4f6e49b21c8a6814fbf3c9980c79",
+      "valid_windows": 114,
+      "valid_windows_by_slot": [
+        36,
+        40,
+        38
+      ],
+      "member_bytes": 34953243,
+      "read_decode_validate_seconds": 0.38150390004739165
+    },
+    {
+      "study_id_sha256": "ae3cb04d8371dab8350899b9a7307ea0a831831e11901b1a0d1177c08312b90e",
+      "valid_windows": 94,
+      "valid_windows_by_slot": [
+        31,
+        30,
+        33
+      ],
+      "member_bytes": 33605645,
+      "read_decode_validate_seconds": 0.3683420000015758
+    },
+    {
+      "study_id_sha256": "8654252eeccaca9de2b74092d5ed9cfe25347479c78dbaff3a84d71456aaf822",
+      "valid_windows": 79,
+      "valid_windows_by_slot": [
+        29,
+        20,
+        30
+      ],
+      "member_bytes": 27680808,
+      "read_decode_validate_seconds": 0.3489468000479974
+    },
+    {
+      "study_id_sha256": "797487633df15a421e23298ec20d8cc04b6e271ad72a11d81ad5ef7c5566f9d6",
+      "valid_windows": 86,
+      "valid_windows_by_slot": [
+        32,
+        26,
+        28
+      ],
+      "member_bytes": 23575153,
+      "read_decode_validate_seconds": 0.31697390001500025
+    },
+    {
+      "study_id_sha256": "2a1f936f6845384d4a3087d2964504983513c9a018c10f5e8cf674e86007fbae",
+      "valid_windows": 113,
+      "valid_windows_by_slot": [
+        40,
+        38,
+        35
+      ],
+      "member_bytes": 35511195,
+      "read_decode_validate_seconds": 0.3972694000112824
+    },
+    {
+      "study_id_sha256": "263b0aa094d38f7fee5d49b949afb71514801b863dd70a6a5ecb4f3bd30bb565",
+      "valid_windows": 93,
+      "valid_windows_by_slot": [
+        30,
+        30,
+        33
+      ],
+      "member_bytes": 24963072,
+      "read_decode_validate_seconds": 0.32023880002088845
+    },
+    {
+      "study_id_sha256": "7a0729e62edac9d42561c775319b2c7b5a5c1a0129e8e411cee92b4f42e2bb88",
+      "valid_windows": 77,
+      "valid_windows_by_slot": [
+        27,
+        25,
+        25
+      ],
+      "member_bytes": 24041316,
+      "read_decode_validate_seconds": 0.32787009997991845
+    },
+    {
+      "study_id_sha256": "3e62515d0740c1778517e550d5ef2e230489603386d5bbbae66cb4a5cfe1b9bf",
+      "valid_windows": 72,
+      "valid_windows_by_slot": [
+        24,
+        24,
+        24
+      ],
+      "member_bytes": 24423082,
+      "read_decode_validate_seconds": 0.3416465999907814
+    },
+    {
+      "study_id_sha256": "602afe9db61d01d9be8725c53a3882f7c43b24a54421e3b5d5ea5fe30bd25657",
+      "valid_windows": 72,
+      "valid_windows_by_slot": [
+        24,
+        24,
+        24
+      ],
+      "member_bytes": 26692647,
+      "read_decode_validate_seconds": 0.35088250000262633
+    },
+    {
+      "study_id_sha256": "76d4aa0823b094eaffbf0f2a9b4c36810522195a1c51016aec3b2804d6ff34cb",
+      "valid_windows": 95,
+      "valid_windows_by_slot": [
+        35,
+        30,
+        30
+      ],
+      "member_bytes": 26585308,
+      "read_decode_validate_seconds": 0.3564114000182599
+    },
+    {
+      "study_id_sha256": "23998a1b2fd8b889a70a20c387429442b42590aa16d18d7197d7b2963c64234c",
+      "valid_windows": 111,
+      "valid_windows_by_slot": [
+        48,
+        35,
+        28
+      ],
+      "member_bytes": 29870444,
+      "read_decode_validate_seconds": 0.360182199976407
+    },
+    {
+      "study_id_sha256": "853541ab774071c93494152005598a0d405e28872bc5bc7593f39d5c83318611",
+      "valid_windows": 102,
+      "valid_windows_by_slot": [
+        40,
+        28,
+        34
+      ],
+      "member_bytes": 21079010,
+      "read_decode_validate_seconds": 0.29795199999352917
+    },
+    {
+      "study_id_sha256": "0736093f26c0dbc7ad2f3c83d1ee68b2a0256f22f2d4d562b5b664a2ce3dafc2",
+      "valid_windows": 95,
+      "valid_windows_by_slot": [
+        35,
+        30,
+        30
+      ],
+      "member_bytes": 28392517,
+      "read_decode_validate_seconds": 0.34933040000032634
+    },
+    {
+      "study_id_sha256": "96d8df626b5680caeb9392040c78b8019060aa442c4d18629ab11dc6a836407a",
+      "valid_windows": 100,
+      "valid_windows_by_slot": [
+        38,
+        32,
+        30
+      ],
+      "member_bytes": 36464076,
+      "read_decode_validate_seconds": 0.3822500000242144
+    },
+    {
+      "study_id_sha256": "581f9e30ec1ac27d09034430528e8143640ebb83c67d288259ec6a39d228bc39",
+      "valid_windows": 120,
+      "valid_windows_by_slot": [
+        44,
+        36,
+        40
+      ],
+      "member_bytes": 38980504,
+      "read_decode_validate_seconds": 0.3944748999783769
+    },
+    {
+      "study_id_sha256": "06978338d594de7159c5e82ac957ec4f91fce0768046d127a731e17da1987417",
+      "valid_windows": 75,
+      "valid_windows_by_slot": [
+        16,
+        30,
+        29
+      ],
+      "member_bytes": 25221287,
+      "read_decode_validate_seconds": 0.3307424999657087
+    },
+    {
+      "study_id_sha256": "d47e669f1664b0ff85704497d0e2c5fbdce90a9127354d4140d5371d03ca612a",
+      "valid_windows": 93,
+      "valid_windows_by_slot": [
+        30,
+        33,
+        30
+      ],
+      "member_bytes": 29166219,
+      "read_decode_validate_seconds": 0.349318900029175
+    },
+    {
+      "study_id_sha256": "7fda167a17e9d3d9a218f98027962b9c2a456555653265a19341b5f42b5cc9a6",
+      "valid_windows": 100,
+      "valid_windows_by_slot": [
+        32,
+        30,
+        38
+      ],
+      "member_bytes": 32909805,
+      "read_decode_validate_seconds": 0.38472420000471175
+    },
+    {
+      "study_id_sha256": "81ed6cfcfcaa978408c340071c576fed0c7d84d024e05afba36473def09ac625",
+      "valid_windows": 89,
+      "valid_windows_by_slot": [
+        30,
+        29,
+        30
+      ],
+      "member_bytes": 26692761,
+      "read_decode_validate_seconds": 0.35780689999228343
+    },
+    {
+      "study_id_sha256": "3466df8ea16c3d896e5c2ebab09ba36587c990fde841b0bf789736d450160fad",
+      "valid_windows": 130,
+      "valid_windows_by_slot": [
+        45,
+        47,
+        38
+      ],
+      "member_bytes": 40201154,
+      "read_decode_validate_seconds": 0.4115956000168808
+    },
+    {
+      "study_id_sha256": "1d4d165c13e28c07401b7fe36e2174ed3674eec4ca0e8d845e96b3d6670adfd6",
+      "valid_windows": 76,
+      "valid_windows_by_slot": [
+        24,
+        28,
+        24
+      ],
+      "member_bytes": 28497274,
+      "read_decode_validate_seconds": 0.3520264999824576
+    },
+    {
+      "study_id_sha256": "c7343c760778a6fc1fb7d7c38449959540051c73a3f1086472186535aeb3764e",
+      "valid_windows": 108,
+      "valid_windows_by_slot": [
+        34,
+        48,
+        26
+      ],
+      "member_bytes": 28045696,
+      "read_decode_validate_seconds": 0.3333210999844596
+    },
+    {
+      "study_id_sha256": "e0dc445b2d523dcf4f5386c4a4ea8f70474f7dc5e41d2142ac844fddc654a08e",
+      "valid_windows": 87,
+      "valid_windows_by_slot": [
+        27,
+        30,
+        30
+      ],
+      "member_bytes": 27533921,
+      "read_decode_validate_seconds": 0.3420820999890566
+    },
+    {
+      "study_id_sha256": "6006b01a743e4376d7cda24f51868c8a3987911761dae168076041d83f918779",
+      "valid_windows": 104,
+      "valid_windows_by_slot": [
+        36,
+        36,
+        32
+      ],
+      "member_bytes": 35818707,
+      "read_decode_validate_seconds": 0.38949289999436587
+    },
+    {
+      "study_id_sha256": "47600267734450f98a1d5611fbe5d3ea72a521114a42532b0e7ad4abb3f72715",
+      "valid_windows": 98,
+      "valid_windows_by_slot": [
+        40,
+        28,
+        30
+      ],
+      "member_bytes": 24876521,
+      "read_decode_validate_seconds": 0.3263095999718644
+    },
+    {
+      "study_id_sha256": "8ef6661310244ddb1c306ffb40ce5e723bcd6b8ed97773d5b99601e523534386",
+      "valid_windows": 95,
+      "valid_windows_by_slot": [
+        29,
+        36,
+        30
+      ],
+      "member_bytes": 24024000,
+      "read_decode_validate_seconds": 0.328609999967739
+    },
+    {
+      "study_id_sha256": "dfdc6f44be84ae766936c856dee20956bf20e0d421be05d16bee0e6e59213d50",
+      "valid_windows": 103,
+      "valid_windows_by_slot": [
+        32,
+        40,
+        31
+      ],
+      "member_bytes": 29093673,
+      "read_decode_validate_seconds": 0.35261020000325516
+    },
+    {
+      "study_id_sha256": "df3f2d3a48131d67afeca8e41d98045626c02b1768b83d279128217b8b993447",
+      "valid_windows": 102,
+      "valid_windows_by_slot": [
+        34,
+        38,
+        30
+      ],
+      "member_bytes": 26865795,
+      "read_decode_validate_seconds": 0.3534147000173107
+    },
+    {
+      "study_id_sha256": "6315fc37471dab7b30f579520e51d0760139d4dd782ac18db73e45b9fc4d889b",
+      "valid_windows": 85,
+      "valid_windows_by_slot": [
+        30,
+        30,
+        25
+      ],
+      "member_bytes": 27937397,
+      "read_decode_validate_seconds": 0.36194769997382537
+    },
+    {
+      "study_id_sha256": "631549fe8ab8722fb07d788d4124139b22fbeb562634a09f5594cf07e30238db",
+      "valid_windows": 72,
+      "valid_windows_by_slot": [
+        24,
+        24,
+        24
+      ],
+      "member_bytes": 25320484,
+      "read_decode_validate_seconds": 0.3476276000146754
+    },
+    {
+      "study_id_sha256": "a734a34bbf8ae7ff82ba547cf1e0c9b4184c049eedc9708b92d2452df2159a16",
+      "valid_windows": 94,
+      "valid_windows_by_slot": [
+        35,
+        30,
+        29
+      ],
+      "member_bytes": 24041738,
+      "read_decode_validate_seconds": 0.32160450000083074
+    },
+    {
+      "study_id_sha256": "3045a3ba736d7d6fdfaa063d1b9b103d09307222245699ecc4f9d6b152d2c0a0",
+      "valid_windows": 102,
+      "valid_windows_by_slot": [
+        30,
+        34,
+        38
+      ],
+      "member_bytes": 27789181,
+      "read_decode_validate_seconds": 0.35882890003267676
+    },
+    {
+      "study_id_sha256": "edc2e0a054913c9d7e4f8b1fca9eeed99ed3a8d53a42e064d1122faef05b3972",
+      "valid_windows": 109,
+      "valid_windows_by_slot": [
+        39,
+        37,
+        33
+      ],
+      "member_bytes": 28256029,
+      "read_decode_validate_seconds": 0.3605486999731511
+    },
+    {
+      "study_id_sha256": "695d8985e778ff853a6f02d3157dee857faf1e4dd8e84f250a314e1464da6475",
+      "valid_windows": 80,
+      "valid_windows_by_slot": [
+        25,
+        30,
+        25
+      ],
+      "member_bytes": 26959474,
+      "read_decode_validate_seconds": 0.3631615999620408
+    },
+    {
+      "study_id_sha256": "97675ac4b41a777787529d4ef5ab9e5f6334b6506d9e75c493c6791df83dee9a",
+      "valid_windows": 77,
+      "valid_windows_by_slot": [
+        25,
+        25,
+        27
+      ],
+      "member_bytes": 23101406,
+      "read_decode_validate_seconds": 0.34193880000384524
+    },
+    {
+      "study_id_sha256": "4f2f178af945d938d8e212de533d536546b0acf066b7d10c6ddae99e4dfdf40e",
+      "valid_windows": 104,
+      "valid_windows_by_slot": [
+        40,
+        35,
+        29
+      ],
+      "member_bytes": 28021692,
+      "read_decode_validate_seconds": 0.36337219999404624
+    },
+    {
+      "study_id_sha256": "b6a969b1a00563b23e503e50f17874f276c2b1f5d7b73a3240c8e4c37e1e13fa",
+      "valid_windows": 111,
+      "valid_windows_by_slot": [
+        48,
+        32,
+        31
+      ],
+      "member_bytes": 26842529,
+      "read_decode_validate_seconds": 0.3488159999833442
+    },
+    {
+      "study_id_sha256": "120c2be135858f72be7034a824897c6b8d5211e6aacd06730364cd30fe87b30c",
+      "valid_windows": 75,
+      "valid_windows_by_slot": [
+        29,
+        16,
+        30
+      ],
+      "member_bytes": 25239607,
+      "read_decode_validate_seconds": 0.3313392999698408
+    },
+    {
+      "study_id_sha256": "05ac489b0f07e422bf38c633399e072be79abca1d7e285e4637d3d398c9a798e",
+      "valid_windows": 71,
+      "valid_windows_by_slot": [
+        25,
+        23,
+        23
+      ],
+      "member_bytes": 17885195,
+      "read_decode_validate_seconds": 0.29852730000857264
+    },
+    {
+      "study_id_sha256": "b5d56dff91480a15f22df326b9fe081958f8d527ec8a1bac272afa7d41827c52",
+      "valid_windows": 78,
+      "valid_windows_by_slot": [
+        26,
+        28,
+        24
+      ],
+      "member_bytes": 24755006,
+      "read_decode_validate_seconds": 0.34441570000490174
+    },
+    {
+      "study_id_sha256": "5a06bd027850b83f3a977e6dc4bb8b409b36dd05a393d3cb9f6d74761be26168",
+      "valid_windows": 94,
+      "valid_windows_by_slot": [
+        42,
+        27,
+        25
+      ],
+      "member_bytes": 30992334,
+      "read_decode_validate_seconds": 0.3682666000095196
+    },
+    {
+      "study_id_sha256": "c1a6e42156a8f9af2b8fe9b02582098aa34e037291d1388c417c0918e238a5c3",
+      "valid_windows": 83,
+      "valid_windows_by_slot": [
+        33,
+        20,
+        30
+      ],
+      "member_bytes": 27053791,
+      "read_decode_validate_seconds": 0.34687000000849366
+    },
+    {
+      "study_id_sha256": "2bf5ac7de289e791df1ecc0e5149494e8c481d08abfb2a121a0f93324e4d32f1",
+      "valid_windows": 94,
+      "valid_windows_by_slot": [
+        34,
+        30,
+        30
+      ],
+      "member_bytes": 30909229,
+      "read_decode_validate_seconds": 0.366644499998074
+    },
+    {
+      "study_id_sha256": "4c51b3af6034b6fca473231d49d92782ed3807f51a314220692607bb8275d741",
+      "valid_windows": 117,
+      "valid_windows_by_slot": [
+        43,
+        36,
+        38
+      ],
+      "member_bytes": 37532949,
+      "read_decode_validate_seconds": 0.39951130002737045
+    },
+    {
+      "study_id_sha256": "c72bfb835d861a7396f3df2a9a8664aaf133bb583e677d9f15cb857acaa394d8",
+      "valid_windows": 120,
+      "valid_windows_by_slot": [
+        36,
+        48,
+        36
+      ],
+      "member_bytes": 26755581,
+      "read_decode_validate_seconds": 0.3461012999759987
+    },
+    {
+      "study_id_sha256": "1b9c014b0f5eb5abc0e46fe89f7be99ddec3827705ca6b6a8350a49a9d65464a",
+      "valid_windows": 111,
+      "valid_windows_by_slot": [
+        33,
+        32,
+        46
+      ],
+      "member_bytes": 26637402,
+      "read_decode_validate_seconds": 0.3399329000385478
+    },
+    {
+      "study_id_sha256": "8ffdc3bfdd74f8911519e49474165c2a9e5de39f3ce9ff9742a4ac019823cc71",
+      "valid_windows": 90,
+      "valid_windows_by_slot": [
+        28,
+        34,
+        28
+      ],
+      "member_bytes": 24590824,
+      "read_decode_validate_seconds": 0.3391140000312589
+    },
+    {
+      "study_id_sha256": "749d913472183494cf6192e135017ed72669ababbaeb2279d490347d132bff6f",
+      "valid_windows": 95,
+      "valid_windows_by_slot": [
+        29,
+        36,
+        30
+      ],
+      "member_bytes": 27800347,
+      "read_decode_validate_seconds": 0.3370078000007197
+    },
+    {
+      "study_id_sha256": "6f53d3889e768d240763f88010e7f02642acad92284a86416f87305fc85d5783",
+      "valid_windows": 68,
+      "valid_windows_by_slot": [
+        23,
+        22,
+        23
+      ],
+      "member_bytes": 16005250,
+      "read_decode_validate_seconds": 0.28885309997713193
+    },
+    {
+      "study_id_sha256": "bad8cf9f00266b5a2768153fbd240712fef901c3724b9dbed5ae0bca177e91a1",
+      "valid_windows": 107,
+      "valid_windows_by_slot": [
+        40,
+        35,
+        32
+      ],
+      "member_bytes": 27088943,
+      "read_decode_validate_seconds": 0.33810140000423416
+    },
+    {
+      "study_id_sha256": "88799f1223134d5fa6563e08931bdb6d0552a327404de6fc9c885d1b9d39666c",
+      "valid_windows": 110,
+      "valid_windows_by_slot": [
+        48,
+        30,
+        32
+      ],
+      "member_bytes": 26360827,
+      "read_decode_validate_seconds": 0.3449312999728136
+    },
+    {
+      "study_id_sha256": "dd33e676a4a93dcf9eed58c7b1a78b23c19f2f405ab422fc109f86754b8b01bb",
+      "valid_windows": 121,
+      "valid_windows_by_slot": [
+        38,
+        40,
+        43
+      ],
+      "member_bytes": 38111211,
+      "read_decode_validate_seconds": 0.4054236999945715
+    },
+    {
+      "study_id_sha256": "2aba37c5cabee4803dd3f25e002cb5d8c757cde3d677c076ef0856c2e39c4ed7",
+      "valid_windows": 84,
+      "valid_windows_by_slot": [
+        26,
+        30,
+        28
+      ],
+      "member_bytes": 24466658,
+      "read_decode_validate_seconds": 0.32766589999664575
+    },
+    {
+      "study_id_sha256": "1bfcebea3d51981c8583f67010bcb6eaf9ce9e967ef6343766d0c48c1a534bc7",
+      "valid_windows": 62,
+      "valid_windows_by_slot": [
+        22,
+        20,
+        20
+      ],
+      "member_bytes": 16069893,
+      "read_decode_validate_seconds": 0.27869160001864657
+    },
+    {
+      "study_id_sha256": "de728e843aed8c1548a5054e29a4f706e9b9f39ce5f92724cd4257714da8183f",
+      "valid_windows": 51,
+      "valid_windows_by_slot": [
+        17,
+        17,
+        17
+      ],
+      "member_bytes": 18527360,
+      "read_decode_validate_seconds": 0.2960535000311211
+    },
+    {
+      "study_id_sha256": "8f3b47b4ad9adb361d5314313338f86aec686316006a9a9f1ab73a82b394793f",
+      "valid_windows": 67,
+      "valid_windows_by_slot": [
+        22,
+        21,
+        24
+      ],
+      "member_bytes": 20802963,
+      "read_decode_validate_seconds": 0.31676979997428134
+    },
+    {
+      "study_id_sha256": "274455011dc885b2ca26e945b401654113f9008f7cf18e37e97154290225368a",
+      "valid_windows": 98,
+      "valid_windows_by_slot": [
+        30,
+        34,
+        34
+      ],
+      "member_bytes": 32901730,
+      "read_decode_validate_seconds": 0.37492659996496513
+    },
+    {
+      "study_id_sha256": "c349738101dd55a3815096065da42a1fd6f694be464decc89cfce1811c74cab0",
+      "valid_windows": 65,
+      "valid_windows_by_slot": [
+        23,
+        22,
+        20
+      ],
+      "member_bytes": 20859096,
+      "read_decode_validate_seconds": 0.3136621000012383
+    },
+    {
+      "study_id_sha256": "b643a9ce43ef45729c0cbe58108dec6f533d4270cdc0db224767b6a211376cfe",
+      "valid_windows": 100,
+      "valid_windows_by_slot": [
+        30,
+        36,
+        34
+      ],
+      "member_bytes": 24176467,
+      "read_decode_validate_seconds": 0.3214416999835521
+    },
+    {
+      "study_id_sha256": "20126b15ce2273295f2912cdb2c2b26c0b2129a45443dc5f346da53d9a4a408e",
+      "valid_windows": 117,
+      "valid_windows_by_slot": [
+        37,
+        45,
+        35
+      ],
+      "member_bytes": 31676020,
+      "read_decode_validate_seconds": 0.3898509999853559
+    },
+    {
+      "study_id_sha256": "9d84aa2373c573ac0f8aa04093567dc0be6fb718daf130b7f11ce99f0f7471ca",
+      "valid_windows": 90,
+      "valid_windows_by_slot": [
+        34,
+        28,
+        28
+      ],
+      "member_bytes": 26331623,
+      "read_decode_validate_seconds": 0.3467975999810733
+    },
+    {
+      "study_id_sha256": "06fc50f7a7edd11114577b4c686b3bf6f1852a6c68b19b1677680250d07cc7f3",
+      "valid_windows": 85,
+      "valid_windows_by_slot": [
+        22,
+        29,
+        34
+      ],
+      "member_bytes": 22870662,
+      "read_decode_validate_seconds": 0.3373657999909483
+    },
+    {
+      "study_id_sha256": "8d1635a69d63646c052a22d791d025a72183f479af5613e5d17b861359eea6b8",
+      "valid_windows": 87,
+      "valid_windows_by_slot": [
+        27,
+        30,
+        30
+      ],
+      "member_bytes": 29600986,
+      "read_decode_validate_seconds": 0.3618133999989368
+    },
+    {
+      "study_id_sha256": "6e3f62190b690b78bb3b9c91b57c64438508bdd8d0b2407bb80348c31631a6c1",
+      "valid_windows": 104,
+      "valid_windows_by_slot": [
+        24,
+        35,
+        45
+      ],
+      "member_bytes": 26460869,
+      "read_decode_validate_seconds": 0.34427609998965636
+    },
+    {
+      "study_id_sha256": "15e7ac827fb8228a7ca2522c194d10cd7c4d5fc5efa3ee76b80546f15201b099",
+      "valid_windows": 59,
+      "valid_windows_by_slot": [
+        21,
+        22,
+        16
+      ],
+      "member_bytes": 17862273,
+      "read_decode_validate_seconds": 0.2997361000161618
+    },
+    {
+      "study_id_sha256": "088d2f37f5c65ef09ad591c1b92d54e3a0882ad7475b1fe3cf0e32df4f41aa37",
+      "valid_windows": 111,
+      "valid_windows_by_slot": [
+        36,
+        35,
+        40
+      ],
+      "member_bytes": 33150229,
+      "read_decode_validate_seconds": 0.3955658999620937
+    },
+    {
+      "study_id_sha256": "70a951d3380fbe600fcff65d2d29209da9ad21221b4375ae521de7ee08d19c1b",
+      "valid_windows": 112,
+      "valid_windows_by_slot": [
+        42,
+        35,
+        35
+      ],
+      "member_bytes": 35765946,
+      "read_decode_validate_seconds": 0.3981758000445552
+    },
+    {
+      "study_id_sha256": "5362401faf57e48c6ddef9b0d0207558107db7cf6884473dca285c1f3c917f60",
+      "valid_windows": 96,
+      "valid_windows_by_slot": [
+        30,
+        36,
+        30
+      ],
+      "member_bytes": 29759382,
+      "read_decode_validate_seconds": 0.34256110002752393
+    },
+    {
+      "study_id_sha256": "9976b22ca32b68ddbfb22a1cdabebc2b705f564bc22b3c1984d4f78f7b90183c",
+      "valid_windows": 120,
+      "valid_windows_by_slot": [
+        48,
+        48,
+        24
+      ],
+      "member_bytes": 21350772,
+      "read_decode_validate_seconds": 0.307753499946557
+    },
+    {
+      "study_id_sha256": "1d922b8e00472ce5fe4fde325f5bfbd907da5f980f8dbe671906e171ca061312",
+      "valid_windows": 84,
+      "valid_windows_by_slot": [
+        30,
+        26,
+        28
+      ],
+      "member_bytes": 27026061,
+      "read_decode_validate_seconds": 0.34495460003381595
+    },
+    {
+      "study_id_sha256": "0a755896701b8de79a5218e21f5e1093e4b9560b3f4010c40b19ad85e1473ef0",
+      "valid_windows": 99,
+      "valid_windows_by_slot": [
+        33,
+        33,
+        33
+      ],
+      "member_bytes": 22542039,
+      "read_decode_validate_seconds": 0.3005350000457838
+    },
+    {
+      "study_id_sha256": "db329b05bc53b4d56aa743d4db7f923c50b3540aade0687139f8d10244cd0f05",
+      "valid_windows": 88,
+      "valid_windows_by_slot": [
+        30,
+        26,
+        32
+      ],
+      "member_bytes": 31171304,
+      "read_decode_validate_seconds": 0.36670589999994263
+    },
+    {
+      "study_id_sha256": "0b9356a158c75920ae3f5fc57b74c537174e351365c80a213013c9497c985ac0",
+      "valid_windows": 57,
+      "valid_windows_by_slot": [
+        19,
+        19,
+        19
+      ],
+      "member_bytes": 21571305,
+      "read_decode_validate_seconds": 0.3234615999972448
+    },
+    {
+      "study_id_sha256": "a044f871a1200b12d04e351b95e4dcd6c656d943ec066386553c26a9f373dc0e",
+      "valid_windows": 104,
+      "valid_windows_by_slot": [
+        32,
+        36,
+        36
+      ],
+      "member_bytes": 34814006,
+      "read_decode_validate_seconds": 0.3809898000326939
+    },
+    {
+      "study_id_sha256": "96d8303084cdf585d06e65dab59dca7c330a952addefd9b5ec03406d19b54c1a",
+      "valid_windows": 101,
+      "valid_windows_by_slot": [
+        32,
+        36,
+        33
+      ],
+      "member_bytes": 31331515,
+      "read_decode_validate_seconds": 0.3691825999994762
+    },
+    {
+      "study_id_sha256": "4fd0c85c574c16cc0b7d479b2dc5372bf120a85c19e161e72700564e61e2f8d0",
+      "valid_windows": 60,
+      "valid_windows_by_slot": [
+        19,
+        20,
+        21
+      ],
+      "member_bytes": 21321296,
+      "read_decode_validate_seconds": 0.32645779999438673
+    },
+    {
+      "study_id_sha256": "401e23933c477c51fbff1e73b307d382b3353d20ccb66063d08e9f452f4fbee6",
+      "valid_windows": 62,
+      "valid_windows_by_slot": [
+        24,
+        17,
+        21
+      ],
+      "member_bytes": 16226356,
+      "read_decode_validate_seconds": 0.2921100999810733
+    },
+    {
+      "study_id_sha256": "65e6e4aad7033bafca4cd9edfc69ff8f5d8a1b858c8e226f3a8fb58124bc42ff",
+      "valid_windows": 102,
+      "valid_windows_by_slot": [
+        36,
+        36,
+        30
+      ],
+      "member_bytes": 27150646,
+      "read_decode_validate_seconds": 0.35591919999569654
+    },
+    {
+      "study_id_sha256": "3c4ac4c1d4e2392436779d222fd29c4d830ab8ba68bc0859acd940eb7f4c743b",
+      "valid_windows": 141,
+      "valid_windows_by_slot": [
+        48,
+        45,
+        48
+      ],
+      "member_bytes": 35072045,
+      "read_decode_validate_seconds": 0.40639700001338497
+    },
+    {
+      "study_id_sha256": "03cfb3f0f1b346fdb2483654655e3eb48bbe572fbd4488d43da9d46e5fc4f173",
+      "valid_windows": 91,
+      "valid_windows_by_slot": [
+        31,
+        30,
+        30
+      ],
+      "member_bytes": 28850605,
+      "read_decode_validate_seconds": 0.37269190000370145
+    },
+    {
+      "study_id_sha256": "1d235f1d1a125b45a1a47676d8f0b79e59318a527c008bedb6012c3f755414fb",
+      "valid_windows": 57,
+      "valid_windows_by_slot": [
+        19,
+        19,
+        19
+      ],
+      "member_bytes": 20258591,
+      "read_decode_validate_seconds": 0.3063656999729574
+    },
+    {
+      "study_id_sha256": "a4c698b566b68fae3802a912e739180d6474a8ce93713f6aca8ceef2c772a964",
+      "valid_windows": 90,
+      "valid_windows_by_slot": [
+        30,
+        30,
+        30
+      ],
+      "member_bytes": 32963536,
+      "read_decode_validate_seconds": 0.3581741999951191
+    },
+    {
+      "study_id_sha256": "7d4c524b9700f998e76e4d0f36dc129a18e16e5145bfec16bc89cfca0ccb04a8",
+      "valid_windows": 116,
+      "valid_windows_by_slot": [
+        36,
+        35,
+        45
+      ],
+      "member_bytes": 33354528,
+      "read_decode_validate_seconds": 0.39769880002131686
+    },
+    {
+      "study_id_sha256": "522173d76a942426119615e9b485718fe539f351cb183d94304abafe83dc1c18",
+      "valid_windows": 104,
+      "valid_windows_by_slot": [
+        39,
+        33,
+        32
+      ],
+      "member_bytes": 34911628,
+      "read_decode_validate_seconds": 0.3812231000047177
+    },
+    {
+      "study_id_sha256": "b77009173d99e384c8f231e83a27dce6b1d125e9419af4c4fe5a2eff4a0af6a6",
+      "valid_windows": 95,
+      "valid_windows_by_slot": [
+        30,
+        35,
+        30
+      ],
+      "member_bytes": 24434704,
+      "read_decode_validate_seconds": 0.32805549999466166
+    },
+    {
+      "study_id_sha256": "61784b662a30bc2417c18f418a399ca4bf30680e2a66f8d3c9291846f912f5bd",
+      "valid_windows": 124,
+      "valid_windows_by_slot": [
+        48,
+        48,
+        28
+      ],
+      "member_bytes": 25313325,
+      "read_decode_validate_seconds": 0.34272620000410825
+    },
+    {
+      "study_id_sha256": "ac63c062dca71ac45cd194bafb86f96d461afcc0e583de13c38139423f2c33ef",
+      "valid_windows": 74,
+      "valid_windows_by_slot": [
+        26,
+        22,
+        26
+      ],
+      "member_bytes": 21733909,
+      "read_decode_validate_seconds": 0.3527710000053048
+    },
+    {
+      "study_id_sha256": "f8b4320cc225794fa9f6ec637b97f5053adfe313999a27650147154f4ec44c26",
+      "valid_windows": 64,
+      "valid_windows_by_slot": [
+        24,
+        24,
+        16
+      ],
+      "member_bytes": 15397906,
+      "read_decode_validate_seconds": 0.2881809000391513
+    },
+    {
+      "study_id_sha256": "5f9587976068f4438a1be7067018646197f292353333c271870f9a5b429d75ad",
+      "valid_windows": 64,
+      "valid_windows_by_slot": [
+        19,
+        26,
+        19
+      ],
+      "member_bytes": 21171215,
+      "read_decode_validate_seconds": 0.3284192999708466
+    },
+    {
+      "study_id_sha256": "e9aed9aa7d8915859b98d020f8879ea2f26caab91bff6d443dc118176e7b756a",
+      "valid_windows": 93,
+      "valid_windows_by_slot": [
+        33,
+        30,
+        30
+      ],
+      "member_bytes": 25334921,
+      "read_decode_validate_seconds": 0.3534978000097908
+    },
+    {
+      "study_id_sha256": "0cf55c85c4098937c86efe5686d722060fab9cce7c8037ab1b35e6fb8869ec9c",
+      "valid_windows": 72,
+      "valid_windows_by_slot": [
+        24,
+        24,
+        24
+      ],
+      "member_bytes": 23166052,
+      "read_decode_validate_seconds": 0.33988819998921826
+    },
+    {
+      "study_id_sha256": "e5f4802af857155e3bc456bf9a066864e8474ab767e2170c68dfed72bf62604e",
+      "valid_windows": 70,
+      "valid_windows_by_slot": [
+        23,
+        25,
+        22
+      ],
+      "member_bytes": 21670102,
+      "read_decode_validate_seconds": 0.351692299998831
+    },
+    {
+      "study_id_sha256": "ac490c0a99cc5c58f77c98dc747165cddbbc5847a70255341410b70ba6e1487a",
+      "valid_windows": 90,
+      "valid_windows_by_slot": [
+        34,
+        28,
+        28
+      ],
+      "member_bytes": 25709507,
+      "read_decode_validate_seconds": 0.35921379999490455
+    },
+    {
+      "study_id_sha256": "e32d66e7f51b64e68e7dc5d63960a1fdef7de0cdf9d9516c14daaf42f6543576",
+      "valid_windows": 101,
+      "valid_windows_by_slot": [
+        36,
+        32,
+        33
+      ],
+      "member_bytes": 32785625,
+      "read_decode_validate_seconds": 0.40405850001843646
+    },
+    {
+      "study_id_sha256": "cbb774a5c427b095c8ba482218624d956e9502af481b94060125a6c68c6d0dc1",
+      "valid_windows": 72,
+      "valid_windows_by_slot": [
+        23,
+        24,
+        25
+      ],
+      "member_bytes": 21119469,
+      "read_decode_validate_seconds": 0.34493750002002344
+    },
+    {
+      "study_id_sha256": "fd07ba0f9db82de2be61fea3373909ecdac5323b650e40a95e82f3c1b9612854",
+      "valid_windows": 62,
+      "valid_windows_by_slot": [
+        20,
+        20,
+        22
+      ],
+      "member_bytes": 18536018,
+      "read_decode_validate_seconds": 0.34956449997844175
+    },
+    {
+      "study_id_sha256": "ad8e23cf645c23ad987debaf0d410e573523348b08097722a64482b72c9f372b",
+      "valid_windows": 101,
+      "valid_windows_by_slot": [
+        41,
+        33,
+        27
+      ],
+      "member_bytes": 26123187,
+      "read_decode_validate_seconds": 0.4209186999942176
+    },
+    {
+      "study_id_sha256": "b18266890c6d88ce7ce9496d53baee57f2ecc756cd0e6f1514d3c6bd6ee878c8",
+      "valid_windows": 95,
+      "valid_windows_by_slot": [
+        30,
+        30,
+        35
+      ],
+      "member_bytes": 28365649,
+      "read_decode_validate_seconds": 0.4045824999921024
+    },
+    {
+      "study_id_sha256": "3a0f2734e12ee4276fe0b4c67c17025c28743d7a00c5da899c8ee0d59ebc47fe",
+      "valid_windows": 113,
+      "valid_windows_by_slot": [
+        35,
+        31,
+        47
+      ],
+      "member_bytes": 27715890,
+      "read_decode_validate_seconds": 0.4143247000174597
+    },
+    {
+      "study_id_sha256": "a7a10feb46df61594bdcb9bf7f5035bbf28b8712d9315fde1f34a5d6454b59a5",
+      "valid_windows": 62,
+      "valid_windows_by_slot": [
+        22,
+        24,
+        16
+      ],
+      "member_bytes": 16498132,
+      "read_decode_validate_seconds": 0.30984439997700974
+    },
+    {
+      "study_id_sha256": "c1b08548215fe50f373fc2e2d46de5bafb6f88d42aad9a91ee990a21ea44dc4b",
+      "valid_windows": 120,
+      "valid_windows_by_slot": [
+        36,
+        43,
+        41
+      ],
+      "member_bytes": 36970204,
+      "read_decode_validate_seconds": 0.44462470000144094
+    },
+    {
+      "study_id_sha256": "301d422203734cede439575119317e3f1548780b3a097760b29e57f59dd8c75c",
+      "valid_windows": 89,
+      "valid_windows_by_slot": [
+        30,
+        30,
+        29
+      ],
+      "member_bytes": 28436287,
+      "read_decode_validate_seconds": 0.37789509998401627
+    },
+    {
+      "study_id_sha256": "af6baba484e9b3b639d3c254bc456af9b04161a666027960eccdeab9b7b3bbc5",
+      "valid_windows": 90,
+      "valid_windows_by_slot": [
+        30,
+        30,
+        30
+      ],
+      "member_bytes": 32332422,
+      "read_decode_validate_seconds": 0.38351660000626
+    },
+    {
+      "study_id_sha256": "2b9bd66c84813b5df8e00084948197a4520e0b816125f0c0b86542bf2fb293ab",
+      "valid_windows": 90,
+      "valid_windows_by_slot": [
+        30,
+        30,
+        30
+      ],
+      "member_bytes": 20992046,
+      "read_decode_validate_seconds": 0.33415539999259636
+    },
+    {
+      "study_id_sha256": "7c4d0fff12016e7afc9d74c933b420f5e2e2e439f3397eb499fdeb4b31393c33",
+      "valid_windows": 79,
+      "valid_windows_by_slot": [
+        22,
+        30,
+        27
+      ],
+      "member_bytes": 24354721,
+      "read_decode_validate_seconds": 0.3506550999591127
+    },
+    {
+      "study_id_sha256": "ea331664f22abc883237a4d691628fed1de406dd3d65fcfd0362972c53936cd0",
+      "valid_windows": 101,
+      "valid_windows_by_slot": [
+        32,
+        33,
+        36
+      ],
+      "member_bytes": 32571983,
+      "read_decode_validate_seconds": 0.37835469999117777
+    },
+    {
+      "study_id_sha256": "177294b78bf4e03459e10c21f085416ba4e2962260e7eb13cfb4f93211ec24b2",
+      "valid_windows": 95,
+      "valid_windows_by_slot": [
+        35,
+        30,
+        30
+      ],
+      "member_bytes": 25365406,
+      "read_decode_validate_seconds": 0.3477598000317812
+    },
+    {
+      "study_id_sha256": "c952c8bf8f92cae1fafe1477f2491e15d814582ba5f0593629a63f8900508b65",
+      "valid_windows": 62,
+      "valid_windows_by_slot": [
+        20,
+        20,
+        22
+      ],
+      "member_bytes": 17610005,
+      "read_decode_validate_seconds": 0.3053675999981351
+    },
+    {
+      "study_id_sha256": "b2f3ef40e3d878884e6e2e3f7c2c617e6a966c221b73b04d176f454e981dace0",
+      "valid_windows": 101,
+      "valid_windows_by_slot": [
+        33,
+        36,
+        32
+      ],
+      "member_bytes": 31741150,
+      "read_decode_validate_seconds": 0.37875329999951646
+    },
+    {
+      "study_id_sha256": "1742e487d9ed1766c31c22758e1941ad754edf1f3f5a8cbbc5f8d6c348b70691",
+      "valid_windows": 104,
+      "valid_windows_by_slot": [
+        36,
+        36,
+        32
+      ],
+      "member_bytes": 32912128,
+      "read_decode_validate_seconds": 0.39023369998903945
+    },
+    {
+      "study_id_sha256": "cf8b3294010a18d9b342af2e64eb74aa177c091a982ca358978fac2f4ebdd862",
+      "valid_windows": 88,
+      "valid_windows_by_slot": [
+        28,
+        30,
+        30
+      ],
+      "member_bytes": 28578498,
+      "read_decode_validate_seconds": 0.36173910001525655
+    },
+    {
+      "study_id_sha256": "dfaea2c4ba33a81b1c21ffdba093bf6c0e59336c1462ffdf2e69db7586d8efb3",
+      "valid_windows": 56,
+      "valid_windows_by_slot": [
+        22,
+        17,
+        17
+      ],
+      "member_bytes": 14345137,
+      "read_decode_validate_seconds": 0.2992149000056088
+    },
+    {
+      "study_id_sha256": "4f9f3962f3c951c0c28f114187b4f6248b4f52e8cf7f42d0199d8f087f062421",
+      "valid_windows": 77,
+      "valid_windows_by_slot": [
+        26,
+        24,
+        27
+      ],
+      "member_bytes": 23221717,
+      "read_decode_validate_seconds": 0.3367881000158377
+    },
+    {
+      "study_id_sha256": "1bce0964eeaf08317a7efd8d68708ff8880a88f07eb9559c08892520a3229e8e",
+      "valid_windows": 91,
+      "valid_windows_by_slot": [
+        29,
+        32,
+        30
+      ],
+      "member_bytes": 25607401,
+      "read_decode_validate_seconds": 0.34194310003658757
+    },
+    {
+      "study_id_sha256": "532a5aab8eebf0f22a6b2989465d855ed53b0e2839fbd8950ee82da2268ed5eb",
+      "valid_windows": 92,
+      "valid_windows_by_slot": [
+        30,
+        34,
+        28
+      ],
+      "member_bytes": 33654899,
+      "read_decode_validate_seconds": 0.378207299974747
+    },
+    {
+      "study_id_sha256": "02320265ca8404d484f36ad19cf1e7dff0683bbe65af9e5c8523e34a808907d4",
+      "valid_windows": 88,
+      "valid_windows_by_slot": [
+        30,
+        30,
+        28
+      ],
+      "member_bytes": 24132354,
+      "read_decode_validate_seconds": 0.33104640000965446
+    },
+    {
+      "study_id_sha256": "9f27e3af84b2ad9fbe102151aa826f8efd423018d7a52b6ac88d93ed79cf0252",
+      "valid_windows": 57,
+      "valid_windows_by_slot": [
+        19,
+        17,
+        21
+      ],
+      "member_bytes": 21683082,
+      "read_decode_validate_seconds": 0.3108735000132583
+    },
+    {
+      "study_id_sha256": "c74578f1f891329d09ebfc1034e61cd8132a24d3f1e9ed5739985d2abe95cc28",
+      "valid_windows": 102,
+      "valid_windows_by_slot": [
+        34,
+        30,
+        38
+      ],
+      "member_bytes": 30509139,
+      "read_decode_validate_seconds": 0.3676827999879606
+    },
+    {
+      "study_id_sha256": "6a7dac4f4906dd2c3512f5082e9cbe7e076379c4c4f4ea5571ac331d466fdddd",
+      "valid_windows": 92,
+      "valid_windows_by_slot": [
+        28,
+        34,
+        30
+      ],
+      "member_bytes": 32884901,
+      "read_decode_validate_seconds": 0.3757728000055067
+    },
+    {
+      "study_id_sha256": "10233944686f55539826c478f07a1d2a92b2547914b83aa5a4436352ca69bf7f",
+      "valid_windows": 57,
+      "valid_windows_by_slot": [
+        19,
+        19,
+        19
+      ],
+      "member_bytes": 19690656,
+      "read_decode_validate_seconds": 0.31555920001119375
+    },
+    {
+      "study_id_sha256": "7a3a7503ec61fa1bc994572316530eee61facb7294fbfd8469d089dab5ab3a62",
+      "valid_windows": 78,
+      "valid_windows_by_slot": [
+        26,
+        24,
+        28
+      ],
+      "member_bytes": 21578213,
+      "read_decode_validate_seconds": 0.32007810001960024
+    },
+    {
+      "study_id_sha256": "c8aec0f537e3f00c6cf2915f380fe2af3d30f1899e9d580c93b0b8d72020c830",
+      "valid_windows": 99,
+      "valid_windows_by_slot": [
+        24,
+        36,
+        39
+      ],
+      "member_bytes": 34919937,
+      "read_decode_validate_seconds": 0.41685229999711737
+    },
+    {
+      "study_id_sha256": "969285afe1d6b3ac96eccd17e6f08f04c05b3916de724816a1cdd87013666a01",
+      "valid_windows": 106,
+      "valid_windows_by_slot": [
+        36,
+        38,
+        32
+      ],
+      "member_bytes": 31348006,
+      "read_decode_validate_seconds": 0.3906760000390932
+    },
+    {
+      "study_id_sha256": "8bf411c23c1cc1c43a97432924a256c1b67e5483d86ca17ce2a5dffbc2325377",
+      "valid_windows": 101,
+      "valid_windows_by_slot": [
+        33,
+        36,
+        32
+      ],
+      "member_bytes": 31487584,
+      "read_decode_validate_seconds": 0.401208899973426
+    },
+    {
+      "study_id_sha256": "bc09a46ac70a5b49980e6a4248b1783251bc5b3da677954bc7f1f2d902aae6b8",
+      "valid_windows": 67,
+      "valid_windows_by_slot": [
+        21,
+        23,
+        23
+      ],
+      "member_bytes": 14749746,
+      "read_decode_validate_seconds": 0.3100827999878675
+    },
+    {
+      "study_id_sha256": "f9656816bf7db003b8dbc8ab6f7af5f803bb392949e7f149bc1ba9efbcd5e395",
+      "valid_windows": 111,
+      "valid_windows_by_slot": [
+        40,
+        38,
+        33
+      ],
+      "member_bytes": 35662178,
+      "read_decode_validate_seconds": 0.3890296000172384
+    },
+    {
+      "study_id_sha256": "e73308f949e9fcfc41858fd81371efbeb195cb45a71272c456799a790c3713ec",
+      "valid_windows": 118,
+      "valid_windows_by_slot": [
+        48,
+        34,
+        36
+      ],
+      "member_bytes": 26003783,
+      "read_decode_validate_seconds": 0.34751150000374764
+    },
+    {
+      "study_id_sha256": "65d0028025613e79bfef46588f4ec8ed0efdbe0e8aa85a365400e2ddfabf624c",
+      "valid_windows": 110,
+      "valid_windows_by_slot": [
+        33,
+        32,
+        45
+      ],
+      "member_bytes": 34084775,
+      "read_decode_validate_seconds": 0.38721060001989827
+    },
+    {
+      "study_id_sha256": "58be3f101bfa3d43cd10eafd16bf717e59395b7bc65b8fdf02d093e1d5ca73fb",
+      "valid_windows": 62,
+      "valid_windows_by_slot": [
+        20,
+        16,
+        26
+      ],
+      "member_bytes": 15247511,
+      "read_decode_validate_seconds": 0.2866224000463262
+    },
+    {
+      "study_id_sha256": "5cc856d3c953fad340adedea61c881770bf5548b37afe7da2cb9b13d14f73a29",
+      "valid_windows": 101,
+      "valid_windows_by_slot": [
+        33,
+        36,
+        32
+      ],
+      "member_bytes": 30601923,
+      "read_decode_validate_seconds": 0.36250380001729354
+    },
+    {
+      "study_id_sha256": "6d017e543d2db2b17c5cd8a1c8ddff315aa725c4011eddc5c5e172161735c501",
+      "valid_windows": 90,
+      "valid_windows_by_slot": [
+        28,
+        34,
+        28
+      ],
+      "member_bytes": 28706270,
+      "read_decode_validate_seconds": 0.36042709997855127
+    },
+    {
+      "study_id_sha256": "b68278f3b20a1448ef75a44712cfbf96a7a49dfd54c172af1a537cfd366c93ce",
+      "valid_windows": 68,
+      "valid_windows_by_slot": [
+        27,
+        21,
+        20
+      ],
+      "member_bytes": 18720219,
+      "read_decode_validate_seconds": 0.3140426999889314
+    },
+    {
+      "study_id_sha256": "a698eca4bca1efd6a0c0cf695978d25ea6c2ade197f72ffdda3c3d371e9b7844",
+      "valid_windows": 91,
+      "valid_windows_by_slot": [
+        29,
+        32,
+        30
+      ],
+      "member_bytes": 22000230,
+      "read_decode_validate_seconds": 0.3177395999664441
+    },
+    {
+      "study_id_sha256": "bd03b32a1a9d10cb9e15af9828acf6dd86c33208357d4f0f94894ba8dc1af8be",
+      "valid_windows": 64,
+      "valid_windows_by_slot": [
+        24,
+        24,
+        16
+      ],
+      "member_bytes": 15011636,
+      "read_decode_validate_seconds": 0.29784519999520853
+    },
+    {
+      "study_id_sha256": "2c5c7ff0d4f455bc10d667b2e4da97bf7fdaa9b8235e69dbf09b56ba47973dd9",
+      "valid_windows": 94,
+      "valid_windows_by_slot": [
+        18,
+        32,
+        44
+      ],
+      "member_bytes": 26331457,
+      "read_decode_validate_seconds": 0.34814970003208145
+    },
+    {
+      "study_id_sha256": "9ba4e804de0d3414dc911bbbbf6c28525dbb7d2c293993bb3157eaa7cef82f9b",
+      "valid_windows": 62,
+      "valid_windows_by_slot": [
+        24,
+        22,
+        16
+      ],
+      "member_bytes": 15862293,
+      "read_decode_validate_seconds": 0.2850267000030726
+    },
+    {
+      "study_id_sha256": "d7fbe0a0222343ec555513ed9a15b9ec60aede3f3a4082141772726059214b3e",
+      "valid_windows": 94,
+      "valid_windows_by_slot": [
+        33,
+        30,
+        31
+      ],
+      "member_bytes": 31440137,
+      "read_decode_validate_seconds": 0.3808446999755688
+    },
+    {
+      "study_id_sha256": "4085e36148b724cb0936e9602ad7b68b44be75badb8fa37fcd96d76fc4b2cb0a",
+      "valid_windows": 99,
+      "valid_windows_by_slot": [
+        26,
+        37,
+        36
+      ],
+      "member_bytes": 34977648,
+      "read_decode_validate_seconds": 0.40923700004350394
+    },
+    {
+      "study_id_sha256": "a1f2f969e3695acd9c9350fcaabb31c27eb45bc03adda3388fbfd2467e0db610",
+      "valid_windows": 94,
+      "valid_windows_by_slot": [
+        30,
+        34,
+        30
+      ],
+      "member_bytes": 29191043,
+      "read_decode_validate_seconds": 0.3640035999706015
+    },
+    {
+      "study_id_sha256": "d01b0418ee975a0d614f42feeffa95ec9f364e89489cef7d30170d81568d9a71",
+      "valid_windows": 93,
+      "valid_windows_by_slot": [
+        33,
+        30,
+        30
+      ],
+      "member_bytes": 34669114,
+      "read_decode_validate_seconds": 0.36895959998946637
+    },
+    {
+      "study_id_sha256": "d9b22f41d714ca0ead6fd22d0885c718f52cf49f3a1c99df2a53b7a3864a5f46",
+      "valid_windows": 57,
+      "valid_windows_by_slot": [
+        19,
+        19,
+        19
+      ],
+      "member_bytes": 21738250,
+      "read_decode_validate_seconds": 0.3268614999833517
+    },
+    {
+      "study_id_sha256": "4e15ce1bfc1c48e797204bf88a66eab4b9a71da4db364e9ded6487facd7f4501",
+      "valid_windows": 98,
+      "valid_windows_by_slot": [
+        30,
+        48,
+        20
+      ],
+      "member_bytes": 24028997,
+      "read_decode_validate_seconds": 0.3407114000292495
+    },
+    {
+      "study_id_sha256": "e53c2636e06c1342c178096d1b7aa4795e38aabf15f21b13d94d16bcdcd37ec9",
+      "valid_windows": 111,
+      "valid_windows_by_slot": [
+        31,
+        48,
+        32
+      ],
+      "member_bytes": 26738180,
+      "read_decode_validate_seconds": 0.34807739994721487
+    },
+    {
+      "study_id_sha256": "63ccdbceca9d0d1e6dfaa19ceb73bcbabe8fea9362108da1bf9fbd9213c01d3e",
+      "valid_windows": 84,
+      "valid_windows_by_slot": [
+        31,
+        26,
+        27
+      ],
+      "member_bytes": 31847636,
+      "read_decode_validate_seconds": 0.3692490999819711
+    },
+    {
+      "study_id_sha256": "6ddfdf9f1535f53c30190ea70f4710af05af01d66a13aae139012619c5b519cb",
+      "valid_windows": 106,
+      "valid_windows_by_slot": [
+        40,
+        40,
+        26
+      ],
+      "member_bytes": 37949639,
+      "read_decode_validate_seconds": 0.39714150002691895
+    },
+    {
+      "study_id_sha256": "9fe9ea8cdededc1077903018b294c5db755df42372dcf14c24cce59ea42c1bdf",
+      "valid_windows": 102,
+      "valid_windows_by_slot": [
+        30,
+        38,
+        34
+      ],
+      "member_bytes": 29479369,
+      "read_decode_validate_seconds": 0.3491900999797508
+    },
+    {
+      "study_id_sha256": "7214192d27f25f08428dbec8776fe1305893480977bfa783fe15dbc8f360a570",
+      "valid_windows": 87,
+      "valid_windows_by_slot": [
+        40,
+        16,
+        31
+      ],
+      "member_bytes": 27844013,
+      "read_decode_validate_seconds": 0.35590359999332577
+    },
+    {
+      "study_id_sha256": "91fb037a784431034f02aa784a8c579cd7e480315dad19f57ef5848084e9f4ee",
+      "valid_windows": 84,
+      "valid_windows_by_slot": [
+        26,
+        30,
+        28
+      ],
+      "member_bytes": 24540984,
+      "read_decode_validate_seconds": 0.3465552999987267
+    },
+    {
+      "study_id_sha256": "dac629905e83e98614111c0ffd8220d671d6b8de60e9932e4671f24b281608de",
+      "valid_windows": 56,
+      "valid_windows_by_slot": [
+        16,
+        22,
+        18
+      ],
+      "member_bytes": 13626010,
+      "read_decode_validate_seconds": 0.2898159999749623
+    },
+    {
+      "study_id_sha256": "67e44c5280a3a9f622accadaa1ccf45bf07078b1cfa37a4eef1499482d8ee3d3",
+      "valid_windows": 79,
+      "valid_windows_by_slot": [
+        23,
+        27,
+        29
+      ],
+      "member_bytes": 31716029,
+      "read_decode_validate_seconds": 0.35718019999330863
+    },
+    {
+      "study_id_sha256": "0617c60578b40eca3230c4830eb2755bf28d3e09ce9bde045ef749d23f2b010c",
+      "valid_windows": 100,
+      "valid_windows_by_slot": [
+        37,
+        30,
+        33
+      ],
+      "member_bytes": 28427031,
+      "read_decode_validate_seconds": 0.35861940000904724
+    },
+    {
+      "study_id_sha256": "a38e87204b54b8d129ca949e09e74dbea0278f5a6c38e74330d45e8334d2567f",
+      "valid_windows": 79,
+      "valid_windows_by_slot": [
+        29,
+        30,
+        20
+      ],
+      "member_bytes": 26223020,
+      "read_decode_validate_seconds": 0.35503909998806193
+    },
+    {
+      "study_id_sha256": "f8349f29279fb6b0eac80d47968d8f45f0084f0a0e1375d4688556be19cd4ecc",
+      "valid_windows": 106,
+      "valid_windows_by_slot": [
+        32,
+        36,
+        38
+      ],
+      "member_bytes": 31493410,
+      "read_decode_validate_seconds": 0.37969240004895255
+    },
+    {
+      "study_id_sha256": "33c4a433d0d0f5bca8379c45f40cf5a805f50d6e993df57df76a5e4eacfe0828",
+      "valid_windows": 61,
+      "valid_windows_by_slot": [
+        21,
+        19,
+        21
+      ],
+      "member_bytes": 22610504,
+      "read_decode_validate_seconds": 0.32322870002826676
+    },
+    {
+      "study_id_sha256": "e58963851cd64c26e55c06ebdc7cdab8f71325bc8fb0e9d9f3704c54600bd9ad",
+      "valid_windows": 56,
+      "valid_windows_by_slot": [
+        18,
+        16,
+        22
+      ],
+      "member_bytes": 15240660,
+      "read_decode_validate_seconds": 0.2939953000168316
+    },
+    {
+      "study_id_sha256": "b2b10dd663de4f19c3bbc2ac6b031118671d31330c7cd26cfceb75c5bff5bb5e",
+      "valid_windows": 104,
+      "valid_windows_by_slot": [
+        36,
+        30,
+        38
+      ],
+      "member_bytes": 36657401,
+      "read_decode_validate_seconds": 0.404735799995251
+    },
+    {
+      "study_id_sha256": "03f2624e3dd7152cac1d4fb0b0787be487a64ac42e59e27f0977f588f47c4879",
+      "valid_windows": 112,
+      "valid_windows_by_slot": [
+        48,
+        32,
+        32
+      ],
+      "member_bytes": 27438666,
+      "read_decode_validate_seconds": 0.3472252000356093
+    },
+    {
+      "study_id_sha256": "8e041c49516cd45785526d4600e0f42a90bc3ef025b3ee32a60e81e617d0a118",
+      "valid_windows": 61,
+      "valid_windows_by_slot": [
+        19,
+        23,
+        19
+      ],
+      "member_bytes": 20892755,
+      "read_decode_validate_seconds": 0.3460872999858111
+    },
+    {
+      "study_id_sha256": "10ddcc469099b95a20a21ac94e37cd3f95d67e51011a2a40d8f805bfadf55ba7",
+      "valid_windows": 108,
+      "valid_windows_by_slot": [
+        48,
+        32,
+        28
+      ],
+      "member_bytes": 26160593,
+      "read_decode_validate_seconds": 0.35268060001544654
+    },
+    {
+      "study_id_sha256": "6438a67edb320c1fd01937d0ba9bc737f741f6c4635ba6029be52d39741357e1",
+      "valid_windows": 85,
+      "valid_windows_by_slot": [
+        25,
+        30,
+        30
+      ],
+      "member_bytes": 27490566,
+      "read_decode_validate_seconds": 0.3612066000350751
+    },
+    {
+      "study_id_sha256": "50e013f9ae7e671279041911069891f361cbffb85d9ed3c5e57c3a9719de6c4b",
+      "valid_windows": 93,
+      "valid_windows_by_slot": [
+        33,
+        30,
+        30
+      ],
+      "member_bytes": 24874350,
+      "read_decode_validate_seconds": 0.34246280003571883
+    }
+  ],
+  "raw_DICOM_or_teacher_read_or_fit": false,
+  "whole_cache_export_or_acquisition": false,
+  "next_gate": "Full24 processed array QA and complete4207 index required before formal fitting",
+  "limits": [
+    "Remote reference byte comparisons are source-bound runtime proof; original DICOM was not rerun on this PC.",
+    "Only this audited whole-shard processed data were downloaded; no full dataset or archive extraction.",
+    "One successful shard does not establish all4207 decoder coverage, capacity, runtime or learned accuracy."
+  ]
+}

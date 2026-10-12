@@ -1,0 +1,83 @@
+{
+  "schema_version": "p009_artificial_validation_v1",
+  "seed": 20261008,
+  "protected_baseline_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "builder_sha256": "e3d9f1c1290c1672f50f039584cf67d6af7c24c2421c5f2e6f211c2cbefc6dd6",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch": "2.10.0+cu128",
+  "forwards": [
+    {
+      "input_shape": [
+        1,
+        94,
+        3,
+        320,
+        320
+      ],
+      "output_shape": [
+        1,
+        12
+      ],
+      "grad_disabled": true,
+      "finite": true
+    },
+    {
+      "input_shape": [
+        1,
+        94,
+        3,
+        320,
+        320
+      ],
+      "output_shape": [
+        1,
+        12
+      ],
+      "grad_disabled": true,
+      "finite": true
+    },
+    {
+      "input_shape": [
+        1,
+        94,
+        3,
+        320,
+        320
+      ],
+      "output_shape": [
+        1,
+        12
+      ],
+      "grad_disabled": true,
+      "finite": true
+    },
+    {
+      "input_shape": [
+        1,
+        94,
+        3,
+        320,
+        320
+      ],
+      "output_shape": [
+        1,
+        12
+      ],
+      "grad_disabled": true,
+      "finite": true
+    }
+  ],
+  "submission_contract": {
+    "studies": 2,
+    "targets": 12,
+    "valid": true
+  },
+  "peak_allocated_mib": 379.27685546875,
+  "six_stdlib_unittests": "run separately before this receipt",
+  "limits": [
+    "Random 8-dimensional encoder tests original windows/attention and inference API; not real CoAt checkpoint accuracy or memory.",
+    "Physical crop paths separately use artificial native pixels and deterministic cv2 stub; no real OpenCV interpolation/MRI equivalence claim.",
+    "Real GPU/CPU worker processes and real checkpoint strict loading are not exercised."
+  ],
+  "real_MRI_weights_training_remote_or_submission": false
+}

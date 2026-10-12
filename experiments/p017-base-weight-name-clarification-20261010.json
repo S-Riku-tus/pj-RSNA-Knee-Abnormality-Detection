@@ -1,0 +1,20 @@
+{
+  "schema_version": "p017_baseline_weight_order_wording_clarification_v1",
+  "at_utc": "2026-10-10T10:14:11.609119+00:00",
+  "original_preregistration_preserved": {
+    "path": "experiments/p017-native-baseline-failover-preregistration-20261010.json",
+    "sha256": "5a42251f58fd64484bbe98b09b2c724be770524630ed405d491304a84f09af23"
+  },
+  "prior_field": "unchanged.original_S5_SWA_70_30",
+  "clarification": "The field names the two unchanged baseline components; their order in the field name is not an assignment of coefficients. The actual unchanged original5 arithmetic is 0.7*Raptor + 0.3*S5, float32 cast, no final rerank.",
+  "numeric_evidence": {
+    "path": "artifacts/research/20261010-p012-baseline-cleanup-root-v3/actual64-root-acceptance-v1.json",
+    "sha256": "daf0f4bde922f47d0db072aab3236609caa7dae79ef08d5419334b0c3f3433e5",
+    "actual_fixed70_30_float32_max_abs_diff": 0.0
+  },
+  "baseline_NB_sha256": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee",
+  "coefficients_math_source_model_and_candidate_factor_changed": false,
+  "P017_native_valid_other10_baseline80_native20_MCL_Syn_baseline_only_unchanged": true,
+  "actual_P017_Save_Submit": 0,
+  "Gold_or_Public_coefficient_selection": false
+}

@@ -1,0 +1,197 @@
+{
+  "schema_version": "p009_savedV2_independent_source_settings_binding",
+  "checked_at_utc": "2026-10-08T12:33:17.404453+00:00",
+  "status": "saved_source_settings_binding_passed_actual_profile_pending",
+  "all_passed": true,
+  "checks": {
+    "exact_GetKernel_V2_only_once": true,
+    "no_status_output_or_payload_reads_or_mutation": true,
+    "accepted_same_ref_savedV2_kernel137665364": true,
+    "save_no_error_or_invalid_sources": true,
+    "source_nonempty": true,
+    "critical_settings_present_in_raw_not_SDK_defaults": true,
+    "returned_ref_author_slug_kernel_exact": true,
+    "returned_current_saved_version2": true,
+    "canonical_title_matches_request": true,
+    "saved_private_matches_request": true,
+    "saved_GPU_enabled_matches_request": true,
+    "saved_Internet_OFF_matches_request": true,
+    "saved_TPU_disabled_matches_request": true,
+    "saved_T4_shape_matches_request": true,
+    "saved_Original_container_digest_matches_request": true,
+    "request_original_pinning_type": true,
+    "python_notebook_metadata_and_blob": true,
+    "request_SAVE_AND_RUN_ALL": true,
+    "request_explicit_both_Dataset_Version1_pins": true,
+    "saved_Dataset_refs_match_both_requested_pins": true,
+    "competition_Input_exact": true,
+    "no_extra_kernel_or_model_inputs": true,
+    "local_profile_SHA_exact_launch": true,
+    "both_prelaunch_reviews_all_passed_18_and35": true,
+    "both_review_file_SHAs_bound_in_launch": true,
+    "all53_prelaunch_checks_bound_to_same_profile": true,
+    "package_local_profile_byte_exact": true,
+    "all_package_files_SHA_size_exact": true,
+    "old_V1_fresh_official_ERROR_preserved": true,
+    "production19_and_scored14_unchanged": true,
+    "all13cells10code_saved": true,
+    "all_saved_cells_metadata_text_exact_local_and_request": true,
+    "all_saved_code_outputs_empty_no_execution_count": true,
+    "all_four_prediction_literals_bound_to_reviewed_local": true,
+    "saved_cell00_text_type_id_metadata_exact": true,
+    "saved_cell01_text_type_id_metadata_exact": true,
+    "saved_cell02_text_type_id_metadata_exact": true,
+    "saved_cell03_text_type_id_metadata_exact": true,
+    "saved_cell04_text_type_id_metadata_exact": true,
+    "saved_cell05_text_type_id_metadata_exact": true,
+    "saved_cell06_text_type_id_metadata_exact": true,
+    "saved_cell07_text_type_id_metadata_exact": true,
+    "saved_cell08_text_type_id_metadata_exact": true,
+    "saved_cell09_text_type_id_metadata_exact": true,
+    "saved_cell10_text_type_id_metadata_exact": true,
+    "saved_cell11_text_type_id_metadata_exact": true,
+    "saved_cell12_text_type_id_metadata_exact": true,
+    "all10_saved_codecells_compile_without_execution": true,
+    "saved_cell5_embedded_p006_metrics.py_exact_SHA": true,
+    "saved_cell6_embedded_p007_metrics.py_exact_SHA": true,
+    "saved_cell7_embedded_p009_metrics.py_exact_SHA": true,
+    "same_fixed32_UID_order_unique_SHA": true,
+    "same_label_free_goldexcluded_resource_profile_summary": true,
+    "diagnostic_competition_rerun_guard_retained": true
+  },
+  "checks_passed": 54,
+  "checks_total": 54,
+  "ref": "rsraki/p009-profile-32-fov140-fov160",
+  "saved_version": 2,
+  "kernel_id": 137665364,
+  "local_notebook_sha256": "57679651c3cc8c670c126465ee2e09135bea7d4bb8bab703d345ea43ef20ed0a",
+  "saved_API_source_utf8_sha256": "be02f77d2e726dd1cd1a1db0a2034cc58d5074cf0578e16acb4537ef5e9b0dd4",
+  "source_comparison": "API source serialization converts source lists to text. Every cell and full notebook match after only this normalization; raw notebook file SHA is not claimed equal to API blob.",
+  "cells": [
+    {
+      "index": 0,
+      "cell_type": "markdown",
+      "source_utf8_sha256": "3f3ca25912eff6c0c848ef452527928c83aee4dd1dddf2823299688b65cafffd",
+      "source_chars": 2537
+    },
+    {
+      "index": 1,
+      "cell_type": "markdown",
+      "source_utf8_sha256": "8969448ad366510e35276a9649f7321aec4b996744c7fbb04072ac93c8607ffa",
+      "source_chars": 1739
+    },
+    {
+      "index": 2,
+      "cell_type": "markdown",
+      "source_utf8_sha256": "4b7b1a557aa21773172dc833cf01736732d46879410cc1991f00078ee177da58",
+      "source_chars": 1724
+    },
+    {
+      "index": 3,
+      "cell_type": "code",
+      "source_utf8_sha256": "1a131a459c7b302f3a22caa51bf9134ab43eb9804bed9799dd96ef7d796a7dfc",
+      "source_chars": 7911
+    },
+    {
+      "index": 4,
+      "cell_type": "code",
+      "source_utf8_sha256": "73479f7fd919996f4723ef93b4c881cbf698b9d79082cf7e1073fd85bd2b1ab1",
+      "source_chars": 1557
+    },
+    {
+      "index": 5,
+      "cell_type": "code",
+      "source_utf8_sha256": "b5b63b8a7fc39250d40d36714607a2aac8bd52ac7c870b603d7a3a0cdc9b54a9",
+      "source_chars": 8804
+    },
+    {
+      "index": 6,
+      "cell_type": "code",
+      "source_utf8_sha256": "160b295d2a03df7f28c82fda7b6910a8724d146662ce6343cce9f01adcf22434",
+      "source_chars": 10389
+    },
+    {
+      "index": 7,
+      "cell_type": "code",
+      "source_utf8_sha256": "631b7f92bdcd97415dd24ca108f4e2f49a80929df0213d2ffb882aca4b81af0c",
+      "source_chars": 18109
+    },
+    {
+      "index": 8,
+      "cell_type": "code",
+      "source_utf8_sha256": "fe88cbfa098fd6760016417cefe8063f38265465db536cd02633df9c65edc17c",
+      "source_chars": 116
+    },
+    {
+      "index": 9,
+      "cell_type": "code",
+      "source_utf8_sha256": "81cfd2b20dbc25662adbda3b94c98b1bcdfa366c7ca997313139d718284790b8",
+      "source_chars": 6579
+    },
+    {
+      "index": 10,
+      "cell_type": "code",
+      "source_utf8_sha256": "050aacdc1902df88b18fe1c3bc27bad57b743ca5c0e5b1c98bd1ccb1e37e5b96",
+      "source_chars": 8475
+    },
+    {
+      "index": 11,
+      "cell_type": "code",
+      "source_utf8_sha256": "d27c72236f2810c7f442032f4c56470ab6d467ae9fb618cfbe97b4cb38b5acfd",
+      "source_chars": 3708
+    },
+    {
+      "index": 12,
+      "cell_type": "code",
+      "source_utf8_sha256": "23d4ef5bddac9f2fd621e00d4e2c45a443877e7423b718f6e1ed20b9d0449003",
+      "source_chars": 203842
+    }
+  ],
+  "prelaunch_review_counts_bound": [
+    18,
+    35
+  ],
+  "inputs": {
+    "request_explicit_dataset_versions": [
+      "goodpjw2008/rsna-knee-2-5d-convnext-reader/1",
+      "nartaa/rsna-knee-publication-swa-weights-20261007/1"
+    ],
+    "returned_dataset_refs": [
+      "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+      "nartaa/rsna-knee-publication-swa-weights-20261007"
+    ],
+    "returned_internal_Dataset_version_IDs": null,
+    "scope": "Save request pins both Version1 and accepted invalidDatasetSources is empty. Saved GetKernel returns names without version or internal IDs; internal version binding remains unobserved by this endpoint."
+  },
+  "settings": {
+    "isPrivate": true,
+    "enableGpu": true,
+    "enableInternet": false,
+    "enableTpu": false,
+    "machineShape": "NvidiaTeslaT4",
+    "dockerImage": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f"
+  },
+  "metadata_lastRunTime": "2026-10-05T12:30:10.413Z",
+  "metadata_lastRunTime_scope": "Returned timestamp is retained verbatim; it is not worker start, completion or runtime evidence.",
+  "runtime_gate_pending": "No V2 status/output read was made. Actual Kaggle Python3.13 Linux fork 3-task probe, all32 UID FOV140/160 model/reader/fusion numerical and resource gates remain unverified here.",
+  "old_failed_V1_preserved": true,
+  "accuracy_scope": "Resource-only diagnostic, no OOF or Public improvement measured; never a competition submission.",
+  "remote_read_calls": 1,
+  "remote_mutation_or_poll_loop": false,
+  "MRI_model_payload_GPU_training_access": false,
+  "docs_ledger_owner": "root",
+  "evidence_sha256": {
+    "artifacts/research/20261008-p009-profile32-saved-binding-independent-v2/read_once.py": "c1116915a449e910425b932946a99f230ccb074f8fea5c8e1ab406cdc03c295b",
+    "artifacts/research/20261008-p009-profile32-saved-binding-independent-v2/get-request.json": "5b5fce707af5bbc6f3069124bad584a31e6fa1eb382f88eb4993f7a238371a6c",
+    "artifacts/research/20261008-p009-profile32-saved-binding-independent-v2/read-receipt.json": "4f3d6697865f31c80e3e84e97a9947c22837c9af33b8f3ab5719748a37edafc1",
+    "artifacts/research/20261008-p009-profile32-saved-binding-independent-v2/saved-source.json": "860b4f0f0326c2e86db464b824fac18ab85ce08bf442d700fe73293aea16d1a2",
+    "artifacts/research/20261008-p009-profile32-saved-binding-independent-v2/saved-source-raw.json": "fa3ae60bf84899fa92d95c830802a5155139165885a8038d6de50d3bb5d10ec2",
+    "artifacts/research/20261008-p009-profile32-launch-v2/launch-request.json": "e8a5a935f9f192ed1909e4c0de5b7e423a146f2b8f4a299b973153906a41f909",
+    "artifacts/research/20261008-p009-profile32-launch-v2/save-response.json": "786642d64ed3236badc8b9237b00bb6d2dddb74214607421c01b115b3a46acd2",
+    "artifacts/research/20261008-p009-profile32-launch-v2/fresh-failed-V1-status.json": "501b8bf37196b8f38cf2d05f91aa9f8a3ba009b5d414eb8d78964d140cc0230e",
+    "experiments/p009-profile32-prelaunch-root-review-v2-20261008.json": "cc2b5e8fd9e3f2c90f6e694fdaccd18fb1491cb04d86d9d918ae5384b6191385",
+    "experiments/p009-profile32-independent-prelaunch-review-v2-20261008.json": "4771f75014f4bb101bca88b0288ba9f8b6813bdb5640c22f20e91272572f4b02",
+    "notebooks/public/19a_profile_p009_fov140_fov160_32.ipynb": "57679651c3cc8c670c126465ee2e09135bea7d4bb8bab703d345ea43ef20ed0a",
+    "artifacts/kaggle/p009-profile32-fov140-fov160-v2-20261008/package.json": "38814c05f6d11ce81febb77c94c801cfdb20e5296db020497b2d2b8d6c45111c"
+  }
+}

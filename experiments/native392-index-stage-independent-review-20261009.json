@@ -1,0 +1,82 @@
+{
+  "schema_version": "native392_hardlink_stage_independent_local_review_v1",
+  "reviewed_at_utc": "2026-10-08T16:27:22.072512+00:00",
+  "all_passed": true,
+  "checks": {
+    "authoritative_stager_core_SHA_299cdac_exact": true,
+    "author_preparation22_true_bool_checks": true,
+    "author_all4_source_hashes_match": true,
+    "protected_models_preprocessing_and_notebooks_unchanged": true,
+    "one_shard_integer0_to23_cli_and_runtime": true,
+    "metadata_production_exact_canonical_root_no_other_artifact_targets": true,
+    "all_resolved_paths_confined_to_workspace": true,
+    "first52_and_remaining100_saved_source_schema_checked": true,
+    "first25_and_remaining28_compact_metadata_schema_checked": true,
+    "actual_array_review13_all_bool_and5_arrays_perstudy": true,
+    "actual01_to10_metadata1757_and8785_array_prior_receipts_validated": true,
+    "actual01_to07_176_each_and08_to10_175_each_verified": true,
+    "metadata_test_actualZIP_open_guard_and_link_guard_passed": true,
+    "exact_wholegroup4207_4102group_24shards_noGold_structural_plan_checked": true,
+    "fresh_folder_parent_and_samevolume_preflight_before_body_or_link": true,
+    "single_os_link_no_archive_copy_or_extract_fallback": true,
+    "single_new_folder_creation_and_no_parent_bootstrap": true,
+    "sourceZIP_SHA_twice_and_immutable_bytes_mtime_inode_checked": true,
+    "target_samefile_nlink_exactly_plus1_receipt_checked": true,
+    "summary_exact_bytes_exclusive_xb_copy_and_original_full_stat_guard": true,
+    "metadata_hashes_rechecked_before_and_after_link": true,
+    "artificial_FINAL_receipt_failure_keeps_partial_and_no_retry_pass": true,
+    "author_artificial_KeyboardInterrupt_leaves_progress_partial_pass": true,
+    "fullindex_rejects_partial_before_archive_SHA_orNPZ_access": true,
+    "independent_partial_index_rejection_no_actual_archive_read_pass": true,
+    "only_unlink_new_success_progress_marker_no_oldsource_mutation": true,
+    "author_CPU16_and_independent_CPU4_passed": true,
+    "no_API_HTTP_realZIP_body_real_link_teacher_decode_model_GPU_fit_by_review": true
+  },
+  "checks_passed": 28,
+  "checks_total": 28,
+  "source_sha256": {
+    "stage_tools.py": "299cdac980d50013ecbec10381876055ecd5fca7d98aa23d7f9af3a3713bc154",
+    "stage_one.py": "a1923eb56b6dba3032a33d5e509290f3552fe238f515d294822a773771a3e447",
+    "test_stage_tools.py": "e411d9ca5cfe7ff00dccd26e7cd9f9e1650bf55e19f30c89b2caadec47f253f5",
+    "record_preparation.py": "6fd3a2ae2755150d27a9ca86b129a6430173880b68f45d2b73a90efa0b9f06f1"
+  },
+  "preparation_sha256": "637f72d02e5eb8121b3fbfddb269c786908ab13aee002d407d9d529e6b72d352",
+  "independent_test_sha256": "edc23811b8ded46bd8e22a9542a73a50f0639e2ccb83a06a3584e6e07dee63db",
+  "fullindex_source_normalized_sha256": "f9478250d4775dafbd0ba1d29f06bffb1247b8153209b9a5d93d82143d957d56",
+  "test_receipts": {
+    "author_suite": {
+      "tests": 16,
+      "passed": true,
+      "command": ".venv/Scripts/python.exe -m unittest discover -s artifacts/research/20261009-native392-index-stage-tools-v1 -p test_stage_tools.py -v"
+    },
+    "independent_suite": {
+      "tests": 4,
+      "passed": true,
+      "command": ".venv/Scripts/python.exe artifacts/research/20261009-native392-index-stage-independent-v1/test_independent_stage_r2.py"
+    }
+  },
+  "metadata_only_scope": {
+    "actual_shards": 10,
+    "prior_processed_studies_covered": 1757,
+    "prior_actual_array_receipts_covered": 8785,
+    "actual_arrays_reverified_by_this_review": false,
+    "actual_processed_ZIP_bodies_read": 0,
+    "actual_hardlinks_created": 0,
+    "actual_API_HTTP_calls": 0,
+    "model_GPU_DICOM_teacher_or_fit": false
+  },
+  "independent_fixture_history": {
+    "old_test_retained": true,
+    "initial_failure_was_test_path_assumption_only": "shard08/09 actual COMPLETE observation-v2, not guessed observation-v1",
+    "failure_json_sha256": "fe008893371d03d434ab49dcb9f1b7447a2ef8e0a1db7d2ae7cde305041e1cf6",
+    "production_core_modified": false
+  },
+  "limitations": [
+    "Hardlinks retain a shared writable inode; operational immutability of both aliases remains required after staging.",
+    "This review validates prior array-QA metadata; it does not reopen processed archives or independently repeat numeric array QA.",
+    "The existing full-index builder rejects .partial markers and rehashes/rechecks all archives and arrays. Stage-final receipt collection is an additional root workflow gate, not a new predicate inside that unchanged index builder.",
+    "Actual full24/4207 index and training remain separate uncompleted steps.",
+    "No local source edit, remote action, actual image decode or checkpoint access was performed."
+  ],
+  "decision": "The one-shard manual stager preparation is independently qualified under the documented immutable-alias and full24 index workflow. No authorization to acquire, train or retry is inferred."
+}

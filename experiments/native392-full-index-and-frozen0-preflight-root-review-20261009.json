@@ -1,0 +1,56 @@
+{
+  "schema_version": "native392_full_index_and_frozen0_preflight_root_review_v1",
+  "at_utc": "2026-10-09T03:23:32.100123+00:00",
+  "all_passed": true,
+  "checks": {
+    "prior_all24_acceptance_frozen": true,
+    "completed_full_train_index": true,
+    "full_UID_set_unique_sorted": true,
+    "verified_arrays_and_windows": true,
+    "labels_reports_read_false_no_bulk_unpack": true,
+    "package_and_plan_binding": true,
+    "contract_manifest_structure_bound": true,
+    "Gold_UID_and_groups_excluded": true,
+    "all24_summary_SHA_size_receipt_and_count_binding": true,
+    "protected_baseline_and_candidate_unchanged": true,
+    "normal_existing_CUDA_preflight_ready_full4207_fixed_fold0": true
+  },
+  "index_path": "data\\native392\\v2-20261009\\full-index.json",
+  "index_sha256": "7d373ae85098758a8bc322b4e65079de07e998f7b7cd42a5a2d26cc4577eae31",
+  "index_bytes": 318002,
+  "verified": {
+    "studies": 4207,
+    "arrays": 21035,
+    "valid_windows": 386196
+  },
+  "shards": 24,
+  "prior_all24_review_sha256": "d551394d738d723bc34839715afeb3e87a27cf7c40b700a99e4d301c24f2db1a",
+  "preflight": {
+    "ready": true,
+    "train_studies": 3386,
+    "valid_studies": 821,
+    "cache_studies": 4207,
+    "fitting_performed": false
+  },
+  "argv": [
+    "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\.venv\\Scripts\\python.exe",
+    "scripts/train_native_dinov2_fast16.py",
+    "preflight",
+    "--manifest",
+    "data/manifests/v1-vmohitrao-research",
+    "--index",
+    "data/native392/v2-20261009/full-index.json",
+    "--resource-gate",
+    "artifacts/research/20261009-f005-fast16-resource-gate-v1/resource-gate.json",
+    "--config",
+    "configs/experiments/f005-dinov2-native-frozen-control-fast16.json",
+    "--fold",
+    "0"
+  ],
+  "stderr": "",
+  "raw_DICOM_read_or_downloaded": false,
+  "real_fit_started": false,
+  "bulk_array_QA_repeated": false,
+  "cached_FP32_training_equivalence_qualified": false,
+  "decision": "Existing online frozen fold0 preflight passed. Actual cached training requires its own numerical and producer-lineage gates."
+}

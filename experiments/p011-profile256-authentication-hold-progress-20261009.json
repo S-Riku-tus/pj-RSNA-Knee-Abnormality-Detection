@@ -1,0 +1,104 @@
+{
+  "schema_version": "p011_actual256_success_remote_authentication_hold_v1",
+  "at_utc": "2026-10-08T18:50:35.364918+00:00",
+  "own_best_Public": 0.95,
+  "target955_reached": false,
+  "strict_above960_reached": false,
+  "actual256": {
+    "root_checks": 24,
+    "peer_checks": 47,
+    "status": "COMPLETE",
+    "source_profile_SHA": "1d81ac179370be73197ec818879604f6551e36a5f15f1745cea54e7858439b3a",
+    "phase_seconds": 977.9129918039998,
+    "sampled_GPU_peak_MiB": 8893,
+    "original_fusion_diff": 0.0,
+    "accuracy_evaluated": false,
+    "Public_score": null
+  },
+  "frozen_proofs": {
+    "root256": {
+      "path": "experiments/p011-profile256-completed-root-review-20261009.json",
+      "sha256": "9acb096c7ebb9c37053d21034bc9d81c18e8fbfb7df680652bdad4371f888f7a"
+    },
+    "peer256": {
+      "path": "experiments/p011-profile256-actual-results-independent-review-20261009.json",
+      "sha256": "2cf298a4132a4a87d66f66555c76303604100a1f4719f2582163f86d0d5e758c"
+    },
+    "serving_source24": {
+      "path": "experiments/p011-serving-handoff-independent-source-review-20261009.json",
+      "sha256": "56f018ad60ef06198d7b7d709e263e27c9597f9c9f74b4007261249e514bb538"
+    },
+    "serving_request11": {
+      "path": "experiments/p011-serving-qualified-request-independent-review-20261009.json",
+      "sha256": "bcd0d3c74e9169816e3deeaaaece418e8d0193a45a7b2e2053a657b0f57a009f"
+    },
+    "regional20": {
+      "path": "experiments/regional-triplet-component-preparation-20261009.json",
+      "sha256": "00dbd6585d971048c8588a181794373e9cc145d108313589170ed44a22fcb47b"
+    }
+  },
+  "serving": {
+    "request_frozen": true,
+    "ref": "rsraki/p011srv-8105f0434cc183692525c2dd8ccdc9eb",
+    "Save_called": 0,
+    "competition_submit_called": 0,
+    "fullhidden_success": false
+  },
+  "native_cache": {
+    "PC_verified_studies": 3332,
+    "PC_verified_arrays": 16660,
+    "PC_verified_shards": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "remote_20_22_COMPLETE_summary28_accepted": true,
+    "remote21_last_observed_RUNNING": true,
+    "remote23_24_savedV1_accepted": true,
+    "remote23_24_source_status_bound": false,
+    "new20_22_download_bytes": 0,
+    "full4207_index_present": false,
+    "formal_f005_fit": 0
+  },
+  "authentication": {
+    "probe_path": "artifacts/research/20261009-kaggle-connectivity-probe-v1/receipt.json",
+    "probe_sha256": "2cc9bba392c6dc890190195af0f7b4d35a8a2789bb85e2e5fe4f6378ba866620",
+    "official_probe_HTTP_status": 401,
+    "initial_default_GetKernel_HTTP403_observed_in_root_tool_result": true,
+    "cause_is_expired_token_or_scope_or_other_auth_condition": "unresolved",
+    "automatic_approval_rejected": false,
+    "user_API_reauthentication_requested": true,
+    "credentials_read_copied_or_printed_by_review": false
+  },
+  "regional_component": {
+    "only_prepared": true,
+    "CPU_tests": 8,
+    "existing_generic_CUDA_logical_windows": 2,
+    "optimizer_steps": 0,
+    "MRI_or_teacher_used": false,
+    "head_parameters": 83352,
+    "precision_or_full144_resource_qualification": false
+  },
+  "limitations": [
+    "256 diagnostic is not AUC or hidden submission success.",
+    "Matching recorded pixel hashes do not independently rehash MRI arrays.",
+    "Phase sum excludes queue/import/environment and miscellaneous overhead.",
+    "Author Gold selection reuse stays audited; own Gold fit/selection0."
+  ]
+}

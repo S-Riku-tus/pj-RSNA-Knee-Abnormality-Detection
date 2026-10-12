@@ -1,0 +1,73 @@
+{
+  "checked_at_utc": "2026-10-08T13:07:45.787043+00:00",
+  "status": "v3_prepared_nine_offline_tests_passed_actual_saved_DTO_fixture_no_new_remote_read",
+  "ref": "rsraki/native392-cache-shard-01-of-24",
+  "saved_version": 1,
+  "kernel_id": 137670873,
+  "tools_folder": "artifacts/research/20261008-native392-shard01-results-v3",
+  "source_sha256": {
+    "compact_tools.py": "c1e26e550e629cb401e159fb3f01f64b67f43bf893794670f87c2b1e5cb6efd2",
+    "get_once.py": "738c6d3f0e0e0945bd61da0fdbe01d02b2b04aa0222696d876e84eaf8a8c9f9e",
+    "verify_summary.py": "3b2c9ad35cff87530b6f5bd8b629450bb9b8b690db60ec6884be0078e9b9ad2f",
+    "test_compact_tools.py": "d4b42219da7d462eed7e9575896ebe994b75c6d0a1738b2321c76732e172e36c"
+  },
+  "accepted_launch_response_sha256": "0f59f3b54ce0dbee085ddc23155ed454045cd3f6f7949a61f136937e4bb1d111",
+  "accepted_launch_request_sha256": "52fb5e3ee878318fbf1eaed09db057b03f652c428b09ba63dd3752b8d7a529a8",
+  "package_sha256": "9a3ebe73a3d53f360c5216eb2e4a63214ececb9a39b09224fdfa23d1e55971c2",
+  "normalized_notebook_sha256": "60be60c7410878a718c678d94f2ac3002f02826747f93cefdcfaf7479ef6ff26",
+  "artificial_tests_passed": 9,
+  "unittest_command": ".venv/Scripts/python.exe -m unittest discover -s artifacts/research/20261008-native392-shard01-results-v3 -p test_compact_tools.py -v",
+  "ruff_passed": true,
+  "artificial_contracts": [
+    "one status RPC plus all3 pages of both output/size metadata; exact summary-only HTTP",
+    "raw absent status with typed QUEUED never downloads summary and never claims worker activity",
+    "repeated pagination token fails before any HTTP download",
+    "entire Notebook metadata or raw environment drift prevents summary HTTP",
+    "HTTPS and streamed/declared4MB bounds; failed responses close",
+    "176 structural summary fixture; partial/UID/source/time/archive/QC/decoder/resource drift and unexpected positive output allowlist entries fail",
+    "actual saved ApiGetKernelResponse wrapper metadata plus blob.source; raw CPU/OFF/private fields retained",
+    "missing/legacy/wrong-type/empty/invalid JSON/nonNotebook/language/slug wrappers raise ValueError before summary HTTP",
+    "malformed cell source is rejected before output listing or summary HTTP"
+  ],
+  "actual_stored_response_fixtures_sha256": {
+    "saved-source.json": "319068362bb6b4c17a8f58038f21ea3218212582c2a5f71b78447a63e1792c8b",
+    "saved-source-raw.json": "b44dc2a33848e91f5798ffdcd09c0d923455543a46291649bdca2b1115dcf650"
+  },
+  "repair": {
+    "classification": "read-only download client defect; no evidence of an export job failure",
+    "observed_exception": "KeyError: source at compact_tools.py:294 metadata.pop('source')",
+    "incorrect_assumption": "ApiGetKernelResponse.metadata.source",
+    "official_response_contract": "ApiGetKernelResponse.metadata plus ApiGetKernelResponse.blob.source",
+    "fallback_to_legacy_source_location": false,
+    "old_six_test_scope": "Artificial metadata.source fixture tested pagination/limits but did not validate actual official SDK wrapper; superseded by actual saved response fixtures and independent SDK roundtrip tests.",
+    "previous_root_observation_raw_status": {
+      "status": "RUNNING"
+    },
+    "previous_root_observation_typed_status": {
+      "status": "RUNNING",
+      "failureMessage": null
+    },
+    "previous_root_observation_checked_at_utc": "2026-10-08T12:58:03.298580+00:00",
+    "previous_observation_and_tools_preserved": true,
+    "previous_tools_and_observation_sha256": {
+      "compact_tools.py": "5b643a583f9df31cca1c8795dfab70c9ca7b39ad59bb332e83da54a233761cb6",
+      "get_once.py": "738c6d3f0e0e0945bd61da0fdbe01d02b2b04aa0222696d876e84eaf8a8c9f9e",
+      "verify_summary.py": "3b2c9ad35cff87530b6f5bd8b629450bb9b8b690db60ec6884be0078e9b9ad2f",
+      "test_compact_tools.py": "796a6c7e6a8f1185b9720f9fd5ef3619d90128ab655c6bf4d722c4f654ed7b78",
+      "observation-v1/read-start.json": "15cf26295d43e6e4421bed58499a900e796c833de8626513c04d00ef7f637c5a",
+      "observation-v1/official-status.json": "74ef6cbfe452bb1228276b5406794c70930f129a71e1f68ef7afa56709a7fe16"
+    },
+    "export_job_rerun_required_by_repair": false
+  },
+  "positive_output_allowlist": "exact final summary/ZIP plus embedded10 code/plan files and corresponding Python313 pyc only",
+  "actual_remote_status_read": false,
+  "actual_output_downloaded": false,
+  "archive_downloaded": false,
+  "MRI_model_weights_downloaded": false,
+  "real_teacher_read": false,
+  "real_fit": false,
+  "remote_mutation": false,
+  "actual_NPZ_or_outerZIP_QC": false,
+  "public_score": null,
+  "scope": "Offline actual saved source/DTO fixtures with synthetic summary, pagination and HTTP. Prepare one fresh root observation; all176 NPZ numeric bytes/outerZIP SHA require later processed-cache/index verification."
+}

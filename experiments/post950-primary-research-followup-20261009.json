@@ -1,0 +1,45 @@
+{
+  "schema_version": "bounded_primary_research_followup_v1",
+  "checked_date_JST": "2026-10-09",
+  "query_scope": [
+    "site:kaggle.com/code rsna 0.96 2026",
+    "site:kaggle.com/code rsna 0.957 knee",
+    "RSNA Knee 0.955 model",
+    "RSNA Knee 0.964 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://www.kaggle.com/code/fuadmuhammad/rsna-knee-fast-parent-0-957-v2/comments",
+      "observed_version": 1,
+      "title_claim": "0.957",
+      "page_reported_public_and_best_score": "0.939",
+      "own_reproduction_score": null,
+      "decision": "タイトルを再現済み精度の根拠にしない。以前の公式metadata監査と整合。"
+    },
+    {
+      "url": "https://github.com/anhquan1111/rsna-knee-abnormality-detection/blob/main/README.md",
+      "observed_branch": "main",
+      "immutable_commit_verified": false,
+      "author_reported_submission3_public": "0.771",
+      "author_reported_submission3_CV": "0.8112",
+      "own_reproduction_score": null,
+      "author_observations": "所見別attentionでも同じsliceへの集中と装置由来信号が見られ、58件で反復選択したCVとPublicに差があった。",
+      "inference_for_our_work": "attention実装の存在だけで局所病変を学習できたとは判断しない。自作モデルではcoverage・attention集中・装置別支持数をweak検証で測る候補にする。作者のGold選択を自分の選択手順へ移さない。"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/734105",
+      "full_page_open_returned_lines": 0,
+      "search_index_excerpt_only": true,
+      "author_reported_soft_vs_hard_macro_gain": 0.0143,
+      "author_reported_paired_95pct_interval": [-0.0041, 0.0330],
+      "own_reproduction_score": null,
+      "decision": "ソフト教師の優位を確定しない。元教師を保持し、明確なReport根拠を確認した独立実験として扱う。"
+    }
+  ],
+  "verified_reproducible_recipe_above_0_955_in_this_query": false,
+  "absence_of_higher_public_recipes_proven": false,
+  "models_MRI_or_raw_reports_downloaded": false,
+  "own_Gold_used_for_training_or_selection": false,
+  "own_best_official_public": "0.950",
+  "goal_strictly_above_0_960_achieved": false
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "p009_official_scored_review_v1",
+  "checked_at_utc": "2026-10-08T14:52:52.930521+00:00",
+  "checks": {
+    "exact_submission56956158": true,
+    "exact_saved_notebookV1": true,
+    "raw_COMPLETE": true,
+    "typed_COMPLETE": true,
+    "official_own_score_0_948": true,
+    "error_absent": true,
+    "submitted_source19_unchanged": true,
+    "baseline14_unchanged": true,
+    "prior_source_visible_submission_binding_passed": true,
+    "strict_score_target_not_achieved": true
+  },
+  "all_passed": true,
+  "checks_passed": 10,
+  "submission_ref": 56956158,
+  "notebook_ref": "rsraki/p009-coat-fov160",
+  "saved_version": 1,
+  "own_public_score_text": "0.948",
+  "baseline_public_score_text": "0.950",
+  "displayed_score_change": -0.002,
+  "decision": "Reject FOV160; retain p005 FOV140 own950 baseline",
+  "unreported_raw_AUC_per_target_or_hidden_runtime_known": false,
+  "source_receipt": "artifacts\\research\\20261008-p009-competition-submit-v1\\scoring-20261008T144934439464.json",
+  "source_receipt_sha256": "20b879f47a2772990fb6fc4b37da663f7eabc05091165441bcd3f3f77c8039b6",
+  "source_binding_sha256": {
+    "experiments/p009-submission-binding-review-20261008.json": "edd6312d5edb1671034b1cda23b3430b281285763944bb37ce7636f4f1c7a179",
+    "experiments/p009-serving-saved-binding-review-20261008.json": "2e9afe09d343bd529dc6892ff541f8bfd30a3f9c303d976c8da10db276a6b21a",
+    "experiments/p009-serving-visible-output-review-20261008.json": "7acd7549ce550c71e3d03db7041d598758be91f58194abb498c0413d4f983aae"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "p012_baseline64_checker_repaired_actual_rerun_root_progress_v1",
+  "recorded_at_utc": "2026-10-09T14:47:34.322646+00:00",
+  "old_ERROR_genuine_body_observation": {
+    "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/profile64-error-bodies-v2/observation.json",
+    "sha256": "489228a2150ec3a3362d1f203a91b642e97423d7f222254e4cbfca3a4b1fe361",
+    "artifact_GETs": 8,
+    "source_status_and_two_inventory_pages_RPCs": 4,
+    "actual_RUN_qualification": false
+  },
+  "independent_actual_ERROR_body_checks": {
+    "eight_actual_GET_lengths_SHA_match": true,
+    "fourCSV_exact64_UID13columns_finite12": true,
+    "fixed70_30_average_percentile_double_then_float32_cells_exact": 768,
+    "zero_original_exposed_fallback_and_both_S5_worker_PASS_counts": true,
+    "top_level_per_study_stats_shape_from_actual64_workers_confirmed": true,
+    "two_owned_process_groups_actual_absence_and_direct_exit0": true,
+    "NVIDIA_peak_or_parent_cleanup_not_qualified": true,
+    "original_worker_prediction_full_bodies_independently_recomputed": false
+  },
+  "collector_repair": {
+    "old_V1_GetKernel_HOLD_preserved_body_GETs": 0,
+    "V2_scope": "Strict raw/SDK comparison limited to13 actual identity/platform/Input fields; nonbinding metadata values not stored.",
+    "V3_only_two_new_author_runtime_pins": true,
+    "metadata_acceptance_does_not_alter_prediction_math": true
+  },
+  "new_diagnostic_source_peer": {
+    "path": "artifacts/research/20261009-p012-baseline-cleanup-profile-independent-v2/review.json",
+    "sha256": "9fb087eee27a2573b52ae4358bbf3a07f181851eb691ba886108308b349af559",
+    "all_passed": true,
+    "checks": 19,
+    "author_tests": 8,
+    "independent_tests": 2,
+    "actual_qualified": false
+  },
+  "new_private_actual_Save": {
+    "receipt_path": "artifacts/research/20261009-p012-baseline-cleanup-root-v2/actual-profile64-Save-attempt-v1/receipt.json",
+    "receipt_sha256": "0095a97d69de43526c302ddbe10548d05a354549380b82a93c42f8e71996124b",
+    "schema_version": "p012_actual_private_baseline64_Save_accepted_v1",
+    "at_utc": "2026-10-09T14:40:14.822995+00:00",
+    "ref": "rsraki/p012-baseline64-cleanup-v2-83cc21f88d7c445b",
+    "saved_version": 1,
+    "kernel_id": 137888437,
+    "official_Save_calls": 1,
+    "private_Save_accepted": true,
+    "diagnostic_studies": 64,
+    "context_path": "artifacts/research/20261009-p012-baseline-cleanup-root-v2/root64-preparation-v1.json",
+    "context_sha256": "9d9d0e247a0ba309e5bbd4bf7e192ad4b31283dcad1dd566d0fd13b23e66b3e5",
+    "notebook_sha256": "9bfa2b0b955adc8dbca60b950cd8cfb8e30304e4abdf65fe1210171282a3d7aa",
+    "request_sha256": "19c9e928e154c4793de3ab7732dec3284ab5dfc7488cf372d7bdf289cc3060ee",
+    "fresh_available_GPU_seconds_from_raw": "53036.862",
+    "actual_run_complete": false,
+    "actual_cleanup_qualified": false,
+    "native_or_twofold_qualification": false,
+    "competition_Submit": 0,
+    "own_best_Public": "0.951",
+    "strict_above960_achieved": false
+  },
+  "latest_official_saved_source_status": {
+    "observation_path": "artifacts/research/20261009-p012-baseline-cleanup-root-v2/profile64-observation-v1/observation.json",
+    "observation_sha256": "8d7427f1c2b9f91eedc5acce8ba0982dec0cf46f83ce8b760b7b835edcd1a678",
+    "at_utc": "2026-10-09T14:42:00.992161+00:00",
+    "ref": "rsraki/p012-baseline64-cleanup-v2-83cc21f88d7c445b",
+    "saved_version": 1,
+    "maximum_read_RPCs": 2,
+    "body_GETs": 0,
+    "Save_upload_Submit": 0,
+    "actual_cleanup_qualified": false,
+    "actual_twofold_qualified": false,
+    "raw_status": "RUNNING",
+    "typed_status": "RUNNING",
+    "source_declared_platform_verified": true,
+    "actual_run_complete": false,
+    "failure_present": false
+  },
+  "fold1": {
+    "completed_epochs": 8,
+    "fixed_final_epochs": 12,
+    "run_status": "running",
+    "snapshot_path": "artifacts/research/20261009-p012-baseline-cleanup-root-v2/running-metadata-at-rerun-record.json",
+    "snapshot_sha256": "7b87c39f54382526eb99874080f7532517c4ba53a292c210fa4dae2cb576c9f0",
+    "interim_checkpoint_adopted_or_read": false
+  },
+  "original_V1_failure_and_sources_immutable": true,
+  "prediction_models_numeric_original5_changed": false,
+  "old_ERROR_not_reused_for64_256_qualification": true,
+  "actual_baseline_cleanup_qualified": false,
+  "actual_twofold_qualified": false,
+  "Serving_qualified": false,
+  "competition_Submit": 0,
+  "own_best_Public": "0.951",
+  "strict_above960_achieved": false
+}

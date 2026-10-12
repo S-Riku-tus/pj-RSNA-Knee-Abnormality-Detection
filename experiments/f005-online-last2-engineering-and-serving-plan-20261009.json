@@ -1,0 +1,204 @@
+{
+  "schema_version": "f005_online_last2_engineering_and_serving_plan_progress_v1",
+  "recorded_at_utc": "2026-10-09T11:48:59.571944+00:00",
+  "all_passed": true,
+  "checks": {
+    "exact_primary_evidence_SHA_bound": true,
+    "singlefold47_actual_pass_not_twofold": true,
+    "V2_short_output_only_static7_contracts": true,
+    "old_independent25_scope_remains_V1": true,
+    "S6_new_source_not_available_ABI_not_qualified": true,
+    "p013_raw_omitted_default_pending_not_worker_claim": true,
+    "running_fold1_metadata_snapshot_only": true,
+    "weak_metrics_not_Public": true,
+    "own951_goal_unachieved": true,
+    "ledger186_no_edits": true
+  },
+  "evidence": {
+    "singlefold_actual47": {
+      "path": "artifacts/research/20261009-f005-online-last2-actual-CPU64-256-root-review-v1/review.json",
+      "sha256": "ee45335088b6982891cf89c2dff50b97e6db069e3a3923bdc0109bcc486b97f0"
+    },
+    "designV2": {
+      "path": "artifacts/research/20261009-f005-twofold-native-addition-serving-design-v2/design.json",
+      "sha256": "7971245fb671ad104e5b7f3742bfb6ec6c57a9470e17a4e76938496103064ea8"
+    },
+    "short_path_static_repair": {
+      "path": "artifacts/research/20261009-f005-twofold-native-addition-serving-design-v2/repair-receipt.json",
+      "sha256": "43f00b14a69921da9b02a826035a8331f5f25c979e2588bdae3645c1b90aa762"
+    },
+    "old_designV1_independent25_only": {
+      "path": "artifacts/research/20261009-f005-twofold-native-addition-serving-design-independent-v1/review.json",
+      "sha256": "a1969e413a53e7ec0190ad6c0355ebbcbc68b1caacdef552727745629e32c81d"
+    },
+    "S6_bounded_primary_assessment": {
+      "path": "artifacts/research/20261009-helios-S6-candidate-assessment-v1/research.json",
+      "sha256": "bedf0002aefc29564b91f67c8c3e832f8c6c0adc35cf12e0022a7357dce2693b"
+    },
+    "p013_scoring_observation20_33": {
+      "path": "artifacts/research/20261009-p013-serving-fixed20-root-v1/submission-observation-v2/observation.json",
+      "sha256": "d68c1834cec66aa80f77835bb29a63c805b2d3ecfbc1a2c7fa1246a4666130cf"
+    },
+    "own_p012_official951": {
+      "path": "artifacts/research/20261009-f005-native-runtime-root-v1/public951-submission-observation-v15/observation.json",
+      "sha256": "6566d820025709e557a5caf9c51ae78089728c41306fb60f2cba64b5353bfbf6"
+    },
+    "unlabeled_native64_descriptive_only": {
+      "path": "artifacts/research/20261009-f005-online-last2-64-unlabeled-complementarity-v1/review-r2.json",
+      "sha256": "6647a754a8855afc21841f12f54cdf61fdc81794cc42ba5cc77ffe66b7017938"
+    }
+  },
+  "own_confirmed_Public_best": 0.951,
+  "own_scored_submission_ref": 56998356,
+  "next_target": 0.955,
+  "final_target_strictly_above": 0.96,
+  "goal_achieved": false,
+  "singlefold_engineering": {
+    "actual_CPU_native64_native256": true,
+    "strict_checks": 47,
+    "model_fold": 0,
+    "new_twofold_qualification_reused": false,
+    "serving_candidate_gate_passed": false,
+    "accuracy_evaluated": false
+  },
+  "twofold_design": {
+    "revision": 2,
+    "fold1_seal_output": "artifacts/research/20261009-f005-online-last2-diagnostic-adapter-preparation-v2/b1",
+    "declared_member_names": 215,
+    "absolute_Windows_path_max_chars": 247,
+    "commands_AST_reviewed": 7,
+    "notExecuted": true,
+    "old_independent25_qualifies_revision1_only": true,
+    "integrated_router": "In progress; not implemented or qualified",
+    "actual_receipt_SHA_nonce_Input_metadata_required_for_templates": true,
+    "integrated_Notebook_generated": false,
+    "actual_twofold_or_integrated_qualification": false
+  },
+  "p013_scoring": {
+    "at_utc": "2026-10-09T11:33:24.951066+00:00",
+    "ref": "rsraki/p013-fixed20-cublas-control-ab8db36c2f2f6aa7",
+    "saved_version": 1,
+    "submission_ref": 57006968,
+    "official_get_requests": 1,
+    "Save_upload_Submit": 0,
+    "own_Public": null,
+    "strict_above960_achieved": false,
+    "actual_status": "NOT_EXPLICIT_YET",
+    "SDK_default_status": "PENDING",
+    "raw_status_field_omitted": true,
+    "error_description": null,
+    "hidden_scoring_complete": false
+  },
+  "fold1_training_snapshot": {
+    "source_path": "artifacts/runs/f005-native-last2-fast16-fold1-20261009-v1/run.json",
+    "captured_at_utc": "2026-10-09T11:48:59.571944+00:00",
+    "source_mutable": true,
+    "snapshot_path": "artifacts/research/20261009-f005-online-last2-engineering-serving-record-v1/fold1-live-run-snapshot.json",
+    "snapshot_sha256": "c4fcf78cc45343270e0866039afc939dab56235b7ef2a5c5f739640d80038c8c",
+    "status": "running",
+    "epochs_completed": 2,
+    "fixed_total_epochs": 12,
+    "seed": 20261002,
+    "fold": 1,
+    "train_studies": 3316,
+    "valid_studies": 891,
+    "config": {
+      "schema_version": "frozen_features_v1",
+      "seed": 20261002,
+      "n_folds": 5,
+      "reason": "Use paired window_chunk16 engineering based on artificial full144 throughput; all biological/training factors remain prespecified. Change only generic DINO blocks10/11 trainability relative to native frozen control; encoder LR prespecified1e-5, head LR old3e-4; no weak/Public sweep.",
+      "preprocess": {
+        "version": "physical_letterbox_triplet_v1",
+        "image_size": 392,
+        "max_series": 3,
+        "slices_per_series": 48,
+        "percentiles": [
+          1,
+          99
+        ]
+      },
+      "encoder": {
+        "model_name": "dinov2_vits14",
+        "feature_dim": 384,
+        "batch_size": 16,
+        "precision": "fp16"
+      },
+      "head": {
+        "hidden_dim": 192,
+        "dropout": 0.2,
+        "pooling": "attention"
+      },
+      "train": {
+        "epochs": 12,
+        "batch_size": 16,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.01,
+        "num_workers": 0,
+        "selection": "bce"
+      },
+      "online": {
+        "schema_version": "native392_last2_training_fast16_v1",
+        "trainable_blocks": 2,
+        "microbatch_studies": 1,
+        "effective_batch_studies": 16,
+        "window_chunk": 16,
+        "checkpoint_last2": true,
+        "encoder_learning_rate": 1e-05,
+        "accumulation_denominator": "total_observed_labels_in_effective_batch",
+        "folds": [
+          0,
+          1
+        ],
+        "amp_grad_scaler": true
+      }
+    },
+    "source_sha256": {
+      "native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+      "finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+      "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+      "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+      "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+      "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+      "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+      "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+    },
+    "latest_epoch": {
+      "epoch": 2,
+      "weak_bce": 0.34066647420341273,
+      "weak_macro_auc_12": 0.7712510096863192,
+      "elapsed_seconds": 3483.3915968000656,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    "real_checkpoint_teacher_or_prediction_bytes_opened": false,
+    "accuracy_qualification_or_final_adoption": false
+  },
+  "S6_candidate": {
+    "four_checkpoint_SHA_and_training_source_SHA_changed": true,
+    "fresh_public_inference_remains_original_S5": true,
+    "new_S6_training_or_forward_source_body_confirmed": false,
+    "runtime_ABI_or_actual_score_qualified": false,
+    "new_execution_ready_candidate": false
+  },
+  "unlabeled_native64": {
+    "descriptive_complementarity_only": true,
+    "singlefold_training_reused_cohort": true,
+    "clean_OOF_or_heldout_verified": false,
+    "teacher_body_reads_or_ratio_search": 0,
+    "Public951_Raptor_correlation_evaluated": false,
+    "accuracy_gain_evidence": false
+  },
+  "own_Gold_fit_or_selection": 0,
+  "upstream_public_Gold_prior_audit_is_separate": true,
+  "this_record_operations": {
+    "metadata_and_source_only": true,
+    "API_HTTP_GPU_fit_seal_model_MRI_teacher_payloads": 0,
+    "ledger_new_rows_or_edits": 0
+  },
+  "limits": [
+    "Producer run is mutable; the saved snapshot is authoritative only at its capture time.",
+    "Diagnostic engineering passes do not establish prediction quality or hidden completion.",
+    "The old design remains immutable; this V2 path fix has separate narrow source evidence."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "p010_failed_profile_v2_actual_phase_plus_source_replay_review",
+  "ref": "rsraki/p010diag-d6a587bcefded28cde96453a8ba1848f",
+  "saved_version": 2,
+  "kernel_id": 137683716,
+  "official_status": "ERROR",
+  "all_passed": true,
+  "checks": {
+    "actual_raw_and_typed_ERROR": true,
+    "child_import_fix_passed": true,
+    "original_base32_completed": true,
+    "original_reader_and_fusion_SUCCESS": true,
+    "bounded_base32_completed": true,
+    "second_fusion_AssertionError_and_FALLBACK": true,
+    "same_helper_alias_mismatch_artificially_reproduced": true,
+    "single_log_and_metadata_set_no_payloads": true,
+    "no_summary_or_shared224_or_stock224_output": true,
+    "corrected_V2_immutable": true,
+    "p009_shared_helper_immutable": true,
+    "candidate_execution_and_accuracy_remain_ungated": true
+  },
+  "checks_passed": 12,
+  "actual_log_error": {
+    "time_seconds": 222.9592223,
+    "phase": "bounded base fusion (second fusion)",
+    "exception": "[Apex Fusion EXCEPTION] AssertionError",
+    "full_inner_traceback_preserved_by_original_fusion": false
+  },
+  "root_cause_source_evidence": {
+    "module": "scripts/p009_profile_runtime.py",
+    "function": "replay_reader_once/replay",
+    "assert_line": 240,
+    "required_data_alias": "/kaggle/working/p009_profile_data",
+    "actual_p010_command_data_alias": "/kaggle/working/p010_profile_data",
+    "scope": "Source-bound exact-command replay mismatch is locally reproduced. The original fusion catches the inner assertion and logs its type only."
+  },
+  "phase_partial_success": "Child import preflight, original base32, original actual ConvNeXt inference/fusion, and bounded base32 passed visible execution; no full candidate pixel/raw/resource gate completed.",
+  "unreached": [
+    "shared base+224",
+    "standalone stock224",
+    "paired numeric comparison",
+    "fixed90:10 candidate"
+  ],
+  "candidate_gate_passed": false,
+  "AUC_or_hidden_runtime_proof": false,
+  "partial_submission_present_not_submittable": true,
+  "failure_scope": "Second local diagnostic wrapper defect; not evidence of base14/p009 numerical or hidden-serving failure.",
+  "evidence_sha256": {
+    "artifacts\\research\\20261008-p010-profile32-failure-v2\\observation-v1\\failure-read-receipt.json": "7a805a5965958e4c5e066d04b1d1517d1a6d6d7d6bb2642221bc001cbad99cd4",
+    "artifacts\\research\\20261008-p010-profile32-failure-v2\\observation-v1\\output-metadata.json": "0ab1a5d8fec96ecd484f06d3feb61ad99556873efe2139dd2ba80299ed3a9eae",
+    "artifacts\\research\\20261008-p010-profile32-failure-v2\\observation-v1\\output-metadata.log": "781cfb5a235abfa41cfcbdacdf3f38d7571cb9734f32b36d121d3adcdbd09ded",
+    "artifacts\\research\\20261008-p010-profile32-failure-v2\\observation-v1\\read-start.json": "522124b70cfc3029b266a8c64d90c637c28a4e9499f3a173bbe7305592986939",
+    "artifacts\\research\\20261008-p010-profile32-failure-v2\\observation-v1\\saved-source-raw.json": "727988685707d8d524356425e46998d6a3ca66be288ea93ac7a7bbcc06a95633",
+    "artifacts\\research\\20261008-p010-profile32-failure-v2\\observation-v1\\saved-source.json": "34972a25ead7d3b512a8951ff6786ae27bc3356db1c99511f87eb8f989e6e469",
+    "artifacts\\research\\20261008-p010-profile32-failure-v2\\observation-v1\\session-log-receipt.json": "01a9688ec2dc02dc7eabd87f44fbef3bdeb6b3d496fe78a3cf1c2f6921e6b36e",
+    "artifacts\\research\\20261008-p010-profile32-failure-v2\\observation-v1\\session-log.raw": "781cfb5a235abfa41cfcbdacdf3f38d7571cb9734f32b36d121d3adcdbd09ded",
+    "artifacts\\research\\20261008-p010-profile32-failure-v2\\observation-v1\\status.json": "8ac6238d76dc9e38361cb829b4b84c951cde816eeb075c083c343cda537a8cae",
+    "artifacts\\research\\20261008-p010-profile32-failure-v2\\observation-v1\\visible.log": "229c0cd56842c14427c6e26324e1335cd8f6e5f09f5e7c013b9eafae64d3e729",
+    "artifacts\\research\\20261008-p010-profile32-failure-v2\\artificial-replay-path-proof.json": "968319c12543ebfe8012c2f51595c62bf381cd9ce2144a370fd22b1a48cba0a1"
+  },
+  "next_fix": "New V3 profile-local replay alias and fixed checkpoint/UID/cache contract, with exact original fusion command artificial regression and pre-model replay probe; V1/V2 preserved."
+}

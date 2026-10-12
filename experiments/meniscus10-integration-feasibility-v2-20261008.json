@@ -1,0 +1,293 @@
+{
+  "schema": "rsna_meniscus10_single_branch_integration_feasibility_v1",
+  "checked_at_jst": "2026-10-08T18:43:50.425726+09:00",
+  "status": "synthetic_pixels_and_stock_input_contract_verified_actual_kaggle_model_profile_pending",
+  "candidate": "Apex plus separate public0033 Meniscus10 fixed90to10 rank hypothesis; candidateID assigned separately by root",
+  "files": {
+    "helper": "scripts/public0033_streaming_adapter.py",
+    "helper_sha256": "6bb32f73128fc47fc1fa547e731a7b1deab417a8b03171a457970945f55630c9",
+    "tests": "tests/test_public0033_streaming_adapter.py",
+    "test_count": 9
+  },
+  "source": {
+    "notebook": "sujanmajhisuzan/rsna-knee-tri-specialist-superstack",
+    "version": 2,
+    "script_version_id": 355742320,
+    "source_sha256": "122f4cbcb203e43de9995440ee3ff775f39d6338fae7a22e921e75a961cac156",
+    "upstream_runtime_sha256": "9541f82a993d7dc2942ca2a5112e110471285f8d80701846079a3dc708761683",
+    "runtime_frozen_unchanged": true
+  },
+  "checkpoint": {
+    "dataset": "renta0426/rsna-knee-public0033-meniscus-bag-v1",
+    "version": 2,
+    "internal_version_id": 19356288,
+    "filename": "checkpoint_epoch30.safetensors",
+    "sha256_author_declared": "e1443bb0f518418a31428cd7eb153f15af4c48c7175baf1f9d21c84f1c2a93e7",
+    "bytes": 347965736,
+    "payload_downloaded": false,
+    "license": "Apache2.0; upstream DINOv2 and competition data retain original terms"
+  },
+  "exact_cache_input": {
+    "slots": [
+      [
+        "SAG_FLUID_FS",
+        "Sagittal",
+        true,
+        true
+      ],
+      [
+        "COR_FLUID_FS",
+        "Coronal",
+        true,
+        true
+      ],
+      [
+        "AX_FLUID_FS",
+        "Axial",
+        true,
+        true
+      ],
+      [
+        "SAG_FLUID_NOFS",
+        "Sagittal",
+        true,
+        false
+      ],
+      [
+        "COR_T1",
+        "Coronal",
+        false,
+        false
+      ],
+      [
+        "SAG_T1",
+        "Sagittal",
+        false,
+        false
+      ]
+    ],
+    "shape": [
+      "N",
+      6,
+      12,
+      336,
+      336
+    ],
+    "dtype": "uint8",
+    "mask_dtype": "float32",
+    "crop_mm": 130.0,
+    "band": [
+      0.2,
+      0.8
+    ],
+    "sampling": "floor linspace, unique, pad last to12",
+    "percentiles": [
+      1,
+      99
+    ],
+    "resize": "torch bilinear align_corners=False beforeuint8 round",
+    "right_laterality": "Coronal/Axial columnflip; Sagittal depthflip",
+    "orientation": "native per-frame orientation; no Apexcanonicaltransposition",
+    "window_starts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "input_normalization": "FP32 /255 thenImageNetRGB mean/std",
+    "fullfit_training_preprocess_hash_independently_matched": false,
+    "evidence_limit": "Byte-equality with the public scoredintegration's healthy/pixelcache path, not independent rawtrainingcache reconstruction."
+  },
+  "incompatible_apex_reuse": [
+    "CoAtNet wide0.02to0.98 sampling/2to98percentiles androundednative384 crop differs",
+    "ConvNeXtcanonical153.6mm/0.4mmpixel orientation andslicevolume differs",
+    "alreadywindowed/normalized canonicalpixels cannot reconstruct Meniscusrawselectedframes"
+  ],
+  "memory": {
+    "one_uint8_study_bytes": 8128512,
+    "uint8_cohort1300_bytes": 10567065600,
+    "delivery": "disk memmap complete cohort written onestudy atatime; nofullcohort anonymous array",
+    "stock_runtime_batch_studies_per_gpu": 32,
+    "stock_runtime_precision": "fp32",
+    "stock_runtime_exact_devices": "TeslaT4x2",
+    "working_frames_bound": "Only12selectednativeframes/slot plus1studycache; nativeframesize andtensorresize still affectRAM",
+    "diskreserve_bytes": 536870912,
+    "pagecache_RSS_guarantee": false,
+    "stock_batch32_T4_peak_vram_verified": false
+  },
+  "fusion": {
+    "parent": "frozen scoredApex",
+    "parent_rank_weight": 0.9,
+    "branch_rank_weight": 0.1,
+    "targets": [
+      "Medial Meniscus",
+      "Lateral Meniscus"
+    ],
+    "all_cohort_global_average_rank": true,
+    "incumbent_bytes_unchanged": true,
+    "other10column_strings_unchanged": true,
+    "labels_or_score_feedback_used": false,
+    "new_output_required": true,
+    "author_original_exact0936route_inherited": false,
+    "public_improvement_verified": false
+  },
+  "evaluation_limit": "Weak4349fullfit excludes58gold perauthorcontract; notfold-safeOOF. Ownweakfold predictions mustnot selectblend or count asindependentvalidation. NoGoldfit/selectionperformed.",
+  "priority_over224crop": "ViTBase /sixseries/10windows representation differsfromApexCNNbranches, whereas224crop sharesCoAtNetseed42/OAItraining. Statisticaldecorrelation andPublicbenefit remainunmeasured.",
+  "remaining_work": [
+    "Audited DICOMheader classification/longestseries selection/projectionorder/lateralitycaller adapter; noReportinput",
+    "Bundle smallfile/weight hash verification andKaggleoriginalenvironment dependency readiness",
+    "Kaggle actual64thenlargerstudy profile; budget modelFP32 T4batch32 andmemorypagecache",
+    "Stage separate rawbranchCSV andfixedoverlay preservingApex; onlylater authorizedmanual/APIexecution"
+  ],
+  "verification": {
+    "checks": {
+      "reference_pixels_case0_byte_equal": true,
+      "reference_pixels_case1_byte_equal": true,
+      "reference_pixels_case2_byte_equal": true,
+      "reference_pixels_case3_byte_equal": true,
+      "reference_pixels_case4_byte_equal": true,
+      "reference_pixels_case5_byte_equal": true,
+      "reference_pixels_case6_byte_equal": true,
+      "reference_pixels_case7_byte_equal": true,
+      "stock_runtime_input_validator_accepts_memmap": true,
+      "scratch_removed_after_validated_memmap_use": true,
+      "exact_author_head_mock_encoder_cpu_forward_finite": true,
+      "exact_author_head_mock_encoder_cuda_forward_finite": true
+    },
+    "passed": 12,
+    "total": 12,
+    "reference_cases": [
+      {
+        "count": 1,
+        "shape": [
+          31,
+          27
+        ],
+        "spacing": 0.5,
+        "failed": [],
+        "plane": "Sagittal",
+        "laterality": null,
+        "bytes_equal": true,
+        "result_sha256": "f092a6a3c94aac50ab4a848b87abbf101bbb13f9f9e4c4130dc9e05b4c04d1f6"
+      },
+      {
+        "count": 3,
+        "shape": [
+          31,
+          27
+        ],
+        "spacing": 0.5,
+        "failed": [],
+        "plane": "Coronal",
+        "laterality": "R",
+        "bytes_equal": true,
+        "result_sha256": "f3560321427ad969641006a61c687ef6a1fdd4b9818f0e1e97a78ee9fbf04087"
+      },
+      {
+        "count": 29,
+        "shape": [
+          31,
+          27
+        ],
+        "spacing": 0.5,
+        "failed": [],
+        "plane": "Sagittal",
+        "laterality": "R",
+        "bytes_equal": true,
+        "result_sha256": "726b0970f716f1f0c0cbe52ecc6fdfc2d2fc4997983af53e21d9cb6e5b7e4bea"
+      },
+      {
+        "count": 29,
+        "shape": [
+          31,
+          27
+        ],
+        "spacing": 0.5,
+        "failed": [],
+        "plane": "Axial",
+        "laterality": "R",
+        "bytes_equal": true,
+        "result_sha256": "bde31514218453eb4db6f9a518d2bae794e1be907ddd07d98bba814f84a4f525"
+      },
+      {
+        "count": 29,
+        "shape": [
+          259,
+          271
+        ],
+        "spacing": 1.0,
+        "failed": [],
+        "plane": "Sagittal",
+        "laterality": "L",
+        "bytes_equal": true,
+        "result_sha256": "451196229c74338f58a72f04cfd8728f0294541c9be7d53e0b26f499763db282"
+      },
+      {
+        "count": 29,
+        "shape": [
+          259,
+          271
+        ],
+        "spacing": 0.9923664122137404,
+        "failed": [],
+        "plane": "Coronal",
+        "laterality": "L",
+        "bytes_equal": true,
+        "result_sha256": "451196229c74338f58a72f04cfd8728f0294541c9be7d53e0b26f499763db282"
+      },
+      {
+        "count": 29,
+        "shape": [
+          31,
+          27
+        ],
+        "spacing": null,
+        "failed": [
+          5,
+          8
+        ],
+        "plane": "Sagittal",
+        "laterality": "R",
+        "bytes_equal": true,
+        "result_sha256": "9ff0df0ca933c125b5de815cbbba6fc71fad5fc6718d20ebb1e75ba3c1683d68"
+      },
+      {
+        "count": 29,
+        "shape": [
+          31,
+          27
+        ],
+        "spacing": null,
+        "failed": [
+          5,
+          8
+        ],
+        "plane": "Axial",
+        "laterality": "L",
+        "bytes_equal": true,
+        "result_sha256": "a0ee7d9cdd5378a37d86393987ea15c041342c1a2069cc14077a4bfd030aec30"
+      }
+    ],
+    "mock_encoder_cuda": {
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "max_cpu_difference": 1.6391277313232422e-06,
+      "finite": true
+    },
+    "synthetic_only": true,
+    "not_accuracy_or_real_model_vram_evidence": true
+  },
+  "actions": {
+    "real_mri_decode": false,
+    "model_payload_download": false,
+    "real_model_inference_or_training": false,
+    "external_launch_upload_submit": false,
+    "gold_labels_read": false,
+    "weak_labels_read": false
+  }
+}

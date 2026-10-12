@@ -1,0 +1,103 @@
+{
+  "schema_version": "p011_independent_stock224_fixed10_design_only_v1",
+  "at_utc": "2026-10-08T15:51:50.280827+00:00",
+  "status": "design_only_no_implementation_API_or_actual_GPU",
+  "candidate_gate_passed": false,
+  "root_decision_pending": [
+    "p010_AA_numerical_controls",
+    "runtime_feasibility64_then256",
+    "independent_source_and_actual_payload_contracts"
+  ],
+  "prediction_factor": "Add the existing independent author224 probability-ranking branch after original p005 fusion, using fixed90:10 all12. Original p005 transport and all seven code cells remain literal.",
+  "baseline": {
+    "notebook_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "all7_code_cell_sha256": {
+      "3": "73479f7fd919996f4723ef93b4c881cbf698b9d79082cf7e1073fd85bd2b1ab1",
+      "4": "37243d9c509200ca349d6bcb080ee23b22cfee8ad3d209ae19a7c44535b49c20",
+      "5": "fe88cbfa098fd6760016417cefe8063f38265465db536cd02633df9c65edc17c",
+      "6": "81cfd2b20dbc25662adbda3b94c98b1bcdfa366c7ca997313139d718284790b8",
+      "7": "050aacdc1902df88b18fe1c3bc27bad57b743ca5c0e5b1c98bd1ccb1e37e5b96",
+      "8": "d27c72236f2810c7f442032f4c56470ab6d467ae9fb618cfbe97b4cb38b5acfd",
+      "9": "b3b5f3ec1c3eade95d6dfd87e9ec6c0d31fcf6ec849b556804aabb0d912702c0"
+    },
+    "original7_code_cells_byte_preserved": true,
+    "original_main320_native384_FOV140_K94_two_views_readerK16_weights_fusion_unchanged": true,
+    "shared_transport_migration_or_source_mutation": false
+  },
+  "additional_branch": {
+    "stock_source_sha256": "b61046e344425c446370d3df1ca019cf278f13fba385117035f849484a5a85f0",
+    "checkpoint_filename": "raptor_ft_alldata_t16_blendjev_oai_d96_c08_r224_swa.pt",
+    "checkpoint_sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+    "checkpoint_bytes": 292842755,
+    "arch": "coatnet_rmlp_2_rw_224.sw_in12k_ft_in1k",
+    "native_fastread_sha256": "5a59b6f82e846bcdfd452aaee6ff518cdd9d0b04aab03691b45c3f70a5198cb0",
+    "input": "Same native384/FOV140/mask96/SLOTS as stock author; new independent second decode pass over the same studies. crop307 offset38 to bilinear224 align_corners=False.",
+    "forward": "Literal full94-window single view, eval, no_grad, CUDA FP16 on two GPUs. No chunking or FP32 fallback accepted.",
+    "checkpoint_head_contract": "SHA/bytes/explicit arch224/head12/finiteFP32 state/strict load. Author target order checked; absent checkpoint label metadata remains explicitly unconfirmed.",
+    "transport": "New bounded apply_async branch only, declared total queue48/outstanding min(2*nproc,48)/original nproc expression; original p005 transport untouched.",
+    "model_source_history": "Existing nartaa InputVersion1; author Gold58 checkpoint selection/development reuse. Not own independent OOF; author train exclusion unverified."
+  },
+  "execution_order": [
+    "Run original14 preparation/main/reader definitions unchanged.",
+    "Install transparent parent fusion-call observation before the unchanged original fusion cell; cross-cell lifetime benign preflight, no imitation success prints.",
+    "Require exactly one actual original fusion SUCCESS and no EXCEPTION/FALLBACK. Validate baseline13columns/orderedUIDs/finite range.",
+    "Save baseline CPU CSV bytes using exclusive immutable backup, SHA receipt and orderedUID/label hashes. Original source already releases base models; explicitly GC/empty CUDA cache before loading extra models and observe actual memory. No retained base GPU model references.",
+    "Decode and infer stock224 independently on the same complete baseline UID set. Original decoder semantics and mask0 behavior preserved; no Reports/teacher labels.",
+    "Write raw224/UID-device/input-backend-resource/checkpoint/forward receipts exclusively before any gate or blend. Any branch or worker error remains fatal with drain/task_done, never absorbed by original broad fusion except.",
+    "Apply fixed0.9 average-percentile-rank baseline plus0.1 average-percentile-rank raw224, then final average-percentile-rank over all12. No coefficient selection or search.",
+    "Check baseline backup and original baseline SHA unchanged; validate candidate UID/order/columns/finite values, independently recompute blend, then atomic final CSV replacement only in a serving Notebook approved later by root."
+  ],
+  "new_factors_separated": {
+    "accuracy_factor": "Additional frozen224 expert with predeclared10percent all12 weight.",
+    "resource_difference": "Two decoder passes per study, extra stock-model load/forward, sequential scheduling.",
+    "baseline_probability_or_CSV_identity": "Original p005 finishes and is frozen before the expert runs; no shared/base bounded transport control required to preserve already completed baseline predictions.",
+    "unproven_numerical_contract": "A/A outcome still determines whether stock224 same-device repeat behavior and author reproduction are acceptable. Existing1e-7 criteria are not automatically relaxed by choosing this alternative.",
+    "no_serving_1GPU_change_or_precision_backend_change": true
+  },
+  "profile64_then256": {
+    "same_each_phase_whole_groups_Gold_UID_group_excluded": true,
+    "Report_teacher_AUC_used": false,
+    "main_once_reader_once_stock_once_per_cohort": true,
+    "no_redundant_three_base_runs": true,
+    "baseline_fusion_stored_before_extra_branch": true,
+    "stock_and_baseline_input_hashes": "Record per-study native volume/mask bytes from both passes, without changing original numeric functions; require equality or explain invalidated comparison.",
+    "observations": [
+      "Actual T4x2 FP16/full94/model+backbone counts/no_grad/fallback0 and strict checkpoint receipts.",
+      "Actual duplicate decode count and source/FOV per worker, no skip-coverage promises for hidden test.",
+      "CPU process-tree RSS/queue/outstanding bounds, disk output and per-device sampled GPU and Torch peak allocated/reserved.",
+      "Separate model load, base+reader, second decode+224 and blend times; estimate hidden cost from256 with startup explicitly separate, not a guarantee.",
+      "Whole-group32/64/256 UID hash binding, submission.csv removal in success and failure, compact receipts only."
+    ],
+    "memory_gate_mib": 13000,
+    "maximum_runtime_margin": "Root must evaluate against current competition limit and the actual p005 full rerun. No unmeasured fixed multiplier or hidden completion promise.",
+    "profile_predictions_submission_eligible": false
+  },
+  "source_safety_contracts": [
+    "All7 baseline code cells remain byte identical; source and InputsV1/V1 pinned. New helper/probe/append cells only.",
+    "State/checkpoint/decoder/native shapes/label order/normalization remain bound; new branch never requires Report.",
+    "Original fallback does not silently qualify the baseline; actual parent SUCCESS observation and baseline CSV validation are mandatory.",
+    "Phase receipts use exclusive files and preserve failed evidence; no source/model/API mutations here.",
+    "Pure-stdlib independent original ordinal float32 and percentile-fusion checks; tiny CUDA is preliminary instrumentation only."
+  ],
+  "coefficient_selection_or_AUC_or_training": false,
+  "new_Dataset_needed": false,
+  "new_model_payload_download_here": false,
+  "root_only_API_or_competition_mutation": true,
+  "protected_source_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/19_submit_p009_coat_fov160.ipynb": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+    "notebooks/public/21_submit_p010_swa224_rank10.ipynb": "4adf9088b97c795cb50e382b41d4a158950352ef4d5316fda40551111c39c41c",
+    "notebooks/public/21a_profile_p010_shared224_32_v3.ipynb": "b6710a91dd8fc9cb472170f324453aa28ec2fc44d46be5013ba05be271d996b3",
+    "notebooks/public/21a_profile_p010_AA_32_v4.ipynb": "dd22faffb31c1510eab2bf66d06a76b93d37e5491bd9db611cada9c5f6e2359a",
+    "scripts/p010_shared_runtime.py": "494685ecee58ccd98771e5e287992c598bbeea8691fd08dbceb4ebd18e2f59b7",
+    "scripts/p010_author224_runtime.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c"
+  },
+  "relation_to_V3_and_V4": "V3 remains ERROR with its unmet raw and CSV criteria; V4 remains a diagnosis. Neither is retrospectively passed or copied into this proposed candidate.",
+  "operations": {
+    "API": 0,
+    "GPU": 0,
+    "MRI": 0,
+    "training": 0,
+    "implementation_files": 0
+  }
+}

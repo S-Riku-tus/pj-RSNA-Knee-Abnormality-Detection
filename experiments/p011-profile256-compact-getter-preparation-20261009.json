@@ -1,0 +1,93 @@
+{
+  "schema_version": "p011_private256_compact_getter_local_preparation_v1",
+  "at_utc": "2026-10-08T18:20:38.564657+00:00",
+  "all_passed": true,
+  "checks": {
+    "SDK_artificial2_tests_and_Ruff_pass": true,
+    "default_preflight_no_auth_API_or_HTTP_pass": true,
+    "actualaccepted256_source17_launcher24_cohort256_fixed_pointer": true,
+    "raw_typed_entire25cell22code_original7_andInput_metadata_saved_binding_reused": true,
+    "13JSON_CSV_allowlist_byte_caps_reused": true,
+    "metadata_allpages_Counter_fullpath_basename_method_unchanged": true,
+    "fixed_boundedHTTPS_stream_hash_close_transport_unchanged": true,
+    "corrected_unsigned_requestsSession_get_entry_byte_AST_reused": true,
+    "Session_auth_none_trustEnvFalse_identity_retry0_noSDK_get": true,
+    "sourceRPC0_cached17_before_freshStatus1": true,
+    "raw_missing_or_nonterminal0inventory_0HTTP": true,
+    "ERROR0inventory_0HTTP_log_requires_separate_root_read": true,
+    "COMPLETE13bounded_bodies_no_UID_MRI_NPZ_weights_orTeacher_body": true,
+    "fresh_observation_intent_exclusive_no_blindretry": true,
+    "private256_source_helper_launch_assets_unchanged": true,
+    "candidate_actual256_hidden_Public_rootqualification_remainfalse": true
+  },
+  "SDK_artificial_tests": {
+    "passed": 2,
+    "seconds": 0.338
+  },
+  "Ruff_passed": true,
+  "ref": "rsraki/p011diag256-e5e8cdc760af73b43bbd386184635afb",
+  "saved_version": 1,
+  "kernel_id": 137720781,
+  "source_sha256": {
+    "launcher_adapter.py": "dca456dc6e20a6eee7c6f4343d2cf318d4be936d6100ad65c70ef542511da836",
+    "results_tools.py": "e063651125e65bd8728d6f7db97936e879f03b337f02032a1d94b0be6d05549d",
+    "get_once.py": "e02406354aa7e56b487e70e2b013bf6ebe0bf7cf7ad58d38f0392169ccd728cb",
+    "test_results.py": "5d6c582fc9bab440e80e841bc33c6600bb5232e6ca41bfc65cc663149d88c0e2"
+  },
+  "reused64_sources_sha256": {
+    "results_tools.py": "734e654caff78ed21138a01c5fe92c577756de9fe37c5565c28f8965e045e153",
+    "get_results_once_v2.py": "d77b2452b0e2da222189557f625b8d8dda2bfd21f72c4cb0fb3cfa8fad2c4ef9"
+  },
+  "captured_pointer_sha256": "985bedf5c94bcb325d7ff48c364b581643548da3f4371f5ddbc79a4839307421",
+  "fixed_profile_sha256": "1d81ac179370be73197ec818879604f6551e36a5f15f1745cea54e7858439b3a",
+  "fixed_package_sha256": "bb1882e12e675a23c6c73df69f6cbdd5580b35d59dceed36946e62f98d24c0cc",
+  "saved_source17_proof": {
+    "path": "experiments/p011-profile256-savedV1-binding-review-20261009.json",
+    "sha256": "f4c83f23cc3baad2089eea4f6d4d622f2eb4602398ac66522118ab21321f4653"
+  },
+  "launcher24_proof": {
+    "path": "experiments/p011-profile256-root-launcher-independent-review-20261009.json",
+    "sha256": "8b6f2870b522a0c2c3dddc57ec5b64cf74492c0ea5516cbfc987b41447684c3e"
+  },
+  "cohort": {
+    "studies": 256,
+    "groups": 255,
+    "ordered_uid_sha256": "685a6a4c82f1ae7bf29a8d2dfeafccecf02b394f8a5a0ef5da284af32085e55a",
+    "first64_ordered_uid_sha256": "8eeada7574bcc1a72c29bbebcdfcdd7ae2c7fd85359f4dbe7d3c6d7da8e7e371"
+  },
+  "file_allowlist": [
+    "P011_BASELINE_SEAL.json",
+    "P011_BASE_PROFILE.json",
+    "P011_BEFORE_EXTRA.json",
+    "P011_CANDIDATE_BLEND_RECEIPT.json",
+    "P011_EXPERT_LOAD_cuda_0.json",
+    "P011_EXPERT_LOAD_cuda_1.json",
+    "P011_PROFILE_SUMMARY.json",
+    "P011_STANDALONE224_SUMMARY.json",
+    "_own.csv",
+    "_sota_0949.csv",
+    "p007_observation_plain/inference.json",
+    "p011_baseline_sealed.csv",
+    "p011_expert224_raw.csv"
+  ],
+  "source_RPC_planned": 0,
+  "fresh_status_RPC_planned": 1,
+  "metadata_pages": "Both endpoints finite pagination,100/page; positive output selection13 only; file.size is not byteproof.",
+  "body_limits_bytes": {
+    "JSON_each": 4194304,
+    "CSV_each": 131072
+  },
+  "root_only_command_not_executed": [
+    "artifacts/tools/kaggle-venv/Scripts/python.exe",
+    "artifacts/research/20261009-p011-profile256-results-tools-v1/get_once.py",
+    "--execute"
+  ],
+  "actual_API_auth_HTTP_GPU_MRI_model_Save_submit_by_preparer": 0,
+  "candidate_gate_passed": false,
+  "actual256_results_qualified": false,
+  "full_Serving_passed": false,
+  "Public_score": null,
+  "accuracy_evaluated": false,
+  "decision": "Root may make one fresh status observation, and only if raw/typedCOMPLETE fetch13 compact bodies. ERROR holds with0 body, separate log read required.",
+  "limitations": "Transport readiness is not runtime/resource/completion/accuracy qualification. Root must review actual256 results independently; perUID native pixels/model bodies are not fetched or verified."
+}

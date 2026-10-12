@@ -1,0 +1,51 @@
+{
+  "schema_version": "f005_twofold_p014_compact_serving_running_v1",
+  "observed_at_utc": "2026-10-10T04:21:10.407029+00:00",
+  "own_best_official_Public": "0.951",
+  "strict_above_0_960_achieved": false,
+  "actual_native_CPU64_256_qualified": {
+    "path": "artifacts/research/20261010-f005-online-last2-twofold-root-review-preparation-v3/actual-root-observation-v1/review.json",
+    "sha256": "ed33e82bda30380b46e75af444d58c6b334cebb2aa18cccc3c66395cd4f12cdc",
+    "passed": 12
+  },
+  "parent_original5_preserved": true,
+  "native_twofold_fixed_weight": 0.2,
+  "own_Gold_fit_selection": 0,
+  "source_UTF8_bytes": 927057,
+  "source_limit_bytes": 950000,
+  "source_packet_member_count": 77,
+  "compressed_packet_restoration_all_member_size_SHA_match": true,
+  "changed_from_V3": "zlib source transport plus local guard; same 71 source closure and prediction math; fresh root authority and ref",
+  "notebook": {
+    "path": "notebooks/public/27_submit_p014_native_twofold_compact.ipynb",
+    "sha256": "43c4e7726bc5091f53eaa3fd6ccd032c96642eee326ea5c7a4486ad541a835e0"
+  },
+  "private_Save": {
+    "ref": "rsraki/p012native2-2017c2587f0dd4f03bfd9dee7332a074",
+    "kernel_id": 137969034,
+    "saved_version": 1,
+    "official_Save_calls": 1,
+    "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/actual-serving-Save-attempt-v1/receipt.json",
+    "sha256": "959546e820ea9b51a6a9182b44f5ddb25c6d7ccd3470a54ab652ce52922cafa4"
+  },
+  "actual_source_binding": {
+    "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/visible-observation-v1/source-binding.json",
+    "sha256": "bd1bc9f8eb9c8b294a2a6db5ec1b68037b925f8a8ac81e33c242c2566e717bad",
+    "passed": 8,
+    "all_cells": 21,
+    "code_cells": 17
+  },
+  "actual_status": {
+    "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/visible-observation-v1/observation.json",
+    "sha256": "931cf774def18845c6bbade9c932394b5d64b69249c987c5b4e8ede6a45e2449",
+    "raw": "RUNNING",
+    "typed": "RUNNING",
+    "failure_message_empty": true,
+    "body_GETs": 0
+  },
+  "prior_HTTP400_reason_source_size_inference_not_retained_server_error": true,
+  "prior_failed_ref_not_resaved": true,
+  "new_competition_Submit": 0,
+  "whole_visible_hidden_accuracy_qualified": false,
+  "next": "Wait actual complete; bounded twenty outputs; independent CSV mean rank cleanup checks; one manual exact V1 competition submission"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "ledger_metric_source_column_correction_v1",
+  "at_utc": "2026-10-10T07:51:35.887312+00:00",
+  "before_sha256": "a17b9adaec2ce005073a9a7181e976a41895ac29f4f097bde40325bf6a755a1e",
+  "after_sha256": "a4517219cc1d2f007619941be2710a987a58c7ac69dc5a69c48a5d14ab3daaef",
+  "data_rows": 209,
+  "columns_before": 14,
+  "columns_after": 15,
+  "added_column": "weak_macro_auc_12",
+  "corrected": [
+    {
+      "experiment_id": "p012-baseline256-qualified-f005-fold1-complete-20261010",
+      "numeric_string_preserved": "0.8669470619793428",
+      "evidence": "experiments/p012-baseline256-qualified-f005-fold1-complete-20261010.json",
+      "evidence_sha256": "401e7ed4a7e4ac426212030afcd012a1bf9abc46057ae5cc3b0e396ae9476e1e",
+      "explicit_key": "fold1_last2_selected_AUC12",
+      "fold": 1,
+      "epoch": 9,
+      "not_twofold_mean": true
+    },
+    {
+      "experiment_id": "f005-regional-epoch1-parallel-fold0-started-20261010",
+      "numeric_string_preserved": "0.7068970697715208",
+      "evidence": "experiments/f005-regional-epoch1-parallel-fold0-started-20261010.json",
+      "evidence_sha256": "a40e97b4438fb37903fd053f3b067c6667ca27203ea70fdcc0433c9d9a48bf7b",
+      "explicit_key": "first_actual_fold1_epoch.weak_macro_auc_12",
+      "fold": 1,
+      "epoch": 1,
+      "not_twofold_mean": true
+    },
+    {
+      "experiment_id": "f005-regional-parallel-epochs12-transport-source12-20261010",
+      "numeric_string_preserved": "0.7573160595863899",
+      "evidence": "experiments/f005-regional-parallel-epochs12-transport-source12-20261010.json",
+      "evidence_sha256": "c106acc452c2d19a0fb52bac87b2f179e252e1c8de0eeee22f1ca408a6111fa3",
+      "explicit_key": "actual_partial_training.fold1.weak_AUC12",
+      "fold": 1,
+      "epoch": 2,
+      "not_twofold_mean": true
+    }
+  ],
+  "known_Gold_values_unchanged": [
+    {
+      "experiment_id": "e001-smoke-fold0",
+      "gold_macro_auc_12": "0.487177986159391"
+    },
+    {
+      "experiment_id": "e002-baseline-fold0",
+      "gold_macro_auc_12": "0.487177986159391"
+    }
+  ],
+  "remaining_Gold_blank_rows": 207,
+  "all_other_old_cell_strings_order_rows_preserved": true,
+  "old_experiment_JSON_and_model_run_files_changed": false,
+  "no_new_model_accuracy_or_qualification": true,
+  "real_model_MRI_teacher_GPU_API_operations": 0,
+  "Gold_evaluation_not_inferred_from_no_fit_flag": true
+}

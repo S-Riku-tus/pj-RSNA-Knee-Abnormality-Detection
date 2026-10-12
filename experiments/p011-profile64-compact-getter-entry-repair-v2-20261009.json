@@ -1,0 +1,58 @@
+{
+  "schema_version": "p011_root_compact_getter_entry_repair_v2",
+  "at_utc": "2026-10-08T17:45:48.230613+00:00",
+  "all_passed": true,
+  "checks": {
+    "root_error_AttributeError_reproduced_actualSDK_clientclass_without_auth": true,
+    "actual_KaggleClient_get_absent_http_client_present": true,
+    "root_old_observation_v1_never_created": true,
+    "old_getter_helper_CSV_and_initialproof_immutable_SHA": true,
+    "launch5sources_NotebookV3_frozenassets_unchanged": true,
+    "only_new_getter_v2_and_entrytests_added_no_runtimehelper_changes": true,
+    "separate_requestsSession_get_used_instead_of_SDKget": true,
+    "Session_retry0_noSDK_authcookiesheaders_copied": true,
+    "Session_trustenv_false_no_netrc_proxycredential_discovery": true,
+    "AcceptEncoding_identity_preserves_bytecap_ContentLength_contract": true,
+    "fixed_transport_HTTPS4redirect_cap_timeout_stream_hash_close_unchanged": true,
+    "root_API_ownclient_retry0_RPC_redirectfalse": true,
+    "private64_nonce_savedV1_source_exact_body13_whitelist_unchanged": true,
+    "SourceRPC0_freshStatus1_reusing17proof": true,
+    "new_results_observation_v2_exclusive_and_intent_no_blindretry": true,
+    "first_failure_errorType_only_receipt_preserved": true,
+    "actualSDK_entry4_artificial_tests_pass": true,
+    "Ruff_new2sources_pass": true,
+    "old8helpertests_no_longer_claim_actual_entry_coverage": true,
+    "child_actualAPI_HTTP_MRI_model_fit_submit0": true,
+    "actual64_output_and_accuracy_not_yet_measured_by_child": true
+  },
+  "new_sources_sha256": {
+    "get_results_once_v2.py": "d77b2452b0e2da222189557f625b8d8dda2bfd21f72c4cb0fb3cfa8fad2c4ef9",
+    "test_getter_entry_v2.py": "165ded9065433367be65145a094eb5b3ef017ef07b7ffdc9409ca9dd6f2acaad"
+  },
+  "protected_prior_sources_and_receipts": {
+    "get_results_once.py": "dc8ed94db062b75882c3b7fc2a897d0230d462dac492bbe3accb9a621a244617",
+    "results_tools.py": "734e654caff78ed21138a01c5fe92c577756de9fe37c5565c28f8965e045e153",
+    "fusion_checks.py": "acb8ef88c8c5d9a699cf05a0cbcf7f4d3f4c4f819dd41321e629112625508f9e",
+    "frozen-bindings-v3.json": "f5343fc7bbd2c752b28fda8b79a1050265aca80925cc4a64c0901f70da68f697",
+    "captured-readset-v1.json": "cde54b4a1a39f4cd591a904750d60c2ff845c44e98a3dd4ce6060b060b5d504d"
+  },
+  "old_preparation_SHA": "731c9516a330bfe02c4aa2bb3ece0e1295d6e735d3cbb9ad9aab555b31ef2fa8",
+  "current_profile_SHA": "62e6aaefda761077dafbbe56167732784f9c14ec11230df0e197481918974020",
+  "launch_sources_sha256": {
+    "launch_tools.py": "8ffe2be7f6130a923bdad41612fbf7a53983ba782ea292c4d2bc1d89fce351ff",
+    "launch_once.py": "ee4461817956f201f7d994f6b63f189877da9e84018a6f5a062ed098f6dd96c0",
+    "freeze_bindings.py": "c7d131b806986e26eb68687bfb8a7d9bf5a8f84e0826799eb9a65dd35655f958",
+    "test_launch_tools.py": "e60761cd89e204659d238f1e97899c81da4e2826e443292f3b02f8ea51ed8a14",
+    "test_sdk_request.py": "b6fe1e6e2214d776a6afc5cb13ff63071fc32bbe26481ac73077263b21152672"
+  },
+  "actual_client_definition_SHA": "4c831465e19649912d329a0aafe05d73cb429757399c8e714a1e06cfe819bfa7",
+  "actual_first_failure_receipt_SHA": "a9bd732580c9b6fcc67545bb014b90bfde6559724b944359f27965fe1144c8b0",
+  "API_calls_by_child": 0,
+  "HTTP_by_child": 0,
+  "fixed_source_or_model_changes": false,
+  "candidate_gate_passed": false,
+  "accuracy_measured": false,
+  "root_command_not_executed": "artifacts/tools/kaggle-venv/Scripts/python.exe artifacts/research/20261009-p011-profile64-launch-v1/get_results_once_v2.py --execute",
+  "root_default_preflight": "artifacts/tools/kaggle-venv/Scripts/python.exe artifacts/research/20261009-p011-profile64-launch-v1/get_results_once_v2.py",
+  "test_scope": "Actual SDK client class getattr absence and separate actual Session binding; mocked collect, HTTP0. Existing helper DTO fixtures remain historical, not evidence that old entry ran."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "p011_competition_savedV1_submission_accepted_v1",
+  "accepted_at_utc": "2026-10-09T02:30:41.814656+00:00",
+  "submission_ref": 56986152,
+  "notebook_ref": "rsraki/p011srv-8105f0434cc183692525c2dd8ccdc9eb",
+  "kernel_id": 137784585,
+  "saved_version": 1,
+  "requested_output": "submission.csv",
+  "fresh_allowance_before_submission": 5,
+  "RPC_counts": {
+    "GetSubmissionLimits": 1,
+    "GetKernelSessionStatus": 1,
+    "CreateCodeSubmission": 1
+  },
+  "Public_score": null,
+  "own_public_lb": null,
+  "scoring_complete": false,
+  "hidden_rerun_passed": false,
+  "protected_own_public_lb": 0.95,
+  "automatic_retry": false,
+  "accuracy_gain_not_yet_known": true,
+  "evidence_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/22_submit_p011_independent224_rank10_v3.ipynb": "a8e13bf0b053716e024f363417bc8b338b958eddf8a1837d3bad0a385607fd0c",
+    "experiments/p011-serving-savedV1-binding-review-20261009.json": "45078c2e40a758bf03367ef38e9b11215d7d85a438496e3ebfd8c648c5423569",
+    "experiments/p011-profile256-completed-root-review-20261009.json": "9acb096c7ebb9c37053d21034bc9d81c18e8fbfb7df680652bdad4371f888f7a",
+    "experiments/p011-profile256-actual-results-independent-review-20261009.json": "2cf298a4132a4a87d66f66555c76303604100a1f4719f2582163f86d0d5e758c",
+    "experiments/p011-serving-visible-output-independent-review-20261009.json": "d29ed36c04e888c2ab5054173c8b3c7352f0b7bbcbb9d6d26be1b01d124c579a",
+    "artifacts/research/20261009-p011-serving-root-launch-v1/attempt-v1/save-response.json": "0c79e3e4d56a7b8c6382ae7440b364caf59ce98f3f9b7a635e061079c760f11c",
+    "artifacts/research/20261009-p011-serving-root-launch-v1/attempt-v1/launch-request.json": "b3488c3bdcb378a6231464521dcf15863bafc66c598bc10434d04a36745143b8",
+    "artifacts/research/20261009-p011-serving-results-tools-v1/observation-v1/download-receipt.json": "d6a11ec3e5a93a762f49945939d4fa67f40e63682e0c561108b031e4566a2b78",
+    "experiments/p011-serving-visible-output-root-review-20261009.json": "f375cb84349a1431c77530305f71f2753a63cdbcc52dd585ff455008ae6f4fcf"
+  }
+}

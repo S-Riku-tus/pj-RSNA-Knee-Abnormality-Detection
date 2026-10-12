@@ -1,0 +1,194 @@
+{
+  "schema_version": "p008_serving_saved_binding_independent_review_v2",
+  "reviewed_at_utc": "2026-10-08T11:04:56.745777+00:00",
+  "accepted_save_response_at_utc": "2026-10-08T10:55:27.635959+00:00",
+  "status": "saved_V1_source_environment_payload_binding_verified_visible_runtime_pending",
+  "saved_ref": "rsraki/p008-apex-meniscus10",
+  "saved_url": "https://www.kaggle.com/code/rsraki/p008-apex-meniscus10",
+  "saved_version": 1,
+  "kernel_id": 137655738,
+  "notebook_sha256": "5e849e0f81357f44c612e5cda2cbfe88225a22fa784b76cf59c14a9684a0951f",
+  "saved_source_text_sha256": "a1da50a75952c9a71a8918c04e2b7ee6dbf99ba372036b4e03f1c107f49cd91d",
+  "original7_code_cell_sha256": {
+    "3": "73479f7fd919996f4723ef93b4c881cbf698b9d79082cf7e1073fd85bd2b1ab1",
+    "4": "37243d9c509200ca349d6bcb080ee23b22cfee8ad3d209ae19a7c44535b49c20",
+    "5": "fe88cbfa098fd6760016417cefe8063f38265465db536cd02633df9c65edc17c",
+    "6": "81cfd2b20dbc25662adbda3b94c98b1bcdfa366c7ca997313139d718284790b8",
+    "7": "050aacdc1902df88b18fe1c3bc27bad57b743ca5c0e5b1c98bd1ccb1e37e5b96",
+    "8": "d27c72236f2810c7f442032f4c56470ab6d467ae9fb618cfbe97b4cb38b5acfd",
+    "9": "b3b5f3ec1c3eade95d6dfd87e9ec6c0d31fcf6ec849b556804aabb0d912702c0"
+  },
+  "appended_code_cell_sha256": "8b70b49d089e87adcf5ae990db54446fe7cf4bbda2ed390a08b5467c0ffffa5c",
+  "request_settings_differences_vs_preparation": {
+    "newTitle": {
+      "prepared": "p008 Apex Meniscus10",
+      "launched": "p008 apex meniscus10"
+    }
+  },
+  "display_title_scope": "Prepared title p008 Apex Meniscus10 became p008 apex meniscus10; canonical ref unchanged. Case-only display title change does not alter model, Notebook source, Input, or predictions.",
+  "Notebook_serialization_scope": "Accepted request serializes cells0 and10 source lists as joined strings. Saved source equals accepted request JSON exactly. Every cell type, joined source, metadata, ID and non-source field matches preparation after this representation-only normalization. Original7 code cell source strings remain unchanged.",
+  "supersedes_review": {
+    "path": "experiments/p008-serving-saved-binding-review-20261008.json",
+    "historical_result": "54/55 checks; strict raw JSON type equality failed for list-to-string serialization in cells0 and10",
+    "actual_source_mismatch": false,
+    "remediation": "audit interpretation normalized source representation only; no Notebook/helper/Input/runtime change or remote action"
+  },
+  "Input_version_evidence": {
+    "accepted_request_explicit_versions": [
+      "goodpjw2008/rsna-knee-2-5d-convnext-reader/1",
+      "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+      "renta0426/rsna-knee-public0033-meniscus-bag-v1/2"
+    ],
+    "saved_Dataset_slug_set_matches": true,
+    "accepted_invalidDatasetSources": [],
+    "saved_metadata_internal_Input_version_ids_returned": false,
+    "numeric_ids": {
+      "competition": {
+        "ref": "rsna-knee-abnormality-detection",
+        "expected_bundle_id": 20902466
+      },
+      "reader": {
+        "ref": "goodpjw2008/rsna-knee-2-5d-convnext-reader/1",
+        "expected_internal_version_id": 20325538
+      },
+      "SWA": {
+        "ref": "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+        "expected_internal_version_id": 20440357
+      },
+      "Meniscus10": {
+        "ref": "renta0426/rsna-knee-public0033-meniscus-bag-v1/2",
+        "expected_internal_version_id": 19356288
+      }
+    },
+    "scope": "Explicit /1,/1,/2 accepted in SaveKernel with invalid sources empty; GetKernel metadata returns Dataset slugs only. Numeric expected internal version IDs and competition bundle ID are provenance, not directly observed saved binding."
+  },
+  "Original_evidence": {
+    "saved_digest": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+    "numeric_provenance": 31481,
+    "numeric_id_directly_returned": false
+  },
+  "GPU_scope": "Saved NvidiaTeslaT4 and GPU enabled; actual two-T4 runtime, aggregate incumbent+branch memory and full cohort completion await visible outputs. Strict stock runtime requires T4x2.",
+  "embedded_payload": {
+    "sha256": "f314ba2ba4bbc1c117731fe596f9a78766588433384b091c14d440f25b54ea78",
+    "members": {
+      "public0033_apex_serving.py": {
+        "bytes": 20828,
+        "sha256": "b4e78777d3cda121d4e3133fca87a9931478fcfb9d5b6c685c2937c4825a8799"
+      },
+      "public0033_profile_runtime.py": {
+        "bytes": 26147,
+        "sha256": "6e06462c651fc3a881be15e60895ca07fd530afce8a743a7fd27b43e22bd69ed"
+      },
+      "public0033_streaming_adapter.py": {
+        "bytes": 22810,
+        "sha256": "324b85cadf163820dd4d93381721523396e129a26ffb7952c7711f2496e516d4"
+      }
+    },
+    "teacher_MRI_weight_or_UID_assets_embedded": false
+  },
+  "prior_proof": {
+    "offline_static_checks": 26,
+    "artificial_tests": 38,
+    "new_serving_tests": 14,
+    "real64_independent_resource_contract_checks": 32,
+    "combined_runtime_proof": false,
+    "accuracy_proof": false
+  },
+  "captured_initial_status": {
+    "status": "QUEUED",
+    "failureMessage": null
+  },
+  "captured_status_at_utc": "2026-10-08T10:55:28.433198Z",
+  "status_scope": "Only existing QUEUED/empty-output launch receipts reviewed; no fresh poll, completion, specialist_used=true, combined GPU peak, hidden rerun, or score verified by this audit.",
+  "teacher_and_accuracy_scope": "Live serving reads test UID/series/plane metadata without Report or train.csv. Released specialist is weak fullfit, not OOF. Fixed90:10 was prespecified without own Gold coefficient selection; original Apex7 code cells and other10 prediction-value-string contract are preserved.",
+  "own_best_Public": "0.950",
+  "p008_Public": null,
+  "competition_submission_launched": false,
+  "next_gate": "Saved exactV1 COMPLETE, real specialist_used=true, stock CUDA/resource/source/CSV independent audit and fresh submission allowance.",
+  "checks": {
+    "accepted_SaveKernel_no_error": true,
+    "accepted_all_invalid_source_and_tag_fields_present_empty": true,
+    "accepted_exact_normalized_owner_slug": true,
+    "request_saved_exact_owner_slug": true,
+    "saved_and_request_canonical_title": true,
+    "saved_author_slug_correct": true,
+    "accepted_V1_binding": true,
+    "accepted_kernel_id_binding": true,
+    "launch_review_hash_binding": true,
+    "parent_prelaunch25_checks_passed": true,
+    "parent_prelaunch_current_notebook_prep_validation_hashes": true,
+    "prelaunch_visible_only_no_competition_authorization": true,
+    "prepared17_SHA_unchanged": true,
+    "packaged_notebook_bytes_exact_repo": true,
+    "saved_all11_source_cells_exact_prepared17": true,
+    "request_all11_source_cells_exact_prepared17": true,
+    "saved_full_JSON_identity_to_accepted_request": true,
+    "saved_full_notebook_identity_after_source_list_normalization": true,
+    "saved11_cells8_code": true,
+    "saved_code_clean_unexecuted": true,
+    "all8_saved_code_cells_compile": true,
+    "protected14_SHA_unchanged": true,
+    "original7_code_cells_exact_saved": true,
+    "original7_code_hashes_exact_preparation": true,
+    "original_notebook_metadata_exact_saved": true,
+    "appended_source_hash_exact_preparation": true,
+    "prepared_API_settings_SHA_unchanged": true,
+    "only_display_title_case_change_vs_prepared_settings": true,
+    "saved_request_private": true,
+    "saved_request_GPU_enabled": true,
+    "saved_request_Internet_OFF": true,
+    "saved_request_TPU_disabled": true,
+    "actual_saved_Original_digest_exact": true,
+    "Original_pinning_requested": true,
+    "actual_saved_T4_machine_exact": true,
+    "SAVE_AND_RUN_ALL_requested": true,
+    "three_Datasets_explicit_V1_V1_V2_pins_requested": true,
+    "saved_three_Dataset_slugs_exact_order_independent": true,
+    "one_Competition_Input_only": true,
+    "exact4_Input_count": true,
+    "no_extra_kernel_or_model_Input": true,
+    "embedded_payload_exact_prepared_ZIP": true,
+    "embedded_payload_SHA_exact_preparation": true,
+    "ZIP_exact3_python_helpers_only": true,
+    "ZIP_safe_relative_basenames": true,
+    "ZIP_declared_member_contract_exact_preparation": true,
+    "ZIP_all_member_bytes_and_SHA_exact": true,
+    "ZIP_all3_exact_current_helper_files": true,
+    "Notebook_calls_live_append_exactly_once": true,
+    "actual_live_metadata_test_UID_only_no_teacher_Report": true,
+    "source_pins_exact_stock_runtime_and_manifest": true,
+    "one_prediction_factor_fixed90_to10_Meniscus_only": true,
+    "offline_validation26_checks38_tests_binding": true,
+    "real64_profile32_check_gate_hash_binding": true,
+    "captured_initial_QUEUED_no_failure": true,
+    "captured_initial_outputs_empty_no_performance_proof": true
+  },
+  "checks_passed": 56,
+  "checks_total": 56,
+  "source_artifacts": {
+    "artifacts/research/20261008-p008-serving-launch-v1/saved-source.json": "6acf3f4a451a901e151b6e76767d0dfe55641ffdf2cf174f1b73f3536cbedbf8",
+    "artifacts/research/20261008-p008-serving-launch-v1/launch-request.json": "22944b86257088d746f26fbd6b9a3adc99597aec675764a606ad7bb2f6e4077c",
+    "artifacts/research/20261008-p008-serving-launch-v1/save-response.json": "f7c89c211533280609af3e8f502a6db0b74562f0aedae1253b6da1ea73bc21f7",
+    "artifacts/research/20261008-p008-serving-launch-v1/status-20261008T105528433198.json": "51a915d26e993ea92e033eb514899ee4c763e918d36e2775054bdf95deb8f59d",
+    "artifacts/research/20261008-p008-serving-launch-v1/output-20261008T105528433198.json": "68678bec65bf17d7473d2ce76c6ec05b8ccf329074516e1a57b6d8b7f289e2bc",
+    "notebooks/public/17_submit_p008_apex_meniscus10.ipynb": "5e849e0f81357f44c612e5cda2cbfe88225a22fa784b76cf59c14a9684a0951f",
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "experiments/p008-apex-menis10-preparation-20261008.json": "25eca4b222f1b54e9059140fa9fea8f9b4ebb074247dedb18f6e91b48f937765",
+    "experiments/p008-apex-menis10-validation-20261008.json": "7436aca5d2c40f64049daaf46e57506bd4fcc4b7a9fb1108928b21654a064096",
+    "experiments/p008-prelaunch-root-review-20261008.json": "9b46b26ea81b5ccd7ad695418fe1fe77b1e5fee18341f92a1af686388408dbaa",
+    "experiments/public0033-profile64-result-review-20261008.json": "44a51f0c1bf6c1cb9abe6e5e46e6e8f6c5c5ef410a265d9b464290a5fb8ba58c",
+    "artifacts/kaggle/p008-apex-menis10-v1-20261008/api-settings.json": "9ac79bc5c5abfca30283849c10487f667f6d2fa09d1d0a5b52c1c721338eec1b",
+    "artifacts/kaggle/p008-apex-menis10-v1-20261008/p008-meniscus-code.zip": "f314ba2ba4bbc1c117731fe596f9a78766588433384b091c14d440f25b54ea78"
+  },
+  "limits": [
+    "Initial queued status is not visible completion or competition submission.",
+    "Visible summary must be passed with specialist_used=true, actual full12 forwards and fixed overlay before treating this as p008 candidate.",
+    "Original branch resource gate covers uncompressed ExplicitVRLittleEndian selected frames only; compressed hidden syntax handling is unproven.",
+    "N<2 skip or declared input fallback retains Apex and is not a successful specialist comparison; unexpected checkpoint/CUDA/programming errors re-raise.",
+    "Saved metadata shifted lastRunTime is not used as execution time; receipt timestamps are retained."
+  ],
+  "remote_mutation_or_fresh_poll_by_this_agent": false,
+  "MRI_or_model_download_decode_fit_by_this_agent": false,
+  "competition_submission_by_this_agent": false,
+  "old_artifacts_or_docs_modified": false
+}

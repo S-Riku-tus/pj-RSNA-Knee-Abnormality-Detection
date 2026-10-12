@@ -1,0 +1,83 @@
+{
+  "schema_version": "p011_private64_root_oneoff_launcher_preparation_v3",
+  "at_utc": "2026-10-08T17:30:33.539256+00:00",
+  "all_passed": true,
+  "checks": {
+    "V3fixedsource_freeze_and_preflight_pass": true,
+    "protected14_and_PLAN_SHA_fixed": true,
+    "source_contract_independent22_pass_and_bytefixed": true,
+    "authorprep10_artificial21_peer17_currentpassed": true,
+    "all_local_launcher5source_fixedSHA": true,
+    "Notebook25cells22code_and_original7literal_order_once": true,
+    "serving21cells18code_original7literal_order_once": true,
+    "positive_profilepackage12files_bytefixed": true,
+    "all5helpers_and_stock_embedded_package_localsbyteexact": true,
+    "stock_LF_b61046_authorSHA_unmodified": true,
+    "structural64UID63wholegroups_Gold_UID_and_group0": true,
+    "ordered64UID_SHA_from_plan_fixed": true,
+    "private_Original31481_T4x2_OFF_Inputpins1_1_pluscomp": true,
+    "normal_cached_auth_only_after_explicit_execute_flag": true,
+    "CSPRNG128bit_newslug_no_404_assumption_or_existingrefread": true,
+    "Decimal_rawGPU_quota_once_not_compAllowance": true,
+    "request_intent_written_before_SaveCall": true,
+    "one_SaveAndRunAll_per_attempt_no_retry": true,
+    "instanceHTTPS_retries0_redirectfalse": true,
+    "unknownSave_and_nonV1_hold_with_rawproof": true,
+    "source_proof_SHA_recheck_after_freshquota_before_save": true,
+    "safeerror_type_status_only_no_exception_signedURLtext": true,
+    "fresh_exclusive_outputfolders_and_rootintent_priorretryreject": true,
+    "CPU19_tests_pass": true,
+    "actualSDK_DTO3_offline_tests_pass": true,
+    "Ruff_new_tools_pass": true,
+    "negative_oldPackageV2_reject": true,
+    "negative_proofSHAdrift_reject": true,
+    "negative_assetSHAdrift_reject": true,
+    "negative_launcherSHAdrift_reject": true,
+    "no_actualAPI_GPU_MRI_teacher_checkpoint_download_fit_or_submit": true,
+    "candidate_accuracy_and_oldp010qualification_false": true
+  },
+  "bindings_path": "artifacts/research/20261009-p011-profile64-launch-v1/frozen-bindings-v3.json",
+  "bindings_sha256": "f5343fc7bbd2c752b28fda8b79a1050265aca80925cc4a64c0901f70da68f697",
+  "launcher_source_sha256": {
+    "launch_tools.py": "8ffe2be7f6130a923bdad41612fbf7a53983ba782ea292c4d2bc1d89fce351ff",
+    "launch_once.py": "ee4461817956f201f7d994f6b63f189877da9e84018a6f5a062ed098f6dd96c0",
+    "freeze_bindings.py": "c7d131b806986e26eb68687bfb8a7d9bf5a8f84e0826799eb9a65dd35655f958",
+    "test_launch_tools.py": "e60761cd89e204659d238f1e97899c81da4e2826e443292f3b02f8ea51ed8a14",
+    "test_sdk_request.py": "b6fe1e6e2214d776a6afc5cb13ff63071fc32bbe26481ac73077263b21152672"
+  },
+  "proofs": {
+    "author_preparation": {
+      "path": "experiments/p011-profile64-preparation-v3-20261009.json",
+      "sha256": "18087a2a089be593fa327ddff74e0ffe166a4f886e922f664a3dfa5fbcf051a1"
+    },
+    "artificial": {
+      "path": "experiments/p011-artificial-preparation-validation-v3-20261009.json",
+      "sha256": "c9549811f800c11ced15da8381a257879d59497d6f531ad7d83c09f8aa8f24b7"
+    },
+    "independent_prelaunch": {
+      "path": "experiments/p011-independent-prelaunch-review-v3-20261009.json",
+      "sha256": "bc853182fa3349e5a9ec0e848008ebcc576975f73044757722dc255c60ece059"
+    }
+  },
+  "source_contract_independent22": {
+    "path": "experiments/p011-launcher-source-contract-review-v3-20261009.json",
+    "sha256": "909f65a0ccee8d7eace5497b1e0fa3ccd86e64a391ea303f2746b6b0a80b416a"
+  },
+  "profile_SHA": "62e6aaefda761077dafbbe56167732784f9c14ec11230df0e197481918974020",
+  "package_version": 3,
+  "remote_expected_saved_version": 1,
+  "API_calls": 0,
+  "actual_MRI_model_teacher_GPU_fit_or_submit": false,
+  "candidate_gate_passed": false,
+  "own_Gold_selection": false,
+  "author_Gold_selection_reuse": true,
+  "internal_Input_versionIDs_confirmed": false,
+  "namespace_collision": "A new independent 128bit nonce avoids intentional overwrite; remote nonexistence is not proven. NonV1 response holds without blind retry.",
+  "quota_limit": "Conservative >3600 seconds available from fresh rawGPU quota. No daily competition allowance check for this private profile.",
+  "actual_before_execute": false,
+  "commands_not_executed": {
+    "root_local_preflight": "artifacts/tools/kaggle-venv/Scripts/python.exe artifacts/research/20261009-p011-profile64-launch-v1/launch_once.py",
+    "root_actual_private64_save_once": "artifacts/tools/kaggle-venv/Scripts/python.exe artifacts/research/20261009-p011-profile64-launch-v1/launch_once.py --execute"
+  },
+  "tests_scope": "19 CPU runtime-free contracts/one-call fixtures +3 actual SDK DTO artificial fixtures. No real API/HTTP/body/GPU calls. 4 extra local manifest mutation rejects."
+}

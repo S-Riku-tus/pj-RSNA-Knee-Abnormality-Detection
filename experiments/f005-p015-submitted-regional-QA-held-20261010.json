@@ -1,0 +1,123 @@
+{
+  "schema_version": "f005_P015_official_Submit_and_regional_QA_held_v1",
+  "at_utc": "2026-10-10T05:26:27.483029+00:00",
+  "own_best_official_Public": "0.951",
+  "strict_above960_achieved": false,
+  "P014_submission_ref": 57031186,
+  "P014_latest_official_observation": {
+    "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/submission-observation-v5/observation.json",
+    "sha256": "c216d81c750cbf8a82eab8ea10b9e815238890ea9209b5b9a3e776508004815f"
+  },
+  "P015_submission_ref": 57031981,
+  "P015_latest_official_observation": {
+    "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/submission-observation-v1/observation.json",
+    "sha256": "0590008f3c20ce0f1a8a2fcc49d3606e075bc5fb1c7438ff5c9134a4f932c662"
+  },
+  "P014_Public": null,
+  "P015_Public": null,
+  "saved_ref": "rsraki/p012native2-ff87856adabf4210bdd8a797616743f0",
+  "saved_version": 1,
+  "kernel_id": 137973395,
+  "notebook": {
+    "path": "notebooks/public/28_submit_p015_native_support_mask.ipynb",
+    "sha256": "cd02b96feff6069a5dd386f47418517207916077f5d3011ee07ed50c9012eaa1"
+  },
+  "visible_status": "COMPLETE",
+  "actual_output_GET_count": 22,
+  "visible_UID_count": 3,
+  "source_binding": {
+    "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/visible-observation-v2/source-binding.json",
+    "sha256": "cc1fc9e01808bb51bd61aa13b8fd412a4d1bc9d5f00c672972c1ca298457ae7a"
+  },
+  "visible_observation": {
+    "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/visible-observation-v2/observation.json",
+    "sha256": "51cd6168a93ad27546aeef1396ee016267932b6773be9e39ebc72c54ddefb06b"
+  },
+  "independent_visible_review": {
+    "path": "artifacts/research/20261010-p015-native-support-mask-visible-independent-v1/review.json",
+    "sha256": "8cf87e448a971de4f982a1865fc0a3d1b47345a34d0007994a9c289b8e72d2de"
+  },
+  "independent_visible_checks_passed": 58,
+  "single_factor": "MCL and Synovitis restored to sealed P012 baseline numeric predictions; other10 exact uniform20 fields",
+  "weak_support_threshold_new_hypothesis": 20,
+  "native_rank_fraction_other10": 0.2,
+  "native_rank_fraction_MCL_Synovitis": 0.0,
+  "visible_math": {
+    "baseline_70_30_FP32_bit_difference": 0.0,
+    "native_FP32_mean_difference": 0.0,
+    "uniform_backup_fixed80_20_rank_difference": 0.0,
+    "masked_baseline_value_difference": 0.0,
+    "other10_field_string_difference": 0,
+    "final_CSV_byteexact": true,
+    "coefficient_search": false,
+    "visible_UIDs": 3,
+    "UID_order_sha256": "9679026cd1dbad718cd9a8a7e717322d30f1fef5536d11685224a5cc26af3011",
+    "labels": [
+      "ACL",
+      "MCL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Synovitis",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ],
+    "values_checked_baseline": 36,
+    "values_checked_native": 36,
+    "values_checked_uniform_backup": 36,
+    "masked_values_checked": 6,
+    "unchanged_field_strings_checked": 30,
+    "format": ".17g",
+    "line_terminator": "CRLF unchanged csv.writer default",
+    "final_bytes": 834,
+    "final_mask_rerank_performed": false
+  },
+  "native_runtime_observed_seconds": 25.55343770999997,
+  "native_fallback_count": 0,
+  "strict_cleanup_clear_calls": 1,
+  "actual_Submit_receipt": {
+    "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/actual-serving-Submit-attempt-v1/receipt.json",
+    "sha256": "c239940b351ebd641b67688d34281b13d5e34c06779548c34bd727206c70abb9"
+  },
+  "actual_Save": 1,
+  "actual_Submit": 1,
+  "remaining_allowance_before_P015_Submit": 4,
+  "automatic_retry": false,
+  "full_hidden_completion_verified": false,
+  "whole_hidden_time_upper_bound_established": false,
+  "own_Gold_fit_or_selection": 0,
+  "teacher_Report_inference_read": false,
+  "public_third_party_Gold_provenance_separate": true,
+  "patient_independence_claimed": false,
+  "regional_next_factor": {
+    "hypothesis": "Normalized CLS plus16 fixed regional patch means instead of CLS-only, same last2 and weak training settings",
+    "config": {
+      "path": "configs/experiments/f005-dinov2-native-regional4x4-last2-fast16.json",
+      "sha256": "bb3c0b33b11f177eb5326b158405f87d8656b0b5b355f4d6d214463c2c04380a"
+    },
+    "source_handoff": {
+      "path": "artifacts/research/20261010-f005-regional-training-source-implementation-v1/handoff.json",
+      "sha256": "fd16920be75100dbcb6c01faf54ebf8c9bc042f60c0cf14e26d1c500966f11a3"
+    },
+    "actual_artificial_CUDA_QA": {
+      "path": "artifacts/qa/20261010-regional4x4-streamed-full144-v1/checks.json",
+      "sha256": "1f6150d568ff6d092818c5d0d27b91b9d502ed04b51a69da1cf42476431f0c90"
+    },
+    "QA_passed": false,
+    "passed_through": "full144 logits, masked BCE, all trainable gradients and dropout RNG; effective16 gradients",
+    "failed_check": "effective_group16_post_AdamW_parameter_parity",
+    "real_MRI_pixels_read": false,
+    "real_teacher_labels_read": false,
+    "real_training_started": false,
+    "action": "Diagnose update discrepancy before any fitting; preserve failed QA and fixed tolerances"
+  },
+  "weak_teacher_cause_audit": {
+    "path": "artifacts/research/20261010-weak-Synovitis-MCL-teacher-cause-audit-v1/research.json",
+    "sha256": "c9b0240a5029ffe82b18baa158c0f89b495cdac142e3a1b833465d07a890dcc1"
+  },
+  "next": "Observe exact P014/P015 Public without repeat Submit; diagnose regional artificial update before real training"
+}

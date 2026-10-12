@@ -1,0 +1,43 @@
+{
+  "schema_version": "post950_external_reader_primary_review_v1",
+  "reviewed_date_JST": "2026-10-08",
+  "retrieval_method": "web search and direct primary author repositories",
+  "own_incumbent_public": "0.950",
+  "new_verified_own_score": null,
+  "sources": [
+    {
+      "url": "https://github.com/aditbytes/kaggle-rsna-knee-abnormality",
+      "role": "Participant primary experiment report; author values, not our API reproduction",
+      "author_reported": {
+        "public_reference": "0.944",
+        "v1_reader_alone": "0.860",
+        "reference_plus_v1_weight20": "0.937",
+        "v3_reader_alone_folds01": "0.923",
+        "reference_plus_v3_weight15": "0.943",
+        "v4": "384px cache/320px input; described as training"
+      },
+      "interpretation": "Different representation alone did not establish positive ensemble gain in these reported examples. Do not adopt a weaker independent reader merely because it is diverse.",
+      "limits": "Author Gold-based evaluation and selection differ from our Gold exclusion policy. No payload, model or MRI obtained. README branch mutable; exact commit and Kaggle saved Input bindings not independently verified. Not a >0.950 recipe."
+    },
+    {
+      "url": "https://github.com/Beiciccc/rsna-knee-abnormality-detection",
+      "role": "Primary public reproducibility repository",
+      "observed": "Lists scored reproduction anchors and a structural CSV validator; viewed README does not establish a new >0.950 recipe.",
+      "limits": "Did not infer leaderboard improvement from repository activity, title or license."
+    },
+    {
+      "url": "https://github.com/facebookresearch/dinov2",
+      "role": "Official model source",
+      "observed": "DINOv2 supports useful frozen visual features; this does not prove that fine-tuning the last two blocks improves this MRI task.",
+      "application": "Keep a frozen control with identical image preprocessing/head, compare one-factor last-two-block adaptation using fixed weak folds, no Gold selection."
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/",
+      "role": "Competition primary overview/evaluation",
+      "observed": "Evaluation is macro ROC-AUC across twelve findings.",
+      "derived": "A +0.005 macro improvement needs a +0.060 sum of per-target AUC changes; +0.010 needs +0.120. This arithmetic is not a forecast. A strictly monotone final per-target transform preserves AUC if numerical ties do not change."
+    }
+  ],
+  "decision": "Preserve own950 and evaluate current one-factor submissions. Build bounded native392 cache and measure online frozen/last2 CUDA before actual training. No blind weaker-model blend or title-score shortcut.",
+  "remote_mutation_or_MRI_model_download": false
+}

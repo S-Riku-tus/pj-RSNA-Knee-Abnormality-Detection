@@ -1,0 +1,137 @@
+{
+  "schema_version": "regional_triplet_component_artificial_preparation_v1",
+  "checked_at_utc": "2026-10-08T18:38:35.814750+00:00",
+  "all_passed": true,
+  "checks": {
+    "existing_NativeTripletMIL_head_training_CLI_configs_and14_unchanged": true,
+    "normalized_CLS_plus_disjoint4x4_patch_means_shape17x384": true,
+    "patch_grid28x28_regional_grid4x4_each7x7_rowmajor_tested": true,
+    "FP32_region_means_then_FP16_storage_FP32_head": true,
+    "CLS_descriptor_bitexact_existing_encoder_path_in_CPU_fixture": true,
+    "head_state_keys_shapes_strict_roundtrip_and_parameter_count_unchanged": true,
+    "exact3x48_input_and_same_plane_flags_with_windowwise_mask_position17repeat": true,
+    "only_valid_windows_encoded_corrupt_padding_and_padded_nan_features_neutral": true,
+    "patch_information_reaches_existing_head_with_image_independent_CLS_fixture": true,
+    "two_study_row_order_and_12_target_column_order_tested": true,
+    "prefix_noGrad_encoder_eval_finalnorm_frozen_only_blocks10_11_grad": true,
+    "suffix_checkpoint_CPU_output_and_grad_exact_equivalence": true,
+    "allmissing_malformed_tokens_and_FP16_overflow_rejected": true,
+    "CPU8_unittest_Ruff_and_format_passed": true,
+    "existing_generic_actual_CUDA_two_logical_windows_only": true,
+    "actual_CUDA_freeze_and_last2_finite_grad_scope_and_prefix_unchanged": true,
+    "actual_CUDA_head_parameter_count_equal_both_arms": true,
+    "actual_CUDA_proof_source_and_check_CLI_SHA_bound": true,
+    "no_MRI_teacher_newweights_optimizer_realfit_or_submission": true,
+    "no_existing_trainer_config_checkpoint_or_serving_integration": true
+  },
+  "component_only": true,
+  "component_class": "RegionalTripletMIL(NativeTripletMIL)",
+  "hypothesis": "Expose coarse local normalized DINO patch information to the unchanged finding-specific head while retaining the original CLS descriptor; improvement is unmeasured.",
+  "sole_future_model_factor": "Representation/instance count:1 CLS perwindow becomes CLS+16 fixed region means. Existing pixel extraction,encoder trainability,head architecture/params,teacher/splits/seed/crop must remain matched.",
+  "input": {
+    "image_size": 392,
+    "max_series": 3,
+    "windows_per_series": 48,
+    "valid_windows_only_encoded": true,
+    "existing_native_cache_reusable": true,
+    "new_DICOM_decode_required": false
+  },
+  "feature": {
+    "encoder": "generic DINOv2 ViT-S/14",
+    "normalized_patch_grid": [
+      28,
+      28
+    ],
+    "regional_grid": [
+      4,
+      4
+    ],
+    "patches_per_region": [
+      7,
+      7
+    ],
+    "ordering": "Within each original window:CLS first,then16 region means row-major. Windows remain at their original series/slot positions.",
+    "feature_dim": 384,
+    "head_input_feature_dim": 384,
+    "head_hidden_dim_unchanged": 192,
+    "instances_per_window": 17,
+    "head_L_per_series": 816,
+    "head_trainable_parameters": 83352,
+    "pool_dtype": "FP32 means of normalized patch descriptors; all17 castFP16 thenFP32",
+    "head_plane_and_flags": "Unchanged per-series",
+    "head_positions_and_mask": "repeat_interleave17 per originalwindow; no new region coordinates or learned embedding"
+  },
+  "source_sha256": {
+    "src/rsna_knee/regional_triplet_model.py": "31f91d75d73b222c1e37d8864abfe584c6bd648203ef67293ec56d855eaa9589",
+    "tests/test_regional_triplet_model.py": "aec48c9e5e46c33766313a80d61449cf177eeef7b3b7a03e8b39e27845e2834e",
+    "scripts/check_regional_triplet_artificial.py": "6fc47e3978d5c092aee9e94d6a14bf0179660f59196e3b7bf5864656f05c0f01"
+  },
+  "protected_unchanged_sha256": {
+    "src/rsna_knee/native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+    "src/rsna_knee/finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "src/rsna_knee/feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "src/rsna_knee/triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "src/rsna_knee/feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "src/rsna_knee/feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "src/rsna_knee/imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "src/rsna_knee/contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+    "scripts/train_native_dinov2_fast16.py": "cfdba529adcdd9b6d5f34a6b020cdae03f7fb04551ed4807778503fa1235ece0",
+    "configs/experiments/f005-dinov2-native-frozen-control-fast16.json": "7352e38ba0e58aad041a31c3b667c0f23c3ef0f9e085a48c4832e7cc36a8a7cb",
+    "configs/experiments/f005-dinov2-native-last2-fast16.json": "896b7293b26413c895002f906ff83023389456a9ba9afda7f5413a0c498fc279",
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546"
+  },
+  "CPU_tests": {
+    "passed": 8,
+    "seconds": 0.979,
+    "scope": "Small differentiable stand-in encoder; no real pretrained CPU forward,teacher or optimizer.",
+    "batch_row_comparison_atol": 1e-06,
+    "batch_row_comparison_rtol": 0,
+    "row_tolerance_scope": "Artificial CPU batched-vs-separate logits only; no oldp010 GPUgate is changed."
+  },
+  "Ruff_and_format_passed": true,
+  "actual_CUDA_artificial": {
+    "path": "artifacts/qa/20261009-regional-triplet-artificial-two-windows-v1/checks.json",
+    "sha256": "797a8318edc2c5e5a0a6b191660b1f3ca1d51b4931e6b6ba8df1201de0295d18",
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.10.0+cu128",
+    "logical_windows_total": 2,
+    "forward_valid_windows_each": 1,
+    "backward_calls": 1,
+    "optimizer_steps": 0,
+    "peak_reserved_bytes_by_arm": {
+      "0": 205520896,
+      "2": 232783872
+    },
+    "existing_generic_weights_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "new_weights_acquired": false,
+    "MRI_teacher_data_read": false
+  },
+  "primary_sources": [
+    {
+      "url": "https://github.com/facebookresearch/dinov2/blob/main/dinov2/models/vision_transformer.py",
+      "checked_at": "2026-10-09 JST",
+      "supports": "Official normalized CLS/patch token outputs;register-free path places normalized patches afterCLS. Local execution uses the already-pinned generic source,not a fresh main checkout."
+    },
+    {
+      "url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002699",
+      "checked_at": "2026-10-09 JST",
+      "supports": "MRI-series/slice aggregation and multiple planes motivate the existing MIL context. The paper does not test this4x4 DINO hypothesis or RSNA competition gain."
+    }
+  ],
+  "limitations": [
+    "This is neither a fullqualified trainer/checkpoint nor a serving/scored candidate. Existing f005 CLI still constructs the unchanged CLS model. No integration occurred.",
+    "Identical state_dict shapes allow strict tensor loading across classes,but representation semantics differ. A future dedicated config/checkpoint schema must encode the17-instance representation before training or inference; oldnative checkpoint schemas are not qualification evidence.",
+    "The head is permutation-invariant among descriptors sharing a window position. No explicit regional identity/adjacency is added; coarsened local descriptors and encoder positional context are the only additional information.",
+    "17instances increase head token count and affect CLS-vs-region attention mass. Encoder window count staysfixed; training resources/retained suffix activations for full144 realwindows are unmeasured.",
+    "Only2 synthetic logical encoderwindows ran on4090 with existinggeneric weights. No full144 GPU repetition,optimizer,realteacher or learned accuracy.",
+    "Allmissing studies remain rejected like NativeTripletMIL. Patient independence andgeneric pretraining overlap remain unverified; Gold/Public are not used for fit or selection.",
+    "f005 matched CLS freeze/last2 contrast and root review remain separate prerequisites before choosing any future matched regional experiment."
+  ],
+  "trainer_checkpoint_serving_candidate_gate_passed": false,
+  "accuracy_evaluated": false,
+  "own_Gold_fit_or_selection": false,
+  "API_Save_HTTP_payload_newweights_DICOM_teacher_fit_optimizer_submit": 0,
+  "official_document_browsing_only": true,
+  "existing_component_trainer_config_cli_or_oldrun_edits": 0,
+  "decision": "Isolated component and artificial contracts pass. Hold actual regional learning/inference pending future dedicated config/schema/resource review; improvement remains a hypothesis."
+}

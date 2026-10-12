@@ -1,0 +1,84 @@
+{
+  "schema_version": "f005_fast16_paired_checker_preparation_v1",
+  "at_utc": "2026-10-09T02:40:58.332771+00:00",
+  "all_passed": true,
+  "checks": {
+    "fixed_root_commandlist_SHA": true,
+    "immutable_structural_plan_SHA": true,
+    "all_eight_current_training_sources_match": true,
+    "current_CLI_matches": true,
+    "same_fixed_resource_gate": true,
+    "fixed_configs_semantic_hashes": true,
+    "structural4207_and_prespecified_fold_counts": true,
+    "two_meaningful_artificial_CPU_tests_passed": true,
+    "Ruff_source_check_passed": true,
+    "no_actual_run_or_fullcache_preflight_executed": true,
+    "no_teacher_MRI_model_checkpoint_body_reads_in_preparation": true,
+    "no_old_source_config_CLI_or_run_edits": true
+  },
+  "source_sha256": {
+    "compare_runs.py": "a5f72a2ce515978d63bf782cd0e3d7c67a26b69c5db778c11d43e792b6d12dd9",
+    "test_compare_runs.py": "5da54361da246461a411bb4a7e96c747cdbb524e1e96c159e28c2fbee59e4439"
+  },
+  "commands_sha256": "68d077bba0aec1e2446c57808c0798f637f1b14664f2a50333a354b0aedfa1b9",
+  "plan_file_sha256": "12bc17f371997b20d1b1f85de83b8792a2e058ee409e08b0bff70aa50d7ff425",
+  "fixed_source_sha256": {
+    "native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+    "finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+  },
+  "CLI_sha256": "cfdba529adcdd9b6d5f34a6b020cdae03f7fb04551ed4807778503fa1235ece0",
+  "config_semantic_sha256": {
+    "0": "4d9e17c9bae01944d9112313d0b2ab263797626b900e43c3ced623a9ad7b1987",
+    "2": "e27837ab653b6dc4155bc3489c5570795ccbf16a2e34bd3ba1dd107c44ff45db"
+  },
+  "resource_gate_sha256": "f7460c837b1cd8e9d4d19ff0ea35929b8877a3fb7de766527785aedeba461824",
+  "test_results": {
+    "unittest": {
+      "tests": 2,
+      "passed": 2,
+      "elapsed_seconds": 0.005
+    },
+    "Ruff": "passed"
+  },
+  "root_after_both_fold0_fits_complete_argv_not_executed": [
+    ".venv/Scripts/python.exe",
+    "artifacts/research/20261009-f005-fast16-pair-review-tools-v1/compare_runs.py",
+    "--frozen-run",
+    "artifacts/runs/f005-native-frozen-control-fast16-fold0-20261009-v1",
+    "--last2-run",
+    "artifacts/runs/f005-native-last2-fast16-fold0-20261009-v1",
+    "--output",
+    "experiments/f005-fast16-fold0-paired-weak-review-20261009.json"
+  ],
+  "actual_full4207_index_existed_during_preparation": false,
+  "actual_runs_or_predictions_reviewed": false,
+  "actual_teacher_checkpoint_MRI_model_body_reads": 0,
+  "GPU_fit_API_HTTP_Save_upload_submit": 0,
+  "result_scope": "Recorded weak metrics and locally saved twelve-epoch prediction/checkpoint-byte receipts; not Gold/Public accuracy.",
+  "checkpoint_contract": {
+    "best_file": "best.pt",
+    "last_file": "last.pt",
+    "schema_from_source": "native392_generic_dino_suffix_head_fast16_v1",
+    "future_best_bytes_SHA_checked": true,
+    "tensor_deserialization": false,
+    "last_internal_epoch_strict_schema_required_separately": true
+  },
+  "metrics_contract": {
+    "best_selection": "minimum recorded logits weak BCE; earliest exact tie",
+    "per_finding_AUC": "recorded run/history AUC; support validated with positive/negative/soft/missing counts",
+    "per_finding_BCE": "not saved by current CLI; null, without approximation",
+    "teacher_values_or_missing_mask_identities_reopened": false,
+    "valid_UID_order": "correct fold UID set, all12/best order unchanged, paired order equal; original manifest row order not independently reopened"
+  },
+  "fold1_gate": "Root review of both fold0 technical completion and paired results before the already-fixed fold1 pair. No learning-rate/label/seed/crop search introduced.",
+  "patient_independence_verified": false,
+  "own_Gold_evaluated": false,
+  "Public_score": null,
+  "preparation_not_accuracy_or_full_fit_qualification": true
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "f005_completed_cached_frozen0_and_actual_online_last2_start_root_receipt_v1",
+  "at_utc": "2026-10-09T04:15:57.692680+00:00",
+  "all_passed": true,
+  "frozen_run_path": "artifacts\\runs\\f005-native-frozen-cached-FP32-fast16-fold0-20261009-v1",
+  "frozen_run_sha256": "68cd3c9550c3d039d01bffa1943505f9d671ba48d01f26f710a5882c1fac9aaf",
+  "frozen_selected_epoch": 11,
+  "frozen_selected_weak_BCE": 0.32320641890826474,
+  "frozen_selected_weak_AUC12": 0.7944484597102713,
+  "frozen_elapsed_seconds": 372.259913899994,
+  "frozen_actual_optimizer_steps": 2544,
+  "frozen_AMP_skipped_steps": 0,
+  "proofs": {
+    "full4207_feature_cache": {
+      "path": "experiments\\f005-frozen-FP32-full4207-cache-root-review-20261009.json",
+      "sha256": "a4d3f4f2f525a349550bd742e5f53459ca68a53bd4fa5bbdfe3ddd139afeef16"
+    },
+    "completed_frozen_independent14": {
+      "path": "artifacts\\research\\20261009-f005-cached-frozen-fold0-independent-review-v1\\observation-v2.json",
+      "sha256": "72cbd2d6b5b1d5e893fc95e87b81fc2b2cb7e0940f6ae108294a29a2b479ec9a"
+    },
+    "selected_weak_values_recomputed_CPU": {
+      "path": "experiments\\f005-frozen-fold0-selected-weak-recomputed-20261009.json",
+      "sha256": "a25d884cfde88fa7294c7269cb9ae6ac2a74cf79befb281abe40054c2eae0f03"
+    },
+    "selected_real_checkpoint_strict_CPU": {
+      "path": "artifacts\\qa\\20261009-f005-frozen-cached-FP32-fold0-checkpoint-CPU-v1\\reconstruction.json",
+      "sha256": "546492c8d6b1424d9a933eb778b34ebbea38e5f73c582c836874ec4d448625c0"
+    }
+  },
+  "last2_actual_run_path": "artifacts\\runs\\f005-native-last2-fast16-fold0-20261009-v1",
+  "last2_run_snapshot_sha256": "eb4d656d6d287da9da49097982b8a30aa6691d78746f228de7f14ddc151e85be",
+  "last2_status_at_observation": "running",
+  "last2_completed_epochs_at_observation": 0,
+  "last2_actual_process_started_at_utc": "2026-10-09T04:15:39.5039970Z",
+  "last2_live_unified_exec_session": 88754,
+  "last2_preflight_passed": {
+    "ready": true,
+    "train_studies": 3386,
+    "valid_studies": 821,
+    "cache_studies": 4207,
+    "fitting_performed": false
+  },
+  "same_source_teacher_seed_fold_head_loss12epoch_except_encoder_trainable_blocks": true,
+  "own_Public_best": "0.950",
+  "own955_achieved": false,
+  "strict_above960_achieved": false,
+  "ownGold_fit_or_checkpoint_or_coefficient_selection": 0,
+  "serving_candidate_qualified": false,
+  "Kaggle_Save_or_submit_this_progress": 0,
+  "next": "Finish unchanged last2 fold0; root paired review then prespecified fold1 frozen/last2. Qualify real native Kaggle runtime before any blend submission.",
+  "limits": [
+    "Frozen weak AUC is not own Public. Last2 has not completed.",
+    "Whole real online/cached twelve-epoch trajectories were not compared.",
+    "Patient independence remains unverified."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "p016_preregistered_numerical_type_wording_clarification_v1",
+  "at_utc": "2026-10-10T09:09:05.432402+00:00",
+  "original_preregistration": {
+    "path": "experiments/p016-direct224-onefactor-preregistration-20261010.json",
+    "sha256": "6e473732c3ad1eeb2ad8da144bd5059fe2c06d232af5d08d683bf1f2671c898d",
+    "bytes_preserved": true
+  },
+  "clarification_only": true,
+  "original_ambiguous_text": "existing float32/UID-order/CSV helpers",
+  "precise_existing_recipe": {
+    "original_P012_baseline_model_outputs": "float32 as original code",
+    "direct224_child_raw_probabilities": "unranked NumPy float32 12 values per study",
+    "late_blend": "unchanged old P011 fixed_rank10: average percentile rank, Python float arithmetic 0.9/0.1, final average percentile rank",
+    "new_intermediate_float32_cast": false,
+    "CSV": "unchanged old P011 Python float .17g, LF, same UID order, all12 findings"
+  },
+  "old_helper": {
+    "path": "artifacts/kaggle/p011-independent224-rank10-v3-20261009/p011_contracts.py",
+    "sha256": "0d86b0bcded2046fef89605cd7dd22fb7f05f326b15bf66a11027d46e96de76c"
+  },
+  "new_v1_helper": {
+    "path": "artifacts/research/20261010-p016-direct224-onefactor-source-preparation-v1/p011_contracts.py",
+    "sha256": "0d86b0bcded2046fef89605cd7dd22fb7f05f326b15bf66a11027d46e96de76c",
+    "entire_bytes_equal_old": true,
+    "symbol_sha256": {
+      "average_percentile": "2a64a6aa926bd632f7b66e9453690b3e15a47bb4d8a83d1515b8d2820d638cb6",
+      "read_submission": "36f2b9790f5f994d40427c5c59f74c05303e3c9fabeb943339f0cf5f41d1aa92",
+      "write_submission_exclusive": "1d58e19f2b595efe97abacc0fa8317e30fc4b39d5a66bd4866abbd7edd51774e",
+      "fixed_rank10": "2de085610830d0cf11f5eeeed74e30a8d9c51e1218c2ba8cf1ff67f718a40a17"
+    }
+  },
+  "code_or_math_or_coefficient_changes_from_this_record": 0,
+  "coefficient_search_or_result_based_adjustment": 0,
+  "new_runtime_GPU_model_MRI_Save_Submit_at_record": 0,
+  "v1_standalone_native_import_blocker": "SOURCE HOLD; unrelated minimal import path repair pending new revision; no qualification from this record",
+  "current_P014_official_state": "hidden rerun exception, Public None; P016 90:10 unchanged from preregistration",
+  "own_verified_Public": 0.951,
+  "strict_above0960_achieved": false
+}

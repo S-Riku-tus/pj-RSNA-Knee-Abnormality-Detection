@@ -1,0 +1,114 @@
+{
+  "schema_version": "f005_cached_CLS_diagnostic_adapter_preparation_v1",
+  "prepared_at_UTC": "2026-10-09T04:39:38.648138+00:00",
+  "all_passed": true,
+  "checks": {
+    "actual_completed_cached0_metadata_CPU8_weak_full4207_bound": true,
+    "real_assets_unsealed_child_did_not_copy_weights": true,
+    "qualification_candidate_accuracy_closed": true,
+    "positive_source_inventory_and_casefold_uniqueness": true,
+    "all_source_SHA_match": true,
+    "old_bundle_tools_and_native_runtime_byte_identical": true,
+    "native_decoder_queue_and_resource_modules_byte_identical": true,
+    "new_adapter_packet_matches_frozen_source": true,
+    "producer4_sources_unmodified": true,
+    "all_source_compile_config_JSON": true,
+    "all_prepared_metadata_asset_SHA_bound": true,
+    "p011_cohort64_256_same_structural_sources_prefix": true,
+    "all_selected_canonical5array_metadata_receipts": true,
+    "same_native392_physical_preprocess": true,
+    "all3_clean_Notebooks_compile_and_explicit_permissions_closed": true,
+    "generic_CPU_factory1_and_exact_original_strict_apply": true,
+    "no_old_qualification_guard_bypass_or_run_bundle_call": true,
+    "old_prepare_and_consume_called_without_numerical_changes": true,
+    "CPU7.log": true,
+    "ruff-check.log": true,
+    "ruff-format.log": true,
+    "all_original_model_sources_and14_22_unchanged": true
+  },
+  "source_sha256": {
+    "cached_contracts.py": "b0ddb0ec7d9ae10f1e43c8a050e2dae74ee508485956b65906bfd7a9119ba52b",
+    "seal_cached.py": "d1ae24d7ff25429f197b1279099483f90a52f6bdb225d3e73220fd24273fb937",
+    "cached_runtime.py": "091dd8b57def83a44da3f42a8931eec9baadee84ccd207fe3f931284394ed020",
+    "test_adapter.py": "5b203ddb23f84fb5ea115427b04f5473f72a276b3e6c998f53c5f2c9f6cb1bf5",
+    "record_preparation.py": "b064d3f8cc2812e23f7c189759dca3a3db09c11f9a9141fcb5c37c737337f950"
+  },
+  "packet_path": "artifacts/research/20261009-f005-cached-native-diagnostic-adapter-v1/source-preparation-v2",
+  "packet_manifest_sha256": "9aabe0de7f7dd3b650722efb271a30d80bfe66c70da942a6c2d07115cd14a2d5",
+  "packet_source_zip_sha256": "01108f36095c6318e12c3948f4f3c24e749adff52fabe4bfb12da72152f20458",
+  "packet_source_members": 37,
+  "packet_file_sha256": {
+    "audit/completed-run.json": "68cd3c9550c3d039d01bffa1943505f9d671ba48d01f26f710a5882c1fac9aaf",
+    "audit/CPU.json": "546492c8d6b1424d9a933eb778b34ebbea38e5f73c582c836874ec4d448625c0",
+    "audit/equivalence.json": "62f04d8a9791dfba41568a5dcbb1ed4940726fe40c0b1b7040a1dbed82477038",
+    "audit/full4207.json": "a4d3f4f2f525a349550bd742e5f53459ca68a53bd4fa5bbdfe3ddd139afeef16",
+    "audit/root.json": "8d36e456e664c235d1f008b7bf2c68eeced01e8e0ac64db0c4e8b01e9f1c5d6b",
+    "audit/weak.json": "a25d884cfde88fa7294c7269cb9ae6ac2a74cf79befb281abe40054c2eae0f03",
+    "BUILD_COMPLETE.json": "d2ea459f6a5891fe60ddb8fc1af4a92092a85aea037017c3b1ad0e318395c4f8",
+    "BUILD_START.json": "bfa4fb67c24dbcab89ad05fe11f44516b08cbdce82d6e0917a520977424255fe",
+    "bundle.json": "9aabe0de7f7dd3b650722efb271a30d80bfe66c70da942a6c2d07115cd14a2d5",
+    "configs/selected.json": "7352e38ba0e58aad041a31c3b667c0f23c3ef0f9e085a48c4832e7cc36a8a7cb",
+    "CPU_smoke-permission-TEMPLATE.json": "d172534d57f84804da14eba49c78a6c501532ecf62b0864fb95ec3db259e90c7",
+    "CPU_smoke_UNQUALIFIED.ipynb": "45119f2570c83ae1d35fbf4ca1a6286a26182759ec76d00613091bbb840c9c67",
+    "diagnostics/cohort256.json": "72063a5c44663210da703de3fb3543a1fb2b0c663608b24b535ef7a17a165858",
+    "diagnostics/cohort64.json": "7ef022b211a0875696e911f8fd70040deb1d1073b47dd98384e48af21270ba53",
+    "native256-permission-TEMPLATE.json": "bc2f25f16d0cf7a59b68e466bdb1000f7f4c374cfd5e0b9c0606c268ef7ce679",
+    "native256_UNQUALIFIED.ipynb": "3ded72dba54a3e8ee359fe1e3861a789cd8b6f0b1831710c7e516125352a02f7",
+    "native64-permission-TEMPLATE.json": "41c394ff5b176a27c9a50fbc3350659b481bbff4926e229e1ac148b802698cfe",
+    "native64_UNQUALIFIED.ipynb": "8ca671d78e6a89d20aa87245f2bef717655f5606206d1fd13b9a4d6b658d0e57",
+    "source-code.zip": "01108f36095c6318e12c3948f4f3c24e749adff52fabe4bfb12da72152f20458"
+  },
+  "root_actual_selected_checkpoint_sha256": "702a8fe16298fa858ba594ea67722af787f9a70859cc7785d7436027f2908470",
+  "child_actual_checkpoint_or_generic_bytes_read_or_copied": 0,
+  "selected_epoch": 11,
+  "producer_source_sha256": {
+    "cache_tools.py": "90c25788a937cd86dc0f45435341d50739f250144a17550bd75533a4dae433ee",
+    "extract_once.py": "b8f09b28bb28e0a58a21418b4f3816d98ff099283a2b1b578f0d18e36aef489b",
+    "train_cached.py": "c7815bf71e0a567718b38502bbdbab3907adb252991b60950a4e91e32ceb98d8",
+    "qualify_artificial.py": "7eecb04ecf0ec97dd38bfd3d4f362d7390375a0c1d27c449a0f6610e6d27779e"
+  },
+  "root_evidence_sha256": {
+    "CPU": "546492c8d6b1424d9a933eb778b34ebbea38e5f73c582c836874ec4d448625c0",
+    "full4207": "a4d3f4f2f525a349550bd742e5f53459ca68a53bd4fa5bbdfe3ddd139afeef16",
+    "weak": "a25d884cfde88fa7294c7269cb9ae6ac2a74cf79befb281abe40054c2eae0f03",
+    "root": "8d36e456e664c235d1f008b7bf2c68eeced01e8e0ac64db0c4e8b01e9f1c5d6b",
+    "equivalence": "62f04d8a9791dfba41568a5dcbb1ed4940726fe40c0b1b7040a1dbed82477038"
+  },
+  "native_cohort_counts": [
+    64,
+    256
+  ],
+  "native_expected_array_receipts": {
+    "64": 320,
+    "256": 1280
+  },
+  "source_prepared": true,
+  "actual_root_sealing_executed": false,
+  "actual_Kaggle_CPU_smoke_native64_native256_executed": false,
+  "serving_candidate_gate_passed": false,
+  "accuracy_evaluated": false,
+  "Public_score": null,
+  "root_local_seal_argv_not_executed": [
+    ".venv/Scripts/python.exe",
+    "artifacts/research/20261009-f005-cached-native-diagnostic-adapter-v1/seal_cached.py",
+    "--output",
+    "artifacts/research/20261009-f005-cached-native-diagnostic-adapter-v1/root-sealed-v1-FRESH",
+    "--execute"
+  ],
+  "sequence": "Root real seal + private Input packaging; exact private CPU mount/import/strict reconstruction; root explicit native64 permission referencing actualCPU receipt; then native256 permission referencing actual64 receipt. All array SHA verified before model. Source-only templates remain closed.",
+  "limitations": [
+    "Root metadata confirms real cached frozen0 completion/CPU reconstruction; child only checked metadata/code. Actual source-asset copying branch and Kaggle runtime were not executed by child.",
+    "The native64/256 cohort array receipts are taken from accepted current canonical summaries; no child pixel/feature/ZIP payload was read or independently numerically rechecked.",
+    "CUDA numerical functions are unchanged original Native/consumer code, but fresh generic loader/dual-device diagnosis requires the actual CPU and T4 stages; CPU7 tests are metadata/mapping/safety contracts only.",
+    "Pixel byte QC does not imply cross-GPU bitwise logits equivalence or improved Public AUC.",
+    "Queue parent bound excludes IPC/workers/native pages/GPU and no hard-kill missing-callback watchdog is added.",
+    "No clinical/ensemble coefficient/adoption/submission decision is made before the paired study. Own0.950 and strict above0.960 remain distinct from weak validation."
+  ],
+  "activity": {
+    "real_weights_checkpoint_teacher_MRI_NPZ_cache_payload_reads": 0,
+    "real_decode_or_GPU_forward_fit": 0,
+    "API_HTTP_auth_upload_Save_submit": 0,
+    "old_source_config_Notebook_edits": 0
+  },
+  "docs_ledger_owner": "root"
+}

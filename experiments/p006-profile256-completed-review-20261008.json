@@ -1,0 +1,599 @@
+{
+  "schema_version": "p006_real_profile256_independent_review_v1",
+  "reviewed_at_utc": "2026-10-08T10:35:28.186137+00:00",
+  "official_status_at_utc": "2026-10-08T10:31:43.196802+00:00",
+  "saved_ref": "rsraki/p006-profile-256-k16-k24",
+  "saved_version": 1,
+  "status": "profile256_passed_compact_CSV_and_fixed_fusion_independently_verified",
+  "checks": [
+    {
+      "name": "official_COMPLETE_no_failure",
+      "passed": true
+    },
+    {
+      "name": "complete_all_output_pages",
+      "passed": true
+    },
+    {
+      "name": "only_six_compact_outputs_downloaded",
+      "passed": true
+    },
+    {
+      "name": "summary_download_SHA_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "prepared256_UIDs_unique",
+      "passed": true
+    },
+    {
+      "name": "summary_passed256_exact_cohort",
+      "passed": true
+    },
+    {
+      "name": "gold_excluded_no_Report_targets_or_accuracy",
+      "passed": true
+    },
+    {
+      "name": "weak_manifest_provenance_same",
+      "passed": true
+    },
+    {
+      "name": "protected_baseline14_SHA_same",
+      "passed": true
+    },
+    {
+      "name": "bound_profile256_source_SHA_same",
+      "passed": true
+    },
+    {
+      "name": "prior_saved_binding60_checks_passed",
+      "passed": true
+    },
+    {
+      "name": "main256_pair_calls_successful",
+      "passed": true
+    },
+    {
+      "name": "main_every_UID_has_positive_valid_slices",
+      "passed": true
+    },
+    {
+      "name": "fixed_all12_weight_dictionary",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:canonical_columns",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:256_expected_UID_order",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:unique_UIDs",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:no_extra_or_missing_fields",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:3072_finite_probabilities_in_range",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:12_nonconstant_columns",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:download_receipt_SHA_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "coverage16:256_UID_order",
+      "passed": true
+    },
+    {
+      "name": "coverage16:exact_k_shape",
+      "passed": true
+    },
+    {
+      "name": "coverage16:all6_boolean_slots_valid",
+      "passed": true
+    },
+    {
+      "name": "coverage16:sample_positions_count_valid",
+      "passed": true
+    },
+    {
+      "name": "fusion16:SUCCESS_no_fallback_fixed_formula",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k16.csv:canonical_columns",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k16.csv:256_expected_UID_order",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k16.csv:unique_UIDs",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k16.csv:no_extra_or_missing_fields",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k16.csv:3072_finite_probabilities_in_range",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k16.csv:12_nonconstant_columns",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k16.csv:download_receipt_SHA_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k16.csv:canonical_columns",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k16.csv:256_expected_UID_order",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k16.csv:unique_UIDs",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k16.csv:no_extra_or_missing_fields",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k16.csv:3072_finite_probabilities_in_range",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k16.csv:12_nonconstant_columns",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k16.csv:download_receipt_SHA_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k16.csv:summary_receipt_matches_independent_CSV",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k16.csv:summary_receipt_matches_independent_CSV",
+      "passed": true
+    },
+    {
+      "name": "independent_rank_fusion16",
+      "passed": true
+    },
+    {
+      "name": "resources16:positive_measurements",
+      "passed": true
+    },
+    {
+      "name": "coverage24:256_UID_order",
+      "passed": true
+    },
+    {
+      "name": "coverage24:exact_k_shape",
+      "passed": true
+    },
+    {
+      "name": "coverage24:all6_boolean_slots_valid",
+      "passed": true
+    },
+    {
+      "name": "coverage24:sample_positions_count_valid",
+      "passed": true
+    },
+    {
+      "name": "fusion24:SUCCESS_no_fallback_fixed_formula",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k24.csv:canonical_columns",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k24.csv:256_expected_UID_order",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k24.csv:unique_UIDs",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k24.csv:no_extra_or_missing_fields",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k24.csv:3072_finite_probabilities_in_range",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k24.csv:12_nonconstant_columns",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k24.csv:download_receipt_SHA_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k24.csv:canonical_columns",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k24.csv:256_expected_UID_order",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k24.csv:unique_UIDs",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k24.csv:no_extra_or_missing_fields",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k24.csv:3072_finite_probabilities_in_range",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k24.csv:12_nonconstant_columns",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k24.csv:download_receipt_SHA_and_bytes",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k24.csv:summary_receipt_matches_independent_CSV",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k24.csv:summary_receipt_matches_independent_CSV",
+      "passed": true
+    },
+    {
+      "name": "independent_rank_fusion24",
+      "passed": true
+    },
+    {
+      "name": "resources24:positive_measurements",
+      "passed": true
+    },
+    {
+      "name": "reader_mask_identity16_24",
+      "passed": true
+    },
+    {
+      "name": "full_batch4_all6_slot_groups_exercised",
+      "passed": true
+    },
+    {
+      "name": "k24_GPU_peak_below_prespecified13000MiB",
+      "passed": true
+    },
+    {
+      "name": "main_resources_positive",
+      "passed": true
+    },
+    {
+      "name": "visible_log_normalized_UTF8_text_receipt_SHA",
+      "passed": true
+    },
+    {
+      "name": "visible_log_both_fusion_SUCCESS_no_exception_fallback",
+      "passed": true
+    },
+    {
+      "name": "visible_log_both_readers_Found3_checkpoints",
+      "passed": true
+    },
+    {
+      "name": "label_free_probability_delta_recomputed",
+      "passed": true
+    },
+    {
+      "name": "comparison_has_no_accuracy",
+      "passed": true
+    }
+  ],
+  "passed": 76,
+  "checks_total": 76,
+  "studies": 256,
+  "cohort_UID_sha256": "04aeadcd9352b4238bd54f7f3cacf21b7f81717dc8ea6229ff5b1400ffef518d",
+  "raw_UIDs_in_tracked_review": false,
+  "csv_contracts": {
+    "_sota_0949.csv": {
+      "rows": 256,
+      "columns": [
+        "StudyInstanceUID",
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "bytes": 49003,
+      "sha256": "02162569ea26ab11a15edbeb1f92ff55bf63a3348050188cc86c12a045452b18",
+      "unique_per_target": {
+        "ACL": 256,
+        "MCL": 256,
+        "Medial Meniscus": 256,
+        "Lateral Meniscus": 256,
+        "Medial OA": 256,
+        "Lateral OA": 256,
+        "PF OA": 256,
+        "Effusion": 256,
+        "Synovitis": 256,
+        "Baker's": 256,
+        "Contusion": 256,
+        "Fracture": 256
+      }
+    },
+    "p006_reader_k16.csv": {
+      "rows": 256,
+      "columns": [
+        "StudyInstanceUID",
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "bytes": 50171,
+      "sha256": "0ea7d36e4a208a7c22ba1c4dfb14f57077c9c77505e54dd81cd062b2e60ce4a1",
+      "unique_per_target": {
+        "ACL": 256,
+        "MCL": 256,
+        "Medial Meniscus": 256,
+        "Lateral Meniscus": 256,
+        "Medial OA": 256,
+        "Lateral OA": 256,
+        "PF OA": 256,
+        "Effusion": 256,
+        "Synovitis": 256,
+        "Baker's": 256,
+        "Contusion": 256,
+        "Fracture": 256
+      }
+    },
+    "p006_fused_k16.csv": {
+      "rows": 256,
+      "columns": [
+        "StudyInstanceUID",
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "bytes": 47949,
+      "sha256": "e03be0e446a0ef648c73bbe7ef2343e96d1b1fd5ff4965a1cad5e354f631feee",
+      "unique_per_target": {
+        "ACL": 219,
+        "MCL": 245,
+        "Medial Meniscus": 244,
+        "Lateral Meniscus": 250,
+        "Medial OA": 225,
+        "Lateral OA": 254,
+        "PF OA": 253,
+        "Effusion": 253,
+        "Synovitis": 256,
+        "Baker's": 251,
+        "Contusion": 247,
+        "Fracture": 254
+      }
+    },
+    "p006_reader_k24.csv": {
+      "rows": 256,
+      "columns": [
+        "StudyInstanceUID",
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "bytes": 50202,
+      "sha256": "ddc8fa48f40b552dc1217c307c9705d40bcc5a519e0a9966204ad183f771e918",
+      "unique_per_target": {
+        "ACL": 256,
+        "MCL": 256,
+        "Medial Meniscus": 256,
+        "Lateral Meniscus": 256,
+        "Medial OA": 256,
+        "Lateral OA": 256,
+        "PF OA": 256,
+        "Effusion": 256,
+        "Synovitis": 256,
+        "Baker's": 256,
+        "Contusion": 256,
+        "Fracture": 256
+      }
+    },
+    "p006_fused_k24.csv": {
+      "rows": 256,
+      "columns": [
+        "StudyInstanceUID",
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "bytes": 47853,
+      "sha256": "3ccd7cfdfd4ad4d7da9ae6da8a77534d652fcf18ff18c6b5ddf696b8e7bcabe6",
+      "unique_per_target": {
+        "ACL": 229,
+        "MCL": 247,
+        "Medial Meniscus": 246,
+        "Lateral Meniscus": 252,
+        "Medial OA": 227,
+        "Lateral OA": 255,
+        "PF OA": 251,
+        "Effusion": 256,
+        "Synovitis": 256,
+        "Baker's": 256,
+        "Contusion": 245,
+        "Fracture": 253
+      }
+    }
+  },
+  "independent_fusion_max_abs_diff": {
+    "16": 0.0,
+    "24": 0.0
+  },
+  "all6slots_batch4_exercised": true,
+  "full_batch_groups4_all6slots": 64,
+  "reader_valid_slot_count_distribution": {
+    "16": {
+      "6": 256
+    },
+    "24": {
+      "6": 256
+    }
+  },
+  "main_valid_slice_count_distribution": {
+    "96": 170,
+    "84": 79,
+    "74": 5,
+    "95": 2
+  },
+  "main_seconds": 313.73957680699993,
+  "reader_seconds": {
+    "16": 234.96146675199998,
+    "24": 273.5168509119999
+  },
+  "sampled_gpu_peak_mib": {
+    "16": [
+      8069,
+      1895
+    ],
+    "24": [
+      11561,
+      543
+    ]
+  },
+  "sampled_process_tree_RSS_bytes": {
+    "main": 14348943360,
+    "16": 10990755840,
+    "24": 11604615168
+  },
+  "sampled_process_tree_RSS_GiB": {
+    "main": 13.363494873046875,
+    "16": 10.235939025878906,
+    "24": 10.807640075683594
+  },
+  "resources": {
+    "main": {
+      "elapsed_seconds": 313.73957680699993,
+      "sampled_peak_process_tree_rss_bytes": 14348943360,
+      "rss_note": "Sum of RSS includes shared pages more than once; sampled, not exact peak.",
+      "sampled_gpu_peak_used_mib": [
+        3287,
+        3763
+      ],
+      "gpu_note": "nvidia-smi device-wide sampled memory, includes unrelated allocations on that device.",
+      "samples": 568,
+      "disk_free_bytes_after": 20939653120,
+      "successful_pair_calls": 256
+    },
+    "16": {
+      "elapsed_seconds": 234.96146675199998,
+      "sampled_peak_process_tree_rss_bytes": 10990755840,
+      "sampled_gpu_peak_used_mib": [
+        8069,
+        1895
+      ],
+      "samples": 428,
+      "disk_free_bytes_after": 20938424320
+    },
+    "24": {
+      "elapsed_seconds": 273.5168509119999,
+      "sampled_peak_process_tree_rss_bytes": 11604615168,
+      "sampled_gpu_peak_used_mib": [
+        11561,
+        543
+      ],
+      "samples": 498,
+      "disk_free_bytes_after": 20937256960
+    }
+  },
+  "observed_reader24_div_reader16_elapsed_ratio": 1.1640923709447848,
+  "own_public_lb": null,
+  "own_best_public_lb": "0.950",
+  "accuracy_evaluated": false,
+  "native_DICOM_zero_skip_proven": false,
+  "visible_log_storage_scope": "The downloader's text-mode write on Windows converts LF to CRLF. Receipt SHA/bytes describe original SDK UTF8 text; universal-newline read reproduces that text exactly. source_artifacts SHA describes the preserved physical CRLF file bytes. No existing log or receipt was overwritten.",
+  "profile256_submission_gate_passed": true,
+  "serving_submission_gate_scope": "The 256-study resource/coverage/rank gate passes. Parent still must audit serving Version1 COMPLETE and real visible submission/_own/_sota CSVs plus reader/fusion SUCCESS before competition submission. This diagnostic is never submitted.",
+  "decision": "Accept resource/coverage gate for current prepared k24 serving candidate; competitive accuracy remains unmeasured.",
+  "limits": [
+    "Fixed16then24 includes warm-cache and install/setup differences; ratio is not isolated forward-cost measurement.",
+    "Sum of process-tree RSS can double-count shared pages and device peaks are sampled device-wide values.",
+    "Positive masks and successful paired calls do not prove all native DICOM files decoded without skipped frames.",
+    "256 fixed weak-fullfit studies are not OOF or AUC validation; prediction differences do not establish improvement.",
+    "Larger/heterogeneous hidden cohort, 9h completion and private fallback rates remain unknown."
+  ],
+  "source_artifacts": {
+    "artifacts/kaggle/p006-profile-256-k16-k24-v1-20261008/preparation.json": "e8772d059332c93b36c7e53a73ed0256c0010f3b51906bbe1bfa20d6e10b5191",
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/15b_profile_p006_k16_k24_256.ipynb": "02899d7d111377b7f2347dfe1b84367521bbadd4aa29a4afa1562039ea188c10",
+    "experiments/p006-profile256-independent-binding-review-20261008.json": "6ab58c05afb201d241c09748d2c158d9a1d7d5e9d7c8363eb54dd9d08b3029c5",
+    "artifacts/research/20261008-p006-profile256-results-v1/P006_PROFILE_SUMMARY.json": "2700aafd97101ed9bbf100892019e48c5b6da9494df48cc8c8a6d2b38add8ce4",
+    "artifacts/research/20261008-p006-profile256-results-v1/download-receipt.json": "63bf877a07ca17afc1805f0bc497c41b0e1d0efbe9e19079a477f9e3cff6f5de",
+    "artifacts/research/20261008-p006-profile256-results-v1/official-status.json": "456819764f9956fa78735417ebe69103bf1ecdeacba315fff53f2dc74f20bc88",
+    "artifacts/research/20261008-p006-profile256-results-v1/visible.log": "e1733defb5ba11de2d7a5908794904f741a6e437bdbd41a6dfbf15aa85ed7f1f"
+  },
+  "remote_mutation_or_competition_submission": false,
+  "MRI_or_model_payload_download_or_decode_or_fit_by_auditor": false
+}

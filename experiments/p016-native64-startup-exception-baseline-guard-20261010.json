@@ -1,0 +1,64 @@
+{
+  "schema_version": "p016_actual_native64_diagnostic_startup_exception_root_v1",
+  "at_utc": "2026-10-10T10:23:00.345572+00:00",
+  "ref": "rsraki/p016n64-c86b549b4d474efaa90337335f19a202",
+  "kernel_id": 138009389,
+  "saved_version": 1,
+  "root_CLI_ERROR_chunk": "91ca63",
+  "actual_baseline": {
+    "complete": true,
+    "studies": 64,
+    "clear_calls": 1,
+    "exposed_fallback_count": 0,
+    "whole_parent_seconds": 764.9837533259999,
+    "receipt": {
+      "path": "artifacts/research/20261010-p016-native64-ERROR-child-logs-root-v1/P012_BASELINE_CLEANUP_DIAGNOSTIC.json",
+      "sha256": "a4a4770fae7d1045df5e9b6dbe690afc45b8f1f109bb7fb5041a859106c95d33"
+    }
+  },
+  "actual_added_child": {
+    "complete": false,
+    "returncode": 1,
+    "elapsed_seconds": 0.11426455200000873,
+    "child_joined": true,
+    "watchdog_terminated_process_group": true,
+    "MRI_or_model_body_started": false,
+    "reason": "Legacy baseline-only sitecustomize imported at Python startup through extra child PYTHONPATH. Its routing config guard rejects the new P016 child before p016_child.py executes.",
+    "evidence": [
+      {
+        "path": "artifacts/research/20261010-p016-native64-ERROR-child-logs-root-v1/P016_NATIVE64_CHILD.log",
+        "sha256": "2cf599ab34f21cfed58ac5491a351f7846aa9fbedb3af6f0bd12076644f5dd3f"
+      },
+      {
+        "path": "artifacts/research/20261010-p016-native64-ERROR-child-logs-root-v1/P016_NATIVE64_WATCHDOG.json",
+        "sha256": "3d891751aa6b578883068baafd54e60c7a7691e240e6579f5a209c380a4e1edd"
+      }
+    ]
+  },
+  "actual_notebook_log": {
+    "path": "artifacts/research/20261010-p016-native64-ERROR-log-root-v1/p016n64-c86b549b4d474efaa90337335f19a202.log",
+    "sha256": "2c3b3eb128ec4ec7ed5a2d4ce5d03b31b77e3a78de049da090461a66adab8449"
+  },
+  "log_download_scope": "CLI --file-pattern nonmatch first for executionlog; exact3 diagnostic names second; no MRI/model/cache files downloaded",
+  "v1_collector_separate_HOLD": {
+    "stage": "exact_source",
+    "source_RPCs": 1,
+    "status_RPCs": 0,
+    "body_GETs": 0,
+    "reason_not_yet_known": true,
+    "proof": {
+      "path": "artifacts/research/20261010-p016-native64-root-launch-source-preparation-v1/actual-native64-observation-v1/held.json",
+      "sha256": "3804d6f40a2afda027e60293ddb4c475ca0c14c35fd9745c09d13ebb7e5675fb"
+    }
+  },
+  "v1_source_author_peer_accepted_but_real_interpreter_startup_defect_found": true,
+  "fix_pending": "New64 and256 wrapper V2 remove legacy baseline guard path only after dependency proof, clean-interpreter regression, independent source review; newrootpermission/newnonce and real64 required. Core21 checkpoint and actualCPU unchanged.",
+  "new64_native256_Serving_qualified": false,
+  "old_actual_CPU_source_and_checkpoint_still_unchanged": true,
+  "P014_P015_hidden_exception_cause_not_established": true,
+  "same_sitecustomize_path_not_present_in_old_P014_P015_Serving_source": true,
+  "training_fixed12_continues": true,
+  "own_verified_Public": 0.951,
+  "strict_above0960_achieved": false,
+  "goal_continues": true
+}

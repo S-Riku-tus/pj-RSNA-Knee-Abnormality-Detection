@@ -1,0 +1,111 @@
+{
+  "schema_version": "p007_convnext_anatomical_mirror_v1",
+  "prepared_at_jst": "2026-10-08",
+  "status": "prepared_single_factor_not_executed",
+  "baseline_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "baseline_own_public_lb": 0.95,
+  "candidate_sha256": "e5a9f4692fb3206b18a53a03ec10d14b8cd2e5bb287d843f965838a5a9c924bd",
+  "candidate_own_public_lb": null,
+  "code_difference": {
+    "changed_code_cells": [
+      8
+    ],
+    "other_code_cells_byte_identical": 6,
+    "effective_k": 16
+  },
+  "runtime_binding": {
+    "writefile_cell_index": 8,
+    "writefile_path": "/kaggle/working/own_src/infer.py",
+    "subprocess_cell_index": 9,
+    "main_call_uses_default_k": true,
+    "run_dataset_window_centres_k_propagation_verified": true,
+    "effective_convnext_k_per_slot": 16
+  },
+  "mirror_contract": {
+    "input": "uint8 B,S=6,K=16,C=3,H,W before make_views normalization",
+    "sagittal_slots": [
+      0,
+      3
+    ],
+    "coronal_slots": [
+      1,
+      4
+    ],
+    "axial_slots": [
+      2,
+      5
+    ],
+    "sagittal_valid_only": "local channel reverse and pos->1-pos",
+    "coronal_axial_valid_only": "width reverse; position unchanged",
+    "mask_slots_labels_fat_suppression_unchanged": true,
+    "missing_slot_pixels_and_positions_unchanged": true,
+    "no_intensity_inversion_or_label_swap": true,
+    "window_order_retained": true,
+    "view_probability_average": [
+      0.5,
+      0.5
+    ],
+    "model_probability_average": "original mean over the same3 fold checkpoints per view"
+  },
+  "coordinate_semantics": {
+    "name": "sampled-token-coordinate left/right mirror",
+    "window_permutation": "Reversing sagittal K order together with position merely permutes tokens. The eval Transformer/Attention is permutation equivariant/invariant apart from floating reduction order, so sorting is not required.",
+    "native_grid_contract": "Artificial audit confirms c[::-1]==native_depth-1-c for released window_centres and every native depth3..64 at k16/k24. Thus sagittal token reversal is consistent with native mirrored-grid centres in the qualified case. Other grids can differ at banker's half ties (depth4/k3 counterexample). Position reflection retains float32 rounding tolerance.",
+    "channel_normalization": "ImageNet mean/std differ between channels. Reverse uint8 slice channels before normalization; reversing normalized channels is not equivalent."
+  },
+  "released_training_augmentation_audit": {
+    "source": "p005 embedded knee.py StudyDataset/make_views",
+    "observed": [
+      "random source-series choice",
+      "stratified random window centres",
+      "series-shared rotation",
+      "scale",
+      "translation",
+      "gamma",
+      "gain"
+    ],
+    "mirror_in_released_path": false,
+    "actual_train_py_and_all_training_invocations_downloaded": false,
+    "conclusion": "Mirror is a test-time hypothesis, not demonstrated training-supported augmentation."
+  },
+  "unchanged": [
+    "main CoAt branch and all checkpoint bytes",
+    "ConvNeXt k16/series/reader/res/batch4/workers4",
+    "rank fusion12 coefficients",
+    "original decoder/fallback",
+    "fixed3Inputs/Original container/Internet OFF"
+  ],
+  "syntax_checks": [
+    {
+      "cell_index": 3,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 4,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 5,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 6,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 7,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 8,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 9,
+      "compiled_without_execution": true
+    }
+  ],
+  "cost": "ConvNeXt forward approximately2x plus one cloned uint8 batch. Total wall time and peak VRAM unmeasured; mirrored batch deleted before next batch.",
+  "accuracy_and_independence": "Improvement unmeasured. Label-free diagnostics cannot establish AUC; public checkpoint exposure prevents true retrospective OOF; own gold is never fit/selection.",
+  "no_real_MRI_weights_training_remote_or_submission_in_builder": true
+}

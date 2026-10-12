@@ -1,0 +1,81 @@
+{
+  "schema_version": "rsna_knee_P018_actual_local4090_synthetic_QC_milestone_v1",
+  "run_id": "p018-mixed-realGPU4-synthetic-QC-20261010",
+  "at_utc": "2026-10-10T14:51:39.585652+00:00",
+  "at_JST": "2026-10-10T23:51:39.585652+09:00",
+  "actual_QC_receipt": {
+    "path": "artifacts/qa/p18g1/checks.json",
+    "sha256": "f3449514f3070df7eed012c25b07b7a54355452c8fb9bafb5c64002ae3f9f276"
+  },
+  "actual_Root_acceptance": {
+    "path": "artifacts/qa/20261010-p018-mixed-local4090-QC-root-v1/Root-acceptance.json",
+    "sha256": "5994090ab77518e3597e08b44d22238209bb4bec49683af5e9143cf13531d69c"
+  },
+  "actual_independent_review": {
+    "path": "artifacts/research/20261010-p018-mixed-native-full144-CUDA-QC-actual-independent-v1/review.json",
+    "sha256": "ec25690f08a95335eb50f808784640d65dc84ec89f1548b0fec22917e34a7cec"
+  },
+  "source_preparation": {
+    "path": "artifacts/research/20261010-p018-mixed-native-full144-CUDA-QC-source-preparation-v1/preparation.json",
+    "sha256": "027fd4fe5063d791b8b6041392d198e13446df5b0b56d86352fd201c2f164f01"
+  },
+  "source_independent_review": {
+    "path": "artifacts/research/20261010-p018-mixed-native-full144-CUDA-QC-source-independent-v1/review.json",
+    "sha256": "f0c6d549a45141c8451715efe8e8b58263ab5cff9f11d8c44811089aa7874f06"
+  },
+  "actual_execution_chunk_id": "48529d",
+  "actual_exit_code": 0,
+  "actual_CPU_same_selected_models_receipt": {
+    "path": "artifacts/qa/20261010-p018-mixed-selected-CPU-v2/reconstruction.json",
+    "sha256": "38532749966f54efbc352fc58bcf1fefd733cfe0ead403d5138372c0082ce18c"
+  },
+  "real_selected_models": 4,
+  "synthetic_inputs_only": true,
+  "artificial_models": false,
+  "device": "NVIDIA GeForce RTX 4090",
+  "devices": 1,
+  "successful_full_model_forwards": 8,
+  "fixtures": {
+    "full144": {
+      "encoded_windows_each": 144,
+      "chunk16_calls_each": 9
+    },
+    "masked96": {
+      "encoded_windows_each": 96,
+      "chunk16_calls_each": 6
+    }
+  },
+  "allmissing_original_model_rejections": 4,
+  "allmissing_encoder_entry": 0,
+  "allmissing_consumer_refused_before_forward": true,
+  "storage_alias_pairs_checked": 6,
+  "storage_alias_count": 0,
+  "prefix_suffix_head_before_after_exact": true,
+  "elapsed_seconds": 6.0,
+  "Torch_peak_allocated_bytes": 653356544,
+  "Torch_peak_reserved_bytes": 767557632,
+  "CPU_RSS_peak_bytes": null,
+  "source_peer_checks": 12,
+  "actual_independent_checks": 10,
+  "Root_actual_checks": 12,
+  "saved_family_mean_FP32_values_independently_recomputed": 48,
+  "family_mean_max_abs_difference": 0,
+  "final_mixed_vector_separately_serialized": false,
+  "final_mixed_vector_equality_asserted_by_frozen_executed_Source": true,
+  "MRI_Report_teacher_body_API_calls": 0,
+  "own_Gold_fit_or_selection": false,
+  "actual_twoT4_native64_256_Serving_qualified": false,
+  "accuracy_evaluated": false,
+  "P016_latest_official_observation": {
+    "path": "artifacts/research/20261010-p016-official-score-tools-source-v1/official-observation-v2/observation.json",
+    "sha256": "b82df498b02a1e131580fc6f446ab6c62544fe07201f2e593cc736e6a0d1adc5"
+  },
+  "P017_latest_official_observation": {
+    "path": "artifacts/research/20261010-p017-official-score-tools-source-v1/official-observation-v6/observation.json",
+    "sha256": "b4edeafc350ed35582421f8fbbf8334bdf2446d5df7daaec7c0bcf4bc02b7f2a"
+  },
+  "official_Public": null,
+  "own_best_Public": 0.951,
+  "strict_above960_achieved": false,
+  "next": "Register genuinely new private REG Inputs with new-only API semantics; verify actual remote BIN bytes; fresh mixed64/256 and exact protected-baseline/failover integration before Submit."
+}

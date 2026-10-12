@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-10-08T15:41:37.686141+00:00",
+  "status": "independent_standard_library_float32_checks_prepared",
+  "checks": {
+    "original_division_then_final_float32": true,
+    "old_checker_and_predict_sources_preserved": true,
+    "ten_meaningful_CPU_unittests_passed": true,
+    "Ruff_passed": true,
+    "raw_absolute1e7_relative0_unchanged": true,
+    "zero_rank_tolerance_and_tie_set": true,
+    "candidate_accuracy_gate_false": true,
+    "no_remote_or_model_MRI_teacher_GPU": true
+  },
+  "source_sha256": {
+    "float32_checks.py": "fda9847b5232b6fe177c4ef3b46539c5e15e5316b1ee6edfaed02b59caf4abac",
+    "test_float32_checks.py": "d1e4bd2246f31d4bfccea93e643d41591425540e40cb87a869371aa1846b4592"
+  },
+  "CPU_tests": {
+    "count": 10,
+    "seconds": 0.001,
+    "command": ".venv/Scripts/python.exe -m unittest discover -s artifacts/research/20261009-p010-AA-diagnostic-tools-v4 -p test_float32_checks.py -v"
+  },
+  "limits": [
+    "Interprets source-returned float32 probabilities/serialized decimals; does not infer unavailable V3 raw outputs.",
+    "ULP observations do not authorize any tolerance change; cross-control CSV byte identity remains a separate required gate."
+  ],
+  "all_passed": true
+}

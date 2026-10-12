@@ -1,0 +1,138 @@
+{
+  "schema_version": "native392_stage14_root_readonly_review_v1",
+  "at_utc": "2026-10-08T17:21:30.294321+00:00",
+  "all_passed": true,
+  "checks": {
+    "exact14completed_staging_receipts_indices01to13_plus15": true,
+    "all_actual_array_reviews_source_SHA_match": true,
+    "all_2457studies_12285_arrays_checked": true,
+    "canonical_archive_sizes_and_mtimes_still_match": true,
+    "summary_SHA_still_exact": true,
+    "hardlink_and_source_invariance_gates_passed": true,
+    "protected14_strict_SHA_unchanged": true,
+    "no_24index_or_fit_claim": true
+  },
+  "shards": [
+    {
+      "shard_index": 0,
+      "studies": 176,
+      "arrays": 880,
+      "archive_sha256": "bafc99755bfef36efad9b531dcaf21df00d08384e13691d4aa79942f2fd9cb99"
+    },
+    {
+      "shard_index": 1,
+      "studies": 176,
+      "arrays": 880,
+      "archive_sha256": "b382a5b451e383b1aa506fb72e888b13a646dfbb64b5c40df5b29c5ee1888136"
+    },
+    {
+      "shard_index": 2,
+      "studies": 176,
+      "arrays": 880,
+      "archive_sha256": "8f65cc0c99a8178adeee5793df6005080aa7823ab2accd9f06c905d51b13eec9"
+    },
+    {
+      "shard_index": 3,
+      "studies": 176,
+      "arrays": 880,
+      "archive_sha256": "ede7739e28a7975c99331a215726db223e8f0afb40412ef830a712cbdfd631dc"
+    },
+    {
+      "shard_index": 4,
+      "studies": 176,
+      "arrays": 880,
+      "archive_sha256": "6790039a1b55550fa35774ec7dca7ddcd60048b1695d321282b74002b19763fc"
+    },
+    {
+      "shard_index": 5,
+      "studies": 176,
+      "arrays": 880,
+      "archive_sha256": "fcf96e6228a3b13764ca2815cfced51bdd0611990fd86df34d4e909943fdfcb1"
+    },
+    {
+      "shard_index": 6,
+      "studies": 176,
+      "arrays": 880,
+      "archive_sha256": "32107c42ae786ccc31b9b20693fe0efd5b78ca19e294c715fae239a78c722814"
+    },
+    {
+      "shard_index": 7,
+      "studies": 175,
+      "arrays": 875,
+      "archive_sha256": "d5d4cdc59309f1b35d3ccdd433f3becf9b2e80909abdc5718de0ad6f1d9c3cea"
+    },
+    {
+      "shard_index": 8,
+      "studies": 175,
+      "arrays": 875,
+      "archive_sha256": "1b8f586e1cb1b80c1f13caa17d3e12051ac3d6898495a1e7ea73aa98fa447c15"
+    },
+    {
+      "shard_index": 9,
+      "studies": 175,
+      "arrays": 875,
+      "archive_sha256": "8074afbaf385b05efce2872d9f96d8dda690a2745da21637fdfd00679b35bb09"
+    },
+    {
+      "shard_index": 10,
+      "studies": 175,
+      "arrays": 875,
+      "archive_sha256": "9df14e79d256c0ba58e762d99f3a9b9fa92d814353c96497eb17cfe84790fec5"
+    },
+    {
+      "shard_index": 11,
+      "studies": 175,
+      "arrays": 875,
+      "archive_sha256": "648d6393729b8756562421ae595467ff2475c6fdce595ac46befbbd474acdcd4"
+    },
+    {
+      "shard_index": 12,
+      "studies": 175,
+      "arrays": 875,
+      "archive_sha256": "2ac04dfcdcf4c904cd0a137431ceebc775f3b1d4cfe7208061d060ee178b0e98"
+    },
+    {
+      "shard_index": 14,
+      "studies": 175,
+      "arrays": 875,
+      "archive_sha256": "4c6330469d7743d791de47d24cbb51731d12a7486ed1ba3758e28c5f78204c2e"
+    }
+  ],
+  "evidence_sha256": {
+    "data/native392/v2-20261009/shards/shard-01/stage-final-receipt.json": "f7eac2ecd551c97f15bc6b1a5b9e000ee44a5830f659172a672e9dca7cb5baf0",
+    "experiments/native392-shard01-completed-cache-review-20261008.json": "53e2ea61a6c28b9a557d1123f9dfe6e91f37ed95b541a2e3e89366c5e671fdc8",
+    "data/native392/v2-20261009/shards/shard-02/stage-final-receipt.json": "94df73eddca1c8fea1911bc0c0893606d887dc455fded266adabfe12e114b59b",
+    "experiments/native392-shard02-completed-cache-review-20261008.json": "72603e9bb18e105fe2f7f6ce95ddc8c978161ee3bdcd641de18278580e2f1be9",
+    "data/native392/v2-20261009/shards/shard-03/stage-final-receipt.json": "58b064a8927df925586533fdd6a1c2737e3e6e34a89527d637fef6810fda0442",
+    "experiments/native392-shard03-completed-cache-review-20261008.json": "88825380358588d68eeed18cd43fc37954c36453e02531305ba9a25484bbedaf",
+    "data/native392/v2-20261009/shards/shard-04/stage-final-receipt.json": "29580b3cbcd54c42723169f9d74e6b105835741e309aaa0b7bc58a248eeb9bba",
+    "experiments/native392-shard04-completed-cache-review-20261008.json": "d6c078af64e189eed3f623c027a8d609e8d77feb818f90c0249f4a613667d7fb",
+    "data/native392/v2-20261009/shards/shard-05/stage-final-receipt.json": "5a43a7f5454d3af8c679b68a33fc6303a7c276d57f5fd838cdd8c9ad8c2659bc",
+    "experiments/native392-shard05-completed-cache-review-20261009.json": "2093fb8dd67570ceddbf7e0b9f4c39aae946e515ee0b5e4b1f8a84904b79f0e0",
+    "data/native392/v2-20261009/shards/shard-06/stage-final-receipt.json": "20040187079ea6bbb3acfa8bdb5632765ffa319d155ca48265fe277ac4ded87f",
+    "experiments/native392-shard06-completed-cache-review-20261009.json": "bec616d221b79be88f9bf729c3e0dd4d806805094e5307ecbc132cf7113534c1",
+    "data/native392/v2-20261009/shards/shard-07/stage-final-receipt.json": "1f7ddca1e47027af0a3b7b85f56f02b0a53f96e0c209a0abf2034f231335b347",
+    "experiments/native392-shard07-completed-cache-review-20261009.json": "f631a79cf1dd43e55ca1488c8a534528d59429fed503bcd5e0386f049b94d757",
+    "data/native392/v2-20261009/shards/shard-08/stage-final-receipt.json": "d22177023ce99be6bafd6bf4a2d5325218056523a91d4e6d2a090155e3e2086a",
+    "experiments/native392-shard08-completed-cache-review-20261009.json": "fa3b848f9eed556a77c4129096fa3c8d49485625f3acb05f42e22649466792f0",
+    "data/native392/v2-20261009/shards/shard-09/stage-final-receipt.json": "aa1d40389002e77da3bf10f43cfb0c4dcca6f97c60a0902b0d95116fa4393b7b",
+    "experiments/native392-shard09-completed-cache-review-20261009.json": "5a599d0fc48dd0c1989d693cdd15f3aea047471be498dbfec777b11987e5e808",
+    "data/native392/v2-20261009/shards/shard-10/stage-final-receipt.json": "c3dcfb84dc67bc3148cd362d69586f8f7d05f1d265b466ddd13cbe53d81289e6",
+    "experiments/native392-shard10-completed-cache-review-20261009.json": "eda42c24a971c08d3f011b4bb701ef73da553ba1ab78877bb25761188b3b4752",
+    "data/native392/v2-20261009/shards/shard-11/stage-final-receipt.json": "ff924e5f8c9281497d207ddae943e86e924b701f16c11647f66ca9ce6b8c93d0",
+    "experiments/native392-shard11-completed-cache-review-20261009.json": "fb99182d6b946ffa2d73a4a1c120aecc29ec26bcc6f8da7b248b7ee70c62f13c",
+    "data/native392/v2-20261009/shards/shard-12/stage-final-receipt.json": "9ea4f050abddb8c0745e4195638983467e31fdab094de96f7f6bbf2dd19d23a1",
+    "experiments/native392-shard12-completed-cache-review-20261009.json": "4d2a4c315946fc565df5f2c0a7d72e603ce073368836ab91d5be8df40078dcfb",
+    "data/native392/v2-20261009/shards/shard-13/stage-final-receipt.json": "b5e18466b703a1db04e3a1d36127fc0cfd29be01cd5a03db08c38508ad473acc",
+    "experiments/native392-shard13-completed-cache-review-20261009.json": "35aa8740065a69188b2971f6b653fab335fee5e2dc18a57373927b93a62c38b9",
+    "data/native392/v2-20261009/shards/shard-15/stage-final-receipt.json": "9a8cb56cd799f2bd999e2c449b81e71f5e4ce80ea67dec12b5ffc8c1c96e5029",
+    "experiments/native392-shard15-completed-cache-review-20261009.json": "01499ba890a849c9070e13578ad9f6679275e87881a038c612cd8479254b7069"
+  },
+  "studies": 2457,
+  "arrays": 12285,
+  "metadata_reads_only": true,
+  "MRI_model_API_fit": false,
+  "full4207_index_built": false,
+  "own_Public": "0.950",
+  "goal_achieved": false
+}

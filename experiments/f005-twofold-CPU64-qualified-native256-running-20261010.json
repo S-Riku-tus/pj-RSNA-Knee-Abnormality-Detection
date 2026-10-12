@@ -1,0 +1,75 @@
+{
+  "schema_version": "f005_twofold_actual_CPU64_complete_native256_running_root_record_v1",
+  "at_utc": "2026-10-09T17:04:39.891085+00:00",
+  "pair_fingerprint_sha256": "00de45ae6f84073efa1659671812d7799be1cbf38f6c43cda7acc35bbcbfae86",
+  "CPU_actual_observation": {
+    "path": "artifacts/research/20261010-f005-online-last2-twofold-results-tools-v5/CPU-observation-v2/review.json",
+    "sha256": "aa9b5af656458c3da9674073824e0750029c16bab78e5b29b0131ec4cec5fd56"
+  },
+  "CPU_strict_twofold_actual_gate_passed": true,
+  "native64_actual_observation": {
+    "path": "artifacts/research/20261010-f005-online-last2-twofold-results-tools-v5/native64-observation-v2/review.json",
+    "sha256": "e3b0725532cffdae43a214b83bd41c91c946ce3960665dcd758168a77dee9d92"
+  },
+  "native64_actual_body": {
+    "path": "artifacts/research/20261010-f005-online-last2-twofold-results-tools-v5/native64-observation-v2/F005_TWOFOLD_DIAGNOSTIC_native64.json",
+    "sha256": "e5700f89b32c86e7d9670b08cb707cb9f1bb3d8aacdf4cf8a493fa8792ae455a"
+  },
+  "native64_actual_gate_passed": true,
+  "native64_studies": 64,
+  "native64_full_fold_forward_calls": 128,
+  "native64_elapsed_seconds": 213.815249172,
+  "native64_resources": {
+    "elapsed_seconds": 202.34304710600003,
+    "sampled_peak_process_tree_rss_bytes": 3884310528,
+    "rss_note": "Sum of RSS includes shared pages more than once; sampled, not exact peak.",
+    "sampled_gpu_peak_used_mib": [
+      635,
+      635
+    ],
+    "gpu_note": "nvidia-smi device-wide sampled memory, includes unrelated allocations on that device.",
+    "samples": 375,
+    "disk_free_bytes_after": 20728254464
+  },
+  "native64_torch_peak_reserved_bytes": [
+    524288000,
+    524288000
+  ],
+  "native64_fallbacks": 0,
+  "native64_cleanup_passed": true,
+  "native256_accepted_Save": {
+    "path": "artifacts/research/20261010-f005-twofold-native-root-v2/native256-phase-v1/actual-Save-attempt-v1/receipt.json",
+    "sha256": "501805778ae42820529aba3e3bcc35e78857a27754b1eec5119ae97585b65ac5"
+  },
+  "native256_actual_observation": {
+    "path": "artifacts/research/20261010-f005-online-last2-twofold-results-tools-v5/native256-observation-v1/review.json",
+    "sha256": "82b9846118ce2139031eaad6a9074e2f2585324b7ebab865a0d73bec003ef9a2"
+  },
+  "native256_ref": "rsraki/n392l2pair-d5766eeb7e62499ba4764928e220ad59",
+  "native256_kernel_id": 137904159,
+  "native256_saved_version": 1,
+  "native256_actual_status": "RUNNING",
+  "same_pair_same_native_source_verified": true,
+  "decoder_requested_display_version": 1,
+  "decoder_manifest_sha256": "0db631c509b9878b050d05a328d7479a0671f46db51959ec10b0b2fd73f2f1a5",
+  "earlier_decoderV2_preflight_Save_calls": 0,
+  "fresh_v2_source_independent_review": {
+    "path": "artifacts/research/20261010-f005-twofold-native-root-independent-v2/review.json",
+    "sha256": "0413dca22a43c45d5a37cce536c404ce66f6eb69dac74e64d5f35feff15e6a63"
+  },
+  "new_private_diagnostic_Save_calls_accepted": 3,
+  "new_competition_Submit": 0,
+  "own_best_official_Public_primary": {
+    "path": "artifacts/research/20261009-f005-native-runtime-root-v1/public951-submission-observation-v15/observation.json",
+    "sha256": "6566d820025709e557a5caf9c51ae78089728c41306fb60f2cba64b5353bfbf6"
+  },
+  "own_best_official_Public": "0.951",
+  "actual_twofold_CPU64_256_qualified": false,
+  "Serving_qualified": false,
+  "hidden_runtime_success_guaranteed": false,
+  "Public_complementarity_proven": false,
+  "patient_independent_validation_confirmed": false,
+  "own_Gold_fit_selection": 0,
+  "strict_above960_achieved": false,
+  "next": "Collect this accepted native256 run once complete; bind all three genuine phases to new converter and Serving registry, preserve P012 original5/fixed20, Save and Submit one exact new version."
+}

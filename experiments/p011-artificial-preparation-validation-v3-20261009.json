@@ -1,0 +1,108 @@
+{
+  "schema_version": "p011_local_preparation_artificial_validation_v3",
+  "checked_at_utc": "2026-10-08T17:23:49.418146+00:00",
+  "all_passed": true,
+  "checks": {
+    "CPU19_meaningful_tests_pass": true,
+    "Ruff_all_new_sources_pass": true,
+    "GPU_artificial_CPU_CUDA_full_sparse_allmissing_pass": true,
+    "GPU_artificial_current_source_SHA": true,
+    "GPU_no_training_MRI_publicweight_production_qualification": true,
+    "serving_and64_preparation10checks_each_pass": true,
+    "both_Notebook_package_copies_byteexact": true,
+    "original7_fullcode_bytes_and_order_unchanged": true,
+    "one_runtime_observation_cell_change_only": true,
+    "all_package_helpers_literal_bytes_and_SHA_exact": true,
+    "stock_expected_LF_file_sha_and_helper_unchanged": true,
+    "runtime_diff_only_new_native_gate_consume_record_and_profile_acceptance": true,
+    "mandatory_workerreceipt_guard_before_model_call": true,
+    "same64cohort_bytes_as_V2": true,
+    "fixed64_no_GoldUID_or_group": true,
+    "protected_14_submit_p005_public950_control": true,
+    "protected_19_submit_p009_coat_fov160": true,
+    "protected_21_submit_p010_swa224_rank10": true,
+    "protected_21a_profile_p010_AA_32_v4_r2": true,
+    "V1_V2_and_priorproof_preserved": true,
+    "old_p010_gates_unchanged_candidate_false": true
+  },
+  "CPU_tests": 19,
+  "GPU_proof": {
+    "path": "artifacts/qa/20261009-p011-artificial-stock224-v3/checks.json",
+    "sha256": "0143b1e7276130c473ce687973cac2df8a27c59b3e0cb4c695d1ca3273fe92fb",
+    "GPU": "NVIDIA GeForce RTX 4090",
+    "peak_reserved_mib": 948.0,
+    "elapsed_seconds": 1.297000000020489,
+    "scope": "Synthetic native uint8 and random TinyEncoder; no actual weights/MRI/T4 or accuracy qualification."
+  },
+  "notebooks": [
+    {
+      "notebook": "notebooks/public/22_submit_p011_independent224_rank10_v3.ipynb",
+      "cells": 21,
+      "code_cells": 18,
+      "sha256": "a8e13bf0b053716e024f363417bc8b338b958eddf8a1837d3bad0a385607fd0c"
+    },
+    {
+      "notebook": "notebooks/public/22a_profile_p011_independent224_64_v3.ipynb",
+      "cells": 25,
+      "code_cells": 22,
+      "sha256": "62e6aaefda761077dafbbe56167732784f9c14ec11230df0e197481918974020"
+    }
+  ],
+  "package_json_sha256": {
+    "artifacts/kaggle/p011-independent224-rank10-v3-20261009": "163f5abd128f2e93e9e836397e0da0245bfd229ca74b93508664a50c7677d3e6",
+    "artifacts/kaggle/p011-profile64-independent224-v3-20261009": "18087a2a089be593fa327ddff74e0ffe166a4f886e922f664a3dfa5fbcf051a1"
+  },
+  "cohort_json_sha256": "342ac914493d88970ad531ecec67fce643f90177b37722f88b86662266dfa502",
+  "ordered_UID_sha256": "8eeada7574bcc1a72c29bbebcdfcdd7ae2c7fd85359f4dbe7d3c6d7da8e7e371",
+  "helper_sha256": {
+    "p011_contracts.py": "0d86b0bcded2046fef89605cd7dd22fb7f05f326b15bf66a11027d46e96de76c",
+    "p011_metrics.py": "1ca09fbff359947d7b1df69823f52d5490671d6950f1eb59e69b23167962b9d9",
+    "p010_author224_metrics.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+    "p006_metrics.py": "b61115cc92ab335273a31cf12c754097e3f0844ce2b7aaf9fd50c56f755603ca",
+    "p007_metrics.py": "a291d826ed287683cfa15e98eb207bb15fe459b04263a2e4c5fcda8730138549"
+  },
+  "source_SHA": {
+    "scripts/p011_contracts.py": "0d86b0bcded2046fef89605cd7dd22fb7f05f326b15bf66a11027d46e96de76c",
+    "scripts/p011_independent_runtime.py": "1ca09fbff359947d7b1df69823f52d5490671d6950f1eb59e69b23167962b9d9",
+    "scripts/build_p011_independent224.py": "dd642cff6425e493fe115eaea0233743448319cf9bbe1f43b30342f4aa3d1550",
+    "scripts/build_p011_profile.py": "899b0a8758bb213a598b39de4299a6910d6b50e1fc8c1d5e9523078226af36e0",
+    "scripts/check_p011_artificial.py": "80f58470fdb978cce09559b7899d458fc85eb1b699e5a34dda1809ceb9ca40a2",
+    "tests/test_p011_independent224.py": "127261757f250bcaa0dd148fb127d12a63e89955f4c3c878363332bfc3a9a4ac"
+  },
+  "author_runtime_preparation": {
+    "path": "experiments/p010-author224-runtime-preparation-20261008.json",
+    "sha256": "3d98ec408fe71a98290beada0115c8f2a7f041e18f1757b7142c5acad48a33aa"
+  },
+  "retained_V1_discrepancy_evidence": {
+    "path": "artifacts/research/20261009-p011-package-bytefix-v2/discrepancy.json",
+    "sha256": "10a1d4f47c51192eddb16ee45e2451259c36eacec6915a19311ad572c5402a38"
+  },
+  "candidate_gate_passed": false,
+  "new_model_branch": true,
+  "old_p010_gates_relaxed_or_requalified": false,
+  "actual_64_or_256_executions": 0,
+  "real_MRI_or_weight_download": false,
+  "API_calls": 0,
+  "accuracy_evaluated": false,
+  "allmissing_policy": "Keep exact stock finite masked-input probabilities; no perUID baseline-only fallback. Unexpected CUDA/model/contract errors fatal. Original CPU decoder exception-to-zero behavior is separately recorded.",
+  "remaining_gates": [
+    "peer/root finalV3 prelaunch review",
+    "actual private64 result root review",
+    "actual256 resources/doubledecode identity/runtime",
+    "fullhidden completion and scoring"
+  ],
+  "transport_limit": "OS-killed task with no callback lacks a per-task watchdog; does not guarantee hidden completion.",
+  "native_receipt_guard_delta": {
+    "changed_definitions": [
+      "run_standalone224",
+      "finish_profile"
+    ],
+    "added_definitions": [
+      "validate_native_receipt"
+    ],
+    "numerical_source_or_policy_changed": false,
+    "missing_corrupt_wrongUID_hash_status_receipts_rejected": true,
+    "genuine_decoder_exception_zero_input_accepted": true,
+    "V2_prior_validation_sha256": "8c7ff1252ea4652f96ee84133b48849189c9a2c549039dfa431b3db5dadfcd19"
+  }
+}

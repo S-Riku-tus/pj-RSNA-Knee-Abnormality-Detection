@@ -1,0 +1,89 @@
+{
+  "schema_version": "p007_profile_preparation_v2",
+  "prepared_at_jst": "2026-10-08",
+  "studies": 32,
+  "uids": [
+    "1.2.826.0.1.3680043.8.498.11043543420859531726426521315399258528",
+    "1.2.826.0.1.3680043.8.498.83376388091077619281568190257019735638",
+    "1.2.826.0.1.3680043.8.498.25604547074218147115077644853162295379",
+    "1.2.826.0.1.3680043.8.498.38039631093067555454700266397073080430",
+    "1.2.826.0.1.3680043.8.498.99413398303724030328059886749330413303",
+    "1.2.826.0.1.3680043.8.498.95091624999382167943525022414631622532",
+    "1.2.826.0.1.3680043.8.498.11958117172819754862618612170999909480",
+    "1.2.826.0.1.3680043.8.498.53901077733518036755308692304268815965",
+    "1.2.826.0.1.3680043.8.498.22263857526032448247006468310072414129",
+    "1.2.826.0.1.3680043.8.498.13273890409523605456488117581706115075",
+    "1.2.826.0.1.3680043.8.498.37519350121906786941281770770693979271",
+    "1.2.826.0.1.3680043.8.498.77150650601457686196626648868552167695",
+    "1.2.826.0.1.3680043.8.498.14495028403937132710814780922642512791",
+    "1.2.826.0.1.3680043.8.498.93230313557251171119475173996942942855",
+    "1.2.826.0.1.3680043.8.498.10351168527688244230248760520733020605",
+    "1.2.826.0.1.3680043.8.498.33479806419966566464727310013949313521",
+    "1.2.826.0.1.3680043.8.498.11863890747360341056211511874563792862",
+    "1.2.826.0.1.3680043.8.498.11651755040149549966484720727140190853",
+    "1.2.826.0.1.3680043.8.498.10855290714402117092990651362697310270",
+    "1.2.826.0.1.3680043.8.498.15297444019822621504849851092382560980",
+    "1.2.826.0.1.3680043.8.498.65356758967883114612797250487949537460",
+    "1.2.826.0.1.3680043.8.498.81462603621780919719466264356289554669",
+    "1.2.826.0.1.3680043.8.498.41939824564209194493855981805593285528",
+    "1.2.826.0.1.3680043.8.498.66510565421813721258189101326477318907",
+    "1.2.826.0.1.3680043.8.498.90223492515368389331845681759355261030",
+    "1.2.826.0.1.3680043.8.498.96944926470854551064948200936284887742",
+    "1.2.826.0.1.3680043.8.498.80247974926646352443043954025450139721",
+    "1.2.826.0.1.3680043.8.498.57342523828166309133982222435655662667",
+    "1.2.826.0.1.3680043.8.498.63204735160524958513470115761010950181",
+    "1.2.826.0.1.3680043.8.498.11432815311029789072253610823554308183",
+    "1.2.826.0.1.3680043.8.498.98824066826946884510314135448574304233",
+    "1.2.826.0.1.3680043.8.498.42486421970612099441197418307958561877"
+  ],
+  "same_p006_uid_selection": true,
+  "ordered_uid_sha256": "fb83b0b77b4539eb70b142cecc69c3cbc6a0ae4a8763381869078cc936b6fc07",
+  "gold_excluded": true,
+  "Report_or_targets_used": false,
+  "accuracy_evaluated": false,
+  "baseline_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "candidate_sha256": "b207fb23a729a26c7c964d28401cef146ce76bb464b05fb6673718d8b70d2d93",
+  "notebook_sha256": "6ac02f00e74005492a828a5e198e8c839ee336798b5e77b76bdaacb95150d2b1",
+  "generator_sha256": "886dd9515dee1640bfeab15300d92f52ba7cbb82126e7f4bf3e2c7532823ae58",
+  "p006_generator_sha256": "99a989487f7df300736da25c13c10cd27068cceab734b330c9ededdcf08975ca",
+  "p006_helper_sha256": "b61115cc92ab335273a31cf12c754097e3f0844ce2b7aaf9fd50c56f755603ca",
+  "p007_helper_sha256": "a291d826ed287683cfa15e98eb207bb15fe459b04263a2e4c5fcda8730138549",
+  "input_sha256": {
+    "data\\manifests\\v1-vmohitrao-research\\weak.csv": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+    "data\\manifests\\v1-vmohitrao-research\\gold.csv": "f86a67cf9c5704c37bbe0d7912b308cd7497a2804918c0cc5e8e2008a0b16bad",
+    "data\\exports\\rsraki-rsna-knee-sv354838181\\rsna-cache-v1\\raw\\train_series.csv": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3"
+  },
+  "main_coat_executions": 1,
+  "reader_executions": {
+    "plain_k16": 1,
+    "mirror2view_k16": 1
+  },
+  "profile_prediction_sources": {
+    "plain_reader_body": "exact baseline14 body except entrypoint observation context",
+    "mirror_reader_body": "exact candidate16 body except entrypoint observation context",
+    "fusion": "exact baseline14 fusion except working training-alias data path",
+    "model_decoder_inputs_coefficients": "unchanged pinned p0053Inputs and Originalcontainer"
+  },
+  "observational_changes": [
+    "reuse p006 metadata alias/mask/pair/resource helpers and same fixed cohort",
+    "separate returned-mask directories for plain and mirror",
+    "top-level original model forward hooks count/shape/finite logits",
+    "mirror helper pass-through observer records position/mask contract and actual TTA calls",
+    "reset CoAt CSV before each reader; remove stale own CSV; reject fusion fallback",
+    "fixed fusion formula, identical mask and complete forward-count gates",
+    "AST original run no_grad decorator and actual load/forward grad-disabled gates",
+    "delete final diagnostic submission.csv"
+  ],
+  "limitations": [
+    "finite-logit hooks synchronizeCUDA and measurements include observers/pip/cache effects",
+    "mask-valid is not proof every native DICOM decoded without skip",
+    "sampled RSS may double-count shared pages and GPU memory is device-wide",
+    "32 cases and unlabeled score differences do not prove hidden completion or AUC gain"
+  ],
+  "real_inference_remote_or_public_submission_performed_at_preparation": false,
+  "supersedes_unexecuted_v1": {
+    "notebook_sha256": "54de4d87061df65a501fe48ce6edbd281d3cd0962052810a27ae24f554846fc6",
+    "package": "artifacts/kaggle/p007-profile-32-plain-mirror-v1-20261008",
+    "reason": "The embedded p007 serving v1 moved run's no_grad decorator to its helper. V1 profile is invalidated before execution; V2 embeds the corrected serving source and rejects grad-enabled execution."
+  }
+}

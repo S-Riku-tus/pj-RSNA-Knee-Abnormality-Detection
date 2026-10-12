@@ -1,0 +1,105 @@
+{
+  "schema_version": "p011_independent_local_prelaunch_review_v2",
+  "reviewed_at_utc": "2026-10-08T17:18:58.587446+00:00",
+  "all_passed": true,
+  "checks": {
+    "original14_SHA_protected": true,
+    "original_exact7_computational_cells": true,
+    "serving_all7_full_cells_each_once_and_in_order": true,
+    "serving_exact_shape_and_packaged_copy": true,
+    "serving_all_added_and_original_cells_compile": true,
+    "serving_all5_literal_helpers_match_actual_packagebytes_SHA": true,
+    "serving_stock_actual_LF_bytes_and_literal_SHA": true,
+    "serving_no_own_Gold_or_weakOOF_accuracy_qualification": true,
+    "serving_literal_original_fusion_then_guard_seal_extra_blend": true,
+    "profile64_all7_full_cells_each_once_and_in_order": true,
+    "profile64_exact_shape_and_packaged_copy": true,
+    "profile64_all_added_and_original_cells_compile": true,
+    "profile64_all5_literal_helpers_match_actual_packagebytes_SHA": true,
+    "profile64_stock_actual_LF_bytes_and_literal_SHA": true,
+    "profile64_no_own_Gold_or_weakOOF_accuracy_qualification": true,
+    "profile64_literal_original_fusion_then_guard_seal_extra_blend": true,
+    "runtime_frozen_SHA": true,
+    "namespace_models_only_after_CPU_assert_seal": true,
+    "original_main_return_and_reader_subprocess_complete_then_gc_emptycache": true,
+    "extra_second_native_decode_only_newbounded_transport": true,
+    "extra_errors_abort_then_reraise_no_restore_fallback": true,
+    "extra_unique_fullUID_predictions_and_perStudy_receipts": true,
+    "actual_fastread_SHA_FOV140_native384_slots_bound": true,
+    "profile_failed_initializer_returns_sharedflag_FailedBuilder": true,
+    "profile_parent_before_pair_rejects_sharedflag_and_closes_alias": true,
+    "profile_Pickler_identity_original__preone_and_initializer": true,
+    "profile_only_dataalias_and_once_reader_command": true,
+    "strict_resource_checks_sampled3phase_actual2T4_positivefinite": true,
+    "profile_two_decode_SHA_and_fusion_independent_formula": true,
+    "no_additional_seed_backend_setter_or_GPU_before_seal": true,
+    "allmissing_keeps_stock_unexpectedCUDAfatal_oldp010closed": true,
+    "copied_CSV_fixed90_10_queue_observer_bytehash_math_AST_same": true,
+    "fixed64_exactUID_hash_GoldUIDgroup_excluded_wholegroups": true,
+    "diagnostic_runtime_only_structural_CSV_and_competition_rerun_guard": true,
+    "profile_diagnostic_submission_cleanup_finally": true,
+    "author_artificial_validation24checks_source_package_bound": true,
+    "GPU_artificial_sourceHashes_current_and_no_realpayload_qualification": true,
+    "GPU_report_three_masks_CPU_CUDA6full94_noGrad_AMP_finite_nofallback": true,
+    "peer10CPU_orchestration_resource_initializer_tests_passed": true,
+    "author17CPU_tests_independently_rerun_success_once_final": true,
+    "Ruff_new_sources_and_peer_CPUtests_success": true,
+    "V1_package_bytefix_history_preserved": true
+  },
+  "checks_passed": 42,
+  "checks_total": 42,
+  "source_SHA": {
+    "scripts/p011_contracts.py": "0d86b0bcded2046fef89605cd7dd22fb7f05f326b15bf66a11027d46e96de76c",
+    "scripts/p011_independent_runtime.py": "d9ff49d4cd470d0b4643d7a74cf16abd07c4d8eea76857253c6e66711183dbc8",
+    "scripts/build_p011_independent224.py": "41c24dbfad59d01fb8613febad385184d3d0ddf952464d2d243691c061a00821",
+    "scripts/build_p011_profile.py": "fad5dfd428b9bc71d92bdb6bd4ee21c579efa2faa4734c5f3234f09869c7757b",
+    "scripts/check_p011_artificial.py": "80f58470fdb978cce09559b7899d458fc85eb1b699e5a34dda1809ceb9ca40a2",
+    "tests/test_p011_independent224.py": "4b5199504a2e0954a9cbfc1e0f25ea1001b254635061cb37c372ac5d85259c11"
+  },
+  "notebooks": {
+    "serving": {
+      "path": "notebooks\\public\\22_submit_p011_independent224_rank10_v2.ipynb",
+      "sha256": "43289adfef3edf2eb3ff47ffc3d4df924b6ca20b60c9bec1e0e818579d18e739",
+      "cells": 21,
+      "code_cells": 18
+    },
+    "private64": {
+      "path": "notebooks\\public\\22a_profile_p011_independent224_64_v2.ipynb",
+      "sha256": "15e877d05f11e2511ecb8426daca53c7000fc9e1a2e7471f6c27143a934c33a4",
+      "cells": 25,
+      "code_cells": 22
+    }
+  },
+  "package_json_sha256": {
+    "artifacts\\kaggle\\p011-independent224-rank10-v2-20261009": "c1c2554d99b5f3c66fc91e4aa173381295c1bc79c150d39e9861d9e11b7bdd28",
+    "artifacts\\kaggle\\p011-profile64-independent224-v2-20261009": "12b91622969f6db9f69de27823d2d86a1bbbec7838b6fbdba0b1afdc56cea29a"
+  },
+  "cohort_json_sha256": "342ac914493d88970ad531ecec67fce643f90177b37722f88b86662266dfa502",
+  "ordered_UID_sha256": "8eeada7574bcc1a72c29bbebcdfcdd7ae2c7fd85359f4dbe7d3c6d7da8e7e371",
+  "author_validation": {
+    "path": "experiments\\p011-artificial-preparation-validation-v2-20261009.json",
+    "sha256": "8c7ff1252ea4652f96ee84133b48849189c9a2c549039dfa431b3db5dadfcd19"
+  },
+  "author_artificial_GPU_report": {
+    "path": "artifacts\\qa\\20261009-p011-artificial-stock224-v2\\checks.json",
+    "sha256": "a8c98f6a16d39af47109fec7e45eb03f0231b49b6643254646f78de142cb31e6",
+    "independently_GPU_executed": false,
+    "scope": "Reported tiny random model on RTX4090; not actual checkpoint, MRI, twoT4, hidden runtime or Public AUC."
+  },
+  "independent_CPU_tests": {
+    "peer": 10,
+    "peer_seconds": 0.04,
+    "author": 17,
+    "author_seconds": 0.434,
+    "peer_source_sha256": "c28d1b4e0758cd4e4f3c5290842d28f5637db07f854ab69ffa6e2ee6f30e0648",
+    "scope": "Fake torch/author helper protocol verifies orchestration; does not qualify actual models."
+  },
+  "candidate_gate_passed": false,
+  "accuracy_evaluated": false,
+  "old_p010_gate_requalified": false,
+  "actual64_or256_executions_verified_here": 0,
+  "remote_API_or_auth_or_save_submit": 0,
+  "real_MRI_or_model_weight_body_read": 0,
+  "decision": "Eligible only for root private64 diagnostic launch",
+  "scope": "Original computational cell bytes are preserved. Source integrity does not guarantee run-to-run bit identity; actual64/256 and hidden completion/score remain required."
+}

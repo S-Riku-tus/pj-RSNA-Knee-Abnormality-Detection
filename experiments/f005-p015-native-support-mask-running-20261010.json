@@ -1,0 +1,72 @@
+{
+  "schema_version": "f005_P015_support_mask_actual_Save_running_v1",
+  "at_utc": "2026-10-10T05:04:42.162664+00:00",
+  "own_best_official_Public": "0.951",
+  "P014_submission_ref": 57031186,
+  "P014_latest_official_observation": {
+    "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/submission-observation-v4/observation.json",
+    "sha256": "085571369c2c69e158f7a385a8b4401309e6943ed4398d0e692e74b9925a5826"
+  },
+  "P014_Public": null,
+  "P015_Public": null,
+  "strict_above960_achieved": false,
+  "notebook": {
+    "path": "notebooks/public/28_submit_p015_native_support_mask.ipynb",
+    "sha256": "cd02b96feff6069a5dd386f47418517207916077f5d3011ee07ed50c9012eaa1"
+  },
+  "source_UTF8_bytes": 939926,
+  "private_saved_version": 1,
+  "kernel_id": 137973395,
+  "ref": "rsraki/p012native2-ff87856adabf4210bdd8a797616743f0",
+  "single_factor": "Restore original P012 numeric predictions for MCL and Synovitis only; other10 exact uniform20 field strings",
+  "new_weak_only_support_hypothesis": {
+    "threshold": 20,
+    "support_report": {
+      "path": "artifacts/research/20261010-f005-target-reliability-source-review-v1/research.json",
+      "sha256": "c79c62620e02ca7be631bcc49e170b8e1b37eab5d38cec17c3814b33d1f97796"
+    },
+    "hypothesized_before_current_P014_Public_available": true,
+    "own_Gold_Public_fit": 0
+  },
+  "source_writer_preparation": {
+    "path": "artifacts/research/20261010-f005-native-support-mask-source-preparation-v1/preparation.json",
+    "sha256": "4bdb6712e755ef087346cb559977316bb714a2432faa3d7d961680b8d0af14c4"
+  },
+  "compiled_code_cells": 18,
+  "original_writefile_magic_body_compiled": true,
+  "artificial_CSV_checks": 5,
+  "native_CPU64_256_primary_qualification": {
+    "path": "artifacts/research/20261010-f005-online-last2-twofold-root-review-preparation-v3/actual-root-observation-v1/review.json",
+    "sha256": "ed33e82bda30380b46e75af444d58c6b334cebb2aa18cccc3c66395cd4f12cdc"
+  },
+  "native_models_preprocessing_and_twofold_mean_unchanged": true,
+  "old37_uniform_acceptance_applies_new_masked_final": false,
+  "Save": {
+    "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/actual-serving-Save-attempt-v1/receipt.json",
+    "sha256": "d7e4fc001e079a772fcce9a43fc409d7b62afe914d684ca2157dd2f63bab84fb"
+  },
+  "factor_binding": {
+    "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/P015_APPENDED_MASK_FACTOR_BINDING.json",
+    "sha256": "d77bd1c2b48a2838866e1da4c13ba421e8437584a3fd2da02c636e709a3f5317"
+  },
+  "current_visible_status": {
+    "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/visible-observation-v1/observation.json",
+    "sha256": "824834c03219b10ae7a7a83225eda6df796f66b3075c4271e0e9308d8f4df2c1"
+  },
+  "exact_whole_source_six_Input_binding": {
+    "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/visible-observation-v1/source-binding.json",
+    "sha256": "cc1fc9e01808bb51bd61aa13b8fd412a4d1bc9d5f00c672972c1ca298457ae7a"
+  },
+  "source_binding_checks_passed": 8,
+  "actual_visible_status": "RUNNING",
+  "failure_message_empty": true,
+  "actual_Save": 1,
+  "actual_Submit": 0,
+  "automatic_retry": false,
+  "actual_masked_visible_hidden_Public_qualified": false,
+  "own_Gold_fit_selection": 0,
+  "public_third_party_Gold_provenance_separate": true,
+  "patient_independence_claimed": false,
+  "new_models_MRI_Report_teacher_upload": 0,
+  "next": "Actual complete22 output GET; two restored columns exact baseline and other10 byteexact uniform checks; fresh allowance and manual exactV1 Submit if goal unmet; compare official P014/P015"
+}

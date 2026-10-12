@@ -1,0 +1,53 @@
+{
+  "schema_version": "native392_full_range_root_independent_review_v1",
+  "checked_at_utc": "2026-10-08T15:32:29.567102+00:00",
+  "checks": {
+    "preparation_all17_passed": true,
+    "full_source_SHA_same_as_artificial_preparation": true,
+    "old_sources_unchanged": true,
+    "immutable_audited_core_exact": true,
+    "actual_SDK_stdlib_test_invocations16_unique9_passed": true,
+    "ruff_passed": true,
+    "source_read_zero_prefix_only_manual_get_and_no_retry": true,
+    "shard05_strict100_current28_source_archive_exact": true,
+    "shard05_zero_prefix_and_no_old_path": true,
+    "shard06_strict100_current28_source_archive_exact": true,
+    "shard06_zero_prefix_and_no_old_path": true,
+    "shard07_strict100_current28_source_archive_exact": true,
+    "shard07_zero_prefix_and_no_old_path": true
+  },
+  "all_passed": true,
+  "checks_passed": 13,
+  "checks_total": 13,
+  "preparation_sha256": "3e67fe3e8b10269d008236540fecd26c0ed0dc2df6448c9bce469f96d0efa9e4",
+  "source_sha256": {
+    "full_range_tools.py": "f9d8e175474a0fbd4bce94401a91adcdae6f6ca200be524506a67b5f13bbc7ae",
+    "get_one.py": "595d3d76fc6f3f6ac15f24ad2a043ddb622d3884e8bcc0a6de208e79300ad9f8",
+    "record_preparation.py": "ebf523a5f86ac3337d09fd24c12cc6240a4f33e1502236e33dbed1609e736d8e",
+    "test_full_range.py": "c790b2915c185bf79b42d1650c3d569dbfc075cd5cd67ae6b200c88d89383fe9",
+    "test_full_range_sdk.py": "048c24d46cbfd1f1877f9edda7df61f6c95bdc19499a9a12bb70224363064698"
+  },
+  "contexts": [
+    {
+      "shard_index": 4,
+      "ref": "rsraki/n392s05-27fcad27e4372b8d198e59857707e65f",
+      "archive_bytes": 4619896162,
+      "ranges128MiB": 35
+    },
+    {
+      "shard_index": 5,
+      "ref": "rsraki/n392s06-bc15ed8bc2e31d33195bcb606230d60b",
+      "archive_bytes": 4712653873,
+      "ranges128MiB": 36
+    },
+    {
+      "shard_index": 6,
+      "ref": "rsraki/n392s07-50ec8e23cde2bbe6fd569918dd145f02",
+      "archive_bytes": 4713140182,
+      "ranges128MiB": 36
+    }
+  ],
+  "actual_API_HTTP_or_processed_payload_for_this_review": false,
+  "actual_training": false,
+  "scope": "Root source inspection, actual source/summary fixtures, CPU tests. Actual remote transfer and array QC are subsequent gates."
+}

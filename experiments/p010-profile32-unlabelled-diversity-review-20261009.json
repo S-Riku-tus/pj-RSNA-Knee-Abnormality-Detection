@@ -1,0 +1,305 @@
+{
+  "schema_version": "p010_fixed32_unlabelled_diversity_only_v1",
+  "studies": 32,
+  "supplied_groups": 31,
+  "ordered_UID_sha256": "fb83b0b77b4539eb70b142cecc69c3cbc6a0ae4a8763381869078cc936b6fc07",
+  "official_run_status": "ERROR",
+  "saved_version": 3,
+  "kernel_id": 137683716,
+  "by_label": {
+    "ACL": {
+      "original_fused_vs_stock224_Spearman": 0.8762603263642842,
+      "original_fused_vs_stock224_pair_relations": {
+        "concordant": 424,
+        "discordant": 70,
+        "tie_left_only": 2,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_changed_rank_cells_of32": 8,
+      "fixed90_10_vs_original_changed_pair_relations_of496": 4,
+      "fixed90_10_vs_original_pair_relations": {
+        "concordant": 492,
+        "discordant": 1,
+        "tie_left_only": 2,
+        "tie_right_only": 1,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_max_average_percentile_rank_shift": 0.03125
+    },
+    "MCL": {
+      "original_fused_vs_stock224_Spearman": 0.9271244277607499,
+      "original_fused_vs_stock224_pair_relations": {
+        "concordant": 443,
+        "discordant": 50,
+        "tie_left_only": 3,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_changed_rank_cells_of32": 6,
+      "fixed90_10_vs_original_changed_pair_relations_of496": 3,
+      "fixed90_10_vs_original_pair_relations": {
+        "concordant": 493,
+        "discordant": 0,
+        "tie_left_only": 3,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_max_average_percentile_rank_shift": 0.015625
+    },
+    "Medial Meniscus": {
+      "original_fused_vs_stock224_Spearman": 0.9749793827035778,
+      "original_fused_vs_stock224_pair_relations": {
+        "concordant": 464,
+        "discordant": 31,
+        "tie_left_only": 1,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_changed_rank_cells_of32": 2,
+      "fixed90_10_vs_original_changed_pair_relations_of496": 1,
+      "fixed90_10_vs_original_pair_relations": {
+        "concordant": 495,
+        "discordant": 0,
+        "tie_left_only": 1,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_max_average_percentile_rank_shift": 0.015625
+    },
+    "Lateral Meniscus": {
+      "original_fused_vs_stock224_Spearman": 0.8826979472140762,
+      "original_fused_vs_stock224_pair_relations": {
+        "concordant": 430,
+        "discordant": 66,
+        "tie_left_only": 0,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_changed_rank_cells_of32": 4,
+      "fixed90_10_vs_original_changed_pair_relations_of496": 2,
+      "fixed90_10_vs_original_pair_relations": {
+        "concordant": 494,
+        "discordant": 2,
+        "tie_left_only": 0,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_max_average_percentile_rank_shift": 0.03125
+    },
+    "Medial OA": {
+      "original_fused_vs_stock224_Spearman": 0.9791915302887414,
+      "original_fused_vs_stock224_pair_relations": {
+        "concordant": 468,
+        "discordant": 25,
+        "tie_left_only": 3,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_changed_rank_cells_of32": 6,
+      "fixed90_10_vs_original_changed_pair_relations_of496": 3,
+      "fixed90_10_vs_original_pair_relations": {
+        "concordant": 493,
+        "discordant": 0,
+        "tie_left_only": 3,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_max_average_percentile_rank_shift": 0.015625
+    },
+    "Lateral OA": {
+      "original_fused_vs_stock224_Spearman": 0.9530791788856305,
+      "original_fused_vs_stock224_pair_relations": {
+        "concordant": 454,
+        "discordant": 42,
+        "tie_left_only": 0,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_changed_rank_cells_of32": 2,
+      "fixed90_10_vs_original_changed_pair_relations_of496": 1,
+      "fixed90_10_vs_original_pair_relations": {
+        "concordant": 495,
+        "discordant": 0,
+        "tie_left_only": 0,
+        "tie_right_only": 1,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_max_average_percentile_rank_shift": 0.015625
+    },
+    "PF OA": {
+      "original_fused_vs_stock224_Spearman": 0.9589442815249267,
+      "original_fused_vs_stock224_pair_relations": {
+        "concordant": 455,
+        "discordant": 41,
+        "tie_left_only": 0,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_changed_rank_cells_of32": 0,
+      "fixed90_10_vs_original_changed_pair_relations_of496": 0,
+      "fixed90_10_vs_original_pair_relations": {
+        "concordant": 496,
+        "discordant": 0,
+        "tie_left_only": 0,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_max_average_percentile_rank_shift": 0.0
+    },
+    "Effusion": {
+      "original_fused_vs_stock224_Spearman": 0.9802052785923754,
+      "original_fused_vs_stock224_pair_relations": {
+        "concordant": 474,
+        "discordant": 22,
+        "tie_left_only": 0,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_changed_rank_cells_of32": 0,
+      "fixed90_10_vs_original_changed_pair_relations_of496": 0,
+      "fixed90_10_vs_original_pair_relations": {
+        "concordant": 496,
+        "discordant": 0,
+        "tie_left_only": 0,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_max_average_percentile_rank_shift": 0.0
+    },
+    "Synovitis": {
+      "original_fused_vs_stock224_Spearman": 0.9714076246334311,
+      "original_fused_vs_stock224_pair_relations": {
+        "concordant": 467,
+        "discordant": 29,
+        "tie_left_only": 0,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_changed_rank_cells_of32": 0,
+      "fixed90_10_vs_original_changed_pair_relations_of496": 0,
+      "fixed90_10_vs_original_pair_relations": {
+        "concordant": 496,
+        "discordant": 0,
+        "tie_left_only": 0,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_max_average_percentile_rank_shift": 0.0
+    },
+    "Baker's": {
+      "original_fused_vs_stock224_Spearman": 0.9156891495601173,
+      "original_fused_vs_stock224_pair_relations": {
+        "concordant": 440,
+        "discordant": 56,
+        "tie_left_only": 0,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_changed_rank_cells_of32": 0,
+      "fixed90_10_vs_original_changed_pair_relations_of496": 0,
+      "fixed90_10_vs_original_pair_relations": {
+        "concordant": 496,
+        "discordant": 0,
+        "tie_left_only": 0,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_max_average_percentile_rank_shift": 0.0
+    },
+    "Contusion": {
+      "original_fused_vs_stock224_Spearman": 0.9570158595779995,
+      "original_fused_vs_stock224_pair_relations": {
+        "concordant": 456,
+        "discordant": 39,
+        "tie_left_only": 1,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_changed_rank_cells_of32": 2,
+      "fixed90_10_vs_original_changed_pair_relations_of496": 1,
+      "fixed90_10_vs_original_pair_relations": {
+        "concordant": 495,
+        "discordant": 0,
+        "tie_left_only": 1,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_max_average_percentile_rank_shift": 0.015625
+    },
+    "Fracture": {
+      "original_fused_vs_stock224_Spearman": 0.9010263929618768,
+      "original_fused_vs_stock224_pair_relations": {
+        "concordant": 438,
+        "discordant": 58,
+        "tie_left_only": 0,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_changed_rank_cells_of32": 0,
+      "fixed90_10_vs_original_changed_pair_relations_of496": 0,
+      "fixed90_10_vs_original_pair_relations": {
+        "concordant": 496,
+        "discordant": 0,
+        "tie_left_only": 0,
+        "tie_right_only": 0,
+        "tie_both": 0,
+        "all_unordered_pairs": 496
+      },
+      "fixed90_10_vs_original_max_average_percentile_rank_shift": 0.0
+    }
+  },
+  "all12_changed_rank_cells_of384": 30,
+  "all12_changed_pair_relations_of5952": 15,
+  "coefficient": {
+    "incumbent": 0.9,
+    "author224": 0.1,
+    "predeclared_all12": true,
+    "coefficient_search": false
+  },
+  "definitions": {
+    "Spearman": "Pearson correlation of per-column average ranks, with average ties.",
+    "discordant_pair": "Both models rank the pair strictly and their order differs. One-sided or double ties are reported separately.",
+    "fixed90_10": "Average-percentile-rank both branches, take fixed0.9/0.1 mean and average-percentile-rank the result."
+  },
+  "source_sha256": {
+    "p010_fused_original.csv": "a3920ee376bdad1d3fc1c5a3c87c1f8400105331d218f9bf6f71cf620feca2b8",
+    "p010_stock224_raw.csv": "25d036a162cde05ae1b9704370cb9432e3f87fa6f8be4dae71ed15ef6b74a441",
+    "p010_shared224_raw.csv": "03ec66afe33ddd0cf5ca82b4a04690188bda213729225dceec30bfb1e4125f80"
+  },
+  "download_receipt_sha256": "d2690f22b8c279afc46505569f48a62d41992f76673e4457adb951a782836ccb",
+  "original14_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "analysis_script_sha256": "4e0cc2e8ee88d8a0873a53ed9d2f0d4f7a49a62664364c2f4a4e5556039cc4df",
+  "teacher_targets_or_Report_read": false,
+  "Gold_labels_used": false,
+  "AUC_evaluated": false,
+  "raw_UIDs_in_tracked_review": false,
+  "new_API_MRI_GPU_or_model_operations": 0,
+  "candidate_gate_passed": false,
+  "predictions_published_or_submitted": false,
+  "scope": "32 unlabelled training-image studies with pretrained full-weak exposure. Measures output diversity and hypothetical rank effects only; does not predict accuracy gain, establish residual complementarity, select coefficients or validate hidden runtime.",
+  "Gold_checkpoint_history": "Author pretrained224 selected/developed on Gold58; ownGold fit/selection not performed."
+}

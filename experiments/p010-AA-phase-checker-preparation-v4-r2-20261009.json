@@ -1,0 +1,57 @@
+{
+  "schema_version": "p010_AA_phase_checker_preparation_v4_r2",
+  "prepared_at_utc": "2026-10-08T16:37:40.498148+00:00",
+  "all_passed": true,
+  "checks": {
+    "exact_V4_source_environment_before_evidence_checks": true,
+    "download_stream_SHA_actual_bytes_positive40_allowlist": true,
+    "all10_phase_ordered32_UIDs_12_original_labels": true,
+    "float32_raw_bit_hex_SHA_and_finalCSV_interpretation": true,
+    "six_main_original_ordinal_float64_division_then_float32": true,
+    "separate10_GUARDs_bind_phase_body_SHA": true,
+    "actual_both_model_load_weight_SHA_and_eval_receipts": true,
+    "base64full94views_and_stock32full94_noGrad_AMP": true,
+    "sourceSHA_FOV140_nativeinput_mask_byte_receipts": true,
+    "bounded_transport_taskdone_joined_cancel_bound_checks": true,
+    "fixed_actual_UID_to_GPU_assignment_validated": true,
+    "predeclared13000MiB_GPU_reserved_elapsedRSS_resource_checks": true,
+    "all10_native_hashes_equal_no_pixels_claim": true,
+    "six_independent_ULP_raw_rank_tie_device_comparisons": true,
+    "observed_GPU_strata_descriptive_not_causal": true,
+    "raw1e7_and_CSVbyteexact_criteria_retained_diagnosticCanFail": true,
+    "ERROR_partial_JSON_scope_no_complete_CSV_claim": true,
+    "whole_summary_design_helperSHA_and_noReport_noGoldfit": true,
+    "candidate_always_closed_accuracy_Public_unmeasured": true,
+    "nine_meaningful_synthetic_CPU_tests_Ruff_pass": true
+  },
+  "CPU_unittest": {
+    "tests": 9,
+    "passed": 9,
+    "seconds": 0.384
+  },
+  "source_sha256": {
+    "phase_checks.py": "dfe0cb0f41aa4976479a971059c78574d8160e4f2232452ab0b0e33f68ef77c9",
+    "verify_results.py": "0f86d7ba34599a4529d1d4c4b7cf0a932c43bd1d42d1da8016ed9a465e437762",
+    "test_phase_checks.py": "a36c1da5ba3d536fd4a950c33c25b70e3df65aa3225597be916c146535796bd6"
+  },
+  "frozen_getter_source_sha256": {
+    "compact_tools.py": "249b7accdbebb886890235ace81cbc02b8ac0a9525dec67e2d115ecb4f8c3318",
+    "get_once.py": "faf02f0079560dcb8a3fe2061c99ae2863a33521db2f1209d07fb5bf7ee3617b"
+  },
+  "independent_float32_checker_sha256": "fda9847b5232b6fe177c4ef3b46539c5e15e5316b1ee6edfaed02b59caf4abac",
+  "candidate_gate_passed": false,
+  "accuracy_evaluated": false,
+  "real_payload_or_GPU_in_artificial_tests": false,
+  "actual_results_review_not_yet_executed_in_preparation": true,
+  "root_manual_argv": [
+    ".venv/Scripts/python.exe",
+    "artifacts\\research\\20261009-p010-AA-results-tools-v4-r2\\verify_results.py",
+    "--observation",
+    "artifacts\\research\\20261009-p010-AA-results-tools-v4-r2\\observation-v1",
+    "--launch-directory",
+    "artifacts/research/20261009-p010-AA32-launch-v4-r2",
+    "--review-output",
+    "experiments/p010-AA-completed-compact-review-v4-r2-20261009.json"
+  ],
+  "scope": "Artificial compact receipts/CSVs only. MRI/model payload, API, auth, real GPU or actual cache body access zero."
+}

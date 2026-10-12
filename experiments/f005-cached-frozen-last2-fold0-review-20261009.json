@@ -1,0 +1,686 @@
+{
+  "schema_version": "f005_cached_CLS_frozen_vs_online_last2_paired_weak_review_v1",
+  "at_utc": "2026-10-09T10:07:00.517983+00:00",
+  "all_passed": true,
+  "checks": {
+    "both_runs_complete12_with_earliest_best_and_actual_positive_steps": true,
+    "fixed_configs_sources_full4207_index_resource_provenance": true,
+    "all_epoch_prediction_SHA_UID_set_order_and_finite12": true,
+    "selected_epoch_CSV_and_best_checkpoint_file_SHA": true,
+    "same_fold_and_seed": true,
+    "same_validation_UID_order": true,
+    "same_manifest_index_resource_and_encoder_provenance": true,
+    "same_environment_and_GPU": true,
+    "same_observed_support_for_all_targets": true,
+    "sole_model_factor_last2_both_window16": true,
+    "cached_frozen_actual_producer_lineage_and_complete4207_cache_bound": true,
+    "original_last2_online_producer_unchanged": true,
+    "immutable_ordinary_numeric_history_UID_config_Gold_checks_reused": true
+  },
+  "fold": 0,
+  "full4207_index_sha256": "7d373ae85098758a8bc322b4e65079de07e998f7b7cd42a5a2d26cc4577eae31",
+  "resource_gate_sha256": "f7460c837b1cd8e9d4d19ff0ea35929b8877a3fb7de766527785aedeba461824",
+  "arms": {
+    "frozen_control": {
+      "run_path": "artifacts/runs/f005-native-frozen-cached-FP32-fast16-fold0-20261009-v1",
+      "run_json_sha256": "68cd3c9550c3d039d01bffa1943505f9d671ba48d01f26f710a5882c1fac9aaf",
+      "config_sha256": "62fe47e30191b2e8bd4a026242f56770f549039a586091bf4d68df3a499463dd",
+      "fold": 0,
+      "trainable_blocks": 0,
+      "selected_epoch": 11,
+      "selected_weak_BCE": 0.32320641890826474,
+      "selected_weak_macro_AUC12": 0.7944484597102713,
+      "final_weak_BCE": 0.3318409104155832,
+      "final_minus_best_weak_BCE": 0.008634491507318487,
+      "selected_validation_minus_training_BCE": 0.025361151933312953,
+      "selected_checkpoint_sha256": "702a8fe16298fa858ba594ea67722af787f9a70859cc7785d7436027f2908470",
+      "selected_prediction_sha256": "f4cdbe3e5ccb211edbe98a7ddc52d221a5a66e3290f95adf2064c7855d58322e",
+      "final_prediction_sha256": "987bc9ae4f51d6b36340c430b299654e8600e38b27ce3019c382857e1eacf5db",
+      "ordered_valid_UID_sha256": "839c3453d3d9ff2ac69edf5219073411854f04dfb238869d28c68cf650cb6bb7",
+      "valid_studies": 821,
+      "elapsed_seconds": 372.259913899994,
+      "epoch_receipts": [
+        {
+          "epoch": 1,
+          "train_bce": 0.42200807175770644,
+          "weak_bce": 0.4023816201394196,
+          "weak_macro_auc_12": 0.7304502049710454,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 117440512,
+          "epoch_wall_seconds": 28.236062000039965
+        },
+        {
+          "epoch": 2,
+          "train_bce": 0.38750344613555576,
+          "weak_bce": 0.3773306900030742,
+          "weak_macro_auc_12": 0.7409488589960213,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 117440512,
+          "epoch_wall_seconds": 30.719660999951884
+        },
+        {
+          "epoch": 3,
+          "train_bce": 0.36323047787529716,
+          "weak_bce": 0.3655063334988407,
+          "weak_macro_auc_12": 0.7432314916873438,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 117440512,
+          "epoch_wall_seconds": 30.863950800034218
+        },
+        {
+          "epoch": 4,
+          "train_bce": 0.3497407476627169,
+          "weak_bce": 0.36023536260493955,
+          "weak_macro_auc_12": 0.7521809664995424,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 117440512,
+          "epoch_wall_seconds": 30.851739400008228
+        },
+        {
+          "epoch": 5,
+          "train_bce": 0.3381681280781998,
+          "weak_bce": 0.35189615459847623,
+          "weak_macro_auc_12": 0.7639958284114994,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 117440512,
+          "epoch_wall_seconds": 30.871785799972713
+        },
+        {
+          "epoch": 6,
+          "train_bce": 0.3309247615585846,
+          "weak_bce": 0.34264230019908437,
+          "weak_macro_auc_12": 0.7677270712838086,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 117440512,
+          "epoch_wall_seconds": 31.105104800022673
+        },
+        {
+          "epoch": 7,
+          "train_bce": 0.3234075657682619,
+          "weak_bce": 0.3335532669374117,
+          "weak_macro_auc_12": 0.7742540423225156,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 117440512,
+          "epoch_wall_seconds": 31.036129699961748
+        },
+        {
+          "epoch": 8,
+          "train_bce": 0.3156244276984578,
+          "weak_bce": 0.34211545433281226,
+          "weak_macro_auc_12": 0.7852269812310809,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 117440512,
+          "epoch_wall_seconds": 31.782905700034462
+        },
+        {
+          "epoch": 9,
+          "train_bce": 0.3074385306240789,
+          "weak_bce": 0.32761983493297786,
+          "weak_macro_auc_12": 0.7867707835105242,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 117440512,
+          "epoch_wall_seconds": 31.3893755999743
+        },
+        {
+          "epoch": 10,
+          "train_bce": 0.3031316649647424,
+          "weak_bce": 0.3258280177505224,
+          "weak_macro_auc_12": 0.7920482211004587,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 117440512,
+          "epoch_wall_seconds": 32.300459299993236
+        },
+        {
+          "epoch": 11,
+          "train_bce": 0.2978452669749518,
+          "weak_bce": 0.32320641890826474,
+          "weak_macro_auc_12": 0.7944484597102713,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 117440512,
+          "epoch_wall_seconds": 31.389130000025034
+        },
+        {
+          "epoch": 12,
+          "train_bce": 0.2908635629929954,
+          "weak_bce": 0.3318409104155832,
+          "weak_macro_auc_12": 0.7985597675356532,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 117440512,
+          "epoch_wall_seconds": 31.604970199987292
+        }
+      ],
+      "optimizer_steps": 2544,
+      "amp_skipped_steps": 0,
+      "peak_reserved_bytes": 117440512,
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "environment": {
+        "torch": "2.10.0+cu128",
+        "numpy": "2.5.3"
+      },
+      "per_target": {
+        "ACL": {
+          "binary_observed": 693,
+          "positive": 80,
+          "negative": 613,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 693,
+          "missing": 128,
+          "recorded_AUC": 0.8226957585644372,
+          "per_finding_BCE": null
+        },
+        "MCL": {
+          "binary_observed": 683,
+          "positive": 11,
+          "negative": 672,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 683,
+          "missing": 138,
+          "recorded_AUC": 0.7125270562770563,
+          "per_finding_BCE": null
+        },
+        "Medial Meniscus": {
+          "binary_observed": 750,
+          "positive": 309,
+          "negative": 441,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 750,
+          "missing": 71,
+          "recorded_AUC": 0.7891596768157101,
+          "per_finding_BCE": null
+        },
+        "Lateral Meniscus": {
+          "binary_observed": 717,
+          "positive": 104,
+          "negative": 613,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 717,
+          "missing": 104,
+          "recorded_AUC": 0.6745670724055716,
+          "per_finding_BCE": null
+        },
+        "Medial OA": {
+          "binary_observed": 442,
+          "positive": 71,
+          "negative": 371,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 442,
+          "missing": 379,
+          "recorded_AUC": 0.8915758703162371,
+          "per_finding_BCE": null
+        },
+        "Lateral OA": {
+          "binary_observed": 426,
+          "positive": 33,
+          "negative": 393,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 426,
+          "missing": 395,
+          "recorded_AUC": 0.76705991209808,
+          "per_finding_BCE": null
+        },
+        "PF OA": {
+          "binary_observed": 466,
+          "positive": 88,
+          "negative": 378,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 466,
+          "missing": 355,
+          "recorded_AUC": 0.8101851851851852,
+          "per_finding_BCE": null
+        },
+        "Effusion": {
+          "binary_observed": 617,
+          "positive": 100,
+          "negative": 517,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 617,
+          "missing": 204,
+          "recorded_AUC": 0.9341972920696325,
+          "per_finding_BCE": null
+        },
+        "Synovitis": {
+          "binary_observed": 101,
+          "positive": 100,
+          "negative": 1,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 101,
+          "missing": 720,
+          "recorded_AUC": 0.64,
+          "per_finding_BCE": null
+        },
+        "Baker's": {
+          "binary_observed": 378,
+          "positive": 59,
+          "negative": 319,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 378,
+          "missing": 443,
+          "recorded_AUC": 0.8862972211890973,
+          "per_finding_BCE": null
+        },
+        "Contusion": {
+          "binary_observed": 266,
+          "positive": 99,
+          "negative": 167,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 266,
+          "missing": 555,
+          "recorded_AUC": 0.7870924817032602,
+          "per_finding_BCE": null
+        },
+        "Fracture": {
+          "binary_observed": 188,
+          "positive": 44,
+          "negative": 144,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 188,
+          "missing": 633,
+          "recorded_AUC": 0.81802398989899,
+          "per_finding_BCE": null
+        }
+      }
+    },
+    "last2": {
+      "run_path": "artifacts/runs/f005-native-last2-fast16-fold0-20261009-v1",
+      "run_json_sha256": "56a463e2a54739e2077a1e991af7f66e80fb5c45d1cd70018cc5c368778ed3ba",
+      "config_sha256": "d3eabc71398a903ea14eccafd0f1a0e6f5ac9976f30190c6a079d66b26af4740",
+      "fold": 0,
+      "trainable_blocks": 2,
+      "selected_epoch": 8,
+      "selected_weak_BCE": 0.27375829822323816,
+      "selected_weak_macro_AUC12": 0.8771277163065415,
+      "final_weak_BCE": 0.31614579817276756,
+      "final_minus_best_weak_BCE": 0.042387499949529395,
+      "selected_validation_minus_training_BCE": 0.04982461288145107,
+      "selected_checkpoint_sha256": "7b5a8443d2339580db3343d39cb53ef21faa08452db8ba41235af1a6fb2a9a35",
+      "selected_prediction_sha256": "bc0fa544835ac4604546c7f65e6862da5df7b477ba4236a599ff0df85011e171",
+      "final_prediction_sha256": "7dc58806e454f00479cea07d3e651c003a0ea7f9432773c84ae1e272bc55d245",
+      "ordered_valid_UID_sha256": "839c3453d3d9ff2ac69edf5219073411854f04dfb238869d28c68cf650cb6bb7",
+      "valid_studies": 821,
+      "elapsed_seconds": 21057.8433829,
+      "epoch_receipts": [
+        {
+          "epoch": 1,
+          "train_bce": 0.4141724508489319,
+          "weak_bce": 0.3777010221328955,
+          "weak_macro_auc_12": 0.7429936781434937,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 1163919360,
+          "epoch_wall_seconds": 1748.733027700102
+        },
+        {
+          "epoch": 2,
+          "train_bce": 0.35106923361461556,
+          "weak_bce": 0.33963445152144833,
+          "weak_macro_auc_12": 0.7856989502594814,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 1163919360,
+          "epoch_wall_seconds": 1757.9335141999181
+        },
+        {
+          "epoch": 3,
+          "train_bce": 0.324664095099039,
+          "weak_bce": 0.32463259423082985,
+          "weak_macro_auc_12": 0.8220566704530573,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 1163919360,
+          "epoch_wall_seconds": 1745.6530332000693
+        },
+        {
+          "epoch": 4,
+          "train_bce": 0.2981612218202111,
+          "weak_bce": 0.3029857405676191,
+          "weak_macro_auc_12": 0.835975744125772,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 1163919360,
+          "epoch_wall_seconds": 1745.9325020000106
+        },
+        {
+          "epoch": 5,
+          "train_bce": 0.279595100476595,
+          "weak_bce": 0.30153026230410795,
+          "weak_macro_auc_12": 0.8489457522213807,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 1163919360,
+          "epoch_wall_seconds": 1740.9394411999965
+        },
+        {
+          "epoch": 6,
+          "train_bce": 0.26277645851920656,
+          "weak_bce": 0.28528148745778076,
+          "weak_macro_auc_12": 0.8514370402294302,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 1163919360,
+          "epoch_wall_seconds": 1761.9015531999758
+        },
+        {
+          "epoch": 7,
+          "train_bce": 0.24347385711973374,
+          "weak_bce": 0.2798305250491582,
+          "weak_macro_auc_12": 0.8709486195679211,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 1163919360,
+          "epoch_wall_seconds": 1797.5835554000223
+        },
+        {
+          "epoch": 8,
+          "train_bce": 0.2239336853417871,
+          "weak_bce": 0.27375829822323816,
+          "weak_macro_auc_12": 0.8771277163065415,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 1163919360,
+          "epoch_wall_seconds": 1803.929307699902
+        },
+        {
+          "epoch": 9,
+          "train_bce": 0.20513362170746818,
+          "weak_bce": 0.2839891317012499,
+          "weak_macro_auc_12": 0.8758288384372998,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 1163919360,
+          "epoch_wall_seconds": 1744.5069005000405
+        },
+        {
+          "epoch": 10,
+          "train_bce": 0.1845499492843422,
+          "weak_bce": 0.2890005207791149,
+          "weak_macro_auc_12": 0.8820166757784443,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 1163919360,
+          "epoch_wall_seconds": 1732.7984779999824
+        },
+        {
+          "epoch": 11,
+          "train_bce": 0.1646681081130079,
+          "weak_bce": 0.31126903214233176,
+          "weak_macro_auc_12": 0.877300139882068,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "gpu_peak_reserved_bytes": 1163919360,
+          "epoch_wall_seconds": 1735.2795036000898
+        },
+        {
+          "epoch": 12,
+          "train_bce": 0.1401915522583856,
+          "weak_bce": 0.31614579817276756,
+          "weak_macro_auc_12": 0.8758725964759471,
+          "optimizer_steps": 211,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 1,
+          "gpu_peak_reserved_bytes": 1163919360,
+          "epoch_wall_seconds": 1742.5758673999226
+        }
+      ],
+      "optimizer_steps": 2543,
+      "amp_skipped_steps": 1,
+      "peak_reserved_bytes": 1163919360,
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "environment": {
+        "torch": "2.10.0+cu128",
+        "numpy": "2.5.3"
+      },
+      "per_target": {
+        "ACL": {
+          "binary_observed": 693,
+          "positive": 80,
+          "negative": 613,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 693,
+          "missing": 128,
+          "recorded_AUC": 0.8909461663947797,
+          "per_finding_BCE": null
+        },
+        "MCL": {
+          "binary_observed": 683,
+          "positive": 11,
+          "negative": 672,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 683,
+          "missing": 138,
+          "recorded_AUC": 0.7298430735930735,
+          "per_finding_BCE": null
+        },
+        "Medial Meniscus": {
+          "binary_observed": 750,
+          "positive": 309,
+          "negative": 441,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 750,
+          "missing": 71,
+          "recorded_AUC": 0.8917288598287212,
+          "per_finding_BCE": null
+        },
+        "Lateral Meniscus": {
+          "binary_observed": 717,
+          "positive": 104,
+          "negative": 613,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 717,
+          "missing": 104,
+          "recorded_AUC": 0.7667837871753043,
+          "per_finding_BCE": null
+        },
+        "Medial OA": {
+          "binary_observed": 442,
+          "positive": 71,
+          "negative": 371,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 442,
+          "missing": 379,
+          "recorded_AUC": 0.9146957214988042,
+          "per_finding_BCE": null
+        },
+        "Lateral OA": {
+          "binary_observed": 426,
+          "positive": 33,
+          "negative": 393,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 426,
+          "missing": 395,
+          "recorded_AUC": 0.8380754105944945,
+          "per_finding_BCE": null
+        },
+        "PF OA": {
+          "binary_observed": 466,
+          "positive": 88,
+          "negative": 378,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 466,
+          "missing": 355,
+          "recorded_AUC": 0.8465909090909091,
+          "per_finding_BCE": null
+        },
+        "Effusion": {
+          "binary_observed": 617,
+          "positive": 100,
+          "negative": 517,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 617,
+          "missing": 204,
+          "recorded_AUC": 0.9390715667311412,
+          "per_finding_BCE": null
+        },
+        "Synovitis": {
+          "binary_observed": 101,
+          "positive": 100,
+          "negative": 1,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 101,
+          "missing": 720,
+          "recorded_AUC": 0.99,
+          "per_finding_BCE": null
+        },
+        "Baker's": {
+          "binary_observed": 378,
+          "positive": 59,
+          "negative": 319,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 378,
+          "missing": 443,
+          "recorded_AUC": 0.9078157377397588,
+          "per_finding_BCE": null
+        },
+        "Contusion": {
+          "binary_observed": 266,
+          "positive": 99,
+          "negative": 167,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 266,
+          "missing": 555,
+          "recorded_AUC": 0.903889191314341,
+          "per_finding_BCE": null
+        },
+        "Fracture": {
+          "binary_observed": 188,
+          "positive": 44,
+          "negative": 144,
+          "soft_excluded_from_AUC": 0,
+          "BCE_observed": 188,
+          "missing": 633,
+          "recorded_AUC": 0.9060921717171717,
+          "per_finding_BCE": null
+        }
+      }
+    }
+  },
+  "last2_minus_frozen": {
+    "selected_weak_BCE": -0.049448120685026575,
+    "selected_weak_macro_AUC12": 0.08267925659627018,
+    "per_target_recorded_AUC": {
+      "ACL": 0.06825040783034253,
+      "MCL": 0.017316017316017285,
+      "Medial Meniscus": 0.1025691830130111,
+      "Lateral Meniscus": 0.0922167147697327,
+      "Medial OA": 0.023119851182567097,
+      "Lateral OA": 0.07101549849641453,
+      "PF OA": 0.03640572390572383,
+      "Effusion": 0.004874274661508693,
+      "Synovitis": 0.35,
+      "Baker's": 0.021518516550661504,
+      "Contusion": 0.1167967096110808,
+      "Fracture": 0.08806818181818177
+    }
+  },
+  "fold1_gate": "Root review of both fold0 completion, strict checkpoint metadata and these weak results; this tool launches nothing.",
+  "checkpoint_tensor_metadata_and_last_epoch_independently_verified": false,
+  "original_manifest_row_order_independently_verified": false,
+  "teacher_values_or_per_UID_missing_masks_read": false,
+  "AUC_independently_recomputed_from_teachers": false,
+  "patient_independence_verified": false,
+  "own_Gold_evaluated": false,
+  "Public_score": null,
+  "limits": [
+    "AUC and observed support come from saved CLI metrics; teacher values and mask identities are not reopened.",
+    "All twelve prediction files and both arms share the exact fold UID set/order; original weak.csv row order is not separately read.",
+    "Best checkpoint bytes are hashed, without loading tensors. Strict tensor schema and final checkpoint epoch require the existing loader separately.",
+    "Per-finding BCE is not saved by the current CLI. No probability-space approximation is substituted for logits BCE.",
+    "Reserved CUDA memory and history times are cumulative; epoch duration uses adjacent differences. No device-wide peak claim.",
+    "Held-fold weak metrics are not Gold/Public, not independent OOF claims for public branches, and do not predict .955 or .960.",
+    "Feature tensors and pixel-member associations were checked by the bound root full4207 cache proof; this tool reads only cache metadata.",
+    "FP32 cache preserves the original post-FP16 boundary; it is not a higher-precision encoder intervention.",
+    "Same-runtime artificial full144/16+3 equality does not measure a complete real twelve-epoch online/cached trajectory."
+  ],
+  "raw_run_identity": {
+    "0": {
+      "raw_run_sha256": "68cd3c9550c3d039d01bffa1943505f9d671ba48d01f26f710a5882c1fac9aaf",
+      "schema_version": "native392_training_run_cached_CLS_FP32_v1",
+      "engineering_lineage": {
+        "foundation": {
+          "version": "window_chunk16_v1",
+          "base_native_training_sha256": "0c470e265332e14e31b1942996f37efd7861f9932eb9ded117253b689b97bf26",
+          "change": "window_chunk2_to16_in_both_arms"
+        },
+        "execution": "f005_frozen_CLS_FP32_cached_head_training_v1",
+        "change": "one-pass frozen CLS cache at unchanged postFP16 FP32 head boundary",
+        "clinical_ML_factor_changed": false,
+        "producer_source_sha256": {
+          "cache_tools.py": "90c25788a937cd86dc0f45435341d50739f250144a17550bd75533a4dae433ee",
+          "extract_once.py": "b8f09b28bb28e0a58a21418b4f3816d98ff099283a2b1b578f0d18e36aef489b",
+          "train_cached.py": "c7815bf71e0a567718b38502bbdbab3907adb252991b60950a4e91e32ceb98d8",
+          "qualify_artificial.py": "7eecb04ecf0ec97dd38bfd3d4f362d7390375a0c1d27c449a0f6610e6d27779e"
+        }
+      },
+      "training_execution": "f005_frozen_CLS_FP32_cached_head_training_v1",
+      "producer_source_sha256": {
+        "cache_tools.py": "90c25788a937cd86dc0f45435341d50739f250144a17550bd75533a4dae433ee",
+        "extract_once.py": "b8f09b28bb28e0a58a21418b4f3816d98ff099283a2b1b578f0d18e36aef489b",
+        "train_cached.py": "c7815bf71e0a567718b38502bbdbab3907adb252991b60950a4e91e32ceb98d8",
+        "qualify_artificial.py": "7eecb04ecf0ec97dd38bfd3d4f362d7390375a0c1d27c449a0f6610e6d27779e"
+      }
+    },
+    "2": {
+      "raw_run_sha256": "56a463e2a54739e2077a1e991af7f66e80fb5c45d1cd70018cc5c368778ed3ba",
+      "schema_version": "native392_training_run_fast16_v1",
+      "engineering_lineage": {
+        "version": "window_chunk16_v1",
+        "base_native_training_sha256": "0c470e265332e14e31b1942996f37efd7861f9932eb9ded117253b689b97bf26",
+        "change": "window_chunk2_to16_in_both_arms"
+      },
+      "training_execution": null,
+      "producer_source_sha256": null
+    }
+  },
+  "cached_frozen_input": {
+    "representation": "CLS_only_384",
+    "feature_cache_index_sha256": "61f97b4bed65f55632ffe20112188b78c51ba03c9355d2f8c894b38904d09c25",
+    "feature_fingerprint": "6ff6c2acc2f532b210c7600de3b417c87c91f79721808e4d3e7322a866b47966",
+    "root_complete_cache_review_sha256": "a4d3f4f2f525a349550bd742e5f53459ca68a53bd4fa5bbdfe3ddd139afeef16",
+    "source_review_sha256": "ea06269803d8f1352f32141da601c67f73c26f81401bb81e7b5d62efd7be9c2d",
+    "artificial_same_runtime_equivalence_sha256": "62f04d8a9791dfba41568a5dcbb1ed4940726fe40c0b1b7040a1dbed82477038",
+    "producer_source_sha256": {
+      "cache_tools.py": "90c25788a937cd86dc0f45435341d50739f250144a17550bd75533a4dae433ee",
+      "extract_once.py": "b8f09b28bb28e0a58a21418b4f3816d98ff099283a2b1b578f0d18e36aef489b",
+      "train_cached.py": "c7815bf71e0a567718b38502bbdbab3907adb252991b60950a4e91e32ceb98d8",
+      "qualify_artificial.py": "7eecb04ecf0ec97dd38bfd3d4f362d7390375a0c1d27c449a0f6610e6d27779e"
+    },
+    "immutable_ordinary_checker_sha256": "a5f72a2ce515978d63bf782cd0e3d7c67a26b69c5db778c11d43e792b6d12dd9",
+    "view_changes": "Cached schema/lineage and two cache-only audit keys normalized only in memory; raw run SHA retained."
+  },
+  "actual_full12_online_vs_cached_trajectory_equivalence_measured": false,
+  "feature_payloads_reopened_by_this_comparator": false
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "f005_twofold_source_integration_progress_snapshot_v1",
+  "observed_at_utc": "2026-10-09T12:56:53.149633+00:00",
+  "observed_at_JST": "2026-10-09T21:56:53.149633+09:00",
+  "own_confirmed_Public": "0.951",
+  "own_completed_submission_ref": 56998356,
+  "P013_submitted_ref": 57006968,
+  "P013_last_official_read_UTC": "2026-10-09T12:08:44+00:00",
+  "P013_last_raw_status_exposed": false,
+  "P013_last_SDK_default_status": "PENDING",
+  "P013_score_unconfirmed": true,
+  "duplicate_Submit": 0,
+  "fold1": {
+    "status": "running",
+    "observed_epochs": 5,
+    "fixed_epochs": 12,
+    "last_weak_BCE": 0.2928173509883299,
+    "last_weak_AUC12": 0.8505246428487222,
+    "run_json_original_byte_sha256_snapshot": "d5fecaee027ae9a43f7b0f7c9a73350d106822ee634943a6fb15fc1c452d491f",
+    "immutable_metadata_snapshot_path": "artifacts/research/20261009-f005-twofold-source-integration-progress-root-v1/observation-v1/fold1-running-snapshot.json",
+    "immutable_metadata_snapshot_sha256": "19cf15c487f5a54b504f64c893f7b1aa7265bf93ba4103452d42e19b9a0d1a5f",
+    "interim_checkpoint_adopted": false,
+    "own_Gold_fit_or_selection": 0
+  },
+  "evidence": {
+    "parent_clock_writer_independent": {
+      "path": "artifacts/research/20261009-f005-twofold-parent-clock-and-final-writer-independent-v1/review.json",
+      "sha256": "fcee671fa241fe0b32f83d5a27ec8ad670599abe17c55b556fdcdb1406376ba1",
+      "checks": 28,
+      "all_passed": true
+    },
+    "twofold_results_V2_independent": {
+      "path": "artifacts/research/20261009-f005-online-last2-twofold-results-independent-v2/review.json",
+      "sha256": "b9d477da9211d5b745cb1dcf717460f3fc89102f4a74559f4f8a49291cd4ce9a",
+      "checks": 39,
+      "all_passed": true
+    },
+    "twofold_results_V3_root_delta": {
+      "path": "artifacts/research/20261009-f005-online-last2-twofold-results-root-independent-v3/review.json",
+      "sha256": "0ea4efe3b23e9b6eb6fceee48bece394314f52b9ad243221904c2b377a2a8403",
+      "checks": 13,
+      "all_passed": true
+    },
+    "cleanup_V1_HOLD": {
+      "path": "artifacts/research/20261009-f005-twofold-baseline-cleanup-independent-v1/review.json",
+      "sha256": "ac2026ac8366938240c2b285988dbf021a80490d7bffe133d7d78a981e32a74c",
+      "checks": 28,
+      "all_passed": false
+    },
+    "cleanup_V2_author_preparation": {
+      "path": "artifacts/research/20261009-f005-twofold-baseline-cleanup-preparation-v2/preparation.json",
+      "sha256": "231d06700c815cc66d5e5d795781f9256556b92f198739f842410111b371bb97",
+      "checks": 26,
+      "all_passed": true
+    },
+    "cleanup_V2_independent": {
+      "path": "artifacts/research/20261009-f005-twofold-baseline-cleanup-independent-v2/review.json",
+      "sha256": "6226823411f2710f8c1d3e4dfeab7ac0812025b0c0f3da0d39535d4d0d67c3e3",
+      "checks": 35,
+      "all_passed": true
+    },
+    "fresh_public_candidates_independent": {
+      "path": "artifacts/research/20261009-fresh-public-recipes-independent-v1/review.json",
+      "sha256": "4e042f71ea035f9ac28ab7822b841657e932395cc906011ea5cc87e059cc8ab3",
+      "checks": 9,
+      "all_passed": true
+    }
+  },
+  "protected_Notebooks_unchanged": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/24_submit_p012_public951_snapshot_control.ipynb": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee",
+    "notebooks/public/25_submit_p013_fixed20_cublas_control.ipynb": "d9a837599fa96e32e09d4e1c44f199e76af60e415ee3a5bd8521d2f363d9d14a"
+  },
+  "cleanup_V2_independent_review_source_only_passed": true,
+  "root_twofold_converter_source_preparation_in_progress": true,
+  "source_preparation_does_not_qualify_actual_GPU_or_accuracy": true,
+  "actual_twofold_CPU64_256_gate_passed": false,
+  "full_integrated_Notebook_qualified": false,
+  "next": [
+    "固定12epochを完了する",
+    "選択checkpointのCPU再構築と両foldの封印を確認する",
+    "同じ二fold組のKaggle CPU→64→256を実検証する",
+    "選択親への統合を実検証してから新規提出する"
+  ],
+  "new_API_Save_upload_Submit_model_MRI_teacher_access_by_this_recorder": 0,
+  "ledger_rows": 186,
+  "ledger_unchanged_sha256": "6e9b612ed4f5a1c4d242ec54ddf2d66bed916a9bc06adeb4ce6730f0dd5b4d26",
+  "strictly_above_0_960_goal_achieved": false
+}

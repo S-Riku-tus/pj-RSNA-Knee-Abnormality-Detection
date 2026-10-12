@@ -1,0 +1,72 @@
+{
+  "schema_version": "f005_actual_twofold_qualified_P014_source400_root_record_v1",
+  "at_utc": "2026-10-10T04:02:45.964814+00:00",
+  "actual_twofold_CPU64_256_root_review": {
+    "path": "artifacts/research/20261010-f005-online-last2-twofold-root-review-preparation-v3/actual-root-observation-v1/review.json",
+    "sha256": "ed33e82bda30380b46e75af444d58c6b334cebb2aa18cccc3c66395cd4f12cdc"
+  },
+  "actual_twofold_qualified": true,
+  "actual_root_checks": 12,
+  "native256_actual_body": {
+    "path": "artifacts/research/20261010-f005-online-last2-twofold-results-tools-v5/native256-observation-v3/F005_TWOFOLD_DIAGNOSTIC_native256.json",
+    "sha256": "075ac1a6c6016e8d1bf98f24de1d62410273c13886b60a282f1f81ce1b762d54"
+  },
+  "native256_elapsed_seconds": 574.70449265,
+  "native256_actual_studies": 256,
+  "native256_full_fold_forward_calls": 512,
+  "native256_resources": {
+    "elapsed_seconds": 564.5816778,
+    "sampled_peak_process_tree_rss_bytes": 3887063040,
+    "rss_note": "Sum of RSS includes shared pages more than once; sampled, not exact peak.",
+    "sampled_gpu_peak_used_mib": [
+      635,
+      635
+    ],
+    "gpu_note": "nvidia-smi device-wide sampled memory, includes unrelated allocations on that device.",
+    "samples": 1040,
+    "disk_free_bytes_after": 20727668736
+  },
+  "native256_torch_peak_reserved_bytes": [
+    524288000,
+    524288000
+  ],
+  "native256_fallbacks": 0,
+  "native256_cleanup_complete": true,
+  "P014_materialization": {
+    "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v1/serving-root-preparation-v1.json",
+    "sha256": "c32b888211e6184148e09a38223501146af340839531756148a510864ea1e6d3"
+  },
+  "V3_filename_fix_peer": {
+    "path": "artifacts/research/20261010-f005-p012-twofold-serving-materializer-independent-v3/review.json",
+    "sha256": "84002aa71bbc3e803864e50458ea09f84f013ffa5eed27970b5bcf4eec494a7c"
+  },
+  "P014_source_UTF8_bytes": 2756122,
+  "P014_source_metadata_ZIP_bytes": 1851630,
+  "P014_source_metadata_members": 77,
+  "P014_first_Save_HTTP400": {
+    "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v1/actual-serving-Save-attempt-v1/held.json",
+    "sha256": "77f4bd17c26bf3a612ab5deb2fb0821f4f71ccf366c88bebfb7c775f018b022c"
+  },
+  "P014_exactref_GetKernel404": {
+    "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v1/failed-Save-exactref-reconciliation-v1.json",
+    "sha256": "55c8901445c9fd853bdf540949d8eaf6862f36cd3324b2b966e9f6d644c9f73c"
+  },
+  "P014_accepted_kernel_found": false,
+  "P014_first_Save_calls": 1,
+  "P014_same_request_resends": 0,
+  "P014_new_competition_Submit": 0,
+  "size_limit_explanation_is_inference_not_preserved_Save_error_body": true,
+  "Kaggle_primary_source_size_reports": [
+    "https://www.kaggle.com/general/565447",
+    "https://www.kaggle.com/discussions/questions-and-answers/442202"
+  ],
+  "current_compression_fix": "Fresh V4 transports same ZIP_STORED packet through bounded zlib/base64; all member bytes/numeric sources/models preserved, new nonce, source <=900000 bytes required.",
+  "source26_status": "Preserved oversized candidate, Save failed before execution; do not treat as successful submission.",
+  "own_best_official_Public": "0.951",
+  "P014_Public": null,
+  "P014_full_integrated_runtime_qualified": false,
+  "Public_complementarity_proven": false,
+  "own_Gold_fit_selection": 0,
+  "patient_independence_confirmed": false,
+  "strict_above960_achieved": false
+}

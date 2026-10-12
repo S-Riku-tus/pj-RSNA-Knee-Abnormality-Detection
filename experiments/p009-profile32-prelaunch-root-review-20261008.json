@@ -1,0 +1,34 @@
+{
+  "checked_at_utc": "2026-10-08T11:58:56.093337+00:00",
+  "all_passed": true,
+  "checks": {
+    "protected14": true,
+    "candidate19_exact": true,
+    "profile19a_exact": true,
+    "only_production_main_cell4_changes": true,
+    "six_other_code_cells_exact": true,
+    "generated_paired_profile_source_exact": true,
+    "all13cells10code": true,
+    "same_fixed32cohort": true,
+    "no_gold_target_report_accuracy": true,
+    "two_main_one_reader_two_fusions": true,
+    "all13tests_ruff": true,
+    "all_tested_files_unchanged": true,
+    "all_three_runtime_helpers_bound": true,
+    "runtime_guarded_140_160_and_shared_reader": true,
+    "clean_notebook": true,
+    "not_competition_candidate": true
+  },
+  "profile_sha256": "5ee2308bdaa844f20ecdd187fdd2283609772da68df88f1dae6f04a98e83340f",
+  "candidate_sha256": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+  "evidence_sha256": {
+    "notebooks\\public\\14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks\\public\\19_submit_p009_coat_fov160.ipynb": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+    "notebooks\\public\\19a_profile_p009_fov140_fov160_32.ipynb": "5ee2308bdaa844f20ecdd187fdd2283609772da68df88f1dae6f04a98e83340f",
+    "experiments\\p009-profile32-preparation-20261008.json": "1f0ead25d2b411dc0f66867836adc15b77d93d412d3b1f48ba4da040011f5938",
+    "experiments\\p009-profile32-artificial-validation-20261008.json": "b8344d4f0bbb36048940563478bb96a667c19c37699f624bb1f6c5554d5ad465"
+  },
+  "ref": "rsraki/p009-profile-32-fov140-fov160",
+  "accuracy_evaluated": false,
+  "limits": "Real checkpoint/Pool/worker resource gates still require this actual Kaggle profile; no new Public improvement is claimed."
+}

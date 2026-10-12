@@ -1,0 +1,97 @@
+{
+  "schema_version": "p011_actual64_root_result_review_v1",
+  "at_utc": "2026-10-08T18:05:22.847835+00:00",
+  "all_passed": true,
+  "checks": {
+    "peer45_exact_frozen_and_all_passed": true,
+    "official_raw_typed_COMPLETE_v1": true,
+    "13_compact_body_SHA_lengths_independently_rechecked": true,
+    "64_status_no_accuracy_or_serving_qualification": true,
+    "source14_exact_unchanged": true,
+    "actual_profile64_exact_unchanged": true,
+    "each_main_reader_expert_once": true,
+    "main128_actual94windows320_autocast_noGrad": true,
+    "main2_original_checkpoint_loads320": true,
+    "reader_plain3models48forwards_noGrad": true,
+    "64_record_uid_coverage": true,
+    "native64_two_decode_input_SHA_shape_bytes_equal": true,
+    "worker64_JSON_receipt_SHA_and_guard_before_model": true,
+    "expert64_full94_FP16_noGrad_fallback0": true,
+    "expert64_F32_probabilities_byte_SHA_recomputed": true,
+    "expert2_strict486_checkpoint224_loads": true,
+    "expert_total64_and6016_windows_transport_consumed": true,
+    "CSV64_UID_order_matches_profile": true,
+    "NumPy_original_fusion_exact": true,
+    "CSV_JSON_expert64x12_probabilities_exact": true,
+    "NumPy_fixed90_10_reconstructed_CSV_SHA": true,
+    "baseline_CPU_seal_before_after_exact_main_returned": true,
+    "three_actual_phases_twoT4_sampled_peaks_below13000": true,
+    "no_Gold_Report_or_targets_own_selection_or_oldgate_requalification": true
+  },
+  "64_diagnostic_passed": true,
+  "ref": "rsraki/p011diag-faf10ad9505f58563d2df789609cccef",
+  "saved_version": 1,
+  "kernel_id": 137715763,
+  "source_profile_SHA": "62e6aaefda761077dafbbe56167732784f9c14ec11230df0e197481918974020",
+  "ordered64_UID_SHA": "8eeada7574bcc1a72c29bbebcdfcdd7ae2c7fd85359f4dbe7d3c6d7da8e7e371",
+  "candidate_gate_passed": false,
+  "256_profile_completed": false,
+  "accuracy_evaluated": false,
+  "candidate_file_body_downloaded": false,
+  "candidate_reconstructed_SHA": "64304aabbce6b2cbdbd7680b05dfc31a50ae893afe49a01329c3026fbfed4560",
+  "original_fusion_numpy_maxdiff": 0.0,
+  "raw_CSV_JSON_maxdiff": 0.0,
+  "sum_three_phase_seconds": 230.08909291999998,
+  "sampled_gpu_peaks_mib": [
+    [
+      3611,
+      3763
+    ],
+    [
+      8067,
+      543
+    ],
+    [
+      7741,
+      8893
+    ]
+  ],
+  "extra_phase_GPU_before_allocated_mib": [
+    9.1279296875,
+    9.1279296875
+  ],
+  "extra_phase_GPU_before_reserved_mib": [
+    404.0,
+    404.0
+  ],
+  "independent_review_SHA": "971cc250ac96b01ee2af066f64fd89b6640d454a0362412982602d9b4411b2ad",
+  "actual_body_SHA": {
+    "P011_BASELINE_SEAL.json": "991e626f7f521c10a88410c1400382bd677b07a4b646964423a039875111b659",
+    "P011_BASE_PROFILE.json": "69468c3c0f2d28f1015b0cdde608004afbb349d9a866dfe689085308745297a7",
+    "P011_BEFORE_EXTRA.json": "c1b0d75fcc270b5df40551bc635ea2bfd7756c04fcfd8edc5c7539beb9210b77",
+    "P011_CANDIDATE_BLEND_RECEIPT.json": "bd7c48bb116a89cd89b70dbf66d95df6720bf0b006f84bf9d2e99002ba9d8d89",
+    "P011_EXPERT_LOAD_cuda_0.json": "36793d6dbffb086772d6a6631a5894a29ba1431f9e657ed0cc6b33c6768c4a27",
+    "P011_EXPERT_LOAD_cuda_1.json": "1c5a4e9c6f236a26c5085132913bdb3959a8e943215de1183d759531edb38be9",
+    "P011_PROFILE_SUMMARY.json": "815fef965c0780d7984fd13a392461eb14799fa34c936f72a441004e2f9168ac",
+    "P011_STANDALONE224_SUMMARY.json": "dee08d75be4a98b47a4e7569f00d7c59ada8af26fe18511ebcfc90f3ea8c3b47",
+    "_own.csv": "45d031f9b6dd5a394a3ff87c1175a01940aaadc7e6613f96b0b9c057b0a99eec",
+    "_sota_0949.csv": "93632c88c91c42465000b13b3d9a7621c9d84752af60d41711d8484dc1c477f8",
+    "p007_observation_plain/inference.json": "b9878ce90f6431b1f152cd2f6c85ee8e23f7b4204d0cd1beaa3a6570e8e8c520",
+    "p011_baseline_sealed.csv": "32be019f748955878fa48738c30420ebb1ffe9a38e54eed731fb059b185584b2",
+    "p011_expert224_raw.csv": "405b6b5265bd5d5f7e11139c73ea8e7bb2747b04db1eb75746997eef317727d4"
+  },
+  "checker_correction": {
+    "initial_inline_check_failed": true,
+    "cause": "Input_before/after contain two hashes only; native receipt also includes shape/dtype/bytes. Compare identical field projections; complete native receipts also agree.",
+    "runtime_source_or_threshold_changed": false
+  },
+  "limitations": [
+    "64 diagnostic is not Public accuracy or hidden/full-serving qualification.",
+    "MRI array bodies were not independently rehashed; matching recorded hashes checked.",
+    "Phase sum excludes queue, environment/import and misc overhead.",
+    "RSS sums duplicate shared pages; sampled GPU memory is not exact peak.",
+    "Author Gold selection reuse persists; own Gold fit/selection0."
+  ],
+  "raw_UIDs_in_this_review": false,
+  "API_HTTP_realMRI_weights_fit_in_this_review": 0
+}

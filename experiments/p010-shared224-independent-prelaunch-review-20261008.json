@@ -1,0 +1,367 @@
+{
+  "schema_version": "p010_independent_offline_prelaunch_review_v1",
+  "checked_at_utc": "2026-10-08T14:02:30.869459+00:00",
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "source_sha:notebooks/public/14_submit_p005_public950_control.ipynb",
+      "passed": true,
+      "evidence": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546"
+    },
+    {
+      "name": "source_sha:notebooks/public/21_submit_p010_swa224_rank10.ipynb",
+      "passed": true,
+      "evidence": "4adf9088b97c795cb50e382b41d4a158950352ef4d5316fda40551111c39c41c"
+    },
+    {
+      "name": "source_sha:notebooks/public/21a_profile_p010_shared224_32.ipynb",
+      "passed": true,
+      "evidence": "eaa9ec444a884ccb6f5f9c1fec427a6d85febd710cbc226b20b770c68bbce960"
+    },
+    {
+      "name": "source_sha:scripts/p010_shared_runtime.py",
+      "passed": true,
+      "evidence": "494685ecee58ccd98771e5e287992c598bbeea8691fd08dbceb4ebd18e2f59b7"
+    },
+    {
+      "name": "source_sha:scripts/p010_author224_runtime.py",
+      "passed": true,
+      "evidence": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c"
+    },
+    {
+      "name": "source_sha:scripts/p010_profile_runtime.py",
+      "passed": true,
+      "evidence": "710171f0c031fda29a1b9e2292fffe715fd7bdade7a14d2fc5e32101aea24244"
+    },
+    {
+      "name": "source_sha:scripts/build_p010_shared224.py",
+      "passed": true,
+      "evidence": "f4f78950b8776ab7a4d4bd686266f4314e02a2515b89661d223dc607643e6836"
+    },
+    {
+      "name": "source_sha:scripts/build_p010_profile.py",
+      "passed": true,
+      "evidence": "f176dc1c0cd4aaac88e54db049950bbff9491eba59db7cb7098c09dd8c5bf183"
+    },
+    {
+      "name": "serving_package_canonical_bytes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_package_canonical_bytes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "serving_manifest_source_bindings",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_manifest_source_binding",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "expected_cell_counts",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "serving_code_compiles_no_prior_outputs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_code_compiles_no_prior_outputs",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "original_six_other_production_code_cells_literal",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "original_numerical_defs_and_decorators_literal",
+      "passed": true,
+      "evidence": 19
+    },
+    {
+      "name": "original_top_level_constants_literal",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "original_base_inference_rank_and_process_expression_retained",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "production_dynamic_test_ids_without_fixed32_list",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_embedded_helper:p006_metrics.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_embedded_helper:p007_metrics.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_embedded_helper:p009_metrics.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_embedded_helper:p010_shared_metrics.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_embedded_helper:p010_author224_metrics.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_embedded_helper:p010_profile_metrics.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "serving_packaged_helper:p010_author224_runtime.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "serving_packaged_helper:p010_shared_runtime.py",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_single_four_control_call",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_prediction_source_is_production_literal",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "bounded_base_differs_only_expert_enable_boolean",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_literals_match_package_hashes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "reader_k16_original_literal",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fusion_only_diagnostic_root_override",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "stock_nine_author_numerical_defs_with_decorators_literal",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "stock_full_sha_bound",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "both_notebooks_literal_stock_source",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "original_and_author_embedded_reader_exact_source",
+      "passed": true,
+      "evidence": "5a59b6f82e846bcdfd452aaee6ff518cdd9d0b04aab03691b45c3f70a5198cb0"
+    },
+    {
+      "name": "original_author_label_and_native_volume_constants",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "author224_only_crop_fraction_preserved",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fixed32_ordered_uid_hash",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fixed32_gold_uid_and_group_independently_excluded",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "structural_csv_sha_bound_into_profile_summary",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_competition_rerun_guard_no_teacher_file_read",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_stdout_lifecycle_probe_before_real_predictions",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "production_guard_brackets_literal_original_fusion",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "three_base_controls_and_standalone_stock_reference",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "reader_one_execution_two_replays",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "preregistered_raw_1e7_and_final_csv_byte_exact",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "native_volume_and_mask_byte_identity_all_controls",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "T4x2_and_both_sampled_reserved_peak_gates",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "workers_fastread_fov_and_pickle_identity_checked",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "shared224_actual_checkpoint_eval_fp16_no_grad_single94_strict",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "expert_freed_before_original_reader_fusion",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "profile_removes_submission_csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "coefficients_and_preparation_gates_fixed_not_accuracy_selected",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "bounded_parent_only_99_payloads_explicit_scope",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "independent_held_payload_cancel_cleanup_both_queues_zero",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "finally_acknowledges_held_delivery_payload",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline14_still_protected_at_end",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "source_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/21_submit_p010_swa224_rank10.ipynb": "4adf9088b97c795cb50e382b41d4a158950352ef4d5316fda40551111c39c41c",
+    "notebooks/public/21a_profile_p010_shared224_32.ipynb": "eaa9ec444a884ccb6f5f9c1fec427a6d85febd710cbc226b20b770c68bbce960",
+    "scripts/p010_shared_runtime.py": "494685ecee58ccd98771e5e287992c598bbeea8691fd08dbceb4ebd18e2f59b7",
+    "scripts/p010_author224_runtime.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+    "scripts/p010_profile_runtime.py": "710171f0c031fda29a1b9e2292fffe715fd7bdade7a14d2fc5e32101aea24244",
+    "scripts/build_p010_shared224.py": "f4f78950b8776ab7a4d4bd686266f4314e02a2515b89661d223dc607643e6836",
+    "scripts/build_p010_profile.py": "f176dc1c0cd4aaac88e54db049950bbff9491eba59db7cb7098c09dd8c5bf183"
+  },
+  "package_file_sha256": {
+    "artifacts\\kaggle\\p010-shared384-swa224-rank10-v1-20261008\\21_submit_p010_swa224_rank10.ipynb": "4adf9088b97c795cb50e382b41d4a158950352ef4d5316fda40551111c39c41c",
+    "artifacts\\kaggle\\p010-shared384-swa224-rank10-v1-20261008\\config.json": "8717a572983cd6e543606e4f9d5c2724a489aa6f97199fbd3ed81d696a56bb81",
+    "artifacts\\kaggle\\p010-shared384-swa224-rank10-v1-20261008\\p010_author224_runtime.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+    "artifacts\\kaggle\\p010-shared384-swa224-rank10-v1-20261008\\p010_author224_stock.py": "d8b159caf4ea4a079aad13ac33c063c4bda3b2863591273971f7344935770133",
+    "artifacts\\kaggle\\p010-shared384-swa224-rank10-v1-20261008\\p010_shared_runtime.py": "494685ecee58ccd98771e5e287992c598bbeea8691fd08dbceb4ebd18e2f59b7",
+    "artifacts\\kaggle\\p010-shared384-swa224-rank10-v1-20261008\\package.json": "a945f8f900aae39e4b4dd5c1439e4e8e9369c6e414f66c01842e524080290342",
+    "artifacts\\kaggle\\p010-profile32-shared224-rank10-v1-20261008\\21a_profile_p010_shared224_32.ipynb": "eaa9ec444a884ccb6f5f9c1fec427a6d85febd710cbc226b20b770c68bbce960",
+    "artifacts\\kaggle\\p010-profile32-shared224-rank10-v1-20261008\\cohort.json": "25b504ab1e517058ab3ddb1be5f08ef2f0556c693a680b8ce6ce5d4dfc01ef54",
+    "artifacts\\kaggle\\p010-profile32-shared224-rank10-v1-20261008\\package.json": "b1f61c7fd20da2776dd8ba50a44b219bf324bdd5e22bfe23eaa42333d319bdbc"
+  },
+  "independent_cpu_tests": {
+    "command": ".venv/Scripts/python.exe -m unittest discover -s tests -p test_p010*.py -v",
+    "tests": 28,
+    "exit_code": 0,
+    "runtime_seconds_reported": 4.339,
+    "artificial_CPU_only": true,
+    "real_MRI_checkpoint_payload_GPU_remote_access": false,
+    "scope": "Synthetic tiny encoder/checkpoints, CSV and fake Pool; not real stock weights, MRI or actual T4."
+  },
+  "ruff": {
+    "source_and_four_test_files": "passed",
+    "exit_code": 0
+  },
+  "independent_probe": {
+    "path": "artifacts\\research\\20261008-p010-independent-prelaunch-review-v1\\fixed-cleanup-observation.json",
+    "sha256": "229f02445d2c3792e8d140e1f13d00ff0039ce4f98541d8a9c4d95c5a000b683",
+    "both_unfinished_queues": 0
+  },
+  "decision": "Offline source/package and artificial contracts pass. Eligible for root-only private real T4x2 profile32 launch; serving and competition submission remain gated by real profile and independent completion review.",
+  "actual_T4_profile_gate_passed": false,
+  "accuracy_evaluated": false,
+  "limitations": [
+    "No actual remote environment/Input/container binding in this local review.",
+    "Real stock checkpoint payload/strict load/CUDA all94 memory and original-vs-shared MRI predictions must pass the profile.",
+    "Cross-cell stdout identity is only qualified by the benign first probe pair on the actual Kaggle kernel.",
+    "1307-task artificial tests cover Python worker/consumer/pool errors, not OS hard-kill callback loss timeout.",
+    "99 prepared volumes bound parent payloads only; worker, IPC and decoder memory are excluded.",
+    "Exact profile CSV identity and finite raw values do not prove hidden-test runtime or an AUC improvement.",
+    "Author checkpoint Gold development/selection is acknowledged; no own Gold/Report/target fitting in this task."
+  ],
+  "this_review_operations": {
+    "remote_calls": 0,
+    "remote_mutations": 0,
+    "actual_GPU_runs": 0,
+    "real_MRI_decodes": 0,
+    "real_model_payload_reads": 0,
+    "training": 0,
+    "structural_manifest_metadata_reads_only": true
+  }
+}

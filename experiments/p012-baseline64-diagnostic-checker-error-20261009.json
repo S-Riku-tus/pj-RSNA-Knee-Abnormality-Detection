@@ -1,0 +1,123 @@
+{
+  "schema_version": "p012_baseline64_actual_ERROR_checker_root_record_v1",
+  "recorded_at_utc": "2026-10-09T14:33:55.162271+00:00",
+  "actual_status": {
+    "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/profile64-observation-v3/observation.json",
+    "sha256": "de8bd4a4691c32c574c442b0f21def361871d8f40c30ee8ab5d3764d42977976",
+    "official_raw": "ERROR",
+    "official_typed": "ERROR",
+    "failureMessage_returned": false
+  },
+  "saved_source_and_declared_platform": {
+    "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/profile64-observation-v3/source-binding.json",
+    "sha256": "4b13611dfa0b3d4099c930a3bc0fb32ab89e9fb40f0e890e374730eeca782cf5",
+    "all_passed": true
+  },
+  "error_output_metadata": {
+    "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/profile64-error-metadata-v1/observation.json",
+    "sha256": "d091583b0f640dc032fbfaa21b487e1b9e018265b42b3b9a0b8d95de74806ee3",
+    "body_GETs": 0,
+    "metadata_pages": 1
+  },
+  "output_inventory": {
+    "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/profile64-error-metadata-v1/output-inventory-safe.json",
+    "sha256": "7a7518de2ee16bb5294ec4f51c9c158bfdfa027a21a51ceb5a89f352c9848ed5"
+  },
+  "primary_visible_log": {
+    "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/profile64-error-metadata-v1/visible-log-safe.txt",
+    "sha256": "36e12bdb4a2338d58e1720b801dd9cfff69af18910fe1ad2bb272dadbc49f516",
+    "actual_bytes": 34370,
+    "signed_URLs_saved": false
+  },
+  "log_verified_original_prediction_completion": {
+    "controller": {
+      "status": "PASS",
+      "rows": 64,
+      "scored": 64,
+      "fallback_studies": 0,
+      "seconds": 625.9,
+      "per_study_mean": {
+        "decode_s": 7.777,
+        "render_s": 2.673,
+        "gpu_s": 16.347,
+        "windows": 558.6
+      },
+      "worker_exit_codes": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "blend": {
+      "weights": {
+        "raptor": 0.7,
+        "ours": 0.3
+      },
+      "rows": 64,
+      "raptor_failed": 0,
+      "ours_failed": 0,
+      "raptor_seconds": 126.6,
+      "total_seconds": 786.9,
+      "spearman_raptor_raw_vs_sub": {
+        "ACL": 1.0,
+        "MCL": 1.0,
+        "Medial Meniscus": 1.0,
+        "Lateral Meniscus": 1.0,
+        "Medial OA": 1.0,
+        "Lateral OA": 1.0,
+        "PF OA": 1.0,
+        "Effusion": 1.0,
+        "Synovitis": 1.0,
+        "Baker's": 1.0,
+        "Contusion": 1.0,
+        "Fracture": 1.0
+      },
+      "spearman_raptor_vs_ours": {
+        "ACL": 0.7052,
+        "MCL": 0.7003,
+        "Medial Meniscus": 0.9159,
+        "Lateral Meniscus": 0.8556,
+        "Medial OA": 0.8573,
+        "Lateral OA": 0.9014,
+        "PF OA": 0.8727,
+        "Effusion": 0.8211,
+        "Synovitis": 0.859,
+        "Baker's": 0.812,
+        "Contusion": 0.8208,
+        "Fracture": 0.7401
+      }
+    },
+    "scope": "Primary bounded API visible log; individual CSV bytes not yet downloaded or independently verified."
+  },
+  "actual_failure": {
+    "exception": "ValueError",
+    "message": "Each controller needs actual NVIDIA samples",
+    "location": "p012_profile.Sampler.finish -> require(selected)",
+    "cause": "The strict require helper accepts only the singleton True. selected is always a list, so both nonempty and empty lists are rejected.",
+    "original_model_or_prediction_code_failure_observed": false,
+    "phase_GPU_peak_or_cleanup_qualification_from_ERROR": false
+  },
+  "second_source_incompatibility": {
+    "old_checker": "worker.stats.per_study, expected every worker UID",
+    "actual_producer": "worker.per_study at top level; preview capped to first50",
+    "actual_second_runtime_exception_observed": false,
+    "fix_scope": "Separate V2 diagnostic checker, retain original producer/schema and use CSV/actual rows for full coverage."
+  },
+  "next_source_fix_in_progress": true,
+  "original_V1_sources_and_failed_Save_preserved": true,
+  "cleanup_not_reached": true,
+  "diagnostic_Error_CSV_must_not_be_submitted": true,
+  "same_source_actual64_must_be_repeated_before256": true,
+  "running_fold1": {
+    "completed_epochs": 8,
+    "fixed_final_epochs": 12,
+    "run_path": "artifacts/runs/f005-native-last2-fast16-fold1-20261009-v1/run.json",
+    "snapshot_sha256": "7b87c39f54382526eb99874080f7532517c4ba53a292c210fa4dae2cb576c9f0",
+    "interim_checkpoint_adopted_or_read": false
+  },
+  "competition_Submit": 0,
+  "actual_baseline_cleanup_qualified": false,
+  "actual_twofold_qualified": false,
+  "Serving_qualified": false,
+  "own_best_Public": "0.951",
+  "strict_above960_achieved": false
+}

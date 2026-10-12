@@ -1,0 +1,47 @@
+{
+  "schema_version": "p016_serving_platform_failure_and_regional_fold1_progress_v1",
+  "at_jst": "2026-10-10T22:16:00+09:00",
+  "p016": {
+    "kernel_id": 138030227,
+    "saved_version": 1,
+    "actual_status": "ERROR",
+    "cause": "Serving parent passed validated authority platform metadata unchanged to a reused cleanup helper expecting different keys and machine enum. Exact contract rejection occurred after baseline inference and before the added model.",
+    "Root_actual_failure_analysis": {
+      "path": "artifacts/research/20261010-p016-serving-platform-contract-root-analysis-v1.json",
+      "sha256": "4d714c1bd06ae2cf012cd8c467c71e29106d6685862cf502d9b707f3fe304f9d"
+    },
+    "log_Metadata_requests": 1,
+    "log_artifact_GETs": 2,
+    "new_Save_or_Submit": 0,
+    "whole_Serving_qualified": false,
+    "minimal_fix_being_prepared": "Serving-only strict platform schema translation; retain frozen21 and actual CPU64_256 diagnostic receipts."
+  },
+  "p017": {
+    "official_submission_ref": 57042712,
+    "kernel_id": 138018511,
+    "saved_version": 1,
+    "latest_official_observation_utc": "2026-10-10T13:15:17.956410+00:00",
+    "explicit_official_status": "UNKNOWN",
+    "public_score": null,
+    "missing_raw_status_is_not_TYPED_PENDING_evidence": true
+  },
+  "regional_fold1": {
+    "status": "complete",
+    "epochs": 12,
+    "selected_epoch": 10,
+    "selection_rule": "earliest minimum masked weak BCE",
+    "selected_weak_bce": 0.2779688899362838,
+    "Root_completed_review_path": "artifacts/research/20261010-f005-regional-fold1-completed-root-review-v1.json",
+    "AMP_skips_total": 2,
+    "training_or_selection_own_Gold": false,
+    "new_model_uploaded_or_Kaggle_qualified": false
+  },
+  "regional_fold0": {
+    "status": "running",
+    "latest_observed_epoch": 11,
+    "partial_checkpoint_adopted": false
+  },
+  "historical_hidden_error_cause_deduced_from_current_visible_failure": false,
+  "own_best_public": 0.951,
+  "strict_above_0_960_achieved": false
+}

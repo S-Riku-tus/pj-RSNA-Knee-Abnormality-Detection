@@ -1,0 +1,484 @@
+{
+  "schema_version": "f005_fast16_fullcache_fit_entry_review_v1",
+  "checked_at_utc": "2026-10-08T17:47:11.363919+00:00",
+  "all_passed": false,
+  "checks": {
+    "CUDA_available_hardware_query_only": false,
+    "both_frozen_configs_pass_current_validator": true,
+    "one_model_factor_trainability_only": true,
+    "both_configs_pass_existing_resource_gate": true,
+    "current_native_sources_equal_resource_gate": true,
+    "CLI_sha256_equal_resource_gate": true,
+    "manifest_seed_and_folds_match_configs": true,
+    "manifest_Gold_nonuse_and_group_independence_scope_retained": true,
+    "retained_fold_audit_integrity_complete": true,
+    "canonical_final_receipts_complete_and_no_partial": true,
+    "generic_assets_existing_and_provenance_noncompetition": true,
+    "all_four_planned_run_paths_fresh_now": true,
+    "canonical_index_output_parent_is_cache_root": true,
+    "no_formal_preflight_fit_or_payload_read_performed": true
+  },
+  "scope": "LOCAL metadata review and planned root commands; no training authorization consumed",
+  "fit_start_gate_open": false,
+  "cache_snapshot": {
+    "canonical_root": "data/native392/v2-20261009",
+    "completed_shards": 16,
+    "studies": 2807,
+    "arrays": 14035,
+    "remaining_shards": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "stage_receipts": [
+      {
+        "shard": 1,
+        "complete": true,
+        "studies": 176,
+        "arrays": 880,
+        "stage_receipt_sha256": "f7eac2ecd551c97f15bc6b1a5b9e000ee44a5830f659172a672e9dca7cb5baf0",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 2,
+        "complete": true,
+        "studies": 176,
+        "arrays": 880,
+        "stage_receipt_sha256": "94df73eddca1c8fea1911bc0c0893606d887dc455fded266adabfe12e114b59b",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 3,
+        "complete": true,
+        "studies": 176,
+        "arrays": 880,
+        "stage_receipt_sha256": "58b064a8927df925586533fdd6a1c2737e3e6e34a89527d637fef6810fda0442",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 4,
+        "complete": true,
+        "studies": 176,
+        "arrays": 880,
+        "stage_receipt_sha256": "29580b3cbcd54c42723169f9d74e6b105835741e309aaa0b7bc58a248eeb9bba",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 5,
+        "complete": true,
+        "studies": 176,
+        "arrays": 880,
+        "stage_receipt_sha256": "5a43a7f5454d3af8c679b68a33fc6303a7c276d57f5fd838cdd8c9ad8c2659bc",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 6,
+        "complete": true,
+        "studies": 176,
+        "arrays": 880,
+        "stage_receipt_sha256": "20040187079ea6bbb3acfa8bdb5632765ffa319d155ca48265fe277ac4ded87f",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 7,
+        "complete": true,
+        "studies": 176,
+        "arrays": 880,
+        "stage_receipt_sha256": "1f7ddca1e47027af0a3b7b85f56f02b0a53f96e0c209a0abf2034f231335b347",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 8,
+        "complete": true,
+        "studies": 175,
+        "arrays": 875,
+        "stage_receipt_sha256": "d22177023ce99be6bafd6bf4a2d5325218056523a91d4e6d2a090155e3e2086a",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 9,
+        "complete": true,
+        "studies": 175,
+        "arrays": 875,
+        "stage_receipt_sha256": "aa1d40389002e77da3bf10f43cfb0c4dcca6f97c60a0902b0d95116fa4393b7b",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 10,
+        "complete": true,
+        "studies": 175,
+        "arrays": 875,
+        "stage_receipt_sha256": "c3dcfb84dc67bc3148cd362d69586f8f7d05f1d265b466ddd13cbe53d81289e6",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 11,
+        "complete": true,
+        "studies": 175,
+        "arrays": 875,
+        "stage_receipt_sha256": "ff924e5f8c9281497d207ddae943e86e924b701f16c11647f66ca9ce6b8c93d0",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 12,
+        "complete": true,
+        "studies": 175,
+        "arrays": 875,
+        "stage_receipt_sha256": "9ea4f050abddb8c0745e4195638983467e31fdab094de96f7f6bbf2dd19d23a1",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 13,
+        "complete": true,
+        "studies": 175,
+        "arrays": 875,
+        "stage_receipt_sha256": "b5e18466b703a1db04e3a1d36127fc0cfd29be01cd5a03db08c38508ad473acc",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 14,
+        "complete": true,
+        "studies": 175,
+        "arrays": 875,
+        "stage_receipt_sha256": "503feed7566b1e7ca72803bce7bc0772879477b219eabacbbe4d99db159e876f",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 15,
+        "complete": true,
+        "studies": 175,
+        "arrays": 875,
+        "stage_receipt_sha256": "9a8cb56cd799f2bd999e2c449b81e71f5e4ce80ea67dec12b5ffc8c1c96e5029",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      },
+      {
+        "shard": 16,
+        "complete": true,
+        "studies": 175,
+        "arrays": 875,
+        "stage_receipt_sha256": "2a1822f1be322a59beca33efc52dc044963e6d21cf24b49fd8427cc9a81cfbdc",
+        "no_partial_marker": true,
+        "summary_sha256_matches": true
+      }
+    ],
+    "full_index_exists": false,
+    "required_studies": 4207,
+    "required_arrays": 21035
+  },
+  "canonical_path_correction": {
+    "old_handoff_retained": "artifacts/kaggle/f005-native-train-handoff-v3-fast16-20261009/handoff.json",
+    "old_handoff_sha256": "532322c2c504034f7ecb91dd19773e6cdfcc8eb8703f3d56050d7300e873e05f",
+    "old_placeholder_index": "data/native392/full-index.json",
+    "old_placeholder_resource_gate": "data/native392/resource-gate-fast16-v3.json",
+    "selected_index": "data/native392/v2-20261009/full-index.json",
+    "selected_resource_gate": "artifacts/research/20261009-f005-fast16-resource-gate-v1/resource-gate.json",
+    "reason": "Index builder requires output.parent == cache_root; actual gate stays at its already validated evidence path."
+  },
+  "root_formal_start_conditions_in_order": [
+    "Accept all24 final-stage receipts and actual full per-array audits:4207 studies/21035 arrays; no partial or held marker. This is a root workflow gate, not a predicate requiring stage-final-receipt inside build_full_index.",
+    "Run the explicit full-index command once against a fresh canonical index path. Require actual complete=true,24 unique shards,exact4207 weak UID/group/fold set and21035 verified arrays,original immutable plan/source/preprocess/manifest hashes.",
+    "Root accept full-index SHA and verification result, then check CUDA/config/resource-gate and unchanged manifest audit/assets/source hashes. Ordinary preflight reads weak labels before NativePixelStore, so run it only after full index acceptance.",
+    "Before each real train CLI, reject any existing proposed output path; CLI itself also refuses existing run directories, but constructs its model before this refusal.",
+    "Run frozen-control fold0 then last2 fold0 with seed20261002 and identical fast16 engineering. Root inspect completion/finite loss,actual optimizer opportunities/steps,strict best/last checkpoint and source/input receipts before proceeding.",
+    "Run the same fixed paired fold1 after fold0 root review. Select earliest minimum observed-cell weak validation BCE within each fixed run; own Gold cannot train or select checkpoints."
+  ],
+  "full_index_argv_not_executed": [
+    ".venv/Scripts/python.exe",
+    "scripts/build_native392_index.py",
+    "--package",
+    "artifacts/kaggle/native392-full-shards-v2-20261008",
+    "--cache-root",
+    "data/native392/v2-20261009",
+    "--output",
+    "data/native392/v2-20261009/full-index.json",
+    "--summary-glob",
+    "shards/**/NATIVE392_PIXEL_SHARD_SUMMARY.json"
+  ],
+  "root_training_sequence_not_executed": [
+    {
+      "fold": 0,
+      "trainable_blocks": 0,
+      "output": "artifacts/runs/f005-native-frozen-control-fast16-fold0-20261009-v1",
+      "output_currently_absent": true,
+      "preflight_argv_after_full_index_root_acceptance": [
+        ".venv/Scripts/python.exe",
+        "scripts/train_native_dinov2_fast16.py",
+        "preflight",
+        "--manifest",
+        "data/manifests/v1-vmohitrao-research",
+        "--index",
+        "data/native392/v2-20261009/full-index.json",
+        "--resource-gate",
+        "artifacts/research/20261009-f005-fast16-resource-gate-v1/resource-gate.json",
+        "--config",
+        "configs/experiments/f005-dinov2-native-frozen-control-fast16.json",
+        "--fold",
+        "0"
+      ],
+      "train_argv_not_executed": [
+        ".venv/Scripts/python.exe",
+        "scripts/train_native_dinov2_fast16.py",
+        "train",
+        "--manifest",
+        "data/manifests/v1-vmohitrao-research",
+        "--index",
+        "data/native392/v2-20261009/full-index.json",
+        "--resource-gate",
+        "artifacts/research/20261009-f005-fast16-resource-gate-v1/resource-gate.json",
+        "--config",
+        "configs/experiments/f005-dinov2-native-frozen-control-fast16.json",
+        "--fold",
+        "0",
+        "--output",
+        "artifacts/runs/f005-native-frozen-control-fast16-fold0-20261009-v1",
+        "--repo",
+        "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/dinov2-source",
+        "--weights",
+        "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/dinov2_vits14_pretrain.pth",
+        "--provenance",
+        "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/encoder-provenance.json"
+      ]
+    },
+    {
+      "fold": 0,
+      "trainable_blocks": 2,
+      "output": "artifacts/runs/f005-native-last2-fast16-fold0-20261009-v1",
+      "output_currently_absent": true,
+      "preflight_argv_after_full_index_root_acceptance": [
+        ".venv/Scripts/python.exe",
+        "scripts/train_native_dinov2_fast16.py",
+        "preflight",
+        "--manifest",
+        "data/manifests/v1-vmohitrao-research",
+        "--index",
+        "data/native392/v2-20261009/full-index.json",
+        "--resource-gate",
+        "artifacts/research/20261009-f005-fast16-resource-gate-v1/resource-gate.json",
+        "--config",
+        "configs/experiments/f005-dinov2-native-last2-fast16.json",
+        "--fold",
+        "0"
+      ],
+      "train_argv_not_executed": [
+        ".venv/Scripts/python.exe",
+        "scripts/train_native_dinov2_fast16.py",
+        "train",
+        "--manifest",
+        "data/manifests/v1-vmohitrao-research",
+        "--index",
+        "data/native392/v2-20261009/full-index.json",
+        "--resource-gate",
+        "artifacts/research/20261009-f005-fast16-resource-gate-v1/resource-gate.json",
+        "--config",
+        "configs/experiments/f005-dinov2-native-last2-fast16.json",
+        "--fold",
+        "0",
+        "--output",
+        "artifacts/runs/f005-native-last2-fast16-fold0-20261009-v1",
+        "--repo",
+        "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/dinov2-source",
+        "--weights",
+        "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/dinov2_vits14_pretrain.pth",
+        "--provenance",
+        "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/encoder-provenance.json"
+      ]
+    },
+    {
+      "fold": 1,
+      "trainable_blocks": 0,
+      "output": "artifacts/runs/f005-native-frozen-control-fast16-fold1-20261009-v1",
+      "output_currently_absent": true,
+      "preflight_argv_after_full_index_root_acceptance": [
+        ".venv/Scripts/python.exe",
+        "scripts/train_native_dinov2_fast16.py",
+        "preflight",
+        "--manifest",
+        "data/manifests/v1-vmohitrao-research",
+        "--index",
+        "data/native392/v2-20261009/full-index.json",
+        "--resource-gate",
+        "artifacts/research/20261009-f005-fast16-resource-gate-v1/resource-gate.json",
+        "--config",
+        "configs/experiments/f005-dinov2-native-frozen-control-fast16.json",
+        "--fold",
+        "1"
+      ],
+      "train_argv_not_executed": [
+        ".venv/Scripts/python.exe",
+        "scripts/train_native_dinov2_fast16.py",
+        "train",
+        "--manifest",
+        "data/manifests/v1-vmohitrao-research",
+        "--index",
+        "data/native392/v2-20261009/full-index.json",
+        "--resource-gate",
+        "artifacts/research/20261009-f005-fast16-resource-gate-v1/resource-gate.json",
+        "--config",
+        "configs/experiments/f005-dinov2-native-frozen-control-fast16.json",
+        "--fold",
+        "1",
+        "--output",
+        "artifacts/runs/f005-native-frozen-control-fast16-fold1-20261009-v1",
+        "--repo",
+        "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/dinov2-source",
+        "--weights",
+        "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/dinov2_vits14_pretrain.pth",
+        "--provenance",
+        "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/encoder-provenance.json"
+      ]
+    },
+    {
+      "fold": 1,
+      "trainable_blocks": 2,
+      "output": "artifacts/runs/f005-native-last2-fast16-fold1-20261009-v1",
+      "output_currently_absent": true,
+      "preflight_argv_after_full_index_root_acceptance": [
+        ".venv/Scripts/python.exe",
+        "scripts/train_native_dinov2_fast16.py",
+        "preflight",
+        "--manifest",
+        "data/manifests/v1-vmohitrao-research",
+        "--index",
+        "data/native392/v2-20261009/full-index.json",
+        "--resource-gate",
+        "artifacts/research/20261009-f005-fast16-resource-gate-v1/resource-gate.json",
+        "--config",
+        "configs/experiments/f005-dinov2-native-last2-fast16.json",
+        "--fold",
+        "1"
+      ],
+      "train_argv_not_executed": [
+        ".venv/Scripts/python.exe",
+        "scripts/train_native_dinov2_fast16.py",
+        "train",
+        "--manifest",
+        "data/manifests/v1-vmohitrao-research",
+        "--index",
+        "data/native392/v2-20261009/full-index.json",
+        "--resource-gate",
+        "artifacts/research/20261009-f005-fast16-resource-gate-v1/resource-gate.json",
+        "--config",
+        "configs/experiments/f005-dinov2-native-last2-fast16.json",
+        "--fold",
+        "1",
+        "--output",
+        "artifacts/runs/f005-native-last2-fast16-fold1-20261009-v1",
+        "--repo",
+        "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/dinov2-source",
+        "--weights",
+        "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/dinov2_vits14_pretrain.pth",
+        "--provenance",
+        "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/encoder-provenance.json"
+      ]
+    }
+  ],
+  "fixed_training_contract": {
+    "seed": 20261002,
+    "n_folds": 5,
+    "folds": [
+      0,
+      1
+    ],
+    "epochs": 12,
+    "fold0_train_valid": [
+      3386,
+      821
+    ],
+    "fold1_train_valid": [
+      3316,
+      891
+    ],
+    "window_chunk": 16,
+    "microbatch_studies": 1,
+    "effective_batch_studies": 16,
+    "denominator": "Sum observed teacher cells in the actual effective group, including the short last group; missing labels masked before BCE, never taught as negatives.",
+    "head_lr": 0.0003,
+    "last2_encoder_lr": 1e-05,
+    "weight_decay": 0.01,
+    "AMP": "GradScaler; record actual optimizer steps and overflow skips; no-optimizer-update epoch is fatal.",
+    "selection": "Minimum weak validation observed-cell BCE, earliest exact tie; no ownGold selection.",
+    "preprocess": "native392 physical_letterbox_triplet_v1; three series by48 triplets; common label order; Report is not required for inference.",
+    "frozen_prefix": "Generic DINOv2 ViT-S/14;0 vs last2 blocks trainable. Strict generic prefix and suffix/head checkpoint contracts.",
+    "patient_independence_verified": false
+  },
+  "source_sha256": {
+    "native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+    "finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+  },
+  "CLI_sha256": "cfdba529adcdd9b6d5f34a6b020cdae03f7fb04551ed4807778503fa1235ece0",
+  "config_file_sha256": {
+    "0": "7352e38ba0e58aad041a31c3b667c0f23c3ef0f9e085a48c4832e7cc36a8a7cb",
+    "2": "896b7293b26413c895002f906ff83023389456a9ba9afda7f5413a0c498fc279"
+  },
+  "config_semantic_sha256": {
+    "0": "4d9e17c9bae01944d9112313d0b2ab263797626b900e43c3ced623a9ad7b1987",
+    "2": "e27837ab653b6dc4155bc3489c5570795ccbf16a2e34bd3ba1dd107c44ff45db"
+  },
+  "resource_gate": {
+    "path": "artifacts/research/20261009-f005-fast16-resource-gate-v1/resource-gate.json",
+    "sha256": "f7460c837b1cd8e9d4d19ff0ea35929b8877a3fb7de766527785aedeba461824",
+    "source_and_both_config_validation_passed": true,
+    "actual_processed_triplets": 115,
+    "artificial_maximum_triplets": 144
+  },
+  "manifest_metadata_sha256": {
+    "manifest.json": "976abfe212ce23ad8112f16cb61d2c8172bb837ad50aed7ac88886760fc2cabf",
+    "fold-audit-v2.json": "bca25c48af792853ff1c19eac8e728462696dd869681bd8a3285dc7fcdbc4e24"
+  },
+  "prior_teacher_csv_sha256_from_retained_audit_not_read_this_review": {
+    "manifest.json": "976abfe212ce23ad8112f16cb61d2c8172bb837ad50aed7ac88886760fc2cabf",
+    "weak.csv": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+    "gold.csv": "f86a67cf9c5704c37bbe0d7912b308cd7497a2804918c0cc5e8e2008a0b16bad"
+  },
+  "generic_asset_provenance": {
+    "path": "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/encoder-provenance.json",
+    "metadata_sha256": "9b943ee11469f0535f6548d00e611539fa292982ede1ef0a331b5146667e9b24",
+    "expected_source_tree_sha256": "4a5a3cfbd4185dd4955c1de2f2f26e3b4ba3fa88cccae503b9f93ceb08fed818",
+    "expected_weights_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "actual_model_payload_rehashed_this_review": false
+  },
+  "limitations": [
+    "Existing processed115/artificial144 resource checks concern one study on GPU and artificial labels with zero optimizer steps; full-epoch runtime and learned accuracy are unmeasured.",
+    "QA enforces21 decimal GB via per-process CUDA fraction. Formal train_native does not set this hard fraction; do not claim a hard21GB train cap.",
+    "Weak author source declares Gold non-use; private label-author prompt exposure and patient independence are not independently proven. Label-source competition eligibility remains a separate prior audit scope.",
+    "Generic model origin hashes pin local supplied bytes; no independent publisher checksum authentication or LVD pretraining overlap proof.",
+    "Full index builder streams processed NPZ for QC and hashes; it does not decode DICOM. NativePixelStore later validates bound summaries and per-study arrays, not a second unconditional full-archive SHA in constructor.",
+    "Research learning improvement and weak validation gains do not establish own Public>.950 or>.960. No public/Gold coefficient or checkpoint search is authorized by this review."
+  ],
+  "actions_performed": {
+    "API_or_auth": 0,
+    "teacher_CSV_body_reads": 0,
+    "MRI_or_NPZ_or_weight_payload_reads": 0,
+    "GPU_forward_or_optimizer": 0,
+    "full_index_built": false,
+    "real_fit_started": false,
+    "frozen_code_or_handoff_changed": false
+  },
+  "review_script_sha256": "f81ad9722f777e84d5d2b0c908a099c8d5df25c9e4c20cc1edfcdd0917f52a59"
+}

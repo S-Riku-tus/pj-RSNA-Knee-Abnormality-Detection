@@ -1,0 +1,80 @@
+{
+  "schema_version": "p010_V3_compact_results_tools_independent_review_v1",
+  "at_utc": "2026-10-08T14:58:51.848555+00:00",
+  "all_passed": true,
+  "checks": {
+    "author_final_r2_all_source_SHA_bound": true,
+    "getter_compact_and_CSV_math_unchanged_from_first13tests": true,
+    "actual_savedV3_DTO_launch19cells16code6helper_contract_passes": true,
+    "one_exact_ref_private_original_T4_OFF_Input1and1_competition": true,
+    "raw_and_typed_COMPLETE_and_no_error_required": true,
+    "source_and_full_inventory_checked_before_all_compact_HTTP": true,
+    "download_allowlist_exact_summary11CSV_no_MRI_models_archive_coverage": true,
+    "exclusive_new_observation_and_file_writes_no_poll_or_remote_mutations": true,
+    "full100perpage_and100page_bound_token_loops_duplicates_rejected": true,
+    "basename_multisets_preserve_ambiguity_without_size_byte_proof": true,
+    "actual_GET_stream_and_length_SHA_4MiB_summary128KiB_eachCSV_and5redirects_closed": true,
+    "only_pure_string_source_generator_functions_exec_no_model_MRI_import": true,
+    "all4_control_native96x384_uint8_pixelmask_SHA_exact_and_valid": true,
+    "base64each3source_bound_full94_twoT4_grad_eval_hooks": true,
+    "shared32_and_stock32_full94_FP16_no_grad_strictcheckpoint_SHA_float32raw": true,
+    "one_actual24reader_B4_K16_sixvalidslots_and_two_fixed_cache_replays": true,
+    "both_measured_T4_sampled_and_reserved_memory_lt13000_and_cleanup_exact": true,
+    "CSV_math_standardlib_independent_average_ties_fixed_original_and90_10_all12": true,
+    "raw_all12_32_numeric_finite_range_strict_dtype_and_predeclared1e7_rel0": true,
+    "coalesced_and_concatenated_stdout_only_events_stderr_source_not_model_runs": true,
+    "final_submission_absence_required_teacherGold_boundary_OOF_and_Public_unknown": true,
+    "final_source_SHA_and_profile_Notebook_unchanged_after_independent_tests": true
+  },
+  "checks_passed": 22,
+  "source_SHA256": {
+    "artifacts\\research\\20261008-p010-profile32-results-v3\\compact_tools.py": "7d32eeeee0b9d6dcf1061ad3c62087be62ecee6600c3297bdeab1e4768bf5622",
+    "artifacts\\research\\20261008-p010-profile32-results-v3\\get_once.py": "f742db3b1334d4888d1b0ac346dfb2230713554b5cd4ee8b775f01b050e5f839",
+    "artifacts\\research\\20261008-p010-profile32-results-v3\\fusion_checks.py": "ef498098fe3b4c45ceb4b00e2f7b1b23c610b2db13fd3e4af987cc00378ae79f",
+    "artifacts\\research\\20261008-p010-profile32-results-v3\\verify_results.py": "49aff4c55d4683bf61ff383c6abade7d3655529f64622c9dd0396e8968679df4",
+    "artifacts\\research\\20261008-p010-profile32-results-v3\\test_tools.py": "ce31da99ab676e956b53cfd3d7538f39fe308e017c73817ce93a04aebb57ad1b"
+  },
+  "author_validation": {
+    "path": "experiments\\p010-profile32-results-tools-validation-v3-r2-20261008.json",
+    "sha256": "68ba85c9159ca588345f543d7d1a689520eadc6fdefc6e39bd5176fe60584f31"
+  },
+  "actual_saved_source_fixtures_SHA256": {
+    "artifacts\\research\\20261008-p010-profile32-savedV3-binding-v1\\observation-v1\\saved-source.json": "b2e80062d0593f2aac339936b7524c712fe79fccc3f7607f6cdc21b85dd9d47c",
+    "artifacts\\research\\20261008-p010-profile32-savedV3-binding-v1\\observation-v1\\saved-source-raw.json": "7ec545e1eceb337d840374476cbbf2d855ad9cb9c6d4be757c92fdd07d94ee24"
+  },
+  "independent_tests": {
+    "peer_standard_library_suite": {
+      "tests": 14,
+      "seconds": 0.097,
+      "exit_code": 0
+    },
+    "actual_SDK_DTO_artificial_suite": {
+      "tests": 3,
+      "seconds": 0.073,
+      "exit_code": 0,
+      "path": "artifacts\\research\\20261008-p010-results-tools-independent-review-v3\\test_actual_sdk.py",
+      "sha256": "c2ce5a1faf0b99bc4a274acd2b4bec21f7fdf1c518dff709a35eb47be6ff7b0c",
+      "scope": "108 outputs across2pages;4directories preserve duplicate basenames; SDK omitted size0 remains untrusted;12compact mocked GET only; raw nonCOMPLETE/source drift/missing inventory reject HTTP0;5redirect closes."
+    },
+    "Ruff": "passed"
+  },
+  "operations": {
+    "new_authenticate": 0,
+    "API": 0,
+    "real_HTTP": 0,
+    "GPU": 0,
+    "MRI_model_payload": 0,
+    "real_training": 0,
+    "remote_mutations": 0
+  },
+  "actual_completion_profile_gate_passed": false,
+  "Public_AUC_verified": false,
+  "decision": "Compact retrieval/verifier tools pass offline independent checks; root may use one exact savedV3 read-only compact results set when ready. No actual COMPLETE or candidate serving/submission gate is established by this review.",
+  "limits": [
+    "14tests exercise verifier subcontracts including full11CSV math; there is no synthetic full-summary verify() success fixture and no actual complete summary in this review.",
+    "Native array SHA and model forward receipts are source-bound runtime observations; no MRI/NPZ/weights body is downloaded by these tools.",
+    "API output/file metadata multiplicity is checked; ambiguous basenames are not individually mapped and reported size0 is not byte proof.",
+    "Fixed32 resource/numeric qualification cannot establish hidden runtime, hidden codec coverage, or Public accuracy.",
+    "Legacy p010V2 words in two docstrings are descriptive leftovers; runtime/package/request version binding is strictV3."
+  ]
+}

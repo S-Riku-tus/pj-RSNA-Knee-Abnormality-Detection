@@ -1,0 +1,126 @@
+{
+  "schema_version": "p006_serving_saved_binding_independent_review_v1",
+  "reviewed_at_utc": "2026-10-08T10:13:28.324989+00:00",
+  "accepted_launch_at_utc": "2026-10-08T10:09:49.191823+00:00",
+  "status": "accepted_serving_V1_exact_single_k16_to24_factor_bound",
+  "saved_ref": "rsraki/p006-convnext-k24",
+  "saved_version": 1,
+  "kernel_id": 137647954,
+  "baseline14_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "candidate15_sha256": "172d6744be6f5e1e20def4680a1e81f3253989b49f601b1b01459d0c6245a320",
+  "saved_source_text_sha256": "f2e4037a8decae66b63283fcb28f3afbdb7a4255631b8359649beaa57b47aab6",
+  "exact_code_cell_fingerprint": "59139f700e4b919e6ef165c8e79980ab2e3eb5ff37fceca1ee7d8fd5f24c1040",
+  "code_delta": {
+    "zero_based_code_cell": 5,
+    "before": "def run(data_dir, split, ckpts, k=16, studies=None, workers=4, bs=4):",
+    "after": "def run(data_dir, split, ckpts, k=24, studies=None, workers=4, bs=4):",
+    "all_other_code_text_unchanged": true
+  },
+  "dynamic_UID_contract_scope": "Static source binding verifies both branches read actual test/split CSV UID lists, reader dataset length derives from that list, and fusion aligns to main UID order. No new profile observers or fixed cohort are present. This audit does not execute MRI or independently repeat the prior artificial inference tests.",
+  "Input_version_evidence": "Both /1 strings are explicit in the accepted SaveKernel request and invalidDatasetSources is empty. GetKernel returns both expected dataset slugs but omits their version suffixes/internal IDs. Internal20325538/20440357 IDs are not independently exposed by this response.",
+  "Original_container_evidence": {
+    "actual_saved_digest": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+    "numeric_provenance_id": 31481,
+    "numeric_id_directly_returned": false
+  },
+  "gpu_evidence": {
+    "actual_saved_machine": "NvidiaTeslaT4",
+    "desired_count": 2,
+    "runtime_count_independently_verified_here": false
+  },
+  "captured_initial_status": {
+    "status": "RUNNING",
+    "failureMessage": null
+  },
+  "captured_status_at_utc": "2026-10-08T10:09:50Z",
+  "status_scope": "Existing first postlaunch observation only. Parent owns fresh polling. RUNNING is not visible completion, successful fusion, or competition scoring.",
+  "profile32_gate": {
+    "studies": 32,
+    "checks": 37,
+    "gpu_peak_mib": {
+      "16": [
+        8069,
+        2047
+      ],
+      "24": [
+        11561,
+        543
+      ]
+    },
+    "k24_peak_max_mib": 11561
+  },
+  "own_incumbent_Public": "0.950",
+  "candidate_own_Public": null,
+  "goal": "own Public strictly greater than0.960; not achieved by this binding review",
+  "competition_submission_gate": "Parent requires profile256 passed plus visible serving completion, actual reader/fusion SUCCESS without fallback, and CSV identity/finite/rank verification before competition submission. This agent neither submits nor clears that remaining gate.",
+  "checks": {
+    "accepted_SaveKernel_no_error": true,
+    "all_invalid_Input_and_tag_fields_empty": true,
+    "response_ref_normalizes_exact_serving_owner_slug": true,
+    "response_saved_request_owner_slug_exact": true,
+    "saved_owner_title_slug_correct": true,
+    "kernel_id_binding": true,
+    "saved_Version_1_binding": true,
+    "saved_all_cell_sources_exact_prepared15": true,
+    "request_all_cell_sources_exact_prepared15": true,
+    "saved_code_fingerprint_exact_prepared15": true,
+    "all_three_sources_have_seven_code_cells": true,
+    "saved_source_outputs_clean": true,
+    "protected14_hash_unchanged": true,
+    "candidate15_hash_bound_launch_expected": true,
+    "baseline_has_seven_code_cells": true,
+    "exactly_reader_cell_changed_from14": true,
+    "single_default_k16_to24_line_change_only": true,
+    "reader_default_k_is24_studiesNone_batch4_workers4": true,
+    "dynamic_all_studies_read_from_split_csv": true,
+    "reader_CLI_calls_run_without_fixed_UID_or_override": true,
+    "dataset_len_comes_from_supplied_studies": true,
+    "main_test_UIDs_and_output_order_dynamic": true,
+    "fusion_reader_UIDs_aligned_to_main_UID_order": true,
+    "fusion_CLI_split_test_without_fixed_cohort": true,
+    "no_profile_observer_or_fixed_manifest_added": true,
+    "all_nonreader_prediction_code_and_fusion_unchanged": true,
+    "saved_and_request_private": true,
+    "saved_and_request_GPU_enabled": true,
+    "saved_and_request_Internet_OFF": true,
+    "saved_and_request_TPU_disabled": true,
+    "exact_Original_digest_saved_and_requested": true,
+    "Original_pinning_requested": true,
+    "T4_machine_requested_and_saved": true,
+    "SAVE_AND_RUN_ALL_requested": true,
+    "two_Input_Datasets_explicit_V1_request": true,
+    "saved_two_Input_Dataset_slugs_match": true,
+    "saved_and_request_Competition_slug_exact": true,
+    "no_extra_kernel_or_model_Input": true,
+    "captured_initial_status_RUNNING_no_failure": true,
+    "captured_initial_output_empty_not_yet_verified": true,
+    "root32_profile_gate_37_passed": true,
+    "root32_all6slots_batch4_workload_exercised": true,
+    "root32_k24_sampled_device_peak_below13000MiB": true,
+    "protected_p005_own_Public0950_scored_baseline": true
+  },
+  "checks_passed": 44,
+  "checks_total": 44,
+  "source_artifacts": {
+    "artifacts/research/20261008-p006-serving-launch-v1/saved-source-20261008T100950.json": "48f13731325c599be11df034fd6f4085247a64382366c01f7cdcbac12412e86c",
+    "artifacts/research/20261008-p006-serving-launch-v1/launch-request.json": "66762c51586741b161dddef57b46e253fa8e1f2572fdc336cfbf019a64624bbc",
+    "artifacts/research/20261008-p006-serving-launch-v1/save-response.json": "d3f35436070a8113a7b44aa0a804ac9cbba0174b0037e14e059df113102281d1",
+    "artifacts/research/20261008-p006-serving-launch-v1/status-20261008T100950.json": "15c0e9b3f8a291919c411990d1b3c95e30fb5213aefc9369d69dd6bf72b38479",
+    "artifacts/research/20261008-p006-serving-launch-v1/output-20261008T100950.json": "68678bec65bf17d7473d2ce76c6ec05b8ccf329074516e1a57b6d8b7f289e2bc",
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/15_submit_p006_convnext_k24.ipynb": "172d6744be6f5e1e20def4680a1e81f3253989b49f601b1b01459d0c6245a320",
+    "artifacts/research/20261008-p006-api-contract-v1/api_requests.py": "38e00c3689159fdadc68534d7cf62b68517d0b9b26cee925c3da479a225230ea",
+    "experiments/p006-profile32-completed-review-20261008.json": "e5e6768ee7d424a279f43643a822311a92502ad8c02b6ccf32c05ce922c911be",
+    "experiments/p005-scored-review-20261008.json": "74a32741f229612be6161404dd55b3f8e1fac2910c473b75b4d8d1a9b4fc54b2"
+  },
+  "limitations": [
+    "Unchanged broad reader/main decode catches may omit native images; no all-native-DICOM decode success claim.",
+    "Unchanged serving fallback remains possible; visible CSV/logs are not yet in this snapshot.",
+    "32-study sampled resources do not prove full hidden runtime or improved AUC.",
+    "Saved metadata lastRunTime has a known shifted value and is not used as launch/execution evidence."
+  ],
+  "remote_mutation_or_submission_by_this_agent": false,
+  "fresh_network_poll_by_this_agent": false,
+  "MRI_or_model_download_decode_fit_by_this_agent": false,
+  "protected14_and_prior_audits_modified": false
+}

@@ -1,0 +1,107 @@
+{
+  "schema_version": "remaining_native392_summary_tools_independent_review_v2",
+  "checked_at_utc": "2026-10-08T14:42:47.576087+00:00",
+  "all_passed": true,
+  "checks": {
+    "all_old_V1_preparation_files_hash_unchanged": true,
+    "V2_preparation27_and_source_hashes_valid": true,
+    "collector_CLI_verifier_entry_bytes_identical_V1": true,
+    "old_V4_source_immutable_exact19_numeric_predicates": true,
+    "V2_numeric_function_literal_V1": true,
+    "only_two_HEAD_specific_predicates_replaced": true,
+    "fresh_source_binding_proofs_valid_before_auth": true,
+    "exact_aliases_V1_only_no_generic_or_future_ref_assumption": true,
+    "protected14_18a_f005_SHA_and24wholegroup_plan": true,
+    "status1_RPC_explicit_COMPLETE_then_source_metadata": true,
+    "raw_default_state_worker_not_assumed_COMPLETE": true,
+    "full_Notebook_blob_source_embedding_verified_before_HTTP": true,
+    "CPU_private_OFF_Original_decoder2_pin_acceptance": true,
+    "positive_allowlist_no_partial_teacher_submission_model_outputs": true,
+    "two_DTO_inventory_shapes_bijective_basenames": true,
+    "all_pages100_items_repeat_token_limit100": true,
+    "metadata_sizes_retained_without_byteproof": true,
+    "summary_declared_and_streamed4million_bytecap": true,
+    "archive_Range0_0_206_headers_only_no_full_body_branch": true,
+    "both_response_types_always_close_bounded4redirects_HTTPS": true,
+    "safe_signed_URL_digest_not_saved_headers_or_rawURL": true,
+    "source_and_proof_gate_before_summary_HTTP_then_rangeonly": true,
+    "new_directories_exclusive_no_retry_overwrite": true,
+    "numeric_gold_hash_cleanup_time_CPU_QC_receipts_retained": true,
+    "final_GET_and_rangebyteproof_recomputed_SHA_and_total": true,
+    "fixed_final_decision_tracks_finalchecks": true,
+    "actual_array_archive_SHA_Public_gate_not_claimed": true,
+    "all_tool_source_files_still_match_peer_preparation": true
+  },
+  "checks_passed": 28,
+  "checks_total": 28,
+  "authoritative_tools": "artifacts\\research\\20261008-native392-remaining-summary-tools-v2",
+  "manual_ready_targets": [
+    {
+      "ref": "rsraki/n392s02-e01c6c7f3fa0ca87e4be0672a5d58193",
+      "version": 1,
+      "kernel_id": 137683945,
+      "shard_index": 1,
+      "source_binding_proof_sha256": "7e07e7d975ebb22b12614b0e81898331e4bb6d409c028facd4add95992891177"
+    },
+    {
+      "ref": "rsraki/n392s03-8a2b01af538bdabe2e6f783c475163a9",
+      "version": 1,
+      "kernel_id": 137683965,
+      "shard_index": 2,
+      "source_binding_proof_sha256": "7e07e7d975ebb22b12614b0e81898331e4bb6d409c028facd4add95992891177"
+    },
+    {
+      "ref": "rsraki/n392s04-ff5caa12ee079068af6a933da0a2860b",
+      "version": 1,
+      "kernel_id": 137683997,
+      "shard_index": 3,
+      "source_binding_proof_sha256": "7e07e7d975ebb22b12614b0e81898331e4bb6d409c028facd4add95992891177"
+    }
+  ],
+  "found_and_fixed_before_execution": "V1 positive28/28 final checks retained oldHEAD Hold decision. Independent artificial actualDTO run reproduced it. V1 remains immutable; V2 recalculates Eligible/Hold from the finalcheck set, with new positive/negative regression.",
+  "independent_CPU_verification": {
+    "peer_SDK_tests": 19,
+    "reported_seconds": 0.997,
+    "extra_independent_tests": 3,
+    "extra_reported_seconds": 0.082,
+    "all_passed": true,
+    "actual_SDK_schema_only": true,
+    "fake_transport_only": true,
+    "Ruff": "passed",
+    "extra_tests_scope": [
+      "Raw bool/noncomplete numeric/case statuses cannot qualify COMPLETE",
+      "Four redirects closes all responses and never makes fifthrequest or consumes archivebody",
+      "Rebound malformedteacher summary gives Hold, positive fullsummary gives Eligible"
+    ]
+  },
+  "evidence_sha256": {
+    "experiments\\native392-remaining-summary-tools-preparation-v2-20261008.json": "8c2d418e13cae066421c03d5108210fff532cde8653bb1f91b6dce747af45a78",
+    "experiments\\native392-shards02-04-saved-binding-review-20261008.json": "7e07e7d975ebb22b12614b0e81898331e4bb6d409c028facd4add95992891177",
+    "experiments\\native392-remaining-summary-tools-preparation-20261008.json": "2369dfb253072c89eb74fd2956a97cdbc39b4933548f7ed3c1525f3e1401d757",
+    "artifacts\\research\\20261008-native392-remaining-summary-tools-v2\\compact_tools.py": "4468014bd7f937bfe0fc9b4963d8fd2f600493fb145a367d817db7aa67a6131f",
+    "artifacts\\research\\20261008-native392-remaining-summary-tools-v2\\summary_checks.py": "2dfa392c180bc7dcf3833d6371a7a80033c7ff17f37e0cabd11a435ef7b5e33d",
+    "artifacts\\research\\20261008-native392-remaining-summary-tools-v2\\get_once.py": "797056a83a6f26e97d7eb8c5eb50b6c8ecdeec7c3d7c099dcd2cf7cb90be295d",
+    "artifacts\\research\\20261008-native392-remaining-summary-tools-v2\\verify_once.py": "62fd572909b82b849509ca69d3ca03d24b93b08e4e17be5430b11ae6887e51a4",
+    "artifacts\\research\\20261008-native392-remaining-summary-tools-v2\\test_compact_tools.py": "0cc1a836c0e5d2a0916604789a61aefae02af42930345147b90e56e9431e8367",
+    "artifacts\\research\\20261008-native392-remaining-summary-tools-v2\\record_preparation.py": "da9e2e88f08761578161349372fb48ed0479054bceb8dc487ff717f84184c401",
+    "artifacts\\research\\20261008-native392-remaining-summary-tools-v2\\commands-not-executed.json": "f780e10289c8a7fdf39f576266bafb8ebdc08f2f986d45d88a7770723a609169",
+    "artifacts\\research\\20261008-native392-remaining-summary-independent-review-v1\\independent_contract_tests.py": "ada98d9ecb8938e2dea499417e8e6f7918772aea72e4b7cf398302867af67d52"
+  },
+  "decision": "LocalV2 read-only compact getter/verifier qualifies for root's explicitly invoked exactalias V1 checks. No remote job, cache download or fit is started here.",
+  "limitations": [
+    "Only source/summary claims and byte-length metadata are checked; actual175/176 NPZ values and outerZIP SHA require later processed-cache QA.",
+    "The streamed Range GET closes before application body consumption; it may transport header-buffered bytes, so the claim is application archivebody consumed0, not zero network bytes.",
+    "API internalDataset versionIDs remain unobserved; accepteddecoder/2 pin and runtime decoderreceipt are separate evidence.",
+    "Currentreadytargets are shards02/03/04; laterindices require their own acceptedV1/source proofs and exactjob bindings."
+  ],
+  "operations": {
+    "API_authentication": 0,
+    "API_calls": 0,
+    "real_HTTP": 0,
+    "remote_mutations": 0,
+    "MRI_or_real_processed_pixel_payload_reads": 0,
+    "model_payload_reads": 0,
+    "GPU": 0,
+    "fit": 0
+  }
+}

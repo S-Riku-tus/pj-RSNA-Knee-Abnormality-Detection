@@ -1,0 +1,22 @@
+{
+  "schema_version": "p011_private256_results_fresh_snapshot_entry_local_v1",
+  "all_passed": true,
+  "checks": {
+    "default_local_preflight_source0_status1_noAPI_pass": true,
+    "Ruff_pass": true,
+    "old_getter_helper_pointer_proof_immutableSHA_rechecked": true,
+    "explicitfreshoutput_and_persnapshot_exclusive_intent": true,
+    "noautomaticloop_retry_Save_submit_or_sourceGET": true,
+    "samefrozenCOMPLETE13body_andunsignedSession_transport_reused": true
+  },
+  "snapshot_cli_sha256": "953e53aca594c06b4aca8e56de3d66d7878579e9cefe8c017af6be6f7f3d992d",
+  "API_auth_HTTP_called_by_preparer": 0,
+  "root_command": [
+    "artifacts/tools/kaggle-venv/Scripts/python.exe",
+    "artifacts/research/20261009-p011-profile256-results-tools-v1/get_snapshot.py",
+    "--execute",
+    "--output",
+    "artifacts/research/20261009-p011-profile256-results-tools-v1/observation-v2"
+  ],
+  "candidate_gate_passed": false
+}

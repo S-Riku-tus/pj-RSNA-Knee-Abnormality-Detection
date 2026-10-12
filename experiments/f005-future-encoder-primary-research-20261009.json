@@ -1,0 +1,176 @@
+{
+  "schema_version": "f005_future_encoder_bounded_primary_research_v1",
+  "observed_at_utc": "2026-10-09T03:01:47Z",
+  "observed_at_JST": "2026-10-09T12:01:47+09:00",
+  "research_only": true,
+  "current_generic_encoder": "DINOv2 ViT-S/14; native392 triplets; normalized CLS384",
+  "search_query_count": 4,
+  "search_queries": [
+    "DINOv3 official github dinov3_vits16 pretrained weights license normalization",
+    "MedDINOv2 official github pretrained weights MRI model",
+    "medical DINO MRI self supervised pretrained model weights official repository",
+    "DINOv2 medical MRI ViT small pretrained encoder model card official"
+  ],
+  "evidence_policy": "公式論文・作者repo/model cardのみ。一般検索に現れた転載・個人投稿・非作者再配布重みは根拠に使わない。",
+  "candidates": [
+    {
+      "name": "DINOv3 ViT-S/16 LVD-1689M",
+      "priority": "将来の小型encoder対照として条件付き第一候補。現f005・Regionalより後。",
+      "official_weights": {
+        "model_id": "facebook/dinov3-vits16-pretrain-lvd1689m",
+        "torch_hub_entry": "dinov3_vits16",
+        "file_name_from_official_hub_source": "dinov3_vits16_pretrain_lvd1689m-08c60483.pth",
+        "full_checkpoint_sha256": null,
+        "access": "Meta公式申請・同意後のURL、又はHF gated repositoryでcontact情報共有と条件同意。実アクセス取得・重みGETは行っていない。",
+        "public_weight_availability_date_from_author_README": "2025-08-14",
+        "paper_version": "arXiv:2508.10104v1; 2025-08-13",
+        "code_version_reviewed": "facebookresearch/dinov3 main; mutable revision、commit hash未固定",
+        "license": "DINOv3 License; official license last updated 2025-08-19"
+      },
+      "declared_architecture": {
+        "parameters_rounded_million": 21,
+        "embedding_dimension": 384,
+        "patch_size": 16,
+        "blocks": 12,
+        "storage_tokens": 4,
+        "positional_encoding": "RoPE; official transformer block receives rope_sincos",
+        "forward_features_CLS_key": "x_norm_clstoken",
+        "normalization_mean": [0.485, 0.456, 0.406],
+        "normalization_std": [0.229, 0.224, 0.225]
+      },
+      "MRI_and_exposure": {
+        "pretraining_domain": "LVD-1689M web images curated from public Instagram posts; medical/MRI-specific weightsではない。",
+        "verified_knee_MRI_or_RSNA2026_result": null,
+        "explicit_RSNA2026_or_own_Gold_use_reported_in_reviewed_sources": false,
+        "training_image_membership_or_Gold_overlap_independently_verified": false,
+        "exposure_eligibility_gate_passed": false
+      },
+      "local_static_fit": {
+        "direct_drop_in_to_existing_NativeTripletMIL": false,
+        "reason": "CLS384 shapeは一致するが、現コードはregister0、S14、prepare_tokens tensorとblock(tokens)を要求。DINOv3は4storage・tuple返却・RoPE引数で同等経路ではない。",
+        "native392_size_issue": "392は16の倍数でない。公式cardは最寄り小さい倍数へcropすると記載。392をそのまま通すと384相当のpatch領域となるためsilent変更は禁止。",
+        "future_requirements": "別adapter・明示したsize/padding政策・対応するDINOv2対照・strict payload/hash・人工forward/backward・full144資源検査。CLS384を維持すれば共通MIL head shapeは利用可能だが予測値の同等性はない。",
+        "measured_peak_VRAM_bytes": null,
+        "measured_seconds": null,
+        "knee_accuracy_gain": null
+      },
+      "primary_sources": [
+        "https://github.com/facebookresearch/dinov3",
+        "https://github.com/facebookresearch/dinov3/blob/main/dinov3/hub/backbones.py",
+        "https://github.com/facebookresearch/dinov3/blob/main/dinov3/models/vision_transformer.py",
+        "https://huggingface.co/facebook/dinov3-vits16-pretrain-lvd1689m",
+        "https://arxiv.org/abs/2508.10104v1",
+        "https://github.com/facebookresearch/dinov3/blob/main/LICENSE.md"
+      ]
+    },
+    {
+      "name": "RAD-DINO public checkpoint",
+      "priority": "公開重みは具体的に存在するが、膝MRI向けの次順位には推奨しない。",
+      "official_weights": {
+        "model_id": "microsoft/rad-dino",
+        "compatible_file": "backbone_compatible.safetensors",
+        "HF_file_metadata_size_rounded_MB": 346,
+        "full_checkpoint_sha256": null,
+        "observed_HF_revision": "110cbc18d5133582e320b43d53bf5c44e410c936",
+        "access": "作者HF public file inventoryで存在確認。binary取得は未実施。",
+        "first_weight_release_date": null,
+        "paper_publication_month": "2025-01; Nature Machine Intelligence DOI10.1038/s42256-024-00965-w",
+        "license": "MIT; author card research-purpose description"
+      },
+      "declared_architecture": {
+        "backbone": "DINOv2 ViT-B/14",
+        "embedding_dimension": 768,
+        "patch_size": 14,
+        "parameters_rounded_million": 86.6,
+        "author_compatible_loader": "Original DINOv2 vitb14 + converted backbone state strict=True",
+        "processor_shorter_edge_and_center_crop": 518,
+        "normalization_mean": [0.5307, 0.5307, 0.5307],
+        "normalization_std": [0.2583, 0.2583, 0.2583]
+      },
+      "MRI_and_exposure": {
+        "pretraining_domain": "882775 public chest X-rays: MIMIC-CXR, CheXpert, NIH-CXR, PadChest, BRAX。膝MRIではない。",
+        "checkpoint_selection": "公開checkpointは論文版と異なる。100000iterationのrunから35000iterationをCXR evaluation dataset validationのlinear probeで選択した旨がcardに記載。",
+        "explicit_RSNA2026_or_own_Gold_use_reported_in_reviewed_sources": false,
+        "training_image_membership_or_Gold_overlap_independently_verified": false,
+        "exposure_eligibility_gate_passed": false,
+        "verified_knee_MRI_or_RSNA2026_result": null
+      },
+      "local_static_fit": {
+        "direct_drop_in_to_existing_NativeTripletMIL": false,
+        "reason": "S14/CLS384固定と異なりB14/CLS768。MIL入力投影とloader/config契約を変更する必要。独自normalization・518pxも現392/ImageNet前処理と異なる。",
+        "fair_future_control": "generic DINOv2 B14とRAD-DINO B14を同じhead/入力政策で比較する必要。S14との差だけを医用pretraining効果と呼ばない。",
+        "measured_peak_VRAM_bytes": null,
+        "measured_seconds": null,
+        "knee_accuracy_gain": null
+      },
+      "primary_sources": [
+        "https://huggingface.co/microsoft/rad-dino",
+        "https://huggingface.co/microsoft/rad-dino/tree/main",
+        "https://huggingface.co/microsoft/rad-dino/commit/110cbc18d5133582e320b43d53bf5c44e410c936",
+        "https://huggingface.co/microsoft/rad-dino/raw/main/preprocessor_config.json"
+      ]
+    },
+    {
+      "name": "MM-DINOv2 MRI adaptation (MICCAI2025)",
+      "priority": "MRI研究の参考。素早く差し替える公開medical encoder重みとしては未gate。",
+      "official_weights": {
+        "author_repository": "daniel-scholz/mm-dinov2",
+        "version_reviewed": "main; mutable commit hash未固定; MICCAI2025 paper",
+        "paper_publication_month_from_author_citation": "2025-09",
+        "medical_trained_checkpoint_file": null,
+        "medical_trained_checkpoint_access": null,
+        "README_download_link_is_generic_initialization": "dinov2_vitb14_pretrain.pth; medical trained weightsとは区別",
+        "full_checkpoint_sha256": null,
+        "license": "CC BY-NC4.0 in author README; competition redistribution/use suitability not assessed"
+      },
+      "declared_architecture": {
+        "initial_backbone": "DINOv2 ViT-B/14",
+        "patch_size": 14,
+        "verified_medical_payload_embedding_dimension": null,
+        "modality_inputs": ["T1w", "T1ce", "T2w", "FLAIR"],
+        "changes": "modality-specific patch/position embeddings and sequence masking; semi-supervised prototype loss",
+        "normalization_mean": null,
+        "normalization_std": null
+      },
+      "MRI_and_exposure": {
+        "task": "glioma molecular subtype classification; knee MRI accuracyとは別",
+        "datasets": ["BraTS2021", "LUMIERE", "UPENN GBM", "Rembrandt", "UCSF-PDGM", "EGD", "TCGA"],
+        "preprocessing": "1mm isotropic/resampled brain registration to SRI24, skull stripping and tumor-centered slices; evaluation crop96 resized224。現native knee tripletとは異なる。",
+        "explicit_RSNA2026_or_own_Gold_use_reported_in_reviewed_sources": false,
+        "training_image_membership_or_Gold_overlap_independently_verified": false,
+        "exposure_eligibility_gate_passed": false
+      },
+      "local_static_fit": {
+        "direct_drop_in_to_existing_NativeTripletMIL": false,
+        "reason": "MRI向けであっても4sequence脳腫瘍モデルと3adjacent-plane knee tripletsは入力意味が異なる。作者READMEはgeneric初期重みからtrainingする案内で、medical trained payloadを確認できなかった。",
+        "measured_peak_VRAM_bytes": null,
+        "measured_seconds": null,
+        "knee_accuracy_gain": null
+      },
+      "primary_sources": [
+        "https://github.com/daniel-scholz/mm-dinov2",
+        "https://github.com/daniel-scholz/mm-dinov2/blob/main/docs/DATASETS.md",
+        "https://papers.miccai.org/miccai-2025/paper/1896_paper.pdf"
+      ]
+    }
+  ],
+  "requested_MedDINOv2_name": {
+    "official_medical_checkpoint_identified_in_this_bounded_search": false,
+    "limitation": "MedDINOv2という固有候補の作者重み/model cardは今回4検索で同定できなかった。不存在の証明ではなく、MM-DINOv2やRAD-DINOを同名扱いしない。"
+  },
+  "discarded_search_hit": {
+    "url": "https://github.com/ucuapps/dino-medical",
+    "reason": "確認したREADMEは元DINO/ImageNet案内。medical/MRI trained checkpointの一次根拠として採用しない。"
+  },
+  "recommendation": "現在のf005凍結対照→last2→Regionalの一要因比較順を維持。次encoderを試すならDINOv3 S16を事前固定した別対照候補にするが、アクセス/ライセンス・checkpointSHA・size/adapter人工契約・full144資源の別gate後。医用という名称や自然画像/胸X線の指標から膝Publicの利得を推測しない。",
+  "primary_access_limits": [
+    "DINOv3 HF raw config/processorとRAD-DINO raw configにweb取得エラーがあった。入手不可や非公開という結論にはしない。",
+    "全候補について実checkpoint bytes/strictload/runtime/MRI forward/Gold membershipは未検証。時点のsource/cardだけを確認した。"
+  ],
+  "Public_score_prediction": null,
+  "MRI_model_checkpoint_downloads": 0,
+  "private_API_calls": 0,
+  "GPU_forward_training": 0,
+  "old_source_CLI_config_or_run_edits": 0,
+  "documentation_or_ledger_edits": 0
+}

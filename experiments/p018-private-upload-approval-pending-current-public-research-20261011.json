@@ -1,0 +1,82 @@
+{
+  "schema_version": "rsna_knee_P018_upload_approval_pending_and_current_public_research_v1",
+  "run_id": "p018-private-upload-approval-pending-current-public-research-20261011",
+  "at_utc": "2026-10-10T15:12:29.747708+00:00",
+  "at_JST": "2026-10-11T00:12:29.747708+09:00",
+  "actual_upload_execution_auto_review_rejected_before_process": true,
+  "rejection_reason": "Specific new UUID destinations and unpublished Regional fold0/fold1 payload require explicit user approval for external private upload.",
+  "rejection_record_source": "Tool review output in this conversation; not a Dataset API response.",
+  "specific_two_upload_question_sent": true,
+  "specific_two_upload_answer_received": false,
+  "older_CLS_fold1_user_approval_is_not_new_REG_upload_approval": true,
+  "new_attempt_directories_exist": false,
+  "actual_new_REG_Start_PUT_Create_calls": 0,
+  "actual_new_REG_private_V1_registry_issued": false,
+  "new_upload_context": {
+    "path": "artifacts/research/20261010-p018-regional-private-upload-root-v2/context.json",
+    "sha256": "864cfccef637e1a3ad0e4e920d851861cc3d0dca326e865c9563a4c97e5f8c33"
+  },
+  "new_upload_Source_preparation": {
+    "path": "artifacts/research/20261010-p018-regional-private-upload-source-preparation-v2/preparation.json",
+    "sha256": "13398a5a02fd30302837421306206f764c7a374ae9dd79b3fca78f15e32aef90"
+  },
+  "new_upload_Source_peer": {
+    "path": "artifacts/research/20261010-p018-regional-private-upload-independent-source-v2/review.json",
+    "sha256": "02df73acca73a5c803878c981668ad6e77e3af5d7c3ffa7c9079d74167a36325"
+  },
+  "exact_new_destinations": [
+    "rsraki/n392rg-f0-8e978296019046e3a9fff8fcb6a4901f",
+    "rsraki/n392rg-f1-82087594dae443ab82a701d9750b661a"
+  ],
+  "positive_payload": "Two BIN/manifest pairs, 208822289 bytes total; model, generic DINO, code; no MRI, Report bodies, teacher rows, or credentials.",
+  "independent_remote_byte_wrapper_Source_review": {
+    "path": "artifacts/research/20261010-p018-regional-input-byte-wrapper-independent-source-v1/review.json",
+    "sha256": "4caa851feb4f7b130b19b01212f004652b6eaa6564a910b2dfa43ab113ff60ec"
+  },
+  "independent_new_phase_contract_Source_review": {
+    "path": "artifacts/research/20261010-p018-mixed-phase-contracts-independent-source-v1/review.json",
+    "sha256": "2390caf22a6f66ab80493a77ab5c586d03b42b807ddbd59076f1be501aa99724"
+  },
+  "new_Kaggle64_256_Serving_or_accuracy_qualification_issued": false,
+  "current_public_Notebook_receipt": {
+    "path": "artifacts/research/20261011-public-four-arm-current-source-research-v1/actual-current-public-observation-v1/receipt.json",
+    "sha256": "d73d092fdb5e284b9f297d1f0925b094cad768e25691ac6d78316107aea3ece4"
+  },
+  "current_public_Notebook": {
+    "url": "https://www.kaggle.com/code/nishantkharga/rsna-knee-full-4-arm-ensemble-v55?scriptVersionId=348575417",
+    "display_version": 57,
+    "saved_script_version_id": 348575417,
+    "Source_SHA256": "94dc9270a8a48086ecc845d3a0c45bc6908e3dae7eb713822b11325fda0a3234",
+    "author_current_linked_Public": 0.936,
+    "own_reproduction_Public": null,
+    "stronger_than_own_951_evidence": false,
+    "assets_downloaded_or_executed": false
+  },
+  "additional_foundation_model_primary_research": {
+    "repository": "https://github.com/ytrsk/OrthoFoundation-MSK-5M",
+    "paper": "https://arxiv.org/abs/2601.18250",
+    "authors_repository_claim": "Expanded DINOv3-L continuation pretraining on approximately 5 million MSK images; no verified RSNA Public result.",
+    "paper_scope": "January 2026 paper describes 1.2 million knee images and 14 clinical tasks; do not equate this with the expanded 5M repository release.",
+    "separate_original_repository_license": "https://github.com/ytrsk/OrthoFoundation/blob/main/LICENSE",
+    "license_scope": "MIT in the separate original repository does not establish terms of expanded checkpoint or upstream DINOv3 weights.",
+    "expanded_checkpoint_access_license_Kaggle_accuracy_verified": false,
+    "model_binary_downloaded": false,
+    "prior_fixed_candidate_record": {
+      "path": "experiments/f005-regional-sealer-source38-medical-lead-20261010.json",
+      "sha256": "21a8e9ff8eb7c836732c694bea756ef590c70767b44c097e6caed5107a307e8b"
+    }
+  },
+  "latest_official_score_observations": {
+    "P016": {
+      "path": "artifacts/research/20261010-p016-official-score-tools-source-v1/official-observation-v3/observation.json",
+      "sha256": "83fb8a2572aa04e23268342ddf0dd2830d0a768eab0f0a0147860d277e83d88d"
+    },
+    "P017": {
+      "path": "artifacts/research/20261010-p017-official-score-tools-source-v1/official-observation-v7/observation.json",
+      "sha256": "67fce4d89f066cd255c52ca6b698c774f2d85d3a8bede355807c01b0c93b4be4"
+    }
+  },
+  "own_best_Public": 0.951,
+  "strict_above960_achieved": false,
+  "next": "While the concrete upload answer is pending, finish executable mixed Serving/parent and native diagnostic source. After explicit approval: sequential new-only uploads, actual private V1 metadata, remote BIN byte proof, new 64/256, normal/fault Serving qualification, then fresh Submit gates."
+}

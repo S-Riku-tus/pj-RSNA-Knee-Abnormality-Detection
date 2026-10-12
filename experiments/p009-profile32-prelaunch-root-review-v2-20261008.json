@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-10-08T12:17:54.254826+00:00",
+  "all_passed": true,
+  "checks": {
+    "protected14": true,
+    "production19_unchanged": true,
+    "profile_exact_corrected_v2": true,
+    "only_profile_helper_and_tail_changed": true,
+    "prediction_literals_unchanged": true,
+    "only_production_main_changes": true,
+    "generated_all13cell_sources_exact": true,
+    "all13cells10code": true,
+    "same32cohort": true,
+    "no_gold_labels_report_or_accuracy": true,
+    "two_main_one_reader_two_fusions": true,
+    "eight_profile_tests_pass_one_explicit_fork_skip": true,
+    "all_tested_source_hashes_exact": true,
+    "all_three_helpers_exact": true,
+    "five_package_files_exact": true,
+    "clean_profile": true,
+    "diagnostic_never_competes": true,
+    "failed_v1_preserved": true
+  },
+  "profile_sha256": "57679651c3cc8c670c126465ee2e09135bea7d4bb8bab703d345ea43ef20ed0a",
+  "candidate_sha256": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+  "evidence_sha256": {
+    "notebooks\\public\\14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks\\public\\19_submit_p009_coat_fov160.ipynb": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+    "notebooks\\public\\19a_profile_p009_fov140_fov160_32.ipynb": "57679651c3cc8c670c126465ee2e09135bea7d4bb8bab703d345ea43ef20ed0a",
+    "experiments\\p009-profile32-preparation-v2-20261008.json": "6c424b0fc0fff95a8392c7f9790f5d03ca7cbdfab5ef73aa04732e609cd6aece",
+    "experiments\\p009-profile32-artificial-validation-v2-20261008.json": "583ff2c17912406d80fc1f7e711e03ea5c89fdb0f6a3de5239ee548c6605a428"
+  },
+  "ref": "rsraki/p009-profile-32-fov140-fov160",
+  "planned_saved_version": 2,
+  "accuracy_evaluated": false,
+  "limits": "Windows fork test is explicitly skipped; actual Kaggle synthetic transport and real32 gates remain mandatory."
+}

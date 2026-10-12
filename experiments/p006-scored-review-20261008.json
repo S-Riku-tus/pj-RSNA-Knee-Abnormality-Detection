@@ -1,0 +1,36 @@
+{
+  "recorded_at_utc": "2026-10-08T11:37:07.906222+00:00",
+  "checked_at_utc": "2026-10-08T11:35:26.403727+00:00",
+  "status": "official_own_COMPLETE_public0950_not_promoted",
+  "checks": {
+    "exact_submission_ref": true,
+    "exact_saved_version": true,
+    "actual_server_complete": true,
+    "actual_public_text": true,
+    "submitted_by_own_account": true,
+    "official_filename": true,
+    "positive_hidden_submission_bytes": true,
+    "no_returned_error": true,
+    "baseline14_protected": true,
+    "submitted15_unchanged": true
+  },
+  "all_passed": true,
+  "submission_ref": 56949480,
+  "notebook_ref": "rsraki/p006-convnext-k24",
+  "saved_version": 1,
+  "own_public_score_text": "0.950",
+  "own_incumbent_public": "0.950",
+  "decision": "Keep original p005 k16 incumbent: rounded displayed score improvement unobserved, k24 has greater compute and no demonstrated benefit.",
+  "unrounded_delta_known": false,
+  "hidden_worker_runtime_known": false,
+  "hidden_fallback_count_known": false,
+  "limits": [
+    "Same three-decimal displayed score does not prove equal raw AUC or predictions.",
+    "Acceptance-to-observation elapsed is not hidden execution time.",
+    "COMPLETE establishes a scored hidden rerun; no individual target AUC, logs or fallback counts returned."
+  ],
+  "source": "artifacts\\research\\20261008-p006-competition-submit-v1\\scoring-20261008T113526403727.json",
+  "source_sha256": "c2790f517f54933f40a4181aad4922867e0dcdb992b9cb68ab7b4f2fbd19dbb4",
+  "strict_over0960_goal_achieved": false,
+  "remote_mutation": false
+}

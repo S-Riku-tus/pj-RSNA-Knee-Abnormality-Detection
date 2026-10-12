@@ -1,0 +1,15 @@
+{
+  "schema_version": "p008_competition_submission_accepted_v1",
+  "accepted_at_utc": "2026-10-08T11:15:16.157150+00:00",
+  "submission_ref": 56950968,
+  "notebook_ref": "rsraki/p008-apex-meniscus10",
+  "saved_version": 1,
+  "requested_output": "submission.csv",
+  "own_public_lb": null,
+  "scoring_complete": false,
+  "fresh_allowance_before_submission": 3,
+  "protected_own_public_lb": 0.95,
+  "automatic_retry": false,
+  "change": "Only fixed90to10 rank overlay on two Meniscus columns; frozen own950 Apex seven original code cells unchanged",
+  "accuracy_gain_not_yet_known": true
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "p010_AA_diagnostic_offline_preparation_v4",
+  "status": "prepared_no_real_models_MRI_or_remote",
+  "checks": {
+    "original14_protected": true,
+    "all5_prediction_source_literals_unchanged": true,
+    "old_V3_helper_embedded_byte_identical_as_previous_helper": true,
+    "16_other_original_V3_cells_unchanged": true,
+    "same_fixed32_UID_hash": true,
+    "Gold_UID_group_excluded_no_targets_or_Report": true,
+    "ten_AA_phases_predeclared_ordinary_and_fixed_distinct": true,
+    "perstudy_raw_input_device_receipts_exclusive_before_phase_guards": true,
+    "phase_resources_backend_raw_saved_before_comparisons": true,
+    "raw1e7_and_byteexact_not_relaxed_candidate_gate_closed": true,
+    "fixed_owned_queue_single_total_bound48": true,
+    "child_import_replay_and_fork_preflight_before_models": true,
+    "crosscell_stdout_lifecycle_preflight": true,
+    "no_reader_or_fusion_GPU_runs_in_AA_diagnostic": true,
+    "diagnostic_submission_removed_in_finally": true,
+    "all21_cells_compile_clean_outputs": true
+  },
+  "all_passed": true,
+  "candidate_gate_passed": false,
+  "actual_execution_gate_passed": false,
+  "studies": 32,
+  "ordered_uid_sha256": "fb83b0b77b4539eb70b142cecc69c3cbc6a0ae4a8763381869078cc936b6fc07",
+  "notebook_sha256": "dd22faffb31c1510eab2bf66d06a76b93d37e5491bd9db611cada9c5f6e2359a",
+  "baseline_notebook_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "design_sha256": "3802f43033e98238ea1e0142f8a377a48551d5e20a5c6811c38369a21ec06db5",
+  "helper_sha256": {
+    "p006_metrics.py": "b61115cc92ab335273a31cf12c754097e3f0844ce2b7aaf9fd50c56f755603ca",
+    "p007_metrics.py": "a291d826ed287683cfa15e98eb207bb15fe459b04263a2e4c5fcda8730138549",
+    "p009_metrics.py": "a8491a62f2b33501c4db01f695cc0afcc96da353e8badf6788fd82fa1a1e0591",
+    "p010_shared_metrics.py": "494685ecee58ccd98771e5e287992c598bbeea8691fd08dbceb4ebd18e2f59b7",
+    "p010_author224_metrics.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+    "p010_profile_metrics.py": "0ff5bf6aa1ca231fc8050f5c92cc55e0d6f64b80070f853489680065a70139fc",
+    "p010_previous_metrics.py": "5cdc78fef82f083a6519527b13c1bc8e8fd86223eb9ccda1afc1ae9d164d84f8",
+    "p010_aa_transport.py": "a0519ee4462332092baf533b059f259bc08f479d7920d2ff4270679d784211a8"
+  },
+  "literal_source_sha256": {
+    "original": "37243d9c509200ca349d6bcb080ee23b22cfee8ad3d209ae19a7c44535b49c20",
+    "bounded": "3b3608fdcaea901987002659a1d99b8f5fc13731c7e0a8f80d0b65da3c575b84",
+    "shared": "43f0b59c40caeea2ff6aae02ca6e39caddd8a958329ea6a820d8950c9a58f032",
+    "reader": "667568b4e06f0c54937ad1e4d7059ffeff44e68592d59d10580e13ec337a5fa5",
+    "fusion": "03664021098fa7345c1a0ba816cd998afeedea9c6231aecd7acb5d1d7de5d1ab"
+  },
+  "profile_notebook": "notebooks\\public\\21a_profile_p010_AA_32_v4.ipynb",
+  "package": "artifacts\\kaggle\\p010-profile32-AA-numerics-v4-20261009",
+  "actual_GPU_MRI_model_payload_access": 0,
+  "training": false,
+  "API_or_competition_mutations": false,
+  "phase_status_scope": "Phase receipts are persisted before guards. Separate GUARD receipts and final diagnostic summary establish execution completion; no AUC/candidate qualification.",
+  "fixed_dispatch_scope": "Only diagnostic ownership routing changes. Original/common-queue and fixed-owned-queue observations are not a causal mapping-only comparison.",
+  "numeric_criteria": {
+    "raw_absolute": 1e-07,
+    "raw_relative": 0.0,
+    "base_and_fused_CSV_byte_identity_required": true
+  },
+  "previous_V1V2V3_and_serving21": "immutable; V4 is diagnosis only"
+}

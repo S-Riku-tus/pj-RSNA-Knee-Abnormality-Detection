@@ -1,0 +1,500 @@
+{
+  "checked_at_utc": "2026-10-08T11:29:40.735469+00:00",
+  "status": "implemented_artificial_CUDA_verified_real_training_not_started",
+  "hypothesis": "One model factor: generic native392 DINO encoder blocks10/11 trainable vs all frozen; same original f002 head",
+  "real_MRI_used_locally": false,
+  "real_label_fit": false,
+  "whole_cache_acquired": false,
+  "remote_mutations_by_this_agent": false,
+  "config": {
+    "schema_version": "frozen_features_v1",
+    "seed": 20261002,
+    "n_folds": 5,
+    "reason": "Change only mean pooling to finding-specific two-level attention relative to f001; all data, generic encoder, geometry, seed, folds, epochs and BCE selection fixed.",
+    "preprocess": {
+      "version": "physical_letterbox_triplet_v1",
+      "image_size": 392,
+      "max_series": 3,
+      "slices_per_series": 48,
+      "percentiles": [
+        1,
+        99
+      ]
+    },
+    "encoder": {
+      "model_name": "dinov2_vits14",
+      "feature_dim": 384,
+      "batch_size": 16,
+      "precision": "fp16"
+    },
+    "head": {
+      "hidden_dim": 192,
+      "dropout": 0.2,
+      "pooling": "attention"
+    },
+    "train": {
+      "epochs": 12,
+      "batch_size": 16,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.01,
+      "num_workers": 0,
+      "selection": "bce"
+    }
+  },
+  "config_sha256": "f2e98efbb73accd3053032cac811e203d8a4d0570e26e2e32ea9d4eaaaba7280",
+  "seed": 20261002,
+  "fold": null,
+  "targets": [
+    "ACL",
+    "MCL",
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Lateral OA",
+    "PF OA",
+    "Effusion",
+    "Synovitis",
+    "Baker's",
+    "Contusion",
+    "Fracture"
+  ],
+  "source_sha256": {
+    "finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "profile_dinov2_last2.py": "b3d035346c0d5a79d4afdef1d9085f1ea40cfad49f70229adeeff1d987b07251",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1"
+  },
+  "artificial_input_sha256": {
+    "images": "7064130b21d05976df4c2824051cc0740eb1f6e4aa874b487d1bf8335f97f4fa",
+    "mask": "761136e30319b547b806f3753bb0237dcf74194a44f77561bcc360ba1a5b7adb",
+    "positions": "1247ab8a33198f792e4e90fb1eb24370f34f7d86a6112b74561bd6025c47ed99",
+    "planes": "ab25350e3e65efebe24584461683ecda68725576e825e550038b90e7b1479946",
+    "flags": "2ad9765cd88ebce594f7e27e0310dbe56068b791fe20b5ac432470567e95d38f"
+  },
+  "runtime": {
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "gpu_total_bytes": 25756696576,
+    "xformers_disabled": "1",
+    "attention": "official MemEffAttention falls back to PyTorch SDPA for ordinary tensors; actual CUDA backend not observed",
+    "flash_sdp_enabled": true,
+    "mem_efficient_sdp_enabled": true,
+    "math_sdp_enabled": true
+  },
+  "cuda_checks_passed": 19,
+  "cuda_checks": [
+    {
+      "name": "freeze: shared CLS/head forward equivalence",
+      "passed": true,
+      "details": {
+        "max_logit_abs_diff": 0.0
+      }
+    },
+    {
+      "name": "freeze: finite fixed target contract",
+      "passed": true,
+      "details": [
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ]
+    },
+    {
+      "name": "freeze: final norm/prefix frozen and encoder eval",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "freeze: all-masked study fails clearly",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "freeze: selected encoder gradients finite and nonzero",
+      "passed": true,
+      "details": {
+        "selected": 0,
+        "nonzero": 0
+      }
+    },
+    {
+      "name": "freeze: frozen encoder receives no gradient",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "freeze: head receives finite gradients",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "freeze: missing label is not a negative",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "last2: shared CLS/head forward equivalence",
+      "passed": true,
+      "details": {
+        "max_logit_abs_diff": 0.0
+      }
+    },
+    {
+      "name": "last2: finite fixed target contract",
+      "passed": true,
+      "details": [
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ]
+    },
+    {
+      "name": "Freeze / last2 forward values unchanged before fitting",
+      "passed": true,
+      "details": {
+        "max_logit_abs_diff": 0.0
+      }
+    },
+    {
+      "name": "last2: final norm/prefix frozen and encoder eval",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "last2: all-masked study fails clearly",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "last2: selected encoder gradients finite and nonzero",
+      "passed": true,
+      "details": {
+        "selected": 28,
+        "nonzero": 28
+      }
+    },
+    {
+      "name": "last2: frozen encoder receives no gradient",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "last2: head receives finite gradients",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "last2: missing label is not a negative",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Generic encoder values unchanged; no optimizer fitting",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Checkpoint OFF/ON same logits and last2 gradients",
+      "passed": true,
+      "details": {
+        "max_logit_abs_diff": 0.0,
+        "max_gradient_abs_diff": 0.0,
+        "gradient_tolerance": {
+          "rtol": 0.001,
+          "atol": 2e-06
+        }
+      }
+    }
+  ],
+  "artificial_unittest_count": 14,
+  "unittest_breakdown": {
+    "native_pixel_pilot": 8,
+    "last2_contract_and_safe_extraction": 6
+  },
+  "ruff_check_and_format_passed": true,
+  "generic_initialization": {
+    "source_url": "https://github.com/facebookresearch/dinov2",
+    "source_revision": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+    "source_tree_sha256": "4a5a3cfbd4185dd4955c1de2f2f26e3b4ba3fa88cccae503b9f93ceb08fed818",
+    "weights_url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth",
+    "weights_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "pretraining": "generic_dinov2_lvd142m",
+    "competition_finetuned": false,
+    "gold_used_for_tuning": false,
+    "exposure_audit": "Intended input is the unmodified generic ViT-S/14 checkpoint manually obtained from the official URL. Competition fine-tuning and gold selection are not part of the official generic recipe. LVD-142M overlap with competition patients/images is unknown. Local hashes pin supplied bytes; no publisher checksum or independent origin authentication was performed."
+  },
+  "generic_weights_whitelist_extraction_hash_provenance_verified": true,
+  "artificial_microbatch": {
+    "studies": 1,
+    "shape": [
+      1,
+      3,
+      48,
+      3,
+      392,
+      392
+    ],
+    "all144_valid_mask": true,
+    "window_chunk": 2,
+    "optimizer_steps": 0,
+    "notes": "Do not interpret this as simultaneous batch16 feasibility"
+  },
+  "arms": [
+    {
+      "arm": "freeze",
+      "parameters": {
+        "trainable_encoder_names": [],
+        "trainable_encoder_parameters": 0,
+        "frozen_encoder_parameters": 22056576,
+        "trainable_head_parameters": 83352,
+        "encoder_eval": true,
+        "final_norm_frozen": true,
+        "trainable_blocks": 0,
+        "window_chunk": 2,
+        "checkpoint_last2": false,
+        "chunk_factor": "same window microbatch in both arms; retained backward activations span all valid windows",
+        "checkpoint_factor": "optional suffix activation recomputation; separate from the last2 biological factor",
+        "feature_quantization": "fp16 CLS then fp32, matching frozen feature cache storage"
+      },
+      "valid_triplets": 144,
+      "forward_backward_seconds": [
+        0.7425054999766871,
+        0.7136745000025257
+      ],
+      "loss": 0.7255759835243225,
+      "gpu_peak_allocated_bytes": 198820864,
+      "gpu_peak_reserved_bytes": 226492416,
+      "gradient_names": [],
+      "optimizer_steps": 0
+    },
+    {
+      "arm": "last2",
+      "parameters": {
+        "trainable_encoder_names": [
+          "blocks.10.norm1.weight",
+          "blocks.10.norm1.bias",
+          "blocks.10.attn.qkv.weight",
+          "blocks.10.attn.qkv.bias",
+          "blocks.10.attn.proj.weight",
+          "blocks.10.attn.proj.bias",
+          "blocks.10.ls1.gamma",
+          "blocks.10.norm2.weight",
+          "blocks.10.norm2.bias",
+          "blocks.10.mlp.fc1.weight",
+          "blocks.10.mlp.fc1.bias",
+          "blocks.10.mlp.fc2.weight",
+          "blocks.10.mlp.fc2.bias",
+          "blocks.10.ls2.gamma",
+          "blocks.11.norm1.weight",
+          "blocks.11.norm1.bias",
+          "blocks.11.attn.qkv.weight",
+          "blocks.11.attn.qkv.bias",
+          "blocks.11.attn.proj.weight",
+          "blocks.11.attn.proj.bias",
+          "blocks.11.ls1.gamma",
+          "blocks.11.norm2.weight",
+          "blocks.11.norm2.bias",
+          "blocks.11.mlp.fc1.weight",
+          "blocks.11.mlp.fc1.bias",
+          "blocks.11.mlp.fc2.weight",
+          "blocks.11.mlp.fc2.bias",
+          "blocks.11.ls2.gamma"
+        ],
+        "trainable_encoder_parameters": 3550464,
+        "frozen_encoder_parameters": 18506112,
+        "trainable_head_parameters": 83352,
+        "encoder_eval": true,
+        "final_norm_frozen": true,
+        "trainable_blocks": 2,
+        "window_chunk": 2,
+        "checkpoint_last2": false,
+        "chunk_factor": "same window microbatch in both arms; retained backward activations span all valid windows",
+        "checkpoint_factor": "optional suffix activation recomputation; separate from the last2 biological factor",
+        "feature_quantization": "fp16 CLS then fp32, matching frozen feature cache storage"
+      },
+      "valid_triplets": 144,
+      "forward_backward_seconds": [
+        1.0300648999982513,
+        0.9784614999662153
+      ],
+      "loss": 0.7255759835243225,
+      "gpu_peak_allocated_bytes": 4459252224,
+      "gpu_peak_reserved_bytes": 4477419520,
+      "gradient_names": [
+        "blocks.10.norm1.weight",
+        "blocks.10.norm1.bias",
+        "blocks.10.attn.qkv.weight",
+        "blocks.10.attn.qkv.bias",
+        "blocks.10.attn.proj.weight",
+        "blocks.10.attn.proj.bias",
+        "blocks.10.ls1.gamma",
+        "blocks.10.norm2.weight",
+        "blocks.10.norm2.bias",
+        "blocks.10.mlp.fc1.weight",
+        "blocks.10.mlp.fc1.bias",
+        "blocks.10.mlp.fc2.weight",
+        "blocks.10.mlp.fc2.bias",
+        "blocks.10.ls2.gamma",
+        "blocks.11.norm1.weight",
+        "blocks.11.norm1.bias",
+        "blocks.11.attn.qkv.weight",
+        "blocks.11.attn.qkv.bias",
+        "blocks.11.attn.proj.weight",
+        "blocks.11.attn.proj.bias",
+        "blocks.11.ls1.gamma",
+        "blocks.11.norm2.weight",
+        "blocks.11.norm2.bias",
+        "blocks.11.mlp.fc1.weight",
+        "blocks.11.mlp.fc1.bias",
+        "blocks.11.mlp.fc2.weight",
+        "blocks.11.mlp.fc2.bias",
+        "blocks.11.ls2.gamma"
+      ],
+      "optimizer_steps": 0
+    }
+  ],
+  "checkpoint_equivalence": {
+    "valid_triplets": 144,
+    "all144_valid_mask": true,
+    "max_logit_abs_diff": 0.0,
+    "max_gradient_abs_diff": 0.0,
+    "gradient_tolerance": {
+      "rtol": 0.001,
+      "atol": 2e-06
+    },
+    "trials": [
+      {
+        "checkpoint_last2": false,
+        "seconds": 1.1250708000152372,
+        "gpu_peak_allocated_bytes": 4459252224,
+        "gpu_peak_reserved_bytes": 4477419520
+      },
+      {
+        "checkpoint_last2": true,
+        "seconds": 1.2914046999649145,
+        "gpu_peak_allocated_bytes": 748848128,
+        "gpu_peak_reserved_bytes": 845152256
+      }
+    ],
+    "optimizer_steps": 0
+  },
+  "engineering_factors": {
+    "window_chunk": "Same2 in both arms; all suffix backward graphs retained without checkpoint",
+    "checkpoint": "Separate optional suffix recomputation, logits/gradients equal in artificial CUDA QC; final norm remains frozen",
+    "head": "Original FrozenFeatureHead, hidden192/dropout0.2/two-level finding attention; shared masks/positions/planes/flags",
+    "normalization": "Shared native physical letterbox/global p1p99 adjacent triplets; online uint8/255/ImageNet; fp16 CLS cast matches cache"
+  },
+  "conditional_compute_epoch_arithmetic": [
+    {
+      "workload": "6 valid windows, small resource gate",
+      "arm": "freeze",
+      "measured_per_study_seconds": [
+        0.07122250000247732,
+        0.03566049999790266
+      ],
+      "3386_studies_epoch_minutes_from_each_sample": [
+        4.019323083473137,
+        2.0124408832149734
+      ],
+      "excluded": [
+        "compressed pixel read/decompression",
+        "host-to-device transfer",
+        "optimizer/GradScaler step",
+        "validation",
+        "data loader and scheduling"
+      ]
+    },
+    {
+      "workload": "6 valid windows, small resource gate",
+      "arm": "last2",
+      "measured_per_study_seconds": [
+        0.06551480002235621,
+        0.04613690002588555
+      ],
+      "3386_studies_epoch_minutes_from_each_sample": [
+        3.697218547928302,
+        2.603659058127475
+      ],
+      "excluded": [
+        "compressed pixel read/decompression",
+        "host-to-device transfer",
+        "optimizer/GradScaler step",
+        "validation",
+        "data loader and scheduling"
+      ]
+    },
+    {
+      "workload": "144 valid windows, all3x48",
+      "arm": "freeze",
+      "measured_per_study_seconds": [
+        0.7425054999766871,
+        0.7136745000025257
+      ],
+      "3386_studies_epoch_minutes_from_each_sample": [
+        41.90206038201771,
+        40.275030950142536
+      ],
+      "excluded": [
+        "compressed pixel read/decompression",
+        "host-to-device transfer",
+        "optimizer/GradScaler step",
+        "validation",
+        "data loader and scheduling"
+      ]
+    },
+    {
+      "workload": "144 valid windows, all3x48",
+      "arm": "last2",
+      "measured_per_study_seconds": [
+        1.0300648999982513,
+        0.9784614999662153
+      ],
+      "3386_studies_epoch_minutes_from_each_sample": [
+        58.12999585656799,
+        55.21784398142675
+      ],
+      "excluded": [
+        "compressed pixel read/decompression",
+        "host-to-device transfer",
+        "optimizer/GradScaler step",
+        "validation",
+        "data loader and scheduling"
+      ]
+    }
+  ],
+  "full_cache_not_started": {
+    "weak_studies": 4207,
+    "raw_pixel_upper_bytes": 279272641536,
+    "raw_pixel_upper_GiB": 260.09291553497314,
+    "gate": "16-study Kaggle native pixel pilot compression/byteQC/read-speed before any full cache export"
+  },
+  "next_gate": "Root CPU API run18a -> review summary/byteQC/cohort/resource/archive16 -> processed pixel compression/read benchmark -> authorize limited real training separately",
+  "pixel_preparation_validation": "experiments/native392-pixel16-preparation-validation-20261008.json",
+  "pixel_independent_review": "experiments/native392-pixel16-independent-prelaunch-review-v3-20261008.json",
+  "raw_artifacts": {
+    "artifacts/qa/20261008-dinov2-last2-profiler-v1/DINO_LAST2_PROFILE_SUMMARY.json": "6bdb25f813cafd6b03f06f0b3cb9fa44bb7b10f9a0707dffa9488a6b2403e0d3",
+    "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/DINO_LAST2_PROFILE_SUMMARY.json": "c2bf5d7590ee194d77fe5511a10977e2fb57b31895ab87dae0edfff7f2991cdd"
+  },
+  "command": ".venv/Scripts/python.exe scripts/profile_dinov2_last2.py --output artifacts/qa/NEW-IMMUTABLE-PROFILE-RUN --valid-triplets 144 --window-chunk 2 --repeats 2 --checkpoint-equivalence",
+  "public_auc_measured": false,
+  "public_score": null
+}

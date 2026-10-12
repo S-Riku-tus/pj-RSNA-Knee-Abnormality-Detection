@@ -1,0 +1,20 @@
+{
+  "schema_version": "bounded_primary_web_followup_v1",
+  "recorded_at_utc": "2026-10-08T14:30:36.212720+00:00",
+  "queries": [
+    "site:kaggle.com/code rsna 0.958 knee",
+    "site:kaggle.com/code rsna 0.96 knee 2026",
+    "site:github.com rsna-knee 0.95",
+    "site:kaggle.com rsna-knee-abnormality-detection 0.955"
+  ],
+  "primary_sources": [
+    "https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection",
+    "https://github.com/homeshwarnelakurthi/RSNA-Knee-Abnormality-Detection/blob/main/docs/STRATEGY.md",
+    "https://github.com/aditbytes/kaggle-rsna-knee-abnormality"
+  ],
+  "scope": "Search returned no additional independently reproducible >0.955 recipe in these four queries; not an exhaustive absence claim. Historical leaderboard claims in repositories are not current official scores.",
+  "own_public_score_changed": false,
+  "model_or_MRI_downloads": 0,
+  "remote_mutations": 0,
+  "training": false
+}

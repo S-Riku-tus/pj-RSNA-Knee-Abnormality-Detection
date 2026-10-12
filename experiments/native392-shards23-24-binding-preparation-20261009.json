@@ -1,0 +1,60 @@
+{
+  "schema_version": "native392_last2_CPU_saved_source_binding_local_preparation_v1",
+  "all_passed": true,
+  "checks": {
+    "actual23_24_SaveV1_two_refs_kernels_receipts_bound": true,
+    "indices22_23_exact_order_and_total4_RPCs": true,
+    "old3jobs_or6RPC_or_duplicate_contract_rejected": true,
+    "all4_source_files_compile_and_Ruff_pass": true,
+    "samefullsource_DTO_CPUOriginal_decoder2_goldgroup_QC_auditor_contract": true,
+    "source_not_status_reading_credentials_or_images_in_preparation": true,
+    "rootonly_future_GetKernel1_Status1_per_job_no_Output_or_mutation": true,
+    "freshreadsets_and_proof_file_exclusive_no_auto_retry": true
+  },
+  "accepted_jobs": [
+    {
+      "shard_index": 22,
+      "ref": "rsraki/n392s23-489e0603662c0fd85ef3530c0924f7ca",
+      "kernel_id": 137723666,
+      "saved_version": 1
+    },
+    {
+      "shard_index": 23,
+      "ref": "rsraki/n392s24-df9c57d8c250deee1d6988335fea5d69",
+      "kernel_id": 137723691,
+      "saved_version": 1
+    }
+  ],
+  "approval_sha256": "4fd07b4b98e2bf74634fc31682e154efd0e6218ffffb95d09c5620b1c5de3402",
+  "source_sha256": {
+    "binding_spec.py": "e4c4de51965f0897a9dee9570d30b90089ef53fc7bd99f2cea11fb66b850e795",
+    "prepare_approvals.py": "e56317961ed19cc25a42c7244f5dccca67f94ceee6397acba83a5ffd95d00062",
+    "read_once.py": "08f7110302cbd72c99d6295aa0366954fe74d970997a3f431d087f08342f2583",
+    "audit.py": "fc45f6b893f83e46f43d6390ea6f9ff0373df9e4083a7cc57786c7a0445767cb"
+  },
+  "reused20_22_source_sha256": {
+    "binding_spec.py": "f90be11a225d3628f55746acb1aafaeb1532af051dae244e2ed110e7aef1f141",
+    "prepare_approvals.py": "0d100c84bcbffffbf0ffc878181949bcdaf67a482aede7f6de170d32a065a5cc",
+    "read_once.py": "1d2df5e5f51a3a35468809b6e78fbf876c70267d4561463f4e74075eef3b93ea",
+    "audit.py": "8c4bd26b9bce0997aa35c8abbf0e5c52d89c1c3cc4bdf5d4e062871bee88b7b3"
+  },
+  "limited_artificial_schema_negative_cases": 3,
+  "expected_GetKernel_RPCs": 2,
+  "expected_Status_RPCs": 2,
+  "expected_total_RPCs": 4,
+  "actual_API_HTTP_auth_MRI_model_archive_GPU_fit_submit_by_preparer": 0,
+  "actual_source_or_status_read_by_preparer": false,
+  "root_commands_not_executed": [
+    [
+      "artifacts/tools/kaggle-venv/Scripts/python.exe",
+      "artifacts/research/20261009-native392-shards23-24-saved-binding-v1/read_once.py"
+    ],
+    [
+      ".venv/Scripts/python.exe",
+      "artifacts/research/20261009-native392-shards23-24-saved-binding-v1/audit.py"
+    ]
+  ],
+  "output_review": "experiments/native392-shards23-24-saved-binding-review-20261009.json",
+  "scope": "Full original source/data/runtime audit unchanged; only exact jobs/indices/refs and two-job4-RPC counts adapted. Output/cache correctness remains pending.",
+  "decision": "Local approval complete; root may make exact four savedV1 reads then run the offline source/settings auditor."
+}

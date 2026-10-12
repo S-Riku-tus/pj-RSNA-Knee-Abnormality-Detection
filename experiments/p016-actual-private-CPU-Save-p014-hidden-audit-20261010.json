@@ -1,0 +1,56 @@
+{
+  "schema_version": "p016_direct224_actual_private_CPU_Save_root_progress_v1",
+  "at_utc": "2026-10-10T09:27:37.873992+00:00",
+  "actual_accepted_Save": {
+    "path": "artifacts/research/20261010-p016-CPU-root-launch-source-preparation-v1/actual-CPU-Save-attempt-v1/accepted.json",
+    "sha256": "43ac64e7ed1c8cdd2c1e8dc19bfecf27a38af5982fc30106f9c48b6378eeab99",
+    "ref": "rsraki/p016cpu-4482458c08f041f890e3da554049e3c3",
+    "saved_version": 1,
+    "kernel_id": 138006054,
+    "Save_calls_attempted": 1,
+    "quota_RPCs": 1,
+    "Input_metadata_RPCs": 1,
+    "fresh_available_GPU_seconds": "107531.917"
+  },
+  "actual_official_CLI_status_observation": {
+    "at_utc": "2026-10-10T09:25:57Z",
+    "chunk_id": "cb538e",
+    "exit_code": 0,
+    "status_text": "KernelWorkerStatus.COMPLETE",
+    "calls": 1,
+    "source_Input_and_actual_model_receipt_yet_verified": false
+  },
+  "source_and_metadata_proofs": {
+    "newsource_peer": {
+      "path": "artifacts/research/20261010-p016-direct224-onefactor-source-independent-review-v2/review.json",
+      "sha256": "1f6a9d1daec2b1f08d441b2c9fc24fe4c3899d56948225b148737dfb6fdd04d1"
+    },
+    "CPUbook_peer": {
+      "path": "artifacts/research/20261010-p016-CPU-diagnostic-source-independent-review-v1/review.json",
+      "sha256": "a5675c222c27d286dd8eaaaf4cda587e5579c331d7e2c9b6968a8f37139feaec"
+    },
+    "root_Save_precheck": {
+      "path": "artifacts/research/20261010-p016-direct224-CPU-root-v1/root-Save-precheck.json",
+      "sha256": "652e1f8ae33dff8449a3e7002158754809d05a1a56ed69c56e77c6388257a0c5"
+    },
+    "native_hidden_audit": {
+      "path": "artifacts/research/20261010-p014-hidden-rerun-source-independent-audit-v1/review.json",
+      "sha256": "55ccf0a79937242fea390f6c004873a77a3509f87e92d08eb88d646129038be2"
+    },
+    "native_unavailability_feasibility": {
+      "path": "artifacts/research/20261010-p014-native-zero-valid-source-feasibility-v1/report.json",
+      "sha256": "3b17095685a2b6e12ac251594bbb2c02abb9e756ef8e7fa484a2eb282512c6ef"
+    }
+  },
+  "source_scope": "CPU-only strict model1/factory1/forward0/MRI0/GPU0; public SWA V1 only; Original31481 private OFF; no competition dataset or submission",
+  "actual_new_CPU_reconstruction_qualified": false,
+  "actual_new_native64_256_Serving_qualified": false,
+  "competition_Submit_calls": 0,
+  "P014": "official explicitCOMPLETE plus hiddenrerun error, PublicNone; no retry",
+  "P015": "09:17:49Z rawstatus omitted/PublicNone/errorNone, score not returned",
+  "Regional": "fold1 E6 weakBCE .304757/AUC12 .848795; fold0 last root snapshotE4; latest exactpair independent metadata snapshot pending; both fixed12 continue",
+  "own_verified_Public": 0.951,
+  "strict_above0960_achieved": false,
+  "goal_continues": true,
+  "next": "Actual CPU output + savedsource/Input audit then genuine root phase acceptance; new P012-preserving native64 wrapper."
+}

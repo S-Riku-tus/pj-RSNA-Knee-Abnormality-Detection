@@ -1,0 +1,268 @@
+{
+  "schema_version": "p013_cleanup_repair_and_last2_runtime_root_progress_v1",
+  "at_utc": "2026-10-09T09:56:00.251065+00:00",
+  "own_Public_best": "0.950",
+  "target_intermediate": "0.955",
+  "goal_strict_above960": true,
+  "goal_achieved": false,
+  "approved_S5_snapshot_private_upload_already_completed": true,
+  "protected_notebooks_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/23_submit_p012_public951_v9_control.ipynb": "93be7f0ffa5f963ff2f9c0171ab2d8f31130717e3072803493c46a9e22d718f5",
+    "notebooks/public/24_submit_p012_public951_snapshot_control.ipynb": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee"
+  },
+  "accepted_official_submission_latest": {
+    "at_utc": "2026-10-09T09:53:23.082590+00:00",
+    "ref": "rsraki/p012-s5-v9-fixed-77784060724855c8",
+    "saved_version": 1,
+    "submission_ref": 56998356,
+    "official_get_requests": 1,
+    "Save_upload_Submit": 0,
+    "own_Public": null,
+    "strict_above960_achieved": false,
+    "actual_status": "NOT_EXPLICIT_YET",
+    "SDK_default_status": "PENDING",
+    "raw_status_field_omitted": true,
+    "error_description": null,
+    "hidden_scoring_complete": false,
+    "evidence": {
+      "path": "artifacts/research/20261009-f005-native-runtime-root-v1/public951-submission-observation-v11/observation.json",
+      "sha256": "8407479b1de6bc230a57529faf5c63d60fec67fc2f56f0bda9be2033c2c6386f"
+    }
+  },
+  "p013": {
+    "first_actual64_failed": {
+      "path": "artifacts/research/20261009-p013-structural-profile-root-v1/profile64-observation-v1/P013_PROFILE_FAILED.json",
+      "sha256": "e85a14ffa6c7a152b70d57672ada09c0a8dc0a3dbd5a71bae0fa115ba1a43a5c"
+    },
+    "old_failure_before_S5_guard_numeric_memory_unobserved": true,
+    "repair": "After finished consumers, complete dual-GPU observations and synchronization; clear persistent cuBLAS workspaces once; delegate original strict cleanup thresholds.",
+    "model_math_or_GPU_thresholds_changed": false,
+    "actual64_root_acceptance": {
+      "path": "artifacts/research/20261009-p013-structural-profile-root-v2/actual64-root-acceptance-v1.json",
+      "sha256": "e407f0cc865ae1b49cb0996f04a873b1e900c02e765ff69234b6672c39a3e21c"
+    },
+    "actual64_independent_review": {
+      "path": "artifacts/research/20261009-p013-structural-profile-root-v2/profile64-independent-review-v3.json",
+      "sha256": "057458c4d35455788815eedafb13c2fecd6d3d6630a48e612cb554169dbcd799"
+    },
+    "whole_seconds": 942.8961281776428,
+    "phases": {
+      "original_main": {
+        "elapsed_seconds": 104.61792072700001,
+        "sampled_peak_process_tree_rss_bytes": 12020379648,
+        "rss_note": "Sum of RSS includes shared pages more than once; sampled, not exact peak.",
+        "sampled_gpu_peak_used_mib": [
+          3363,
+          3363
+        ],
+        "gpu_note": "nvidia-smi device-wide sampled memory, includes unrelated allocations on that device.",
+        "samples": 190,
+        "disk_free_bytes_after": 20938473472
+      },
+      "Reader_pip_inference_original_fusion": {
+        "elapsed_seconds": 96.34425657600002,
+        "sampled_peak_process_tree_rss_bytes": 10480775168,
+        "rss_note": "Sum of RSS includes shared pages more than once; sampled, not exact peak.",
+        "sampled_gpu_peak_used_mib": [
+          8067,
+          1895
+        ],
+        "gpu_note": "nvidia-smi device-wide sampled memory, includes unrelated allocations on that device.",
+        "samples": 179,
+        "disk_free_bytes_after": 20906856448
+      },
+      "parent_cleanup_S5_assets_decode_inference_fixed20": {
+        "elapsed_seconds": 716.535133772,
+        "sampled_peak_process_tree_rss_bytes": 21476102144,
+        "rss_note": "Sum of RSS includes shared pages more than once; sampled, not exact peak.",
+        "sampled_gpu_peak_used_mib": [
+          10361,
+          10123
+        ],
+        "gpu_note": "nvidia-smi device-wide sampled memory, includes unrelated allocations on that device.",
+        "samples": 1289,
+        "disk_free_bytes_after": 20906856448
+      },
+      "whole": {
+        "elapsed_seconds": 942.09843697,
+        "sampled_peak_process_tree_rss_bytes": 21467058176,
+        "rss_note": "Sum of RSS includes shared pages more than once; sampled, not exact peak.",
+        "sampled_gpu_peak_used_mib": [
+          10361,
+          10123
+        ],
+        "gpu_note": "nvidia-smi device-wide sampled memory, includes unrelated allocations on that device.",
+        "samples": 1691,
+        "disk_free_bytes_after": 20906856448
+      }
+    },
+    "main_forwards": 128,
+    "Reader_forwards": 48,
+    "S5_studies": 64,
+    "S5_fallback": 0,
+    "Reader_selected_decode_counts": {
+      "load_series_calls": 384,
+      "raised_exception_calls": 0,
+      "zero_n_raw_calls": 0,
+      "n_bad_total_skipped_files": 0,
+      "n_bad_positive_calls": 0,
+      "returned_n_below3_calls": 0,
+      "normal_empty_slots": 0,
+      "normal_repeated_selected_series_calls": 83,
+      "naturally_short_series_calls": 0,
+      "unexpected_short_series_calls": 0
+    },
+    "actual_workspace_clear_allocated_each_gpu_bytes": [
+      9571328,
+      3072
+    ],
+    "actual_reserved_before_original_cleanup_each_gpu_bytes": 423624704,
+    "actual_after_original_cleanup_allocated_reserved_each_gpu_bytes": [
+      0,
+      0
+    ],
+    "actual_after_cleanup_free_each_gpu_bytes": 15490416640,
+    "old_V1_exact_failure_cause_proven": false,
+    "current_run_original_fusion_maxdiff": 0.0,
+    "current_run_baseline_seal_before_after_byte_identical": true,
+    "fixed_coefficients": [
+      0.8,
+      0.2
+    ],
+    "final_percentile_rerank": true,
+    "reconstructed_candidate_sha256": "919e7212762e813ba60b7779a21b09a61e0b2c3089dbd3567935b25c1c5ea492",
+    "cross_run_comparison": {
+      "path": "artifacts/research/20261009-p013-structural-profile-root-v2/profile64-root-compact-inspection-v1.json",
+      "sha256": "6413df14a0ca030df270cf3cdf72d15255168c84b6f470477a547defba348b47"
+    },
+    "cross_run_Reader_same_CoAt6_and_baseline10_rank_cells_changed": true,
+    "cross_run_raw_logit_math_accuracy_equivalence_unproven": true,
+    "input_inventory_registry_proof": {
+      "path": "artifacts/research/20261009-p013-structural-profile-root-v2/four-Input-inventories-complete-v1/review.json",
+      "sha256": "2e8b524798c923d46a51661abf048736e481852e20b0a9deece25a682f20d64f"
+    },
+    "actual256_Save_accepted": {
+      "schema_version": "p013_actual_private_structural256_Save_accepted_v1",
+      "at_utc": "2026-10-09T09:50:07.361602+00:00",
+      "ref": "rsraki/p013-s5-fixed20-profile256-clean-699e33966206a09c",
+      "saved_version": 1,
+      "kernel_id": 137854919,
+      "private_Save_accepted": true,
+      "official_Save_calls": 1,
+      "request_sha256": "c8cdca3eb1f640f38703f356ca1a0cfb5cc7f2076e333adc4f27ad59f6562c15",
+      "notebook_sha256": "95c0715c102b22dfb02636f63f37a7ec902259a06abb611f0dbea4ec08a7ad1f",
+      "fresh_available_GPU_seconds_from_raw": "58016.970",
+      "diagnostic_studies": 256,
+      "actual_run_complete": false,
+      "competition_Submit": 0,
+      "actual_resource_or_accuracy_qualified": false,
+      "own_Public": null,
+      "own_Public_best": "0.950",
+      "strict_above960_achieved": false,
+      "evidence": {
+        "path": "artifacts/research/20261009-p013-structural-profile-root256-v1/actual-profile256-Save-attempt-v1/receipt.json",
+        "sha256": "3a5f59d65d324714e1c8907803a71c65a9c8ca9a852d6c47cf46f409fe98888a"
+      }
+    },
+    "actual256_latest": {
+      "at_utc": "2026-10-09T09:52:29.799249+00:00",
+      "ref": "rsraki/p013-s5-fixed20-profile256-clean-699e33966206a09c",
+      "saved_version": 1,
+      "kernel_id": 137854919,
+      "actual_complete": false,
+      "competition_Submit": 0,
+      "API_Save_upload": 0,
+      "positive_body_GETs": 0,
+      "actual_resource_or_accuracy_qualified": false,
+      "raw_status": "RUNNING",
+      "typed_status": "RUNNING",
+      "evidence": {
+        "path": "artifacts/research/20261009-p013-structural-profile-root256-v1/profile256-observation-v1/observation.json",
+        "sha256": "a237866b2f82e17d1aa7e53ad3e5cbdc93fce16fddc5db631ab062fbac527044"
+      }
+    },
+    "serving_disabled_until_actual256_accepted": true,
+    "competition_Submit_for_p013": 0
+  },
+  "last2_fold0": {
+    "run_metadata_snapshot": {
+      "path": "artifacts/research/20261009-p013-cleanup-progress-record-v1/last2-run-metadata-snapshot.json",
+      "sha256": "de6548ff39360d3c0923457284b9b3bebdede5c57bef22f921ecbfe51b586386"
+    },
+    "status": "running",
+    "epochs_completed": 11,
+    "fixed_epochs": 12,
+    "latest": {
+      "epoch": 11,
+      "train_bce": 0.1646681081130079,
+      "weak_bce": 0.31126903214233176,
+      "weak_macro_auc_12": 0.877300139882068,
+      "optimizer_steps": 212,
+      "optimizer_step_opportunities": 212,
+      "amp_skipped_steps": 0,
+      "elapsed_seconds": 19315.19081670011,
+      "prediction_sha256": "50108245cd7343b95316d9ef80667eb81d556abb5b7ca776446ad41fe3c7e4ba",
+      "gpu_peak_reserved_bytes": 1163919360
+    },
+    "actual_optimizer_steps": 2332,
+    "AMP_skipped_steps": 0,
+    "interim_min_BCE_epoch": 8,
+    "interim_min_BCE": 0.27375829822323816,
+    "unfinished_checkpoint_stat_hash_load_or_select": false,
+    "conditions_or_selection_rule_changed": false,
+    "weak_metrics_are_not_Public": true,
+    "final_selected_checkpoint_actual_CPU_Kaggle_qualification": false
+  },
+  "independent_source_only_reviews": {
+    "last2_CPU_entry_V2": {
+      "path": "artifacts/research/20261009-f005-online-last2-CPU-entry-independent-review-v2/review-r2.json",
+      "sha256": "7e487abd78211c97fb0f2527613bfdbcd9dfee9c44e712607c50e0fd3fdb6a46",
+      "checks": 8,
+      "actual_runtime_qualification_transferred": false
+    },
+    "last2_real_sealer_V2": {
+      "path": "artifacts/research/20261009-f005-online-last2-diagnostic-adapter-independent-review-v2/review.json",
+      "sha256": "81997e3239f6a6aaa2c7362f2211a7595be7bba159f2124df6e317be3a0b8505",
+      "checks": 30,
+      "actual_runtime_qualification_transferred": false
+    },
+    "last2_transport_V1": {
+      "path": "artifacts/research/20261009-f005-online-last2-transport-wrapper-independent-review-v1/review.json",
+      "sha256": "fb242b7ea658249e24ce012e2beb79b1daac88e0600eede6627561952ad05199",
+      "checks": 27,
+      "actual_runtime_qualification_transferred": false
+    },
+    "last2_twofold_driver_V1_coreV2": {
+      "path": "artifacts/research/20261009-f005-online-last2-twofold-driver-independent-review-v1/review.json",
+      "sha256": "832064572007104d93ff08c4213487bbb084139ab9b2b32a1b75f122b0fd7cd3",
+      "checks": 38,
+      "actual_runtime_qualification_transferred": false
+    },
+    "p013_profile_V3": {
+      "path": "artifacts/research/20261009-p013-fixed-S5-structural-profile-independent-review-v3/review-r2.json",
+      "sha256": "dad7d8e825e513347d92847fb28f6d4d622a436ec955ad24172a4b207a3e7482",
+      "checks": 33,
+      "actual_runtime_qualification_transferred": false
+    },
+    "p013_serving_cleanup_V2_r2": {
+      "path": "artifacts/research/20261009-p013-fixed-S5-serving-cleanup-independent-review-v2/review.json",
+      "sha256": "f21429e7d3fc1ca9b9927303e64cbce1cab9fcad53569dbd2ef2e223f8cd79c8",
+      "checks": 33,
+      "actual_runtime_qualification_transferred": false
+    }
+  },
+  "external_pretrained_Gold_selection_and_prior_reuse_audit_separate": true,
+  "own_Gold_training_checkpoint_selection_or_new_ratio_search": 0,
+  "collector_repairs": [
+    "Keep failed metadata8page observation; positive output inventory has13 pages and compact allowlist22 bodies only.",
+    "Keep failed Input registry assumptions; Ortho contains837 filenames over9pages, one empty vendor __init__.py omits totalBytes.",
+    "Keep old compact schema20-only and old cross-run equality Hold; exact22 body bindings and CSV variation observations replace the assumptions without changing runtime or current-run math gates."
+  ],
+  "next": [
+    "Verify actual256 compact contracts before enabling the source-reviewed serving cleanup and visible submission candidate.",
+    "Observe exact official56998356 score; never duplicate a pending Submit.",
+    "After actual12 completion, paired frozen/last2 weak review, strict actualCPU reconstruction, new sealed Input/CPU64/256.",
+    "Run unchanged cachedFrozen/last2 fold1 comparison with new run directories."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "checked_at_utc": "2026-10-08T15:48:36.854503+00:00",
+  "status": "independent_source_only_artificial_throughput_review",
+  "source_sha256": "0e292b5287bc1849af0f8c0b331a47711b63df219f076a9360e451adf0176e92",
+  "checks": {
+    "CUDA_check_first_main_statement": true,
+    "four_chunks_both_arms_three_steady_one_warmup": true,
+    "decimal21GB_allocator_cap": true,
+    "original_configs_and_head_state_preserved": true,
+    "existing_generic_only_whitelist_hash_reuse": true,
+    "head_train_encoder_eval_finalnorm_frozen_checkpoint_true": true,
+    "full144_392_FP16_prefix_noGrad_checked": true,
+    "artificial_missing_teacher_NaN_loss_and_grad_invariance": true,
+    "effective16_denominator176_scaled_BCE_backward": true,
+    "no_optimizer_or_scaler_step_update_calls": true,
+    "all_trainable_grads_finite_suffix_nonzero_frozen_none": true,
+    "synchronized_forward_BCE_backward_only_timing": true,
+    "unchanged_encoder_head_and_prefix_after_no_optimizer": true,
+    "bounded_OOM_hold_no_retry_exclusive_artifacts": true,
+    "chunk_logit_difference_descriptive_not_accuracy": true
+  },
+  "checks_passed": 15,
+  "checks_total": 15,
+  "all_passed": true,
+  "GPU_tests_or_model_weights_MRI_teacher_API_HTTP_reads_by_reviewer": false,
+  "actual_throughput_results_independently_verified": false,
+  "limits": [
+    "Only source/config contracts audited. Parent/post agent owns the actual GPU execution and results.",
+    "One micro-study represents no real16-study optimizer group, unscaled gradient clipping, validation or I/O/H2D.",
+    "Decimal21GB cap covers Torch allocator only; device-wide peaks are not continuously sampled.",
+    "A faster synthetic chunk does not establish real sparse-window throughput, weak AUC or Public score improvement."
+  ],
+  "prior_review_kept": "experiments/f005-window-throughput-independent-source-review-20261009.json",
+  "review_correction": "Hash digest.update calls are not optimizer/scaler updates; AST detector now scopes the receiver name. No profiler source change."
+}

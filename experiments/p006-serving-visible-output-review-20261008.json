@@ -1,0 +1,114 @@
+{
+  "schema_version": "p006_saved_visible_output_review_v1",
+  "ref": "rsraki/p006-convnext-k24",
+  "saved_version": 1,
+  "official_visible_status": "COMPLETE",
+  "checks": [
+    {
+      "name": "official_COMPLETE",
+      "passed": true
+    },
+    {
+      "name": "three_reader_checkpoints",
+      "passed": true
+    },
+    {
+      "name": "reader_written",
+      "passed": true
+    },
+    {
+      "name": "fusion_success",
+      "passed": true
+    },
+    {
+      "name": "fusion_no_failure",
+      "passed": true
+    },
+    {
+      "name": "main_no_study_fallback",
+      "passed": true
+    },
+    {
+      "name": "executed_infer_source_equals_k24",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:columns",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:unique_rows",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:finite_range",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:nonconstant",
+      "passed": true
+    },
+    {
+      "name": "_own.csv:columns",
+      "passed": true
+    },
+    {
+      "name": "_own.csv:unique_rows",
+      "passed": true
+    },
+    {
+      "name": "_own.csv:finite_range",
+      "passed": true
+    },
+    {
+      "name": "_own.csv:nonconstant",
+      "passed": true
+    },
+    {
+      "name": "submission.csv:columns",
+      "passed": true
+    },
+    {
+      "name": "submission.csv:unique_rows",
+      "passed": true
+    },
+    {
+      "name": "submission.csv:finite_range",
+      "passed": true
+    },
+    {
+      "name": "submission.csv:nonconstant",
+      "passed": true
+    },
+    {
+      "name": "UID_order_all_branches",
+      "passed": true
+    },
+    {
+      "name": "visible_UIDs_match_scored_baseline",
+      "passed": true
+    },
+    {
+      "name": "independent_fixed_rank_formula",
+      "passed": true
+    }
+  ],
+  "passed": 22,
+  "rows": 3,
+  "UIDs": [
+    "1.2.826.0.1.3680043.8.498.10047035057544427318018579121635276191",
+    "1.2.826.0.1.3680043.8.498.10062861783145312629332250977456991776",
+    "1.2.826.0.1.3680043.8.498.10067514707072572280263481548497591402"
+  ],
+  "max_rank_formula_difference": 0.0,
+  "files_sha256": {
+    "_own.csv": "0c66efd46e58547806d16f1f2c09defc1b91503c385228cb07a73f95476f9576",
+    "_sota_0949.csv": "faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede",
+    "own_src/infer.py": "e7ef007962037128d3d2494ff0d21881a128d13ff467ee6f524285baca2bf024",
+    "submission.csv": "381253ef942b8f7da0488b13f9e6aabed6a9b660ae40e68b17533a9eba14b37b"
+  },
+  "own_public_lb": null,
+  "competition_submitted": false,
+  "remaining_submit_gate": "Completed256 diagnostic and fresh daily allowance; submit this same Version1 output only",
+  "limits": "Visible small dataset does not validate hidden runtime/AUC or full native decode coverage. Upstream optional fallback unchanged."
+}

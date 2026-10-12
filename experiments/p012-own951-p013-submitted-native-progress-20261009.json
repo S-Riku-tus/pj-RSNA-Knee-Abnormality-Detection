@@ -1,0 +1,246 @@
+{
+  "schema_version": "p012_own951_p013_submitted_native_progress_metadata_v1",
+  "recorded_at_utc": "2026-10-09T11:20:14.405432+00:00",
+  "all_passed": true,
+  "checks": {
+    "ownP012_officialCOMPLETE_explicit951_noerror_not_author_only": true,
+    "protected14_and_fixed24_25_book_SHA_unchanged": true,
+    "actualP013_peer20_visible_math_and_same_final_SHA": true,
+    "genuineP013_64_256_root_acceptances_and_actual37_bound": true,
+    "P013_actual_Submit1_accepted_same_visible_V1_Publicunknown": true,
+    "API4Inputs_reorder_only_source_all22_and_explicitFalse_causal_bound": true,
+    "new_online_native64_actual10_no_cached_qualification_reuse": true,
+    "new_native256_Save1_and_actualCOMPLETE10_same_bundle_notServing": true,
+    "live_fold1_snapshot_fixed_same_seed_source_no_interim_adoption": true,
+    "complete_frozen_fold1_independent19_kept_separate": true
+  },
+  "evidence": {
+    "p012_scored": {
+      "path": "artifacts/research/20261009-f005-native-runtime-root-v1/public951-submission-observation-v15/observation.json",
+      "sha256": "6566d820025709e557a5caf9c51ae78089728c41306fb60f2cba64b5353bfbf6"
+    },
+    "p013_submit": {
+      "path": "artifacts/research/20261009-p013-serving-fixed20-root-v1/actual-serving-Submit-attempt-v1/receipt.json",
+      "sha256": "f9d168852ac96f7ef4e49982a5e37d147c310719720bebed4e8ba3a5b025bde4"
+    },
+    "p013_pending": {
+      "path": "artifacts/research/20261009-p013-serving-fixed20-root-v1/submission-observation-v1/observation.json",
+      "sha256": "9bea44a3d254de9200ead6e50b8df01be0d8946a435bc0ea48131a50c464c252"
+    },
+    "p013_visible_peer20": {
+      "path": "artifacts/research/20261009-p013-serving-fixed20-root-v1/visible-independent-review-v1.json",
+      "sha256": "efc81342c90b9a7aa638130bd90ca590d432765b16cce2b3ec4c2e6f2d741a75"
+    },
+    "p013_root64": {
+      "path": "artifacts/research/20261009-p013-structural-profile-root-v2/actual64-root-acceptance-v1.json",
+      "sha256": "e407f0cc865ae1b49cb0996f04a873b1e900c02e765ff69234b6672c39a3e21c"
+    },
+    "p013_root256": {
+      "path": "artifacts/research/20261009-p013-structural-profile-root256-v1/actual256-root-acceptance-v1.json",
+      "sha256": "36d43b158fdff71b2a8932a75867b5d8c9031b153716cd876254afdef7c780a8"
+    },
+    "p013_actual256_peer37": {
+      "path": "artifacts/research/20261009-p013-structural-profile-root256-v1/profile256-independent-review-v1.json",
+      "sha256": "99b1a6a47d9f72f5b5a1c1ce821b3c9e1fd28866cf6c43261b49f9ca6dbfd3d5"
+    },
+    "p013_Input_reorder_cause": {
+      "path": "artifacts/research/20261009-p013-serving-results-tools-v2/observation-v1/saved-source-pre-gate-diagnostic.json",
+      "sha256": "a3068a8e05b582b755e176d9e3acd3685ca9a007a116b86195f0cf4f0abc1fb2"
+    },
+    "p013_collected_v3": {
+      "path": "artifacts/research/20261009-p013-serving-results-tools-v3/observation-v1/review.json",
+      "sha256": "23ef3d67026f58c9c01ad6538256a7897b4dbfc081fafa1c3d25e6c9a853fb62"
+    },
+    "native64": {
+      "path": "artifacts/research/20261009-f005-online-last2-GPU-results-tools-v1/native64-observation-v2/review.json",
+      "sha256": "0ef727dd52915f3d41c3fcb26d204ad66cc5bca4aa5474e7291ac0e1a9f64cbe"
+    },
+    "native64_receipt": {
+      "path": "artifacts/research/20261009-f005-online-last2-GPU-results-tools-v1/native64-observation-v2/F005_ONLINE_LAST2_DIAGNOSTIC_native64.json",
+      "sha256": "69eeb13cb2442347d935fa4ca6f9fe830f33d65f4da8b2178320c50ae54b0039"
+    },
+    "native256_Save": {
+      "path": "artifacts/research/20261009-f005-online-last2-runtime-root-v1/actual-native256-Save-attempt-v1/receipt.json",
+      "sha256": "ba357431d9569da30e2724e18a7907c64c5aca63210ce378a358b16c31df4f4f"
+    },
+    "native256_running": {
+      "path": "artifacts/research/20261009-f005-online-last2-GPU-results-tools-v1/native256-observation-v1/review.json",
+      "sha256": "9b7e8ccdaaee5bb2e4497461d43343a3decda88b344b0847130f4b19e7056916"
+    },
+    "native256_complete": {
+      "path": "artifacts/research/20261009-f005-online-last2-GPU-results-tools-v1/native256-observation-v2/review.json",
+      "sha256": "f25c0b3aa90736d2af5ad54aa7d9dba8ec28366db37be22f6787af7313581457"
+    },
+    "native256_receipt": {
+      "path": "artifacts/research/20261009-f005-online-last2-GPU-results-tools-v1/native256-observation-v2/F005_ONLINE_LAST2_DIAGNOSTIC_native256.json",
+      "sha256": "b567592db8fede4579b897deef6a5022b864bdb41a4a31bc006ddadfc6bb2661"
+    },
+    "fold0_pair": {
+      "path": "experiments/f005-cached-frozen-last2-fold0-review-20261009.json",
+      "sha256": "d042ae1db94eaa259e00ed530c0fb429913d49c1996ad9ec2f48487ad039782f"
+    },
+    "frozen_fold1_review": {
+      "path": "artifacts/research/20261009-f005-cached-frozen-fold1-complete-independent-review-v1/review.json",
+      "sha256": "1202e5afac2969ddbf8ca7cd6465da832e5bff9b95a3b7d1f7acbe5424899a62"
+    },
+    "last2_fold1_live": {
+      "path": "artifacts/runs/f005-native-last2-fast16-fold1-20261009-v1/run.json",
+      "sha256": "444d31f39920f5ebe9075887d5947113311b8333f4935efa6d086b061f0b7b68"
+    },
+    "control14": {
+      "path": "notebooks/public/14_submit_p005_public950_control.ipynb",
+      "sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546"
+    },
+    "scored24": {
+      "path": "notebooks/public/24_submit_p012_public951_snapshot_control.ipynb",
+      "sha256": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee"
+    },
+    "submitted25": {
+      "path": "notebooks/public/25_submit_p013_fixed20_cublas_control.ipynb",
+      "sha256": "d9a837599fa96e32e09d4e1c44f199e76af60e415ee3a5bd8521d2f363d9d14a"
+    }
+  },
+  "own_Public_best": "0.951",
+  "protected_p005_own_Public_control": "0.950",
+  "target_next": "0.955",
+  "target_final_strictly_above": "0.960",
+  "strict_above960_achieved": false,
+  "p012": {
+    "own_official_Public": "0.951",
+    "official_status": "COMPLETE",
+    "hidden_scoring_complete": true,
+    "saved_ref": "rsraki/p012-s5-v9-fixed-77784060724855c8",
+    "saved_version": 1,
+    "submission_ref": 56998356,
+    "observed_at_utc": "2026-10-09T11:08:56.868629+00:00",
+    "error_description": null,
+    "author_score_only_claim": false,
+    "scored_source24_sha256": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee",
+    "S5_original_source_and_fixed70_30_preserved": true,
+    "approved_private_snapshot_upload_completed_previously": true
+  },
+  "p013": {
+    "submitted_ref": "rsraki/p013-fixed20-cublas-control-ab8db36c2f2f6aa7",
+    "saved_version": 1,
+    "kernel_id": 137861867,
+    "submission_ref": 57006968,
+    "official_Submit_calls": 1,
+    "accepted_at_utc": "2026-10-09T11:13:32.898015+00:00",
+    "Public": null,
+    "hidden_complete": false,
+    "visible_peer_checks": 20,
+    "visible_studies": 3,
+    "visible_elapsed_seconds": 204.89715719223022,
+    "current_original_fusion_maxdiff": 0.0,
+    "candidate_byte_SHA": "1facac288e4b4e765e0f8b38560e99ff521863dd49c76a988aeae1ff87088add",
+    "fixed20_all12": true,
+    "fallbacks": 0,
+    "source25_sha256": "d9a837599fa96e32e09d4e1c44f199e76af60e415ee3a5bd8521d2f363d9d14a",
+    "actual256_checks": 37,
+    "actual256_whole_wall_seconds": 2979.6394262313843,
+    "actual64_and256_resource_contracts_root_accepted": true,
+    "scoring_observation": {
+      "at_utc": "2026-10-09T11:15:02.511618+00:00",
+      "ref": "rsraki/p013-fixed20-cublas-control-ab8db36c2f2f6aa7",
+      "saved_version": 1,
+      "submission_ref": 57006968,
+      "official_get_requests": 1,
+      "Save_upload_Submit": 0,
+      "own_Public": null,
+      "strict_above960_achieved": false,
+      "actual_status": "NOT_EXPLICIT_YET",
+      "SDK_default_status": "PENDING",
+      "raw_status_field_omitted": true,
+      "error_description": null,
+      "hidden_scoring_complete": false
+    },
+    "remaining_daily_allowance_before_Submit": 3,
+    "remaining_after_Submit_arithmetic_estimate": 2,
+    "remaining_after_Submit_fresh_verified": false,
+    "collector_bug": {
+      "V1_ordered_ref_compare_failed_before_status_and_body": true,
+      "V2_all22cells_and_environment_equal_proven": true,
+      "InternetFalse_raw_explicit_and_not_the_cause": true,
+      "actual_exact4refs_permuted_and_suffix_omitted": true,
+      "V3_same4unique_set_only_correction": true,
+      "prediction_Source_Save_or_model_changes": 0,
+      "V3_positive_HTTP_objects": 16,
+      "original_log_SHA_and_redacted_stored_SHA_separate": true
+    }
+  },
+  "online_last2": {
+    "selected_fold0_epoch": 8,
+    "fixed_fold0_epochs": 12,
+    "fold0_weak_BCE": 0.27375829822323816,
+    "fold0_weak_AUC12": 0.8771277163065415,
+    "native64_completed_at_utc": "2026-10-09T11:00:25.773502+00:00",
+    "native64_actual_checks": 10,
+    "native64_studies": 64,
+    "native64_array_SHA_count": 320,
+    "native64_elapsed_seconds": 177.67677081099998,
+    "native64_sampled_GPU_used_MiB": [
+      563,
+      563
+    ],
+    "native64_Torch_peak_reserved_bytes": [
+      448790528,
+      448790528
+    ],
+    "native64_actual12_finite_and_fallback0": true,
+    "old_cached_frozen_qualification_reused": false,
+    "native256_Save_accepted_at_utc": "2026-10-09T11:01:36.813534+00:00",
+    "native256_ref": "rsraki/n392l2diag-3a1b4ee97c9b48979c26f0d3c3d9ef54",
+    "native256_saved_version": 1,
+    "native256_kernel_id": 137863182,
+    "native256_observed_at_utc": "2026-10-09T11:16:41.458314+00:00",
+    "native256_raw_status": "COMPLETE",
+    "native256_body_GETs": 2,
+    "native256_actual_contract_passed": true,
+    "native256_actual_checks": 10,
+    "native256_studies": 256,
+    "native256_array_SHA_count": 1280,
+    "native256_elapsed_seconds": 701.20378942,
+    "native256_sampled_GPU_used_MiB": [
+      563,
+      563
+    ],
+    "native256_Torch_peak_reserved_bytes": [
+      448790528,
+      448790528
+    ],
+    "native256_actual12_finite_and_fallback0": true,
+    "native64_native256_aggregate_qualification_flag_in_root_tool": false,
+    "Serving_qualified": false,
+    "accuracy_qualified": false,
+    "Public": null,
+    "twofold_serving_driver_source_only": true,
+    "fold1_snapshot": {
+      "status": "running",
+      "completed_history_count": 1,
+      "snapshot_SHA": "444d31f39920f5ebe9075887d5947113311b8333f4935efa6d086b061f0b7b68",
+      "observed_at_utc": "2026-10-09T11:20:14.405432+00:00",
+      "snapshot_path": "artifacts/research/20261009-p012-p013-native-consolidated-record-v1/last2-fold1-live-snapshot.json",
+      "epoch1_weak_BCE": 0.368269232834703,
+      "epoch1_weak_AUC12": 0.7111889418852333,
+      "elapsed_seconds": 1744.362511400017,
+      "optimizer_steps": 208,
+      "AMP_skips": 0,
+      "fixed_epochs": 12,
+      "seed": 20261002,
+      "interim_adoption": false,
+      "train_studies": 3316,
+      "valid_studies": 891
+    }
+  },
+  "own_Gold_fit_or_selection_in_this_record": 0,
+  "API_GPU_model_MRI_teacher_prediction_or_fit_operations_by_recorder": 0,
+  "limits": [
+    "P012's own official951 is a scored outcome. P013 submission acceptance and visible tests do not imply hidden success or score.",
+    "Weak BCE/AUC is saved run metadata, not Public or Gold. No teacher, prediction, pixel or checkpoint payload is opened by this recorder.",
+    "Native64 and Native256 are this selected original-online fold0 model's actual diagnostics; earlier cached-frozen qualification is not transferred. Their individual contract gates pass; the root diagnostic tool's aggregate qualification flag remains false and Serving/twofold are unqualified.",
+    "Input reference set equality does not expose internal Dataset version IDs or all mounted weight bytes. Current runtime strict asset and input-array checks remain separate evidence.",
+    "Sampled memory is not an exact peak and RSS may double count shared pages. Hidden data size/codecs and whole hidden runtime remain unproven.",
+    "Live fold1 is an immutable captured snapshot. Conditions and source remain fixed; earliest weak-BCE checkpoint selection after fixed12 is not an interim adoption.",
+    "Patient independence is unverified. Public weights' upstream Gold/weak priors require their separate lineage audit."
+  ]
+}

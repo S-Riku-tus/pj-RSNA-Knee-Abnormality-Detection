@@ -1,0 +1,56 @@
+{
+  "checked_at_utc": "2026-10-08T12:32:54.523481+00:00",
+  "all_passed": true,
+  "checks": {
+    "protected14": true,
+    "immutable18a": true,
+    "all_preparation16checks_and9tests": true,
+    "package_sha_exact": true,
+    "plan_exact_fresh_structural_reconstruction": true,
+    "plan_file_hash_exact": true,
+    "code_zip_and_all10members_hash_exact": true,
+    "all24_sources_reconstructed_exact_clean_compile": true,
+    "4207_exactly_once": true,
+    "all4102wholegroups_preserved": true,
+    "no_gold_UID_or_group": true,
+    "175to176_studies24shards": true,
+    "fixed_preprocess_source_and_strict_budget": true,
+    "only_first_CPU_privateOFF_original_decoder2competition_job": true,
+    "prior_f005_source_and_v2_package_unchanged": true,
+    "no_real_pixel_label_fit_or_fullcache_in_preparation": true
+  },
+  "job": {
+    "index": 0,
+    "directory": "shard-01",
+    "notebook": "20a_export_native392_shard_01_of_24_v2.ipynb",
+    "notebook_sha256": "1e9379a1f77a5452e55e04b2f843adb699f9d4d0ae1481bcdd74b33846cbbfd0",
+    "kernel_ref": "rsraki/native392-cache-shard-01-of-24",
+    "title": "native392 cache shard 01 of 24",
+    "private": true,
+    "accelerator": "CPU",
+    "internet": false,
+    "docker_image_pinning_type": "original",
+    "docker_image": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+    "competition_sources": [
+      "rsna-knee-abnormality-detection"
+    ],
+    "dataset_sources": [
+      "rsraki/rsna-dicom-decoders-py313-v1/2"
+    ],
+    "kernel_sources": [],
+    "model_sources": [],
+    "competition_submission_forbidden": true
+  },
+  "package": "artifacts\\kaggle\\native392-full-shards-v2-20261008",
+  "package_sha256": "9a3ebe73a3d53f360c5216eb2e4a63214ececb9a39b09224fdfa23d1e55971c2",
+  "plan_sha256": "4c9b4a2f4f6c7a4acd50d809a67a95d60513e96ae360424f774ac3fc54bd3f60",
+  "evidence_sha256": {
+    "experiments\\native392-full-shards-preparation-validation-v2-20261008.json": "12ccdbfcd334182bad3f81abe82d1ec5f6f270924827b454625733218c882231",
+    "artifacts\\kaggle\\native392-full-shards-v2-20261008\\package.json": "9a3ebe73a3d53f360c5216eb2e4a63214ececb9a39b09224fdfa23d1e55971c2",
+    "artifacts\\kaggle\\native392-full-shards-v2-20261008\\plan.json": "12bc17f371997b20d1b1f85de83b8792a2e058ee409e08b0bff70aa50d7ff425",
+    "artifacts\\kaggle\\native392-full-shards-v2-20261008\\native392-code.zip": "1c75d7f330ce3188990e0839cb8080557cc045a70d497728c41598395acdbeb1"
+  },
+  "real_export_complete": false,
+  "full_cache_acquired": false,
+  "limits": "Only shard01 is planned for first actual CPU execution; no full-cache download or real label fit is performed by this review."
+}

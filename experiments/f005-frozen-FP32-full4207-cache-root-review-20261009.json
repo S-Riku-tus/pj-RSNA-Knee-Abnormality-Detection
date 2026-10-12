@@ -1,0 +1,159 @@
+{
+  "feature_cache_index_sha256": "61f97b4bed65f55632ffe20112188b78c51ba03c9355d2f8c894b38904d09c25",
+  "studies": 4207,
+  "arrays_verified": 21035,
+  "valid_windows": 386196,
+  "payload_bytes": 369782884,
+  "fingerprint": "6ff6c2acc2f532b210c7600de3b417c87c91f79721808e4d3e7322a866b47966",
+  "original_pixel_or_model_bodies_read": false,
+  "teacher_CSV_read": false,
+  "source_plan_sha256": "12bc17f371997b20d1b1f85de83b8792a2e058ee409e08b0bff70aa50d7ff425",
+  "pixel_index_sha256": "7d373ae85098758a8bc322b4e65079de07e998f7b7cd42a5a2d26cc4577eae31",
+  "equivalence_sha256": "62f04d8a9791dfba41568a5dcbb1ed4940726fe40c0b1b7040a1dbed82477038",
+  "producer_source_sha256": {
+    "cache_tools.py": "90c25788a937cd86dc0f45435341d50739f250144a17550bd75533a4dae433ee",
+    "extract_once.py": "b8f09b28bb28e0a58a21418b4f3816d98ff099283a2b1b578f0d18e36aef489b",
+    "train_cached.py": "c7815bf71e0a567718b38502bbdbab3907adb252991b60950a4e91e32ceb98d8",
+    "qualify_artificial.py": "7eecb04ecf0ec97dd38bfd3d4f362d7390375a0c1d27c449a0f6610e6d27779e"
+  },
+  "source_sha256": {
+    "native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+    "finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+  },
+  "qualified_frozen_prefix_sha256": "48475d2c7e18d683c60ab86fa005116d7c2f5effc5a5823122b2426d22d63657",
+  "initial_head_sha256": "675899de6885c37b3177bd11c5ff4681c327d47fdfa3a40cc0eb5ef5fe6191c7",
+  "summary_receipts": [
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-01\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "5a1aeef87119bcdca6edca0b4d04e1b792309b9176eaa95104436f6495856574"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-02\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "7093b35e690f551a15cfdf1aa9c3d7e737393fbee086df02fdbccc511055cca6"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-03\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "86753e4fc24307370e145d1b8e89ea7ac727c6bfaa75d7aaa7a8d14344ac4542"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-04\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "11bfc65479896ea9a625583667e81ba2282a3269ff58eaab0acaba206bd596d1"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-05\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "37bec55198957adb6dea4d0ef93ddfe6d449a7b52ccbe5639f15b49d0aac2b06"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-06\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "aa3d374f0aee5ea3db203e1ea8383f73da896e231ab565d1c2aee16f6bc7fd9d"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-07\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "05f11d7af7bc75e0968a5e37bb8b4f093d3415e47dd5ed7ff5fb8553bd78bf78"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-08\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "96ea5d3abf48068fe12f0022be55cfe1934aab1d4b80ce85878f558f34662813"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-09\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "a9a429a8f403eed000ab9888222ea7e9ed27634021d335e725e619badb11b8bc"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-10\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "b9a15d74a7fc7e08f754c483385c24a38fd9680f832aa54183d0ca3e2a3ddd99"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-11\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "0a4452ebc51439f47ebe377f758172726db1930953b38dea3601032b940ea1d3"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-12\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "47bdc7353fa6b6914faf4e4d3e6f6dea56faca798ab857e4b0a9f7f5726ba25b"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-13\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "8720a829d09e28dc21bce21d395775b86f457b4f30f2a05745d6958d6043d621"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-14\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "178d22de48bdb408d8f16e9c83fd89b8e7fabdeebd6b57d360a0376c4f5dfa27"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-15\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "a8d5e92805d8e1f8df8b646ec1dfd89b3eb8ddcf8a145b4703f5a4bf8a081850"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-16\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "dc052e9231a492909ca6c84dc945212da75c1896872d2917a38168264058ebd3"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-17\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "c08729f4f81e6d8a5c72df4abfc6354854230e31eec994387b5432fd645379a4"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-18\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "be98662f69b38193c7940c6dc5914989a57e0a946e683807d6bb201677eaa171"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-19\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "60292ef7025c08f0bf30c11820ff07e4ffa10173df93bdecb3bbcdb8a9c4a44e"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-20\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "965357d2e4dce01bcef6ddf6fecdd2e0483197afd05f5ea006d30cd7ca5f15a4"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-21\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "4e4513668053439f3a33dc6dfc089ee56dd852e28e6fc150a972484aa45e0d56"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-22\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "4669dce79776fa2621b74f4aa629db22c388c2fd6361d4f5f53475c7d26272d9"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-23\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "5b89fe28844187a94aa1fba6f39ec5cf8c2cdc6a354e18d27ef613271e73b7e1"
+    },
+    {
+      "path": "data\\native392\\v2-20261009\\shards\\shard-24\\NATIVE392_PIXEL_SHARD_SUMMARY.json",
+      "sha256": "c8e4a82917ef67bdc9f57a24d2664a807e495bae9e8085d8a39a429bcaf1c340"
+    }
+  ],
+  "real_fit": false,
+  "live_GPU_runtime_observed": false,
+  "candidate_gate_passed": false,
+  "schema_version": "f005_frozen_FP32_full4207_feature_cache_root_review_v1",
+  "complete": true,
+  "all_passed": true,
+  "future_fit_output": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\runs\\f005-native-frozen-cached-FP32-fast16-fold0-20261009-v1",
+  "future_fit_output_absent": true,
+  "fit_path_reserved": false,
+  "freshness_limit": "Observed immediately after QA; original trainer must still create its fresh run exclusively.",
+  "checks": {
+    "source_qualification_fullindex_and_plan_bound": true,
+    "all24_summaries_Gold_UID_and_group_exclusion": true,
+    "all4207_UID_filename_embeddedUID_pixel_member_bound": true,
+    "all21035_arrays_shape_dtype_finite_hash_and_padding": true,
+    "FP32_exact_original_FP16_boundary": true,
+    "complete_marker_partial_and_final_inventory": true,
+    "initial_head_and_frozen_prefix_bound": true,
+    "future_fit_path_absent_no_fit_or_GPU": true,
+    "protected_producer_config_and_notebooks_unchanged": true
+  },
+  "feature_cache_path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\data\\native392\\frozen-cls-FP32-fast16-20261009-v1",
+  "own_Gold_fit_or_selection": 0,
+  "formal_fit_ready": true,
+  "actual_CPU_full_feature_QA": true,
+  "acceptance_tool_source_sha256": {
+    "acceptance_tools.py": "926ca6d050a53b7e19d8841b2560940a266c9a9368e8a54df61d27e6f4d1e94c",
+    "accept_once.py": "aaa5d69d93dfecc17fe17359e198faa5a6022209f688cac1b82fac4d54ef868c",
+    "test_acceptance.py": "a176e62eaa094281c29e426bfa603ff63db8e31fca41b47658591011a31d59fc"
+  }
+}

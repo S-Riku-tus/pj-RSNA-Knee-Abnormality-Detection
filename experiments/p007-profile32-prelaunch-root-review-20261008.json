@@ -1,0 +1,32 @@
+{
+  "checked_at_utc": "2026-10-08T10:58:15.856345+00:00",
+  "checks": {
+    "baseline14_exact_SHA": true,
+    "corrected_candidate_exact_SHA": true,
+    "corrected_profile_exact_SHA": true,
+    "serving_only_cell8_changed": true,
+    "six_other_serving_code_cells_exact": true,
+    "all16_tests_passed_no_skips": true,
+    "direct_actual_run_caller_grad_enabled": true,
+    "direct_run_no_outer_wrapper": true,
+    "all12_direct_forwards_no_grad": true,
+    "old_unrun_v1_preserved": true,
+    "fixed32_gold_excluded_no_targets": true,
+    "same_p00632_UID_order": true,
+    "actual_run_no_grad_AST": true,
+    "actual_run_k16": true,
+    "only_one_extra_profile_helper": true,
+    "all_previous_profile_code_except_tail_exact": true,
+    "embedded_mirror_helper_current_source_exact": true,
+    "plain_embedded_reader_control_exact": true,
+    "mirror_embedded_reader_corrected_exact": true,
+    "profile_all_code_compiles_clean": true
+  },
+  "all_passed": true,
+  "profile_sha256": "6ac02f00e74005492a828a5e198e8c839ee336798b5e77b76bdaacb95150d2b1",
+  "candidate_sha256": "b207fb23a729a26c7c964d28401cef146ce76bb464b05fb6673718d8b70d2d93",
+  "private_resource_profile_launch_allowed": true,
+  "competition_submit_allowed": false,
+  "own_best_public": "0.950",
+  "accuracy_evaluated": false
+}

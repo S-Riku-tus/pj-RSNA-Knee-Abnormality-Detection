@@ -1,0 +1,51 @@
+{
+  "schema_version": "p009_serving_visible_independent_review_v1",
+  "reviewed_at_utc": "2026-10-08T13:35:12.365818+00:00",
+  "status": "visible_V1_FOV160_and_fixed_fusion_verified",
+  "saved_ref": "rsraki/p009-coat-fov160",
+  "saved_version": 1,
+  "kernel_id": 137675752,
+  "studies": 3,
+  "checks": {
+    "saved_binding31_all_passed": true,
+    "exact_ref_V1_kernel137675752": true,
+    "raw_actual_COMPLETE_no_failure": true,
+    "saved_source_hash_matches_binding": true,
+    "binding_response_bytes_revalidated": true,
+    "binding_review_bytes_exact": true,
+    "exact3_CSVs_downloaded_no_MRI_model_cache": true,
+    "three_CSV_bytes_SHA_exact": true,
+    "visible_log_bytes_SHA_exact": true,
+    "all_output_pagination_completed": true,
+    "13_columns_UID_order_finite": true,
+    "independent_fixed12_weights_rank_fusion_maxdiff0": true,
+    "reader_and_fused12targets_nonconstant": true,
+    "main_2GPU_and_reader3checkpoints_success_log": true,
+    "fusion_success_once_no_exception_fallback": true
+  },
+  "checks_passed": 15,
+  "checks_total": 15,
+  "independent_fixed_fusion_max_abs_difference": 0.0,
+  "own_best_Public": "0.950",
+  "p009_Public": null,
+  "accuracy_evaluated": false,
+  "hidden_rerun_completed": false,
+  "source_artifacts": {
+    "saved-binding-review.json": "2e9afe09d343bd529dc6892ff541f8bfd30a3f9c303d976c8da10db276a6b21a",
+    "saved-source-raw.json": "fe20710084a9e9b7ad077624abdaa3c56145019478709f08a335f0e38546a8ab",
+    "download-receipt.json": "f0ad8a0593a7c41385854b352643e885cfc13e0414e6d15ebde7f51f0ec58d3d",
+    "visible.log": "498681e69d8cfaf87af688049c73c3ad9f2e1f74aebcff9b99aa7efdd8c5234b",
+    "status.json": "d63e9e9202fb48b2ce6e817e685514e92dca1ed64c324b1dea4b377cbd433427",
+    "saved-source.json": "f9c5d0095587aade5fd9d504d7af48409a2ef2894ec3d72c9bcfcefc398a44dc",
+    "submission.csv": "5f2dd736c281a2e79cd5ea66b7171ed5a2c09651da209fdbe28363145215328e",
+    "_own.csv": "b76d419ef51716589104899d4e2ef82f11fa272215c7c0a744d690f880cccbeb",
+    "output-pages.json": "36f29f1c7f8a7915183ab3f5f058f6158fae38f20fdafb9a30ae3cfcc1f6fbe7",
+    "_sota_0949.csv": "7db15c04dce1869d6684dbfdd7e328c5eb55d4a8b9f1e1569d1cdb4f29517057"
+  },
+  "independent_math_helper_sha256": "f103012a1bf4f525925663718473e61aa5475d941369e9070302ba6860c53109",
+  "remote_calls_or_submission": false,
+  "limits": [
+    "ServingFOV160 follows exact bound source and stale-source/FOV assertions; individual main forwards/input arrays were not separately serialized. Profile32 provided instrumented main64 forwards per FOV with gradients disabled.",
+    "Visible success and finite rank fusion do not establish hidden completion or accuracy improvement. Dataset internal version IDs remain unobserved; accepted Input pins are recorded separately."
+  ]
+}

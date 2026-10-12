@@ -1,0 +1,523 @@
+{
+  "schema_version": "p009_profile32_compact_independent_review_v3",
+  "reviewed_at_utc": "2026-10-08T13:04:01.237007+00:00",
+  "status": "passed_real_label_free_FOV140_160_profile32",
+  "ref": "rsraki/p009-profile-32-fov140-fov160",
+  "saved_version": 2,
+  "official_visible_status": "COMPLETE",
+  "studies": 32,
+  "ordered_uid_sha256": "fb83b0b77b4539eb70b142cecc69c3cbc6a0ae4a8763381869078cc936b6fc07",
+  "checks": [
+    {
+      "name": "exact_saved_profileV2_ref",
+      "passed": true
+    },
+    {
+      "name": "saved_source_V2_ref_kernel_and_request_bound",
+      "passed": true
+    },
+    {
+      "name": "saved_all13cell_sources_and_accepted_JSON_bound",
+      "passed": true
+    },
+    {
+      "name": "saved_requested_OriginalT4_private_offline",
+      "passed": true
+    },
+    {
+      "name": "accepted_requested_unchanged_V1_V1_Datasetpins",
+      "passed": true
+    },
+    {
+      "name": "official_raw_and_typed_COMPLETE_no_failure",
+      "passed": true
+    },
+    {
+      "name": "full_pagination_enumerated",
+      "passed": true
+    },
+    {
+      "name": "final_submission_csv_absent_from_all_output_pages",
+      "passed": true
+    },
+    {
+      "name": "only6compact_files_or_optional_inference_downloaded",
+      "passed": true
+    },
+    {
+      "name": "no_agent_mutation_or_competition_submission",
+      "passed": true
+    },
+    {
+      "name": "download_SHA:P009_PROFILE_SUMMARY.json",
+      "passed": true
+    },
+    {
+      "name": "download_SHA:p009_fused_fov140.csv",
+      "passed": true
+    },
+    {
+      "name": "download_SHA:p009_fused_fov160.csv",
+      "passed": true
+    },
+    {
+      "name": "download_SHA:p009_main_fov140.csv",
+      "passed": true
+    },
+    {
+      "name": "download_SHA:p009_main_fov160.csv",
+      "passed": true
+    },
+    {
+      "name": "download_SHA:p009_reader_k16.csv",
+      "passed": true
+    },
+    {
+      "name": "visible_log_rawUTF8_SHA",
+      "passed": true
+    },
+    {
+      "name": "summary_v2_passed32_sameUID",
+      "passed": true
+    },
+    {
+      "name": "same_p006_p00732UID",
+      "passed": true
+    },
+    {
+      "name": "protected14_sourceSHA",
+      "passed": true
+    },
+    {
+      "name": "production19_sourceSHA",
+      "passed": true
+    },
+    {
+      "name": "corrected_profile_sourceSHA",
+      "passed": true
+    },
+    {
+      "name": "p006_helper_SHA",
+      "passed": true
+    },
+    {
+      "name": "p007_helper_SHA",
+      "passed": true
+    },
+    {
+      "name": "p009_helper_SHA",
+      "passed": true
+    },
+    {
+      "name": "no_Gold_Report_teacher_or_AUC",
+      "passed": true
+    },
+    {
+      "name": "real_Linuxfork_artificial3task_preflight_passed",
+      "passed": true
+    },
+    {
+      "name": "reader32UID13cols_finite_nonconstant",
+      "passed": true
+    },
+    {
+      "name": "readerCSV_originalSHA",
+      "passed": true
+    },
+    {
+      "name": "reader_all32_all6slots_valid_sameShape",
+      "passed": true
+    },
+    {
+      "name": "single_reader3models24forward_noGrad",
+      "passed": true
+    },
+    {
+      "name": "runtime_reader_complete_gates",
+      "passed": true
+    },
+    {
+      "name": "actual_observed_readerSHA",
+      "passed": true
+    },
+    {
+      "name": "140:actual_worker_FOV_sourceSHA64forward_masks_pickle",
+      "passed": true
+    },
+    {
+      "name": "140:prediction_sourceSHA_bound",
+      "passed": true
+    },
+    {
+      "name": "140:main_and_fused32UID13cols_finite_nonconstant",
+      "passed": true
+    },
+    {
+      "name": "140:original_main_and_fusedCSV_SHA",
+      "passed": true
+    },
+    {
+      "name": "140:independent_fixed_rank_fusion_maxdiff0",
+      "passed": true
+    },
+    {
+      "name": "140:same_readerCSV_SHA_reuse",
+      "passed": true
+    },
+    {
+      "name": "140:fusion_success_no_fallback",
+      "passed": true
+    },
+    {
+      "name": "140:reader_replay_only_second_once",
+      "passed": true
+    },
+    {
+      "name": "140:sampled_resources_T4_margin",
+      "passed": true
+    },
+    {
+      "name": "160:actual_worker_FOV_sourceSHA64forward_masks_pickle",
+      "passed": true
+    },
+    {
+      "name": "160:prediction_sourceSHA_bound",
+      "passed": true
+    },
+    {
+      "name": "160:main_and_fused32UID13cols_finite_nonconstant",
+      "passed": true
+    },
+    {
+      "name": "160:original_main_and_fusedCSV_SHA",
+      "passed": true
+    },
+    {
+      "name": "160:independent_fixed_rank_fusion_maxdiff0",
+      "passed": true
+    },
+    {
+      "name": "160:same_readerCSV_SHA_reuse",
+      "passed": true
+    },
+    {
+      "name": "160:fusion_success_no_fallback",
+      "passed": true
+    },
+    {
+      "name": "160:reader_replay_only_second_once",
+      "passed": true
+    },
+    {
+      "name": "160:sampled_resources_T4_margin",
+      "passed": true
+    },
+    {
+      "name": "FOV160_module_cache_source_switched_from140",
+      "passed": true
+    },
+    {
+      "name": "declared2main1reader2fusion",
+      "passed": true
+    },
+    {
+      "name": "reported_main_rank_deltas_match5CSVs",
+      "passed": true
+    },
+    {
+      "name": "reported_rank_correlation:ACL",
+      "passed": true
+    },
+    {
+      "name": "reported_rank_correlation:MCL",
+      "passed": true
+    },
+    {
+      "name": "reported_rank_correlation:Medial Meniscus",
+      "passed": true
+    },
+    {
+      "name": "reported_rank_correlation:Lateral Meniscus",
+      "passed": true
+    },
+    {
+      "name": "reported_rank_correlation:Medial OA",
+      "passed": true
+    },
+    {
+      "name": "reported_rank_correlation:Lateral OA",
+      "passed": true
+    },
+    {
+      "name": "reported_rank_correlation:PF OA",
+      "passed": true
+    },
+    {
+      "name": "reported_rank_correlation:Effusion",
+      "passed": true
+    },
+    {
+      "name": "reported_rank_correlation:Synovitis",
+      "passed": true
+    },
+    {
+      "name": "reported_rank_correlation:Baker's",
+      "passed": true
+    },
+    {
+      "name": "reported_rank_correlation:Contusion",
+      "passed": true
+    },
+    {
+      "name": "reported_rank_correlation:Fracture",
+      "passed": true
+    },
+    {
+      "name": "reported_mask_count_deltas",
+      "passed": true
+    },
+    {
+      "name": "summary_final_submission_deleted",
+      "passed": true
+    },
+    {
+      "name": "visible_main_wrote32rows13cols_twice",
+      "passed": true
+    },
+    {
+      "name": "reader_observed_source_exact_single_original_CLI_print",
+      "passed": true
+    },
+    {
+      "name": "reader_write_messages_in_real_inference_phase_only_actual24forwards_replay1",
+      "passed": true
+    },
+    {
+      "name": "visible2fusionSUCCESS_noEXCEPTION_FALLBACK_or_PicklingError",
+      "passed": true
+    }
+  ],
+  "checks_passed": 72,
+  "checks_total": 72,
+  "independent_fixed_fusion_max_abs_diff": {
+    "140": 0.0,
+    "160": 0.0
+  },
+  "actual_main_inference": {
+    "140": {
+      "FOV_mm": 140,
+      "workers": 4,
+      "pairs": 32,
+      "forwards": 64,
+      "all_forward_grad_enabled": false,
+      "actual_builder_source_sha256": "5a59b6f82e846bcdfd452aaee6ff518cdd9d0b04aab03691b45c3f70a5198cb0",
+      "pickle_identity_passed_registered_module_removed": true
+    },
+    "160": {
+      "FOV_mm": 160,
+      "workers": 4,
+      "pairs": 32,
+      "forwards": 64,
+      "all_forward_grad_enabled": false,
+      "actual_builder_source_sha256": "a40f4c4ec1704a35910973d7edc0c4b8f0649978e48758e753062750317ca6a7",
+      "pickle_identity_passed_registered_module_removed": true
+    }
+  },
+  "actual_reader_inference": {
+    "models": 3,
+    "views": 1,
+    "batches": 8,
+    "model_calls": 24,
+    "mirror_calls": 0,
+    "load_grad_enabled": false,
+    "all_forward_grad_enabled": false,
+    "all_batch4_all6slots_exercised": true
+  },
+  "reader_log_contract": {
+    "visible_reader_write_message_counts_by_fusion": [
+      2,
+      0
+    ],
+    "real_model_calls": 24,
+    "real_models": 3,
+    "real_views": 1,
+    "actual_reader_inference_executions": 1,
+    "second_fusion_CSV_replay_calls": 1,
+    "interpretation": "Visible messages are not independent inference counters. Actual24 forwards/3 models, fresh runtime observer, fixed one-call CLI source and one exact CSV replay establish the execution count."
+  },
+  "reader_source_contract": {
+    "observed_runtime_reader_sha256": "4967fa1cbfe8bad6a7331c588b2cccd0350ac7bd5982b27669612e63ec48cd76",
+    "original_reader_CLI_write_print_count": 1
+  },
+  "artificial_fork_transport": {
+    "context": "fork",
+    "workers": 1,
+    "artificial_tasks": 3,
+    "task_roundtrip_passed": true,
+    "registered_module_removed": true,
+    "MRI_model_labels_or_GPU_consumed": false
+  },
+  "resources": {
+    "main140": {
+      "elapsed_seconds": 65.07836869299999,
+      "sampled_peak_process_tree_rss_bytes": 10341969920,
+      "sampled_gpu_peak_used_mib": [
+        3363,
+        3763
+      ],
+      "samples": 119,
+      "disk_free_bytes_after": 20939583488
+    },
+    "fusion140": {
+      "elapsed_seconds": 61.091108504999966,
+      "sampled_peak_process_tree_rss_bytes": 9914093568,
+      "sampled_gpu_peak_used_mib": [
+        8067,
+        543
+      ],
+      "samples": 114,
+      "disk_free_bytes_after": 20939370496
+    },
+    "main160": {
+      "elapsed_seconds": 52.96174695799999,
+      "sampled_peak_process_tree_rss_bytes": 14503161856,
+      "sampled_gpu_peak_used_mib": [
+        3319,
+        3319
+      ],
+      "samples": 89,
+      "disk_free_bytes_after": 20939337728
+    },
+    "fusion160": {
+      "elapsed_seconds": 1.0550682019999726,
+      "sampled_peak_process_tree_rss_bytes": 2957852672,
+      "sampled_gpu_peak_used_mib": [
+        543,
+        543
+      ],
+      "samples": 3,
+      "disk_free_bytes_after": 20939329536
+    }
+  },
+  "comparison": {
+    "max_main_rank_delta": 0.29032260000000004,
+    "mean_absolute_main_rank_delta": 0.03914650542708333,
+    "per_target_main_rank_correlation": {
+      "ACL": 0.9604105571847507,
+      "MCL": 0.9765395894428152,
+      "Medial Meniscus": 0.9809384164222872,
+      "Lateral Meniscus": 0.9541788856304986,
+      "Medial OA": 0.9758064516129032,
+      "Lateral OA": 0.9853372434017593,
+      "PF OA": 0.9824046920821112,
+      "Effusion": 0.9886363636363635,
+      "Synovitis": 0.9783724340175952,
+      "Baker's": 0.9849706744868034,
+      "Contusion": 0.9813049853372433,
+      "Fracture": 0.9802052785923753
+    },
+    "valid_slice_count_differences": {
+      "1.2.826.0.1.3680043.8.498.11043543420859531726426521315399258528": 0,
+      "1.2.826.0.1.3680043.8.498.83376388091077619281568190257019735638": 0,
+      "1.2.826.0.1.3680043.8.498.25604547074218147115077644853162295379": 0,
+      "1.2.826.0.1.3680043.8.498.38039631093067555454700266397073080430": 0,
+      "1.2.826.0.1.3680043.8.498.99413398303724030328059886749330413303": 0,
+      "1.2.826.0.1.3680043.8.498.95091624999382167943525022414631622532": 0,
+      "1.2.826.0.1.3680043.8.498.11958117172819754862618612170999909480": 0,
+      "1.2.826.0.1.3680043.8.498.53901077733518036755308692304268815965": 0,
+      "1.2.826.0.1.3680043.8.498.22263857526032448247006468310072414129": 0,
+      "1.2.826.0.1.3680043.8.498.13273890409523605456488117581706115075": 0,
+      "1.2.826.0.1.3680043.8.498.37519350121906786941281770770693979271": 0,
+      "1.2.826.0.1.3680043.8.498.77150650601457686196626648868552167695": 0,
+      "1.2.826.0.1.3680043.8.498.14495028403937132710814780922642512791": 0,
+      "1.2.826.0.1.3680043.8.498.93230313557251171119475173996942942855": 0,
+      "1.2.826.0.1.3680043.8.498.10351168527688244230248760520733020605": 0,
+      "1.2.826.0.1.3680043.8.498.33479806419966566464727310013949313521": 0,
+      "1.2.826.0.1.3680043.8.498.11863890747360341056211511874563792862": 0,
+      "1.2.826.0.1.3680043.8.498.11651755040149549966484720727140190853": 0,
+      "1.2.826.0.1.3680043.8.498.10855290714402117092990651362697310270": 0,
+      "1.2.826.0.1.3680043.8.498.15297444019822621504849851092382560980": 0,
+      "1.2.826.0.1.3680043.8.498.65356758967883114612797250487949537460": 0,
+      "1.2.826.0.1.3680043.8.498.81462603621780919719466264356289554669": 0,
+      "1.2.826.0.1.3680043.8.498.41939824564209194493855981805593285528": 0,
+      "1.2.826.0.1.3680043.8.498.66510565421813721258189101326477318907": 0,
+      "1.2.826.0.1.3680043.8.498.90223492515368389331845681759355261030": 0,
+      "1.2.826.0.1.3680043.8.498.96944926470854551064948200936284887742": 0,
+      "1.2.826.0.1.3680043.8.498.80247974926646352443043954025450139721": 0,
+      "1.2.826.0.1.3680043.8.498.57342523828166309133982222435655662667": 0,
+      "1.2.826.0.1.3680043.8.498.63204735160524958513470115761010950181": 0,
+      "1.2.826.0.1.3680043.8.498.11432815311029789072253610823554308183": 0,
+      "1.2.826.0.1.3680043.8.498.98824066826946884510314135448574304233": 0,
+      "1.2.826.0.1.3680043.8.498.42486421970612099441197418307958561877": 0
+    },
+    "main_coat_executions": 2,
+    "reader_convnext_executions": 1,
+    "reader_k_fixed": 16,
+    "fusion_executions": 2,
+    "second_fusion_reader_csv_replayed_once": true,
+    "accuracy_evaluated": false,
+    "note": "Label-free prediction differences do not establish AUC improvement. Public weights are fullfit."
+  },
+  "all6slots_batch4_exercised": true,
+  "sampled_gpu_peak_mib": {
+    "main140": [
+      3363,
+      3763
+    ],
+    "fusion140": [
+      8067,
+      543
+    ],
+    "main160": [
+      3319,
+      3319
+    ],
+    "fusion160": [
+      543,
+      543
+    ]
+  },
+  "final_diagnostic_submission_deleted": true,
+  "accuracy_evaluated": false,
+  "own_public_lb": null,
+  "root_serving_gate": {
+    "profile32_gate_passed_serving_trial_eligible": true,
+    "launch_candidate": "19 CoAtFOV160/readerk16 original fixed fusion, SHA 35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+    "before_competition_submission": [
+      "Root must independently bind exact19 saved source, dynamic test UID, originalmodel weights/pins/OriginalT4offline.",
+      "Serving official COMPLETE, every UID13colsfinite/nonconstant, visible main/reader/fusion success without fallback, same fixedfusion.",
+      "Root chooses whether to use the remaining submission allocation after other candidate scores; this profile is not submitted.",
+      "Only complete competition scoring establishes accuracy gain; the physicalFOV160 scale shift remains an unmeasured hypothesis."
+    ],
+    "serving_launched_or_competition_submitted_by_this_agent": false
+  },
+  "limits": [
+    "The raw subprocess stream displayed the real reader write twice inside the first fusion. The duplication mechanism was not isolated; message multiplicity is not used to count executions. Runtime source has one CLI print, actualmodelhooks24/3 and cachedCSVreplay1 remain mandatory.",
+    "32 weak-training studies are label-free resource/contract tests and are not independent OOF of publicfullfit models.",
+    "Valid masks do not establish every native DICOM decode without skip; hiddenruntime remains unproved.",
+    "Finitehooks synchronizeCUDA; FOV140 precedes160; cache/install effects limit timing comparisons.",
+    "RSS can double-count shared pages and sampledGPU memory is device-wide."
+  ],
+  "artifacts": {
+    "artifacts/research/20261008-p009-profile32-results-v2/P009_PROFILE_SUMMARY.json": "36c52d3ce133b03705d336d392f92a3442f579664f866afaeaf7886b2361279e",
+    "artifacts/research/20261008-p009-profile32-results-v2/download-receipt.json": "8e48c467d01ceb9e3049c864e4b91ece328db13c0b342224cb7b9bc229a7996d",
+    "artifacts/research/20261008-p009-profile32-results-v2/official-status.json": "ef98c3a4fae83e2cbfd4941a6cf644108fb0d7663627ed0366d77697dfe828b2",
+    "artifacts/research/20261008-p009-profile32-results-v2/saved-source.json": "9f572c218cac61126e6ccdc3a2f608a87e61f321a07d8ec7145b27d97766ffe9",
+    "artifacts/research/20261008-p009-profile32-launch-v2/save-response.json": "786642d64ed3236badc8b9237b00bb6d2dddb74214607421c01b115b3a46acd2",
+    "artifacts/research/20261008-p009-profile32-launch-v2/launch-request.json": "e8a5a935f9f192ed1909e4c0de5b7e423a146f2b8f4a299b973153906a41f909",
+    "artifacts/research/20261008-p009-profile32-results-v2/visible.log": "8db48d90c6a11b39786a1e5b146ecc135c60e8264de7fab8aeb1a6c79617be4d",
+    "experiments/p009-profile32-preparation-v2-20261008.json": "6c424b0fc0fff95a8392c7f9790f5d03ca7cbdfab5ef73aa04732e609cd6aece",
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/19_submit_p009_coat_fov160.ipynb": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+    "notebooks/public/19a_profile_p009_fov140_fov160_32.ipynb": "57679651c3cc8c670c126465ee2e09135bea7d4bb8bab703d345ea43ef20ed0a",
+    "artifacts/research/20261008-p009-profile32-results-v2/verify_results_v3.py": "3e1275d80db50fb37f62f6ae326c8cfc3ef3b4ac901ea2ced1e8bf854fe49a31",
+    "artifacts/research/20261008-p009-profile32-results-v2/download_results.py": "cb7b0a77aa8f6619364e0798db0b2bdd44d9bcbbdf76ecc82cd165af35ee1351",
+    "artifacts/research/20261008-p009-profile32-results-v2/verify_results.py": "3b5eac8df1fdf6a1fdb9a72f01f5d6f7baa43f72681e71ebc1e4f46b823c9a08",
+    "artifacts/research/20261008-p009-profile32-results-v2/p009_fused_fov140.csv": "a3920ee376bdad1d3fc1c5a3c87c1f8400105331d218f9bf6f71cf620feca2b8",
+    "artifacts/research/20261008-p009-profile32-results-v2/p009_fused_fov160.csv": "f9fda818662aff851cda104a7b2b2c068d91c37dfdb12b2a448122239e11c82d",
+    "artifacts/research/20261008-p009-profile32-results-v2/p009_main_fov140.csv": "2b311ea9e7f7a694a773d20c2c116ca0a8f8bbf93e69c4fcd7ab786b85952ac8",
+    "artifacts/research/20261008-p009-profile32-results-v2/p009_main_fov160.csv": "00fff9040bb49c6bb7fb6073354314b06b6cb511dd414317ad2caf369a6cb926",
+    "artifacts/research/20261008-p009-profile32-results-v2/p009_reader_k16.csv": "6ab2ce6a6ee68e47dcd886bc008b83efc3fc393e2d94fd51a57fab2b7873a549"
+  },
+  "MRI_weights_individual_coverage_remote_mutation_or_submission_by_agent": false
+}

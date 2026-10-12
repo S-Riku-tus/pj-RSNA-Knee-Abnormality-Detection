@@ -1,0 +1,93 @@
+{
+  "checked_at_utc": "2026-10-08T13:25:16.962111+00:00",
+  "status": "v4_prepared_fifteen_offline_tests_passed_actual_HEAD_hold_no_body_download",
+  "ref": "rsraki/native392-cache-shard-01-of-24",
+  "saved_version": 1,
+  "kernel_id": 137670873,
+  "tools_folder": "artifacts/research/20261008-native392-shard01-results-v4",
+  "source_sha256": {
+    "compact_tools.py": "1a3080dafd08d49f7f5ad7d6ca3cbd4b6e4394e425030bc303828c33ae811ef0",
+    "get_once.py": "e410b3596a923e7ca9c271300c5e47f64989b2e08ff545f646a6d36982ad4667",
+    "verify_summary.py": "8afadabd205b6d53e4a42578dbe7dc3fa340f867a46032b6857c7a32cc99a490",
+    "test_compact_tools.py": "0bf80f1f915680f3d6db69004195c3354cd74f5eea9c80057912a6be89ee0c97",
+    "head_once.py": "4f3eee4617c1e3a9c7859563ba0ec8734887b097b7a290bff156c352a763aefa"
+  },
+  "accepted_launch_response_sha256": "0f59f3b54ce0dbee085ddc23155ed454045cd3f6f7949a61f136937e4bb1d111",
+  "accepted_launch_request_sha256": "52fb5e3ee878318fbf1eaed09db057b03f652c428b09ba63dd3752b8d7a529a8",
+  "package_sha256": "9a3ebe73a3d53f360c5216eb2e4a63214ececb9a39b09224fdfa23d1e55971c2",
+  "normalized_notebook_sha256": "60be60c7410878a718c678d94f2ac3002f02826747f93cefdcfaf7479ef6ff26",
+  "artificial_tests_passed": 15,
+  "unittest_command": ".venv/Scripts/python.exe -m unittest discover -s artifacts/research/20261008-native392-shard01-results-v4 -p test_compact_tools.py -v",
+  "ruff_passed": true,
+  "artificial_contracts": [
+    "one status RPC plus all3 pages of both output/size metadata; exact summary-only HTTP",
+    "raw absent status with typed QUEUED never downloads summary and never claims worker activity",
+    "repeated pagination token fails before any HTTP download",
+    "entire Notebook metadata or raw environment drift prevents summary HTTP",
+    "HTTPS and streamed/declared4MB bounds; failed responses close",
+    "176 structural summary fixture; partial/UID/source/time/archive/QC/decoder/resource drift and unexpected positive output allowlist entries fail",
+    "actual saved ApiGetKernelResponse wrapper metadata plus blob.source; raw CPU/OFF/private fields retained",
+    "missing/legacy/wrong-type/empty/invalid JSON/nonNotebook/language/slug wrappers raise ValueError before summary HTTP",
+    "malformed cell source is rejected before output listing or summary HTTP",
+    "actual21 output names vs basename-only ListKernelFiles metadata map by a unique full-inventory bijection",
+    "basename collision, foreign path, missing output and post-map duplicate fail closed",
+    "ListKernelFiles sizes preserved but explicitly not byte proof; two actual HEAD lengths plus summary stream bytes/archive receipt required",
+    "HEAD unavailable/Content-Length absent/status failure/redirect cap/byte cap hold with closed responses and body0",
+    "HEAD transport error receipts preserve safe status/host/urlSHA/length and omit signed URL text"
+  ],
+  "actual_stored_response_fixtures_sha256": {
+    "saved-source.json": "319068362bb6b4c17a8f58038f21ea3218212582c2a5f71b78447a63e1792c8b",
+    "saved-source-raw.json": "b44dc2a33848e91f5798ffdcd09c0d923455543a46291649bdca2b1115dcf650"
+  },
+  "repair": {
+    "classification": "read-only download client defect; no evidence of an export job failure",
+    "observed_exception": "COMPLETE output inventory is outside the fixed positive allowlist due to unequal full paths vs basename keys",
+    "incorrect_assumption": "ListKernelFiles.name contains the same full relative paths as ListKernelSessionOutput.file_name and size proves artifact bytes",
+    "official_response_contract": "ApiListKernelFilesItem only name/size/creation_date; ApiKernelSessionOutputFile file_name/url. Actual21 keys map through unique basename bijection. GetKernel metadata/blob.source repair retained.",
+    "fallback_to_legacy_source_location": false,
+    "old_six_test_scope": "Artificial metadata.source fixture tested pagination/limits but did not validate actual official SDK wrapper; superseded by actual saved response fixtures and independent SDK roundtrip tests.",
+    "previous_root_observation_raw_status": {
+      "status": "COMPLETE"
+    },
+    "previous_root_observation_typed_status": {
+      "status": "COMPLETE",
+      "failureMessage": null
+    },
+    "previous_root_observation_checked_at_utc": "2026-10-08T13:10:51.870921+00:00",
+    "previous_observation_and_tools_preserved": true,
+    "previous_tools_and_observation_sha256": {
+      "compact_tools.py": "c1e26e550e629cb401e159fb3f01f64b67f43bf893794670f87c2b1e5cb6efd2",
+      "get_once.py": "738c6d3f0e0e0945bd61da0fdbe01d02b2b04aa0222696d876e84eaf8a8c9f9e",
+      "verify_summary.py": "3b2c9ad35cff87530b6f5bd8b629450bb9b8b690db60ec6884be0078e9b9ad2f",
+      "test_compact_tools.py": "d4b42219da7d462eed7e9575896ebe994b75c6d0a1738b2321c76732e172e36c",
+      "observation-v1/read-start.json": "cf4a97bf544c96fa263178c56b4662ee4844feefdc950211747a8e3310acd239",
+      "observation-v1/official-status.json": "4d5c432a66d156fc3acaa5f3e8e0686cdeff3efa0965c074e1da7260ca87b9e9",
+      "observation-v1/saved-metadata.json": "97c5e81cb7369c1b950ca5bff8e640147d6a18d9a21e44d8282c9092348ef797",
+      "observation-v1/saved-binding-review.json": "c2dbed66f34a824c1f09994bf60dd7cdc380efbcf926a37ff3cd3ab17c485355",
+      "observation-v1/visible-output-metadata.json": "070c915192660fa73093398c1daac291fae23b3bd54c21777e4c4531efb21b97",
+      "observation-v1/visible.log": "db64d91ebc685cf1765a28f3cff6c040522db3b0628fac50841c615e5877a531"
+    },
+    "export_job_rerun_required_by_repair": false
+  },
+  "positive_output_allowlist": "exact final summary/ZIP plus embedded10 code/plan files and corresponding Python313 pyc only",
+  "actual_remote_status_read_by_agent": false,
+  "actual_exactV1_session_output_refreshed_once_by_agent": true,
+  "actual_HEAD_summary_attempts": 1,
+  "actual_HEAD_archive_attempts": 0,
+  "actual_HEAD_byte_metadata_verified": false,
+  "actual_HEAD_hold_reason": "ValueError; initial safe hold receipt recorded only exception type. Actual failure status/content-length unknown, no guessing. Failure receipt logic now improved locally; no additional network retry.",
+  "actual_HEAD_observation_sha256": {
+    "read-start.json": "8bb2d8373f9d498a4596734340509dcf0424acdc3d509f0c1c9e6c9b840164a8",
+    "visible-output-metadata.json": "44e759d1a47ea919114e95fb857587155fd296862b87e6042f2f148c23c2753c",
+    "HEAD-held.json": "787d1ffc98f4517290dc05b5934c7f83dabb71ab3e5ee85a9052e6d39932e106"
+  },
+  "actual_output_downloaded": false,
+  "archive_downloaded": false,
+  "MRI_model_weights_downloaded": false,
+  "real_teacher_read": false,
+  "real_fit": false,
+  "remote_mutation": false,
+  "actual_NPZ_or_outerZIP_QC": false,
+  "public_score": null,
+  "scope": "Actual previously fetched COMPLETE exactV1 source and21 outputs agree; explicit root-authorized SessionOutput refresh plus one SUMMARY HEAD held, no body GET. Offline15 tests prepare bijective remapping and byte metadata gates. Actual176 NPZ bytes/outerZIP SHA remain unverified; remaining23 launches hold without summary/cache quality evidence."
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "p011_single_submission_status_getter_local_preparation_v1",
+  "all_passed": true,
+  "checks": {
+    "actual_ref56986152_raw_typed_acceptance_receipts_SHA_bind5checks": true,
+    "exactcompetition_kernel137784585_savedV1_source_CSV_linked_prior_RPC": true,
+    "old14_22V3_source17_visible12_33_and25624_47_immutable_proofs_bound": true,
+    "GetSubmission_actual_request_ref_only_and_response_ApiSubmission": true,
+    "fresh_explicit_observation_directory_intent_exclusive_reuse_rejected": true,
+    "only_one_progress_RPC_no_source_log_payload_or_new_submit": true,
+    "missing_rawstatus_UNKNOWN_typedPENDING_default_no_worker_claim": true,
+    "missing_defaultzero_nonfinite_or_nonCOMPLETE_Public_not_evaluated": true,
+    "explicit_COMPLETE_positivefinite_score_and_noError_only_scored": true,
+    "Decimal_strictgreater0960_exact_threshold_0960_notachieved": true,
+    "ERROR_presence_safeclassification_hash_URLdigest_only_no_credentials": true,
+    "actualSDK_two_focused_CPUfixtures_and_Ruff_passed": true,
+    "default_readiness_auth_API_HTTP0_passed": true,
+    "child_API_auth_GPU_fit_MRI_models_and_actualscore_observations0": true
+  },
+  "actual_submitted_binding": {
+    "all_passed": true,
+    "checks": {
+      "accepted_positive_submission_ref_raw_typed_and_local_identity": true,
+      "accepted_same_competition_serving_kernel_savedV1_csv": true,
+      "actual_single_CodeSubmit_no_retry_and_freshallowance5": true,
+      "all_actual_source17_visible_root12_peer33_and25624_47_evidence_bound": true,
+      "actual_requested_output_current_SHA_and_source_protection_bound": true
+    },
+    "submission_ref": 56986152,
+    "notebook_ref": "rsraki/p011srv-8105f0434cc183692525c2dd8ccdc9eb",
+    "kernel_id": 137784585,
+    "saved_version": 1,
+    "competition_name": "rsna-knee-abnormality-detection",
+    "requested_output": "submission.csv",
+    "accepted_at_utc": "2026-10-09T02:30:41.814656+00:00",
+    "submission_receipt_sha256": {
+      "experiments/p011-submission-accepted-20261009.json": "f11aba38c20fc562f155061d8328c7a480967bc898b5dbf7e4dd3527fe856af2",
+      "artifacts/research/20261009-p011-competition-submit-v1/attempt-v1/submission-request.json": "b888fad7cb26f1294b0a24e11ecc854e8159cf9542a8d69d15e3af78b4c7cf20",
+      "artifacts/research/20261009-p011-competition-submit-v1/attempt-v1/submission-response.json": "e0d18b7a701e60ce01e2853f3bddb84e22bf837eb1b49eae65eab91554f16b25"
+    },
+    "prior_evidence_sha256": {
+      "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+      "notebooks/public/22_submit_p011_independent224_rank10_v3.ipynb": "a8e13bf0b053716e024f363417bc8b338b958eddf8a1837d3bad0a385607fd0c",
+      "experiments/p011-serving-savedV1-binding-review-20261009.json": "45078c2e40a758bf03367ef38e9b11215d7d85a438496e3ebfd8c648c5423569",
+      "experiments/p011-profile256-completed-root-review-20261009.json": "9acb096c7ebb9c37053d21034bc9d81c18e8fbfb7df680652bdad4371f888f7a",
+      "experiments/p011-profile256-actual-results-independent-review-20261009.json": "2cf298a4132a4a87d66f66555c76303604100a1f4719f2582163f86d0d5e758c",
+      "experiments/p011-serving-visible-output-independent-review-20261009.json": "d29ed36c04e888c2ab5054173c8b3c7352f0b7bbcbb9d6d26be1b01d124c579a",
+      "artifacts/research/20261009-p011-serving-root-launch-v1/attempt-v1/save-response.json": "0c79e3e4d56a7b8c6382ae7440b364caf59ce98f3f9b7a635e061079c760f11c",
+      "artifacts/research/20261009-p011-serving-root-launch-v1/attempt-v1/launch-request.json": "b3488c3bdcb378a6231464521dcf15863bafc66c598bc10434d04a36745143b8",
+      "artifacts/research/20261009-p011-serving-results-tools-v1/observation-v1/download-receipt.json": "d6a11ec3e5a93a762f49945939d4fa67f40e63682e0c561108b031e4566a2b78",
+      "experiments/p011-serving-visible-output-root-review-20261009.json": "f375cb84349a1431c77530305f71f2753a63cdbcc52dd585ff455008ae6f4fcf"
+    },
+    "GetSubmission_scope": "Official request contains only globally unique submission.ref. Kernel/V1/competition/source/output linkage comes from immutable actual submitted request and acceptance, not additional fields returned by this RPC."
+  },
+  "source_sha256": {
+    "status_tools.py": "e3f0a5d3990bdda37fa174a6ed58af299d3c9349dc107c727b812944e0ce1858",
+    "get_once.py": "bd243842ae5f2ebaa0fe46ab2a631f07cc7a48e1c19cf6129c8897ce07645db7",
+    "test_status.py": "7039ea95e4a802393b40e1f477482eb3931eec2f94a0006491d1361ae913cbfe"
+  },
+  "focused_artificialSDK_CPU_tests": {
+    "passed": 2,
+    "seconds": 0.276,
+    "subcase_scope": "0.961/0.960/0.955, absent raw state, default0/missing scores/NaN/PENDING, ERROR and wrong-ref; one exact injected GetSubmission with safely omitted error/URL text; reused directory rejected before second RPC."
+  },
+  "root_only_command_not_executed": [
+    "artifacts/tools/kaggle-venv/Scripts/python.exe",
+    "artifacts/research/20261009-p011-scoring-status-tools-v1/get_once.py",
+    "--execute",
+    "--output",
+    "artifacts/research/20261009-p011-scoring-status-tools-v1/observation-v1"
+  ],
+  "actual_API_HTTP_auth_score_model_MRI_GPU_fit_submit_by_preparer": 0,
+  "actual_GetSubmission_by_preparer": false,
+  "own_Public_score": null,
+  "strict_above960_achieved": false,
+  "score_zero_policy": "Conservatively treat zero/missing/default Public as unreturned, including explicit text0. A positive finite raw text only becomes an evaluated score with explicit COMPLETE and no error.",
+  "limitations": "ApiGetSubmissionRequest has only ref. Competition, exact kernel/savedV1/source/output are bound to prior actual accepted RPC, not invented fresh API fields. The one-shot cannot determine queue worker runtime, per-label/Public/private AUC or hidden branch receipts.",
+  "decision": "Prepared; root may make one fresh metadata observation. No automatic polling, resubmission or inferred score/default-state conclusion."
+}

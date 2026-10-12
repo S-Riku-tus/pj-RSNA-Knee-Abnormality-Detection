@@ -1,0 +1,298 @@
+{
+  "schema_version": "dinov2_last2_native392_feasibility_review_v1",
+  "reviewed_at_utc": "2026-10-08T11:02:08.271454+00:00",
+  "status": "one_factor_design_feasible_new_pixel_cache_and_trainable_CLI_required",
+  "chosen_line": "2.5D generic DINOv2 ViT-S/14, physical392 triplets, existing finding-specific two-level attention head; only last2 transformer blocks trainability differs from paired online-frozen control.",
+  "one_factor": {
+    "control": "encoder all frozen",
+    "candidate": "last2 transformer blocks trainable, all earlier blocks/patch embedding/position embedding/final norm frozen",
+    "head": "same head hidden192/dropout0.2/attention, same seed and initialization in both",
+    "not_added": [
+      "patch-specific new head",
+      "resolution change",
+      "window density change",
+      "teacher corrections",
+      "new folds",
+      "dropout search",
+      "Public/Golddriven coefficients"
+    ]
+  },
+  "existing_inputs": {
+    "pixel192": {
+      "metadata_path": "data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/train-v1/cache.json",
+      "preprocess": {
+        "version": "v1",
+        "image_size": 192,
+        "max_series": 3,
+        "windows_per_series": 8,
+        "percentiles": [
+          1,
+          99
+        ]
+      },
+      "information_limit": "Only24 adjacent-slice windows after direct square192 resize; no native FOV/aspect or missing locations recovered by upscale."
+    },
+    "CLS392": {
+      "metadata_path": "data/features/f001-weak-sv355640726/export.json",
+      "preprocess": {
+        "version": "physical_letterbox_triplet_v1",
+        "image_size": 392,
+        "max_series": 3,
+        "slices_per_series": 48,
+        "percentiles": [
+          1,
+          99
+        ]
+      },
+      "encoder": {
+        "model_name": "dinov2_vits14",
+        "feature_dim": 384,
+        "batch_size": 16,
+        "precision": "fp16"
+      },
+      "payload_bytes": 281589228,
+      "information_limit": "Stores only 384-D CLS per triplet, not pixels or spatial patch tokens. Changing head cannot backpropagate through encoder or restore native patches."
+    }
+  },
+  "initialization_inventory_only": {
+    "ZIP_path": "artifacts/kaggle/f001-inputs-v1/rsna-frozen-feature-inputs-v1.zip",
+    "ZIP_bytes": 85592938,
+    "members": [
+      {
+        "path": "encoder/dinov2-source/dinov2/hub/backbones.py",
+        "bytes": 5586,
+        "compressed_bytes": 1348
+      },
+      {
+        "path": "encoder/dinov2-source/dinov2/models/vision_transformer.py",
+        "bytes": 16438,
+        "compressed_bytes": 4899
+      },
+      {
+        "path": "encoder/dinov2-source/hubconf.py",
+        "bytes": 1126,
+        "compressed_bytes": 402
+      },
+      {
+        "path": "encoder/dinov2_vits14_pretrain.pth",
+        "bytes": 88283115,
+        "compressed_bytes": 82199718
+      },
+      {
+        "path": "encoder/encoder-provenance.json",
+        "bytes": 1086,
+        "compressed_bytes": 651
+      }
+    ],
+    "model_payload_opened_hashed_loaded_or_extracted": false,
+    "ZIP_scope": "Central-directory names and declared sizes only. Actual SHA/provenance/model loading remain a separate authorized next stage."
+  },
+  "target_preprocess": {
+    "version": "physical_letterbox_triplet_v1",
+    "image_size": 392,
+    "max_series": 3,
+    "slices_per_series": 48,
+    "percentiles": [
+      1,
+      99
+    ]
+  },
+  "shared_pixel_contract": [
+    "Reuse select_series, geometric_order, global native-series p1/p99, slope/intercept and MONOCHROME1 handling, physical letterbox, adjacent indices and positions unchanged.",
+    "Prefer bounded_feature_reader with same accepted geometry and percentile arithmetic; prior byte evidence is artificial and real pilot comparison remains required.",
+    "New cache retains uint8 windows(3,48,3,392,392), mask(3,48), positions(3,48), planes(3), flags(3,2), preprocessing fingerprint and per-UID payload hash.",
+    "Cache writer/reloader must preserve arrays byte-for-byte; do not treat .npz ZIP container bytes/timestamps as the pixel contract.",
+    "Training and Report-free inference call the same triplet builder; inferred/fabricated spacing, per-slice normalization and fallback predictions are excluded."
+  ],
+  "resolution_choice": {
+    "chosen": 392,
+    "why": "Matches current high-resolution f002 features; preserving image/window/head conditions isolates trainability.",
+    "256_or288": "Not divisible by14 under current DINO contract; reject rather than silently crop/pad.",
+    "280": "Technically valid lower-budget separate baseline, but changing392to280 together with fine-tuning would mix two factors.",
+    "192_local_comparison": "Possible engineering comparison after implementing online loader, but it has24 sparse distorted triplets and cannot assess native high-resolution focal evidence. Existing ResNet e009 already fine-tunes pixel inputs; rerunning192 is a lower-priority implementation/resource check, not a likely bridge from Public0.950 to >0.960."
+  },
+  "storage_budget_uncompressed_padded_upper_bound": {
+    "256": {
+      "image_size": 256,
+      "patch14_multiple": false,
+      "bytes_per_padded_study": 28311552,
+      "raw_weak4207_GiB": 110.9267578125,
+      "raw_pilot32_GiB": 0.84375,
+      "raw_pilot64_GiB": 1.6875,
+      "raw_max176studies_per_shard24_GiB": 4.640625
+    },
+    "280": {
+      "image_size": 280,
+      "patch14_multiple": true,
+      "bytes_per_padded_study": 33868800,
+      "raw_weak4207_GiB": 132.70046710968018,
+      "raw_pilot32_GiB": 1.009368896484375,
+      "raw_pilot64_GiB": 2.01873779296875,
+      "raw_max176studies_per_shard24_GiB": 5.5515289306640625
+    },
+    "288": {
+      "image_size": 288,
+      "patch14_multiple": false,
+      "bytes_per_padded_study": 35831808,
+      "raw_weak4207_GiB": 140.3916778564453,
+      "raw_pilot32_GiB": 1.06787109375,
+      "raw_pilot64_GiB": 2.1357421875,
+      "raw_max176studies_per_shard24_GiB": 5.873291015625
+    },
+    "392": {
+      "image_size": 392,
+      "patch14_multiple": true,
+      "bytes_per_padded_study": 66382848,
+      "raw_weak4207_GiB": 260.09291553497314,
+      "raw_pilot32_GiB": 1.978363037109375,
+      "raw_pilot64_GiB": 3.95672607421875,
+      "raw_max176studies_per_shard24_GiB": 10.880996704101562
+    }
+  },
+  "current_local_free_GiB": 385.529842376709,
+  "shard_plan_conditional": {
+    "full_cache_not_started": true,
+    "provisional_shards": 24,
+    "weak_studies": 4207,
+    "max_studies_per_shard": 176,
+    "raw_max_shard_GiB": 10.880996704101562,
+    "temporary_native_scratch": "At least2x native float32 series bytes + reserve; observed previous largest series ~605MiB -> around1.2GiB plus reserve. Actual pilot includes native-header/disk checks.",
+    "output_safety_budget": "Bound raw output to about11GiB and reserve at least4GiB in the observed Kaggle working disk; abort before starting a shard if budget is insufficient. Compression gain is unmeasured, not assumed.",
+    "archive_layout": "Stream each per-UID compressed npz from one-study memory into a ZIP_STORED shard; do not retain a full loose-file tree plus archive on Kaggle. Local reader opens npz members directly rather than keeping a second unpacked full cache. Preserve per-UID array/member hashes and shard SHA/index.",
+    "local_disk_scope": "386GiB free covers one260GiB raw-upper-bound representation, not520GiB duplicated archive plus extracted arrays. Keep only one image-cache representation; other active artifacts and actual disk are rechecked before a full export.",
+    "transfer": "Only processed triplet shards and small manifests transferred to localPC, never full original DICOM.",
+    "adaptive_after_pilot": "Choose shard count from measured decode time, native scratch and real compressed bytes;24 is a conservative raw-size example, not24 authorized launches."
+  },
+  "pilot_first": {
+    "selection": "Fixed seed20261002, fold0 training groups only, Gold and heldout-fold groups excluded; keep all members of selected groups. Target32 UID-equivalent, cap64 and log actual count/group hash.",
+    "raw_images32_GiB": 1.978363037109375,
+    "raw_images64_GiB": 3.95672607421875,
+    "Kaggle": "Native cache QC only, same3x48 triplets; no fit, Gold targets or leaderboard scoring.",
+    "local_next_authorized_stage": "After cache and explicit model loading authorization: actual generic encoder forward/backward resource diagnostic on fixed training pilot, compare frozen vslast2 using equal masks/order/head seed, before any full-fold fit.",
+    "GPU_settings_initial_proposal": {
+      "study_batch": 1,
+      "encoder_window_chunk": 16,
+      "effective_study_batch": 16,
+      "AMP": true,
+      "gradient_checkpoint_last2": "optional fixed in both controls where relevant; validate artificial gradient equivalence",
+      "encoder_lr": 1e-05,
+      "head_lr": 0.0003
+    },
+    "full_training_not_yet_scheduled": true
+  },
+  "training_contract": {
+    "CUDA": "ensure_cuda before data/model/run mutations; no CPU training fallback",
+    "folds": "Reuse unchanged4207 weak manifest/group folds0/1 first; patient independence remains unverified",
+    "loss": "Existing masked_bce, missing cells observed=False; internal tensor placeholder0 is never a negative target",
+    "selection": "minimum masked weak validation BCE fixed for paired runs, supplementary12/aux11/class support reported; no Gold fit/evaluation/selection",
+    "backbone_gradients": "Use torch.no_grad for frozen prefix, not inference_mode tensors feeding trainable blocks. Only last2+head parameters get optimizer groups. Final norm remains frozen.",
+    "feature_rounding": "Preserve existing AMP normalization and fp16 CLS quantization in both online routes; compare frozen online pilot to original cached CLS within explicitly logged numerical tolerance.",
+    "source_eligibility": "Current weak-label provenance is unchanged CC BY-NC research adoption, with Kaggle submission eligibility not established in the existing manifest. This study is a local research comparison; submission use needs separate source-policy review."
+  },
+  "code_proposals_not_implemented": [
+    {
+      "path": "src/rsna_knee/triplet_cache.py",
+      "purpose": "Native392 streamed npz-in-ZIP_STORED writer/direct member reader, masks/positions/planes/flags and immutable source/pixel fingerprints; reject192/CLS caches and avoid duplicated full extraction."
+    },
+    {
+      "path": "src/rsna_knee/finetune_model.py",
+      "purpose": "Strict local genericDINO loading, frozen prefix+last2 gradient path, same FrozenFeatureHead; configurable trainability0 or2 only."
+    },
+    {
+      "path": "src/rsna_knee/finetune_runtime.py",
+      "purpose": "CUDA first, fixed split/loss/selection, chunked windows+study gradient accumulation, source/run/hash audit; no Gold evaluation."
+    },
+    {
+      "path": "scripts/build_native_triplet_handoff.py",
+      "purpose": "Code-only unexecuted private pilot/shard Notebook builder; no upload/execute/submit."
+    },
+    {
+      "path": "scripts/finetune_dinov2.py",
+      "purpose": "Explicit preflight/profile/train CLI separated; no implicit downloads or remote operations."
+    }
+  ],
+  "tests_proposed_before_real_assets": [
+    "Artificial DICOM old/bounded/newcache pixel, positions and metadata byte equivalence.",
+    "Artificial group/Gold/missing-label split checks and Report-free submission contract.",
+    "Toy transformer: frozen layers no grads/updates; exactly last2+head nonzero gradients; chunked vsfull gradients agree.",
+    "CUDA absence guard runs before input/output mutations; immutable run/cache guards.",
+    "Fake online encoder/fp16 quantization gives same head probabilities as frozen features; no hidden encoder download.",
+    "Actual available4090 artificial shape/mask/12logit forward/backward with resource report; no real MRI/model payload until authorized."
+  ],
+  "commands": {
+    "existing_verified_safe": [
+      {
+        "command": ".\\.venv\\Scripts\\python.exe -m rsna_knee doctor",
+        "executed": true,
+        "result": "Python3.12.13 / torch2.10.0+cu128 / CUDA true; no fit/model loading"
+      },
+      {
+        "command": ".\\.venv\\Scripts\\python.exe scripts/frozen_features.py train --help",
+        "executed": true,
+        "result": "Existing CLI fits frozen head only; it cannot implement the new gradient path."
+      }
+    ],
+    "proposed_after_code_implementation_and_next_stage_authorization_DO_NOT_RUN_NOW": [
+      {
+        "command": ".\\.venv\\Scripts\\python.exe scripts/build_native_triplet_handoff.py --manifest data/manifests/v1-vmohitrao-research --fold-audit data/manifests/v1-vmohitrao-research/fold-audit-v2.json --output artifacts/kaggle/ft001-native392-pilot-v1 --image-size 392 --pilot-exclude-fold 0 --pilot-groups 32",
+        "status": "proposed_CLI_not_implemented; exactarguments finalized by implementation"
+      },
+      {
+        "command": ".\\.venv\\Scripts\\python.exe scripts/finetune_dinov2.py profile --cache data/native/ft001-native392-pilot-v1 --manifest data/manifests/v1-vmohitrao-research --fold 0 --trainable-last-blocks 0 --output artifacts/qa/ft001-frozen-pilot-v1",
+        "status": "proposed_CLI_not_implemented; fixedpilot/model asset authorization first"
+      },
+      {
+        "command": ".\\.venv\\Scripts\\python.exe scripts/finetune_dinov2.py profile --cache data/native/ft001-native392-pilot-v1 --manifest data/manifests/v1-vmohitrao-research --fold 0 --trainable-last-blocks 2 --output artifacts/qa/ft001-last2-pilot-v1",
+        "status": "proposed_CLI_not_implemented; actual forward/backward only after prior gate"
+      }
+    ]
+  },
+  "can_start_now": "Source implementation and artificial contract tests for this one paired gradient-path comparison. Existing environment and generic asset catalog support preparation.",
+  "must_wait_for_Kaggle_preprocessing": "Real native392 pixel-cache pilot; no cached CLS inversion/upscaling workaround. Full shards only after real pilot resource/decode/byte QC, full fold training only after measured budget.",
+  "goal_improvement_evidence": "No evidence yet this branch improves Public0.950 or reaches >0.960; it enables disease-supervised spatial encoder adaptation absent from prior frozen CLS head trials.",
+  "checks": {
+    "existing_features_complete4207": true,
+    "existing_native_preprocess392_3x48": true,
+    "existing_pixels192_3x8": true,
+    "existing_feature_encode_returns_only_CLS": true,
+    "existing_encoder_requires_grad_false": true,
+    "existing_encode_has_inference_mode": true,
+    "existing_pixel_cache_square_resize": true,
+    "DINO_multiple14_contract_preserved": true,
+    "generic_initialization_present_by_ZIP_member_catalog": true,
+    "generic_source_and_provenance_present_by_catalog": true,
+    "fixed_manifest_seed20261002_folds5": true,
+    "fixed_fold_audit_integrity_ready": true,
+    "fixed_groups_supplied_and_duplicates": true,
+    "patient_independence_not_claimed": true,
+    "Gold58_excluded4207weak": true,
+    "CUDA_guard_exists_before_feature_fit_reads": true,
+    "masked_missing_loss_exists": true,
+    "Report_free_inference_contract_exists": true,
+    "prior_bounded_reader_artificial_windows_geometry_bytes_verified": true,
+    "native_cache_not_existing_export_type": true
+  },
+  "checks_passed": 20,
+  "checks_total": 20,
+  "source_artifacts": {
+    "src/rsna_knee/feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "src/rsna_knee/feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "src/rsna_knee/feature_runtime.py": "bfa9c7d075f342bd45fcdf2152e7560587972923a1e37e6d915f7e617399e01e",
+    "src/rsna_knee/feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "src/rsna_knee/imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "src/rsna_knee/runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05",
+    "src/rsna_knee/contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+    "scripts/bounded_feature_reader.py": "95a906f7e157cf1fa6d722432e6ed913838c6f579ac352418255688a5cf49ee6",
+    "tests/test_bounded_feature_reader.py": "a93798ef85a41405744c6e48c1afdfdec5342f9b8847b03458d9867fb142aa5c",
+    "scripts/frozen_features.py": "a7e56b6391f0f3c358d1d412aec487b91c879cd03a6775dc3559ceb26daee387",
+    "data/features/f001-weak-sv355640726/export.json": "aa164be29b14813b9793c51b9924ef2e4019f4f01c2aa1ec35d17fdf536e1f5a",
+    "data/exports/rsraki-rsna-knee-sv354838181/rsna-cache-v1/train-v1/cache.json": "46cd2fb927c611bd00fcad30efdeba5afbc38c4fd32b1152d85013bb2080707c",
+    "data/manifests/v1-vmohitrao-research/manifest.json": "976abfe212ce23ad8112f16cb61d2c8172bb837ad50aed7ac88886760fc2cabf",
+    "data/manifests/v1-vmohitrao-research/fold-audit-v2.json": "bca25c48af792853ff1c19eac8e728462696dd869681bd8a3285dc7fcdbc4e24",
+    "experiments/f002-memory-reader-review-20261008.json": "badd48bfd67ec4b8e27548724bc4501d8bc0612809838eea97c5cdb32eb37bc1"
+  },
+  "metadata_or_source_only": true,
+  "model_or_MRI_payload_read_loaded_downloaded_decoded": false,
+  "actual_training_or_remote_mutation_started": false,
+  "protected14_p006_p007_p008_or_docs_modified": false
+}

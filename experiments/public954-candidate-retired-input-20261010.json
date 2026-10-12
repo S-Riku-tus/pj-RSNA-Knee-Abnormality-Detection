@@ -1,0 +1,60 @@
+{
+  "schema_version": "author954_source_exact_but_retired_input_root_assessment_v1",
+  "at_utc": "2026-10-09T16:03:59.635946+00:00",
+  "author_Notebook": "heliosli/rsna-knee-abnormality-detection",
+  "author_scored_script": 356507041,
+  "author_submission_id": 56982104,
+  "author_display_version": 1,
+  "author_official_Public": "0.954",
+  "own_score_for_this_candidate": null,
+  "research_source12": {
+    "path": "artifacts/research/20261010-public952-bounded-research-v1/research.json",
+    "sha256": "eb105e292297b6b6bfce75594df9fae217553d499af3686c295ffd5088e6e490"
+  },
+  "explicit_savedV1_source": {
+    "path": "artifacts/research/20261010-public954-exact-saved-source-root-v1/savedV1-observation-v1/receipt.json",
+    "sha256": "a1ea2e68969b212a3825420de520d481f3521ad197dd3a4bdef9169fff7e461d"
+  },
+  "S6_source_cache_independent10": {
+    "path": "artifacts/research/20261010-helios-S6-V10-cache-and-source-independent-v1/review.json",
+    "sha256": "6223be9f16723b7236e2c3cf824c2ec2c742e9c5a685f2bd488a384f7373c80c"
+  },
+  "genuine_current_source_access": {
+    "path": "artifacts/research/20261010-public954-S6-snapshot-root-v1/source-access-observation-v1.json",
+    "sha256": "b78907b846ce1998d0404b20a0d355240c12754ccd43656ff851ed9ab535d3ca"
+  },
+  "current_V11_notice": {
+    "path": "artifacts/research/20261010-public954-S6-snapshot-root-v1/currentV11-notice-v1/README.md",
+    "sha256": "d1b4c7546afb49a920baa8a7647d68eacb70214e8fcb50efa3ba98374a38bdc2"
+  },
+  "notice_transfer": {
+    "path": "artifacts/research/20261010-public954-S6-snapshot-root-v1/currentV11-notice-v1/receipt.json",
+    "sha256": "4eb45a2a66e390978e003ee5c578e5813b0238783b3d9d203535fb53f5d1fa14"
+  },
+  "partial_model_attempt": {
+    "path": "artifacts/research/20261010-public954-S6-snapshot-root-v1/model-download-v1/held.json",
+    "sha256": "6968237741c0a910d3a68d31bbecebecbf13a27e1eea32cde2083e38da5c477c"
+  },
+  "exact_backend_HTTP_status_of_failed_V10_file_request": null,
+  "retirement_basis": "Current author's README explicitly retires model files and earlier versions. No alternate source is named.",
+  "S6_model_bytes_downloaded": 0,
+  "S6_models_loaded": 0,
+  "new_S6_private_Dataset_uploads": 0,
+  "S6_actual_reproduction_or_cleanup_qualified": false,
+  "upstream_Gold_prior_audit_not_erased_by_changed_comment": true,
+  "old_S5_weight_files_are_not_S6_weight_substitutes": true,
+  "retirement_not_claimed_cause_of_all_previous_notebook_failures": true,
+  "decision": "Hold the author954 candidate; continue our existing private S5 snapshot P012 own951 and prespecified native twofold20%.",
+  "running_fold1_epochs": 11,
+  "fixed_final_epochs": 12,
+  "interim_checkpoint_read_hashed_or_adopted": false,
+  "run_metadata_snapshot_sha256": "94fe5054fcd5144156189195494b1e762518de3937018f774ef1ea2f112fe7be",
+  "new_competition_Submit": 0,
+  "own_best_official_Public": "0.951",
+  "strict_above960_achieved": false,
+  "twofold_entry_source18": {
+    "path": "artifacts/research/20261010-f005-twofold-native-root-v1/preparation.json",
+    "sha256": "b5655528268623faaaa602881cf77a6f5fecd437c2ef7c601146bec869a6ad55"
+  },
+  "twofold_entry_actual_preparation_or_qualification": false
+}

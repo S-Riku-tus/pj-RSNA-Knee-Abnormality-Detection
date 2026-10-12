@@ -1,0 +1,209 @@
+{
+  "schema_version": "f005_last2_complete_CPU_privateInput_fold1_progress_metadata_v1",
+  "recorded_at_utc": "2026-10-09T10:42:32.452638+00:00",
+  "all_passed": true,
+  "checks": {
+    "complete_fold0_pair13_and_CPU8_metadata_bound": true,
+    "complete_frozen_fold1_independent19_bound": true,
+    "live_fold1_run_snapshot_no_interim_selection": true,
+    "privateV1inventory_and_new_actualCPU8_COMPLETE_bound": true,
+    "sealed_bundle_transport_metadata_bound_without_modelbytes": true,
+    "latest_official_pending_status_and_unknown_score_preserved": true,
+    "capacity_from_raw_duration_not_corrupt_typedSDK": true,
+    "new_three_unique14column_Publicblank_rows": true
+  },
+  "evidence": {
+    "pair": {
+      "path": "experiments/f005-cached-frozen-last2-fold0-review-20261009.json",
+      "sha256": "d042ae1db94eaa259e00ed530c0fb429913d49c1996ad9ec2f48487ad039782f"
+    },
+    "CPU": {
+      "path": "artifacts/qa/20261009-f005-online-last2-fold0-checkpoint-CPU-v2/reconstruction.json",
+      "sha256": "cee9ade1f770bbd3c4d129fc5aa08ff3eea42b8bb764126a9cbb394a28672845"
+    },
+    "frozen1_review": {
+      "path": "artifacts/research/20261009-f005-cached-frozen-fold1-complete-independent-review-v1/review.json",
+      "sha256": "1202e5afac2969ddbf8ca7cd6465da832e5bff9b95a3b7d1f7acbe5424899a62"
+    },
+    "last2_0": {
+      "path": "artifacts/runs/f005-native-last2-fast16-fold0-20261009-v1/run.json",
+      "sha256": "56a463e2a54739e2077a1e991af7f66e80fb5c45d1cd70018cc5c368778ed3ba"
+    },
+    "frozen1": {
+      "path": "artifacts/runs/f005-native-frozen-cached-FP32-fast16-fold1-20261009-v1/run.json",
+      "sha256": "3237ffa79f397b3e09474afa69bbfe69645c91cee6f8ac6d70560ea1dae0a465"
+    },
+    "last2_1": {
+      "path": "artifacts/runs/f005-native-last2-fast16-fold1-20261009-v1/run.json",
+      "sha256": "41abf19e2d502c03b5bed59eca9c834b9d043e2c18f31381695e74fadfaa6745"
+    },
+    "CPU_Save": {
+      "path": "artifacts/research/20261009-f005-online-last2-runtime-root-v1/actual-CPU-smoke-Save-attempt-v1/receipt.json",
+      "sha256": "bded849fd6ddd3877d54c1201452c1c02eb6bfbdcfef496edb353ca0560e6d74"
+    },
+    "Kaggle_CPU_result": {
+      "path": "artifacts/research/20261009-f005-online-last2-CPU-results-tools-v1/observation-v1/review.json",
+      "sha256": "4a2735ed10f94ba99c8cd6225f9270c4005a17e298edec674337aa04fb288b2d"
+    },
+    "Input": {
+      "path": "artifacts/research/20261009-f005-online-last2-runtime-root-v1/native-private-V1-inventory-observation-v1.json",
+      "sha256": "513b96a59fcf82d620b91e251032949d5fccd4e44f056c871f5c83f67062634f"
+    },
+    "bundle": {
+      "path": "artifacts/research/20261009-f005-online-last2-diagnostic-adapter-preparation-v2/b0/bundle.json",
+      "sha256": "795763ae5c4ac81467d15ddcd2a438e51e6ac6528b8a5c794c0f7fb78351bcc7"
+    },
+    "bundle_complete": {
+      "path": "artifacts/research/20261009-f005-online-last2-diagnostic-adapter-preparation-v2/b0/BUILD_COMPLETE.json",
+      "sha256": "d33a177223ad080f67bb804a4edc5404be64d2539a3e5e0b0d88dd8488109fe0"
+    },
+    "transport": {
+      "path": "artifacts/research/20261009-f005-online-last2-transport-wrapper-preparation-v1/p0/transport-manifest.json",
+      "sha256": "1ec90a9ce7f3406b90e56ed7f14135cfacc86d5097defcbafb7013466e3a1eda"
+    },
+    "p013": {
+      "path": "artifacts/research/20261009-p013-structural-profile-root256-v1/profile256-observation-v5/observation.json",
+      "sha256": "0495c95d45eb510ff1a92946253b779284d36dd4ca51b1d6a26a9bb071a962b2"
+    },
+    "p012": {
+      "path": "artifacts/research/20261009-f005-native-runtime-root-v1/public951-submission-observation-v13/observation.json",
+      "sha256": "9d9a9ef62e08a7c0dfc18384f7bc4c9ba3930722a705784a4862c49e837c3b1e"
+    },
+    "capacity": {
+      "path": "artifacts/research/20261009-f005-online-last2-runtime-root-v1/capacity-observation-v1.json",
+      "sha256": "b6a74c5fdaa7fb04d29ff92b3c646d8436e75f943ea69c342147867fe75fbcda"
+    }
+  },
+  "fold0": {
+    "completed_epochs": 12,
+    "selected_epoch": 8,
+    "selection_rule": "bce",
+    "last2_selected_weak_BCE": 0.27375829822323816,
+    "last2_selected_weak_AUC12": 0.8771277163065415,
+    "frozen_selected_weak_BCE": 0.32320641890826474,
+    "frozen_selected_weak_AUC12": 0.7944484597102713,
+    "weak_delta": {
+      "selected_weak_BCE": -0.049448120685026575,
+      "selected_weak_macro_AUC12": 0.08267925659627018,
+      "per_target_recorded_AUC": {
+        "ACL": 0.06825040783034253,
+        "MCL": 0.017316017316017285,
+        "Medial Meniscus": 0.1025691830130111,
+        "Lateral Meniscus": 0.0922167147697327,
+        "Medial OA": 0.023119851182567097,
+        "Lateral OA": 0.07101549849641453,
+        "PF OA": 0.03640572390572383,
+        "Effusion": 0.004874274661508693,
+        "Synovitis": 0.35,
+        "Baker's": 0.021518516550661504,
+        "Contusion": 0.1167967096110808,
+        "Fracture": 0.08806818181818177
+      }
+    },
+    "steps": 2543,
+    "opportunities": 2544,
+    "AMP_skips": 1,
+    "skip_epoch": 12,
+    "selected_precedes_skip": true,
+    "strict_selected_CPU_reconstruction_checks": 8,
+    "real_checkpoint_payload_read_by_this_recorder": false,
+    "elapsed_seconds": 21057.8433829,
+    "Synovitis_validation_negative_support": 1
+  },
+  "fold1": {
+    "frozen_complete12": true,
+    "frozen_selected_epoch": 10,
+    "frozen_weak_BCE": 0.3241002338521143,
+    "frozen_weak_AUC12": 0.8009330060640272,
+    "frozen_elapsed_seconds": 374.4391328000929,
+    "frozen_optimizer_steps": 2496,
+    "frozen_AMP_skips": 0,
+    "frozen_independent_checks": 19,
+    "last2_current_snapshot_status": "running",
+    "last2_completed_history_count": 0,
+    "last2_train_studies": 3316,
+    "last2_valid_studies": 891,
+    "seed": 20261002,
+    "root_reported_start_JST": "2026-10-09 19:26",
+    "root_reported_session_id": 5865,
+    "mutable_run_snapshot": "artifacts/research/20261009-f005-training-runtime-progress-record-v1/last2_1-run-snapshot.json",
+    "no_interim_checkpoint_adoption": true
+  },
+  "new_last2_runtime": {
+    "sealed_bundle_sha256": "795763ae5c4ac81467d15ddcd2a438e51e6ac6528b8a5c794c0f7fb78351bcc7",
+    "transport_archive_metadata": {
+      "path": "native392.transport.bin",
+      "bytes": 104916823,
+      "sha256": "a995a043430a975844fa93c3b71323d6c2896428cbf9c6c606169267f0a2c107"
+    },
+    "root_reported_remote_two_payload_total_bytes": 104953497,
+    "private_Input_ref": "rsraki/n392-l2f0-ff5a76c17ef944e7ac113afecf2ba947",
+    "dataset_id_root_reported": 12465171,
+    "private_display_V1_registry_checks": 5,
+    "internal_version_id": null,
+    "registry_names_and_sizes_verified": true,
+    "mounted_all_members_SHA_CPU_reconstruction_complete": true,
+    "actual_Kaggle_CPU_members_verified": 215,
+    "actual_Kaggle_CPU_checks": 8,
+    "actual_Kaggle_CPU_observed_at_utc": "2026-10-09T10:38:37.973588+00:00",
+    "actual_Kaggle_CPU_receipt_SHA_root_reported": "b1525124629e8713b80dbb9f0f887b558380f4e98acb88683b524ed0867391c8",
+    "child_recomputed_model_or_member_payload_SHA": false,
+    "CPU_saved_ref": "rsraki/n392l2diag-a7962b18081b4a3fa6410933b36961aa",
+    "CPU_saved_version": 1,
+    "CPU_kernel_id": 137859731,
+    "CPU_Save_accepted_at_utc": "2026-10-09T10:30:19.356466+00:00",
+    "CPU_result_observed_complete": true,
+    "old_cached_frozen_runtime_qualification_reused": false,
+    "native64_qualified": false,
+    "native256_qualified": false,
+    "Serving_qualified": false
+  },
+  "other_candidates": {
+    "p013_actual64_accepted_SHA": "e407f0cc865ae1b49cb0996f04a873b1e900c02e765ff69234b6672c39a3e21c",
+    "p013256_observed_at_utc": "2026-10-09T10:35:15.996528+00:00",
+    "p013256_raw_status": "RUNNING",
+    "p013256_qualified": false,
+    "p013_competition_submissions": 0,
+    "p012_submission_ref": 56998356,
+    "p012_observed_at_utc": "2026-10-09T10:27:53.275530+00:00",
+    "p012_actual_status": "NOT_EXPLICIT_YET",
+    "p012_SDK_default_status": "PENDING",
+    "p012_raw_status_omitted": true,
+    "p012_Public": null,
+    "p012_error_description": null
+  },
+  "capacity": {
+    "observed_at_utc": "2026-10-09T10:35:49.582242+00:00",
+    "official_submission_limits": {
+      "numToday": 2,
+      "numTotal": 14,
+      "numAllowedNow": 3
+    },
+    "raw_GPU_seconds_allowed": "108000s",
+    "raw_GPU_seconds_used": "52724.932738200s",
+    "raw_GPU_seconds_reserved": "0s",
+    "raw_remaining_GPU_seconds": "55275.067261800",
+    "typed_GPU_allowed21600_does_not_override_raw108000": true
+  },
+  "parent_reported_operational_history": [
+    "First long-path sealing attempt failed at max271 and its partial directory was retained; short b0 max247 succeeded using the same source.",
+    "The one-shot private-create relative temporary path attempt failed before acceptance; a repaired absolute-path attempt created the private V1 once.",
+    "CPU manual-save preflight missing-file-hash schema attempt failed with API0 and was retained; v2 bound actual Notebook/request SHAs without numeric changes."
+  ],
+  "own_Public_best": "0.950",
+  "target_next_Public": "0.955",
+  "target_final_Public_strictly_above": "0.960",
+  "strict_above960_achieved": false,
+  "last2_Public": null,
+  "own_Gold_fit_or_selection_by_this_recorder": 0,
+  "clinical_training_conditions_changed": false,
+  "child_API_GPU_model_MRI_teacher_prediction_or_fit_operations": 0,
+  "limits": [
+    "Weak BCE/AUC is saved metadata, not Public/Gold. No teacher or prediction matrix is reopened by this progress recorder.",
+    "Synovitis has only one validation negative in fold0; patient independence is unverified. Weak improvement does not guarantee Public0955 or strict above0960.",
+    "The CPU strict reconstruction was previously performed by the root. This recorder binds its metadata SHA, not tensors.",
+    "Registry names/sizes alone are not mounted whole-byte proof. The bound new actualCPU8 review verifies215 mounted member bytes and CPU reconstruction; GPU/native stages remain separate from earlier cached-frozen acceptance.",
+    "Live training is a captured run.json snapshot; later epochs are not inferred. PENDING from a missing raw submission status is an SDK default, not proof of an active scoring worker.",
+    "GPU allowance and status observations retain their exact timestamps and are not future capacity/runtime guarantees."
+  ]
+}

@@ -1,0 +1,558 @@
+{
+  "checked_at_utc": "2026-10-08T11:48:36.721676+00:00",
+  "schema_version": "native392_plane_dedup_static_feasibility_v1",
+  "status": "byte_identical_representation_feasible_design_only_deferred",
+  "decision": "現行16件の処理済みキャッシュは bytes/QC が検証済み。現形式の単純全件換算約97.39GiBは現在のローカル空き約385GiB以内というroot観測に基づき、storage再設計を次の学習準備の前提にしない。全件規模・shard export の実測後、容量/転送/読み込みが障害になった場合にだけ別storage要因として検討する。",
+  "accuracy_scope": "収納方式だけでは入力も予測も改善しない。encoder最後2block微調整という表現改善の比較方針を維持。弱い枝を加えればPublic>.960になるとは仮定しない。",
+  "incumbent_immutable": {
+    "notebook": "notebooks/public/18a_profile_dinov2_native392_pixel16.ipynb",
+    "sha256": "ff88e2077d7d7ef484fbd19e5f50ddd69e40c663dea22f73283903b13d860e7e",
+    "ref": "rsraki/native392-pixel16-diagnostic",
+    "saved_version": 1,
+    "format_unchanged": true
+  },
+  "actual_incumbent_measurement": {
+    "processed_studies": 16,
+    "archive_bytes": 397707087,
+    "archive_MiB": 379.283034324646,
+    "raw_padded_image_bytes": 1062125568,
+    "measured_archive_to_raw_image_ratio": 0.3744445091825527,
+    "conditional_same_mean_4207_archive_GiB": 97.39036409935215,
+    "export_seconds": 162.10934305500007,
+    "CPU_peak_RSS_bytes": 1482244096,
+    "conditional_same_mean_4207_export_hours": 11.840173719312245,
+    "root_processed_cache_read_decode_validate_seconds": 4.720055699988734,
+    "full_cache_prediction_guaranteed": false,
+    "scope": "Fixed16 weak/groups outside heldout0, all3 selected series present, valid53..115, total1406; 48 series include two large-volume reference-reader QC skips. Whole-dataset native counts/content/compression/runtime are unmeasured. Full export requires appropriately bounded shards, not one pilot run scaled blindly."
+  },
+  "source_capacity": {
+    "one_plane_uint8_bytes": 153664,
+    "plane_to_DEFLATE32768_distance_ratio": 4.689453125,
+    "padded_432plane_image_bytes_per_study": 66382848,
+    "raw_image_MiB_per_study": 63.3076171875,
+    "conditional_4207_uncompressed_image_GiB": 260.09291553497314,
+    "original_metadata_bytes_per_study": 768,
+    "uint16_triplet_reference_bytes_per_study": 864,
+    "candidate_payload_formula": "K_nonzero *153664 +864 uint16 references +768 unchanged metadata; excludes headers/fingerprint/hash manifests/container compression. ID0 denotes implicit all-zero plane.",
+    "universal_nonzero_palette_bounds": [
+      0,
+      426
+    ],
+    "lower_bound_scope": "K=0 is representation bound only, not a normal MRI expectation; valid zero-image tokens retain original mask=True. Whole-native constant series is rejected by existing normalizer.",
+    "upper_bound_scope": "Per series max142 distinct native indices when48 centres include clipped endpoints; 3 series max426. Identical final pixel content and implicit zeros can reduce K. No universal3x gain.",
+    "illustrative_native_index_only_scenarios": [
+      {
+        "assumed_identical_native_slice_count_each_of_3_series": 1,
+        "distinct_indices_each_series": 1,
+        "palette_upper_planes": 3,
+        "uncompressed_payload_bytes": 462624,
+        "payload_MiB": 0.441192626953125,
+        "conditional_4207_payload_GiB": 1.8125950992107391
+      },
+      {
+        "assumed_identical_native_slice_count_each_of_3_series": 16,
+        "distinct_indices_each_series": 16,
+        "palette_upper_planes": 48,
+        "uncompressed_payload_bytes": 7377504,
+        "payload_MiB": 7.035736083984375,
+        "conditional_4207_payload_GiB": 28.905607134103775
+      },
+      {
+        "assumed_identical_native_slice_count_each_of_3_series": 32,
+        "distinct_indices_each_series": 32,
+        "palette_upper_planes": 96,
+        "uncompressed_payload_bytes": 14753376,
+        "payload_MiB": 14.069915771484375,
+        "conditional_4207_payload_GiB": 57.80481997132301
+      },
+      {
+        "assumed_identical_native_slice_count_each_of_3_series": 48,
+        "distinct_indices_each_series": 48,
+        "palette_upper_planes": 144,
+        "uncompressed_payload_bytes": 22129248,
+        "payload_MiB": 21.104095458984375,
+        "conditional_4207_payload_GiB": 86.70403280854225
+      },
+      {
+        "assumed_identical_native_slice_count_each_of_3_series": 64,
+        "distinct_indices_each_series": 64,
+        "palette_upper_planes": 192,
+        "uncompressed_payload_bytes": 29505120,
+        "payload_MiB": 28.138275146484375,
+        "conditional_4207_payload_GiB": 115.60324564576149
+      },
+      {
+        "assumed_identical_native_slice_count_each_of_3_series": 96,
+        "distinct_indices_each_series": 96,
+        "palette_upper_planes": 288,
+        "uncompressed_payload_bytes": 44256864,
+        "payload_MiB": 42.206634521484375,
+        "conditional_4207_payload_GiB": 173.40167132019997
+      },
+      {
+        "assumed_identical_native_slice_count_each_of_3_series": 128,
+        "distinct_indices_each_series": 128,
+        "palette_upper_planes": 384,
+        "uncompressed_payload_bytes": 59008608,
+        "payload_MiB": 56.274993896484375,
+        "conditional_4207_payload_GiB": 231.20009699463844
+      },
+      {
+        "assumed_identical_native_slice_count_each_of_3_series": 142,
+        "distinct_indices_each_series": 142,
+        "palette_upper_planes": 426,
+        "uncompressed_payload_bytes": 65462496,
+        "payload_MiB": 62.429901123046875,
+        "conditional_4207_payload_GiB": 256.4869082272053
+      },
+      {
+        "assumed_identical_native_slice_count_each_of_3_series": 144,
+        "distinct_indices_each_series": 142,
+        "palette_upper_planes": 426,
+        "uncompressed_payload_bytes": 65462496,
+        "payload_MiB": 62.429901123046875,
+        "conditional_4207_payload_GiB": 256.4869082272053
+      },
+      {
+        "assumed_identical_native_slice_count_each_of_3_series": 256,
+        "distinct_indices_each_series": 142,
+        "palette_upper_planes": 426,
+        "uncompressed_payload_bytes": 65462496,
+        "payload_MiB": 62.429901123046875,
+        "conditional_4207_payload_GiB": 256.4869082272053
+      }
+    ],
+    "actual16_metadata_only_distinct_native_indices_total": 1594,
+    "actual16_candidate_uncompressed_payload_upper_bytes": 244966528,
+    "actual16_candidate_uncompressed_payload_upper_MiB": 233.6182861328125,
+    "conditional_actual16_mean_4207_uncompressed_candidate_upper_GiB": 59.987312607467175,
+    "actual16_candidate_compressed_bytes_measured": false,
+    "actual16_index_scope": "Only supplied native shapes and selected-centre integers inspected. No actual pixel hash dedup was run; bound ignores equal-content/zero planes, includes unchanged metadata and refs but excludes headers. Raw palette bound is not measured compressed transport size.",
+    "actual16_records": [
+      {
+        "study_id_sha256": "25a7d9e4e6ae3d1ff213cf0fcadd81ec15601c6c80248ba487ea3bf747364de9",
+        "series": [
+          {
+            "native_slices": 144,
+            "selected_centres": 48,
+            "distinct_native_indices_needed": 142
+          },
+          {
+            "native_slices": 31,
+            "selected_centres": 31,
+            "distinct_native_indices_needed": 31
+          },
+          {
+            "native_slices": 32,
+            "selected_centres": 32,
+            "distinct_native_indices_needed": 32
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 205,
+        "palette_indices_metadata_uncompressed_upper_bytes": 31502752,
+        "measured_current_NPZ_bytes": 26384940
+      },
+      {
+        "study_id_sha256": "45c800fdc2b908965f900ce8d02b403fe0f89c8c0ee313bc732228de97ca009a",
+        "series": [
+          {
+            "native_slices": 144,
+            "selected_centres": 48,
+            "distinct_native_indices_needed": 142
+          },
+          {
+            "native_slices": 32,
+            "selected_centres": 32,
+            "distinct_native_indices_needed": 32
+          },
+          {
+            "native_slices": 32,
+            "selected_centres": 32,
+            "distinct_native_indices_needed": 32
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 206,
+        "palette_indices_metadata_uncompressed_upper_bytes": 31656416,
+        "measured_current_NPZ_bytes": 27910268
+      },
+      {
+        "study_id_sha256": "438af0e9b06ce86493bcabee0d764372fc9a5c8b19f9967aa7041d7b38d55e01",
+        "series": [
+          {
+            "native_slices": 17,
+            "selected_centres": 17,
+            "distinct_native_indices_needed": 17
+          },
+          {
+            "native_slices": 19,
+            "selected_centres": 19,
+            "distinct_native_indices_needed": 19
+          },
+          {
+            "native_slices": 17,
+            "selected_centres": 17,
+            "distinct_native_indices_needed": 17
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 53,
+        "palette_indices_metadata_uncompressed_upper_bytes": 8145824,
+        "measured_current_NPZ_bytes": 18606321
+      },
+      {
+        "study_id_sha256": "41e20d12cbbea48549f08372b31cc714b0da5c3085dda7a3ac5427b35d21d479",
+        "series": [
+          {
+            "native_slices": 19,
+            "selected_centres": 19,
+            "distinct_native_indices_needed": 19
+          },
+          {
+            "native_slices": 25,
+            "selected_centres": 25,
+            "distinct_native_indices_needed": 25
+          },
+          {
+            "native_slices": 19,
+            "selected_centres": 19,
+            "distinct_native_indices_needed": 19
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 63,
+        "palette_indices_metadata_uncompressed_upper_bytes": 9682464,
+        "measured_current_NPZ_bytes": 20521588
+      },
+      {
+        "study_id_sha256": "2439603d8cf8b97e2c4e4a6d1cdc26374faea3da22bc6508bb645fd72da3beb4",
+        "series": [
+          {
+            "native_slices": 35,
+            "selected_centres": 35,
+            "distinct_native_indices_needed": 35
+          },
+          {
+            "native_slices": 40,
+            "selected_centres": 40,
+            "distinct_native_indices_needed": 40
+          },
+          {
+            "native_slices": 26,
+            "selected_centres": 26,
+            "distinct_native_indices_needed": 26
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 101,
+        "palette_indices_metadata_uncompressed_upper_bytes": 15521696,
+        "measured_current_NPZ_bytes": 20817698
+      },
+      {
+        "study_id_sha256": "3746df8f39b7a425338cceca976e164d640f8a67ecd07bfc162ead85b43a2b1b",
+        "series": [
+          {
+            "native_slices": 28,
+            "selected_centres": 28,
+            "distinct_native_indices_needed": 28
+          },
+          {
+            "native_slices": 30,
+            "selected_centres": 30,
+            "distinct_native_indices_needed": 30
+          },
+          {
+            "native_slices": 30,
+            "selected_centres": 30,
+            "distinct_native_indices_needed": 30
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 88,
+        "palette_indices_metadata_uncompressed_upper_bytes": 13524064,
+        "measured_current_NPZ_bytes": 27963159
+      },
+      {
+        "study_id_sha256": "0555711065567d144c564a378d60535c375a4b06ea6282eadab843237942eba9",
+        "series": [
+          {
+            "native_slices": 28,
+            "selected_centres": 28,
+            "distinct_native_indices_needed": 28
+          },
+          {
+            "native_slices": 26,
+            "selected_centres": 26,
+            "distinct_native_indices_needed": 26
+          },
+          {
+            "native_slices": 32,
+            "selected_centres": 32,
+            "distinct_native_indices_needed": 32
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 86,
+        "palette_indices_metadata_uncompressed_upper_bytes": 13216736,
+        "measured_current_NPZ_bytes": 23348953
+      },
+      {
+        "study_id_sha256": "606d0d4a619fe49afb3356a58c5a6b04cff970ef49836c674fced3a2ccfb3600",
+        "series": [
+          {
+            "native_slices": 24,
+            "selected_centres": 24,
+            "distinct_native_indices_needed": 24
+          },
+          {
+            "native_slices": 20,
+            "selected_centres": 20,
+            "distinct_native_indices_needed": 20
+          },
+          {
+            "native_slices": 22,
+            "selected_centres": 22,
+            "distinct_native_indices_needed": 22
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 66,
+        "palette_indices_metadata_uncompressed_upper_bytes": 10143456,
+        "measured_current_NPZ_bytes": 20308711
+      },
+      {
+        "study_id_sha256": "3762b22aaec7cf7db5be5e65cd8f5bc2c7058a2ee39ded3ebbbf52cbcf1a34f6",
+        "series": [
+          {
+            "native_slices": 28,
+            "selected_centres": 28,
+            "distinct_native_indices_needed": 28
+          },
+          {
+            "native_slices": 40,
+            "selected_centres": 40,
+            "distinct_native_indices_needed": 40
+          },
+          {
+            "native_slices": 30,
+            "selected_centres": 30,
+            "distinct_native_indices_needed": 30
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 98,
+        "palette_indices_metadata_uncompressed_upper_bytes": 15060704,
+        "measured_current_NPZ_bytes": 30935335
+      },
+      {
+        "study_id_sha256": "70ef628b1b5ca9a7996d5eb8220d66b92040186bc039ce6b4d1bb5f8b51c2080",
+        "series": [
+          {
+            "native_slices": 24,
+            "selected_centres": 24,
+            "distinct_native_indices_needed": 24
+          },
+          {
+            "native_slices": 16,
+            "selected_centres": 16,
+            "distinct_native_indices_needed": 16
+          },
+          {
+            "native_slices": 20,
+            "selected_centres": 20,
+            "distinct_native_indices_needed": 20
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 60,
+        "palette_indices_metadata_uncompressed_upper_bytes": 9221472,
+        "measured_current_NPZ_bytes": 15761715
+      },
+      {
+        "study_id_sha256": "84abd26168be9349ca0f357c7974766500e0a72a64c1c6a585265dd571b2fadf",
+        "series": [
+          {
+            "native_slices": 22,
+            "selected_centres": 22,
+            "distinct_native_indices_needed": 22
+          },
+          {
+            "native_slices": 21,
+            "selected_centres": 21,
+            "distinct_native_indices_needed": 21
+          },
+          {
+            "native_slices": 29,
+            "selected_centres": 29,
+            "distinct_native_indices_needed": 29
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 72,
+        "palette_indices_metadata_uncompressed_upper_bytes": 11065440,
+        "measured_current_NPZ_bytes": 25987576
+      },
+      {
+        "study_id_sha256": "6b5b75da9d287fa9f7c79028415e0cd9f5278226feadd6d2bf792fb52f32af7e",
+        "series": [
+          {
+            "native_slices": 24,
+            "selected_centres": 24,
+            "distinct_native_indices_needed": 24
+          },
+          {
+            "native_slices": 16,
+            "selected_centres": 16,
+            "distinct_native_indices_needed": 16
+          },
+          {
+            "native_slices": 24,
+            "selected_centres": 24,
+            "distinct_native_indices_needed": 24
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 64,
+        "palette_indices_metadata_uncompressed_upper_bytes": 9836128,
+        "measured_current_NPZ_bytes": 17022494
+      },
+      {
+        "study_id_sha256": "40eafb3f9e263fb212a98ed0c0e51fab28b5dc45c262cf63559e4be59fd317be",
+        "series": [
+          {
+            "native_slices": 35,
+            "selected_centres": 35,
+            "distinct_native_indices_needed": 35
+          },
+          {
+            "native_slices": 35,
+            "selected_centres": 35,
+            "distinct_native_indices_needed": 35
+          },
+          {
+            "native_slices": 45,
+            "selected_centres": 45,
+            "distinct_native_indices_needed": 45
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 115,
+        "palette_indices_metadata_uncompressed_upper_bytes": 17672992,
+        "measured_current_NPZ_bytes": 28318764
+      },
+      {
+        "study_id_sha256": "6057489f3bb2336728c7cc0b50eff42ce4cd982e1e38bd7c1121f945061e4119",
+        "series": [
+          {
+            "native_slices": 35,
+            "selected_centres": 35,
+            "distinct_native_indices_needed": 35
+          },
+          {
+            "native_slices": 47,
+            "selected_centres": 47,
+            "distinct_native_indices_needed": 47
+          },
+          {
+            "native_slices": 33,
+            "selected_centres": 33,
+            "distinct_native_indices_needed": 33
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 115,
+        "palette_indices_metadata_uncompressed_upper_bytes": 17672992,
+        "measured_current_NPZ_bytes": 30364684
+      },
+      {
+        "study_id_sha256": "f4aa248a7838a136146a9262b1e38639acbd0bcf8340c06de916012562538b0b",
+        "series": [
+          {
+            "native_slices": 32,
+            "selected_centres": 32,
+            "distinct_native_indices_needed": 32
+          },
+          {
+            "native_slices": 36,
+            "selected_centres": 36,
+            "distinct_native_indices_needed": 36
+          },
+          {
+            "native_slices": 33,
+            "selected_centres": 33,
+            "distinct_native_indices_needed": 33
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 101,
+        "palette_indices_metadata_uncompressed_upper_bytes": 15521696,
+        "measured_current_NPZ_bytes": 31389090
+      },
+      {
+        "study_id_sha256": "7d8d0444e49ca27948a400f41e736e78d7be11780ac1b69d48946e1f673e62d7",
+        "series": [
+          {
+            "native_slices": 33,
+            "selected_centres": 33,
+            "distinct_native_indices_needed": 33
+          },
+          {
+            "native_slices": 32,
+            "selected_centres": 32,
+            "distinct_native_indices_needed": 32
+          },
+          {
+            "native_slices": 36,
+            "selected_centres": 36,
+            "distinct_native_indices_needed": 36
+          }
+        ],
+        "nonzero_palette_plane_upper_bound": 101,
+        "palette_indices_metadata_uncompressed_upper_bytes": 15521696,
+        "measured_current_NPZ_bytes": 32062377
+      }
+    ]
+  },
+  "preprocess_contract_audit": {
+    "percentile_scope": "All native voxels in each selected series, p1/p99 before letterbox and sampling; MONOCHROME1 and slope/intercept handled first. No per-plane/per-triplet/new pooled normalization.",
+    "plane_pixels": "Final physical-aspect392x392 uint8 BILINEAR letterbox with original zero padding; candidate dedup would occur only after this unchanged result.",
+    "triplet_sampling": "rint(linspace(0,N-1,min(N,48))) centres; channels clip(centre+[-1,0,1],0,N-1), order retained.",
+    "slots": "Up to3 selected series ordinal slots from shared select_series; fluid/fat priority, distinct-plane preference, UID tie order. These are not fixed6 anatomical slots.",
+    "metadata_scope": "mask(bool3x48), positions(float32 3x48 from native physical centre locations), planes(int64 3), flags(float32 3x2) are separate per-token/per-slot data. Equal image bytes never imply equal positions/masks/series/group.",
+    "existing_resize_memoization": "Readers already resize each needed native index once per selected series; current triplet NPZ materializes repeated plane bytes for encoder input. Storage dedup does not itself reduce MRI decode or percentile work."
+  },
+  "possible_future_storage_design_not_implemented": {
+    "pool": "Per-study first-appearance order across slot/window/channel. SHA256 of shape/dtype/C-order final392uint8 bytes plus equality check within hash bucket; zero plane ID0 implicit; uint16 refs shape3x48x3.",
+    "reconstruction": "Gather references to original dense3x48x3x392x392 images; preserve all4 metadata arrays byte-for-byte. Same original five array hashes/dtypes/shapes and encoder inputs must match before accepting conversion.",
+    "prohibited_changes": [
+      "Do not derive mask from zero pixels",
+      "Do not collapse token positions or merge series metadata",
+      "Do not alter normalized percentile scope/crop/resize/channel order",
+      "Do not combine global dictionaries across folds/groups",
+      "Do not claim old NPZ bytes/file SHA are preserved"
+    ],
+    "new_provenance_needed": "Separate storage schema/fingerprint/version, palette/ref member SHA, original-five-array hashes, conversion/source hashes and immutable manifest; keep authoritative semantic preprocessing contract. Existing fingerprint includes storage and implementation text, so cannot reuse the old file fingerprint blindly.",
+    "resource_tradeoff": "Dense reconstruction keeps current loader API but palette plus dense array can raise peak RAM and has indexing cost; direct token-batch gather requires separately verified loader/model contract work. Transfer compression/time gains remain unmeasured.",
+    "future_minimum_tests": [
+      "Five-array byte/dtype/shape/SHA equality after reconstruction",
+      "Clipped endpoint repeated channels and sparse48 sampling",
+      "Valid all-zero token versus masked zero padding",
+      "Same pixels at different positions/cross-series metadata",
+      "Strict corrupted refs/palette/manifest rejection and bounded safe NPZ reading"
+    ]
+  },
+  "compression_primary_sources": [
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc1951.html",
+      "accessed_date_JST": "2026-10-08",
+      "claim": "DEFLATE maximum backward reference distance32768 bytes and max length258; full same plane153664 bytes cannot be one long-range copy when repetition distance exceeds32768."
+    },
+    {
+      "url": "https://numpy.org/doc/stable/reference/generated/numpy.savez_compressed.html",
+      "accessed_date_JST": "2026-10-08",
+      "claim": "savez_compressed stores each .npy array in ZIP_DEFLATED .npz; outer existing ZIP_STORED does not recompress NPZ members."
+    }
+  ],
+  "compression_caveat": "32768-byte reference limitation explains why repeated whole planes are not fully deduplicated by current Deflate. Zero margins/padding/local patterns/Huffman still compress; actual incumbent16 ratio0.37444 disproves any blanket claim that NPZ is uncompressed. It does not predict candidate palette NPZ compression factor.",
+  "evidence_sha256": {
+    "artifacts/research/20261008-native392-pixel16-results-v1/NATIVE392_PIXEL_PILOT_SUMMARY.json": "dad0f98b3f9b803f9f00aa9ce077bb23a0b9b894fe54b629a5ab1c254a7334f5",
+    "experiments/native392-pixel16-saved-binding-review-20261008.json": "05f71209e18a0b9ce943e16ce6b1fdd5a4c4a80665bd0fc8ef7cf2263432ba0d",
+    "experiments/native392-pixel16-completed-review-20261008.json": "372b8c41bc1686dace46a2b18304c1eaeef7237b757ed8fecc70671e38703477",
+    "notebooks/public/18a_profile_dinov2_native392_pixel16.ipynb": "ff88e2077d7d7ef484fbd19e5f50ddd69e40c663dea22f73283903b13d860e7e",
+    "src/rsna_knee/feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "src/rsna_knee/triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "src/rsna_knee/imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "scripts/bounded_feature_reader.py": "95a906f7e157cf1fa6d722432e6ed913838c6f579ac352418255688a5cf49ee6"
+  },
+  "implemented_or_changed_pixel_format": false,
+  "payload_access_by_this_audit": false,
+  "remote_mutation": false,
+  "real_MRI_decode_or_training": false,
+  "docs_ledger_owner": "root"
+}

@@ -1,0 +1,205 @@
+{
+  "schema_version": "p011_actual256_independent_compact_review_v1",
+  "at_utc": "2026-10-08T18:34:32.429723+00:00",
+  "all_passed": true,
+  "checks": {
+    "exact256_savedV1_ref_kernel_source_and_orderedcohort": true,
+    "immutable_p011-profile256-savedV1-binding-review-20261009": true,
+    "immutable_p011-profile256-root-launcher-preparation-20261009": true,
+    "immutable_p011-profile256-root-launcher-independent-review-20261009": true,
+    "immutable_p011-profile256-compact-getter-preparation-20261009": true,
+    "official_raw_typed_COMPLETE_failureempty_explicitV1": true,
+    "actual_savedV1_source25cells22code_T4_OFF_private_reused": true,
+    "SourceRPC0_StatusRPC1_no_loop_mutation": true,
+    "13unique_compact9JSON4CSV_exact_allowlist": true,
+    "all13_body_SHA_actualbytes_HTTP_length_cap_exact": true,
+    "both_inventory_allpages_Counter_multiplicity_agrees": true,
+    "API_ListFiles_size_not_byteproof": true,
+    "cleanup_metadata_no_submission_partial_or_abort": true,
+    "separate_UID_body_MRI_cache_or_weight_download0": true,
+    "profile256_passed_schema_orderedcohortSHA": true,
+    "main_reader_expert_once256": true,
+    "profile_dictionary_vs_separate_expert_and_blend_receipts_exact": true,
+    "base_earlier_stage_reader0_finalreader1_no_stale_mismatch": true,
+    "baseline_main_no_failed_fallback_or_initializererror": true,
+    "originalfusion_success1_exception0_fallback0": true,
+    "baseline_main2loads_original320_ckptSHA": true,
+    "baseline512_forward_full94windows320_FP16_grad0": true,
+    "reader3models_plain64batches192forwards_grad0": true,
+    "reader_summary_gate_matches_actual192_events": true,
+    "CPU_seal_before_extra_namespace_and_returned_reader": true,
+    "CSV256_UID12targets_finite_originalfusion_independent_maxdiff0": true,
+    "all12_fixed90_10_rank_average_percentile_candidate_reconstructedSHA": true,
+    "all256_UID_hash_records_exact_coverage": true,
+    "256_native96_384_uint8_mask96_positive_bytecontracts": true,
+    "two_decode_per256_recorded_input_and_maskSHA_exact": true,
+    "256_worker_receipt_verified_before_model_and_SHA_present": true,
+    "two_actual_expert_load_receipts_exact_summary": true,
+    "two_expert_strict486_FP32_checkpoint3394_arch224_eval": true,
+    "256_stock_full94_singleview224_forwardFP16_grad0_fallback0": true,
+    "256_JSON_probability_F32byteSHA_independently_struct_recomputed": true,
+    "rawCSV12probability_vs256_runtimeJSON_exact_maxdiff0": true,
+    "all256_input_before_after_SHA_match_native_receipts": true,
+    "two_expert_GPU_workers_total256_both_active_no_equal_share_assumption": true,
+    "expert256_forwardcounts_total24064_windows": true,
+    "no_realprofile_decode_error_allmissing_or_initializerfail": true,
+    "bounded_transport256_completed_no_cancel_unfinished_errors": true,
+    "three_phases_sampled_positive_finite_T4memory_lt13000MiB": true,
+    "resource_runtime_gate_report_matches_threephase_contract": true,
+    "diagnostic_submitted_CSV_deleted_only_reconstructed_hash": true,
+    "Report_teacher_Gold_consumedfalse_sourcecohortexcluded": true,
+    "ownGold_selection_false_authorGold_reuse_explicit": true,
+    "candidate_fullServing_Public_accuracy_qualification_stillfalse": true
+  },
+  "decision": "256-study private diagnostic passed; full serving and Public accuracy remain unqualified",
+  "official_status_observed_at_utc": "2026-10-08T18:33:55.279448+00:00",
+  "ref": "rsraki/p011diag256-e5e8cdc760af73b43bbd386184635afb",
+  "saved_version": 1,
+  "kernel_id": 137720781,
+  "source_profile_SHA": "1d81ac179370be73197ec818879604f6551e36a5f15f1745cea54e7858439b3a",
+  "ordered256_UID_SHA": "685a6a4c82f1ae7bf29a8d2dfeafccecf02b394f8a5a0ef5da284af32085e55a",
+  "raw_UIDs_saved_in_this_review": false,
+  "body_SHA256": {
+    "P011_BASELINE_SEAL.json": "2c9e2e1ef370356cef7ae72d06764473da742c3c6a97d618d4f2ad501243d501",
+    "P011_BASE_PROFILE.json": "b7820ccf9a15c01b2219ab47742570f97b56c9821e2543ddb0f51366b2d870e5",
+    "P011_BEFORE_EXTRA.json": "d3ba4ebbdd492e7429700a3c88d5c93e3641e5c31ceb06977862844e915ca537",
+    "P011_CANDIDATE_BLEND_RECEIPT.json": "2b068148be29b1a0e97b90e16eb2d8c4109ce693a86fe5f6d7182510f91b31f4",
+    "P011_EXPERT_LOAD_cuda_0.json": "bfa2e21a1bdc184b2d5f5833246472aa6b0c19de3539b840d0d8e1536e67de6f",
+    "P011_EXPERT_LOAD_cuda_1.json": "5d7f4bca9915be8f7895a91a346d920641acd3abcad86b29e887e2d9f1566d3d",
+    "P011_PROFILE_SUMMARY.json": "fc3c21d91972a59ab4ccf0251494eb8dce62306f799ff8f8b47bdcd86c7ea7ab",
+    "P011_STANDALONE224_SUMMARY.json": "cef3551b4f1d04da2a737fdfc7008cc5fa00d31b52ea8685213006819943f5f1",
+    "_own.csv": "59f3d2b07517554af728c59ec09b42b87c44274160b7770ea65efd87df27ab2b",
+    "_sota_0949.csv": "8c08315b0579010597e81456ab974d7394a7a8fb53f21454c374577d0b0a0676",
+    "p007_observation_plain/inference.json": "97bbbdd02d9ec0a9f045f50cc38fd98cf9c1595be95dbd64d934cf6869b4706a",
+    "p011_baseline_sealed.csv": "7a3bdcdd57e13b48033a6c0272c54479b41c1e9e334d62f9518b95242340d9ee",
+    "p011_expert224_raw.csv": "c6baed73c58cc9260c989204b7697a9ae0ec15df53efb46b0c1325e436a6108b"
+  },
+  "control_receipt_SHA256": {
+    "status.json": "f149cef4e2ff0b1caae4d70c02ece80ad71ec17bb1adfc9b8f98ebf4eaaf82b4",
+    "saved-binding.json": "16ce598f4ab618d5d032dd9ac5b25496ec6eb45cc304ece1caf640521abb0a5b",
+    "download-receipt.json": "d3d1f55c3dda43b139158c5f30a17876b62d57bd568fca8118a517719e612724",
+    "visible-output-metadata.json": "b77971c20a449335e8484775bfab0eed4520ba2f2c0da4c245e9ba09fcc57988"
+  },
+  "preserved_proof_SHA256": {
+    "experiments/p011-profile256-savedV1-binding-review-20261009.json": "f4c83f23cc3baad2089eea4f6d4d622f2eb4602398ac66522118ab21321f4653",
+    "experiments/p011-profile256-root-launcher-preparation-20261009.json": "6f1849b6b19768f228dd1f236c9e1e7afcea6f55878437a9f628853063351da6",
+    "experiments/p011-profile256-root-launcher-independent-review-20261009.json": "8b6f2870b522a0c2c3dddc57ec5b64cf74492c0ea5516cbfc987b41447684c3e",
+    "experiments/p011-profile256-compact-getter-preparation-20261009.json": "8636ffb85b75e92433c635e64ec96dae5d532ea0d32cbe215f25aafec2c08abd"
+  },
+  "CSV_independent_math": {
+    "all_passed": true,
+    "original_fusion_independent_maxdiff": 0.0,
+    "fixed10_candidate_csv_reconstructed_sha256": "60b07ae57134505c989f66e5ed3694d14f31bd98972ffdde6fb2b14d0e60955b",
+    "candidate_file_body_downloaded": false,
+    "candidate_profile_file_deleted": "Must separately check official output inventory and runtime summary; SHA reconstruction is not external observation of the deleted file.",
+    "original12_columns_and_UID_order_finite": true,
+    "fixed10_formula": "average_percentile(0.9*average_percentile(base)+0.1*average_percentile(expert))",
+    "CSV_sha256": {
+      "_sota_0949.csv": "8c08315b0579010597e81456ab974d7394a7a8fb53f21454c374577d0b0a0676",
+      "_own.csv": "59f3d2b07517554af728c59ec09b42b87c44274160b7770ea65efd87df27ab2b",
+      "p011_baseline_sealed.csv": "7a3bdcdd57e13b48033a6c0272c54479b41c1e9e334d62f9518b95242340d9ee",
+      "p011_expert224_raw.csv": "c6baed73c58cc9260c989204b7697a9ae0ec15df53efb46b0c1325e436a6108b"
+    },
+    "accuracy_evaluated": false
+  },
+  "rawprobability_JSON_CSV_independent_maxdiff": 0.0,
+  "native_valid_slices": {
+    "minimum": 74,
+    "maximum": 96,
+    "sum": 23452
+  },
+  "phases": {
+    "baseline_main": {
+      "elapsed_seconds": 363.319242642,
+      "sampled_peak_process_tree_rss_bytes": 14512279552,
+      "rss_note": "Sum of RSS includes shared pages more than once; sampled, not exact peak.",
+      "sampled_gpu_peak_used_mib": [
+        3363,
+        3763
+      ],
+      "gpu_note": "nvidia-smi device-wide sampled memory, includes unrelated allocations on that device.",
+      "samples": 653,
+      "disk_free_bytes_after": 20938145792
+    },
+    "baseline_reader": {
+      "elapsed_seconds": 469.08214855099993,
+      "sampled_peak_process_tree_rss_bytes": 11857920000,
+      "rss_note": "Sum of RSS includes shared pages more than once; sampled, not exact peak.",
+      "sampled_gpu_peak_used_mib": [
+        8069,
+        543
+      ],
+      "gpu_note": "nvidia-smi device-wide sampled memory, includes unrelated allocations on that device.",
+      "samples": 865,
+      "disk_free_bytes_after": 20936732672
+    },
+    "independent_expert": {
+      "elapsed_seconds": 145.51160061099995,
+      "sampled_peak_process_tree_rss_bytes": 18056843264,
+      "rss_note": "Sum of RSS includes shared pages more than once; sampled, not exact peak.",
+      "sampled_gpu_peak_used_mib": [
+        7743,
+        8893
+      ],
+      "gpu_note": "nvidia-smi device-wide sampled memory, includes unrelated allocations on that device.",
+      "samples": 250,
+      "disk_free_bytes_after": 20934348800
+    }
+  },
+  "sum_phase_elapsed_seconds": 977.9129918039998,
+  "sum_excludes_queue_environment_startup_import_and_misc": true,
+  "expert_twoT4_allocator_and_device_summary": [
+    {
+      "index": 0,
+      "name": "Tesla T4",
+      "allocated_mib": 293.115234375,
+      "reserved_mib": 4010.0,
+      "peak_reserved_mib": 7604.0
+    },
+    {
+      "index": 1,
+      "name": "Tesla T4",
+      "allocated_mib": 293.115234375,
+      "reserved_mib": 4100.0,
+      "peak_reserved_mib": 8754.0
+    }
+  ],
+  "expert_GPU_study_distribution_observed": {
+    "cuda:1": 130,
+    "cuda:0": 126
+  },
+  "GPU_equal_share_assumed": false,
+  "actual_forward_counts": {
+    "main": 512,
+    "reader": 192,
+    "expert_stock": 256,
+    "expert_backbone": 256,
+    "expert_backbone_windows": 24064
+  },
+  "expert_checkpoint_label_metadata_present": [
+    false,
+    false
+  ],
+  "label_order_evidence": "Literal author LAB/head12 and runtime outputs; checkpoint contains no explicit labels metadata.",
+  "author_Gold_selection_reuse": true,
+  "author_Gold_training_exclusion_independently_verified": false,
+  "own_Gold_fit_or_selection": false,
+  "weak_OOF_checkpoint": false,
+  "256_diagnostic_passed": true,
+  "candidate_gate_passed": false,
+  "256_profile_completed": true,
+  "full_Serving_passed": false,
+  "accuracy_evaluated": false,
+  "Public_score": null,
+  "resource_runtime_gate_passed": true,
+  "double_decode_identity_gate_passed": true,
+  "limitations": [
+    "Native volume/mask equality independently checked between captured receipt strings, not recomputed from real MRI bytes locally.",
+    "Worker receipt SHA/guard-before-model is source-bound runtime evidence; worker receipt bodies were not downloaded.",
+    "Resource memory is sampled device-wide usage and summed process-tree RSS, not exact unique process RAM or hidden-test peak.",
+    "256-study timings do not guarantee fullhidden runtime. Codec coverage is not audited per DICOM frame.",
+    "Reader3-model192-forward execution observed; separate reader checkpoint payload SHAs were not externally downloaded/recomputed in this review.",
+    "Deleted candidate CSV bytes are independently reconstructed from four downloaded prediction CSVs and matched to the recorded candidate SHA; its deleted body was not obtained."
+  ],
+  "API_HTTP_actualMRI_model_teacher_or_fit_by_reviewer": 0
+}

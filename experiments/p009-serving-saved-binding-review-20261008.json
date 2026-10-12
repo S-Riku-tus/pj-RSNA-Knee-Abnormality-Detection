@@ -1,0 +1,79 @@
+{
+  "schema_version": "p009_serving_savedV1_independent_binding_v1",
+  "reviewed_at_utc": "2026-10-08T13:35:04.936169+00:00",
+  "all_passed": true,
+  "checks": {
+    "accepted_exact_own_ref_V1_kernel": true,
+    "accepted_no_error_invalid_inputs": true,
+    "canonical19_SHA_and_protected14": true,
+    "packaged19_bytes_and_all5_SHA_equal": true,
+    "request_entire_Notebook_equals19": true,
+    "root_prelaunch17_passed_SHA": true,
+    "root_evidence_hashes_current": true,
+    "real32_profile72_passed": true,
+    "real32_gradient_disabled64_forwards_each": true,
+    "real32_allslots_batch4_reader16": true,
+    "actual_profile160_fastread_SHA": true,
+    "request_Original_T4_GPU_private_OFF": true,
+    "request_Input1_Input1_comp_only": true,
+    "request_SAVE_AND_RUN_ALL": true,
+    "saved_exact_ref_kernel137675752_currentV1": true,
+    "saved_title_owner_slug_language_type": true,
+    "saved_entire_Notebook_equals_requested19": true,
+    "raw_typed_blob_source_identical": true,
+    "all10_cell_sources_and_types_identical19": true,
+    "seven_clean_code_cells": true,
+    "seven_saved_code_compile_without_execution": true,
+    "only_original_main_cell4_changed": true,
+    "other_six_original_code_and_fixed_fusion_same": true,
+    "FOV160_crop_native384_inputs_same": true,
+    "embedded_fastread_only140to160_change": true,
+    "stale_fastread_source_and_FOV_guards": true,
+    "no_profile_parts_fixed32_UIDs_added": true,
+    "saved_raw_private_GPU_noTPU_InternetOFF": true,
+    "saved_Original_digest_T4_exact": true,
+    "saved_two_input_slugs_no_others": true,
+    "blob_owner_slug_python_notebook": true
+  },
+  "checks_passed": 31,
+  "checks_total": 31,
+  "saved_ref": "rsraki/p009-coat-fov160",
+  "saved_version": 1,
+  "kernel_id": 137675752,
+  "local_notebook_sha256": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+  "protected14_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "saved_source_text_sha256": "dda0a203e7b4fec9538fffc26bdbdd6838e6b8457da0f119b65ad731d6047491",
+  "source_artifacts": {
+    "notebooks/public/19_submit_p009_coat_fov160.ipynb": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "artifacts/research/20261008-p009-serving-launch-v1/launch-request.json": "bff8cc45797c8f5f6b16535490f47e8fc7ae778677362a743d9ae6bf3e8bba94",
+    "artifacts/research/20261008-p009-serving-launch-v1/save-response.json": "971f49b966e51ba993ca19e19a10b3d2bf34e40f429376c25bac9ce8c09e473c",
+    "artifacts/kaggle/p009-coat-fov160-v1-20261008/package.json": "6c11c83e0be292e0d5fedb135d9bd8798abc53f0e9f2eac5b3fba6a0d656118b"
+  },
+  "Input_version_scope": "Accepted /1+/1 pins without invalid Input rejection; GetKernel returns slugs only. Internal Dataset version IDs not observed. Numeric Original31481 provenance separate; saved digest exact.",
+  "actual_T4x2_count_confirmed": false,
+  "own_best_Public": "0.950",
+  "p009_Public": null,
+  "hidden_rerun_completed": false,
+  "teacher_MRI_model_download_or_GPU_execution": false,
+  "fresh_status": {
+    "checked_at_utc": "2026-10-08T13:35:04.234494+00:00",
+    "raw": {
+      "status": "COMPLETE"
+    },
+    "typed": {
+      "status": "COMPLETE",
+      "failureMessage": null
+    },
+    "typed_without_defaults": {
+      "status": "COMPLETE"
+    },
+    "raw_COMPLETE_confirmed": true,
+    "scope": "Raw status omitted with typed QUEUED is a schema default; worker state unknown. Actual raw COMPLETE and no failure required for CSV GET."
+  },
+  "fresh_response_artifact_sha256": {
+    "saved-source.json": "f9c5d0095587aade5fd9d504d7af48409a2ef2894ec3d72c9bcfcefc398a44dc",
+    "saved-source-raw.json": "fe20710084a9e9b7ad077624abdaa3c56145019478709f08a335f0e38546a8ab",
+    "status.json": "d63e9e9202fb48b2ce6e817e685514e92dca1ed64c324b1dea4b377cbd433427"
+  }
+}

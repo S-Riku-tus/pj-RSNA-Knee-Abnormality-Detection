@@ -1,0 +1,64 @@
+{
+  "schema_version": "p013_own950_P012_native_twofold_parent_root_decision_v1",
+  "recorded_at_utc": "2026-10-09T13:04:27.603970+00:00",
+  "root_actor": true,
+  "p013": {
+    "own_official_Public": "0.950",
+    "official_status": "COMPLETE",
+    "error_description": null,
+    "submission_ref": 57006968,
+    "saved_version": 1,
+    "kernel_id": 137861867,
+    "observed_at_utc": "2026-10-09T12:58:39.452876+00:00",
+    "hidden_scoring_complete": true,
+    "adopted": false,
+    "additional_Submit": 0,
+    "hidden_walltime_from_score_poll_proven": false
+  },
+  "selected_parent": {
+    "name": "P012",
+    "own_official_Public": "0.951",
+    "submission_ref": 56998356,
+    "notebook_path": "notebooks/public/24_submit_p012_public951_snapshot_control.ipynb",
+    "notebook_sha256": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee",
+    "all_five_code_cells_to_preserve_literal_and_order": true,
+    "code_cell_sha256": [
+      "3858126b82681ba469934c84a79f360eb199df59c16159b7a168df94e415cb37",
+      "d08db7bd194a78dac8c923a50048d098dd297223cc971e0fec40ba996d840e78",
+      "28e149bd01ee06b3aec6fc1d23ffc1c344c98d79f67d21a5050a0abe28e1c4ce",
+      "56e1d3e0c6fe73bf3efd72500effd0e63d99ddebe582f854fbf0e0bdfefa5c95",
+      "968b4d9b019c5519e6fec31161ab2d636d482a587bbe0742fba02a54c5b52959"
+    ],
+    "fixed_private_S5_Input_ref": "rsraki/rsna-knee-compact-v1/1",
+    "selection_reason": "Higher displayed own official score, with an existing completed hidden rerun; retain P013 as a scored nonadopted comparison.",
+    "statistical_significance_from_rounded_Public_proven": false
+  },
+  "next_native_addition": {
+    "original_twofold_FP32_mean": "0.5 * (sigmoid(logits_fold0.float()) + sigmoid(logits_fold1.float()))",
+    "fixed_ratio_unchanged": {
+      "rank_selected_baseline": 0.8,
+      "rank_native_probability_mean": 0.2
+    },
+    "final_estimator": "average_pct(0.8*average_pct(P012_final70_30) + 0.2*average_pct(native_twofold_FP32_mean))",
+    "all12_average_ties_pct_denominator_N_and_17g": true,
+    "ratio_or_finding_weights_search": 0,
+    "own_Gold_fit_or_selection": 0,
+    "actual_twofold_CPU64_256_gate_passed": false,
+    "full_integrated_Notebook_qualified": false,
+    "new_native_submission_created": false
+  },
+  "evidence": {
+    "artifacts/research/20261009-p013-serving-fixed20-root-v1/submission-observation-v4/observation.json": "e6ca33a9ce6ea945d5b1f60b5767c667715840b5a67ddb8b8971bc84343252b2",
+    "artifacts/research/20261009-p013-serving-fixed20-root-v1/submission-observation-v4/response-safe.json": "91fbec93397256cadfcd90275fc9a73f02b213834dbc99e54ca069092b778e0c",
+    "artifacts/research/20261009-f005-native-runtime-root-v1/public951-submission-observation-v15/observation.json": "6566d820025709e557a5caf9c51ae78089728c41306fb60f2cba64b5353bfbf6",
+    "artifacts/research/20261009-p013-serving-fixed20-root-v1/actual-serving-Submit-attempt-v1/receipt.json": "f9d168852ac96f7ef4e49982a5e37d147c310719720bebed4e8ba3a5b025bde4",
+    "notebooks/public/24_submit_p012_public951_snapshot_control.ipynb": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee"
+  },
+  "prior_design_parent_null_is_preserved_history": true,
+  "old_score_pending_ledger_row_preserved_as_history": true,
+  "own_best_Public": "0.951",
+  "next_goal": "0.955",
+  "final_goal_strictly_above": "0.960",
+  "strict_above960_achieved": false,
+  "new_API_GPU_model_MRI_teacher_actions_by_this_recorder": 0
+}

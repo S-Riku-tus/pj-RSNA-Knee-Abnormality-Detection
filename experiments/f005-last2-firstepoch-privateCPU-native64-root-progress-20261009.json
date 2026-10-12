@@ -1,0 +1,106 @@
+{
+  "schema_version": "f005_last2_real_firstepoch_privateCPU_complete_native64_Save_progress_v1",
+  "at_utc": "2026-10-09T05:20:21.729827+00:00",
+  "all_passed": true,
+  "run_snapshot": {
+    "path": "artifacts\\runs\\f005-native-last2-fast16-fold0-20261009-v1\\run.json",
+    "sha256": "e9aec85ab187916824e5073d1de744793ad4bf4d4aae8cae5f374a78c6538c07",
+    "status": "running",
+    "completed_epochs": 2,
+    "first_epoch": {
+      "epoch": 1,
+      "weak_bce": 0.3777010221328955,
+      "weak_macro_auc_12": 0.7429936781434937,
+      "optimizer_steps": 212,
+      "optimizer_step_opportunities": 212,
+      "amp_skipped_steps": 0,
+      "elapsed_seconds": 1748.733027700102,
+      "gpu_peak_reserved_bytes": 1163919360
+    }
+  },
+  "first_epoch_frozen_control": {
+    "weak_bce": 0.4023816201394196,
+    "weak_macro_auc_12": 0.7304502049710454
+  },
+  "same_epoch_weak_only_improvement_not_final_selection": true,
+  "proofs": {
+    "real_cached_adapter_independent28": {
+      "path": "artifacts\\research\\20261009-f005-cached-native-diagnostic-independent-review-v1\\frozen-adapter-review-r2.json",
+      "sha256": "990575093d7cc76da625af65e1d734381776da8768197f5d1a086e807af69de2"
+    },
+    "transport_wrapper_v3_independent28": {
+      "path": "artifacts\\research\\20261009-f005-native-transport-wrapper-independent-review-v3\\review.json",
+      "sha256": "4a330fb1ba0dc1e9d425e7de4b09163c096ed130146397d0cc6d935d950983d6"
+    },
+    "actual_sealed_bundle_manifest": {
+      "path": "artifacts\\research\\20261009-f005-cached-native-diagnostic-adapter-v1\\root-sealed-v1-FRESH\\bundle.json",
+      "sha256": "e3625b893d71e8e717fddf1135824ed5428e6859a3d284e624025c515b8d3657"
+    },
+    "actual_private_V1_inventory": {
+      "path": "artifacts\\research\\20261009-f005-native-runtime-root-v1\\native-private-V1-inventory-observation-v1.json",
+      "sha256": "ffac78fa362c9710d71f267744bbfacd823060a4447eba0b9c23138d7cf8a2bf"
+    },
+    "actual_CPU_source_runtime6": {
+      "path": "artifacts\\research\\20261009-f005-native-runtime-root-v1\\CPU-smoke-observation-v1\\review.json",
+      "sha256": "c14fca436d4e0d5a169828c908afa4004fd71e711464f3133e164ac4ad533de7"
+    },
+    "actual_CPU_independent21": {
+      "path": "artifacts\\research\\20261009-f005-cached-native-CPU-independent-review-v1\\review.json",
+      "sha256": "ed0f02f12a7c46f898747281daf817a5c9a532659cdf91e7b43b7244508ece27"
+    },
+    "actual_CPU_receipt": {
+      "path": "artifacts\\research\\20261009-f005-native-runtime-root-v1\\CPU-smoke-observation-v1\\F005_CACHED_DIAGNOSTIC_CPU_smoke.json",
+      "sha256": "1f8c129b21337821a74753c40dffcf9222796db7c121219bccb28b95d6ec4375"
+    },
+    "actual183_member_transport_receipt": {
+      "path": "artifacts\\research\\20261009-f005-native-runtime-root-v1\\CPU-smoke-observation-v1\\F005_NATIVE_TRANSPORT_RECEIPT.json",
+      "sha256": "1c60fe048a7af159ccdd2cb2e9bae8335a4d7aba2d37a5e3c5ed50f9037f0665"
+    },
+    "actual_native64_Save_acceptance": {
+      "path": "artifacts\\research\\20261009-f005-native-runtime-root-v1\\actual-native64-Save-attempt-v1\\receipt.json",
+      "sha256": "4240979b76b076fdc0d3a52e56b9277daaa16f3d2dcb52bd1aac09cc50274eb8"
+    },
+    "public951_explicit_V1_export": {
+      "path": "artifacts\\research\\20261009-f005-native-runtime-root-v1\\public951-explicit-saved-v1-source-v1\\receipt.json",
+      "sha256": "cda02bec9a6ed68753d09332298a6e04aa2df24a41927877706a07381845dc04"
+    },
+    "public951_V7_followup_hold": {
+      "path": "artifacts\\research\\20261009-heliosli-public951-independent-analysis-v1\\research-explicitV1-V7-followup-v1.json",
+      "sha256": "2d4d886d69bfcb36f2fec3d99d803a6749ea0d434f588475ba0a57bf71d3b4b7"
+    },
+    "own_private_destination_readonly_evidence": {
+      "path": "artifacts\\research\\20261009-f005-native-runtime-root-v1\\native-upload-ownership-and-payload-readonly-proof-v1.json",
+      "sha256": "5492a429aeba916c0ab33da233339db6966e0f4ef45589dea55def859eb00b42"
+    }
+  },
+  "actual_new_private_Datasets": 1,
+  "actual_private_CPU_Save": 1,
+  "actual_private_native64_Save": 1,
+  "actual_private_input_dataset_id": 12459214,
+  "actual_private_input_display_version": 1,
+  "actual_CPU_all183_member_SHA_and_strict_reconstruction": true,
+  "actual_native64_complete_or_resource_QC": false,
+  "actual_native256_complete": false,
+  "native64_ref": "rsraki/n392diag-803d4ccd30e81d4b48c713883f84fd5d",
+  "native64_kernel_id": 137811090,
+  "actual_native64_preceding_CPU_receipt_sha256": "1f8c129b21337821a74753c40dffcf9222796db7c121219bccb28b95d6ec4375",
+  "fresh_available_GPU_seconds_at_native64_Save": "60299.080",
+  "selected_input_internal_version_IDs": null,
+  "request_versions_explicit_actual_bytes_verified_before_model_in_CPU": true,
+  "new_competition_submissions": 0,
+  "own_Public_best": "0.950",
+  "author_Public951_is_not_own": true,
+  "own955_achieved": false,
+  "strict_above960_achieved": false,
+  "own_Gold_fit_checkpoint_or_coefficient_selection": 0,
+  "auto_review_upload_rejection_resolved": true,
+  "resolution": "Official MY_PRIVATE namespace proof6 plus exact positive payload and existing API submission authorization; same operation reapproved. CLI Windows relative slash error then fixed by upload-folder cwd/-p.; private V1 remote inventory and actualCPU body proofs succeeded.",
+  "public_candidate_hold": "Author official.951 exists; explicitV1 export +actualV7 manifest gives c7 ID but top-level manifest assertion demands a5. This pair stops before inference; source/Input exact scoring correspondence unresolved. LatestV10 cannot substitute.",
+  "next": "Observe native64 actual results and then gated256; unchanged last2 fixed12 completion, paired fold0 review and fixedfold1 pair; decide one next modeling factor from per-target weak results; qualify intended selected-model inference before fixed blend/official submission.",
+  "limits": [
+    "Early epoch weak gain does not establish final gain or ownPublic gain.",
+    "Native64 Save acceptance is not a completed GPU profile or hidden submission.",
+    "Patient independence is unverified; Public authors reusedGold separately from own training.",
+    "Goal remainsactive: own0.955 and strictlyabove0.960 remainunachieved."
+  ]
+}

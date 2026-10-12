@@ -1,0 +1,85 @@
+{
+  "P014_P015_hidden_exception_cause": "Still unknown; P016 output pagination is a separate local collection issue, not proof of hidden rerun cause.",
+  "at_utc": "2026-10-10T11:16:35.718933+00:00",
+  "own_best_official_Public": 0.951,
+  "p016_native64": {
+    "actual_names_count": 187,
+    "actual_native256_or_Serving_qualified": false,
+    "actual_native64_phase_root_qualified_at_this_record": false,
+    "actual_page200_has_next_token": false,
+    "actual_raw_typed_status": "COMPLETE",
+    "actual_required10_names_present": true,
+    "actual_safe_output_metadata": {
+      "path": "artifacts/research/20261010-p016-native64-output-metadata-root-v1/metadata-only.json",
+      "sha256": "aa9be2a0b5d83da5aa3a967813e02e8b741af401f9af5d4964cdd5d720079f29"
+    },
+    "actual_submission_csv_absent": true,
+    "cause_of_collector_hold": "Output count exceeded former single-page100 contract; actual body/inference outcome was not yet reviewed.",
+    "kernel_id": 138015216,
+    "model_math_Source_inputs_changed": false,
+    "models_MRI_or_CSV_body_downloaded_by_metadata_reader": false,
+    "new_collector_default_SDK_auth0_chunk": "454e8d",
+    "new_collector_preparation": {
+      "path": "artifacts/research/20261010-p016-native64-results-tools-v3/getter-preparation.json",
+      "sha256": "69b4ba8bac667bd9717caa47dcd773cae3c33a3b18fbc941e1cb260ed8244f0d"
+    },
+    "new_output_metadata_limit": "3 pages x 200, no body GET before full safe inventory",
+    "previous_collector_body_GETs": 0,
+    "previous_collector_stage": "one_complete_output_page",
+    "ref": "rsraki/p016n64-c7706576a7224c28941455284b4e5fa8",
+    "saved_Source8_checks_passed": true,
+    "saved_version": 1
+  },
+  "p017": {
+    "API_source_bytes": 949769,
+    "Input_metadata_RPCs": 6,
+    "Save_RPCs": 1,
+    "actual_Save_accepted": {
+      "path": "artifacts/research/20261010-p017-native-serving-root-v1/actual-serving-Save-attempt-v1/receipt.json",
+      "sha256": "9f7c926f63faea675458c8700d4386ef533bd599eec268ecb08783292bdcffa2"
+    },
+    "actual_available_GPU_seconds": 105947.264,
+    "actual_root_execute_chunk": "036301",
+    "actual_run_or_failover_qualified": false,
+    "combined_source_Save_independent_peer": {
+      "path": "artifacts/research/20261010-p017-materialized-and-Save-independent-v1/review.json",
+      "sha256": "8fc0dab29ea75346ac426bbfc580a8ccb5c6ad0499eebe7193532847dcce1acb"
+    },
+    "competition_Submit_calls": 0,
+    "fault_diagnostic_Source_in_preparation_only": true,
+    "kernel_id": 138018511,
+    "model_MRI_credential_uploads": 0,
+    "quota_RPCs": 1,
+    "ref": "rsraki/p017native-58e915a9fc1d4faeb9204ea03dc490a2",
+    "root_precheck": {
+      "path": "artifacts/research/20261010-p017-native-serving-root-v1/root-Save-precheck.json",
+      "sha256": "5170779585ff2c4d86dca1030a3da617ed7a999008e2d66eb4d4c68106efda25"
+    },
+    "root_private_Save_authorization": {
+      "path": "artifacts/research/20261010-p017-native-serving-root-v1/root-final-manual-Save-authorization.json",
+      "sha256": "ac4f51d8df9a9c69bac500eeedbf98e0ce8614802496265ea7904077ee577b8d"
+    },
+    "runtime_only_one_factor": "Optional native runtime failure may restore sealed original baseline bytes after owned process cleanup; healthy math and coefficients unchanged.",
+    "saved_version": 1
+  },
+  "regional_training": {
+    "Gold_or_Public_evaluated": false,
+    "all_completed_epochs_amp_skips": 0,
+    "comparison_limit": "Partial weak-label descriptive evidence; parallel execution/environment may differ, no causal or final architecture conclusion.",
+    "fixed_epochs": 12,
+    "fold0_epoch": 8,
+    "fold0_fixed10_same_epoch_AUC_delta": -0.0038133732677579912,
+    "fold0_same_epoch_weak_BCE_delta": 0.006543951767986389,
+    "fold1_epoch": 9,
+    "fold1_fixed10_same_epoch_AUC_delta": -0.003962383478999909,
+    "fold1_same_epoch_weak_BCE_delta": 0.0034909103924280482,
+    "models_or_teacher_tables_read_for_this_snapshot": false,
+    "partial_checkpoint_adopted": false,
+    "partial_snapshot": {
+      "path": "artifacts/research/20261010-f005-regional-E8E9-root-snapshot-v1/comparison.json",
+      "sha256": "1eb08b59c6657cf4d091d9bd9aa7a15c2e236ccb18275a6f87b3e87fbdea8642"
+    }
+  },
+  "schema_version": "p016_pagination_p017_actual_private_Save_regional_partial_progress_v1",
+  "strict_above0_960_achieved": false
+}

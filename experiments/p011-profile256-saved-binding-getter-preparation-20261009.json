@@ -1,0 +1,71 @@
+{
+  "schema_version": "p011_private256_saved_binding_getter_local_preparation_v1",
+  "all_passed": true,
+  "checks": {
+    "actual_saved256_response_request_identity_local8checks_pass": true,
+    "SDK_artificial2_tests_and_Ruff_pass": true,
+    "default_source_inspection_no_auth_or_API_pass": true,
+    "old64_getter_cloned_only_proof_outputfilename_changed": true,
+    "fixed256_Notebook_package25cells22code_and_all6_sources": true,
+    "frozen_launcher_all4_passedproofs_and64_prerequisites_required_before_auth": true,
+    "fullNotebook_only_source_list_text_normalization_blob_wrapper_preserved": true,
+    "Original_T4private_OFF_Input1_1_source_graph_required": true,
+    "raw_missing_repeated_accept_typed_empty_only_null_foreign_reject": true,
+    "explicit_savedV1_source1_status1_only_no_outputs_or_mutations": true,
+    "SDKclient_GET_attribute_not_used_output_HTTP_transport_absent": true,
+    "fresh_observation_and_proof_no_retry_or_loop": true,
+    "raw_status_absent_typed_QUEUED_worker_unknown_preserved": true,
+    "candidate_fullserving_Public_qualification_not_claimed": true
+  },
+  "artificialSDK_CPU_tests": {
+    "passed": 2,
+    "seconds": 0.84
+  },
+  "Ruff_passed": true,
+  "ref": "rsraki/p011diag256-e5e8cdc760af73b43bbd386184635afb",
+  "saved_version": 1,
+  "kernel_id": 137720781,
+  "request_sha256": "1335711cbf52a2b8f2adc571125fab7569cdfb20676cb5f00bff4433f052625a",
+  "notebook_sha256": "1d81ac179370be73197ec818879604f6551e36a5f15f1745cea54e7858439b3a",
+  "package_sha256": "bb1882e12e675a23c6c73df69f6cbdd5580b35d59dceed36946e62f98d24c0cc",
+  "getter_sha256": {
+    "binding.py": "967c80e250fe86984e8241f6f00dc5bfe4107477bfa1093e14e06fd25f194f4d",
+    "get_once.py": "2be37c4847ac504cbbd6f3501e010a02cf33d5e18165031ebf6bd364a8810163",
+    "test_binding.py": "452104fa24e057b1a5da085cf368fc33e1071107faa54aa64f5c304839cab7e5"
+  },
+  "reused64_source_sha256": {
+    "binding.py": "9401f3d8b7574f69de6223dd329fd7ed45d7ba6da1219df2766d93fd1b298f96",
+    "get_once.py": "68bd7e3fddb87c9088e0de7426220763f13dda61451077785f6e62b6d6f8afbf"
+  },
+  "actualSave_response_sha256": "89fe334c2beac10f24fc103df449f7a4aec93cd1ca35a738f78f18b2a90f84e8",
+  "actualSave_accepted_sha256": "e5fc1853568c5d8cf8fa638df47740aad8924aec92f8e6cafe5ada64c7da4994",
+  "accepted_local_checks": {
+    "explicit_ref_kernel_savedV1_equals_raw_typed_accepted": true,
+    "accepted_private256_not_competition_no_retry": true,
+    "intent_launch_source_request_SHA_identity": true,
+    "request_all_Notebook_fields_match_canonical_source_normalization_only": true,
+    "launch_all_asset_and_proof_SHA_current": true,
+    "private_Original31481_T4_OFF_request": true,
+    "Input1_Input1_comp_only_and_SaveAndRunAll_request": true,
+    "fixed256_wholegroup_noGold_noTeacher_and_original7_source_contract": true
+  },
+  "prepared_root_only_command": [
+    "artifacts/tools/kaggle-venv/Scripts/python.exe",
+    "artifacts/research/20261009-p011-profile256-saved-binding-v1/get_once.py",
+    "--read",
+    "--ref",
+    "rsraki/p011diag256-e5e8cdc760af73b43bbd386184635afb",
+    "--kernel-id",
+    "137720781",
+    "--request-sha256",
+    "1335711cbf52a2b8f2adc571125fab7569cdfb20676cb5f00bff4433f052625a"
+  ],
+  "API_auth_HTTP_Save_submit_GPU_MRI_model_by_preparer": 0,
+  "actual_saved_source_status_observed_by_preparer": false,
+  "candidate_gate_passed": false,
+  "full_Serving_passed": false,
+  "Public_score": null,
+  "output_body_download_code_in_this_getter": false,
+  "decision": "Prepared read-only exact savedV1 source/status set; root may invoke once. No output payload access.",
+  "limitations": "Accepted launch pins human Input/1 versions; selected internal Dataset IDs and actual2T4 device/runtime qualification remain unknown before saved/runtime receipts."
+}

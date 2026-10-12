@@ -1,0 +1,99 @@
+{
+  "schema_version": "f005_frozen_CLS_FP32_cache_independent_source_review_v1",
+  "at_utc": "2026-10-09T03:34:54.545019+00:00",
+  "all_passed": true,
+  "checks": {
+    "four_producer_sources_match_author_freeze": true,
+    "author_preparation10_and_SHA": true,
+    "source_files_compile_without_execution": true,
+    "root_manual_commands_frozen": true,
+    "original_eight_native_sources_unchanged": true,
+    "original_CLI_configs_unchanged": true,
+    "protected_public950_source_unchanged": true,
+    "actual_full4207_preflight_root_proof_fixed": true,
+    "exact_frozen_CLS_Native_class_and_window16": true,
+    "same_postFP16_FP32_boundary_without_new_precision_or_regions": true,
+    "same_masks_positions_planes_flags_zero_padding_shape": true,
+    "root_explicit_execute_and_CUDA_before_meta_or_model": true,
+    "full4207_structural_plan_UID_Gold_group_exclusion_no_teacher_extraction": true,
+    "extractor_CSV_access_audit_hook_forbids_Report_and_teacher": true,
+    "complete_cache_and_stale_partial_rejection": true,
+    "UID_set_hashed_filename_embedded_UID_and_current_pixel_member_SHA_bound": true,
+    "bounded_hashed_allow_pickle_false_NPZ_arrays": true,
+    "same_seed_factory_initial_head_and_unchanged_frozen_prefix": true,
+    "recorded_runtime_flags_and_source_qualification_after_seed_factory": true,
+    "capture_no_grad_encoder_eval_prehead_only_RNG_unchanged": true,
+    "independent_AST_seed_optimizer_scaler_and_epoch_evaluation_invariant": true,
+    "missing_teacher_observed_total_denominator_true_tail_and_AMP_updates_preserved": true,
+    "checkpoint_original_serializer_strict_loader_suffix_head_compatible": true,
+    "distinct_cached_run_lineage_source_and_cache_audit_without_monkeypatch": true,
+    "owned_fresh_output_only_on_qualification_failure": true,
+    "independent_stdlib_only_CPU2_and_Ruff": true
+  },
+  "producer_source_sha256": {
+    "cache_tools.py": "90c25788a937cd86dc0f45435341d50739f250144a17550bd75533a4dae433ee",
+    "extract_once.py": "b8f09b28bb28e0a58a21418b4f3816d98ff099283a2b1b578f0d18e36aef489b",
+    "train_cached.py": "c7815bf71e0a567718b38502bbdbab3907adb252991b60950a4e91e32ceb98d8",
+    "qualify_artificial.py": "7eecb04ecf0ec97dd38bfd3d4f362d7390375a0c1d27c449a0f6610e6d27779e"
+  },
+  "author_preparation_sha256": "e22c2b5577831747c0b26a47e231dfa22bd3fc5e6b29cfb98672bb9ae8b45555",
+  "root_commands_sha256": "7c2925648f184958565f0e9b4d679cea94e073147744f462f14da51c4b49ef53",
+  "original_native_source_sha256": {
+    "native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+    "finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+  },
+  "original_CLI_sha256": "cfdba529adcdd9b6d5f34a6b020cdae03f7fb04551ed4807778503fa1235ece0",
+  "config_file_sha256": {
+    "0": "7352e38ba0e58aad041a31c3b667c0f23c3ef0f9e085a48c4832e7cc36a8a7cb",
+    "2": "896b7293b26413c895002f906ff83023389456a9ba9afda7f5413a0c498fc279"
+  },
+  "full4207_index_root_proof_sha256": "748e760a3636f57f9c3c29227dffc11ae08ad4a37597705fddb754d269476b74",
+  "root_observed_index_sha256": "7d373ae85098758a8bc322b4e65079de07e998f7b7cd42a5a2d26cc4577eae31",
+  "independent_test_source_sha256": "1b51001651b1ed44508e9de3d1fcc5c7b36a05f12737a70042388e3c9b983151",
+  "independent_CPU_tests": {
+    "passed": 2,
+    "elapsed_seconds": 0.033,
+    "Torch_imported": false,
+    "GPU_model_or_real_teacher_payload_access": false,
+    "Ruff": "passed",
+    "scope": "Actual adapter AST isolated with a dummy inference-mode decorator. Exact original epoch try/evaluation/setup after the declared boundary substitutions; malformed model-call signature rejection."
+  },
+  "resolved_source_findings": [
+    "Cache consumer now binds all4207 UID keys, hash filenames and embedded UIDhash to the original pixel member SHA for each same UID.",
+    "Actual qualification runtime must equal current recorded backend/runtime flags after the same original seed/factory initialization.",
+    "Capture explicitly rejects runtime window_chunk other than16 and exact-class frozen guard rejects Regional/last2."
+  ],
+  "source_equivalence_conditions": [
+    "Stored FP32 equals the original FP16-to-FP32 CLS head input, rather than changing feature precision.",
+    "Same immutable native forward creates cache inputs, stops at the head prehook, and consumes no head/dropout RNG.",
+    "Training/evaluation adapter changes input store/head boundary and receipts only. Original seed/shuffle/optimizer/scaler/observed loss/12epoch/earliest-BCE selection stay literal.",
+    "Original real-training preflight retains Gold UID/group/fold rejection before teacher conversion. Cache extraction is label/Report-free; cache training reads the same fixed weak teachers through that preflight.",
+    "Frozen prefix and initial head hashes must match reconstruction. Original strict suffix/head checkpoint save/load math remains; explicit cached producer lineage is additional metadata."
+  ],
+  "current_stage_allowed": "Root artificial full144 same-runtime CUDA qualification only; this source review does not open real-cache extraction or actual fit gates.",
+  "actual_CUDA_equivalence_observed_by_this_reviewer": false,
+  "actual_complete_feature_cache_reviewed": false,
+  "actual_full12_epoch_trajectory_equivalence_measured": false,
+  "actual_accuracy_evaluated": false,
+  "candidate_gate_passed": false,
+  "Public_score": null,
+  "limits": [
+    "Source/AST invariance and CPU isolation are conditional evidence. Root actual generic-encoder CUDA numerical qualification is required before real cache extraction.",
+    "Artificial19 microstudies/16+3 groups do not measure a complete learned12epoch trajectory or real MRI accuracy.",
+    "Runtime binding covers recorded Torch/NumPy/CUDA/GPU model and cuDNN/TF32/SDPA flags; no driver UUID or separate cuDNN-version identity claim.",
+    "The existing ordinary paired-run checker deliberately rejects the new cached schema until a separate later lineage adapter is approved; old checker unchanged.",
+    "No patient independence, own Gold or Public-score improvement follows from cached weak-label head training."
+  ],
+  "reviewer_activity": {
+    "read_source_and_small_metadata_only": true,
+    "API_HTTP_GPU_realMRI_NPZ_model_teacher_fit": 0,
+    "old_source_config_CLI_run_or_pair_checker_edits": 0,
+    "docs_ledger_edits": 0
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "schema_version": "p012_baseline64_started_nativefold1_root_progress_v1",
+  "recorded_at_utc": "2026-10-09T14:25:06.383371+00:00",
+  "source_reviews": {
+    "baseline_cleanup_diagnostic_source": {
+      "path": "artifacts/research/20261009-p012-baseline-cleanup-profile-independent-v1/review.json",
+      "sha256": "46fb1b8cdac1dd0abf673b1c447342b072a8c6df6d0a6e41a235873845b6d998",
+      "independent_source_checks": 30,
+      "actual_runtime_qualified": false
+    },
+    "P012_twofold_integrator_source": {
+      "path": "artifacts/research/20261009-f005-p012-twofold-parent-integrator-independent-v1/review.json",
+      "sha256": "a95c6d4b7f5e5d26920b9979beee3970605c29bf796856f01c330636b9a3c47f",
+      "independent_source_checks": 33,
+      "actual_runtime_qualified": false
+    }
+  },
+  "actual_private_diagnostic_Save": {
+    "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/actual-profile64-Save-attempt-v3/receipt.json",
+    "sha256": "55d683512d370c91598d1b0ab4c03810e0486b1b7d6fb8bf080387c681fd31a9",
+    "schema_version": "p012_actual_private_baseline64_Save_accepted_v1",
+    "at_utc": "2026-10-09T14:11:50.577965+00:00",
+    "ref": "rsraki/p012-baseline64-cleanup-40c1708784aa4ab6",
+    "saved_version": 1,
+    "kernel_id": 137885104,
+    "official_Save_calls": 1,
+    "private_Save_accepted": true,
+    "diagnostic_studies": 64,
+    "context_path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/root64-preparation-v1.json",
+    "context_sha256": "6c299773da8fdaebc62d58e59be7f1d19cad6a870806efd0cfde3e1931a3a41c",
+    "notebook_sha256": "8bbc234b69da6280d06bc7ad1150ecec850ec7d671b5a3aa83a792aababf0b09",
+    "request_sha256": "ed63f1eb358df921ddce486cce3d40d026ed2c3a99d4fbd6056521745fa0edf1",
+    "fresh_available_GPU_seconds_from_raw": "53842.667",
+    "actual_run_complete": false,
+    "actual_cleanup_qualified": false,
+    "native_or_twofold_qualification": false,
+    "competition_Submit": 0,
+    "own_best_Public": "0.951",
+    "strict_above960_achieved": false
+  },
+  "latest_actual_diagnostic_status": {
+    "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/profile64-observation-v2/observation.json",
+    "sha256": "e4c3a9793e6f89c8c6f8c76c15813894963f43bc4742a31f12626db89ebc8f00",
+    "at_utc": "2026-10-09T14:22:50.050421+00:00",
+    "ref": "rsraki/p012-baseline64-cleanup-40c1708784aa4ab6",
+    "saved_version": 1,
+    "maximum_read_RPCs": 2,
+    "body_GETs": 0,
+    "Save_upload_Submit": 0,
+    "actual_cleanup_qualified": false,
+    "actual_twofold_qualified": false,
+    "raw_status": "RUNNING",
+    "typed_status": "RUNNING",
+    "source_declared_platform_verified": true,
+    "actual_run_complete": false,
+    "failure_present": false
+  },
+  "saved_source_and_declared_platform_binding": {
+    "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/profile64-observation-v2/source-binding.json",
+    "sha256": "4b13611dfa0b3d4099c930a3bc0fb32ab89e9fb40f0e890e374730eeca782cf5",
+    "checks": {
+      "all_cell_types_text_order_equal_to_root_request": true,
+      "present_raw_metadata_strict_type_and_value_match_typed": true,
+      "exact_kernel_ref_savedVersion1": true,
+      "private_original_T4_off_declared_platform": true,
+      "exact_unique_three_Inputs_with_suffix_present_or_all_API_omitted": true,
+      "competition_and_no_extra_kernel_or_model_Inputs": true
+    },
+    "all_passed": true,
+    "new_VM_image_ID_claim": false,
+    "mounted_Input_internal_ID_unknown": true
+  },
+  "earlier_Save_preflight_failures_preserved": {
+    "1": {
+      "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/actual-profile64-Save-attempt-v1/held.json",
+      "sha256": "3eb47575ad10be1895e4c7688bbc3c1e8bd45009cd7b91ac0841a69c523533db",
+      "Save_calls_attempted": 0,
+      "HTTP_status": null,
+      "error_type": "HTTPError"
+    },
+    "2": {
+      "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/actual-profile64-Save-attempt-v2/held.json",
+      "sha256": "5c46cfe7eec2d29892a5bdb0a566c8646dba6fb3b3120cd1bc38216641d73c06",
+      "Save_calls_attempted": 0,
+      "HTTP_status": 401,
+      "error_type": "HTTPError"
+    }
+  },
+  "authentication_recovery_observed": {
+    "standard_SDK_OAuth_refresh_completed": true,
+    "account": "rsraki",
+    "secret_values_displayed_or_credential_files_manually_read_or_copied": false,
+    "401_exact_expiry_or_revocation_cause_proven": false,
+    "scope": "Local SDK authentication recovery before the sole diagnostic Save; not a diagnosis of earlier hidden Notebook exceptions."
+  },
+  "protected_notebook_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/24_submit_p012_public951_snapshot_control.ipynb": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee",
+    "notebooks/public/25_submit_p013_fixed20_cublas_control.ipynb": "d9a837599fa96e32e09d4e1c44f199e76af60e415ee3a5bd8521d2f363d9d14a"
+  },
+  "running_fold1": {
+    "run_path": "artifacts/runs/f005-native-last2-fast16-fold1-20261009-v1/run.json",
+    "status": "running",
+    "completed_epochs": 8,
+    "fixed_final_epochs": 12,
+    "last_history": {
+      "epoch": 8,
+      "train_bce": 0.2328355306809444,
+      "weak_bce": 0.29396618929548624,
+      "weak_macro_auc_12": 0.8682937814651966,
+      "metrics": {
+        "per_target": {
+          "ACL": {
+            "auc": 0.8461373915169295,
+            "binary_observed": 749,
+            "positive": 101.0,
+            "soft_excluded": 0
+          },
+          "MCL": {
+            "auc": 0.7136607142857143,
+            "binary_observed": 716,
+            "positive": 16.0,
+            "soft_excluded": 0
+          },
+          "Medial Meniscus": {
+            "auc": 0.8347116361788618,
+            "binary_observed": 808,
+            "positive": 328.0,
+            "soft_excluded": 0
+          },
+          "Lateral Meniscus": {
+            "auc": 0.7722210215402349,
+            "binary_observed": 766,
+            "positive": 105.0,
+            "soft_excluded": 0
+          },
+          "Medial OA": {
+            "auc": 0.9045107241205446,
+            "binary_observed": 496,
+            "positive": 59.0,
+            "soft_excluded": 0
+          },
+          "Lateral OA": {
+            "auc": 0.8661792752701843,
+            "binary_observed": 451,
+            "positive": 22.0,
+            "soft_excluded": 0
+          },
+          "PF OA": {
+            "auc": 0.830412593002521,
+            "binary_observed": 495,
+            "positive": 78.0,
+            "soft_excluded": 0
+          },
+          "Effusion": {
+            "auc": 0.9634198343079922,
+            "binary_observed": 716,
+            "positive": 108.0,
+            "soft_excluded": 0
+          },
+          "Synovitis": {
+            "auc": 0.9204123711340206,
+            "binary_observed": 122,
+            "positive": 97.0,
+            "soft_excluded": 0
+          },
+          "Baker's": {
+            "auc": 0.9187756497948016,
+            "binary_observed": 395,
+            "positive": 51.0,
+            "soft_excluded": 0
+          },
+          "Contusion": {
+            "auc": 0.9118417535418337,
+            "binary_observed": 302,
+            "positive": 87.0,
+            "soft_excluded": 0
+          },
+          "Fracture": {
+            "auc": 0.9372424128887223,
+            "binary_observed": 191,
+            "positive": 34.0,
+            "soft_excluded": 0
+          }
+        },
+        "macro_auc_12": 0.8682937814651966,
+        "available_class_macro_auc": 0.8682937814651966,
+        "defined_classes": 12,
+        "note": "Soft targets are excluded from ROC-AUC; use masked BCE for weak-label validation."
+      },
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0,
+      "elapsed_seconds": 13934.494963000063,
+      "prediction_sha256": "0f9bb89dacc5783506e71328aecdfca9a6dc0d796c7245b409ce06500390965a",
+      "gpu_peak_reserved_bytes": 1180696576
+    },
+    "snapshot_path": "artifacts/research/20261009-p012-baseline64-started-root-progress-v1/running-metadata-snapshot.json",
+    "snapshot_sha256": "7b87c39f54382526eb99874080f7532517c4ba53a292c210fa4dae2cb576c9f0",
+    "interim_checkpoint_adopted_or_read": false,
+    "selection_after_complete12": "earliest minimum weak validation BCE"
+  },
+  "next_order": [
+    "Observe baseline64 terminal state and verify actual output bodies",
+    "Run same-source baseline256 only after genuine64 acceptance",
+    "Finish fixed12 fold1 and seal selected pair",
+    "Independently qualify actual twofold CPU then64 then256",
+    "Integrate P012 fixed20 and qualify complete Serving",
+    "Submit exact verified saved version once with fresh quota"
+  ],
+  "actual_baseline_cleanup_qualified": false,
+  "actual_twofold_CPU64_256_qualified": false,
+  "Serving_qualified": false,
+  "competition_Submit_this_checkpoint": 0,
+  "own_best_Public": "0.951",
+  "P013_own_Public": "0.950",
+  "strict_above960_achieved": false
+}

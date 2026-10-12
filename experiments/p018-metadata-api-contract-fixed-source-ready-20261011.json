@@ -1,0 +1,101 @@
+{
+  "schema_version": "rsna_knee_P018_actual_metadata_defect_and_source_ready_v1",
+  "run_id": "p018-metadata-api-contract-fixed-source-ready-20261011",
+  "at_utc": "2026-10-10T15:48:49.008096+00:00",
+  "at_JST": "2026-10-11T00:48:49.008096+09:00",
+  "actual_existing_owned_CLS_protocol_observation": {
+    "path": "artifacts/research/20261011-owned-CLS-GetDataset-protocol-diagnostic-v1/actual-protocol-observation-v1/observation.json",
+    "sha256": "ab37264470ff7d456fb6a4b06a664aca1ad693d5572dad71910c74fb87c0be10"
+  },
+  "actual_API_defect_scope": {
+    "normal_existing_private_V1_GetDataset_omitted_raw_files": true,
+    "SDK_typed_default_empty_files_is_not_remote_inventory": true,
+    "old_postCreate_getter_would_reject_this_normal_shape": true,
+    "fix": "Read exact V1 file inventory with separate single ListDatasetFiles request, while retaining independent GetDataset privacy/ref/ID/version and status checks.",
+    "new_getter_RPC_limit": 3,
+    "pagination_retry_or_redirect_allowed": false,
+    "source_bound_per_response_bytes": 1048576,
+    "previous_hidden_Submit_errors_explained_by_this_observation": false,
+    "actual_new_REG_metadata_or_bytes_verified": false
+  },
+  "source_preparations": {
+    "metadata_getter": {
+      "path": "artifacts/research/20261011-p018-regional-private-metadata-tools-v2/preparation.json",
+      "sha256": "1c1efa78bc06b580233f21c9c48366b6dc205734178be3f6c878cdbabf369078"
+    },
+    "mixed_parent": {
+      "path": "artifacts/research/20261010-p018-mixed-native-serving-source-preparation-v1/preparation.json",
+      "sha256": "4efe47d8af8a23b1ef4743e6f5be50175c7455db943d319528dd4520d9c3369e"
+    },
+    "native64_256_wrapper": {
+      "path": "artifacts/research/20261011-p018-mixed-native-wrapper-source-preparation-v2/preparation.json",
+      "sha256": "a0f1359db2ccf9f6ca9c6cb1cda4c4a9d113bd953c058ebd57f19be3a6dd4ba8"
+    },
+    "manual_Save": {
+      "path": "artifacts/research/20261011-p018-mixed-native-serving-root-launch-source-preparation-v1/preparation.json",
+      "sha256": "729c67d70b4c3f0b48364020b01ab91a670b4d46db25cea0e7840245805e2c6f"
+    }
+  },
+  "independent_source_peers": {
+    "metadata_getter": {
+      "path": "artifacts/research/20261011-p018-regional-private-metadata-independent-source-v2/review.json",
+      "sha256": "69046512f59c16a13d6ada66899f0e0ca24023c5166c53431722401e12079f6f"
+    },
+    "mixed_parent": {
+      "path": "artifacts/research/20261011-p018-mixed-native-serving-independent-source-v1/review.json",
+      "sha256": "61230b65e81439e8e98a3b30980bb650c366e69b76bd30d1df4938ee56fb243b"
+    },
+    "manual_Save": {
+      "path": "artifacts/research/20261011-p018-mixed-native-serving-manual-Save-independent-source-v1/review.json",
+      "sha256": "d132f109867ce041d51d565514035da0a76ff1e9580f47f77356f0fa541e0843"
+    },
+    "native64_256_wrapper": {
+      "path": "artifacts/research/20261011-p018-mixed-native-wrapper-independent-source-v2/review.json",
+      "sha256": "d34cce5f99f408ec6303658a62fce99198401252b88e90887312c83439e8bfe3"
+    }
+  },
+  "source_capacity": {
+    "parent_source_only_API_bytes": 541915,
+    "internal_API_cap_bytes": 950000,
+    "native_source_only_packet_files": 60,
+    "native_source_only_raw_bytes": 2349784,
+    "native_source_only_base64_bytes": 442280,
+    "genuine_context_API_size_measured_or_accepted": false,
+    "note": "Real IDs, metadata, permissions and prior receipts must be injected and the actual Save request remeasured; Source estimates are not Save qualification."
+  },
+  "preserved_actual_local_QC": {
+    "CPU_selected_model_loads": 4,
+    "synthetic_GPU_successful_forwards": 8,
+    "local_QC_is_not_Kaggle_T4_MRI_or_Public_proof": true
+  },
+  "new_REG_upload": {
+    "specific_new_two_destination_approval_answer_received": false,
+    "auto_review_rejected_before_process": true,
+    "Start_PUT_Create_calls": 0,
+    "attempt_directories_exist": false,
+    "older_CLS_fold1_permission_fulfilled_separately": true,
+    "question_already_pending_not_reasked": true
+  },
+  "additional_primary_research": {
+    "path": "docs/research/p018-additional-model-research-20261011.json",
+    "sha256": "05803b7ee4cf1394b142a2c97fec8e423c9f12a5d5071003c7611e5e8e0ffbf6"
+  },
+  "latest_official_score_observations": {
+    "P016": {
+      "path": "artifacts/research/20261010-p016-official-score-tools-source-v1/official-observation-v4/observation.json",
+      "sha256": "0f5054ab696bb15d641eca0bc44e8f4341f001fa23f872c08caee454394b39a5"
+    },
+    "P017": {
+      "path": "artifacts/research/20261010-p017-official-score-tools-source-v1/official-observation-v8/observation.json",
+      "sha256": "3b3a5cdaad37a721c49949cec9f6b21980cbf9adce69b3007dcb2c01118cba77"
+    }
+  },
+  "protected_baseline": {
+    "path": "notebooks/public/24_submit_p012_public951_snapshot_control.ipynb",
+    "sha256": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee"
+  },
+  "own_best_Public": 0.951,
+  "new_mixed_native64_256_Serving_qualification_issued": false,
+  "strict_above960_achieved": false,
+  "next": "After the pending concrete approval: sequential new-only uploads, actual three-read metadata per fold, byte-only Kaggle verification, fresh mixed64 then mixed256, normal/fault Serving, fresh Submit allowance and one fixed Public experiment."
+}

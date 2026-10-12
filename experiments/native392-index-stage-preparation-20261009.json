@@ -1,0 +1,254 @@
+{
+  "schema_version": "native392_local_hardlink_index_stage_preparation_v1",
+  "checked_at_utc": "2026-10-08T16:14:18.159757+00:00",
+  "all_passed": true,
+  "checks": {
+    "16_meaningful_CPU_tests_passed": true,
+    "ruff_passed": true,
+    "all07_actual_metadata_contracts_passed_without_ZIP_body_read": true,
+    "all07_actual_archive_stats_unchanged": true,
+    "first52_source_and_compact25_schema_supported": true,
+    "remaining100_source_and_compact28_schema_supported": true,
+    "all07_actual_array13_proof_requires880_arrays_each": true,
+    "immutable_V2_4207_wholegroup24_plan_source_verified": true,
+    "original_preprocessing_and_fullindex_modules_unchanged": true,
+    "original14_and18a_unchanged": true,
+    "old_f005V2_and_fast16V3_packages_unchanged": true,
+    "exact_resolved_workspace_paths_and_samevolume_guard": true,
+    "only_new_shard_folder_mkdir_in_stage": true,
+    "explicit_hardlink_with_no_ZIP_copy_fallback": true,
+    "oldsource_fullSHA_checked_before_and_after_link": true,
+    "samefile_nlink_content_and_mtime_receipt": true,
+    "summary_exact_bytes_fresh_xb": true,
+    "intent_finalreceipt_fresh_x_and_interruption_partial_marker": true,
+    "failedstage_preserves_evidence_and_no_blindretry": true,
+    "oldpartial_never_removed_or_modified": true,
+    "no_network_API_decoder_training_imports": true,
+    "manual1CLI1shard_and_full24_index_not_built": true
+  },
+  "sources_sha256": {
+    "stage_tools.py": "299cdac980d50013ecbec10381876055ecd5fca7d98aa23d7f9af3a3713bc154",
+    "stage_one.py": "a1923eb56b6dba3032a33d5e509290f3552fe238f515d294822a773771a3e447",
+    "test_stage_tools.py": "e411d9ca5cfe7ff00dccd26e7cd9f9e1650bf55e19f30c89b2caadec47f253f5",
+    "record_preparation.py": "6fd3a2ae2755150d27a9ca86b129a6430173880b68f45d2b73a90efa0b9f06f1"
+  },
+  "protected_assets": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/18a_profile_dinov2_native392_pixel16.ipynb": "ff88e2077d7d7ef484fbd19e5f50ddd69e40c663dea22f73283903b13d860e7e",
+    "src/rsna_knee/native_training.py": "0c470e265332e14e31b1942996f37efd7861f9932eb9ded117253b689b97bf26",
+    "src/rsna_knee/native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+    "src/rsna_knee/native_pixel_shards.py": "f9478250d4775dafbd0ba1d29f06bffb1247b8153209b9a5d93d82143d957d56",
+    "src/rsna_knee/triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "artifacts/kaggle/f005-native-train-handoff-v2-20261008/f005-native-code.zip": "6cdc36eb33b886f21dd338c57ad5e01ae7f46dabc95cdda3b54d119507953eb4",
+    "artifacts/kaggle/f005-native-train-handoff-v3-fast16-20261009/f005-native-fast16-code.zip": "a46bdedace8df3c0aa0c891291fa2a74cbbf817f0e368289445e0b1cda7c2131"
+  },
+  "authoritative_package_sha256": "9a3ebe73a3d53f360c5216eb2e4a63214ececb9a39b09224fdfa23d1e55971c2",
+  "plan_file_sha256": "12bc17f371997b20d1b1f85de83b8792a2e058ee409e08b0bff70aa50d7ff425",
+  "plan_semantic_sha256": "4c9b4a2f4f6c7a4acd50d809a67a95d60513e96ae360424f774ac3fc54bd3f60",
+  "code_zip_sha256": "1c75d7f330ce3188990e0839cb8080557cc045a70d497728c41598395acdbeb1",
+  "current01_07_metadata_only_contexts": [
+    {
+      "index": 0,
+      "archive_bytes": 4741650198,
+      "archive_sha256": "bafc99755bfef36efad9b531dcaf21df00d08384e13691d4aa79942f2fd9cb99",
+      "summary_sha256": "5a1aeef87119bcdca6edca0b4d04e1b792309b9176eaa95104436f6495856574",
+      "metadata_sha256": {
+        "summary": "5a1aeef87119bcdca6edca0b4d04e1b792309b9176eaa95104436f6495856574",
+        "array_review": "53e2ea61a6c28b9a557d1123f9dfe6e91f37ed95b541a2e3e89366c5e671fdc8",
+        "compact_review": "5eea3830f4a831cc20fb59f592e2d9658e318abd002007f4740df13390297d38",
+        "source_proof": "e9f2a3b946f0b7c887f9203779789cc1760ea059deeaf034c5b1ab70a86617af",
+        "download_receipt": "9034eac73a76511e37af938433f04c25cea5914b790daf29e3bf8ecf5bc28dae"
+      },
+      "planned_studies": 176,
+      "planned_arrays": 880,
+      "cohort_sha256": "1f02a6759d2bfd643ebf67ab70db7856ebbffd520724ccc376a3ff583d54466c",
+      "fingerprint": "9a5031f46277c4ed55de3dbb25a23487f3f401cb55d2a676558e407163488491",
+      "ref": "rsraki/native392-cache-shard-01-of-24",
+      "kernel_id": 137670873,
+      "saved_version": 1,
+      "actual_archive_stat": {
+        "bytes": 4741650198,
+        "mtime_ns": 1791467017437273600,
+        "device": 8532297721783996307,
+        "inode": 844424933087990,
+        "nlink": 1
+      }
+    },
+    {
+      "index": 1,
+      "archive_bytes": 4684805955,
+      "archive_sha256": "b382a5b451e383b1aa506fb72e888b13a646dfbb64b5c40df5b29c5ee1888136",
+      "summary_sha256": "7093b35e690f551a15cfdf1aa9c3d7e737393fbee086df02fdbccc511055cca6",
+      "metadata_sha256": {
+        "summary": "7093b35e690f551a15cfdf1aa9c3d7e737393fbee086df02fdbccc511055cca6",
+        "array_review": "72603e9bb18e105fe2f7f6ce95ddc8c978161ee3bdcd641de18278580e2f1be9",
+        "compact_review": "93e77a8c30f15c9ea07214ecf0a1f3863e3a306a914644807359e55caaf50a6c",
+        "source_proof": "7e07e7d975ebb22b12614b0e81898331e4bb6d409c028facd4add95992891177",
+        "download_receipt": "01779cd00ba25df5195afa32353cfdf987b2c2b2779f3a219c774dd9ad61c5c3"
+      },
+      "planned_studies": 176,
+      "planned_arrays": 880,
+      "cohort_sha256": "2b9369d34ef25b2a5a3fec7f31b041834b5307ee4b893e7f85c33279d96423fc",
+      "fingerprint": "9a5031f46277c4ed55de3dbb25a23487f3f401cb55d2a676558e407163488491",
+      "ref": "rsraki/n392s02-e01c6c7f3fa0ca87e4be0672a5d58193",
+      "kernel_id": 137683945,
+      "saved_version": 1,
+      "actual_archive_stat": {
+        "bytes": 4684805955,
+        "mtime_ns": 1791473154398004000,
+        "device": 8532297721783996307,
+        "inode": 3377699723484790,
+        "nlink": 1
+      }
+    },
+    {
+      "index": 2,
+      "archive_bytes": 4827892599,
+      "archive_sha256": "8f65cc0c99a8178adeee5793df6005080aa7823ab2accd9f06c905d51b13eec9",
+      "summary_sha256": "86753e4fc24307370e145d1b8e89ea7ac727c6bfaa75d7aaa7a8d14344ac4542",
+      "metadata_sha256": {
+        "summary": "86753e4fc24307370e145d1b8e89ea7ac727c6bfaa75d7aaa7a8d14344ac4542",
+        "array_review": "88825380358588d68eeed18cd43fc37954c36453e02531305ba9a25484bbedaf",
+        "compact_review": "ec33c593b217f50f32e359fee4510fff4d88be4c2b88dcf2d8f14d9644a57300",
+        "source_proof": "7e07e7d975ebb22b12614b0e81898331e4bb6d409c028facd4add95992891177",
+        "download_receipt": "f110ba22cba20487788a5b14dea87afbb1f4da9679061e5e949daf44b822ecad"
+      },
+      "planned_studies": 176,
+      "planned_arrays": 880,
+      "cohort_sha256": "f1b37c37fff5ff049c14707d94e7df79a91369e3280c8eef24e899e3daed5417",
+      "fingerprint": "9a5031f46277c4ed55de3dbb25a23487f3f401cb55d2a676558e407163488491",
+      "ref": "rsraki/n392s03-8a2b01af538bdabe2e6f783c475163a9",
+      "kernel_id": 137683965,
+      "saved_version": 1,
+      "actual_archive_stat": {
+        "bytes": 4827892599,
+        "mtime_ns": 1791473051757425300,
+        "device": 8532297721783996307,
+        "inode": 2251799816642169,
+        "nlink": 1
+      }
+    },
+    {
+      "index": 3,
+      "archive_bytes": 4774783538,
+      "archive_sha256": "ede7739e28a7975c99331a215726db223e8f0afb40412ef830a712cbdfd631dc",
+      "summary_sha256": "11bfc65479896ea9a625583667e81ba2282a3269ff58eaab0acaba206bd596d1",
+      "metadata_sha256": {
+        "summary": "11bfc65479896ea9a625583667e81ba2282a3269ff58eaab0acaba206bd596d1",
+        "array_review": "d6c078af64e189eed3f623c027a8d609e8d77feb818f90c0249f4a613667d7fb",
+        "compact_review": "f036c491305171f0c01a7ecba00f7d8152aedc192c9d0a65c0ac1e8cdf01408b",
+        "source_proof": "7e07e7d975ebb22b12614b0e81898331e4bb6d409c028facd4add95992891177",
+        "download_receipt": "508a85bb23c195085f1e33b40bf711330f6934ed656a3ee2649b08decd8b532a"
+      },
+      "planned_studies": 176,
+      "planned_arrays": 880,
+      "cohort_sha256": "d86b4a0eb90a1df06abcab108f5a174b38847003862cee1b88ed7443cf23a394",
+      "fingerprint": "9a5031f46277c4ed55de3dbb25a23487f3f401cb55d2a676558e407163488491",
+      "ref": "rsraki/n392s04-ff5caa12ee079068af6a933da0a2860b",
+      "kernel_id": 137683997,
+      "saved_version": 1,
+      "actual_archive_stat": {
+        "bytes": 4774783538,
+        "mtime_ns": 1791471371068624900,
+        "device": 8532297721783996307,
+        "inode": 844424933088703,
+        "nlink": 1
+      }
+    },
+    {
+      "index": 4,
+      "archive_bytes": 4619896162,
+      "archive_sha256": "6790039a1b55550fa35774ec7dca7ddcd60048b1695d321282b74002b19763fc",
+      "summary_sha256": "37bec55198957adb6dea4d0ef93ddfe6d449a7b52ccbe5639f15b49d0aac2b06",
+      "metadata_sha256": {
+        "summary": "37bec55198957adb6dea4d0ef93ddfe6d449a7b52ccbe5639f15b49d0aac2b06",
+        "array_review": "2093fb8dd67570ceddbf7e0b9f4c39aae946e515ee0b5e4b1f8a84904b79f0e0",
+        "compact_review": "974d05d0ed5febfb1cd9235d6f96aa7d7e7e72820cc3ca127616ea36919a946d",
+        "source_proof": "f0b9d32537f4a89dcf475558a85b25c6381962cbd1360373a8dc1158f0883e7e",
+        "download_receipt": "3c6a22497c9028fa2d419dc9429dd9a254e77213c92e561f0afe13f0e328c3a0"
+      },
+      "planned_studies": 176,
+      "planned_arrays": 880,
+      "cohort_sha256": "400fc6261a282f11af4a0a4b923986b8ad12d07f73b94daff08372f5c630af7f",
+      "fingerprint": "9a5031f46277c4ed55de3dbb25a23487f3f401cb55d2a676558e407163488491",
+      "ref": "rsraki/n392s05-27fcad27e4372b8d198e59857707e65f",
+      "kernel_id": 137689831,
+      "saved_version": 1,
+      "actual_archive_stat": {
+        "bytes": 4619896162,
+        "mtime_ns": 1791473961435621700,
+        "device": 8532297721783996307,
+        "inode": 1125899909719432,
+        "nlink": 1
+      }
+    },
+    {
+      "index": 5,
+      "archive_bytes": 4712653873,
+      "archive_sha256": "fcf96e6228a3b13764ca2815cfced51bdd0611990fd86df34d4e909943fdfcb1",
+      "summary_sha256": "aa3d374f0aee5ea3db203e1ea8383f73da896e231ab565d1c2aee16f6bc7fd9d",
+      "metadata_sha256": {
+        "summary": "aa3d374f0aee5ea3db203e1ea8383f73da896e231ab565d1c2aee16f6bc7fd9d",
+        "array_review": "bec616d221b79be88f9bf729c3e0dd4d806805094e5307ecbc132cf7113534c1",
+        "compact_review": "43cf45f9fcae2375bd45ddd8a1c6bcf75c576ae89e65ebcd01c2dac448bc0784",
+        "source_proof": "f0b9d32537f4a89dcf475558a85b25c6381962cbd1360373a8dc1158f0883e7e",
+        "download_receipt": "24d7afa304c2957e83cfe44878be2824cdf8acc4fb9449856eb108a14584c858"
+      },
+      "planned_studies": 176,
+      "planned_arrays": 880,
+      "cohort_sha256": "f626a9a1c9e73152089297f1be319e04f7f6d504f5d2a4a62a3f9d64fc7311fd",
+      "fingerprint": "9a5031f46277c4ed55de3dbb25a23487f3f401cb55d2a676558e407163488491",
+      "ref": "rsraki/n392s06-bc15ed8bc2e31d33195bcb606230d60b",
+      "kernel_id": 137689847,
+      "saved_version": 1,
+      "actual_archive_stat": {
+        "bytes": 4712653873,
+        "mtime_ns": 1791473979714133400,
+        "device": 8532297721783996307,
+        "inode": 2533274793353034,
+        "nlink": 1
+      }
+    },
+    {
+      "index": 6,
+      "archive_bytes": 4713140182,
+      "archive_sha256": "32107c42ae786ccc31b9b20693fe0efd5b78ca19e294c715fae239a78c722814",
+      "summary_sha256": "05f11d7af7bc75e0968a5e37bb8b4f093d3415e47dd5ed7ff5fb8553bd78bf78",
+      "metadata_sha256": {
+        "summary": "05f11d7af7bc75e0968a5e37bb8b4f093d3415e47dd5ed7ff5fb8553bd78bf78",
+        "array_review": "f631a79cf1dd43e55ca1488c8a534528d59429fed503bcd5e0386f049b94d757",
+        "compact_review": "95cc4e1ce248e67c13eb4fe72f5c76f99452f747ac813497cf9e4c33389a4aae",
+        "source_proof": "f0b9d32537f4a89dcf475558a85b25c6381962cbd1360373a8dc1158f0883e7e",
+        "download_receipt": "9541e17e48d67dafc17ad45eb2252073c4baa11ce21d03239665c19cd9da1fb2"
+      },
+      "planned_studies": 176,
+      "planned_arrays": 880,
+      "cohort_sha256": "af731423c063f1e8b042261a40e27239849404df8ad1051926acd00c56088ca9",
+      "fingerprint": "9a5031f46277c4ed55de3dbb25a23487f3f401cb55d2a676558e407163488491",
+      "ref": "rsraki/n392s07-50ec8e23cde2bbe6fd569918dd145f02",
+      "kernel_id": 137689879,
+      "saved_version": 1,
+      "actual_archive_stat": {
+        "bytes": 4713140182,
+        "mtime_ns": 1791474003385160500,
+        "device": 8532297721783996307,
+        "inode": 1970324839931727,
+        "nlink": 1
+      }
+    }
+  ],
+  "actual_processed_archive_body_reads_or_links": 0,
+  "actual_partial_modified": false,
+  "actual_canonical_parent_or_shard_directory_created": false,
+  "actual_API_HTTP_model_teacher_or_fit": false,
+  "artificial_tiny_archive_hardlinks_tested": true,
+  "constraints": [
+    "Root must explicitly create the canonical shards parent; the CLI creates only one fresh shard folder.",
+    "Source and target must resolve inside this workspace and be on the same volume.",
+    "Actual execution hashes each old processed ZIP before and after linking; SUMMARY alone is byte copied.",
+    "A hardlink shares a writable inode: keep both cache aliases immutable after staging.",
+    "Failed or interrupted staging retains a partial marker and must not enter the full index.",
+    "Metadata preparation verifies prior numeric/array proofs without reopening real pixel ZIP bytes.",
+    "Full index remains a separate manual step after all24 complete shards; real fit waits for complete4207."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "native392_canonical_shards01to12_root_stage_review_v1",
+  "checked_at_utc": "2026-10-08T16:51:29.715494+00:00",
+  "all_passed": true,
+  "checks": {
+    "shard01_stage_receipt_immutable_complete": true,
+    "shard02_stage_receipt_immutable_complete": true,
+    "shard03_stage_receipt_immutable_complete": true,
+    "shard04_stage_receipt_immutable_complete": true,
+    "shard05_stage_receipt_immutable_complete": true,
+    "shard06_stage_receipt_immutable_complete": true,
+    "shard07_stage_receipt_immutable_complete": true,
+    "shard08_stage_receipt_immutable_complete": true,
+    "shard09_stage_receipt_immutable_complete": true,
+    "shard10_stage_receipt_immutable_complete": true,
+    "shard11_stage_receipt_immutable_complete": true,
+    "shard12_stage_receipt_immutable_complete": true,
+    "2107studies_10535arrays_prior_actual_QA": true,
+    "full4207index_not_yet_created": true
+  },
+  "actual_processed_studies": 2107,
+  "actual_prior_numeric_arrays": 10535,
+  "formal_fit_started": false,
+  "raw_DICOM_API_teacher_or_model_access_by_stage": false,
+  "hardlink_aliases_share_writable_inode_and_are_immutable_inputs": true
+}

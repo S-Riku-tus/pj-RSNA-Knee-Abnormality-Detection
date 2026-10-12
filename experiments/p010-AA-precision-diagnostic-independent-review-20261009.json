@@ -1,0 +1,409 @@
+{
+  "checked_at_utc": "2026-10-08T15:41:37.686141+00:00",
+  "status": "local_existing_CSV_and_preregistered_AA_design_independently_reviewed",
+  "checks": {
+    "all14_protected_sources_exact_unchanged": true,
+    "plan_evidence_SHA_exact": true,
+    "cohort32_order_SHA_exact": false,
+    "all9_existing_CSV_32_UID_13cols_order_finite_range_nonconstant": true,
+    "existing_comparison_main_original_vs_bounded_recomputed": true,
+    "existing_comparison_main_original_vs_shared_recomputed": true,
+    "existing_comparison_fused_original_vs_bounded_recomputed": true,
+    "existing_comparison_fused_original_vs_shared_recomputed": true,
+    "existing_comparison_shared224_vs_stock224_recomputed": true,
+    "all3_original_target_fusions_exact_independent": true,
+    "expert_average_percentile_ranks_equal_only": true,
+    "actual_V3_ERROR_and_candidate_gate_stays_false": true,
+    "ten_phases_same_policy_AA_and_fixed_split_explicit": true,
+    "no_transport_causal_claim_from_unmatched_gpu_dispatch": true,
+    "retain_raw1e7_rel0_CSVexact_13000MiB_gates": true,
+    "persist_before_comparison_and_failed_phase_not_complete": true,
+    "threadlocal_identity_no_backend_setter_changes": true,
+    "diagnostic_only_no_teacher_Goldfit_AUC_or_submission": true,
+    "source_float64_division_and_final_float32_observed": true
+  },
+  "checks_passed": 18,
+  "checks_total": 19,
+  "all_passed": false,
+  "plan_sha256": "3802f43033e98238ea1e0142f8a377a48551d5e20a5c6811c38369a21ec06db5",
+  "existing_CSV_sha256": {
+    "p010_main_original.csv": "2b311ea9e7f7a694a773d20c2c116ca0a8f8bbf93e69c4fcd7ab786b85952ac8",
+    "p010_main_bounded.csv": "39fb37f6beae3a38e8b456a9b4fb1651fc5f0de704d920d0766645553f24b8e5",
+    "p010_main_shared.csv": "2b311ea9e7f7a694a773d20c2c116ca0a8f8bbf93e69c4fcd7ab786b85952ac8",
+    "p010_fused_original.csv": "a3920ee376bdad1d3fc1c5a3c87c1f8400105331d218f9bf6f71cf620feca2b8",
+    "p010_fused_bounded.csv": "402f852c043a4156176d309413059b6d13a8744eb37ee00f60fed5930b5c3306",
+    "p010_fused_shared.csv": "a3920ee376bdad1d3fc1c5a3c87c1f8400105331d218f9bf6f71cf620feca2b8",
+    "p010_reader_k16.csv": "6ab2ce6a6ee68e47dcd886bc008b83efc3fc393e2d94fd51a57fab2b7873a549",
+    "p010_shared224_raw.csv": "03ec66afe33ddd0cf5ca82b4a04690188bda213729225dceec30bfb1e4125f80",
+    "p010_stock224_raw.csv": "25d036a162cde05ae1b9704370cb9432e3f87fa6f8be4dae71ed15ef6b74a441"
+  },
+  "independent_comparisons": {
+    "main_original_vs_bounded": {
+      "bytes_identical": false,
+      "maximum_absolute_difference": 0.03225806000000003,
+      "changed_cells": 2,
+      "by_label": [
+        {
+          "label": "ACL",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "MCL",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Medial Meniscus",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Lateral Meniscus",
+          "changed_cells": 2,
+          "pair_order_or_tie_changes": 1
+        },
+        {
+          "label": "Medial OA",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Lateral OA",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "PF OA",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Effusion",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Synovitis",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Baker's",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Contusion",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Fracture",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        }
+      ]
+    },
+    "main_original_vs_shared": {
+      "bytes_identical": true,
+      "maximum_absolute_difference": 0.0,
+      "changed_cells": 0,
+      "by_label": [
+        {
+          "label": "ACL",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "MCL",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Medial Meniscus",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Lateral Meniscus",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Medial OA",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Lateral OA",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "PF OA",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Effusion",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Synovitis",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Baker's",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Contusion",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Fracture",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        }
+      ]
+    },
+    "fused_original_vs_bounded": {
+      "bytes_identical": false,
+      "maximum_absolute_difference": 0.03125,
+      "changed_cells": 2,
+      "by_label": [
+        {
+          "label": "ACL",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "MCL",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Medial Meniscus",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Lateral Meniscus",
+          "changed_cells": 2,
+          "pair_order_or_tie_changes": 1
+        },
+        {
+          "label": "Medial OA",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Lateral OA",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "PF OA",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Effusion",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Synovitis",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Baker's",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Contusion",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Fracture",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        }
+      ]
+    },
+    "fused_original_vs_shared": {
+      "bytes_identical": true,
+      "maximum_absolute_difference": 0.0,
+      "changed_cells": 0,
+      "by_label": [
+        {
+          "label": "ACL",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "MCL",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Medial Meniscus",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Lateral Meniscus",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Medial OA",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Lateral OA",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "PF OA",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Effusion",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Synovitis",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Baker's",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Contusion",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Fracture",
+          "changed_cells": 0,
+          "pair_order_or_tie_changes": 0
+        }
+      ]
+    },
+    "shared224_vs_stock224": {
+      "bytes_identical": false,
+      "maximum_absolute_difference": 0.0005064457654953003,
+      "changed_cells": 300,
+      "by_label": [
+        {
+          "label": "ACL",
+          "changed_cells": 25,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "MCL",
+          "changed_cells": 25,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Medial Meniscus",
+          "changed_cells": 25,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Lateral Meniscus",
+          "changed_cells": 25,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Medial OA",
+          "changed_cells": 25,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Lateral OA",
+          "changed_cells": 25,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "PF OA",
+          "changed_cells": 25,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Effusion",
+          "changed_cells": 25,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Synovitis",
+          "changed_cells": 25,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Baker's",
+          "changed_cells": 25,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Contusion",
+          "changed_cells": 25,
+          "pair_order_or_tie_changes": 0
+        },
+        {
+          "label": "Fracture",
+          "changed_cells": 25,
+          "pair_order_or_tie_changes": 0
+        }
+      ]
+    }
+  },
+  "original_fusion_maxdiff": {
+    "original": 0.0,
+    "bounded": 0.0,
+    "shared": 0.0
+  },
+  "expert_average_percentile_rank_maxdiff": 0.0,
+  "protected_source_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/19_submit_p009_coat_fov160.ipynb": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+    "notebooks/public/21_submit_p010_swa224_rank10.ipynb": "4adf9088b97c795cb50e382b41d4a158950352ef4d5316fda40551111c39c41c",
+    "notebooks/public/21a_profile_p010_shared224_32.ipynb": "eaa9ec444a884ccb6f5f9c1fec427a6d85febd710cbc226b20b770c68bbce960",
+    "notebooks/public/21a_profile_p010_shared224_32_v2.ipynb": "86b16a97fec35c5c345b56b2eac479b4e70f66a04afaf97921837d6274290b05",
+    "notebooks/public/21a_profile_p010_shared224_32_v3.ipynb": "b6710a91dd8fc9cb472170f324453aa28ec2fc44d46be5013ba05be271d996b3",
+    "scripts/p010_shared_runtime.py": "494685ecee58ccd98771e5e287992c598bbeea8691fd08dbceb4ebd18e2f59b7",
+    "scripts/p010_author224_runtime.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+    "scripts/p010_profile_runtime.py": "710171f0c031fda29a1b9e2292fffe715fd7bdade7a14d2fc5e32101aea24244",
+    "scripts/p010_profile_runtime_v2.py": "907ec6ff904348883080cf3288ab2b1e39bf1da2e2606988ba4cbca2309ff2fc",
+    "scripts/p010_profile_runtime_v3.py": "5cdc78fef82f083a6519527b13c1bc8e8fd86223eb9ccda1afc1ae9d164d84f8",
+    "scripts/p006_profile_runtime.py": "b61115cc92ab335273a31cf12c754097e3f0844ce2b7aaf9fd50c56f755603ca",
+    "scripts/p007_profile_runtime.py": "a291d826ed287683cfa15e98eb207bb15fe459b04263a2e4c5fcda8730138549",
+    "scripts/p009_profile_runtime.py": "a8491a62f2b33501c4db01f695cc0afcc96da353e8badf6788fd82fa1a1e0591"
+  },
+  "old_fusion_checker_sha256_unchanged": "ef498098fe3b4c45ceb4b00e2f7b1b23c610b2db13fd3e4af987cc00378ae79f",
+  "actualGPU_or_API_HTTP_model_MRI_teacher_fit": false,
+  "actual_V3_gate_passed": false,
+  "accuracy_or_hidden_runtime_proven": false,
+  "limits": [
+    "Nine already downloaded CSV files are partial ERROR-version evidence; internal raw observations/resources were not persisted before the real assert.",
+    "Expert rank equality does not satisfy its raw gate or prove improved AUC.",
+    "Float64-vs-final-float32 local checker discrepancy was not the actual V3 line556 failure.",
+    "The ten-phase plan is prospective; no new source/GPU/API execution is certified here."
+  ]
+}

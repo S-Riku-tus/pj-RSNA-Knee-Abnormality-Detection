@@ -1,0 +1,53 @@
+{
+  "schema_version": "p011_frozen_serving_local_handoff_preparation_v1",
+  "at_utc": "2026-10-08T18:32:27.078310+00:00",
+  "all_passed": true,
+  "checks": {
+    "existing_serving11_positive_inventory_notebook_package_copy_bound": true,
+    "source21cells18code_original7_once_order_and6embedded_exact_compile": true,
+    "sameV3_5helpers_stock_model_decoder_fixed90_10_and_sourceSHA": true,
+    "dynamic_testUIDs_no_diagnostic_cohort_in_serving_compute": true,
+    "Original_T4private_OFF_Input1_1_metadata_identical": true,
+    "current64_256_source_assets_unchanged": true,
+    "CPU3_focusedfutureproof_allowance_tests_Ruff_anddefault_preflight_pass": true,
+    "future_root_andpeer256_explicit_SHA_source_IDs_resource_identity_allpassed_required": true,
+    "futureproof_missing_servingSavegate_false": true,
+    "no_API_HTTP_auth_Save_upload_or_submit_functions_added": true,
+    "only_local_request_json_canfreeze_afterfuture_proof_binding": true,
+    "competition_submit_requires_separate_visible_savedV1_branches_andCSV_proof": true,
+    "freshofficial_GetSubmissionLimits_numAllowedNow_ge1_within60s_required": true,
+    "kernel_version_is_saved1_not_scriptVersionId_and_outputsubmissionCSV": true,
+    "candidate_Pubic_accuracy_hidden_completion_not_qualified": true
+  },
+  "CPU_tests": {
+    "passed": 3,
+    "seconds": 0.126
+  },
+  "Ruff_passed": true,
+  "source_sha256": {
+    "serving_guard.py": "1fc7cfd3e1e96172515f681ee8a3fe967051379a564571d0e947336fc75ce9d6",
+    "preflight.py": "6f56fef8129e32cc4b811717faf73cdf4af01ab7405d0126f7dfcea6d705be84",
+    "test_guards.py": "1e1e03d7aadadcdcf06640d3012bebc42f309ebefc92f2e3a2a402d08792a7f5"
+  },
+  "handoff_sha256": "4c16d8d0753eb1ddfa836745d7ae9be74dd0be556fd571345cfbfc3fb7b056fb",
+  "serving_sha256": "a8e13bf0b053716e024f363417bc8b338b958eddf8a1837d3bad0a385607fd0c",
+  "package_sha256": "163f5abd128f2e93e9e836397e0da0245bfd229ca74b93508664a50c7677d3e6",
+  "authoritative_package": "artifacts/kaggle/p011-independent224-rank10-v3-20261009",
+  "pending_future_proofs": {
+    "root": [
+      "experiments/p011-profile256-completed-root-review-20261009.json",
+      "p011_actual256_root_result_review_v1"
+    ],
+    "peer": [
+      "experiments/p011-profile256-actual-results-independent-review-20261009.json",
+      "p011_actual256_independent_compact_review_v1"
+    ]
+  },
+  "serving_Save_gate_passed": false,
+  "competition_submit_gate_passed": false,
+  "API_auth_HTTP_Save_upload_submit_GPU_MRI_model_by_preparer": 0,
+  "candidate_gate_passed": false,
+  "accuracy_evaluated": false,
+  "Public_score": null,
+  "decision": "Concrete local serving handoff prepared; both future256 result proofs missing, so no serving Save request frozen and no competition submission allowed."
+}

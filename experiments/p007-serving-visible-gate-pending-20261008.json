@@ -1,0 +1,29 @@
+{
+  "schema_version": "p007_serving_visible_gate_pending_v1",
+  "checked_at_utc": "2026-10-08T11:30:58.863559+00:00",
+  "ref": "rsraki/p007-convnext-mirror",
+  "saved_version": 1,
+  "kernel_id": 137659997,
+  "status": "raw_worker_state_unreturned_visible_outputs_empty",
+  "raw_status": {},
+  "typed_status": {
+    "status": "QUEUED",
+    "failureMessage": null
+  },
+  "source_binding_checks_passed": 48,
+  "output_file_count": 0,
+  "log_characters": 0,
+  "compact_CSV_downloaded": false,
+  "independent_visible_fusion_verified": false,
+  "requested_visible_review_not_created_reason": "No COMPLETE or CSV evidence; reserve successful visible review filename for actual completion.",
+  "read_only_status_calls_this_attempt": 1,
+  "read_only_output_calls_this_attempt": 1,
+  "poll_loop_or_remote_mutation": false,
+  "p007_Public": null,
+  "source_artifacts": {
+    "artifacts/research/20261008-p007-serving-results-v1/status-attempt-20261008T112950906639.json": "105620d5354ffc88dd01c339a5ac53851319ae242eba03c3acc268244660e9d6",
+    "artifacts/research/20261008-p007-serving-results-v1/output-attempt-20261008T113043262469.json": "68678bec65bf17d7473d2ce76c6ec05b8ccf329074516e1a57b6d8b7f289e2bc",
+    "artifacts/research/20261008-p007-serving-results-v1/download_results.py": "2f3c2b5f5a78f48942bc2af45d2e438c647d74f3b8fae28378bdc3d127fbb565",
+    "artifacts/research/20261008-p007-serving-results-v1/verify_results.py": "fd6b791eca37c1db09396b500c2b37576d5d8f0f2dc5ff10ebaf878ddc7d5a8c"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": "rsna_knee_actual_P018_mixed_CPU_and_upload_HOLD_milestone_v1",
+  "run_id": "p018-mixed-realCPU4-bytecode-fixed-upload403-20261010",
+  "at_utc": "2026-10-10T14:42:55.060360+00:00",
+  "at_JST": "2026-10-10T23:42:55.060360+09:00",
+  "mixed_Source_preparation": {
+    "path": "artifacts/research/20261010-p018-mixed-native-source-preparation-v2/preparation.json",
+    "sha256": "13aed20e4188dcc05334293bedc46c14ada4452590ed658038d9c993720b6611"
+  },
+  "mixed_independent_delta_Source_review": {
+    "path": "artifacts/research/20261010-p018-mixed-native-source-independent-review-v2/review.json",
+    "sha256": "acb69bb66e06337470b2893d7da85e1414d49a8ff9337210df2416dc47eca363"
+  },
+  "actual_CPU_receipt": {
+    "path": "artifacts/qa/20261010-p018-mixed-selected-CPU-v2/reconstruction.json",
+    "sha256": "38532749966f54efbc352fc58bcf1fefd733cfe0ead403d5138372c0082ce18c"
+  },
+  "actual_CPU_Root_acceptance": {
+    "path": "artifacts/qa/20261010-p018-mixed-selected-CPU-v2/Root-acceptance.json",
+    "sha256": "6947244b5adcffea3fd6184ce50ddce71a26ccd8e336e616d57936aabc7d20cd"
+  },
+  "fresh_local_REG_extraction": {
+    "path": "artifacts/qa/p18m/reextract-receipt.json",
+    "sha256": "d4123b40953a9e3018a2c5d393613d87c1615dc17037c7a75532050075cb5963"
+  },
+  "actual_CPU_execution": {
+    "chunk_id": "0542b8",
+    "exit_code": 0,
+    "generic_factory_calls": 1,
+    "checkpoint_loads": 4,
+    "strict_apply_calls": 4,
+    "storage_alias_pairs_checked": 6,
+    "alias_count": 0,
+    "model_forward_calls": 0,
+    "elapsed_seconds": 2.547000000020489,
+    "Root_checks": 9,
+    "independent_Source_delta_checks": 17
+  },
+  "old_failure": {
+    "CPU_v1": "Import-created Python bytecode added 17 files before strict positive inventory verification; failed before model reconstruction.",
+    "historical_source_peer_and_failed_trees_preserved": true,
+    "strict_inventory_relaxed": false
+  },
+  "private_upload": {
+    "fold0_old_attempt": "Failed before StartBlobUpload/PUT/CreateDataset; GetDataset attempt1 only.",
+    "actual_exact_ref_probe": {
+      "path": "artifacts/research/20261010-p018-regional-private-upload-diagnostic-tools-v1/actual-GetDataset-probe-v1/observation.json",
+      "sha256": "706871a149b256be168284d6723112652dbd8d1111745c7a6b62076e18ed269c"
+    },
+    "probe_execution_chunk_id": "907c6e",
+    "HTTP_status": 403,
+    "JSON_code_present": false,
+    "GetDataset_calls": 1,
+    "HTTP_requests": 1,
+    "StartBlobUpload_detachedPUT_CreateDataset_calls": 0,
+    "absence_proved": false,
+    "new_REG_private_Dataset_creation_verified": false,
+    "JSON200_code404_hypothesis_proved": false
+  },
+  "own_Gold_fit_or_selection": false,
+  "teacher_Report_inference_read": false,
+  "actual_mixed_full144_forward_qualified": false,
+  "actual_mixed_Kaggle_native64_256_Serving_qualified": false,
+  "accuracy_evaluated": false,
+  "own_best_Public": 0.951,
+  "strict_above960_achieved": false,
+  "next": "Actual local4090 full144/masked96 QC after independent Source review; exact new-only private Dataset API path without interpreting403 as absence; new mixed native64/256 and parent Serving integration before Submit."
+}

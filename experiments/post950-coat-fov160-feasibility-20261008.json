@@ -1,0 +1,102 @@
+{
+  "schema_version": "coat_fov160_static_feasibility_v1",
+  "reviewed_at_utc": "2026-10-08T11:21:37.039103+00:00",
+  "status": "static_source_audit_passed_candidate_not_implemented",
+  "baseline": "notebooks/public/14_submit_p005_public950_control.ipynb",
+  "baseline_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "baseline_source_role": "Own scored p005/Apex0.950; use this as one-factor parent, separate from k24/TTA/Meniscus candidates.",
+  "CoAt_cell_index": 4,
+  "CoAt_cell_source_sha256": "37243d9c509200ca349d6bcb080ee23b22cfee8ad3d209ae19a7c44535b49c20",
+  "embedded_fastread_source_sha256": "5a59b6f82e846bcdfd452aaee6ff518cdd9d0b04aab03691b45c3f70a5198cb0",
+  "observed_constants": {
+    "INPUT_RES": 320,
+    "INPUT_MODE": "crop",
+    "IMG": 384,
+    "CROP_MM": 140.0,
+    "K_EVAL": 94,
+    "FASTREAD_VARIANT": "study_lut",
+    "FR_HDR": 32,
+    "FR_PX": 16
+  },
+  "actual_call_chain": [
+    "main -> multiprocessing fork Pool initializer _pre_init",
+    "_pre_init -> _load_fastread().make_builder('study_lut',IMG384,SLOTS96)",
+    "make_builder -> build_study_batched -> _fill -> _fill_lut, or _fill_plain fallback",
+    "embedded CROP_MM crop -> cv2 INTER_AREA native384 canvas -> uint8",
+    "gpu_windows -> centred32px-border removal ->94x3x320x320 normalized tensor -> fixed CoAtNet320 strict checkpoint + mirror mean"
+  ],
+  "outer_constant_only_edit_is_effective": false,
+  "critical_scope": "The outer CoAt cell CROP_MM140 is independent of embedded _fastread.CROP_MM140. Editing only the outer constant does not change the normal study_lut decode path. Cfg accepts no FOV argument.",
+  "possible_future_bridge": "After importing fastread separately in each _pre_init worker, explicitly set that module.CROP_MM=160.0 before make_builder, or regenerate the embedded constant and its hash. Root decides implementation; this audit does neither. Preserve LUT and pydicom/fallback branches consistently.",
+  "candidate_prediction_factor": "Only the physical CoAtNet central image crop target140->160mm; same original p005 backbone320, checkpoint/SWA,94 windows, two TTA views, ConvNeXt k16/3fold and target rank weights.",
+  "nominal_geometry": {
+    "native_canvas_pixels": 384,
+    "model_input_pixels": 320,
+    "baseline_crop_target_mm": 140,
+    "candidate_crop_target_mm": 160,
+    "baseline_final_FOV_mm": 116.66666666666667,
+    "candidate_final_FOV_mm": 133.33333333333334,
+    "baseline_mm_per_model_pixel": 0.3645833333333333,
+    "candidate_mm_per_model_pixel": 0.4166666666666667,
+    "anatomy_linear_pixel_scale_ratio": 0.875,
+    "physical_square_area_ratio": 1.3061224489795917
+  },
+  "geometry_limits": [
+    "Nominal formulas assume enough native image extent and the scalar PixelSpacing used by this code; actual crops round to integer pixels and clamp to min(height,width).",
+    "If native physical image extent is below140mm, both targets can clip to the same crop and make no change.160mm is a target, not a guaranteed acquired FOV.",
+    "Scalar spacing and anisotropic native images can give different physical FOV by axis; this proposed factor does not correct orientation/spacing conventions.",
+    "Slot/slice/window policy and shapes stay fixed, but uint8 values and nonblank masks can change; mask-dependent evaluated centres may then change as a consequence of the crop factor."
+  ],
+  "training_FOV_evidence": {
+    "author_source_comment": "Fixed config must match training; native384 corpus and CROP_MM140 are stated in the scored author's source. Older long docstring says336/384 in places and is not the executed config.",
+    "independent_training_corpus_or_augmentation_source_verified": false,
+    "checkpoint_meta_res_assertion": 384,
+    "actual_model_input_res": 320,
+    "scope": "Current native140mm384 ->central320 route is scored. Training-time augmentation distribution/effective random-crop FOV is not proved by this inference source alone."
+  },
+  "model_shape_tradeoff": "Keeping320 input leaves attention grid/relative bias tensors and strict checkpoint shapes unchanged. A384 model-input alternative changes input shape and may require model-grid or bias compatibility work.160mm native target is a simpler fixed-grid scale hypothesis, not proven more accurate.",
+  "resources_tradeoff": "DICOM file/slice count, selected native decode shapes,96x384 cache and94x3x320 GPU inputs stay fixed. Larger source-region resize may add CPU crop/resize work (nominal area1.306x), not a measured1.306x runtime. No additional checkpoint or GPU forward is required by this factor.",
+  "accuracy_tradeoff": "More peripheral context could help some findings, while12.5% smaller anatomy in the fixed pixel grid can remove detail or shift the learned scale distribution. Neither direction nor clinical superiority nor0.955/0.960 achievement is established.",
+  "before_implementation_gate": [
+    "Keep original14 immutable; new Notebook only after root chooses this factor, with new hashes/config and no k24/TTA/expert mixture.",
+    "Artificial geometry contract should demonstrate effective fastread160 target, same dimensions/masks contract, consistent LUT/fallback handling and unchanged strict model loading.",
+    "Visible completion/source/input/environment/resource/CSV/fallback audit before a single competition comparison; Gold coefficient search is not authorized by this hypothesis."
+  ],
+  "checks": {
+    "protected14_exact_SHA": true,
+    "live_native384_model320_centralcrop": true,
+    "outer_crop140_and_independent_embedded_crop140": true,
+    "live_fastread_study_lut_in_each_fork_initializer": true,
+    "live_study_lut_calls_batch_then_LUT_gather": true,
+    "both_LUT_and_fallback_use_same_embedded_FOV_constant": true,
+    "FOV_resize_clips_to_native_extent_rounds_and_INTER_AREA": true,
+    "model_img_size320_checkpoint_strict_unchanged_candidate": true,
+    "existing94windows_mirror320_FP16_policy": true,
+    "full_selected_frame_percentile_then_crop": true,
+    "nominal116_to133mm_formula": true,
+    "no_candidate_implementation_execution_by_this_audit": true
+  },
+  "checks_passed": 12,
+  "checks_total": 12,
+  "function_source_sha256": {
+    "CoAt._load_fastread": "f06938c851f1494bbf03de2bc4b6dd822d26d35f84c74f374784b71dc9f0e610",
+    "CoAt._pre_init": "b011f07d2b447662faf5034f2d2ccef27158225475540c98be1f8db53e75ab50",
+    "CoAt.gpu_windows": "705bfb614f1ceb96ac09a0d891ea2fc2bca2d9682717d483724c898fd2118971",
+    "CoAt.load_model": "ed1cff1fc1241d28d7ea421e418f6ea932d24215c4c68bc678f1e243f60ccec2",
+    "CoAt.build_backbone": "f33910867056ee43df5a9154f252a90ca0dc9cc5b77042d513192b0aa66ef1dd",
+    "CoAt.infer_pair_probs": "5e724e74f0317754d48956a01fcc389e7ab962ff4eeaeedefd86e1e61a1f95d6",
+    "CoAt._eval_centers": "4ddfae29b35a0580a8b1df43bb4dcce0cac15b6a4d6473313d23390780d1acb3",
+    "fastread.make_builder": "36f401e53fccf2d1dbe992e56e20dda8f36d27afcf8e4069cbe02198f8f73aab",
+    "fastread.build_study_batched": "3f14c2b7fe3c27088b5cfa99269c41a84481e26296458ed4323fff015ff2e79e",
+    "fastread._fill": "1e86930681dbd441a25e64520e98472dd6b256b4e6090fd0a076b2ddbb07eb38",
+    "fastread._fill_lut": "d1bae02415b565a92937c4973e74403dec8231e8541084e4c3835a77d204cf41",
+    "fastread._fill_plain": "2393c31baecd7b235e8b805eff244152201929fa34633b10eb7e161e2f88d83c",
+    "fastread._mm_crop_resize_fn": "2494690b018a7717577a1d1562bc48a4f52d49a59ff4a3535943cb1348e4c96e"
+  },
+  "proposed_FOV160_Public": null,
+  "accuracy_evaluated": false,
+  "MRI_or_model_payload_download_decode_fit": false,
+  "GPU_forward": false,
+  "candidate_notebook_created_or_baseline_modified": false,
+  "remote_call": false
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": "f005_regional_sealer_source38_and_bounded_medical_backbone_lead_v1",
+  "at_utc": "2026-10-10T06:16:37.938930+00:00",
+  "name": "f005-regional-sealer-source38-medical-lead-20261010",
+  "own_verified_Public": 0.951,
+  "own_strict_above0960_achieved": false,
+  "source_preparation": {
+    "sealer_and_singlefold_CPU_entry_implemented": true,
+    "independent_source_checks": 38,
+    "independent_stdlib_refusals": 2,
+    "author_stdlib_checks": 4,
+    "source_compile_and_Ruff_passed": true,
+    "actual_completed_regional_run_acceptance": false,
+    "actual_regional_CPU_or_seal_or_Kaggle_qualification": false,
+    "regional_serving_driver_implemented": false,
+    "producer_or_old_control_changed": false
+  },
+  "regional_fold1_observation": {
+    "run_id": "native-regional4x4-last2-dense-fast16-fold1-20261010-v1",
+    "status": "running",
+    "epochs": 0,
+    "error": null,
+    "checkpoint_adopted": false,
+    "same_GPU_parallel_fold0_started": false
+  },
+  "pending_official_submissions": {
+    "P014": {
+      "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/submission-observation-v10/observation.json",
+      "sha256": "a54b454e831d9d88b6db091d3a03c91e4bfa2390ba3d2e9a3d74d652be4e435a",
+      "at_utc": "2026-10-10T06:12:16.435079+00:00",
+      "own_Public": null,
+      "hidden_scoring_complete": false
+    },
+    "P015": {
+      "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/submission-observation-v6/observation.json",
+      "sha256": "ea25b887f0746114cd2ad64772c872d740e88499540a8a1806cee361af7d4cd2",
+      "at_utc": "2026-10-10T06:12:16.650441+00:00",
+      "own_Public": null,
+      "hidden_scoring_complete": false
+    }
+  },
+  "medical_candidate": {
+    "repository": "https://github.com/ytrsk/OrthoFoundation-MSK-5M",
+    "commit": "df8f943460ffc452974869d33f15afe3674aa9f3",
+    "LFS_declared_bytes": 1307719878,
+    "actual_model_payload_downloaded": false,
+    "license_scope_payload_access_and_Kaggle_accuracy_verified": false,
+    "own_reproduction_Public": null,
+    "training_or_submission_adopted": false
+  },
+  "Gold_boundary": {
+    "own_Gold_labels_fit_or_selection": 0,
+    "weak_Report_free_inference": true,
+    "public_weight_Gold_provenance_separate": true,
+    "patient_independence_verified": false
+  },
+  "evidence": {
+    "regional_sealer_source": {
+      "path": "artifacts/research/20261010-f005-regional-sealer-source-preparation-v1/preparation.json",
+      "sha256": "a3e952847c34603f7c6f1e9ea7777564db9489c1828000fb14a9ea702398d38b"
+    },
+    "regional_sealer_source_peer": {
+      "path": "artifacts/research/20261010-f005-regional-sealer-independent-review-v1/review.json",
+      "sha256": "cdcde98c605bfe9a895862e27cecc5d7a970ee24bfd73cac903ef82bcd3c2cbe"
+    },
+    "regional_driver_design": {
+      "path": "artifacts/research/20261010-f005-regional-serving-driver-source-design-v1/plan.json",
+      "sha256": "072591fb24465c3f90112268f84b1822c23faee64616de71a3fb73f5e0d09e7a"
+    },
+    "medical_backbone_primary_research": {
+      "path": "artifacts/research/20261010-medical-backbone-public-source-research-root-v1/research.json",
+      "sha256": "2d6b30a4bbf6c3ff32975df090002b607167d4d32d795f2c012e5a45b416c794"
+    },
+    "medical_backbone_pinned_source_addendum": {
+      "path": "artifacts/research/20261010-medical-backbone-public-source-research-root-v1/source-inspection-addendum-v1.json",
+      "sha256": "7e1cce0cd72048d402fe590abed0caacc446575ed96c86a618cc04238bb555a2"
+    }
+  },
+  "next": [
+    "Complete fixed12 before genuine selected checkpoint CPU diagnosis and byteexact seal.",
+    "Continue exact official P014/P015 score observations; do not reuse visible qualification as hidden completion.",
+    "Use existing regional driver source plan to prepare dedicated runtime; its own CPU64_256 and serving qualifications remain required.",
+    "Decide independent same-GPU fold0 overlap only after the first actual epoch and combined resource evidence."
+  ]
+}

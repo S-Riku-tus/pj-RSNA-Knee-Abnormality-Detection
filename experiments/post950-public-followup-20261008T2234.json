@@ -1,0 +1,32 @@
+{
+  "checked_date_JST": "2026-10-08",
+  "research_scope": "Three bounded web searches for official-public 0.955/0.960 notebooks and primary repositories; selected source inspection, not an exhaustive search or current leaderboard audit",
+  "own_incumbent_Public": "0.950",
+  "own_p006_p007_p008_Public": ["0.950", "0.950", "0.950"],
+  "sources": [
+    {
+      "url": "https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection",
+      "author_reported_Public": "0.941",
+      "author_reported_baseline_Public": "0.940",
+      "own_reproduction": false,
+      "method": "Public reference plus RadImageNet and ImageNet ResNet50 five-fold arms, finding-specific rank weights",
+      "relevant_author_observation": "Full and halved extra-arm weights both displayed 0.941; authors identify encoder overlap with their reference and warn that diversity among added arms is different from complementarity to the reference",
+      "limits": "That author's architecture and Gold-based evaluation/selection differ from this project. Causal explanations and quoted historical leaderboard/public-ceiling statements are author interpretations, not verified current facts",
+      "decision": "No replacement of own0.950; retain complementarity-to-incumbent as a question for separate validation. No download/training/labels adopted"
+    },
+    {
+      "url": "https://www.rsna.org/artificial-intelligence/ai-image-challenge/knee-mri-ai-challenge",
+      "role": "Official competition organizer context, not evidence for any candidate score"
+    },
+    {
+      "url": "https://github.com/Beiciccc/rsna-knee-abnormality-detection/blob/main/results/public_scores.md",
+      "role": "Primary public experiment repository; no verified above0.950 recipe established in this follow-up"
+    }
+  ],
+  "no_verified_immediately_reproducible_above0955_recipe_found_in_this_scope": true,
+  "does_not_prove_no_stronger_private_or_public_model_exists": true,
+  "next_work": "Official p009 one-factor score; p010 separately gated224 addition; full weak-only native392 cache and controlled frozen-versus-last2 training",
+  "own_Gold_fit_or_selection": false,
+  "remote_mutation_from_this_research": false,
+  "raw_DICOM_model_or_teacher_download_from_this_research": false
+}

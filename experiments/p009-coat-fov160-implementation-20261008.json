@@ -1,0 +1,75 @@
+{
+  "schema_version": "p009_coat_physical_FOV160_candidate_v1",
+  "prepared_at_jst": "2026-10-08",
+  "status": "prepared_not_executed_accuracy_unmeasured",
+  "baseline_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "baseline_own_public_lb": "0.950",
+  "candidate_sha256": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+  "candidate_own_public_lb": null,
+  "factor": "CoAt physical crop target140->160mm, including the actual embedded module constant",
+  "code_difference": {
+    "changed_code_cells": [
+      4
+    ],
+    "six_other_code_cells_byte_identical": true,
+    "embedded_change_only_CROP_MM140_to160": true,
+    "ConvNeXt_k": 16,
+    "extra_runtime_binding": [
+      "stale fastread file rejection",
+      "actual imported FOV assertion",
+      "parent loader preflight before fork workers"
+    ]
+  },
+  "original_fastread_sha256": "5a59b6f82e846bcdfd452aaee6ff518cdd9d0b04aab03691b45c3f70a5198cb0",
+  "candidate_fastread_sha256": "a40f4c4ec1704a35910973d7edc0c4b8f0649978e48758e753062750317ca6a7",
+  "model_shapes_and_loading": "Unchanged INPUT_RES320, IMG384, K94, architecture functions and strict checkpoint loading; actual checkpoint not obtained or loaded.",
+  "unchanged": [
+    "SWA/checkpoint bytes",
+    "CoAt two-view mean",
+    "ConvNeXt k16/3fold",
+    "LUT/global percentile/series/slice policies",
+    "rank fusion12weights",
+    "same3Inputs/Originalcontainer/T4/InternetOFF"
+  ],
+  "nominal_final_FOV_mm": {
+    "original": 116.66666666666667,
+    "candidate": 133.33333333333334
+  },
+  "limits": [
+    "Native crop clipping/rounding/scalar spacing limit the nominal FOV formula.",
+    "Mask and thus evaluated centres may change as consequences of physical crop.",
+    "Anatomy becomes12.5% smaller in the fixed320grid; extra context may help or lose detail.",
+    "No training augmentation/corpus distribution independently established; improvement unmeasured."
+  ],
+  "syntax_checks": [
+    {
+      "cell_index": 3,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 4,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 5,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 6,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 7,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 8,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 9,
+      "compiled_without_execution": true
+    }
+  ],
+  "real_MRI_weights_fit_remote_or_submission_performed": false
+}

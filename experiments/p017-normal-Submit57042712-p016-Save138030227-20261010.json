@@ -1,0 +1,65 @@
+{
+  "schema_version": "rsna_p017_normal_actual_Submit_p016_private_Serving_Save_event_v1",
+  "at_utc": "2026-10-10T12:56:22.271442+00:00",
+  "P017": {
+    "actual_normal_Submit_accepted": true,
+    "submission_ref": 57042712,
+    "kernel_id": 138018511,
+    "saved_version": 1,
+    "ref": "rsraki/p017native-58e915a9fc1d4faeb9204ea03dc490a2",
+    "receipt": {
+      "path": "artifacts/research/20261010-p017-native-serving-root-v1/actual-serving-Submit-attempt-v1/receipt.json",
+      "sha256": "84cee30d247bcf6e1d8bb046ddb4daa44d36c5f26e2b33e013290dcc451e7ac7"
+    },
+    "source_independent14": {
+      "path": "artifacts/research/20261010-p017-competition-submit-independent-v4/review.json",
+      "sha256": "edf4f5e3994a2d897df41bf57cd7dc6eeb9a109efcaf0c0b87b50b859c3a1cb5"
+    },
+    "full_genuine_metadata_default_proof": {
+      "path": "artifacts/research/20261010-p017-competition-submit-source-preparation-v4/root-full-genuine-default-pass-v1.json",
+      "sha256": "6c9b1be4ba31de636037c24c1980002c58b698b921bfeab27b80ed897b32f533"
+    },
+    "actual_Submit_calls": 1,
+    "RPC_counts": {
+      "GetKernel": 1,
+      "GetStatus": 1,
+      "GetSubmissionLimits": 1,
+      "CreateCodeSubmission": 1,
+      "GetAcceleratorQuota": 1
+    },
+    "remaining_allowance_before_Submit": 3,
+    "hidden_scoring_complete": false,
+    "own_Public": null,
+    "local_V2_output_gate_HOLD_and_V3_Root_header_HOLD_preserved": true,
+    "normal_saved_Notebook_or_math_changes": 0,
+    "fault_diagnostic_never_Submitted": true
+  },
+  "P016": {
+    "actual_private_Serving_Save_accepted": true,
+    "kernel_id": 138030227,
+    "saved_version": 1,
+    "ref": "rsraki/p016s-15fc2f133b64440bb0116eca01263c41",
+    "accepted_Save": {
+      "path": "artifacts/research/20261010-p016-serving-root-launch-source-preparation-v2/actual-serving-Save-attempt-v1/accepted.json",
+      "sha256": "5b16d933f6a83a7ea392e9bbda1cf86768b96b6827344f6a81f15c05420973e0"
+    },
+    "Save_helper_source_peer6": {
+      "path": "artifacts/research/20261010-p016-serving-manual-Save-independent-source-v2/review.json",
+      "sha256": "c3bd3488d39c660291b94f3f17df454de3976ad42a4ab65dd96e99400e8e8f84"
+    },
+    "actual_Save_calls": 1,
+    "fresh_Input_metadata_RPCs": 4,
+    "fresh_quota_RPCs": 1,
+    "fresh_available_GPU_seconds": "102220.268",
+    "actual_CPU64_256_qualified": true,
+    "actual_Serving_or_accuracy_qualified": false,
+    "competition_Submit_calls": 0,
+    "actual_Serving_outputs_collected": false
+  },
+  "own_official_Public_best": 0.951,
+  "strict_above_0960_achieved": false,
+  "Regional_fixed12_training_continues": true,
+  "own_Gold_training_selection_inference_Report_zero": true,
+  "new_model_MRI_Report_credentials_upload_calls": 0,
+  "automatic_retry_or_unknown_resubmit": false
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "f005_regional_partial_parallel_epochs_and_source_only_transport_v1",
+  "at_utc": "2026-10-10T07:10:00Z",
+  "own_verified_Public": 0.951,
+  "own_strict_above0960_achieved": false,
+  "actual_partial_training": {
+    "observation": "artifacts/research/20261010-f005-regional-first-parallel-epochs-root-v1/observation.json",
+    "observation_sha256": "268bf44a4707d8ebfa2511c86051f037d87b68ded047e136861257394e0ef0b9",
+    "original_run_metadata_snapshots": 2,
+    "fold0": {"epochs": 1, "weak_bce": 0.3776020874355983, "weak_AUC12": 0.7619789439107433, "updates": 212, "AMP_skips": 0, "epoch_interval_seconds": 2247.068589500035},
+    "fold1": {"epochs": 2, "weak_bce": 0.3429961043213596, "weak_AUC12": 0.7573160595863899, "updates_per_epoch": 208, "AMP_skips": 0, "elapsed_cumulative_seconds": 4110.913270300021, "second_epoch_interval_seconds": 2230.186063800007},
+    "both_status": "running",
+    "both_error": null,
+    "elapsed_seconds_in_history_is_cumulative": true,
+    "observed_parallel_epoch_interval_approximately_minutes": 37,
+    "whole_fixed12_time_gain_or_parallel_memory_peak_proven": false,
+    "fixed12_min_weak_BCE_earliest_tie_unchanged": true,
+    "source13_CLI2_config_pair_unchanged": true,
+    "partial_model_adopted": false
+  },
+  "initial_comparison_is_not_selection": {
+    "fold0_same_epoch_AUC12_delta": 0.018985265767249477,
+    "fold0_same_epoch_Synovitis_AUC_delta": 0.2599999999999999,
+    "fold0_Synovitis_binary_positive_negative": [100, 1],
+    "fold0_previous_support10_AUC_delta": -0.0033800187416382797,
+    "fold1_same_epoch_AUC12_delta": -0.013934950099929242,
+    "fold1_previous_support10_AUC_delta": -0.0006987442436264368,
+    "interpretation": "Fold0's initial macro gain is driven by Synovitis with only one negative; excluding previously low-support MCL/Synovitis, both early support10 comparisons are worse. Do not claim improved accuracy or select a partial checkpoint. New strict determinism and process overlap also prevent representation-only causation."
+  },
+  "transport_source_only": {
+    "preparation": "artifacts/research/20261010-f005-regional-transport-source-preparation-v1/preparation.json",
+    "preparation_sha256": "8f6f2bde8478cb659aa9a4c8a83343eea06c531a9fd7b506584cc6db151aa8f9",
+    "adapter_sha256": "ea41bdf8c91447cdeaec64ea4d207c03a7653c1d465e28243051725ea0600268",
+    "source_inventory_sha256": "5fd3004e4632392a55d471539812d42784c3c48a356033230d8406fee3e37fd4",
+    "independent_review": "artifacts/research/20261010-f005-regional-transport-independent-review-v1/review.json",
+    "independent_review_sha256": "6102ea4107e18243cf2d7f73acdfe92e56e59dce30f358ad2d2be321b516345b",
+    "independent_checks_passed": 12,
+    "stdlib_negative_checks_passed_and_independently_rerun": 2,
+    "compile2_Ruff_passed": true,
+    "default_payload_reads": 0,
+    "dedicated_schema": "regional4x4_deterministic_dense_singlefold_BIN_transport_v1",
+    "contract": "Genuine root private versioned refs and exact two-file SHA, ZIP_STORED full positive member SHA before destination creation, fresh exclusive extraction and final tree/Input SHA. Dedicated successful transport receipt qualifies byte preservation only.",
+    "actual_remote_bytes_CPU64_256_Serving_qualified": false,
+    "producer_common_BIN_Notebook_edits": 0
+  },
+  "parent_bridge_source_preparation": {
+    "preparation": "artifacts/research/20261010-f005-regional-parent-bridge-source-preparation-v1/preparation.json",
+    "preparation_sha256": "01da5bf6f80bf0cfd6c048c73166090694a92c078ccf80fc6d65f2a56fa05a12",
+    "author_source_checks_passed": 15,
+    "stdlib_refusal_probes_passed": 4,
+    "independent_review_pending": true,
+    "contract": "Dedicated Regional constructor rejects unissued authority before asset imports/writes, then original baseline hooks/clock/owned files/cleanup1, new transport, absolute Regional router child, unchanged FP32 mean/projection/fixed20 atomic writer.",
+    "old_ParentStages_CLS_qualification_monkeypatch_or_bypass": false,
+    "actual_Authority_Notebook_GPU_API_model_operations": 0,
+    "support_mask_receipt_name_integration_pending": true
+  },
+  "official_submissions_last_observed_utc": "2026-10-10T07:06:11Z",
+  "P014_57031186": {"actual_status": "NOT_EXPLICIT_YET", "own_Public": null, "error": null},
+  "P015_57031981": {"actual_status": "NOT_EXPLICIT_YET", "own_Public": null, "error": null},
+  "own_Gold_fit_or_selection": false,
+  "patient_independence_verified": false,
+  "actual_Regional_completed12_seal_CPU64_256_Save_Submit": false,
+  "next": [
+    "Continue both immutable fixed12 local runs; use completed minimum weak BCE only.",
+    "Finish the source-only parent peer and dedicated receipt connection to the unchanged support mask.",
+    "After completed12 actual local CPU/seal and approved private Inputs, qualify the new same-pair remote CPU64_256 chain.",
+    "Wait for explicit exact official P014/P015 results before adoption; keep best951 and target strictly above960 active."
+  ]
+}

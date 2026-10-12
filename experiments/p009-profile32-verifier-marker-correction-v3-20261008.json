@@ -1,0 +1,62 @@
+{
+  "checked_at_utc": "2026-10-08T13:02:33.433289+00:00",
+  "status": "verifier_log_marker_assumption_corrected_real_profile_source_unchanged",
+  "ref": "rsraki/p009-profile-32-fov140-fov160",
+  "saved_version": 2,
+  "old_verifier_sha256": "3b5eac8df1fdf6a1fdb9a72f01f5d6f7baa43f72681e71ebc1e4f46b823c9a08",
+  "new_verifier_sha256": "3e1275d80db50fb37f62f6ae326c8cfc3ef3b4ac901ea2ced1e8bf854fe49a31",
+  "visible_log_sha256": "8db48d90c6a11b39786a1e5b146ecc135c60e8264de7fab8aeb1a6c79617be4d",
+  "failed_old_check": "visible_one_reader_inference_CSV_write",
+  "old_failure_reproduced_locally": true,
+  "unchanged_validation_function_AST": {
+    "read": true,
+    "digest": true,
+    "source": true,
+    "ranks": true,
+    "fixed_fusion": true,
+    "read_predictions": true,
+    "validate_inference": true,
+    "validate_resources": true,
+    "validate_main": true,
+    "independent_spearman": true,
+    "embedded_sha": true
+  },
+  "all_existing_forward_mask_FOV_CSV_fusion_resource_gates_preserved": true,
+  "reader_source_contract": {
+    "observed_runtime_reader_sha256": "4967fa1cbfe8bad6a7331c588b2cccd0350ac7bd5982b27669612e63ec48cd76",
+    "original_reader_CLI_write_print_count": 1
+  },
+  "reader_log_contract": {
+    "visible_reader_write_message_counts_by_fusion": [
+      2,
+      0
+    ],
+    "real_model_calls": 24,
+    "real_models": 3,
+    "real_views": 1,
+    "actual_reader_inference_executions": 1,
+    "second_fusion_CSV_replay_calls": 1,
+    "interpretation": "Visible messages are not independent inference counters. Actual24 forwards/3 models, fresh runtime observer, fixed one-call CLI source and one exact CSV replay establish the execution count."
+  },
+  "visible_reader_write_events": [
+    {
+      "event_index": 51,
+      "log_event_time": 142.045943353,
+      "data": "wrote /kaggle/working/_own.csv\n"
+    },
+    {
+      "event_index": 52,
+      "log_event_time": 142.254133514,
+      "data": "wrote /kaggle/working/_own.csv\n"
+    }
+  ],
+  "cause_scope": "The checker assumed one visible message for one inference. Source has one CLI print but the recorded stream displays two messages within the same first inference interval. The stream duplication mechanism has not been isolated. Source/hash, three models and24 observed forwards, fresh observer directories, equal CSV hashes and one second-fusion replay are the execution-count evidence. This is a checker defect, not a model or profile failure.",
+  "synthetic_unittest_tests_passed": 5,
+  "regression": "One or two real-phase messages accepted; zero real marker, write in replay/after/before phase, 48 actual forwards or duplicate replay remain rejected.",
+  "completed_report_output": "experiments/p009-profile32-completed-review-v3-20261008.json",
+  "complete_verifier_v3_executed_by_agent": false,
+  "producer_or_observation_source_modified": false,
+  "remote_read_or_mutation": false,
+  "GPU_or_MRI_consumed": false,
+  "AUC_gain_established": false
+}

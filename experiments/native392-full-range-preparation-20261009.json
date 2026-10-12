@@ -1,0 +1,195 @@
+{
+  "schema_version": "native392_fresh_full_range_preparation_v1",
+  "checked_at_utc": "2026-10-08T15:30:39.733348+00:00",
+  "all_passed": true,
+  "checks": {
+    "V2_core_exact_independently_audited_SHA": true,
+    "all_V2_and_shared_protected_sources_immutable": true,
+    "strict100_binding_proof_is_fresh05_07_primary_receipt": true,
+    "entrypoint_fixed_empty_prefix_not_caller_supplied_old_file": true,
+    "exact_same206_range_bytecap_and_fullSHA_core_reused": true,
+    "oldprefix_payload_hash_copy0_and_existing_outputs_not_overwritten": true,
+    "only64or128MiB_no_auto_retry_and_exception_type_only": true,
+    "future_remaining_indices_generic1through23_without176_study_hardcoding": true,
+    "shard05_current100_source_and28_summary_UIDgroup_Gold_and_archive_bindings": true,
+    "shard05_zero_start_current_archive_SHA_no_prefix_read": true,
+    "shard06_current100_source_and28_summary_UIDgroup_Gold_and_archive_bindings": true,
+    "shard06_zero_start_current_archive_SHA_no_prefix_read": true,
+    "shard07_current100_source_and28_summary_UIDgroup_Gold_and_archive_bindings": true,
+    "shard07_zero_start_current_archive_SHA_no_prefix_read": true,
+    "all_sources_compile": true,
+    "seven_stdlib_and_two_actualSDK_CPU_tests_passed": true,
+    "Ruff_passed": true
+  },
+  "checks_passed": 17,
+  "source_sha256": {
+    "full_range_tools.py": "f9d8e175474a0fbd4bce94401a91adcdae6f6ca200be524506a67b5f13bbc7ae",
+    "get_one.py": "595d3d76fc6f3f6ac15f24ad2a043ddb622d3884e8bcc0a6de208e79300ad9f8",
+    "record_preparation.py": "ebf523a5f86ac3337d09fd24c12cc6240a4f33e1502236e33dbed1609e736d8e",
+    "test_full_range.py": "c790b2915c185bf79b42d1650c3d569dbfc075cd5cd67ae6b200c88d89383fe9",
+    "test_full_range_sdk.py": "048c24d46cbfd1f1877f9edda7df61f6c95bdc19499a9a12bb70224363064698"
+  },
+  "audited_V2_core": {
+    "path": "artifacts\\research\\20261009-native392-remaining-cache-tools-v2\\resume_tools.py",
+    "sha256": "c3dfea20943c940f510a9efb5b0d3d98947939370fb402c4ced1b177b446e008",
+    "independent_review_path": "experiments/native392-remaining-range-independent-review-20261009.json",
+    "independent_review_sha256": "e40e31ed1ed6999ae56d41b8151fc2d4da52e315a5779671864e765f4f7ace8c"
+  },
+  "protected_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/18a_profile_dinov2_native392_pixel16.ipynb": "ff88e2077d7d7ef484fbd19e5f50ddd69e40c663dea22f73283903b13d860e7e",
+    "artifacts/kaggle/f005-native-train-handoff-v2-20261008/f005-native-code.zip": "6cdc36eb33b886f21dd338c57ad5e01ae7f46dabc95cdda3b54d119507953eb4",
+    "src/rsna_knee/native_training.py": "0c470e265332e14e31b1942996f37efd7861f9932eb9ded117253b689b97bf26",
+    "artifacts/research/20261008-native392-remaining-cache-tools-v1/download_one.py": "023a453929e6eb44c9328a096ef73e996306ad8fd325094ccd0ea38a1180c11d",
+    "artifacts/research/20261008-native392-remaining-summary-tools-v2/compact_tools.py": "4468014bd7f937bfe0fc9b4963d8fd2f600493fb145a367d817db7aa67a6131f",
+    "artifacts/research/20261008-native392-remaining-summary-tools-v2/summary_checks.py": "2dfa392c180bc7dcf3833d6371a7a80033c7ff17f37e0cabd11a435ef7b5e33d"
+  },
+  "contexts": [
+    {
+      "index": 4,
+      "ref": "rsraki/n392s05-27fcad27e4372b8d198e59857707e65f",
+      "version": 1,
+      "kernel_id": 137689831,
+      "studies": 176,
+      "archive": {
+        "name": "native392-shard-05-of-24.zip",
+        "bytes": 4619896162,
+        "sha256": "6790039a1b55550fa35774ec7dca7ddcd60048b1695d321282b74002b19763fc"
+      },
+      "summary_sha256": "37bec55198957adb6dea4d0ef93ddfe6d449a7b52ccbe5639f15b49d0aac2b06",
+      "summary_review_sha256": "974d05d0ed5febfb1cd9235d6f96aa7d7e7e72820cc3ca127616ea36919a946d",
+      "source_proof_sha256": "f0b9d32537f4a89dcf475558a85b25c6381962cbd1360373a8dc1158f0883e7e",
+      "128MiB_ranges": 35,
+      "64MiB_ranges": 69
+    },
+    {
+      "index": 5,
+      "ref": "rsraki/n392s06-bc15ed8bc2e31d33195bcb606230d60b",
+      "version": 1,
+      "kernel_id": 137689847,
+      "studies": 176,
+      "archive": {
+        "name": "native392-shard-06-of-24.zip",
+        "bytes": 4712653873,
+        "sha256": "fcf96e6228a3b13764ca2815cfced51bdd0611990fd86df34d4e909943fdfcb1"
+      },
+      "summary_sha256": "aa3d374f0aee5ea3db203e1ea8383f73da896e231ab565d1c2aee16f6bc7fd9d",
+      "summary_review_sha256": "43cf45f9fcae2375bd45ddd8a1c6bcf75c576ae89e65ebcd01c2dac448bc0784",
+      "source_proof_sha256": "f0b9d32537f4a89dcf475558a85b25c6381962cbd1360373a8dc1158f0883e7e",
+      "128MiB_ranges": 36,
+      "64MiB_ranges": 71
+    },
+    {
+      "index": 6,
+      "ref": "rsraki/n392s07-50ec8e23cde2bbe6fd569918dd145f02",
+      "version": 1,
+      "kernel_id": 137689879,
+      "studies": 176,
+      "archive": {
+        "name": "native392-shard-07-of-24.zip",
+        "bytes": 4713140182,
+        "sha256": "32107c42ae786ccc31b9b20693fe0efd5b78ca19e294c715fae239a78c722814"
+      },
+      "summary_sha256": "05f11d7af7bc75e0968a5e37bb8b4f093d3415e47dd5ed7ff5fb8553bd78bf78",
+      "summary_review_sha256": "95cc4e1ce248e67c13eb4fe72f5c76f99452f747ac813497cf9e4c33389a4aae",
+      "source_proof_sha256": "f0b9d32537f4a89dcf475558a85b25c6381962cbd1360373a8dc1158f0883e7e",
+      "128MiB_ranges": 36,
+      "64MiB_ranges": 71
+    }
+  ],
+  "commands_not_executed": [
+    {
+      "shard": 5,
+      "executed": false,
+      "root_only_manual": true,
+      "argv": [
+        "artifacts/tools/kaggle-venv/Scripts/python.exe",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261009-native392-full-range-tools-v1\\get_one.py",
+        "--shard-index",
+        "4",
+        "--source-binding-proof",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shards05-07-saved-binding-review-20261008.json",
+        "--observation",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261008-native392-remaining-summary-tools-v2\\observations\\shard-05-observation-v1",
+        "--summary-review",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shard05-summary-review-20261009.json",
+        "--output",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261009-native392-shard05-cache-fullrange-v1-attempt1",
+        "--range-mib",
+        "128"
+      ]
+    },
+    {
+      "shard": 6,
+      "executed": false,
+      "root_only_manual": true,
+      "argv": [
+        "artifacts/tools/kaggle-venv/Scripts/python.exe",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261009-native392-full-range-tools-v1\\get_one.py",
+        "--shard-index",
+        "5",
+        "--source-binding-proof",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shards05-07-saved-binding-review-20261008.json",
+        "--observation",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261008-native392-remaining-summary-tools-v2\\observations\\shard-06-observation-v1",
+        "--summary-review",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shard06-summary-review-20261009.json",
+        "--output",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261009-native392-shard06-cache-fullrange-v1-attempt1",
+        "--range-mib",
+        "128"
+      ]
+    },
+    {
+      "shard": 7,
+      "executed": false,
+      "root_only_manual": true,
+      "argv": [
+        "artifacts/tools/kaggle-venv/Scripts/python.exe",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261009-native392-full-range-tools-v1\\get_one.py",
+        "--shard-index",
+        "6",
+        "--source-binding-proof",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shards05-07-saved-binding-review-20261008.json",
+        "--observation",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261008-native392-remaining-summary-tools-v2\\observations\\shard-07-observation-v1",
+        "--summary-review",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shard07-summary-review-20261009.json",
+        "--output",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261009-native392-shard07-cache-fullrange-v1-attempt1",
+        "--range-mib",
+        "128"
+      ]
+    }
+  ],
+  "tests": {
+    "stdlib": {
+      "passed": 7,
+      "seconds": 0.411,
+      "exit_code": 0
+    },
+    "actual_SDK_DTO": {
+      "passed": 2,
+      "seconds": 0.051,
+      "exit_code": 0
+    },
+    "Ruff": "passed"
+  },
+  "scope": {
+    "API": 0,
+    "real_HTTP": 0,
+    "GPU": 0,
+    "old_actual_prefix_stat_hash_copy": 0,
+    "actual_archive_download_extract_decode": 0,
+    "model_or_labels_or_real_fit": 0,
+    "remote_mutations": 0
+  },
+  "actual_full_archives_acquired": false,
+  "actual_NPZ_arrays_verified": false,
+  "decision": "Prepared-only fresh full-Range collector; independent review precedes root one-off real acquisition. Fullarchive SHA and subsequent NPZ QA are mandatory; no full4207 index/training gate.",
+  "limits": [
+    "05–07 current source/summary contexts are metadata-only checked. 08–10 and other future175 shards require their own strict100 proof and current28 completed summary.",
+    "Starts at0; exactly one logical GET per64/128MiB range, at most3 redirects, no automatic retry. Failure keeps partial and requires a separately reviewed fresh recovery.",
+    "Final wholearchive SHA verifies bytes, not NPZ numeric contract; no raw DICOM/model/labels are requested."
+  ]
+}

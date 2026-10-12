@@ -1,0 +1,81 @@
+{
+  "schema_version": "p012_concrete_private_snapshot_approved_upload_created_and_run_started_v1",
+  "at_utc": "2026-10-09T07:12:56.759232+00:00",
+  "own_Public_best": "0.950",
+  "strict_above960_achieved": false,
+  "explicit_user_answer": "rsrakiは自分のアカウントで、この非公開アップロードを許可する",
+  "automatic_review_previous_rejection_resolved_by_concrete_user_payload_and_destination_approval": true,
+  "upload_CLI_exit_code": 0,
+  "actual_own_private_dataset": {
+    "id": 12461292,
+    "ref": "rsraki/rsna-knee-compact-v1",
+    "isPrivate": true,
+    "currentVersionNumber": 1,
+    "totalBytes": 885066366,
+    "licenseName": "Other (specified in description)"
+  },
+  "snapshot_review_path": "artifacts\\research\\20261009-f005-native-runtime-root-v1\\public951-own-S5-private-V1-observation-v1\\review.json",
+  "snapshot_review_sha256": "f4820b1dea857f4d945160aa7ecd3b9b48f277359d6e50792f9b7be84c3671d4",
+  "source_compact_V9_manifest_sha256": "42d3b5a502cd021d86a223b0c7982dcae1e7d7db46ead519ddf9436ba443b2ff",
+  "original_active_bytes": 885065206,
+  "remote_eight_files_sizes_and_manifest_verified": true,
+  "actual_runtime_weights_SHA_verified": false,
+  "existing_dataset_update_or_external_publication": false,
+  "MRI_Report_credentials_uploaded": false,
+  "unchanged_five_original_code_cells": true,
+  "notebook": "notebooks\\public\\24_submit_p012_public951_snapshot_control.ipynb",
+  "notebook_sha256": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee",
+  "new_private_Save": {
+    "schema_version": "p012_actual_private_fixed_S5_V9_Save_accepted_v1",
+    "at_utc": "2026-10-09T07:10:13.107111+00:00",
+    "ref": "rsraki/p012-s5-v9-fixed-77784060724855c8",
+    "saved_version": 1,
+    "kernel_id": 137829925,
+    "private_Save_accepted": true,
+    "actual_run_complete": false,
+    "own_Public": null,
+    "author_Public": "0.951",
+    "Input_pins": [
+      "rsraki/rsna-knee-compact-v1/1",
+      "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1",
+      "nartaa/rsna-knee-publication-swa-weights-20261007/1"
+    ],
+    "request_sha256": "ca275e25c5b89e60178456d3ae4ad5119742192f4ae54cc3b3e4828e438805a0",
+    "notebook_sha256": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee",
+    "fresh_available_GPU_seconds_from_raw": "59380.680",
+    "official_Save_calls": 1,
+    "competition_submission": false,
+    "own_Public_best": "0.950",
+    "strict_above960_achieved": false
+  },
+  "source_Input_environment_binding_all_passed": true,
+  "latest_actual_status": "RUNNING",
+  "saved_execution_complete_or_competition_submit": false,
+  "own_new_Public": null,
+  "author_Public": "0.951",
+  "last2": {
+    "status": "running",
+    "completed_epochs": 6,
+    "fixed_total_epochs": 12,
+    "last_actual_history": {
+      "epoch": 6,
+      "train_bce": 0.26277645851920656,
+      "weak_bce": 0.28528148745778076,
+      "weak_macro_auc_12": 0.8514370402294302,
+      "optimizer_steps": 212,
+      "optimizer_step_opportunities": 212,
+      "amp_skipped_steps": 0,
+      "elapsed_seconds": 10501.093071500072,
+      "prediction_sha256": "1a703855478d3222bebe12164dfb871812adf2ca6c94a0dab2e3b929ff66393b",
+      "gpu_peak_reserved_bytes": 1163919360
+    },
+    "snapshot_sha256": "9ec6bf95b9de9bfcc7e42b5760ea2fe79d69f3c94b7f05610bebc590a49a9621",
+    "condition_changes": 0
+  },
+  "next": "Observe exact saved V1; independent eight-output validation; fresh competition allowance; root manual code Submit",
+  "limits": [
+    "Author score is not own result",
+    "Visible completion is not hidden scoring proof",
+    "Weak training AUC is not Public AUC"
+  ]
+}

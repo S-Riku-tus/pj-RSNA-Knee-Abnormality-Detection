@@ -1,0 +1,77 @@
+{
+  "schema_version": "regional_triplet_component_independent_source_and_CPU_review_v1",
+  "checked_at_utc": "2026-10-08T18:48:16.547205+00:00",
+  "all_passed": true,
+  "checks": {
+    "author_preparation_SHA20checks_source_and_test_hashes_bound": true,
+    "all12_protected_source_config_and_baseline_files_byte_unchanged": true,
+    "class_inherits_original_NativeTripletMIL_constructor_training_eval_and_parameter_contract": true,
+    "single_model_representation_factor_no_added_learned_parameters": true,
+    "392_patch14_grid28_exact_divisible4_regions7x7_FP32_then_FP16_FP32": true,
+    "CLS_first_all16_regions_rowmajor_disjoint_in_source_and_author_fixture": true,
+    "independent_analytic_backward_all784patch_support_1_over49_CLS_separate": true,
+    "independent_within_window_head_permutation_invariance_tolerance1e6": true,
+    "independent_twelve_output_columns_and_head83352_parameters": true,
+    "flatten_nonzero_index_copy_study_series_window_order_retained": true,
+    "original_mask_and_positions_repeat17_same_planes_flags_no_region_coordinates": true,
+    "valid_windows_only_encoded_and_masked_corrupt_padding_neutral_author_CPU8": true,
+    "noGrad_prefix_encoder_eval_frozen_norm_suffix10_11_only_checkpoint_same_scopes": true,
+    "allmissing_and_nonfinite_or_FP16_overflow_refused": true,
+    "author_two_window_artificial_CUDA_proof_SHA_scope_bound_without_peer_rerun": true,
+    "component_not_integrated_trainer_checkpoint_cache_or_serving_qualification_false": true,
+    "unchanged_tensor_shapes_not_semantic_CLS_checkpoint_compatibility": true,
+    "independent_two_meaningful_CPU_tests_and_Ruff_passed": true
+  },
+  "checks_total": 18,
+  "source_sha256": {
+    "src/rsna_knee/regional_triplet_model.py": "31f91d75d73b222c1e37d8864abfe584c6bd648203ef67293ec56d855eaa9589",
+    "tests/test_regional_triplet_model.py": "aec48c9e5e46c33766313a80d61449cf177eeef7b3b7a03e8b39e27845e2834e",
+    "scripts/check_regional_triplet_artificial.py": "6fc47e3978d5c092aee9e94d6a14bf0179660f59196e3b7bf5864656f05c0f01"
+  },
+  "author_preparation_sha256": "00dbd6585d971048c8588a181794373e9cc145d108313589170ed44a22fcb47b",
+  "author_CUDA_proof_sha256": "797a8318edc2c5e5a0a6b191660b1f3ca1d51b4931e6b6ba8df1201de0295d18",
+  "independent_source_sha256": {
+    "test_independent_component.py": "105ad7215ac28a063c20b2dfd17768bb599d0f3aaf7ebaa7f2eebbce7332de28",
+    "record_review.py": "634552af5cf93256575220d6cb25e1fa8be80179eada4f10aeb7db28709b1c5f"
+  },
+  "protected_unchanged_file_checks": {
+    "src/rsna_knee/native_training_fast16.py": true,
+    "src/rsna_knee/finetune_model.py": true,
+    "src/rsna_knee/feature_model.py": true,
+    "src/rsna_knee/triplet_cache.py": true,
+    "src/rsna_knee/feature_imaging.py": true,
+    "src/rsna_knee/feature_contracts.py": true,
+    "src/rsna_knee/imaging.py": true,
+    "src/rsna_knee/contracts.py": true,
+    "scripts/train_native_dinov2_fast16.py": true,
+    "configs/experiments/f005-dinov2-native-frozen-control-fast16.json": true,
+    "configs/experiments/f005-dinov2-native-last2-fast16.json": true,
+    "notebooks/public/14_submit_p005_public950_control.ipynb": true
+  },
+  "independent_CPU_tests": {
+    "passed": 2,
+    "seconds": 0.044,
+    "pool_gradient_atol": 1e-07,
+    "pool_gradient_rtol": 0,
+    "head_permutation_atol": 1e-06,
+    "head_permutation_rtol": 0,
+    "scope": "Analytical token-to-region backward and artificial-feature head only. No encoder weights or images read; no optimizer."
+  },
+  "author_tests_scope": "The prior eight stand-in CPU tests and existing-generic two-window 4090 proof were reviewed and SHA-bound, not rerun here.",
+  "limitations": [
+    "This changes the representation and descriptor count, not the trainable head parameterization. Local descriptors may improve information retention; no learned gain has been measured.",
+    "Descriptors in a window share position and flags; the current head cannot identify a region index separately. Its permutation invariance was independently confirmed within artificial CPU floating-point tolerance.",
+    "Old CLS checkpoints have compatible tensor shapes but different semantics. A dedicated representation/schema/config gate is required before any trainer or inference integration.",
+    "Seventeen descriptors increase aggregation cost and CLS-versus-region attention mass. Existing two-window artificial resources do not qualify full144-window real training or effectivebatch16.",
+    "No Gold, weak, Public AUC or accuracy comparison was performed. Patient independence and generic pretraining overlap remain unconfirmed."
+  ],
+  "component_static_contract_passed": true,
+  "trainer_checkpoint_serving_candidate_gate_passed": false,
+  "accuracy_evaluated": false,
+  "Public_score": null,
+  "real_fit_allowed_by_this_review": false,
+  "actual_GPU_encoder_weights_MRI_teacher_API_HTTP_auth_optimizer_fit_submit_by_peer": 0,
+  "source_config_or_existing_artifact_edits_by_peer": 0,
+  "docs_ledger_owner": "root",
+  "decision": "Isolated component has no identified source blocker and the independent mathematical checks pass. Actual learning or inference remains closed until a dedicated matched experiment/schema/resource gate is prepared."
+}

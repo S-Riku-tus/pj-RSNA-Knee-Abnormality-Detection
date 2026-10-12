@@ -1,0 +1,90 @@
+{
+  "schema_version": "f005_regional_actual_epoch1_and_independent_sameGPU_twofold_overlap_v1",
+  "at_utc": "2026-10-10T06:23:14.819482+00:00",
+  "own_verified_Public": 0.951,
+  "own_strict_above0960_achieved": false,
+  "first_actual_fold1_epoch": {
+    "epoch": 1,
+    "train_bce": 0.4214193614524259,
+    "weak_bce": 0.37689895801028905,
+    "weak_macro_auc_12": 0.7068970697715208,
+    "optimizer_steps": 208,
+    "optimizer_step_opportunities": 208,
+    "amp_skipped_steps": 0,
+    "elapsed_seconds": 1880.7272065000143,
+    "observed_cells": 22851,
+    "gpu_peak_reserved_bytes": 1197473792
+  },
+  "first_epoch_not_adopted": true,
+  "runtime_change": "After the first actual fold1 epoch, start the same fixed12 source/config fold0 in a separate process and fresh run directory on the same RTX4090. No producer changes or shared optimizer/RNG objects. Process overlap is an additional execution circumstance, not a new model factor or single-process resource qualification.",
+  "actual_launch": {
+    "fold0_exec_session": 94738,
+    "fold1_exec_session": 91809,
+    "fold0_main_PID_observed": 11844,
+    "fold1_main_PID_observed": 24112,
+    "fold0_process_started_utc": "2026-10-10T06:19:52.306+00:00",
+    "fold0_start_chunk": "bd0126",
+    "fold0_status_chunk": "e14ed1",
+    "first_epoch_chunk": "528b8c",
+    "GPU_overlap_observation_chunk": "25af3d",
+    "process_observation_chunk": "e0685e"
+  },
+  "runs": {
+    "0": {
+      "run_id": "native-regional4x4-last2-dense-fast16-fold0-20261010-v1",
+      "run_json_sha256": "2431a85dce6910f82fd7fda7d63444e23046b6a5fc9742b331f7e09dc3284012",
+      "status": "running",
+      "epochs": 0,
+      "train_studies": 3386,
+      "valid_studies": 821,
+      "snapshot": "fold0-run-snapshot-v1.json"
+    },
+    "1": {
+      "run_id": "native-regional4x4-last2-dense-fast16-fold1-20261010-v1",
+      "run_json_sha256": "bd32fc85961fba89d3f11d16dd59f2942ff97ad6f2d37fc29df38350f6a079a4",
+      "status": "running",
+      "epochs": 1,
+      "train_studies": 3316,
+      "valid_studies": 891,
+      "snapshot": "fold1-run-snapshot-v1.json"
+    }
+  },
+  "eligibility": {
+    "source13_CLI2_config_unchanged_and_equal": true,
+    "same_manifest_cache_QA_targets_provenance": true,
+    "independent_group_folds": true,
+    "model_adoption_during_partial_training": false,
+    "own_Gold_fit_or_selection": false,
+    "patient_independence_verified": false
+  },
+  "resource_observations": {
+    "logical_CPU_count": 28,
+    "RAM_total_bytes": 34196131840,
+    "RAM_available_bytes_at_0610": 19131277312,
+    "first_fold1_actual_torch_peak_reserved_bytes": 1197473792,
+    "six_samples_pre_overlap_peak_global_MiB": 2386,
+    "six_samples_pre_overlap_mean_utilization_percent": 22.0,
+    "post_overlap_sample_global_MiB": 4097,
+    "post_overlap_sample_total_MiB": 24564,
+    "post_overlap_sample_GPU_utilization_percent": 47,
+    "both_main_process_sample_WorkingSet_bytes": [
+      2126725120,
+      2117607424
+    ],
+    "whole_run_or_parallel_peak_proven": false,
+    "parallel_training_qualified_by_prior_single_process_QA": false,
+    "actual_shortening_proven": false
+  },
+  "next": [
+    "Preserve both fixed12 runs; watch for actual exceptions and resource pressure.",
+    "Measure the next actual epoch wall time before claiming shorter total training.",
+    "Use original minimum weak BCE/earliest tie only after each fixed12 run completes.",
+    "New Regional own CPU64_256 and serving qualifications required before Submit."
+  ],
+  "actual_regional_seal_CPU_Kaggle_Submit": false,
+  "P014_submit57031186_and_P015_submit57031981_last_poll": "2026-10-10T06:12:16Z; scores not returned",
+  "artifact_observation": {
+    "path": "artifacts/research/20261010-f005-regional-parallel-training-root-v1/observation.json",
+    "sha256": "23c2a1cae88e18ead560f643f42c315bfd950067a10f7f854e1c63fe14b0ade7"
+  }
+}

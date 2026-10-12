@@ -1,0 +1,31 @@
+{
+  "checked_at_utc": "2026-10-08T11:29:10.172374+00:00",
+  "ref": "rsraki/native392-pixel16-diagnostic",
+  "notebook_sha256": "ff88e2077d7d7ef484fbd19e5f50ddd69e40c663dea22f73283903b13d860e7e",
+  "all_passed": true,
+  "checks": {
+    "canonical18a_sha": true,
+    "authoritative_v3_notebook_exact": true,
+    "all3_sha_bindings": true,
+    "package_hash_bound": true,
+    "preparation8_checks_passed": true,
+    "eight_tests_and_ruff": true,
+    "independent38_checks": true,
+    "corrected_cpu_helper_executed": true,
+    "fixed_whole_group16_no_gold_fold0": true,
+    "no_runtime_targets_encoder_fit_submission": true,
+    "cpu_private_offline": true,
+    "raw_bounded_below1GiB": true,
+    "only_approved_two_inputs": true,
+    "protected14": true,
+    "clean_notebook": true
+  },
+  "evidence_sha256": {
+    "notebooks\\public\\18a_profile_dinov2_native392_pixel16.ipynb": "ff88e2077d7d7ef484fbd19e5f50ddd69e40c663dea22f73283903b13d860e7e",
+    "experiments\\native392-pixel16-preparation-validation-20261008.json": "d1b7916b6b91e7e72c14931137be9cc998532e7477ef675c3aeae0d04f25bb03",
+    "experiments\\native392-pixel16-independent-prelaunch-review-v3-20261008.json": "9a3ee8d861dc2249123b7e6a76bea96de77fe01888031ecce1ecc01b789a544b",
+    "artifacts\\kaggle\\native392-pixel16-v3-20261008\\package.json": "dbc90249cf034d53ddd838e77710f0e14221d4ba6fe31d54fb9815cb56a91e2f"
+  },
+  "runtime_cache_or_MRI_quality_proven": false,
+  "for_submission": false
+}

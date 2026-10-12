@@ -1,0 +1,56 @@
+{
+  "schema_version": "p006_convnext_k24_validation_v1",
+  "checked_at_utc": "2026-10-08T09:39:08.929282+00:00",
+  "unit_tests": {
+    "command": ".venv/Scripts/python.exe -m unittest tests.test_p006_convnext_density -v",
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 2.504
+  },
+  "ruff": {
+    "passed": true,
+    "files": [
+      "scripts/build_p006_convnext_density.py",
+      "tests/test_p006_convnext_density.py"
+    ]
+  },
+  "cuda_artificial_test": {
+    "passed": true,
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.10.0+cu128",
+    "densities": [
+      16,
+      24
+    ],
+    "short_native_series": [
+      3,
+      4
+    ],
+    "missing_slots_and_all_missing_study": true,
+    "original_dataset_and_head_bodies": true,
+    "encoder": "random synthetic8dim Conv2d; real ConvNeXt/checkpoints not exercised",
+    "masked_slot_prediction_difference": 0.0,
+    "submission_contract": {
+      "studies": 3,
+      "targets": 12,
+      "valid": true
+    }
+  },
+  "notebook_sha256": "172d6744be6f5e1e20def4680a1e81f3253989b49f601b1b01459d0c6245a320",
+  "baseline_sha256_unchanged": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "changed_prediction_code_cells": [
+    8
+  ],
+  "changed_prediction_signature_only": "k=16 -> k=24",
+  "other6_code_cells_byte_identical": true,
+  "runtime_default_propagation_verified": true,
+  "notebook_input_original_metadata_unchanged": true,
+  "real_MRI_checkpoint_fit_upload_submit_performed": false,
+  "files_sha256": {
+    "scripts\\build_p006_convnext_density.py": "ca32b3cd8b7ab2d75bbe44ec414a424fdf3e2453477240cfa4ce601b128493b1",
+    "tests\\test_p006_convnext_density.py": "88e288bef86be4f8896a4d2979eefc4b09b7f3ca3836440fe37393d48281561e",
+    "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\notebooks\\public\\15_submit_p006_convnext_k24.ipynb": "172d6744be6f5e1e20def4680a1e81f3253989b49f601b1b01459d0c6245a320",
+    "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\p006-convnext-density-implementation-20261008.json": "1f338c9e08af258c06f0eb0e83db45edfd2f28b5a232161f19cfe5e45333b6e8"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": "f005_selected_fold0_actual_weak_CSV_CPU_recomputation_v1",
+  "at_utc": "2026-10-09T04:11:58.205092+00:00",
+  "all_passed": true,
+  "run_path": "artifacts\\runs\\f005-native-frozen-cached-FP32-fast16-fold0-20261009-v1",
+  "run_sha256": "68cd3c9550c3d039d01bffa1943505f9d671ba48d01f26f710a5882c1fac9aaf",
+  "weak_csv_sha256": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+  "prediction_sha256": "f4cdbe3e5ccb211edbe98a7ddc52d221a5a66e3290f95adf2064c7855d58322e",
+  "selected_epoch": 11,
+  "selection_rule": "minimum weak BCE; earliest exact tie",
+  "valid_studies": 821,
+  "observed_cells": 5727,
+  "observed_by_target": {
+    "ACL": 693,
+    "MCL": 683,
+    "Medial Meniscus": 750,
+    "Lateral Meniscus": 717,
+    "Medial OA": 442,
+    "Lateral OA": 426,
+    "PF OA": 466,
+    "Effusion": 617,
+    "Synovitis": 101,
+    "Baker's": 378,
+    "Contusion": 266,
+    "Fracture": 188
+  },
+  "recomputed_metrics": {
+    "per_target": {
+      "ACL": {
+        "auc": 0.8226957585644372,
+        "binary_observed": 693,
+        "positive": 80.0,
+        "soft_excluded": 0
+      },
+      "MCL": {
+        "auc": 0.7125270562770563,
+        "binary_observed": 683,
+        "positive": 11.0,
+        "soft_excluded": 0
+      },
+      "Medial Meniscus": {
+        "auc": 0.7891596768157101,
+        "binary_observed": 750,
+        "positive": 309.0,
+        "soft_excluded": 0
+      },
+      "Lateral Meniscus": {
+        "auc": 0.6745670724055716,
+        "binary_observed": 717,
+        "positive": 104.0,
+        "soft_excluded": 0
+      },
+      "Medial OA": {
+        "auc": 0.8915758703162371,
+        "binary_observed": 442,
+        "positive": 71.0,
+        "soft_excluded": 0
+      },
+      "Lateral OA": {
+        "auc": 0.76705991209808,
+        "binary_observed": 426,
+        "positive": 33.0,
+        "soft_excluded": 0
+      },
+      "PF OA": {
+        "auc": 0.8101851851851852,
+        "binary_observed": 466,
+        "positive": 88.0,
+        "soft_excluded": 0
+      },
+      "Effusion": {
+        "auc": 0.9341972920696325,
+        "binary_observed": 617,
+        "positive": 100.0,
+        "soft_excluded": 0
+      },
+      "Synovitis": {
+        "auc": 0.64,
+        "binary_observed": 101,
+        "positive": 100.0,
+        "soft_excluded": 0
+      },
+      "Baker's": {
+        "auc": 0.8862972211890973,
+        "binary_observed": 378,
+        "positive": 59.0,
+        "soft_excluded": 0
+      },
+      "Contusion": {
+        "auc": 0.7870924817032602,
+        "binary_observed": 266,
+        "positive": 99.0,
+        "soft_excluded": 0
+      },
+      "Fracture": {
+        "auc": 0.81802398989899,
+        "binary_observed": 188,
+        "positive": 44.0,
+        "soft_excluded": 0
+      }
+    },
+    "macro_auc_12": 0.7944484597102713,
+    "available_class_macro_auc": 0.7944484597102713,
+    "defined_classes": 12,
+    "note": "Soft targets are excluded from ROC-AUC; use masked BCE for weak-label validation."
+  },
+  "recorded_logit_FP32_BCE": 0.32320641890826474,
+  "CSV_probability_FP64_reconstructed_BCE": 0.32320641849643744,
+  "absolute_BCE_reconstruction_error": 4.118272944886314e-10,
+  "BCE_reconstruction_tolerance": 1e-05,
+  "missing_values_excluded_not_zero_filled": true,
+  "saturated_observed_probabilities": 0,
+  "teacher_weak_values_read": true,
+  "Gold_label_values_read": false,
+  "MRI_model_GPUTensor_API_or_fit": 0,
+  "own_Public_unchanged": "0.950",
+  "limits": [
+    "Weak Report-derived targets differ from official hidden image-derived labels.",
+    "CSV sigmoid probabilities approximate logit BCE; this is not byte-exact logit reconstruction.",
+    "Patient independence is unverified. No own Gold or Public improvement inferred."
+  ]
+}

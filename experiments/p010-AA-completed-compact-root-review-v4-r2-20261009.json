@@ -1,0 +1,2794 @@
+{
+  "schema_version": "p010_AA_independent_compact_review_v4_r2",
+  "all_passed": true,
+  "official_terminal_state": "COMPLETE",
+  "ref": "rsraki/p010diag-d6a587bcefded28cde96453a8ba1848f",
+  "saved_version": 4,
+  "kernel_id": 137683716,
+  "source_sha256": "3f92559244f1131dc6d79408f9ae8d5a88f5bfb69d7307bdab206c3e6883d9ca",
+  "studies": 32,
+  "completed_phase_receipts": 10,
+  "phases": {
+    "base_original_ordinary_A1": {
+      "completed_studies": 32,
+      "status": "phase_complete_before_comparison",
+      "resources": {
+        "seconds": 59.56102242899999,
+        "sampled_GPU_peak_mib": [
+          3763,
+          3311
+        ],
+        "torch_reserved_mib": [
+          3634.0,
+          3182.0
+        ],
+        "RSS_bytes": 10361266176
+      },
+      "devices": {
+        "cuda:0": 16,
+        "cuda:1": 16
+      },
+      "actual_forward_count": 64,
+      "base_autocast_disabled_forward_observations": 0,
+      "actual_weight_loads": [
+        {
+          "device": "cuda:0",
+          "model_class": "RaptorClassifier",
+          "resolution": 320,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+          "actual_checkpoint_bytes": 292840787,
+          "all_eval": true
+        },
+        {
+          "device": "cuda:1",
+          "model_class": "RaptorClassifier",
+          "resolution": 320,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+          "actual_checkpoint_bytes": 292840787,
+          "all_eval": true
+        }
+      ],
+      "backend_flags": {
+        "before_source": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": false,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": false,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "highest",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        },
+        "after_phase": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        }
+      },
+      "mask_valid_slices": {
+        "min": 74,
+        "max": 96,
+        "sum": 2918
+      }
+    },
+    "base_original_ordinary_A2": {
+      "completed_studies": 32,
+      "status": "phase_complete_before_comparison",
+      "resources": {
+        "seconds": 63.14951603100002,
+        "sampled_GPU_peak_mib": [
+          3349,
+          3349
+        ],
+        "torch_reserved_mib": [
+          3210.0,
+          3530.0
+        ],
+        "RSS_bytes": 14615646208
+      },
+      "devices": {
+        "cuda:0": 16,
+        "cuda:1": 16
+      },
+      "actual_forward_count": 64,
+      "base_autocast_disabled_forward_observations": 0,
+      "actual_weight_loads": [
+        {
+          "device": "cuda:0",
+          "model_class": "RaptorClassifier",
+          "resolution": 320,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+          "actual_checkpoint_bytes": 292840787,
+          "all_eval": true
+        },
+        {
+          "device": "cuda:1",
+          "model_class": "RaptorClassifier",
+          "resolution": 320,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+          "actual_checkpoint_bytes": 292840787,
+          "all_eval": true
+        }
+      ],
+      "backend_flags": {
+        "before_source": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        },
+        "after_phase": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        }
+      },
+      "mask_valid_slices": {
+        "min": 74,
+        "max": 96,
+        "sum": 2918
+      }
+    },
+    "base_bounded_ordinary_A1": {
+      "completed_studies": 32,
+      "status": "phase_complete_before_comparison",
+      "resources": {
+        "seconds": 62.550855884999976,
+        "sampled_GPU_peak_mib": [
+          3349,
+          3309
+        ],
+        "torch_reserved_mib": [
+          3210.0,
+          3170.0
+        ],
+        "RSS_bytes": 15012069376
+      },
+      "devices": {
+        "cuda:0": 16,
+        "cuda:1": 16
+      },
+      "actual_forward_count": 64,
+      "base_autocast_disabled_forward_observations": 0,
+      "actual_weight_loads": [
+        {
+          "device": "cuda:0",
+          "model_class": "RaptorClassifier",
+          "resolution": 320,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+          "actual_checkpoint_bytes": 292840787,
+          "all_eval": true
+        },
+        {
+          "device": "cuda:1",
+          "model_class": "RaptorClassifier",
+          "resolution": 320,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+          "actual_checkpoint_bytes": 292840787,
+          "all_eval": true
+        }
+      ],
+      "backend_flags": {
+        "before_source": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        },
+        "after_phase": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        }
+      },
+      "mask_valid_slices": {
+        "min": 74,
+        "max": 96,
+        "sum": 2918
+      }
+    },
+    "base_bounded_ordinary_A2": {
+      "completed_studies": 32,
+      "status": "phase_complete_before_comparison",
+      "resources": {
+        "seconds": 62.69081523400001,
+        "sampled_GPU_peak_mib": [
+          3349,
+          3521
+        ],
+        "torch_reserved_mib": [
+          3210.0,
+          3570.0
+        ],
+        "RSS_bytes": 15574188032
+      },
+      "devices": {
+        "cuda:0": 16,
+        "cuda:1": 16
+      },
+      "actual_forward_count": 64,
+      "base_autocast_disabled_forward_observations": 0,
+      "actual_weight_loads": [
+        {
+          "device": "cuda:0",
+          "model_class": "RaptorClassifier",
+          "resolution": 320,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+          "actual_checkpoint_bytes": 292840787,
+          "all_eval": true
+        },
+        {
+          "device": "cuda:1",
+          "model_class": "RaptorClassifier",
+          "resolution": 320,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+          "actual_checkpoint_bytes": 292840787,
+          "all_eval": true
+        }
+      ],
+      "backend_flags": {
+        "before_source": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        },
+        "after_phase": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        }
+      },
+      "mask_valid_slices": {
+        "min": 74,
+        "max": 96,
+        "sum": 2918
+      }
+    },
+    "base_bounded_fixed_A1": {
+      "completed_studies": 32,
+      "status": "phase_complete_before_comparison",
+      "resources": {
+        "seconds": 64.082809935,
+        "sampled_GPU_peak_mib": [
+          3319,
+          3319
+        ],
+        "torch_reserved_mib": [
+          3210.0,
+          3530.0
+        ],
+        "RSS_bytes": 12211666944
+      },
+      "devices": {
+        "cuda:0": 16,
+        "cuda:1": 16
+      },
+      "actual_forward_count": 64,
+      "base_autocast_disabled_forward_observations": 0,
+      "actual_weight_loads": [
+        {
+          "device": "cuda:0",
+          "model_class": "RaptorClassifier",
+          "resolution": 320,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+          "actual_checkpoint_bytes": 292840787,
+          "all_eval": true
+        },
+        {
+          "device": "cuda:1",
+          "model_class": "RaptorClassifier",
+          "resolution": 320,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+          "actual_checkpoint_bytes": 292840787,
+          "all_eval": true
+        }
+      ],
+      "backend_flags": {
+        "before_source": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        },
+        "after_phase": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        }
+      },
+      "mask_valid_slices": {
+        "min": 74,
+        "max": 96,
+        "sum": 2918
+      }
+    },
+    "base_bounded_fixed_A2": {
+      "completed_studies": 32,
+      "status": "phase_complete_before_comparison",
+      "resources": {
+        "seconds": 63.99080629400004,
+        "sampled_GPU_peak_mib": [
+          3669,
+          3309
+        ],
+        "torch_reserved_mib": [
+          3530.0,
+          3170.0
+        ],
+        "RSS_bytes": 16978780160
+      },
+      "devices": {
+        "cuda:0": 16,
+        "cuda:1": 16
+      },
+      "actual_forward_count": 64,
+      "base_autocast_disabled_forward_observations": 0,
+      "actual_weight_loads": [
+        {
+          "device": "cuda:0",
+          "model_class": "RaptorClassifier",
+          "resolution": 320,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+          "actual_checkpoint_bytes": 292840787,
+          "all_eval": true
+        },
+        {
+          "device": "cuda:1",
+          "model_class": "RaptorClassifier",
+          "resolution": 320,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+          "actual_checkpoint_bytes": 292840787,
+          "all_eval": true
+        }
+      ],
+      "backend_flags": {
+        "before_source": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        },
+        "after_phase": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        }
+      },
+      "mask_valid_slices": {
+        "min": 74,
+        "max": 96,
+        "sum": 2918
+      }
+    },
+    "stock224_ordinary_A1": {
+      "completed_studies": 32,
+      "status": "phase_complete_before_comparison",
+      "resources": {
+        "seconds": 30.730832989999953,
+        "sampled_GPU_peak_mib": [
+          7743,
+          8895
+        ],
+        "torch_reserved_mib": [
+          7604.0,
+          8756.0
+        ],
+        "RSS_bytes": 17353908224
+      },
+      "devices": {
+        "cuda:0": 17,
+        "cuda:1": 15
+      },
+      "actual_forward_count": 32,
+      "base_autocast_disabled_forward_observations": 0,
+      "actual_weight_loads": [
+        {
+          "device": "cuda:0",
+          "model_class": "RaptorClassifier",
+          "resolution": 224,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+          "actual_checkpoint_bytes": 292842755,
+          "all_eval": true
+        },
+        {
+          "device": "cuda:1",
+          "model_class": "RaptorClassifier",
+          "resolution": 224,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+          "actual_checkpoint_bytes": 292842755,
+          "all_eval": true
+        }
+      ],
+      "backend_flags": {
+        "before_source": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        },
+        "after_phase": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        }
+      },
+      "mask_valid_slices": {
+        "min": 74,
+        "max": 96,
+        "sum": 2918
+      }
+    },
+    "stock224_ordinary_A2": {
+      "completed_studies": 32,
+      "status": "phase_complete_before_comparison",
+      "resources": {
+        "seconds": 30.388461920000054,
+        "sampled_GPU_peak_mib": [
+          7741,
+          8893
+        ],
+        "torch_reserved_mib": [
+          7602.0,
+          8754.0
+        ],
+        "RSS_bytes": 17648320512
+      },
+      "devices": {
+        "cuda:0": 17,
+        "cuda:1": 15
+      },
+      "actual_forward_count": 32,
+      "base_autocast_disabled_forward_observations": 0,
+      "actual_weight_loads": [
+        {
+          "device": "cuda:0",
+          "model_class": "RaptorClassifier",
+          "resolution": 224,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+          "actual_checkpoint_bytes": 292842755,
+          "all_eval": true
+        },
+        {
+          "device": "cuda:1",
+          "model_class": "RaptorClassifier",
+          "resolution": 224,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+          "actual_checkpoint_bytes": 292842755,
+          "all_eval": true
+        }
+      ],
+      "backend_flags": {
+        "before_source": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        },
+        "after_phase": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        }
+      },
+      "mask_valid_slices": {
+        "min": 74,
+        "max": 96,
+        "sum": 2918
+      }
+    },
+    "stock224_fixed_A1": {
+      "completed_studies": 32,
+      "status": "phase_complete_before_comparison",
+      "resources": {
+        "seconds": 29.496757164999963,
+        "sampled_GPU_peak_mib": [
+          8893,
+          7743
+        ],
+        "torch_reserved_mib": [
+          8754.0,
+          7604.0
+        ],
+        "RSS_bytes": 18024181760
+      },
+      "devices": {
+        "cuda:0": 16,
+        "cuda:1": 16
+      },
+      "actual_forward_count": 32,
+      "base_autocast_disabled_forward_observations": 0,
+      "actual_weight_loads": [
+        {
+          "device": "cuda:0",
+          "model_class": "RaptorClassifier",
+          "resolution": 224,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+          "actual_checkpoint_bytes": 292842755,
+          "all_eval": true
+        },
+        {
+          "device": "cuda:1",
+          "model_class": "RaptorClassifier",
+          "resolution": 224,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+          "actual_checkpoint_bytes": 292842755,
+          "all_eval": true
+        }
+      ],
+      "backend_flags": {
+        "before_source": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        },
+        "after_phase": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        }
+      },
+      "mask_valid_slices": {
+        "min": 74,
+        "max": 96,
+        "sum": 2918
+      }
+    },
+    "stock224_fixed_A2": {
+      "completed_studies": 32,
+      "status": "phase_complete_before_comparison",
+      "resources": {
+        "seconds": 30.532745381999916,
+        "sampled_GPU_peak_mib": [
+          7741,
+          8895
+        ],
+        "torch_reserved_mib": [
+          7602.0,
+          8756.0
+        ],
+        "RSS_bytes": 17731584000
+      },
+      "devices": {
+        "cuda:0": 16,
+        "cuda:1": 16
+      },
+      "actual_forward_count": 32,
+      "base_autocast_disabled_forward_observations": 0,
+      "actual_weight_loads": [
+        {
+          "device": "cuda:0",
+          "model_class": "RaptorClassifier",
+          "resolution": 224,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+          "actual_checkpoint_bytes": 292842755,
+          "all_eval": true
+        },
+        {
+          "device": "cuda:1",
+          "model_class": "RaptorClassifier",
+          "resolution": 224,
+          "tensor_count": 486,
+          "shape_dtype_sha256": "327ccb7952b954af00e80bdb996507d385a0f4d164e6fa269f15a10e5f0fb579",
+          "actual_checkpoint_sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+          "actual_checkpoint_bytes": 292842755,
+          "all_eval": true
+        }
+      ],
+      "backend_flags": {
+        "before_source": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        },
+        "after_phase": {
+          "torch": "2.11.0+cu128",
+          "timm": "1.0.29",
+          "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+          "CUDA": "12.8",
+          "cuDNN": 91900,
+          "cudnn": {
+            "enabled": true,
+            "benchmark": true,
+            "deterministic": false,
+            "allow_tf32": true
+          },
+          "cuda_matmul": {
+            "allow_tf32": true,
+            "allow_fp16_reduced_precision_reduction": true,
+            "allow_bf16_reduced_precision_reduction": true
+          },
+          "float32_matmul_precision": "high",
+          "deterministic_algorithms": false,
+          "deterministic_warn_only": false,
+          "SDP": {
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true
+          },
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "devices": [
+            {
+              "device": "cuda:0",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            },
+            {
+              "device": "cuda:1",
+              "name": "Tesla T4",
+              "capability": [
+                7,
+                5
+              ],
+              "total_memory_bytes": 15636037632,
+              "multi_processor_count": 40
+            }
+          ],
+          "driver_version": null,
+          "driver_version_scope": "Not exposed by a relied-upon public PyTorch API; no extra command executed."
+        }
+      },
+      "mask_valid_slices": {
+        "min": 74,
+        "max": 96,
+        "sum": 2918
+      }
+    }
+  },
+  "summary_checks": {
+    "all10_phase_GUARD_verified": true,
+    "all16_CSVs_verified": true,
+    "all6_comparisons_independently_recomputed": true,
+    "all10_input_hashes_equal": true,
+    "actual_source_design_helper_SHA_verified": true
+  },
+  "comparisons": {
+    "base_original_ordinary": {
+      "raw": {
+        "studies": 32,
+        "targets": 12,
+        "numeric_cells_differ": 377,
+        "exact_float32_equal": false,
+        "maximum_absolute_difference": 0.00032716989517211914,
+        "ULP": {
+          "median": 345.5,
+          "p99_nearest_rank": 5489,
+          "max": 9437
+        },
+        "absolute_tolerance_predeclared": 1e-07,
+        "relative_tolerance_predeclared": 0.0,
+        "within_existing_raw_gate": false,
+        "candidate_or_accuracy_gate_passed": false
+      },
+      "by_label": {
+        "ACL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 9.781122207641602e-05
+        },
+        "MCL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 4.649162292480469e-05
+        },
+        "Medial Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00013005733489990234
+        },
+        "Lateral Meniscus": {
+          "changed_rank_cells": 2,
+          "pair_order_or_tie_relation_changes": 1,
+          "maximum_absolute_difference": 0.00032716989517211914
+        },
+        "Medial OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 4.649162292480469e-05
+        },
+        "Lateral OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.133317947387695e-05
+        },
+        "PF OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00021505355834960938
+        },
+        "Effusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00010219216346740723
+        },
+        "Synovitis": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 3.466010093688965e-05
+        },
+        "Baker's": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001175999641418457
+        },
+        "Contusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.93202018737793e-05
+        },
+        "Fracture": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00012022256851196289
+        }
+      },
+      "observed_GPU_strata": {
+        "same_observed_GPU": {
+          "studies": 18,
+          "measurement": {
+            "studies": 18,
+            "targets": 12,
+            "numeric_cells_differ": 216,
+            "exact_float32_equal": false,
+            "maximum_absolute_difference": 0.00032716989517211914,
+            "ULP": {
+              "median": 546.0,
+              "p99_nearest_rank": 6282,
+              "max": 9437
+            },
+            "absolute_tolerance_predeclared": 1e-07,
+            "relative_tolerance_predeclared": 0.0,
+            "within_existing_raw_gate": false,
+            "candidate_or_accuracy_gate_passed": false
+          }
+        },
+        "different_observed_GPU": {
+          "studies": 14,
+          "measurement": {
+            "studies": 14,
+            "targets": 12,
+            "numeric_cells_differ": 161,
+            "exact_float32_equal": false,
+            "maximum_absolute_difference": 8.404254913330078e-05,
+            "ULP": {
+              "median": 125.5,
+              "p99_nearest_rank": 2648,
+              "max": 2814
+            },
+            "absolute_tolerance_predeclared": 1e-07,
+            "relative_tolerance_predeclared": 0.0,
+            "within_existing_raw_gate": false,
+            "candidate_or_accuracy_gate_passed": false
+          }
+        }
+      },
+      "stratification_is_descriptive_not_causal": true
+    },
+    "base_bounded_ordinary": {
+      "raw": {
+        "studies": 32,
+        "targets": 12,
+        "numeric_cells_differ": 383,
+        "exact_float32_equal": false,
+        "maximum_absolute_difference": 0.0003886222839355469,
+        "ULP": {
+          "median": 355.5,
+          "p99_nearest_rank": 4735,
+          "max": 13040
+        },
+        "absolute_tolerance_predeclared": 1e-07,
+        "relative_tolerance_predeclared": 0.0,
+        "within_existing_raw_gate": false,
+        "candidate_or_accuracy_gate_passed": false
+      },
+      "by_label": {
+        "ACL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.759166717529297e-05
+        },
+        "MCL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001036226749420166
+        },
+        "Medial Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00029093027114868164
+        },
+        "Lateral Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0002822279930114746
+        },
+        "Medial OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.724761962890625e-05
+        },
+        "Lateral OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 9.593367576599121e-05
+        },
+        "PF OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00013589859008789062
+        },
+        "Effusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 4.965066909790039e-05
+        },
+        "Synovitis": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.420778274536133e-05
+        },
+        "Baker's": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.785988807678223e-05
+        },
+        "Contusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0003886222839355469
+        },
+        "Fracture": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.729364395141602e-05
+        }
+      },
+      "observed_GPU_strata": {
+        "same_observed_GPU": {
+          "studies": 18,
+          "measurement": {
+            "studies": 18,
+            "targets": 12,
+            "numeric_cells_differ": 216,
+            "exact_float32_equal": false,
+            "maximum_absolute_difference": 0.00029093027114868164,
+            "ULP": {
+              "median": 487.5,
+              "p99_nearest_rank": 4735,
+              "max": 7794
+            },
+            "absolute_tolerance_predeclared": 1e-07,
+            "relative_tolerance_predeclared": 0.0,
+            "within_existing_raw_gate": false,
+            "candidate_or_accuracy_gate_passed": false
+          }
+        },
+        "different_observed_GPU": {
+          "studies": 14,
+          "measurement": {
+            "studies": 14,
+            "targets": 12,
+            "numeric_cells_differ": 167,
+            "exact_float32_equal": false,
+            "maximum_absolute_difference": 0.0003886222839355469,
+            "ULP": {
+              "median": 216.0,
+              "p99_nearest_rank": 3897,
+              "max": 13040
+            },
+            "absolute_tolerance_predeclared": 1e-07,
+            "relative_tolerance_predeclared": 0.0,
+            "within_existing_raw_gate": false,
+            "candidate_or_accuracy_gate_passed": false
+          }
+        }
+      },
+      "stratification_is_descriptive_not_causal": true
+    },
+    "base_bounded_fixed": {
+      "raw": {
+        "studies": 32,
+        "targets": 12,
+        "numeric_cells_differ": 372,
+        "exact_float32_equal": false,
+        "maximum_absolute_difference": 0.00017780065536499023,
+        "ULP": {
+          "median": 108.5,
+          "p99_nearest_rank": 2618,
+          "max": 8747
+        },
+        "absolute_tolerance_predeclared": 1e-07,
+        "relative_tolerance_predeclared": 0.0,
+        "within_existing_raw_gate": false,
+        "candidate_or_accuracy_gate_passed": false
+      },
+      "by_label": {
+        "ACL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00013034045696258545
+        },
+        "MCL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 3.272294998168945e-05
+        },
+        "Medial Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00010728836059570312
+        },
+        "Lateral Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.364153861999512e-05
+        },
+        "Medial OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.851553916931152e-05
+        },
+        "Lateral OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 9.912252426147461e-05
+        },
+        "PF OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.915496826171875e-05
+        },
+        "Effusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 3.364682197570801e-05
+        },
+        "Synovitis": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 5.507469177246094e-05
+        },
+        "Baker's": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.802248001098633e-05
+        },
+        "Contusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00017780065536499023
+        },
+        "Fracture": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.42538070678711e-05
+        }
+      },
+      "observed_GPU_strata": {
+        "same_observed_GPU": {
+          "studies": 32,
+          "measurement": {
+            "studies": 32,
+            "targets": 12,
+            "numeric_cells_differ": 372,
+            "exact_float32_equal": false,
+            "maximum_absolute_difference": 0.00017780065536499023,
+            "ULP": {
+              "median": 108.5,
+              "p99_nearest_rank": 2618,
+              "max": 8747
+            },
+            "absolute_tolerance_predeclared": 1e-07,
+            "relative_tolerance_predeclared": 0.0,
+            "within_existing_raw_gate": false,
+            "candidate_or_accuracy_gate_passed": false
+          }
+        },
+        "different_observed_GPU": {
+          "studies": 0,
+          "measurement": null
+        }
+      },
+      "stratification_is_descriptive_not_causal": true
+    },
+    "stock224_ordinary": {
+      "raw": {
+        "studies": 32,
+        "targets": 12,
+        "numeric_cells_differ": 383,
+        "exact_float32_equal": false,
+        "maximum_absolute_difference": 0.00023880600929260254,
+        "ULP": {
+          "median": 660.0,
+          "p99_nearest_rank": 7386,
+          "max": 9499
+        },
+        "absolute_tolerance_predeclared": 1e-07,
+        "relative_tolerance_predeclared": 0.0,
+        "within_existing_raw_gate": false,
+        "candidate_or_accuracy_gate_passed": false
+      },
+      "by_label": {
+        "ACL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001316666603088379
+        },
+        "MCL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001849830150604248
+        },
+        "Medial Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00023880600929260254
+        },
+        "Lateral Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001602470874786377
+        },
+        "Medial OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001359879970550537
+        },
+        "Lateral OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00019419193267822266
+        },
+        "PF OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00018870830535888672
+        },
+        "Effusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.233023643493652e-05
+        },
+        "Synovitis": {
+          "changed_rank_cells": 2,
+          "pair_order_or_tie_relation_changes": 1,
+          "maximum_absolute_difference": 6.22868537902832e-05
+        },
+        "Baker's": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00010573863983154297
+        },
+        "Contusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00022011995315551758
+        },
+        "Fracture": {
+          "changed_rank_cells": 2,
+          "pair_order_or_tie_relation_changes": 1,
+          "maximum_absolute_difference": 6.437301635742188e-05
+        }
+      },
+      "observed_GPU_strata": {
+        "same_observed_GPU": {
+          "studies": 16,
+          "measurement": {
+            "studies": 16,
+            "targets": 12,
+            "numeric_cells_differ": 192,
+            "exact_float32_equal": false,
+            "maximum_absolute_difference": 0.00022011995315551758,
+            "ULP": {
+              "median": 612.5,
+              "p99_nearest_rank": 7386,
+              "max": 9499
+            },
+            "absolute_tolerance_predeclared": 1e-07,
+            "relative_tolerance_predeclared": 0.0,
+            "within_existing_raw_gate": false,
+            "candidate_or_accuracy_gate_passed": false
+          }
+        },
+        "different_observed_GPU": {
+          "studies": 16,
+          "measurement": {
+            "studies": 16,
+            "targets": 12,
+            "numeric_cells_differ": 191,
+            "exact_float32_equal": false,
+            "maximum_absolute_difference": 0.00023880600929260254,
+            "ULP": {
+              "median": 741.5,
+              "p99_nearest_rank": 7537,
+              "max": 8013
+            },
+            "absolute_tolerance_predeclared": 1e-07,
+            "relative_tolerance_predeclared": 0.0,
+            "within_existing_raw_gate": false,
+            "candidate_or_accuracy_gate_passed": false
+          }
+        }
+      },
+      "stratification_is_descriptive_not_causal": true
+    },
+    "stock224_fixed": {
+      "raw": {
+        "studies": 32,
+        "targets": 12,
+        "numeric_cells_differ": 382,
+        "exact_float32_equal": false,
+        "maximum_absolute_difference": 0.00021404027938842773,
+        "ULP": {
+          "median": 606.0,
+          "p99_nearest_rank": 4027,
+          "max": 17685
+        },
+        "absolute_tolerance_predeclared": 1e-07,
+        "relative_tolerance_predeclared": 0.0,
+        "within_existing_raw_gate": false,
+        "candidate_or_accuracy_gate_passed": false
+      },
+      "by_label": {
+        "ACL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 8.383393287658691e-05
+        },
+        "MCL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 4.559755325317383e-05
+        },
+        "Medial Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00011157989501953125
+        },
+        "Lateral Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00021404027938842773
+        },
+        "Medial OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 8.845329284667969e-05
+        },
+        "Lateral OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00012001395225524902
+        },
+        "PF OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.18235969543457e-05
+        },
+        "Effusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 5.447864532470703e-05
+        },
+        "Synovitis": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.286667823791504e-05
+        },
+        "Baker's": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001157224178314209
+        },
+        "Contusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00012689828872680664
+        },
+        "Fracture": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 5.0008296966552734e-05
+        }
+      },
+      "observed_GPU_strata": {
+        "same_observed_GPU": {
+          "studies": 32,
+          "measurement": {
+            "studies": 32,
+            "targets": 12,
+            "numeric_cells_differ": 382,
+            "exact_float32_equal": false,
+            "maximum_absolute_difference": 0.00021404027938842773,
+            "ULP": {
+              "median": 606.0,
+              "p99_nearest_rank": 4027,
+              "max": 17685
+            },
+            "absolute_tolerance_predeclared": 1e-07,
+            "relative_tolerance_predeclared": 0.0,
+            "within_existing_raw_gate": false,
+            "candidate_or_accuracy_gate_passed": false
+          }
+        },
+        "different_observed_GPU": {
+          "studies": 0,
+          "measurement": null
+        }
+      },
+      "stratification_is_descriptive_not_causal": true
+    },
+    "original_vs_bounded_A1": {
+      "raw": {
+        "studies": 32,
+        "targets": 12,
+        "numeric_cells_differ": 383,
+        "exact_float32_equal": false,
+        "maximum_absolute_difference": 0.00030487775802612305,
+        "ULP": {
+          "median": 389.0,
+          "p99_nearest_rank": 4061,
+          "max": 8369
+        },
+        "absolute_tolerance_predeclared": 1e-07,
+        "relative_tolerance_predeclared": 0.0,
+        "within_existing_raw_gate": false,
+        "candidate_or_accuracy_gate_passed": false
+      },
+      "by_label": {
+        "ACL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 9.638071060180664e-05
+        },
+        "MCL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 9.354948997497559e-05
+        },
+        "Medial Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00024205446243286133
+        },
+        "Lateral Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00030487775802612305
+        },
+        "Medial OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 5.614757537841797e-05
+        },
+        "Lateral OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 8.046627044677734e-05
+        },
+        "PF OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001361370086669922
+        },
+        "Effusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.447600364685059e-05
+        },
+        "Synovitis": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 4.738569259643555e-05
+        },
+        "Baker's": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00011801719665527344
+        },
+        "Contusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00024941563606262207
+        },
+        "Fracture": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 5.8710575103759766e-05
+        }
+      },
+      "observed_GPU_strata": {
+        "same_observed_GPU": {
+          "studies": 16,
+          "measurement": {
+            "studies": 16,
+            "targets": 12,
+            "numeric_cells_differ": 191,
+            "exact_float32_equal": false,
+            "maximum_absolute_difference": 0.00011801719665527344,
+            "ULP": {
+              "median": 305.0,
+              "p99_nearest_rank": 3234,
+              "max": 3960
+            },
+            "absolute_tolerance_predeclared": 1e-07,
+            "relative_tolerance_predeclared": 0.0,
+            "within_existing_raw_gate": false,
+            "candidate_or_accuracy_gate_passed": false
+          }
+        },
+        "different_observed_GPU": {
+          "studies": 16,
+          "measurement": {
+            "studies": 16,
+            "targets": 12,
+            "numeric_cells_differ": 192,
+            "exact_float32_equal": false,
+            "maximum_absolute_difference": 0.00030487775802612305,
+            "ULP": {
+              "median": 492.0,
+              "p99_nearest_rank": 5352,
+              "max": 8369
+            },
+            "absolute_tolerance_predeclared": 1e-07,
+            "relative_tolerance_predeclared": 0.0,
+            "within_existing_raw_gate": false,
+            "candidate_or_accuracy_gate_passed": false
+          }
+        }
+      },
+      "stratification_is_descriptive_not_causal": true
+    }
+  },
+  "main_CSV_byte_identity_measurements": {
+    "base_original_ordinary": {
+      "CSV_byte_exact": false,
+      "criterion_unchanged": true
+    },
+    "base_bounded_ordinary": {
+      "CSV_byte_exact": true,
+      "criterion_unchanged": true
+    },
+    "base_bounded_fixed": {
+      "CSV_byte_exact": true,
+      "criterion_unchanged": true
+    },
+    "original_vs_bounded_A1": {
+      "CSV_byte_exact": true,
+      "criterion_unchanged": true
+    }
+  },
+  "phase_bodies_downloaded": 40,
+  "download_receipt_sha256": "5bfda526dc05651d69d999cf4563749fb6e5d7e37a082afb4c66dc1c2ff001d0",
+  "candidate_gate_passed": false,
+  "accuracy_evaluated": false,
+  "Public_score": null,
+  "decision": "Completed diagnostic audited; candidate remains closed",
+  "scope": "Compact receipts and CSV arithmetic only. Native pixel/weight bytes and hidden runtime were not independently inspected; observed device strata do not establish causation.",
+  "verified_at_utc": "2026-10-08T16:38:08.803276+00:00",
+  "checks": {
+    "official_exactV4_raw_typed_COMPLETE": true,
+    "all10_completed_phase_receipts": true,
+    "all10_phase_GUARD_verified": true,
+    "all16_raw_main_CSV_contracts_verified": true,
+    "all6_float32_ULP_rank_tie_device_comparisons_recomputed": true,
+    "all10_native_input_hashes_equal": true,
+    "actual_design_helper_source_SHA_verified": true,
+    "exact40_bounded_actual_GET_SHA_bytes": true,
+    "captured_Source_Status_reused_RPC0": true,
+    "root_independent_Numpy_actual6_CSV_recalculations_match": true,
+    "all6_existing_raw1e7_gate_failures_retained": true,
+    "candidate_and_accuracy_closed": true,
+    "no_reader_or_fusion_actual_inference_in_AA": true,
+    "real_T4x2_observed": true,
+    "all9_artificial_checker_CPU_tests_root_passed": true,
+    "all10_artificial_getter_SDK_tests_root_passed": true,
+    "tracked_result_has_no_cohort_UIDs": true
+  },
+  "checks_passed": 17,
+  "checks_total": 17,
+  "root_reviewed_at_utc": "2026-10-08T16:42:45.780829+00:00",
+  "actual_payload_GET_bytes": 2470284,
+  "official_metadata_RPCs": 10,
+  "source_status_extra_RPCs": 0,
+  "unchanged_policy_pairs": {
+    "base_original_ordinary": {
+      "left_phase": "base_original_ordinary_A1",
+      "right_phase": "base_original_ordinary_A2",
+      "maximum_absolute_raw_difference": 0.00032716989517211914,
+      "changed_raw_cells": 377,
+      "float32_ULP": {
+        "maximum": 9437,
+        "median": 345.5,
+        "p99_nearest_rank": 5489
+      },
+      "by_label": {
+        "ACL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 9.781122207641602e-05
+        },
+        "MCL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 4.649162292480469e-05
+        },
+        "Medial Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00013005733489990234
+        },
+        "Lateral Meniscus": {
+          "changed_rank_cells": 2,
+          "pair_order_or_tie_relation_changes": 1,
+          "maximum_absolute_difference": 0.00032716989517211914
+        },
+        "Medial OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 4.649162292480469e-05
+        },
+        "Lateral OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.133317947387695e-05
+        },
+        "PF OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00021505355834960938
+        },
+        "Effusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00010219216346740723
+        },
+        "Synovitis": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 3.466010093688965e-05
+        },
+        "Baker's": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001175999641418457
+        },
+        "Contusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.93202018737793e-05
+        },
+        "Fracture": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00012022256851196289
+        }
+      },
+      "same_observed_device_studies": 18,
+      "existing_raw_absolute_tolerance": 1e-07,
+      "existing_raw_relative_tolerance": 0.0,
+      "existing_raw_gate_would_pass": false,
+      "diagnostic_measurement_not_gate_relaxation": true
+    },
+    "base_bounded_ordinary": {
+      "left_phase": "base_bounded_ordinary_A1",
+      "right_phase": "base_bounded_ordinary_A2",
+      "maximum_absolute_raw_difference": 0.0003886222839355469,
+      "changed_raw_cells": 383,
+      "float32_ULP": {
+        "maximum": 13040,
+        "median": 355.5,
+        "p99_nearest_rank": 4735
+      },
+      "by_label": {
+        "ACL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.759166717529297e-05
+        },
+        "MCL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001036226749420166
+        },
+        "Medial Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00029093027114868164
+        },
+        "Lateral Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0002822279930114746
+        },
+        "Medial OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.724761962890625e-05
+        },
+        "Lateral OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 9.593367576599121e-05
+        },
+        "PF OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00013589859008789062
+        },
+        "Effusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 4.965066909790039e-05
+        },
+        "Synovitis": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.420778274536133e-05
+        },
+        "Baker's": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.785988807678223e-05
+        },
+        "Contusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0003886222839355469
+        },
+        "Fracture": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.729364395141602e-05
+        }
+      },
+      "same_observed_device_studies": 18,
+      "existing_raw_absolute_tolerance": 1e-07,
+      "existing_raw_relative_tolerance": 0.0,
+      "existing_raw_gate_would_pass": false,
+      "diagnostic_measurement_not_gate_relaxation": true
+    },
+    "base_bounded_fixed": {
+      "left_phase": "base_bounded_fixed_A1",
+      "right_phase": "base_bounded_fixed_A2",
+      "maximum_absolute_raw_difference": 0.00017780065536499023,
+      "changed_raw_cells": 372,
+      "float32_ULP": {
+        "maximum": 8747,
+        "median": 108.5,
+        "p99_nearest_rank": 2618
+      },
+      "by_label": {
+        "ACL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00013034045696258545
+        },
+        "MCL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 3.272294998168945e-05
+        },
+        "Medial Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00010728836059570312
+        },
+        "Lateral Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.364153861999512e-05
+        },
+        "Medial OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.851553916931152e-05
+        },
+        "Lateral OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 9.912252426147461e-05
+        },
+        "PF OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.915496826171875e-05
+        },
+        "Effusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 3.364682197570801e-05
+        },
+        "Synovitis": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 5.507469177246094e-05
+        },
+        "Baker's": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.802248001098633e-05
+        },
+        "Contusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00017780065536499023
+        },
+        "Fracture": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 6.42538070678711e-05
+        }
+      },
+      "same_observed_device_studies": 32,
+      "existing_raw_absolute_tolerance": 1e-07,
+      "existing_raw_relative_tolerance": 0.0,
+      "existing_raw_gate_would_pass": false,
+      "diagnostic_measurement_not_gate_relaxation": true
+    },
+    "stock224_ordinary": {
+      "left_phase": "stock224_ordinary_A1",
+      "right_phase": "stock224_ordinary_A2",
+      "maximum_absolute_raw_difference": 0.00023880600929260254,
+      "changed_raw_cells": 383,
+      "float32_ULP": {
+        "maximum": 9499,
+        "median": 660.0,
+        "p99_nearest_rank": 7386
+      },
+      "by_label": {
+        "ACL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001316666603088379
+        },
+        "MCL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001849830150604248
+        },
+        "Medial Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00023880600929260254
+        },
+        "Lateral Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001602470874786377
+        },
+        "Medial OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001359879970550537
+        },
+        "Lateral OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00019419193267822266
+        },
+        "PF OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00018870830535888672
+        },
+        "Effusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.233023643493652e-05
+        },
+        "Synovitis": {
+          "changed_rank_cells": 2,
+          "pair_order_or_tie_relation_changes": 1,
+          "maximum_absolute_difference": 6.22868537902832e-05
+        },
+        "Baker's": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00010573863983154297
+        },
+        "Contusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00022011995315551758
+        },
+        "Fracture": {
+          "changed_rank_cells": 2,
+          "pair_order_or_tie_relation_changes": 1,
+          "maximum_absolute_difference": 6.437301635742188e-05
+        }
+      },
+      "same_observed_device_studies": 16,
+      "existing_raw_absolute_tolerance": 1e-07,
+      "existing_raw_relative_tolerance": 0.0,
+      "existing_raw_gate_would_pass": false,
+      "diagnostic_measurement_not_gate_relaxation": true
+    },
+    "stock224_fixed": {
+      "left_phase": "stock224_fixed_A1",
+      "right_phase": "stock224_fixed_A2",
+      "maximum_absolute_raw_difference": 0.00021404027938842773,
+      "changed_raw_cells": 382,
+      "float32_ULP": {
+        "maximum": 17685,
+        "median": 606.0,
+        "p99_nearest_rank": 4027
+      },
+      "by_label": {
+        "ACL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 8.383393287658691e-05
+        },
+        "MCL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 4.559755325317383e-05
+        },
+        "Medial Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00011157989501953125
+        },
+        "Lateral Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00021404027938842773
+        },
+        "Medial OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 8.845329284667969e-05
+        },
+        "Lateral OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00012001395225524902
+        },
+        "PF OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.18235969543457e-05
+        },
+        "Effusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 5.447864532470703e-05
+        },
+        "Synovitis": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.286667823791504e-05
+        },
+        "Baker's": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001157224178314209
+        },
+        "Contusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00012689828872680664
+        },
+        "Fracture": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 5.0008296966552734e-05
+        }
+      },
+      "same_observed_device_studies": 32,
+      "existing_raw_absolute_tolerance": 1e-07,
+      "existing_raw_relative_tolerance": 0.0,
+      "existing_raw_gate_would_pass": false,
+      "diagnostic_measurement_not_gate_relaxation": true
+    },
+    "original_vs_bounded_A1": {
+      "left_phase": "base_original_ordinary_A1",
+      "right_phase": "base_bounded_ordinary_A1",
+      "maximum_absolute_raw_difference": 0.00030487775802612305,
+      "changed_raw_cells": 383,
+      "float32_ULP": {
+        "maximum": 8369,
+        "median": 389.0,
+        "p99_nearest_rank": 4061
+      },
+      "by_label": {
+        "ACL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 9.638071060180664e-05
+        },
+        "MCL": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 9.354948997497559e-05
+        },
+        "Medial Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00024205446243286133
+        },
+        "Lateral Meniscus": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00030487775802612305
+        },
+        "Medial OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 5.614757537841797e-05
+        },
+        "Lateral OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 8.046627044677734e-05
+        },
+        "PF OA": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.0001361370086669922
+        },
+        "Effusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 7.447600364685059e-05
+        },
+        "Synovitis": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 4.738569259643555e-05
+        },
+        "Baker's": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00011801719665527344
+        },
+        "Contusion": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 0.00024941563606262207
+        },
+        "Fracture": {
+          "changed_rank_cells": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_difference": 5.8710575103759766e-05
+        }
+      },
+      "same_observed_device_studies": 16,
+      "existing_raw_absolute_tolerance": 1e-07,
+      "existing_raw_relative_tolerance": 0.0,
+      "existing_raw_gate_would_pass": false,
+      "diagnostic_measurement_not_gate_relaxation": true
+    }
+  },
+  "primary_nondeterminism_reference": {
+    "url": "https://docs.pytorch.org/docs/2.11/notes/randomness.html",
+    "checked_on": "2026-10-09 JST",
+    "interpretation": "cuDNN benchmark/kernel nondeterminism is a possible mechanism. Flags were observed, not experimentally changed. Same-GPU repeats still vary; no isolated cause or general noise bound."
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "schema_version": "p007_profile32_saved_binding_independent_review_v1",
+  "reviewed_at_utc": "2026-10-08T11:05:03.762714+00:00",
+  "accepted_launch_received_at_utc": "2026-10-08T10:59:04.299006+00:00",
+  "official_read_at_utc": "2026-10-08T11:01:03.356221+00:00",
+  "status": "saved_profile_V1_corrected_mirror_source_and_settings_bound_execution_in_progress",
+  "ref": "rsraki/p007-profile-32-plain-mirror",
+  "saved_version": 1,
+  "kernel_id": 137656226,
+  "profile_sha256": "6ac02f00e74005492a828a5e198e8c839ee336798b5e77b76bdaacb95150d2b1",
+  "serving_candidate_sha256": "b207fb23a729a26c7c964d28401cef146ce76bb464b05fb6673718d8b70d2d93",
+  "saved_source_text_sha256": "e31fcf2039acb6ec26754e76d744376db3dbb66700d495a92dfe264bcd87c133",
+  "code_fingerprint": "e1332dfa75336e4ac7600cb4c190edc9baf85b19100d8f33858805fce1ec13de",
+  "cell_count": 13,
+  "code_cell_count": 10,
+  "embedded_helper_sha256": {
+    "p006_metrics.py": "b61115cc92ab335273a31cf12c754097e3f0844ce2b7aaf9fd50c56f755603ca",
+    "p007_metrics.py": "a291d826ed287683cfa15e98eb207bb15fe459b04263a2e4c5fcda8730138549"
+  },
+  "embedded_reader_contracts": {
+    "plain": {
+      "run_decorators": [
+        "torch.no_grad()"
+      ],
+      "defaults": {
+        "k": 16,
+        "studies": null,
+        "workers": 4,
+        "bs": 4
+      },
+      "helper_decorators": null
+    },
+    "mirror": {
+      "run_decorators": [
+        "torch.no_grad()"
+      ],
+      "defaults": {
+        "k": 16,
+        "studies": null,
+        "workers": 4,
+        "bs": 4
+      },
+      "helper_decorators": []
+    }
+  },
+  "same_p00632_ordered_uid_sha256": "fb83b0b77b4539eb70b142cecc69c3cbc6a0ae4a8763381869078cc936b6fc07",
+  "initial_official_visible_status": {
+    "status": "RUNNING",
+    "failureMessage": null
+  },
+  "initial_visible_output_files": [],
+  "execution_scope": "This is one official exact-v1 read only. RUNNING/empty outputs establishes no runtime gradient, fusion, resource, MRI coverage or accuracy success. Parent owns subsequent monitoring and runtime gates.",
+  "Dataset_version_evidence": "The accepted launch request explicitly pins both Dataset /1 strings and has no invalidDatasetSources. Saved GetKernel exposes matching slugs without versions or internal IDs; 20325538/20440357 are not independently returned here.",
+  "container_evidence": {
+    "saved_digest": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+    "requested_pinning": "original",
+    "numeric_Original31481_provenance_independently_returned": false
+  },
+  "gpu_evidence": {
+    "saved_machine": "NvidiaTeslaT4",
+    "desired_gpu_count": 2,
+    "runtime_gpu_count_verified": false
+  },
+  "source_lastRunTime_not_used_as_execution_evidence": "2026-10-05T11:01:04.828Z",
+  "profile_has_no_gold_image_or_teacher_target_use": true,
+  "plain_dummy_sample_submission_zeros_only_define_column_contract": true,
+  "checks": {
+    "accepted_response_no_error": true,
+    "accepted_invalid_source_and_tag_lists_empty": true,
+    "response_saved_request_ref_exact": true,
+    "saved_kernel_id137656226_bound": true,
+    "saved_V1_bound": true,
+    "saved_owner_slug_title_exact": true,
+    "all_saved_cell_sources_exact_prepared": true,
+    "all_requested_cell_sources_exact_prepared": true,
+    "saved_code_fingerprint_exact_prepared": true,
+    "saved13_cells10_code_cells": true,
+    "saved_all_output_and_execution_counts_clean": true,
+    "profile_SHA_exact_v2": true,
+    "serving_SHA_exact_v2": true,
+    "protected_baseline14_SHA_exact": true,
+    "protected_density15_SHA_exact": true,
+    "mirror_serving_only_declared_factor_k16": true,
+    "p006_profile_code_unchanged_except_new_helper_and_tail": true,
+    "p006_helper_exact_current_source": true,
+    "p007_helper_exact_current_source": true,
+    "plain_embedded_reader_exact_original14": true,
+    "mirror_embedded_reader_exact_corrected16": true,
+    "fusion_exact_original14_except_training_alias": true,
+    "both_embedded_run_decorators_no_grad": true,
+    "mirror_helper_does_not_steal_decorator": true,
+    "both_readers_keep_k16_workers4_batch4_dynamic_UID": true,
+    "mirror_plain_and_reflected_probability_mean_equal": true,
+    "observer_AST_no_grad_run_guard_present": true,
+    "observer_load_forward_gradient_guards_present": true,
+    "observer_actual_pass_complete_forward_and_TTA_count_guards": true,
+    "single_live_CoAt_main_call": true,
+    "fixed32_same_p006_UID_order_hash": true,
+    "weak_gold_UID_disjoint_and_available": true,
+    "all_Gold_UIDs_excluded_by_saved_prelude": true,
+    "profile_has_no_teacher_label_Report_read": true,
+    "profile_final_submission_csv_deleted": true,
+    "paired_reader_stale_CSV_reset_and_fallback_rejection": true,
+    "saved_and_requested_private": true,
+    "saved_and_requested_GPU_enabled": true,
+    "saved_and_requested_Internet_OFF": true,
+    "saved_and_requested_TPU_disabled": true,
+    "exact_Original_container_saved_and_requested": true,
+    "Original_pinning_and_SAVE_AND_RUN_ALL_requested": true,
+    "T4_machine_saved_and_requested": true,
+    "both_Dataset_V1_pins_explicit_request": true,
+    "saved_both_expected_Dataset_slugs": true,
+    "saved_and_requested_competition_slug": true,
+    "saved_and_requested_no_extra_kernel_model_Input": true,
+    "first_independent_read_RUNNING_without_failure": true,
+    "first_independent_read_no_visible_output_or_next_page": true,
+    "all_saved10_code_cells_compile": true
+  },
+  "checks_passed": 50,
+  "checks_total": 50,
+  "source_artifacts": {
+    "artifacts/research/20261008-p007-profile32-launch-v1/saved-source.json": "6072b02b2c60a54dd86c666a008c13db44ec3160a1f297ae4d05472f266fb3df",
+    "artifacts/research/20261008-p007-profile32-launch-v1/launch-request.json": "a6d8a70bf6daaf9307cefd1383562c5caaf7bc28920e38091bc98a784d5c4cb5",
+    "artifacts/research/20261008-p007-profile32-launch-v1/save-response.json": "038160f4cb75823a1dc13aa13518a346252fb834c5621367512850c85a65b7ee",
+    "artifacts/research/20261008-p007-profile32-launch-v1/status-20261008T110103356221.json": "15c0e9b3f8a291919c411990d1b3c95e30fb5213aefc9369d69dd6bf72b38479",
+    "artifacts/research/20261008-p007-profile32-launch-v1/output-20261008T110103356221.json": "68678bec65bf17d7473d2ce76c6ec05b8ccf329074516e1a57b6d8b7f289e2bc",
+    "artifacts/research/20261008-p007-profile32-launch-v1/read-summary-20261008T110103356221.json": "cc237478a95ebdc12dd738be7110363a9ef4b7fe419c29b85bc6032afb979c3c",
+    "notebooks/public/16a_profile_p007_plain_mirror_32.ipynb": "6ac02f00e74005492a828a5e198e8c839ee336798b5e77b76bdaacb95150d2b1",
+    "notebooks/public/16_submit_p007_convnext_mirror.ipynb": "b207fb23a729a26c7c964d28401cef146ce76bb464b05fb6673718d8b70d2d93",
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/15_submit_p006_convnext_k24.ipynb": "172d6744be6f5e1e20def4680a1e81f3253989b49f601b1b01459d0c6245a320",
+    "notebooks/public/15a_profile_p006_k16_k24_32.ipynb": "cfa4829afb95fdc62e2769cfea3ee924021d9bacba365b54db718fda77b59120",
+    "scripts/p006_profile_runtime.py": "b61115cc92ab335273a31cf12c754097e3f0844ce2b7aaf9fd50c56f755603ca",
+    "scripts/p007_profile_runtime.py": "a291d826ed287683cfa15e98eb207bb15fe459b04263a2e4c5fcda8730138549",
+    "experiments/p007-profile32-preparation-v2-20261008.json": "a618c93771f0ba3bb6ced720ee723f777bc37886520b4ca255812c5553144376",
+    "experiments/p007-convnext-mirror-implementation-v2-20261008.json": "ae0415400e36ed2e34cfb9a99e2d94dfa9718087c4800e4b870bec64fb823d4e",
+    "artifacts/research/20261008-p007-profile32-launch-v1/audit_saved_binding.py": "d5fa825de369132233d174e3217580863c12d0bbfa9538f5fb466a55e658a97b",
+    "artifacts/research/20261008-p007-profile32-launch-v1/check_state.py": "3d9b4e41ae3303795b49633dcc3d72ad269b2da112690ab95552216996e8e926"
+  },
+  "profile_competition_submission_performed": false,
+  "remote_mutation_by_this_agent": false,
+  "fresh_readonly_API_calls_by_this_agent": [
+    "get_kernel_session_status(v1)",
+    "list_kernel_session_output(v1)",
+    "get_kernel(v1)"
+  ],
+  "automatic_poll_loop_added": false,
+  "real_MRI_or_model_download_decode_fit_by_this_agent": false,
+  "protected14_density15_and_v1_packages_changed": false
+}

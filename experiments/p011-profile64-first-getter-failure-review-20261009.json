@@ -1,0 +1,26 @@
+{
+  "schema_version": "p011_root_first_getter_client_failure_v1",
+  "root_reported_at_utc": "2026-10-08T17:41:33Z",
+  "reviewed_at_utc": "2026-10-08T17:45:48.230613+00:00",
+  "ref": "rsraki/p011diag-faf10ad9505f58563d2df789609cccef",
+  "saved_version": 1,
+  "kernel_id": 137715763,
+  "failure_type": "AttributeError",
+  "exception_text_saved": false,
+  "root_failure_stage": "Evaluating sdk.get argument before results.collect was entered; actual KaggleClient defines no get method.",
+  "old_results_observation_folder_exists": false,
+  "source_status_output_HTTP_requests_by_collect": 0,
+  "kernel_predictor_failure_concluded": false,
+  "Notebook_or_model_code_modified": false,
+  "root_attempt_auto_retry": false,
+  "old_getter_and_preparation_SHA": {
+    "get_results_once.py": "dc8ed94db062b75882c3b7fc2a897d0230d462dac492bbe3accb9a621a244617",
+    "results_tools.py": "734e654caff78ed21138a01c5fe92c577756de9fe37c5565c28f8965e045e153",
+    "fusion_checks.py": "acb8ef88c8c5d9a699cf05a0cbcf7f4d3f4c4f819dd41321e629112625508f9e",
+    "frozen-bindings-v3.json": "f5343fc7bbd2c752b28fda8b79a1050265aca80925cc4a64c0901f70da68f697",
+    "captured-readset-v1.json": "cde54b4a1a39f4cd591a904750d60c2ff845c44e98a3dd4ce6060b060b5d504d"
+  },
+  "old_preparation_SHA": "731c9516a330bfe02c4aa2bb3ece0e1295d6e735d3cbb9ad9aab555b31ef2fa8",
+  "previous_test_scope_gap": "Eight DTO fixtures covered results.collect with injected HTTP; none exercised production CLI with the actual KaggleClient object interface.",
+  "scope": "Local client defect, no conclusion about running64 outputs/compute/accuracy."
+}

@@ -1,0 +1,351 @@
+{
+  "schema_version": "p007_profile32_compact_independent_review_v1",
+  "reviewed_at_utc": "2026-10-08T11:18:04.511759+00:00",
+  "status": "passed_real_label_free_profile32",
+  "ref": "rsraki/p007-profile-32-plain-mirror",
+  "saved_version": 1,
+  "official_visible_status": "COMPLETE",
+  "checks": [
+    {
+      "name": "exact_saved_profile_ref_V1",
+      "passed": true
+    },
+    {
+      "name": "official_COMPLETE_without_failure",
+      "passed": true
+    },
+    {
+      "name": "all_output_pages_enumerated",
+      "passed": true
+    },
+    {
+      "name": "final_submission_csv_absent",
+      "passed": true
+    },
+    {
+      "name": "only_compact_files_downloaded",
+      "passed": true
+    },
+    {
+      "name": "no_remote_mutation_or_submit",
+      "passed": true
+    },
+    {
+      "name": "download_sha:P007_PROFILE_SUMMARY.json",
+      "passed": true
+    },
+    {
+      "name": "download_sha:_sota_0949.csv",
+      "passed": true
+    },
+    {
+      "name": "download_sha:p007_fused_mirror.csv",
+      "passed": true
+    },
+    {
+      "name": "download_sha:p007_fused_plain.csv",
+      "passed": true
+    },
+    {
+      "name": "download_sha:p007_reader_mirror.csv",
+      "passed": true
+    },
+    {
+      "name": "download_sha:p007_reader_plain.csv",
+      "passed": true
+    },
+    {
+      "name": "visible_log_SDK_text_SHA",
+      "passed": true
+    },
+    {
+      "name": "saved_binding50_passed",
+      "passed": true
+    },
+    {
+      "name": "profile_source_prepared_and_bound",
+      "passed": true
+    },
+    {
+      "name": "protected14_SHA",
+      "passed": true
+    },
+    {
+      "name": "corrected16_v2_SHA",
+      "passed": true
+    },
+    {
+      "name": "summary_v2_passed32",
+      "passed": true
+    },
+    {
+      "name": "same_p00632_cohort",
+      "passed": true
+    },
+    {
+      "name": "no_Gold_Report_teacher_targets_accuracy",
+      "passed": true
+    },
+    {
+      "name": "p006_helper_SHA",
+      "passed": true
+    },
+    {
+      "name": "p007_helper_SHA",
+      "passed": true
+    },
+    {
+      "name": "main_one_execution_and32_pair_calls",
+      "passed": true
+    },
+    {
+      "name": "main_all32_have_valid_slices",
+      "passed": true
+    },
+    {
+      "name": "main_resources_T4_margin",
+      "passed": true
+    },
+    {
+      "name": "main32UID13columns_finite_nonconstant",
+      "passed": true
+    },
+    {
+      "name": "plain:complete_UID_shape_all6slot_mask",
+      "passed": true
+    },
+    {
+      "name": "plain:original_reader_csv_SHA_columns_rows",
+      "passed": true
+    },
+    {
+      "name": "plain:original_fused_csv_SHA_columns_rows",
+      "passed": true
+    },
+    {
+      "name": "plain:both32UID13cols_finite_nonconstant",
+      "passed": true
+    },
+    {
+      "name": "plain:independent_fixed_rank_fusion_exact",
+      "passed": true
+    },
+    {
+      "name": "plain:fusion_success_no_fallback",
+      "passed": true
+    },
+    {
+      "name": "plain:actual_3models_views_forwards_no_grad_TTA",
+      "passed": true
+    },
+    {
+      "name": "plain:runtime_observer_gates_passed",
+      "passed": true
+    },
+    {
+      "name": "plain:resources_positive_T4_headroom",
+      "passed": true
+    },
+    {
+      "name": "mirror:complete_UID_shape_all6slot_mask",
+      "passed": true
+    },
+    {
+      "name": "mirror:original_reader_csv_SHA_columns_rows",
+      "passed": true
+    },
+    {
+      "name": "mirror:original_fused_csv_SHA_columns_rows",
+      "passed": true
+    },
+    {
+      "name": "mirror:both32UID13cols_finite_nonconstant",
+      "passed": true
+    },
+    {
+      "name": "mirror:independent_fixed_rank_fusion_exact",
+      "passed": true
+    },
+    {
+      "name": "mirror:fusion_success_no_fallback",
+      "passed": true
+    },
+    {
+      "name": "mirror:actual_3models_views_forwards_no_grad_TTA",
+      "passed": true
+    },
+    {
+      "name": "mirror:runtime_observer_gates_passed",
+      "passed": true
+    },
+    {
+      "name": "mirror:resources_positive_T4_headroom",
+      "passed": true
+    },
+    {
+      "name": "plain_mirror_identical_masks",
+      "passed": true
+    },
+    {
+      "name": "comparison_k16_held",
+      "passed": true
+    },
+    {
+      "name": "nontrivial_TTA_probability_effect",
+      "passed": true
+    },
+    {
+      "name": "reported_TTA_deltas_match_CSV",
+      "passed": true
+    },
+    {
+      "name": "visible_main_wrote32rows13cols_once",
+      "passed": true
+    },
+    {
+      "name": "visible_two_fusion_SUCCESS_no_EXCEPTION_FALLBACK",
+      "passed": true
+    }
+  ],
+  "checks_passed": 50,
+  "checks_total": 50,
+  "studies": 32,
+  "ordered_uid_sha256": "fb83b0b77b4539eb70b142cecc69c3cbc6a0ae4a8763381869078cc936b6fc07",
+  "independent_fixed_fusion_max_abs_diff": {
+    "plain": 0.0,
+    "mirror": 0.0
+  },
+  "actual_inference": {
+    "plain": {
+      "models": 3,
+      "views": 1,
+      "batches": 8,
+      "model_calls": 24,
+      "mirror_calls": 0,
+      "load_grad_enabled": false,
+      "all_forward_grad_enabled": false,
+      "all_batch4_all6slots_exercised": true
+    },
+    "mirror": {
+      "models": 3,
+      "views": 2,
+      "batches": 8,
+      "model_calls": 48,
+      "mirror_calls": 8,
+      "load_grad_enabled": false,
+      "all_forward_grad_enabled": false,
+      "all_batch4_all6slots_exercised": true
+    }
+  },
+  "resources": {
+    "main": {
+      "elapsed_seconds": 56.61156170000001,
+      "sampled_peak_process_tree_rss_bytes": 10258980864,
+      "sampled_gpu_peak_used_mib": [
+        3763,
+        3763
+      ],
+      "samples": 104,
+      "disk_free_bytes_after": 20939931648
+    },
+    "plain": {
+      "elapsed_seconds": 59.83983474599998,
+      "sampled_peak_process_tree_rss_bytes": 9887498240,
+      "sampled_gpu_peak_used_mib": [
+        8069,
+        1983
+      ],
+      "samples": 112,
+      "disk_free_bytes_after": 20939681792
+    },
+    "mirror": {
+      "elapsed_seconds": 72.05475952800003,
+      "sampled_peak_process_tree_rss_bytes": 9965441024,
+      "sampled_gpu_peak_used_mib": [
+        8071,
+        543
+      ],
+      "samples": 135,
+      "disk_free_bytes_after": 20939505664
+    }
+  },
+  "comparison": {
+    "max_probability_delta": 0.14809647000000004,
+    "mean_absolute_probability_delta": 0.014379373328125,
+    "per_target_rank_correlation": {
+      "ACL": 0.9923020527859235,
+      "MCL": 0.9879032258064515,
+      "Medial Meniscus": 0.9956011730205276,
+      "Lateral Meniscus": 0.9919354838709675,
+      "Medial OA": 0.9963343108504397,
+      "Lateral OA": 0.9952346041055717,
+      "PF OA": 0.9886363636363635,
+      "Effusion": 0.9893695014662756,
+      "Synovitis": 0.9904692082111435,
+      "Baker's": 0.9930351906158357,
+      "Contusion": 0.9820381231671553,
+      "Fracture": 0.972507331378299
+    },
+    "k_fixed": 16,
+    "main_coat_executions": 1,
+    "accuracy_evaluated": false,
+    "note": "Differences and correlations do not show AUC improvement; public models are fullfit."
+  },
+  "all6slots_batch4_exercised": true,
+  "sampled_gpu_peak_mib": {
+    "plain": [
+      8069,
+      1983
+    ],
+    "mirror": [
+      8071,
+      543
+    ]
+  },
+  "mirror_plain_reader_elapsed_ratio": 1.2041269805280765,
+  "final_diagnostic_submission_csv_deleted": true,
+  "own_public_lb": null,
+  "accuracy_evaluated": false,
+  "visible_log_representation": {
+    "saved_byte_sha256": "9cd46e137ffd85658fe9d6916d8b378a6cfdb73791d4c12d52438e7429980404",
+    "SDK_text_universal_newline_sha256": "24886c17454a878a37b33803cd6c3d6ad4a21dc601428928d4c0b5e83f131474",
+    "first_getter_note": "Windows text writing converted SDK LF to CRLF. Original file/receipt preserved; normalized UTF8 text hash matches SDK receipt. Getter now preserves LF on future fresh runs."
+  },
+  "root_serving_gate": {
+    "profile32_gate_passed_serving_trial_eligible": true,
+    "launch_candidate": "Corrected16 v2, SHA b207fb23a729a26c7c964d28401cef146ce76bb464b05fb6673718d8b70d2d93, k16 plus mirror2view only",
+    "capacity_scope": "Fixed B4x6slots tensor fully exercised and sampled TTA peak below13,000MiB. Root's gate advances serving without an additional256 profile. Hidden full-test runtime is unproved.",
+    "before_competition_submission": [
+      "Root must bind the exact corrected16 serving saved source with dynamic test UIDs, same models/Input pins and Original/T4/offline environment.",
+      "Serving must be official COMPLETE with visible main and Conv reader success, one Fusion SUCCESS, no EXCEPTION/FALLBACK.",
+      "Verify every serving test UID,13column order, finite/nonconstant values and unchanged fixed-rank fusion within1e-12.",
+      "Submit that same serving saved version; never submit this diagnostic profile.",
+      "Only completed competition scoring establishes improvement; this diagnostic uses no labels or AUC."
+    ],
+    "serving_launched_or_submitted_by_this_agent": false
+  },
+  "limits": [
+    "32 weak-train studies test resources/contracts, not independent OOF or accuracy; public full-fit checkpoint exposure remains.",
+    "Finite-logit hooks synchronizeCUDA. Plain precedes mirror, so timing includes installation/cache/observer effects.",
+    "RSS may count shared pages twice; GPU peaks are sampled and device-wide.",
+    "Valid masks do not prove every native DICOM decoded without skip; hidden cardinality, series mix and oblique geometry remain unqualified."
+  ],
+  "artifacts": {
+    "artifacts/research/20261008-p007-profile32-results-v1/P007_PROFILE_SUMMARY.json": "71e89f08053abadfe9c36d38f95a072b8b198bd1492c06c6493c3573bc59e898",
+    "artifacts/research/20261008-p007-profile32-results-v1/download-receipt.json": "8d4d4e89171e244218d02707e6b4b469ab4b79693a9ea97b11b5cfb13212002a",
+    "artifacts/research/20261008-p007-profile32-results-v1/official-status.json": "e7f81bb66f882c2154c1b64c097e5dda4e2c1bc33b70b9674dcf29d67a4785a0",
+    "artifacts/research/20261008-p007-profile32-results-v1/visible.log": "9cd46e137ffd85658fe9d6916d8b378a6cfdb73791d4c12d52438e7429980404",
+    "experiments/p007-profile32-preparation-v2-20261008.json": "a618c93771f0ba3bb6ced720ee723f777bc37886520b4ca255812c5553144376",
+    "experiments/p007-profile32-saved-binding-review-20261008.json": "3de75bf349036a536e352d307ebd6a9c916946c09193bcba1dc96b0751013f5f",
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/16_submit_p007_convnext_mirror.ipynb": "b207fb23a729a26c7c964d28401cef146ce76bb464b05fb6673718d8b70d2d93",
+    "artifacts/research/20261008-p007-profile32-results-v1/download_results.py": "ed4a939d9ba56395441e350203f4295e124177fe6cdc90164a37e47745d403eb",
+    "artifacts/research/20261008-p007-profile32-results-v1/verify_results.py": "1f7d022451956c07caafd8acd6cee75ba53b5f68141425e7cc372c843c6ef3c1",
+    "artifacts/research/20261008-p007-profile32-results-v1/_sota_0949.csv": "39fb37f6beae3a38e8b456a9b4fb1651fc5f0de704d920d0766645553f24b8e5",
+    "artifacts/research/20261008-p007-profile32-results-v1/p007_fused_mirror.csv": "709aa81cc4d3109a4d0144c3e69caf146a353506c9488f5f541f1749b2feab5a",
+    "artifacts/research/20261008-p007-profile32-results-v1/p007_fused_plain.csv": "402f852c043a4156176d309413059b6d13a8744eb37ee00f60fed5930b5c3306",
+    "artifacts/research/20261008-p007-profile32-results-v1/p007_reader_mirror.csv": "dc76e90f7817fbb14dd35ee90c80a1049f73cf96fe05bf40bf44f7cbf24c1017",
+    "artifacts/research/20261008-p007-profile32-results-v1/p007_reader_plain.csv": "6ab2ce6a6ee68e47dcd886bc008b83efc3fc393e2d94fd51a57fab2b7873a549"
+  },
+  "remote_mutation_submit_MRI_weights_individual_coverage_download_by_this_agent": false
+}

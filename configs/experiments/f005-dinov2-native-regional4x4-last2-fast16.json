@@ -1,0 +1,93 @@
+{
+  "schema_version": "frozen_features_v1",
+  "seed": 20261002,
+  "n_folds": 5,
+  "reason": "Change CLS representation to CLS plus16 fixed4x4 normalized patch means, preserving last2/head/weak-BCE/seed/folds/12epochs. Both streamed-vs-dense and ordinary dense replay artificial QA exposed near-zero gradient sign differences amplified by AdamW; a VJP-specific cause is not established. Qualify standard dense backward under explicit pre-CUDA cuBLAS workspace and strict PyTorch deterministic algorithms, without forcing SDPA math, loosening tolerances, changing optimizer epsilon, zeroing gradients or selecting with Gold/Public.",
+  "preprocess": {
+    "version": "physical_letterbox_triplet_v1",
+    "image_size": 392,
+    "max_series": 3,
+    "slices_per_series": 48,
+    "percentiles": [
+      1,
+      99
+    ]
+  },
+  "encoder": {
+    "model_name": "dinov2_vits14",
+    "feature_dim": 384,
+    "batch_size": 16,
+    "precision": "fp16"
+  },
+  "head": {
+    "hidden_dim": 192,
+    "dropout": 0.2,
+    "pooling": "attention"
+  },
+  "train": {
+    "epochs": 12,
+    "batch_size": 16,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "num_workers": 0,
+    "selection": "bce"
+  },
+  "online": {
+    "schema_version": "native392_regional4x4_last2_deterministic_dense_training_fast16_v3",
+    "trainable_blocks": 2,
+    "microbatch_studies": 1,
+    "effective_batch_studies": 16,
+    "window_chunk": 16,
+    "checkpoint_last2": true,
+    "encoder_learning_rate": 1e-05,
+    "accumulation_denominator": "total_observed_labels_in_effective_batch",
+    "folds": [
+      0,
+      1
+    ],
+    "amp_grad_scaler": true,
+    "execution": "regional_standard_deterministic_dense_suffix_checkpoint_backward_v3"
+  },
+  "representation": {
+    "name": "normalized_CLS_plus_fixed4x4_patch_means_v1",
+    "model_class": "RegionalTripletMIL",
+    "normalized_patch_grid": [
+      28,
+      28
+    ],
+    "regional_grid": [
+      4,
+      4
+    ],
+    "patches_per_region": [
+      7,
+      7
+    ],
+    "order": "CLS first, then16 disjoint regional means row-major within each original window",
+    "pooling": "FP32 means of normalized patch tokens",
+    "instances_per_window": 17,
+    "instances_per_series": 816,
+    "feature_dim": 384,
+    "quantization": "all17 FP16 thenFP32",
+    "positions_and_masks": "repeat_interleave17 per original window",
+    "learned_regional_coordinates": false
+  },
+  "representation_sha256": "d35a690ea61353e496e9bf4d317a16ab0baad2d2986d35055a71dd548b433ecb",
+  "execution": {
+    "version": "regional_standard_deterministic_dense_suffix_checkpoint_backward_v3",
+    "encoder_window_chunk": 16,
+    "head_forward_per_microstudy": 1,
+    "backward": "one standard autograd backward through the full regional study; no streamed VJP or fallback",
+    "checkpoint_last2": true,
+    "AMP": "scale observed group loss once; unscale/clip/AdamW/update once after the actual effective group",
+    "determinism": {
+      "cublas_workspace_config": ":4096:8",
+      "torch_deterministic_algorithms": true,
+      "torch_deterministic_warn_only": false,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": true,
+      "configured_before_cuda": true,
+      "SDPA_policy": "default dispatch under strict deterministic algorithms; no forced math backend"
+    }
+  }
+}

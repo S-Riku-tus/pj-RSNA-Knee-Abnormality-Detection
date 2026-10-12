@@ -1,0 +1,58 @@
+{
+  "schema_version": "f005_regional_support_mask_source_peer12_only_v1",
+  "observed_at_utc": "2026-10-10T07:28:02Z",
+  "preparation": "artifacts/research/20261010-f005-regional-support-mask-source-preparation-v1/preparation.json",
+  "preparation_sha256": "a51fb0c9cbf96391098a48e1f6d0e9eb5654cc4754c72395eae59a647a316c00",
+  "independent_review": "artifacts/research/20261010-f005-regional-support-mask-independent-review-v1/review.json",
+  "independent_review_sha256": "3f5afe737181487a5a2b070cf8982c3a1a1e21b0bfbf6244979842577b063234",
+  "independent_checks_passed": 12,
+  "source_sha256": {
+    "regional_mask_writer.py": "c8d700d7f1f166132a2e285b4d0c220ac3c82aae324e66855e8224ecb9ddfca5",
+    "notebook-cell.py": "cca85cf34ce7cfc258b4a06b186b84d2bc856f28d46a54679daf4d18b277c5af",
+    "notebook-cell.json": "6e427203fc962502896b996d4a7d073b4854b871d0935ecef5bbe9bbdf143f9a"
+  },
+  "source_only": true,
+  "actual_runtime_qualified": false,
+  "policy": {
+    "baseline_targets": ["MCL", "Synovitis"],
+    "min_positive_and_negative_support_each_fold": 20,
+    "other10": "Existing uniform20 CSV field strings copied byteexact",
+    "old_CSV_helpers_and_support_constants_AST_exact": true,
+    "same_genuine_Regional_authority_before_working_CSV_access": true,
+    "old_CLS_receipt_acceptance": false,
+    "ratio_or_checkpoint_search": false
+  },
+  "author_artificial_CSV_checks": 7,
+  "author_artificial_CSV_studies": 3,
+  "author_artificial_masked_values": 6,
+  "author_artificial_other_fieldstrings": 30,
+  "actual_Notebook_generated": false,
+  "actual_new_Regional_CPU64_256_qualified": false,
+  "actual_remote_transport_or_Serving_qualified": false,
+  "mask_connection_gap_resolved_at_source_level_only": true,
+  "actual_models_MRI_teacher_GPU_API_operations_for_source_review": 0,
+  "local_training": {
+    "fold0_epochs": 1,
+    "fold1_epochs": 2,
+    "both_status": "running",
+    "both_error": null,
+    "fixed_epochs": 12,
+    "selection": "Minimum masked weak BCE after all12 epochs; earliest tie",
+    "partial_checkpoints_adopted": false,
+    "initial_weak_metrics_establish_improvement": false
+  },
+  "official_observations": {
+    "P014": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/submission-observation-v17/observation.json",
+    "P015": "artifacts/research/20261010-p015-native-support-mask-root-v1/submission-observation-v13/observation.json",
+    "submission_refs": [57031186, 57031981],
+    "status_field_omitted": true,
+    "Public_score_returned": false,
+    "error_returned": false,
+    "hidden_scoring_complete": false,
+    "additional_Save_upload_Submit": 0
+  },
+  "own_verified_Public": 0.951,
+  "own_strict_above0960_achieved": false,
+  "own_Gold_fit_or_selection": false,
+  "goal_continues": true
+}

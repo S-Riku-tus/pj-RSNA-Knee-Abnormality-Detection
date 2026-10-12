@@ -1,0 +1,122 @@
+{
+  "schema_version": "public0033_profile64_independent_result_domain_review_v1",
+  "reviewed_at": "2026-10-08T19:28:36.122622+09:00",
+  "status": "real64_single_branch_contract_passed_integration_preparation_allowed",
+  "saved_ref": "rsraki/public0033-meniscus-profile64",
+  "saved_version": 1,
+  "kernel_id": 137648556,
+  "checks_passed": 32,
+  "checks": [
+    "all_passed_no_fallback",
+    "64_unique_same_order_cohort_full12_raw2",
+    "UID_hash_matches_all_source_receipts",
+    "actual_UIDs_exact_fixed_weak_prefix_and_Goldexcluded",
+    "preparation_cohort_exact",
+    "actual_helper_hashes_match_prepared_and_current_source",
+    "saved_source_binding_51checks",
+    "rawCSV_SHA_matches_stock_and_profile",
+    "full12CSV_SHA_matches_profile",
+    "raw_Meniscus_exact_actual_full12",
+    "all_target_min_max_unique_match_actual_CSV",
+    "stock_raw_target_min_max_match_actual_CSV",
+    "checkpoint_strict_233_state_actual_SHA",
+    "two_actual_T4_devices",
+    "two_strict_FP32_models_loaded",
+    "stock_FP32_autocast_false_batch32_tenwindows_once",
+    "20_actual_batch32_uint8_to12_FP32_finite_forward",
+    "actual_workers_complete_contiguous64",
+    "stock_cache_exact_memmap_shape_size",
+    "64_actual_masks_UID_shape_all_some_valid",
+    "actual_mask_hash_independently_reconstructed",
+    "298_valid_slot_masks_match_decoder",
+    "3557_selected_frames_success_no_recorded_errors",
+    "uncompressed_explicitVRLE_only_not_broad_decoder_proof",
+    "native_shape_count_matches_selected_frames",
+    "all9_actual_payload_bytes_SHA_match_public_provenance",
+    "all_actual_source_config_SHA_match_stock_receipt",
+    "final_events64decoded_contract_pass_no_error",
+    "timing_reconciles_positive_and_overhead",
+    "actual_sampled_resources_all383_both_devices",
+    "actual_allocator_reserved_below_each_T4_capacity",
+    "Gold_teacher_accuracy_fusion_submission_false"
+  ],
+  "UID_count": 64,
+  "UID_sha256": "f10c8e925842ba538f357fac9d2c21cade8761dc6f85618761bd0cd84c9a0244",
+  "raw_UIDs_in_this_review": false,
+  "timing": {
+    "decode_and_cache_seconds": 108.31623096800001,
+    "stock_inference_with_observer_seconds": 96.413042636,
+    "total_seconds_to_contract_complete": 219.24844639999998,
+    "note": "Includes observation synchronization and repeated bundle/cache hash I/O; not hidden-test runtime."
+  },
+  "resources": {
+    "elapsed_seconds": 206.266645077,
+    "sampled_peak_process_tree_rss_bytes": 2710343680,
+    "sampled_gpu_peak_used_mib": [
+      7511,
+      7511
+    ],
+    "samples": 383,
+    "gpu_samples": 383,
+    "disk_free_bytes_after": 1148774240256,
+    "rss_note": "Sampled sum of RSS; shared pages/page cache may inflate it and short peaks may be missed.",
+    "gpu_note": "Sampled device-wide nvidia-smi memory, including allocations outside this process."
+  },
+  "allocator_peaks_by_device": [
+    {
+      "device_index": 1,
+      "torch_peak_allocated_bytes": 5448576512,
+      "torch_peak_reserved_bytes": 7736393728
+    },
+    {
+      "device_index": 0,
+      "torch_peak_allocated_bytes": 5448576512,
+      "torch_peak_reserved_bytes": 7736393728
+    }
+  ],
+  "coverage": {
+    "valid_recovered_slots": 298,
+    "possible_slots": 384,
+    "missing_slots": 86,
+    "slot_count_histogram": {
+      "5": 31,
+      "6": 7,
+      "4": 23,
+      "3": 3
+    },
+    "valid_by_slot": [
+      63,
+      60,
+      64,
+      35,
+      39,
+      37
+    ],
+    "selected_frames": 3557,
+    "recorded_decode_errors": 0,
+    "transfer_syntax": "ExplicitVRLittleEndian only",
+    "raw_shape_variants": 33
+  },
+  "source_hashes": {
+    "experiments\\public0033-profile64-preparation-20261008.json": "453d788edcb3de191984be1853f22d48cecf4e39fa3a6dc0209dfb599be30c7a",
+    "artifacts\\research\\20261008-public0033-profile64-independent-review-v1\\review.json": "e5627d0bb6e97186e8fa498cfdfdf43a72ce83b97024c853771bf78660ab0143",
+    "artifacts\\research\\20261008-public0033-profile64-results-v1\\diagnostic_public0033_full12.csv": "ac8d09bed5947756bded80d917363fcfc5d94ed91a8cf237ce28ee58c7450713",
+    "artifacts\\research\\20261008-public0033-profile64-results-v1\\public0033_bag_raw.csv": "61096679b8cd5e80453f33da03e06d2f3d6223a7882464012b08091188e849dd",
+    "artifacts\\research\\20261008-public0033-profile64-results-v1\\public0033_cached_inference_receipt.json": "a79c1085fbfa6de4201143153b74a771b2d50790de631ee0219bb16ec6eac442",
+    "artifacts\\research\\20261008-public0033-profile64-results-v1\\PUBLIC0033_PROFILE_COHORT.json": "158883a195a3e54f5ebdfac15d535f99e99ffc8354d76f026a7300c01cbb9997",
+    "artifacts\\research\\20261008-public0033-profile64-results-v1\\PUBLIC0033_PROFILE_EVENTS.jsonl": "f498b3728dcef44b7322fb03f31fc157c168e515c1b77ef9bd61da59be3f6e18",
+    "artifacts\\research\\20261008-public0033-profile64-results-v1\\PUBLIC0033_PROFILE_SUMMARY.json": "491085c6a91dbe075417f3c194a18f3eafdfb5d254a102e14bfcd93a39e199f7",
+    "artifacts\\research\\20261008-public0033-profile64-results-v1\\visible.log": "8a032e84803d7ba7e80f7a5251f5006370a8ed9b29f1bd569b601c1b72ae3518"
+  },
+  "limits": [
+    "64 fixed weak-fullfit UID prefix, not OOF or accuracy evidence.",
+    "Partial native slot availability: 86 missing slots, with at least one valid slot per study.",
+    "Observed no selected-frame decode failures; only uncompressed ExplicitVRLE was exercised, not JPEG/JPEG2000/RLE compressed codecs.",
+    "Native arrays include up to1024-square selected frames; whole-series extreme/heterogeneous hidden data remain untested.",
+    "Memory measured on single stock batch32 per GPU; larger cohorts add repeated batches and scratch/page-cache exposure.",
+    "Totals include model loading, source/cache hashing and observation; linear scaling is only a planning estimate.",
+    "No model payload or real MRI downloaded locally by this audit.",
+    "Own Public0.950 incumbent preserved; branch/fusion Public improvement remains unmeasured."
+  ],
+  "next_step": "Offline Apex14+fixed10percent Meniscus-only serving preparation. Root independently gates launch and submission."
+}

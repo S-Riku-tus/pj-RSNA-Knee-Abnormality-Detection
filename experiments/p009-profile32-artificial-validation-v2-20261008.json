@@ -1,0 +1,44 @@
+{
+  "schema_version": "p009_profile32_artificial_validation_v2",
+  "prepared_at_jst": "2026-10-08",
+  "profile_unittests": {
+    "discovered": 9,
+    "passed": 8,
+    "skipped": 1,
+    "skip_reason": "Windows has no fork start method; actual pure3task forkPool probe is mandatory before MRI/model use in Kaggle profile"
+  },
+  "ruff_passed": true,
+  "python": "3.12.13 (main, Jun 11 2026, 04:05:29) [MSC v.1944 64 bit (AMD64)]",
+  "local_multiprocessing_start_methods": [
+    "spawn"
+  ],
+  "source_changed_cell_indices": [
+    7,
+    12
+  ],
+  "profile_prediction_literal140_160_reader_fusion_all_unchanged": true,
+  "production19_sha256_unchanged": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+  "files_sha256": {
+    "scripts/build_p009_profile.py": "4aa70440a9cdc8b304f07e647874ec24454535fc8b82372371ee4069cbe6cf53",
+    "scripts/p009_profile_runtime.py": "a8491a62f2b33501c4db01f695cc0afcc96da353e8badf6788fd82fa1a1e0591",
+    "tests/test_p009_profile.py": "f12e2a9e2b4bbcaaed0ed6191e62c5c3898a2aa9a927d75d093da57f40eaa20c",
+    "notebooks/public/19a_profile_p009_fov140_fov160_32.ipynb": "57679651c3cc8c670c126465ee2e09135bea7d4bb8bab703d345ea43ef20ed0a",
+    "artifacts/kaggle/p009-profile32-fov140-fov160-v2-20261008/package.json": "38814c05f6d11ce81febb77c94c801cfdb20e5296db020497b2d2b8d6c45111c"
+  },
+  "checks": [
+    "Original _pre_one old separate__main__ namespace reproduces PicklingError via actual ForkingPickler",
+    "Registered ModuleType loads(actual original_pre_one) is identical function; synthetic caller gets original output volume/mask objects",
+    "Original actual __main__ remains same; diagnostic module removed on normal and exception exit; __main__ overwrite rejected",
+    "Module is registered during the entire CoAt main and all worker transports, removed only after main/Pool/thread completion",
+    "Each actual _pre_one/_pre_init identity gate before main; real3taskLinuxfork probe mandatory before paired main",
+    "Existing7 source/cache/actualclosure/CSVreplay/rank/package contracts remain successful"
+  ],
+  "old_failed_V1_source_package_audits_and_logs_preserved": true,
+  "failure_evidence": "experiments/p009-profile32-first-failure-review-20261008.json",
+  "source_settings_binding_remoteV1": "experiments/p009-profile32-saved-binding-review-v2-20261008.json",
+  "MRI_weights_fit_remote_mutation_or_competition_submission": false,
+  "limits": [
+    "Local actualLinuxforkPool is not tested; saved Kaggle execution must show artificial_fork_transport.task_roundtrip_passed and actual32UID main completion.",
+    "This fix corrects profile transport only; accuracy and hidden serving completion are unproved."
+  ]
+}

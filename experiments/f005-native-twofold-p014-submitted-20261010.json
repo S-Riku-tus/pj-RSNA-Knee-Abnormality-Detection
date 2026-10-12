@@ -1,0 +1,66 @@
+{
+  "schema_version": "f005_native_twofold_p014_submitted_v1",
+  "submitted_at_utc": "2026-10-10T04:41:01.558721+00:00",
+  "own_best_official_Public": "0.951",
+  "own_P014_Public": null,
+  "strict_above_0_960_achieved": false,
+  "first_own_F005_native_twofold_official_submission": true,
+  "P013_previous_own950_was_public_p005_plus_public_S5_not_native_F005": true,
+  "notebook": {
+    "path": "notebooks/public/27_submit_p014_native_twofold_compact.ipynb",
+    "sha256": "43c4e7726bc5091f53eaa3fd6ccd032c96642eee326ea5c7a4486ad541a835e0"
+  },
+  "preserved_own951_parent_SHA": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee",
+  "source_UTF8_bytes": 927057,
+  "private_saved_version": 1,
+  "kernel_id": 137969034,
+  "ref": "rsraki/p012native2-2017c2587f0dd4f03bfd9dee7332a074",
+  "native_factor": "full twofold FP32 probability mean; uniform fixed20percent after original P012 rank70_30 baseline; final average percentile",
+  "native_CPU64_256_qualification": {
+    "path": "artifacts/research/20261010-f005-online-last2-twofold-root-review-preparation-v3/actual-root-observation-v1/review.json",
+    "sha256": "ed33e82bda30380b46e75af444d58c6b334cebb2aa18cccc3c66395cd4f12cdc",
+    "passed": 12
+  },
+  "actual_visible20_outputs": {
+    "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/visible-observation-v3/observation.json",
+    "sha256": "0d3fb2a6d6797440cbd02b4945646d3933f6abef3d86cd6d24ecc47c3dce725d"
+  },
+  "actual_visible_independent_review": {
+    "path": "artifacts/research/20261010-p014-native-twofold-serving-visible-independent-v1/review.json",
+    "sha256": "ff1f438bf52d07e02b6669bed15c8b44907522b6aad182bcdc1073a7e5d96544",
+    "passed": 37
+  },
+  "visible_studies": 3,
+  "baseline_float32_36_values_difference0": true,
+  "native_FP32_mean_36_values_difference0": true,
+  "final_rank_36_values_difference0": true,
+  "CSV_CRLF17g_bytes": 834,
+  "finalCSV_SHA": "60bc025a67a596340589cda98eea87c9b1a2b2d19552e49f158e1d0d0f2c8d64",
+  "visible_native_seconds": 23.983563548,
+  "visible_native_sampled_GPU_MiB": [
+    735,
+    735
+  ],
+  "fallback0": true,
+  "owned_baseline_processes_terminated_before_native": true,
+  "baseline_cublas_clear_calls": 1,
+  "manual_Submit": {
+    "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/actual-serving-Submit-attempt-v1/receipt.json",
+    "sha256": "8d16ece005564f4193c803cdb33a29aeac75979e5d799be7cfd827d77e1ee0cb"
+  },
+  "submission_ref": 57031186,
+  "actual_Submit_calls": 1,
+  "automatic_retry": false,
+  "fresh_allowance_before_Submit": 5,
+  "first_submission_observation": {
+    "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/submission-observation-v1/observation.json",
+    "sha256": "7c66d4d44c53cd9a5db50336567034943c07064a57798f45b4ead5a7b3b5ce0b"
+  },
+  "actual_submission_status": "NOT_EXPLICIT_YET",
+  "raw_status_omitted_SDK_default_PENDING_not_treated_as_explicit": true,
+  "hidden_scoring_complete": false,
+  "own_Gold_fit_selection": 0,
+  "third_party_public_weight_Gold_provenance_separate": true,
+  "whole_hidden_time_bound_proven": false,
+  "next": "Read exact official submission; retain own951 until higher confirmed; choose next factor from actual result"
+}

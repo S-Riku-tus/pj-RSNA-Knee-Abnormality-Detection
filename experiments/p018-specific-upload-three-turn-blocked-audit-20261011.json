@@ -1,0 +1,78 @@
+{
+  "schema_version": "rsna_knee_P018_three_turn_same_blocker_audit_v1",
+  "run_id": "p018-specific-upload-three-turn-blocked-audit-20261011",
+  "at_utc": "2026-10-10T16:08:02.223689+00:00",
+  "at_JST": "2026-10-11T01:08:02.223689+09:00",
+  "actual_returned_goal_status": "blocked",
+  "actual_goal_status_tool_result": {
+    "path": "artifacts/research/20261011-p018-three-turn-blocked-root-audit-v1/goal-status-returned.json",
+    "sha256": "7e6cdb9dfe174968e05946b996df3da3d9a188db9b1549205553ab33cab48b5d"
+  },
+  "previous_goal_turn_classification": "progress",
+  "prior_completed_evidence": [
+    {
+      "path": "experiments/p018-metadata-api-contract-fixed-source-ready-20261011.json",
+      "sha256": "27d5b8ee2fae31ca96add95bcd88d25765c2932180ef7b23025c6aba49c44140"
+    },
+    {
+      "path": "experiments/p018-next-training-decision-official-list-crosscheck-20261011.json",
+      "sha256": "b9d2aa52eef429875a7f50e078d471d4141fae8be6467c6dcf9a9c374648fc6c"
+    }
+  ],
+  "same_specific_REG_upload_approval_condition_consecutive_goal_turns": 3,
+  "turns": [
+    "Original turn: specific new Regional upload approval pending; source preparation completed.",
+    "First continuation: same approval pending; score-protocol/training decisions and official first-page read completed.",
+    "Second continuation: same approval pending; all ready preparations rechecked, actual current score requests rejected401, same P016 handle reobserved401 without restarting jobs."
+  ],
+  "same_blocker": "Automatic approval review rejected concrete new Regional model egress; the already-asked specific two-destination question remains unanswered.",
+  "old_CLS_fold1_approval_fulfilled_not_new_REG_approval": true,
+  "preparations_and_independent_source_reviews_complete": true,
+  "no_remaining_specific_source_defect_or_already_qualified_new_training_factor_found": true,
+  "no_meaningful_next_goal_action_without_user_input_or_external_state_change": true,
+  "independent_blocked_audit": "p005_growth_architecture agent agreed in this conversation; no extra source/test/API/model execution.",
+  "new_REG_attempts_exist": false,
+  "REG_Start_PUT_Create_calls": 0,
+  "new_REG_remote_bytes_or_mixed64_256_Serving_qualified": false,
+  "latest_official_observations": {
+    "P016_v5": {
+      "held_observation": {
+        "path": "artifacts/research/20261010-p016-official-score-tools-source-v1/official-observation-v5/held.json",
+        "sha256": "9d4dbbc5ab24bada16ad2a48e8056baa1d443019e201df7891e2c6cef5185efd"
+      },
+      "safe_HTTP_projection": {
+        "path": "artifacts/research/20261010-p016-official-score-tools-source-v1/official-observation-v5/raw-response-safe.json",
+        "sha256": "edaa175040cc23c8b675aa5b47c2caeb31ae612a47f428dc6f9a2da9c2aa5456"
+      }
+    },
+    "P016_v6": {
+      "held_observation": {
+        "path": "artifacts/research/20261010-p016-official-score-tools-source-v1/official-observation-v6/held.json",
+        "sha256": "89c5f20cb80d77aba361bd3d3d32c5fcb4a63b2c2a7592b2e89cb88f6fcf08f2"
+      },
+      "safe_HTTP_projection": {
+        "path": "artifacts/research/20261010-p016-official-score-tools-source-v1/official-observation-v6/raw-response-safe.json",
+        "sha256": "edaa175040cc23c8b675aa5b47c2caeb31ae612a47f428dc6f9a2da9c2aa5456"
+      }
+    },
+    "P017_v9": {
+      "held_observation": {
+        "path": "artifacts/research/20261010-p017-official-score-tools-source-v1/official-observation-v9/held.json",
+        "sha256": "d9708c9fa226a2a3c77f8dc69913c4370ea5c0e3899a49de202dc76f620e3717"
+      },
+      "safe_HTTP_projection": {
+        "path": "artifacts/research/20261010-p017-official-score-tools-source-v1/official-observation-v9/raw-response-safe.json",
+        "sha256": "edaa175040cc23c8b675aa5b47c2caeb31ae612a47f428dc6f9a2da9c2aa5456"
+      }
+    }
+  },
+  "new_authentication_obstruction_first_observed_this_turn": true,
+  "authentication_obstruction_not_counted_as_three_goal_turns": true,
+  "authentication_expiry_or_exact_root_cause_confirmed": false,
+  "HTTP401_is_not_submission_ERROR_or_job_terminal_evidence": true,
+  "existing_jobs_restarted_or_resubmitted": false,
+  "credential_files_or_values_manually_read_printed_or_copied": false,
+  "own_best_Public": 0.951,
+  "strict_above960_achieved": false,
+  "resume_requirement": "Concrete Regional upload approval and functioning Kaggle API authentication or new official score evidence; preserve the full objective of an official Public strictly above0.960."
+}

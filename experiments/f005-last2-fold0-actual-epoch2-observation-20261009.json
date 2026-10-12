@@ -1,0 +1,27 @@
+{
+  "schema_version": "f005_last2_actual_running_epoch2_weak_observation_v1",
+  "at_utc": "2026-10-09T05:25:06.404150+00:00",
+  "run_path": "artifacts\\runs\\f005-native-last2-fast16-fold0-20261009-v1\\run.json",
+  "run_snapshot_sha256": "e9aec85ab187916824e5073d1de744793ad4bf4d4aae8cae5f374a78c6538c07",
+  "status": "running",
+  "completed_epochs": 2,
+  "fixed_total_epochs": 12,
+  "actual_optimizer_updates": 424,
+  "AMP_skipped_steps": 0,
+  "latest_epoch": {
+    "epoch": 2,
+    "weak_bce": 0.33963445152144833,
+    "weak_macro_auc_12": 0.7856989502594814,
+    "elapsed_seconds": 3506.66654190002,
+    "gpu_peak_reserved_bytes": 1163919360
+  },
+  "matched_frozen_epoch2": {
+    "weak_bce": 0.3773306900030742,
+    "weak_macro_auc_12": 0.7409488589960213
+  },
+  "own_Public_best": "0.950",
+  "ownGold_fit_or_selection": 0,
+  "accuracy_adoption_decided": false,
+  "strict_above960_achieved": false,
+  "limits": "This is an early weak-label epoch; compare complete fixed12 plus fixedfold1 before selecting a modeling change. Public score is not inferred."
+}

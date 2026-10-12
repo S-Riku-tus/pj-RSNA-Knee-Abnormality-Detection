@@ -1,0 +1,65 @@
+{
+  "schema_version": "f005_fast16_actual_processed115_root_resource_review_v1",
+  "checked_at_utc": "2026-10-08T15:56:19.395656+00:00",
+  "all_passed": true,
+  "checks": {
+    "preparation47_passed": true,
+    "root28_CPU_tests_passed": true,
+    "fast16_QA_status": true,
+    "actual_processed115_label_free_no_fit": true,
+    "source_and_CLI_current_SHA": true,
+    "both_arms_micro1_window16_effective16": true,
+    "actual_GPU_reserved_and_allocated_below21decimalGB": true,
+    "effective_observed_denominator176_no_optimizer": true,
+    "all_six_QA_contracts_passed": true,
+    "strict_roundtrip_both_difference0": true,
+    "original14_and_old_native_source_unchanged": true,
+    "real_resource_validator_accepts_exact_frozen-control_config": true,
+    "real_resource_validator_accepts_exact_last2_config": true
+  },
+  "checks_passed": 13,
+  "checks_total": 13,
+  "source_sha256": {
+    "native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+    "finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+  },
+  "CLI_sha256": "cfdba529adcdd9b6d5f34a6b020cdae03f7fb04551ed4807778503fa1235ece0",
+  "QA_summary_sha256": "e3198b9915af0cea33f10b454dd30f52b47d2eb116b9c1b87e9b350d575265ba",
+  "resource_gate": "artifacts/research/20261009-f005-fast16-resource-gate-v1/resource-gate.json",
+  "resource_gate_sha256": "f7460c837b1cd8e9d4d19ff0ea35929b8877a3fb7de766527785aedeba461824",
+  "pilot_UID_sha256": "40eafb3f9e263fb212a98ed0c0e51fab28b5dc45c262cf63559e4be59fd317be",
+  "valid_triplets": 115,
+  "arms": [
+    {
+      "arm": "freeze",
+      "forward_seconds": 0.10779310000361875,
+      "backward_seconds": 0.06034470000304282,
+      "gpu_peak_reserved_bytes": 448790528,
+      "effective_batch_studies": 16,
+      "effective_observed_denominator": 176,
+      "optimizer_steps": 0
+    },
+    {
+      "arm": "last2",
+      "forward_seconds": 0.09967839997261763,
+      "backward_seconds": 0.057405299972742796,
+      "gpu_peak_reserved_bytes": 1115684864,
+      "effective_batch_studies": 16,
+      "effective_observed_denominator": 176,
+      "optimizer_steps": 0
+    }
+  ],
+  "processed_cache_read_decompress_hash_seconds": 0.2835324999759905,
+  "teacher_labels_read_or_optimizer_steps_or_real_fitting": false,
+  "raw_DICOM_or_new_weights_downloaded": false,
+  "actual_complete4207_index_available": false,
+  "formal_fit_started": false,
+  "actual_full_epoch_duration_or_accuracy_measured": false,
+  "batch16_simultaneously_on_GPU_capacity_proven": false
+}

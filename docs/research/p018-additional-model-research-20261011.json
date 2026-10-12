@@ -1,0 +1,75 @@
+{
+  "schema_version": "rsna_knee_additional_public_model_research_v1",
+  "observed_date_JST": "2026-10-11",
+  "scope": "Primary web documentation and existing saved public Notebook source; no model acquisition, MRI processing, or execution.",
+  "current_own_best_Public": 0.951,
+  "new_score_above_960_confirmed": false,
+  "candidates": [
+    {
+      "name": "Current four-arm public Notebook",
+      "primary_url": "https://www.kaggle.com/code/nishantkharga/rsna-knee-full-4-arm-ensemble-v55?scriptVersionId=348575417",
+      "current_display_version": 57,
+      "current_script_version_id": 348575417,
+      "author_current_linked_Public_observed_via_official_metadata": 0.936,
+      "own_reproduction_Public": null,
+      "source_complementarity_review": "artifacts/research/20261011-public-four-arm-source-complementarity-review-v1/research.json",
+      "source_complementarity_review_sha256": "5e12eb2643a57065ca043fa8b8658275d6e0b5ca11b4cdc332de60a27233842a",
+      "whole_recipe_priority": "Low: weaker observed author score and several simultaneous preprocessing/model/coefficient changes.",
+      "conditional_component_lead": "RadImageNet ResNet50 is a different pretraining family. DINO and CoAtNet families overlap with current assets; exact trained checkpoint identity is not established by filenames.",
+      "Gold_provenance_limit": "No fitting or Gold/Report-body read call in current inference source; upstream five-head/calibrator training and checkpoint selection remain unknown. This is not a Gold-free certification."
+    },
+    {
+      "name": "Original RadImageNet",
+      "primary_repository": "https://github.com/BMEII-AI/RadImageNet",
+      "primary_license_file": "https://github.com/BMEII-AI/RadImageNet/blob/main/LICENSE",
+      "primary_paper": "https://pubs.rsna.org/doi/10.1148/ryai.210315",
+      "author_documentation": "Pretraining on approximately 1.35 million medical CT/MRI/ultrasound images; ResNet50, DenseNet121, InceptionResNetV2 and InceptionV3 released.",
+      "repository_license_observed": "MIT, copyright 2021 BMEII-AI; do not infer terms of separately hosted or downstream trained artifacts from this file alone.",
+      "transfer_learning_evidence_limit": "Paper evaluates multiple medical tasks, including ACL/meniscus MRI, but does not establish this competition's macro-AUC or complementarity to our 0.951 baseline.",
+      "binary_downloaded": false,
+      "next_if_needed": "Audit exact upstream checkpoint and downstream head provenance and preprocessing, then compare one component with group-separated weak labels before any blend adoption."
+    },
+    {
+      "name": "Independent competition participant's own-model experiments",
+      "primary_repository": "https://github.com/TranBaDat2607/RSNA-Knee-Abnormality-Detection",
+      "mutable_main_README_observed_not_immutable_commit_pinned": true,
+      "author_claims_only": {
+        "own_ConvNeXt_solo_Public_range": [0.917, 0.924],
+        "original_public_stack_author_reported_Public": 0.943,
+        "stack_plus_own_leg_best_reported_Public": 0.942,
+        "report_only_targets_vs_heavy_OOF_pseudolabels": "Report-only model scored better in that participant's experiments."
+      },
+      "official_submission_API_verified_by_us": false,
+      "not_comparable_to_our_runs": "Different targets, architectures, splits, preprocessing and baseline; no causal transfer of those numerical effects.",
+      "practical_inference": "A separately trained model and improved weak metrics do not guarantee a better Public ensemble. Keep our 0.951 baseline, measure new mixed-native Public, and avoid selecting blend weights from small Gold samples.",
+      "code_or_label_table_adopted": false
+    }
+  ],
+  "additional_bounded_search": {
+    "queries": [
+      "site:kaggle.com/code/ rsna-knee 0.956",
+      "site:kaggle.com/code/ rsna-knee 0.955",
+      "site:kaggle.com/code/ rsna-knee 0.957",
+      "site:kaggle.com/code/ rsna-knee 0.96"
+    ],
+    "new_stronger_current_saved_run_verified": false,
+    "misleading_title_result": {
+      "url": "https://www.kaggle.com/code/fuadmuhammad/rsna-knee-fast-parent-0-957-v2/comments",
+      "title_claim": "0.957",
+      "search_result_author_Public": "0.939",
+      "search_result_fresh_official_API_observation": false,
+      "already_researched_primary_record": "artifacts/research/20261009-fast-parent-latest-official-read-v1/receipt.json",
+      "new_asset_acquisition_or_code_execution": false
+    },
+    "limit": "Four targeted queries did not establish a new stronger candidate; this does not prove that none exists. Titles, per-label AUCs and projected scores are not macro-Public results."
+  },
+  "current_experiment": {
+    "new_REG_plus_CLS_fixed_equal_mean": "Both folds improved fixed supported-ten weak macro-AUC; exploratory same-weak validation, not a Public score.",
+    "new_mixed_real_CPU_reconstruction": true,
+    "new_mixed_real_models_local4090_synthetic_forwards": 8,
+    "new_mixed_Kaggle64_256_qualified": false,
+    "new_mixed_full_serving_qualified": false,
+    "new_Regional_private_upload_specific_approval": "Pending as of this observation; no Start/PUT/Create executed.",
+    "next": "Explicit approval -> new private upload -> remote exact-byte verification -> mixed native64 and native256 -> normal/fault full Serving -> one fixed preregistered Public experiment."
+  }
+}

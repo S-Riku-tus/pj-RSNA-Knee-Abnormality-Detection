@@ -1,0 +1,142 @@
+{
+  "schema_version": "public0033_profile64_saved_binding_independent_review_v1",
+  "reviewed_at_utc": "2026-10-08T10:18:45.974527+00:00",
+  "accepted_launch_at_utc": "2026-10-08T10:13:31.234302+00:00",
+  "status": "accepted_isolated_profile64_V1_source_environment_payload_verified",
+  "saved_ref": "rsraki/public0033-meniscus-profile64",
+  "saved_version": 1,
+  "kernel_id": 137648556,
+  "notebook_sha256": "e0e7bc5dd0a2809b1707efff376fdbe103f69cc071038cd7cdb352fd0c4b391b",
+  "saved_source_text_sha256": "a746b09961905d3c5c214142b794d6c7125637deda433e34d47314c71ca51b3b",
+  "code_cell_fingerprint": "86146ad5fa18abce38c1ea9821c1418ca185f6f919ca9ea3a04ead523e484e0d",
+  "request_settings_differences_vs_preparation": {
+    "slug": {
+      "prepared": "rsraki/public0033-menis-profile64",
+      "launched": "rsraki/public0033-meniscus-profile64"
+    },
+    "newTitle": {
+      "prepared": "public0033 meniscus batch32 profile64",
+      "launched": "public0033 meniscus profile64"
+    }
+  },
+  "Input_version_evidence": "renta /2 is explicit in the accepted SaveKernel request and invalidDatasetSources is empty. Saved metadata returns the exact slug without version or internal ID. Internal19356288 and competition bundle20902466 are provenance/expected IDs, not directly observed by this GetKernel response.",
+  "Original_evidence": {
+    "saved_digest": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+    "numeric_provenance": 31481,
+    "numeric_id_directly_returned": false
+  },
+  "GPU_scope": "Saved NvidiaTeslaT4, requested T4x2. The diagnostic runtime requires actual T4x2; actual runtime device count and batch32 completion are not verified by this saved-source audit.",
+  "embedded_payload": {
+    "sha256": "761b5f2c203194856f9435df3b03287f4e5e721fbb0d1f36d7bd3e59ff781ae4",
+    "members": {
+      "public0033_streaming_adapter.py": {
+        "bytes": 22810,
+        "sha256": "324b85cadf163820dd4d93381721523396e129a26ffb7952c7711f2496e516d4"
+      },
+      "public0033_profile_runtime.py": {
+        "bytes": 26147,
+        "sha256": "6e06462c651fc3a881be15e60895ca07fd530afce8a743a7fd27b43e22bd69ed"
+      },
+      "public0033_profile_cohort.json": {
+        "bytes": 5311,
+        "sha256": "158883a195a3e54f5ebdfac15d535f99e99ffc8354d76f026a7300c01cbb9997"
+      }
+    },
+    "UID_count": 64,
+    "UID_sha256": "f10c8e925842ba538f357fac9d2c21cade8761dc6f85618761bd0cd84c9a0244",
+    "raw_UIDs_in_this_review": false
+  },
+  "teacher_and_fusion_scope": "Profile reads train_series.csv metadata for fixed weak UIDs, no train.csv Report/teacher values. Packaged common adapter defines fixed_meniscus_overlay for another possible serving route, but neither Notebook nor profile runtime calls it. Fusion is not applied and submission.csv generation is forbidden. Imported stock runtime is hash-pinned and not fetched/executed by this audit.",
+  "prior_preparation_proof": {
+    "checks": 22,
+    "artificial_tests": 24,
+    "test_log_sha256": "223fb224641bf92211857b4b99225036216e22f19009cd343d554628e2749768",
+    "real_MRI_or_stock_encoder_performance_proof": false
+  },
+  "captured_initial_status": {
+    "status": "RUNNING",
+    "failureMessage": null
+  },
+  "captured_status_at_utc": "2026-10-08T10:13:32Z",
+  "status_scope": "Existing initial RUNNING receipt only, not fresh status, completion, MRI decode success or score. Parent handles monitoring.",
+  "own_best_Public": "0.950",
+  "branch_accuracy_evaluated": false,
+  "goal": "Own Public strictly above0.960 remains unachieved.",
+  "checks": {
+    "accepted_SaveKernel_no_error": true,
+    "accepted_all_invalid_Input_and_tag_fields_empty": true,
+    "accepted_exact_normalized_owner_slug": true,
+    "request_saved_exact_owner_slug": true,
+    "canonical_title_saved_and_requested": true,
+    "saved_owner_slug_correct": true,
+    "kernel_id_binding": true,
+    "saved_Version1_binding": true,
+    "prepared17a_SHA_unchanged": true,
+    "packaged_notebook_bytes_exact_repo": true,
+    "saved_all_cells_exact_prepared17a": true,
+    "request_all_cells_exact_prepared17a": true,
+    "saved_three_total_cells_and_two_code_cells": true,
+    "saved_code_clean_and_unexecuted": true,
+    "both_prepared_code_cells_compile": true,
+    "only_slug_title_canonicalization_vs_prepared_api_settings": true,
+    "api_settings_bytes_still_match_preparation": true,
+    "saved_and_request_private": true,
+    "saved_and_request_GPU_enabled": true,
+    "saved_and_request_Internet_OFF": true,
+    "saved_and_request_TPU_disabled": true,
+    "actual_saved_Original_digest_matches_request": true,
+    "Original_pinning_requested": true,
+    "actual_saved_T4_machine_matches_request": true,
+    "SAVE_AND_RUN_ALL_requested": true,
+    "one_Dataset_explicit_V2_pin_requested": true,
+    "one_Dataset_saved_slug_matches": true,
+    "one_Competition_Input_only": true,
+    "no_extra_model_or_kernel_Input": true,
+    "no_SWA_Conv_head_Input": true,
+    "embedded_payload_exact_prepared_ZIP": true,
+    "embedded_payload_sha256_exact_preparation": true,
+    "ZIP_exact_code_and_cohort_allowlist_only": true,
+    "ZIP_members_safe_relative_basenames": true,
+    "ZIP_all_member_bytes_and_hashes_exact": true,
+    "runtime_and_adapter_exact_current_prepared_helpers": true,
+    "fixed64_cohort_sorted_unique": true,
+    "UID_hash_matches_cohort_and_preparation": true,
+    "cohort_exclusion_and_no_label_flags": true,
+    "preparation_gold_and_no_accuracy_flags": true,
+    "runtime_series_read_only_train_series_metadata": true,
+    "runtime_series_selected_fields_no_Report_or_target": true,
+    "runtime_invokes_one_stock_branch_no_overlay": true,
+    "Notebook_calls_profile_only_and_forbids_submission": true,
+    "runtime_guards_no_submission_and_reports_no_fusion": true,
+    "stock_source_and_bundle_pins_preserved": true,
+    "actual_stock_T4x2_FP32_batch32_window10_required": true,
+    "prior_offline_22_checks_24_tests_recorded": true,
+    "captured_initial_RUNNING_no_failure": true,
+    "captured_initial_outputs_empty_unverified": true,
+    "protected14_SHA_preserved": true
+  },
+  "checks_passed": 51,
+  "checks_total": 51,
+  "source_artifacts": {
+    "artifacts/research/20261008-public0033-profile64-launch-v1/saved-source-20261008T101332.json": "a9ed270542ba40c3c863efa3e77a1fb73a9a2f5fa0f4100ff5b051b9e9abdbe3",
+    "artifacts/research/20261008-public0033-profile64-launch-v1/launch-request.json": "4885ff7bf7accb83698e042ff895450639c206fbd396e3619e22040b983fe2ac",
+    "artifacts/research/20261008-public0033-profile64-launch-v1/save-response.json": "57df638a397ba82fa10afdb1b05e8859452dd9ebaeda21efaa808ab850d3eaa2",
+    "artifacts/research/20261008-public0033-profile64-launch-v1/status-20261008T101332.json": "15c0e9b3f8a291919c411990d1b3c95e30fb5213aefc9369d69dd6bf72b38479",
+    "artifacts/research/20261008-public0033-profile64-launch-v1/output-20261008T101332.json": "68678bec65bf17d7473d2ce76c6ec05b8ccf329074516e1a57b6d8b7f289e2bc",
+    "notebooks/public/17a_profile_public0033_meniscus64.ipynb": "e0e7bc5dd0a2809b1707efff376fdbe103f69cc071038cd7cdb352fd0c4b391b",
+    "experiments/public0033-profile64-preparation-20261008.json": "453d788edcb3de191984be1853f22d48cecf4e39fa3a6dc0209dfb599be30c7a",
+    "artifacts/kaggle/public0033-profile64-v1-20261008/api-settings.json": "0c4bdc9989f69664137570c38b3ce3443b1b044d39f051b5bcf0764b58176660",
+    "artifacts/kaggle/public0033-profile64-v1-20261008/public0033-profile-code.zip": "761b5f2c203194856f9435df3b03287f4e5e721fbb0d1f36d7bd3e59ff781ae4",
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546"
+  },
+  "limits": [
+    "64 weak-fullfit studies are not OOF or accuracy evidence.",
+    "Gold exclusion reflects fixed cohort/preparation proof, not a new training or selection step.",
+    "Actual stock loads, decoder errors, GPU batch32 peaks and CSV contracts await profile outputs.",
+    "Saved metadata lastRunTime is not used as execution time because its shifted value is inconsistent with launch receipts."
+  ],
+  "remote_mutation_or_fresh_poll_by_this_agent": false,
+  "MRI_or_model_download_decode_fit_by_this_agent": false,
+  "competition_submission_by_this_agent": false,
+  "old_artifacts_or_docs_modified": false
+}

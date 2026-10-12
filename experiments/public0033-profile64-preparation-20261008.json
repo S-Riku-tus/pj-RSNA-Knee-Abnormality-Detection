@@ -1,0 +1,167 @@
+{
+  "schema_version": "public0033_profile64_preparation_v1",
+  "prepared_at": "2026-10-08T19:08:54.039662+09:00",
+  "status": "offline_package_artificial_contracts_passed_real_profile_unexecuted",
+  "notebook_path": "notebooks\\public\\17a_profile_public0033_meniscus64.ipynb",
+  "notebook_sha256": "e0e7bc5dd0a2809b1707efff376fdbe103f69cc071038cd7cdb352fd0c4b391b",
+  "generator_sha256": "f111c6e5708e7eb49742cfcfb763aa2333388ede269b7492686d152ed80e4528",
+  "helper_sha256": {
+    "public0033_streaming_adapter.py": "324b85cadf163820dd4d93381721523396e129a26ffb7952c7711f2496e516d4",
+    "public0033_profile_runtime.py": "6e06462c651fc3a881be15e60895ca07fd530afce8a743a7fd27b43e22bd69ed"
+  },
+  "payload_sha256": "761b5f2c203194856f9435df3b03287f4e5e721fbb0d1f36d7bd3e59ff781ae4",
+  "payload_members": {
+    "public0033_streaming_adapter.py": {
+      "bytes": 22810,
+      "sha256": "324b85cadf163820dd4d93381721523396e129a26ffb7952c7711f2496e516d4"
+    },
+    "public0033_profile_runtime.py": {
+      "bytes": 26147,
+      "sha256": "6e06462c651fc3a881be15e60895ca07fd530afce8a743a7fd27b43e22bd69ed"
+    },
+    "public0033_profile_cohort.json": {
+      "bytes": 5311,
+      "sha256": "158883a195a3e54f5ebdfac15d535f99e99ffc8354d76f026a7300c01cbb9997"
+    }
+  },
+  "studies": 64,
+  "study_uid_sha256": "f10c8e925842ba538f357fac9d2c21cade8761dc6f85618761bd0cd84c9a0244",
+  "selection": "lexicographically_sorted_fixed_weak_manifest_UID_prefix_64",
+  "gold_excluded": true,
+  "gold_overlap_count": 0,
+  "Report_or_targets_consumed_at_Kaggle": false,
+  "preparation_inputs_used_for_UID_exclusion_and_hashes_only": true,
+  "input_sha256": {
+    "data\\manifests\\v1-vmohitrao-research\\weak.csv": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+    "data\\manifests\\v1-vmohitrao-research\\gold.csv": "f86a67cf9c5704c37bbe0d7912b308cd7497a2804918c0cc5e8e2008a0b16bad",
+    "data\\exports\\rsraki-rsna-knee-sv354838181\\rsna-cache-v1\\raw\\train_series.csv": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3"
+  },
+  "accuracy_evaluated": false,
+  "real_MRI_decoded_at_preparation": false,
+  "weights_retrieved_at_preparation": false,
+  "remote_executed_at_preparation": false,
+  "fusion_applied": false,
+  "submission_created": false,
+  "cache_data_bytes": 520224768,
+  "maximum_anonymous_cohort_studies_during_decode": 1,
+  "actual_stock_max_batch_unverified": true,
+  "stock_call_count_planned": 1,
+  "stock_source_sha256": "9541f82a993d7dc2942ca2a5112e110471285f8d80701846079a3dc708761683",
+  "stock_dataset": {
+    "ref": "renta0426/rsna-knee-public0033-meniscus-bag-v1",
+    "version": 2,
+    "internal_version_id": 19356288,
+    "metadata_checked_at": "2026-10-08 JST",
+    "source": {
+      "api_files": {
+        "bundle_manifest.json": 9163,
+        "checkpoint_epoch30.safetensors": 347965736,
+        "checkpoint_epoch30.safetensors.json": 564,
+        "dinov2_config.json": 548,
+        "fullfit0033_meniscus_bag.yaml": 5854,
+        "public0033_meniscus10_residual.yaml": 8131,
+        "public0033_runtime.py": 42887,
+        "run_contract.json": 6607,
+        "task_complete.json": 979
+      },
+      "manifest_sha256": "b610229f046fe0f27ec8dcf661c5532d4991427428378975d0443da671607945",
+      "api_listing_sha256": "2c39e5d4914a3d3d3d49df72b3c7677d467ab0a3869504f76d1bd09fa8ad219b",
+      "declared_payload": {
+        "checkpoint_epoch30.safetensors": {
+          "bytes": 347965736,
+          "sha256": "e1443bb0f518418a31428cd7eb153f15af4c48c7175baf1f9d21c84f1c2a93e7"
+        },
+        "checkpoint_epoch30.safetensors.json": {
+          "bytes": 564,
+          "sha256": "42d1e4de3c19b00d891732441e8cd8be155848c1558ba7963361098986c7126c"
+        },
+        "dataset-metadata.json": {
+          "bytes": 201,
+          "sha256": "ce2978438784537cbd3d293162654369601712544d1195c99f7a02a33b6aa949"
+        },
+        "dinov2_config.json": {
+          "bytes": 548,
+          "sha256": "f7ff4cfa73d2f70647dbf6950541ad25d73082d54c2e7e9bded160c7656b2a70"
+        },
+        "fullfit0033_meniscus_bag.yaml": {
+          "bytes": 5854,
+          "sha256": "142dc28a42d419583bd1355877b17d02154b8df391a71b6361320b2c3c1e9c71"
+        },
+        "public0033_meniscus10_residual.yaml": {
+          "bytes": 8131,
+          "sha256": "460442d3c093b8d393b344b2ccca989621482f650de5d8966599086b6d9e5e11"
+        },
+        "public0033_runtime.py": {
+          "bytes": 42887,
+          "sha256": "9541f82a993d7dc2942ca2a5112e110471285f8d80701846079a3dc708761683"
+        },
+        "run_contract.json": {
+          "bytes": 6607,
+          "sha256": "107ef5133238dc514eb990bf75e05a0c5d8262873c95158957565bdc7278e11f"
+        },
+        "task_complete.json": {
+          "bytes": 979,
+          "sha256": "ec97ee4064d8b3219b8ba677719d80d31b25968d3737100887a88da7610a9528"
+        }
+      },
+      "checkpoint_payload_downloaded_at_preparation": false,
+      "stock_checkpoint_count": 1,
+      "stock_checkpoint_replicas_at_inference": 2,
+      "stock_manifest_historical_parent_route_not_applied": true
+    }
+  },
+  "original_container": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+  "api_launch_settings_sha256": "0c4bdc9989f69664137570c38b3ce3443b1b044d39f051b5bcf0764b58176660",
+  "launch_required_checks": [
+    "exact saved 3-cell source",
+    "private Original31481 digest; T4x2; Internet OFF",
+    "competition20902466 and renta Dataset19356288 only; no Apex/head Inputs",
+    "64 fixed weak UID hash and no Gold UID overlap",
+    "summary generated only after both batch32 x10 finite FP32 passes",
+    "no submission.csv or competition submission"
+  ],
+  "limits": [
+    "Own Public0.950 incumbent remains unchanged.",
+    "This is execution/resource profiling, not accuracy/OOF testing.",
+    "Fullfit weak checkpoint does not support weak holdout coefficient selection.",
+    "Larger hidden cohorts and actual gain remain unverified."
+  ],
+  "verified_at": "2026-10-08T19:11:46.282450+09:00",
+  "checks": [
+    "immutable_notebook_package_bytes",
+    "prepared_notebook_SHA",
+    "generator_SHA",
+    "helpers_SHA",
+    "api_settings_SHA",
+    "three_cells_and_two_compilable_empty_code_cells",
+    "payload_hash",
+    "embedded_payload_exact",
+    "payload_allowlist",
+    "payload_members_SHA_bytes",
+    "embedded_UID_cohort_exact",
+    "fixed64_UIDs_sorted_weak_prefix",
+    "Gold_UID_overlap_zero",
+    "UID_hash",
+    "source_metadata_hashes",
+    "private_offline_GPU_original_pin",
+    "only_competition_and_renta_V2_Inputs",
+    "scratch_64cache_bytes",
+    "9public_files_exact_API_byte_listing",
+    "Apex_baseline14_unchanged",
+    "no_real_MRI_weights_remote_submission_or_fusion_at_preparation",
+    "24_artificial_unittests_including_available_CUDA"
+  ],
+  "checks_passed": 22,
+  "unittest_count": 24,
+  "unittest_log_sha256": "223fb224641bf92211857b4b99225036216e22f19009cd343d554628e2749768",
+  "tests_sha256": {
+    "test_public0033_streaming_adapter.py": "f5a41e49254624e6340c11cb14a2419192e136230ba7d247aa85b8699be7a373",
+    "test_public0033_profile_runtime.py": "a410da68ade2afcdb38d906806fb523d22904c82407845c720b26305f45f6639"
+  },
+  "artificial_GPU_observer_test_device": "NVIDIA GeForce RTX 4090",
+  "GPU_test_limit": "Artificial Linear head/input, single available RTX4090; not the released DINO encoder/checkpoint, not T4x2 performance or accuracy.",
+  "source_baseline_SHA_verified": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "raw_UIDs_stored_only_in_fixed_profile_Notebook_and_private_package": true,
+  "provenance_current_dataset_publicity": "Official API V2 public; bundle's private/upload flags describe historical author preparation.",
+  "recommended_next_step": "Root inspect exact package/source/settings, bind Dataset19356288+competition20902466, then authorized private save/run. Do not submit this diagnostic."
+}

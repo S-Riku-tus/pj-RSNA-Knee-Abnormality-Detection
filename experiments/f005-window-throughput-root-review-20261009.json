@@ -1,0 +1,109 @@
+{
+  "schema_version": "f005_window_throughput_root_summary_review_v1",
+  "checked_at_utc": "2026-10-08T15:42:29.169359+00:00",
+  "all_passed": true,
+  "checks": {
+    "peer84_checks_passed": true,
+    "original_source_hashes_preserved": true,
+    "oneoff_source_SHA_exact": true,
+    "artificial_only_no_optimizer": true,
+    "frozen_chunk2_mean_exact_3steady_1warmup": true,
+    "frozen_chunk2_full144_counts_gradfinite_resource": true,
+    "frozen_chunk2_model_state_not_updated": true,
+    "frozen_chunk4_mean_exact_3steady_1warmup": true,
+    "frozen_chunk4_full144_counts_gradfinite_resource": true,
+    "frozen_chunk4_model_state_not_updated": true,
+    "frozen_chunk8_mean_exact_3steady_1warmup": true,
+    "frozen_chunk8_full144_counts_gradfinite_resource": true,
+    "frozen_chunk8_model_state_not_updated": true,
+    "frozen_chunk16_mean_exact_3steady_1warmup": true,
+    "frozen_chunk16_full144_counts_gradfinite_resource": true,
+    "frozen_chunk16_model_state_not_updated": true,
+    "last2_chunk2_mean_exact_3steady_1warmup": true,
+    "last2_chunk2_full144_counts_gradfinite_resource": true,
+    "last2_chunk2_model_state_not_updated": true,
+    "last2_chunk4_mean_exact_3steady_1warmup": true,
+    "last2_chunk4_full144_counts_gradfinite_resource": true,
+    "last2_chunk4_model_state_not_updated": true,
+    "last2_chunk8_mean_exact_3steady_1warmup": true,
+    "last2_chunk8_full144_counts_gradfinite_resource": true,
+    "last2_chunk8_model_state_not_updated": true,
+    "last2_chunk16_mean_exact_3steady_1warmup": true,
+    "last2_chunk16_full144_counts_gradfinite_resource": true,
+    "last2_chunk16_model_state_not_updated": true
+  },
+  "checks_passed": 28,
+  "checks_total": 28,
+  "summary_sha256": "f85b1f8dea8c053e34d1ca575d0098c1b7c7ac5fc91e405991f07bff9f9349e8",
+  "peer_review_sha256": "72df7ab537eb26b311d5efc2b9fb2421e566b0eda4eab1c52ec5b9902d462b8b",
+  "measurements": [
+    {
+      "arm": "frozen",
+      "window_chunk": 2,
+      "steady_mean_seconds": 0.7145620999896588,
+      "speedup_vs_chunk2": 1.0,
+      "peak_reserved_bytes": 226492416,
+      "eval_max_abs_change_vs_chunk2": 0.0
+    },
+    {
+      "arm": "frozen",
+      "window_chunk": 4,
+      "steady_mean_seconds": 0.35398683334157494,
+      "speedup_vs_chunk2": 2.018612085778206,
+      "peak_reserved_bytes": 268435456,
+      "eval_max_abs_change_vs_chunk2": 1.539289951324463e-05
+    },
+    {
+      "arm": "frozen",
+      "window_chunk": 8,
+      "steady_mean_seconds": 0.17029409999183068,
+      "speedup_vs_chunk2": 4.196047308884674,
+      "peak_reserved_bytes": 316669952,
+      "eval_max_abs_change_vs_chunk2": 1.2472271919250488e-05
+    },
+    {
+      "arm": "frozen",
+      "window_chunk": 16,
+      "steady_mean_seconds": 0.11397050002900262,
+      "speedup_vs_chunk2": 6.2697110200255395,
+      "peak_reserved_bytes": 469762048,
+      "eval_max_abs_change_vs_chunk2": 1.7881393432617188e-05
+    },
+    {
+      "arm": "last2",
+      "window_chunk": 2,
+      "steady_mean_seconds": 1.3242755999866251,
+      "speedup_vs_chunk2": 1.0,
+      "peak_reserved_bytes": 840957952,
+      "eval_max_abs_change_vs_chunk2": 0.0
+    },
+    {
+      "arm": "last2",
+      "window_chunk": 4,
+      "steady_mean_seconds": 0.6322870666626841,
+      "speedup_vs_chunk2": 2.094421457924754,
+      "peak_reserved_bytes": 1046478848,
+      "eval_max_abs_change_vs_chunk2": 1.539289951324463e-05
+    },
+    {
+      "arm": "last2",
+      "window_chunk": 8,
+      "steady_mean_seconds": 0.3069526999994802,
+      "speedup_vs_chunk2": 4.314266009026366,
+      "peak_reserved_bytes": 968884224,
+      "eval_max_abs_change_vs_chunk2": 1.2472271919250488e-05
+    },
+    {
+      "arm": "last2",
+      "window_chunk": 16,
+      "steady_mean_seconds": 0.16976463332927474,
+      "speedup_vs_chunk2": 7.800656556174842,
+      "peak_reserved_bytes": 1197473792,
+      "eval_max_abs_change_vs_chunk2": 1.7881393432617188e-05
+    }
+  ],
+  "scope": "Independent aggregation/source inspection of actual artificial CUDA receipts; no repeat GPU run or real label fitting",
+  "new_training_engineering_config_adopted_by_this_record": false,
+  "actual_epoch_IO_validation_or_optimizer_duration_measured": false,
+  "gradient_equivalence_between_chunk_sizes_verified": false
+}

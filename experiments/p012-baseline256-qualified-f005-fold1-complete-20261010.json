@@ -1,0 +1,79 @@
+{
+  "schema_version": "p012_baseline256_actual_qualified_f005_fold1_completed_root_record_v1",
+  "at_utc": "2026-10-09T16:37:23.139538+00:00",
+  "actual256_acceptance": {
+    "path": "artifacts/research/20261010-p012-baseline-cleanup-root256-v1/actual256-root-acceptance-v1.json",
+    "sha256": "e3d26ae94982c78893cf9b4c13e986f5ec7c1e53972f0a2684a06bb169a3e5af"
+  },
+  "baseline_actual_checks": 15,
+  "actual256_elapsed_seconds": 2559.3288875,
+  "actual_original70_30_float32_cells": 3072,
+  "max_abs_difference": 0.0,
+  "baseline_actual_cleanup_qualified": true,
+  "baseline_fallback0_owned2PG_gone_clear1_strict_T4_release": true,
+  "fold1_paired_weak_review": {
+    "path": "experiments/f005-cached-frozen-last2-fold1-review-20261010.json",
+    "sha256": "a781ee6704fbf14ba724b680b77a7005d130920dbb0fd66974d194ca1e95355b"
+  },
+  "fold1_strict_CPU_reconstruction": {
+    "path": "artifacts/qa/20261010-f005-online-last2-fold1-checkpoint-CPU-v2/reconstruction.json",
+    "sha256": "5e203dcdba819a52e6e6f9087ad7730fd50763ee09f9202e7fea7a91cedc4a19"
+  },
+  "fold1_completed12_selected_epoch": 9,
+  "fold1_last2_selected_BCE": 0.27969071834775916,
+  "fold1_last2_selected_AUC12": 0.8669470619793428,
+  "fold1_weak_interpretation": {
+    "path": "artifacts/research/20261010-f005-selected-fold1-learning-interpretation-v1/report.json",
+    "sha256": "e0e8abe641bd09dd00f3dab38d2f9dbaf31110d097902d64864461adc2c0db81"
+  },
+  "fold1_seal": {
+    "path": "artifacts/research/20261009-f005-online-last2-diagnostic-adapter-preparation-v2/b1/BUILD_COMPLETE.json",
+    "sha256": "f72ef28b5824467ebd8fe902877347305b7b00ce8edd248d843b4720169075c6"
+  },
+  "fold1_user_explicit_private_upload_approved": true,
+  "fold1_actual_privateV1_inventory": {
+    "path": "artifacts/research/20261010-f005-fold1-private-input-root-v1/native-private-V1-inventory-observation-v1.json",
+    "sha256": "d75d987c72550faa26f8c7e07fc07387677d715177e48385845a4c25ce248312"
+  },
+  "private_upload_initial_auto_review_rejection_resolved_by_user_approval": true,
+  "official_CLI_relative_path_resume_filename_error_before_body_Create": true,
+  "official_CLI_absolute_path_completed_private_creation": true,
+  "upload_Create_RPC_count_not_instrumented": null,
+  "first_twofold_Save_preflight_held": {
+    "path": "artifacts/research/20261010-f005-twofold-native-root-v1/CPU-phase-v1/actual-Save-attempt-v1/held.json",
+    "sha256": "8e0d5f523a4d6b1ec2636555a50aaebb7e59608de47ffaace9ffcb9d3f36e59c"
+  },
+  "fresh_Input_diagnosis": {
+    "path": "artifacts/research/20261010-f005-twofold-native-root-v1/CPU-phase-v1/actual-Save-attempt-v1/input-metadata-diagnosis-v1.json",
+    "sha256": "08e3469e932c8d371a707258336dde58aa15185d09794382b129fa747660c096"
+  },
+  "requested_decoderV2_inventory_404": {
+    "path": "artifacts/research/20261010-f005-twofold-native-root-v1/CPU-phase-v1/actual-Save-attempt-v1/decoder-version2-inventory-v1.json",
+    "sha256": "6f3f1b55f78fa3275b98e6f448e7c15e79f9a8078b88f75658e55483dead18bb"
+  },
+  "actual_decoderV1_manifest_matches_original_pin": {
+    "path": "artifacts/research/20261010-f005-twofold-native-root-v1/decoder-V1-manifest-observation-v1/receipt.json",
+    "sha256": "3893ee482f7d6b5a39dfceb002b81f8bf7bfa21450c050dcdcc00c259f7481ac"
+  },
+  "same_decoder_bytes_confirmed_without_model_or_MRI_download": true,
+  "sourcepackage_revision_v2_is_not_Kaggle_display_V2": true,
+  "native_first_Save_calls": 0,
+  "decoder_Input_V1_source_revision_in_preparation": true,
+  "bounded_additional_primary_web_research": {
+    "path": "artifacts/research/20261010-post-S6-retirement-bounded-web-research-v1/research.json",
+    "sha256": "46a1243187fcb185c120f64c84b192fb62f5f2cd37c23a8365d054c4993525eb"
+  },
+  "own_best_official_Public_primary": {
+    "path": "artifacts/research/20261009-f005-native-runtime-root-v1/public951-submission-observation-v15/observation.json",
+    "sha256": "6566d820025709e557a5caf9c51ae78089728c41306fb60f2cba64b5353bfbf6"
+  },
+  "own_best_official_Public": "0.951",
+  "new_competition_Submit": 0,
+  "actual_twofold_CPU64_256_qualified": false,
+  "Serving_qualified": false,
+  "Public_complementarity_proven": false,
+  "patient_independent_validation_confirmed": false,
+  "own_Gold_fit_selection": 0,
+  "strict_above960_achieved": false,
+  "next": "Use actual byte-identical decoderV1 through fresh source-only revision and new nonce; genuine twofold CPU then64 then256, fixed20 native addition, one exact-version competition Submit and official score."
+}

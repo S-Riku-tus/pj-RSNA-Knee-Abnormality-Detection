@@ -1,0 +1,38 @@
+{
+  "schema_version": "p011_savedV1_source_status_binding_tools_preparation_v1",
+  "checked_at_utc": "2026-10-08T17:34:44.671550+00:00",
+  "all_passed": true,
+  "checks": {
+    "meaningful4_offline_CPU_tests_pass": true,
+    "Ruff_pass": true,
+    "offline_actual_SDK_saved_DTO_binding_pass": true,
+    "official_source_status_request_v1_DTO_roundtrip_pass": true,
+    "source_normalisation_only_and_full_metadata_drift_rejected": true,
+    "noauth_default_and_explicitaccepted_requesthash_required": true,
+    "fake_exact2_RPC_and_repeatfolder_rejected": true,
+    "raw_absent_status_typedQUEUED_not_completion": true,
+    "no_API_auth_output_log_payload_mutation": true
+  },
+  "CPU_tests": 4,
+  "actualSDK_offline_checks": 3,
+  "expected_live_binding_checks": 17,
+  "accepted_ref": "rsraki/p011diag-faf10ad9505f58563d2df789609cccef",
+  "kernel_id": 137715763,
+  "version_label": "v1",
+  "request_sha256": "a70ffd8b4bab23b64283aafcdd4638fdd3f92a0a7f1dcbc133f718c29773bdec",
+  "canonical_Notebook_sha256": "62e6aaefda761077dafbbe56167732784f9c14ec11230df0e197481918974020",
+  "source_sha256": {
+    "artifacts/research/20261009-p011-profile64-saved-binding-v1/binding.py": "9401f3d8b7574f69de6223dd329fd7ed45d7ba6da1219df2766d93fd1b298f96",
+    "artifacts/research/20261009-p011-profile64-saved-binding-v1/get_once.py": "68bd7e3fddb87c9088e0de7426220763f13dda61451077785f6e62b6d6f8afbf",
+    "artifacts/research/20261009-p011-profile64-saved-binding-v1/test_binding.py": "33cbe79f0ddfade2dbcfb3a40e7d0caf2b35ee96e64dba75537daf3c58508029"
+  },
+  "future_root_operation": "explicit --read --ref --kernel-id --request-sha256 afteraccepted request and assets binding; exactly GetKernel(v1)+GetKernelSessionStatus(v1)",
+  "API_or_auth_calls_during_preparation": 0,
+  "real_MRI_GPU_model_or_payload_access": false,
+  "remote_mutation_or_submit": false,
+  "source_status_binding_is_runtime_accuracy_qualification": false,
+  "selected_Input_internal_version_IDs": "unknown; saved GetKernel has only slugs, accepted request /1 pins are separately recorded",
+  "status_semantics": "Raw status absent with typed QUEUED can be SDK default; no worker start/completion/runtime promise.",
+  "live_observation_destination": "artifacts/research/20261009-p011-profile64-saved-binding-v1/observation-v1",
+  "live_proof_destination": "experiments/p011-profile64-savedV1-binding-review-20261009.json"
+}

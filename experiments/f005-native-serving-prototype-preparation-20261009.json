@@ -1,0 +1,92 @@
+{
+  "schema_version": "f005_native_CLS_serving_source_prototype_preparation_v1",
+  "observed_at_UTC": "2026-10-09T03:45:47.570576+00:00",
+  "all_passed": true,
+  "checks": {
+    "positive_source_member_inventory": true,
+    "casefold_unique_source_members": true,
+    "all_source_bytes_current": true,
+    "all_member_SHA_match": true,
+    "source_ZIP_SHA_match": true,
+    "no_models_pixels_teachers_in_source_packet": true,
+    "all_source_compile_and_config_JSON_parse": true,
+    "Notebook_equals_builder": true,
+    "Notebook_clean_unexecuted_compile": true,
+    "CLS_identity_and_target_order": true,
+    "actual_assets_unresolved": true,
+    "all_execute_and_accuracy_gates_closed": true,
+    "only_source_preparation_complete": true,
+    "old_source_config_and_baseline_hashes_unchanged": true,
+    "single_generic_CPU_loader_call_in_source": true,
+    "consumer_thread_inference_mode_in_source": true,
+    "native_exceptions_not_caught_in_worker_or_consumer": true,
+    "CPU-contracts.log": true,
+    "ruff-check.log": true,
+    "ruff-format.log": true
+  },
+  "source_file_sha256": {
+    "artifacts/research/20261009-f005-native-serving-prototype-v1/bundle_tools.py": "12b88e794b28cfd810972372c2150335d20e7fc413efb922b4a0f7c65ff62188",
+    "artifacts/research/20261009-f005-native-serving-prototype-v1/build_bundle.py": "14b6caf86f57c6d3c35fdbd1b39c1eeab7e379e5cafa7040826505e7c8a7522f",
+    "artifacts/research/20261009-f005-native-serving-prototype-v1/native_runtime.py": "9a32b4dd823e766a63e9c335cd0aa30e295dd9febf176003b757e4c0889a5289",
+    "artifacts/research/20261009-f005-native-serving-prototype-v1/test_prototype.py": "c2b979b9cb9acc54e512a295120a18abeb4c18512e573565014461a6ce774d09",
+    "artifacts/research/20261009-f005-native-serving-prototype-v1/record_preparation.py": "a325ef112f3aa1dc6e00b617817fe9a2293abe0f67ee234fe13bbc838f7336b6"
+  },
+  "authoritative_packet": "artifacts/research/20261009-f005-native-serving-prototype-v1/source-template-v3",
+  "packet_file_sha256": {
+    "BUILD_COMPLETE.json": "61e9cd307931375ad1dad5b78ffe29247c23e674bcab249398cfe18fa7905c57",
+    "BUILD_START.json": "86b5ce648b619dc1d29137fe41c429a7d841481dc8af7981e97b404905b05cce",
+    "bundle.json": "b997a3480906d6f627415d2d38d4cdef909d64f02383851d567cea9e6d1b910d",
+    "checkpoint-audit-plan.json": "988462cf6176d44925d6146428cfb716f1d19f2d9b5c28bd3a72fdd84e38e4d4",
+    "native392_standalone_UNQUALIFIED.ipynb": "e39c942402c13f176520407b644ead206e54ed50799669748dabe7cc36ee24ae",
+    "source-code.zip": "08f52108f2f8000834af4ea3039eda2cb03497077c28deb834fbc44fdbba0486"
+  },
+  "packet_source_members": 30,
+  "tests": {
+    "stdlib_CPU_contracts": 5,
+    "actual_CUDA_or_model_loading_tests": 0,
+    "actual_assets_sealing_tested": false
+  },
+  "feasibility_review": "experiments/f005-native-kaggle-inference-feasibility-20261009.json",
+  "feasibility_review_sha256": "5edd8215f31cc5d4f330a0f3a2d6b9834972e96b12454bf467e5a0294d915182",
+  "protected_baseline_SHA": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/22_submit_p011_independent224_rank10_v3.ipynb": "a8e13bf0b053716e024f363417bc8b338b958eddf8a1837d3bad0a385607fd0c"
+  },
+  "prepared": true,
+  "trained_asset_bundle_sealed": false,
+  "execute_gate_passed": false,
+  "actual_resource_qualification_passed": false,
+  "accuracy_evaluated": false,
+  "Public_score": null,
+  "future_template_command_not_executed": [
+    ".venv/Scripts/python.exe",
+    "artifacts/research/20261009-f005-native-serving-prototype-v1/build_bundle.py",
+    "--output",
+    "artifacts/research/20261009-f005-native-serving-prototype-v1/source-template-next-FRESH"
+  ],
+  "future_trained_bundle_copy_requires": "Explicit --seal-trained with audited REAL original fast16 CLS producer eligibility, selected best.pt, generic source/weights/provenance. Alternative cached-frozen lineage requires a separate reviewed producer adapter; not silently accepted.",
+  "later_root_only_gates": [
+    "completed CLS producer/weak BCE/Gold/group/checkpoint audit",
+    "CPU weights_only strict checkpoint reconstruction and exact prefix/norm/suffix/head",
+    "private Input exact version and Original31481/offline CPU mount/import/decoder V2",
+    "actual native64/256 twoT4 resource and preprocessing byte QC",
+    "separately fixed baseline integration/submission plan"
+  ],
+  "limitations": [
+    "Only source/metadata/compile and negative gates were tested; actual checkpoint copy, torch strictload, models and CUDA execution were not run.",
+    "Current two-T4/queue/cleanup receipts are planned runtime outputs, not measured evidence.",
+    "Parent prepared-payload count bound excludes worker/IPC/native page cache/GPU; no OS-hardkill missing-callback watchdog is added by the reused queue helper.",
+    "No allmasked fallback is adopted: missing-all-series/decoder/geometry/model/CUDA errors remain fatal; hidden coverage not established.",
+    "Native392 physical triplets need independent decoding; original384/FOV140 volume is not reused as a substitute.",
+    "Standalone F005_NATIVE_PREDICTIONS.csv only; no selected ensemble coefficient, submitted candidate or score claim.",
+    "Expected public generic SHA is historical initialization provenance; no current model fingerprint was inspected."
+  ],
+  "activity": {
+    "actual_model_checkpoint_generic_bytes_read_or_copied": 0,
+    "actual_teacher_MRI_NPZ_read": 0,
+    "actual_DICOM_decode": 0,
+    "actual_GPU_fit_or_forward": 0,
+    "API_HTTP_auth_upload_Save_submit": 0,
+    "old_source_config_Notebook_changes": 0
+  }
+}

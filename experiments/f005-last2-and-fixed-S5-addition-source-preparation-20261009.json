@@ -1,0 +1,116 @@
+{
+  "schema_version": "f005_last2_and_fixed_S5_addition_source_preparation_root_progress_v1",
+  "at_utc": "2026-10-09T08:03:15.062261+00:00",
+  "goal_turn": "progress: source preparation, independent CPU-entry review, live unchanged training and verified score wait",
+  "protected_notebook_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/23_submit_p012_public951_v9_control.ipynb": "93be7f0ffa5f963ff2f9c0171ab2d8f31130717e3072803493c46a9e22d718f5",
+    "notebooks/public/24_submit_p012_public951_snapshot_control.ipynb": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee"
+  },
+  "own_Public_best": "0.950",
+  "strict_above960_achieved": false,
+  "accepted_submission": {
+    "at_utc": "2026-10-09T07:56:19.934063+00:00",
+    "ref": "rsraki/p012-s5-v9-fixed-77784060724855c8",
+    "saved_version": 1,
+    "submission_ref": 56998356,
+    "official_get_requests": 1,
+    "Save_upload_Submit": 0,
+    "own_Public": null,
+    "strict_above960_achieved": false,
+    "actual_status": "NOT_EXPLICIT_YET",
+    "SDK_default_status": "PENDING",
+    "raw_status_field_omitted": true,
+    "error_description": null,
+    "hidden_scoring_complete": false,
+    "path": "artifacts/research/20261009-f005-native-runtime-root-v1/public951-competition-observation-v5/observation.json",
+    "sha256": "04a32a263f251eef0937621e3440d555c94c770f1ad23cc54bcbe5b5fabf6ca9"
+  },
+  "last2": {
+    "status": "running",
+    "completed_epochs": 7,
+    "fixed_total_epochs": 12,
+    "last_actual_history": {
+      "epoch": 7,
+      "train_bce": 0.24347385711973374,
+      "weak_bce": 0.2798305250491582,
+      "weak_macro_auc_12": 0.8709486195679211,
+      "optimizer_steps": 212,
+      "optimizer_step_opportunities": 212,
+      "amp_skipped_steps": 0,
+      "elapsed_seconds": 12298.676626900095,
+      "prediction_sha256": "abcb7e76dbf985e0b02040e5151f5c31994e29e9d201507b513396a1aed73a47",
+      "gpu_peak_reserved_bytes": 1163919360
+    },
+    "optimizer_steps_total": 1484,
+    "AMP_skips_total": 0,
+    "run_snapshot": {
+      "path": "artifacts/research/20261009-f005-native-runtime-root-v1/last2-at-next-source-preparation.json",
+      "sha256": "7b67267660ccd42ea5fa02f117d1970d5360554f8d00bc15643f807b8097966a"
+    },
+    "conditions_changed": false,
+    "unfinished_checkpoint_accessed": false,
+    "weak_metrics_are_not_official_Public": true
+  },
+  "last2_CPU_entry": {
+    "preparation": {
+      "path": "artifacts/research/20261009-f005-online-last2-runtime-preparation-v2/preparation.json",
+      "sha256": "efaee35c78f73d7d6971f0bed2629eccfc285596d21bf1983015052059113bd1"
+    },
+    "independent_review": {
+      "path": "artifacts/research/20261009-f005-online-last2-CPU-entry-independent-review-v2/review-r2.json",
+      "sha256": "7e487abd78211c97fb0f2527613bfdbcd9dfee9c44e712607c50e0fd3fdb6a46"
+    },
+    "independent_static_checks": 8,
+    "known_eight_sources_directly_pinned": true,
+    "completed12_before_checkpoint_stat_hash_load": true,
+    "actual_CPU_reconstruction_forward_Kaggle_qualified": false,
+    "single_full_model_state_digest_qualified": false
+  },
+  "p013_fixed_S5_addition": {
+    "preparation": {
+      "path": "artifacts/research/20261009-p013-fixed-S5-addition-preparation-v1/package/source-preparation.json",
+      "sha256": "52265e25bca8bd84a04e874bcffa52e1ab41fae9e0c736571d0367f1b6907c40"
+    },
+    "artificial_validation": {
+      "path": "artifacts/research/20261009-p013-fixed-S5-addition-preparation-v1/validation.json",
+      "sha256": "48862a3b0830a97cbecf4d5c2a3a2529d46a6d51f496a793095b90abe7951c6a"
+    },
+    "notebook": {
+      "path": "artifacts/research/20261009-p013-fixed-S5-addition-preparation-v1/package/P013_FIXED20_UNQUALIFIED.ipynb",
+      "sha256": "5f86d5c0d35fb3a67087f212038c65174f419f5e86eb493ea6fc01c12fef12d7"
+    },
+    "original14_code7_once_and_original_S5_core2_byte_preserved": true,
+    "fixed_weights": [
+      0.8,
+      0.2
+    ],
+    "final_average_percentile_rerank": true,
+    "coefficient_search_or_own_Gold_fit": false,
+    "S5_child_environment_isolated": true,
+    "parent_deadline_shared_by_S5_child": true,
+    "baseline_hard_interrupt_implemented": false,
+    "source_only_6_stdlib_tests": true,
+    "actual_GPU_profile_Save_Submit": 0,
+    "candidate_gate_passed": false,
+    "serving_direct_execution_allowed": false,
+    "Reader_wheel_import_identity_vs_original950_requires_actual_observation": true,
+    "Reader_silent_series_decode_omissions_not_proved_zero": true
+  },
+  "new_bounded_primary_public_research": {
+    "report": {
+      "path": "artifacts/research/20261009-post951-next-public-recipe-research-v1/research.json",
+      "sha256": "a2056768d903784777d2c344d0388e11685042d3181135930cad7a6f3708b41c"
+    },
+    "new_recipe_with_official_955plus_score_code_and_pinned_weights_verified": 0,
+    "global_absence_claimed": false
+  },
+  "own_Gold_training_or_checkpoint_selection": 0,
+  "external_pretrained_Gold_selection_and_prior_separate_audit": true,
+  "next": [
+    "Observe exact official submission56998356; do not duplicate pending Submit",
+    "Freeze and independently review online-last2 sealing/diagnostic source",
+    "Complete p013 teacher-free structural64/256 wrappers; bind actual Reader dependency path and whole resources",
+    "After actual complete12, paired weak review then strict real CPU reconstruction; keep frozen/last2 fold1 contrast unchanged"
+  ]
+}

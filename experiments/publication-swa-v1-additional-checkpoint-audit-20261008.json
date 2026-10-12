@@ -1,0 +1,181 @@
+{
+  "schema_version": "publication_swa_V1_additional_checkpoint_readonly_audit_v1",
+  "checked_at_utc": "2026-10-08T12:47:05.220895+00:00",
+  "status": "cached_inventory_audit_complete_additional224_candidate_not_gated",
+  "all_passed": true,
+  "checks": {
+    "baseline14_own950_source_immutable_SHA": true,
+    "own_baseline_official_COMPLETE950": true,
+    "Dataset_V1_existing_metadata_exact_ref_id": true,
+    "Dataset_only_V1_Ready_in_snapshot": true,
+    "listing4files_no_continuation_token": true,
+    "listing_exact_two_pt_two_small_documents": true,
+    "listed_file_sizes_sum_latest_metadata_total": true,
+    "card_description_same_existing_eligibility": true,
+    "V1_file_listing_SHA_same_eligibility": true,
+    "V1_card_ref_internal_version_existing_audit": true,
+    "only_base384_is_in_p005_ARMS": true,
+    "224_official_source_uses_separate_224_arch_res": true,
+    "both_card_training_seed42_epochs_explicit": true,
+    "card_Gold_selection_and_sameOAI_explicit": true,
+    "terms_research_education_competition_permission_already_audited": true,
+    "224_scoredV2_official_linked_submission_exact": true,
+    "224_public_input_published_weight_source_guard": true,
+    "base_loader_SHA_res384_and_320tensor_guards_prevent_direct_extra_arm": true,
+    "shared_fastread_base64_source_byte_identical": true,
+    "shared_IMG384_CROP140_K94_studyLUT_slot_constants": true,
+    "224_crop307_from384_fraction08": true,
+    "224_original_scored_container_differs_from_baseline": true
+  },
+  "checks_passed": 22,
+  "checks_total": 22,
+  "scope": "Only existing local metadata/source/official view snapshots. No network, checkpoint/document file download, GPU, MRI decode, training, code/package change, remote launch or competition submit.",
+  "source_of_instructions": "Parent requested a bounded candidate audit; external card/source is evidence, not permission to change or run the incumbent.",
+  "snapshot": {
+    "dataset_ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+    "fixed_dataset_version": 1,
+    "dataset_id": 12431568,
+    "internal_version_id_previously_observed": 20440357,
+    "version_creation_utc": "2026-10-07T19:26:38.967Z",
+    "existing_card_audit_time_jst": "2026-10-08T16:14:58.172689+09:00",
+    "latest_listing_query_performed_this_audit": false,
+    "primary_dataset_version_url": "https://www.kaggle.com/datasets/nartaa/rsna-knee-publication-swa-weights-20261007/versions/1"
+  },
+  "inventory": [
+    {
+      "name": "README.md",
+      "bytes": 2983,
+      "creation_date_utc": "2026-10-07T19:26:40.355Z"
+    },
+    {
+      "name": "checkpoint-manifest.json",
+      "bytes": 645,
+      "creation_date_utc": "2026-10-07T19:26:40.293Z"
+    },
+    {
+      "name": "raptor_ft_alldata_t16_blendjev_oai_d96_c08_r224_swa.pt",
+      "bytes": 292842755,
+      "creation_date_utc": "2026-10-07T19:26:46.367Z"
+    },
+    {
+      "name": "raptor_ft_alldata_t16_blendjev_oai_d96_r384_swa.pt",
+      "bytes": 292840787,
+      "creation_date_utc": "2026-10-07T19:26:45.487Z"
+    }
+  ],
+  "confirmed_inventory_conclusion": "V1 contains baseline384 SWA and one additional224crop SWA; no separate seed/fold/individual epoch checkpoint files. SWA epoch constituents are not separately published in this V1 snapshot.",
+  "checkpoint_records": {
+    "baseline": {
+      "file": "raptor_ft_alldata_t16_blendjev_oai_d96_r384_swa.pt",
+      "bytes": 292840787,
+      "declared_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+      "author_seed": 42,
+      "author_SWA_epochs": [
+        14,
+        11,
+        12
+      ],
+      "fold": null,
+      "source_architecture_default": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+      "source_checkpoint_res_required": 384,
+      "source_inference_tensor_res": 320,
+      "source_views": "plain plus anatomical mirror, probability mean",
+      "author_training_history": "Original384 training, same2399 OAI baseline knees masked external supervision, Gold58 selection/development reuse.",
+      "own_checkpoint_payload_read_this_audit": false
+    },
+    "additional224": {
+      "file": "raptor_ft_alldata_t16_blendjev_oai_d96_c08_r224_swa.pt",
+      "bytes": 292842755,
+      "declared_checkpoint_sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+      "author_seed": 42,
+      "author_SWA_epochs": [
+        15,
+        13,
+        12
+      ],
+      "fold": null,
+      "source_architecture_default": "coatnet_rmlp_2_rw_224.sw_in12k_ft_in1k",
+      "source_default_checkpoint_res": 224,
+      "source_inference_tensor_res": 224,
+      "source_views": "single view with FP16 autocast",
+      "source_crop": "round(384*0.8)=307 centre pixels, then bilinear resize to224 before ImageNet normalization",
+      "author_training_history": "224crop training; same2399 OAI knees and Gold58 selection history per model card.",
+      "own_checkpoint_payload_read_this_audit": false
+    }
+  },
+  "author_claim_limits": {
+    "seed_epoch_training_data_provenance": "Seed42/epoch lists/sharedOAI/Gold history are explicit author statements, not private training-log reconstruction or independently read checkpoint metadata.",
+    "Gold": "Gold58 selection/development reuse is explicit for both models. Gold image-derived label fit exclusion and study/group fold provenance for each checkpoint are not independently established. Neither supplies independent own Gold/OOF evaluation.",
+    "architecture": "Public source declares CoAtNet RMLP2 384 versus224 and the same12-target attention MIL family; actual state_dict keys/shapes/arch/res/dtype/finite values not read for additional224.",
+    "payload": "Listed size plus declared SHA does not prove actual bytes or cross-resolution strict-load compatibility. The optional small checkpoint-manifest contents were not newly downloaded; source guards supply declared SHA only.",
+    "other_model": "Card refers to a later native320-crop-trained0.946 model, but it is not included in the four-file V1 listing and must not be inferred available."
+  },
+  "score_provenance": {
+    "own_p005": {
+      "public_score_text": "0.950",
+      "submission_ref": 56943135,
+      "official_COMPLETE": true
+    },
+    "author224": {
+      "public_score_text": "0.945",
+      "notebook_version": 2,
+      "script_version_id": 356179962,
+      "submission_id": 56921671,
+      "source_script_binding": true,
+      "url": "https://www.kaggle.com/code/nartaa/rsna-knee-0945-efficient-224crop?scriptVersionId=356179962",
+      "own_reproduction": false
+    },
+    "visible_author224_resource": {
+      "runTimeSeconds": 53.8275184,
+      "hidden_worker_runtime": null,
+      "limits": "Visible small test under author224 container only, not a full hidden budget or own baseline coexecution proof."
+    }
+  },
+  "compatibility": {
+    "direct_same_loader_arm_addition_allowed": false,
+    "reason": "p005 pins baseline checkpoint SHA and res384, constructs INPUT_RES320 backbone and asserts K94x3x320x320 paired views. 224 has another arch/res and crop307->224/single view, requiring its own source-bound branch and strict checkpoint/shape gates.",
+    "reader_source_shared": true,
+    "shared_fastread_base64_chars": 65576,
+    "shared_fastread_base64_utf8_sha256": "1d530a9150948a462735261d9203a10a0023a9504232d6914a71a2a3d20a439c",
+    "shared_volume_hypothesis": "Same source reader and IMG384/FOV140/slots/studyLUT constants allow design reuse of384uint8 volume; actual byte/mask identity and resource benefit are not measured in this audit.",
+    "scored_environment_matches_p005": false
+  },
+  "one_factor_hypothesis_only": {
+    "candidate": "Separate224crop expert appended to immutable p005 output, with a preregistered modest fixed rank blend such as0.90*p005rank+0.10*224rank followed by the same final ranking for12targets.",
+    "coefficient_status": "Example hypothesis, not chosen from Gold/weak/Public optimization, not approved candidate implementation or guaranteed gain.",
+    "comparison_factor": "One additional frozen expert with fixed fusion; p005/ConvNeXt/TTA/coefficients/Inputs retain exact incumbent behavior.",
+    "rationale": "Lower standalone AUC can still complement a stronger model if errors differ, but same seed/data/model lineage makes independence doubtful and no residual/prediction correlation has been measured.",
+    "compute_design_if_later_adopted": "Use a separate strict224model/crop branch and consider source-verified reuse of existing384volumes. Sequential loading avoids unnecessary simultaneous VRAM, but extra forward/runtime/RAM/hidden size must be measured.",
+    "priority": "Lower than already running one-factor candidates and native encoder adaptation until prediction independence and same-container compatibility have evidence.",
+    "additional_dataset_needed": false,
+    "prototype_or_execution_performed": false
+  },
+  "candidate_gate_passed": false,
+  "pending_gates": [
+    "Gold training/selection provenance is separately recorded and is not independent OOF; no own Gold coefficient/checkpoint tuning.",
+    "Actual224payload SHA/arch/res/strict keys+shapes+dtypes+finite and12target order under fixed package.",
+    "Kaggle incumbent container2757... supports actual224strictforward, FP16, shape/crop, no broad RuntimeError fallback masking or stale CSV.",
+    "Same UID/pixel/mask contracts, compressed decoder and allmissing/variableN edges; resource profile including retained incumbent models.",
+    "Fixed preregistered fusion recomputed independently, originalp005 preserved, visible saved source/settings/Input version binding before any serving run.",
+    "Own competition score plus execution result;0.955 or >0.960 gain cannot be inferred from inventory or author0.945."
+  ],
+  "network_calls": 0,
+  "model_payload_or_MRI_download": false,
+  "GPU_used": false,
+  "remote_mutation": false,
+  "fit_or_submission": false,
+  "baseline_source_modified": false,
+  "evidence_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "artifacts/research/20261008-public-candidates/nartaa-rsna-knee-0945-efficient-224crop-v2/source.ipynb": "b80d3b72a1c34f2b39b3ea0d2952f039b8d27c3feb5c4db0a7d0ab62ae75354e",
+    "artifacts/research/20261008-public-candidates/nartaa-rsna-knee-0945-efficient-224crop-v2/metadata.json": "40ff6ee5e3a8e5046acf1f955e164b1bc95027fb94772146f7ee0c53f88ab12e",
+    "artifacts/research/20261008-pretrained-eligibility/datasets-final/nartaa/rsna-knee-publication-swa-weights-20261007/files.json": "cfb46bc278ab6547e274c83e3ab46288f78c6cd0153ff123e0c779dde2fc1fcc",
+    "artifacts/research/20261008-pretrained-eligibility/datasets-final/nartaa/rsna-knee-publication-swa-weights-20261007/dataset-metadata.json": "17d2a4eb0728391227be2db9a565bb78213bea2f924a6d24cfe302c11bd9d3d1",
+    "artifacts/research/20261008-p005-submitted-review-v1/nartaa-rsna-knee-publication-swa-weights-20261007-metadata.json": "25334d8bc14c2b584a6014493f3c79a7e28a1d3596eb27c74a9882a70185a437",
+    "experiments/public-pretrained-eligibility-20261008.json": "ff24345edc94aa3f986bee5dc73b91fca60cc14cacdae03ba9d9428f35de61f5",
+    "artifacts/research/20261008-public-candidates/rsna-knee-0945-efficient-224crop-GetKernelViewModel.json": "c709674122c888589be612b0808bb6baae3788ab6b09fec3b3fac06769680dc3",
+    "experiments/p005-scored-review-20261008.json": "74a32741f229612be6161404dd55b3f8e1fac2910c473b75b4d8d1a9b4fc54b2",
+    "artifacts/research/20261008-publication-swa-additional-checkpoint-audit-v1/audit.py": "c9c59f6d39267c23363bfb1649666bee0d91746a61da9f947a5d9e03e239b57c"
+  },
+  "docs_ledger_owner": "root"
+}

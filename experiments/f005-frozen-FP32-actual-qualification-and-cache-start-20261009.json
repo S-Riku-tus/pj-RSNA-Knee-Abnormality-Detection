@@ -1,0 +1,41 @@
+{
+  "schema_version": "f005_frozen_FP32_root_actual_qualification_and_extraction_start_v1",
+  "at_utc": "2026-10-09T03:39:37.332521+00:00",
+  "artificial_full144_CUDA_checks_passed": 5,
+  "equivalence_path": "artifacts\\qa\\20261009-f005-frozen-FP32-cache-equivalence-v1\\equivalence.json",
+  "equivalence_sha256": "62f04d8a9791dfba41568a5dcbb1ed4940726fe40c0b1b7040a1dbed82477038",
+  "source_sha256": {
+    "native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+    "finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+  },
+  "producer_source_sha256": {
+    "cache_tools.py": "90c25788a937cd86dc0f45435341d50739f250144a17550bd75533a4dae433ee",
+    "extract_once.py": "b8f09b28bb28e0a58a21418b4f3816d98ff099283a2b1b578f0d18e36aef489b",
+    "train_cached.py": "c7815bf71e0a567718b38502bbdbab3907adb252991b60950a4e91e32ceb98d8",
+    "qualify_artificial.py": "7eecb04ecf0ec97dd38bfd3d4f362d7390375a0c1d27c449a0f6610e6d27779e"
+  },
+  "dropout_logits_RNG_gradients_AdamW_GradScaler_byteexact": true,
+  "actual_extraction_started_at_utc": "2026-10-09T03:34:26.050941+00:00",
+  "live_unified_exec_session": 68677,
+  "feature_cache_path": "data\\native392\\frozen-cls-FP32-fast16-20261009-v1",
+  "current_completed_NPZ_file_count": 755,
+  "feature_cache_complete": false,
+  "formal_fit_started": false,
+  "existing_full_index_sha256": "7d373ae85098758a8bc322b4e65079de07e998f7b7cd42a5a2d26cc4577eae31",
+  "commandlist_sha256": "7c2925648f184958565f0e9b4d679cea94e073147744f462f14da51c4b49ef53",
+  "author_preparation_sha256": "e22c2b5577831747c0b26a47e231dfa22bd3fc5e6b29cfb98672bb9ae8b45555",
+  "teacher_and_Report_csv_forbidden_in_extraction": true,
+  "ownGold_fit_or_selection": 0,
+  "representation": "Native392 CLS at unchanged post-FP16 FP32 head boundary; engineering change with separate producer provenance",
+  "decision": "Wait for actual full feature-cache completion and CPU acceptance before starting the frozen head fit. Do not rerun a live extraction.",
+  "limits": [
+    "Artificial update equality does not demonstrate real accuracy or all real epoch trajectories.",
+    "Incomplete live cache cannot train."
+  ]
+}

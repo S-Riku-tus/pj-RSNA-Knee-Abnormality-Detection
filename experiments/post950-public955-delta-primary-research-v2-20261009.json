@@ -1,0 +1,396 @@
+{
+  "schema_version": "post950_public955_bounded_primary_delta_research_v2",
+  "checked_at_utc": "2026-10-08T16:30:34.799581+00:00",
+  "checked_at_jst": "2026-10-09T01:30:34.799581+09:00",
+  "all_passed": true,
+  "checks": {
+    "old_baseline14_SHA_unchanged": true,
+    "previous13_scope_inspected_and_preserved": true,
+    "four_targeted_web_queries_only": true,
+    "listing_RPCs_exactly2_and_one_held_preserved": true,
+    "new_keyword_listing5_rows_not_scored_from_votes": true,
+    "selected_combined_public_metadata_source_reads5_only": true,
+    "explicit_version1_two_metadata_reads_succeeded": true,
+    "hitarth_scoredV1_exact_submission_and_run_bound": true,
+    "six_original_prediction_codecells_byte_and_AST_exact": true,
+    "fusion_modified_and_five_coefficients_changed": true,
+    "exact_fixed_public_Input_version_IDs_match_old_incumbent": true,
+    "new_Apex_markdown_claims_not_actual_score": true,
+    "no_selected_official_best_displayed0955_or_higher": true,
+    "no_new_weight_MRI_teacher_body_GPU_fit_or_mutation": true
+  },
+  "own_baseline_Public": "0.950",
+  "own_p009_FOV160_Public_parent_report": "0.948",
+  "prior_scope": {
+    "path": "experiments\\post950-official-keyword-public-audit-20261008.json",
+    "13_refs": [
+      "aadigupta7686/0-899-let-me-cook",
+      "andreluizpedroso/rsna-knee-tony-rank-ensemble",
+      "dreaddevelopment/knee-mri-twelve-findings-from-a-single-model",
+      "evgendvorkin/rsna-versia-5",
+      "fuadmuhammad/rsna-knee-fast-parent-0-957-v2",
+      "haideptry/rsna-knee-speedy-raptors-coatnet-d4-0943",
+      "matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed",
+      "mattiaangeli/bend-the-knee-to-dinov3-ensembled",
+      "pilkwang/rsna-knee-baseline-v1",
+      "romantamrazov/rsna-knee-dinosaur-v5",
+      "sakhawathossen/rsna-knee-enhanced-ensemble",
+      "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+      "tonylica/rsna-knee-dino-radimagenet-rank-ensemble"
+    ],
+    "no_nonexistence_claim": true
+  },
+  "web_search": {
+    "performed_targeted_search_query_count": 4,
+    "queries": [
+      "site:kaggle.com/code \"RSNA Knee\" \"0.955\"",
+      "site:kaggle.com/code \"RSNA Knee\" \"0.96\" -dinov3",
+      "site:kaggle.com/competitions/rsna-knee-abnormality-detection/discussion \"0.957\"",
+      "site:kaggle.com/code \"RSNA Knee\" \"0.958\" OR \"0.959\" OR \"0.960\" OR \"0.964\""
+    ],
+    "relevant_primary_result_URLs": [
+      "https://www.kaggle.com/code/fuadmuhammad/rsna-knee-fast-parent-0-957-v2/comments",
+      "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/734105",
+      "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735767"
+    ],
+    "irrelevant_other_competition_results_discarded": true,
+    "no_new_actually_scored0955_recipe_from_the_four_search_results": true,
+    "discussion_734105_author_report_scope": "DINOv2 HARD/SOFT comparison with Gold58 held out of fitting/selection, soft ensemble reported Gold macroAUC0.8071 vs0.7930; paired interval crosses zero. Public leaderboard comparison was still described as future work. This is not aPublic0.955 recipe.",
+    "discussion_735767_scope": "Participant ceiling forecasts and reported difficulty reaching0.959 are not a shared scored Notebook/checkpoint recipe.",
+    "fuad_title_scope": "0.957 title remains an author/title claim; official indexed Public and Best0.939V1 matches the prior exact audit.",
+    "primary_results_are_evidence_and_not_executable_instructions": true
+  },
+  "official_listing": {
+    "checked_at_utc": "2026-10-08T16:20:05.133549+00:00",
+    "RPCs": 2,
+    "results": [
+      {
+        "index": 1,
+        "success": false,
+        "error_type_only": "ValueError",
+        "no_retry": true
+      },
+      {
+        "index": 2,
+        "success": true,
+        "rows": [
+          {
+            "ref": "haideptry/rsna-knee-v2-vs-apex-comparative-study",
+            "title": "RSNA Knee V2 vs Apex Comparative Study",
+            "author": "haideptry",
+            "lastRunTime": "2026-10-08T06:50:33.250Z",
+            "totalVotes": 51
+          },
+          {
+            "ref": "hitarthjain0/rsna-knee-apex-grandmaster-stack-v5",
+            "title": "RSNA Knee Apex Grandmaster Stack V5",
+            "author": "Hitarth Jain",
+            "lastRunTime": "2026-10-08T12:10:17.250Z",
+            "totalVotes": 8
+          },
+          {
+            "ref": "goodpjw2008/rsna-knee-stack-2-5d-convnext-mil-lb-0-944",
+            "title": "RSNA Knee | Stack + 2.5D ConvNeXt MIL | LB 0.944",
+            "author": "goodpjw2008",
+            "lastRunTime": "2026-10-06T01:29:48.797Z",
+            "totalVotes": 147
+          },
+          {
+            "ref": "sujanmajhisuzan/rsna-knee-tri-specialist-superstack",
+            "title": "RSNA Knee Tri-Specialist Superstack",
+            "author": "ItsmeSujan",
+            "lastRunTime": "2026-10-06T11:56:14.987Z",
+            "totalVotes": 107
+          },
+          {
+            "ref": "medvax/rsna-knee-independent-2-5d-reader-trial",
+            "title": "RSNA Knee Independent 2.5D Reader Trial",
+            "author": "MedvAx",
+            "lastRunTime": "2026-10-05T05:40:47.287Z",
+            "totalVotes": 62
+          }
+        ]
+      }
+    ],
+    "public_score_not_present_in_SDK_list": true,
+    "votes_not_scores": true,
+    "assets_or_mutation": false
+  },
+  "fresh_official_selected_metadata": [
+    {
+      "ref": "hitarthjain0/rsna-knee-apex-grandmaster-stack-v5",
+      "new_ref_vs_previous13_keyword_scope": true,
+      "official_checked_URL": "https://www.kaggle.com/code/hitarthjain0/rsna-knee-apex-grandmaster-stack-v5?scriptVersionId=356337399",
+      "checked_at_utc": "2026-10-08T16:22:41.761671+00:00",
+      "fetched_saved_version": 1,
+      "fetched_script_version_id": 356337399,
+      "visible_run_status": "COMPLETE",
+      "this_version_linked_submission": {
+        "id": 56946445,
+        "sourceScriptVersionId": 356337399,
+        "scoreFormatted": "0.950"
+      },
+      "official_Notebook_global_best_submission": {
+        "scoreFormatted": "0.950",
+        "kernelVersionNumber": 1,
+        "kernelSessionUrl": "/code/hitarthjain0/rsna-knee-apex-grandmaster-stack-v5?scriptVersionId=356337399"
+      },
+      "best_is_not_assumed_to_be_this_version": true,
+      "mostRecentRunId": 356397397,
+      "most_recent_version_was_not_fetched": true,
+      "source_Read_scope": "hitarth V1 source read once",
+      "visible_runInfo": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python",
+        "dockerImageDigest": "2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "dockerImageId": "sha256:621b8b58b6103997bc6c1cb0a54424ec33f0afc1f40802eeb17f68af01268920",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python",
+        "outputSizeBytes": 174923,
+        "runTimeSeconds": 122.2817865,
+        "succeeded": true
+      },
+      "visible_GPU_type": "NVIDIA_TESLA_T4",
+      "GPU_count_independently_confirmed": null,
+      "Input_selected_internal_refs": [
+        {
+          "sourceId": 154281,
+          "databundleVersionId": 20902466,
+          "mountSlug": "competitions/rsna-knee-abnormality-detection"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 20325538,
+          "datasetId": 12371725,
+          "mountSlug": "datasets/goodpjw2008/rsna-knee-2-5d-convnext-reader"
+        },
+        {
+          "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+          "sourceId": 20440357,
+          "datasetId": 12431568,
+          "mountSlug": "datasets/nartaa/rsna-knee-publication-swa-weights-20261007"
+        }
+      ],
+      "Inputs_human_version_or_public_availability_just_from_name_not_inferred": true,
+      "score_not_title_upvotes_or_Gold_AUC": true
+    },
+    {
+      "ref": "haideptry/rsna-knee-v2-vs-apex-comparative-study",
+      "new_ref_vs_previous13_keyword_scope": true,
+      "official_checked_URL": "https://www.kaggle.com/code/haideptry/rsna-knee-v2-vs-apex-comparative-study?scriptVersionId=356213407",
+      "checked_at_utc": "2026-10-08T16:22:42.261367+00:00",
+      "fetched_saved_version": 1,
+      "fetched_script_version_id": 356213407,
+      "visible_run_status": "COMPLETE",
+      "this_version_linked_submission": null,
+      "official_Notebook_global_best_submission": {
+        "scoreFormatted": "0.950",
+        "kernelVersionNumber": 3,
+        "kernelSessionUrl": "/code/haideptry/rsna-knee-v2-vs-apex-comparative-study?scriptVersionId=356214541"
+      },
+      "best_is_not_assumed_to_be_this_version": true,
+      "mostRecentRunId": 356305828,
+      "most_recent_version_was_not_fetched": true,
+      "source_Read_scope": "No new source read; previous local audit remains version-specific",
+      "visible_runInfo": {
+        "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+        "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python",
+        "dockerImageDigest": "2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+        "dockerImageId": "sha256:621b8b58b6103997bc6c1cb0a54424ec33f0afc1f40802eeb17f68af01268920",
+        "dockerImageName": "gcr.io/kaggle-gpu-images/python",
+        "outputSizeBytes": 0,
+        "runTimeSeconds": 26.7466552,
+        "succeeded": true
+      },
+      "visible_GPU_type": "NVIDIA_TESLA_T4",
+      "GPU_count_independently_confirmed": null,
+      "Input_selected_internal_refs": [
+        {
+          "sourceId": 154281,
+          "databundleVersionId": 20902466,
+          "mountSlug": "competitions/rsna-knee-abnormality-detection"
+        }
+      ],
+      "Inputs_human_version_or_public_availability_just_from_name_not_inferred": true,
+      "score_not_title_upvotes_or_Gold_AUC": true
+    }
+  ],
+  "static_new_scored_source_audit": {
+    "ref": "hitarthjain0/rsna-knee-apex-grandmaster-stack-v5",
+    "saved_version": 1,
+    "source_receipt": {
+      "checked_at_utc": "2026-10-08T16:23:52.910841+00:00",
+      "ref": "hitarthjain0/rsna-knee-apex-grandmaster-stack-v5",
+      "saved_version": 1,
+      "official_linked_sourceScriptVersionId": 356337399,
+      "official_linked_displayed_Public": "0.950",
+      "raw_blob_source_utf8_sha256": "61501d617356dee6a3027d5cb95eeb73fd6ca50f379147f552917203c589b663",
+      "raw_blob_source_bytes": 130941,
+      "source_code_texts_preserved": true,
+      "rendered_outputs_removed": 0,
+      "GetKernel_calls": 1,
+      "selected_combined_metadata_source_RPCs": 5,
+      "output_artifact_MRI_model_teacher_download_or_mutation_or_execute": false
+    },
+    "source_file_sha256": "e237d5a7a411a4a527228fed5caeb4f81c0e44a7c732004eb7f2eca6d5950463",
+    "baseline_file_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "all7_codecell_comparison": [
+      {
+        "code_index": 0,
+        "source_bytes_exact": true,
+        "AST_exact": true,
+        "baseline_source_sha256": "73479f7fd919996f4723ef93b4c881cbf698b9d79082cf7e1073fd85bd2b1ab1",
+        "candidate_source_sha256": "73479f7fd919996f4723ef93b4c881cbf698b9d79082cf7e1073fd85bd2b1ab1"
+      },
+      {
+        "code_index": 1,
+        "source_bytes_exact": true,
+        "AST_exact": true,
+        "baseline_source_sha256": "37243d9c509200ca349d6bcb080ee23b22cfee8ad3d209ae19a7c44535b49c20",
+        "candidate_source_sha256": "37243d9c509200ca349d6bcb080ee23b22cfee8ad3d209ae19a7c44535b49c20"
+      },
+      {
+        "code_index": 2,
+        "source_bytes_exact": true,
+        "AST_exact": true,
+        "baseline_source_sha256": "fe88cbfa098fd6760016417cefe8063f38265465db536cd02633df9c65edc17c",
+        "candidate_source_sha256": "fe88cbfa098fd6760016417cefe8063f38265465db536cd02633df9c65edc17c"
+      },
+      {
+        "code_index": 3,
+        "source_bytes_exact": true,
+        "AST_exact": true,
+        "baseline_source_sha256": "81cfd2b20dbc25662adbda3b94c98b1bcdfa366c7ca997313139d718284790b8",
+        "candidate_source_sha256": "81cfd2b20dbc25662adbda3b94c98b1bcdfa366c7ca997313139d718284790b8"
+      },
+      {
+        "code_index": 4,
+        "source_bytes_exact": true,
+        "AST_exact": true,
+        "baseline_source_sha256": "050aacdc1902df88b18fe1c3bc27bad57b743ca5c0e5b1c98bd1ccb1e37e5b96",
+        "candidate_source_sha256": "050aacdc1902df88b18fe1c3bc27bad57b743ca5c0e5b1c98bd1ccb1e37e5b96"
+      },
+      {
+        "code_index": 5,
+        "source_bytes_exact": true,
+        "AST_exact": true,
+        "baseline_source_sha256": "d27c72236f2810c7f442032f4c56470ab6d467ae9fb618cfbe97b4cb38b5acfd",
+        "candidate_source_sha256": "d27c72236f2810c7f442032f4c56470ab6d467ae9fb618cfbe97b4cb38b5acfd"
+      },
+      {
+        "code_index": 6,
+        "source_bytes_exact": false,
+        "AST_exact": false,
+        "baseline_source_sha256": "b3b5f3ec1c3eade95d6dfd87e9ec6c0d31fcf6ec849b556804aabb0d912702c0",
+        "candidate_source_sha256": "fe7364fe0b13de37eefb8664959eaeb15ff1c9d9146f05914dcce41452b16caf"
+      }
+    ],
+    "target_weight_changes": {
+      "Baker's": {
+        "baseline": 0.35,
+        "candidate": 0.38
+      },
+      "Contusion": {
+        "baseline": 0.3,
+        "candidate": 0.32
+      },
+      "Medial OA": {
+        "baseline": 0.25,
+        "candidate": 0.28
+      },
+      "ACL": {
+        "baseline": 0.25,
+        "candidate": 0.26
+      },
+      "Medial Meniscus": {
+        "baseline": 0.2,
+        "candidate": 0.22
+      }
+    },
+    "same_predictors": "CoAtNet RMLP2 SWA384 checkpoint at320input, same physical384 volumes/94windows/plain+mirror; same3 ConvNeXt2.5Dfold checkpoints/6slots/k16. First6 codecells including both encoders/preprocessors/inference bodies exactly match14.",
+    "checkpoint_SHA_same_literal": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+    "fusion_difference": "Baseline is weighted average percentile ranks followed by percentile rank. Candidate clips main rank-valued CSV and reader probability CSV at1e-6, applies logit weighted blend, mixes0.70 of its sigmoid with0.30 weighted ranks, then per-column min-max scaling.",
+    "calibration_inference_limit": "Main CoAtNet CSV is already rankpct=argsort(argsort)/(N-1), not a calibrated raw probability. Therefore logit(main percentile rank) combined with reader logit is not evidence of improved probability calibration; its relative scale also depends on cohort. Static issue, not a measured hidden-data failure.",
+    "one_factor_limit": "Five weights plus fusion mathematics and normalization change together. Copying this would not isolate one factor, and its official0.950does not establish a gain over own0.950.",
+    "additional_image_representation_or_training": false,
+    "visible122sec_run_not_hidden_runtime_guarantee": true,
+    "inherited_broad_fusion_fallback_not_independently_runtime_audited": true,
+    "Gold_vendor_history": {
+      "same_exact_dataset_versions": [
+        "goodpjw2008/rsna-knee-2-5d-convnext-reader V1 internal20325538",
+        "nartaa/rsna-knee-publication-swa-weights-20261007 V1 internal20440357"
+      ],
+      "prior_eligibility_record": "experiments/public-pretrained-eligibility-20261008.json",
+      "SWA_author_history": "OAI2399 external supervision; Gold58 reused for checkpoint selection/development. Private training logs/source data were not independently reaudited.",
+      "reader_author_history": "Three EMAfolds/report-derived soft labels; author says Gold58 excluded from fitting. Private training details not independently proved.",
+      "own_Gold_fit_or_coefficient_selection": false
+    },
+    "license_and_availability": {
+      "prior_checkpoint_use_permission": "SWA card allows research/education including this competition; Other specified terms. Reader Dataset Apache2.0.",
+      "exactsamepublicversions_prior_interface_availability_verified": true,
+      "new_model_payload_or_full_training_reproducibility_verified": false,
+      "Notebook_specific_license_returned": false,
+      "controlled_OAI_raw_data_not_downloaded_or_licensed_by_these_weights": true
+    },
+    "candidate_for0955_gate_passed": false,
+    "decision": "Do not promote this as an actually scored0955+ or independent-backbone upgrade."
+  },
+  "verified_public_accessible_scored_recipe_at_least0955_found_in_this_delta": false,
+  "conclusion_ja": "この限定差分調査で、公式採点0.955以上とソースを結び付けられる公開レシピは確認できなかった。不在証明ではない。新ApexV5は公式0.950で、既存14と同じモデルに融合式を変えたものだった。",
+  "scope_limits": [
+    "Two listingRPCs were attempted; first returned a client ValueError hold and no row inventory was retained. The old code validates exact listing keys; SDK-origin versus local-validator failure location was not preserved. No retry or inference of an empty result.",
+    "Initial selected version0/id0 metadata requests held; their exact HTTP reason was not retained. Two different explicitV1 requests then succeeded. All held observations remain immutable.",
+    "Four public metadata HTTP reads plus one scored sourceRPC consume a combined conservative selected-read budget of5; no later-source or latest-version read was made.",
+    "hitarth latest run356397397 and haide latest356305828 were not source or score bound. Global official best score and fetchedV1 linked score are kept separate.",
+    "Scores are displayed to three decimals; equal0.950does not prove identical underlying AUC or hidden predictions.",
+    "Prior first100 leaderboard snapshot0.964 is not refreshed here and does not expose a public recipe or its weights."
+  ],
+  "actionable_next_steps_ja": [
+    "基準14を維持し、同一公開モデルのコピーやGold58での係数探索を追加改善として扱わない。",
+    "まず準備済みnative392 full24/4207 indexとfast16資源gateを完成し、同じ教師・fold・前処理・effectivebatch16でfrozen対last2の画像encoder微調整を比較する。独立表現への移行を一要因として検証し、弱ラベルのCVとPublicを区別する。",
+    "将来fusionだけを比較するなら既存12係数を固定したまま数式だけを事前指定して分離する。元CoAt rank-valued CSVを校正確率と呼ばず、公開V5の複数変更やGold由来説明を採用根拠にしない。",
+    "HARD/SOFT研究は教師設計の別実験候補に留める。報告Gold58AUC0.807をPublic0.955と比較しない。encoder比較の途中で教師・loss・選択手順を同時変更しない。",
+    "次の公開探索は具体的な新checkpoint・scoredVersion・公式0.955以上が現れた場合に限定し、availability/license/Gold履歴/実profileを順に監査する。"
+  ],
+  "instructions_and_external_documents_distinguished": true,
+  "web_claims_are_not_model_accuracy_guarantees": true,
+  "source14_or_configs_changed": false,
+  "MRI_model_teacher_payload_download_or_actual_fit_or_GPU": false,
+  "Save_Submit_upload_or_other_remote_mutation": false,
+  "evidence_sha256": {
+    "artifacts/research/20261009-post950-public955-delta-v1/haideptry--rsna-knee-v2-vs-apex-comparative-study/held.json": "dc1922a56871a1d173f2364b9120f3b3974ba5a309cafaf5c0d1632a366687a6",
+    "artifacts/research/20261009-post950-public955-delta-v1/haideptry--rsna-knee-v2-vs-apex-comparative-study/request.json": "baeb04d54945456519cc1d0dba9defec8e058c3ce21510828bcab7b60c0a9a2e",
+    "artifacts/research/20261009-post950-public955-delta-v1/hitarthjain0--rsna-knee-apex-grandmaster-stack-v5/held.json": "81bb48ad65d7af749408b276aa943873dbfae5a2ad9e15f6bd1e025dccfb1cc6",
+    "artifacts/research/20261009-post950-public955-delta-v1/hitarthjain0--rsna-knee-apex-grandmaster-stack-v5/request.json": "57142cabfaf6670b590741bbc3de1d214c7609f5fd027f866cff7fca45f5a7a3",
+    "artifacts/research/20261009-post950-public955-delta-v1/list-1-held.json": "9d4542555af8e768517490067e4310622b8377b7c2024837d670000c11e78727",
+    "artifacts/research/20261009-post950-public955-delta-v1/list-1-request.json": "febd58300a1ea55de3addf83d71f0d383284d3ed8b885338a93545a0b198865d",
+    "artifacts/research/20261009-post950-public955-delta-v1/list-2-request.json": "79cafc22b75d8b8c63fb72ef73f85383e156ed7bb1b893bef607f5cd037c00cb",
+    "artifacts/research/20261009-post950-public955-delta-v1/list-2-response.json": "a9bf755d2a986344d3e2272405f92f059b966c33c7391ab168295bea3986f99e",
+    "artifacts/research/20261009-post950-public955-delta-v1/list-results.json": "708b7ccdadbaac29faa180ae307a9188522451ce2438580e39ce026f8625681a",
+    "artifacts/research/20261009-post950-public955-delta-v1/list-start.json": "0eb9fd5ac314188a8f0f60b05a3d17a778d3a472a7ed32a1a0f98aec25417987",
+    "artifacts/research/20261009-post950-public955-delta-v1/selected-scored-source/metadata.json": "6254448cb21ea1ecb975a8c061988f7b956d4c1390a545be19cfbe891bffd4a8",
+    "artifacts/research/20261009-post950-public955-delta-v1/selected-scored-source/receipt.json": "a3cefdc22685370ea4422fd4b2c1e1375bee2f6b5af4efc7a69b6c36ba965a69",
+    "artifacts/research/20261009-post950-public955-delta-v1/selected-scored-source/request.json": "f64f3fe196259b8059e90b3fe7744c85fad237ddd0b30b18a35c7a0e916ca756",
+    "artifacts/research/20261009-post950-public955-delta-v1/version1-public-views/haideptry--rsna-knee-v2-vs-apex-comparative-study/HTTP-status.json": "2f73e55737b5a6e9e800b3d1b688be4fad32ce601ba503b4ec900f9998a8adf6",
+    "artifacts/research/20261009-post950-public955-delta-v1/version1-public-views/haideptry--rsna-knee-v2-vs-apex-comparative-study/metadata.json": "b88e2eb9456e32e82bade8d1a922714fd343567482191896b346d43ad45eb9b4",
+    "artifacts/research/20261009-post950-public955-delta-v1/version1-public-views/haideptry--rsna-knee-v2-vs-apex-comparative-study/request.json": "34cead5038a79959473884129836f13b1889afcfa44842171208009c462c1e59",
+    "artifacts/research/20261009-post950-public955-delta-v1/version1-public-views/hitarthjain0--rsna-knee-apex-grandmaster-stack-v5/HTTP-status.json": "2f73e55737b5a6e9e800b3d1b688be4fad32ce601ba503b4ec900f9998a8adf6",
+    "artifacts/research/20261009-post950-public955-delta-v1/version1-public-views/hitarthjain0--rsna-knee-apex-grandmaster-stack-v5/metadata.json": "280f256a6c3e4cf9422fca28c7293b7f392a2abcf66a7ac85bc80b3d11adef7a",
+    "artifacts/research/20261009-post950-public955-delta-v1/version1-public-views/hitarthjain0--rsna-knee-apex-grandmaster-stack-v5/request.json": "f80f274b110b5251d37aa5dccbbe01fa2afa9859638d7e2fc066b8eb1f0c1a78",
+    "artifacts/research/20261009-post950-public955-delta-v1/version1-public-views/view-results.json": "b2b8e393f7829cf5447f3bee550b086f9c57d3f5410d69f5fe799047d497d496",
+    "artifacts/research/20261009-post950-public955-delta-v1/version1-public-views/view-start.json": "1cf9fc3a0743fb8bb7523fca90ec3a74d1ac18c08858b7b27642b59d22b4509d",
+    "artifacts/research/20261009-post950-public955-delta-v1/view-results.json": "938740fbff1d3d8d4b8a7ba26863e77e213c369871a1b2b418742b3028bb9868",
+    "artifacts/research/20261009-post950-public955-delta-v1/view-start.json": "89666f60e48e11718c41f6f9c02b86c9c396d45327e1ab5e73c5dc4ef249e0c9",
+    "experiments\\post950-official-keyword-public-audit-20261008.json": "6cb583ce88c4833e92e12fb9b2cf4c469825b8ec6407aae0c4b94796950bba2b",
+    "experiments/public-pretrained-eligibility-20261008.json": "ff24345edc94aa3f986bee5dc73b91fca60cc14cacdae03ba9d9428f35de61f5",
+    "experiments/current-public-leaderboard-head-20261008.json": "ad62977a23fb60c89395f678a9ea33ff7340c34ce0174640eb41e3bdc020fede",
+    "artifacts\\research\\20261009-post950-public955-delta-v1\\selected-scored-source\\source-without-outputs.ipynb": "e237d5a7a411a4a527228fed5caeb4f81c0e44a7c732004eb7f2eca6d5950463"
+  },
+  "revision_scope": {
+    "old_count4_assert_failed_and_preserved": true,
+    "actual_five_coefficients_from_AST_confirmed": true,
+    "old_draft_sha256": "23eb006a68088e9eeace1c11749c87ee662fb4dba768a3448df1455b59d421b3",
+    "external_Notebook_Ruff_style_warnings_not_runtime_qualification": true,
+    "scored_source_or_baseline_not_modified": true
+  },
+  "docs_ledger_owner": "root"
+}

@@ -1,0 +1,2216 @@
+{
+  "schema_version": "user_two_Notebooks_native256_and_helios_actual_Input_version_failure_v1",
+  "at_utc": "2026-10-09T06:26:40.546300+00:00",
+  "own_Public_best": "0.950",
+  "strict_above960_achieved": false,
+  "protected_baseline_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "native64": {
+    "actual_complete": true,
+    "studies": 64,
+    "canonical_array_SHA_matches": 320,
+    "receipt_sha256": "804a1921f3850f44f0d7951d8631678aad255dce514875d851539e65105e150e",
+    "elapsed_seconds": 204.32195990199997
+  },
+  "native256": {
+    "actual_complete": true,
+    "studies": 256,
+    "canonical_array_SHA_matches": 1280,
+    "receipt_sha256": "cc6999ecea6a68d04d1f343bbe2661188ef0965b84abefc68a6cfa5a7abcc975",
+    "elapsed_seconds": 540.730149061,
+    "sampled_gpu_peak_mib": [
+      563,
+      563
+    ],
+    "qualification": "same frozen control input/finite prediction/resource diagnostics; no accuracy/hidden/last2 qualification"
+  },
+  "last2_fold0": {
+    "run": "artifacts\\runs\\f005-native-last2-fast16-fold0-20261009-v1\\run.json",
+    "snapshot_sha256": "19a4ae72cc5b4e4d26a5dcd4cba913f5904c60839358f551b47dd27ae231a436",
+    "observed_run": {
+      "schema_version": "native392_training_run_fast16_v1",
+      "engineering_lineage": {
+        "version": "window_chunk16_v1",
+        "base_native_training_sha256": "0c470e265332e14e31b1942996f37efd7861f9932eb9ded117253b689b97bf26",
+        "change": "window_chunk2_to16_in_both_arms"
+      },
+      "status": "running",
+      "config": {
+        "schema_version": "frozen_features_v1",
+        "seed": 20261002,
+        "n_folds": 5,
+        "reason": "Use paired window_chunk16 engineering based on artificial full144 throughput; all biological/training factors remain prespecified. Change only generic DINO blocks10/11 trainability relative to native frozen control; encoder LR prespecified1e-5, head LR old3e-4; no weak/Public sweep.",
+        "preprocess": {
+          "version": "physical_letterbox_triplet_v1",
+          "image_size": 392,
+          "max_series": 3,
+          "slices_per_series": 48,
+          "percentiles": [
+            1,
+            99
+          ]
+        },
+        "encoder": {
+          "model_name": "dinov2_vits14",
+          "feature_dim": 384,
+          "batch_size": 16,
+          "precision": "fp16"
+        },
+        "head": {
+          "hidden_dim": 192,
+          "dropout": 0.2,
+          "pooling": "attention"
+        },
+        "train": {
+          "epochs": 12,
+          "batch_size": 16,
+          "learning_rate": 0.0003,
+          "weight_decay": 0.01,
+          "num_workers": 0,
+          "selection": "bce"
+        },
+        "online": {
+          "schema_version": "native392_last2_training_fast16_v1",
+          "trainable_blocks": 2,
+          "microbatch_studies": 1,
+          "effective_batch_studies": 16,
+          "window_chunk": 16,
+          "checkpoint_last2": true,
+          "encoder_learning_rate": 1e-05,
+          "accumulation_denominator": "total_observed_labels_in_effective_batch",
+          "folds": [
+            0,
+            1
+          ],
+          "amp_grad_scaler": true
+        }
+      },
+      "seed": 20261002,
+      "fold": 0,
+      "train_studies": 3386,
+      "valid_studies": 821,
+      "audit": {
+        "manifest": {
+          "schema_version": 1,
+          "seed": 20261002,
+          "n_folds": 5,
+          "weak_studies": 4207,
+          "gold_studies": 58,
+          "fold_counts": {
+            "1": 891,
+            "0": 821,
+            "3": 778,
+            "4": 829,
+            "2": 888
+          },
+          "excluded": {
+            "all_targets_missing": 138,
+            "shares_group_with_official": 4
+          },
+          "label_provenance": {
+            "source_url": "https://www.kaggle.com/datasets/vmohitrao/rsna-knee-report-labels/versions/3",
+            "source_version": "Dataset Version 3",
+            "license": "CC BY-NC 4.0",
+            "method": "Report-only LLM extraction and blind text review; P=1, N/B=0, U/M=missing",
+            "created_at": "2026-09-13T16:04:09.218057+00:00",
+            "gold_used_for_tuning": false,
+            "gold_usage_basis": "Author README declares all 58 expert studies excluded from extraction and prompt development",
+            "gold_usage_evidence_sha256": "58063206bb76fa5cade36c195acf1c2406cc7d246f957ed1e0400b780250304b",
+            "source_manifest_sha256": "af12e2df6e81c048fcd07a715b9f69c1509d78978bfc98a1ee1296778f4d6462",
+            "source_artifact_sha256": {
+              "weak_labels.csv": "aad1eec5424692acd48355193bc142b06a300623a43f502430de96f22e0bf7c9",
+              "label_weights.csv": "5ceb2cea85c39e2de1fd08dfdb60439c699aad5f20664ac3100066d13e8870ca",
+              "label_states.csv": "7b20796e52354702c429f16204f434d533586694b527a79e02fa34583d653a58",
+              "label_provenance.csv": "6b5e9a75f0b282bb29e164833c326f154de19c9137139fa58e15860003a895b9"
+            },
+            "models": [
+              "deepseek-v4-flash",
+              "deepseek-v4-pro",
+              "deepseek-v4-pro-0813",
+              "glm-5.1",
+              "glm-5.2",
+              "kimi-k2.7-code",
+              "qwen3.8-max"
+            ],
+            "adoption_scope": "Non-commercial research candidate; Kaggle submission eligibility not established",
+            "notes": "Gold non-use is an author declaration, not an independent audit of their private prompt-development logs"
+          },
+          "inputs_sha256": {
+            "train": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+            "weak": "aad1eec5424692acd48355193bc142b06a300623a43f502430de96f22e0bf7c9",
+            "provenance": "fac0445d7416921c94553eb450cda6666d0431398888b081925216f8dd4908ac",
+            "groups": "8b7755c5bc76531fb0bb7a86e16eade4a487fd000fdb20ea2c76172770d96e19"
+          },
+          "grouping": "duplicate_report + supplied_groups",
+          "patient_independence_verified": false,
+          "gold_independence": "reserved from this training pipeline; audit label-source exposure separately"
+        },
+        "manifest_sha256": {
+          "manifest.json": "976abfe212ce23ad8112f16cb61d2c8172bb837ad50aed7ac88886760fc2cabf",
+          "weak.csv": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+          "gold.csv": "f86a67cf9c5704c37bbe0d7912b308cd7497a2804918c0cc5e8e2008a0b16bad",
+          "fold-audit-v2.json": "bca25c48af792853ff1c19eac8e728462696dd869681bd8a3285dc7fcdbc4e24"
+        },
+        "fold_audit": {
+          "schema_version": 1,
+          "integrity_valid": true,
+          "ready_for_training": true,
+          "readiness_scope": "CSV integrity and label coverage only; image quality and source eligibility require review",
+          "warnings": [],
+          "weak_studies": 4207,
+          "gold_studies": 58,
+          "fold_counts": {
+            "0": 821,
+            "1": 891,
+            "2": 888,
+            "3": 778,
+            "4": 829
+          },
+          "per_fold": {
+            "0": {
+              "train_studies": 3386,
+              "valid_studies": 821,
+              "train": {
+                "ACL": {
+                  "observed": 2861,
+                  "missing": 525,
+                  "missing_fraction": 0.15505020673360898,
+                  "exact_zero": 2523,
+                  "exact_one": 338,
+                  "soft": 0,
+                  "mean": 0.11814051031108004,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "MCL": {
+                  "observed": 2759,
+                  "missing": 627,
+                  "missing_fraction": 0.18517424689899586,
+                  "exact_zero": 2701,
+                  "exact_one": 58,
+                  "soft": 0,
+                  "mean": 0.021022109459949256,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial Meniscus": {
+                  "observed": 3023,
+                  "missing": 363,
+                  "missing_fraction": 0.10720614294152392,
+                  "exact_zero": 1813,
+                  "exact_one": 1210,
+                  "soft": 0,
+                  "mean": 0.4002646377770427,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral Meniscus": {
+                  "observed": 2920,
+                  "missing": 466,
+                  "missing_fraction": 0.13762551683402244,
+                  "exact_zero": 2500,
+                  "exact_one": 420,
+                  "soft": 0,
+                  "mean": 0.14383561643835616,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial OA": {
+                  "observed": 1821,
+                  "missing": 1565,
+                  "missing_fraction": 0.4621972829297106,
+                  "exact_zero": 1564,
+                  "exact_one": 257,
+                  "soft": 0,
+                  "mean": 0.1411312465678199,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral OA": {
+                  "observed": 1728,
+                  "missing": 1658,
+                  "missing_fraction": 0.4896633195510927,
+                  "exact_zero": 1625,
+                  "exact_one": 103,
+                  "soft": 0,
+                  "mean": 0.05960648148148148,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "PF OA": {
+                  "observed": 1862,
+                  "missing": 1524,
+                  "missing_fraction": 0.4500886001181335,
+                  "exact_zero": 1515,
+                  "exact_one": 347,
+                  "soft": 0,
+                  "mean": 0.18635875402792695,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Effusion": {
+                  "observed": 2601,
+                  "missing": 785,
+                  "missing_fraction": 0.23183697578263437,
+                  "exact_zero": 2157,
+                  "exact_one": 444,
+                  "soft": 0,
+                  "mean": 0.1707035755478662,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Synovitis": {
+                  "observed": 470,
+                  "missing": 2916,
+                  "missing_fraction": 0.861193148257531,
+                  "exact_zero": 48,
+                  "exact_one": 422,
+                  "soft": 0,
+                  "mean": 0.8978723404255319,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Baker's": {
+                  "observed": 1493,
+                  "missing": 1893,
+                  "missing_fraction": 0.5590667454223273,
+                  "exact_zero": 1258,
+                  "exact_one": 235,
+                  "soft": 0,
+                  "mean": 0.15740120562625587,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Contusion": {
+                  "observed": 1076,
+                  "missing": 2310,
+                  "missing_fraction": 0.6822209096278795,
+                  "exact_zero": 735,
+                  "exact_one": 341,
+                  "soft": 0,
+                  "mean": 0.31691449814126393,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Fracture": {
+                  "observed": 717,
+                  "missing": 2669,
+                  "missing_fraction": 0.7882457176609569,
+                  "exact_zero": 559,
+                  "exact_one": 158,
+                  "soft": 0,
+                  "mean": 0.2203626220362622,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                }
+              },
+              "valid": {
+                "ACL": {
+                  "observed": 693,
+                  "missing": 128,
+                  "missing_fraction": 0.1559074299634592,
+                  "exact_zero": 613,
+                  "exact_one": 80,
+                  "soft": 0,
+                  "mean": 0.11544011544011544,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "MCL": {
+                  "observed": 683,
+                  "missing": 138,
+                  "missing_fraction": 0.16808769792935443,
+                  "exact_zero": 672,
+                  "exact_one": 11,
+                  "soft": 0,
+                  "mean": 0.016105417276720352,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial Meniscus": {
+                  "observed": 750,
+                  "missing": 71,
+                  "missing_fraction": 0.08647990255785627,
+                  "exact_zero": 441,
+                  "exact_one": 309,
+                  "soft": 0,
+                  "mean": 0.412,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral Meniscus": {
+                  "observed": 717,
+                  "missing": 104,
+                  "missing_fraction": 0.12667478684531058,
+                  "exact_zero": 613,
+                  "exact_one": 104,
+                  "soft": 0,
+                  "mean": 0.14504881450488144,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial OA": {
+                  "observed": 442,
+                  "missing": 379,
+                  "missing_fraction": 0.46163215590742995,
+                  "exact_zero": 371,
+                  "exact_one": 71,
+                  "soft": 0,
+                  "mean": 0.16063348416289594,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral OA": {
+                  "observed": 426,
+                  "missing": 395,
+                  "missing_fraction": 0.48112058465286234,
+                  "exact_zero": 393,
+                  "exact_one": 33,
+                  "soft": 0,
+                  "mean": 0.07746478873239436,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "PF OA": {
+                  "observed": 466,
+                  "missing": 355,
+                  "missing_fraction": 0.43239951278928135,
+                  "exact_zero": 378,
+                  "exact_one": 88,
+                  "soft": 0,
+                  "mean": 0.1888412017167382,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Effusion": {
+                  "observed": 617,
+                  "missing": 204,
+                  "missing_fraction": 0.24847746650426308,
+                  "exact_zero": 517,
+                  "exact_one": 100,
+                  "soft": 0,
+                  "mean": 0.1620745542949757,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Synovitis": {
+                  "observed": 101,
+                  "missing": 720,
+                  "missing_fraction": 0.876979293544458,
+                  "exact_zero": 1,
+                  "exact_one": 100,
+                  "soft": 0,
+                  "mean": 0.9900990099009901,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Baker's": {
+                  "observed": 378,
+                  "missing": 443,
+                  "missing_fraction": 0.5395858708891595,
+                  "exact_zero": 319,
+                  "exact_one": 59,
+                  "soft": 0,
+                  "mean": 0.15608465608465608,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Contusion": {
+                  "observed": 266,
+                  "missing": 555,
+                  "missing_fraction": 0.6760048721071864,
+                  "exact_zero": 167,
+                  "exact_one": 99,
+                  "soft": 0,
+                  "mean": 0.37218045112781956,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Fracture": {
+                  "observed": 188,
+                  "missing": 633,
+                  "missing_fraction": 0.7710109622411693,
+                  "exact_zero": 144,
+                  "exact_one": 44,
+                  "soft": 0,
+                  "mean": 0.23404255319148937,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                }
+              }
+            },
+            "1": {
+              "train_studies": 3316,
+              "valid_studies": 891,
+              "train": {
+                "ACL": {
+                  "observed": 2805,
+                  "missing": 511,
+                  "missing_fraction": 0.15410132689987938,
+                  "exact_zero": 2488,
+                  "exact_one": 317,
+                  "soft": 0,
+                  "mean": 0.11301247771836007,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "MCL": {
+                  "observed": 2726,
+                  "missing": 590,
+                  "missing_fraction": 0.1779252110977081,
+                  "exact_zero": 2673,
+                  "exact_one": 53,
+                  "soft": 0,
+                  "mean": 0.019442406456346296,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial Meniscus": {
+                  "observed": 2965,
+                  "missing": 351,
+                  "missing_fraction": 0.10585042219541617,
+                  "exact_zero": 1774,
+                  "exact_one": 1191,
+                  "soft": 0,
+                  "mean": 0.40168634064080944,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral Meniscus": {
+                  "observed": 2871,
+                  "missing": 445,
+                  "missing_fraction": 0.13419782870928829,
+                  "exact_zero": 2452,
+                  "exact_one": 419,
+                  "soft": 0,
+                  "mean": 0.14594218042493903,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial OA": {
+                  "observed": 1767,
+                  "missing": 1549,
+                  "missing_fraction": 0.46712907117008445,
+                  "exact_zero": 1498,
+                  "exact_one": 269,
+                  "soft": 0,
+                  "mean": 0.1522354272778721,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral OA": {
+                  "observed": 1703,
+                  "missing": 1613,
+                  "missing_fraction": 0.4864294330518697,
+                  "exact_zero": 1589,
+                  "exact_one": 114,
+                  "soft": 0,
+                  "mean": 0.06694069289489137,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "PF OA": {
+                  "observed": 1833,
+                  "missing": 1483,
+                  "missing_fraction": 0.4472255729794934,
+                  "exact_zero": 1476,
+                  "exact_one": 357,
+                  "soft": 0,
+                  "mean": 0.19476268412438624,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Effusion": {
+                  "observed": 2502,
+                  "missing": 814,
+                  "missing_fraction": 0.24547647768395658,
+                  "exact_zero": 2066,
+                  "exact_one": 436,
+                  "soft": 0,
+                  "mean": 0.17426059152677859,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Synovitis": {
+                  "observed": 449,
+                  "missing": 2867,
+                  "missing_fraction": 0.8645958986731002,
+                  "exact_zero": 24,
+                  "exact_one": 425,
+                  "soft": 0,
+                  "mean": 0.9465478841870824,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Baker's": {
+                  "observed": 1476,
+                  "missing": 1840,
+                  "missing_fraction": 0.5548854041013269,
+                  "exact_zero": 1233,
+                  "exact_one": 243,
+                  "soft": 0,
+                  "mean": 0.16463414634146342,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Contusion": {
+                  "observed": 1040,
+                  "missing": 2276,
+                  "missing_fraction": 0.6863691194209891,
+                  "exact_zero": 687,
+                  "exact_one": 353,
+                  "soft": 0,
+                  "mean": 0.33942307692307694,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Fracture": {
+                  "observed": 714,
+                  "missing": 2602,
+                  "missing_fraction": 0.784680337756333,
+                  "exact_zero": 546,
+                  "exact_one": 168,
+                  "soft": 0,
+                  "mean": 0.23529411764705882,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                }
+              },
+              "valid": {
+                "ACL": {
+                  "observed": 749,
+                  "missing": 142,
+                  "missing_fraction": 0.15937149270482603,
+                  "exact_zero": 648,
+                  "exact_one": 101,
+                  "soft": 0,
+                  "mean": 0.1348464619492657,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "MCL": {
+                  "observed": 716,
+                  "missing": 175,
+                  "missing_fraction": 0.19640852974186307,
+                  "exact_zero": 700,
+                  "exact_one": 16,
+                  "soft": 0,
+                  "mean": 0.0223463687150838,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial Meniscus": {
+                  "observed": 808,
+                  "missing": 83,
+                  "missing_fraction": 0.0931537598204265,
+                  "exact_zero": 480,
+                  "exact_one": 328,
+                  "soft": 0,
+                  "mean": 0.40594059405940597,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral Meniscus": {
+                  "observed": 766,
+                  "missing": 125,
+                  "missing_fraction": 0.14029180695847362,
+                  "exact_zero": 661,
+                  "exact_one": 105,
+                  "soft": 0,
+                  "mean": 0.1370757180156658,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial OA": {
+                  "observed": 496,
+                  "missing": 395,
+                  "missing_fraction": 0.44332210998877664,
+                  "exact_zero": 437,
+                  "exact_one": 59,
+                  "soft": 0,
+                  "mean": 0.11895161290322581,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral OA": {
+                  "observed": 451,
+                  "missing": 440,
+                  "missing_fraction": 0.49382716049382713,
+                  "exact_zero": 429,
+                  "exact_one": 22,
+                  "soft": 0,
+                  "mean": 0.04878048780487805,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "PF OA": {
+                  "observed": 495,
+                  "missing": 396,
+                  "missing_fraction": 0.4444444444444444,
+                  "exact_zero": 417,
+                  "exact_one": 78,
+                  "soft": 0,
+                  "mean": 0.15757575757575756,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Effusion": {
+                  "observed": 716,
+                  "missing": 175,
+                  "missing_fraction": 0.19640852974186307,
+                  "exact_zero": 608,
+                  "exact_one": 108,
+                  "soft": 0,
+                  "mean": 0.15083798882681565,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Synovitis": {
+                  "observed": 122,
+                  "missing": 769,
+                  "missing_fraction": 0.8630751964085297,
+                  "exact_zero": 25,
+                  "exact_one": 97,
+                  "soft": 0,
+                  "mean": 0.7950819672131147,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Baker's": {
+                  "observed": 395,
+                  "missing": 496,
+                  "missing_fraction": 0.5566778900112234,
+                  "exact_zero": 344,
+                  "exact_one": 51,
+                  "soft": 0,
+                  "mean": 0.1291139240506329,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Contusion": {
+                  "observed": 302,
+                  "missing": 589,
+                  "missing_fraction": 0.6610549943883277,
+                  "exact_zero": 215,
+                  "exact_one": 87,
+                  "soft": 0,
+                  "mean": 0.28807947019867547,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Fracture": {
+                  "observed": 191,
+                  "missing": 700,
+                  "missing_fraction": 0.7856341189674523,
+                  "exact_zero": 157,
+                  "exact_one": 34,
+                  "soft": 0,
+                  "mean": 0.17801047120418848,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                }
+              }
+            },
+            "2": {
+              "train_studies": 3319,
+              "valid_studies": 888,
+              "train": {
+                "ACL": {
+                  "observed": 2803,
+                  "missing": 516,
+                  "missing_fraction": 0.1554685146128352,
+                  "exact_zero": 2465,
+                  "exact_one": 338,
+                  "soft": 0,
+                  "mean": 0.12058508740635034,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "MCL": {
+                  "observed": 2705,
+                  "missing": 614,
+                  "missing_fraction": 0.18499548056643567,
+                  "exact_zero": 2650,
+                  "exact_one": 55,
+                  "soft": 0,
+                  "mean": 0.02033271719038817,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial Meniscus": {
+                  "observed": 2980,
+                  "missing": 339,
+                  "missing_fraction": 0.10213919855378126,
+                  "exact_zero": 1771,
+                  "exact_one": 1209,
+                  "soft": 0,
+                  "mean": 0.40570469798657716,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral Meniscus": {
+                  "observed": 2868,
+                  "missing": 451,
+                  "missing_fraction": 0.13588430250075323,
+                  "exact_zero": 2452,
+                  "exact_one": 416,
+                  "soft": 0,
+                  "mean": 0.14504881450488144,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial OA": {
+                  "observed": 1780,
+                  "missing": 1539,
+                  "missing_fraction": 0.4636938836999096,
+                  "exact_zero": 1527,
+                  "exact_one": 253,
+                  "soft": 0,
+                  "mean": 0.14213483146067415,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral OA": {
+                  "observed": 1694,
+                  "missing": 1625,
+                  "missing_fraction": 0.48960530280204884,
+                  "exact_zero": 1583,
+                  "exact_one": 111,
+                  "soft": 0,
+                  "mean": 0.06552538370720189,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "PF OA": {
+                  "observed": 1830,
+                  "missing": 1489,
+                  "missing_fraction": 0.44862910515215426,
+                  "exact_zero": 1479,
+                  "exact_one": 351,
+                  "soft": 0,
+                  "mean": 0.1918032786885246,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Effusion": {
+                  "observed": 2546,
+                  "missing": 773,
+                  "missing_fraction": 0.2329014763482977,
+                  "exact_zero": 2131,
+                  "exact_one": 415,
+                  "soft": 0,
+                  "mean": 0.16300078554595443,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Synovitis": {
+                  "observed": 445,
+                  "missing": 2874,
+                  "missing_fraction": 0.8659234709249775,
+                  "exact_zero": 42,
+                  "exact_one": 403,
+                  "soft": 0,
+                  "mean": 0.9056179775280899,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Baker's": {
+                  "observed": 1504,
+                  "missing": 1815,
+                  "missing_fraction": 0.5468514612835191,
+                  "exact_zero": 1271,
+                  "exact_one": 233,
+                  "soft": 0,
+                  "mean": 0.15492021276595744,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Contusion": {
+                  "observed": 1070,
+                  "missing": 2249,
+                  "missing_fraction": 0.6776137390780356,
+                  "exact_zero": 729,
+                  "exact_one": 341,
+                  "soft": 0,
+                  "mean": 0.3186915887850467,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Fracture": {
+                  "observed": 719,
+                  "missing": 2600,
+                  "missing_fraction": 0.7833684844832781,
+                  "exact_zero": 565,
+                  "exact_one": 154,
+                  "soft": 0,
+                  "mean": 0.2141863699582754,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                }
+              },
+              "valid": {
+                "ACL": {
+                  "observed": 751,
+                  "missing": 137,
+                  "missing_fraction": 0.15427927927927929,
+                  "exact_zero": 671,
+                  "exact_one": 80,
+                  "soft": 0,
+                  "mean": 0.10652463382157124,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "MCL": {
+                  "observed": 737,
+                  "missing": 151,
+                  "missing_fraction": 0.17004504504504506,
+                  "exact_zero": 723,
+                  "exact_one": 14,
+                  "soft": 0,
+                  "mean": 0.018995929443690638,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial Meniscus": {
+                  "observed": 793,
+                  "missing": 95,
+                  "missing_fraction": 0.10698198198198199,
+                  "exact_zero": 483,
+                  "exact_one": 310,
+                  "soft": 0,
+                  "mean": 0.39092055485498106,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral Meniscus": {
+                  "observed": 769,
+                  "missing": 119,
+                  "missing_fraction": 0.134009009009009,
+                  "exact_zero": 661,
+                  "exact_one": 108,
+                  "soft": 0,
+                  "mean": 0.14044213263979194,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial OA": {
+                  "observed": 483,
+                  "missing": 405,
+                  "missing_fraction": 0.4560810810810811,
+                  "exact_zero": 408,
+                  "exact_one": 75,
+                  "soft": 0,
+                  "mean": 0.15527950310559005,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral OA": {
+                  "observed": 460,
+                  "missing": 428,
+                  "missing_fraction": 0.481981981981982,
+                  "exact_zero": 435,
+                  "exact_one": 25,
+                  "soft": 0,
+                  "mean": 0.05434782608695652,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "PF OA": {
+                  "observed": 498,
+                  "missing": 390,
+                  "missing_fraction": 0.4391891891891892,
+                  "exact_zero": 414,
+                  "exact_one": 84,
+                  "soft": 0,
+                  "mean": 0.1686746987951807,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Effusion": {
+                  "observed": 672,
+                  "missing": 216,
+                  "missing_fraction": 0.24324324324324326,
+                  "exact_zero": 543,
+                  "exact_one": 129,
+                  "soft": 0,
+                  "mean": 0.19196428571428573,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Synovitis": {
+                  "observed": 126,
+                  "missing": 762,
+                  "missing_fraction": 0.8581081081081081,
+                  "exact_zero": 7,
+                  "exact_one": 119,
+                  "soft": 0,
+                  "mean": 0.9444444444444444,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Baker's": {
+                  "observed": 367,
+                  "missing": 521,
+                  "missing_fraction": 0.5867117117117117,
+                  "exact_zero": 306,
+                  "exact_one": 61,
+                  "soft": 0,
+                  "mean": 0.16621253405994552,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Contusion": {
+                  "observed": 272,
+                  "missing": 616,
+                  "missing_fraction": 0.6936936936936937,
+                  "exact_zero": 173,
+                  "exact_one": 99,
+                  "soft": 0,
+                  "mean": 0.3639705882352941,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Fracture": {
+                  "observed": 186,
+                  "missing": 702,
+                  "missing_fraction": 0.7905405405405406,
+                  "exact_zero": 138,
+                  "exact_one": 48,
+                  "soft": 0,
+                  "mean": 0.25806451612903225,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                }
+              }
+            },
+            "3": {
+              "train_studies": 3429,
+              "valid_studies": 778,
+              "train": {
+                "ACL": {
+                  "observed": 2887,
+                  "missing": 542,
+                  "missing_fraction": 0.15806357538641003,
+                  "exact_zero": 2552,
+                  "exact_one": 335,
+                  "soft": 0,
+                  "mean": 0.11603740907516454,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "MCL": {
+                  "observed": 2812,
+                  "missing": 617,
+                  "missing_fraction": 0.17993584135316418,
+                  "exact_zero": 2753,
+                  "exact_one": 59,
+                  "soft": 0,
+                  "mean": 0.020981507823613087,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial Meniscus": {
+                  "observed": 3078,
+                  "missing": 351,
+                  "missing_fraction": 0.10236220472440945,
+                  "exact_zero": 1847,
+                  "exact_one": 1231,
+                  "soft": 0,
+                  "mean": 0.3999350227420403,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral Meniscus": {
+                  "observed": 2971,
+                  "missing": 458,
+                  "missing_fraction": 0.1335666375036454,
+                  "exact_zero": 2541,
+                  "exact_one": 430,
+                  "soft": 0,
+                  "mean": 0.1447324133288455,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial OA": {
+                  "observed": 1856,
+                  "missing": 1573,
+                  "missing_fraction": 0.45873432487605714,
+                  "exact_zero": 1593,
+                  "exact_one": 263,
+                  "soft": 0,
+                  "mean": 0.14170258620689655,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral OA": {
+                  "observed": 1762,
+                  "missing": 1667,
+                  "missing_fraction": 0.48614756488772237,
+                  "exact_zero": 1651,
+                  "exact_one": 111,
+                  "soft": 0,
+                  "mean": 0.06299659477866061,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "PF OA": {
+                  "observed": 1923,
+                  "missing": 1506,
+                  "missing_fraction": 0.43919510061242345,
+                  "exact_zero": 1567,
+                  "exact_one": 356,
+                  "soft": 0,
+                  "mean": 0.18512740509620385,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Effusion": {
+                  "observed": 2632,
+                  "missing": 797,
+                  "missing_fraction": 0.23242927967337415,
+                  "exact_zero": 2197,
+                  "exact_one": 435,
+                  "soft": 0,
+                  "mean": 0.16527355623100304,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Synovitis": {
+                  "observed": 467,
+                  "missing": 2962,
+                  "missing_fraction": 0.8638086905803442,
+                  "exact_zero": 39,
+                  "exact_one": 428,
+                  "soft": 0,
+                  "mean": 0.9164882226980728,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Baker's": {
+                  "observed": 1516,
+                  "missing": 1913,
+                  "missing_fraction": 0.557888597258676,
+                  "exact_zero": 1285,
+                  "exact_one": 231,
+                  "soft": 0,
+                  "mean": 0.15237467018469658,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Contusion": {
+                  "observed": 1085,
+                  "missing": 2344,
+                  "missing_fraction": 0.6835812190142899,
+                  "exact_zero": 728,
+                  "exact_one": 357,
+                  "soft": 0,
+                  "mean": 0.32903225806451614,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Fracture": {
+                  "observed": 738,
+                  "missing": 2691,
+                  "missing_fraction": 0.7847769028871391,
+                  "exact_zero": 577,
+                  "exact_one": 161,
+                  "soft": 0,
+                  "mean": 0.2181571815718157,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                }
+              },
+              "valid": {
+                "ACL": {
+                  "observed": 667,
+                  "missing": 111,
+                  "missing_fraction": 0.14267352185089974,
+                  "exact_zero": 584,
+                  "exact_one": 83,
+                  "soft": 0,
+                  "mean": 0.12443778110944528,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "MCL": {
+                  "observed": 630,
+                  "missing": 148,
+                  "missing_fraction": 0.19023136246786632,
+                  "exact_zero": 620,
+                  "exact_one": 10,
+                  "soft": 0,
+                  "mean": 0.015873015873015872,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial Meniscus": {
+                  "observed": 695,
+                  "missing": 83,
+                  "missing_fraction": 0.10668380462724936,
+                  "exact_zero": 407,
+                  "exact_one": 288,
+                  "soft": 0,
+                  "mean": 0.4143884892086331,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral Meniscus": {
+                  "observed": 666,
+                  "missing": 112,
+                  "missing_fraction": 0.14395886889460155,
+                  "exact_zero": 572,
+                  "exact_one": 94,
+                  "soft": 0,
+                  "mean": 0.14114114114114115,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial OA": {
+                  "observed": 407,
+                  "missing": 371,
+                  "missing_fraction": 0.4768637532133676,
+                  "exact_zero": 342,
+                  "exact_one": 65,
+                  "soft": 0,
+                  "mean": 0.1597051597051597,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral OA": {
+                  "observed": 392,
+                  "missing": 386,
+                  "missing_fraction": 0.4961439588688946,
+                  "exact_zero": 367,
+                  "exact_one": 25,
+                  "soft": 0,
+                  "mean": 0.06377551020408163,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "PF OA": {
+                  "observed": 405,
+                  "missing": 373,
+                  "missing_fraction": 0.4794344473007712,
+                  "exact_zero": 326,
+                  "exact_one": 79,
+                  "soft": 0,
+                  "mean": 0.19506172839506172,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Effusion": {
+                  "observed": 586,
+                  "missing": 192,
+                  "missing_fraction": 0.2467866323907455,
+                  "exact_zero": 477,
+                  "exact_one": 109,
+                  "soft": 0,
+                  "mean": 0.18600682593856654,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Synovitis": {
+                  "observed": 104,
+                  "missing": 674,
+                  "missing_fraction": 0.8663239074550129,
+                  "exact_zero": 10,
+                  "exact_one": 94,
+                  "soft": 0,
+                  "mean": 0.9038461538461539,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Baker's": {
+                  "observed": 355,
+                  "missing": 423,
+                  "missing_fraction": 0.5437017994858612,
+                  "exact_zero": 292,
+                  "exact_one": 63,
+                  "soft": 0,
+                  "mean": 0.17746478873239438,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Contusion": {
+                  "observed": 257,
+                  "missing": 521,
+                  "missing_fraction": 0.6696658097686375,
+                  "exact_zero": 174,
+                  "exact_one": 83,
+                  "soft": 0,
+                  "mean": 0.3229571984435798,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Fracture": {
+                  "observed": 167,
+                  "missing": 611,
+                  "missing_fraction": 0.7853470437017995,
+                  "exact_zero": 126,
+                  "exact_one": 41,
+                  "soft": 0,
+                  "mean": 0.24550898203592814,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                }
+              }
+            },
+            "4": {
+              "train_studies": 3378,
+              "valid_studies": 829,
+              "train": {
+                "ACL": {
+                  "observed": 2860,
+                  "missing": 518,
+                  "missing_fraction": 0.15334517465956188,
+                  "exact_zero": 2516,
+                  "exact_one": 344,
+                  "soft": 0,
+                  "mean": 0.12027972027972028,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "MCL": {
+                  "observed": 2766,
+                  "missing": 612,
+                  "missing_fraction": 0.1811722912966252,
+                  "exact_zero": 2715,
+                  "exact_one": 51,
+                  "soft": 0,
+                  "mean": 0.01843817787418655,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial Meniscus": {
+                  "observed": 3046,
+                  "missing": 332,
+                  "missing_fraction": 0.09828300769686205,
+                  "exact_zero": 1811,
+                  "exact_one": 1235,
+                  "soft": 0,
+                  "mean": 0.40544977019041367,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral Meniscus": {
+                  "observed": 2918,
+                  "missing": 460,
+                  "missing_fraction": 0.13617525162818236,
+                  "exact_zero": 2507,
+                  "exact_one": 411,
+                  "soft": 0,
+                  "mean": 0.14084989718985608,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial OA": {
+                  "observed": 1828,
+                  "missing": 1550,
+                  "missing_fraction": 0.45885139135583186,
+                  "exact_zero": 1558,
+                  "exact_one": 270,
+                  "soft": 0,
+                  "mean": 0.14770240700218817,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral OA": {
+                  "observed": 1729,
+                  "missing": 1649,
+                  "missing_fraction": 0.4881586737714624,
+                  "exact_zero": 1624,
+                  "exact_one": 105,
+                  "soft": 0,
+                  "mean": 0.06072874493927125,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "PF OA": {
+                  "observed": 1864,
+                  "missing": 1514,
+                  "missing_fraction": 0.448194197750148,
+                  "exact_zero": 1535,
+                  "exact_one": 329,
+                  "soft": 0,
+                  "mean": 0.1765021459227468,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Effusion": {
+                  "observed": 2591,
+                  "missing": 787,
+                  "missing_fraction": 0.2329780935464772,
+                  "exact_zero": 2145,
+                  "exact_one": 446,
+                  "soft": 0,
+                  "mean": 0.17213431107680432,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Synovitis": {
+                  "observed": 453,
+                  "missing": 2925,
+                  "missing_fraction": 0.8658969804618117,
+                  "exact_zero": 43,
+                  "exact_one": 410,
+                  "soft": 0,
+                  "mean": 0.9050772626931567,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Baker's": {
+                  "observed": 1495,
+                  "missing": 1883,
+                  "missing_fraction": 0.5574304322084074,
+                  "exact_zero": 1261,
+                  "exact_one": 234,
+                  "soft": 0,
+                  "mean": 0.1565217391304348,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Contusion": {
+                  "observed": 1097,
+                  "missing": 2281,
+                  "missing_fraction": 0.6752516281823564,
+                  "exact_zero": 729,
+                  "exact_one": 368,
+                  "soft": 0,
+                  "mean": 0.33546034639927075,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Fracture": {
+                  "observed": 732,
+                  "missing": 2646,
+                  "missing_fraction": 0.783303730017762,
+                  "exact_zero": 565,
+                  "exact_one": 167,
+                  "soft": 0,
+                  "mean": 0.22814207650273224,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                }
+              },
+              "valid": {
+                "ACL": {
+                  "observed": 694,
+                  "missing": 135,
+                  "missing_fraction": 0.16284680337756333,
+                  "exact_zero": 620,
+                  "exact_one": 74,
+                  "soft": 0,
+                  "mean": 0.10662824207492795,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "MCL": {
+                  "observed": 676,
+                  "missing": 153,
+                  "missing_fraction": 0.18455971049457176,
+                  "exact_zero": 658,
+                  "exact_one": 18,
+                  "soft": 0,
+                  "mean": 0.026627218934911243,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial Meniscus": {
+                  "observed": 727,
+                  "missing": 102,
+                  "missing_fraction": 0.12303980699638119,
+                  "exact_zero": 443,
+                  "exact_one": 284,
+                  "soft": 0,
+                  "mean": 0.390646492434663,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral Meniscus": {
+                  "observed": 719,
+                  "missing": 110,
+                  "missing_fraction": 0.13268998793727382,
+                  "exact_zero": 606,
+                  "exact_one": 113,
+                  "soft": 0,
+                  "mean": 0.1571627260083449,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Medial OA": {
+                  "observed": 435,
+                  "missing": 394,
+                  "missing_fraction": 0.4752714113389626,
+                  "exact_zero": 377,
+                  "exact_one": 58,
+                  "soft": 0,
+                  "mean": 0.13333333333333333,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Lateral OA": {
+                  "observed": 425,
+                  "missing": 404,
+                  "missing_fraction": 0.4873341375150784,
+                  "exact_zero": 394,
+                  "exact_one": 31,
+                  "soft": 0,
+                  "mean": 0.07294117647058823,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "PF OA": {
+                  "observed": 464,
+                  "missing": 365,
+                  "missing_fraction": 0.44028950542822676,
+                  "exact_zero": 358,
+                  "exact_one": 106,
+                  "soft": 0,
+                  "mean": 0.22844827586206898,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Effusion": {
+                  "observed": 627,
+                  "missing": 202,
+                  "missing_fraction": 0.2436670687575392,
+                  "exact_zero": 529,
+                  "exact_one": 98,
+                  "soft": 0,
+                  "mean": 0.15629984051036683,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Synovitis": {
+                  "observed": 118,
+                  "missing": 711,
+                  "missing_fraction": 0.8576598311218335,
+                  "exact_zero": 6,
+                  "exact_one": 112,
+                  "soft": 0,
+                  "mean": 0.9491525423728814,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Baker's": {
+                  "observed": 376,
+                  "missing": 453,
+                  "missing_fraction": 0.5464414957780458,
+                  "exact_zero": 316,
+                  "exact_one": 60,
+                  "soft": 0,
+                  "mean": 0.1595744680851064,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Contusion": {
+                  "observed": 245,
+                  "missing": 584,
+                  "missing_fraction": 0.7044632086851629,
+                  "exact_zero": 173,
+                  "exact_one": 72,
+                  "soft": 0,
+                  "mean": 0.2938775510204082,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "Fracture": {
+                  "observed": 173,
+                  "missing": 656,
+                  "missing_fraction": 0.7913148371531966,
+                  "exact_zero": 138,
+                  "exact_one": 35,
+                  "soft": 0,
+                  "mean": 0.2023121387283237,
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                }
+              }
+            }
+          },
+          "inputs_sha256": {
+            "train": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+            "weak": "aad1eec5424692acd48355193bc142b06a300623a43f502430de96f22e0bf7c9",
+            "provenance": "fac0445d7416921c94553eb450cda6666d0431398888b081925216f8dd4908ac",
+            "groups": "8b7755c5bc76531fb0bb7a86e16eade4a487fd000fdb20ea2c76172770d96e19"
+          },
+          "manifest_sha256": {
+            "manifest.json": "976abfe212ce23ad8112f16cb61d2c8172bb837ad50aed7ac88886760fc2cabf",
+            "weak.csv": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+            "gold.csv": "f86a67cf9c5704c37bbe0d7912b308cd7497a2804918c0cc5e8e2008a0b16bad"
+          },
+          "gold_used_for_tuning": false,
+          "gold_evaluation": "source declaration; exposure audit required",
+          "patient_independence_verified": false,
+          "note": "No stratification claim; distributions and image quality still need human review. No identifiers in audit."
+        },
+        "pixel_index_sha256": "7d373ae85098758a8bc322b4e65079de07e998f7b7cd42a5a2d26cc4577eae31",
+        "resource_gate_sha256": "f7460c837b1cd8e9d4d19ff0ea35929b8877a3fb7de766527785aedeba461824",
+        "resource_gate": {
+          "schema_version": "native392_training_resource_gate_fast16_v1",
+          "native392_pixel16_complete": true,
+          "native392_byte_QC_passed": true,
+          "compression_measured": true,
+          "direct_archive_read_speed_measured": true,
+          "artificial_CUDA_gradient_and_roundtrip_passed": true,
+          "source_sha256": {
+            "native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+            "finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+            "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+            "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+            "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+            "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+            "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+            "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+          },
+          "CLI_sha256": "cfdba529adcdd9b6d5f34a6b020cdae03f7fb04551ed4807778503fa1235ece0",
+          "config_semantic_sha256": {
+            "0": "4d9e17c9bae01944d9112313d0b2ab263797626b900e43c3ced623a9ad7b1987",
+            "2": "e27837ab653b6dc4155bc3489c5570795ccbf16a2e34bd3ba1dd107c44ff45db"
+          },
+          "evidence": {
+            "pixel16": {
+              "path": "experiments/native392-pixel16-completed-review-20261008.json",
+              "sha256": "372b8c41bc1686dace46a2b18304c1eaeef7237b757ed8fecc70671e38703477"
+            },
+            "processed_QA": {
+              "path": "artifacts/qa/20261009-f005-fast16-processed115-v1/NATIVE392_QA_SUMMARY.json",
+              "sha256": "e3198b9915af0cea33f10b454dd30f52b47d2eb116b9c1b87e9b350d575265ba"
+            },
+            "artificial_CUDA": {
+              "path": "experiments/dinov2-last2-implementation-validation-20261008.json",
+              "sha256": "4addeb73ae372d71586e778f418625afd4afe7643969a9529c22b228e4696c79"
+            },
+            "fast16_full144_QA": {
+              "path": "artifacts/qa/20261009-f005-fast16-full144-v1/NATIVE392_QA_SUMMARY.json",
+              "sha256": "79114daf2654cc9a2a05f375c5b92bbf324f49bd5d210fdd0a7a140b303f0f96"
+            }
+          },
+          "note": "Actual processed115 and artificial144 resources verified for both fast16 arms; exact full24/4207 index is separately required before real fitting."
+        }
+      },
+      "source_sha256": {
+        "native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+        "finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+        "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+        "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+        "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+        "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+        "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+        "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+      },
+      "encoder_provenance": {
+        "source_url": "https://github.com/facebookresearch/dinov2",
+        "source_revision": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+        "source_tree_sha256": "4a5a3cfbd4185dd4955c1de2f2f26e3b4ba3fa88cccae503b9f93ceb08fed818",
+        "weights_url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth",
+        "weights_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+        "license": "Apache-2.0 for generic DINOv2 code/weights; original archive notices retained",
+        "pretraining": "generic_dinov2_lvd142m",
+        "competition_finetuned": false,
+        "gold_used_for_tuning": false,
+        "reviewed_at": "2026-10-06 JST; official README, model card and pinned commit reviewed",
+        "exposure_audit": "Intended input is the unmodified generic ViT-S/14 checkpoint manually obtained from the official URL. Competition fine-tuning and gold selection are not part of the official generic recipe. LVD-142M overlap with competition patients/images is unknown. Local hashes pin supplied bytes; no publisher checksum or independent origin authentication was performed."
+      },
+      "parameters": {
+        "trainable_encoder_names": [
+          "blocks.10.norm1.weight",
+          "blocks.10.norm1.bias",
+          "blocks.10.attn.qkv.weight",
+          "blocks.10.attn.qkv.bias",
+          "blocks.10.attn.proj.weight",
+          "blocks.10.attn.proj.bias",
+          "blocks.10.ls1.gamma",
+          "blocks.10.norm2.weight",
+          "blocks.10.norm2.bias",
+          "blocks.10.mlp.fc1.weight",
+          "blocks.10.mlp.fc1.bias",
+          "blocks.10.mlp.fc2.weight",
+          "blocks.10.mlp.fc2.bias",
+          "blocks.10.ls2.gamma",
+          "blocks.11.norm1.weight",
+          "blocks.11.norm1.bias",
+          "blocks.11.attn.qkv.weight",
+          "blocks.11.attn.qkv.bias",
+          "blocks.11.attn.proj.weight",
+          "blocks.11.attn.proj.bias",
+          "blocks.11.ls1.gamma",
+          "blocks.11.norm2.weight",
+          "blocks.11.norm2.bias",
+          "blocks.11.mlp.fc1.weight",
+          "blocks.11.mlp.fc1.bias",
+          "blocks.11.mlp.fc2.weight",
+          "blocks.11.mlp.fc2.bias",
+          "blocks.11.ls2.gamma"
+        ],
+        "trainable_encoder_parameters": 3550464,
+        "frozen_encoder_parameters": 18506112,
+        "trainable_head_parameters": 83352,
+        "encoder_eval": true,
+        "final_norm_frozen": true,
+        "trainable_blocks": 2,
+        "window_chunk": 16,
+        "checkpoint_last2": true,
+        "chunk_factor": "same window microbatch in both arms; retained backward activations span all valid windows",
+        "checkpoint_factor": "optional suffix activation recomputation; separate from the last2 biological factor",
+        "feature_quantization": "fp16 CLS then fp32, matching frozen feature cache storage"
+      },
+      "targets": [
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "environment": {
+        "torch": "2.10.0+cu128",
+        "numpy": "2.5.3"
+      },
+      "selection_data": "weak_validation",
+      "selection_rule": "bce",
+      "gold_used_for_training_or_selection": false,
+      "gold_evaluated": false,
+      "patient_independence_verified": false,
+      "history": [
+        {
+          "epoch": 1,
+          "train_bce": 0.4141724508489319,
+          "weak_bce": 0.3777010221328955,
+          "weak_macro_auc_12": 0.7429936781434937,
+          "metrics": {
+            "per_target": {
+              "ACL": {
+                "auc": 0.6581158238172921,
+                "binary_observed": 693,
+                "positive": 80.0,
+                "soft_excluded": 0
+              },
+              "MCL": {
+                "auc": 0.7188852813852814,
+                "binary_observed": 683,
+                "positive": 11.0,
+                "soft_excluded": 0
+              },
+              "Medial Meniscus": {
+                "auc": 0.7123557081948205,
+                "binary_observed": 750,
+                "positive": 309.0,
+                "soft_excluded": 0
+              },
+              "Lateral Meniscus": {
+                "auc": 0.6559794202534822,
+                "binary_observed": 717,
+                "positive": 104.0,
+                "soft_excluded": 0
+              },
+              "Medial OA": {
+                "auc": 0.832922060665882,
+                "binary_observed": 442,
+                "positive": 71.0,
+                "soft_excluded": 0
+              },
+              "Lateral OA": {
+                "auc": 0.7350605289536587,
+                "binary_observed": 426,
+                "positive": 33.0,
+                "soft_excluded": 0
+              },
+              "PF OA": {
+                "auc": 0.7432659932659933,
+                "binary_observed": 466,
+                "positive": 88.0,
+                "soft_excluded": 0
+              },
+              "Effusion": {
+                "auc": 0.8778336557059961,
+                "binary_observed": 617,
+                "positive": 100.0,
+                "soft_excluded": 0
+              },
+              "Synovitis": {
+                "auc": 0.68,
+                "binary_observed": 101,
+                "positive": 100.0,
+                "soft_excluded": 0
+              },
+              "Baker's": {
+                "auc": 0.8089368258859785,
+                "binary_observed": 378,
+                "positive": 59.0,
+                "soft_excluded": 0
+              },
+              "Contusion": {
+                "auc": 0.7073731325228331,
+                "binary_observed": 266,
+                "positive": 99.0,
+                "soft_excluded": 0
+              },
+              "Fracture": {
+                "auc": 0.7851957070707071,
+                "binary_observed": 188,
+                "positive": 44.0,
+                "soft_excluded": 0
+              }
+            },
+            "macro_auc_12": 0.7429936781434937,
+            "available_class_macro_auc": 0.7429936781434937,
+            "defined_classes": 12,
+            "note": "Soft targets are excluded from ROC-AUC; use masked BCE for weak-label validation."
+          },
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "elapsed_seconds": 1748.733027700102,
+          "prediction_sha256": "42a98325cf4a31a7408d2854da3f2b6a1b10743b55df116312a802a36c4d534d",
+          "gpu_peak_reserved_bytes": 1163919360
+        },
+        {
+          "epoch": 2,
+          "train_bce": 0.35106923361461556,
+          "weak_bce": 0.33963445152144833,
+          "weak_macro_auc_12": 0.7856989502594814,
+          "metrics": {
+            "per_target": {
+              "ACL": {
+                "auc": 0.720942088091354,
+                "binary_observed": 693,
+                "positive": 80.0,
+                "soft_excluded": 0
+              },
+              "MCL": {
+                "auc": 0.7574404761904762,
+                "binary_observed": 683,
+                "positive": 11.0,
+                "soft_excluded": 0
+              },
+              "Medial Meniscus": {
+                "auc": 0.754192075967388,
+                "binary_observed": 750,
+                "positive": 309.0,
+                "soft_excluded": 0
+              },
+              "Lateral Meniscus": {
+                "auc": 0.684292257497804,
+                "binary_observed": 717,
+                "positive": 104.0,
+                "soft_excluded": 0
+              },
+              "Medial OA": {
+                "auc": 0.8589271477924149,
+                "binary_observed": 442,
+                "positive": 71.0,
+                "soft_excluded": 0
+              },
+              "Lateral OA": {
+                "auc": 0.7606600354691958,
+                "binary_observed": 426,
+                "positive": 33.0,
+                "soft_excluded": 0
+              },
+              "PF OA": {
+                "auc": 0.765422077922078,
+                "binary_observed": 466,
+                "positive": 88.0,
+                "soft_excluded": 0
+              },
+              "Effusion": {
+                "auc": 0.9447001934235977,
+                "binary_observed": 617,
+                "positive": 100.0,
+                "soft_excluded": 0
+              },
+              "Synovitis": {
+                "auc": 0.71,
+                "binary_observed": 101,
+                "positive": 100.0,
+                "soft_excluded": 0
+              },
+              "Baker's": {
+                "auc": 0.8626534190531853,
+                "binary_observed": 378,
+                "positive": 59.0,
+                "soft_excluded": 0
+              },
+              "Contusion": {
+                "auc": 0.7942902074638601,
+                "binary_observed": 266,
+                "positive": 99.0,
+                "soft_excluded": 0
+              },
+              "Fracture": {
+                "auc": 0.8148674242424242,
+                "binary_observed": 188,
+                "positive": 44.0,
+                "soft_excluded": 0
+              }
+            },
+            "macro_auc_12": 0.7856989502594814,
+            "available_class_macro_auc": 0.7856989502594814,
+            "defined_classes": 12,
+            "note": "Soft targets are excluded from ROC-AUC; use masked BCE for weak-label validation."
+          },
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "elapsed_seconds": 3506.66654190002,
+          "prediction_sha256": "8fa3e1263850c7acf1eeb4ec42233b926dafd58ec0048dff74a74474df597d5a",
+          "gpu_peak_reserved_bytes": 1163919360
+        },
+        {
+          "epoch": 3,
+          "train_bce": 0.324664095099039,
+          "weak_bce": 0.32463259423082985,
+          "weak_macro_auc_12": 0.8220566704530573,
+          "metrics": {
+            "per_target": {
+              "ACL": {
+                "auc": 0.7660685154975531,
+                "binary_observed": 693,
+                "positive": 80.0,
+                "soft_excluded": 0
+              },
+              "MCL": {
+                "auc": 0.7432359307359307,
+                "binary_observed": 683,
+                "positive": 11.0,
+                "soft_excluded": 0
+              },
+              "Medial Meniscus": {
+                "auc": 0.7797738297044816,
+                "binary_observed": 750,
+                "positive": 309.0,
+                "soft_excluded": 0
+              },
+              "Lateral Meniscus": {
+                "auc": 0.696762454511231,
+                "binary_observed": 717,
+                "positive": 104.0,
+                "soft_excluded": 0
+              },
+              "Medial OA": {
+                "auc": 0.8775293269048252,
+                "binary_observed": 442,
+                "positive": 71.0,
+                "soft_excluded": 0
+              },
+              "Lateral OA": {
+                "auc": 0.7864137558794048,
+                "binary_observed": 426,
+                "positive": 33.0,
+                "soft_excluded": 0
+              },
+              "PF OA": {
+                "auc": 0.8085618085618086,
+                "binary_observed": 466,
+                "positive": 88.0,
+                "soft_excluded": 0
+              },
+              "Effusion": {
+                "auc": 0.9460928433268859,
+                "binary_observed": 617,
+                "positive": 100.0,
+                "soft_excluded": 0
+              },
+              "Synovitis": {
+                "auc": 0.84,
+                "binary_observed": 101,
+                "positive": 100.0,
+                "soft_excluded": 0
+              },
+              "Baker's": {
+                "auc": 0.9006428988895383,
+                "binary_observed": 378,
+                "positive": 59.0,
+                "soft_excluded": 0
+              },
+              "Contusion": {
+                "auc": 0.8521744390007863,
+                "binary_observed": 266,
+                "positive": 99.0,
+                "soft_excluded": 0
+              },
+              "Fracture": {
+                "auc": 0.8674242424242424,
+                "binary_observed": 188,
+                "positive": 44.0,
+                "soft_excluded": 0
+              }
+            },
+            "macro_auc_12": 0.8220566704530573,
+            "available_class_macro_auc": 0.8220566704530573,
+            "defined_classes": 12,
+            "note": "Soft targets are excluded from ROC-AUC; use masked BCE for weak-label validation."
+          },
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "elapsed_seconds": 5252.319575100089,
+          "prediction_sha256": "ba5e29d4eb5b05178fc713d0de448e98a1855f8018e85599ad67d96fbc185c24",
+          "gpu_peak_reserved_bytes": 1163919360
+        },
+        {
+          "epoch": 4,
+          "train_bce": 0.2981612218202111,
+          "weak_bce": 0.3029857405676191,
+          "weak_macro_auc_12": 0.835975744125772,
+          "metrics": {
+            "per_target": {
+              "ACL": {
+                "auc": 0.8012030995106035,
+                "binary_observed": 693,
+                "positive": 80.0,
+                "soft_excluded": 0
+              },
+              "MCL": {
+                "auc": 0.7382305194805194,
+                "binary_observed": 683,
+                "positive": 11.0,
+                "soft_excluded": 0
+              },
+              "Medial Meniscus": {
+                "auc": 0.8069260066486141,
+                "binary_observed": 750,
+                "positive": 309.0,
+                "soft_excluded": 0
+              },
+              "Lateral Meniscus": {
+                "auc": 0.7143148450244698,
+                "binary_observed": 717,
+                "positive": 104.0,
+                "soft_excluded": 0
+              },
+              "Medial OA": {
+                "auc": 0.8993963782696177,
+                "binary_observed": 442,
+                "positive": 71.0,
+                "soft_excluded": 0
+              },
+              "Lateral OA": {
+                "auc": 0.7993677230318452,
+                "binary_observed": 426,
+                "positive": 33.0,
+                "soft_excluded": 0
+              },
+              "PF OA": {
+                "auc": 0.8168290043290043,
+                "binary_observed": 466,
+                "positive": 88.0,
+                "soft_excluded": 0
+              },
+              "Effusion": {
+                "auc": 0.9457253384912959,
+                "binary_observed": 617,
+                "positive": 100.0,
+                "soft_excluded": 0
+              },
+              "Synovitis": {
+                "auc": 0.78,
+                "binary_observed": 101,
+                "positive": 100.0,
+                "soft_excluded": 0
+              },
+              "Baker's": {
+                "auc": 0.9152011051485043,
+                "binary_observed": 378,
+                "positive": 59.0,
+                "soft_excluded": 0
+              },
+              "Contusion": {
+                "auc": 0.8991108691707494,
+                "binary_observed": 266,
+                "positive": 99.0,
+                "soft_excluded": 0
+              },
+              "Fracture": {
+                "auc": 0.9154040404040404,
+                "binary_observed": 188,
+                "positive": 44.0,
+                "soft_excluded": 0
+              }
+            },
+            "macro_auc_12": 0.835975744125772,
+            "available_class_macro_auc": 0.835975744125772,
+            "defined_classes": 12,
+            "note": "Soft targets are excluded from ROC-AUC; use masked BCE for weak-label validation."
+          },
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "elapsed_seconds": 6998.2520771001,
+          "prediction_sha256": "8b35698f2bd6065144a3eca384eefa031c78e2120b938c894b44fea5606a8b14",
+          "gpu_peak_reserved_bytes": 1163919360
+        }
+      ],
+      "public_lb": null,
+      "resume_supported": false,
+      "microbatch_studies": 1,
+      "effective_batch_studies": 16,
+      "denominator": "sum observed teacher cells over each actual effective group, including the short final group",
+      "selected": {
+        "epoch": 4,
+        "train_bce": 0.2981612218202111,
+        "weak_bce": 0.3029857405676191,
+        "weak_macro_auc_12": 0.835975744125772,
+        "metrics": {
+          "per_target": {
+            "ACL": {
+              "auc": 0.8012030995106035,
+              "binary_observed": 693,
+              "positive": 80.0,
+              "soft_excluded": 0
+            },
+            "MCL": {
+              "auc": 0.7382305194805194,
+              "binary_observed": 683,
+              "positive": 11.0,
+              "soft_excluded": 0
+            },
+            "Medial Meniscus": {
+              "auc": 0.8069260066486141,
+              "binary_observed": 750,
+              "positive": 309.0,
+              "soft_excluded": 0
+            },
+            "Lateral Meniscus": {
+              "auc": 0.7143148450244698,
+              "binary_observed": 717,
+              "positive": 104.0,
+              "soft_excluded": 0
+            },
+            "Medial OA": {
+              "auc": 0.8993963782696177,
+              "binary_observed": 442,
+              "positive": 71.0,
+              "soft_excluded": 0
+            },
+            "Lateral OA": {
+              "auc": 0.7993677230318452,
+              "binary_observed": 426,
+              "positive": 33.0,
+              "soft_excluded": 0
+            },
+            "PF OA": {
+              "auc": 0.8168290043290043,
+              "binary_observed": 466,
+              "positive": 88.0,
+              "soft_excluded": 0
+            },
+            "Effusion": {
+              "auc": 0.9457253384912959,
+              "binary_observed": 617,
+              "positive": 100.0,
+              "soft_excluded": 0
+            },
+            "Synovitis": {
+              "auc": 0.78,
+              "binary_observed": 101,
+              "positive": 100.0,
+              "soft_excluded": 0
+            },
+            "Baker's": {
+              "auc": 0.9152011051485043,
+              "binary_observed": 378,
+              "positive": 59.0,
+              "soft_excluded": 0
+            },
+            "Contusion": {
+              "auc": 0.8991108691707494,
+              "binary_observed": 266,
+              "positive": 99.0,
+              "soft_excluded": 0
+            },
+            "Fracture": {
+              "auc": 0.9154040404040404,
+              "binary_observed": 188,
+              "positive": 44.0,
+              "soft_excluded": 0
+            }
+          },
+          "macro_auc_12": 0.835975744125772,
+          "available_class_macro_auc": 0.835975744125772,
+          "defined_classes": 12,
+          "note": "Soft targets are excluded from ROC-AUC; use masked BCE for weak-label validation."
+        },
+        "optimizer_steps": 212,
+        "optimizer_step_opportunities": 212,
+        "amp_skipped_steps": 0,
+        "elapsed_seconds": 6998.2520771001,
+        "prediction_sha256": "8b35698f2bd6065144a3eca384eefa031c78e2120b938c894b44fea5606a8b14",
+        "gpu_peak_reserved_bytes": 1163919360,
+        "checkpoint_sha256": "d41061a6e5282644a4eb0db7f2637cf01aab7ac7ae96b6dd46ce5f76c86527da"
+      }
+    },
+    "own_Public": null,
+    "condition_changes": 0,
+    "next": "complete fixed12 epochs, pairedfold0 review, then same fixedfold1"
+  },
+  "Helios": {
+    "URL": "https://www.kaggle.com/code/heliosli/rsna-knee-blend-gold",
+    "author_official_Public": "0.951",
+    "author_scored_script_version_id": 356373796,
+    "source_code_cells_unchanged": true,
+    "prepared_notebook": "notebooks\\public\\23_submit_p012_public951_v9_control.ipynb",
+    "notebook_sha256": "93be7f0ffa5f963ff2f9c0171ab2d8f31130717e3072803493c46a9e22d718f5",
+    "V9_outer_bundle_id": "a5e76db599f5bb66",
+    "V9_selectedS5_bundle_id": "c7ebab1eb953f1a6",
+    "V9_DINO_arm_used": false,
+    "own_Gold_fit_selection": 0,
+    "own_private_V1_ref": "rsraki/p012-helios-v9-d325d3f16cafdddb",
+    "own_private_V1_status": "ERROR",
+    "actual_error_seconds": 74.473002398,
+    "phase": "after Raptor3 forwards and offline wheels; before compact asset load",
+    "actual_mounted_bundle_id": "209a32c8b50a6b1c",
+    "actual_mounted_compact_version_inferred_from_manifest": 10,
+    "inference_basis": "actual assertion tuple matches observed currentV10 manifest; not a returned Input version field",
+    "requested_Input_versions": [
+      "heliosli/rsna-knee-compact-v1/9",
+      "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1",
+      "nartaa/rsna-knee-publication-swa-weights-20261007/1"
+    ],
+    "SDK_suffix_did_not_pin_actual_runtime_version": true,
+    "kept_guard_detected_wrong_version": true,
+    "competition_submit": 0,
+    "own_Public": null,
+    "recovery": "Kaggle editor compact Version9 + Pin + SaveRunAll; review actual saved version; do not replace hash guard or use currentV10 as reproduction"
+  },
+  "Ryan": {
+    "URL": "https://www.kaggle.com/code/ryanholbrook/rsna-knee-abnormalities-efficiency-lb/notebook",
+    "role": "public leaderboard display; no train/model/inference/submission",
+    "observed_notebook_version": 70,
+    "table": {
+      "rows": 5374,
+      "teams_at_least955": 56,
+      "teams_strictly_above960": 7,
+      "max_Public": "0.964"
+    },
+    "CSV_sha256": "fa5417e979b0f5ccc7b628b78ca7ac99e93676285691c657d4e490ab2945fa87",
+    "EfficiencyRank_is_not_accuracy_rank": true,
+    "most_downloaded_claim_verified": false,
+    "publicly_usable_above955_recipe_verified": false
+  },
+  "new_observation_getter_fix": "Original p012 getter rejected API-reordered same3refs; v2 uses exact unique reference-set equivalence. No saved Notebook rerun or prediction code change.",
+  "next_sequence": [
+    "recover Helios actualV9 and score unchanged author control",
+    "complete local12 and pairedfold0/fold1 verification",
+    "review per-finding weak support/masks then select one model or teacher factor",
+    "qualify final trained candidate and fixed blend then own official score"
+  ],
+  "limits": [
+    "Visible3 success would not guarantee hidden coverage or own author score",
+    "Public author Gold exposure audited separately; no clean OOF assumption",
+    "No official own score above0.950 in this observation"
+  ],
+  "proof_SHA": {
+    "native64_peer": "f529113ab7769d0f116e42322bf8491c88b82a8739a54f90c71fc9302e993948",
+    "native256_root_review": "f50c5d4a8685526cc779120a1814475178990b274f25cad65368a9eb5a05a894",
+    "Helios_actual_error_log_safe": "1ee3233b61fffaa18982919979bf7fa26022d4933e1f1356e21ea414a2c49967",
+    "Helios_actual_saved_metadata": "8eeaacd4259476aa5a4b06e1d1a9fa9a0c90e186a17810fb3f1f5e638c1cb71a"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": "p010_shared224_offline_artificial_validation_v1",
+  "all_passed": true,
+  "checks": {
+    "original14_SHA_protected": true,
+    "CPU28tests_and_Ruff": true,
+    "artificialCUDA3cases_full_sparse_allmissing": true,
+    "base320_mirror_raw_unchanged_before_after_expert": true,
+    "stock224_reference_raw_exact_zero": true,
+    "same_native384_pixels_masks_not_mutated": true,
+    "strict_12_head_noGrad_eval_FP16_full94_single_forward": true,
+    "1307_unique_study_bounded_parent_payload_count": true,
+    "worker_consumer_startup_and_held_delivery_cancel_fatal_cleanup": true,
+    "delivery_and_inference_task_done_on_exception": true,
+    "literal_6_other_base_code_cells": true,
+    "literal_9_author_numerical_symbols_noGrad_decorator": true,
+    "rank10_averageties_all12_submission_contract": true,
+    "incumbent_bytes_retained_atomic_candidate_replace": true,
+    "fusion_failclosed_stdout_parent_guard": true,
+    "profile_same32_Gold_UID_group_excluded": true,
+    "T4_real_checkpoint_and_profile_execution_gate_closed": true
+  },
+  "candidate_gate_passed": false,
+  "actual_checkpoint_verified": false,
+  "actual_T4_profile_executed": false,
+  "new_MRI_decodes": 0,
+  "new_weights_downloaded": 0,
+  "optimizer_updates": 0,
+  "remote_mutations": 0,
+  "baseline_notebook_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "serving_notebook_sha256": "4adf9088b97c795cb50e382b41d4a158950352ef4d5316fda40551111c39c41c",
+  "profile_notebook_sha256": "eaa9ec444a884ccb6f5f9c1fec427a6d85febd710cbc226b20b770c68bbce960",
+  "author_runtime_sha256": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+  "shared_runtime_sha256": "494685ecee58ccd98771e5e287992c598bbeea8691fd08dbceb4ebd18e2f59b7",
+  "production_builder_sha256": "f4f78950b8776ab7a4d4bd686266f4314e02a2515b89661d223dc607643e6836",
+  "profile_runtime_sha256": "710171f0c031fda29a1b9e2292fffe715fd7bdade7a14d2fc5e32101aea24244",
+  "profile_builder_sha256": "f176dc1c0cd4aaac88e54db049950bbff9491eba59db7cb7098c09dd8c5bf183",
+  "GPU_checks_path": "artifacts\\qa\\20261008-p010-shared224-artificial-cuda-v3\\checks.json",
+  "GPU_checks_sha256": "e070f7042233871f515323f1eb066af4f2d0d548fc16080165e05f625042e2f3",
+  "artificial_commands": [
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_p010*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "artifacts\\qa\\20261008-p010-shared224-artificial-cuda-v3\\cpu-tests.log",
+      "sha256": "6f8d21bf07ae0ca521d74de1bc285f2c664e5a7500073e331761d52003ea5882"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "scripts/build_p010_shared224.py",
+        "scripts/p010_shared_runtime.py",
+        "scripts/p010_profile_runtime.py",
+        "scripts/build_p010_profile.py",
+        "scripts/check_p010_artificial_cuda.py",
+        "scripts/p010_author224_runtime.py",
+        "scripts/extract_p010_author224_source.py",
+        "tests/test_p010_shared_runtime.py",
+        "tests/test_p010_shared_builder.py",
+        "tests/test_p010_profile.py",
+        "tests/test_p010_author224_runtime.py"
+      ],
+      "exit_code": 0,
+      "log": "artifacts\\qa\\20261008-p010-shared224-artificial-cuda-v3\\ruff-corrected.log",
+      "sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0"
+    }
+  ],
+  "tiny_untrained_GPU_peak_reserved_mib": 1172.0,
+  "tiny_forward_limitation": "RTX4090 tiny untrained encoder does not prove actual 224 CoAtNet/T4 memory, speed or checkpoint compatibility.",
+  "pending_gates": [
+    "actual_224_checkpoint_SHA_strict_compatibility",
+    "cross_cell_Obs_lifetime_in_actual_saved_Jupyter",
+    "actual_original_vs_bounded_base_raw_and_CSV_control",
+    "actual_shared_base_vs_baseline_identity",
+    "actual_stock224_vs_shared224_pixel_mask_raw_identity",
+    "actual_T4x2_FP16_no_grad_single94batch_resources",
+    "hidden_test_full_cohort_runtime",
+    "own_Public_score_improvement"
+  ],
+  "scope_limits": [
+    "Parent volume-reference count excludes prep-worker and IPC buffers/native metadata/GPUfloat windows.",
+    "Python task/model exceptions verified; OS-killed worker missing callbacks have no new per-task timeout.",
+    "Gold58 reused by author selection/development; neither model is own independent OOF.",
+    "Original decode-failure mask0 semantics preserved; no hidden all-codec-success claim."
+  ],
+  "non_code_validation_invocation_correction": "First Ruff invocation used a nonexistent extractor filename and failed E902; log retained. Correct extractor_source filename passed. Code/GPU/tests were unchanged."
+}

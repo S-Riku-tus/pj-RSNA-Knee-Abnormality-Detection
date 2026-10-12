@@ -1,0 +1,75 @@
+{
+  "checked_at_utc": "2026-10-08T11:26:49.057088+00:00",
+  "status": "prepared_artificial_verified_independent_review_pending",
+  "notebook": "notebooks/public/18a_profile_dinov2_native392_pixel16.ipynb",
+  "notebook_sha256": "ff88e2077d7d7ef484fbd19e5f50ddd69e40c663dea22f73283903b13d860e7e",
+  "notebook_bytes": 54349,
+  "authoritative_package": "artifacts\\kaggle\\native392-pixel16-v3-20261008",
+  "package_notebook_sha256": "ff88e2077d7d7ef484fbd19e5f50ddd69e40c663dea22f73283903b13d860e7e",
+  "package_metadata_sha256": "dbc90249cf034d53ddd838e77710f0e14221d4ba6fe31d54fb9815cb56a91e2f",
+  "package_initial_status_retained": "prepared_artificial_checks_pending",
+  "package_initial_build_path": "artifacts\\kaggle\\native392-pixel16-v3-notebook-build.ipynb",
+  "code_zip_sha256": "06740ee9e8824f11e52e437336bc2336fae53fc4543d8dd9bc7edf9da1690a89",
+  "cohort_sha256": "76efb68252577c21877b37537e3caf8b09cd5d876469c2763d71babff94b0eb3",
+  "checks": [
+    {
+      "name": "fixed 16 whole groups / no fold0 or Gold UID/group / no teacher values",
+      "passed": true
+    },
+    {
+      "name": "unchanged native392 3x48 / physical metadata / raw budget",
+      "passed": true
+    },
+    {
+      "name": "real artificial DICOM shared vs bounded reader exact392 byte QC",
+      "passed": true
+    },
+    {
+      "name": "16 artificial export / compressed NPZ array byte roundtrip",
+      "passed": true
+    },
+    {
+      "name": "teacher CSV nonread and Runtime audit hook rejects other Input CSV",
+      "passed": true
+    },
+    {
+      "name": "pixel archive direct member SHA and array hashes reject corruption",
+      "passed": true
+    },
+    {
+      "name": "all-masked studies and changed preprocessing/budget rejected",
+      "passed": true
+    },
+    {
+      "name": "isolated embedded decoder helpers CPU resource snapshot regression",
+      "passed": true
+    }
+  ],
+  "unittest_tests_passed": 8,
+  "ruff_passed": true,
+  "required_inputs": [
+    "rsna-knee-abnormality-detection",
+    "rsraki/rsna-dicom-decoders-py313-v1/2"
+  ],
+  "accelerator": "CPU",
+  "internet": false,
+  "private": true,
+  "archive_budget_bytes": 1073741824,
+  "raw_pixel_upper_bytes": 1062125568,
+  "runtime_teacher_csv_read": false,
+  "builder_reads_existing_local_manifest_structure_only": true,
+  "real_MRI_decode_locally": false,
+  "actual_encoder_training": false,
+  "remote_mutations": false,
+  "for_submission": false,
+  "history": {
+    "v1": "prelaunch shutil missing import rejected independently; retained",
+    "v2": "builder CLI relative path metadata failed after writing code; unlaunched, retained",
+    "v3": "import shutil and direct-call regression; relative build path resolved; immutable package bound to canonical18a"
+  },
+  "source_sha256": {
+    "src/rsna_knee/triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "scripts/build_native_triplet_pilot.py": "cc1a92383f8b7f292b7095e4bb914b897335ad0ce00646604587b0d11250a558",
+    "tests/test_native_triplet_pilot.py": "44a3a47f61e03817b1e6063e3dee5bb4d73c66101a25e4f0372cfbe3a94d9c95"
+  }
+}

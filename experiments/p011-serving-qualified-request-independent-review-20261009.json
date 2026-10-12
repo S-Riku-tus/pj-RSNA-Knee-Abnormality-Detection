@@ -1,0 +1,48 @@
+{
+  "schema_version": "p011_qualified_local_serving_request_independent_review_v1",
+  "at_utc": "2026-10-08T18:46:51.754634+00:00",
+  "all_passed": true,
+  "checks": {
+    "parent_source24_review_current_and_allpassed": true,
+    "root24_peer47_exact_SHA_schema_and_allpassed": true,
+    "root_peer_same_savedV1_kernel_source_ordered256_resource_and_decode_booleanflags": true,
+    "root24_independentReviewSHA_and_all13bodySHA_match_peer47": true,
+    "NumPy_STDlib_originalfusion_diff0_and_candidate_reconstruction_same_SHA": true,
+    "qualified_local_request_exact_both_future_proofs_paths_and_SHA": true,
+    "fresh_serving_nonce_shape_and_expectedSavedV1_no_overwrite_intent": true,
+    "request_entire_source_settings_Original_T4_private_OFF_inputs1_1_comp_match_frozen_contract": true,
+    "all36_request_assets_and_package_same_frozen_and_current_SHA": true,
+    "local_request_no_Save_submit_actual_accuracy_or_hidden_qualification": true,
+    "handoff_guard_sources_still_exact_parent24_SHA": true
+  },
+  "parent_source24_review_SHA": "56f018ad60ef06198d7b7d709e263e27c9597f9c9f74b4007261249e514bb538",
+  "root256_24_SHA": "9acb096c7ebb9c37053d21034bc9d81c18e8fbfb7df680652bdad4371f888f7a",
+  "peer256_47_SHA": "2cf298a4132a4a87d66f66555c76303604100a1f4719f2582163f86d0d5e758c",
+  "qualified_request_SHA": "9b57be96f4645eb6631bcdea3539ecaba5505a7c706da21de06dfdb9edfbf659",
+  "qualified_handoff_SHA": "03c28343ea5f7e52d0fd1799dc68534bf067156d6b8e6c4083a487ab8490bc09",
+  "serving_ref": "rsraki/p011srv-8105f0434cc183692525c2dd8ccdc9eb",
+  "serving_notebook_SHA": "a8e13bf0b053716e024f363417bc8b338b958eddf8a1837d3bad0a385607fd0c",
+  "serving_package_SHA": "163f5abd128f2e93e9e836397e0da0245bfd229ca74b93508664a50c7677d3e6",
+  "source_guard_SHA": {
+    "serving_guard.py": "1fc7cfd3e1e96172515f681ee8a3fe967051379a564571d0e947336fc75ce9d6",
+    "preflight.py": "6f56fef8129e32cc4b811717faf73cdf4af01ab7405d0126f7dfcea6d705be84",
+    "test_guards.py": "1e1e03d7aadadcdcf06640d3012bebc42f309ebefc92f2e3a2a402d08792a7f5"
+  },
+  "requested_saved_version": 1,
+  "local_request_ready": true,
+  "serving_Save_accepted": false,
+  "competition_submit_gate_passed": false,
+  "candidate_gate_passed": false,
+  "full_Serving_passed": false,
+  "accuracy_evaluated": false,
+  "Public_score": null,
+  "API_auth_HTTP_GPU_MRI_model_fit_Save_submit_by_reviewer": 0,
+  "actual256_proofs_reexecuted": false,
+  "root_reported_external_state": "Root reports API authorization held (default403/escalated401), with Save/submit0. This local review did not observe those endpoints and makes no Notebook failure conclusion from the authentication hold.",
+  "decision": "The local serving request exactly binds the accepted root24/peer47 diagnosis and unchanged22V3 source/settings. Root may proceed to its authorized single private savedV1 run once authentication works, after fresh source/proof/request/GPU-quota checks. Source binding and actual visible serving output review remain required before any competition submission.",
+  "limitations": [
+    "No remote nonce existence check or authentication retry was performed.",
+    "Actual256 diagnosis does not guarantee full hidden completion or Public improvement.",
+    "The candidate reconstructed from diagnostic CSV remains deleted; serving requires a new actual submission.csv and dynamic UID contract."
+  ]
+}

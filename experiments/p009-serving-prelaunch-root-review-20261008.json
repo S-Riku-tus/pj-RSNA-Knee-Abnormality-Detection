@@ -1,0 +1,34 @@
+{
+  "checked_at_utc": "2026-10-08T13:07:25.624433+00:00",
+  "all_passed": true,
+  "checks": {
+    "protected14": true,
+    "canonical19_exact": true,
+    "only_main_code_cell4_changed": true,
+    "ten_cells_seven_code_and_six_unchanged": true,
+    "clean_serving_source": true,
+    "actual_remote_profileV2_COMPLETE32": true,
+    "all72_real_independent_gates": true,
+    "all54_profile_savedsource_bindings": true,
+    "two64_main_forwards32pairs": true,
+    "grad_disabled_actual_main": true,
+    "actual_FOV160_builder": true,
+    "same_all32_valid_counts": true,
+    "reader16_once_same32_bothfusions": true,
+    "independent_rank_fusion_difference0": true,
+    "actual_changed_predictions_not_accuracy_claim": true,
+    "no_diagnostic_submission": true,
+    "newGPU_no_extra_model_or_decoderInput": true
+  },
+  "ref": "rsraki/p009-coat-fov160",
+  "candidate_sha256": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+  "real_profile_review_sha256": "d3766467ec76dff91f4d7671219b1f28f7ce40e31cf537833f2e60529e705a42",
+  "evidence_sha256": {
+    "notebooks\\public\\14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks\\public\\19_submit_p009_coat_fov160.ipynb": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+    "experiments\\p009-profile32-completed-review-v3-20261008.json": "d3766467ec76dff91f4d7671219b1f28f7ce40e31cf537833f2e60529e705a42"
+  },
+  "serving_launch_eligible": true,
+  "competition_submission_eligible": false,
+  "limits": "Real32 gives serving resource/contract feasibility; actual visible serving/saved binding must pass before fresh daily limits and competition RPC; no accuracy gain established."
+}

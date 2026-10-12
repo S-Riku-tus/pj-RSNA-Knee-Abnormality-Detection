@@ -1,0 +1,56 @@
+{
+ "schema_version": "p011_new_independent224_preparation_v1",
+ "all_passed": true,
+ "checks": {
+  "all7_original_code_cells_literal_and_order_unchanged": true,
+  "all_code_compile": true,
+  "original14_protected": true,
+  "extra_stock_namespace_only_after_seal": true,
+  "fixed_all12_rank90_10_no_search": true,
+  "baseline_transport_unmodified": true,
+  "candidate_gate_false_oldp010_not_requalified": true,
+  "no_API_actualMRI_or_weight_download": true,
+  "package_stock_file_exact_LF_source_bytes": true,
+  "native_worker_receipt_required_before_extra_model": true
+ },
+ "notebook_sha256": "a8e13bf0b053716e024f363417bc8b338b958eddf8a1837d3bad0a385607fd0c",
+ "baseline_sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+ "generator_sha256": "dd642cff6425e493fe115eaea0233743448319cf9bbe1f43b30342f4aa3d1550",
+ "helper_sha256": {
+  "p011_contracts.py": "0d86b0bcded2046fef89605cd7dd22fb7f05f326b15bf66a11027d46e96de76c",
+  "p011_metrics.py": "1ca09fbff359947d7b1df69823f52d5490671d6950f1eb59e69b23167962b9d9",
+  "p010_author224_metrics.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+  "p006_metrics.py": "b61115cc92ab335273a31cf12c754097e3f0844ce2b7aaf9fd50c56f755603ca",
+  "p007_metrics.py": "a291d826ed287683cfa15e98eb207bb15fe459b04263a2e4c5fcda8730138549"
+ },
+ "stock_source_sha256": "b61046e344425c446370d3df1ca019cf278f13fba385117035f849484a5a85f0",
+ "candidate_gate_passed": false,
+ "studies": null,
+ "ordered_uid_sha256": null,
+ "new_model_branch": true,
+ "old_p010_gate_relaxed_or_requalified": false,
+ "accuracy_evaluated": false,
+ "real_MRI_decode_or_checkpoint_acquisition": false,
+ "baseline_original7_cell_sha256": [
+  "73479f7fd919996f4723ef93b4c881cbf698b9d79082cf7e1073fd85bd2b1ab1",
+  "37243d9c509200ca349d6bcb080ee23b22cfee8ad3d209ae19a7c44535b49c20",
+  "fe88cbfa098fd6760016417cefe8063f38265465db536cd02633df9c65edc17c",
+  "81cfd2b20dbc25662adbda3b94c98b1bcdfa366c7ca997313139d718284790b8",
+  "050aacdc1902df88b18fe1c3bc27bad57b743ca5c0e5b1c98bd1ccb1e37e5b96",
+  "d27c72236f2810c7f442032f4c56470ab6d467ae9fb618cfbe97b4cb38b5acfd",
+  "b3b5f3ec1c3eade95d6dfd87e9ec6c0d31fcf6ec849b556804aabb0d912702c0"
+ ],
+ "allmissing_policy": "Keep original author224 finite masked-input output; no perUID base-only substitution.",
+ "unexpected_CUDA_model_or_contract_errors": "fatal, preserve receipts, no silent restoration",
+ "unmeasured_gates": [
+  "new_p011_actual64_result_root_review",
+  "256_doubledecode_pixelmask_identity_and_resources",
+  "actual_twoT4_model_memory_runtime",
+  "wholehidden_coverage_completion",
+  "self_public_accuracy"
+ ],
+ "profile_transport_scope": "Only independent extra branch bounded; original baseline transport untouched. Fixed GPU assignment is not adopted.",
+ "author_Gold_selection_reuse": true,
+ "own_Gold_fit_or_selection": false,
+ "pretrained_weak_OOF": false
+}

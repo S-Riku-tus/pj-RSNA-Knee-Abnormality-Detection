@@ -1,0 +1,89 @@
+{
+  "schema_version": "p017_healthy_visible_and_fault_private_Save_root_progress_v1",
+  "at_utc": "2026-10-10T11:50:32.773250+00:00",
+  "P017_healthy": {
+    "accepted_Save": {
+      "path": "artifacts/research/20261010-p017-native-serving-root-v1/actual-serving-Save-attempt-v1/receipt.json",
+      "sha256": "9f7c926f63faea675458c8700d4386ef533bd599eec268ecb08783292bdcffa2"
+    },
+    "actual_observation": {
+      "path": "artifacts/research/20261010-p017-serving-results-tools-v2/actual-visible-observation-v1/observation.json",
+      "sha256": "210419f3616ccf0e59a58d71e9793f134ac26fd4c1a8715e9026f3023f7b306a"
+    },
+    "actual_independent_review11": {
+      "path": "artifacts/research/20261010-p017-healthy-visible-actual-independent-v1/review.json",
+      "sha256": "784ed642be00f8411787a4ad8c776940b9ca9f26a9a110c352c1f78bbfb30cce"
+    },
+    "actual_root_acceptance": {
+      "path": "artifacts/research/20261010-p017-native-serving-root-v1/actual-healthy-visible-root-acceptance-v1.json",
+      "sha256": "66eb71bc37962e7b99051b9594d88142ce8e1578674b17d43bd1e4b7f337a7c9"
+    },
+    "kernel_id": 138018511,
+    "version": 1,
+    "raw_typed_status": "COMPLETE",
+    "visible_studies": 3,
+    "positive_bodies": 23,
+    "actual_GET_bytes": 63909,
+    "branch": "healthy",
+    "fallback_used": false,
+    "math_difference": 0.0,
+    "masked_fields": 6,
+    "other_uniform_fields": 30,
+    "final_CSV_byteexact": true,
+    "healthy_visible_branch_qualified": true,
+    "actual_fault_mechanism_qualified": false,
+    "submission_ready": false,
+    "accuracy_evaluated": false
+  },
+  "P017_fault": {
+    "materialized_and_Save_source_peer14": {
+      "path": "artifacts/research/20261010-p017-fault-materialized-and-Save-independent-v1/review.json",
+      "sha256": "8a6f2000d938f3260914bdabf74eb1308be8f14c562e5b820c2c59b85ae04ce6"
+    },
+    "root_final_private_Save_authorization": {
+      "path": "artifacts/research/20261010-p017-malformed-DICOM-fault-root-v1/root-final-manual-Save-authorization.json",
+      "sha256": "04d432ebcce65ebf94f61bcf6d241b5d6b3e044c8ac14a124753d1cfee8ac9a2"
+    },
+    "actual_private_Save": {
+      "path": "artifacts/research/20261010-p017-malformed-DICOM-fault-root-v1/actual-fault-Save-attempt-v1/receipt.json",
+      "sha256": "3e3665312c25292ca4494b673dc2df9875314ab7de256fc8bc395a9d783a2eb3"
+    },
+    "kernel_id": 138022868,
+    "version": 1,
+    "ref": "rsraki/p017fault-a89ce77a35584bfe9104902ff0d04683",
+    "actual_Save_calls": 1,
+    "Input_metadata_calls": 6,
+    "quota_calls": 1,
+    "available_GPU_seconds": 104700.36493,
+    "API_source_bytes": 945618,
+    "synthetic_fault_input": true,
+    "diagnostic_only": true,
+    "actual_fault_branch_qualified": false,
+    "competition_Submit_allowed": false,
+    "model_MRI_Report_credentials_upload": false
+  },
+  "P016_native256": {
+    "actual_private_Save": {
+      "path": "artifacts/research/20261010-p016-native256-root-launch-source-preparation-v2/actual-native256-Save-attempt-v1/accepted.json",
+      "sha256": "70c51e6b7a7c133127035e81cf18bf7cebc17cfae2a82b961171a6de2264c6ec"
+    },
+    "getter_source_peer10": {
+      "path": "artifacts/research/20261010-p016-native256-success-collector-independent-v1/review.json",
+      "sha256": "bb5b98d1fc6fa4f405823821c0e070ae77577c60d42e3fcb767c9a255ceecb84"
+    },
+    "kernel_id": 138020795,
+    "version": 1,
+    "actual_Save_accepted": true,
+    "actual_phase_qualified": false,
+    "actual_outputs_collected": false
+  },
+  "own_best_official_Public": 0.951,
+  "strict_above_0960_achieved": false,
+  "goal_remains_active": true,
+  "limits": [
+    "Visible healthy three-study contracts do not prove hidden success or score improvement.",
+    "Actual Linux malformed-DICOM recovery is still awaiting the dedicated diagnostic result.",
+    "Native256 is accepted private execution, not yet a qualified phase.",
+    "No incomplete regional checkpoint was selected or submitted."
+  ]
+}

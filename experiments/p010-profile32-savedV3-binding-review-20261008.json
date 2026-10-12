@@ -1,0 +1,91 @@
+{
+  "schema_version": "p010_private_profile32_savedV3_independent_binding_v1",
+  "reviewed_at_utc": "2026-10-08T14:53:26.198140+00:00",
+  "all_passed": true,
+  "checks": {
+    "planned_nonce_actual_request_ref_title": true,
+    "128bit_nonce_format_32hex": true,
+    "accepted_same_kernel_new_savedV3": true,
+    "accepted_exact_own_nonce_ref": true,
+    "accepted_no_error_or_invalid_input": true,
+    "canonical_source_namespace_request_SHA": true,
+    "package_canonical_bytes": true,
+    "original14_protected": true,
+    "request_entire_Notebook_equals_local21a": true,
+    "all_root_launch_review_hashes_current": true,
+    "request_Original_T4_private_GPU_OFF_noTPU": true,
+    "request_Input1_Input1_comp_only": true,
+    "request_SAVE_AND_RUN_ALL_diagnostic_only": true,
+    "fresh_V2_explicit_ERROR_preserved_before_V3": true,
+    "fresh_latest_V2_source_before_V3_equal_immutable_V2": true,
+    "accepted_raw_response_V3_kernel_matches_typed": true,
+    "V1V2_failure_evidence_source_helpers_all_preserved": true,
+    "V2_actual_failure_evidence_all_preserved": true,
+    "saved_exact_nonce_ref_same_kernel_V3": true,
+    "saved_exact_owner_title_slug_python_Notebook": true,
+    "raw_typed_blob_source_same": true,
+    "entire_Notebook_equals_actual_launch_and21a": true,
+    "all19_cell_types_sources_fields_equal": true,
+    "all16_code_cells_compile_clean_outputs": true,
+    "all6_runtime_helpers_literal_hash": true,
+    "stock_source_literal_bound": true,
+    "same_fixed32_UID_order_sha": true,
+    "Gold_UID_group_guard_and_competition_rerun_guard": true,
+    "crosscell_stdout_probe_precedes_actual_profile": true,
+    "raw_private_GPU_noTPU_InternetOFF_explicit": true,
+    "saved_Original_digest_T4_shape_exact": true,
+    "saved_two_Input_slugs_comp_no_model_kernel_sources": true,
+    "blob_owner_slug_python_notebook": true,
+    "preparation_and_actual_T4_gate_remain_false": true,
+    "baseline14_still_immutable": true
+  },
+  "checks_passed": 35,
+  "checks_total": 35,
+  "saved_ref": "rsraki/p010diag-d6a587bcefded28cde96453a8ba1848f",
+  "saved_version": 3,
+  "kernel_id": 137683716,
+  "planned_source_sha256": "b6710a91dd8fc9cb472170f324453aa28ec2fc44d46be5013ba05be271d996b3",
+  "actual_blob_source_text_sha256": "8740c36c15336fd750583e80f0d9c7f059f4d943bfaed647d23dc712303f1a17",
+  "normalized_entire_Notebook_sha256": "0a1fe97a0f7829033ccb27e05d1365a17d9cca56b7d5932ee44ed9f3c9c8f3ae",
+  "source_and_input_receipt_sha256": {
+    "notebooks\\public\\21a_profile_p010_shared224_32_v3.ipynb": "b6710a91dd8fc9cb472170f324453aa28ec2fc44d46be5013ba05be271d996b3",
+    "notebooks\\public\\14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "artifacts\\research\\20261008-p010-profile32-launch-v3\\launch-request.json": "145ce9b20e0ca2b131db1373203474197aa285875b8352823d3252dc3cbe487b",
+    "artifacts\\research\\20261008-p010-profile32-launch-v3\\save-response.json": "a4dcf64ae148eaa2f8148261d7b0ebe45a070b61b9599a921d7bd94aab3f9bc0",
+    "artifacts\\research\\20261008-p010-profile32-launch-v1\\namespace.json": "b06f7eb5ba255968677f5a34a06b2a6516f5dd966a0ad4e2c6aa7d8fe931ab09",
+    "artifacts\\kaggle\\p010-profile32-shared224-rank10-v3-20261008\\package.json": "d6921e2bd24b673ec5301102a0baa379da2c6940e9f988a08aa241314bed2be7",
+    "artifacts\\kaggle\\p010-profile32-shared224-rank10-v3-20261008\\cohort.json": "25b504ab1e517058ab3ddb1be5f08ef2f0556c693a680b8ce6ce5d4dfc01ef54"
+  },
+  "namespace_scope": "Same 128-bit32hex alias and kernel as V1; accepted savedV3 preserves V1/V2. Global absence before original V1 SaveKernel was not directly queried. No fresh-namespace claim for V3.",
+  "Input_version_scope": "Accepted /1+/1 pins and no invalidInput response; GetKernel reports slugs only. Internal Dataset version IDs remain unobserved.",
+  "actual_T4_profile_gate_passed": false,
+  "accuracy_evaluated": false,
+  "operations": {
+    "GetKernel": 1,
+    "GetKernelSessionStatus": 1,
+    "remote_mutations": 0,
+    "body_downloads": 0,
+    "MRI_model_payload_access": 0,
+    "poll_loop": false
+  },
+  "decision": "Saved private original-image T4 diagnostic is source/settings bound. Wait for actual diagnostic completion; no serving or competition submission authorized by this binding alone.",
+  "status_observation": {
+    "checked_at_utc": "2026-10-08T14:53:24.492811+00:00",
+    "raw": {
+      "status": "RUNNING"
+    },
+    "typed": {
+      "status": "RUNNING",
+      "failureMessage": null
+    },
+    "typed_without_defaults": {
+      "status": "RUNNING"
+    },
+    "scope": "Raw status absent and typed QUEUED may be schema default; worker state/start time unknown. No queued/running assertion from typed default."
+  },
+  "fresh_artifact_sha256": {
+    "status.json": "ef9a1f7afbeaf1beac3afae92ff9f2526f4ac57c688d38454908eefe4b0a6528",
+    "saved-source.json": "b2e80062d0593f2aac339936b7524c712fe79fccc3f7607f6cdc21b85dd9d47c",
+    "saved-source-raw.json": "7ec545e1eceb337d840374476cbbf2d855ad9cb9c6d4be757c92fdd07d94ee24"
+  }
+}

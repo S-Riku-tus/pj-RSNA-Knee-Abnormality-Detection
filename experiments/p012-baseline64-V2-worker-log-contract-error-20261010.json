@@ -1,0 +1,89 @@
+{
+  "schema_version": "p012_baseline64_V2_actual_ERROR_worker_log_contract_root_v1",
+  "recorded_at_utc": "2026-10-09T15:03:21.330246+00:00",
+  "official_ERROR_source_bound_observation": {
+    "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v2/profile64-error-bodies-v1/observation.json",
+    "sha256": "fe31e11abf804efa632bff61ce71ef0dba2eb40ced2ee420a1b3099ab4e25a1d",
+    "kernel_id": 137888437,
+    "saved_version": 1,
+    "positive_small_artifact_GETs": 13,
+    "qualified": false
+  },
+  "all_stored_transfer_SHA_and_count_verified": true,
+  "fourCSV_fixed70_30_float32_exact_cells": 768,
+  "genuine_worker_success_logs": {
+    "0": {
+      "stored_log_sha256": "41d829624d8bc66c3ecd341dba59cb3a4fe58eaecd65498ae5475a0e535b2a69",
+      "actual_completion": {
+        "studies": 32,
+        "scored": 32,
+        "timed_out": false,
+        "seconds": 627.0,
+        "amp": "fp16"
+      },
+      "fallback": 0,
+      "literal_PASS_absent": true,
+      "Traceback_absent": true
+    },
+    "1": {
+      "stored_log_sha256": "5ad2372aee94faf967e35f60547918c2d851f7091d19b5ff000d2ec2abec8631",
+      "actual_completion": {
+        "studies": 32,
+        "scored": 32,
+        "timed_out": false,
+        "seconds": 670.0,
+        "amp": "fp16"
+      },
+      "fallback": 0,
+      "literal_PASS_absent": true,
+      "Traceback_absent": true
+    }
+  },
+  "actual_failure": {
+    "message": "Both original S5 worker logs must pass",
+    "location": "p012_profile.finish239",
+    "cause": "New diagnostic demanded a literal PASS token, but the unchanged original producer reports WORKER_DONE JSON and fallback count.",
+    "actual_predictions_and_original_receipts_PASS_full64_fallback0": true
+  },
+  "actual_NVIDIA_sampled_phase_evidence": {
+    "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v2/profile64-error-bodies-v1/P012_NVIDIA_RESOURCES.json",
+    "sha256": "cc02610156c2391de2e1414f290cae66c261190af1cef2b3a5502aa3a9912bf3",
+    "phases": {
+      "raptor": {
+        "samples": 532,
+        "sampled_GPU_peak_mib": [
+          3763,
+          3643
+        ],
+        "first_monotonic": 358.647202467,
+        "last_monotonic": 516.855421217
+      },
+      "s5_controller": {
+        "samples": 2224,
+        "sampled_GPU_peak_mib": [
+          10225,
+          9987
+        ],
+        "first_monotonic": 517.145353558,
+        "last_monotonic": 1193.950314436
+      }
+    },
+    "sampling_not_exact_child_Torch_peak": true,
+    "whole_run_GPU_peak_upper_bound_claimed": false
+  },
+  "seal_and_parent_GPU_cleanup_not_reached": true,
+  "V3_log_checker_and_whole_post_baseline_actual_schema_replay_in_progress": true,
+  "previous_failures_and_models_predictions_original5_immutable": true,
+  "original_worker_prediction_full_bodies_externally_recomputed": false,
+  "actual64_or256_qualification_borrowed_from_ERROR": false,
+  "running_fold1_epochs": 9,
+  "fixed_final_epochs": 12,
+  "run_metadata_snapshot_sha256": "f37293e0f42b9294cdb84ae997ad216d724c31847295c88b7d58e5d4996f73f5",
+  "interim_checkpoint_adopted_or_read": false,
+  "competition_Submit": 0,
+  "actual_baseline_cleanup_qualified": false,
+  "actual_twofold_qualified": false,
+  "Serving_qualified": false,
+  "own_best_Public": "0.951",
+  "strict_above960_achieved": false
+}

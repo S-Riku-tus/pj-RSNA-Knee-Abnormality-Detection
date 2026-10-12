@@ -1,0 +1,61 @@
+{
+  "schema_version": "f005_cached_frozen_online_last2_pair_checker_local_preparation_v1",
+  "at_utc": "2026-10-09T03:48:34.351988+00:00",
+  "all_passed": true,
+  "checks": {
+    "immutable_ordinary_checker_SHA": true,
+    "immutable_ordinary_preparation_SHA": true,
+    "ordinary_config_source_CLI_resource_hashes_unchanged": true,
+    "cached_4producer_exact_SHA_and_fixed_manual_commands": true,
+    "source_independent34_and_actual_artificial5_fixed_SHA": true,
+    "whole4207_native_index_completed_root11_binding": true,
+    "original_compare_AST_literal_unchanged": true,
+    "private_namespace_single_initial_read_adapter_compiles": true,
+    "focused_CPU_2_AST_inverse_and_cached_fake_rejection_passed": true,
+    "Ruff_passed": true,
+    "no_torch_import_or_CUDA_initialization_by_this_preparation": true,
+    "no_real_runs_predictions_checkpoints_features_or_teacher_opened": true
+  },
+  "source_sha256": {
+    "compare_cached_pair.py": "0b5544977a9323e2e6e94cf4b51e22f03f34242c43ac727539b39c669c617930",
+    "test_cached_pair.py": "f74288fe8c9b5916a15dbee53f36b2477be6eed4d7e0aa10c04108ef370aabdf",
+    "record_preparation.py": "a73c6309ee96a9fe9fb5a21f752d71bbea83777c39c052f8011521aa3b54a04d"
+  },
+  "immutable_ordinary_checker_sha256": "a5f72a2ce515978d63bf782cd0e3d7c67a26b69c5db778c11d43e792b6d12dd9",
+  "immutable_ordinary_preparation_sha256": "c2c5ed226ba8980bf9d548ab5eb25a12e5e53f52d5c842408a3365a5283f5b94",
+  "source_review_sha256": "ea06269803d8f1352f32141da601c67f73c26f81401bb81e7b5d62efd7be9c2d",
+  "actual_artificial_equivalence_sha256": "62f04d8a9791dfba41568a5dcbb1ed4940726fe40c0b1b7040a1dbed82477038",
+  "producer_source_sha256": {
+    "cache_tools.py": "90c25788a937cd86dc0f45435341d50739f250144a17550bd75533a4dae433ee",
+    "extract_once.py": "b8f09b28bb28e0a58a21418b4f3816d98ff099283a2b1b578f0d18e36aef489b",
+    "train_cached.py": "c7815bf71e0a567718b38502bbdbab3907adb252991b60950a4e91e32ceb98d8",
+    "qualify_artificial.py": "7eecb04ecf0ec97dd38bfd3d4f362d7390375a0c1d27c449a0f6610e6d27779e"
+  },
+  "root_native4207_index_review_sha256": "748e760a3636f57f9c3c29227dffc11ae08ad4a37597705fddb754d269476b74",
+  "manual_commands_sha256": "51e9614913ef6d05e2a29b6a6841276a392eda1a3055f341c1d739f841144bfc",
+  "CPU_tests": {
+    "count": 2,
+    "passed": true,
+    "seconds": 0.109
+  },
+  "expected_cache_root_review_schema": "f005_frozen_FP32_full4207_feature_cache_root_review_v1",
+  "cache_review_requires_explicit_root_accepted_actual_SHA": true,
+  "actual_full_feature_cache_binding_performed": false,
+  "real_pair_result_review_performed": false,
+  "actual_feature_cache_INCOMPLETE_marker_present_at_preparation": true,
+  "actual_full12_online_cached_trajectory_equivalence_measured": false,
+  "view_policy": "Only cached schema, lineage and two cache-only audit keys are normalized in memory after separate guards. Raw run SHA and honest producer identity remain in the output.",
+  "numeric_checks_preserved": "All original epoch/earliest-BCE-tie/config/source/index/Gold/missing-support/AMP-opportunities/UID-order/finite12/CSV-SHA/best-file checks and pair contrasts are reused.",
+  "checkpoint_scope": "Best tensor bytes are hashed only when root applies the comparator to completed runs; no tensor deserialization. Strict suffix/head and final checkpoint internal epoch remain separate original-loader checks.",
+  "scope": "Prepare only. Original run/config/source files are unchanged. No teacher values, masks, real prediction/checkpoint/feature tensors, actual MRI, weights, CUDA or API are accessed.",
+  "activities": {
+    "GPU": 0,
+    "API_HTTP": 0,
+    "real_fit": 0,
+    "real_teacher_feature_prediction_checkpoint_body_reads": 0
+  },
+  "patient_independence_verified": false,
+  "own_Gold_evaluated": false,
+  "Public_score": null,
+  "decision": "Ready for root to compare completed cached-frozen versus original last2 runs only after the exact complete4207 cache QA proof is accepted. Current incomplete cache does not qualify a real pair."
+}

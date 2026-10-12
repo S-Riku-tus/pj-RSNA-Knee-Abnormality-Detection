@@ -1,0 +1,82 @@
+{
+  "schema_version": "p010_results_compact_tools_preparation_v3",
+  "status": "prepared_offline_14_artificial_tests_passed_actual_COMPLETION_unverified",
+  "all_passed": true,
+  "checks": {
+    "standard_library_verifier_and_independent_fusion": true,
+    "raw_COMPLETE_and_source_before_HTTP": true,
+    "whole19_notebook_fields_only_source_list_normalised": true,
+    "same_fixed32_UId_and_source_manifest": true,
+    "bounded_positive_summary_and11CSV_only": true,
+    "full_bounded_both_endpoints_pagination": true,
+    "basenames_multiset_no_ambiguous_path_or_bytes_claim": true,
+    "HTTPS_GET_actualbytes_vs_untrusted_listed_size_separate": true,
+    "all4_native_pixel_mask_hashes_exact": true,
+    "base64times3_and_author32times2_and_reader24": true,
+    "full94_no_grad_FP16_checkpoint_binding": true,
+    "all6slots_batch4_and_two_exact_replays": true,
+    "fusion_and90_10_stdlib_numerical_contract": true,
+    "resources_two_T4_under13000_and_cleanup_ledgers": true,
+    "final_diagnostic_submission_absent": true,
+    "Ruff_passed": true,
+    "tools_no_network_or_model_or_MRI_run": true,
+    "candidate_and_AUC_gates_remain_unmeasured": true,
+    "meaningful14_CPU_tests_passed": true,
+    "frontend_coalescing_and_duplicate_prints_are_not_inference_counts": true
+  },
+  "checks_passed": 20,
+  "files_sha256": {
+    "artifacts\\research\\20261008-p010-profile32-results-v3\\compact_tools.py": "7d32eeeee0b9d6dcf1061ad3c62087be62ecee6600c3297bdeab1e4768bf5622",
+    "artifacts\\research\\20261008-p010-profile32-results-v3\\get_once.py": "f742db3b1334d4888d1b0ac346dfb2230713554b5cd4ee8b775f01b050e5f839",
+    "artifacts\\research\\20261008-p010-profile32-results-v3\\fusion_checks.py": "ef498098fe3b4c45ceb4b00e2f7b1b23c610b2db13fd3e4af987cc00378ae79f",
+    "artifacts\\research\\20261008-p010-profile32-results-v3\\verify_results.py": "49aff4c55d4683bf61ff383c6abade7d3655529f64622c9dd0396e8968679df4",
+    "artifacts\\research\\20261008-p010-profile32-results-v3\\test_tools.py": "ce31da99ab676e956b53cfd3d7538f39fe308e017c73817ce93a04aebb57ad1b"
+  },
+  "required_compact_files": [
+    "P010_PROFILE_SUMMARY.json",
+    "p010_main_original.csv",
+    "p010_main_bounded.csv",
+    "p010_main_shared.csv",
+    "p010_fused_original.csv",
+    "p010_fused_bounded.csv",
+    "p010_fused_shared.csv",
+    "p010_reader_k16.csv",
+    "p010_shared224_raw.csv",
+    "p010_stock224_raw.csv",
+    "p010_fixed10.csv",
+    "p010_incumbent.csv"
+  ],
+  "body_bounds": {
+    "summary_bytes": 4194304,
+    "each_CSV_bytes": 131072,
+    "visible_log_bytes": 4194304,
+    "pages_each_endpoint": 100,
+    "entries_per_page": 100
+  },
+  "raw_tolerance": {
+    "absolute": 1e-07,
+    "relative": 0,
+    "baseline_CSV": "byte_exact",
+    "fixed_fusion_maxdiff": 0
+  },
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m unittest discover -s artifacts/research/20261008-p010-profile32-results-v3 -p test_tools.py -v",
+    "passed": 14,
+    "actual_GPU_MRI_models_or_API": 0
+  },
+  "getter_root_manual_command": "artifacts/tools/kaggle-venv/Scripts/python.exe artifacts/research/20261008-p010-profile32-results-v3/get_once.py --launch-directory artifacts/research/20261008-p010-profile32-launch-v3 --output artifacts/research/20261008-p010-profile32-results-v3/observation-v1",
+  "verifier_root_manual_command": ".venv/Scripts/python.exe artifacts/research/20261008-p010-profile32-results-v3/verify_results.py --launch-directory artifacts/research/20261008-p010-profile32-launch-v3 --output artifacts/research/20261008-p010-profile32-results-v3/observation-v1",
+  "no_autonomous_execution_or_poll_or_remote_mutations": true,
+  "candidate_execution_gate_passed": false,
+  "actual_checkpoint_T4_profile_gate_passed": false,
+  "Public_AUC_verified": false,
+  "limits": [
+    "Verifier reads compact provenance claims bound to runtime source plus actual JSON/CSV numerical values; no array payload is acquired.",
+    "API Files.size is not artifact byte proof; exact body byte counts come from bounded GET.",
+    "Basename duplicates are preserved in a multiset, without individual size/path mapping claims.",
+    "Ordinal-rank tied-row assignment is not reconstructed independently; exact control CSV bytes are mandatory.",
+    "Fixed32 qualification cannot establish hidden runtime or accuracy."
+  ],
+  "supersedes_validation_sha256": "8853c873b68e7d72162fa16be903c640b3b6ef5040ff136e9c4847c1d3a8f806",
+  "new_difference": "Checker parses complete concatenated log JSON arrays and coalesced stdout lines; meaningful frontend duplication regression. Profile source and math unchanged."
+}

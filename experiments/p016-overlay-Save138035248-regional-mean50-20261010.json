@@ -1,0 +1,69 @@
+{
+  "schema_version": "p016_platform_overlay_actual_Save_and_weak_complementarity_progress_v1",
+  "at_utc": "2026-10-10T13:39:02.398760+00:00",
+  "P016": {
+    "actual_Save_accepted": {
+      "path": "artifacts/research/20261010-p016-serving-overlay-root-launch-source-preparation-v1/actual-serving-Save-attempt-v1/accepted.json",
+      "sha256": "9efaff2c290d03f19533a38e00b7ff8643cd6441ef8084401c8cfb955a2e1764"
+    },
+    "ref": "rsraki/p016s-4a35199b8591421593d8998a9358db81",
+    "kernel_id": 138035248,
+    "saved_version": 1,
+    "Save_calls": 1,
+    "competition_Submit_calls": 0,
+    "fresh_Input_metadata_calls": 4,
+    "fresh_GPU_quota_seconds": "101969.405",
+    "Source_API_bytes": 522033,
+    "only_change": "Strict parent platform schema translation, bound as a Serving-only overlay; frozen21 diagnostics and original prediction cells unchanged.",
+    "actual_Serving_status": "NOT_OBSERVED",
+    "actual_Serving_qualified": false,
+    "old_ERROR_kernel_preserved": 138030227
+  },
+  "Regional_fold1": {
+    "actual_weak_complementarity": {
+      "path": "artifacts/research/20261010-f005-regional-CLS-complementarity-source-preparation-v1/actual-fold1-comparison-v1.json",
+      "sha256": "e18ecaa0ad4b72538b6bcaaddc98c7ee26ab5165d08d382737d4ac438e069e61"
+    },
+    "selected_epochs": {
+      "regional": 10,
+      "CLS": 9
+    },
+    "fixed_FP32_coefficient": [
+      0.5,
+      0.5
+    ],
+    "fixed10_AUC": {
+      "regional": 0.8806778837082054,
+      "CLS": 0.8800624500747695,
+      "fixed_FP32_mean50": 0.8863459969258551
+    },
+    "fixed10_observed_probability_BCE": {
+      "regional": 0.2987270197639777,
+      "CLS": 0.2980793587259258,
+      "fixed_FP32_mean50": 0.283321485682809
+    },
+    "weak_labels_only": true,
+    "own_Gold_or_Report_reads": 0,
+    "coefficient_search": false,
+    "new_Input_or_adoption_decided": false,
+    "fold0_complete_not_observed": true
+  },
+  "P017": {
+    "official_submission_ref": 57042712,
+    "last_observation_utc": "2026-10-10T13:35:11.050110+00:00",
+    "official_raw_status_present": false,
+    "Public_score": null,
+    "SDK_default_PENDING_not_official_evidence": true
+  },
+  "public_research": {
+    "new_exact_Source_downloads": 2,
+    "models_MRI_submission_outputs_downloads": 0,
+    "verified_new_distinct_checkpoint": 0,
+    "Source_research": {
+      "path": "artifacts/research/20261010-latest-public-unread-source-tools-v1/research.json",
+      "sha256": "a66f21a5dd0b28873dadc2d44bc8981ae287c3c749f629f77cf02fdc89ff931f"
+    }
+  },
+  "own_best_Public": 0.951,
+  "strict_above_0_960_achieved": false
+}

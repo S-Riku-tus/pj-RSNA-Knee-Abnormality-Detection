@@ -1,0 +1,62 @@
+{
+  "schema_version": "p011_Serving_compact_getter_preparation_v1",
+  "at_utc": "2026-10-09T02:17:28.464584+00:00",
+  "all_passed": true,
+  "checks": {
+    "actual_Serving_source17_proof45078_fixed": true,
+    "frozen_Serving_binding_module_cd1d9_SHA_reused": true,
+    "exact_savedV1_nonce_kernel137784585_private_Original_T4_OFF_inputs1_1": true,
+    "all21cells18code_original7_6helpers_rebind_cachedSource_beforeAuth": true,
+    "root256_24_peer47_and36sharedassets_rechecked_locally": true,
+    "sourceRPC0_and_freshStatusRPC1_explicitV1_only": true,
+    "rawmissing_RUNNING_ERROR_or_failureMessage_body0_no_output_inventory": true,
+    "required7JSON5CSV_actualServing_source_no_profile2_GET": true,
+    "metadata_allpages_fullpath_basename_Counter_multiplicity_agrees": true,
+    "submission_present_no_partial_or_abort_required": true,
+    "fixed_original_boundedHTTPS_cap_stream_close_transport_reused": true,
+    "separate_unsignedSession_get_retry0_trustEnvFalse_noSDKget": true,
+    "signedURLs_tokens_not_persisted_perUIDfiles_MRI_weights0": true,
+    "exclusive_execute_intent_fresh_observation_no_blindretry_Save_submit0": true,
+    "actualSDK2_focused_CPU_fixtures_success_0auth_0HTTP": true,
+    "Ruff_final_sources_pass_source_compile_only": true
+  },
+  "source_SHA256": {
+    "fusion_checks.py": "acb8ef88c8c5d9a699cf05a0cbcf7f4d3f4c4f819dd41321e629112625508f9e",
+    "get_once.py": "dc58f051e84e308f49046aa566fec3e6abbd48b0a3836c856737cf6b635db198",
+    "results_tools.py": "9188b7fdcaabfabe32a6a84eccadd30ffc5234439469a7218f81280b3dd28fe5",
+    "serving_adapter.py": "866aa598851f5b341849147cef09d6c378ce899614a01e9ba7a4d3d6ae12184d",
+    "test_results.py": "65acb84e571227db3af761cacd6d422b0c60c84af77448bb5e67cb2b7cbdd08b"
+  },
+  "source_proof_SHA": "45078c2e40a758bf03367ef38e9b11215d7d85a438496e3ebfd8c648c5423569",
+  "actualSDK_CPU_tests": {
+    "passed": 2,
+    "seconds": 0.701
+  },
+  "saved_ref": "rsraki/p011srv-8105f0434cc183692525c2dd8ccdc9eb",
+  "kernel_id": 137784585,
+  "saved_version": 1,
+  "source_serving_SHA": "a8e13bf0b053716e024f363417bc8b338b958eddf8a1837d3bad0a385607fd0c",
+  "required_body_count": 12,
+  "JSON_count": 7,
+  "CSV_count": 5,
+  "source_RPC_planned": 0,
+  "status_RPC_planned": 1,
+  "CSV_cap_bytes_each": 131072,
+  "JSON_cap_bytes_each": 4194304,
+  "profile_only_metadata_flags_no_bodyGET": [
+    "P011_BASE_PROFILE.json",
+    "p007_observation_plain/inference.json"
+  ],
+  "actual_GET_by_preparer": 0,
+  "API_auth_HTTP_GPU_MRI_model_fit_Save_submit_by_preparer": 0,
+  "candidate_gate_passed": false,
+  "accuracy_evaluated": false,
+  "Public_score": null,
+  "root_only_command_not_executed": [
+    "artifacts/tools/kaggle-venv/Scripts/python.exe",
+    "artifacts/research/20261009-p011-serving-results-tools-v1/get_once.py",
+    "--execute"
+  ],
+  "decision": "Root may perform one fresh explicitV1 status request. Only raw/typedCOMPLETE without failure permits paginated metadata and twelve bounded Serving body GETs. No GetKernel/Save/submit. Local actual-output checker is separate.",
+  "limits": "Transport readiness does not qualify visible submission or hidden success. Main/reader forward and per-checkpoint runtime receipts are absent in this Serving source; use exact source and prior actual256 evidence as such."
+}

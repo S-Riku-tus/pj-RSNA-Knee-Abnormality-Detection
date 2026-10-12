@@ -1,0 +1,63 @@
+{
+  "schema_version": "p014_official_hidden_rerun_exception_root_observation_v1",
+  "at_utc": "2026-10-10T09:10:37.753299+00:00",
+  "P014": {
+    "submission_ref": 57031186,
+    "ref": "rsraki/p012native2-2017c2587f0dd4f03bfd9dee7332a074",
+    "saved_version": 1,
+    "raw_status": "COMPLETE",
+    "own_Public": null,
+    "successful_scoring": false,
+    "errorDescription": "Your notebook hit an unhandled error while rerunning your code. Note that the hidden dataset can be larger/smaller/different than the public dataset",
+    "held": {
+      "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/submission-observation-v25/held.json",
+      "sha256": "408dca0c44e9e4423f45c355810b6d0ea5d07766bd4379b297603a6b2fe2bc46"
+    },
+    "raw_and_typed_safe_response": {
+      "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/submission-observation-v25/response-safe.json",
+      "sha256": "d92a13013901a14c51a618617a2e4f918eb0a0bbd200a49d92b364a004d67f1e"
+    },
+    "getter_AssertionError_is_local_failed_score_validation_not_hidden_stacktrace": true,
+    "exact_hidden_exception_type_or_traceback_available": false
+  },
+  "P015": {
+    "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/submission-observation-v21/observation.json",
+    "sha256": "4fa4f94318b562de4d47359f72f5c5e1e37e396fa8d32cececbaff8941e84ce4",
+    "observation": {
+      "at_utc": "2026-10-10T09:07:39.183482+00:00",
+      "ref": "rsraki/p012native2-ff87856adabf4210bdd8a797616743f0",
+      "saved_version": 1,
+      "submission_ref": 57031981,
+      "official_get_requests": 1,
+      "Save_upload_Submit": 0,
+      "own_Public": null,
+      "strict_above960_achieved": false,
+      "actual_status": "NOT_EXPLICIT_YET",
+      "SDK_default_status": "PENDING",
+      "raw_status_field_omitted": true,
+      "error_description": null,
+      "hidden_scoring_complete": false
+    }
+  },
+  "diagnosis": {
+    "visible3_and_CPU64_256_success_do_not_establish_hidden_robustness": true,
+    "elapsed4h26m_until_observation_is_not_run_time_or_timeout_proof": true,
+    "OOM_missing_file_zero_valid_deadline_or_platform_not_established": true,
+    "next_source_audit": "Compare added Native strict input/decoder/deadline/per-study boundaries with protected successful P012; independently inspect saved frozen source. No blind resubmit."
+  },
+  "official_debugging_primary_source": "https://www.kaggle.com/code-competition-debugging",
+  "P016": {
+    "v1_source_review": "artifacts/research/20261010-p016-direct224-onefactor-source-independent-review-v1/review.json",
+    "source_HOLD": "standalone native64/native256 missing reused path causes hidden_io ModuleNotFoundError; author repairing import only in fresh v2",
+    "new_runtime_reconstruction_GPU_MRI_Save_Submit": 0,
+    "math_clarification": {
+      "path": "experiments/p016-numerical-type-wording-clarification-20261010.json",
+      "sha256": "3b8f402dd1f2a241f0a8487ad495d1760799a397688b6622ddeebda0ce447bc3"
+    },
+    "coefficients_unchanged": "all12 90:10 from preregistration"
+  },
+  "Regional": "fixed12 fold0 E4/fold1 E5 ongoing; no partial checkpoint adoption",
+  "own_verified_Public": 0.951,
+  "strict_above0960_achieved": false,
+  "goal_continues": true
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": "p007_submission_savedV1_independent_binding_review_v1",
+  "reviewed_at_utc": "2026-10-08T11:41:01.122174+00:00",
+  "status": "accepted_same_savedV1_mirror_binding_verified_score_unreturned",
+  "saved_ref": "rsraki/p007-convnext-mirror",
+  "saved_version": 1,
+  "kernel_id": 137659997,
+  "submission_ref": 56951892,
+  "accepted_at_utc": "2026-10-08T11:38:57.251587+00:00",
+  "checks": {
+    "acceptance_exact_immutable_submit_review": true,
+    "accepted_ref56951892": true,
+    "accepted_timestamp_response_exact": true,
+    "request_same_savedV1_exact_ref": true,
+    "accepted_binding_visible_same_ref_kernel": true,
+    "request_competition_submission_csv": true,
+    "source_binding48_checks_all_passed": true,
+    "visible11_checks_all_passed": true,
+    "request_both_gate_SHA_current": true,
+    "protected14_and16_SHA_current": true,
+    "fresh_savedCOMPLETE_no_failure": true,
+    "fresh_status_queried_exactV1_script": true,
+    "fresh_pre_submit_allowance2_record": true,
+    "fresh_today3_total10_not_total_limited": true,
+    "limits_before_request_before_acceptance": true,
+    "one_guarded_API_submission_no_retry": true,
+    "visible_independent_fusion_exact_and_teacherfree": true,
+    "accepted_score_unmeasured_not_scoring_complete": true,
+    "protected_own0950_not_newpromotion": true
+  },
+  "checks_passed": 19,
+  "checks_total": 19,
+  "quota_scope": {
+    "pre_submit_official": {
+      "numToday": 3,
+      "numTotal": 10,
+      "numAllowedNow": 2,
+      "limitedByTotal": false
+    },
+    "pre_submit_checked_at_utc": "2026-10-08T11:38:55.587140+00:00",
+    "post_submit_arithmetic_projection_remaining": 1,
+    "post_submit_official_remaining_observed": false
+  },
+  "own_best_Public": "0.950",
+  "p007_Public": null,
+  "hidden_worker_state_known": false,
+  "hidden_rerun_completed": false,
+  "scoring_scope": "Acceptance only. No fresh GetSubmission by this audit; PENDING/QUEUED/running/success/error and score are not inferred from an accepted ref.",
+  "source_artifacts": {
+    "experiments/p007-submission-accepted-20261008.json": "05edd1dcddc534497b6673a42b7c224c70cb9303f641ff1e9d1df701d39c4b96",
+    "experiments/p007-serving-saved-binding-review-20261008.json": "6d6dbdf85b56b593e18e4afb48dadb7ec2e212fdf117c271283fd9ea38b41bea",
+    "experiments/p007-serving-visible-output-review-20261008.json": "cf5838a129fb7f65cc31df425da03b89e9189c6342a3d7c9d3233562c4b79b88",
+    "artifacts/research/20261008-p007-competition-submit-v1/submission-request.json": "c8fcbae150ba1575d8d0df22a3383f2b0e7e698530d1f53725fec05d921ce2aa",
+    "artifacts/research/20261008-p007-competition-submit-v1/submission-response.json": "0536f4d4afca36296c3a6a1f69ba8f79185d49f2c3ae8221210c792c73fb9b2e",
+    "artifacts/research/20261008-p007-competition-submit-v1/fresh-submission-limits.json": "7775ab0361ffaf96134097f5875417bc73f9f40aac02a4ab09ee5ecfbfb3bfe2",
+    "artifacts/research/20261008-p007-competition-submit-v1/fresh-serving-status.json": "c5d706dd9b10a170c6088be6e58eabc656e35ac7b6859c44e60b04faaf161e41",
+    "artifacts/research/20261008-p007-competition-submit-v1/submit_once.py": "31b8e4686d4eb7c48541a68cd203fdd4fff81af7fe5fa0a6a53e1ed58d105a68",
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/16_submit_p007_convnext_mirror.ipynb": "b207fb23a729a26c7c964d28401cef146ce76bb464b05fb6673718d8b70d2d93"
+  },
+  "remote_poll_or_mutation_by_this_audit": false,
+  "MRI_model_payload_access_fit": false,
+  "limits": [
+    "One successful visibleV1 run and accepted submission do not prove hidden completion or improvement.",
+    "Mirror serving actual call count is source-bound inference completion evidence; profile32 separately supplied instrumented48 model calls.",
+    "Remaining1 is arithmetic from fresh pre-submit2 after one accepted submission, not a server read or reservation."
+  ]
+}

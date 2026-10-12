@@ -1,0 +1,154 @@
+{
+  "schema_version": "f005_regional_epochs45_and_public_Versia7_duplicate_source_root_milestone_v1",
+  "at_utc": "2026-10-10T08:56:28.310330+00:00",
+  "partial_training": {
+    "root_observation": {
+      "path": "artifacts/research/20261010-f005-regional-parallel-f0E4-f1E5-root-v1/observation.json",
+      "sha256": "ce7362561128e7c02e2741c84061b3fed03e37e04bc713636192dfe40201d080"
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "completed_epochs": 4,
+        "latest_epoch": {
+          "epoch": 4,
+          "train_bce": 0.31496545506502277,
+          "weak_bce": 0.31248607166320924,
+          "weak_macro_auc_12": 0.8246000094548265,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "observed_cells": 23331,
+          "elapsed_seconds": 8864.727128300001,
+          "prediction_sha256": "ab250cb18eb310658391ed62752fedf67a92129b490466f5ce3f5a1f528bd8ed",
+          "gpu_peak_reserved_bytes": 1254096896
+        },
+        "latest_epoch_interval_seconds": 2204.9848363999045,
+        "same_epoch_CLS": {
+          "run": "artifacts/runs/f005-native-last2-fast16-fold0-20261009-v1/run.json",
+          "sha256": "56a463e2a54739e2077a1e991af7f66e80fb5c45d1cd70018cc5c368778ed3ba",
+          "epoch": 4,
+          "weak_bce": 0.3029857405676191,
+          "weak_macro_auc_12": 0.835975744125772,
+          "fixed10_AUC": 0.8513478410028745
+        },
+        "fixed10_AUC": 0.840167197492978,
+        "fixed10_AUC_delta": -0.01118064350989656,
+        "weak_BCE_delta": 0.00950033109559012
+      },
+      {
+        "fold": 1,
+        "completed_epochs": 5,
+        "latest_epoch": {
+          "epoch": 5,
+          "train_bce": 0.30259441723246205,
+          "weak_bce": 0.3093054959928911,
+          "weak_macro_auc_12": 0.8313063834554187,
+          "optimizer_steps": 208,
+          "optimizer_step_opportunities": 208,
+          "amp_skipped_steps": 0,
+          "observed_cells": 22851,
+          "elapsed_seconds": 10730.716147799976,
+          "prediction_sha256": "e6a5e08c319bdb0da913be96278ad0ce4195e9ecf4d0cf6ee26f79fff809049e",
+          "gpu_peak_reserved_bytes": 1337982976
+        },
+        "latest_epoch_interval_seconds": 2203.990136999986,
+        "same_epoch_CLS": {
+          "run": "artifacts/runs/f005-native-last2-fast16-fold1-20261009-v1/run.json",
+          "sha256": "f3a0ddc4762cc64840b10a1d5f79cbd3c910cbb735e0bb8a4848507560134fe3",
+          "epoch": 5,
+          "weak_bce": 0.2928173509883299,
+          "weak_macro_auc_12": 0.8505246428487222,
+          "fixed10_AUC": 0.8615871376923988
+        },
+        "fixed10_AUC": 0.8498037610301549,
+        "fixed10_AUC_delta": -0.011783376662243938,
+        "weak_BCE_delta": 0.016488145004561194
+      }
+    ],
+    "fixed_support10_labels": [
+      "ACL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ],
+    "fixed12_continues": true,
+    "partial_checkpoint_adopted": false,
+    "representation_only_effect_proved": false,
+    "old_GPU_settings_and_overlap_differ": true,
+    "actual_live_sessions_verified": [
+      94738,
+      91809
+    ]
+  },
+  "fresh_public_source": {
+    "URL": "https://www.kaggle.com/code/evgendvorkin/rsna-versia-7",
+    "report": {
+      "path": "artifacts/research/20261010-public-versia7-source-root-v1/source-analysis-v1/report.json",
+      "sha256": "ddd783e85fd46c17008757afb5259c0f02e4206da1f1f14720ccd4e13b873ea6"
+    },
+    "source_code5_same_as_own951_original5_except_boundary_newlines": true,
+    "new_factor_verified": false,
+    "current_author_score_or_scriptVersion_known": false,
+    "decision": "No new model acquisition or reproduction from this duplicate source.",
+    "read_scope": "source markdown and metadata only; savedoutputs decode/view0, actualmodels/MRI/teacher0",
+    "source_pull_calls": 1
+  },
+  "P016_source_preparation": {
+    "preregistered_conditions": "experiments/p016-direct224-onefactor-preregistration-20261010.json",
+    "fixed_crop_offset80_noresize_full94_singleview_rawprob_rank90_10_preserved": true,
+    "final_source_freeze_and_independent_peer_pending": true,
+    "serving_or_newCPU64_256_qualified": false,
+    "actual_P016_Save_Submit": 0
+  },
+  "official_Submissions": [
+    {
+      "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/submission-observation-v24/observation.json",
+      "sha256": "923c2b8a2839cecd608155f92ecb03ea75046865a079bfa6e1ab919d85094ceb",
+      "observation": {
+        "at_utc": "2026-10-10T08:54:02.550110+00:00",
+        "ref": "rsraki/p012native2-2017c2587f0dd4f03bfd9dee7332a074",
+        "saved_version": 1,
+        "submission_ref": 57031186,
+        "official_get_requests": 1,
+        "Save_upload_Submit": 0,
+        "own_Public": null,
+        "strict_above960_achieved": false,
+        "actual_status": "NOT_EXPLICIT_YET",
+        "SDK_default_status": "PENDING",
+        "raw_status_field_omitted": true,
+        "error_description": null,
+        "hidden_scoring_complete": false
+      }
+    },
+    {
+      "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/submission-observation-v20/observation.json",
+      "sha256": "66b2e44081c07f8a22cbacb888b8fda3436855158e7528586e43b238190568cb",
+      "observation": {
+        "at_utc": "2026-10-10T08:54:02.865638+00:00",
+        "ref": "rsraki/p012native2-ff87856adabf4210bdd8a797616743f0",
+        "saved_version": 1,
+        "submission_ref": 57031981,
+        "official_get_requests": 1,
+        "Save_upload_Submit": 0,
+        "own_Public": null,
+        "strict_above960_achieved": false,
+        "actual_status": "NOT_EXPLICIT_YET",
+        "SDK_default_status": "PENDING",
+        "raw_status_field_omitted": true,
+        "error_description": null,
+        "hidden_scoring_complete": false
+      }
+    }
+  ],
+  "own_verified_Public": 0.951,
+  "own_Gold_fit_selection_evaluation": false,
+  "own_strict_above0960_achieved": false,
+  "goal_continues": true
+}

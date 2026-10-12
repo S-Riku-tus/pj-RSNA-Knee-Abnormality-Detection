@@ -1,0 +1,112 @@
+{
+  "schema_version": "native392_canonical_shards01to10_root_stage_review_v1",
+  "checked_at_utc": "2026-10-08T16:19:48.688332+00:00",
+  "all_passed": true,
+  "checks": {
+    "all10_fresh_canonical_stage_receipts_complete": true,
+    "all10_immutable_source_bytes_and_mtime": true,
+    "all10_samefile_nlink_exactly_one": true,
+    "all10_exact_summary_byte_copy": true,
+    "all10_no_partial_markers": true,
+    "1757_actual_fullQA_studies_8785_arrays": true,
+    "oldZIP_not_copied_or_unpacked": true,
+    "full4207_index_not_built": true
+  },
+  "staged_processed_cache_shards": [
+    {
+      "shard_index": 0,
+      "studies": 176,
+      "arrays": 880,
+      "receipt_sha256": "f7eac2ecd551c97f15bc6b1a5b9e000ee44a5830f659172a672e9dca7cb5baf0",
+      "archive_sha256": "bafc99755bfef36efad9b531dcaf21df00d08384e13691d4aa79942f2fd9cb99",
+      "summary_sha256": "5a1aeef87119bcdca6edca0b4d04e1b792309b9176eaa95104436f6495856574",
+      "bytes": 4741650198
+    },
+    {
+      "shard_index": 1,
+      "studies": 176,
+      "arrays": 880,
+      "receipt_sha256": "94df73eddca1c8fea1911bc0c0893606d887dc455fded266adabfe12e114b59b",
+      "archive_sha256": "b382a5b451e383b1aa506fb72e888b13a646dfbb64b5c40df5b29c5ee1888136",
+      "summary_sha256": "7093b35e690f551a15cfdf1aa9c3d7e737393fbee086df02fdbccc511055cca6",
+      "bytes": 4684805955
+    },
+    {
+      "shard_index": 2,
+      "studies": 176,
+      "arrays": 880,
+      "receipt_sha256": "58b064a8927df925586533fdd6a1c2737e3e6e34a89527d637fef6810fda0442",
+      "archive_sha256": "8f65cc0c99a8178adeee5793df6005080aa7823ab2accd9f06c905d51b13eec9",
+      "summary_sha256": "86753e4fc24307370e145d1b8e89ea7ac727c6bfaa75d7aaa7a8d14344ac4542",
+      "bytes": 4827892599
+    },
+    {
+      "shard_index": 3,
+      "studies": 176,
+      "arrays": 880,
+      "receipt_sha256": "29580b3cbcd54c42723169f9d74e6b105835741e309aaa0b7bc58a248eeb9bba",
+      "archive_sha256": "ede7739e28a7975c99331a215726db223e8f0afb40412ef830a712cbdfd631dc",
+      "summary_sha256": "11bfc65479896ea9a625583667e81ba2282a3269ff58eaab0acaba206bd596d1",
+      "bytes": 4774783538
+    },
+    {
+      "shard_index": 4,
+      "studies": 176,
+      "arrays": 880,
+      "receipt_sha256": "5a43a7f5454d3af8c679b68a33fc6303a7c276d57f5fd838cdd8c9ad8c2659bc",
+      "archive_sha256": "6790039a1b55550fa35774ec7dca7ddcd60048b1695d321282b74002b19763fc",
+      "summary_sha256": "37bec55198957adb6dea4d0ef93ddfe6d449a7b52ccbe5639f15b49d0aac2b06",
+      "bytes": 4619896162
+    },
+    {
+      "shard_index": 5,
+      "studies": 176,
+      "arrays": 880,
+      "receipt_sha256": "20040187079ea6bbb3acfa8bdb5632765ffa319d155ca48265fe277ac4ded87f",
+      "archive_sha256": "fcf96e6228a3b13764ca2815cfced51bdd0611990fd86df34d4e909943fdfcb1",
+      "summary_sha256": "aa3d374f0aee5ea3db203e1ea8383f73da896e231ab565d1c2aee16f6bc7fd9d",
+      "bytes": 4712653873
+    },
+    {
+      "shard_index": 6,
+      "studies": 176,
+      "arrays": 880,
+      "receipt_sha256": "1f7ddca1e47027af0a3b7b85f56f02b0a53f96e0c209a0abf2034f231335b347",
+      "archive_sha256": "32107c42ae786ccc31b9b20693fe0efd5b78ca19e294c715fae239a78c722814",
+      "summary_sha256": "05f11d7af7bc75e0968a5e37bb8b4f093d3415e47dd5ed7ff5fb8553bd78bf78",
+      "bytes": 4713140182
+    },
+    {
+      "shard_index": 7,
+      "studies": 175,
+      "arrays": 875,
+      "receipt_sha256": "d22177023ce99be6bafd6bf4a2d5325218056523a91d4e6d2a090155e3e2086a",
+      "archive_sha256": "d5d4cdc59309f1b35d3ccdd433f3becf9b2e80909abdc5718de0ad6f1d9c3cea",
+      "summary_sha256": "96ea5d3abf48068fe12f0022be55cfe1934aab1d4b80ce85878f558f34662813",
+      "bytes": 4745258059
+    },
+    {
+      "shard_index": 8,
+      "studies": 175,
+      "arrays": 875,
+      "receipt_sha256": "aa1d40389002e77da3bf10f43cfb0c4dcca6f97c60a0902b0d95116fa4393b7b",
+      "archive_sha256": "1b8f586e1cb1b80c1f13caa17d3e12051ac3d6898495a1e7ea73aa98fa447c15",
+      "summary_sha256": "a9a429a8f403eed000ab9888222ea7e9ed27634021d335e725e619badb11b8bc",
+      "bytes": 4767390640
+    },
+    {
+      "shard_index": 9,
+      "studies": 175,
+      "arrays": 875,
+      "receipt_sha256": "c3dcfb84dc67bc3148cd362d69586f8f7d05f1d265b466ddd13cbe53d81289e6",
+      "archive_sha256": "8074afbaf385b05efce2872d9f96d8dda690a2745da21637fdfd00679b35bb09",
+      "summary_sha256": "b9a15d74a7fc7e08f754c483385c24a38fd9680f832aa54183d0ca3e2a3ddd99",
+      "bytes": 4797675991
+    }
+  ],
+  "formal_fit_started": false,
+  "raw_DICOM_teacher_or_model_downloaded_by_stage": false,
+  "API_calls_by_stage": 0,
+  "immutable_hardlink_shares_writable_inode": true,
+  "next_full_index_requires_all24": true
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "p007_serving_visible_independent_review_v1",
+  "reviewed_at_utc": "2026-10-08T11:37:26.827899+00:00",
+  "status": "visible_V1_fixed_fusion_and_UIDs_verified",
+  "saved_ref": "rsraki/p007-convnext-mirror",
+  "saved_version": 1,
+  "kernel_id": 137659997,
+  "studies": 3,
+  "checks": {
+    "saved_binding48_all_passed": true,
+    "exact_V1_kernel_ref": true,
+    "raw_actual_COMPLETE_not_SDK_default": true,
+    "saved_source_hash_unchanged": true,
+    "three_CSV_allowlist_no_MRI_model_cache": true,
+    "download_all_bytes_SHA_exact": true,
+    "13_columns_UID_order_finite": true,
+    "independent_fixed12_weight_fusion_maxdiff0": true,
+    "all12_reader_and_fused_targets_nonconstant": true,
+    "actual2_GPU_main_and3checkpoint_reader_log": true,
+    "fusion_success_once_no_exception_fallback": true
+  },
+  "checks_passed": 11,
+  "checks_total": 11,
+  "independent_fixed_fusion_max_abs_difference": 0.0,
+  "own_best_Public": "0.950",
+  "p007_Public": null,
+  "accuracy_evaluated": false,
+  "hidden_rerun_completed": false,
+  "limits": [
+    "Actual serving mirror forward count/grad/mask is inferred from exact saved source and completed reader, not separately instrumented in this serving Notebook. Real profile32 supplied48 FP16 mirror calls, no_grad and all6 batch4 resource proof.",
+    "Visible data and finite rank fusion do not establish hidden completion or accuracy improvement."
+  ],
+  "source_artifacts": {
+    "submission.csv": "381253ef942b8f7da0488b13f9e6aabed6a9b660ae40e68b17533a9eba14b37b",
+    "_own.csv": "1042bab11a21255b23bd50b450d7b772f5475efeccde6110849fc0225037e3d8",
+    "_sota_0949.csv": "faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede",
+    "visible.log": "f58c2fb6fa2fbf641616a0e7c13b91fb2bbc972d3e498c13ce0ba87f273219de",
+    "download-receipt.json": "2937e2bfb93a0d7c708a126f87247677ec6419dc4e3d5f81a29cc565ab7fabe3",
+    "saved-source.json": "ec3a3a42dc48739b25e4553f3438b43317c9ccd38a44f32da311de800ccfb3df",
+    "status-complete.json": "31ee15c3e8c12e6547370ef41fef21a031842b81beba7384ec937e20499b8c01"
+  },
+  "binding_json_sha256": "6d6dbdf85b56b593e18e4afb48dadb7ec2e212fdf117c271283fd9ea38b41bea",
+  "independent_math_helper_sha256": "f103012a1bf4f525925663718473e61aa5475d941369e9070302ba6860c53109",
+  "remote_calls_or_submission": false
+}

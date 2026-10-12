@@ -1,0 +1,93 @@
+{
+  "schema_version": "rsna_p017_fault_root_p016_phase3_materialized_event_v1",
+  "at_utc": "2026-10-10T12:42:04.902453+00:00",
+  "issued_by": "root",
+  "own_best_official_Public": 0.951,
+  "strictly_above_0960_achieved": false,
+  "P017": {
+    "healthy_visible_studies": 3,
+    "healthy_root": {
+      "path": "artifacts/research/20261010-p017-native-serving-root-v1/actual-healthy-visible-root-acceptance-v1.json",
+      "sha256": "66eb71bc37962e7b99051b9594d88142ce8e1578674b17d43bd1e4b7f337a7c9"
+    },
+    "actual_fault_root": {
+      "path": "artifacts/research/20261010-p017-malformed-DICOM-fault-root-v1/actual-fault-root-acceptance-v1.json",
+      "sha256": "2f9cba2c2f0335fdb9076e5457ad620ae402978c55f00942e4d391dc0a709719"
+    },
+    "actual_fault_independent": {
+      "path": "artifacts/research/20261010-p017-fault-actual-independent-v1/review.json",
+      "sha256": "812bdfd015bc93fd6f30874b0ee42cd95164db4f16089e27e70bfdd9c92b7a76"
+    },
+    "fault_contract_checks": 24,
+    "fault_independent_checks": 12,
+    "offline_replay_new_API_GET_GPU_calls": 0,
+    "original_fault_body_GETs": 15,
+    "original_fault_GET_bytes": 41114,
+    "restored_original_baseline_byteexact": true,
+    "failed_native_temp_files_removed": false,
+    "loaded_model_aliveness": null,
+    "normal_competition_Submit_issued": false,
+    "diagnostic_Submit_forbidden": true,
+    "hidden_completion_verified": false,
+    "accuracy_evaluated": false
+  },
+  "P016": {
+    "actual_native256_independent": {
+      "path": "artifacts/research/20261010-p016-native256-actual-independent-v1/review.json",
+      "sha256": "7c3bb486563ea87c968b44124d2419532d981b494eb54d2b990fc0e4cdd8c268"
+    },
+    "actual_native256_root": {
+      "path": "artifacts/research/20261010-p016-serving-root-v1/actual-native256-root-acceptance-v1.json",
+      "sha256": "1c523b05e3a71dc4dae852353ffdae92df582d027b0b0953fd065bcba37637f2"
+    },
+    "actual_CPU64_256_root_review": {
+      "path": "artifacts/research/20261010-p016-serving-root-v1/metadata/actual-phase-review.json",
+      "sha256": "cf02cd4faf45925bed4a1c310af5fff16545b8201c70c88583ccc8ae2ceaad68"
+    },
+    "root_materialization_context": {
+      "path": "artifacts/research/20261010-p016-serving-root-v1/materialization-context.json",
+      "sha256": "34c291e78228f1984df1da3c04b9ffca89962b2ffd7c68b4e9a20ec72890a774"
+    },
+    "genuine_Serving_source_binding": {
+      "path": "artifacts/research/20261010-p016-serving-root-v1/materialized-serving-source-v1/serving-binding.json",
+      "sha256": "1df04c14e4dfec4c27b95211e9b508fce56a14222ab6d17ce552c388280d075c"
+    },
+    "Serving_ref": "rsraki/p016s-15fc2f133b64440bb0116eca01263c41",
+    "actual_native256_studies": 256,
+    "actual_native256_elapsed_seconds": 133.86029885699963,
+    "actual_baseline_whole_seconds": 2989.33615998,
+    "Torch_peak_reserved_mib": [
+      8600,
+      7448
+    ],
+    "sampled_process_tree_RSS_bytes": 6423257088,
+    "sampled_RSS_includes_duplicate_shared_pages": true,
+    "fallback_calls": 0,
+    "actual_CPU64_256_qualified": true,
+    "actual_Serving_Save_issued": false,
+    "actual_Serving_or_accuracy_qualified": false,
+    "coefficients": [
+      0.9,
+      0.1
+    ],
+    "fixed12_rank_final_percentile_passes": 1,
+    "additional_final_rank_passes": 0,
+    "own_Gold_fit_selection_Report_read": false
+  },
+  "Regional": {
+    "snapshot": {
+      "path": "artifacts/research/20261010-f005-regional-E10E11-root-snapshot-v1/comparison.json",
+      "sha256": "2be0601b6beff366770b0be12fa01b384351de48b8534a9520c38a84877e6097"
+    },
+    "fold0_latest_epoch": 10,
+    "fold1_latest_epoch": 11,
+    "fixed_total_epochs": 12,
+    "fold0_fixed10_AUC_delta_vs_old_same_epoch": -0.003186,
+    "fold1_fixed10_AUC_delta_vs_old_same_epoch": -0.005063,
+    "fold1_epoch11_AMP_skipped_steps": 1,
+    "partial_checkpoint_adopted": false,
+    "patient_independence_verified": false
+  },
+  "upload_model_MRI_Report_credentials_calls": 0,
+  "public_accuracy_claimed": false
+}

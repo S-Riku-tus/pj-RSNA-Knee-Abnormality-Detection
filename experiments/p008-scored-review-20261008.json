@@ -1,0 +1,30 @@
+{
+  "recorded_at_utc": "2026-10-08T13:27:08.951554+00:00",
+  "checked_at_utc": "2026-10-08T13:24:13.704488+00:00",
+  "all_passed": true,
+  "checks": {
+    "exact_submission_ref": true,
+    "exact_saved_version": true,
+    "actual_server_complete": true,
+    "actual_public_text": true,
+    "submitted_by_own_account": true,
+    "official_filename": true,
+    "positive_hidden_submission_bytes": true,
+    "no_returned_error": true,
+    "baseline14_protected": true,
+    "submitted17_unchanged": true
+  },
+  "submission_ref": 56950968,
+  "notebook_ref": "rsraki/p008-apex-meniscus10",
+  "saved_version": 1,
+  "own_public_score_text": "0.950",
+  "official_total_bytes": 382855,
+  "decision": "Keep p005: fixed10 Meniscus overlay adds compute without displayed gain",
+  "source": "artifacts/research/20261008-p008-competition-submit-v1/scoring-20261008T132413704488.json",
+  "source_sha256": "b855890b59fcddc2bfcdb3c14c8edf05a06c08be404031de9fe5b1c9a3568d79",
+  "remote_mutation": false,
+  "unrounded_delta_known": false,
+  "hidden_worker_runtime_known": false,
+  "individual_AUC_known": false,
+  "strict_over0960_goal_achieved": false
+}

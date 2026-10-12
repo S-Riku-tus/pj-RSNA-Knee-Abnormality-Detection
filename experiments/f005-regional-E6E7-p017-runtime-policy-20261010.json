@@ -1,0 +1,74 @@
+{
+  "schema_version": "Regional_E6E7_and_P017_runtime_policy_root_progress_v1",
+  "at_utc": "2026-10-10T10:06:48.650407+00:00",
+  "Regional_partial_root_comparison": {
+    "path": "artifacts/research/20261010-f005-regional-E6E7-root-snapshot-v1/comparison.json",
+    "sha256": "b60675453ba8b6d2ed4af76ea05a5b59c52b552dc330dcbc81744c9f7c16f0f5"
+  },
+  "Regional_comparison": [
+    {
+      "fold": 0,
+      "epoch": 6,
+      "Regional_raw_run_sha256": "3ace1c342d1e44d7990a6829f7d61206d54099ddcd455f5b253bb22527736c1f",
+      "old_CLS_run_path": "artifacts/runs/f005-native-last2-fast16-fold0-20261009-v1/run.json",
+      "old_CLS_run_sha256": "56a463e2a54739e2077a1e991af7f66e80fb5c45d1cd70018cc5c368778ed3ba",
+      "Regional_weak_BCE": 0.28913737102362086,
+      "old_same_epoch_weak_BCE": 0.28528148745778076,
+      "BCE_delta_Regional_minus_old": 0.0038558835658401014,
+      "Regional_AUC12": 0.854474076342521,
+      "old_same_epoch_AUC12": 0.8514370402294302,
+      "fixed10_Regional_AUC": 0.8672438916110252,
+      "fixed10_old_AUC": 0.8715518292276973,
+      "fixed10_AUC_delta": -0.004307937616672031,
+      "all_epochs_amp_skips": 0,
+      "epoch_interval_seconds": 2175.3867501999484,
+      "cumulative_elapsed_seconds": 13233.522552200011,
+      "prediction_sha256": "af55d1066fb853ac689c2dcb0e203c5331d4b2235b4fe198c4b235b2cb37ffa3",
+      "updates": 212,
+      "opportunities": 212,
+      "run_status": "running"
+    },
+    {
+      "fold": 1,
+      "epoch": 7,
+      "Regional_raw_run_sha256": "a14015e6ab19e4acd2ee6e04d4e653f1fad7f524d67ceebc4119374871dc43d1",
+      "old_CLS_run_path": "artifacts/runs/f005-native-last2-fast16-fold1-20261009-v1/run.json",
+      "old_CLS_run_sha256": "f3a0ddc4762cc64840b10a1d5f79cbd3c910cbb735e0bb8a4848507560134fe3",
+      "Regional_weak_BCE": 0.2947755054261194,
+      "old_same_epoch_weak_BCE": 0.2826255471944516,
+      "BCE_delta_Regional_minus_old": 0.012149958231667812,
+      "Regional_AUC12": 0.8587794992667562,
+      "old_same_epoch_AUC12": 0.865756203400435,
+      "fixed10_Regional_AUC": 0.8664343313734213,
+      "fixed10_old_AUC": 0.8766128012233793,
+      "fixed10_AUC_delta": -0.01017846984995796,
+      "all_epochs_amp_skips": 0,
+      "epoch_interval_seconds": 2176.655362199992,
+      "cumulative_elapsed_seconds": 15102.477663900005,
+      "prediction_sha256": "8c9b0a0e6e355ccb7bfd11a7e573a517ce981e257d3cf515218347b772765d9a",
+      "updates": 208,
+      "opportunities": 208,
+      "run_status": "running"
+    }
+  ],
+  "fixed12_complete_before_checkpoint_adoption": true,
+  "weak_AUC12_and_fixed_support10_distinguished": true,
+  "current_Regional_improvement_established": false,
+  "Gold_or_Public_evaluation": false,
+  "P017_preregistration": {
+    "path": "experiments/p017-native-baseline-failover-preregistration-20261010.json",
+    "sha256": "5a42251f58fd64484bbe98b09b2c724be770524630ed405d491304a84f09af23"
+  },
+  "P017_single_factor": "Explicit baseline raw-byte restore on optional Native runtime failure after healthy sealed baseline and safe process termination. Native model, support20 mask and healthy rank math unchanged.",
+  "P017_source_preparation_and_peer_pending": true,
+  "P017_actual_new_GPU_Save_Submit": 0,
+  "P016_native64_state": {
+    "status": "RUNNING",
+    "root_CLI_chunk": "6df3d8",
+    "actual_completed_qualified": false
+  },
+  "P014_P015_hidden_exception_no_score": true,
+  "own_verified_Public": 0.951,
+  "strict_above0960_achieved": false,
+  "goal_continues": true
+}

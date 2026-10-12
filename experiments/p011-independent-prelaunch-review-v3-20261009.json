@@ -1,0 +1,84 @@
+{
+  "schema_version": "p011_independent_prelaunch_delta_review_v3",
+  "reviewed_at_utc": "2026-10-08T17:28:10.247203+00:00",
+  "all_passed": true,
+  "checks": {
+    "V2_peer42_proof_immutable_and_allpassed": true,
+    "V2_runtime_snapshot_preserved_exact_d9ff": true,
+    "V3_runtime_exact_frozenSHA": true,
+    "only_added_nativegate_and_two_expected_functions_change": true,
+    "removing_only_gate_call_receipt_keys_profilepredicate_restores_entire_V2_AST": true,
+    "nativebyte_receipt_validate_after_inputs_before_actual_infer": true,
+    "nativegate_missing_corrupt_size_UID_exactsuccess_or_recordedzero_decodererror": true,
+    "serving_all_cells_except_single_runtime_literal_unchanged": true,
+    "serving_exact_packagecopy_frozen_runtimeLF_no_currentqualification": true,
+    "profile64_all_cells_except_single_runtime_literal_unchanged": true,
+    "profile64_exact_packagecopy_frozen_runtimeLF_no_currentqualification": true,
+    "peer_post22_source_package_cohort_input_graph_integrity": true,
+    "cohort64_V2byteexact_64UID63groups_Gold_excluded": true,
+    "author_V3_validation21_and19CPU_report_currentSourceHashes": true,
+    "author_GPU_same3masks_tiny_sourcebound_not_actualqualification": true,
+    "focused3CPU_actualconsume_missing_malformed_mismatch_modelcalls0_success_andzero_policy_pass": true,
+    "focused3CPU_Ruff_pass": true
+  },
+  "checks_passed": 17,
+  "checks_total": 17,
+  "retained_V2_parent": {
+    "path": "experiments\\p011-independent-prelaunch-review-20261009.json",
+    "sha256": "f3741522b6e970b905dd54d5e422d9482d27cdd550823f3e79594a9dfa6246d7",
+    "checks": 42,
+    "peerCPU": 10,
+    "authorCPU_independently_rerun": 17
+  },
+  "source_inventory_peer": {
+    "path": "experiments\\p011-launcher-source-contract-review-v3-20261009.json",
+    "sha256": "909f65a0ccee8d7eace5497b1e0fa3ccd86e64a391ea303f2746b6b0a80b416a",
+    "checks": 22
+  },
+  "author_validation": {
+    "path": "experiments\\p011-artificial-preparation-validation-v3-20261009.json",
+    "sha256": "c9549811f800c11ced15da8381a257879d59497d6f531ad7d83c09f8aa8f24b7",
+    "CPU_report": 19
+  },
+  "source_SHA": {
+    "scripts/p011_contracts.py": "0d86b0bcded2046fef89605cd7dd22fb7f05f326b15bf66a11027d46e96de76c",
+    "scripts/p011_independent_runtime.py": "1ca09fbff359947d7b1df69823f52d5490671d6950f1eb59e69b23167962b9d9",
+    "scripts/build_p011_independent224.py": "dd642cff6425e493fe115eaea0233743448319cf9bbe1f43b30342f4aa3d1550",
+    "scripts/build_p011_profile.py": "899b0a8758bb213a598b39de4299a6910d6b50e1fc8c1d5e9523078226af36e0",
+    "scripts/check_p011_artificial.py": "80f58470fdb978cce09559b7899d458fc85eb1b699e5a34dda1809ceb9ca40a2",
+    "tests/test_p011_independent224.py": "127261757f250bcaa0dd148fb127d12a63e89955f4c3c878363332bfc3a9a4ac"
+  },
+  "notebooks": [
+    {
+      "notebook": "notebooks/public/22_submit_p011_independent224_rank10_v3.ipynb",
+      "cells": 21,
+      "code_cells": 18,
+      "sha256": "a8e13bf0b053716e024f363417bc8b338b958eddf8a1837d3bad0a385607fd0c"
+    },
+    {
+      "notebook": "notebooks/public/22a_profile_p011_independent224_64_v3.ipynb",
+      "cells": 25,
+      "code_cells": 22,
+      "sha256": "62e6aaefda761077dafbbe56167732784f9c14ec11230df0e197481918974020"
+    }
+  ],
+  "package_json_sha256": {
+    "artifacts/kaggle/p011-independent224-rank10-v3-20261009": "163f5abd128f2e93e9e836397e0da0245bfd229ca74b93508664a50c7677d3e6",
+    "artifacts/kaggle/p011-profile64-independent224-v3-20261009": "18087a2a089be593fa327ddff74e0ffe166a4f886e922f664a3dfa5fbcf051a1"
+  },
+  "new_tests": {
+    "path": "artifacts\\research\\20261009-p011-independent-prelaunch-v3\\test_receipt_gate.py",
+    "sha256": "5585c4110889414caaa67290966a6985ec354f5573a94d412d25f2f1bcf95535",
+    "passed": 3,
+    "seconds": 0.075,
+    "scope": "Actual nested consume AST body; mocked model/helper protocol, no actual CUDA/model/MRI."
+  },
+  "candidate_gate_passed": false,
+  "accuracy_evaluated": false,
+  "old_p010_gate_requalified": false,
+  "actual64_or256_executions_verified_here": 0,
+  "remote_API_auth_save_submit": 0,
+  "MRI_model_weight_body_reads": 0,
+  "decision": "Eligible only for root private64 diagnostic launch",
+  "limitations": "No actual twoT4/64/256 runtime or hidden completion/score qualified. Original seven computational cells remain byte identical; stochastic bit identity is not asserted."
+}

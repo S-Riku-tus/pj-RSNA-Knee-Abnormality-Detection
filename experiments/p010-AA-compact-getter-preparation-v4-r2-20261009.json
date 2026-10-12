@@ -1,0 +1,58 @@
+{
+  "schema_version": "p010_AA_getter_preparation_v4_r2",
+  "prepared_at_utc": "2026-10-08T16:31:45.394195+00:00",
+  "all_passed": true,
+  "checks": {
+    "actual_ApiGetKernelResponse_fixture_21cells_8helpers_passed": true,
+    "existing_exact_V4_capture_reused_SourceStatus_RPC_zero": true,
+    "raw_and_typed_terminal_only_default_worker_unknown": true,
+    "full_source_private_T4_OFF_Original_Input_pins_before_HTTP": true,
+    "four_page_360entry_both_endpoint_roundtrip": true,
+    "ambiguous_320_basename_counts_preserved_no_byteproof": true,
+    "COMPLETE_exact40_compact_GETs_ERROR_JSON_only": true,
+    "positive_allowlist_no_MRI_NPZ_weights_perstudy_body": true,
+    "bounded_HTTPS_ContentLength_countedSHA_responseclose": true,
+    "wrongversion_drift_foreignoutput_collision_freshfolder_failclosed": true,
+    "SDK_default_missing_state_artifactGET_zero": true,
+    "immutable_V3_transport_SHA_verified": true,
+    "no_auth_API_HTTP_GPU_MRI_or_realweights_access_in_preparation": true,
+    "final_Ruff_success": true
+  },
+  "SDK_artificial_unittest": {
+    "tests": 10,
+    "passed": 10,
+    "seconds": 0.326
+  },
+  "source_sha256": {
+    "compact_tools.py": "249b7accdbebb886890235ace81cbc02b8ac0a9525dec67e2d115ecb4f8c3318",
+    "get_once.py": "faf02f0079560dcb8a3fe2061c99ae2863a33521db2f1209d07fb5bf7ee3617b",
+    "test_getter_sdk.py": "af8c998b56365d36a6d8f305e43f6e9dbe4ad46218ed561cd7627962c9a1ad02"
+  },
+  "existing_actual_source_status_capture": "artifacts/research/20261009-p010-AA32-savedV4-binding-v1/observation-v1",
+  "existing_actual_capture_sha256": {
+    "read-start.json": "c010aee94d1a4720672852ec8f5e2dd25b72de7beccc96f369a84dd4ced48747",
+    "status.json": "965b98670e0972ef78b5afce1ff5cac1c3a099fdf42967d9467209f465c5d971",
+    "saved-source-raw.json": "1e8bb69e5979d12e01215071a02c7e9895e94e32da1d4a12b2332be36fe418b5",
+    "saved-source.json": "62510f03488f934fe0d21da908511c2cc9c9403a76891c6f5c2c2924b54eb10c"
+  },
+  "Notebook_sha256": "3f92559244f1131dc6d79408f9ae8d5a88f5bfb69d7307bdab206c3e6883d9ca",
+  "ref": "rsraki/p010diag-d6a587bcefded28cde96453a8ba1848f",
+  "kernel_id": 137683716,
+  "saved_version": 4,
+  "protected_V3_getter_sha256": "7d32eeeee0b9d6dcf1061ad3c62087be62ecee6600c3297bdeab1e4768bf5622",
+  "candidate_gate_passed": false,
+  "accuracy_evaluated": false,
+  "phase_checker_status": "prepared_source_artificial_tests_pending",
+  "root_manual_command_argv": [
+    "artifacts/tools/kaggle-venv/Scripts/python.exe",
+    "artifacts\\research\\20261009-p010-AA-results-tools-v4-r2\\get_once.py",
+    "--launch-directory",
+    "artifacts/research/20261009-p010-AA32-launch-v4-r2",
+    "--captured-binding",
+    "artifacts/research/20261009-p010-AA32-savedV4-binding-v1/observation-v1",
+    "--output",
+    "artifacts\\research\\20261009-p010-AA-results-tools-v4-r2\\observation-v1"
+  ],
+  "commands_executed_remotely_in_preparation": false,
+  "scope": "Offline actual SDK DTO roundtrips and artificial HTTP responses only; no remote reads or real payload bodies."
+}

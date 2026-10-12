@@ -1,0 +1,607 @@
+{
+  "schema_version": "f005_regional_epochs34_integrated_v2_public_source_root_milestone_v1",
+  "at_utc": "2026-10-10T08:24:01.458087+00:00",
+  "actual_partial_training": {
+    "root_observation": {
+      "path": "artifacts/research/20261010-f005-regional-parallel-f0E3-f1E4-root-v1/observation.json",
+      "sha256": "6d3a12a75b37e271956fbaf62abdce0e9d9d8da794d62f3736c09c85a7696ae8"
+    },
+    "same_epoch_metadata_comparison": {
+      "path": "artifacts/research/20261010-f005-regional-epochs34-metadata-analysis-v1/report.json",
+      "sha256": "533c1b2027f7920456d998c15f75cde56d970c8d6d8efd320017d2fee70d3631"
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "completed_epochs": 3,
+        "latest_epoch": {
+          "epoch": 3,
+          "train_bce": 0.33211538762658593,
+          "weak_bce": 0.33970507922671284,
+          "weak_macro_auc_12": 0.8085600594388276,
+          "optimizer_steps": 212,
+          "optimizer_step_opportunities": 212,
+          "amp_skipped_steps": 0,
+          "observed_cells": 23331,
+          "elapsed_seconds": 6659.7422919000965,
+          "prediction_sha256": "84cbb67795881cb76a8a9d251d8da20cea3ab4b20fb86c89dd2bdee3ddeb90c0",
+          "gpu_peak_reserved_bytes": 1254096896
+        },
+        "latest_epoch_interval_seconds": 2195.1438794001006
+      },
+      {
+        "fold": 1,
+        "completed_epochs": 4,
+        "latest_epoch": {
+          "epoch": 4,
+          "train_bce": 0.32006320218148027,
+          "weak_bce": 0.3273852894597916,
+          "weak_macro_auc_12": 0.8061965041553144,
+          "optimizer_steps": 208,
+          "optimizer_step_opportunities": 208,
+          "amp_skipped_steps": 0,
+          "observed_cells": 22851,
+          "elapsed_seconds": 8526.72601079999,
+          "prediction_sha256": "18f90f3404de7de72bb242bfcbe0b1cb3fe9c4bc1601080464fdf44724dfa587",
+          "gpu_peak_reserved_bytes": 1197473792
+        },
+        "latest_epoch_interval_seconds": 2198.2818774000043
+      }
+    ],
+    "comparison": [
+      {
+        "fold": 0,
+        "epoch": 3,
+        "history_index_zero_based": 2,
+        "same_recorded_binary_support": true,
+        "metrics": {
+          "regional": {
+            "weak_macro_auc_12": 0.8085600594388276,
+            "fixed10_equal_mean_AUC": 0.8139327856123073,
+            "weak_BCE": 0.33970507922671284,
+            "optimizer_steps_this_epoch": 212,
+            "opportunities_this_epoch": 212,
+            "AMP_skips_this_epoch": 0,
+            "optimizer_steps_through_epoch": 636,
+            "AMP_skips_through_epoch": 0,
+            "elapsed_cumulative_seconds": 6659.7422919000965,
+            "previous_epoch_elapsed_cumulative_seconds": 4464.598412499996,
+            "epoch_interval_by_difference_seconds": 2195.1438794001006,
+            "elapsed_history_cumulative_seconds": [
+              {
+                "epoch": 1,
+                "elapsed_seconds": 2247.068589500035
+              },
+              {
+                "epoch": 2,
+                "elapsed_seconds": 4464.598412499996
+              },
+              {
+                "epoch": 3,
+                "elapsed_seconds": 6659.7422919000965
+              }
+            ]
+          },
+          "CLS": {
+            "weak_macro_auc_12": 0.8220566704530573,
+            "fixed10_equal_mean_AUC": 0.8281444114700758,
+            "weak_BCE": 0.32463259423082985,
+            "optimizer_steps_this_epoch": 212,
+            "opportunities_this_epoch": 212,
+            "AMP_skips_this_epoch": 0,
+            "optimizer_steps_through_epoch": 636,
+            "AMP_skips_through_epoch": 0,
+            "elapsed_cumulative_seconds": 5252.319575100089,
+            "previous_epoch_elapsed_cumulative_seconds": 3506.66654190002,
+            "epoch_interval_by_difference_seconds": 1745.6530332000693,
+            "elapsed_history_cumulative_seconds": [
+              {
+                "epoch": 1,
+                "elapsed_seconds": 1748.733027700102
+              },
+              {
+                "epoch": 2,
+                "elapsed_seconds": 3506.66654190002
+              },
+              {
+                "epoch": 3,
+                "elapsed_seconds": 5252.319575100089
+              }
+            ]
+          }
+        },
+        "delta_regional_minus_CLS": {
+          "AUC12": -0.01349661101422972,
+          "fixed10": -0.014211625857768473,
+          "weak_BCE": 0.015072484995882984
+        },
+        "per_target": [
+          {
+            "target": "ACL",
+            "positive": 80,
+            "negative": 613,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.7346247960848287,
+            "CLS_AUC": 0.7660685154975531,
+            "regional_minus_CLS": -0.03144371941272439
+          },
+          {
+            "target": "MCL",
+            "positive": 11,
+            "negative": 672,
+            "soft_excluded": 0,
+            "in_fixed10": false,
+            "regional_AUC": 0.7633928571428571,
+            "CLS_AUC": 0.7432359307359307,
+            "regional_minus_CLS": 0.020156926406926345
+          },
+          {
+            "target": "Medial Meniscus",
+            "positive": 309,
+            "negative": 441,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.7737636586457668,
+            "CLS_AUC": 0.7797738297044816,
+            "regional_minus_CLS": -0.006010171058714819
+          },
+          {
+            "target": "Lateral Meniscus",
+            "positive": 104,
+            "negative": 613,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.6921665202660309,
+            "CLS_AUC": 0.696762454511231,
+            "regional_minus_CLS": -0.004595934245200106
+          },
+          {
+            "target": "Medial OA",
+            "positive": 71,
+            "negative": 371,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.8808321627880491,
+            "CLS_AUC": 0.8775293269048252,
+            "regional_minus_CLS": 0.003302835883223887
+          },
+          {
+            "target": "Lateral OA",
+            "positive": 33,
+            "negative": 393,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.7958979104017272,
+            "CLS_AUC": 0.7864137558794048,
+            "regional_minus_CLS": 0.00948415452232243
+          },
+          {
+            "target": "PF OA",
+            "positive": 88,
+            "negative": 378,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.7949134199134199,
+            "CLS_AUC": 0.8085618085618086,
+            "regional_minus_CLS": -0.013648388648388687
+          },
+          {
+            "target": "Effusion",
+            "positive": 100,
+            "negative": 517,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.9493230174081237,
+            "CLS_AUC": 0.9460928433268859,
+            "regional_minus_CLS": 0.0032301740812378243
+          },
+          {
+            "target": "Synovitis",
+            "positive": 100,
+            "negative": 1,
+            "soft_excluded": 0,
+            "in_fixed10": false,
+            "regional_AUC": 0.8,
+            "CLS_AUC": 0.84,
+            "regional_minus_CLS": -0.039999999999999925
+          },
+          {
+            "target": "Baker's",
+            "positive": 59,
+            "negative": 319,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.858349715743053,
+            "CLS_AUC": 0.9006428988895383,
+            "regional_minus_CLS": -0.042293183146485336
+          },
+          {
+            "target": "Contusion",
+            "positive": 99,
+            "negative": 167,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.8177584225488417,
+            "CLS_AUC": 0.8521744390007863,
+            "regional_minus_CLS": -0.03441601645194459
+          },
+          {
+            "target": "Fracture",
+            "positive": 44,
+            "negative": 144,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.8416982323232324,
+            "CLS_AUC": 0.8674242424242424,
+            "regional_minus_CLS": -0.025726010101010055
+          }
+        ]
+      },
+      {
+        "fold": 1,
+        "epoch": 4,
+        "history_index_zero_based": 3,
+        "same_recorded_binary_support": true,
+        "metrics": {
+          "regional": {
+            "weak_macro_auc_12": 0.8061965041553144,
+            "fixed10_equal_mean_AUC": 0.8212131429834318,
+            "weak_BCE": 0.3273852894597916,
+            "optimizer_steps_this_epoch": 208,
+            "opportunities_this_epoch": 208,
+            "AMP_skips_this_epoch": 0,
+            "optimizer_steps_through_epoch": 832,
+            "AMP_skips_through_epoch": 0,
+            "elapsed_cumulative_seconds": 8526.72601079999,
+            "previous_epoch_elapsed_cumulative_seconds": 6328.444133399986,
+            "epoch_interval_by_difference_seconds": 2198.2818774000043,
+            "elapsed_history_cumulative_seconds": [
+              {
+                "epoch": 1,
+                "elapsed_seconds": 1880.7272065000143
+              },
+              {
+                "epoch": 2,
+                "elapsed_seconds": 4110.913270300021
+              },
+              {
+                "epoch": 3,
+                "elapsed_seconds": 6328.444133399986
+              },
+              {
+                "epoch": 4,
+                "elapsed_seconds": 8526.72601079999
+              }
+            ]
+          },
+          "CLS": {
+            "weak_macro_auc_12": 0.8402500039140012,
+            "fixed10_equal_mean_AUC": 0.8470816689088778,
+            "weak_BCE": 0.30739193214564214,
+            "optimizer_steps_this_epoch": 208,
+            "opportunities_this_epoch": 208,
+            "AMP_skips_this_epoch": 0,
+            "optimizer_steps_through_epoch": 832,
+            "AMP_skips_through_epoch": 0,
+            "elapsed_cumulative_seconds": 6964.569809000008,
+            "previous_epoch_elapsed_cumulative_seconds": 5225.152248500031,
+            "epoch_interval_by_difference_seconds": 1739.4175604999764,
+            "elapsed_history_cumulative_seconds": [
+              {
+                "epoch": 1,
+                "elapsed_seconds": 1744.362511400017
+              },
+              {
+                "epoch": 2,
+                "elapsed_seconds": 3483.3915968000656
+              },
+              {
+                "epoch": 3,
+                "elapsed_seconds": 5225.152248500031
+              },
+              {
+                "epoch": 4,
+                "elapsed_seconds": 6964.569809000008
+              }
+            ]
+          }
+        },
+        "delta_regional_minus_CLS": {
+          "AUC12": -0.03405349975868677,
+          "fixed10": -0.025868525925445973,
+          "weak_BCE": 0.019993357314149474
+        },
+        "per_target": [
+          {
+            "target": "ACL",
+            "positive": 101,
+            "negative": 648,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.6984017846229067,
+            "CLS_AUC": 0.7723230656398973,
+            "regional_minus_CLS": -0.07392128101699058
+          },
+          {
+            "target": "MCL",
+            "positive": 16,
+            "negative": 700,
+            "soft_excluded": 0,
+            "in_fixed10": false,
+            "regional_AUC": 0.6902678571428571,
+            "CLS_AUC": 0.7132142857142857,
+            "regional_minus_CLS": -0.02294642857142859
+          },
+          {
+            "target": "Medial Meniscus",
+            "positive": 328,
+            "negative": 480,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.7511178861788618,
+            "CLS_AUC": 0.7599974593495935,
+            "regional_minus_CLS": -0.008879573170731736
+          },
+          {
+            "target": "Lateral Meniscus",
+            "positive": 105,
+            "negative": 661,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.698984223038686,
+            "CLS_AUC": 0.731359412146099,
+            "regional_minus_CLS": -0.032375189107412994
+          },
+          {
+            "target": "Medial OA",
+            "positive": 59,
+            "negative": 437,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.8940387076756002,
+            "CLS_AUC": 0.8884536322382965,
+            "regional_minus_CLS": 0.005585075437303688
+          },
+          {
+            "target": "Lateral OA",
+            "positive": 22,
+            "negative": 429,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.8322737868192414,
+            "CLS_AUC": 0.8272939182030091,
+            "regional_minus_CLS": 0.00497986861623223
+          },
+          {
+            "target": "PF OA",
+            "positive": 78,
+            "negative": 417,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.7640041812703683,
+            "CLS_AUC": 0.7747955481768432,
+            "regional_minus_CLS": -0.010791366906474864
+          },
+          {
+            "target": "Effusion",
+            "positive": 108,
+            "negative": 608,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.9587140594541911,
+            "CLS_AUC": 0.9603740253411306,
+            "regional_minus_CLS": -0.0016599658869395073
+          },
+          {
+            "target": "Synovitis",
+            "positive": 97,
+            "negative": 25,
+            "soft_excluded": 0,
+            "in_fixed10": false,
+            "regional_AUC": 0.7719587628865979,
+            "CLS_AUC": 0.8989690721649485,
+            "regional_minus_CLS": -0.12701030927835055
+          },
+          {
+            "target": "Baker's",
+            "positive": 51,
+            "negative": 344,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.8857729138166894,
+            "CLS_AUC": 0.908686730506156,
+            "regional_minus_CLS": -0.02291381668946657
+          },
+          {
+            "target": "Contusion",
+            "positive": 87,
+            "negative": 215,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.8356054530874097,
+            "CLS_AUC": 0.9110398289227479,
+            "regional_minus_CLS": -0.07543437583533819
+          },
+          {
+            "target": "Fracture",
+            "positive": 34,
+            "negative": 157,
+            "soft_excluded": 0,
+            "in_fixed10": true,
+            "regional_AUC": 0.8932184338703635,
+            "CLS_AUC": 0.9364930685650056,
+            "regional_minus_CLS": -0.0432746346946421
+          }
+        ]
+      }
+    ],
+    "fixed10_policy": {
+      "rule": "両foldでpositive>=20 AND negative>=20を満たす共通集合に固定。epoch/AUCを見てラベルを増減しない。",
+      "labels": [
+        "ACL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "excluded": [
+        "MCL",
+        "Synovitis"
+      ],
+      "MCL_positive_fold0_fold1": [
+        11,
+        16
+      ],
+      "Synovitis_positive_negative_fold0": [
+        100,
+        1
+      ],
+      "Synovitis_positive_negative_fold1": [
+        97,
+        25
+      ],
+      "fold1_Synovitis_alone_passes_but_common10_keeps_exclusion": true,
+      "negative_derived_from": "history[i].metrics.per_target[target].binary_observed - positive"
+    },
+    "fixed12_continues": true,
+    "partial_checkpoint_adopted": false,
+    "new_Gold_fit_selection_or_eval": false,
+    "representation_only_causal_effect_established": false
+  },
+  "integrated_Notebook_source": {
+    "preparation": {
+      "path": "artifacts/research/20261010-f005-regional-integrated-notebook-source-preparation-v2/preparation.json",
+      "sha256": "ab131804f2772ff4bd15e19426a860f756e3f62dc3496a59bb04d0b6c87da962"
+    },
+    "independent_peer": {
+      "path": "artifacts/research/20261010-f005-regional-integrated-notebook-independent-review-v2/review.json",
+      "sha256": "605bf9c0468271a01cf7ec3716403e6c504b2f786576781ad0b806bc49c409af"
+    },
+    "source_only": true,
+    "checks_passed": 15,
+    "V1_HOLD_preserved": true,
+    "change": "Only final mask call failure cleanup; other21 cells and source66 byteexact, original5/math unchanged.",
+    "exact_API_bytes": 671063,
+    "exact_API_sha256": "951f65997f09019b40d207cfc577201e49249f0aa779e98fe58331d0646c389c",
+    "root_capacity_guard_bytes": 950000,
+    "Kaggle_official_size_limit_established": false,
+    "actual_runtime_qualified": false,
+    "completed12_new_pair_privateInputs_CPU64_256_authority_issued": false
+  },
+  "bounded_fresh_public_source": {
+    "analysis": {
+      "path": "artifacts/research/20261010-public-kernel-score-metadata-root-v1/source-analysis-v1/report.json",
+      "sha256": "b54b0f26d36c6355c9089026bb54e11da2cd174b6906c452c06a7278cc0478ed"
+    },
+    "public_notebook": "https://www.kaggle.com/code/romantamrazov/rsna-knee-dinosaur-v5",
+    "current_author_Public_or_versionID_known": false,
+    "same_primary_CoAtNet_as_own951": true,
+    "potential_new_factor": "Separate224 crop checkpoint in Lateral OA branch13%; unproved complementarity.",
+    "whole_recipe_replacement": "HOLD",
+    "root_calls": {
+      "public_kernel_metadata_list": 1,
+      "public_source_metadata_pull": 1,
+      "actual_model_MRI_teacher_downloads": 0,
+      "source_execution_Save_Submit": 0
+    },
+    "runtime_and_Gold_limits": [
+      {
+        "risk": "primary hides study errors",
+        "evidence": "cell4:L443-445 returnszero volume onprep exception; L515 initialprob=.5, L549-550 logs GPU exception andcontinues. No failure-count threshold.",
+        "consequence": "FinalUID/finite/rangechecks can pass failed/prior rows; all-masked volume notexplicitly rejected in primary."
+      },
+      {
+        "risk": "ties assigned ordinal ranks",
+        "evidence": "cell4:L329-331 argsort twice instead of average tie ranks",
+        "consequence": "Constantfallback/tied probabilities can acquire artificial unique ordering; later average rank cannot recovertieequivalence."
+      },
+      {
+        "risk": "ConvNeXt per-series decode failures remain valid",
+        "evidence": "cell7 embeddedinfer DicomStudyDataset catchesread exceptions; cell8:L101 admitsvalid_slots=0",
+        "consequence": "No zero-valid-slot/failurethreshold rejection; diagnostics exists but finalCSVmay contain modelpriorpredictions."
+      },
+      {
+        "risk": "optionalcrop meansvariablefinalrecipe",
+        "evidence": "cell11:L26-36,L64-111; checkpointmissing, budget<65min, exception, timeout all preserveV16",
+        "consequence": "Source+visiblecompletion doesnotidentify whether hidden run used newfactor. Full hiddenbranchreceipt required."
+      },
+      {
+        "risk": "parent and child share output paths",
+        "evidence": "cell11:L73-74 crop writes submission.csv; finally restores priorbytes ifnotenabled; backup restoreL106-111",
+        "consequence": "Code attempts safe rollback, but partialwrite/childtermination or parentkill beforefinally notqualified here."
+      },
+      {
+        "risk": "no end-to-end primarydeadline/cleanup receipt",
+        "evidence": "primary cell4 main hasunboundedPool/queuejoin; outer budgetchecks beginonlyafter primary. ConvNeXt catchcell8:L117 canleaveearlier spawnedworker outside explicit statecleanup. cropfinallyL104-105 has15secwait withoutSIGKILLfallback.",
+        "consequence": "Hang/orphan/GPU-memorypressure possible; thread/process anddevice-release notstrictlyqualified."
+      },
+      {
+        "risk": "repeat predecode and GPU caches",
+        "evidence": "primary whole-study inference first, reader second, crop third; no explicit parentCUDA cache release beforelater subprocesses",
+        "consequence": "Third fullhidden pass maynotfit65minreserve; hardware/time/memory notmeasured in this review."
+      }
+    ],
+    "Gold_audit": {
+      "inference_Gold_or_Report_input_read": false,
+      "author_training_exclusion_claim": "cell4:L25-27 claims58Gold nottrained; claim only, producer training/labels not audited.",
+      "explicit_historical_Gold_selection": "cell4:L126-129 and crop embedded:L47-48 describe greedy+exhaustive7arm selection on45Gold. Current crop/specialist rationale citesGold58 inmarkdown.",
+      "upstream_training_uncertainty": "own951 originalcell18:L2 saysRaptor trained everytrainingstudy and selected58Gold; contradictory to copied candidate docstring exclusion. Exactweight lineage not re-audited; neither source declaration proves cleanGold exclusion.",
+      "current_Gold_coefficient_fit_or_checkpoint_selection": "Not established from inference-only source. Influence on architecture/target branch apparent; exactchoice provenance unavailable.",
+      "own_new_Gold_fit_selection": 0,
+      "fold_group_report_dup_patient_isolation_verified": false,
+      "licenses_provenance": "cell0 acknowledgesOAI/NDA3407/upstreamlicenses; this narrow review did not inspect model cards/training data/licenses or assert eligibility.",
+      "Gold58_single_AUC_not_independent_validation": true,
+      "clean_independent_OOF_verified": false
+    }
+  },
+  "official_submission_observations": [
+    {
+      "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/submission-observation-v21/observation.json",
+      "sha256": "68ece73277f15d7b712f82cd6636d510c2176fff1361e05b51e4b7d23152cbcf",
+      "observation": {
+        "at_utc": "2026-10-10T08:18:47.574122+00:00",
+        "ref": "rsraki/p012native2-2017c2587f0dd4f03bfd9dee7332a074",
+        "saved_version": 1,
+        "submission_ref": 57031186,
+        "official_get_requests": 1,
+        "Save_upload_Submit": 0,
+        "own_Public": null,
+        "strict_above960_achieved": false,
+        "actual_status": "NOT_EXPLICIT_YET",
+        "SDK_default_status": "PENDING",
+        "raw_status_field_omitted": true,
+        "error_description": null,
+        "hidden_scoring_complete": false
+      }
+    },
+    {
+      "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/submission-observation-v17/observation.json",
+      "sha256": "e401977bb806dcbd4c975134498ddda02da43471e659ee3c22fd458e7dfab40e",
+      "observation": {
+        "at_utc": "2026-10-10T08:18:47.748833+00:00",
+        "ref": "rsraki/p012native2-ff87856adabf4210bdd8a797616743f0",
+        "saved_version": 1,
+        "submission_ref": 57031981,
+        "official_get_requests": 1,
+        "Save_upload_Submit": 0,
+        "own_Public": null,
+        "strict_above960_achieved": false,
+        "actual_status": "NOT_EXPLICIT_YET",
+        "SDK_default_status": "PENDING",
+        "raw_status_field_omitted": true,
+        "error_description": null,
+        "hidden_scoring_complete": false
+      }
+    }
+  ],
+  "own_verified_Public": 0.951,
+  "own_strict_above0960_achieved": false,
+  "goal_continues": true,
+  "authorized_next_steps": "Complete fixed12 -> paired review and evaluate -> actual CPU reconstruction -> byteexact privacy reviewed serving bundles -> qualified remote64/256 -> real integrated serving validation -> Submit; polling existing2 without duplicate submissions."
+}

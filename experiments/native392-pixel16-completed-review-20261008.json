@@ -1,0 +1,227 @@
+{
+  "checked_at_utc": "2026-10-08T11:44:05.176237+00:00",
+  "status": "actual_CPU16_and_downloaded_processed_cache_independently_verified",
+  "ref": "rsraki/native392-pixel16-diagnostic",
+  "saved_version": 1,
+  "checks": {
+    "actual_COMPLETE_processed16": true,
+    "canonical_cohort_exact": true,
+    "source_bound_QC46_with_two_skips": true,
+    "CPU_no_labels_report_fit": true,
+    "train_series_only_inputCSV": true,
+    "native_temporary_empty": true,
+    "processed_only_bounded_retrieval": true,
+    "same_summary_receipt": true,
+    "actual_archive_bytes_and_SHA": true,
+    "exact16_unique_STORED_NPZ_members": true,
+    "all16_member_byte_SHA": true,
+    "all80_array_byte_SHA": true,
+    "all16_shape_dtype_fingerprint_no_pickle": true,
+    "actual_mask_positions_planes_flags_padding_contract": true
+  },
+  "all_passed": true,
+  "studies": 16,
+  "actual_preprocessing_QC_passes": 46,
+  "large_volume_reference_QC_skips": 2,
+  "archive_bytes": 397707087,
+  "archive_MiB": 379.283034324646,
+  "archive_sha256": "31cf4d41b8e3be930ac62c29b1cb7611e9a1fffa2ba43011437c48460dc3e5a2",
+  "elapsed_Kaggle_export_seconds": 162.10934305500007,
+  "Kaggle_CPU_peak_RSS_bytes": 1482244096,
+  "measured_compressed_to_padded_raw_ratio": 0.3744445091825527,
+  "simple_mean_scaled_4207_cache_GiB": 97.39036409935215,
+  "conditional_mean_scaled_full_CPU_hours": 11.840173719312245,
+  "conditional_scope": "Fixed non-heldout16 sample, not population bound; series sizes/QC/native paging and compression vary. Shards required if single-run estimate exceeds allowed runtime.",
+  "valid_windows": {
+    "min": 53,
+    "max": 115,
+    "sum": 1406
+  },
+  "local_read_decode_validate_total_seconds": 4.720055699988734,
+  "study_records": [
+    {
+      "study_id_sha256": "25a7d9e4e6ae3d1ff213cf0fcadd81ec15601c6c80248ba487ea3bf747364de9",
+      "valid_windows": 111,
+      "valid_windows_by_slot": [
+        48,
+        31,
+        32
+      ],
+      "member_bytes": 26384940,
+      "read_decode_validate_seconds": 0.2883538999594748
+    },
+    {
+      "study_id_sha256": "45c800fdc2b908965f900ce8d02b403fe0f89c8c0ee313bc732228de97ca009a",
+      "valid_windows": 112,
+      "valid_windows_by_slot": [
+        48,
+        32,
+        32
+      ],
+      "member_bytes": 27910268,
+      "read_decode_validate_seconds": 0.28792600001906976
+    },
+    {
+      "study_id_sha256": "438af0e9b06ce86493bcabee0d764372fc9a5c8b19f9967aa7041d7b38d55e01",
+      "valid_windows": 53,
+      "valid_windows_by_slot": [
+        17,
+        19,
+        17
+      ],
+      "member_bytes": 18606321,
+      "read_decode_validate_seconds": 0.23360919998958707
+    },
+    {
+      "study_id_sha256": "41e20d12cbbea48549f08372b31cc714b0da5c3085dda7a3ac5427b35d21d479",
+      "valid_windows": 63,
+      "valid_windows_by_slot": [
+        19,
+        25,
+        19
+      ],
+      "member_bytes": 20521588,
+      "read_decode_validate_seconds": 0.24184520001290366
+    },
+    {
+      "study_id_sha256": "2439603d8cf8b97e2c4e4a6d1cdc26374faea3da22bc6508bb645fd72da3beb4",
+      "valid_windows": 101,
+      "valid_windows_by_slot": [
+        35,
+        40,
+        26
+      ],
+      "member_bytes": 20817698,
+      "read_decode_validate_seconds": 0.25150970002869144
+    },
+    {
+      "study_id_sha256": "3746df8f39b7a425338cceca976e164d640f8a67ecd07bfc162ead85b43a2b1b",
+      "valid_windows": 88,
+      "valid_windows_by_slot": [
+        28,
+        30,
+        30
+      ],
+      "member_bytes": 27963159,
+      "read_decode_validate_seconds": 0.2776132000144571
+    },
+    {
+      "study_id_sha256": "0555711065567d144c564a378d60535c375a4b06ea6282eadab843237942eba9",
+      "valid_windows": 86,
+      "valid_windows_by_slot": [
+        28,
+        26,
+        32
+      ],
+      "member_bytes": 23348953,
+      "read_decode_validate_seconds": 0.2510550000006333
+    },
+    {
+      "study_id_sha256": "606d0d4a619fe49afb3356a58c5a6b04cff970ef49836c674fced3a2ccfb3600",
+      "valid_windows": 66,
+      "valid_windows_by_slot": [
+        24,
+        20,
+        22
+      ],
+      "member_bytes": 20308711,
+      "read_decode_validate_seconds": 0.2425418000202626
+    },
+    {
+      "study_id_sha256": "3762b22aaec7cf7db5be5e65cd8f5bc2c7058a2ee39ded3ebbbf52cbcf1a34f6",
+      "valid_windows": 98,
+      "valid_windows_by_slot": [
+        28,
+        40,
+        30
+      ],
+      "member_bytes": 30935335,
+      "read_decode_validate_seconds": 0.2788014999823645
+    },
+    {
+      "study_id_sha256": "70ef628b1b5ca9a7996d5eb8220d66b92040186bc039ce6b4d1bb5f8b51c2080",
+      "valid_windows": 60,
+      "valid_windows_by_slot": [
+        24,
+        16,
+        20
+      ],
+      "member_bytes": 15761715,
+      "read_decode_validate_seconds": 0.2164918000344187
+    },
+    {
+      "study_id_sha256": "84abd26168be9349ca0f357c7974766500e0a72a64c1c6a585265dd571b2fadf",
+      "valid_windows": 72,
+      "valid_windows_by_slot": [
+        22,
+        21,
+        29
+      ],
+      "member_bytes": 25987576,
+      "read_decode_validate_seconds": 0.33008699998026714
+    },
+    {
+      "study_id_sha256": "6b5b75da9d287fa9f7c79028415e0cd9f5278226feadd6d2bf792fb52f32af7e",
+      "valid_windows": 64,
+      "valid_windows_by_slot": [
+        24,
+        16,
+        24
+      ],
+      "member_bytes": 17022494,
+      "read_decode_validate_seconds": 0.2941863000160083
+    },
+    {
+      "study_id_sha256": "40eafb3f9e263fb212a98ed0c0e51fab28b5dc45c262cf63559e4be59fd317be",
+      "valid_windows": 115,
+      "valid_windows_by_slot": [
+        35,
+        35,
+        45
+      ],
+      "member_bytes": 28318764,
+      "read_decode_validate_seconds": 0.37022130005061626
+    },
+    {
+      "study_id_sha256": "6057489f3bb2336728c7cc0b50eff42ce4cd982e1e38bd7c1121f945061e4119",
+      "valid_windows": 115,
+      "valid_windows_by_slot": [
+        35,
+        47,
+        33
+      ],
+      "member_bytes": 30364684,
+      "read_decode_validate_seconds": 0.36472849996061996
+    },
+    {
+      "study_id_sha256": "f4aa248a7838a136146a9262b1e38639acbd0bcf8340c06de916012562538b0b",
+      "valid_windows": 101,
+      "valid_windows_by_slot": [
+        32,
+        36,
+        33
+      ],
+      "member_bytes": 31389090,
+      "read_decode_validate_seconds": 0.3707756000221707
+    },
+    {
+      "study_id_sha256": "7d8d0444e49ca27948a400f41e736e78d7be11780ac1b69d48946e1f673e62d7",
+      "valid_windows": 101,
+      "valid_windows_by_slot": [
+        33,
+        32,
+        36
+      ],
+      "member_bytes": 32062377,
+      "read_decode_validate_seconds": 0.3794473000452854
+    }
+  ],
+  "raw_DICOM_decode_or_download": false,
+  "encoder_or_optimization_or_teacher_read": false,
+  "whole_cache_export_or_acquisition": false,
+  "limits": [
+    "46 reference byte comparisons are source-bound runtime proof; original native DICOM was not independently rerun on this PC.",
+    "Downloaded member and all five array bytes are independently SHA-verified; processed images only.",
+    "Local read timing includes SHA and structural validation, not only decompression or training."
+  ]
+}

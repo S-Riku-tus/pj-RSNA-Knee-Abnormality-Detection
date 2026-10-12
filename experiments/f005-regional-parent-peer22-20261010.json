@@ -1,0 +1,23 @@
+{
+  "schema_version": "f005_regional_parent_bridge_source_peer22_only_v1",
+  "at_utc": "2026-10-10T07:17:00Z",
+  "preparation": "artifacts/research/20261010-f005-regional-parent-bridge-source-preparation-v1/preparation.json",
+  "preparation_sha256": "01da5bf6f80bf0cfd6c048c73166090694a92c078ccf80fc6d65f2a56fa05a12",
+  "independent_review": "artifacts/research/20261010-f005-regional-parent-bridge-independent-review-v1/review.json",
+  "independent_review_sha256": "4d45fc9e207df6b3eec189f28db6f1edd550b60ae929a330e0e5036b78caca84",
+  "independent_checks_passed": 22,
+  "source_only": true,
+  "actual_runtime_qualified": false,
+  "old_CLS_qualification_or_constructor_bypass": false,
+  "contract": "Dedicated Regional actual review/authority before original baseline hooks, original owned seal/clock/clear1, dedicated verified transport, absolute fresh Regional child, unchanged FP32 mean/projection/fixed20 atomic writer.",
+  "old_source54_common39_original5_bytes_unchanged": true,
+  "support_mask_receipt_integration_pending": true,
+  "actual_Notebook_generation_Save_Submit_model_MRI_teacher_GPU_API": 0,
+  "local_training": {"fold0_epochs": 1, "fold1_epochs": 2, "fixed12_continues": true, "error": null},
+  "official_last_poll_utc": "2026-10-10T07:16:51Z",
+  "P014_57031186_and_P015_57031981": "No explicit status, Public score or error returned",
+  "own_verified_Public": 0.951,
+  "own_strict_above0960_achieved": false,
+  "own_Gold_fit_or_selection": false,
+  "goal_continues": true
+}

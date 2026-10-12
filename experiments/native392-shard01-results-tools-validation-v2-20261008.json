@@ -1,0 +1,40 @@
+{
+  "checked_at_utc": "2026-10-08T12:54:08.013861+00:00",
+  "status": "prepared_six_artificial_tests_passed_no_real_output_read",
+  "ref": "rsraki/native392-cache-shard-01-of-24",
+  "saved_version": 1,
+  "kernel_id": 137670873,
+  "tools_folder": "artifacts/research/20261008-native392-shard01-results-v1",
+  "source_sha256": {
+    "compact_tools.py": "5b643a583f9df31cca1c8795dfab70c9ca7b39ad59bb332e83da54a233761cb6",
+    "get_once.py": "738c6d3f0e0e0945bd61da0fdbe01d02b2b04aa0222696d876e84eaf8a8c9f9e",
+    "verify_summary.py": "3b2c9ad35cff87530b6f5bd8b629450bb9b8b690db60ec6884be0078e9b9ad2f",
+    "test_compact_tools.py": "796a6c7e6a8f1185b9720f9fd5ef3619d90128ab655c6bf4d722c4f654ed7b78"
+  },
+  "accepted_launch_response_sha256": "0f59f3b54ce0dbee085ddc23155ed454045cd3f6f7949a61f136937e4bb1d111",
+  "accepted_launch_request_sha256": "52fb5e3ee878318fbf1eaed09db057b03f652c428b09ba63dd3752b8d7a529a8",
+  "package_sha256": "9a3ebe73a3d53f360c5216eb2e4a63214ececb9a39b09224fdfa23d1e55971c2",
+  "normalized_notebook_sha256": "60be60c7410878a718c678d94f2ac3002f02826747f93cefdcfaf7479ef6ff26",
+  "artificial_tests_passed": 6,
+  "unittest_command": ".venv/Scripts/python.exe -m unittest discover -s artifacts/research/20261008-native392-shard01-results-v1 -p test_compact_tools.py -v",
+  "ruff_passed": true,
+  "artificial_contracts": [
+    "one status RPC plus all3 pages of both output/size metadata; exact summary-only HTTP",
+    "raw absent status with typed QUEUED never downloads summary and never claims worker activity",
+    "repeated pagination token fails before any HTTP download",
+    "entire Notebook metadata or raw environment drift prevents summary HTTP",
+    "HTTPS and streamed/declared4MB bounds; failed responses close",
+    "176 structural summary fixture; partial/UID/source/time/archive/QC/decoder/resource drift and unexpected positive output allowlist entries fail"
+  ],
+  "positive_output_allowlist": "exact final summary/ZIP plus embedded10 code/plan files and corresponding Python313 pyc only",
+  "actual_remote_status_read": false,
+  "actual_output_downloaded": false,
+  "archive_downloaded": false,
+  "MRI_model_weights_downloaded": false,
+  "real_teacher_read": false,
+  "real_fit": false,
+  "remote_mutation": false,
+  "actual_NPZ_or_outerZIP_QC": false,
+  "public_score": null,
+  "scope": "Prepare compact getter and verify saved-source/status plus summary claims only. All176 NPZ numeric bytes/outerZIP SHA require later processed-cache/index verification."
+}

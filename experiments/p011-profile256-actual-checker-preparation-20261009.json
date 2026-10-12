@@ -1,0 +1,73 @@
+{
+  "schema_version": "p011_actual256_independent_checker_preparation_v1",
+  "at_utc": "2026-10-08T18:28:55.914708+00:00",
+  "all_passed": true,
+  "checks": {
+    "old64_reviewer_fixed_SHA_preserved": true,
+    "same_fusion_STDlib_byte_source": true,
+    "positive_memory_threephase_functions_AST_unchanged": true,
+    "current_source17_launcher21_peer24_getter16_proofs_fixed": true,
+    "reviewer_and_fusion_compile": true,
+    "new256_fixed_savedV1_identity_source_and_cohort_literal": true,
+    "main512_reader192_stock256_window24064_expected": true,
+    "no_exact128_perGPU_assumption": true,
+    "resource_double_decode_runtime_fields_conditional_on_all_passed": true,
+    "candidate_serving_Public_remainfalse_unmeasured": true,
+    "new_required_observation_arg_sanitized_output_and_exclusive_write": true,
+    "actual_results_not_read_during_preparation": true
+  },
+  "source_SHA256": {
+    "review_actual256.py": "f6973b5bd46c1b09f336375c905636a4298a6d2fba6b3b51c1dd391ccc394d76",
+    "fusion_checks.py": "acb8ef88c8c5d9a699cf05a0cbcf7f4d3f4c4f819dd41321e629112625508f9e",
+    "adaptation-diff.json": "94e42b7487440d129188c4aa8f337cf37c441864b5bf3807083e3f6c2a080828"
+  },
+  "immutable64_parent_SHA": "14d5462fde1af18c7c4edef7bb5fc61b37b8566cf91f1a8e8c38f316cd475d6f",
+  "required_proofs": {
+    "experiments/p011-profile256-savedV1-binding-review-20261009.json": {
+      "sha256": "f4c83f23cc3baad2089eea4f6d4d622f2eb4602398ac66522118ab21321f4653",
+      "checks": 17
+    },
+    "experiments/p011-profile256-root-launcher-preparation-20261009.json": {
+      "sha256": "6f1849b6b19768f228dd1f236c9e1e7afcea6f55878437a9f628853063351da6",
+      "checks": 21
+    },
+    "experiments/p011-profile256-root-launcher-independent-review-20261009.json": {
+      "sha256": "8b6f2870b522a0c2c3dddc57ec5b64cf74492c0ea5516cbfc987b41447684c3e",
+      "checks": 24
+    },
+    "experiments/p011-profile256-compact-getter-preparation-20261009.json": {
+      "sha256": "8636ffb85b75e92433c635e64ec96dae5d532ea0d32cbe215f25aafec2c08abd",
+      "checks": 16
+    }
+  },
+  "expected_saved_ref": "rsraki/p011diag256-e5e8cdc760af73b43bbd386184635afb",
+  "saved_version": 1,
+  "kernel_id": 137720781,
+  "notebook_SHA": "1d81ac179370be73197ec818879604f6551e36a5f15f1745cea54e7858439b3a",
+  "ordered256_UID_SHA": "685a6a4c82f1ae7bf29a8d2dfeafccecf02b394f8a5a0ef5da284af32085e55a",
+  "expected_forward_counts": {
+    "main": 512,
+    "reader": 192,
+    "stock": 256,
+    "backbone_windows": 24064
+  },
+  "actual_result_schema": "p011_actual256_independent_compact_review_v1",
+  "actual_results_not_reviewed_yet": true,
+  "API_auth_HTTP_GPU_MRI_weights_teacher_fit": 0,
+  "candidate_gate_passed": false,
+  "actual256_completed": false,
+  "accuracy_evaluated": false,
+  "Public_score": null,
+  "root_or_authorized_local_command_after_compact_complete": [
+    ".venv/Scripts/python.exe",
+    "artifacts/research/20261009-p011-profile256-actual-review-v1/review_actual256.py",
+    "--observation",
+    "artifacts/research/20261009-p011-profile256-results-tools-v1/observation-v1"
+  ],
+  "limitations": [
+    "No additional broad tests or actual data read; reused already checked64 fusion/memory definitions remain byte/AST identical.",
+    "External CSV rank and F32 raw probability SHA are independently recomputed; native volume/mask byte identity is based on captured runtime SHA receipts, without real pixels downloaded.",
+    "Candidate file is deleted by diagnostic code; only independent reconstruction SHA can be checked.",
+    "Runtime/resource gates are emitted by the result reviewer only after actualComplete/source/fixedcounts/CSV/resource checks pass; this preparation does not establish them."
+  ]
+}

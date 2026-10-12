@@ -1,0 +1,18 @@
+{
+  "schema_version": "p007_unrun_v1_prelaunch_defect_v1",
+  "checked_at_utc": "2026-10-08T10:45:32.457122+00:00",
+  "retained_unrun_package_notebook": "artifacts/kaggle/p007-convnext-mirror-v1-20261008/16_submit_p007_convnext_mirror.ipynb",
+  "old_notebook_sha256": "e5a9f4692fb3206b18a53a03ec10d14b8cd2e5bb287d843f965838a5a9c924bd",
+  "observed_decorators": {
+    "run": [],
+    "anatomical_lr_mirror": [
+      "torch.no_grad()"
+    ]
+  },
+  "old_package_ready_for_Kaggle_execution": false,
+  "old_artificial_test_scope_limit": "Outer inference_mode masked absence of no_grad on the real run entrypoint.",
+  "old_proof_overwritten": false,
+  "actual_Kaggle_p007_launch_or_submit": false,
+  "baseline14_and_submitted_p006_affected": false,
+  "correction_in_progress": "Insert helper before decorator/signature pair; add AST and direct run gradient tests; preserve V1 and generate V2."
+}

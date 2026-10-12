@@ -1,0 +1,55 @@
+{
+  "schema_version": "p006_authorized_api_execution_start_v1",
+  "authorization": "Explicit user instruction to execute/submit via API and continue until own official Public strictly exceeds0.960; not achieved yet.",
+  "goal_status": "active",
+  "own_best_public": "0.950",
+  "own_best_submission": 56943135,
+  "candidate": "p006 ConvNeXt k16to24 only; scored baseline protected",
+  "artifact_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/15_submit_p006_convnext_k24.ipynb": "172d6744be6f5e1e20def4680a1e81f3253989b49f601b1b01459d0c6245a320",
+    "notebooks/public/15a_profile_p006_k16_k24_32.ipynb": "cfa4829afb95fdc62e2769cfea3ee924021d9bacba365b54db718fda77b59120",
+    "notebooks/public/15b_profile_p006_k16_k24_256.ipynb": "02899d7d111377b7f2347dfe1b84367521bbadd4aa29a4afa1562039ea188c10",
+    "scripts/build_p006_convnext_density.py": "ca32b3cd8b7ab2d75bbe44ec414a424fdf3e2453477240cfa4ce601b128493b1",
+    "scripts/build_p006_profile.py": "99a989487f7df300736da25c13c10cd27068cceab734b330c9ededdcf08975ca",
+    "scripts/p006_profile_runtime.py": "b61115cc92ab335273a31cf12c754097e3f0844ce2b7aaf9fd50c56f755603ca",
+    "experiments/p006-convnext-density-validation-20261008.json": "df110ce0639eb284b51fbe5f02b7b431a5f3e4ccf00d8f88fc4d8573dd87f62e",
+    "experiments/p006-profile32-saved-binding-review-20261008.json": "5469c63aa1b3ee37d47690464ef792afa5fb73a5f86db482b4a67428b33cbcd1",
+    "artifacts/research/20261008-p006-profile32-launch-v1/save-response.json": "688e7b4822b835b6e40cf5c16b0c4e0f0a246dd946a7bd21d9915de22b014f98"
+  },
+  "artificial_tests": {
+    "candidate_unittest_pass": 8,
+    "candidate_cuda_artificial_forward": true,
+    "profile_observation_unittest_pass": 4,
+    "saved_binding_pass": 25
+  },
+  "real_checkpoints_or_MRI_locally_downloaded": false,
+  "remote_profile_launch": {
+    "ref": "rsraki/p006-profile-32-k16-k24",
+    "private": true,
+    "saved_version": 1,
+    "kernel_id": 137644181,
+    "accepted_at_utc": "2026-10-08T09:43:50.057502+00:00",
+    "latest_confirmed_status_at_record": "QUEUED",
+    "competition_submitted": false
+  },
+  "next_gate": "Profile32 result contract and no failed fusion -> same256 cohort resource/coverage run -> serving visible run/source/CSV audit -> one code-competition submission tied to same saved version.",
+  "GPU_allowance_raw": {
+    "checked_at_utc": "2026-10-08T09:35:07.748727+00:00",
+    "allowed_seconds": 108000,
+    "used_seconds": 42840.065,
+    "reserved_seconds": 0,
+    "arithmetic_available_seconds": 65159.935,
+    "refresh_jst": "2026-10-10T09:00:00+09:00"
+  },
+  "submission_slots_at_check": 4,
+  "limitations": [
+    "Synthetic encoder does not validate real checkpoint accuracy",
+    "Sampled RSS includes shared-page double counting; GPU memory is device-wide",
+    "Fixed16-then24 includes warm OS cache/install effects; not pure forward ratio",
+    "Mask>0 does not prove all native DICOMs decoded without skip",
+    "Public fullfit weights are not independent weak OOF; no Gold/label evaluation or coefficient sweep"
+  ],
+  "ledger_before_sha256": "38238e0b18690720d7f88327522c98214e95d5a6898bc5b5d1a79f17a73124f9",
+  "ledger_before_rows": 61
+}

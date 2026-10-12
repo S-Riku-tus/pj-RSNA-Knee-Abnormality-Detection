@@ -1,0 +1,642 @@
+{
+  "schema_version": "p010_actualERRORV3_partial_CSV_numerical_audit_sanitized_r2",
+  "ref": "rsraki/p010diag-d6a587bcefded28cde96453a8ba1848f",
+  "saved_version": 3,
+  "kernel_id": 137683716,
+  "official_status": "ERROR",
+  "studies": 32,
+  "comparisons": {
+    "main_original_vs_bounded": {
+      "left": "p010_main_original.csv",
+      "right": "p010_main_bounded.csv",
+      "bytes_identical": false,
+      "header_identical": true,
+      "UID_row_order_identical": true,
+      "all32_UID13_columns_finite_0_1_nonconstant": true,
+      "maximum_absolute_numeric_difference": 0.03225806000000003,
+      "numeric_cells_differ": 2,
+      "by_label": {
+        "ACL": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "MCL": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Medial Meniscus": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Lateral Meniscus": {
+          "numeric_cells_differ": 2,
+          "rank_positions_differ": 2,
+          "pair_order_or_tie_relation_changes": 1,
+          "maximum_absolute_numeric_difference": 0.03225806000000003,
+          "rank_changed_UID_sha256": [
+            "93b2bdf993dea467ecbbedf466a333a395085ead262be5275977366b3e515de1",
+            "d7aa523404299a4154dfafb731a1964821c137461a8403560619c98ba9e56a99"
+          ],
+          "pair_flip_UID_sha256": [
+            {
+              "UID_sha256": [
+                "93b2bdf993dea467ecbbedf466a333a395085ead262be5275977366b3e515de1",
+                "d7aa523404299a4154dfafb731a1964821c137461a8403560619c98ba9e56a99"
+              ],
+              "old_relation": 1,
+              "new_relation": -1
+            }
+          ]
+        },
+        "Medial OA": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Lateral OA": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "PF OA": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Effusion": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Synovitis": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Baker's": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Contusion": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Fracture": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        }
+      }
+    },
+    "main_original_vs_shared": {
+      "left": "p010_main_original.csv",
+      "right": "p010_main_shared.csv",
+      "bytes_identical": true,
+      "header_identical": true,
+      "UID_row_order_identical": true,
+      "all32_UID13_columns_finite_0_1_nonconstant": true,
+      "maximum_absolute_numeric_difference": 0.0,
+      "numeric_cells_differ": 0,
+      "by_label": {
+        "ACL": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "MCL": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Medial Meniscus": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Lateral Meniscus": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Medial OA": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Lateral OA": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "PF OA": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Effusion": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Synovitis": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Baker's": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Contusion": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Fracture": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        }
+      }
+    },
+    "fused_original_vs_bounded": {
+      "left": "p010_fused_original.csv",
+      "right": "p010_fused_bounded.csv",
+      "bytes_identical": false,
+      "header_identical": true,
+      "UID_row_order_identical": true,
+      "all32_UID13_columns_finite_0_1_nonconstant": true,
+      "maximum_absolute_numeric_difference": 0.03125,
+      "numeric_cells_differ": 2,
+      "by_label": {
+        "ACL": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "MCL": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Medial Meniscus": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Lateral Meniscus": {
+          "numeric_cells_differ": 2,
+          "rank_positions_differ": 2,
+          "pair_order_or_tie_relation_changes": 1,
+          "maximum_absolute_numeric_difference": 0.03125,
+          "rank_changed_UID_sha256": [
+            "93b2bdf993dea467ecbbedf466a333a395085ead262be5275977366b3e515de1",
+            "d7aa523404299a4154dfafb731a1964821c137461a8403560619c98ba9e56a99"
+          ],
+          "pair_flip_UID_sha256": [
+            {
+              "UID_sha256": [
+                "93b2bdf993dea467ecbbedf466a333a395085ead262be5275977366b3e515de1",
+                "d7aa523404299a4154dfafb731a1964821c137461a8403560619c98ba9e56a99"
+              ],
+              "old_relation": 1,
+              "new_relation": -1
+            }
+          ]
+        },
+        "Medial OA": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Lateral OA": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "PF OA": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Effusion": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Synovitis": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Baker's": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Contusion": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Fracture": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        }
+      }
+    },
+    "fused_original_vs_shared": {
+      "left": "p010_fused_original.csv",
+      "right": "p010_fused_shared.csv",
+      "bytes_identical": true,
+      "header_identical": true,
+      "UID_row_order_identical": true,
+      "all32_UID13_columns_finite_0_1_nonconstant": true,
+      "maximum_absolute_numeric_difference": 0.0,
+      "numeric_cells_differ": 0,
+      "by_label": {
+        "ACL": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "MCL": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Medial Meniscus": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Lateral Meniscus": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Medial OA": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Lateral OA": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "PF OA": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Effusion": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Synovitis": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Baker's": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Contusion": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Fracture": {
+          "numeric_cells_differ": 0,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        }
+      }
+    },
+    "shared224_vs_stock224": {
+      "left": "p010_shared224_raw.csv",
+      "right": "p010_stock224_raw.csv",
+      "bytes_identical": false,
+      "header_identical": true,
+      "UID_row_order_identical": true,
+      "all32_UID13_columns_finite_0_1_nonconstant": true,
+      "maximum_absolute_numeric_difference": 0.0005064457654953003,
+      "numeric_cells_differ": 300,
+      "by_label": {
+        "ACL": {
+          "numeric_cells_differ": 25,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.00017720460891723633,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "MCL": {
+          "numeric_cells_differ": 25,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 7.56382942199707e-05,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Medial Meniscus": {
+          "numeric_cells_differ": 25,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.00017884373664855957,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Lateral Meniscus": {
+          "numeric_cells_differ": 25,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.00014340877532958984,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Medial OA": {
+          "numeric_cells_differ": 25,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.00010865926742553711,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Lateral OA": {
+          "numeric_cells_differ": 25,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0001951456069946289,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "PF OA": {
+          "numeric_cells_differ": 25,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.00013488531112670898,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Effusion": {
+          "numeric_cells_differ": 25,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 5.9604644775390625e-05,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Synovitis": {
+          "numeric_cells_differ": 25,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 4.845857620239258e-05,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Baker's": {
+          "numeric_cells_differ": 25,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.00011435151100158691,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Contusion": {
+          "numeric_cells_differ": 25,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 0.0005064457654953003,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        },
+        "Fracture": {
+          "numeric_cells_differ": 25,
+          "rank_positions_differ": 0,
+          "pair_order_or_tie_relation_changes": 0,
+          "maximum_absolute_numeric_difference": 6.03795051574707e-05,
+          "rank_changed_UID_sha256": [],
+          "pair_flip_UID_sha256": []
+        }
+      }
+    }
+  },
+  "original_fusion_independent_math": {
+    "original": {
+      "fixed_original_target_fusion_maxdiff": 0.0
+    },
+    "bounded": {
+      "fixed_original_target_fusion_maxdiff": 0.0
+    },
+    "shared": {
+      "fixed_original_target_fusion_maxdiff": 0.0
+    }
+  },
+  "shared224_stock224_average_percentile_rank_maxdiff": 0.0,
+  "hypothetical_fixed90_10_shared_vs_stock_candidate_rank_maxdiff": 0.0,
+  "candidate_values_only_recomputed_for_diagnostic_not_published_or_submitted": true,
+  "observed_failure": "A true Lateral Meniscus adjacent ordering swap in the bounded base-only control caused the strict baseline-CSV byte gate to stop.",
+  "not_serialization_or_header_or_UID_roworder_difference": true,
+  "root_cause_unproven": [
+    "UID-to-GPU assignment",
+    "CUDA benchmark/kernel selection",
+    "FP16 nondeterminism",
+    "other runtime numerical effects"
+  ],
+  "base_raw_probabilities_or_UID_device_map_saved": false,
+  "additional224_probabilities_1e7_gate_passed": false,
+  "candidate_complete_execution_gate_passed": false,
+  "candidate_accuracy_or_hidden_runtime_gate_passed": false,
+  "all4_pixelmask_hash_and_model_memory_forward_internal_gates_scope": "Reached strict CSV gate after earlier source-bound runtime assertions; concrete receipts were not saved before abort and are not independently confirmed numeric values.",
+  "next_diagnostic": "Keep all criteria unchanged. First persist compact raw/UID-device/backend/resource receipts before comparisons, repeat literal original A/A on controlled devices, and measure numerical variation before attributing it to transport or changing any contract.",
+  "download_receipt_sha256": "d2690f22b8c279afc46505569f48a62d41992f76673e4457adb951a782836ccb",
+  "actual_CSV_sha256": {
+    "p010_fused_bounded.csv": "402f852c043a4156176d309413059b6d13a8744eb37ee00f60fed5930b5c3306",
+    "p010_fused_original.csv": "a3920ee376bdad1d3fc1c5a3c87c1f8400105331d218f9bf6f71cf620feca2b8",
+    "p010_fused_shared.csv": "a3920ee376bdad1d3fc1c5a3c87c1f8400105331d218f9bf6f71cf620feca2b8",
+    "p010_main_bounded.csv": "39fb37f6beae3a38e8b456a9b4fb1651fc5f0de704d920d0766645553f24b8e5",
+    "p010_main_original.csv": "2b311ea9e7f7a694a773d20c2c116ca0a8f8bbf93e69c4fcd7ab786b85952ac8",
+    "p010_main_shared.csv": "2b311ea9e7f7a694a773d20c2c116ca0a8f8bbf93e69c4fcd7ab786b85952ac8",
+    "p010_reader_k16.csv": "6ab2ce6a6ee68e47dcd886bc008b83efc3fc393e2d94fd51a57fab2b7873a549",
+    "p010_shared224_raw.csv": "03ec66afe33ddd0cf5ca82b4a04690188bda213729225dceec30bfb1e4125f80",
+    "p010_stock224_raw.csv": "25d036a162cde05ae1b9704370cb9432e3f87fa6f8be4dae71ed15ef6b74a441"
+  },
+  "operations": {
+    "CSV_bodies_already_downloaded": 9,
+    "additional_network_calls_by_analysis": 0,
+    "MRI_weights_cache_NPZ_body_reads": 0,
+    "training_or_submission": false
+  },
+  "private_identifier_policy": {
+    "full_private_details_path": "artifacts/research/20261009-p010-profile32-failure-v3/csv-audit-v1/p010-profile32-third-failure-CSV-review-20261009.json",
+    "full_private_details_sha256": "2b2081a0062b4962ba62a2f66de1d7fdbc9ed1362d7711d8803b43a95a7f37c4",
+    "raw_UIDs_in_tracked_review": false,
+    "UID_hash_algorithm": "SHA-256 of exact UTF-8 StudyInstanceUID text",
+    "original_tracked_private_detail_relocated_without_changing_bytes": true
+  },
+  "checks": {
+    "detailed_original_bytes_preserved_private": true,
+    "all9_actual_CSV_SHA_bound": true,
+    "32orderedUIDs_13columns_finite_nonconstant_all9": true,
+    "main_and_fused_headers_and_UID_order_equal": true,
+    "bounded_main_true_numeric_rank_swap_two_cells_identified": true,
+    "original_and_shared_main_and_fused_byte_identical": true,
+    "independent_original_fusion_all3_maxdiff_zero": true,
+    "224raw300of384_cells_differ_max_0p0005064458": true,
+    "224_average_percentile_ranks_identical_all12": true,
+    "hypothetical_fixed90_10_ranks_identical_not_candidate_gate": true,
+    "no_raw_UID_or_signed_URL_in_tracked_review": true,
+    "official_ERROR_and_unmet_raw_1e7_gate_retained": true
+  },
+  "all_passed": true
+}

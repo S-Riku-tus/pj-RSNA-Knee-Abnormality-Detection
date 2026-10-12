@@ -1,0 +1,15 @@
+{
+  "schema_version": "p009_competition_submission_accepted_v1",
+  "accepted_at_utc": "2026-10-08T13:36:51.915519+00:00",
+  "submission_ref": 56956158,
+  "notebook_ref": "rsraki/p009-coat-fov160",
+  "saved_version": 1,
+  "requested_output": "submission.csv",
+  "own_public_lb": null,
+  "scoring_complete": false,
+  "fresh_allowance_before_submission": 1,
+  "protected_own_public_lb": 0.95,
+  "automatic_retry": false,
+  "change": "Only main physical CROP_MM140to160 including embedded fastread; model320 and six other original Apex code cells unchanged",
+  "accuracy_gain_not_yet_known": true
+}

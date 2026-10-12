@@ -1,0 +1,84 @@
+{
+  "schema_version": "p011_serving_savedV1_binding_getter_local_preparation_v1",
+  "all_passed": true,
+  "checks": {
+    "actual_serving_SaveV1_raw_typed_request_identity_local8checks_pass": true,
+    "all8_existing_DTO_text_flags_capture_atomic_functions_AST_unchanged": true,
+    "Serving21cells18code_original7exact_order_and6embedded_sources": true,
+    "dynamic_test_UID_no_fixed_diagnostic_cohort_or_reader_routing": true,
+    "both_actual256_root24_peer47_and_all36_qualified_assets_SHA_bound": true,
+    "private_Original31481_T4_OFF_Input1_1_comp_only_request_required": true,
+    "metadata_blob_fullNotebook_fields_only_source_list_text_normalization": true,
+    "raw_repeated_omission_only_typed_empty_null_foreign_rejected": true,
+    "two_actual_SDK_offline_fixture_tests_and_metadata_drifts_pass": true,
+    "Ruff_and_default_source_inspection_no_auth_API_pass": true,
+    "root_lazy_auth_explicit_savedV1_source1_status1_only": true,
+    "fresh_observation_and_proof_exclusive_reuse_rejected_no_retry": true,
+    "raw_absence_typed_QUEUED_does_not_qualify_worker_start": true,
+    "visible_runtime_CSV_submission_Public_accuracy_qualification_pending": true
+  },
+  "artificialSDK_CPU_tests": {
+    "passed": 2,
+    "seconds": 0.64
+  },
+  "Ruff_passed": true,
+  "ref": "rsraki/p011srv-8105f0434cc183692525c2dd8ccdc9eb",
+  "saved_version": 1,
+  "kernel_id": 137784585,
+  "request_sha256": "b3488c3bdcb378a6231464521dcf15863bafc66c598bc10434d04a36745143b8",
+  "notebook_sha256": "a8e13bf0b053716e024f363417bc8b338b958eddf8a1837d3bad0a385607fd0c",
+  "package_sha256": "163f5abd128f2e93e9e836397e0da0245bfd229ca74b93508664a50c7677d3e6",
+  "getter_sha256": {
+    "binding.py": "cd1d9ff36ecab80ee8c38ae7379680f71608dbe77adffcafe2458d1d8f425f91",
+    "get_once.py": "dd3bb1aecd6486b9d4b8d73bcfd5fc82abf6d355f208a9774170de9b8bf39c63",
+    "test_binding.py": "84fc903deeac56bd65b247770abf5976867d6d64734292aaf59096defcc0c46a"
+  },
+  "reused256_source_sha256": {
+    "binding.py": "967c80e250fe86984e8241f6f00dc5bfe4107477bfa1093e14e06fd25f194f4d",
+    "get_once.py": "2be37c4847ac504cbbd6f3501e010a02cf33d5e18165031ebf6bd364a8810163"
+  },
+  "reused_parser_functions_AST_equal": {
+    "read": true,
+    "sha": true,
+    "write_new": true,
+    "require": true,
+    "text": true,
+    "normalized": true,
+    "raw_repeated_empty": true,
+    "capture_rpc": true
+  },
+  "actualSave_response_sha256": "0c79e3e4d56a7b8c6382ae7440b364caf59ce98f3f9b7a635e061079c760f11c",
+  "actualSave_accepted_sha256": "3caec42e47d7005613fc9fee7d08e24c94ef882d01f7f9ee8ebee8fdce58264f",
+  "accepted_local_checks": {
+    "explicit_ref_kernel_savedV1_equals_raw_typed_accepted": true,
+    "accepted_privateServing_Save1_quota1_not_competition_no_retry": true,
+    "intent_launch_source_request_SHA_identity": true,
+    "request_all_Notebook_fields_match_canonical_source_normalization_only": true,
+    "launch_all36_assets_and_both_actual256_proofs_SHA_current": true,
+    "private_Original31481_T4_OFF_request": true,
+    "Input1_Input1_comp_only_and_SaveAndRunAll_request": true,
+    "dynamic_testUID_no_profile_cohort_original7_and6helpers_source_contract": true
+  },
+  "prepared_root_only_command": [
+    "artifacts/tools/kaggle-venv/Scripts/python.exe",
+    "artifacts/research/20261009-p011-serving-saved-binding-v1/get_once.py",
+    "--read",
+    "--ref",
+    "rsraki/p011srv-8105f0434cc183692525c2dd8ccdc9eb",
+    "--kernel-id",
+    "137784585",
+    "--request-sha256",
+    "b3488c3bdcb378a6231464521dcf15863bafc66c598bc10434d04a36745143b8"
+  ],
+  "planned_output_review": "experiments/p011-serving-savedV1-binding-review-20261009.json",
+  "planned_observation_folder": "artifacts/research/20261009-p011-serving-saved-binding-v1/observation-v1",
+  "planned_binding_schema": "p011_serving_savedV1_exact_source_binding_v1",
+  "planned_binding_checks": 17,
+  "API_auth_HTTP_Save_submit_GPU_MRI_model_by_preparer": 0,
+  "actual_saved_source_status_observed_by_preparer": false,
+  "candidate_gate_passed": false,
+  "full_Serving_passed": false,
+  "Public_score": null,
+  "decision": "Prepared exact Serving savedV1 readset. Root may invoke once; all actual outputs and scoring gates remain separate.",
+  "limitations": "Accepted request explicitly pins reader/SWA1; actual server selected internal version IDs and two-device/runtime behavior are not established by metadata alone."
+}

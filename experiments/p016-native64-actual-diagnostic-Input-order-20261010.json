@@ -1,0 +1,51 @@
+{
+  "schema_version": "p016_diagnostic_GET_actual_Input_order_observation_root_v1",
+  "at_utc": "2026-10-10T10:26:32.885037+00:00",
+  "ref": "rsraki/p016n64-c86b549b4d474efaa90337335f19a202",
+  "version": 1,
+  "kernel_id": 138009389,
+  "actual_Get_source_status_output_RPCs": [
+    1,
+    1,
+    1
+  ],
+  "actual_diagnostic_only_file_GETs": 16,
+  "model_MRI_cache_GETs": 0,
+  "source_role_order_only_mismatch_confirmed": true,
+  "actual_code_all_Notebook_fields_and_literal_sources_match": true,
+  "actual_private_Original31481_T4_OFF_match": true,
+  "actual_same4_distinct_Input_display_ref_roles": true,
+  "actual_Internal_Input_version_IDs_known": false,
+  "display_version_suffixes_omitted": true,
+  "old_strict_order_checks_remain_false_in_original_proof": true,
+  "actual_failed_private_run_not_qualified": true,
+  "artifact_byte_sha_proofs": {
+    "source": {
+      "path": "artifacts/research/20261010-p016-native64-results-tools-v2/actual-native64-diagnostic-observation-v2/source-binding-diagnostic.json",
+      "sha256": "83b2ceeae78af27540e7e8d2a8d9daf477b7179632a475988e07657ad8b34003"
+    },
+    "status": {
+      "path": "artifacts/research/20261010-p016-native64-results-tools-v2/actual-native64-diagnostic-observation-v2/status.json",
+      "sha256": "6831d9ddf1e5394d51e9ff2fd7bb22ebfcc14b3785dfc6b2033f0cb28564d5a1"
+    },
+    "observation": {
+      "path": "artifacts/research/20261010-p016-native64-results-tools-v2/actual-native64-diagnostic-observation-v2/observation.json",
+      "sha256": "5270ce9e2e3cc874a177f0712941dc93da4650b371b7135abb41b4595a3a8fe7"
+    },
+    "childlog": {
+      "path": "artifacts/research/20261010-p016-native64-results-tools-v2/actual-native64-diagnostic-observation-v2/P016_NATIVE64_CHILD.log",
+      "sha256": "2cf599ab34f21cfed58ac5491a351f7846aa9fbedb3af6f0bd12076644f5dd3f"
+    },
+    "watchdog": {
+      "path": "artifacts/research/20261010-p016-native64-results-tools-v2/actual-native64-diagnostic-observation-v2/P016_NATIVE64_WATCHDOG.json",
+      "sha256": "3d891751aa6b578883068baafd54e60c7a7691e240e6579f5a209c380a4e1edd"
+    }
+  },
+  "source_paths_startup_defect_separate_from_Getter_order_assumption": true,
+  "next": "New64/256 wrapperV2 removes only baseline guard PYTHONPATH dependency; newpeer/newauthority/newnonce required. Future successful getter validates same unique4ref roles and exact allowed requestedV1 or absent display suffix, without pretending unknown internal versions were observed.",
+  "model_source_weights_preprocessing_math_changed": false,
+  "Save_retry_or_resubmit": 0,
+  "own_verified_Public": 0.951,
+  "strict_above0960_achieved": false,
+  "goal_continues": true
+}

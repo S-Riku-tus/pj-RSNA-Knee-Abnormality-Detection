@@ -1,0 +1,144 @@
+{
+  "schema_version": "regional_triplet_future_training_connection_review_v1",
+  "checked_at_utc": "2026-10-08T19:02:09.005294+00:00",
+  "scope": "Read-only source design; no new trainer/config/model changes or execution",
+  "checks": {
+    "all_15_existing_protected_and_component_files_unchanged": true,
+    "current_factory_constructs_Native_not_Regional": true,
+    "legacy_checkpoint_save_omits_representation_identity": true,
+    "legacy_checkpoint_apply_omits_representation_identity": true,
+    "legacy_source_hash_map_omits_regional_module": true
+  },
+  "all_static_findings_confirmed": true,
+  "source_sha256": {
+    "src/rsna_knee/regional_triplet_model.py": "31f91d75d73b222c1e37d8864abfe584c6bd648203ef67293ec56d855eaa9589",
+    "src/rsna_knee/native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+    "src/rsna_knee/finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "src/rsna_knee/feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "src/rsna_knee/feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "scripts/train_native_dinov2_fast16.py": "cfdba529adcdd9b6d5f34a6b020cdae03f7fb04551ed4807778503fa1235ece0",
+    "configs/experiments/f005-dinov2-native-frozen-control-fast16.json": "7352e38ba0e58aad041a31c3b667c0f23c3ef0f9e085a48c4832e7cc36a8a7cb",
+    "configs/experiments/f005-dinov2-native-last2-fast16.json": "896b7293b26413c895002f906ff83023389456a9ba9afda7f5413a0c498fc279"
+  },
+  "prior_component_evidence": {
+    "experiments/regional-triplet-component-preparation-20261009.json": "00dbd6585d971048c8588a181794373e9cc145d108313589170ed44a22fcb47b",
+    "experiments/regional-triplet-component-independent-review-20261009.json": "2dd4ffcc917e2f66288dc8c6afda6c4c8e1ef57bc4bf5df62941b77e37a10000"
+  },
+  "priority_checkpoint_gap": {
+    "finding": "Regional and CLS have identical state keys/shapes. Existing strict tensor loading cannot distinguish their representation semantics.",
+    "current_exposure": "Normal fast16 CLI constructs NativeTripletMIL only. Directly passing RegionalTripletMIL with the legacy config to legacy make/apply helpers can mislabel or consume a CLS-schema checkpoint; this is a static code-path finding, not an executed misuse.",
+    "legacy_schema": "native392_generic_dino_suffix_head_fast16_v1",
+    "parameter_contract_is_not_a_save_load_gate": "run.json parameters includes Regional marker, but checkpoint dictionary and apply helper do not require it.",
+    "new_schema_proposal": "native392_generic_dino_regional4x4_suffix_head_fast16_v1",
+    "mandatory_representation_contract": {
+      "name": "normalized_CLS_plus_fixed4x4_patch_means_v1",
+      "model_class": "RegionalTripletMIL",
+      "normalized_patch_grid": [
+        28,
+        28
+      ],
+      "regional_grid": [
+        4,
+        4
+      ],
+      "pooling": "disjoint7x7 normalized patch means computed FP32; CLS then16 row-major regions",
+      "instances_per_window": 17,
+      "instances_per_series": 816,
+      "feature_dim": 384,
+      "storage": "all17 descriptors FP16 then FP32",
+      "positions_and_masks": "repeat_interleave17 for each original window; planes and flags unchanged",
+      "learned_regional_coordinates": false
+    },
+    "required_before_any_tensor_copy": [
+      "Dedicated save rejects any model other than the declared Regional class/representation; verify runtime options against the dedicated config.",
+      "Dedicated load/apply rejects legacy schema, missing/unknown representation, wrong descriptor order/grid/count/quantization, or a CLS model even when all tensor shapes match.",
+      "Bind the exact representation dictionary and canonical fingerprint in config, run, checkpoint and inference receipt; include regional module and dedicated factory/serializer/CLI SHA in source provenance.",
+      "Retain strict suffix/head keys, shape/dtype/finite checks, generic encoder provenance, frozen-prefix digest, targets12 order, pixel contract, fold/epoch/weak selection/artificial and noGold checks.",
+      "No implicit legacy migration or warm-start from trained CLS suffix/head. Initialize from the same audited generic encoder and fixed-seed fresh head as the matched CLS control."
+    ]
+  },
+  "connection_points": [
+    {
+      "path": "src/rsna_knee/native_training_fast16.py",
+      "symbol": "validate_native_config",
+      "line": 59,
+      "need": "Dedicated config validator/loader with explicit representation. A top-level label alone is unsafe: old factory ignores it; online extra keys are rejected. Distinct schema must fail on the old CLI while retaining the exact numeric training/pixel settings."
+    },
+    {
+      "path": "src/rsna_knee/native_training_fast16.py",
+      "symbol": "new_native_model",
+      "line": 271,
+      "need": "Dedicated explicit factory imports RegionalTripletMIL and passes unchanged trainable_blocks/window_chunk16/checkpoint_last2; never monkeypatch the old factory."
+    },
+    {
+      "path": "src/rsna_knee/native_training_fast16.py",
+      "symbol": "make_native_checkpoint",
+      "line": 176,
+      "need": "Dedicated semantic serializer before legacy-compatible suffix/head tensor extraction; do not call old make helper unchanged."
+    },
+    {
+      "path": "src/rsna_knee/native_training_fast16.py",
+      "symbol": "load_native_checkpoint",
+      "line": 212,
+      "need": "Dedicated Regional schema/identity/source parser; old CLS checkpoint must be rejected before reconstructing model."
+    },
+    {
+      "path": "src/rsna_knee/native_training_fast16.py",
+      "symbol": "apply_native_checkpoint",
+      "line": 239,
+      "need": "Dedicated model-to-checkpoint representation equality gate before load_state_dict; shape compatibility is insufficient."
+    },
+    {
+      "path": "src/rsna_knee/native_training_fast16.py",
+      "symbol": "train_native",
+      "line": 547,
+      "need": "New isolated orchestration must call the dedicated factory/serializer and record new run identity. Keep optimizer groups/seed/shuffle/AMP/loss denominator/12epoch minimum weak-BCE selection identical."
+    },
+    {
+      "path": "src/rsna_knee/native_training_fast16.py",
+      "symbol": "preflight_native_training",
+      "line": 456,
+      "need": "Reuse eligibility/cache contracts but require dedicated representation resource evidence; old source/config-bound gate does not qualify Regional."
+    },
+    {
+      "path": "src/rsna_knee/native_training_fast16.py",
+      "symbol": "predict_native",
+      "line": 667,
+      "need": "Future separate inference entry must use the dedicated parser/factory/apply path, same pixel extraction, UID/targets/finite submission contract, and no Report."
+    },
+    {
+      "path": "scripts/train_native_dinov2_fast16.py",
+      "symbol": "main/qa",
+      "need": "Old CLI imports CLS factory and qa directly constructs NativeTripletMIL. A future dedicated CLI and resource QA are needed; old frozen CLI/config/receipts remain protected."
+    }
+  ],
+  "unchanged_reusable_contracts": {
+    "pixel_input": "Existing native392 uint8 3series x48 windows and shared physical preprocessing/cache/index are reusable; no new DICOM decode or cache format.",
+    "neutral_helpers": "NativePixelStore, tensor_study, label_tensors, observed_bce_sum/backward_observed_micro, effective_observation_count, suffix_keys/prefix_digest, evaluate_native and existing head can be reused only behind dedicated config/identity/resource entry gates.",
+    "matched_settings": "seed20261002; folds0/1 within fixed5-group folds; micro1/effective16; window16; checkpoint_last2; head384->192/83352params/dropout0.2; 12epochs/headLR3e-4/encoderLR1e-5/weightdecay0.01; observed-cell denominator includes final short group.",
+    "sole_experiment_factor": "CLS1 descriptor/window -> CLS+16 regional descriptors/window. Encoder trainability must equal its prespecified CLS comparator; freeze vs last2 must not be changed simultaneously."
+  },
+  "future_start_gates": [
+    "Complete and root-review f005 CLS frozen and last2 arms first (planned folds0 then1), with identical source/config/cache/weak split controls. No Regional fitting before that contrast is accepted.",
+    "Accept all24 full-cache4207/21035 array receipts and fresh complete index plus supplied/report-group/Gold UID-and-group exclusion; patient independence remains unverified.",
+    "Prepare and accept dedicated config/schema/serializer and meaningful cross-representation rejection/roundtrip tests. These are future work, not implemented by this review.",
+    "Obtain root-authorized Regional full144-window resource evidence and effective16 accumulation sufficiency with dedicated source/config hashes. Prior two-window component proof and CLS resource gate cannot substitute; do not tune chunk/microbatch as an unrecorded extra factor.",
+    "Use fresh run directories, same generic initialization, same seed/fold/teacher missing-label mask and weak-BCE checkpoint selection; no own Gold/Public parameter or checkpoint selection."
+  ],
+  "minimum_future_checkpoint_tests": [
+    "Correct Regional artificial strict roundtrip",
+    "CLS checkpoint -> Regional and Regional checkpoint -> CLS both rejected despite same shapes",
+    "Missing/tampered representation, source or order rejected before any model tensor changes"
+  ],
+  "limitations": [
+    "17 descriptors increase head activation cost and change attention mass; same head parameter count does not mean same compute/resource cost.",
+    "Head has no explicit region identity/adjacency; only encoder positional content and pooled descriptors supply regional information.",
+    "Existing shape compatibility is a migration hazard, not evidence of semantic compatibility or gain."
+  ],
+  "trainer_checkpoint_serving_candidate_gate_passed": false,
+  "f005_completion_or_current_index_status_observed": false,
+  "accuracy_improvement_measured": false,
+  "new_source_config_or_component_edits": 0,
+  "GPU_data_teacher_weights_API_auth_HTTP_fit_optimizer_upload_submit": 0,
+  "docs_ledger_owner": "root"
+}

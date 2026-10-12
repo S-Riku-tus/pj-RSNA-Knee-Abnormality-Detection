@@ -1,0 +1,39 @@
+{
+  "schema_version": "p009_profile32_artificial_validation_v1",
+  "prepared_at_jst": "2026-10-08",
+  "stdlib_unittests": {
+    "production_physical_fov": 6,
+    "paired_profile": 7,
+    "all_passed": true
+  },
+  "ruff_all_changed_python_files_passed": true,
+  "python": "3.12.13 (main, Jun 11 2026, 04:05:29) [MSC v.1944 64 bit (AMD64)]",
+  "files_sha256": {
+    "scripts/build_p009_coat_fov160.py": "e3d9f1c1290c1672f50f039584cf67d6af7c24c2421c5f2e6f211c2cbefc6dd6",
+    "scripts/build_p009_profile.py": "72304a255af044f3bf2271fe44866b43d6009bcdb44075a8513632226e723d0b",
+    "scripts/p009_profile_runtime.py": "b08ca328e91831e83d4001c74307d6c190cd4f6a5ec42a81286944fb00456e0c",
+    "scripts/validate_p009_artificial.py": "a9e8358d600bebdd9ee8d1d415d0269d93f931f572bf2cc91aa63264c9f5699e",
+    "tests/test_p009_coat_fov160.py": "2a4be6c5567fdcc46dc9ac2fc30eb46e92e3a3d1db53c7886be9127580670511",
+    "tests/test_p009_profile.py": "a3613a2277aca69b0d9e62724aa7cd0d8317b47d394de3fcf465cefe0fbae735",
+    "notebooks/public/19_submit_p009_coat_fov160.ipynb": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+    "notebooks/public/19a_profile_p009_fov140_fov160_32.ipynb": "5ee2308bdaa844f20ecdd187fdd2283609772da68df88f1dae6f04a98e83340f"
+  },
+  "cuda_production_contract_evidence": "experiments/p009-coat-fov160-validation-20261008.json",
+  "checks": [
+    "Exact baseline140 and production160 bodies are bound as literal arguments to paired_fov",
+    "Same ordered32UID hash as p006/p007 and structural Gold exclusion",
+    "Original14 guard/preprocess/KneeNet/infer writer code unchanged; original no_grad decorator preserved",
+    "Real fastread import creates cache; 140->160 switch deletes only matching cache and imports160; unrelated cache preserved",
+    "Actual make_builder reader lambda closure IMG/SLOTS and module CROP/source SHA recorded; mismatchingFOV rejected",
+    "Exact reader subprocess CSV replay once only, cachedSHA and stale output guards; unrelated pip passthrough; original subprocess.run restored on exceptions",
+    "Independent tied-percentile rank formula and wrongUID rejection",
+    "Package file SHA/Notebook copies/freshpath immutability/allcode syntax"
+  ],
+  "limitations": [
+    "Artificial tests do not execute real MRI, checkpoints or Linux fork Pool.",
+    "CUDA proof uses original window/attention functions with a random tiny encoder, not real CoAt model memory/accuracy.",
+    "Production Python3.13/Kaggle versus local3.12 requires saved-version binding and actual profile after root review.",
+    "AUC and hidden completion remain unmeasured."
+  ],
+  "real_MRI_weights_fit_remote_or_competition_submission": false
+}

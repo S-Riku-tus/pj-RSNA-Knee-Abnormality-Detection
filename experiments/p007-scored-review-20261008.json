@@ -1,0 +1,37 @@
+{
+  "recorded_at_utc": "2026-10-08T12:43:54.387574+00:00",
+  "checked_at_utc": "2026-10-08T12:42:29.081422+00:00",
+  "all_passed": true,
+  "checks": {
+    "exact_submission_ref": true,
+    "exact_saved_version": true,
+    "actual_server_complete": true,
+    "actual_public_text": true,
+    "submitted_by_own_account": true,
+    "official_filename": true,
+    "positive_hidden_submission_bytes": true,
+    "no_returned_error": true,
+    "baseline14_protected": true,
+    "submitted_corrected16_unchanged": true
+  },
+  "status": "official_own_COMPLETE_public0950_not_promoted",
+  "submission_ref": 56951892,
+  "notebook_ref": "rsraki/p007-convnext-mirror",
+  "saved_version": 1,
+  "own_public_score_text": "0.950",
+  "own_incumbent_public": "0.950",
+  "official_total_bytes": 379798,
+  "decision": "Keep p005 k16 plain reader: displayed improvement unobserved; mirror adds forward/compute cost.",
+  "unrounded_delta_known": false,
+  "hidden_worker_runtime_known": false,
+  "hidden_fallback_count_known": false,
+  "limits": [
+    "Equal three-decimal score does not prove equal predictions or exact raw AUC.",
+    "Elapsed since submission is not worker runtime.",
+    "Official COMPLETE establishes a scored hidden rerun, but individual target AUC/logs/fallback counts are unavailable."
+  ],
+  "source": "artifacts\\research\\20261008-p007-competition-submit-v1\\scoring-20261008T124229081422.json",
+  "source_sha256": "2b334f184cf5dc5f6e79ecee2543dab46ac60fe0f7292041c1bcf383d84550f8",
+  "strict_over0960_goal_achieved": false,
+  "remote_mutation": false
+}

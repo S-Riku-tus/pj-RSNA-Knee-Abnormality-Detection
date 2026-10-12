@@ -1,0 +1,187 @@
+{
+  "schema_version": "p011_actual64_independent_compact_review_v1",
+  "at_utc": "2026-10-08T17:54:11.480650+00:00",
+  "all_passed": true,
+  "checks": {
+    "immutable_p011-profile64-savedV1-binding-review-20261009": true,
+    "immutable_p011-profile64-root-launcher-preparation-v3-20261009": true,
+    "immutable_p011-profile64-compact-getter-entry-repair-v2-20261009": true,
+    "official_raw_typed_COMPLETE_failureempty_explicitV1": true,
+    "actual_savedV1_source25cells22code_T4_OFF_private_reused": true,
+    "SourceRPC0_StatusRPC1_no_loop_mutation": true,
+    "13unique_compact9JSON4CSV_exact_allowlist": true,
+    "all13_body_SHA_actualbytes_HTTP_length_cap_exact": true,
+    "both_inventory_allpages_Counter_multiplicity_agrees": true,
+    "API_ListFiles_size_not_byteproof": true,
+    "cleanup_metadata_no_submission_partial_or_abort": true,
+    "separate_UID_body_MRI_cache_or_weight_download0": true,
+    "profile64_passed_schema_orderedcohortSHA": true,
+    "main_reader_expert_once64": true,
+    "profile_dictionary_vs_separate_expert_and_blend_receipts_exact": true,
+    "base_earlier_stage_reader0_finalreader1_no_stale_mismatch": true,
+    "baseline_main_no_failed_fallback_or_initializererror": true,
+    "originalfusion_success1_exception0_fallback0": true,
+    "baseline_main2loads_original320_ckptSHA": true,
+    "baseline128_forward_full94windows320_FP16_grad0": true,
+    "reader3models_plain16batches48forwards_grad0": true,
+    "reader_summary_gate_matches_actual48_events": true,
+    "CPU_seal_before_extra_namespace_and_returned_reader": true,
+    "CSV64_UID12targets_finite_originalfusion_independent_maxdiff0": true,
+    "all12_fixed90_10_rank_average_percentile_candidate_reconstructedSHA": true,
+    "all64_UID_hash_records_exact_coverage": true,
+    "64_native96_384_uint8_mask96_positive_bytecontracts": true,
+    "two_decode_per64_recorded_input_and_maskSHA_exact": true,
+    "64_worker_receipt_verified_before_model_and_SHA_present": true,
+    "two_actual_expert_load_receipts_exact_summary": true,
+    "two_expert_strict486_FP32_checkpoint3394_arch224_eval": true,
+    "64_stock_full94_singleview224_forwardFP16_grad0_fallback0": true,
+    "64_JSON_probability_F32byteSHA_independently_struct_recomputed": true,
+    "rawCSV12probability_vs64_runtimeJSON_exact_maxdiff0": true,
+    "all64_input_before_after_SHA_match_native_receipts": true,
+    "two_expert_GPU_workers_each32_studies": true,
+    "expert64_forwardcounts_total6016_windows": true,
+    "no_realprofile_decode_error_allmissing_or_initializerfail": true,
+    "bounded_transport64_completed_no_cancel_unfinished_errors": true,
+    "three_phases_sampled_positive_finite_T4memory_lt13000MiB": true,
+    "resource_runtime_gate_report_matches_threephase_contract": true,
+    "diagnostic_submitted_CSV_deleted_only_reconstructed_hash": true,
+    "Report_teacher_Gold_consumedfalse_sourcecohortexcluded": true,
+    "ownGold_selection_false_authorGold_reuse_explicit": true,
+    "candidate_256_fullServing_Public_qualification_stillfalse": true
+  },
+  "decision": "64-study private diagnostic passed; prepare256 qualification without changing baseline or fixed coefficient",
+  "official_status_observed_at_utc": "2026-10-08T17:47:00.560773+00:00",
+  "ref": "rsraki/p011diag-faf10ad9505f58563d2df789609cccef",
+  "saved_version": 1,
+  "kernel_id": 137715763,
+  "source_profile_SHA": "62e6aaefda761077dafbbe56167732784f9c14ec11230df0e197481918974020",
+  "ordered64_UID_SHA": "8eeada7574bcc1a72c29bbebcdfcdd7ae2c7fd85359f4dbe7d3c6d7da8e7e371",
+  "raw_UIDs_saved_in_this_review": false,
+  "body_SHA256": {
+    "P011_BASELINE_SEAL.json": "991e626f7f521c10a88410c1400382bd677b07a4b646964423a039875111b659",
+    "P011_BASE_PROFILE.json": "69468c3c0f2d28f1015b0cdde608004afbb349d9a866dfe689085308745297a7",
+    "P011_BEFORE_EXTRA.json": "c1b0d75fcc270b5df40551bc635ea2bfd7756c04fcfd8edc5c7539beb9210b77",
+    "P011_CANDIDATE_BLEND_RECEIPT.json": "bd7c48bb116a89cd89b70dbf66d95df6720bf0b006f84bf9d2e99002ba9d8d89",
+    "P011_EXPERT_LOAD_cuda_0.json": "36793d6dbffb086772d6a6631a5894a29ba1431f9e657ed0cc6b33c6768c4a27",
+    "P011_EXPERT_LOAD_cuda_1.json": "1c5a4e9c6f236a26c5085132913bdb3959a8e943215de1183d759531edb38be9",
+    "P011_PROFILE_SUMMARY.json": "815fef965c0780d7984fd13a392461eb14799fa34c936f72a441004e2f9168ac",
+    "P011_STANDALONE224_SUMMARY.json": "dee08d75be4a98b47a4e7569f00d7c59ada8af26fe18511ebcfc90f3ea8c3b47",
+    "_own.csv": "45d031f9b6dd5a394a3ff87c1175a01940aaadc7e6613f96b0b9c057b0a99eec",
+    "_sota_0949.csv": "93632c88c91c42465000b13b3d9a7621c9d84752af60d41711d8484dc1c477f8",
+    "p007_observation_plain/inference.json": "b9878ce90f6431b1f152cd2f6c85ee8e23f7b4204d0cd1beaa3a6570e8e8c520",
+    "p011_baseline_sealed.csv": "32be019f748955878fa48738c30420ebb1ffe9a38e54eed731fb059b185584b2",
+    "p011_expert224_raw.csv": "405b6b5265bd5d5f7e11139c73ea8e7bb2747b04db1eb75746997eef317727d4"
+  },
+  "control_receipt_SHA256": {
+    "status.json": "ac6da63bb211803b5c8a151199703fde6fb95a205319a639dd9d433b18d2fcc6",
+    "saved-binding.json": "2c15f8ce44e4c343c4197c64c31f7382bdf3b9296507043d4c22a4a8241c9621",
+    "download-receipt.json": "cde6605beb1e30618ee8db8b737a1d88185f4eba89c0cf62fccba18767126c63",
+    "visible-output-metadata.json": "321c95f84dafbc0f2385618f53209add35776fa36859391819a6a49b44af137d"
+  },
+  "preserved_proof_SHA256": {
+    "experiments/p011-profile64-savedV1-binding-review-20261009.json": "08d5f2c031ed947f1d3267bf32dbd757b3f182c4ed9a220545ed0f4e938236e1",
+    "experiments/p011-profile64-root-launcher-preparation-v3-20261009.json": "6dbb9e793376c6ede90ec9a73d87c632a417056b40344e1f2aaba91e16339cf2",
+    "experiments/p011-profile64-compact-getter-entry-repair-v2-20261009.json": "eeef89caa6bc10cfe667da1c430ab1f8ee5b87646fb3f01d188319b86124ba16"
+  },
+  "CSV_independent_math": {
+    "all_passed": true,
+    "original_fusion_independent_maxdiff": 0.0,
+    "fixed10_candidate_csv_reconstructed_sha256": "64304aabbce6b2cbdbd7680b05dfc31a50ae893afe49a01329c3026fbfed4560",
+    "candidate_file_body_downloaded": false,
+    "candidate_profile_file_deleted": "Must separately check official output inventory and runtime summary; SHA reconstruction is not external observation of the deleted file.",
+    "original12_columns_and_UID_order_finite": true,
+    "fixed10_formula": "average_percentile(0.9*average_percentile(base)+0.1*average_percentile(expert))",
+    "CSV_sha256": {
+      "_sota_0949.csv": "93632c88c91c42465000b13b3d9a7621c9d84752af60d41711d8484dc1c477f8",
+      "_own.csv": "45d031f9b6dd5a394a3ff87c1175a01940aaadc7e6613f96b0b9c057b0a99eec",
+      "p011_baseline_sealed.csv": "32be019f748955878fa48738c30420ebb1ffe9a38e54eed731fb059b185584b2",
+      "p011_expert224_raw.csv": "405b6b5265bd5d5f7e11139c73ea8e7bb2747b04db1eb75746997eef317727d4"
+    },
+    "accuracy_evaluated": false
+  },
+  "rawprobability_JSON_CSV_independent_maxdiff": 0.0,
+  "native_valid_slices": {
+    "minimum": 74,
+    "maximum": 96,
+    "sum": 5804
+  },
+  "phases": {
+    "baseline_main": {
+      "elapsed_seconds": 100.17426905299999,
+      "sampled_peak_process_tree_rss_bytes": 11686563840,
+      "rss_note": "Sum of RSS includes shared pages more than once; sampled, not exact peak.",
+      "sampled_gpu_peak_used_mib": [
+        3611,
+        3763
+      ],
+      "gpu_note": "nvidia-smi device-wide sampled memory, includes unrelated allocations on that device.",
+      "samples": 183,
+      "disk_free_bytes_after": 20939239424
+    },
+    "baseline_reader": {
+      "elapsed_seconds": 82.098951769,
+      "sampled_peak_process_tree_rss_bytes": 10362322944,
+      "rss_note": "Sum of RSS includes shared pages more than once; sampled, not exact peak.",
+      "sampled_gpu_peak_used_mib": [
+        8067,
+        543
+      ],
+      "gpu_note": "nvidia-smi device-wide sampled memory, includes unrelated allocations on that device.",
+      "samples": 151,
+      "disk_free_bytes_after": 20938805248
+    },
+    "independent_expert": {
+      "elapsed_seconds": 47.815872098,
+      "sampled_peak_process_tree_rss_bytes": 15547322368,
+      "rss_note": "Sum of RSS includes shared pages more than once; sampled, not exact peak.",
+      "sampled_gpu_peak_used_mib": [
+        7741,
+        8893
+      ],
+      "gpu_note": "nvidia-smi device-wide sampled memory, includes unrelated allocations on that device.",
+      "samples": 87,
+      "disk_free_bytes_after": 20938149888
+    }
+  },
+  "sum_phase_elapsed_seconds": 230.08909291999998,
+  "sum_excludes_queue_environment_startup_import_and_misc": true,
+  "expert_twoT4_allocator_and_device_summary": [
+    {
+      "index": 0,
+      "name": "Tesla T4",
+      "allocated_mib": 293.115234375,
+      "reserved_mib": 4186.0,
+      "peak_reserved_mib": 7602.0
+    },
+    {
+      "index": 1,
+      "name": "Tesla T4",
+      "allocated_mib": 293.115234375,
+      "reserved_mib": 4190.0,
+      "peak_reserved_mib": 8754.0
+    }
+  ],
+  "expert_checkpoint_label_metadata_present": [
+    false,
+    false
+  ],
+  "label_order_evidence": "Literal author LAB/head12 and runtime outputs; checkpoint contains no explicit labels metadata.",
+  "author_Gold_selection_reuse": true,
+  "author_Gold_training_exclusion_independently_verified": false,
+  "own_Gold_fit_or_selection": false,
+  "weak_OOF_checkpoint": false,
+  "64_diagnostic_passed": true,
+  "candidate_gate_passed": false,
+  "256_profile_completed": false,
+  "full_Serving_passed": false,
+  "Public_score": null,
+  "limitations": [
+    "Native volume/mask equality independently checked between captured receipt strings, not recomputed from real MRI bytes locally.",
+    "Worker receipt SHA/guard-before-model is source-bound runtime evidence; worker receipt bodies were not downloaded.",
+    "Resource memory is sampled device-wide usage and summed process-tree RSS, not exact unique process RAM or hidden-test peak.",
+    "64-study timings do not guarantee256 or fullhidden runtime. Codec coverage is not audited per DICOM frame.",
+    "Reader3-model48-forward execution observed; separate reader checkpoint payload SHAs were not externally downloaded/recomputed in this review.",
+    "Deleted candidate CSV bytes are independently reconstructed from four downloaded prediction CSVs and matched to the recorded candidate SHA; its deleted body was not obtained."
+  ],
+  "API_HTTP_actualMRI_model_teacher_or_fit_by_reviewer": 0
+}

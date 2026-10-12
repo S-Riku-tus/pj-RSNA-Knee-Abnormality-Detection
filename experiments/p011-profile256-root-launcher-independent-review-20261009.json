@@ -1,0 +1,85 @@
+{
+  "schema_version": "p011_private256_root_launcher_independent_static_review_v1",
+  "at_utc": "2026-10-08T18:12:02.778344+00:00",
+  "all_passed": true,
+  "checks": {
+    "author21_preparation_fixedSHA_and_all_true": true,
+    "five_launcher_SHA_match_prep_and_frozen_manifest": true,
+    "manifest_fixed_current_SHA": true,
+    "old64_core_SHA_fixed_and_unmodified": true,
+    "all40_old_and_new_frozen_assets_current_SHA": true,
+    "all_four_proofs_SHA_current_exact_18_22_45_24": true,
+    "all_four_proof_checks_true": true,
+    "root64_schema_explicit_accuracy_false_and_missing_fullServing_not_imputed": true,
+    "root64_peer45_SHA_and_same13_body_SHA": true,
+    "same_actual64_ref_V1_kernel_source_orderedUIDs_and_diagnostic_only": true,
+    "new256_Notebook_and_package_fixed_SHA": true,
+    "protected14_SHA_original7_literal_order_once": true,
+    "25cells_22code_clean_outputs_and_compile": true,
+    "CLI_only_private64_to256_and_bindings_filename_diff": true,
+    "five_sources_compile_without_execution": true,
+    "manual_static_parent_request_private_Original31481_T4x2_OFF_inputs1_1_comp_only": true,
+    "manual_static_new128bit_CSPRNG_namespace_idNone_SaveV1_identity_strict": true,
+    "manual_static_auth_only_after_explicit_execute_intent_local_and_proof_checks": true,
+    "manual_static_single_fresh_rawquota_Decimal_gt3600_and_at_most_one_Save": true,
+    "manual_static_sources_recheck_after_quota_before_Save": true,
+    "manual_static_retry0_redirectFalse_instance_only_no_source_status_or_submit": true,
+    "manual_static_request_before_Save_and_exclusive_attempt_unknown_response_hold": true,
+    "manual_static_parent_core_SHA_before_import_and_no_gate_monkeypatch": true,
+    "manual_static_wholegroup256_255groups_Goldexcluded_prefix64_contract": true
+  },
+  "preparation_path": "experiments/p011-profile256-root-launcher-preparation-20261009.json",
+  "preparation_sha256": "6f1849b6b19768f228dd1f236c9e1e7afcea6f55878437a9f628853063351da6",
+  "frozen_bindings_sha256": "7d4eb4836b0a59c162ca85a2f30798a478863c77d446eafd300ee912f94d42de",
+  "launcher_sha256": {
+    "launch_tools.py": "f7949a0571afe8d96f1236c6030cbb3d129f645dbde9241fc5953c926077d6e4",
+    "launch_once.py": "1590de8324050a86b3f721c304f9bca2452fb4028f8af0c51ad1333e1cdea874",
+    "freeze_bindings.py": "b2eab6d0f2ec3c878d41214ed520f756efb957787af8f929e17e5422c992d3d3",
+    "test_launch256.py": "dee9f4321a625e0033752a527dbe61547273f8e77fb341c932ac2387a843976e",
+    "test_sdk_request.py": "474a121533d99c9f34f12f30c6c0da31d0f59ed0ec6e9dbbd758fd1ffc741fd5"
+  },
+  "parent64_core_sha256": "8ffe2be7f6130a923bdad41612fbf7a53983ba782ea292c4d2bc1d89fce351ff",
+  "profile256_SHA": "1d81ac179370be73197ec818879604f6551e36a5f15f1745cea54e7858439b3a",
+  "package256_SHA": "bb1882e12e675a23c6c73df69f6cbdd5580b35d59dceed36946e62f98d24c0cc",
+  "frozen_asset_count": 40,
+  "proof_SHA256": {
+    "local256": "fe96528207649d026253d75c67beba51b33661ad01489d099e9936513107124f",
+    "peer256": "aceb338af6fe5f5eb2f624f69ae745886b1ec596e5cd290951ba7c89ed91c43e",
+    "actual64_peer": "971cc250ac96b01ee2af066f64fd89b6640d454a0362412982602d9b4411b2ad",
+    "actual64_root": "75d3bf7b0ffa0a590e314fdeb4e7e2ba6e8b6b4d0a752161a032069826b20098"
+  },
+  "proof_check_counts": {
+    "local256": 18,
+    "peer256": 22,
+    "actual64_peer": 45,
+    "actual64_root": 24
+  },
+  "cohort_summary": {
+    "studies": 256,
+    "groups": 255,
+    "ordered_uid_sha256": "685a6a4c82f1ae7bf29a8d2dfeafccecf02b394f8a5a0ef5da284af32085e55a",
+    "first64_ordered_uid_sha256": "8eeada7574bcc1a72c29bbebcdfcdd7ae2c7fd85359f4dbe7d3c6d7da8e7e371"
+  },
+  "original7_code_indices": [
+    10,
+    12,
+    14,
+    15,
+    16,
+    17,
+    20
+  ],
+  "verification_scope": "Bounded source reading, fixed-file SHA and compile checks; no execution of launcher or additional broad tests. Author CPU4/SDK2 evidence is hash-bound, not repeated.",
+  "root64_omitted_fields": "Public_score and full_Serving_passed are absent in root64. They are not written or completed by the review. Root64 explicit accuracy_evaluated=false and same peer45/source/13 body SHA guard qualification.",
+  "API_auth_HTTP_Save_submit_model_MRI_GPU_fit_calls_by_reviewer": 0,
+  "actual256_completed": false,
+  "full_Serving_passed": false,
+  "Public_score": null,
+  "candidate_gate_passed": false,
+  "decision": "The local one-off launcher is ready for root to explicitly perform one private256 SaveAndRunAll with fresh raw quota. This does not qualify a competition submission.",
+  "limitations": [
+    "Saved256 version/source/settings/Input internal IDs need postSave review.",
+    "Nonce namespace remote nonexistence is unverified; no intentional overwrite, expected savedV1 only.",
+    "64 diagnostic results do not establish256/fullhidden completion or Public improvement."
+  ]
+}

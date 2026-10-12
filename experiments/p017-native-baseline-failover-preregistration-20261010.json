@@ -1,0 +1,63 @@
+{
+  "schema_version": "p017_native_baseline_failover_onefactor_preregistration_v1",
+  "at_utc": "2026-10-10T09:59:01.586632+00:00",
+  "baseline_saved_source": {
+    "path": "notebooks/public/28_submit_p015_native_support_mask.ipynb",
+    "sha256": "cd02b96feff6069a5dd386f47418517207916077f5d3011ee07ed50c9012eaa1",
+    "kaggle_ref": "rsraki/p012native2-ff87856adabf4210bdd8a797616743f0",
+    "saved_version": 1,
+    "kernel_id": 137973395
+  },
+  "motivation": {
+    "P014_ref": 57031186,
+    "P015_ref": 57031981,
+    "both_hidden_rerun_exception_no_score": true,
+    "actual_cause_unknown": true,
+    "reusing_completed_own951_baseline_after_optional_native_failure_may_avoid_total_submission_failure": true
+  },
+  "single_factor": "Additional Native runtime failure after successful original baseline seal and cleanup may restore original sealed baseline bytes and finish with explicit fallback receipt. Healthy extra-model path remains unchanged.",
+  "unchanged": {
+    "original_own951_all5_numerical_cells": true,
+    "original_S5_SWA_70_30": true,
+    "Native_twofold_model_architecture_checkpoint_and_source": true,
+    "MCL_Synovitis_baseline_only": true,
+    "other10_baseline80_native20_rank_math": true,
+    "native_training_preprocessing_label_order": true,
+    "model_source_CPU_and_native64_256_evidence_source_comparison_required": true
+  },
+  "failover_preconditions": [
+    "Original baseline completed without fallback and passes original UID/order/12 finite output contract.",
+    "Original baseline is sealed with recorded raw SHA and original cleanup completed.",
+    "Source/authorization/Input/model prerequisite checks passed before optional extra inference.",
+    "Owned optional process groups are confirmed dead or safely terminated; no live GPU worker may survive.",
+    "Sealed baseline raw SHA, UID/order and 12 finite values rechecked before atomic output restore."
+  ],
+  "must_remain_fatal": [
+    "Original baseline failure or invalid sealed baseline.",
+    "Source, authority, prerequisite model or Input integrity validation failure.",
+    "Failure to terminate owned processes, parent kill or unrecoverable GPU/OS hang."
+  ],
+  "reporting": {
+    "fallback_used_and_sanitized_reason_required": true,
+    "baseline_byteexact_restore_required": true,
+    "no_claim_of_successful_Native_predictions_on_fallback": true,
+    "native_complete_separate_from_valid_final_submission": true,
+    "safe_secret_handling": true
+  },
+  "expected_limitations": [
+    "No guarantee against baseline failure, Kaggle data mounting or platform failure, hard notebook kill, GPU hang or overall deadline.",
+    "Successful submission and model accuracy improvement are separate; fallback may produce unchanged own951 baseline."
+  ],
+  "validation": [
+    "Source independent review, exact unchanged healthy-path/model/original5 evidence.",
+    "Meaningful artificial tests for extra failure restoration, invalid baseline refusal, live process refusal, original baseline failure propagation, prevalidation failures not bypassed.",
+    "Actual saved private Serving input/source/runtime/output review before competition Submit."
+  ],
+  "Gold_training_or_checkpoint_or_blend_selection": false,
+  "Public_coef_search": false,
+  "Report_required_at_inference": false,
+  "actual_new_Save_Submit_GPU_Model_calls": 0,
+  "own_verified_Public": 0.951,
+  "strict_above0960_achieved": false,
+  "not_authority_or_runtime_qualification": true
+}

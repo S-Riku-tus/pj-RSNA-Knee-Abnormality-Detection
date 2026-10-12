@@ -1,0 +1,97 @@
+{
+  "schema_version": "remaining_native392_oneoff_compact_summary_preparation_v2",
+  "checked_at_utc": "2026-10-08T14:40:36.192655+00:00",
+  "all_passed": true,
+  "checks": {
+    "old_V4_checker_file_SHA_immutable": true,
+    "numeric_function_AST_identical_except_explicit_index_count_alias_and_descriptive_text": true,
+    "exact_V2_package_plan_and_code_SHA_offline": true,
+    "three_exact_nonce_V1_kernel_source_proofs_valid": true,
+    "protected14_18a_f005_byte_hashes_checked": true,
+    "source_proof_and_local_validation_before_authentication": true,
+    "fresh_output_folder_and_no_overwrite": true,
+    "one_status_RPC_then_explicit_COMPLETE_gate_before_any_other_reads": true,
+    "raw_omitted_status_not_defaulted_COMPLETE": true,
+    "actual_DTO_blob_source_only_raw_typed_identical": true,
+    "all_notebook_and10embedded_members_SHA_before_HTTP": true,
+    "exact_private_CPU_OFF_Original_and_decoder2_accepted_pin": true,
+    "bounded_actual_two_inventory_DTO_shapes_and_pagination": true,
+    "complete_positive_output_allowlist_and_one_to_one_basename_mapping": true,
+    "metadata_sizes_preserved_untrusted_not_byteproof": true,
+    "metadata_log_body_not_saved_or_separately_downloaded": true,
+    "summary_GET_cap4million_declared_and_streamed_before_append": true,
+    "archive_206_Range_header_only_response_closed_no_archive_iteration": true,
+    "HTTPS_identity_bounded_redirects_and_safe_receipts": true,
+    "only_two_HEAD_method_gates_replaced": true,
+    "whole_group_Gold_and_structure_checked_without_teacher_Read": true,
+    "same_native392_contract_QC_cleanup_time_resources_predicates_retained": true,
+    "full4207_index_gate_no_arrays_QC_or_Public_claim": true,
+    "artificial_actual_SDK19_tests_passed": true,
+    "Ruff_passed": true,
+    "final_decision_recomputed_from_final_HTTP_and_numeric_checks": true,
+    "no_upload_submit_model_MRI_or_fit_calls": true
+  },
+  "checks_passed": 27,
+  "checks_total": 27,
+  "status": "offline_prepared_not_executed",
+  "scope": "Parent-only one-off exact nonce savedV1 reads after explicit invocation. This preparation has no authentication/API/HTTP/body/GPU/fit call.",
+  "manual_targets_ready": [
+    {
+      "ref": "rsraki/n392s02-e01c6c7f3fa0ca87e4be0672a5d58193",
+      "version": 1,
+      "kernel_id": 137683945,
+      "shard_index": 1,
+      "accepted_notebook_sha256": "e76795b1ea9d95917135078fcf8d520a815a5289374de38f180d8fd90505204f",
+      "source_binding_proof_sha256": "7e07e7d975ebb22b12614b0e81898331e4bb6d409c028facd4add95992891177"
+    },
+    {
+      "ref": "rsraki/n392s03-8a2b01af538bdabe2e6f783c475163a9",
+      "version": 1,
+      "kernel_id": 137683965,
+      "shard_index": 2,
+      "accepted_notebook_sha256": "50427a0837ddcd0e5d4cb0220dccccf1d438df2660850b5e407b644396c6983e",
+      "source_binding_proof_sha256": "7e07e7d975ebb22b12614b0e81898331e4bb6d409c028facd4add95992891177"
+    },
+    {
+      "ref": "rsraki/n392s04-ff5caa12ee079068af6a933da0a2860b",
+      "version": 1,
+      "kernel_id": 137683997,
+      "shard_index": 3,
+      "accepted_notebook_sha256": "e54ef70ecd7c75cd032fac0da88b11aaeed2dfff55844ded8e457bbc34911803",
+      "source_binding_proof_sha256": "7e07e7d975ebb22b12614b0e81898331e4bb6d409c028facd4add95992891177"
+    }
+  ],
+  "later_indices_scope": "Remaining index4..23 need their own accepted nonceV1 receipts and independently matching whole-Notebook source binding proof; this tool never launches them or assumes such proof.",
+  "numeric_predicate_scope": "Original V4 function AST is exact after reversing only explicit parameterization and descriptive label/text changes;19 numeric/source/coverage/QC/temp/resource predicates retained,2 HEAD-only method gates replaced by actual GET/206 proofs.",
+  "HTTP_scope": "Only4MB maximum compactSUMMARY body; processed ZIP Range0-0 streamed request closes before reading even the one-byte body. Require206 ContentRange;200 ignored Range held. Never obtains archive bytes/model/extra output/log HTTP body.",
+  "Input_internal_version_IDs": null,
+  "actual_arrays_or_outerZIP_SHA_verified": false,
+  "public_score": null,
+  "tests": {
+    "CPU_only_passed": 19,
+    "real_SDK_DTO_roundtrip": [
+      "ApiGetKernelResponse",
+      "ApiGetKernelSessionStatusResponse",
+      "ApiListKernelSessionOutputResponse",
+      "ApiListKernelFilesResponse"
+    ],
+    "fixture_scope": "Actual captured source/metadata shapes and output names; transport URLs/status COMPLETE/summary/pixel receipt values are explicitly artificial. No actual pixels/model payload/teachers used."
+  },
+  "API_HTTP_GPU_model_MRI_fit_or_remote_mutation_calls": 0,
+  "old_getters_and_observations_preserved": true,
+  "supersedes_preparation": "experiments/native392-remaining-summary-tools-preparation-20261008.json",
+  "V2_change_scope": "Preserve V1 and all numeric19/HTTP predicates; recompute decision from final checks after replacing old HEAD proof gates. Add positive/negative decision regression. Core collector and manual CLI bodies remain byte-identical to V1.",
+  "V1_core_and_CLI_bytes_preserved": true,
+  "evidence_sha256": {
+    "artifacts/research/20261008-native392-remaining-summary-tools-v2/compact_tools.py": "4468014bd7f937bfe0fc9b4963d8fd2f600493fb145a367d817db7aa67a6131f",
+    "artifacts/research/20261008-native392-remaining-summary-tools-v2/summary_checks.py": "2dfa392c180bc7dcf3833d6371a7a80033c7ff17f37e0cabd11a435ef7b5e33d",
+    "artifacts/research/20261008-native392-remaining-summary-tools-v2/get_once.py": "797056a83a6f26e97d7eb8c5eb50b6c8ecdeec7c3d7c099dcd2cf7cb90be295d",
+    "artifacts/research/20261008-native392-remaining-summary-tools-v2/verify_once.py": "62fd572909b82b849509ca69d3ca03d24b93b08e4e17be5430b11ae6887e51a4",
+    "artifacts/research/20261008-native392-remaining-summary-tools-v2/test_compact_tools.py": "0cc1a836c0e5d2a0916604789a61aefae02af42930345147b90e56e9431e8367",
+    "artifacts/research/20261008-native392-remaining-summary-tools-v2/record_preparation.py": "da9e2e88f08761578161349372fb48ed0479054bceb8dc487ff717f84184c401",
+    "artifacts/research/20261008-native392-remaining-summary-tools-v2/offline-SDK19.log": "b9c2407df2bf44c90829bc6b3b5dc0acd9998ddcd8e6015ae3c182951951c95c",
+    "artifacts/research/20261008-native392-remaining-summary-tools-v2/ruff.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "artifacts/research/20261008-native392-remaining-summary-tools-v2/numeric-predicate-provenance.json": "6ed975877ceafc8dd3e27d71e5090a00db21cb0882aa66ceb5b94a669b718d4e"
+  },
+  "docs_ledger_owner": "root"
+}

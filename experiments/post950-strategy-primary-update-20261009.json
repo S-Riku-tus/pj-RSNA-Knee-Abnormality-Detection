@@ -1,0 +1,152 @@
+{
+  "schema_version": "post950-strategy-primary-update-v1",
+  "checked_at_utc": "2026-10-08T18:05:28Z",
+  "checked_at_jst": "2026-10-09T03:05:28+09:00",
+  "all_passed": true,
+  "all_passed_meaning": "The bounded research and attribution checks passed; this does not qualify any prediction candidate or establish a >=0.955 recipe.",
+  "checks": {
+    "search_queries_at_most_four": true,
+    "primary_Kaggle_sources_only_for_claims": true,
+    "no_private_API_or_metadata_listing_calls": true,
+    "no_model_MRI_or_prediction_payload_download": true,
+    "no_remote_mutation_or_training": true,
+    "author_claims_distinguished_from_official_scores": true,
+    "exact_deadline_and_runtime_not_inferred_from_relative_text": true,
+    "negative_search_result_not_proof_of_absence": true,
+    "prior_research_and_current_64_diagnostic_hash_bound": true,
+    "raw_UIDs_not_saved": true
+  },
+  "scope": {
+    "queries": [
+      "site:kaggle.com/competitions/rsna-knee-abnormality-detection timeline deadline evaluation",
+      "site:kaggle.com/competitions/rsna-knee-abnormality-detection \"evaluation\" \"AUC\"",
+      "site:kaggle.com/code \"knee\" \"0.955\"",
+      "site:kaggle.com/code \"RSNA\" \"knee\" \"0.96\""
+    ],
+    "query_count": 4,
+    "followup": "Direct opens of the official timeline, evaluation, code requirements, overview, data and two already returned discussion URLs; no additional searches.",
+    "search_result_extraction_limit": "The initial combined tool output was truncated. Only returned content available to the reviewer is used for claims. Direct opens subsequently exposed page titles and URLs but zero body lines, except one inaccessible tab URL.",
+    "private_API_calls": 0,
+    "Notebook_source_RPC_calls": 0,
+    "downloaded_model_MRI_or_prediction_payloads": 0
+  },
+  "local_prior_evidence": [
+    {
+      "path": "experiments/post950-public955-delta-primary-research-v2-20261009.json",
+      "sha256": "0dc11b9722e8668371aac365573ed587390d0a520145236e6dd50c15f3ef8997",
+      "prior_checked_at_utc": "2026-10-08T16:30:34.799581Z",
+      "meaning": "The preceding larger public metadata/source review found no verified >=0.955 recipe within its bounded scope. A .957 title had official .939; newly selected Apex derivative official .950 reused the baseline encoder and changed fusion only. This is prior evidence, not a fresh score observation."
+    },
+    {
+      "path": "experiments/p011-profile64-actual-results-independent-review-20261009.json",
+      "sha256": "971cc250ac96b01ee2af066f64fd89b6640d454a0362412982602d9b4411b2ad",
+      "meaning": "Local independent review of a root-acquired private 64-study diagnostic: 45 checks passed, fixed 90:10 rank math independently reconstructed, extra actual 64x94 forwards, no fallback. This is resource/contract evidence, not Public or out-of-fold performance."
+    }
+  ],
+  "primary_source_observations": [
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data?select=sample_submission.csv",
+      "source_type": "official_competition_data_page_indexed_excerpt",
+      "confirmed_from_returned_excerpt": [
+        "The competition predicts 12 findings for each MRI study.",
+        "Hidden test data comprise approximately 1300 studies; the three visible examples are replaced during evaluation.",
+        "Report is absent at testing time.",
+        "Finding prevalences need not match training, Public or final evaluation.",
+        "DICOM transfer syntaxes include Explicit VR Little Endian, Implicit VR Little Endian, JPEG Lossless and JPEG 2000."
+      ],
+      "fresh_actual_hidden_file_count_or_codec_mix_verified": false,
+      "strategy_implication_inference": "A successful visible diagnostic is insufficient for hidden completion. Preserve Report-free inference, bounded memory and the existing supported decoder paths when testing an additional model branch."
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview/timeline",
+      "source_type": "official_page_direct_open",
+      "body_lines_returned": 0,
+      "exact_deadline_verified_in_this_update": false,
+      "note": "An indexed competition header said 14 days to go, and a participant discussed October 22, but neither is used to establish an exact date, timezone or deadline category."
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview/evaluation",
+      "source_type": "official_page_direct_open",
+      "body_lines_returned": 0,
+      "formal_metric_formula_verified_in_this_update": false,
+      "note": "An indexed official overview showed an ROC AUC score tag. This update does not independently recover the detailed averaging or missing-target formula."
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview/code-requirements",
+      "source_type": "official_page_direct_open",
+      "body_lines_returned": 0,
+      "exact_runtime_limit_verified_in_this_update": false
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/740474",
+      "source_type": "participant_discussion",
+      "claim": "Participants discuss a nine-hour hidden inference limit and separately performed training.",
+      "official_requirements_confirmation": false,
+      "new_scored_ge_0955_recipe": false
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733517",
+      "source_type": "original_author_discussion",
+      "claim": "The author reports 0.932 Public and a weaker metadata-only surrogate when scanners are held out.",
+      "score_status": "author_reported_not_official_submission_metadata_bound_in_this_update",
+      "new_scored_ge_0955_recipe": false,
+      "strategy_implication_inference": "Acquisition metadata alone is not evidence for the requested high-score recipe; scanner generalization and validation leakage must not be inferred away."
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735767",
+      "source_type": "participant_discussion",
+      "claim": "A predicted winning level around 0.96 is a forecast, not an exposed scored recipe.",
+      "new_scored_ge_0955_recipe": false
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/734105",
+      "source_type": "original_author_discussion_prior_review",
+      "claim": "A soft-label versus hard-label comparison uses 58 Gold studies, with a confidence interval crossing zero and no completed Public comparison reported in the prior captured evidence.",
+      "fresh_full_body_recovered": false,
+      "new_scored_ge_0955_recipe": false,
+      "strategy_implication_inference": "This does not justify tuning our branch or checkpoint on Gold. A later label-objective experiment would need a separate fixed weak-only comparison."
+    }
+  ],
+  "recipe_search_outcome": {
+    "new_official_scored_ge_0955_public_recipe_verified": 0,
+    "new_reproducible_public_recipe_recommended": 0,
+    "public_recipe_absence_proved": false,
+    "new_source_checkpoints_or_inputs_inspected": false,
+    "interpretation": "No qualifying new recipe was confirmed in the four-query scope. Dynamic page extraction and indexing limit this conclusion; the leaderboard can contain stronger private methods."
+  },
+  "own_project_context_parent_report": {
+    "baseline_p005_Public": 0.95,
+    "p006_p007_p008_Public": 0.95,
+    "p009_FOV160_Public": 0.948,
+    "fresh_competition_score_API_read_in_this_update": false,
+    "public_score_precision_note": "A displayed three-decimal score is not proof of exact equality or a guaranteed margin to 0.955."
+  },
+  "actionable_plan_inference": [
+    {
+      "priority": 1,
+      "action": "Keep the scored p005 0.950 baseline immutable. Complete the root's fixed 256-study qualification of the independent 224 branch before any serving comparison.",
+      "reason": "The completed 64-study test establishes actual forward execution and safe fixed blending on those inputs, while hidden scaling, full serving and Public improvement remain unmeasured.",
+      "guaranteed_Public_gain": false
+    },
+    {
+      "priority": 2,
+      "action": "Finish the complete native392 weak-only cache/index and compare frozen versus last-two-block fine-tuning under the same folds, seed, preprocessing, effective batch, masked-loss denominator and training budget.",
+      "reason": "This tests a changed image representation rather than another small coefficient or field-of-view adjustment. Select using a predeclared weak validation rule and retain the unchanged baseline if the comparison fails.",
+      "Gold_selection_allowed": false,
+      "guaranteed_Public_gain": false
+    },
+    {
+      "priority": 3,
+      "action": "Advance only a measured candidate. Fix the blend before Public feedback, inspect per-label weak validation and error overlap, and reserve a fixed additional validation split only after auditing prior selection use.",
+      "reason": "More branches do not automatically improve ranking. Correlated errors, reused validation decisions and different hidden prevalences can defeat an apparently stronger ensemble.",
+      "target_Public_0955_then_strict_gt_0960": "aspirational_not_established_by_current_evidence"
+    }
+  ],
+  "untouched": [
+    "PROJECT.md",
+    "docs/validation.md",
+    "experiments/ledger.csv",
+    "notebooks/public/14_submit_p005_public950_control.ipynb",
+    "all current Notebook/package/model source files"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": "p012_baseline64_genuine_cleanup_qualified_root_record_v1",
+  "recorded_at_utc": "2026-10-09T15:27:25.329528+00:00",
+  "actual64_acceptance": {
+    "path": "artifacts/research/20261010-p012-baseline-cleanup-root-v3/actual64-root-acceptance-v1.json",
+    "sha256": "daf0f4bde922f47d0db072aab3236609caa7dae79ef08d5419334b0c3f3433e5"
+  },
+  "actual18_body_collection": {
+    "path": "artifacts/research/20261010-p012-baseline-cleanup-root-v3/profile64-complete-bodies-v1/observation.json",
+    "sha256": "d077736ad08f028c306b1701f908aa737aba38b093d5d816231711e1239a38a1"
+  },
+  "checks": {
+    "exact_current_accepted_context_source_platform": true,
+    "official_raw_typed_COMPLETE": true,
+    "actual18_GET_raw_stored_SHA_verified": true,
+    "cross_receipt_and_fourCSV_SHA_verified": true,
+    "canonical_UID13labels_finite_fourCSV": true,
+    "original_fixed70_30_float32_math_and_Raptor_rank_sets": true,
+    "same_teacherfree_controller_fixture_routes": true,
+    "S5_twoT4_FP16_fullN_zero_exposed_fallback_runtimeguard": true,
+    "genuine_owned_twoPGID_absence": true,
+    "single_global_clear_original_order_complete_bothT4_metadata": true,
+    "unchanged_strict_allocated64MiB_reserved128MiB_free12GB": true,
+    "bothphase_NVIDIA_sampled_peak_below13000": true,
+    "baseline_seal_bytes_preserved_submission_absent": true,
+    "wholeparent_monotonic8_3h_boundary_no_hard_interrupt_claim": true,
+    "unknown_fields_null_no_native_teacher_Gold_score_claim": true
+  },
+  "elapsed_seconds": 803.1763053320001,
+  "math": {
+    "fixed70_30_float32_max_abs_diff": 0.0,
+    "original_Raptor_ordinal_tieblock_rank_sets_verified": true,
+    "formula": "average percentile rank/N; 0.7*Raptor+0.3*S5; cast float32; no final rerank",
+    "CSV_float64_vs_float32_serialization_scope": "Compare after exact IEEE float32 cast because original pandas serializes float32 decimal text"
+  },
+  "cleared_once_GPU_after": [
+    {
+      "index": 0,
+      "name": "Tesla T4",
+      "allocated_bytes": 0,
+      "reserved_bytes": 0,
+      "free_bytes": 15526068224,
+      "total_bytes": 15636037632
+    },
+    {
+      "index": 1,
+      "name": "Tesla T4",
+      "allocated_bytes": 0,
+      "reserved_bytes": 0,
+      "free_bytes": 15526068224,
+      "total_bytes": 15636037632
+    }
+  ],
+  "zero_exposed_fallback": true,
+  "owned_inference_process_groups_finished": true,
+  "actual64_cleanup_qualified": true,
+  "actual256_complete": false,
+  "actual_twofold_qualified": false,
+  "Serving_qualified": false,
+  "external_whole_worker_bodies_independently_recomputed": false,
+  "sampled_peak_not_exact_child_Torch_peak": true,
+  "original5_numerics_and_protected_notebooks_preserved": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/24_submit_p012_public951_snapshot_control.ipynb": "0dd6026daf7052afcfbcec61bbcfa23a172a1dbc68b4c6e418049683d20a7fee"
+  },
+  "old_two_diagnostic_ERRORs_preserved_not_qualified": true,
+  "root_acceptance_initial_file_vs_directory_argument_rejected_without_output_then_corrected": true,
+  "new_source_and_interpretation_evidence": [
+    {
+      "path": "artifacts/research/20261010-p012-baseline-cleanup-profile-independent-v3/review.json",
+      "sha256": "de32a6dca89dfc4d8325248844a4060e0591d3afd915d3d10703ac4b0e301d3e"
+    },
+    {
+      "path": "artifacts/research/20261010-p012-baseline-cleanup-root-acceptance-tools-independent-v2/review.json",
+      "sha256": "a0072390e5285d5d1287e49a3afb2c0ce6db2f7f535aac6fe9a50c6bd8d10901"
+    },
+    {
+      "path": "artifacts/research/20261009-f005-p012-twofold-serving-materializer-independent-v1/review.json",
+      "sha256": "e35e870432bb4695ff1870f969885cdf6d7b28292ba5a22372ab2dc275d2d000"
+    },
+    {
+      "path": "artifacts/research/20261009-f005-selected-fold0-learning-interpretation-v1/report.json",
+      "sha256": "574c45d0c5e4777d6af089cd79f369d90ccc6a08e5bfcc3b5de49cd32b72634c"
+    },
+    {
+      "path": "artifacts/research/20261010-f005-fold1-completion-root-handoff-v1/report.json",
+      "sha256": "365915a0e1227326735f199626d5056e93b1c5917be015d3ba16c443e99045c1"
+    }
+  ],
+  "fold0_weak_interpretation": "Synovitis AUC improvement has only one negative; weak changes do not prove Public complementarity.",
+  "running_fold1_epoch_count": 10,
+  "fixed_final_epochs": 12,
+  "run_metadata_snapshot_sha256": "46780d73a888b4cc2b9196e788197585b45117332547784eb67a431e12438c99",
+  "running_checkpoint_read_hashed_or_adopted": false,
+  "new_competition_Submit": 0,
+  "own_best_official_Public": "0.951",
+  "strict_above960_achieved": false,
+  "next": "Same-source256 baseline cleanup; finish fixed12 fold1, paired weak review then genuine twofold CPU64/256 and one fixed20 Public evaluation."
+}

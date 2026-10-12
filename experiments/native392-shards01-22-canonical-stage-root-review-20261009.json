@@ -1,0 +1,162 @@
+{
+  "schema_version": "native392_first22_canonical_root_review_v1",
+  "at_utc": "2026-10-09T02:29:19.002635+00:00",
+  "all_passed": true,
+  "checks": {
+    "previous19_actual_review_all_passed": true,
+    "all22_current_samefile_size_inode_volume_mtime_nlink": true,
+    "all22_summary_bytes_SHA_and_final_receipts_complete": true,
+    "all22_no_partial_or_held_markers": true,
+    "counts3857_studies19285_arrays": true,
+    "shard20_actual175_files875_arrays13": true,
+    "shard21_actual175_files875_arrays13": true,
+    "shard22_actual175_files875_arrays13": true,
+    "whole4207_index_and_final_two_not_claimed_complete": true
+  },
+  "studies": 3857,
+  "arrays": 19285,
+  "remaining_studies": 350,
+  "records": [
+    {
+      "shard": 1,
+      "studies": 176,
+      "arrays": 880,
+      "stage_receipt_SHA": "f7eac2ecd551c97f15bc6b1a5b9e000ee44a5830f659172a672e9dca7cb5baf0"
+    },
+    {
+      "shard": 2,
+      "studies": 176,
+      "arrays": 880,
+      "stage_receipt_SHA": "94df73eddca1c8fea1911bc0c0893606d887dc455fded266adabfe12e114b59b"
+    },
+    {
+      "shard": 3,
+      "studies": 176,
+      "arrays": 880,
+      "stage_receipt_SHA": "58b064a8927df925586533fdd6a1c2737e3e6e34a89527d637fef6810fda0442"
+    },
+    {
+      "shard": 4,
+      "studies": 176,
+      "arrays": 880,
+      "stage_receipt_SHA": "29580b3cbcd54c42723169f9d74e6b105835741e309aaa0b7bc58a248eeb9bba"
+    },
+    {
+      "shard": 5,
+      "studies": 176,
+      "arrays": 880,
+      "stage_receipt_SHA": "5a43a7f5454d3af8c679b68a33fc6303a7c276d57f5fd838cdd8c9ad8c2659bc"
+    },
+    {
+      "shard": 6,
+      "studies": 176,
+      "arrays": 880,
+      "stage_receipt_SHA": "20040187079ea6bbb3acfa8bdb5632765ffa319d155ca48265fe277ac4ded87f"
+    },
+    {
+      "shard": 7,
+      "studies": 176,
+      "arrays": 880,
+      "stage_receipt_SHA": "1f7ddca1e47027af0a3b7b85f56f02b0a53f96e0c209a0abf2034f231335b347"
+    },
+    {
+      "shard": 8,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "d22177023ce99be6bafd6bf4a2d5325218056523a91d4e6d2a090155e3e2086a"
+    },
+    {
+      "shard": 9,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "aa1d40389002e77da3bf10f43cfb0c4dcca6f97c60a0902b0d95116fa4393b7b"
+    },
+    {
+      "shard": 10,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "c3dcfb84dc67bc3148cd362d69586f8f7d05f1d265b466ddd13cbe53d81289e6"
+    },
+    {
+      "shard": 11,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "ff924e5f8c9281497d207ddae943e86e924b701f16c11647f66ca9ce6b8c93d0"
+    },
+    {
+      "shard": 12,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "9ea4f050abddb8c0745e4195638983467e31fdab094de96f7f6bbf2dd19d23a1"
+    },
+    {
+      "shard": 13,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "b5e18466b703a1db04e3a1d36127fc0cfd29be01cd5a03db08c38508ad473acc"
+    },
+    {
+      "shard": 14,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "503feed7566b1e7ca72803bce7bc0772879477b219eabacbbe4d99db159e876f"
+    },
+    {
+      "shard": 15,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "9a8cb56cd799f2bd999e2c449b81e71f5e4ce80ea67dec12b5ffc8c1c96e5029"
+    },
+    {
+      "shard": 16,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "2a1822f1be322a59beca33efc52dc044963e6d21cf24b49fd8427cc9a81cfbdc"
+    },
+    {
+      "shard": 17,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "edbd33bdb78c4623512e889d9517b0861756d96bbe748e93785a154f8969f710"
+    },
+    {
+      "shard": 18,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "3ff71778c623e22364bb8e94aa48d5ebab46ea3054fe067b41176afe2e46c0fa"
+    },
+    {
+      "shard": 19,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "09f99e709454e8eb4e09c44e8351571db42a8b7743d829536a49b26a202094cc"
+    },
+    {
+      "shard": 20,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "781a747cd3a395ae50f027437c6ae3eb2b27ea9479b9df111ed0d9118367a5c8"
+    },
+    {
+      "shard": 21,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "4f5164ed4842c2887ef068ee99a71103839eb2eb5118eddbc5eed7b2fb51f0dc"
+    },
+    {
+      "shard": 22,
+      "studies": 175,
+      "arrays": 875,
+      "stage_receipt_SHA": "696d940345087f7e3751ac4447c21b0ff672a841cc5ff50b87f49626a6b2794c"
+    }
+  ],
+  "previous19_review_SHA": "58016c675078485de9d2f42de936e8689cb176bad3925b9f123c5869fabf532d",
+  "new_actual_array_reviews_SHA": {
+    "experiments/native392-shard20-completed-cache-review-20261009.json": "d2ae5d27dc47f8434a9f115b81e379676d794228bbb2e035cef5c288cc88c892",
+    "experiments/native392-shard21-completed-cache-review-20261009.json": "08216581e6aa38d1790c773613c76e61c437e9878c4b9816587c1b0eb1a1bcc4",
+    "experiments/native392-shard22-completed-cache-review-20261009.json": "711ce6dd8ed5ebdd2b22bd93272cbf6e4ca5db822066bb3e409f3d40df521d3d"
+  },
+  "archive_rehash_or_extraction": false,
+  "raw_DICOM_or_teacher_or_fit": false,
+  "full4207_complete": false
+}

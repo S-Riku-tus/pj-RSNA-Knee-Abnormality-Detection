@@ -1,0 +1,126 @@
+{
+  "schema_version": "p011_independent_stock224_concrete_gates_proposal_v1",
+  "proposed_at_utc": "2026-10-08T16:30:17.095424+00:00",
+  "implementation_started": false,
+  "implementation_permitted_pending_parent_review": false,
+  "remote_operation_or_actual_MRI_model_GPU": false,
+  "candidate_gate_passed": false,
+  "evidence_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "experiments/p011-independent-stock224-fixed10-design-20261009.json": "3560e93bbd0fce204307fefc5f9ba9755da7bbf023f02d4ea89055cde151926e",
+    "experiments/p010-AA32-savedV4-binding-review-20261009.json": "5cf876f3dd69fb82ed3046bf66a4f7c8401801e086e4533130bef4a3de75200f",
+    "experiments/p010-profile32-third-failure-CSV-review-sanitized-r2-20261009.json": "f0b0597eab209cfd541b0910b76619e741ec91b4f6b67ceadc9029219e4211c5"
+  },
+  "protected_baseline7_code_cells": [
+    {
+      "cell_index": 3,
+      "literal_sha256": "73479f7fd919996f4723ef93b4c881cbf698b9d79082cf7e1073fd85bd2b1ab1"
+    },
+    {
+      "cell_index": 4,
+      "literal_sha256": "37243d9c509200ca349d6bcb080ee23b22cfee8ad3d209ae19a7c44535b49c20"
+    },
+    {
+      "cell_index": 5,
+      "literal_sha256": "fe88cbfa098fd6760016417cefe8063f38265465db536cd02633df9c65edc17c"
+    },
+    {
+      "cell_index": 6,
+      "literal_sha256": "81cfd2b20dbc25662adbda3b94c98b1bcdfa366c7ca997313139d718284790b8"
+    },
+    {
+      "cell_index": 7,
+      "literal_sha256": "050aacdc1902df88b18fe1c3bc27bad57b743ca5c0e5b1c98bd1ccb1e37e5b96"
+    },
+    {
+      "cell_index": 8,
+      "literal_sha256": "d27c72236f2810c7f442032f4c56470ab6d467ae9fb618cfbe97b4cb38b5acfd"
+    },
+    {
+      "cell_index": 9,
+      "literal_sha256": "b3b5f3ec1c3eade95d6dfd87e9ec6c0d31fcf6ec849b556804aabb0d912702c0"
+    }
+  ],
+  "proposed_accuracy_factor": "Only add the independently executed existing author224 expert after the unchanged original p005 final fusion. All12 fixed rank90:10, no coefficient search.",
+  "implementation_boundary": {
+    "baseline_whole7_code_literals_unchanged": true,
+    "baseline_transport_and_source_globals_unchanged": true,
+    "extra224_namespace_and_model_created_only_after_baseline_final_success": true,
+    "extra_DICOM_decode": true,
+    "new_Input_or_Dataset": false,
+    "old21_or_AAV4_used_as_serving_source": false
+  },
+  "old_p010_gates": {
+    "absolute_raw_threshold": 1e-07,
+    "relative_threshold": 0.0,
+    "baseline_CSV_identity": "byteexact",
+    "relaxed_or_requalified": false,
+    "actual_V3_raw_delta_exceeds_gate": true,
+    "actual_V3_original_bounded_rank_changes": true,
+    "AA_results_body_not_obtained_by_this_agent": true,
+    "savedV4_COMPLETE_is_source_status_only": true
+  },
+  "proposed_distinct_p011_gates": [
+    {
+      "gate": "source",
+      "condition": "Original14 ALL7 code bytes, weights, labels, FOV140,320/K94/base anatomical TTA,Convk16 and old fusion stay fixed."
+    },
+    {
+      "gate": "baseline_final",
+      "condition": "Original main and reader exactly once, parent actual SUCCESS1/fallback0, final13 columns/UIDorder/finite12 probabilities; parent stdout observer qualified across real cells with benign probe."
+    },
+    {
+      "gate": "baseline_freeze",
+      "condition": "Exclusive CPU-only exact finalized baseline CSV bytes/SHA before extra source/model creation; exact same bytes/SHA after expert branch and immediately before new fixed blend."
+    },
+    {
+      "gate": "resource_release",
+      "condition": "Original main local model mapping is cleared and function returned, reader subprocess completed; extra code GC/empty_cache and records allocated/reserved both GPU states. No baseline source edits or hidden reference release claims without measurements."
+    },
+    {
+      "gate": "stock224",
+      "condition": "Strict original stock numerical literal, actual3394...d6 checkpoint SHA/shape,12label order, full94 one eval/no_grad CUDA-FP16 forward, no FP32 retry; raw outputs finite and source/input receipts saved before guards."
+    },
+    {
+      "gate": "double_decode",
+      "condition": "Baseline pass and independent expert pass use identical original native384/FOV140 pixel+mask hashes perUID; no decoder, normalization, or series-selection change."
+    },
+    {
+      "gate": "fixed_blend",
+      "condition": "Whole12 fixed0.90 base average-percentilerank plus0.10 raw224 average-percentilerank then final average-percentilerank; independent stdlib verifier checks exact recipe/UID/header. No label or AUC-based tuning."
+    },
+    {
+      "gate": "actual64_then256",
+      "condition": "Profile preserves original full pipeline, main/reader once plus standalone expert once. Record both decode times/model times/startup/end-to-end/GPU peaks<13000MiB/hostRSS/cleanup; derive dataset-dependent runtime from measurements, never promise hidden completion from row count alone."
+    },
+    {
+      "gate": "qualification",
+      "condition": "Profile diagnostic submission deleted; no competition submission until root reviews actualAA/standalone expert payload compatibility/runtime/memory/source controls."
+    }
+  ],
+  "artificial_replay_needed": {
+    "CSV_standard_library": "9/32/1301 UID permutations/ties/all12 fixed weights/f32 ordinal serialization, malformed labels/header/UID duplicates/nonfinite/out-of-range rejection, source baseline backup SHA unchanged.",
+    "stock_CPU": "Explicit artificial model and SHA required; crop307 offset38?bilinear224/full94 window reference, full/sparse/allmissing mask, scalar output12/noGrad/input hash/no label swap; wrong architecture/checkpoint/source/label metadata rejection.",
+    "stock_CUDA": "UntrainedTinyEncoder original author Raptor CUDA-FP16 one-forward full/sparse/allmissing contract, actual hooks no_grad/calls/expected input shape, no actual public weight or MRI.",
+    "transport": "Independent extra-expert bounded queue on>1300 synthetic studies, total live payload bound plus every queue task_done, worker/consumer cancellation/drain, partial-before-guard receipt preservation. Original main transport remains byte untouched.",
+    "cell_lifecycle": "Actual notebook benign observer cross-cell preflight before models; repeated frontend log display is not counted as repeated inference."
+  },
+  "label_order": [
+    "ACL",
+    "MCL",
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Lateral OA",
+    "PF OA",
+    "Effusion",
+    "Synovitis",
+    "Baker's",
+    "Contusion",
+    "Fracture"
+  ],
+  "coefficient_selection_from_AUC_or_public": false,
+  "own_Gold_fit_or_selection": false,
+  "author_Gold_history": "Existing publication checkpoint author58-Gold-selection reuse remains audited; this design does not turn fullweak pretrained predictions into OOF.",
+  "decision": "Concrete proposal only. Root reviews actual AA numerical diagnostics before authorizing implementation; old p010 failures/tolerances and all source/history remain intact."
+}

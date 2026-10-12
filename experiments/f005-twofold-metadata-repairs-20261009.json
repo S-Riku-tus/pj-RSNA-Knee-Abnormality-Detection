@@ -1,0 +1,189 @@
+{
+  "schema_version": "f005_twofold_metadata_source_repairs_root_progress_v1",
+  "recorded_at_utc": "2026-10-09T13:32:21.292076+00:00",
+  "source_checks": {
+    "getter_V4": {
+      "path": "artifacts/research/20261009-f005-online-last2-twofold-results-independent-v4/review.json",
+      "sha256": "43767632f99ab301429b0f866888934d65c6b66f4383df46b62688da8e001aa2",
+      "independent_source_checks": 19,
+      "actual_runtime_qualified": false
+    },
+    "presave_V1": {
+      "path": "artifacts/research/20261009-f005-online-last2-twofold-presave-independent-v1/review.json",
+      "sha256": "e8637086b280615dd0ef6a6bbd2d09f8f04bea1ef3c2efbb90a97fc701f1fd44",
+      "independent_source_checks": 24,
+      "actual_runtime_qualified": false
+    },
+    "converter_V2": {
+      "path": "artifacts/research/20261009-f005-online-last2-twofold-root-review-independent-v2/review.json",
+      "sha256": "eb18cf2841bbfc7aabff7103ff329060800308982dff8f9cd9d13c07c345a021",
+      "independent_source_checks": 16,
+      "actual_runtime_qualified": false
+    }
+  },
+  "repair": "Canonical JSON comparison accepts integer dictionary keys serialized to string keys, while still rejecting bool/int/float, source-text, extra-key and nonfinite drift.",
+  "previous_V1_converter_HOLD_and_old_getter_sources_preserved": true,
+  "prediction_and_checkpoint_sources_changed": 0,
+  "presave_is_metadata_only_without_fake_accepted_Save_or_execution_permission": true,
+  "genuine_registry_inputs": {
+    "review_path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/Input-inventories-v4/review.json",
+    "review_sha256": "fd41119d681014529fcc7ed4c80d6a016e1c268c653c750b375c93c685c60a17",
+    "inputs": {
+      "rsraki/rsna-knee-compact-v1/1": {
+        "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/Input-inventories-v4/0-inventory.json",
+        "sha256": "b38994f735231be19096921df69635029b1d74e5e789c4a0cb3ee663d15f0371",
+        "files": 8
+      },
+      "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1": {
+        "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/Input-inventories-v4/1-inventory.json",
+        "sha256": "711bfb200c51ca558c5d57573741e7cae7c5cf22881ad33e5a931dc16b28469a",
+        "files": 837
+      },
+      "nartaa/rsna-knee-publication-swa-weights-20261007/1": {
+        "path": "artifacts/research/20261009-p012-baseline-cleanup-root-v1/Input-inventories-v4/2-inventory.json",
+        "sha256": "b38531a558ce8a292a9407f34d8cb21541d52deb2c158d6f6adad6f7925ffd6e",
+        "files": 4
+      }
+    },
+    "actual_current_versions_all1": true,
+    "model_body_GETs": 0,
+    "mounted_all_model_bytes_hash_claim": false,
+    "public_false_and_empty_file_size_raw_omissions_preserved": true
+  },
+  "root_read_attempts": {
+    "v1": {
+      "failed_before_RPC": true,
+      "reason": "Training venv has no Kaggle package."
+    },
+    "v2": {
+      "metadata_RPCs": 3,
+      "held": "Public privacy false field is omitted, not a compulsory present boolean."
+    },
+    "v3": {
+      "metadata_RPCs": 11,
+      "held": "Ortho inventory has nine pages, exceeding the initial eight-page bound."
+    },
+    "v4": {
+      "metadata_RPCs": 14,
+      "all_passed": true
+    },
+    "total_metadata_RPCs": 28,
+    "automatic_retry": false,
+    "Save_upload_Submit": 0
+  },
+  "running_fold1": {
+    "run_path": "artifacts/runs/f005-native-last2-fast16-fold1-20261009-v1/run.json",
+    "status": "running",
+    "completed_epochs": 6,
+    "fixed_final_epochs": 12,
+    "last_observed_history": {
+      "epoch": 6,
+      "train_bce": 0.2682100849732392,
+      "weak_bce": 0.29385915896653486,
+      "weak_macro_auc_12": 0.8612332294009485,
+      "metrics": {
+        "per_target": {
+          "ACL": {
+            "auc": 0.8140202909179807,
+            "binary_observed": 749,
+            "positive": 101.0,
+            "soft_excluded": 0
+          },
+          "MCL": {
+            "auc": 0.7163392857142857,
+            "binary_observed": 716,
+            "positive": 16.0,
+            "soft_excluded": 0
+          },
+          "Medial Meniscus": {
+            "auc": 0.8108993902439025,
+            "binary_observed": 808,
+            "positive": 328.0,
+            "soft_excluded": 0
+          },
+          "Lateral Meniscus": {
+            "auc": 0.7629853756933939,
+            "binary_observed": 766,
+            "positive": 105.0,
+            "soft_excluded": 0
+          },
+          "Medial OA": {
+            "auc": 0.8999728503277353,
+            "binary_observed": 496,
+            "positive": 59.0,
+            "soft_excluded": 0
+          },
+          "Lateral OA": {
+            "auc": 0.8632125450307269,
+            "binary_observed": 451,
+            "positive": 22.0,
+            "soft_excluded": 0
+          },
+          "PF OA": {
+            "auc": 0.8034188034188035,
+            "binary_observed": 495,
+            "positive": 78.0,
+            "soft_excluded": 0
+          },
+          "Effusion": {
+            "auc": 0.9608918128654971,
+            "binary_observed": 716,
+            "positive": 108.0,
+            "soft_excluded": 0
+          },
+          "Synovitis": {
+            "auc": 0.9237113402061856,
+            "binary_observed": 122,
+            "positive": 97.0,
+            "soft_excluded": 0
+          },
+          "Baker's": {
+            "auc": 0.9199156406748746,
+            "binary_observed": 395,
+            "positive": 51.0,
+            "soft_excluded": 0
+          },
+          "Contusion": {
+            "auc": 0.9201283079390538,
+            "binary_observed": 302,
+            "positive": 87.0,
+            "soft_excluded": 0
+          },
+          "Fracture": {
+            "auc": 0.9393031097789434,
+            "binary_observed": 191,
+            "positive": 34.0,
+            "soft_excluded": 0
+          }
+        },
+        "macro_auc_12": 0.8612332294009485,
+        "available_class_macro_auc": 0.8612332294009485,
+        "defined_classes": 12,
+        "note": "Soft targets are excluded from ROC-AUC; use masked BCE for weak-label validation."
+      },
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0,
+      "elapsed_seconds": 10455.650275500026,
+      "prediction_sha256": "0dc3bef195413b149c72c94c511b1173a7d1d7f9135237af99db62d957e374b8",
+      "gpu_peak_reserved_bytes": 1180696576
+    },
+    "snapshot_path": "artifacts/research/20261009-f005-twofold-metadata-repairs-root-v1/running-metadata-snapshot.json",
+    "snapshot_sha256": "850463b33761c2330574e18f3be81ee16830b7c21e9def6dcd482e8a69a41d10",
+    "interim_checkpoint_adopted_or_read": false,
+    "selection_after_complete12": "earliest minimum weak validation BCE"
+  },
+  "selected_parent_decision": {
+    "path": "experiments/p013-own950-p012-native-parent-decision-20261009.json",
+    "sha256": "a8553b770d032eecf69054bceccf944b35602c8c0466f135a9d44588e5f7bbd1"
+  },
+  "P012_baseline_only_64_256_cleanup_source_preparation_in_progress": true,
+  "P012_baseline_cleanup_actual_run_started": false,
+  "twofold_parent_integrator_source_preparation_in_progress": true,
+  "actual_twofold_CPU64_256_gate_passed": false,
+  "integrated_Serving_qualified": false,
+  "new_native_Submit": 0,
+  "own_best_Public": "0.951",
+  "P013_own_Public": "0.950",
+  "strict_above960_achieved": false
+}

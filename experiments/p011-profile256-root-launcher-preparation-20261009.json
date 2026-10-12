@@ -1,0 +1,106 @@
+{
+  "schema_version": "p011_private256_root_launcher_local_preparation_v1",
+  "at_utc": "2026-10-08T18:08:27.847939+00:00",
+  "all_passed": true,
+  "checks": {
+    "artificial_CPU4_meaningful_gate_and_oneoff_tests_pass": true,
+    "actualSDK_DTO2_tests_pass_no_auth": true,
+    "Ruff_all_sources_pass": true,
+    "frozen_old64_launcher_source_SHA_verified_and_unmodified": true,
+    "CLI_clone_only_private256_and_newbindings_wording": true,
+    "default_local_preflight_uses_no_API_or_auth": true,
+    "four_required_proofs_fixed_passed_18_22_45_24": true,
+    "both_actual64_root_and_peer_proof_source_saved1_uid64_IDs_agree": true,
+    "root64_independent_review_and13_body_hashes_bind_to_peer": true,
+    "current256_notebook_package_and_wholegroup_prefix_frozen": true,
+    "all_original7_and6helper_sources_preserved": true,
+    "all_root64_and_source_assets_reverified_before_auth_and_after_quota": true,
+    "Original31481_docker_T4x2_private_InternetOFF_Input1_1_competition": true,
+    "fresh128bit_CSPRNG_single_newprivate_slug_expected_savedV1": true,
+    "single_raw_quota_RPC_and_at_most_one_Save_no_status_source_or_submit": true,
+    "quota_gt3600s_decimal_strict_before_Save": true,
+    "instance_only_HTTPS_retry0_and_redirectsFalse": true,
+    "freshfolder_exclusive_intent_no_blind_retry_after_unknown_Save": true,
+    "raw_typed_Save_identity_errors_and_V1_strict": true,
+    "actual_GPU_API_HTTP_body_save_submit_auth_by_preparer_zero": true,
+    "candidate_actual256_Public_and_hidden_qualification_remainfalse": true
+  },
+  "CPU_tests": {
+    "passed": 4,
+    "seconds": 0.156
+  },
+  "actualSDK_artificial_tests": 2,
+  "Ruff_passed": true,
+  "launcher_sha256": {
+    "launch_tools.py": "f7949a0571afe8d96f1236c6030cbb3d129f645dbde9241fc5953c926077d6e4",
+    "launch_once.py": "1590de8324050a86b3f721c304f9bca2452fb4028f8af0c51ad1333e1cdea874",
+    "freeze_bindings.py": "b2eab6d0f2ec3c878d41214ed520f756efb957787af8f929e17e5422c992d3d3",
+    "test_launch256.py": "dee9f4321a625e0033752a527dbe61547273f8e77fb341c932ac2387a843976e",
+    "test_sdk_request.py": "474a121533d99c9f34f12f30c6c0da31d0f59ed0ec6e9dbbd758fd1ffc741fd5"
+  },
+  "frozen_bindings_sha256": "7d4eb4836b0a59c162ca85a2f30798a478863c77d446eafd300ee912f94d42de",
+  "parent64_launcher_sha256": "8ffe2be7f6130a923bdad41612fbf7a53983ba782ea292c4d2bc1d89fce351ff",
+  "required_proofs": {
+    "local256": {
+      "path": "experiments/p011-profile256-artificial-validation-20261009.json",
+      "sha256": "fe96528207649d026253d75c67beba51b33661ad01489d099e9936513107124f"
+    },
+    "peer256": {
+      "path": "experiments/p011-profile256-independent-prelaunch-review-20261009.json",
+      "sha256": "aceb338af6fe5f5eb2f624f69ae745886b1ec596e5cd290951ba7c89ed91c43e"
+    },
+    "actual64_peer": {
+      "path": "experiments/p011-profile64-actual-results-independent-review-20261009.json",
+      "sha256": "971cc250ac96b01ee2af066f64fd89b6640d454a0362412982602d9b4411b2ad"
+    },
+    "actual64_root": {
+      "path": "experiments/p011-profile64-completed-root-review-20261009.json",
+      "sha256": "75d3bf7b0ffa0a590e314fdeb4e7e2ba6e8b6b4d0a752161a032069826b20098"
+    }
+  },
+  "proof_check_counts": {
+    "local256": 18,
+    "peer256": 22,
+    "actual64_peer": 45,
+    "actual64_root": 24
+  },
+  "profile_sha256": "1d81ac179370be73197ec818879604f6551e36a5f15f1745cea54e7858439b3a",
+  "package_sha256": "bb1882e12e675a23c6c73df69f6cbdd5580b35d59dceed36946e62f98d24c0cc",
+  "cohort": {
+    "studies": 256,
+    "groups": 255,
+    "ordered_uid_sha256": "685a6a4c82f1ae7bf29a8d2dfeafccecf02b394f8a5a0ef5da284af32085e55a",
+    "first64_ordered_uid_sha256": "8eeada7574bcc1a72c29bbebcdfcdd7ae2c7fd85359f4dbe7d3c6d7da8e7e371"
+  },
+  "root64_required_schema": "p011_actual64_root_result_review_v1",
+  "root64_required_identity": {
+    "ref": "rsraki/p011diag-faf10ad9505f58563d2df789609cccef",
+    "saved_version": 1,
+    "kernel_id": 137715763,
+    "source_profile_SHA": "62e6aaefda761077dafbbe56167732784f9c14ec11230df0e197481918974020",
+    "ordered64_UID_SHA": "8eeada7574bcc1a72c29bbebcdfcdd7ae2c7fd85359f4dbe7d3c6d7da8e7e371"
+  },
+  "schema_boundary": "Root64 uses explicit accuracy_evaluated=false and independent/body SHA bindings; it omits the peer's full_Serving_passed field. No omitted value is interpreted as completed serving or a score.",
+  "commands_not_executed": {
+    "local_preflight": [
+      "artifacts/tools/kaggle-venv/Scripts/python.exe",
+      "artifacts/research/20261009-p011-profile256-launch-v1/launch_once.py"
+    ],
+    "root_only_execute": [
+      "artifacts/tools/kaggle-venv/Scripts/python.exe",
+      "artifacts/research/20261009-p011-profile256-launch-v1/launch_once.py",
+      "--execute"
+    ]
+  },
+  "local_preflight_already_executed": "Using .venv/Scripts/python.exe; no authentication or API.",
+  "real_API_auth_HTTP_Save_submit_GPU_MRI_model_calls": 0,
+  "candidate_gate_passed": false,
+  "actual256_result_passed": false,
+  "accuracy_evaluated": false,
+  "decision": "Local launcher prepared; root may explicitly execute one private256 diagnostic after its final review. No competition submission.",
+  "limitations": [
+    "Saved256 source/environment/internal Dataset bindings require postSave review.",
+    "64 timings/memory do not prove256/fullhidden resources or Public accuracy.",
+    "Fresh128bit slug's remote nonexistence is unverified; no intentional overwrite or retry."
+  ]
+}

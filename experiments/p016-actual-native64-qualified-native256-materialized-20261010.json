@@ -1,0 +1,78 @@
+{
+  "accuracy_evaluated": false,
+  "actual_native64": {
+    "10_body_GETs_raw_SHA_verified": true,
+    "GPU_devices": [
+      "Tesla T4",
+      "Tesla T4"
+    ],
+    "Report_read": false,
+    "Source8_checks_passed": true,
+    "Torch_peak_reserved_MiB_each": [
+      8600.0,
+      8600.0
+    ],
+    "actual_observation": {
+      "path": "artifacts/research/20261010-p016-native64-results-tools-v3/actual-native64-observation-v1/observation.json",
+      "sha256": "8301b9d8bc973da0d04d374ae7d8092a64ebf30ed2bd5f471fb546f50ac0ce27"
+    },
+    "actual_phase_receipt": {
+      "path": "artifacts/research/20261010-p016-native64-results-tools-v3/actual-native64-observation-v1/P016_ACTUAL_NATIVE64.json",
+      "sha256": "d2d0eb5d4be59d2f07505e04e5f29559ca0a1d55ca8b667a376e9ae7d9cc442c"
+    },
+    "actual_whole_Serving_or_accuracy_qualified": false,
+    "baseline_bytes_preserved": true,
+    "baseline_clear_calls": 1,
+    "elapsed_additional_seconds": 43.20893199699992,
+    "fallback_calls": 0,
+    "full94_once_per_study": true,
+    "independent_actual8_review": {
+      "path": "artifacts/research/20261010-p016-native64-actual-independent-v1/review.json",
+      "sha256": "05f988a551a8f08c605a9696c929e6b347cfdff598cd9c5b313a7003e70c0ef1"
+    },
+    "kernel_id": 138015216,
+    "official_raw_typed_status": "COMPLETE",
+    "own_Gold_fit_or_selection": false,
+    "ref": "rsraki/p016n64-c7706576a7224c28941455284b4e5fa8",
+    "resources_limit": "Sampled observations; summed RSS double-counts shared pages, GPU devicewide may include unrelated allocations; not exact peaks.",
+    "root_actual_phase_acceptance": {
+      "path": "artifacts/research/20261010-p016-direct224-native64-root-v2/actual-native64-root-acceptance-v1.json",
+      "sha256": "9efe480e8da7d709e63b65a5184286881e37b0f252613bb9fe024a77da57ccca"
+    },
+    "sampled_GPU_devicewide_peak_used_MiB": [
+      8831,
+      8831
+    ],
+    "sampled_process_tree_sum_RSS_bytes": 12471668736,
+    "saved_version": 1,
+    "studies": 64,
+    "total_body_bytes": 1383989,
+    "unusable_input_count": 0,
+    "upstream_checkpoint_Gold_selection_reuse": true,
+    "watchdog_total_child_seconds": 49.92887641499988
+  },
+  "at_utc": "2026-10-10T11:23:22.396591+00:00",
+  "competition_Submit_calls_for_p016": 0,
+  "native256_source": {
+    "Source_only_Save_helper_basename_typo_detected": "V1 staged launcher expected Native64 notebook filename although frozen256 builder writes Native256. Detected before auth or Save; new immutable launcherV2 corrects only basename, oldV1 preserved.",
+    "actual_Save_or_runtime_qualified": false,
+    "baseline64_reuse_explicit": "Standalone genuine original P012 baseline64 review daf0, identical runtime65717/parent0dd/cohort342ac9/strict clear1 only. New native64 d2d0/root9efe are independent required predecessors.",
+    "genuine_context": {
+      "path": "artifacts/research/20261010-p016-direct224-native256-root-v1/materialization-context.json",
+      "sha256": "b1417de3fb698030258c7937286f1bc8349e1b86dc025be88e3ac32fcb490f78"
+    },
+    "materialized_API_bytes": 864077,
+    "materialized_API_sha256": "020a3af6ed98780e6d2cfb00367e3a2fdabe802be02cea8add94d7a64fd474f0",
+    "ref": "rsraki/p016n256-3c4534c9d6d84b68b61e2858b94f993b",
+    "root_permission": {
+      "path": "artifacts/research/20261010-p016-direct224-native256-root-v1/root-native256-permission.json",
+      "sha256": "6e448e2ce07b0fcbdb478c96e851987a63c816e5b068e4e7deac63fa4847bdb5"
+    },
+    "runtime_or_model_changed_for_typo": false
+  },
+  "no_original_DICOM_bulk_download": true,
+  "own_best_official_Public": 0.951,
+  "schema_version": "p016_actual_native64_qualified_native256_genuine_source_v1",
+  "scope": "Actual64 operational qualification and genuine256 Source materialization only. No Gold/weak targets consumed, coefficient fitting or Public improvement claim.",
+  "strict_above0_960_achieved": false
+}

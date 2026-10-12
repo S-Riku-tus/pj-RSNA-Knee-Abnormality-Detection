@@ -1,0 +1,78 @@
+{
+  "schema_version": "p010_author224_runtime_offline_preparation_v1",
+  "checked_at_utc": "2026-10-08T13:39:49.439872+00:00",
+  "all_passed": true,
+  "checks": {
+    "original14_SHA_preserved": true,
+    "author_savedV2_SHA_bound": true,
+    "stock_source_exact_SHA_7394bytes": true,
+    "all9_original_definition_SHA_exact": true,
+    "literal_no_grad_decorator_defaultNORM_present": true,
+    "CPU13_passed_no_skips": true,
+    "Ruff_passed": true,
+    "productionSHA_fixed_and_no_override": true,
+    "production_CUDA_before_checkpoint_read": true,
+    "explicit_artificial_encoder_SHA_no_production_qualification": true,
+    "source_namespace_callables_modules_LUT_normalization_separate": true,
+    "strictload_explicit_arch224_res224_head12_finiteFP32": true,
+    "checkpoint_label_metadata_uncertainty_explicit": true,
+    "author_Gold_selection_reuse_not_own_OOF": true,
+    "source_full94_singleforward_no_chunk_change": true,
+    "model_hooks_no_grad_eval_full94_shape": true,
+    "raw12_FP32_finite_probability_contract": true,
+    "volume_mask_bytes_unchanged": true,
+    "allmissing_sparse_stock_windows_and_raw_reference_exact_tested": true,
+    "unexpected_errors_mutation_nonfinite_rejected_hooks_cleanup_tested": true,
+    "no_processwide_torchload_import_module_patch": true,
+    "no_download_fit_remote_implementation": true
+  },
+  "checks_passed": 22,
+  "tests_passed": 13,
+  "candidate_gate_passed": false,
+  "status": "offline_CPU_artificial_prepared_not_realweights_not_realMRI_not_GPUprofile_not_launched",
+  "API": {
+    "build_stock_source": "(exact_author_notebook_path_or_mapping)->str",
+    "make_stock_namespace": "(stock_source,*,timm_module=None,artificial_device=None,artificial_cpu=False)->dict; only artificial permits injected tiny encoder",
+    "load_expert224": "(path,device,*,stock_namespace,artificial_expected_sha256=None)->(model,receipt)",
+    "infer_expert224": "(namespace,model,96x384x384_uint8_vol,96_uint8_mask,device)->(np.float32[12],receipt)"
+  },
+  "source_SHA256": {
+    "scripts/p010_author224_runtime.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+    "scripts/extract_p010_author224_source.py": "e60eec7a21e66a87dff62dbb525524e754c2876dd79ff5968bd923a62f6008d9",
+    "tests/test_p010_author224_runtime.py": "8b553861fa48feddfdc6c92fe023f9264774c002cad7ea1f5cc6c0d95f4f0069"
+  },
+  "stock_source_sha256": "b61046e344425c446370d3df1ca019cf278f13fba385117035f849484a5a85f0",
+  "author_notebook_sha256": "b80d3b72a1c34f2b39b3ea0d2952f039b8d27c3feb5c4db0a7d0ab62ae75354e",
+  "checkpoint_expected_sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+  "checkpoint_actual_public_payload_read": false,
+  "actual_GPU_forward": false,
+  "MRI_decode_or_download": false,
+  "network_remote_mutation": false,
+  "training_optimizer_steps": 0,
+  "public_gain": null,
+  "qualification_remaining": [
+    "growth artificial CUDA exact94 FP16/fallback-reject forward",
+    "actual public checkpointSHA/metadata/strictload in same pinned baseline container",
+    "paired32 actual shared-volume/mask/base/raw224 exact numerics",
+    "combined T4x2/RSS/bounded transport runtime profile",
+    "saved-source serving/CSV90:10 evidence",
+    "own competition comparison only after root gates"
+  ],
+  "actual_source_lineage": "Author savedV2/script356179962 source; author linkedPublic0.945. Ownp0050.950 unchanged. Author both models seed42/sharedOAI; Gold58 selection/development reused and not own OOF. Actual checkpoint label metadata still unknown until payload inspected.",
+  "precision_scope": "CPU window/reference and raw probabilities are exactly equal for artificial input. CUDAFP16, real architecture activation sizes, codec coverage, hiddencompletion and Public gain are not established here. Runtime rejects secondforward/nonAMP CUDA rather than accepting stock FP32 fallback.",
+  "environment": {
+    "python": "3.12.13 (main, Jun 11 2026, 04:05:29) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.10.0+cu128",
+    "numpy": "2.5.3",
+    "GPU_used": false
+  },
+  "evidence_sha256": {
+    "artifacts/research/20261008-p010-author224-runtime-preparation-v1/artificial-CPU13.log": "9109fd8558dce445e1f5b42996e482693b729cae1dfeb96c05ffc04827c504bb",
+    "artifacts/research/20261008-p010-author224-runtime-preparation-v1/ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "artifacts/research/20261008-p010-author224-runtime-preparation-v1/stock-source/author224_stock.py": "b61046e344425c446370d3df1ca019cf278f13fba385117035f849484a5a85f0",
+    "artifacts/research/20261008-p010-author224-runtime-preparation-v1/stock-source/extraction-receipt.json": "d01d2b3b07dd557c252ef6b0013828542de46a1e612746752e79f15e4e521bc0",
+    "artifacts/research/20261008-p010-author224-runtime-preparation-v1/artificial-CPU-schema-example.json": "9928282495528647395ae753455ace6799fa5f97db16e69cf44bcc81e6b12be6"
+  },
+  "docs_ledger_owner": "root"
+}

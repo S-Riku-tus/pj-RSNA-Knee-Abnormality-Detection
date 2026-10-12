@@ -1,0 +1,98 @@
+{
+  "schema_version": "p011_local_preparation_artificial_validation_v2",
+  "checked_at_utc": "2026-10-08T17:15:15.127893+00:00",
+  "all_passed": true,
+  "checks": {
+    "CPU17_meaningful_tests_pass": true,
+    "Ruff_all_new_sources_pass": true,
+    "serving_and64_preparation_checks9_each_pass": true,
+    "GPU_artificial_CPU_CUDA_full_sparse_allmissing_pass": true,
+    "GPU_artificial_current_runtime_and_contract_source_SHA": true,
+    "GPU_no_training_no_actualMRI_no_publicweight": true,
+    "GPU_no_production_qualification_or_accuracy": true,
+    "fixed64_wholegroup_GoldExcluded": true,
+    "both_Notebook_copies_byteexact": true,
+    "current_original14_SHA": true,
+    "protected19_exact_historicalSHA": true,
+    "protected21_exact_historicalSHA": true,
+    "protected_AAV4_r2_exact_historicalSHA": true,
+    "V1_packages_and_Notebooks_retained": true,
+    "old_p010_not_requalified_and_gate_false": true,
+    "stock_LF_file_bytes_match_author_expectedSHA": true,
+    "all5_helpers_packages_embedded_exact": true,
+    "fixedall12_90_10_no_search": true,
+    "profile_diagnostic_finalCSV_cleanup_and_rerun_guard": true,
+    "benign_actualcell_stdout_lifetime_guard": true,
+    "profile_initializer_failure_sharedflag_and_preGPU_reject": true,
+    "finite_positive_T4_peak_resource_rejection_contracts": true,
+    "second_decode_not_shared_baseline_transport_unchanged": true,
+    "ALL7_original_codecell_bytes_and_order_bothNotebooks": true
+  },
+  "CPU_tests": 17,
+  "GPU_proof": {
+    "path": "artifacts/qa/20261009-p011-artificial-stock224-v2/checks.json",
+    "sha256": "a8c98f6a16d39af47109fec7e45eb03f0231b49b6643254646f78de142cb31e6",
+    "GPU": "NVIDIA GeForce RTX 4090",
+    "peak_reserved_mib": 948.0,
+    "elapsed_seconds": 1.2660000000032596,
+    "scope": "Synthetic native uint8 and random TinyEncoder; no actual weights/MRI/T4 or accuracy qualification."
+  },
+  "notebooks": [
+    {
+      "notebook": "notebooks/public/22_submit_p011_independent224_rank10_v2.ipynb",
+      "cells": 21,
+      "code_cells": 18,
+      "sha256": "43289adfef3edf2eb3ff47ffc3d4df924b6ca20b60c9bec1e0e818579d18e739"
+    },
+    {
+      "notebook": "notebooks/public/22a_profile_p011_independent224_64_v2.ipynb",
+      "cells": 25,
+      "code_cells": 22,
+      "sha256": "15e877d05f11e2511ecb8426daca53c7000fc9e1a2e7471f6c27143a934c33a4"
+    }
+  ],
+  "package_json_sha256": {
+    "artifacts/kaggle/p011-independent224-rank10-v2-20261009": "c1c2554d99b5f3c66fc91e4aa173381295c1bc79c150d39e9861d9e11b7bdd28",
+    "artifacts/kaggle/p011-profile64-independent224-v2-20261009": "12b91622969f6db9f69de27823d2d86a1bbbec7838b6fbdba0b1afdc56cea29a"
+  },
+  "cohort_json_sha256": "342ac914493d88970ad531ecec67fce643f90177b37722f88b86662266dfa502",
+  "ordered_UID_sha256": "8eeada7574bcc1a72c29bbebcdfcdd7ae2c7fd85359f4dbe7d3c6d7da8e7e371",
+  "helper_sha256": {
+    "p011_contracts.py": "0d86b0bcded2046fef89605cd7dd22fb7f05f326b15bf66a11027d46e96de76c",
+    "p011_metrics.py": "d9ff49d4cd470d0b4643d7a74cf16abd07c4d8eea76857253c6e66711183dbc8",
+    "p010_author224_metrics.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+    "p006_metrics.py": "b61115cc92ab335273a31cf12c754097e3f0844ce2b7aaf9fd50c56f755603ca",
+    "p007_metrics.py": "a291d826ed287683cfa15e98eb207bb15fe459b04263a2e4c5fcda8730138549"
+  },
+  "source_SHA": {
+    "scripts/p011_contracts.py": "0d86b0bcded2046fef89605cd7dd22fb7f05f326b15bf66a11027d46e96de76c",
+    "scripts/p011_independent_runtime.py": "d9ff49d4cd470d0b4643d7a74cf16abd07c4d8eea76857253c6e66711183dbc8",
+    "scripts/build_p011_independent224.py": "41c24dbfad59d01fb8613febad385184d3d0ddf952464d2d243691c061a00821",
+    "scripts/build_p011_profile.py": "fad5dfd428b9bc71d92bdb6bd4ee21c579efa2faa4734c5f3234f09869c7757b",
+    "scripts/check_p011_artificial.py": "80f58470fdb978cce09559b7899d458fc85eb1b699e5a34dda1809ceb9ca40a2",
+    "tests/test_p011_independent224.py": "4b5199504a2e0954a9cbfc1e0f25ea1001b254635061cb37c372ac5d85259c11"
+  },
+  "author_runtime_preparation": {
+    "path": "experiments/p010-author224-runtime-preparation-20261008.json",
+    "sha256": "3d98ec408fe71a98290beada0115c8f2a7f041e18f1757b7142c5acad48a33aa"
+  },
+  "retained_V1_discrepancy_evidence": {
+    "path": "artifacts/research/20261009-p011-package-bytefix-v2/discrepancy.json",
+    "sha256": "10a1d4f47c51192eddb16ee45e2451259c36eacec6915a19311ad572c5402a38"
+  },
+  "candidate_gate_passed": false,
+  "new_model_branch": true,
+  "old_p010_gates_relaxed_or_requalified": false,
+  "actual_64_or_256_executions": 0,
+  "real_MRI_or_weight_download": false,
+  "API_calls": 0,
+  "accuracy_evaluated": false,
+  "allmissing_policy": "Keep exact stock finite masked-input probabilities; no perUID baseline-only fallback. Unexpected CUDA/model/contract errors fatal. Original CPU decoder exception-to-zero behavior is separately recorded.",
+  "remaining_gates": [
+    "peer/root fixedsource prelaunch review",
+    "actual private64 result root review",
+    "actual256 resources/doubledecode identity/runtime",
+    "fullhidden completion and scoring"
+  ],
+  "transport_limit": "OS-killed task with no callback lacks a per-task watchdog; does not guarantee hidden completion."
+}

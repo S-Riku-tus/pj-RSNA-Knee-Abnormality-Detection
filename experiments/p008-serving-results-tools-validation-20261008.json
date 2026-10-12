@@ -1,0 +1,32 @@
+{
+  "schema_version": "p008_compact_results_tools_validation_v1",
+  "validated_at_utc": "2026-10-08T11:15:12.046108+00:00",
+  "status": "stdlib_tools_and_actual_visible_review_passed",
+  "actual_visible_checks_passed": 44,
+  "actual_visible_checks_total": 44,
+  "stdlib_unittest_count": 8,
+  "stdlib_unittest_passed": 8,
+  "test_scope": [
+    "paginated listing and repeated-token rejection",
+    "exact compact allowlist with MRI/weight exclusion",
+    "average ties and three-UID rank preservation despite expert disagreement",
+    "actual visible44-contract recheck without output writes",
+    "unchanged other10 string formatting and partial raw UID rejection",
+    "duplicate UID and nonfinite CSV rejection"
+  ],
+  "source_artifacts": {
+    "artifacts/research/20261008-p008-serving-results-v1/download_results.py": "ed14d9e464f39132111de7a432a0e324fb052bf5f3f3754067b097e715f1d393",
+    "artifacts/research/20261008-p008-serving-results-v1/verify_results.py": "f103012a1bf4f525925663718473e61aa5475d941369e9070302ba6860c53109",
+    "artifacts/research/20261008-p008-serving-results-v1/test_results_tools.py": "be6ba74440db74bf1d06dd82e3505cf7c672df7275c1410fa6132200c7d4c38c",
+    "artifacts/research/20261008-p008-serving-results-v1/download-receipt.json": "09b4225c602869e395dd2a7e951e32dbdcfa7c243cd83049be08011a493539ff",
+    "artifacts/research/20261008-p008-serving-results-v1/review.json": "697b1170e3be008eac2908ff919a70463e4adc8aba53a7e5a65221a973ebf1a7"
+  },
+  "visible_review_json": "experiments/p008-serving-visible-output-review-20261008.json",
+  "visible_review_sha256": "697b1170e3be008eac2908ff919a70463e4adc8aba53a7e5a65221a973ebf1a7",
+  "remote_readonly_compact_download_per_parent_authorization": true,
+  "remote_poll_loop_or_mutation_or_submission": false,
+  "MRI_cache_weight_download": false,
+  "own_Public": "0.950",
+  "p008_Public": null,
+  "full12_mask_external_numeric_recompute": false
+}

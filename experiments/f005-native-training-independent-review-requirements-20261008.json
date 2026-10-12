@@ -1,0 +1,59 @@
+{
+  "schema_version": "f005_native_training_independent_review_requirements_v1",
+  "recorded_date_JST": "2026-10-08",
+  "status": "requirements_fixed_source_and_artificial_evidence_review_pending",
+  "scope": "Independent source/config/artificial-test review only; no actual fit, MRI decode, extra payload retrieval, or additional GPU execution by this reviewer.",
+  "fixed_contrast": {
+    "control": "native392 online generic encoder frozen plus unchanged f002 attention head",
+    "candidate": "same encoder/head/input/seed/folds/loss/optimizer schedule; only blocks10/11 trainable",
+    "both_arms": {
+      "seed": 20261002,
+      "folds": [0, 1],
+      "microbatch_studies": 1,
+      "effective_batch_studies": 16,
+      "window_chunk": 2,
+      "head_learning_rate": 0.0003,
+      "encoder_learning_rate": 0.00001,
+      "preprocess": "physical_letterbox_triplet_v1/392/3 selected series/48 adjacent triplets/p1-p99 whole native series",
+      "selection": "minimum masked weak validation BCE; supplementary AUC only",
+      "head": "hidden192/attention/dropout0.2; same initialization and original12 target order"
+    }
+  },
+  "required_checks": [
+    "Config difference exactly trainable_blocks0to2 plus explanatory reason; shared settings, seed and preprocessing fixed",
+    "CUDA guard before config/teacher/pixel/model reads, output directory mutation or optimizer construction in train and inference entry paths",
+    "Gold UID/group overlap, duplicate study UID, group fold crossing and train/validation overlap rejected before probability/label tensor conversion",
+    "Gold metadata guard discards target/Report fields and never evaluates Gold targets",
+    "Only fixed fold0 or1 is allowed; unchanged manifest/group/fold audit and all manifest/source hashes bound to full pixel index",
+    "No partial pilot cache can serve as full-fold training input; processed pixels checked member/array/fingerprint without full archive extraction",
+    "Each effective group computes D=sum observed target cells for its actual16 or last-short-group rows before forward",
+    "Every microbatch backward uses observed BCE sum/D; no mean of per-study BCE means",
+    "Masked missing values do not enter BCE even when placeholder NaN; they are not negative targets",
+    "One zero_grad and one scaler unscale/clip/step/update opportunity per effective group; AMP-skipped updates counted separately",
+    "Short final accumulation group has its own observed D and one step; zero-observation group refuses update",
+    "Artificial tests compare direct full16 and last3 loss/all parameter gradients with accumulated microbatch1 under different observed label counts",
+    "Artificial tests demonstrate naive mean-of-means differs and all missing cell replacements are invariant",
+    "Frozen prefix/norm state and gradients remain unchanged; only candidate blocks10/11 and common head appear in optimizer groups",
+    "Learning rates prespecified encoder1e-5/head3e-4 and epochs12/BCE selection unchanged; no Public/Gold coefficient sweep",
+    "New immutable run path, full config/seed/fold/input/source/runtime hashes and adopted hypothesis are recorded",
+    "Checkpoint records fixed target order/config/generic source-and-weight provenance/frozen-prefix digest/fold/epoch/weak BCE/noGold",
+    "Suffix/head save and strict load require exact keys/shapes/dtypes/finite values; frozen control suffix empty",
+    "Generic checkpoint/source hashes validated before model construction; same reconstructed prefix digest required before load",
+    "Artificial checkpoint cannot enter real predictions; real checkpoint epoch positive and weak-validation selection required",
+    "Inference test.csv and test_series.csv only; Report/teacher files not required and original12 UID output contract validated",
+    "Resource gate evidence byte hashes/provenance consistent; Boolean gate flags alone do not imply full-fit or microbatch16 resource proof",
+    "Resume unsupported is explicit if optimizer/scaler/RNG state not serialized; inference weights are not claimed resumable",
+    "Handoff ZIP whitelist is source/config only and matches final audited source SHA; stale preparation package must not be adopted"
+  ],
+  "known_prior_evidence": {
+    "native392_pixel16": "CPU COMPLETE16;397707087-byte processed archive independently verified by root;46 native reference byte comparisons and2 large-volume QC skips",
+    "generic_last2_artificial": "Prior19 CUDA and14 unittest with optimizer0 and native144 one-study maximum only; not actual fit",
+    "current_resource_limit": "NativeTripletMIL one-study evidence supports microbatch1 preparation; effective16 is gradient accumulation, not16 studies simultaneously on GPU",
+    "Gold_or_patient_scope": "Gold excluded from own training/selection; supplied/report group separation audited; patient independence remains unverified"
+  },
+  "source_owner": "/root/submitted_p005_check",
+  "docs_ledger_owner": "/root",
+  "actual_training_started_by_reviewer": false,
+  "remote_mutation": false,
+  "goal_scope": "Own Public0.950 incumbent protected; f005 accuracy and>.960 gain unmeasured. Quality gates apply without a new permission flow."
+}

@@ -1,0 +1,179 @@
+{
+  "schema_version": "p006_real_profile32_independent_review_v1",
+  "checks": [
+    {
+      "name": "passed32",
+      "passed": true
+    },
+    {
+      "name": "no_labels",
+      "passed": true
+    },
+    {
+      "name": "main_calls",
+      "passed": true
+    },
+    {
+      "name": "main_masks",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:uids",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:columns",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:finite_range",
+      "passed": true
+    },
+    {
+      "name": "_sota_0949.csv:nonconstant",
+      "passed": true
+    },
+    {
+      "name": "coverage16",
+      "passed": true
+    },
+    {
+      "name": "fusion16",
+      "passed": true
+    },
+    {
+      "name": "hashreader16",
+      "passed": true
+    },
+    {
+      "name": "hashfused16",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k16.csv:uids",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k16.csv:columns",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k16.csv:finite_range",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k16.csv:nonconstant",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k16.csv:uids",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k16.csv:columns",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k16.csv:finite_range",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k16.csv:nonconstant",
+      "passed": true
+    },
+    {
+      "name": "independent_formula16",
+      "passed": true
+    },
+    {
+      "name": "coverage24",
+      "passed": true
+    },
+    {
+      "name": "fusion24",
+      "passed": true
+    },
+    {
+      "name": "hashreader24",
+      "passed": true
+    },
+    {
+      "name": "hashfused24",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k24.csv:uids",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k24.csv:columns",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k24.csv:finite_range",
+      "passed": true
+    },
+    {
+      "name": "p006_reader_k24.csv:nonconstant",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k24.csv:uids",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k24.csv:columns",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k24.csv:finite_range",
+      "passed": true
+    },
+    {
+      "name": "p006_fused_k24.csv:nonconstant",
+      "passed": true
+    },
+    {
+      "name": "independent_formula24",
+      "passed": true
+    },
+    {
+      "name": "identical_masks",
+      "passed": true
+    },
+    {
+      "name": "maximum_reader_batch_exercised",
+      "passed": true
+    },
+    {
+      "name": "official_COMPLETE",
+      "passed": true
+    }
+  ],
+  "passed": 37,
+  "independent_fusion_max_abs_diff": {
+    "16": 0.0,
+    "24": 0.0
+  },
+  "studies": 32,
+  "all6slots_batch4_exercised": true,
+  "main_seconds": 56.521610804000005,
+  "reader_seconds": {
+    "16": 61.288814144999975,
+    "24": 62.25035210599998
+  },
+  "sampled_gpu_peak_mib": {
+    "16": [
+      8069,
+      2047
+    ],
+    "24": [
+      11561,
+      543
+    ]
+  },
+  "own_public_lb": null,
+  "accuracy_evaluated": false,
+  "decision": "Advance same prepared256 diagnostic; no guarantee of hidden9h or improved AUC",
+  "limits": "Fixed16then24 includes warm-cache/install differences. RSS sum may double-count shared pages. Device peaks sampled. Native DICOM decode skip count unknown."
+}

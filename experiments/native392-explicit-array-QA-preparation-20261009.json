@@ -1,0 +1,111 @@
+{
+  "checked_at_utc": "2026-10-08T15:46:15.753889+00:00",
+  "status": "explicit_entry_array_QA_prepared_no_actual_payload_run",
+  "checks": {
+    "shard05_strict100_and_current28_metadata": true,
+    "shard05_actual_download_receipt_matches_only_metadata": true,
+    "shard06_strict100_and_current28_metadata": true,
+    "shard06_actual_download_receipt_matches_only_metadata": true,
+    "shard07_strict100_and_current28_metadata": true,
+    "shard07_actual_download_receipt_matches_only_metadata": true,
+    "old_numeric_source_exact": true,
+    "old13numeric_AST_executed_without_edits": true,
+    "artificial_NPZ_all5arrays_loaded_and_hashed": true,
+    "corruption_mask_dtype_SHA_archive_inventory_rejected": true,
+    "receipt_source_summary_version_UIDcount_drift_rejected": true,
+    "dynamic175_176_plan_no_fixed_date": true,
+    "metadata_gate_before_numeric_body": true,
+    "fresh_exclusive_review_output": true,
+    "eight_artificial_CPU_tests_passed": true,
+    "Ruff_passed": true,
+    "no_actual_archive_or_NPZ_MRI_teacher_GPU_API_HTTP_reads": true
+  },
+  "checks_passed": 17,
+  "checks_total": 17,
+  "all_passed": true,
+  "old_numeric_source_sha256": "1956b02b8745ce69dcb47844fabf90373db81e957f4fa4d099599ec355eee2b8",
+  "old_numeric_AST_sha256": "a005f6f31365e9684bb07ed8076542ed35cc4d77b319ed9c2f5345db77dd4ce8",
+  "original_numeric_checks": 13,
+  "source_sha256": {
+    "array_checks.py": "76ec4b6265b0152e8f3f50067c5c30ba81a2d6d7e27303620183a1fce3aa89ac",
+    "verify_arrays.py": "fea190ff24c971e27b23c4f624e85e17a91957bd61035b7501d372a6d0156f45",
+    "test_array_checks.py": "898558421b86f6256d8bae5972cccce37db639133e1057d72c761e619ccf7152",
+    "full_range_tools.py": "f9d8e175474a0fbd4bce94401a91adcdae6f6ca200be524506a67b5f13bbc7ae"
+  },
+  "CPU_unittest": {
+    "count": 8,
+    "seconds": 1.777,
+    "all_passed": true
+  },
+  "commands": [
+    {
+      "shard_index": 4,
+      "studies": 176,
+      "executed": false,
+      "argv": [
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261009-native392-full-range-tools-v1\\verify_arrays.py",
+        "--shard-index",
+        "4",
+        "--source-binding-proof",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shards05-07-saved-binding-review-20261008.json",
+        "--observation",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261008-native392-remaining-summary-tools-v2\\observations\\shard-05-observation-v1",
+        "--summary-review",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shard05-summary-review-20261009.json",
+        "--download-dir",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261009-native392-shard05-cache-fullrange-v1-attempt1",
+        "--review-output",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shard05-completed-cache-review-20261009.json"
+      ]
+    },
+    {
+      "shard_index": 5,
+      "studies": 176,
+      "executed": false,
+      "argv": [
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261009-native392-full-range-tools-v1\\verify_arrays.py",
+        "--shard-index",
+        "5",
+        "--source-binding-proof",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shards05-07-saved-binding-review-20261008.json",
+        "--observation",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261008-native392-remaining-summary-tools-v2\\observations\\shard-06-observation-v1",
+        "--summary-review",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shard06-summary-review-20261009.json",
+        "--download-dir",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261009-native392-shard06-cache-fullrange-v1-attempt1",
+        "--review-output",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shard06-completed-cache-review-20261009.json"
+      ]
+    },
+    {
+      "shard_index": 6,
+      "studies": 176,
+      "executed": false,
+      "argv": [
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261009-native392-full-range-tools-v1\\verify_arrays.py",
+        "--shard-index",
+        "6",
+        "--source-binding-proof",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shards05-07-saved-binding-review-20261008.json",
+        "--observation",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261008-native392-remaining-summary-tools-v2\\observations\\shard-07-observation-v1",
+        "--summary-review",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shard07-summary-review-20261009.json",
+        "--download-dir",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261009-native392-shard07-cache-fullrange-v1-attempt1",
+        "--review-output",
+        "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\experiments\\native392-shard07-completed-cache-review-20261009.json"
+      ]
+    }
+  ],
+  "actual_archive_NPZ_arrays_verified_in_this_preparation": false,
+  "limits": [
+    "Artificial NPZ tests exercise all original numerical guards with the production 392 shape; actual05–07 arrays require root manual invocation.",
+    "Source100 and current summary28 are recomputed before receipts and actual cache-body access.",
+    "Each completed review is newly and exclusively written; old source/proofs/packages are retained."
+  ]
+}

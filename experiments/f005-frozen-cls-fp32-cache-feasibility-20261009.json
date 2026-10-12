@@ -1,0 +1,73 @@
+{
+  "schema_version": "f005_frozen_CLS_FP32_cache_source_feasibility_v1",
+  "at_utc": "2026-10-09T03:09:57.550136+00:00",
+  "scope": "Source only. No trainer/config/component edits, teacher/NPZ/weights reads, GPU execution, API, fitting or change to the current f005 plan.",
+  "checks": {
+    "freeze_encoder_no_grad_eval_and_FP16_then_FP32_boundary": true,
+    "head_uses_same_five_inputs_and_only_head_dropout_in_native_path": true,
+    "original_seed_factory_order_generator_and_AMP_controls_present": true,
+    "original_training_has_no_outer_head_autocast_or_image_augmentation": true,
+    "original_raw_pixel_reload_forward_and_validation_each_epoch": true,
+    "legacy_FP16_feature_loader_not_valid_FP32_cache_loader": true,
+    "protected_source_config_generic_source_bytes_unchanged": true
+  },
+  "all_source_checks_passed": true,
+  "equivalence_proven": false,
+  "adopted": false,
+  "conclusion": "A one-pass native392 CLS cache can remove repeated frozen DINO/ZIP work without changing the intended ML factor, only if the exact head inputs, initialization, RNG trajectory and update path are demonstrated equivalent. FP32 storage preserves an existing feature snapshot; it does not prove repeated encoder computations are identical.",
+  "boundary": {
+    "source": "src/rsna_knee/finetune_model.py:60-91; src/rsna_knee/feature_model.py:32-54",
+    "features": "FP32 [1,3,48,384], per valid window normalized CLS converted to FP16 then immediately back to FP32; padded windows are exact zero, in original flattened series/window order.",
+    "metadata": "Unchanged bool mask[1,3,48], FP32 positions[1,3,48], int64 planes[1,3], FP32 flags[1,3,2]. Head masks features and positions, keeps the same plane/geometry parameters, finding-wise pooling and dropout0.2.",
+    "cache": "Save already quantized FP32 values losslessly; do not save pre-FP16 normalized CLS, recompute positions, permute slots, add regions or use older f002 features. Legacy load_features expects FP16 and a different cache contract, so a new explicit FP32 loader/index would be needed.",
+    "storage_estimate": {
+      "features_bytes_per_study": 221184,
+      "metadata_bytes_per_study": 768,
+      "all4207_array_bytes": 933752064,
+      "padded_native_image_bytes_per_study": 66382848,
+      "serialization_overhead_and_compression_unmeasured": true
+    },
+    "compute_estimate": "Current train plus validation visit each eligible study every one of12 epochs. A shared label-free one-pass frozen cache changes up to12 encoder/raw-pixel reads to1, then12 small feature reads; it does not imply a12x wall-time speedup. Last2 still requires online recomputation after every parameter update."
+  },
+  "critical_equivalence_conditions": [
+    "Freeze arm only: encoder weights/norm unchanged, encoder.eval(), no augmentation or stochastic-depth/attention dropout in eval. Keep original392 pixels, within-UID valid indices and window_chunk16 boundaries; do not pool or batch windows across different studies.",
+    "Use the exact same head initial state. The original seed20261002 is set BEFORE generic DINO factory construction and FrozenFeatureHead initialization, both of which consume RNG. Creating only a fresh head under that seed is not equivalent. Reconstruct the same original factory sequence or bind the resulting original initial-head state plus RNG state; do not casually load trained head weights.",
+    "Generate features without executing the real head in training mode. Its dropout changes CUDA RNG. At the training boundary compare or restore Python, NumPy, Torch CPU and all CUDA RNG states; use the independent original torch.Generator for the same per-epoch randperm. Keep original CUDA device, head call shapes, microbatch1 and eval/train toggles.",
+    "Head training remains FP32 outside encoder autocast, with the original CUDA GradScaler. Keep AdamW head parameter order/defaults, LR3e-4, weight_decay0.01, missing-label observed-only BCE sum, denominator across each actual effective16 group including the short last group, gradient clipping1.0, scaler step/update and skipped-step counting exactly unchanged. Do not turn this into a vectorized batch16 or a whole-head autocast path.",
+    "Loaded training features must be ordinary no-grad tensors, not inference tensors retained from an inference_mode cache-generation context; the trainable head must save its inputs for backward. Saving/reloading NumPy FP32 bytes and constructing tensors outside inference_mode is one safe boundary.",
+    "Prove cached features/metadata byte-identical to original head inputs and inspect repeated frozen encoder results under the original runtime/backend flags. Floating-point/backend repeatability cannot be inferred from eval/no_grad alone. Preserve benchmark=False, deterministic=True, precision/TF32/SDPA settings, Torch/CUDA/device/source identity; measured differences must not be hidden by a newly relaxed tolerance.",
+    "Before a real cached fit, compare online versus cached paths under the same artificial input, initial head/RNG and group layout: logits, dropout RNG progression, observed loss, head gradients, post-AdamW parameters/optimizer/scaler states, opportunities/steps, validation predictions/BCE and checkpoint head/prefix. Full/sparse/padded inputs and a short/missing-label group are the meaningful cases. No actual equivalence test was run in this source review."
+  ],
+  "checkpoint_and_gates": {
+    "inference_compatibility": "The intended model remains current CLS NativeTripletMIL with trainable_blocks0 and unchanged generic prefix. Keeping a reconstructed NativeTripletMIL object permits existing make_native_checkpoint to save its real head, empty suffix and prefix digest; generic encoder may remain on CPU while only head trains on CUDA. Existing apply/load can reconstruct it for inference if all current strict config/source/provenance/shape/label conditions still hold.",
+    "provenance_gap": "Old source inventory pins the existing8 modules, not a new cache exporter/loader/training orchestrator. A new execution-lineage/audit must bind their exact SHA, FP32 feature fingerprint, source native index/member hashes, initial-state/RNG contract and equivalence receipts. The legacy checkpoint foundation/fast16 lineage must not be presented as proof that caching occurred or was equivalent.",
+    "resource_gap": "Existing resource gate covers online pixels/full144 and both arms. It does not authorize an unmeasured FP32 cache pipeline. Preserve it as parent evidence and add a separate source-bound cache-equivalence/resource gate and a fresh run; never overwrite its source/config checks or relabel an old run.",
+    "no_resume": "Model-only head/suffix checkpoints omit optimizer/scaler/RNG; existing f005 runs cannot be switched or resumed halfway using them. Any adopted cached execution must start a fresh explicitly identified run and retain12 epochs and earliest minimum weak-BCE selection."
+  },
+  "cache_policy": {
+    "identity": "Dedicated native392_CLS_postFP16_FP32 schema; fingerprint generic weights/source/prefix, original native pixel contract/index/source/UID-set hashes, encoder runtime/backend and window16, representation CLS-only, storage dtype/layout, exporter SHA. Preserve per-study array SHA and exact masks/positions/planes/flags; completion requires every eligible weak UID exactly once, no partial cache.",
+    "eligibility": "Use only accepted original eligible weak UID/group structure; gold UID/group excluded. Cache construction reads structural metadata and pixels only, stores no teacher/report/target values and performs no selection. A fixed generic frozen representation may be shared across fold0/1, while fitted heads/fold splits remain separate.",
+    "future_run": "Separate fresh cache and run directories, explicit engineering-equivalence label, source/config/seed/fold/input/environment receipts. No reuse of old f002 feature cache and no ROI/Regional representation. Root must review and authorize implementation/qualification/adoption; current frozen/last2 plan stays unchanged."
+  },
+  "source_file_sha256": {
+    "src/rsna_knee/native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+    "src/rsna_knee/finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "src/rsna_knee/feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "src/rsna_knee/feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "src/rsna_knee/triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "scripts/train_native_dinov2_fast16.py": "cfdba529adcdd9b6d5f34a6b020cdae03f7fb04551ed4807778503fa1235ece0",
+    "configs/experiments/f005-dinov2-native-frozen-control-fast16.json": "7352e38ba0e58aad041a31c3b667c0f23c3ef0f9e085a48c4832e7cc36a8a7cb",
+    "configs/experiments/f005-dinov2-native-last2-fast16.json": "896b7293b26413c895002f906ff83023389456a9ba9afda7f5413a0c498fc279",
+    "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/dinov2-source/dinov2/hub/backbones.py": "871fca671b12a9ff02e810654baf509e97ccf461bf8196ce5ddeefff2fd87d3e",
+    "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/dinov2-source/dinov2/models/vision_transformer.py": "7799a260f2d7d0fe197331d08502fb8c542f9b7424723650f6a39b64fa2639ea",
+    "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/dinov2-source/dinov2/layers/block.py": "60c0ac7dfa4474be313fabfa5a23d82faf6f0cecd4e720a88be35de9788cb636",
+    "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/dinov2-source/dinov2/layers/attention.py": "79c7be7a452b3aad96698ec38d5d5150b9f4d8ac084fa93324510dc9f624775d",
+    "artifacts/qa/20261008-dinov2-last2-profiler-v3-full144-checkpoint-qc/generic-assets/encoder/dinov2-source/dinov2/layers/mlp.py": "255825c73b60a916dd00eb1e38aacbcdbf316e40d6a005efb46e245b7edb43aa"
+  },
+  "activity": {
+    "new_report_JSON": 1,
+    "old_source_config_edits": 0,
+    "teacher_NPZ_weights_reads": 0,
+    "GPU_API_fit": 0
+  }
+}

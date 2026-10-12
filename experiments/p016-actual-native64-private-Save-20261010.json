@@ -1,0 +1,50 @@
+{
+  "schema_version": "p016_actual_native64_private_Save_root_progress_v1",
+  "at_utc": "2026-10-10T09:56:02.319056+00:00",
+  "ref": "rsraki/p016n64-c86b549b4d474efaa90337335f19a202",
+  "kernel_id": 138009389,
+  "saved_version": 1,
+  "actual_Save_calls": 1,
+  "fresh_Input_metadata_RPCs": 4,
+  "fresh_official_GPU_quota_RPCs": 1,
+  "available_GPU_seconds_at_Save": "107531.917",
+  "proofs": {
+    "actual_Save_receipt": {
+      "path": "artifacts/research/20261010-p016-native64-root-launch-source-preparation-v1/actual-native64-Save-attempt-v1/accepted.json",
+      "sha256": "86cb6dac1847297b97c996f8b5a1448c95c63a786483ebb0f7ef1e2f0ad66b19"
+    },
+    "genuine_permission": {
+      "path": "artifacts/research/20261010-p016-direct224-native64-root-v1/root-native64-permission.json",
+      "sha256": "1bb88fffc148278f2c0fddaf71d1b7685e5e453c9820a9af501ba02b25263306"
+    },
+    "materialized_source_peer_12": {
+      "path": "artifacts/research/20261010-p016-native64-materialized-source-independent-v1/review.json",
+      "sha256": "d099b63acdf097168f868796a36f2ce1a1dce30fb6ea84144890349851cc8e36"
+    },
+    "manual_Save_helper_peer_14": {
+      "path": "artifacts/research/20261010-p016-native64-root-launch-independent-v1/review.json",
+      "sha256": "095c74731e994ce99064618d401a228e6e88fe9cc04e36e9339862fa74c27c96"
+    },
+    "root_final_Save_authorization": {
+      "path": "artifacts/research/20261010-p016-direct224-native64-root-v1/root-final-manual-Save-authorization.json",
+      "sha256": "9e4c476ffe2dd659678b29597a798b93af785f72566d6ab4b8ca963c765fb738"
+    }
+  },
+  "private": true,
+  "Internet": false,
+  "requested_Original_version": 31481,
+  "requested_T4x2": true,
+  "exact_Input_V1_roles": 4,
+  "competition_Submit": 0,
+  "actual_native64_completed_and_qualified": false,
+  "actual_native256_Serving_qualified": false,
+  "root_SDK_default_DTO_chunk": "4165a9",
+  "root_actual_Save_chunk": "36cce3",
+  "P014_P015_hidden_rerun_error_no_score": true,
+  "training_fixed12_continues": true,
+  "partial_checkpoint_adopted": false,
+  "own_verified_Public": 0.951,
+  "strict_above0960_achieved": false,
+  "goal_continues": true,
+  "next": "Bounded savedV1 source/settings/status/output verification; genuine new64 acceptance before256. In parallel source-only explicit baseline failover feasibility."
+}

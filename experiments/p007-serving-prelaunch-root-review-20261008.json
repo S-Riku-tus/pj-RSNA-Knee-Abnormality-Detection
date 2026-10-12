@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-10-08T11:23:29.986709+00:00",
+  "ref": "rsraki/p007-convnext-mirror",
+  "notebook_sha256": "b207fb23a729a26c7c964d28401cef146ce76bb464b05fb6673718d8b70d2d93",
+  "all_passed": true,
+  "checks": {
+    "corrected16_sha": true,
+    "protected14_sha": true,
+    "same_cell_structure": true,
+    "only_reader_cell8_changes": true,
+    "six_other_code_cells_exact": true,
+    "clean_notebook": true,
+    "v2_validated_sha": true,
+    "direct_run_without_outer_inference_mode": true,
+    "direct_run_grad_disabled": true,
+    "run_no_grad_retained": true,
+    "mirror_helper_undecorated": true,
+    "k16_fixed": true,
+    "sixteen_artificial_tests": true,
+    "real_profile32_complete": true,
+    "real_profile50_checks": true,
+    "all6slots_batch4": true,
+    "gpu_capacity_gate": true,
+    "actual_mirror_forward48": true,
+    "real_profile_fusion_exact": true,
+    "real_profile_no_accuracy_selection": true,
+    "diagnostic_not_submitted": true
+  },
+  "evidence_sha256": {
+    "notebooks\\public\\16_submit_p007_convnext_mirror.ipynb": "b207fb23a729a26c7c964d28401cef146ce76bb464b05fb6673718d8b70d2d93",
+    "notebooks\\public\\14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "experiments\\p007-convnext-mirror-validation-v2-20261008.json": "1654e824e00d82f0066a3a2684a014e9afe3917c2d7584a5e51c6667e68e8161",
+    "experiments\\p007-profile32-completed-review-20261008.json": "a46ea95abfe7a1c963c425643d84ee0c3f248ee35045cb90b5ae1ea0d11cc010"
+  },
+  "own_public_score": null,
+  "competition_submitted": false
+}

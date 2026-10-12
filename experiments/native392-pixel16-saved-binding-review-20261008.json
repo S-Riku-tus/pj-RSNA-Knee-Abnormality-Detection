@@ -1,0 +1,89 @@
+{
+  "checked_at_utc": "2026-10-08T11:33:15.854007+00:00",
+  "status": "savedV1_exact_private_CPU_pixel16_binding_verified",
+  "ref": "rsraki/native392-pixel16-diagnostic",
+  "saved_version": 1,
+  "kernel_id": 137660730,
+  "notebook_sha256": "ff88e2077d7d7ef484fbd19e5f50ddd69e40c663dea22f73283903b13d860e7e",
+  "checks": {
+    "accepted_no_error": true,
+    "accepted_all_Input_rejections_empty": true,
+    "response_saved_request_exact_ref": true,
+    "kernel_ID_binding": true,
+    "saved_Version1_binding": true,
+    "author_slug_title_binding": true,
+    "canonical_Notebook_SHA": true,
+    "canonical_package_Notebook_bytes": true,
+    "request_saved_all_cell_sources_exact18a": true,
+    "two_code_cells_four_total": true,
+    "saved_code_clean": true,
+    "code_cells_compile": true,
+    "CPU_requested_saved_noGPU": true,
+    "private_saved_requested": true,
+    "Internet_OFF_saved_requested": true,
+    "TPU_off_saved_requested": true,
+    "exact_Original_digest_requested_saved": true,
+    "Original_pinning": true,
+    "SAVE_AND_RUN_ALL": true,
+    "only_decoderV2_explicit_pin_accepted": true,
+    "only_decoder_slug_saved": true,
+    "one_competition_saved_requested": true,
+    "no_other_model_kernel_Input": true,
+    "payload_exact_packageZIP": true,
+    "payload_declared_SHA": true,
+    "ZIP_members_exact_declared_hashes": true,
+    "ZIP_no_CSV_weights_MRI": true,
+    "ZIP_shared_pixel_code_exact_current": true,
+    "ZIP_bounded_reader_exact_current": true,
+    "decoder_resource_helper_shutil_present": true,
+    "runtime_cohort_exact_prepared_structure_only": true,
+    "runtime_fixed_preprocess392_3x48": true,
+    "runtime_calls_label_free_export_only": true,
+    "teacher_Input_CSV_guard_installed": true,
+    "profile_rerun_submission_guard": true,
+    "runtime_QC_original_shared_reader": true,
+    "prior_eight_tests_ruff_passed": true,
+    "prior_independent38_checks_passed": true,
+    "captured_status_no_failure": true,
+    "protected14_SHA": true
+  },
+  "checks_passed": 40,
+  "checks_total": 40,
+  "observed_status": {
+    "checked_at_utc": "2026-10-08T11:31:22.636345+00:00",
+    "response": {
+      "status": "RUNNING",
+      "failureMessage": null
+    }
+  },
+  "visible_output_metadata": {
+    "checked_at_utc": "2026-10-08T11:31:22.906669+00:00",
+    "pages": [
+      {
+        "page": 1,
+        "files": [],
+        "has_next_page": false
+      }
+    ],
+    "complete_pagination": true,
+    "raw_pixel_downloaded": false
+  },
+  "Original_container_numeric_ID": "31481 is prior provenance; this SDK returned the exact digest only",
+  "Input_version_evidence": "Accepted SaveKernel explicitly pins decoder /2 with no rejection; GetKernel returns correct slug but omits internal version IDs",
+  "teacher_scope": "Runtime never opens teacher CSV; offline builder used existing local manifest structure fields only, excluding Gold IDs/groups and held-out fold0",
+  "MRI_resource_or_byteQC_complete": false,
+  "pixel_archive_downloaded": false,
+  "remote_mutation": false,
+  "competition_submission": false,
+  "real_training": false,
+  "time_scope": "Receipt UTC timestamps used; SDK metadata shifted lastRunTime not interpreted as runtime or launch date",
+  "evidence_sha256": {
+    "artifacts/research/20261008-native392-pixel16-saved-binding-v1/saved-source.json": "553bd6cdfc6e0e4a69164dd3ef5f445bc753227d37786981a098dc1921902ad8",
+    "artifacts/research/20261008-native392-pixel16-saved-binding-v1/official-status.json": "8da3ee3b34d290ac59a492bd8de209137d6be64fe9a80b681ebfce89aa4ebc1c",
+    "artifacts/research/20261008-native392-pixel16-saved-binding-v1/visible-output-metadata.json": "c6c1af14b08f43d39d922e5fdaddd6b75d2061eca60e187c7c30503906841fa7",
+    "artifacts/research/20261008-native392-pixel16-launch-v1/launch-request.json": "b61f4086e4c9ed0e1cc27d5f338fb404dea51cf9e310ae4972d903cdd067c3c1",
+    "artifacts/research/20261008-native392-pixel16-launch-v1/save-response.json": "10b4ea11f206ffc33726f142d4d9df4d2acbab8067c0fca063411b07d636ba90",
+    "notebooks/public/18a_profile_dinov2_native392_pixel16.ipynb": "ff88e2077d7d7ef484fbd19e5f50ddd69e40c663dea22f73283903b13d860e7e",
+    "artifacts/kaggle/native392-pixel16-v3-20261008/native392-code.zip": "06740ee9e8824f11e52e437336bc2336fae53fc4543d8dd9bc7edf9da1690a89"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "schema_version": "p006_convnext_k24_implementation_v1",
+  "prepared_at_jst": "2026-10-08",
+  "status": "prepared_single_factor_not_executed",
+  "baseline": {
+    "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\notebooks\\public\\14_submit_p005_public950_control.ipynb",
+    "sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "own_public_lb": 0.95
+  },
+  "candidate": {
+    "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\notebooks\\public\\15_submit_p006_convnext_k24.ipynb",
+    "sha256": "172d6744be6f5e1e20def4680a1e81f3253989b49f601b1b01459d0c6245a320",
+    "own_public_lb": null
+  },
+  "runtime_binding": {
+    "writefile_cell_index": 8,
+    "writefile_path": "/kaggle/working/own_src/infer.py",
+    "subprocess_cell_index": 9,
+    "main_call_uses_default_k": true,
+    "run_dataset_window_centres_k_propagation_verified": true,
+    "effective_convnext_k_per_slot": 24
+  },
+  "prediction_code_delta": {
+    "changed_cell_indices": [
+      8
+    ],
+    "unchanged_other_code_cells": 6,
+    "before": "def run(data_dir, split, ckpts, k=16, studies=None, workers=4, bs=4):",
+    "after": "def run(data_dir, split, ckpts, k=24, studies=None, workers=4, bs=4):",
+    "only_default_k_changed": true
+  },
+  "code_cell_sha256": {
+    "3": {
+      "baseline": "73479f7fd919996f4723ef93b4c881cbf698b9d79082cf7e1073fd85bd2b1ab1",
+      "candidate": "73479f7fd919996f4723ef93b4c881cbf698b9d79082cf7e1073fd85bd2b1ab1"
+    },
+    "4": {
+      "baseline": "37243d9c509200ca349d6bcb080ee23b22cfee8ad3d209ae19a7c44535b49c20",
+      "candidate": "37243d9c509200ca349d6bcb080ee23b22cfee8ad3d209ae19a7c44535b49c20"
+    },
+    "5": {
+      "baseline": "fe88cbfa098fd6760016417cefe8063f38265465db536cd02633df9c65edc17c",
+      "candidate": "fe88cbfa098fd6760016417cefe8063f38265465db536cd02633df9c65edc17c"
+    },
+    "6": {
+      "baseline": "81cfd2b20dbc25662adbda3b94c98b1bcdfa366c7ca997313139d718284790b8",
+      "candidate": "81cfd2b20dbc25662adbda3b94c98b1bcdfa366c7ca997313139d718284790b8"
+    },
+    "7": {
+      "baseline": "050aacdc1902df88b18fe1c3bc27bad57b743ca5c0e5b1c98bd1ccb1e37e5b96",
+      "candidate": "050aacdc1902df88b18fe1c3bc27bad57b743ca5c0e5b1c98bd1ccb1e37e5b96"
+    },
+    "8": {
+      "baseline": "d27c72236f2810c7f442032f4c56470ab6d467ae9fb618cfbe97b4cb38b5acfd",
+      "candidate": "f35ad6527b9ff468219e811d3255815d7288e1a65b3d38bf9bcb1aa884b1a369"
+    },
+    "9": {
+      "baseline": "b3b5f3ec1c3eade95d6dfd87e9ec6c0d31fcf6ec849b556804aabb0d912702c0",
+      "candidate": "b3b5f3ec1c3eade95d6dfd87e9ec6c0d31fcf6ec849b556804aabb0d912702c0"
+    }
+  },
+  "unchanged": [
+    "CoAtNet checkpoint/96slice/K94/native320/anatomical mirror2views",
+    "ConvNeXt3fold checkpoints/series/preprocessing/position slots",
+    "reader batch4/workers4/AMP/fusion12weights/fallback policy",
+    "original container digest/3 public Input versions/Internet OFF",
+    "Notebook metadata and original acknowledgements"
+  ],
+  "syntax_checks": [
+    {
+      "cell_index": 3,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 4,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 5,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 6,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 7,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 8,
+      "compiled_without_execution": true
+    },
+    {
+      "cell_index": 9,
+      "compiled_without_execution": true
+    }
+  ],
+  "limitations": [
+    "Window density changes prediction math; improved AUC is unmeasured.",
+    "ConvNeXt forward windows increase about1.5x; total time/VRAM is unmeasured.",
+    "Public CoAt training exposure makes retrospective weak folds non-independent.",
+    "Original decoder installation failures/masked slices and fallback are unchanged.",
+    "Visible fusion success is required; fallback to pure CoAt is not this candidate success."
+  ],
+  "new_training_or_gold_selection": false,
+  "real_inference_upload_or_submission_in_builder": false,
+  "api_publication_scope": "Separate SDK orchestration is responsible for execution and submission."
+}

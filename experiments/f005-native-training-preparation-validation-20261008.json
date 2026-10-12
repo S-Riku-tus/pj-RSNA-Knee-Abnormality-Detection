@@ -1,0 +1,232 @@
+{
+  "checked_at_utc": "2026-10-08T12:01:26.756347+00:00",
+  "status": "training_CLI_prepared_artificial_and_processed_pixel_QA_verified_no_real_fit",
+  "handoff": "artifacts/kaggle/f005-native-train-handoff-v2-20261008",
+  "handoff_sha256": "54426824935dfe66e32402d9188e5379ccdd4e9d0723966f15113709213ddca1",
+  "code_zip_sha256": "6cdc36eb33b886f21dd338c57ad5e01ae7f46dabc95cdda3b54d119507953eb4",
+  "source_sha256": {
+    "native_training.py": "0c470e265332e14e31b1942996f37efd7861f9932eb9ded117253b689b97bf26",
+    "finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+  },
+  "CLI_sha256": "1a3fbe40395d30eb8f775a22f5acdcf63d0b94ad3d247e13760f81f8551af821",
+  "configs": {
+    "f005-dinov2-native-frozen-control.json": "a25cf2bc7a738c44f9c7b447c179840cc07ae6526592241dcf8298f4e6700953",
+    "f005-dinov2-native-last2.json": "c488579507b87d6eed32d7bfba7b74e18fafbfff3d6a203f0f6ab81311cfc844"
+  },
+  "microbatch_studies": 1,
+  "effective_batch_studies": 16,
+  "epochs": 12,
+  "folds": [
+    0,
+    1
+  ],
+  "seed": 20261002,
+  "encoder_lr": 1e-05,
+  "head_lr": 0.0003,
+  "selection": "minimum weak validation masked BCE; earliest tie",
+  "accumulation": "Each micro observed BCE sum / group's total valid teacher count; short final group uses its actual denominator",
+  "unittest_tests_passed": 8,
+  "ruff_passed": true,
+  "artificial_contracts": [
+    "fullbatch vs production accumulated loss/all gradients for16 and short3 unequal observed counts",
+    "unobserved NaN excluded; naive mean-of-micro-means detected wrong",
+    "Gold UID/group assertions before teacher retention/conversion; sentinel rejected without label parser",
+    "fixed config/LR/micro/effective batch and CUDA-first guard",
+    "strict suffix/head keys,shape,dtype,finite,prefix SHA and target order",
+    "real positive integer epoch; artificial checkpoint cannot enter real prediction",
+    "ID-only inference CSV requires no Report"
+  ],
+  "processed_QA": {
+    "status": "native392_label_free_QA_complete",
+    "real_processed_MRI_pixels_used": true,
+    "raw_DICOM_decoded_or_downloaded": false,
+    "real_teacher_labels_read": false,
+    "real_fit": false,
+    "optimizer_steps": 0,
+    "studies_simultaneously_on_GPU": 1,
+    "effective_batch16_capacity_proven": false,
+    "pilot": {
+      "UID": "1.2.826.0.1.3680043.8.498.54628782412849994943720963251113534589",
+      "valid_triplets": 115,
+      "max_valid_UID_selected": true,
+      "read_decompress_hash_QC_seconds": 0.26844139996683225,
+      "archive_sha256": "31cf4d41b8e3be930ac62c29b1cb7611e9a1fffa2ba43011437c48460dc3e5a2",
+      "archive_bytes": 397707087,
+      "summary_sha256": "dad0f98b3f9b803f9f00aa9ce077bb23a0b9b894fe54b629a5ab1c254a7334f5",
+      "independent_full16_review_sha256": "372b8c41bc1686dace46a2b18304c1eaeef7237b757ed8fecc70671e38703477",
+      "independent_review_referenced": true,
+      "all16_QC_repeated": false,
+      "whole_archive_sha_check_outside_read_timer": true
+    },
+    "arms": [
+      {
+        "arm": "freeze",
+        "valid_triplets": 115,
+        "parameters": {
+          "trainable_encoder_names": [],
+          "trainable_encoder_parameters": 0,
+          "frozen_encoder_parameters": 22056576,
+          "trainable_head_parameters": 83352,
+          "encoder_eval": true,
+          "final_norm_frozen": true,
+          "trainable_blocks": 0,
+          "window_chunk": 2,
+          "checkpoint_last2": true,
+          "chunk_factor": "same window microbatch in both arms; retained backward activations span all valid windows",
+          "checkpoint_factor": "optional suffix activation recomputation; separate from the last2 biological factor",
+          "feature_quantization": "fp16 CLS then fp32, matching frozen feature cache storage"
+        },
+        "forward_seconds": 0.6178854000172578,
+        "backward_seconds": 0.05205660004867241,
+        "transfer_seconds": 0.007251200033351779,
+        "gpu_peak_allocated_bytes": 189672448,
+        "gpu_peak_reserved_bytes": 205520896,
+        "checkpoint_sha256": "2f7cf21de911146de20733db1014c8f8db3701cb09338fc73b19c91f35483b8a",
+        "checkpoint_bytes": 342643,
+        "optimizer_steps": 0
+      },
+      {
+        "arm": "last2",
+        "valid_triplets": 115,
+        "parameters": {
+          "trainable_encoder_names": [
+            "blocks.10.norm1.weight",
+            "blocks.10.norm1.bias",
+            "blocks.10.attn.qkv.weight",
+            "blocks.10.attn.qkv.bias",
+            "blocks.10.attn.proj.weight",
+            "blocks.10.attn.proj.bias",
+            "blocks.10.ls1.gamma",
+            "blocks.10.norm2.weight",
+            "blocks.10.norm2.bias",
+            "blocks.10.mlp.fc1.weight",
+            "blocks.10.mlp.fc1.bias",
+            "blocks.10.mlp.fc2.weight",
+            "blocks.10.mlp.fc2.bias",
+            "blocks.10.ls2.gamma",
+            "blocks.11.norm1.weight",
+            "blocks.11.norm1.bias",
+            "blocks.11.attn.qkv.weight",
+            "blocks.11.attn.qkv.bias",
+            "blocks.11.attn.proj.weight",
+            "blocks.11.attn.proj.bias",
+            "blocks.11.ls1.gamma",
+            "blocks.11.norm2.weight",
+            "blocks.11.norm2.bias",
+            "blocks.11.mlp.fc1.weight",
+            "blocks.11.mlp.fc1.bias",
+            "blocks.11.mlp.fc2.weight",
+            "blocks.11.mlp.fc2.bias",
+            "blocks.11.ls2.gamma"
+          ],
+          "trainable_encoder_parameters": 3550464,
+          "frozen_encoder_parameters": 18506112,
+          "trainable_head_parameters": 83352,
+          "encoder_eval": true,
+          "final_norm_frozen": true,
+          "trainable_blocks": 2,
+          "window_chunk": 2,
+          "checkpoint_last2": true,
+          "chunk_factor": "same window microbatch in both arms; retained backward activations span all valid windows",
+          "checkpoint_factor": "optional suffix activation recomputation; separate from the last2 biological factor",
+          "feature_quantization": "fp16 CLS then fp32, matching frozen feature cache storage"
+        },
+        "forward_seconds": 0.6539077000343241,
+        "backward_seconds": 0.37803340004757047,
+        "transfer_seconds": 0.007251200033351779,
+        "gpu_peak_allocated_bytes": 645642752,
+        "gpu_peak_reserved_bytes": 738197504,
+        "checkpoint_sha256": "9496687703304509e88063ab8ef86ef80c42df2ae4f31eb6f614803b17d4197f",
+        "checkpoint_bytes": 14553033,
+        "optimizer_steps": 0
+      }
+    ],
+    "checks": [
+      {
+        "name": "freeze checkpoint strict roundtrip",
+        "passed": true,
+        "max_logit_abs_diff": 0.0,
+        "artificial_checkpoint_real_prediction_forbidden": true
+      },
+      {
+        "name": "freeze selected suffix finite/frozen prefix no gradients",
+        "passed": true
+      },
+      {
+        "name": "last2 checkpoint strict roundtrip",
+        "passed": true,
+        "max_logit_abs_diff": 0.0,
+        "artificial_checkpoint_real_prediction_forbidden": true
+      },
+      {
+        "name": "last2 selected suffix finite/frozen prefix no gradients",
+        "passed": true
+      }
+    ],
+    "checks_passed": 4,
+    "config_sha256": "c488579507b87d6eed32d7bfba7b74e18fafbfff3d6a203f0f6ab81311cfc844",
+    "config_semantic_sha256": {
+      "0": "ca567239f7e180a94506f05bd7cced570cbfbdf2d3decfac218371a17de8b4aa",
+      "2": "febbc116fb512f8c6ee67efa35691c4483a46ae716e7242d9d9717677aa77312"
+    },
+    "source_sha256": {
+      "native_training.py": "0c470e265332e14e31b1942996f37efd7861f9932eb9ded117253b689b97bf26",
+      "finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+      "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+      "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+      "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+      "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+      "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+      "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+    },
+    "CLI_sha256": "1a3fbe40395d30eb8f775a22f5acdcf63d0b94ad3d247e13760f81f8551af821",
+    "runtime": {
+      "torch": "2.10.0+cu128",
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "limits": [
+      "Single warmed resource observation; image-content gradients are not accuracy evidence",
+      "Read timer includes decompression/member SHA/array QC; no full archive unpacking",
+      "Backward uses artificial labels only; no optimizer is constructed or stepped"
+    ]
+  },
+  "processed_QA_summary_sha256": "8a48365dd1f42af2d857eef475d41b3c6ebae1439880c97a560eeabf7c986fff",
+  "independent_full16_pixels_review_sha256": "372b8c41bc1686dace46a2b18304c1eaeef7237b757ed8fecc70671e38703477",
+  "all16_QC_repeated": false,
+  "bound_resource_gate": "artifacts/research/20261008-f005-native-training-preparation-v1/resource-gate-bound.json",
+  "bound_resource_gate_sha256": "721f738e2152776c15feea6a919abbc6524742cfeb7375eb0601c61a11190231",
+  "bound_resource_gate_validated": true,
+  "conditional_epoch_arithmetic": [
+    {
+      "arm": "freeze",
+      "115valid_measured_component_sum_seconds": 0.9456346000661142,
+      "3386study_epoch_minutes_at_same115workload": 53.36531259706438,
+      "limits": "One sampled UID/timing, not population bound. Excludes AdamW/scaler/validation and different study sizes."
+    },
+    {
+      "arm": "last2",
+      "115valid_measured_component_sum_seconds": 1.3076337000820786,
+      "3386study_epoch_minutes_at_same115workload": 73.79412847463196,
+      "limits": "One sampled UID/timing, not population bound. Excludes AdamW/scaler/validation and different study sizes."
+    }
+  ],
+  "real_weak_or_gold_fit_started": false,
+  "optimizer_updates": 0,
+  "full_cache_acquired": false,
+  "raw_DICOM_download_or_decode_on_PC": false,
+  "remote_mutation": false,
+  "public_score": null,
+  "remaining_training_gate": "Full weak native pixel cache/index4207 with original group/fold/manifest hashes; root decides processing/training start",
+  "inference": "Generic source/weights/provenance reconstruct frozen prefix and finalnorm; strict suffix/head override. Native DICOM only Kaggle. No Report required.",
+  "resume_supported": false,
+  "package_history": {
+    "v1": "Prepared before final guards/source bindings; not adopted, preserved",
+    "v2": "Final source/config and processed QA bind"
+  }
+}

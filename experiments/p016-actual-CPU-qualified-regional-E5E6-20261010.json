@@ -1,0 +1,84 @@
+{
+  "schema_version": "p016_actual_CPU_qualified_and_Regional_E5E6_root_progress_v1",
+  "at_utc": "2026-10-10T09:37:55.561972+00:00",
+  "proofs": {
+    "CPU_root_acceptance": {
+      "path": "artifacts/research/20261010-p016-direct224-CPU-root-v1/actual-CPU-root-acceptance-v1.json",
+      "sha256": "30888b36641298f715222772ee12660b77365d1c2ca04f08310e2a4940ee4b21"
+    },
+    "actual_CPU_getter_observation": {
+      "path": "artifacts/research/20261010-p016-CPU-results-tools-v2/actual-CPU-observation-v2/observation.json",
+      "sha256": "65c6c11c8566d2d77d8f42d51b5e5cd0755838dc093a2c07d1a0f036fa3f2fc6"
+    },
+    "CPU_receipt_independent_review": {
+      "path": "artifacts/research/20261010-p016-actual-CPU-receipt-independent-v1/review.json",
+      "sha256": "511308a04cae161c68118e5962328bdeb945d77f1e61c752e791045444db09ed"
+    },
+    "Regional_E5E6_independent_comparison": {
+      "path": "artifacts/research/20261010-f005-regional-E5E6-metadata-independent-v1/comparison.json",
+      "sha256": "199a3795c26f108e15b1a167161a6641985d2f9da4c44f604b481ac356afe229"
+    }
+  },
+  "actual_new_CPU_gate_passed": true,
+  "actual_CPU": {
+    "ref": "rsraki/p016cpu-4482458c08f041f890e3da554049e3c3",
+    "saved_version": 1,
+    "kernel_id": 138006054,
+    "checkpoint_sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+    "checkpoint_bytes": 292842755,
+    "source_inventory_sha256": "aa6d1d8504cbd78b642c36c71e1394db812fc2ee8d94df5c5597dc2baa6c2522",
+    "receipt_sha256": "a87cd104f3aa9a8b01e2aec2b75e2f2d90ebb36d27f03df1f5ee4342ad05b786",
+    "strict_tensors": 486,
+    "model_factory_calls": 1,
+    "model_forward_calls": 0,
+    "MRI_decode_calls": 0,
+    "Report_read": false,
+    "own_Gold_fit_or_selection": false,
+    "actual_success_log_bytes": 0,
+    "actual_success_log_GET_SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "collector_v1_emptylog_HOLD_preserved_and_v2_fixed": true,
+    "model_reexecution_Save_retry": 0
+  },
+  "actual_GPU64_256_Serving_or_hidden_qualified": false,
+  "Regional": [
+    {
+      "fold": 0,
+      "epoch": 5,
+      "weak_bce": 0.3080197320998974,
+      "weak_macro_auc_12": 0.8408586650045686,
+      "fixed10_AUC_delta_vs_same_epoch_CLS": -0.005331128036797805,
+      "all_history_amp_skipped_steps": 0,
+      "latest_Regional_epoch_interval_seconds": 2193.4086737000616
+    },
+    {
+      "fold": 1,
+      "epoch": 6,
+      "weak_bce": 0.3047567436986832,
+      "weak_macro_auc_12": 0.84879507082934,
+      "fixed10_AUC_delta_vs_same_epoch_CLS": -0.01063777482201278,
+      "all_history_amp_skipped_steps": 0,
+      "latest_Regional_epoch_interval_seconds": 2195.1061539000366
+    }
+  ],
+  "training_process_alive_root_actual_handles": {
+    "fold0": {
+      "session_id": 94738,
+      "last_alive_chunk": "2f73e7",
+      "epoch5_stdout": true
+    },
+    "fold1": {
+      "session_id": 91809,
+      "last_alive_chunk": "cc03cd",
+      "epoch6_stdout": true
+    }
+  },
+  "fixed12_and_minimum_weak_BCE_selection_unchanged": true,
+  "partial_checkpoint_adoption": false,
+  "current_Regional_improvement_established": false,
+  "P014": "hidden rerun exception with no Public; no resubmit",
+  "P015": "09:28:07Z rawstatus omitted/PublicNone/errorNone; no result yet",
+  "own_verified_Public": 0.951,
+  "strict_above0960_achieved": false,
+  "goal_continues": true,
+  "next": "New P012 preserving native64 diagnostic source/peer + genuine actualCPU-bound permission, then realGPU64 and256 before Serving."
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": "p016_wrapper_v2_root_materialization_regional_partial_record_v1",
+  "at_utc": "2026-10-10T10:40:45.416814+00:00",
+  "own_best_public": 0.951,
+  "strictly_above_0_960_achieved": false,
+  "new_private_native64_ref": "rsraki/p016n64-c7706576a7224c28941455284b4e5fa8",
+  "materialization_context": {
+    "path": "artifacts/research/20261010-p016-direct224-native64-root-v2/materialization-context.json",
+    "sha256": "9cb346c36d2bd6d824dd307ab6237ccacff2710bde6d7b60212c8681ba4cdf9f"
+  },
+  "wrapper_source_peer": {
+    "path": "artifacts/research/20261010-p016-native-wrapper-startup-independent-v2/review.json",
+    "sha256": "6899363c91d7bd5784c6330d1403a137bb8fba61ad8b60e4ba59e3fc4884ae96"
+  },
+  "root_permission": {
+    "path": "artifacts/research/20261010-p016-direct224-native64-root-v2/root-native64-permission.json",
+    "sha256": "fdcb0c97807fcb46817b36a678ae6348d2b0f580a71d3fc38e9e45a634b1cdb9"
+  },
+  "minimal_source_delta": "Remove legacy baseline-only sitecustomize path from new native child PYTHONPATH; source core21/checkpoint/CPU/original5/math unchanged.",
+  "SDK_offline_DTO": {
+    "root_chunk": "fd7d2b",
+    "passed": true,
+    "authentication_API_Save_calls": 0,
+    "canonical_request_sha256": "b639a237d5b6dcc97482dc96d4315851e20d37ba687db804655954f2eef1c4af"
+  },
+  "source_bytes": 695688,
+  "source_raw_sha256": "61a211f8cc528febc3424582c2c18dff9c2384d87693ba1f1646654845121e77",
+  "actual_new_native64_or_256_or_Serving_qualification": false,
+  "actual_Save_Submit": 0,
+  "Regional_metadata_snapshot": {
+    "path": "artifacts/research/20261010-f005-regional-E7E8-root-snapshot-v2/comparison.json",
+    "sha256": "0ea9cc5b7103dd4dfd712e94548280c46c224a619fba1f3eb8598abb6caea079",
+    "fixed_support_targets10": [
+      "ACL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ],
+    "comparisons": [
+      {
+        "fold": 0,
+        "epoch": 7,
+        "Regional_raw_run_sha256": "733fd93492cd22f514467d267f2c7c2f79d727d15a719233e574118ae49c30aa",
+        "snapshot_path": "artifacts/research/20261010-f005-regional-E7E8-root-snapshot-v2/fold0-run-snapshot.json",
+        "old_CLS_run_path": "artifacts/runs/f005-native-last2-fast16-fold0-20261009-v1/run.json",
+        "old_CLS_run_sha256": "56a463e2a54739e2077a1e991af7f66e80fb5c45d1cd70018cc5c368778ed3ba",
+        "Regional_weak_BCE": 0.28448732648196384,
+        "old_same_epoch_weak_BCE": 0.2798305250491582,
+        "BCE_delta_Regional_minus_old": 0.004656801432805668,
+        "Regional_AUC12": 0.8582928517553658,
+        "old_same_epoch_AUC12": 0.8709486195679211,
+        "fixed10_Regional_AUC": 0.8684487164787335,
+        "fixed10_old_AUC": 0.8763174560356181,
+        "fixed10_AUC_delta": -0.007868739556884607,
+        "all_epochs_amp_skips": 0,
+        "epoch_interval_seconds": 2186.3666513999924,
+        "cumulative_elapsed_seconds": 15419.889203600003,
+        "prediction_sha256": "21cdaa1eefbb18ea7db7a89d2e00f68ed212a3a9495d9d7ad83e1950ed6aa5bc",
+        "updates": 212,
+        "opportunities": 212,
+        "run_status": "running"
+      },
+      {
+        "fold": 1,
+        "epoch": 8,
+        "Regional_raw_run_sha256": "fd0aebfb2fb16501f7e06a14701abc2148c0d16e865046a70fc49c56aa8d1e27",
+        "snapshot_path": "artifacts/research/20261010-f005-regional-E7E8-root-snapshot-v2/fold1-run-snapshot.json",
+        "old_CLS_run_path": "artifacts/runs/f005-native-last2-fast16-fold1-20261009-v1/run.json",
+        "old_CLS_run_sha256": "f3a0ddc4762cc64840b10a1d5f79cbd3c910cbb735e0bb8a4848507560134fe3",
+        "Regional_weak_BCE": 0.29496327551108487,
+        "old_same_epoch_weak_BCE": 0.29396618929548624,
+        "BCE_delta_Regional_minus_old": 0.0009970862155986304,
+        "Regional_AUC12": 0.8626574048523487,
+        "old_same_epoch_AUC12": 0.8682937814651966,
+        "fixed10_Regional_AUC": 0.869463462406029,
+        "fixed10_old_AUC": 0.8785452292162625,
+        "fixed10_AUC_delta": -0.009081766810233538,
+        "all_epochs_amp_skips": 0,
+        "epoch_interval_seconds": 2185.9755287000444,
+        "cumulative_elapsed_seconds": 17288.45319260005,
+        "prediction_sha256": "c4da0aab40758bf74fb4751b739d1322770855f478b0cbbc45349fec76b13f1e",
+        "updates": 208,
+        "opportunities": 208,
+        "run_status": "running"
+      }
+    ],
+    "actual_sessions_alive_chunks": {
+      "fold0": "8dc81b",
+      "fold1": "07767d"
+    },
+    "fixed12_preserved": true,
+    "partial_checkpoint_adopted": false,
+    "Gold_or_Public_eval": false
+  },
+  "P017_source_capacity": "V1 bound metadata exceeds internal950000; transport-only V2 being prepared. No runtime/accuracy claim."
+}

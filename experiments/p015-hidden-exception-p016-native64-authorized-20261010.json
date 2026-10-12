@@ -1,0 +1,73 @@
+{
+  "schema_version": "p015_hidden_exception_and_p016_native64_root_permission_v1",
+  "at_utc": "2026-10-10T09:48:41.090759+00:00",
+  "P015": {
+    "ref": 57031981,
+    "saved_version": 1,
+    "raw_and_typed_status": "COMPLETE",
+    "error_description": "Your notebook hit an unhandled error while rerunning your code. Note that the hidden dataset can be larger/smaller/different than the public dataset",
+    "public_score": null,
+    "proofs": [
+      {
+        "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/submission-observation-v24/held.json",
+        "sha256": "059ee1bbca8f35ef2fa26215eec4c12f51ab658dca21931bf300cbf9d73415d1"
+      },
+      {
+        "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/submission-observation-v24/response-safe.json",
+        "sha256": "5e7202113101953f9bc055ced5efaad6ac6081cb6b7c156c119aabbc32d35ce5"
+      }
+    ],
+    "resubmit": false,
+    "hidden_exception_type_traceback_or_runtime_known": false
+  },
+  "P014": {
+    "ref": 57031186,
+    "public_score": null,
+    "hidden_rerun_exception": true,
+    "resubmit": false
+  },
+  "shared_source_findings": {
+    "Gold_train_UID_overlap_rejection_found_in_Serving": false,
+    "zero_valid_payload_from_successful_nonempty_decode_found": false,
+    "cause_established": false,
+    "further_audit_pending": true
+  },
+  "P016": {
+    "phase": "new native64 materialized; actualGPU not launched",
+    "ref": "rsraki/p016n64-c86b549b4d474efaa90337335f19a202",
+    "genuine_CPU_root_acceptance": {
+      "path": "artifacts/research/20261010-p016-direct224-CPU-root-v1/actual-CPU-root-acceptance-v1.json",
+      "sha256": "30888b36641298f715222772ee12660b77365d1c2ca04f08310e2a4940ee4b21"
+    },
+    "new_native64_permission": {
+      "path": "artifacts/research/20261010-p016-direct224-native64-root-v1/root-native64-permission.json",
+      "sha256": "1bb88fffc148278f2c0fddaf71d1b7685e5e453c9820a9af501ba02b25263306"
+    },
+    "materialization_context": {
+      "path": "artifacts/research/20261010-p016-direct224-native64-root-v1/materialization-context.json",
+      "sha256": "c7d092a8495b801fee0f812fb2b71d09a608e0c9363858f1cbb91e4af0a93c96"
+    },
+    "wrapper_source_peer": {
+      "path": "artifacts/research/20261010-p016-native64-wrapper-source-independent-review-v1/review.json",
+      "sha256": "ff34da5f70eeb671d77b75ddde20e3127eeeb27d1353ce98537a584311c9b951"
+    },
+    "code_source": {
+      "path": "artifacts/research/20261010-p016-direct224-native64-root-v1/materialized-native64-source-v1/kernel-source-exact.json",
+      "sha256": "bbdd8f54e11f06867d27522b9f7e73cfefeb3e59df8608db66ccaffe08fbf036"
+    },
+    "API_source_bytes": 695007,
+    "private": true,
+    "internet": false,
+    "Original_container_version": 31481,
+    "requested_GPU": "T4x2",
+    "Inputs_V1_count": 4,
+    "competition_Submit": false,
+    "actual_native64_native256_Serving_qualified": false,
+    "own_Gold_fit_or_selection": false,
+    "Report_read": false
+  },
+  "training_fixed12_continues": true,
+  "own_verified_Public": 0.951,
+  "strict_above0960_achieved": false,
+  "goal_continues": true
+}

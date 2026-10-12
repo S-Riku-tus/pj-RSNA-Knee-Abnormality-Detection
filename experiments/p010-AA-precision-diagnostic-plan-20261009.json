@@ -1,0 +1,175 @@
+{
+  "schema_version": "p010_preregistered_AA_numerical_diagnostic_plan_v1",
+  "at_utc": "2026-10-08T15:23:38.535853+00:00",
+  "status": "design_only_not_implemented_or_launched",
+  "purpose": "Measure literal-model repeat variability before attributing V3 rank/raw differences to transport, GPU assignment, backend flags or any other cause.",
+  "actual_evidence": {
+    "experiments/p010-profile32-third-failure-CSV-review-sanitized-r2-20261009.json": "f0b0597eab209cfd541b0910b76619e741ec91b4f6b67ceadc9029219e4211c5",
+    "experiments/p010-profile32-third-failure-review-20261009.json": "862fb549494c80d8adc0752f4c27c08777aa020d1b77e379e4dcdb1fa42c1ab7"
+  },
+  "candidate_gate_passed": false,
+  "no_serving_or_submission_source_changes_authorized_by_this_plan": true,
+  "cohort": {
+    "studies": 32,
+    "supplied_groups": 31,
+    "ordered_UID_sha256": "fb83b0b77b4539eb70b142cecc69c3cbc6a0ae4a8763381869078cc936b6fc07",
+    "same_p006_p010_cohort": true,
+    "Gold_UID_and_group_excluded": true,
+    "teacher_labels_or_Report_read": false,
+    "AUC_or_true_OOF_claim": false,
+    "UID_mapping_and_predictions_private_artifacts_only": true
+  },
+  "invariant_numerical_contract": {
+    "base": "Original14 model320/native384/FOV140/K94/two anatomical mirror views/mean of plain and mirror. Original chunk16, FP16 path and existing fallback behavior remain literal.",
+    "author224": "Exact extracted stock nine symbols: crop307 offset38, bilinear224 align_corners=False, ImageNet normalization, full94-window single FP16 forward, no chunk changes. FP32 fallback remains fatal to qualification.",
+    "reader": "Original k16/three checkpoints/decoder/label order/target coefficients unchanged. Run at most once only if fused-rank diagnostics require it.",
+    "fusion": "Original target fusion preserved; fixed90:10 all12 is recomputation for diagnosis only.",
+    "training_or_new_weights_or_resolution_or_FOV_or_TTA_changes": false,
+    "base_checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+    "author224_checkpoint_sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+    "author224_stock_source_sha256": "b61046e344425c446370d3df1ca019cf278f13fba385117035f849484a5a85f0",
+    "native_fastread_sha256": "5a59b6f82e846bcdfd452aaee6ff518cdd9d0b04aab03691b45c3f70a5198cb0",
+    "public_checkpoint_author_Gold_selection_reuse": true,
+    "own_Gold_fit_or_checkpoint_selection": false,
+    "checkpoint_label_metadata_if_absent_stays_unconfirmed": true
+  },
+  "initial_phase_order": [
+    {
+      "phase": "base_original_ordinary_A1",
+      "source": "literal14",
+      "dispatch": "original common queue"
+    },
+    {
+      "phase": "base_original_ordinary_A2",
+      "source": "literal14",
+      "dispatch": "original common queue"
+    },
+    {
+      "phase": "base_bounded_ordinary_A1",
+      "source": "bounded base-only",
+      "dispatch": "existing ordinary two-GPU consumption"
+    },
+    {
+      "phase": "base_bounded_ordinary_A2",
+      "source": "bounded base-only",
+      "dispatch": "existing ordinary two-GPU consumption"
+    },
+    {
+      "phase": "base_bounded_fixed_A1",
+      "source": "same numerical base-only",
+      "dispatch": "diagnostic UID ordinal modulo2"
+    },
+    {
+      "phase": "base_bounded_fixed_A2",
+      "source": "same numerical base-only",
+      "dispatch": "same diagnostic UID ordinal modulo2"
+    },
+    {
+      "phase": "stock224_ordinary_A1",
+      "source": "literal author224",
+      "dispatch": "existing ordinary bounded consumption"
+    },
+    {
+      "phase": "stock224_ordinary_A2",
+      "source": "literal author224",
+      "dispatch": "existing ordinary bounded consumption"
+    },
+    {
+      "phase": "stock224_fixed_A1",
+      "source": "same literal author224",
+      "dispatch": "diagnostic UID ordinal modulo2"
+    },
+    {
+      "phase": "stock224_fixed_A2",
+      "source": "same literal author224",
+      "dispatch": "same diagnostic UID ordinal modulo2"
+    }
+  ],
+  "dispatch_controls": {
+    "fixed_assignment": "Cohort ordinal modulo2, exactly16 studies on each GPU; both identical models loaded on both GPUs.",
+    "fixed_assignment_is_diagnostic_only": true,
+    "ordinary_actual_UID_device_map_must_be_observed": true,
+    "keep_worker_count_and_declared_total_queue_bound": "Original nproc/outstanding settings and bounded total queue48 retained. Fixed routing must not grow the prepared-object bound.",
+    "implementation_diff_must_be_separate_receipt": "Fixed routing may require queue ownership changes; record those orchestration changes explicitly. Do not claim ordinary-vs-fixed comparison isolates GPU mapping if queue/arrival behavior differs.",
+    "comparison_scope": "Within-policy A/A measures repeat variability. Cross-policy comparison is descriptive until a matched routing control demonstrates the dispatch change alone.",
+    "pure_single_GPU_serving_change": false
+  },
+  "observation_and_persistence": {
+    "raw_probabilities": "Capture CPU float32 raw12 before any rank; capture per-view raw12 where available without adding GPU forward or tensor-copy calls. Preserve exact float32 bits and round-trip decimal CSV.",
+    "UID_device_identity": "Thread-local current-study context, per-study UID hash, actual CUDA device and view index; never use a shared global current UID across two consumers.",
+    "input": "Per-study original uint8 volume/mask SHA, shape/dtype/valid slots, actual worker FOV and source SHA. All phases must equal the same per-UID hashes.",
+    "load": "Checkpoint byte SHA, architecture, strict load result, tensor count and shape/dtype manifest SHA, 12-head shape, device; no checkpoint tensors in receipts.",
+    "backend_flags": [
+      "cudnn enabled/benchmark/deterministic/allow_tf32",
+      "cuda.matmul allow_tf32 and reduced-precision reduction flags",
+      "float32 matmul precision and deterministic-algorithms/warn-only state",
+      "flash/memory-efficient/math SDP enable flags",
+      "torch/timm/CUDA/cuDNN/device properties and available driver version",
+      "only allowlisted CUBLAS_WORKSPACE_CONFIG environment value"
+    ],
+    "backend_policy": "Read actual values before source setup, before inference and after phase. Preserve source setters benchmark=True and matmul.allow_tf32=True; do not alter flags, warm-up order, seed or determinism in this diagnostic.",
+    "resources": "Per-phase elapsed/RSS/disk, sampled per-device GPU peak and torch allocated/reserved peak, actual model/backbone forward counts, input shape/dtype/no_grad/AMP/fallback/cleanup counters.",
+    "write_order": "Create a fresh phase directory and exclusive receipts. Persist each completed study's compact raw and identity receipt; persist whole-phase raw CSV and full compact JSON immediately on completion, before any between-phase assertion.",
+    "failure": "Finally persist a distinct exclusive failed-phase receipt with completed UID hashes, actual counters/resources, exception and cleanup outcome. Keep previous phase outputs. Partial phase is never labeled complete.",
+    "observer_effect": "Observe source-returned CPU arrays and metadata. Record new hooks/timing overhead; scheduling variation introduced by observation is itself not a proven transport defect.",
+    "diagnostic_submission_deletion": "Delete only the workspace diagnostic submission.csv in finally, including mismatch/failure; never submit any profile CSV."
+  },
+  "independent_measurements": [
+    "Same-source A/A absolute raw differences and exact float32 ULP counts (median/p99/max), SHA identity, changed cells and finite range.",
+    "All12 average-percentile ranks, tie relation changes, pair-order flips and implicated UID hashes.",
+    "Original-vs-bounded differences stratified by equal/different observed UID device assignment; do not infer cause from correlation.",
+    "Stock224 same-device A/A raw and ranks; shared224-vs-stock224 matched control is a later root-reviewed phase, not automatically rerun here.",
+    "Per-phase strict original ordinal-rank contract: interpret CSV numbers as float32, compare exactly to float32(k/(N-1)); retain tied-group rank-set audit and cross-control CSV byte identity.",
+    "Exact independent original target fusion, plus hypothetical fixed90:10 final ranks only if the same once-run reader cache is available."
+  ],
+  "unreached_old_checker_defect": {
+    "source": "artifacts/research/20261008-p010-profile32-results-v3/fusion_checks.py:111",
+    "condition": "Float64 exact k/(N-1) was compared to Pandas serialization of original ranks.astype(np.float32).",
+    "scope": "Local checker discrepancy, separate from actualV3 line556 failure.",
+    "future_correction": "Compare exact float32 interpretation using standard-library struct; preserve ordinal rank sets and no numeric tolerance. Old checker remains immutable."
+  },
+  "decision_rules": {
+    "raw_absolute_tolerance_existing": 1e-07,
+    "raw_relative_tolerance_existing": 0.0,
+    "base_and_fused_crosscontrol_CSV_byte_identical_existing": true,
+    "GPU_sampled_and_reserved_limit_mib_existing": 13000,
+    "no_automatic_tolerance_relaxation_or_retroactive_V3_success": true,
+    "when_same_source_AA_differs": "Quantify repeat noise and describe scope. No claim that transport or expert changed the mathematical function follows without matched controls.",
+    "when_same_device_AA_still_differs": "UID GPU mapping alone cannot explain all observed variation. Observe backend state/order; do not switch precision or backend policy automatically.",
+    "when_expert_ranks_equal_but_raw_differs": "Record rank stability only. This neither passes the raw reproduction gate nor proves improved AUC.",
+    "after_measurement": "Root may review a separately justified future contract or request another single-factor diagnostic. Existing V3 failure and criteria remain recorded.",
+    "serving_candidate_gate": false,
+    "accuracy_or_hidden_runtime_gate": false
+  },
+  "prerun_artificial_requirements": [
+    "Exact source diff: original numerical functions, checkpoints, 14/19/21/V1/V2/V3 packages protected; only new profile observation/dispatch/persistence files.",
+    "Many-study CPU routing exact-once, deterministic fixed assignments, queue bounds, producer/consumer failure drain/task_done and no hangs.",
+    "Thread-local UID/view identities remain correct under two simultaneous consumers.",
+    "Exclusive writes preserve completed phase values on forced later mismatch and failed in-phase inference; no fake success.",
+    "Float32 rank CSV serialization and ULP edge-case tests, plus malformed/nonfinite/missingUID/wronghash refusal.",
+    "Reader replay commands/dependency paths/preflight exact p010 alias, real Notebook stdout lifetime probe before models."
+  ],
+  "execution": {
+    "child_remote_or_GPU_or_MRI_or_new_model_operations": 0,
+    "root_only_actual_API_launch_after_new_source_and_peer_review": true,
+    "no_profile_or_serving_V4_created_by_this_design": true,
+    "no_poll_loop_or_submission": true,
+    "actual_gpu_cost_and_hidden_runtime_not_measured": true
+  },
+  "protected_source_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/19_submit_p009_coat_fov160.ipynb": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+    "notebooks/public/21_submit_p010_swa224_rank10.ipynb": "4adf9088b97c795cb50e382b41d4a158950352ef4d5316fda40551111c39c41c",
+    "notebooks/public/21a_profile_p010_shared224_32.ipynb": "eaa9ec444a884ccb6f5f9c1fec427a6d85febd710cbc226b20b770c68bbce960",
+    "notebooks/public/21a_profile_p010_shared224_32_v2.ipynb": "86b16a97fec35c5c345b56b2eac479b4e70f66a04afaf97921837d6274290b05",
+    "notebooks/public/21a_profile_p010_shared224_32_v3.ipynb": "b6710a91dd8fc9cb472170f324453aa28ec2fc44d46be5013ba05be271d996b3",
+    "scripts/p010_shared_runtime.py": "494685ecee58ccd98771e5e287992c598bbeea8691fd08dbceb4ebd18e2f59b7",
+    "scripts/p010_author224_runtime.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+    "scripts/p010_profile_runtime.py": "710171f0c031fda29a1b9e2292fffe715fd7bdade7a14d2fc5e32101aea24244",
+    "scripts/p010_profile_runtime_v2.py": "907ec6ff904348883080cf3288ab2b1e39bf1da2e2606988ba4cbca2309ff2fc",
+    "scripts/p010_profile_runtime_v3.py": "5cdc78fef82f083a6519527b13c1bc8e8fd86223eb9ccda1afc1ae9d164d84f8",
+    "scripts/p006_profile_runtime.py": "b61115cc92ab335273a31cf12c754097e3f0844ce2b7aaf9fd50c56f755603ca",
+    "scripts/p007_profile_runtime.py": "a291d826ed287683cfa15e98eb207bb15fe459b04263a2e4c5fcda8730138549",
+    "scripts/p009_profile_runtime.py": "a8491a62f2b33501c4db01f695cc0afcc96da353e8badf6788fd82fa1a1e0591"
+  }
+}

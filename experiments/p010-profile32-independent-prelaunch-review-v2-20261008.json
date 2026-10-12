@@ -1,0 +1,106 @@
+{
+  "schema_version": "p010_profile32_child_import_v2_independent_prelaunch_review_v1",
+  "checked_at_utc": "2026-10-08T14:24:29.923264+00:00",
+  "all_passed": true,
+  "checks": {
+    "all14_19_21_V1_helpers_builders_and_notebooks_protected": true,
+    "old_independent60_review_preserved": true,
+    "all_V1_package_files_unchanged": true,
+    "new_canonical_Notebook_SHA": true,
+    "new_package_Notebook_bytes_match": true,
+    "runtime_SHA_manifest_and_new_helper_literal": true,
+    "only_two_Notebook_cells_differ": true,
+    "summary_cell_only_profile_helper_SHA_updated": true,
+    "entire_Notebook_metadata_and_other_fields_preserved": true,
+    "one_paired_shared224_call": true,
+    "all_five_original_bounded_shared_reader_fusion_literals_identical": true,
+    "all_other_observation_helper_hashes_identical": true,
+    "cohort_package_bytes_identical": true,
+    "same32_UID_hash_GoldUID_and_groups_excluded": true,
+    "all16_code_cells_compile_no_prior_outputs": true,
+    "only_three_child_observation_functions_added": true,
+    "all_existing_functions_other_than_orchestrator_literal": true,
+    "orchestrator_only_import_guard_preflight_and_receipt_changed": true,
+    "observation_guard_exact_two_helper_allowlist_hash_file_identity": true,
+    "unique_reader_import_insertion_without_run_definition_edit": true,
+    "real_child_preflight_exclusive_file30s_original_ownenvprefix": true,
+    "preflight_before_main_MRI_or_model_execution": true,
+    "preregistered_tolerances_memory_reader_fusion_unchanged": true,
+    "candidate_actual_execution_accuracy_gates_still_false": true,
+    "actual_V1_failure_evidence_all_hashes_preserved": true,
+    "bounded_actual_log_read_under4MiB": true,
+    "actual_original32_completed_before_child_import_error": true,
+    "actual_import_error_then_fallback_then_fatal_guard": true,
+    "V1_failure_does_not_qualify_new224_or_hidden_replay": true,
+    "all_protected_sources_still_same_after_review": true
+  },
+  "checks_passed": 30,
+  "checks_total": 30,
+  "source_sha256": {
+    "scripts\\p010_profile_runtime_v2.py": "907ec6ff904348883080cf3288ab2b1e39bf1da2e2606988ba4cbca2309ff2fc",
+    "scripts\\build_p010_profile_v2.py": "2aa534ca9be8a0b3caae9d1a536e9c8862122d868d8407b3990c10a60c483210",
+    "tests\\test_p010_profile_v2.py": "82e6499d4af947d94754ee729eff1eebd093e626373860bf0ac4c45f638db0fb",
+    "notebooks\\public\\21a_profile_p010_shared224_32_v2.ipynb": "86b16a97fec35c5c345b56b2eac479b4e70f66a04afaf97921837d6274290b05",
+    "artifacts\\kaggle\\p010-profile32-shared224-rank10-v2-20261008\\package.json": "5ddf426db7dee2fdaa6331f206e09cdfcbdbdad834e902dc655809ac9765efd0",
+    "artifacts\\kaggle\\p010-profile32-shared224-rank10-v2-20261008\\cohort.json": "25b504ab1e517058ab3ddb1be5f08ef2f0556c693a680b8ce6ce5d4dfc01ef54",
+    "experiments\\p010-profile32-first-failure-review-20261008.json": "c4a223071726d97cdd73e1688e6c1e385c7caf2b85cef8cede84c5390c70281b",
+    "experiments\\p010-shared224-independent-prelaunch-review-20261008.json": "78abfa38a44ed2d197f548f28381ffde32fa89b99f1e41ad433e3e298ed46a8c"
+  },
+  "protected_source_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/21_submit_p010_swa224_rank10.ipynb": "4adf9088b97c795cb50e382b41d4a158950352ef4d5316fda40551111c39c41c",
+    "notebooks/public/21a_profile_p010_shared224_32.ipynb": "eaa9ec444a884ccb6f5f9c1fec427a6d85febd710cbc226b20b770c68bbce960",
+    "scripts/p010_shared_runtime.py": "494685ecee58ccd98771e5e287992c598bbeea8691fd08dbceb4ebd18e2f59b7",
+    "scripts/p010_author224_runtime.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+    "scripts/p010_profile_runtime.py": "710171f0c031fda29a1b9e2292fffe715fd7bdade7a14d2fc5e32101aea24244",
+    "scripts/build_p010_shared224.py": "f4f78950b8776ab7a4d4bd686266f4314e02a2515b89661d223dc607643e6836",
+    "scripts/build_p010_profile.py": "f176dc1c0cd4aaac88e54db049950bbff9491eba59db7cb7098c09dd8c5bf183",
+    "notebooks/public/19_submit_p009_coat_fov160.ipynb": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c"
+  },
+  "protected_V1_package_file_sha256": {
+    "artifacts\\kaggle\\p010-shared384-swa224-rank10-v1-20261008\\21_submit_p010_swa224_rank10.ipynb": "4adf9088b97c795cb50e382b41d4a158950352ef4d5316fda40551111c39c41c",
+    "artifacts\\kaggle\\p010-shared384-swa224-rank10-v1-20261008\\config.json": "8717a572983cd6e543606e4f9d5c2724a489aa6f97199fbd3ed81d696a56bb81",
+    "artifacts\\kaggle\\p010-shared384-swa224-rank10-v1-20261008\\p010_author224_runtime.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+    "artifacts\\kaggle\\p010-shared384-swa224-rank10-v1-20261008\\p010_author224_stock.py": "d8b159caf4ea4a079aad13ac33c063c4bda3b2863591273971f7344935770133",
+    "artifacts\\kaggle\\p010-shared384-swa224-rank10-v1-20261008\\p010_shared_runtime.py": "494685ecee58ccd98771e5e287992c598bbeea8691fd08dbceb4ebd18e2f59b7",
+    "artifacts\\kaggle\\p010-shared384-swa224-rank10-v1-20261008\\package.json": "a945f8f900aae39e4b4dd5c1439e4e8e9369c6e414f66c01842e524080290342",
+    "artifacts\\kaggle\\p010-profile32-shared224-rank10-v1-20261008\\21a_profile_p010_shared224_32.ipynb": "eaa9ec444a884ccb6f5f9c1fec427a6d85febd710cbc226b20b770c68bbce960",
+    "artifacts\\kaggle\\p010-profile32-shared224-rank10-v1-20261008\\cohort.json": "25b504ab1e517058ab3ddb1be5f08ef2f0556c693a680b8ce6ce5d4dfc01ef54",
+    "artifacts\\kaggle\\p010-profile32-shared224-rank10-v1-20261008\\package.json": "b1f61c7fd20da2776dd8ba50a44b219bf324bdd5e22bfe23eaa42333d319bdbc"
+  },
+  "bounded_failure_excerpts": {
+    "path": "artifacts\\research\\20261008-p010-independent-prelaunch-review-v2\\bounded-failure-excerpts.json",
+    "sha256": "f4e00a027c8d5a9d5a19bce74c04d0a2efbf7637b9b00d7b94b32934c127a83b"
+  },
+  "independent_cpu_test_run": {
+    "tests": 34,
+    "existing_tests": 28,
+    "new_regression_tests": 6,
+    "reported_seconds": 4.214,
+    "exit_code": 0,
+    "command": ".venv/Scripts/python.exe -m unittest discover -s tests -p test_p010*.py -v",
+    "scope": "Actual child interpreter reproduces unbound import failure and verifies correction, altered hash rejection, stale module rejection and real helper import. Remaining tests check reader/source/build contracts. No actual MRI/model/GPU."
+  },
+  "ruff": {
+    "new_runtime_builder_test_files": "passed",
+    "exit_code": 0
+  },
+  "actual_T4_profile_gate_passed": false,
+  "accuracy_evaluated": false,
+  "decision": "Offline V2 child import correction passes; root may launch a fresh private T4x2 diagnostic32. Real four-control/reader/224/memory/CSV identity gates remain pending and no serving/submission gate is opened.",
+  "failure_scope": "V1 profile-only observation child import path defect; evidence does not identify any prior hidden-evaluation cause.",
+  "limitations": [
+    "Independent CPU subprocess tests use local Python; the exact Kaggle environment is checked by the new pre-model child preflight during the real run.",
+    "No real stock224 forward, all94 T4 memory or four-control pixel/raw/CSV identity was reached by V1.",
+    "Parent observed payload bound and worker-hardkill callback timeout limitations remain as in V1."
+  ],
+  "operations": {
+    "network": 0,
+    "API": 0,
+    "remote_mutations": 0,
+    "new_GPU": 0,
+    "actual_MRI_decode": 0,
+    "real_model_payload_reads": 0,
+    "training": 0
+  }
+}

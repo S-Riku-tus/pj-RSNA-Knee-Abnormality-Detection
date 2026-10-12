@@ -1,0 +1,104 @@
+{
+  "schema_version": "f005_regional_deterministic_dense_actual_QA_prefight_fold1_started_v1",
+  "at_utc": "2026-10-10T05:49:16.192858+00:00",
+  "own_best_official_Public": "0.951",
+  "strict_above960_achieved": false,
+  "P014_submission_ref": 57031186,
+  "P014_latest_observation": {
+    "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/submission-observation-v7/observation.json",
+    "sha256": "9c62e5f77bbc7f026cae17f7a9ae79e77224e028f0a4d2a52f8e2ad88e3ad1b0"
+  },
+  "P015_submission_ref": 57031981,
+  "P015_latest_observation": {
+    "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/submission-observation-v3/observation.json",
+    "sha256": "9de8ac033ed7735239ce192cbb34416ce8d7c92a47bf5a583512c6acf096fe5d"
+  },
+  "P014_Public": null,
+  "P015_Public": null,
+  "representation_hypothesis": "Keep native392 last2 and add16 fixed4x4 regional patch means to CLS; no learned region coordinates or extra parameters",
+  "engineering_difference_from_old_CLS": "Explicit strict deterministic dense GPU execution; original CLS did not fix the same policy. Any eventual gain cannot be attributed solely to representation.",
+  "config": {
+    "path": "configs/experiments/f005-dinov2-native-regional4x4-last2-fast16.json",
+    "sha256": "f59bdede1f70ca285771bb4da5bec7fcd3a0ba34987c06aae51a5a68de3dc102"
+  },
+  "source_handoff": {
+    "path": "artifacts/research/20261010-f005-regional-training-source-implementation-v3/handoff.json",
+    "sha256": "322d5cc808bac5113e749729769cf7032e3c380acd6b2316855f2a91521da226"
+  },
+  "actual_artificial_QA": {
+    "path": "artifacts/qa/20261010-regional4x4-dense-full144-v2/checks.json",
+    "sha256": "918df77fb71c094953a6f9bde7a88c2e466167ffcaadb8a4fd6d878697fb6a1b"
+  },
+  "actual_artificial_QA_checks_passed": 50,
+  "independent_actual_QA_review": {
+    "path": "artifacts/research/20261010-regional4x4-dense-decision-independent-v1/actual-QA-review-v1.json",
+    "sha256": "3a0ebce96a7f894cc5856a56d44d49492d2c9a7fa2dc54898a7f379eca8133d3"
+  },
+  "independent_checks_passed": 33,
+  "actual_artificial_optimizer_updates": 6,
+  "full144_valid_windows": 144,
+  "effective_group_sizes": [
+    16,
+    10,
+    4
+  ],
+  "all_trainable_parameter_count": 3633816,
+  "gradient_parameter_AdamW_state_repeatability": "All recorded differences zero",
+  "full144_observed_peak_reserved_bytes": 1272971264,
+  "fixed_tolerances_unchanged": true,
+  "optimizer_LR_epsilon_unchanged": true,
+  "actual_preflight": {
+    "path": "artifacts/research/20261010-f005-regional-deterministic-dense-training-root-v1/actual-preflight-capture-v1.json",
+    "sha256": "c2f188594d1eafb8f9135b03aa3e6ce5e3894934c4ec97110ba652198600e425"
+  },
+  "actual_run": "artifacts/runs/native-regional4x4-last2-dense-fast16-fold1-20261010-v1/run.json",
+  "initial_run_snapshot": {
+    "path": "artifacts/research/20261010-f005-regional-deterministic-dense-training-root-v1/initial-run-snapshot-v1.json",
+    "sha256": "a1345f045618c0ba0b775b86175570c2dc2a5084d7d18047ba10b5399f86d8c2"
+  },
+  "actual_train_status": "running",
+  "actual_training_fold": 1,
+  "training_studies": 3316,
+  "validation_studies": 891,
+  "completed_epochs_at_snapshot": 0,
+  "fixed_epochs": 12,
+  "seed": 20261002,
+  "selection": "Minimum observed-cell weak validation BCE after completing12 epochs; earliest tie",
+  "launch": {
+    "chunk_id": "31f576",
+    "unified_exec_session_id": 91809,
+    "at_utc": "2026-10-10T05:46:43+00:00",
+    "fresh_output": true
+  },
+  "own_Gold_fit_or_selection": 0,
+  "patient_independence_claimed": false,
+  "original_DICOM_bulk_download": 0,
+  "new_pixel_cache": 0,
+  "regional_upload_Save_Submit": 0,
+  "regional_actual_MRI_inference_qualification": false,
+  "regional_accuracy_improvement_demonstrated": false,
+  "preserved_failed_QA": [
+    {
+      "path": "artifacts/qa/20261010-regional4x4-streamed-full144-v1/checks.json",
+      "sha256": "1f6150d568ff6d092818c5d0d27b91b9d502ed04b51a69da1cf42476431f0c90"
+    },
+    {
+      "path": "artifacts/qa/20261010-regional4x4-streamed-full144-v2/checks.json",
+      "sha256": "cfc441f493bc6f908ae793abcdcacce82b363ba9338f02d2917bb7a92d87bb4b"
+    },
+    {
+      "path": "artifacts/qa/20261010-regional4x4-dense-full144-v1/checks.json",
+      "sha256": "9db4bd7d14eac74036ecf35d2e5515ad744f689891362eacd442a72406b9a3de"
+    }
+  ],
+  "causal_correction": {
+    "path": "artifacts/research/20261010-regional4x4-dense-decision-independent-v1/causal-review-v2.json",
+    "sha256": "6ab33c20725204469c33f21481fb8003e7eb3cbd65d09da1b6fb5203cc4f46e0"
+  },
+  "official_reproducibility_documentation": "https://docs.pytorch.org/docs/2.10/notes/randomness.html",
+  "serving_source_only_plan": {
+    "path": "artifacts/research/20261010-f005-regional-serving-source-plan-v1/plan.json",
+    "sha256": "801a4cbb37e01f51d3156c5ac52fdda43cc798991254cafeafbb0ce553e49646"
+  },
+  "next": "Finishfixed12 thencompare matched weakfold1 and strictCPU; observeP014P015 separately; futurefold0 samefreshconfig; regionalCPU64_256/serving require new actual qualification"
+}

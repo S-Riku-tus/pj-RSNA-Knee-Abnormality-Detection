@@ -1,0 +1,105 @@
+{
+  "schema_version": "p010_savedV3_actual_failure_review_v1",
+  "at_utc": "2026-10-08T15:23:38.535853+00:00",
+  "saved_ref": "rsraki/p010diag-d6a587bcefded28cde96453a8ba1848f",
+  "saved_version": 3,
+  "kernel_id": 137683716,
+  "official_visible_status": "ERROR",
+  "official_failure_message": "",
+  "all_passed": true,
+  "checks": {
+    "exact_savedV3_source_and_environment_binding35": true,
+    "official_raw_and_typed_ERROR_not_COMPLETE": true,
+    "one_real_log_and_output_metadata_readset_bound": true,
+    "first_actual_traceback_is_original_bounded_CSV_SHA_assertion": true,
+    "all4_controls_returned_before_failing_comparison": true,
+    "3_source_bound_actual_fusion_success_calls_no_fallback": true,
+    "9_allowlisted_CSV_actual_bytes_SHA_revalidated": true,
+    "true_two_cell_Lateral_Meniscus_order_swap_not_text_formatting": true,
+    "original_shared_base_and_fusion_actual_bytes_identical": true,
+    "224raw_difference_over_1e7_preserved": true,
+    "224rank_and_hypothetical_fixed10_equal_not_accuracy_gate": true,
+    "missing_saved_raw_base_and_GPU_assignment_not_invented": true,
+    "no_UID_in_tracked_evidence": true,
+    "prediction_sources_and_prior_failure_evidence_preserved": true
+  },
+  "first_error": {
+    "exception": "AssertionError",
+    "source": "scripts/p010_profile_runtime_v3.py",
+    "function": "paired_shared224",
+    "line": 556,
+    "condition": "original main CSV SHA must equal bounded base-only main CSV SHA",
+    "visible_log_traceback_seconds": 331.30231715,
+    "reason_independently_measured": "Two adjacent Lateral Meniscus ranks swapped; same headers, same UID order, original/shared main and fused CSVs byte identical."
+  },
+  "reached_phases": {
+    "original_base32_main_written": true,
+    "actual_reader_and_original_fusion_returned": true,
+    "bounded_base32_and_cached_reader_fusion_returned": true,
+    "shared_base224_32_and_cached_reader_fusion_returned": true,
+    "independent_stock224_reference_returned": true,
+    "all4_native_volume_and_mask_hash_comparison_assertions_passed": true,
+    "scope": "Saved-source control flow plus actual primary traceback/stdout. Concrete internal load, forward, memory and pixel-hash receipts were not exported before abort."
+  },
+  "direct_numeric_evidence": {
+    "original_bounded_main_changed_cells": 2,
+    "original_bounded_main_maxabs": 0.03225806000000003,
+    "original_bounded_fused_maxabs": 0.03125,
+    "original_shared_main_byte_identical": true,
+    "original_shared_fused_byte_identical": true,
+    "shared_stock224_raw_changed_cells": 300,
+    "shared_stock224_raw_maxabs": 0.0005064457654953003,
+    "shared_stock224_average_percentile_rank_maxdiff": 0.0,
+    "same_incumbent_hypothetical_fixed90_10_rank_maxdiff": 0.0,
+    "original_fusion_math_all3_maxdiff": 0.0
+  },
+  "not_observed": [
+    "Base raw probabilities before ranking",
+    "Actual UID-to-GPU assignments",
+    "Per-phase actual CUDA backend flags",
+    "Independent concrete GPU peaks and forward-event totals",
+    "Cause of raw/rank variation",
+    "Hidden-data runtime/coverage and score"
+  ],
+  "model_error_scope": "The run reached all four controls without an earlier reported architecture/load/forward/OOM error. This does not prove hidden-data model coverage or numeric resource peaks.",
+  "diagnostic_submission_csv_present_at_abort": true,
+  "diagnostic_submission_csv_eligible_for_competition_submission": false,
+  "summary_complete_or_final_candidate_created": false,
+  "candidate_gate_passed": false,
+  "accuracy_evaluated": false,
+  "thresholds_preserved": {
+    "raw_absolute": 1e-07,
+    "raw_relative": 0.0,
+    "base_and_fused_csv_byte_identical": true
+  },
+  "protected_source_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/19_submit_p009_coat_fov160.ipynb": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+    "notebooks/public/21_submit_p010_swa224_rank10.ipynb": "4adf9088b97c795cb50e382b41d4a158950352ef4d5316fda40551111c39c41c",
+    "notebooks/public/21a_profile_p010_shared224_32.ipynb": "eaa9ec444a884ccb6f5f9c1fec427a6d85febd710cbc226b20b770c68bbce960",
+    "notebooks/public/21a_profile_p010_shared224_32_v2.ipynb": "86b16a97fec35c5c345b56b2eac479b4e70f66a04afaf97921837d6274290b05",
+    "notebooks/public/21a_profile_p010_shared224_32_v3.ipynb": "b6710a91dd8fc9cb472170f324453aa28ec2fc44d46be5013ba05be271d996b3",
+    "scripts/p010_shared_runtime.py": "494685ecee58ccd98771e5e287992c598bbeea8691fd08dbceb4ebd18e2f59b7",
+    "scripts/p010_author224_runtime.py": "6c4417cf21f7bcca27fe51c610e0d8334f0eb7a2e3ff448abaf705b96fac157c",
+    "scripts/p010_profile_runtime.py": "710171f0c031fda29a1b9e2292fffe715fd7bdade7a14d2fc5e32101aea24244",
+    "scripts/p010_profile_runtime_v2.py": "907ec6ff904348883080cf3288ab2b1e39bf1da2e2606988ba4cbca2309ff2fc",
+    "scripts/p010_profile_runtime_v3.py": "5cdc78fef82f083a6519527b13c1bc8e8fd86223eb9ccda1afc1ae9d164d84f8",
+    "scripts/p006_profile_runtime.py": "b61115cc92ab335273a31cf12c754097e3f0844ce2b7aaf9fd50c56f755603ca",
+    "scripts/p007_profile_runtime.py": "a291d826ed287683cfa15e98eb207bb15fe459b04263a2e4c5fcda8730138549",
+    "scripts/p009_profile_runtime.py": "a8491a62f2b33501c4db01f695cc0afcc96da353e8badf6788fd82fa1a1e0591"
+  },
+  "evidence_sha256": {
+    "experiments/p010-profile32-third-failure-CSV-review-sanitized-r2-20261009.json": "f0b0597eab209cfd541b0910b76619e741ec91b4f6b67ceadc9029219e4211c5",
+    "experiments/p010-profile32-savedV3-binding-review-20261008.json": "f111daf4a204a4aa7c1b2bf54017d24cc7f755a9e043545e7536a5f8139022c3",
+    "artifacts/research/20261009-p010-profile32-failure-v3/observation-v1/failure-read-receipt.json": "1ce2d8b58e1a1d4028e8202ae15eaa6c7b83d64b30839e8f3785a0c720956d21",
+    "artifacts/research/20261009-p010-profile32-failure-v3/csv-audit-v1/CSV-download-receipt.json": "d2690f22b8c279afc46505569f48a62d41992f76673e4457adb951a782836ccb",
+    "artifacts/research/20261009-p010-profile32-failure-v3/observation-v1/status.json": "69d3b29ef671bc264f58d56584c62c4975d1c3c077c3e19303c92ba219c631b5",
+    "artifacts/research/20261009-p010-profile32-failure-v3/observation-v1/session-log.raw": "542c3ca5201426badd842347b2b383a6d05f670c05de1dd35420af7110dd588d",
+    "artifacts/research/20261009-p010-profile32-failure-v3/observation-v1/visible.log": "f8ea46d174c3c39116f32d795e9cb774cce47417b7b456c20bf464147adb502c"
+  },
+  "operations_for_this_local_review": {
+    "network": 0,
+    "new_GPU_or_MRI_or_model_access": 0,
+    "remote_mutation": 0
+  }
+}

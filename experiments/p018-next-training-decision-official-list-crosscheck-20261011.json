@@ -1,0 +1,45 @@
+{
+  "schema_version": "rsna_knee_P018_next_training_and_current_submission_crosscheck_v1",
+  "run_id": "p018-next-training-decision-official-list-crosscheck-20261011",
+  "at_utc": "2026-10-10T16:00:31.535955+00:00",
+  "at_JST": "2026-10-11T01:00:31.535955+09:00",
+  "previous_goal_turn_classification": "progress",
+  "previous_turn_completed_source_work": {
+    "path": "experiments/p018-metadata-api-contract-fixed-source-ready-20261011.json",
+    "sha256": "27d5b8ee2fae31ca96add95bcd88d25765c2932180ef7b23025c6aba49c44140"
+  },
+  "training_decision": {
+    "path": "artifacts/research/20261011-p018-next-training-decision-v1/report.json",
+    "sha256": "7286df05bc9637da1bc18f5a6cb8a9f2b2768e5dcc9de2cd95ac5dfdab5146be"
+  },
+  "new_training_started": false,
+  "decision": "Measure the already trained fixedREG50/CLS50 candidate first; the observed four curves do not support simply extending epochs or increasing trainable blocks.",
+  "curve_scope": "Observed weak labels in the existing completed runs; not Gold, independent test performance, or a causal capacity experiment.",
+  "existing_fold2_or_last4_training_already_qualified": false,
+  "score_protocol_primary_source_review": {
+    "path": "artifacts/research/20261011-p016-p017-score-protocol-source-review-v1/report.json",
+    "sha256": "8b66587735ef5369fd53c611c96c5241132d0f21a650acedc12b50cf9c9851a5"
+  },
+  "missing_GetSubmission_required_fields_or_wrong_endpoint_found": false,
+  "alternate_official_firstpage_single_read": {
+    "path": "artifacts/research/20261011-p016-p017-firstpage-score-crosscheck-v1/actual-firstpage-observation-v1/observation.json",
+    "sha256": "1411321a583f48146bb9183be97cbc0edb78c722d378858f57c4af9e227ada2f"
+  },
+  "alternate_reader_source": {
+    "path": "artifacts/research/20261011-p016-p017-firstpage-score-crosscheck-v1/read_once.py",
+    "sha256": "02c29f53484ef7834f7f71c9ea4f60113db7e2bc4e4372cd6df3214dc681d31d"
+  },
+  "new_safe_evidence": "Both current accepted IDs are present in the official first page, but neither supplies explicit raw status or Public score. No old submission result was retained or used.",
+  "score_status_after_crosscheck": "UNKNOWN",
+  "new_own_Public": null,
+  "official_failure_description_returned": false,
+  "verified_hidden_job_running_claim": false,
+  "REG_upload_specific_answer_received": false,
+  "auto_review_specific_egress_rejection_still_applies": true,
+  "REG_Start_PUT_Create_calls": 0,
+  "new_mixed_MRI64_256_Serving_qualified": false,
+  "model_teacher_Report_Gold_GPU_access_during_crosscheck": 0,
+  "own_best_Public": 0.951,
+  "strict_above960_achieved": false,
+  "next": "Await the already-pending concrete Regional upload approval or returned official score. The prepared Regional byte verification, mixed64/256 and Serving must use actual new receipts; do not infer new permission or restart submitted jobs from omitted status."
+}

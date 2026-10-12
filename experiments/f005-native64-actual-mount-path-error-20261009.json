@@ -1,0 +1,34 @@
+{
+  "schema_version": "f005_native64_actual_pre_inference_path_failure_v1",
+  "at_utc": "2026-10-09T05:36:29.904449+00:00",
+  "ref": "rsraki/n392diag-803d4ccd30e81d4b48c713883f84fd5d",
+  "kernel_id": 137811090,
+  "saved_version": 1,
+  "official_status": "ERROR",
+  "error_type": "FileNotFoundError",
+  "traceback_location": "cached_runtime.py:279; structural series CSV SHA before MRI workers/model loader",
+  "missing_requested_path": "/kaggle/input/rsna-knee-abnormality-detection/train_series.csv",
+  "confirmed": "The diagnostic wrapper fixed the old flat competition root and the requested structural CSV was absent there.",
+  "not_established": "Actual competition mount root was not listed in this log. The nested competitions layout is a candidate, not an observation.",
+  "planned_repair": "Fresh wrapper resolves a unique structural competition root from known mount candidates and verifies the pinned series CSV SHA before invoking unchanged runtime. Absent, ambiguous, and mismatched candidates stop.",
+  "source_and_model_numeric_change": false,
+  "native64_qualified": false,
+  "native256_qualified": false,
+  "actual_failure_elapsed_seconds_from_log": 21.123120868,
+  "new_competition_submissions": 0,
+  "own_Public_best": "0.950",
+  "own955_achieved": false,
+  "strict_above960_achieved": false,
+  "last2_training_unchanged_and_continuing": true,
+  "proofs": {
+    "official_saved_status_and_source_review": {
+      "path": "artifacts/research/20261009-f005-native-runtime-root-v1/native64-observation-v1/review.json",
+      "sha256": "321a653431d8ec4ff6d8a0e9c81ebf0bc23db38e3e835ad6658a1fa4afde34e4"
+    },
+    "actual_log_URLs_redacted": {
+      "path": "artifacts/research/20261009-f005-native-runtime-root-v1/native64-observation-v1/visible-error-log-safe.json",
+      "sha256": "6c4597c91f06f7056f227c1a8fb4c38bb65e82668bcf9ae24a2b72295daa395b",
+      "before_redaction_sha256": "f686aec8f7f96f3c564881b555907d549efa66d549d0211d52557aa139801ac0"
+    }
+  }
+}

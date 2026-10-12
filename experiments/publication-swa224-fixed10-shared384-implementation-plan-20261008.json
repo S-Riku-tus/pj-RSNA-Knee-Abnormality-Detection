@@ -1,0 +1,244 @@
+{
+  "schema_version": "source_bound_author224_fixed10_shared384_handoff_plan_v1",
+  "created_at_utc": "2026-10-08T12:53:32.031426+00:00",
+  "status": "offline_plan_only_not_implemented_not_profiled_not_launched",
+  "all_passed": true,
+  "checks": {
+    "inventory22passed_and_candidate_not_gated": true,
+    "baseline_source_protected_sameSHA": true,
+    "immutable_author_savedV2_source_sameSHA": true,
+    "stock_required9_numerical_symbols_source_bound": true,
+    "stock_infer_no_grad_decorator_present": true,
+    "source12_target_order_exact_baseline": true,
+    "shared_reader_B64_exact_and_full384slots": true,
+    "stock_K94_crop_fraction08_res224_bound": true,
+    "stock_fixed12_output_default_arch_bound": true,
+    "plan_only_no_actual_model_or_MRI": true
+  },
+  "checks_passed": 10,
+  "candidate_gate_passed": false,
+  "implementation_owner": "Future separate branch agent chosen by root; current plan does not authorize a new remote launch.",
+  "execution_order": "After current p009 and native first-shard QA; remote scheduling/launch/submission remains root-owned.",
+  "incumbent": {
+    "notebook": "notebooks/public/14_submit_p005_public950_control.ipynb",
+    "sha256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "own_Public": "0.950",
+    "protection": "Never edit14 or replace its stored source/package. Generate a fresh candidate with explicit coupling-only main consumer differences and separate author224 helper. Preserve original CoAt/ConvNeXt math,7 original code-cell references, target coefficients and baseline CSV bytes in a separate backup."
+  },
+  "immutable_author_reference": {
+    "path": "artifacts/research/20261008-public-candidates/nartaa-rsna-knee-0945-efficient-224crop-v2/source.ipynb",
+    "source_sha256": "b80d3b72a1c34f2b39b3ea0d2952f039b8d27c3feb5c4db0a7d0ab62ae75354e",
+    "notebook_ref": "nartaa/rsna-knee-0945-efficient-224crop",
+    "saved_version": 2,
+    "script_version_id": 356179962,
+    "linked_submission_id": 56921671,
+    "author_Public": "0.945",
+    "code_cell3": "Checkpoint path and declaredSHA qualification.",
+    "code_cell4": "Full authoritative224 numerical definitions and original single-view main.",
+    "bound_symbol_definitions": {
+      "_crop": {
+        "definition_source_utf8_sha256": "1abff48888d855b653320b23f01ed0618bad29adc565a63e2061c1d34a0615ca",
+        "decorators": []
+      },
+      "build_backbone": {
+        "definition_source_utf8_sha256": "f5a1634d2e2a54a81265cf1e5b809afaf28b145d88d2cd24bcc48f5bb08ef1a3",
+        "decorators": []
+      },
+      "RaptorClassifier": {
+        "definition_source_utf8_sha256": "da765dd0bd9b371e563a541d5ffbc445d1138d2320d99cc0d8c2b7275e588b75",
+        "decorators": []
+      },
+      "load_model": {
+        "definition_source_utf8_sha256": "17a8beda51380fe0f0983b8bc7061558187ae112a10f0af7523bd49aecc1a3d5",
+        "decorators": []
+      },
+      "_eval_centers": {
+        "definition_source_utf8_sha256": "4ddfae29b35a0580a8b1df43bb4dcce0cac15b6a4d6473313d23390780d1acb3",
+        "decorators": []
+      },
+      "eval_windows": {
+        "definition_source_utf8_sha256": "6b5b2b026d9dd0e3396fc388e77237dcab76c7bc1ca49561337b30bfb704c9c4",
+        "decorators": []
+      },
+      "gpu_windows": {
+        "definition_source_utf8_sha256": "aa59baadaf18b1b276d7b6c99cd1680291e3e8fe0d6c12cbe8e5e2efe501d0a7",
+        "decorators": []
+      },
+      "infer_probs": {
+        "definition_source_utf8_sha256": "1185858b02024a7653421dda7b560bdc67eff06bf7fbe006582c9605cc1eb470",
+        "decorators": [
+          "torch.no_grad()"
+        ]
+      },
+      "rankpct": {
+        "definition_source_utf8_sha256": "e4ec008a6db3f7ada25c9968d72adbd47d1902a9933585610e20fc4326b12e34",
+        "decorators": []
+      }
+    },
+    "note": "Retain decorators/default arguments/constant values, not only AST body snippets. Opening Raptor0.924/64slice docstring is stale lineage; selected-card/current constants govern recipe."
+  },
+  "stock224_contract": {
+    "dataset_ref_version": "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+    "file": "raptor_ft_alldata_t16_blendjev_oai_d96_c08_r224_swa.pt",
+    "listed_bytes": 292842755,
+    "declared_SHA256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+    "arch_default": "coatnet_rmlp_2_rw_224.sw_in12k_ft_in1k",
+    "resolution": 224,
+    "architecture_compatibility_pending": "Actual checkpoint arch/res/state keys+shapes+dtypes must match stock224 strict loader; do not load224 into baseline320/384model or interpolate bias tables without another one-factor experiment.",
+    "input_shared_volume": {
+      "shape": [
+        96,
+        384,
+        384
+      ],
+      "dtype": "uint8",
+      "mask_shape": [
+        96
+      ],
+      "physical_FOV_mm": 140.0,
+      "slots": [
+        [
+          "Sagittal",
+          1,
+          26
+        ],
+        [
+          "Sagittal",
+          0,
+          22
+        ],
+        [
+          "Coronal",
+          1,
+          18
+        ],
+        [
+          "Coronal",
+          0,
+          12
+        ],
+        [
+          "Axial",
+          -1,
+          18
+        ]
+      ],
+      "fastread_variant": "study_lut",
+      "source_shared_byte_identical": true,
+      "actual_shared_vol_mask_byte_identity_tested": false
+    },
+    "windowing": "Stock _eval_centers(mask,D=96,k=94); each centre uses(c-1,c,c+1) channels. Keep exact low-valid/allmissing fallback and mask data; no missing-slot target imputation.",
+    "crop_resize": "_crop uses round(384*0.8)=307 central pixels (offset38), then bilinear224 align_corners=False before ImageNet normalization. Exact LUT/window definitions, not native224 crop or baseline320crop.",
+    "normalization": "Exact float32 uint8/255 plus stock ImageNet mean/std LUT arithmetic; checkpoint expects this path.",
+    "forward": {
+      "shape": [
+        1,
+        94,
+        3,
+        224,
+        224
+      ],
+      "views": 1,
+      "mode": "eval plus @torch.no_grad(), torch.autocast CUDA float16, sigmoid(logits.float())",
+      "backbone_batch": "Stock encode flattens all94windows in one forward. Do not silently change to baselinechunk16: altered batched numerical execution requires a separate approved/validated factor.",
+      "fallback": "Stock infer_probs catches RuntimeError then FP32 fallback. Resource profile must observe actual forward dtype/count and reject qualification if fallback occurred. Unexpected checkpoint/CUDA/programming errors are fatal, not0.5/expert-skip success."
+    },
+    "strict_load": "Exact public source uses load_state_dict(strict=True); preflight must independently verify actual224metadata and expectedSHA before accepting any model. No retrain or dropout/BN update.",
+    "labels": [
+      "ACL",
+      "MCL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Synovitis",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ],
+    "raw_predictions": "One single-view stock224 probability vector per UID, all12finite. Store these before source rankpct; never confuse ordinal stock rankcsv with raw model output.",
+    "Gold_boundary": "Author both models are seed42/shared2399OAI and reuseGold58 selection/development. Selectedcheckpoint provenance is not own independent CV; no own Gold image-derived labels for fit, coefficient optimization, checkpoint/model selection, or profile cohort. Whole-group Gold exclusion uses structural manifests only; teacher/Report reads prohibited."
+  },
+  "shared_decode_design": {
+    "preferred_topology": "One original main preprocessor stream -> one original GPU consumer per device -> original plain+mirror probability assignment -> independent author224 single-view probability -> release study volume/mask.",
+    "why_not_append_after_finished_baseline": "Original14 discards decoded volumes. A final append cannot reuse them without either a secondMRI decode or a wholecohort cache. Use per-study shared consumption in fresh candidate main only.",
+    "baseline_prediction_invariants": [
+      "Original reader _FASTREAD_B64 and make_builder IMG384/FOV140/slots/studyLUT remain exact; return original sid/vol/mask objects to baseline path.",
+      "Do not overwrite baseline globals, class definitions, INPUT_RES, CROP_FRAC, _WLUT, ARMS or model references with224definitions. Use a dedicated helper namespace for224 constants/classes/LUT/model.",
+      "Compute baseline xw/xm and infer_pair_probs exactly; write original arm_probs before expert use and never replace that result. ConvNeXt k16 and existing target-specific fusion remain exact.",
+      "224window advanced indexing creates its own triplet tensors; helper must never write into shared vol/mask. Compare their bytehashes before/after each synthetic/paired32 branch.",
+      "Baseline final submission.csv is copied atomically to candidate-specific apex_incumbent.csv before finalfixed fusion. Backup remains byteexact even if candidate qualification fails."
+    ],
+    "transport_and_lifecycle": [
+      "Consume both branches sequentially for one study on the same GPU consumer. Retain only tiny N*12probability arrays, no secondvolume queue and no fullcohort volume diskcache.",
+      "Release baseline activation references after their result is stored, then run224; release224windows/output and study reference afterward. Shared model residency and allocator peaks must be observed.",
+      "Bind and cleanup expert models explicitly after q.join/thread.join; do not mutate incumbent model references. Unexpected worker errors must be reported to main with bounded cancellation/drain/finally task_done to avoid deadlock.",
+      "Original qmax48 bounds that queue only: Pool.imap_unordered can prefetch more results. Added224time may expose this bufferedRAM risk. Profile and future bounded outstanding-task delivery must preserve numerical/UID contracts; do not assert fullhidden RAM bounded merely from qmax48.",
+      "Any exec profile uses registeredModuleType/sys.modules through Pool lifetime, actual _pre_one/_pre_init ForkingPickler identity and mandatory Linux3task transport probe; previousp009V1failure must not recur."
+    ],
+    "payload_bytes": {
+      "one_volume": 14155776,
+      "original_queue48_only": 679477248,
+      "each_GPU_extra_model_file_bytes_not_VRAM_estimate": 292842755,
+      "note": "These are payload arithmetic, not totalRSS/allocator estimates. Pool buffering, original models, normalizedwindows and94batch activation require actual measurement."
+    },
+    "source_change_rule": "14 itself stays immutable. A future generated candidate may change its copied main orchestration only to attach the extra224consumer and error/resource observations. Every altered source block must be enumerated and baseline numerical functions/reader/other original cells compared literally."
+  },
+  "fixed_fusion": {
+    "expert_weight": 0.1,
+    "incumbent_weight": 0.9,
+    "coefficient_status": "Preregistered hypothesis only; no accuracy guarantee or Gold/weak/Public tuning.",
+    "targets": "All12in the exact original column order.",
+    "recipe": "For N>=2, average percentile rank(method=average,pct=True) each originalp005CSV column and each raw224probability column; z=0.9*rank_p005+0.1*rank_224; output average percentile rank(z). UIDorder exactlyincumbent.",
+    "tie_policy": "Use average ties in both inputs/finalfusion. Source224 rankpct(doubleargsort) is an ordinal display transform; ownfusion ranks rawprobabilities rather than arbitrary source tie ordering. Explicitly record this fixedfusion choice.",
+    "small_input": "For N<2, skip extra branch/fusion, preserve incumbent bytes and mark specialist_used=false with explicitreason. N=0 first follows baseline contract; never publish a misleading passed candidate if baseline itself cannot handle0rows.",
+    "publication": "Build fresh candidate tempfile, validate13columns/UIDs/finite before atomicreplace. Preserve backup and intermediate raw224CSV. Summary distinguishes passed-specialist-used versus inputfallback/failure; visible fallback is not eligible for root submission."
+  },
+  "mandatory_tests_before_real_profile": [
+    "Stdlib CSV tests: exact13columns/UIDorder, finite, duplicateUID rejection, ties and independent90:10formula, atomicnewoutput/no staleCSV, N0/N1explicitstatus.",
+    "Artificial tensor forward only afteractual224checkpoint availability is authorized: sharedvol/mask unchanged; base plain+mirror and exact stock224 numerics, correct94batch/224shape/eval/no_grad/FP16, allmissing and sparsemaskfinite, no broad error absorption.",
+    "CPU fakeworker transport/cancellation: UIDexactonce, no mutation, bounded failure cleanup/queue task_done, Linuxfork3task once in savedprofile. This does not prove MRI or hiddenresource capacity."
+  ],
+  "required_real_profile32": {
+    "cohort": "Reuse fixed32weakUID orderfb83b0b77b4539eb70b142cecc69c3cbc6a0ae4a8763381869078cc936b6fc07, structurallyGold/group excluded; no targets/Report.",
+    "phases": [
+      "Source-bound stock14 baseline reference on32 (reuse exactexistingp009FOV140outputs only if they COMPLETE and source/environment/cohort/actualraw reference cover required contracts; otherwise a pairedbaseline run is necessary).",
+      "Author224standalone reference with byte/mask/rawprob capture, and shared384dualconsumer candidate on same32 under incumbentcontainer2757...T4x2OFF. Resource-only, no fusionweightselection.",
+      "ConvNeXt executes once forbaselinep005CSV; expert is added afteroriginalfinalp005CSV. Reference andsharedbaseline rawprobabilities,vol/maskhashes andp005CSV byteexact must match; expert raw12stockversusshared maxabsdiff0 demanded first, numerical deviation requires investigation rather than silently loosened tolerance."
+    ],
+    "actual_gates": [
+      "Savedsource/privateT4x2OFFOriginal/exactV1Inputs binding; actual224SHA/strictcheckpointarch/res/keys/dtypefinite/classorder12.",
+      "32exact UID results, each96x384x384uint8/mask96 hash before/after preserved, no duplicateDecode planned for shared run; standalone reference decode is a separate diagnostic phase.",
+      "Actual224forwardcount32, each1x94x3x224x224singleview, model.eval/no_grad/FP16all; baseline64pairedplain+mirror predictions preserved, bothGPUused, fallback0/programmingerror0.",
+      "Missingmask andallmissing synthetic edgegate; actualcompressed-codec coverage reported bytransferSyntax, noncompressed32success never establishesunseen compressed support.",
+      "Actual elapsed decode/base/expert/ConvNeXt/fusion andRSS plus bothGPU allocated/reserved/observerpeaks withbase+expertmodels resident; no wholecohortdiskcache or leftovertemporaryfiles.",
+      "All13CSVcolumns/UIDorder/finiteness, baselinebackupSHA, branchraw224SHA, independentstdlib fixedfusionmaxdiff0, actualspecialist_used=true/statuspassed andatomiccandidateSHA."
+    ],
+    "limits": "32profile establishes the measuredcohort/runtimepath only; no fullhidden size/decoder/memory guarantee. Addedbranch requires largerN buffering evidence if transport remains unbounded, and complete savedserving visiblegate before any rootcompetitioncomparison."
+  },
+  "handoff_deliverables_if_root_later_implements": [
+    "New candidate Notebook/helper/builder and privatepackage with fullbaseline/stocksource/checkpoint/Input/container/configSHA provenance; no overwrite14/19a/existingpackages.",
+    "New diagnostic32Notebook/package, artificialcontracttests, preparationJSON and independentprelaunchreview; not forcompetition.",
+    "Compactsummary/raw12CSV/baselinebackup/candidateCSV/resourceevents with independentdownload/verifier andsavedbinding review; noMRI/model/volume export."
+  ],
+  "unmeasured": [
+    "additional224actualpayloadstrictload",
+    "samecontainerGPUresource",
+    "sharedpathnumericidentity",
+    "errorcorrelation",
+    "ownPublicgain",
+    "fullhiddencompletion"
+  ],
+  "execution_performed": false,
+  "GPU_model_MRI_access": false,
+  "network_or_remote_mutation": false,
+  "evidence_sha256": {
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "artifacts/research/20261008-public-candidates/nartaa-rsna-knee-0945-efficient-224crop-v2/source.ipynb": "b80d3b72a1c34f2b39b3ea0d2952f039b8d27c3feb5c4db0a7d0ab62ae75354e",
+    "experiments/publication-swa-v1-additional-checkpoint-audit-20261008.json": "091df401793fc98efd612590a0c7a82c359387c4e3d1ee4834bbcc55fedc44ce",
+    "artifacts/research/20261008-publication-swa-additional-checkpoint-audit-v1/write_plan.py": "60e38d5448b4de8e120f2d8c52bb27b4409e19d9af2b284337c11b9a2e02108e"
+  },
+  "docs_ledger_owner": "root"
+}

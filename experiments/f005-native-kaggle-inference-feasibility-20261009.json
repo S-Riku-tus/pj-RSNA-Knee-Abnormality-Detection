@@ -1,0 +1,173 @@
+{
+  "schema_version": "f005_native392_Kaggle_inference_source_feasibility_v1",
+  "at_utc": "2026-10-09T02:52:34.168841+00:00",
+  "scope": "Local source and existing small receipt JSON only; no model/checkpoint, teacher, NPZ/ZIP body, MRI, GPU, API, HTTP, upload, fit or submission.",
+  "checks": {
+    "checkpoint_schema_source_target_pixel_and_real_weak_selection_guards_present": true,
+    "apply_prefix_provenance_suffix_head_shape_dtype_finite_strict_guards_present": true,
+    "original_factory_constructs_CLS_NativeTripletMIL_only": true,
+    "generic_loader_has_sha_source_tree_and_already_imported_DINO_rejection": true,
+    "predict_native_is_sequential_single_default_cuda_and_no_Report_read": true,
+    "bounded_reader_not_in_existing_checkpoint_source_inventory": true,
+    "no_representation_or_model_class_gate_in_old_load_apply": true,
+    "protected_old_source_config_notebooks_unchanged": true
+  },
+  "all_source_checks_passed": true,
+  "source_review_checks": 8,
+  "candidate_gate_passed": false,
+  "inference_branch_connected": false,
+  "actual_trained_checkpoint_inspected": false,
+  "headline": "The existing numerical factory, strict suffix/head loader and native392 reader are reusable. A baseline-preserving, dual-T4 standalone branch needs a new orchestrator and a trained-bundle identity contract; current predict_native is a single-GPU starting point, not a qualified submission path.",
+  "reuse": {
+    "checkpoint": {
+      "path": "src/rsna_knee/native_training_fast16.py",
+      "make_line": 176,
+      "load_line": 212,
+      "apply_line": 239,
+      "schema": "native392_generic_dino_suffix_head_fast16_v1",
+      "strict_keys": "Frozen generic prefix digest plus exact blocks10/11 suffix, head keys/shapes/dtypes/finite values, config, source and label order. Load real checkpoints with weights_only=True and allow_artificial=False."
+    },
+    "model": {
+      "path": "src/rsna_knee/finetune_model.py",
+      "line": 17,
+      "class": "NativeTripletMIL",
+      "encoder": "dinov2_vits14, 12 unchunked blocks, no registers, CLS384",
+      "head": "FrozenFeatureHead hidden192, 83352 parameters, 12 outputs",
+      "inference": "Same window_chunk16, ImageNet normalization, encoder autocast FP16 then stored-feature FP16->FP32, FP32 head under eval/inference_mode; no new TTA, crop, decoder or pooling."
+    },
+    "pixels": {
+      "path": "src/rsna_knee/triplet_cache.py",
+      "line": 118,
+      "reader": "scripts/bounded_feature_reader.py:65",
+      "training_equivalence": "Reuse select_series, physical slice ordering, whole-native-series p1/p99, physical-aspect letterbox392, adjacent native +/-1 slices, up to48 centers, positions, planes and flags. Only train_series->test_series root mapping changes as existing predict_native does."
+    },
+    "CSV": "Existing read_prediction_ids/tensor_study/validate_submission preserve StudyInstanceUID string order and all12 TARGETS; test.csv reads IDs only, test_series.csv only5 structural fields. Report and targets are not requested.",
+    "baseline_preservation": "Keep original14 ALL7 code cells byte exact. Seal the final baseline CSV on CPU after original fusion succeeds; compare its SHA before/after the independent branch; release original GPU model references and collect/empty CUDA cache before extra model load. p011 is a pattern for CPU seal and bounded delivery, not native392 decoder/model code to copy blindly."
+  },
+  "concrete_gaps": [
+    {
+      "name": "Separate native392 decoding",
+      "evidence": "Apex base uses384px FOV140/96-slot anatomical volume; native f005 uses physical-aspect full-FOV392 letterbox and3series x48 adjacent triplets. Resizing or slicing the existing Apex volume would not reconstruct training pixels.",
+      "action": "Decode the test series independently using the already audited native reader, with bounded CPU workers and a separate temporary workspace."
+    },
+    {
+      "name": "Dual-GPU loading",
+      "evidence": "load_frozen_encoder rejects any previously imported dinov2 module. Calling new_native_model twice in the same process fails. Existing predict_native does not expose a device argument and tensor_study defaults to cuda.",
+      "action": "In a fresh DINO namespace, call new_native_model(...,device=cpu) once, strict apply once, then deepcopy the fully reconstructed CPU model and place one eval copy on each cuda:0/cuda:1. Alternatively separate fresh processes can each load once, but that is a separate orchestration design. No second relaxed loader or silent state-dict load."
+    },
+    {
+      "name": "CLS versus same-shape Regional identity",
+      "evidence": "Native and Regional components share head/state shapes. Existing checkpoint make/load/apply have no representation/model-class field; source/config hashes identify current CLS producer only if authentic production provenance is separately bound. A tensor-key check alone cannot detect a mislabeled same-shape Regional artifact.",
+      "action": "Use an external immutable trained-bundle manifest: exact CLS-only representation/schema, NativeTripletMIL class, producer CLI/source/config/run/checkpoint SHA, targets and approved weak-only selection audit. Reject missing/Regional/unknown identity before model construction; actual checkpoint claims must be cross-checked against the completed accepted run. Future Regional must use its distinct checkpoint schema, never this branch."
+    },
+    {
+      "name": "Unusable inputs",
+      "evidence": "extract_pixel_study propagates a selected-series decoder error; no selected usable series/all mask0 is rejected by pixel validation and NativeTripletMIL. It differs from the author224 finite allmissing behavior.",
+      "action": "Future proposal only: for a genuinely eligible study whose native input is validly determined to have zero usable windows, use its sealed p005 prediction as that UID's extra-branch surrogate, with an explicit reason/count/UID-hash receipt. This changes fusion mathematics, is not implemented or Kaggle-verified, and needs root review before adoption. Unexpected decoder/model/CUDA/schema/contract errors remain fatal; do not silently catch every exception or put zero probabilities into the extra branch."
+    },
+    {
+      "name": "Dependency and reader identity",
+      "evidence": "Checkpoint source inventory pins8 rsna_knee modules but does not include bounded_feature_reader.py. Importing native_training_fast16 also imports runtime, checkpoints, metrics and runtime->model->torchvision; the8-file hash inventory alone is not a complete offline package.",
+      "action": "Package the exact existing rsna_knee import closure or complete source package, explicit reader/orchestrator hashes, pinned generic DINO source tree, provenance and local weights. Run imports/hash/checkpoint metadata smoke in the actual Original Kaggle offline environment; do not add Internet installation."
+    }
+  ],
+  "proposed_private_Input": {
+    "version": "Not created or uploaded. Exact new slug/version/internal ID unresolved; pin once created.",
+    "layout": [
+      "bundle.json: explicit CLS identity, checkpoints/config/source hashes and accepted run references",
+      "generic/encoder-provenance.json",
+      "generic/dinov2/ source snapshot plus hubconf.py, preserving source_tree_hash layout",
+      "generic/dinov2_vits14_pretrain.pth: reuse existing audited local generic weights",
+      "trained/fold-N.pt: selected REAL head/suffix checkpoint, no optimizer/scaler/RNG",
+      "code/src/rsna_knee/: existing unchanged package/import closure",
+      "code/scripts/bounded_feature_reader.py: exact shared byte-audited reader"
+    ],
+    "generic_weight_SHA256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "generic_parameter_bytes_estimate": 88226304,
+    "gold_boundary": "Own f005 producer must bind completed weak-only training/fold/group audits and zero gold training/selection. Generic pretraining provenance is separate, and patient or generic-pretraining overlap independence is not proven. Existing p005/public SWA author gold history remains separate; adding f005 does not erase it.",
+    "private_mount_smoke": "First CPU-only saved-version mount/import/hash/manifest smoke for this new Input plus original reader/SWA versions; require actual mounted files and pinned source/config/checkpoint SHA before a GPU profile. Prior f002 read-only filesystem mount failures happened before notebook code and cannot be fixed by inference code.",
+    "actual_trained_checkpoint_bytes_and_tensor_semantics": "Unknown until real completed run and selected checkpoint are inspected; artificial reference below is size guidance only."
+  },
+  "bounded_transport_design": {
+    "CPU_workers": 2,
+    "outstanding_limit": 2,
+    "inference_queue_max": 2,
+    "T4_consumers": 2,
+    "prepared_parent_payload_count_upper_bound": 7,
+    "padded_array_bytes_per_study": 66383616,
+    "prepared_parent_array_bytes_estimate": 464685312,
+    "reuse_function": "scripts/p010_shared_runtime.py:65 run_bounded_pipeline with all required explicit capacities, task_done/drain/cancel and per-study receipt contracts; source-bound wrapper specific to native extraction needed.",
+    "consumer_grad_contract": "torch.inference_mode is thread-local. Each consume(device,item) must enter its own inference_mode context before NativeTripletMIL/tensor_study/sigmoid; a context around the parent pipeline call does not cover its two new consumer threads. Keep model.eval() and explicit device placement for each model/payload.",
+    "limitations": "Bound excludes worker arrays, IPC serialization copies, decoded native series and file-backed percentile pages. Each selected series uses two native float32 memmaps plus256MiB disk reserve and8MiB copy chunks; that does not prove a constant RSS bound. Native header/series size and hidden study count still vary. Initializer failures must propagate by shared fatal flag/task result rather than Pool respawn or masked-zero substitution; do not assume watchdog coverage for OS-killed workers."
+  },
+  "prior_resource_reference": {
+    "path": "artifacts/qa/20261009-f005-fast16-full144-v1/NATIVE392_QA_SUMMARY.json",
+    "sha256": "79114daf2654cc9a2a05f375c5b92bbf324f49bd5d210fdd0a7a140b303f0f96",
+    "GPU": "NVIDIA GeForce RTX 4090",
+    "torch": "2.10.0+cu128",
+    "input": "Artificial full144 triplets, one study, existing generic model, both arms forward/backward, zero optimizer steps; no MRI or labels.",
+    "arms": [
+      {
+        "arm": "freeze",
+        "valid_triplets": 144,
+        "forward_seconds": 0.11872329999459907,
+        "gpu_peak_reserved_bytes": 448790528,
+        "checkpoint_bytes": 343027
+      },
+      {
+        "arm": "last2",
+        "valid_triplets": 144,
+        "forward_seconds": 0.11266409995732829,
+        "gpu_peak_reserved_bytes": 1195376640,
+        "checkpoint_bytes": 14553417
+      }
+    ],
+    "interpretation": "Artificial serialized freeze head343027B and last2 suffix/head14553417B guide bundle size. 4090 reserved memory and warmed forward time are not T4 measurements, real trained-checkpoint size, hidden completion bounds or accuracy evidence."
+  },
+  "qualification_sequence": [
+    "Complete accepted f005 frozen/last2 fold0 contrast first, then predefined fold1 controls; review weak missing-label BCE/AUC and source/run audit without gold selection or coefficient search. Selected real checkpoint is currently unknown.",
+    "Bind real checkpoint/config/CLI/source/provenance/CLS representation and approved weak/group/Gold audits to the new immutable private bundle; inspect state tensors only in that authorized later step.",
+    "Root separately uploads/pins the Input and runs CPU mount/import/hash smoke. No new public scores can be inferred from that smoke.",
+    "Independent Kaggle T4 branch: tiny artificial model forward/output contract then actual label-free64/256 cohort, including all144 windows, unchanged decoder pixels/masks,1study/GPU, two consumers, resources/cleanup/UID/CSV receipts. Single-GPU predict_native can serve as strict reference, with GPU float variation assessed rather than assumed deterministic.",
+    "Before serving, root reviews total baseline+extra wall time/RSS/temp disk/GPU peaks, explicit missing-input policy, complete native test UID coverage and coefficient plan. Actual64/256 engineering success does not prove hidden coverage or Public improvement."
+  ],
+  "preexisting_cache_state": {
+    "source": "experiments/native392-all24-canonical-root-acceptance-20261009.json",
+    "sha256": "d551394d738d723bc34839715afeb3e87a27cf7c40b700a99e4d301c24f2db1a",
+    "root_accepted_studies": 4207,
+    "root_accepted_arrays": 21035,
+    "scope": "Reused root acceptance JSON only; no current archive array or full-index body reread. Index builder and real fitting are root-owned later/current operations, not performed here."
+  },
+  "prototype_decision": "No inference/serving prototype or new trainer was connected in this source-review task. Existing strict predict_native already provides the minimum standalone reference. Its unresolved trained-bundle identity, allmissing policy and T4 orchestration should be settled before a new real-checkpoint path is implemented; no fake artifact is presented as a trained or serving-qualified model.",
+  "source_file_sha256": {
+    "src/rsna_knee/native_training_fast16.py": "0f07e0e28867d17bfa269c5cb3053696837bfade3a045819371a5a8e4813ecb6",
+    "src/rsna_knee/finetune_model.py": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f",
+    "src/rsna_knee/feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "src/rsna_knee/triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "src/rsna_knee/feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "src/rsna_knee/feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "src/rsna_knee/imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "src/rsna_knee/contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+    "src/rsna_knee/runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05",
+    "scripts/train_native_dinov2_fast16.py": "cfdba529adcdd9b6d5f34a6b020cdae03f7fb04551ed4807778503fa1235ece0",
+    "scripts/bounded_feature_reader.py": "95a906f7e157cf1fa6d722432e6ed913838c6f579ac352418255688a5cf49ee6",
+    "scripts/p010_shared_runtime.py": "494685ecee58ccd98771e5e287992c598bbeea8691fd08dbceb4ebd18e2f59b7",
+    "scripts/p011_independent_runtime.py": "1ca09fbff359947d7b1df69823f52d5490671d6950f1eb59e69b23167962b9d9",
+    "src/rsna_knee/regional_triplet_model.py": "31f91d75d73b222c1e37d8864abfe584c6bd648203ef67293ec56d855eaa9589",
+    "configs/experiments/f005-dinov2-native-frozen-control-fast16.json": "7352e38ba0e58aad041a31c3b667c0f23c3ef0f9e085a48c4832e7cc36a8a7cb",
+    "configs/experiments/f005-dinov2-native-last2-fast16.json": "896b7293b26413c895002f906ff83023389456a9ba9afda7f5413a0c498fc279",
+    "notebooks/public/14_submit_p005_public950_control.ipynb": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+    "notebooks/public/19_submit_p009_coat_fov160.ipynb": "35b64ae2396054077fb46d4991e05185e506bd9e731b016c414777e244f5148c",
+    "notebooks/public/22_submit_p011_independent224_rank10_v3.ipynb": "a8e13bf0b053716e024f363417bc8b338b958eddf8a1837d3bad0a385607fd0c"
+  },
+  "notebook_control950_SHA256": "75c3abe77e8f0ccdaec2f57a8946d2baf297db8cc6fbdb275e5fcb1153b57546",
+  "activity": {
+    "new_review_JSON": 1,
+    "old_source_config_notebook_edits": 0,
+    "checkpoint_or_model_bytes_read": 0,
+    "teacher_or_NPZ_bytes_read": 0,
+    "actual_MRI_decode": 0,
+    "GPU_forward_or_fit": 0,
+    "API_HTTP_upload_submission": 0
+  }
+}

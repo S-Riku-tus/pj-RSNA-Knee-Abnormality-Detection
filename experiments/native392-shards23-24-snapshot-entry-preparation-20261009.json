@@ -1,0 +1,50 @@
+{
+  "schema_version": "native392_last2_fresh_read_snapshot_entry_preparation_v1",
+  "checked_at_utc": "2026-10-08T18:46:01.252133+00:00",
+  "all_passed": true,
+  "checks": {
+    "original_reader_auditor_spec_approval_builder_byte_unchanged": true,
+    "approved_jobs_byte_unchanged": true,
+    "four_artificial_path_rejections_and_validfresh_path": true,
+    "SDK_default_preflight_import_passed_auth_API0": true,
+    "all_three_new_runtime_sources_Ruff_passed": true,
+    "read_once_reuse_location_only_no_auto_retry_or_mutation": true
+  },
+  "source_sha256": {
+    "snapshot_paths.py": "1c4a4eeb0496a9e27652cb554185c9b56af8026fe964545531d5741ae418d57d",
+    "read_snapshot.py": "f7a1fabdb46b66f02534fbc0c44b4b2ce43d87c55f3406606add4d9b6c0e1152",
+    "audit_snapshot.py": "89e0a5b0bbbbcd9859e8fab53003fe1e7f69ccde8534795fb1c87ef0d75418c8"
+  },
+  "preserved_original_source_sha256": {
+    "binding_spec.py": "e4c4de51965f0897a9dee9570d30b90089ef53fc7bd99f2cea11fb66b850e795",
+    "prepare_approvals.py": "e56317961ed19cc25a42c7244f5dccca67f94ceee6397acba83a5ffd95d00062",
+    "read_once.py": "08f7110302cbd72c99d6295aa0366954fe74d970997a3f431d087f08342f2583",
+    "audit.py": "fc45f6b893f83e46f43d6390ea6f9ff0373df9e4083a7cc57786c7a0445767cb"
+  },
+  "approval_sha256": "4fd07b4b98e2bf74634fc31682e154efd0e6218ffffb95d09c5620b1c5de3402",
+  "old_partial_readset_json_SHA": {
+    "artifacts/research/20261009-native392-shards23-24-saved-binding-v1/shard-23/read-held.json": "602941d57f801cd1a5e4602f45863e0b6398da41696d150b19bd5a5fb9bf6fa7",
+    "artifacts/research/20261009-native392-shards23-24-saved-binding-v1/shard-23/read-requests.json": "d358b4b30c7f20924ad9ba6ee2ee619caefd64c28596ff5a949d59d5cf879aed"
+  },
+  "limited_artificial_path_tests": 4,
+  "expected_RPCs_root_only": 4,
+  "actual_API_HTTP_auth_GPU_fit_MRI_model_archive_by_preparer": 0,
+  "authentication_error_scope": "Root reported first GetKernel403 and a separate official quota401. These are remote authentication/connectivity observations, not a CPU export failure. This adapter does not refresh credentials or retry automatically.",
+  "root_read_command_not_executed": [
+    "artifacts/tools/kaggle-venv/Scripts/python.exe",
+    "artifacts\\research\\20261009-native392-shards23-24-saved-binding-v1\\read_snapshot.py",
+    "--execute",
+    "--observation-root",
+    "artifacts\\research\\20261009-native392-shards23-24-saved-binding-v1\\observations\\observation-v2"
+  ],
+  "root_audit_command_not_executed": [
+    ".venv/Scripts/python.exe",
+    "artifacts\\research\\20261009-native392-shards23-24-saved-binding-v1\\audit_snapshot.py",
+    "--observation-root",
+    "artifacts\\research\\20261009-native392-shards23-24-saved-binding-v1\\observations\\observation-v2",
+    "--review-output",
+    "experiments\\native392-shards23-24-saved-binding-review-snapshot-v2-20261009.json"
+  ],
+  "scope": "Fresh explicit storage location only. Original approvals, four savedV1 read calls, full source/settings auditor and all numeric/static contracts stay fixed. Old partial readset remains immutable.",
+  "decision": "Prepared; root may use a fresh readset after API authentication is restored. No remote action performed here."
+}

@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-10-08T13:42:29.649112+00:00",
+  "source": "Official Kaggle API overridePublic true, first100 only",
+  "source_url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/leaderboard",
+  "top_displayed_score": "0.964",
+  "first100_displayed_range": [
+    "0.964",
+    "0.953"
+  ],
+  "count_in_first100_at_least0955": 73,
+  "count_in_first100_strict_over0960": 13,
+  "fresh_submission_limits": {
+    "numToday": 5,
+    "numTotal": 12,
+    "numAllowedNow": 0,
+    "limitedByTotal": false
+  },
+  "stronger_recipe_weights_or_patient_independence_known": false,
+  "own_current_rank_observed": false,
+  "own_best_displayed_score": "0.950",
+  "decision": "Target strictly over0.960 is currently demonstrated by other teams; no runnable public recipe follows from a leaderboard score",
+  "artifact": "artifacts\\research\\20261008-current-leaderboard-v1\\receipt.json"
+}

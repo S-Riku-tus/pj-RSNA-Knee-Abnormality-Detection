@@ -1,0 +1,89 @@
+{
+  "schema_version": "p016_direct224_onefactor_source_preregistration_v1",
+  "at_utc": "2026-10-10T08:32:53.218690+00:00",
+  "status": "SOURCE_PREPARATION_IN_PROGRESS_RUNTIME_UNQUALIFIED",
+  "source_feasibility": {
+    "path": "artifacts/research/20261010-dinosaur-crop224-one-factor-source-feasibility-v1/research.json",
+    "sha256": "52e4e41705397c1407dade62940afa1719de0c897205bebc4e6703c34ddd2742"
+  },
+  "prior_same_weight_candidate": {
+    "path": "experiments/p011-scored-review-20261009.json",
+    "sha256": "33c0f62a13e144509d91604d943835b960b6bb003cf6ea8d121568a25ac32eda",
+    "ref": 56986152,
+    "own_Public_exact_text": "0.950",
+    "baseline_then_own_Public_exact_text": "0.950",
+    "improvement_at_returned_precision": false,
+    "unrounded_equality_or_perfinding_equality_established": false,
+    "recipe": "P005 own950 plus stock224 rank10% all12. Prior stock centre307 then bilinear224; not the proposed directcrop."
+  },
+  "fixed_before_pending_native_Public_results": {
+    "own951_baseline_original5_70_30_S5compact_SWA_preserved": true,
+    "checkpoint_SHA": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+    "existing_Input": "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+    "dataset_id": 12431568,
+    "internal_version_id": 20440357,
+    "crop": "native384 direct centre224, offset80, no resize",
+    "old_stock_child_Net_FP16_head_singleview_full94_preserved_except_crop": true,
+    "DINOsaur_encoderchunk16_imported": false,
+    "rank_blend": {
+      "baseline": 0.9,
+      "directcrop": 0.1,
+      "labels": "all12",
+      "tie_rank": "average",
+      "working_math": "existing float32/UID-order/CSV helpers"
+    },
+    "Gold_derived_Lateral_OA_38_49_13_imported": false,
+    "new_Gold_fit_or_selection": false,
+    "new_Public_coefficient_search": false
+  },
+  "source_scope": "Prepare isolated child after sealed own951 baseline; fatal on prior/zero-valid/timeout/incomplete child; owned temporary submission removed on failure while sealed baseline kept. Existing common ownership/clock/PG/clear reuse, no new framework.",
+  "new_actual_CPU64_256_and_baseline_bytes_before_serving_required": true,
+  "old_stock_or_Regional_qualification_transfer_allowed": false,
+  "source_implementation_finished": false,
+  "actual_new_checkpoint_reconstruction_forward_GPU_API_Save_Submit": 0,
+  "new_Input_upload_or_training_required": false,
+  "official_existing_submissions": [
+    {
+      "path": "artifacts/research/20261010-p014-native-twofold-serving-root-v2/submission-observation-v22/observation.json",
+      "sha256": "c1874ff68d9560b8534e2f5740533bc12295027bc0efdf6fd76105cd7d307929",
+      "observation": {
+        "at_utc": "2026-10-10T08:29:27.957824+00:00",
+        "ref": "rsraki/p012native2-2017c2587f0dd4f03bfd9dee7332a074",
+        "saved_version": 1,
+        "submission_ref": 57031186,
+        "official_get_requests": 1,
+        "Save_upload_Submit": 0,
+        "own_Public": null,
+        "strict_above960_achieved": false,
+        "actual_status": "NOT_EXPLICIT_YET",
+        "SDK_default_status": "PENDING",
+        "raw_status_field_omitted": true,
+        "error_description": null,
+        "hidden_scoring_complete": false
+      }
+    },
+    {
+      "path": "artifacts/research/20261010-p015-native-support-mask-root-v1/submission-observation-v18/observation.json",
+      "sha256": "5aaf6d27ce29c696dccd76909c0f45fa85471abeb1fa8daee2e934cde0424c30",
+      "observation": {
+        "at_utc": "2026-10-10T08:29:28.279055+00:00",
+        "ref": "rsraki/p012native2-ff87856adabf4210bdd8a797616743f0",
+        "saved_version": 1,
+        "submission_ref": 57031981,
+        "official_get_requests": 1,
+        "Save_upload_Submit": 0,
+        "own_Public": null,
+        "strict_above960_achieved": false,
+        "actual_status": "NOT_EXPLICIT_YET",
+        "SDK_default_status": "PENDING",
+        "raw_status_field_omitted": true,
+        "error_description": null,
+        "hidden_scoring_complete": false
+      }
+    }
+  ],
+  "local_Regional_fixed12_continues": true,
+  "own_verified_Public": 0.951,
+  "own_strict_above0960_achieved": false,
+  "goal_continues": true
+}

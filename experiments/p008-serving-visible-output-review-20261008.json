@@ -1,0 +1,264 @@
+{
+  "schema_version": "p008_serving_visible_output_independent_review_v1",
+  "reviewed_at_utc": "2026-10-08T11:13:13.522702+00:00",
+  "status": "visible_V1_runtime_and_independent_fixed_fusion_verified",
+  "saved_ref": "rsraki/p008-apex-meniscus10",
+  "saved_version": 1,
+  "kernel_id": 137655738,
+  "studies": 3,
+  "checks": {
+    "binding56_all_passed": true,
+    "exact_saved_V1_identity": true,
+    "fresh_saved_source_SHA_matches_binding": true,
+    "official_exact_V1_COMPLETE_no_failure": true,
+    "compact_download_exact_allowlist_only": true,
+    "compact_file_hashes_bytes_exact": true,
+    "summary_passed_specialist_used_actual_call1": true,
+    "summary_candidate_published_stage": true,
+    "summary_no_teacher_accuracy_own_gold_feedback": true,
+    "summary_original005_Source_SHA": true,
+    "summary_fixed90_to10_two_targets": true,
+    "stock_passed_no_fallback_neutralization": true,
+    "summary_stock_receipt_exact_downloaded": true,
+    "stock_runtime_manifest_SHA_exact": true,
+    "stock_checkpoint233_strict_bytes_SHA_exact": true,
+    "stock_FP32_noautocast_batch32_window10": true,
+    "stock2_actual_T4_devices": true,
+    "variableN_cache_exact_shape_dtype": true,
+    "all_live_counts_UID_hashes_match": true,
+    "stock2_contiguous_complete_strict_partitions": true,
+    "actual2_strict_FP32_233_loads": true,
+    "runtime_checked_variableN_forward_count": true,
+    "actual2_full12_workers_complete_finite": true,
+    "actual_worker_stock_receipts_match": true,
+    "runtime_checked_full12_FP32_finite_projection": true,
+    "runtime_checked_mask_count_histogram_SHA_consistency": true,
+    "branch_raw2_finite_sorted_current_UIDs": true,
+    "stock_raw2_SHA_exact_downloaded": true,
+    "candidate13_columns_UID_order_finite": true,
+    "other10_original_CSV_strings_exact": true,
+    "independent_fixed90_10_rank_maxdiff0": true,
+    "independent_original_Apex_fusion_rank_maxdiff0": true,
+    "fresh_atomic_candidate_submission_SHA_exact": true,
+    "incumbent_backup_SHA_exact_summary": true,
+    "SOTA_parent_backups_byte_exact": true,
+    "overlay_receipt_source_target_weight_SHA_exact": true,
+    "candidate_runtime_contract_complete": true,
+    "mainreader3_checkpoint_success_log": true,
+    "mainreader_fusion_no_fallback_exception_log": true,
+    "combined_allocator3_phase2device_observed": true,
+    "combined_allocator_peak_record_within_T4_capacity": true,
+    "worker_allocator_peak_within_observed_phase_peak": true,
+    "scratch_cache_not_exported": true,
+    "timings_nonnegative_finite": true
+  },
+  "checks_passed": 44,
+  "checks_total": 44,
+  "independent_CSV_numerical_proof": {
+    "other10_value_strings_equal": true,
+    "fixed90_10_max_abs_difference": 0.0,
+    "original_Apex_fusion_max_abs_difference": 0.0,
+    "Meniscus_numeric_changed_rows": {
+      "Medial Meniscus": 0,
+      "Lateral Meniscus": 0
+    },
+    "Meniscus_rank_changed_rows": {
+      "Medial Meniscus": 0,
+      "Lateral Meniscus": 0
+    }
+  },
+  "runtime_checked_source_bound_proof": {
+    "actual_forward_count": 20,
+    "expected_variableN_forward_count": 20,
+    "actual_loads": [
+      {
+        "device": "cuda:0",
+        "elapsed_seconds": 17.06896433899999,
+        "state_tensor_count": 233,
+        "parameters_fp32": true,
+        "stock_strict_load": true
+      },
+      {
+        "device": "cuda:1",
+        "elapsed_seconds": 17.074950966000017,
+        "state_tensor_count": 233,
+        "parameters_fp32": true,
+        "stock_strict_load": true
+      }
+    ],
+    "actual_workers": [
+      {
+        "device_index": 0,
+        "indices": [
+          0,
+          1
+        ],
+        "probability_shape": [
+          2,
+          12
+        ],
+        "finite": true,
+        "runtime_seconds_with_observer": 21.788803274999992,
+        "torch_peak_allocated_bytes": 678325248,
+        "torch_peak_reserved_bytes": 819986432,
+        "stock_receipt": {
+          "device_index": 0,
+          "device_name": "Tesla T4",
+          "study_count": 2,
+          "index_start": 0,
+          "index_stop_exclusive": 2,
+          "strict_load": true,
+          "checkpoint_replicated": true,
+          "runtime_seconds": 21.779749514999992
+        }
+      },
+      {
+        "device_index": 1,
+        "indices": [
+          2
+        ],
+        "probability_shape": [
+          1,
+          12
+        ],
+        "finite": true,
+        "runtime_seconds_with_observer": 19.63014357099999,
+        "torch_peak_allocated_bytes": 516567552,
+        "torch_peak_reserved_bytes": 606076928,
+        "stock_receipt": {
+          "device_index": 1,
+          "device_name": "Tesla T4",
+          "study_count": 1,
+          "index_start": 2,
+          "index_stop_exclusive": 3,
+          "strict_load": true,
+          "checkpoint_replicated": true,
+          "runtime_seconds": 19.596466356000008
+        }
+      }
+    ],
+    "full12_FP32_finite_projection_checked_in_runtime": true,
+    "mask_sha256_consistent": true,
+    "mask_histogram": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 0
+    },
+    "external_full12_probability_recomputation": false,
+    "external_mask_row_hash_recomputation": false,
+    "individual_forward_records_saved": false
+  },
+  "combined_GPU_allocator_observations": {
+    "before_cleanup": [
+      {
+        "device_index": 0,
+        "device_name": "Tesla T4",
+        "total_memory_bytes": 15636037632,
+        "allocated_bytes": 9571328,
+        "reserved_bytes": 423624704,
+        "peak_allocated_bytes": 3300294656,
+        "peak_reserved_bytes": 3810525184
+      },
+      {
+        "device_index": 1,
+        "device_name": "Tesla T4",
+        "total_memory_bytes": 15636037632,
+        "allocated_bytes": 9571328,
+        "reserved_bytes": 423624704,
+        "peak_allocated_bytes": 3300294656,
+        "peak_reserved_bytes": 3676307456
+      }
+    ],
+    "after_cleanup": [
+      {
+        "device_index": 0,
+        "device_name": "Tesla T4",
+        "total_memory_bytes": 15636037632,
+        "allocated_bytes": 9571328,
+        "reserved_bytes": 423624704,
+        "peak_allocated_bytes": 9571328,
+        "peak_reserved_bytes": 423624704
+      },
+      {
+        "device_index": 1,
+        "device_name": "Tesla T4",
+        "total_memory_bytes": 15636037632,
+        "allocated_bytes": 9571328,
+        "reserved_bytes": 423624704,
+        "peak_allocated_bytes": 9571328,
+        "peak_reserved_bytes": 423624704
+      }
+    ],
+    "stock_branch_peaks": [
+      {
+        "device_index": 0,
+        "device_name": "Tesla T4",
+        "total_memory_bytes": 15636037632,
+        "allocated_bytes": 9571328,
+        "reserved_bytes": 446693376,
+        "peak_allocated_bytes": 678325248,
+        "peak_reserved_bytes": 819986432
+      },
+      {
+        "device_index": 1,
+        "device_name": "Tesla T4",
+        "total_memory_bytes": 15636037632,
+        "allocated_bytes": 9571328,
+        "reserved_bytes": 423624704,
+        "peak_allocated_bytes": 516567552,
+        "peak_reserved_bytes": 606076928
+      }
+    ],
+    "scope": "PyTorch main-process allocator peaks include surviving incumbent allocations; reset before each stock load. Device-wide nvidia-smi/RSS samples and the earlier reader subprocess peak are not captured in this serving summary."
+  },
+  "timings_seconds": {
+    "append_total": 30.42749704000002,
+    "stock_runtime": 22.78770965900003,
+    "loads": [
+      17.06896433899999,
+      17.074950966000017
+    ],
+    "workers": [
+      21.788803274999992,
+      19.63014357099999
+    ]
+  },
+  "binding_review": {
+    "path": "experiments/p008-serving-saved-binding-review-v2-20261008.json",
+    "checks_passed": 56,
+    "source_sha256": "a1da50a75952c9a71a8918c04e2b7ee6dbf99ba372036b4e03f1c107f49cd91d"
+  },
+  "source_artifacts": {
+    "_own.csv": "b76d419ef51716589104899d4e2ef82f11fa272215c7c0a744d690f880cccbeb",
+    "_sota_0949.csv": "faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede",
+    "_sota_backup.csv": "faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede",
+    "download-receipt.json": "09b4225c602869e395dd2a7e951e32dbdcfa7c243cd83049be08011a493539ff",
+    "output-pages.json": "f723ba287bdf04746150bc2c2e325b6426509f21dbd6493a478065fdf3acd39c",
+    "p008_meniscus10/P008_MENISCUS_SUMMARY.json": "1cb3c2a1e396e77bf63c5a73fcdb34a75c8887e5cd09ed0db12f8464d829fe81",
+    "p008_meniscus10/apex_incumbent.csv": "381253ef942b8f7da0488b13f9e6aabed6a9b660ae40e68b17533a9eba14b37b",
+    "p008_meniscus10/apex_meniscus10_candidate.csv": "9a5d617ffdfb58ea66c98d7d2062a92f30e81e149abfafe012b9d21cfd1ef73e",
+    "p008_meniscus10/branch/public0033_bag_raw.csv": "f8360efe61cd8dcc6acdb52861172f6658a549b0b3f79db8ec619f77755222b3",
+    "p008_meniscus10/branch/public0033_cached_inference_receipt.json": "80a52c63f5f2717e83b1b11abe13d6a5bc1efa1504825bb926cced3464ee7fe4",
+    "saved-source.json": "012ba686893d3ce15c63f3eeb46bca31d0bb543c1a03a9e89fb65b67b47871e6",
+    "status-complete.json": "c5d706dd9b10a170c6088be6e58eabc656e35ac7b6859c44e60b04faaf161e41",
+    "submission.csv": "9a5d617ffdfb58ea66c98d7d2062a92f30e81e149abfafe012b9d21cfd1ef73e",
+    "visible.log": "8bf86f94f3aef15952d4e84c18f0b0bf9553d6f618cd35e7ddb87166aa5ecfb0"
+  },
+  "accuracy_evaluated": false,
+  "weak_fullfit_is_OOF": false,
+  "own_Gold_coefficient_selection": false,
+  "own_best_Public": "0.950",
+  "p008_Public": null,
+  "hidden_rerun_completed": false,
+  "competition_submission_by_verifier": false,
+  "limits": [
+    "Full12 arrays/individual forwards/per-UID masks were checked by the hash-bound runtime but are not serialized in V1; this review independently checks the exported proof and receipt consistency, not a numeric reconstruction of those arrays.",
+    "A three-study 90:10 overlay may preserve every rank while the specialist is actually used; changed-rank count is descriptive, never a pass requirement.",
+    "Visible success and allocator peaks do not prove hidden cohort completion, compressed-codec coverage or Public improvement.",
+    "Stock profile64 separately provided full12 numeric evidence on uncompressed frames; released weak fullfit remains not OOF."
+  ],
+  "remote_calls_MRI_model_download_training": false
+}

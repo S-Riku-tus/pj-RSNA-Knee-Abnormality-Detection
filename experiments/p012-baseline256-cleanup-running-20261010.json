@@ -1,0 +1,35 @@
+{
+  "schema_version": "p012_baseline256_actual_Save_running_root_record_v1",
+  "actual_Save": {
+    "path": "artifacts/research/20261010-p012-baseline-cleanup-root256-v1/actual-profile256-Save-attempt-v1/receipt.json",
+    "sha256": "b58027999230ce2a1e4dfbab31ed1aa3129e8c72ac0c120ee837e723db743c8b"
+  },
+  "first_source_status_observation": {
+    "path": "artifacts/research/20261010-p012-baseline-cleanup-root256-v1/profile256-observation-v1/observation.json",
+    "sha256": "c3aa038ee580ad90cb3f9412c362ce222e4372cc7ba36c2df82e777ca8c31337"
+  },
+  "root256_context": {
+    "path": "artifacts/research/20261010-p012-baseline-cleanup-root256-v1/root256-preparation-v1.json",
+    "sha256": "b2fd4a95a03f9a84a97ad2b849b7a76e5b9fa15215b682a0e494fe495ee71f46"
+  },
+  "source_only_independent_review": {
+    "path": "artifacts/research/20261010-p012-baseline-cleanup-root256-independent-review-v1/review.json",
+    "sha256": "9f2f24ca55c7d8954ceadf61125728d071e5bec6c7e7160b56d41664d7d3cf19"
+  },
+  "genuine_actual64_predecessor": {
+    "path": "artifacts/research/20261010-p012-baseline-cleanup-root-v3/actual64-root-acceptance-v1.json",
+    "sha256": "daf0f4bde922f47d0db072aab3236609caa7dae79ef08d5419334b0c3f3433e5"
+  },
+  "original5_and_65717_runtime_preserved": true,
+  "canonical256_contains_ordered64_prefix": true,
+  "fresh_three_Inputs_V1_and_private_Own_S5_V1_checked_before_Save": true,
+  "fresh_available_GPU_seconds": "51360.061",
+  "actual256_complete": false,
+  "actual256_cleanup_qualified": false,
+  "actual_twofold_qualified": false,
+  "Serving_qualified": false,
+  "new_competition_Submit": 0,
+  "own_best_official_Public": "0.951",
+  "strict_above960_achieved": false,
+  "next": "Observe exact savedV1 terminal status once appropriate; collect 18 positive bodies, accept original math/cleanup with same genuine64 predecessor. Native twofold still requires its own CPU64/256."
+}

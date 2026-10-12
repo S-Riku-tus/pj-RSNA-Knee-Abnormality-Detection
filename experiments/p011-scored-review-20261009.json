@@ -1,0 +1,25 @@
+{
+  "schema_version": "p011_actual_own_Public_scored_review_v1",
+  "at_utc": "2026-10-09T03:39:37.332521+00:00",
+  "submission_ref": 56986152,
+  "private_saved_kernel": 137784585,
+  "saved_version": 1,
+  "official_status": "COMPLETE",
+  "own_Public_exact_text": "0.950",
+  "baseline_own_Public_exact_text": "0.950",
+  "delta_at_returned_precision": "0.000",
+  "own955_achieved": false,
+  "strict_above960_achieved": false,
+  "official_status_review_path": "artifacts\\research\\20261009-p011-scoring-status-tools-v1\\observation-v4\\review.json",
+  "official_status_review_sha256": "d17afc45326a36f2ec94f2c8c96263cebf8f27b23078625f9284a3095e2cb7df",
+  "all_protected_source_unchanged": true,
+  "candidate_source_sha256": "a8e13bf0b053716e024f363417bc8b338b958eddf8a1837d3bad0a385607fd0c",
+  "candidate": "P005 original7 + independent stock224 full94 singleview; all12 fixed90:10 rank blend",
+  "hidden_scoring_success_confirmed_by_official_COMPLETE_positive_Public": true,
+  "hidden_trace_or_per_finding_scores_obtained": false,
+  "decision": "Not adopted: no Public improvement at the returned precision; preserve the original P005 own950 basis. Proceed with the prespecified independent frozen/last2 training comparison.",
+  "limits": [
+    "Equal returned 3-decimal scores do not prove identical unrounded AUC or per-finding effects.",
+    "Author-reported scores remain separate. No Private score or significance claim."
+  ]
+}
