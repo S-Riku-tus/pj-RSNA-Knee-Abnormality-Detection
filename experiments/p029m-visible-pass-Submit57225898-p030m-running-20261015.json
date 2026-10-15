@@ -1,0 +1,185 @@
+{
+  "schema_version": "p029m_visible_pass_manual_submit_p030m_running_v1",
+  "recorded_utc": "2026-10-15T10:10:52.928768+00:00",
+  "observation_cutoff": "latest receipts in 20261015-p029m-submit-p030m-run-status-02",
+  "own_official_best": {
+    "score": "0.956",
+    "submission_id": 57164195,
+    "source": "artifacts/research/20261015-p029m-submit-preflight-v1/own-best.json"
+  },
+  "target": {
+    "strictly_above": 0.96,
+    "sufficient_display_target": 0.961,
+    "achieved": false,
+    "probability": null
+  },
+  "author_recipe": {
+    "author": "heliosli",
+    "script_version": 358332966,
+    "linked_submission": 57183099,
+    "official_display_score": "0.957",
+    "title_claim_0_9576_not_verified": true,
+    "gold_exposure": "SWA inherited Gold checkpoint selection; own Gold fit/select/coefficient search0"
+  },
+  "P029M": {
+    "kernel_id": 138824627,
+    "ref": "rsraki/p029m-r6-957-20261015-a91d20e5dd62",
+    "version": 1,
+    "source_sha256": "2215c412c06efe5c3b61dbc963ed57edea875ac6448de3725ed5e411aca01ed5",
+    "visible_status": "COMPLETE",
+    "visible_rows": 3,
+    "targets": 12,
+    "root_and_peer_numeric_match_cells": 36,
+    "rank_formula": "average-ties rank/N per successful arm; .5*((1-.35)*rank384+.35*rank224)+.5*rankR6; float32; no final rerank",
+    "recorded_study_failures": 0,
+    "all9_R6_members_size_SHA_guard_passed": true,
+    "actual_gpus": [
+      "Tesla T4",
+      "Tesla T4"
+    ],
+    "recipe_total_seconds": 453.7,
+    "recipe_total_is_fixed_setup": false,
+    "requested_docker_registry": "gcr.io/kaggle-gpu-images/python",
+    "actual_readback_registry": "gcr.io/kaggle-private-byod/python",
+    "digest_matches_author_requested": "2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+    "actual_runtime": "Python3.13 torch2.11.0+cu128",
+    "formal_submission_id": 57225898,
+    "formal_submission_date_utc": "2026-10-15T10:01:51.583Z",
+    "formal_submit_calls": 1,
+    "hidden_status_field_present": false,
+    "hidden_error_field_present": false,
+    "own_Public_field_present": false,
+    "own_Public": null,
+    "resubmit_existing": false
+  },
+  "P030M": {
+    "kernel_id": 138832933,
+    "ref": "rsraki/p030m-r6-off-20261015-c7e91ba5032f",
+    "version": 1,
+    "status": "RUNNING",
+    "source_sha256": "2283f8667e5bc75c3e7cd90850f8307f208151c2100d429b787ec8d9810b9bd1",
+    "only_scientific_change": "TTA ON to OFF with identical R6 stage-b2, weights, guards and other source",
+    "Get_all_cells_match": true,
+    "Submit_calls": 0,
+    "own_Public": null,
+    "decision": "Qualify visible run; defer Submit until P029M hidden result"
+  },
+  "submission_quota_last_observed": {
+    "numToday": 1,
+    "numTotal": 28,
+    "numAllowedNow": 4
+  },
+  "gpu_quota_last_raw": {
+    "allowed_seconds": "108000",
+    "used_seconds": "12237.127",
+    "reserved_seconds": "0",
+    "remaining_seconds": "95762.873",
+    "warning": "snapshot only; raw counters can update; not runtime assurance"
+  },
+  "selected_unit_tests": {
+    "run": 53,
+    "passed": 52,
+    "skipped": 1,
+    "failures": 0,
+    "errors": 0,
+    "whole_repo_pass_claimed": false,
+    "broad299_unresolved": true
+  },
+  "actions": {
+    "this_continuation_accepted_Save_calls": 7,
+    "manual_Submit_calls": 1,
+    "local_real_MRI_decode": 0,
+    "local_model_body_download": 0,
+    "new_training": 0,
+    "automatic_upload_or_Submit_code_added": false
+  },
+  "next_actions": [
+    "Read existing Submit57225898 result without retry",
+    "Validate P030M visible branch/profile/CSV",
+    "R6 ON to R6 OFF to R7 OFF as fixed few controls, no coefficient sweep",
+    "Resolve actual hidden errors before old F006 parent-switch/blends",
+    "Return to grouped weak-OOF complementarity and GPU training preparation if public route stalls; do not fit or select on Gold"
+  ],
+  "evidence": [
+    {
+      "path": "artifacts/research/20261015-p029m-visible-output-audit-v1/root-independent-audit.json",
+      "bytes": 10715,
+      "sha256": "fd20ed7b286dc5f425d4da22f04c4d0b5ecd72c9c4fe49da3011a0f2135dfa2a"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-visible-output-audit-v1/independent-numeric-audit.json",
+      "bytes": 25513,
+      "sha256": "1e93155f8fb6341dd9da1001d8c437bc30a40c17667965360217407e66f6c4d8"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-visible-output-audit-v1/submission.csv",
+      "bytes": 645,
+      "sha256": "1ebfe53cb93ba0b9705724721755b515e64f7703712bc6a1bdddbcd181a7342b"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-visible-output-audit-v1/blend_receipt.json",
+      "bytes": 1607,
+      "sha256": "3a5d1c7e8a541d3c08d6b49dabee20117c378da589724f2505ddd1ce8ae0d898"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-visible-output-audit-v1/submission_receipt.json",
+      "bytes": 12954,
+      "sha256": "b0278a3f42f2b6db8df3e9abc6908e04a9f6286b8cd894bef752f3f17eb74e82"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-submit-preflight-v1/manual-submit-review.json",
+      "bytes": 1944,
+      "sha256": "b3767a85ec047e5edce46fb65dc0d6443c8f0d10f47e8613bf5a4fa5e0ce1d24"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-submit-preflight-v1/manual-submit-response.json",
+      "bytes": 16,
+      "sha256": "3d8b56555f4c4e15e28e54227b4b57fc572a41d0f7fa3575b21b978488de2003"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-submit-preflight-v1/manual-submit-response-receipt.json",
+      "bytes": 193,
+      "sha256": "d9eee51223beff475c40258b88bbfd43bcfc6903c9e1e48f29f7359fc9a28588"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-submission-status-01/limits.json",
+      "bytes": 46,
+      "sha256": "0918bd7cd95d62c75cb851edb803592e709652116ee8230b2b0fc7a970878a96"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-submit-p030m-run-status-02/submission.json",
+      "bytes": 377,
+      "sha256": "9f435966740d2dee31680f5d12027ad71c6c67ad85ac11f77b4c8bcaa164dc6c"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-submit-p030m-run-status-02/p030m-status.json",
+      "bytes": 20,
+      "sha256": "8a320f75d49b24da756707eb933391ebbd38a94fbad259c43663a4626c585475"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-submit-p030m-run-status-02/p030m-kernel.json",
+      "bytes": 696329,
+      "sha256": "7e9ed30866dca965908a12eece32d1d8db7ae72963c349889a968b3ac762de4f"
+    },
+    {
+      "path": "artifacts/kaggle/p030m-r6-off-20261015-c7e91ba5032f/save-run-response.json",
+      "bytes": 174,
+      "sha256": "82e864529713725afaa6962aaab2e049df75ac5a35e6ed25ea0ae200c758b9f1"
+    },
+    {
+      "path": "artifacts/kaggle/p030m-r6-off-20261015-c7e91ba5032f/quota-before.json",
+      "bytes": 285,
+      "sha256": "cd589ac9b113aa6229dcff9cb94372275d91da9ec8beae2e114110b63096d0ab"
+    },
+    {
+      "path": "experiments/public-frontier-hidden-runtime-refresh-20261015-1910.json",
+      "bytes": 28475,
+      "sha256": "8a2659fc1e548f011a0bdcc83ed68208a8c65b5ff3058c86f264b971664e0c71"
+    },
+    {
+      "path": "artifacts/research/20261015-p029-stage-fallback-validation-v1/validation.json",
+      "bytes": 3440,
+      "sha256": "d76a8d4e7d71dece55f0899506da1af8bb784bcfc02cd5dd9ff5a948614e8d21"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "schema_version": "cpu_continuation_recorded_progress_and_fixed20_contract_v1",
+  "at_UTC": "2026-10-15T07:12:07.070352+00:00",
+  "at_JST": "2026-10-15T16:12:07.070352+09:00",
+  "actor": "/root",
+  "goal": {
+    "metric": "own official Public macro ROC AUC",
+    "operator": ">=",
+    "target": 0.96,
+    "last_recorded_own_Public": 0.956,
+    "current_own_Public": null,
+    "rounded_recorded_gap": 0.004,
+    "current_achievement_verified": false,
+    "achievement_probability": null
+  },
+  "last_recorded_official_at_JST": "2026-10-14 14:33 JST",
+  "unresolved_in_previous_checkpoint_not_current_pending_assertion": [
+    57163437,
+    57166365,
+    57169291
+  ],
+  "current_daily_limits_and_rank": null,
+  "environment": {
+    "usable_CUDA_training_runtime_established": false,
+    "physical_GPU_absence_established": false,
+    "prior_assets_available_in_this_checkout": false,
+    "explicit_standard_library_Python_works": true
+  },
+  "browser_access": {
+    "inventory_browsers": 0,
+    "iab_create_result": "Browser is not available: iab",
+    "own_submissions_web_body_obtained": false,
+    "own_profile_web_body_obtained": false
+  },
+  "evidence_audit": {
+    "descriptors_including_repeated_refs": 30,
+    "matched": 2,
+    "missing": 28,
+    "byte_identity_authenticates_official_score": false
+  },
+  "completed_this_turn": [
+    "Primary-source web investigation with source freshness limits",
+    "Offline recorded-progress evidence audit CLI",
+    "Fixed20 full-N CSV numerical preview CLI and synthetic persistent fixture",
+    "README/PROJECT/goal/validation current-state reconciliation"
+  ],
+  "validation": {
+    "python": "3.11.9",
+    "tests_run": 30,
+    "passed": 29,
+    "skipped": 1,
+    "skip_reasons": [
+      "Creating symbolic links is unavailable on this system"
+    ],
+    "failures": 0,
+    "errors": 0,
+    "success": true,
+    "scope": "Synthetic metadata and CSV contracts; no GPU, MRI, real predictions or official scoring"
+  },
+  "candidate_contract": {
+    "native_weight": 0.2,
+    "parent_weight": 0.8,
+    "reference_folds": [
+      0,
+      1
+    ],
+    "new_training_seed": null,
+    "full_N_rank": "one-based average ties percentile at both stages",
+    "unsupported_parent_columns": [
+      "MCL",
+      "Synovitis"
+    ],
+    "failed_UID": "restore all 12 original parent cell strings after ranks",
+    "new_real_model_candidate_assembled": false,
+    "existing_runtime_FP32_equivalence_verified": false,
+    "Kaggle_qualification_issued": false
+  },
+  "actions_performed_this_turn": {
+    "model_or_data_download": false,
+    "real_MRI_decode": false,
+    "training": false,
+    "credential_read": false,
+    "external_upload": false,
+    "Kaggle_execution_or_submit": false,
+    "automatic_upload_or_submit_code_added": false
+  },
+  "decision_ja": "目標未達。まず既知提出の公式結果と現在枠を読み取り、元ソース/重みの証拠を復旧し、同じF006両fold固定20%で親だけV22へ変更する実候補を段階検証する。weak差をPublicへ加算しない。",
+  "evidence": [
+    {
+      "path": "scripts/audit_recorded_progress.py",
+      "bytes": 10731,
+      "sha256": "80c39151c01207a32782754076895904ccb83cfc7b5757fe40fce40e5fb8e75e"
+    },
+    {
+      "path": "scripts/preview_fixed20_candidate.py",
+      "bytes": 9505,
+      "sha256": "502f5f909cc33b68f5fa06302c849824342fe7232e1719d953a2b87c07c46800"
+    },
+    {
+      "path": "tests/test_audit_recorded_progress.py",
+      "bytes": 9551,
+      "sha256": "e932494206de28fe35090554e4c94218b5d9bd0aaf9aeefd6df1a4e45be265d7"
+    },
+    {
+      "path": "tests/test_preview_fixed20_candidate.py",
+      "bytes": 9919,
+      "sha256": "84361d64719b24be2bece78b9204ca93b011f097ce400499d20117f8fe0b73d8"
+    },
+    {
+      "path": "docs/research/environment-20261015.json",
+      "bytes": 2738,
+      "sha256": "8ed912633b0cebe76ca7b3f150f5fe5232f76d7b41c4f5acf27a71ec447d9c51"
+    },
+    {
+      "path": "experiments/web-research-096-20261015.json",
+      "bytes": 17964,
+      "sha256": "8f114689d04670d475810d5e8e68e9793258203146aca162dea698549a5a2592"
+    },
+    {
+      "path": "artifacts/research/20261015-recorded-progress-evidence-audit-v2/audit.json",
+      "bytes": 13166,
+      "sha256": "665abd53d85d9f080c54cb5aaf5bc2de8032438758c1a3223a5b1fdffbd629f6"
+    },
+    {
+      "path": "artifacts/research/20261015-fixed20-synthetic-contract-v1/preview/manifest.json",
+      "bytes": 3798,
+      "sha256": "aa0c65e22ad6b34178f614e1833e2a689d2ebc4784c31b27683e3a9515a9a430"
+    },
+    {
+      "path": "artifacts/research/20261015-cpu-continuation-validation-v1/validation.json",
+      "bytes": 327,
+      "sha256": "2603431e52e60ce88de85d2b57194852ec67b8ee59dd424762aa0ebb7bd173f6"
+    },
+    {
+      "path": "artifacts/research/20261015-cpu-continuation-validation-v1/unittest.log",
+      "bytes": 5138,
+      "sha256": "9610b981c8f53580a26df48ede49f271cd40c35e4f6297c504b1891cb42bcaa4"
+    }
+  ],
+  "ledger_prefix_before_append": {
+    "bytes": 164140,
+    "sha256": "9b3caeb1a5d67c603683234bf56dca4fcdaf56eb9dfef397924ae0d8b0fe3b84",
+    "old_bytes_preserved": true
+  }
+}

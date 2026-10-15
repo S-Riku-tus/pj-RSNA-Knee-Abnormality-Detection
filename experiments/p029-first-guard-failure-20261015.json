@@ -1,0 +1,26 @@
+{
+  "schema_version": "P029_first_guard_failure_qualified_v1",
+  "status": "ERROR",
+  "kernel_id": 138818102,
+  "version": 2,
+  "ref": "rsraki/p029-r6-957-20261015-42fbc0e9ae14",
+  "last_observed_at_UTC": "2026-10-15T08:47:40.931095+00:00",
+  "error": "First metadata-only preflight could not find exactly one expected R6 V1 manifest",
+  "failure_cell": "In [1]",
+  "no_scientific_cell_started": true,
+  "no_MRI_or_model_load_started_by_this_notebook": true,
+  "R6_V1_mount_verified": false,
+  "actual_mounted_bundle_or_version_observed": null,
+  "reason_not_inferred": "Absent or ambiguous expected manifest; exact current mounted bundle was not printed",
+  "own_Public": null,
+  "competition_Submit": 0,
+  "source_log_sha256": "d03d7af183595c916f831322cfc4e2e2e516c45dcf6c2eebdc46602c41dfa01a",
+  "poll_receipt_substring_boolean_correction": {
+    "original_field": "R6_V1_guard_pass_line_present",
+    "original_value": true,
+    "valid_success_signal": false,
+    "cause": "Traceback echoed the unexecuted print source line; must require an actual stdout event prefix, not substring anywhere",
+    "actual_stdout_success_event_count": 0
+  },
+  "next": "Kaggle-only fixed V1 staging from public files with exact manifest/member SHA; no local model download; explicit mount adapter; retain failed original run"
+}

@@ -1,0 +1,584 @@
+{
+  "schema_version": "public_frontier_refresh_and_r7_manifest_v1",
+  "actor": "/root/web_research",
+  "recorded_at_UTC": "2026-10-15T09:27:24+00:00",
+  "recorded_at_JST": "2026-10-15T18:27:24+09:00",
+  "scope_ja": "???????????????tiny JSON manifest????????Notebook?literal?????????????????????????????????????????MRI?????????????????????????????",
+  "result": "PASS_saved_evidence_identity_and_static_comparison_only_no_R7_runtime_or_Public_qualification",
+  "mandatory_context_read": [
+    "README.md",
+    "PROJECT.md",
+    "docs/validation.md",
+    "experiments/ledger.csv"
+  ],
+  "freshness": {
+    "official_Code_response_at_UTC": "2026-10-15T09:24:27.472297+00:00",
+    "official_author_V2_response_at_UTC": "2026-10-15T09:24:26.949093+00:00",
+    "R7_manifest_response_at_UTC": "2026-10-15T09:23:18.879109+00:00",
+    "R7_source_response_at_UTC": "2026-10-15T08:03:07.8968971Z",
+    "R6_manifest_exact_HTTP_time_known": false,
+    "R6_acquisition_time_reference": "experiments/p029-r6-v1-manifest-metadata-verification-20261015.json",
+    "method_ja": "????????????????HTTP/API????????????????????????????R6 manifest???CLI????????????filesystem???HTTP????????????",
+    "browser_or_authenticated_self_pages_requeried_by_this_agent": false
+  },
+  "saved_evidence": [
+    {
+      "path": "artifacts/research/20261015-public-frontier-refresh-1824-v1/Code-score100.json",
+      "bytes": 376860,
+      "sha256": "d1328c855a902d15b234c244dd00eb20aea2979f11939831df956d6c556226d7"
+    },
+    {
+      "path": "artifacts/research/20261015-public-frontier-refresh-1824-v1/author-R7-latest.json",
+      "bytes": 22949,
+      "sha256": "3287682f1b39bb6d7333689de62c476d45ec18768f927c8815c4ade9306c848a"
+    },
+    {
+      "path": "artifacts/research/20261015-public-frontier-refresh-1824-v1/receipts.json",
+      "bytes": 1772,
+      "sha256": "e94942727d3b9e6a7b3417bf444b887d4a177642484748131a2ce2c8bb8a37e7"
+    },
+    {
+      "path": "artifacts/research/20261015-public-code-list-probe-v1/ListKernels.json",
+      "bytes": 376645,
+      "sha256": "183623cbed33abba64e61beea8233da221f8bf01c5522b78118c64248194bef8"
+    },
+    {
+      "path": "artifacts/research/20261015-r6-v1-manifest-only-v1/manifest.json",
+      "bytes": 4120,
+      "sha256": "6508ce6921eda986c885b2226fa55dd4d2aa8e5fc570b4c007c9a60c05bfc648"
+    },
+    {
+      "path": "artifacts/research/20261015-r7-v2-manifest-metadata-only-v1/manifest.json",
+      "bytes": 5211,
+      "sha256": "c4bb0f7399ada9a020e0c15cae6252033cf0c4335e999961793a176063074ec6"
+    },
+    {
+      "path": "artifacts/research/20261015-r7-v2-manifest-metadata-only-v1/receipt.json",
+      "bytes": 639,
+      "sha256": "a402bfb34b5ac87246537306e29295f57c4482de49ea5d00790918fb2609c5a6"
+    },
+    {
+      "path": "artifacts/kaggle/p029-public957-r6-v1-20261015/source.ipynb",
+      "bytes": 638918,
+      "sha256": "449ce7786021dc17fa671783d86d6f5ae4e10638f013c93085eadaba847cbd02"
+    },
+    {
+      "path": "artifacts/research/20261015-public957-parent-switch-source-v1/author-r7-v2-exact.ipynb",
+      "bytes": 639072,
+      "sha256": "f6bb34eb43c451326585ec5a6e752ffb361fe895b5163848db3d5c35ff078c37"
+    },
+    {
+      "path": "artifacts/research/20261015-public957-parent-switch-source-v1/receipt.json",
+      "bytes": 431,
+      "sha256": "6aacec50adbf6675805fbaa44cecb1533784cdb0966e6908183d7551b3f61526"
+    },
+    {
+      "path": "experiments/p029-r6-v1-manifest-metadata-verification-20261015.json",
+      "bytes": 8117,
+      "sha256": "a96f856da6a8c096e643f7d748f6ddf9c079b40c6a504f3f67ad72e59de83484"
+    }
+  ],
+  "official_read_only_requests_as_saved_by_parent": [
+    {
+      "label": "author-R7-latest",
+      "url": "https://www.kaggle.com/api/i/kernels.LegacyKernelsService/GetKernelViewModel",
+      "body": {
+        "authorUserName": "heliosli",
+        "kernelSlug": "this-one-is-old-version-0-957-new-one-you-can-use",
+        "kernelVersionId": 0,
+        "tab": "notebook"
+      },
+      "request_at_UTC": "2026-10-15T09:24:26.203693+00:00",
+      "response_at_UTC": "2026-10-15T09:24:26.949093+00:00",
+      "anonymous": true,
+      "mutation": false,
+      "status_code": 200,
+      "bytes": 22949,
+      "sha256": "3287682f1b39bb6d7333689de62c476d45ec18768f927c8815c4ade9306c848a"
+    },
+    {
+      "label": "Code-score100",
+      "url": "https://www.kaggle.com/api/i/kernels.KernelsService/ListKernels",
+      "body": {
+        "kernelFilterCriteria": {
+          "listRequest": {
+            "competitionId": 154281,
+            "sortBy": "SCORE_DESCENDING",
+            "group": "EVERYONE",
+            "page": 1,
+            "pageSize": 100
+          }
+        }
+      },
+      "request_at_UTC": "2026-10-15T09:24:26.205705+00:00",
+      "response_at_UTC": "2026-10-15T09:24:27.472297+00:00",
+      "anonymous": true,
+      "mutation": false,
+      "status_code": 200,
+      "bytes": 376860,
+      "sha256": "d1328c855a902d15b234c244dd00eb20aea2979f11939831df956d6c556226d7"
+    }
+  ],
+  "public_Code_frontier": {
+    "request_competition_id": 154281,
+    "request_sort": "SCORE_DESCENDING",
+    "request_group": "EVERYONE",
+    "request_page": 1,
+    "request_page_size": 100,
+    "returned_rows": 100,
+    "returned_unique_kernel_ids": 100,
+    "response_totalCount_raw": 0,
+    "totalCount_interpretation_ja": "totalCount=0??100??????????????????????1??????????Notebook??????????",
+    "descending_score_violations": 0,
+    "all_returned_rows_reference_competition": true,
+    "all_returned_rows_have_linked_submission_flag": true,
+    "bestPublicScore_max": 0.957,
+    "bestPublicScore_min": 0.95,
+    "bestPublicScore_distribution_3dp": {
+      "0.957": 3,
+      "0.956": 38,
+      "0.955": 4,
+      "0.954": 29,
+      "0.953": 1,
+      "0.952": 4,
+      "0.951": 7,
+      "0.950": 14
+    },
+    "returned_score_above_0_956_count": 3,
+    "returned_score_at_least_0_960_count": 0,
+    "same_ID_order_as_earlier_0746_snapshot": true,
+    "same_score_for_all_100_IDs_as_earlier_snapshot": true,
+    "explicit_private_input_row_count": 9,
+    "explicit_private_input_kernel_ids": [
+      138637975,
+      138489906,
+      138104007,
+      138139982,
+      138180901,
+      138038784,
+      137129232,
+      137831248,
+      137885408
+    ],
+    "private_input_interpretation_ja": "isPrivate=true?????????????false/???????????????????Private??????????????????????",
+    "top3": [
+      {
+        "kernel_id": 138637975,
+        "author": "bliverrigpdoge",
+        "title": "R7 + Raptor + knee-centred ConvNeXt",
+        "url": "https://www.kaggle.com/code/bliverrigpdoge/r7-raptor-knee-centred-convnext",
+        "listed_script_version_id": 358269940,
+        "catalog_bestPublicScore": 0.957,
+        "explicit_private_inputs": [
+          20564117
+        ],
+        "input_source_ids": [
+          20297367,
+          20440357,
+          20564117,
+          20601735,
+          154281
+        ],
+        "score_scope": "Catalog best score; not automatically the score of listed script version or our reproduction"
+      },
+      {
+        "kernel_id": 138669425,
+        "author": "heliosli",
+        "title": "This one is old version 0.957 New one you can use↓",
+        "url": "https://www.kaggle.com/code/heliosli/this-one-is-old-version-0-957-new-one-you-can-use",
+        "listed_script_version_id": 358425369,
+        "catalog_bestPublicScore": 0.957,
+        "explicit_private_inputs": [],
+        "input_source_ids": [
+          20297367,
+          20440357,
+          20731557,
+          154281
+        ],
+        "score_scope": "Catalog best score; not automatically the score of listed script version or our reproduction"
+      },
+      {
+        "kernel_id": 138670458,
+        "author": "heliosli",
+        "title": "=0.9576 Latest public dataset score in one click!",
+        "url": "https://www.kaggle.com/code/heliosli/0-9576-latest-public-dataset-score-in-one-click",
+        "listed_script_version_id": 358332966,
+        "catalog_bestPublicScore": 0.957,
+        "explicit_private_inputs": [],
+        "input_source_ids": [
+          20297367,
+          20440357,
+          20611930,
+          154281
+        ],
+        "score_scope": "Catalog best score; not automatically the score of listed script version or our reproduction"
+      }
+    ],
+    "conclusion_ja": "09:24:27UTC??????????100?????0.957?0.960???0????ID??????????????????????Code frontier?????Public?????????????recipe?????????????"
+  },
+  "author_R7_V2_distinct_from_notebook_best": {
+    "author": "heliosli",
+    "url": "https://www.kaggle.com/code/heliosli/this-one-is-old-version-0-957-new-one-you-can-use",
+    "version_pinned_url": "https://www.kaggle.com/code/heliosli/this-one-is-old-version-0-957-new-one-you-can-use?scriptVersionId=358425369",
+    "kernel_id": 138669425,
+    "current_version_number": 2,
+    "total_version_count": 2,
+    "returned_script_version_id": 358425369,
+    "kernel_mostRecentRunId": 358426898,
+    "mostRecentRunId_is_returned_run": false,
+    "linked_submission_as_returned": {
+      "id": 57192075,
+      "sourceScriptVersionId": 358425369
+    },
+    "linked_submission_has_scoreFormatted": false,
+    "linked_submission_score": null,
+    "notebook_best_as_returned": {
+      "scoreFormatted": "0.957",
+      "kernelVersionNumber": 1,
+      "kernelSessionUrl": "/code/heliosli/this-one-is-old-version-0-957-new-one-you-can-use?scriptVersionId=358330886"
+    },
+    "notebook_best_belongs_to_V1_not_V2": true,
+    "observed_visible_batch_status": "COMPLETE",
+    "observed_visible_batch_status_is_hidden_submission_success": false,
+    "visible_batch_runTimeSeconds_as_returned_not_hidden_runtime": 440.9551617,
+    "R7_V2_hidden_runtime_within_9h_qualified": false,
+    "R7_V2_Public_qualified": false,
+    "R7_V2_author_score_qualified": false,
+    "own_R7_V2_reproduction_score": null,
+    "input_graph": [
+      {
+        "sourceId": 154281,
+        "databundleVersionId": 20902466,
+        "mountSlug": "competitions/rsna-knee-abnormality-detection"
+      },
+      {
+        "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+        "sourceId": 20297367,
+        "datasetId": 12357722,
+        "mountSlug": "datasets/heliosli/rsna-orthofoundation-fold0-epoch7-20261004"
+      },
+      {
+        "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+        "sourceId": 20440357,
+        "datasetId": 12431568,
+        "mountSlug": "datasets/nartaa/rsna-knee-publication-swa-weights-20261007"
+      },
+      {
+        "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+        "sourceId": 20731557,
+        "datasetId": 12524886,
+        "mountSlug": "datasets/heliosli/rsna-knee-r6-frozen-fe055406"
+      }
+    ],
+    "interpretation_ja": "??V2/script358425369?visible batch?COMPLETE????linked57192075?sourceScriptVersionId????scoreFormatted???best0.957?V1/script358330886?V1????V2??????mostRecent358426898?????run???????COMPLETE/?441????visible batch?API??????hidden?????9?????Public????????"
+  },
+  "tiny_manifest_identity": {
+    "R6_V1": {
+      "path": "artifacts/research/20261015-r6-v1-manifest-only-v1/manifest.json",
+      "bytes": 4120,
+      "sha256": "6508ce6921eda986c885b2226fa55dd4d2aa8e5fc570b4c007c9a60c05bfc648",
+      "dataset_url": "https://www.kaggle.com/datasets/heliosli/rsna-knee-r6-frozen-fe055406/versions/1",
+      "required_internal_version_id": 20611930,
+      "bundle_id": "fe055406fad6a12f",
+      "tag": "cnx_r6fm_c352",
+      "flip_tta_key_present": false,
+      "manifest_flip_tta": null,
+      "original_notebook_FLIP_TTA": true
+    },
+    "R7_V2": {
+      "path": "artifacts/research/20261015-r7-v2-manifest-metadata-only-v1/manifest.json",
+      "bytes": 5211,
+      "sha256": "c4bb0f7399ada9a020e0c15cae6252033cf0c4335e999961793a176063074ec6",
+      "dataset_url": "https://www.kaggle.com/datasets/heliosli/rsna-knee-r6-frozen-fe055406/versions/2",
+      "required_internal_version_id": 20731557,
+      "bundle_id": "8c7b666e27dc0e8f",
+      "tag": "cnx_r7",
+      "flip_tta_key_present": true,
+      "manifest_flip_tta": false,
+      "original_notebook_FLIP_TTA": false,
+      "metadata_request_receipt": {
+        "request_at_UTC": "2026-10-15T09:23:18.133223+00:00",
+        "response_at_UTC": "2026-10-15T09:23:18.879109+00:00",
+        "url": "https://www.kaggle.com/api/v1/datasets/download/heliosli/rsna-knee-r6-frozen-fe055406/manifest.json?datasetVersionNumber=2&raw=true",
+        "bytes": 5211,
+        "sha256": "c4bb0f7399ada9a020e0c15cae6252033cf0c4335e999961793a176063074ec6",
+        "bundle_id": "8c7b666e27dc0e8f",
+        "models": [
+          "E_lrprior_s0_f0.pt",
+          "E_lrprior_s0_f1.pt",
+          "E_lrprior_s0_f2.pt",
+          "E_lrprior_s0_f3.pt"
+        ],
+        "flip_tta_key_present": true,
+        "metadata_only_no_weights": true,
+        "future_P031_author_score": null,
+        "own_score": null
+      }
+    },
+    "same_dataset_slug_can_hold_different_scientific_bundles": true,
+    "manifest_only_scope_ja": "tiny JSON????????????8?????/config member????????????deserialize???????0?manifest?????SHA????????????????member??????????",
+    "no_silent_latest_resolution_allowed": true
+  },
+  "source_and_bundle_comparison": {
+    "R6_source": {
+      "path": "artifacts/kaggle/p029-public957-r6-v1-20261015/source.ipynb",
+      "bytes": 638918,
+      "sha256": "449ce7786021dc17fa671783d86d6f5ae4e10638f013c93085eadaba847cbd02"
+    },
+    "R7_source": {
+      "path": "artifacts/research/20261015-public957-parent-switch-source-v1/author-r7-v2-exact.ipynb",
+      "bytes": 639072,
+      "sha256": "f6bb34eb43c451326585ec5a6e752ffb361fe895b5163848db3d5c35ff078c37"
+    },
+    "inspection_method": "JSON read + ast.parse + ast.literal_eval of allowlisted assignments; no exec/import of notebook code or embedded modules",
+    "embedded_module_count": 7,
+    "all7_actual_literal_UTF8_SHA_equal_between_R6_and_R7": true,
+    "all7_actual_literal_SHA_equal_each_SOURCE_SHA_dictionary": true,
+    "R6_manifest_declares_only4_source_hashes_all_match": true,
+    "R7_manifest_declares_all7_source_hashes_all_match": true,
+    "actual_embedded_module_sha256": {
+      "px_cache.py": "b13e38a7ad3bd496f8027e02209653e224b0926db4f0853eeb0d076a2d6e2632",
+      "compact_train.py": "04df7e2e154b2c2521696908f272940c63ce17e9b6337b85847fee64504eeaba",
+      "compact_infer.py": "8401812cd63737ec99839d317c4037c4efb445d1baec892fa7481bb30399cc2d",
+      "probe_infer.py": "a6cc31448019c84be5868d0a2ff1d99719b23b0f86110efc03efff3ce6bd6980",
+      "probe_dual.py": "a6155eb08701f9bb746f838bc8ef8e2129c85f76a5c58e379692ffe2e76bbef0",
+      "knee_anchor_bank_v2.py": "e564807a129dfcd3c984348917436ee6083066a4d685340587ebd1d3ea14f309",
+      "side_common.py": "bbcc5d027834e6a6fd48c4a8cf228e25661b7522c792587c840fe4d7cd5c0566"
+    },
+    "manifest_backbone_R6": "convnext_small",
+    "manifest_backbone_R7": "convnext_small",
+    "same_manifest_backbone": true,
+    "same_model_names_and_four_folds": true,
+    "same_nominal_geometry": {
+      "size": 384,
+      "crop": 352,
+      "slices": 3,
+      "phys_mm": 3.5,
+      "views": "v4"
+    },
+    "changed_expected_members": [
+      "E_lrprior_s0_f0.pt",
+      "E_lrprior_s0_f1.pt",
+      "E_lrprior_s0_f2.pt",
+      "E_lrprior_s0_f3.pt",
+      "fluid_stacker.json",
+      "state_spec.json",
+      "state_stacker.json"
+    ],
+    "unchanged_expected_members": [
+      "side_cls.pt"
+    ],
+    "member_expected_SHA_comparison": [
+      {
+        "file": "E_lrprior_s0_f0.pt",
+        "R6_expected_sha256": "59cc88a197bc80c7fa5faa89e69ae7bec04f69cab5259a23a0d0ceb9431e53f6",
+        "R7_expected_sha256": "ca8a76e024828793e0663e5a2a13461de17e820bed6789eafe3f155072d3612f",
+        "same_expected_bytes": false,
+        "actual_member_bytes_read_here": false
+      },
+      {
+        "file": "E_lrprior_s0_f1.pt",
+        "R6_expected_sha256": "3d9dd8d6a1667935ea25e85b2fcfc80c7ae7dd37fe1bb587f8dad9d720fd8066",
+        "R7_expected_sha256": "fb432cf544f218608dbaecf7a8dd3c8b6a26b34a3dfe2dc198172c3e222d5910",
+        "same_expected_bytes": false,
+        "actual_member_bytes_read_here": false
+      },
+      {
+        "file": "E_lrprior_s0_f2.pt",
+        "R6_expected_sha256": "8d32fa2c57efc8e1c9159cf2b22f38cee0f05dce46aab2f000095847f537b1ea",
+        "R7_expected_sha256": "a9718ae111d6307492e724eb1767f0b5a77397d9a4d82c50c1e146b046523bf7",
+        "same_expected_bytes": false,
+        "actual_member_bytes_read_here": false
+      },
+      {
+        "file": "E_lrprior_s0_f3.pt",
+        "R6_expected_sha256": "ea147aac4c30fe5a616b966018446e04bd6815c9965f2ac9b0a4702fa9f32710",
+        "R7_expected_sha256": "073c22c71a9946c1457e37e56fec145f073a921da106b55a10884da01a40fc94",
+        "same_expected_bytes": false,
+        "actual_member_bytes_read_here": false
+      },
+      {
+        "file": "fluid_stacker.json",
+        "R6_expected_sha256": "9fbd6f652470c5ef131f997edb4e358038937dd45e6f6b65a4afed80e10cf35d",
+        "R7_expected_sha256": "be5a1664077300db1fdd0af8daaf44a3ebc41f91152e4f0ec124f805a7a51efb",
+        "same_expected_bytes": false,
+        "actual_member_bytes_read_here": false
+      },
+      {
+        "file": "side_cls.pt",
+        "R6_expected_sha256": "ab623e2b619db4917639220fed15202e8c8aedd07c8e298a66a2afc0f153650a",
+        "R7_expected_sha256": "ab623e2b619db4917639220fed15202e8c8aedd07c8e298a66a2afc0f153650a",
+        "same_expected_bytes": true,
+        "actual_member_bytes_read_here": false
+      },
+      {
+        "file": "state_spec.json",
+        "R6_expected_sha256": "3914242b0c404aee625ea65801f14f60adfee326c1ddd6fb96c48ed7050b7ff3",
+        "R7_expected_sha256": "2c976e70773b745cb357b992ba04946c157aa478e65d82f2883039c038b6ab3c",
+        "same_expected_bytes": false,
+        "actual_member_bytes_read_here": false
+      },
+      {
+        "file": "state_stacker.json",
+        "R6_expected_sha256": "b05147bb463a389a66a4a0d7ff0555efd2bde6f486718f79e9d7fa3d90b24522",
+        "R7_expected_sha256": "7b54a3f774dad3f842d68aaccbb03771806c26c0a3ca3a07fea8575a21f3ead3",
+        "same_expected_bytes": false,
+        "actual_member_bytes_read_here": false
+      }
+    ],
+    "run_config_common_keys_with_different_values": {
+      "targets": {
+        "R6": "/root/autodl-tmp/rsna_align_s0/targets/probe_targets_opusv11b_rr6_plr6_cdr.csv",
+        "R7": "/root/autodl-tmp/rsna_align_s0/targets/probe_targets_opusv11b_rr7_plr7_cdr.csv"
+      }
+    },
+    "R7_only_run_config_keys": [
+      "acl_acuity_decoy",
+      "aug",
+      "aug_grid_fp32",
+      "aug_res",
+      "bn_recal_batches",
+      "check_targets",
+      "ckpt_every",
+      "compile",
+      "cover_stride",
+      "draw_seed",
+      "ema",
+      "eval_stride",
+      "eval_workers",
+      "extent",
+      "extent_classes",
+      "extent_weight",
+      "extra",
+      "feature_studies",
+      "fm_aux",
+      "fm_aux_flip",
+      "fm_aux_log_every",
+      "fm_aux_min_volumes",
+      "fm_aux_weight",
+      "fm_aux_windows",
+      "fm_aux_workers",
+      "forward_only",
+      "freeze_blocks",
+      "grad_ckpt",
+      "grad_ckpt_blocks",
+      "holdout_fold",
+      "i_have_user_authorisation_to_finetune",
+      "include_review_holdout",
+      "labels",
+      "lig_age",
+      "llrd",
+      "mcl_boundary",
+      "mirror",
+      "oa_area_rank",
+      "oa_sign_decoy",
+      "only_folds",
+      "out",
+      "pair_extra",
+      "pair_frac",
+      "pair_rank",
+      "phys_mm",
+      "px_extra",
+      "px_override",
+      "rare_boost",
+      "rare_boost_names",
+      "reeval_run",
+      "resume",
+      "save_area",
+      "save_state_oof",
+      "scaffold",
+      "seed_base",
+      "shift_px",
+      "slice_jitter",
+      "slices",
+      "spatial_attn",
+      "state_spec",
+      "state_targets",
+      "state_weight",
+      "stop_after_epoch",
+      "syn_decomp",
+      "train_sampling",
+      "warm_lr_scale",
+      "warm_start",
+      "workers"
+    ],
+    "R7_only_keys_interpretation_ja": "R6 manifest?run_config?????????R7???????????????????????????????????targets?rr6?rr7??????????????????????",
+    "original_code_cells_byte_unchanged": [
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "original_code_cells_with_text_difference": [
+      6,
+      8
+    ],
+    "observed_author_scientific_switches": [
+      "BUNDLE_ID fe055406fad6a12f -> 8c7b666e27dc0e8f",
+      "FLIP_TTA True -> False; R7 manifest flip_tta=false"
+    ],
+    "interpretation_ja": "R6?R7???ConvNeXt-small??????7?????????4fold????????state_spec?fluid/state stacker?????????bundle??????backbone????????????????????????????V1?V2????TTA ON?OFF??????????????????bundle?TTA???????????"
+  },
+  "Gold_and_permission_boundaries": {
+    "R6_author_manifest_gold_in_training": 0,
+    "R7_author_manifest_gold_in_training": 0,
+    "R6_author_manifest_official_labels_read_by_trainer": false,
+    "R7_author_manifest_official_labels_read_by_trainer": false,
+    "R6_manifest_run_config_gold_studies": 58,
+    "R7_manifest_run_config_gold_studies": 58,
+    "R7_manifest_run_config_include_review_holdout": true,
+    "R7_author_data_policy": "No KneeCoT inputs or derivatives; gold never trained",
+    "R7_author_run_config_i_have_user_authorisation_to_finetune": true,
+    "author_declarations_independently_verified": false,
+    "training_rows_or_gold_labels_acquired_here": false,
+    "Gold_clean_certified": false,
+    "new_user_permission_inferred_from_author_bool": false,
+    "own_Gold_training_or_checkpoint_selection_allowed": false,
+    "Raptor_upstream_Gold_selection_uncertainty_removed": false,
+    "upstream_license_and_external_data_eligibility_newly_certified": false,
+    "interpretation_ja": "Gold0/official-label??/data_policy???manifest????????Gold clean??????????gold_studies=58?include_review_holdout=true????Gold???????????????????i_have_user_authorisation_to_finetune=true??????????????????????Gold?????????????Gold train/select???????????????"
+  },
+  "next_one_factor_comparisons_not_executed_here": [
+    {
+      "priority": 1,
+      "comparison": "P029M: fixed R6 V1, fourfold, TTA ON, original Raptor arms and coefficients",
+      "purpose_ja": "????0.957 recipe???runtime/CSV/hidden/Public???????????????????????",
+      "qualification_issued_by_this_record": false
+    },
+    {
+      "priority": 2,
+      "comparison": "P030M: exact same fixed R6 V1 + TTA OFF only",
+      "purpose_ja": "???????????bundle???TTA??????R7 manifest false???R6 OFF??????????",
+      "qualification_issued_by_this_record": false
+    },
+    {
+      "priority": 3,
+      "comparison": "Future exact R7 V2 bundle vs R6 V1 bundle under the same fixed TTA setting",
+      "purpose_ja": "???4fold???state/stacker????bundle???????????Raptor????rank/failure policy????9file???/??SHA/???/????????????",
+      "qualification_issued_by_this_record": false
+    }
+  ],
+  "goal_assessment_ja": "?????frontier???0.960???????recipe??????????R7 V2???????????????????0.956????0.960??????????????????????????????0.957??????????????????????????",
+  "actions_by_this_agent": {
+    "network_requests": 0,
+    "credentials_read": 0,
+    "model_member_downloads": 0,
+    "model_deserialization": 0,
+    "MRI_decode": 0,
+    "training": 0,
+    "notebook_source_execution": 0,
+    "embedded_module_execution": 0,
+    "external_upload_or_submission": 0,
+    "old_artifact_modifications": 0,
+    "docs_modifications": 0,
+    "new_JSON_records": 1
+  },
+  "validation": {
+    "all_saved_receipt_SHAs_recomputed_match": true,
+    "JSON_roundtrip_planned": false,
+    "notebook_literal_AST_only": true,
+    "raw_source_and_manifest_files_preserved": true,
+    "JSON_roundtrip_passed": true
+  }
+}

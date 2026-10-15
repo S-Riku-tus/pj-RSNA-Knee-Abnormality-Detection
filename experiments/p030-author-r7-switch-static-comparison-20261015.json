@@ -1,0 +1,156 @@
+{
+  "schema_version": "P029_R6_TTAon_author_R7_TTAoff_comparison_and_P030_control_v1",
+  "actor": "/root/runtime_candidate",
+  "at_UTC": "2026-10-15T08:11:20+00:00",
+  "date_JST": "2026-10-15",
+  "conclusion_ja": "作者R7 V2はR6からのbundle変更に加えFLIP_TTAをTrueからFalseへ変更している。直接P029と比較して同じTTAでR6→R7の一要因と扱うことはできない。埋込7モジュールと2Raptorは同一であり、R6/TTA-offのP030を挟めば、P029→P030でTTA、P030→作者R7/TTA-offでbundleを順番に切り分けられる。",
+  "source_evidence": {
+    "P029_R6_TTAon": {
+      "path": "artifacts/research/20261015-helios957-source-metadata-v1/helios957-source-exact.ipynb",
+      "bytes": 638918,
+      "sha256": "449ce7786021dc17fa671783d86d6f5ae4e10638f013c93085eadaba847cbd02",
+      "scriptVersionId": 358332966,
+      "linked_submission": 57183099,
+      "author_formatted_Public": "0.957",
+      "own_Public": null
+    },
+    "author_R7_TTAoff": {
+      "path": "artifacts/research/20261015-public957-parent-switch-source-v1/author-r7-v2-exact.ipynb",
+      "bytes": 639072,
+      "sha256": "f6bb34eb43c451326585ec5a6e752ffb361fe895b5163848db3d5c35ff078c37",
+      "ref": "heliosli/this-one-is-old-version-0-957-new-one-you-can-use",
+      "version": 2,
+      "scriptVersionId": 358425369,
+      "status": "COMPLETE",
+      "linked_submission": 57192075,
+      "linked_sourceScriptVersionId": 358425369,
+      "linked_scoreFormatted_present": false,
+      "linked_Public": null,
+      "linked_submission_current_status_not_observed": true,
+      "best_Public_from_separate_V1": "0.957",
+      "best_version": 1,
+      "best_scriptVersionId": 358330886,
+      "best_V1_score_is_not_a_V2_score": true,
+      "mostRecentRunId": 358426898,
+      "mostRecent_run_not_compared_or_qualified": true,
+      "visible_runtime_seconds": 440.9551617,
+      "actual_GPU_enabled": true,
+      "actual_accelerator": "NVIDIA_TESLA_T4",
+      "actual_Docker_digest": "2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+      "metadata_evidence": {
+        "path": "artifacts/research/20261015-helios957-source-metadata-v1/helios-other957-pinned.json",
+        "bytes": 22949,
+        "sha256": "0df9a5ce263fac3c4ed10c28bc0664c445c058694b2b6589924dd71dee8b33b1"
+      }
+    }
+  },
+  "comparison_method": {
+    "source_execution_or_import": false,
+    "read_scope": "Saved public Notebook/JSON metadata and literal source dictionaries only",
+    "parse": "AST parse and compile without exec; two writefile headers removed only for compile",
+    "code_cell_count_each": 7,
+    "embedded_module_count_each": 7,
+    "cell6_AST_identical_after_normalizing_only_BUNDLE_ID_and_FLIP_TTA": true,
+    "cell8_AST_identical_without_normalization": true,
+    "weight_bytes_or_tensor_equivalence_checked": false
+  },
+  "code_cell_comparison": [
+    {"cell": 2, "role": "Raptor384 script", "R6_sha256": "3858126b82681ba469934c84a79f360eb199df59c16159b7a168df94e415cb37", "R7_sha256": "3858126b82681ba469934c84a79f360eb199df59c16159b7a168df94e415cb37", "byte_identical": true, "AST_identical": true},
+    {"cell": 3, "role": "Raptor384 launcher", "R6_sha256": "d08db7bd194a78dac8c923a50048d098dd297223cc971e0fec40ba996d840e78", "R7_sha256": "d08db7bd194a78dac8c923a50048d098dd297223cc971e0fec40ba996d840e78", "byte_identical": true, "AST_identical": true},
+    {"cell": 4, "role": "Raptor224 script", "R6_sha256": "0b0545b46407a46d5a4ebd6a1a941b24103e62844feffda96d6fc37a48cff090", "R7_sha256": "0b0545b46407a46d5a4ebd6a1a941b24103e62844feffda96d6fc37a48cff090", "byte_identical": true, "AST_identical": true},
+    {"cell": 5, "role": "Raptor224 launcher", "R6_sha256": "10e20e388df7fed2aaecc900cfdebb294735eea8965924748d31d4db28d6d823", "R7_sha256": "10e20e388df7fed2aaecc900cfdebb294735eea8965924748d31d4db28d6d823", "byte_identical": true, "AST_identical": true},
+    {"cell": 6, "role": "Compact setup, literal embedded code and asset binding", "R6_sha256": "d999af7afca4f9f5133e22b5e3c97cd5a2f8a8aa33108c73c232f1ff0dffa06a", "R7_sha256": "5bc33a021a705def7754917e605c66118bcab233c95b29e42cbacc4d77474573", "byte_identical": false, "AST_identical": false, "executable_differences": ["BUNDLE_ID", "FLIP_TTA"], "all_other_executable_AST_identical": true},
+    {"cell": 7, "role": "Compact controller launch and receipt", "R6_sha256": "68f70dd31cc3544cb5734313d06538355a34b122ff430a32820756175c9c9dd9", "R7_sha256": "68f70dd31cc3544cb5734313d06538355a34b122ff430a32820756175c9c9dd9", "byte_identical": true, "AST_identical": true},
+    {"cell": 8, "role": "Final rank mix and fallback", "R6_sha256": "d0fbbf1c24806ee136d33df0e463de8763eea846f0be77b3a4ed98366a0d4e79", "R7_sha256": "510d89dacbc6c4782f9999de9f2c33de9b3555e2b6d0a45a6d75f70d7c060f62", "byte_identical": false, "AST_identical": true, "difference": "One explanatory comment changes R6/flip TTA to R7/no flip TTA; executable source is unchanged"}
+  ],
+  "embedded_module_comparison": [
+    {"name": "px_cache.py", "byte_identical": true, "both_sha256": "b13e38a7ad3bd496f8027e02209653e224b0926db4f0853eeb0d076a2d6e2632"},
+    {"name": "compact_train.py", "byte_identical": true, "both_sha256": "04df7e2e154b2c2521696908f272940c63ce17e9b6337b85847fee64504eeaba"},
+    {"name": "compact_infer.py", "byte_identical": true, "both_sha256": "8401812cd63737ec99839d317c4037c4efb445d1baec892fa7481bb30399cc2d"},
+    {"name": "probe_infer.py", "byte_identical": true, "both_sha256": "a6cc31448019c84be5868d0a2ff1d99719b23b0f86110efc03efff3ce6bd6980"},
+    {"name": "probe_dual.py", "byte_identical": true, "both_sha256": "a6155eb08701f9bb746f838bc8ef8e2129c85f76a5c58e379692ffe2e76bbef0"},
+    {"name": "knee_anchor_bank_v2.py", "byte_identical": true, "both_sha256": "e564807a129dfcd3c984348917436ee6083066a4d685340587ebd1d3ea14f309"},
+    {"name": "side_common.py", "byte_identical": true, "both_sha256": "bbcc5d027834e6a6fd48c4a8cf228e25661b7522c792587c840fe4d7cd5c0566"}
+  ],
+  "precise_configuration_differences": {
+    "BUNDLE_ID": {"P029": "fe055406fad6a12f", "author_V2": "8c7b666e27dc0e8f"},
+    "FLIP_TTA": {"P029": true, "author_V2": false},
+    "C_SLUG": {"both": "rsna-knee-r6-frozen-fe055406", "difference": "Comment only; actual mounted dataset version changes"},
+    "dataset": {"same_dataset_id": 12524886, "P029_version": 1, "P029_internal_version": 20611930, "author_V2_version": 2, "author_V2_internal_version": 20731557},
+    "unchanged_literal_values": ["ARM", "DEADLINE_HOURS", "CODE_SLUG", "COMPETITION", "CODE_SHA", "SOURCE_SHA", "PROBE_CLASS", "W_SLUG", "SOURCES", "WORKER"],
+    "unchanged_scientific_settings": ["Both Raptor checkpoints and preprocessing", "Raptor384 anatomical mirror", "Raptor224 single view", "A224=.35", "outer Raptor/Compact50:50", "per-class overrides", "successful-set percentile rank", "failure rates and fallback logic", "controller/deadline behavior"],
+    "comments_and_markdown_changes": "Header/description follows R7 instead of R6 and removes TTA; credit markdown repairs one separator character. These text changes are not numerical factors",
+    "historical_author_output_support": {"P029_cell6": "ASSETS_READY ... flip_tta True seconds95.0", "author_V2_cell6": "ASSETS_READY ... flip_tta False seconds98.2", "scope": "Public author's saved visible-run outputs; not newly executed evidence or proof of hidden behavior"},
+    "manifest_flip_condition": "manifest.get('flip_tta') or FLIP_TTA",
+    "R7_manifest_flip_false_source": "Author V2 comment plus saved ASSETS_READY False; R7 rawmanifest body has not been read by this agent",
+    "single_factor_claim_for_direct_P029_vs_author_V2": false
+  },
+  "controlled_sequence_selected": [
+    {"candidate": "P029", "bundle": "R6 V1", "flip_TTA": true, "purpose": "Exact public0.957 recipe reproduction; obtain own official result first", "own_result": null},
+    {"candidate": "P030", "bundle": "Same R6 V1", "flip_TTA": false, "purpose": "TTA-only intervention relative to P029", "own_result": null},
+    {"candidate": "P031 planned", "bundle": "R7 V2 of same frozen-dataset slug", "flip_TTA": false, "purpose": "Bundle-only intervention relative to P030 using the existing author V2 scientific source", "own_result": null}
+  ],
+  "P030_offline_preparation": {
+    "builder": {"path": "scripts/prepare_p030_tta_control.py", "sha256": "ba8da7186fe02084272c2baad5afa400768199c15c8fcb4b8bdcbc1510ff9ac7"},
+    "tests": {"path": "tests/test_prepare_p030_tta_control.py", "sha256": "cd4d504ec6951a1a582129ea5c24ef86e4242c5416d6fc54d2c5ffc609b1b357", "passed": 8, "failed": 0},
+    "output_directory": "artifacts/kaggle/p030-r6-tta-off-control-v1-20261015",
+    "source": {"file": "source.ipynb", "bytes": 630346, "sha256": "f3ffc011ea2fa4d72ab4e3e7d4b857a2a1f930ec15192d60be7abeaa98fa156d"},
+    "manifest": {"file": "manifest.json", "bytes": 10983, "sha256": "2e6df0983881b17853a9a63191662bf9970f87b4a6a57eef5146c1ca5cc50224"},
+    "source_cell6_sha256": "6a967f5fbd2a47c90b09aaa2fe404b8c08ba171007ff0ba13c3402ef479b58da",
+    "scientific_edit": "AST-located unique top-level FLIP_TTA=True token changed to False; before/after AST differs only at that boolean",
+    "all_other_code_cells_and_embedded_modules_same_as_P029": true,
+    "old_outputs_and_execution_counts_cleared": true,
+    "old_papermill_and_execution_metadata_cleared": true,
+    "unexecuted_control_notice_added_to_first_markdown": true,
+    "original_credit_markdown_preserved": true,
+    "parent_P029_source_and_manifest_unchanged_SHA_verified": true,
+    "P030_vs_author_R7_V2_AST_equal_after_only_BUNDLE_ID_normalization": true,
+    "fixed_Input_ids": [154281, 20297367, 20440357, 20611930],
+    "Internet_GPU_Docker_plan_inherited_from_P029": true,
+    "effective_runtime_TTA_off_or_mounted_content_qualified": false,
+    "own_inference_or_Submit_performed": false,
+    "own_Public": null,
+    "test_coverage": ["No source execution even when synthetic source raises", "Clear old result display without changing scientific cells or credits", "Reject duplicate/nested/nonliteral/already-false flags", "Reject second AST scientific change", "Reject wrong parent hashes before output", "Reject R7V2 Input or R6manifest that enables flip", "Preserve existing output before any parent read", "Reject executable embedded dictionaries and unsupported cell magic"],
+    "independent_peer_review": {
+      "actor": "/root/history_audit",
+      "verdict": "PASS for local source preparation only; no blocking implementation issue",
+      "separate_string_comparison": "Parent cell6.replace('FLIP_TTA = True','FLIP_TTA = False',1) exactly equals candidate cell6, with one replacement target",
+      "other_six_code_cells_credits_and_all_Input_fields_unchanged": true,
+      "source_and_manifest_SHA_independently_recomputed": true,
+      "historical_outputs_and_execution_counts_independently_confirmed_clear": true,
+      "artificial_tests_independently_passed": 8,
+      "mounted_runtime_or_Public_qualification_issued": false
+    }
+  },
+  "new_local_R6_manifest_evidence": {
+    "path": "artifacts/research/20261015-r6-v1-manifest-only-v1/manifest.json",
+    "bytes": 4120,
+    "sha256": "6508ce6921eda986c885b2226fa55dd4d2aa8e5fc570b4c007c9a60c05bfc648",
+    "bundle_id": "fe055406fad6a12f",
+    "backbone": "convnext_small",
+    "size": 384,
+    "crop": 352,
+    "flip_tta_key_present": false,
+    "get_flip_tta_or_P030_false_evaluates_to_false": true,
+    "metadata_verified_not_models_or_mounted_Kaggle_content": true,
+    "models_deserialized_or_tensor_SHA_checked": false,
+    "interpretation": "This later smallmetadata evidence supplements the earlier rawmanifest-unavailable snapshot; P029 immutable bundle is not rewritten"
+  },
+  "interpretation_and_next_action_ja": [
+    "まずP029を原recipeの自己再現として検証する。作者0.957と自分の得点は別に記録する。ログイン完了や提出枠は親の確認を待ち、この準備で外部実行は開始しない。",
+    "次にP030を同じR6のTTA-off対照として実行し、P029との差を測る。得点が下がっても既存の最良候補を上書き・採用しない。",
+    "P031はR7/TTA-off作者V2の科学コードを利用できる。P030と比べて実行AST差はbundle定数だけ、Input差は同じDatasetのV1→V2であり、2Raptor・係数・TTAの追加変更を避けられる。",
+    "bundle交換には学習重み・state_spec・stacker等の一式が含まれる。R7の個々の学習要素の効果やencoder単独の因果差まで分離したとは主張しない。",
+    "どの段階も係数探索やGoldによる選択を追加しない。元の公開重みのGold選択露出と利用条件、9時間完走未確認、fallback処理を保持する。",
+    "0.957と0.956の作者/自己差や、各候補の丸め差を足して0.960到達を予測しない。到達確率と予想改善幅は未推定。"
+  ],
+  "scope": {
+    "local_code_and_metadata_only": true,
+    "original_Notebook_code_exec_or_import": 0,
+    "weights_or_MRI_or_credentials_read": 0,
+    "MRI_decode_or_GPU_forward_or_training": 0,
+    "network_or_external_Save_Submit_upload": 0,
+    "automatic_upload_or_submit_code_added": false,
+    "P029_immutable_bundle_modified": false
+  }
+}

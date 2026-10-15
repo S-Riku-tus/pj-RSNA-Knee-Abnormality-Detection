@@ -1,0 +1,218 @@
+{
+  "schema_version": "submission_hidden_log_access_static_audit_v1",
+  "actor": "/root/web_research",
+  "recorded_at_utc": "2026-10-15T08:27:03Z",
+  "scope_ja": "導入済みKaggle公式SDKソース、保存済み公式app.js、親が取得した自己提出rawだけの読み取り調査。ネットワーク通信・認証情報読込・SDK認証初期化・Mutationは行っていない。",
+  "installed_versions": {
+    "kaggle": "2.2.4",
+    "kagglesdk": "0.1.37",
+    "version_evidence": "local package METADATA Version fields"
+  },
+  "conclusion_ja": "通常Notebook sessionの正規ログ取得APIは確認できる。一方、この3件のhidden rerunに対応するsession ID、ログ公開権限、取得経路は保存済みGetSubmissionや確認したソースだけでは確定しない。通常のvisible/latest sessionログをhidden障害原因として流用しない。",
+  "observed_submission_raw": [
+    {
+      "ref": 57163437,
+      "path": "artifacts/research/20261015-authenticated-submission-status-v1/Get-57163437-raw.json",
+      "sha256": "16a98b0353ae3f3d46ab0cee8692fb8f84cd011be5a8dfffe5d465a57f19677e",
+      "status": "COMPLETE",
+      "publicScore": null,
+      "generic_unhandled_hidden_rerun_error": true,
+      "hidden_session_or_log_url_fields_present": false
+    },
+    {
+      "ref": 57166365,
+      "path": "artifacts/research/20261015-authenticated-submission-status-v1/Get-57166365-raw.json",
+      "sha256": "f110eb15868e5c4f5e1e08d5c9c15c2932b0521fa58d372f3dceca8524fc3df8",
+      "status": "COMPLETE",
+      "publicScore": null,
+      "generic_unhandled_hidden_rerun_error": true,
+      "hidden_session_or_log_url_fields_present": false
+    },
+    {
+      "ref": 57169291,
+      "path": "artifacts/research/20261015-authenticated-submission-status-v1/Get-57169291-raw.json",
+      "sha256": "4304797c2866f585896993efd30eaee452159344407c3ab3f206b6f0a22050ca",
+      "status": "COMPLETE",
+      "publicScore": null,
+      "generic_unhandled_hidden_rerun_error": true,
+      "hidden_session_or_log_url_fields_present": false
+    },
+    {
+      "ref": 57164195,
+      "path": "artifacts/research/20261015-authenticated-submission-status-v1/Get-57164195-raw.json",
+      "sha256": "5cf1e9f403cd1b4bacffaf9a27f3aa833ba113ac5e5c3ac563449bda3143bbe4",
+      "status": "COMPLETE",
+      "publicScore": "0.956",
+      "generic_unhandled_hidden_rerun_error": false,
+      "hidden_session_or_log_url_fields_present": false
+    }
+  ],
+  "sdk_methods": [
+    {
+      "method": "CompetitionApiService.get_submission",
+      "wire_method": "competitions.CompetitionApiService/GetSubmission",
+      "request_type": "ApiGetSubmissionRequest",
+      "request_fields": [
+        "ref (SubmissionId)"
+      ],
+      "endpoint_in_types": "POST /api/v1/competitions/submissions/get/{ref}",
+      "response_type": "ApiSubmission",
+      "response_fields": [
+        "ref",
+        "total_bytes",
+        "date",
+        "description",
+        "error_description",
+        "file_name",
+        "public_score",
+        "private_score",
+        "status",
+        "submitted_by",
+        "submitted_by_ref",
+        "team_name",
+        "url"
+      ],
+      "response_hidden_session_id_field": false,
+      "response_hidden_log_field": false,
+      "source_path": ".venv/Lib/site-packages/kagglesdk/competitions/types/competition_api_service.py",
+      "request_line": 3066,
+      "response_line": 4636,
+      "purpose_ja": "提出の状態・表示スコア・一般エラーを取得。今回のrawにはtracebackやhidden sessionへの対応がない。",
+      "url_not_assumed_to_be_log": true
+    },
+    {
+      "method": "KernelsApiService.get_kernel_session_logs_stream",
+      "wire_method": "kernels.KernelsApiService/GetKernelSessionLogsStream",
+      "request_type": "ApiGetKernelSessionLogsStreamRequest",
+      "request_fields": [
+        "kernel_session_id",
+        "wait_for_logs_url_seconds",
+        "user_name",
+        "kernel_slug",
+        "version_label"
+      ],
+      "endpoint_path_in_types": "/api/v1/kernels/sessions/{kernel_session_id}/logs/stream",
+      "response_type": "FileDownload",
+      "response_formats": {
+        "running": "text/event-stream; JSON events until END_OF_LOG",
+        "terminated": "persisted worker log, documented as application/json"
+      },
+      "wait_behavior": "default60 seconds, cap300 in SDK docstring; explicit small bound needed for any future call",
+      "source_service_path": ".venv/Lib/site-packages/kagglesdk/kernels/services/kernels_api_service.py",
+      "source_service_line": 148,
+      "source_type_path": ".venv/Lib/site-packages/kagglesdk/kernels/types/kernels_api_service.py",
+      "source_type_line": 686,
+      "requirements_ja": "対象の正しいsessionへの対応と読み取り権限。hidden提出に対応するsession IDを根拠なくSubmissionIdや元scriptVersionIdで代用しない。typesはowner/slug/version_labelも定義するが、選択規則とhidden accessは今回実確認していない。",
+      "hidden_log_access_guaranteed": false,
+      "called": false
+    },
+    {
+      "method": "KaggleApi.kernels_logs",
+      "source_path": ".venv/Lib/site-packages/kaggle/api/kaggle_api_extended.py",
+      "line": 6825,
+      "underlying_method": "KernelsApiService.list_kernel_session_output",
+      "underlying_request_type": "ApiListKernelSessionOutputRequest",
+      "request_type_fields": [
+        "user_name",
+        "kernel_slug",
+        "page_size",
+        "page_token",
+        "version_label"
+      ],
+      "wrapper_actual_fields_set": [
+        "user_name",
+        "kernel_slug"
+      ],
+      "wrapper_version_caveat_ja": "wrapperはparse_kernel_stringでversionを得るが、この関数本体ではversion_labelへセットしていない。owner/slugのlatest session logを返すというdocstring。",
+      "requirements_ja": "正しいowner/slugとkernels.get権限。本人Notebookでもhidden rerunのログに自動対応する根拠はない。",
+      "hidden_log_access_guaranteed": false,
+      "called": false
+    },
+    {
+      "method": "KaggleApi.kernels_logs_stream",
+      "source_path": ".venv/Lib/site-packages/kaggle/api/kaggle_api_extended.py",
+      "line": 6868,
+      "endpoint": "GET /api/v1/kernels/logs/stream/{owner}/{slug}",
+      "response_formats": [
+        "live SSE",
+        "completed persisted log fallback"
+      ],
+      "requirements_ja": "owner/slugとkernels.get権限。latest/session routeでありsubmission IDを指定するAPIではない。通常CLIのfollowは再接続・dedupを行うため、今後利用する場合は読み取り時間と再試行を制限する。",
+      "hidden_log_access_guaranteed": false,
+      "called": false
+    }
+  ],
+  "saved_frontend_evidence": {
+    "path": "artifacts/research/20261015-public-frontier-anonymous-http-v1/kaggle-app.js",
+    "sha256": "78a3be0432923ed8d3a83644aac5dfea342d62121629b6e38c07cdbd783914b7",
+    "read_only_methods_confirmed": [
+      "/api/i/competitions.SubmissionService/GetSubmission",
+      "/api/i/competitions.SubmissionService/ListSubmissions",
+      "/api/i/kernels.KernelsService/GetKernelSessionLog",
+      "/api/i/kernels.KernelsService/GetKernelStatus",
+      "/api/i/kernels.KernelsService/ListKernelSessions",
+      "/api/i/kernels.KernelsService/ListKernelSessionOutput"
+    ],
+    "GetSubmission_response_converter_fields": [
+      "id",
+      "teamId",
+      "isSelected",
+      "isAfterDeadline",
+      "dateSubmitted",
+      "status",
+      "contentLength",
+      "syncRerunState"
+    ],
+    "converter_caveat_ja": "converterは未知の受信fieldsもコピーする実装なので、上記だけが全fieldsだと断定しない。",
+    "syncRerunState_converter_fields": [
+      "id",
+      "name",
+      "errorCause",
+      "sourceSubmissionStatus"
+    ],
+    "ListKernelSessions_response_fields": [
+      "sessions",
+      "quotaLimits",
+      "totalCount"
+    ],
+    "ListKernelSessions_card_fields_seen": [
+      "kernelId",
+      "kernelRunId",
+      "isInternetEnabled",
+      "type",
+      "sourceType"
+    ],
+    "request_schema_limits_ja": "上記内部APIのtoJsonはidentityで、保存app.jsの該当定義だけでは完全な要求DTOが分からない。確定しないsubmissionId/body/readMaskやsession filterを推測して実行しない。",
+    "frontend_submission_log_method_found": false,
+    "method_absence_claim_scope_ja": "この保存bundleと検索語の範囲で専用submission hidden log methodは見つからなかった。別の遅延ロードchunkや主催者向けAPIの不存在は主張しない。",
+    "new_frontend_chunks_downloaded": false
+  },
+  "source_hashes": {
+    ".venv/Lib/site-packages/kagglesdk/kernels/services/kernels_api_service.py": "3c4fa4f570648333d71d170c6b357d6a7baae3df86d38583d86fa6fa20c79b02",
+    ".venv/Lib/site-packages/kagglesdk/kernels/types/kernels_api_service.py": "a7dd65206e7fc27950385e7b163cda48a40766eb8ff7f89d7a334b9bfb151b5c",
+    ".venv/Lib/site-packages/kagglesdk/competitions/types/competition_api_service.py": "f7a8a6bc15f2c44e55c672df8a3ad603cd5e1a18cb3c3e2fb6f7637dbe5aec0b",
+    ".venv/Lib/site-packages/kaggle/api/kaggle_api_extended.py": "210e589ab1f7359ffb560aacfe1c003ac1bc844c366f4ff709bf3d13de4d5458"
+  },
+  "recommended_next_read_only_steps": [
+    "ログイン済み公式提出UIに詳細エラー／ログへのリンクがある場合だけ、そのリンクと提出ID・rerun sessionの対応を確認する。",
+    "公式UIが実際に使うGetSubmission等の要求shapeと返却にhidden session IDや詳細errorがあるかを、親の承認済み読取範囲で確認する。SDKの短いApiSubmissionより豊富な可能性はあるが未実証。",
+    "正しい自己hidden sessionの対応と権限が確認できた場合だけ正規log APIを使い、Content-Type、提出ID、session ID、ログ由来を束縛する。",
+    "詳細が公開されなければ一般unhandled errorを未解決として保持し、同じ提出を再送しない。visibleログの成功・エラーからhidden原因を確定しない。"
+  ],
+  "not_supported_claims": [
+    "hidden traceback is definitely accessible to participant",
+    "kernel logs of owner/slug identify the hidden rerun",
+    "COMPLETE means successful inference when errorDescription exists",
+    "elapsed wall clock proves9hour timeout",
+    "generic hidden error establishes OOM, missing UID, unsupported DICOM or the prior visible bug"
+  ],
+  "actions": {
+    "network_calls": 0,
+    "credential_values_read": 0,
+    "authentication_initializations": 0,
+    "SDK_service_calls": 0,
+    "upload_save_submit_or_other_mutations": 0,
+    "model_data_or_MRI_access": 0,
+    "new_training": 0
+  }
+}

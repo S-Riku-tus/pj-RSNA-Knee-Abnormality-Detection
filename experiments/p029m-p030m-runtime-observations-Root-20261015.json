@@ -1,0 +1,36 @@
+{
+  "schema_version": "p029m_p030m_runtime_observations_not_forecast_Root_v1",
+  "recorded_utc": "2026-10-15T10:27:45.548369+00:00",
+  "measured_visible_only": {
+    "P029M_total_s": 453.7,
+    "P030M_total_s": 405.2,
+    "difference_s": -48.5,
+    "observed_reduction_fraction": 0.10689883182719861,
+    "P029M_compact_s": 345.1,
+    "P030M_compact_s": 320.1,
+    "P029M_mean_gpu_s": 20.1,
+    "P030M_mean_gpu_s": 9.0,
+    "not_a_controlled_repeated_benchmark": true,
+    "Raptor_timing_also_varies_although_source_unchanged": true
+  },
+  "hidden_studies_approximate": 1300,
+  "primary_source": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data?select=sample_submission.csv",
+  "count_scope": "official indexed description, not observed exact hidden N",
+  "official_whole_notebook_limit_s": 32400,
+  "budget_arithmetic_only": {
+    "32400_divided_by1300_seconds_per_study_including_everything": 24.923076923076923,
+    "this_is_a_prediction": false
+  },
+  "runtime_cautions": [
+    "453.7 and405.2 seconds are total recipe durations, not fixed setup",
+    "four CPU loaders and two GPUs overlap; add/scale mean decode+GPU is not wall-time prediction",
+    "cold compile runs in parallel in workers; not in gpu_s; do not double-count",
+    "3 visible MRIs are not representative distribution of approx1300 hidden MRIs",
+    "each Raptor call has2h subprocess timeout; compact8.3h deadline is checked after study and is cooperative",
+    "whole Notebook9h success not independently verified; source author linked .957 is historical successful recipe evidence, not our hidden runtime",
+    "changing only TTA does not reduce Raptor work or CPU decoding and may leave wall time CPU-bound",
+    "P029M outcome is needed before attributing prior F006 hidden failures to any common cause"
+  ],
+  "decision": "P030M visible path validated and held unsubmitted pending P029M; prepare R7 off contract as separate bundle factor",
+  "P031_contract": "experiments/p031-r7-off-static-hash-contract-Root-20261015.json"
+}

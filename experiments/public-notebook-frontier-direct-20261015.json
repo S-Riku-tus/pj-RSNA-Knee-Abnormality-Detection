@@ -1,0 +1,704 @@
+{
+    "schema_version":  "public_notebook_frontier_direct_observation_v1",
+    "actor":  "/root/web_research",
+    "recorded_at_utc":  "2026-10-15T07:46:01.7409680Z",
+    "date_jst":  "2026-10-15",
+    "scope_ja":  "親が許可された匿名公式Legacy APIから保存したraw8件を独立に読み、候補の版とlinked成績を要約した。自身はネットワークAPIを再実行せず、ソース・重み取得や実再現もしていない。",
+    "retrieval_method":  "Parent-authorized anonymous official Legacy GetKernelViewModel response; this actor inspected saved local JSON only",
+    "exact_endpoint_request_and_timestamp_ja":  "rawファイルには元リクエスト時刻とendpoint URLが含まれないため推定して記入しない。各mtimeは保存時刻の参考情報で、API取得時刻の厳密な代替ではない。",
+    "source_search_record":  "experiments/public-notebook-frontier-search-20261015.json",
+    "source_search_record_sha256":  "8c87f6529d26f84cd7eba63aa2e60dfbccb7f9cd97792e619f12c9e0f2ba016d",
+    "raw_record_count":  8,
+    "own_baseline_recorded_Public":  0.956,
+    "own_baseline_record_date_jst":  "2026-10-14",
+    "own_current_account_newly_observed":  false,
+    "observations":  [
+                         {
+                             "ref":  "evgendvorkin/rsna-versia-7",
+                             "url":  "https://www.kaggle.com/code/evgendvorkin/rsna-versia-7",
+                             "raw_evidence_path":  "artifacts/research/20261015-public-legacy-viewmodels-v1/evgendvorkin--rsna-versia-7.json",
+                             "raw_sha256":  "74e263a14e0a44b7896e4a6a74e5c590d266ce0bcfaee1ec5ff011a3184d0644",
+                             "raw_bytes":  20514,
+                             "raw_last_write_utc":  "2026-10-15T07:43:06.1389673Z",
+                             "request_timestamp_separately_present":  false,
+                             "redirect_url":  null,
+                             "kernel_id":  131711115,
+                             "title":  "RSNA_Versia_7",
+                             "current_run_id":  358019432,
+                             "most_recent_run_id":  358019432,
+                             "rendered_run_id":  358019432,
+                             "rendered_run_version":  22,
+                             "current_version_number":  22,
+                             "total_version_count":  22,
+                             "rendered_run_status":  "COMPLETE",
+                             "rendered_run_created_utc":  "2026-10-13T14:02:17.270Z",
+                             "rendered_run_docker_image_version_id":  31430,
+                             "current_equals_most_recent":  true,
+                             "linked_submission_id":  57145959,
+                             "linked_submission_source_script_version_id":  358019432,
+                             "linked_score_formatted":  "0.956",
+                             "linked_submission_matches_rendered_run":  true,
+                             "best_public_score_numeric":  0.956,
+                             "best_score_formatted":  "0.956",
+                             "best_version_number":  22,
+                             "best_session_url":  "/code/evgendvorkin/rsna-versia-7?scriptVersionId=358019432",
+                             "input_count_including_competition":  4,
+                             "input_descriptors":  [
+                                                       {
+                                                           "source_type":  null,
+                                                           "source_id":  154281,
+                                                           "competition_databundle_version_id":  20902466,
+                                                           "mount_slug":  "competitions/rsna-knee-abnormality-detection",
+                                                           "dataset_id":  null
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20297367,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/heliosli/rsna-orthofoundation-fold0-epoch7-20261004",
+                                                           "dataset_id":  12357722
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20440357,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/nartaa/rsna-knee-publication-swa-weights-20261007",
+                                                           "dataset_id":  12431568
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20601735,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/heliosli/rsna-knee-compact-r7cnxfsss",
+                                                           "dataset_id":  12520391
+                                                       }
+                                                   ],
+                             "prior_search_index_observation":  null,
+                             "prior_historical_observation":  {
+                                                                  "date_jst":  "2026-10-14",
+                                                                  "author_Public":  0.956,
+                                                                  "version":  22,
+                                                                  "scriptVersionId":  358019432,
+                                                                  "own_reproduction_Public":  0.956,
+                                                                  "own_submission_id":  57164195,
+                                                                  "source":  "experiments/V22R-official-Public956-Root-adoption-20261014.json"
+                                                              },
+                             "own_reproduced_Public":  null,
+                             "model_bytes_or_source_code_inspected":  false,
+                             "gold_train_or_selection_history_newly_verified":  false
+                         },
+                         {
+                             "ref":  "fuadmuhammad/rsna-knee-fast-parent-0-957-v2",
+                             "url":  "https://www.kaggle.com/code/fuadmuhammad/rsna-knee-fast-parent-0-957-v2",
+                             "raw_evidence_path":  "artifacts/research/20261015-public-legacy-viewmodels-v1/fuadmuhammad--rsna-knee-fast-parent-0-957-v2.json",
+                             "raw_sha256":  "3a19f7443e9a58dfac08eefcda14ad65002f4aed0001a955f3154c64b65d0500",
+                             "raw_bytes":  157081,
+                             "raw_last_write_utc":  "2026-10-15T07:43:13.9255984Z",
+                             "request_timestamp_separately_present":  false,
+                             "redirect_url":  null,
+                             "kernel_id":  135464071,
+                             "title":  "RSNA Knee Fast Parent 0.957 v2",
+                             "current_run_id":  352023373,
+                             "most_recent_run_id":  352023373,
+                             "rendered_run_id":  352023373,
+                             "rendered_run_version":  1,
+                             "current_version_number":  1,
+                             "total_version_count":  1,
+                             "rendered_run_status":  "COMPLETE",
+                             "rendered_run_created_utc":  "2026-09-23T03:59:13.843Z",
+                             "rendered_run_docker_image_version_id":  31430,
+                             "current_equals_most_recent":  true,
+                             "linked_submission_id":  56516459,
+                             "linked_submission_source_script_version_id":  352023373,
+                             "linked_score_formatted":  "0.939",
+                             "linked_submission_matches_rendered_run":  true,
+                             "best_public_score_numeric":  0.939,
+                             "best_score_formatted":  "0.939",
+                             "best_version_number":  1,
+                             "best_session_url":  "/code/fuadmuhammad/rsna-knee-fast-parent-0-957-v2?scriptVersionId=352023373",
+                             "input_count_including_competition":  17,
+                             "input_descriptors":  [
+                                                       {
+                                                           "source_type":  null,
+                                                           "source_id":  154281,
+                                                           "competition_databundle_version_id":  20902466,
+                                                           "mount_slug":  "competitions/rsna-knee-abnormality-detection",
+                                                           "dataset_id":  null
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  18229736,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/marwanmath/resnet-50-radimagenet-marwan",
+                                                           "dataset_id":  11290369
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  18673450,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/pilkwang/rsna-knee-llm-labels",
+                                                           "dataset_id":  11529209
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  18716507,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/pilkwang/rsna-knee-weights",
+                                                           "dataset_id":  11552334
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  18839182,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+                                                           "dataset_id":  11608090
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  18842180,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/antoinegg1/rsna-knee-e11-diverse-heads-v20",
+                                                           "dataset_id":  11610725
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  18879001,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/prvsiyan/rsna-knee-v52-radimagenet-heads-20260812",
+                                                           "dataset_id":  11628770
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  18956429,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/mattiaangeli/knee-mri-fold-weights",
+                                                           "dataset_id":  11611423
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  19120128,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/dreaddevelopment/raptor-knee-maxspan",
+                                                           "dataset_id":  11745616
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  19122845,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/dreaddevelopment/raptor-knee-native384",
+                                                           "dataset_id":  11746763
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  19134209,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/dreaddevelopment/raptor-knee-native384dense",
+                                                           "dataset_id":  11752181
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  19395055,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/mattiaangeli/opencv-python-headless-4120088-x86",
+                                                           "dataset_id":  11887453
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  19395706,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/mattiaangeli/rsna-knee-coat-resgated-ep10-top3",
+                                                           "dataset_id":  11887000
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  19862359,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/mattiaangeli/rsna-knee-coatnet-d4-depthzone-swa3-b2",
+                                                           "dataset_id":  11970384
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_KERNEL_VERSION",
+                                                           "source_id":  342671664,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "notebooks/sofiaanjenje/rsna-knee-e11-train",
+                                                           "dataset_id":  null
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_KERNEL_VERSION",
+                                                           "source_id":  342849430,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "notebooks/sofiaanjenje/rsna-knee-e13-train",
+                                                           "dataset_id":  null
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_MODEL_INSTANCE_VERSION",
+                                                           "source_id":  4533,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "models/metaresearch/dinov2/pytorch/small/1",
+                                                           "dataset_id":  null
+                                                       }
+                                                   ],
+                             "prior_search_index_observation":  {
+                                                                    "indexed_Public":  0.939,
+                                                                    "indexed_Best":  0.939,
+                                                                    "indexed_best_version":  1,
+                                                                    "indexed_displayed_version":  "1 of 1",
+                                                                    "latest_live_version_verified":  false,
+                                                                    "linked_submission_id":  null,
+                                                                    "score_kind":  "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+                                                                },
+                             "prior_historical_observation":  null,
+                             "own_reproduced_Public":  null,
+                             "model_bytes_or_source_code_inspected":  false,
+                             "gold_train_or_selection_history_newly_verified":  false
+                         },
+                         {
+                             "ref":  "guoxiangwangs/e0052-heliosli-rank-blend-public-adaptation",
+                             "url":  "https://www.kaggle.com/code/guoxiangwangs/e0052-heliosli-rank-blend-public-adaptation",
+                             "raw_evidence_path":  "artifacts/research/20261015-public-legacy-viewmodels-v1/guoxiangwangs--e0052-heliosli-rank-blend-public-adaptation.json",
+                             "raw_sha256":  "1f7b58ab36381a96a4d5fe9586b840be3a9553851ac790f67c01d5f6c70e7640",
+                             "raw_bytes":  20640,
+                             "raw_last_write_utc":  "2026-10-15T07:43:10.3471079Z",
+                             "request_timestamp_separately_present":  false,
+                             "redirect_url":  null,
+                             "kernel_id":  138101066,
+                             "title":  "E0052 Heliosli Rank Blend Public Adaptation",
+                             "current_run_id":  357199714,
+                             "most_recent_run_id":  357199714,
+                             "rendered_run_id":  357199714,
+                             "rendered_run_version":  2,
+                             "current_version_number":  2,
+                             "total_version_count":  2,
+                             "rendered_run_status":  "COMPLETE",
+                             "rendered_run_created_utc":  "2026-10-11T00:59:00.077Z",
+                             "rendered_run_docker_image_version_id":  31481,
+                             "current_equals_most_recent":  true,
+                             "linked_submission_id":  57057708,
+                             "linked_submission_source_script_version_id":  357199714,
+                             "linked_score_formatted":  "0.954",
+                             "linked_submission_matches_rendered_run":  true,
+                             "best_public_score_numeric":  0.954,
+                             "best_score_formatted":  "0.954",
+                             "best_version_number":  2,
+                             "best_session_url":  "/code/guoxiangwangs/e0052-heliosli-rank-blend-public-adaptation?scriptVersionId=357199714",
+                             "input_count_including_competition":  4,
+                             "input_descriptors":  [
+                                                       {
+                                                           "source_type":  null,
+                                                           "source_id":  154281,
+                                                           "competition_databundle_version_id":  20902466,
+                                                           "mount_slug":  "competitions/rsna-knee-abnormality-detection",
+                                                           "dataset_id":  null
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20297367,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/heliosli/rsna-orthofoundation-fold0-epoch7-20261004",
+                                                           "dataset_id":  12357722
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20440357,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/nartaa/rsna-knee-publication-swa-weights-20261007",
+                                                           "dataset_id":  12431568
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20557026,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "rsna-knee-compact-v1",
+                                                           "dataset_id":  12385818
+                                                       }
+                                                   ],
+                             "prior_search_index_observation":  {
+                                                                    "indexed_Public":  0.954,
+                                                                    "indexed_Best":  0.954,
+                                                                    "indexed_best_version":  2,
+                                                                    "indexed_displayed_version":  "2 of 2",
+                                                                    "latest_live_version_verified":  false,
+                                                                    "linked_submission_id":  null,
+                                                                    "score_kind":  "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+                                                                },
+                             "prior_historical_observation":  null,
+                             "own_reproduced_Public":  null,
+                             "model_bytes_or_source_code_inspected":  false,
+                             "gold_train_or_selection_history_newly_verified":  false
+                         },
+                         {
+                             "ref":  "heliosli/blend-mine-in-private-lb-luck-to-all-upvoters",
+                             "url":  "https://www.kaggle.com/code/heliosli/blend-mine-in-private-lb-luck-to-all-upvoters",
+                             "raw_evidence_path":  "artifacts/research/20261015-public-legacy-viewmodels-v1/heliosli--blend-mine-in-private-lb-luck-to-all-upvoters.json",
+                             "raw_sha256":  "fa449ad7ee412d60defa842d5e27d21a0e828e181b64fe7ee784c35dd586e140",
+                             "raw_bytes":  91,
+                             "raw_last_write_utc":  "2026-10-15T07:43:06.5824822Z",
+                             "request_timestamp_separately_present":  false,
+                             "redirect_url":  "/code/heliosli/rsna-knee-blend-gold-old-dataset?scriptVersionId=357360972",
+                             "kernel_id":  null,
+                             "title":  null,
+                             "current_run_id":  null,
+                             "most_recent_run_id":  null,
+                             "rendered_run_id":  null,
+                             "rendered_run_version":  null,
+                             "current_version_number":  null,
+                             "total_version_count":  null,
+                             "rendered_run_status":  null,
+                             "rendered_run_created_utc":  null,
+                             "rendered_run_docker_image_version_id":  null,
+                             "current_equals_most_recent":  false,
+                             "linked_submission_id":  null,
+                             "linked_submission_source_script_version_id":  null,
+                             "linked_score_formatted":  null,
+                             "linked_submission_matches_rendered_run":  false,
+                             "best_public_score_numeric":  null,
+                             "best_score_formatted":  null,
+                             "best_version_number":  null,
+                             "best_session_url":  null,
+                             "input_count_including_competition":  0,
+                             "input_descriptors":  [
+
+                                                   ],
+                             "prior_search_index_observation":  null,
+                             "prior_historical_observation":  {
+                                                                  "date_jst":  "2026-10-14",
+                                                                  "source":  "experiments/public-research-096-20261014-v2.json",
+                                                                  "body91bytes_without_kernel_or_score":  true,
+                                                                  "historical_author0956_not_freshly_verified":  true
+                                                              },
+                             "own_reproduced_Public":  null,
+                             "model_bytes_or_source_code_inspected":  false,
+                             "gold_train_or_selection_history_newly_verified":  false
+                         },
+                         {
+                             "ref":  "kiyoshiohno/rsna-knee-template",
+                             "url":  "https://www.kaggle.com/code/kiyoshiohno/rsna-knee-template",
+                             "raw_evidence_path":  "artifacts/research/20261015-public-legacy-viewmodels-v1/kiyoshiohno--rsna-knee-template.json",
+                             "raw_sha256":  "49a511b2c9a19e00f2c53c5afd30fa53fc7a46d17e77a14226193dcafe3d431f",
+                             "raw_bytes":  71457,
+                             "raw_last_write_utc":  "2026-10-15T07:43:09.3921078Z",
+                             "request_timestamp_separately_present":  false,
+                             "redirect_url":  null,
+                             "kernel_id":  137129232,
+                             "title":  "RSNA Knee Template",
+                             "current_run_id":  356743642,
+                             "most_recent_run_id":  358303643,
+                             "rendered_run_id":  356743642,
+                             "rendered_run_version":  12,
+                             "current_version_number":  12,
+                             "total_version_count":  12,
+                             "rendered_run_status":  "COMPLETE",
+                             "rendered_run_created_utc":  "2026-10-09T11:46:52.500Z",
+                             "rendered_run_docker_image_version_id":  31481,
+                             "current_equals_most_recent":  false,
+                             "linked_submission_id":  57007894,
+                             "linked_submission_source_script_version_id":  356743642,
+                             "linked_score_formatted":  "0.948",
+                             "linked_submission_matches_rendered_run":  true,
+                             "best_public_score_numeric":  0.951,
+                             "best_score_formatted":  "0.951",
+                             "best_version_number":  9,
+                             "best_session_url":  "/code/kiyoshiohno/rsna-knee-template?scriptVersionId=356691822",
+                             "input_count_including_competition":  6,
+                             "input_descriptors":  [
+                                                       {
+                                                           "source_type":  null,
+                                                           "source_id":  154281,
+                                                           "competition_databundle_version_id":  20902466,
+                                                           "mount_slug":  "competitions/rsna-knee-abnormality-detection",
+                                                           "dataset_id":  null
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20297367,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/heliosli/rsna-orthofoundation-fold0-epoch7-20261004",
+                                                           "dataset_id":  12357722
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20325538,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/goodpjw2008/rsna-knee-2-5d-convnext-reader",
+                                                           "dataset_id":  12371725
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20440357,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/nartaa/rsna-knee-publication-swa-weights-20261007",
+                                                           "dataset_id":  12431568
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20457217,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "rsna-knee-compact-v1",
+                                                           "dataset_id":  12385818
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20502598,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "private-data-source",
+                                                           "dataset_id":  12383474
+                                                       }
+                                                   ],
+                             "prior_search_index_observation":  null,
+                             "prior_historical_observation":  {
+                                                                  "date_jst":  "2026-10-14",
+                                                                  "author_Best":  0.951,
+                                                                  "best_version":  9,
+                                                                  "source":  "experiments/public-research-096-20261014-v2.json"
+                                                              },
+                             "own_reproduced_Public":  null,
+                             "model_bytes_or_source_code_inspected":  false,
+                             "gold_train_or_selection_history_newly_verified":  false
+                         },
+                         {
+                             "ref":  "matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed",
+                             "url":  "https://www.kaggle.com/code/matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed",
+                             "raw_evidence_path":  "artifacts/research/20261015-public-legacy-viewmodels-v1/matterhorn3838--rsna-knee-v2-velciraptor-dinosaur-speed.json",
+                             "raw_sha256":  "135c1ff9d54fcfd7bc1d1f2480ab52aea8ccb38e2dc5313bd1b30d5714855700",
+                             "raw_bytes":  21254,
+                             "raw_last_write_utc":  "2026-10-15T07:43:11.0877267Z",
+                             "request_timestamp_separately_present":  false,
+                             "redirect_url":  null,
+                             "kernel_id":  135346023,
+                             "title":  "RSNA Knee V2 | Velciraptor DINOsaur Speed",
+                             "current_run_id":  357167211,
+                             "most_recent_run_id":  357167211,
+                             "rendered_run_id":  357167211,
+                             "rendered_run_version":  9,
+                             "current_version_number":  9,
+                             "total_version_count":  9,
+                             "rendered_run_status":  "COMPLETE",
+                             "rendered_run_created_utc":  "2026-10-10T21:12:15.857Z",
+                             "rendered_run_docker_image_version_id":  31430,
+                             "current_equals_most_recent":  true,
+                             "linked_submission_id":  57052818,
+                             "linked_submission_source_script_version_id":  357167211,
+                             "linked_score_formatted":  "0.954",
+                             "linked_submission_matches_rendered_run":  true,
+                             "best_public_score_numeric":  0.954,
+                             "best_score_formatted":  "0.954",
+                             "best_version_number":  9,
+                             "best_session_url":  "/code/matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed?scriptVersionId=357167211",
+                             "input_count_including_competition":  4,
+                             "input_descriptors":  [
+                                                       {
+                                                           "source_type":  null,
+                                                           "source_id":  154281,
+                                                           "competition_databundle_version_id":  20902466,
+                                                           "mount_slug":  "competitions/rsna-knee-abnormality-detection",
+                                                           "dataset_id":  null
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20297367,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/heliosli/rsna-orthofoundation-fold0-epoch7-20261004",
+                                                           "dataset_id":  12357722
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20440357,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/nartaa/rsna-knee-publication-swa-weights-20261007",
+                                                           "dataset_id":  12431568
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20557026,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/heliosli/rsna-knee-compact-v1",
+                                                           "dataset_id":  12385818
+                                                       }
+                                                   ],
+                             "prior_search_index_observation":  {
+                                                                    "indexed_Public":  0.95,
+                                                                    "indexed_Best":  0.95,
+                                                                    "indexed_best_version":  7,
+                                                                    "indexed_displayed_version":  "7 of 8",
+                                                                    "latest_live_version_verified":  false,
+                                                                    "linked_submission_id":  null,
+                                                                    "score_kind":  "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+                                                                },
+                             "prior_historical_observation":  null,
+                             "own_reproduced_Public":  null,
+                             "model_bytes_or_source_code_inspected":  false,
+                             "gold_train_or_selection_history_newly_verified":  false
+                         },
+                         {
+                             "ref":  "romantamrazov/rsna-knee-dinosaur-v5",
+                             "url":  "https://www.kaggle.com/code/romantamrazov/rsna-knee-dinosaur-v5",
+                             "raw_evidence_path":  "artifacts/research/20261015-public-legacy-viewmodels-v1/romantamrazov--rsna-knee-dinosaur-v5.json",
+                             "raw_sha256":  "b863e610c42c8c0232bf6230af6cd2a546c2a1b7d2fdee7b8e92a90caed0a60c",
+                             "raw_bytes":  49230,
+                             "raw_last_write_utc":  "2026-10-15T07:43:07.6273360Z",
+                             "request_timestamp_separately_present":  false,
+                             "redirect_url":  null,
+                             "kernel_id":  134871202,
+                             "title":  "RSNA Knee | DINOsaur V5? 🦖 ",
+                             "current_run_id":  357077179,
+                             "most_recent_run_id":  357077179,
+                             "rendered_run_id":  357077179,
+                             "rendered_run_version":  45,
+                             "current_version_number":  45,
+                             "total_version_count":  45,
+                             "rendered_run_status":  "COMPLETE",
+                             "rendered_run_created_utc":  "2026-10-10T14:25:02.480Z",
+                             "rendered_run_docker_image_version_id":  31430,
+                             "current_equals_most_recent":  true,
+                             "linked_submission_id":  57044638,
+                             "linked_submission_source_script_version_id":  357077179,
+                             "linked_score_formatted":  "0.950",
+                             "linked_submission_matches_rendered_run":  true,
+                             "best_public_score_numeric":  0.95,
+                             "best_score_formatted":  "0.950",
+                             "best_version_number":  45,
+                             "best_session_url":  "/code/romantamrazov/rsna-knee-dinosaur-v5?scriptVersionId=357077179",
+                             "input_count_including_competition":  3,
+                             "input_descriptors":  [
+                                                       {
+                                                           "source_type":  null,
+                                                           "source_id":  154281,
+                                                           "competition_databundle_version_id":  20902466,
+                                                           "mount_slug":  "competitions/rsna-knee-abnormality-detection",
+                                                           "dataset_id":  null
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20325538,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/goodpjw2008/rsna-knee-2-5d-convnext-reader",
+                                                           "dataset_id":  12371725
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20440357,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/nartaa/rsna-knee-publication-swa-weights-20261007",
+                                                           "dataset_id":  12431568
+                                                       }
+                                                   ],
+                             "prior_search_index_observation":  null,
+                             "prior_historical_observation":  {
+                                                                  "date_jst":  "2026-10-14",
+                                                                  "author_Best":  0.95,
+                                                                  "best_version":  45,
+                                                                  "scriptVersionId":  357077179,
+                                                                  "source":  "experiments/public-research-096-20261014-v2.json"
+                                                              },
+                             "own_reproduced_Public":  null,
+                             "model_bytes_or_source_code_inspected":  false,
+                             "gold_train_or_selection_history_newly_verified":  false
+                         },
+                         {
+                             "ref":  "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+                             "url":  "https://www.kaggle.com/code/sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+                             "raw_evidence_path":  "artifacts/research/20261015-public-legacy-viewmodels-v1/sujanmajhisuzan--rsna-knee-apex-grandmaster-stack.json",
+                             "raw_sha256":  "0455fea29e2eb140789b2b245102696463df0d4040dc1c055c32ded24671e13d",
+                             "raw_bytes":  19609,
+                             "raw_last_write_utc":  "2026-10-15T07:43:11.8588549Z",
+                             "request_timestamp_separately_present":  false,
+                             "redirect_url":  null,
+                             "kernel_id":  137544628,
+                             "title":  "RSNA Knee Apex Grandmaster Stack",
+                             "current_run_id":  356192954,
+                             "most_recent_run_id":  356192954,
+                             "rendered_run_id":  356192954,
+                             "rendered_run_version":  1,
+                             "current_version_number":  1,
+                             "total_version_count":  1,
+                             "rendered_run_status":  "COMPLETE",
+                             "rendered_run_created_utc":  "2026-10-07T22:23:53.933Z",
+                             "rendered_run_docker_image_version_id":  31481,
+                             "current_equals_most_recent":  true,
+                             "linked_submission_id":  56969760,
+                             "linked_submission_source_script_version_id":  356192954,
+                             "linked_score_formatted":  "0.950",
+                             "linked_submission_matches_rendered_run":  true,
+                             "best_public_score_numeric":  0.95,
+                             "best_score_formatted":  "0.950",
+                             "best_version_number":  1,
+                             "best_session_url":  "/code/sujanmajhisuzan/rsna-knee-apex-grandmaster-stack?scriptVersionId=356192954",
+                             "input_count_including_competition":  3,
+                             "input_descriptors":  [
+                                                       {
+                                                           "source_type":  null,
+                                                           "source_id":  154281,
+                                                           "competition_databundle_version_id":  20902466,
+                                                           "mount_slug":  "competitions/rsna-knee-abnormality-detection",
+                                                           "dataset_id":  null
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20325538,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/goodpjw2008/rsna-knee-2-5d-convnext-reader",
+                                                           "dataset_id":  12371725
+                                                       },
+                                                       {
+                                                           "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                           "source_id":  20440357,
+                                                           "competition_databundle_version_id":  null,
+                                                           "mount_slug":  "datasets/nartaa/rsna-knee-publication-swa-weights-20261007",
+                                                           "dataset_id":  12431568
+                                                       }
+                                                   ],
+                             "prior_search_index_observation":  {
+                                                                    "indexed_Public":  0.95,
+                                                                    "indexed_Best":  0.95,
+                                                                    "indexed_best_version":  1,
+                                                                    "indexed_displayed_version":  "1 of 1",
+                                                                    "latest_live_version_verified":  false,
+                                                                    "linked_submission_id":  null,
+                                                                    "score_kind":  "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+                                                                },
+                             "prior_historical_observation":  null,
+                             "own_reproduced_Public":  null,
+                             "model_bytes_or_source_code_inspected":  false,
+                             "gold_train_or_selection_history_newly_verified":  false
+                         }
+                     ],
+    "important_differences_ja":  [
+                                     "Matterhornは検索索引V7/8・0.950から、直接metadataのV9・linked0.954・COMPLETEへ更新。古い索引に基づく最新V8エラーという現在説明は新証拠で更新する。",
+                                     "V22はcurrentRun/mostRecentRunとも358019432、V22、linked57145959、作者0.956で旧値から変更なし。自己V22R57164195・0.956は別記録。",
+                                     "Kiyoshiはrendered/current V12のrun356743642・linked0.948だが、mostRecentRun358303643は別。best0.951V9を最新runの成績と扱わず、mostRecent側の完走・Publicを推定しない。",
+                                     "旧Helios refは91Bのredirect応答。移動先はrsna-knee-blend-gold-old-datasetと明示版357360972で、未取得を削除・非公開と判断しない。",
+                                     "Fuadはタイトル0.957に対しV1・linked0.939であり、索引での偽陽性が直接metadataでも確認された。",
+                                     "Guoxiang V2とMatterhorn V9の外部Input sourceId集合は20297367/20440357/20557026で一致する。コード・混合比まで同一とは未確認。V22のcompactは20601735で異なる。",
+                                     "Kiyoshi rendered V12のInputにprivate-data-sourceがあるため、公開ソースのみで再現可能と判定しない。"
+                                 ],
+    "next_direct_API_priority_refs":  [
+                                          "amanatar/rsna-knee-abnormality-detection",
+                                          "anhadmahajan06/rsna-knee-abnormality-detection",
+                                          "nishantkharga/rsna-knee-full-4-arm-ensemble-v55",
+                                          "mattiaangeli/bend-the-knee-to-dinov3-ensembled",
+                                          "prvsiyan/head-and-shoulders-knees-and-toes",
+                                          "vaihero/rsna-knee-effv1",
+                                          "valentinonguyen/knee-sub-tonyrank",
+                                          "maverickss26/rsna-knee-restructured-version-2",
+                                          "tamerlanomralinov/rsna-knee-crazy-lb-tune",
+                                          "paiky1995/rsna-knee-reproduce-raptor-then-fine-tune-on-it"
+                                      ],
+    "priority_basis_ja":  "既知25refsのうち今回raw8件と主4作者を除外し、比較的高い索引成績、表示versionとbestのずれ、更新頻度、独自armの有無をもとに10refsを選んだ。高成績を保証する順序ではない。",
+    "next_verification_ja":  "親が追跡中のscore順公式公開Code一覧を優先し、0.956超の実linked成績があれば、版・Input・ソース・Docker・Gold履歴と提出契約を固定して再現候補へ昇格する。",
+    "result":  {
+                   "direct_nonredirect_candidates":  7,
+                   "redirect_candidates":  1,
+                   "author_linked_greater_than0956":  0,
+                   "author_linked_greater_than0960":  0,
+                   "own_goal_achieved":  false,
+                   "global_absence_claim":  false
+               },
+    "safety_scope":  {
+                         "credential_values_read":  false,
+                         "data_or_weights_download":  false,
+                         "MRI_decode":  false,
+                         "training":  false,
+                         "external_upload_save_submit":  false,
+                         "old_records_overwritten":  false
+                     }
+}

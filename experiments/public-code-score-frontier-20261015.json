@@ -1,0 +1,2235 @@
+{
+    "schema_version":  "official_public_code_score_frontier_v1",
+    "actor":  "/root/web_research",
+    "recorded_at_utc":  "2026-10-15T07:49:50.2242482Z",
+    "research_date_jst":  "2026-10-15",
+    "scope_ja":  "親が取得した公式ListKernelIds/ListKernelsの最初100件を独立再計算した。検索索引では見えなかった作者0.957候補を新証拠として優先する。自身は外部送信・学習・モデル取得をしていない。",
+    "evidence":  {
+                     "list_kernels_path":  "artifacts/research/20261015-public-code-list-probe-v1/ListKernels.json",
+                     "list_kernels_sha256":  "183623cbed33abba64e61beea8233da221f8bf01c5522b78118c64248194bef8",
+                     "list_kernels_bytes":  376645,
+                     "list_ids_path":  "artifacts/research/20261015-public-code-list-probe-v1/ListKernelIds.json",
+                     "list_ids_sha256":  "8b54ed2eec642bad29876b849a7b7fe631a53f6415b2a7e09e56b6c1414557c1",
+                     "receipts_path":  "artifacts/research/20261015-public-code-list-probe-v1/receipts.json",
+                     "receipts_sha256":  "de7af29fb6f69429ada2d83c72a34f044af3ce0c1700bbf5079a49bebdbd07a5",
+                     "retrieval_actor":  "parent /root, anonymous official HTTP",
+                     "analysis_actor":  "/root/web_research, saved local raw",
+                     "list_request":  {
+                                          "ResponseUTC":  "2026-10-15T07:46:00.4857072Z",
+                                          "File":  "ListKernels.json",
+                                          "URL":  "https://www.kaggle.com/api/i/kernels.KernelsService/ListKernels",
+                                          "Name":  "ListKernels",
+                                          "Bytes":  376645,
+                                          "Body":  {
+                                                       "kernelFilterCriteria":  {
+                                                                                    "listRequest":  {
+                                                                                                        "competitionId":  154281,
+                                                                                                        "sortBy":  "SCORE_DESCENDING",
+                                                                                                        "page":  1,
+                                                                                                        "group":  "EVERYONE",
+                                                                                                        "pageSize":  100
+                                                                                                    }
+                                                                                }
+                                                   },
+                                          "Status":  200,
+                                          "RequestUTC":  "2026-10-15T07:45:56.2123860Z"
+                                      },
+                     "ids_request":  {
+                                         "ResponseUTC":  "2026-10-15T07:45:56.2074032Z",
+                                         "File":  "ListKernelIds.json",
+                                         "URL":  "https://www.kaggle.com/api/i/kernels.KernelsService/ListKernelIds",
+                                         "Name":  "ListKernelIds",
+                                         "Bytes":  1015,
+                                         "Body":  {
+                                                      "competitionId":  154281,
+                                                      "sortBy":  "SCORE_DESCENDING",
+                                                      "page":  1,
+                                                      "group":  "EVERYONE",
+                                                      "pageSize":  100
+                                                  },
+                                         "Status":  200,
+                                         "RequestUTC":  "2026-10-15T07:45:55.1775399Z"
+                                     }
+                 },
+    "filtering_and_order":  {
+                                "requested_competition_id":  154281,
+                                "requested_sort":  "SCORE_DESCENDING",
+                                "requested_group":  "EVERYONE",
+                                "requested_page":  1,
+                                "requested_page_size":  100,
+                                "returned_rows":  100,
+                                "returned_totalCount":  0,
+                                "totalCount_field_present":  true,
+                                "totalCount_is_not_usable_as_actual_total":  true,
+                                "totalCount_limit_ja":  "raw totalCountは0だが実配列100件。全件0や全件取得とは扱わず、総公開Notebook数は未確定。",
+                                "descending_violation_positions":  [
+
+                                                                   ],
+                                "nonincreasing_score_verified":  true,
+                                "list_ids_order_mismatch_positions":  [
+
+                                                                      ],
+                                "list_ids_order_matches":  true,
+                                "unique_kernel_ids":  100,
+                                "rows_with_competition154281":  100,
+                                "rows_with_hasLinkedSubmission_true":  100,
+                                "all_public_catalog_retrieved":  false,
+                                "pagination_used":  false
+                            },
+    "score_distribution":  [
+                               {
+                                   "displayed_best_public_score":  0.957,
+                                   "Notebook_rows":  3
+                               },
+                               {
+                                   "displayed_best_public_score":  0.956,
+                                   "Notebook_rows":  38
+                               },
+                               {
+                                   "displayed_best_public_score":  0.955,
+                                   "Notebook_rows":  4
+                               },
+                               {
+                                   "displayed_best_public_score":  0.954,
+                                   "Notebook_rows":  29
+                               },
+                               {
+                                   "displayed_best_public_score":  0.953,
+                                   "Notebook_rows":  1
+                               },
+                               {
+                                   "displayed_best_public_score":  0.952,
+                                   "Notebook_rows":  4
+                               },
+                               {
+                                   "displayed_best_public_score":  0.951,
+                                   "Notebook_rows":  7
+                               },
+                               {
+                                   "displayed_best_public_score":  0.95,
+                                   "Notebook_rows":  14
+                               }
+                           ],
+    "score_frontier":  {
+                           "max_returned_best_public_score":  0.957,
+                           "min_returned_best_public_score":  0.95,
+                           "greater_than0956_rows":  3,
+                           "at_least0960_rows":  0,
+                           "strict_greater_than0960_rows":  0,
+                           "own_prior_recorded_Public":  0.956,
+                           "own_current_Public":  null,
+                           "own_goal_achieved":  false,
+                           "author_best_not_own_reproduced":  true,
+                           "global_absence_of_public0960_recipe_claimed":  false,
+                           "interpretation_ja":  "今回のscore降順返却先頭100件では最高0.957が3件で、0.960以上は0件。これは取得済み公式公開Code一覧の範囲の結論で、非公開解法・全公開履歴・今後の更新の不存在を示さない。"
+                       },
+    "privacy":  {
+                    "Notebook_rows_with_explicit_private_flag":  9,
+                    "Notebook_rows_without_explicit_private_flag":  91,
+                    "private_rows":  [
+                                         {
+                                             "position_in_returned_page":  1,
+                                             "kernel_id":  138637975,
+                                             "ref":  "bliverrigpdoge/r7-raptor-knee-centred-convnext",
+                                             "url":  "https://www.kaggle.com/code/bliverrigpdoge/r7-raptor-knee-centred-convnext",
+                                             "title":  "R7 + Raptor + knee-centred ConvNeXt",
+                                             "returned_script_version_id":  358269940,
+                                             "best_public_score":  0.957,
+                                             "has_linked_submission":  true,
+                                             "input_count_including_competition":  5,
+                                             "input_source_id_set_key":  "154281,20297367,20440357,20564117,20601735",
+                                             "explicit_private_input_count":  1,
+                                             "explicit_private_source_ids":  [
+                                                                                 20564117
+                                                                             ],
+                                             "competition154281_present":  true
+                                         },
+                                         {
+                                             "position_in_returned_page":  21,
+                                             "kernel_id":  138489906,
+                                             "ref":  "picond/rsna-knee-r7-pinned-exact50-control",
+                                             "url":  "https://www.kaggle.com/code/picond/rsna-knee-r7-pinned-exact50-control",
+                                             "title":  "RSNA Knee R7 Pinned Exact50 Control",
+                                             "returned_script_version_id":  358201410,
+                                             "best_public_score":  0.956,
+                                             "has_linked_submission":  true,
+                                             "input_count_including_competition":  5,
+                                             "input_source_id_set_key":  "154281,20297367,20440357,20601735,20700156",
+                                             "explicit_private_input_count":  1,
+                                             "explicit_private_source_ids":  [
+                                                                                 20700156
+                                                                             ],
+                                             "competition154281_present":  true
+                                         },
+                                         {
+                                             "position_in_returned_page":  42,
+                                             "kernel_id":  138104007,
+                                             "ref":  "bliverrigpdoge/velci-kcd25-20",
+                                             "url":  "https://www.kaggle.com/code/bliverrigpdoge/velci-kcd25-20",
+                                             "title":  "velci kcd25 20",
+                                             "returned_script_version_id":  357204606,
+                                             "best_public_score":  0.955,
+                                             "has_linked_submission":  true,
+                                             "input_count_including_competition":  5,
+                                             "input_source_id_set_key":  "154281,20297367,20440357,20557026,20564117",
+                                             "explicit_private_input_count":  1,
+                                             "explicit_private_source_ids":  [
+                                                                                 20564117
+                                                                             ],
+                                             "competition154281_present":  true
+                                         },
+                                         {
+                                             "position_in_returned_page":  54,
+                                             "kernel_id":  138139982,
+                                             "ref":  "goodpjw2008/rsna-knee-coatnet-s6-2-5d-mil-lb-0-954",
+                                             "url":  "https://www.kaggle.com/code/goodpjw2008/rsna-knee-coatnet-s6-2-5d-mil-lb-0-954",
+                                             "title":  "RSNA Knee | CoAtNet + S6 + 2.5D MIL | LB 0.954",
+                                             "returned_script_version_id":  357480643,
+                                             "best_public_score":  0.954,
+                                             "has_linked_submission":  true,
+                                             "input_count_including_competition":  6,
+                                             "input_source_id_set_key":  "154281,20297367,20440357,20536104,20557026,20577001",
+                                             "explicit_private_input_count":  2,
+                                             "explicit_private_source_ids":  [
+                                                                                 20536104,
+                                                                                 20577001
+                                                                             ],
+                                             "competition154281_present":  true
+                                         },
+                                         {
+                                             "position_in_returned_page":  60,
+                                             "kernel_id":  138180901,
+                                             "ref":  "jenillangaliya/rsna-knee-dual-sota-pipeline-lb-0-954",
+                                             "url":  "https://www.kaggle.com/code/jenillangaliya/rsna-knee-dual-sota-pipeline-lb-0-954",
+                                             "title":  "RSNA Knee | Dual SOTA Pipeline [LB 0.954+]",
+                                             "returned_script_version_id":  357375218,
+                                             "best_public_score":  0.954,
+                                             "has_linked_submission":  true,
+                                             "input_count_including_competition":  4,
+                                             "input_source_id_set_key":  "154281,20297367,20440357,20590255",
+                                             "explicit_private_input_count":  1,
+                                             "explicit_private_source_ids":  [
+                                                                                 20590255
+                                                                             ],
+                                             "competition154281_present":  true
+                                         },
+                                         {
+                                             "position_in_returned_page":  76,
+                                             "kernel_id":  138038784,
+                                             "ref":  "jenillangaliya/rsna-knee-0-952-tri-hybrid-multi-scale-mil",
+                                             "url":  "https://www.kaggle.com/code/jenillangaliya/rsna-knee-0-952-tri-hybrid-multi-scale-mil",
+                                             "title":  "RSNA Knee 0.952: Tri-Hybrid Multi-Scale MIL",
+                                             "returned_script_version_id":  357147919,
+                                             "best_public_score":  0.952,
+                                             "has_linked_submission":  true,
+                                             "input_count_including_competition":  4,
+                                             "input_source_id_set_key":  "154281,20440357,20528701,20528755",
+                                             "explicit_private_input_count":  2,
+                                             "explicit_private_source_ids":  [
+                                                                                 20528701,
+                                                                                 20528755
+                                                                             ],
+                                             "competition154281_present":  true
+                                         },
+                                         {
+                                             "position_in_returned_page":  80,
+                                             "kernel_id":  137129232,
+                                             "ref":  "kiyoshiohno/rsna-knee-template",
+                                             "url":  "https://www.kaggle.com/code/kiyoshiohno/rsna-knee-template",
+                                             "title":  "RSNA Knee Template",
+                                             "returned_script_version_id":  356743642,
+                                             "best_public_score":  0.951,
+                                             "has_linked_submission":  true,
+                                             "input_count_including_competition":  6,
+                                             "input_source_id_set_key":  "154281,20297367,20325538,20440357,20457217,20502598",
+                                             "explicit_private_input_count":  1,
+                                             "explicit_private_source_ids":  [
+                                                                                 20502598
+                                                                             ],
+                                             "competition154281_present":  true
+                                         },
+                                         {
+                                             "position_in_returned_page":  82,
+                                             "kernel_id":  137831248,
+                                             "ref":  "samanyu1808/rsna-knee-blend3-please-upvote-if-useful",
+                                             "url":  "https://www.kaggle.com/code/samanyu1808/rsna-knee-blend3-please-upvote-if-useful",
+                                             "title":  "rsna-knee-blend3 please upvote if useful",
+                                             "returned_script_version_id":  356690438,
+                                             "best_public_score":  0.951,
+                                             "has_linked_submission":  true,
+                                             "input_count_including_competition":  5,
+                                             "input_source_id_set_key":  "154281,20297367,20325538,20440357,20495942",
+                                             "explicit_private_input_count":  1,
+                                             "explicit_private_source_ids":  [
+                                                                                 20495942
+                                                                             ],
+                                             "competition154281_present":  true
+                                         },
+                                         {
+                                             "position_in_returned_page":  83,
+                                             "kernel_id":  137885408,
+                                             "ref":  "jenillangaliya/rsna-knee-dual-stage-sota-ensemble-lb-0-951",
+                                             "url":  "https://www.kaggle.com/code/jenillangaliya/rsna-knee-dual-stage-sota-ensemble-lb-0-951",
+                                             "title":  "RSNA Knee: Dual-Stage SOTA Ensemble [LB 0.951]",
+                                             "returned_script_version_id":  356946432,
+                                             "best_public_score":  0.951,
+                                             "has_linked_submission":  true,
+                                             "input_count_including_competition":  4,
+                                             "input_source_id_set_key":  "154281,20440357,20528701,20528755",
+                                             "explicit_private_input_count":  2,
+                                             "explicit_private_source_ids":  [
+                                                                                 20528701,
+                                                                                 20528755
+                                                                             ],
+                                             "competition154281_present":  true
+                                         }
+                                     ],
+                    "decision_rule_ja":  "dataSources[].isPrivate=trueのみを非公開の直接証拠とする。名前にPrivate Weightsがあるだけでは非公開と判定せず、isPrivate欠落も全アクセス成功の保証とはしない。",
+                    "top3_private_flagged":  1,
+                    "top3_no_private_flag_observed":  2,
+                    "actual_Input_access_or_weight_SHA_verified":  false
+                },
+    "input_overlap":  {
+                          "distinct_sorted_source_id_sets":  31,
+                          "score0956_group_counts":  [
+                                                         {
+                                                             "input_source_id_set":  "154281,20297367,20440357,20601735",
+                                                             "Notebook_rows":  24
+                                                         },
+                                                         {
+                                                             "input_source_id_set":  "154281,20297367,20325538,20440357,20601735",
+                                                             "Notebook_rows":  2
+                                                         },
+                                                         {
+                                                             "input_source_id_set":  "154281,19120128,19122845,19134209,20297367,20440357,20601735",
+                                                             "Notebook_rows":  2
+                                                         },
+                                                         {
+                                                             "input_source_id_set":  "154281,20297367,20440357,20557026,20601735",
+                                                             "Notebook_rows":  2
+                                                         },
+                                                         {
+                                                             "input_source_id_set":  "154281,20297367,20440357,20731557",
+                                                             "Notebook_rows":  2
+                                                         },
+                                                         {
+                                                             "input_source_id_set":  "4533,154281,18229736,18673450,18716507,18839182,18842180,18879001,18956429,19120128,19122845,19134209,19395055,19395706,19862359,342671664,342849430",
+                                                             "Notebook_rows":  1
+                                                         },
+                                                         {
+                                                             "input_source_id_set":  "154281,20297367,20440357,20601735,357933574",
+                                                             "Notebook_rows":  1
+                                                         },
+                                                         {
+                                                             "input_source_id_set":  "154281,20287156,20297367,20440357,20601735",
+                                                             "Notebook_rows":  1
+                                                         },
+                                                         {
+                                                             "input_source_id_set":  "154281,20297367,20440357,20588112",
+                                                             "Notebook_rows":  1
+                                                         },
+                                                         {
+                                                             "input_source_id_set":  "154281,20297367,20325538,20440357,20557026,20601735",
+                                                             "Notebook_rows":  1
+                                                         },
+                                                         {
+                                                             "input_source_id_set":  "154281,20297367,20440357,20601735,20700156",
+                                                             "Notebook_rows":  1
+                                                         }
+                                                     ],
+                          "note_ja":  "0.956の38Notebook中24件は同じInput sourceId集合154281/20297367/20440357/20601735。Input集合一致はコード・重み使用法・予測・独立再現の同一性を証明しない。Notebook行数を独立recipe数としない。"
+                      },
+    "top_three":  [
+                      {
+                          "kernel_id":  138637975,
+                          "url":  "https://www.kaggle.com/code/bliverrigpdoge/r7-raptor-knee-centred-convnext",
+                          "title":  "R7 + Raptor + knee-centred ConvNeXt",
+                          "script_version_id_in_list":  358269940,
+                          "best_public_score_in_list":  0.957,
+                          "has_linked_submission":  true,
+                          "linked_submission_id_not_exposed_by_list":  true,
+                          "best_score_binding_to_returned_script_version_unverified":  true,
+                          "input_descriptors":  [
+                                                    {
+                                                        "name":  "RSNA OrthoFoundation Fold0 Epoch7 Private Weights",
+                                                        "data_source_url":  "/datasets/heliosli/rsna-orthofoundation-fold0-epoch7-20261004",
+                                                        "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                        "source_id":  20297367,
+                                                        "is_private_flag":  null
+                                                    },
+                                                    {
+                                                        "name":  "RSNA Knee selected SWA weights 0949 and 0945",
+                                                        "data_source_url":  "/datasets/nartaa/rsna-knee-publication-swa-weights-20261007",
+                                                        "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                        "source_id":  20440357,
+                                                        "is_private_flag":  null
+                                                    },
+                                                    {
+                                                        "name":  "[Private Datasource]",
+                                                        "data_source_url":  null,
+                                                        "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                        "source_id":  20564117,
+                                                        "is_private_flag":  true
+                                                    },
+                                                    {
+                                                        "name":  "RSNA Knee Compact R7 CNX FS SS",
+                                                        "data_source_url":  "/datasets/heliosli/rsna-knee-compact-r7cnxfsss",
+                                                        "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                        "source_id":  20601735,
+                                                        "is_private_flag":  null
+                                                    },
+                                                    {
+                                                        "name":  "RSNA Knee Abnormality Detection",
+                                                        "data_source_url":  "/competitions/rsna-knee-abnormality-detection",
+                                                        "source_type":  null,
+                                                        "source_id":  154281,
+                                                        "is_private_flag":  null
+                                                    }
+                                                ],
+                          "explicit_private_inputs":  1,
+                          "reproduction_disposition_ja":  "private Inputを明示。自己アカウントで同じ入力を取得できる証拠がなく、直接再現候補として優先しない。",
+                          "source_code_audited_by_this_actor":  false,
+                          "web_root_and_comments_body":  "inaccessible via web tool",
+                          "web_matching_discussion_obtained":  false,
+                          "own_reproduced_Public":  null
+                      },
+                      {
+                          "kernel_id":  138669425,
+                          "url":  "https://www.kaggle.com/code/heliosli/this-is-old-version-0-957",
+                          "title":  "This is old version 0.957.",
+                          "script_version_id_in_list":  358425369,
+                          "best_public_score_in_list":  0.957,
+                          "has_linked_submission":  true,
+                          "linked_submission_id_not_exposed_by_list":  true,
+                          "best_score_binding_to_returned_script_version_unverified":  true,
+                          "input_descriptors":  [
+                                                    {
+                                                        "name":  "RSNA OrthoFoundation Fold0 Epoch7 Private Weights",
+                                                        "data_source_url":  "/datasets/heliosli/rsna-orthofoundation-fold0-epoch7-20261004",
+                                                        "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                        "source_id":  20297367,
+                                                        "is_private_flag":  null
+                                                    },
+                                                    {
+                                                        "name":  "RSNA Knee selected SWA weights 0949 and 0945",
+                                                        "data_source_url":  "/datasets/nartaa/rsna-knee-publication-swa-weights-20261007",
+                                                        "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                        "source_id":  20440357,
+                                                        "is_private_flag":  null
+                                                    },
+                                                    {
+                                                        "name":  "RSNA Knee R6 Frozen fe055406",
+                                                        "data_source_url":  "/datasets/heliosli/rsna-knee-r6-frozen-fe055406",
+                                                        "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                        "source_id":  20731557,
+                                                        "is_private_flag":  null
+                                                    },
+                                                    {
+                                                        "name":  "RSNA Knee Abnormality Detection",
+                                                        "data_source_url":  "/competitions/rsna-knee-abnormality-detection",
+                                                        "source_type":  null,
+                                                        "source_id":  154281,
+                                                        "is_private_flag":  null
+                                                    }
+                                                ],
+                          "explicit_private_inputs":  0,
+                          "reproduction_disposition_ja":  "返却Inputにprivate flagはない。重み実取得・SHA・ライセンス・Gold履歴・提出契約は別確認し、親の直接詳細とソース監査へ進む。",
+                          "source_code_audited_by_this_actor":  false,
+                          "web_root_and_comments_body":  "inaccessible via web tool",
+                          "web_matching_discussion_obtained":  false,
+                          "own_reproduced_Public":  null
+                      },
+                      {
+                          "kernel_id":  138670458,
+                          "url":  "https://www.kaggle.com/code/heliosli/0-9576-latest-public-dataset-score-in-one-click",
+                          "title":  "=0.9576 Latest public dataset score in one click!",
+                          "script_version_id_in_list":  358332966,
+                          "best_public_score_in_list":  0.957,
+                          "has_linked_submission":  true,
+                          "linked_submission_id_not_exposed_by_list":  true,
+                          "best_score_binding_to_returned_script_version_unverified":  true,
+                          "input_descriptors":  [
+                                                    {
+                                                        "name":  "RSNA OrthoFoundation Fold0 Epoch7 Private Weights",
+                                                        "data_source_url":  "/datasets/heliosli/rsna-orthofoundation-fold0-epoch7-20261004",
+                                                        "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                        "source_id":  20297367,
+                                                        "is_private_flag":  null
+                                                    },
+                                                    {
+                                                        "name":  "RSNA Knee selected SWA weights 0949 and 0945",
+                                                        "data_source_url":  "/datasets/nartaa/rsna-knee-publication-swa-weights-20261007",
+                                                        "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                        "source_id":  20440357,
+                                                        "is_private_flag":  null
+                                                    },
+                                                    {
+                                                        "name":  "RSNA Knee R6 Frozen fe055406",
+                                                        "data_source_url":  "/datasets/heliosli/rsna-knee-r6-frozen-fe055406",
+                                                        "source_type":  "DATA_SOURCE_TYPE_DATASET_VERSION",
+                                                        "source_id":  20611930,
+                                                        "is_private_flag":  null
+                                                    },
+                                                    {
+                                                        "name":  "RSNA Knee Abnormality Detection",
+                                                        "data_source_url":  "/competitions/rsna-knee-abnormality-detection",
+                                                        "source_type":  null,
+                                                        "source_id":  154281,
+                                                        "is_private_flag":  null
+                                                    }
+                                                ],
+                          "explicit_private_inputs":  0,
+                          "reproduction_disposition_ja":  "返却Inputにprivate flagはない。重み実取得・SHA・ライセンス・Gold履歴・提出契約は別確認し、親の直接詳細とソース監査へ進む。",
+                          "source_code_audited_by_this_actor":  false,
+                          "web_root_and_comments_body":  "inaccessible via web tool",
+                          "web_matching_discussion_obtained":  false,
+                          "own_reproduced_Public":  null
+                      }
+                  ],
+    "top_three_comparison_ja":  [
+                                    "Helios2候補はOrtho source20297367・SWA20440357が共通だがR6 Frozen fe055406はold-version側20731557、0-9576側20611930で異なる。dataset slugだけで固定版が同じと判断しない。",
+                                    "タイトル0.9576やLatestは自己Publicや非丸めの公式スコアを証明しない。ListKernels bestPublicScoreは3件とも0.957。",
+                                    "上位bliverrigの追加Input source20564117はisPrivate=trueでURLなし。Gold/weak履歴も一覧から判定できない。"
+                                ],
+    "web_followup":  {
+                         "root_open_attempts":  3,
+                         "comment_open_attempts":  3,
+                         "all_requested_root_and_comments_inaccessible":  true,
+                         "exact_slug_and_author_query_families":  [
+                                                                      "r7-raptor-knee-centred-convnext",
+                                                                      "this-is-old-version-0-957",
+                                                                      "0-9576-latest-public-dataset-score-in-one-click",
+                                                                      "heliosli RSNA 0.957",
+                                                                      "bliverrigpdoge knee",
+                                                                      "Latest public dataset score in one click",
+                                                                      "knee-centred ConvNeXt"
+                                                                  ],
+                         "matching_condition_or_discussion_body_obtained":  false,
+                         "irrelevant_search_results_not_used":  true,
+                         "note_ja":  "Web検索は一致する議論本文を返さず、直接openも不可。ライセンス、Gold履歴、実行失敗条件は未確認として、親が直接metadata・公開ソースを調査する。"
+                     },
+    "prior_records_kept_point_in_time":  [
+                                             "experiments/public-notebook-frontier-search-20261015.json",
+                                             "experiments/public-notebook-frontier-direct-20261015.json"
+                                         ],
+    "supersession_ja":  "上記旧記録の当時の探索では0.956超を発見できなかったという結論を保持する。本記録で公式一覧上の0.957を新規確認したため、以後の現在判断は本記録と親が追加するlinked詳細を優先する。",
+    "recommended_next_ja":  [
+                                "private flagなしのHelios2件のbestとlinked提出・返却scriptVersionの対応を確認する。",
+                                "実行する版の元ソース、全Input内部版、Docker、offline提出契約、上流Gold選択履歴を固定する。",
+                                "可視3件成功をhidden全件・9時間完走や自己Public改善と区別して、承認済み範囲で親が非公開再現を進める。",
+                                "自己公式Publicが0.957でも目標0.960以上は未達。以後の追加混合は同じF006重み・固定比率など一要因で比較する。"
+                            ],
+    "ranked_rows":  [
+                        {
+                            "position_in_returned_page":  1,
+                            "kernel_id":  138637975,
+                            "ref":  "bliverrigpdoge/r7-raptor-knee-centred-convnext",
+                            "url":  "https://www.kaggle.com/code/bliverrigpdoge/r7-raptor-knee-centred-convnext",
+                            "title":  "R7 + Raptor + knee-centred ConvNeXt",
+                            "returned_script_version_id":  358269940,
+                            "best_public_score":  0.957,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20564117,20601735",
+                            "explicit_private_input_count":  1,
+                            "explicit_private_source_ids":  [
+                                                                20564117
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  2,
+                            "kernel_id":  138669425,
+                            "ref":  "heliosli/this-is-old-version-0-957",
+                            "url":  "https://www.kaggle.com/code/heliosli/this-is-old-version-0-957",
+                            "title":  "This is old version 0.957.",
+                            "returned_script_version_id":  358425369,
+                            "best_public_score":  0.957,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20731557",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  3,
+                            "kernel_id":  138670458,
+                            "ref":  "heliosli/0-9576-latest-public-dataset-score-in-one-click",
+                            "url":  "https://www.kaggle.com/code/heliosli/0-9576-latest-public-dataset-score-in-one-click",
+                            "title":  "=0.9576 Latest public dataset score in one click!",
+                            "returned_script_version_id":  358332966,
+                            "best_public_score":  0.957,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20611930",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  4,
+                            "kernel_id":  131711115,
+                            "ref":  "evgendvorkin/rsna-versia-7",
+                            "url":  "https://www.kaggle.com/code/evgendvorkin/rsna-versia-7",
+                            "title":  "RSNA_Versia_7",
+                            "returned_script_version_id":  358019432,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  5,
+                            "kernel_id":  131760037,
+                            "ref":  "degnonguidi/rsna-knee-abnormality-detection",
+                            "url":  "https://www.kaggle.com/code/degnonguidi/rsna-knee-abnormality-detection",
+                            "title":  "RSNA Knee Abnormality Detection",
+                            "returned_script_version_id":  357933579,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735,357933574",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  6,
+                            "kernel_id":  137102536,
+                            "ref":  "goodpjw2008/rsna-knee-coatnet-2-5d-convnext-mil-lb-0-954",
+                            "url":  "https://www.kaggle.com/code/goodpjw2008/rsna-knee-coatnet-2-5d-convnext-mil-lb-0-954",
+                            "title":  "RSNA Knee | CoAtNet + 2.5D ConvNeXt MIL | LB 0.954",
+                            "returned_script_version_id":  358495736,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  6,
+                            "input_source_id_set_key":  "154281,20297367,20325538,20440357,20557026,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  7,
+                            "kernel_id":  138143608,
+                            "ref":  "heliosli/rsna-knee-blend-gold-old-dataset",
+                            "url":  "https://www.kaggle.com/code/heliosli/rsna-knee-blend-gold-old-dataset",
+                            "title":  "rsna-knee-blend-gold⭐⭐⭐（old dataset）",
+                            "returned_script_version_id":  357360972,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20588112",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  8,
+                            "kernel_id":  138222340,
+                            "ref":  "heliosli/0-957-latest-dataset-score-in-one-click",
+                            "url":  "https://www.kaggle.com/code/heliosli/0-957-latest-dataset-score-in-one-click",
+                            "title":  "≈0.957 | Latest dataset| score in one click!",
+                            "returned_script_version_id":  357456820,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  9,
+                            "kernel_id":  138411209,
+                            "ref":  "lavinwins/rsna-gold-medal",
+                            "url":  "https://www.kaggle.com/code/lavinwins/rsna-gold-medal",
+                            "title":  "RSNA Gold Medal⭐⭐ ",
+                            "returned_script_version_id":  358504398,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20731557",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  10,
+                            "kernel_id":  138413589,
+                            "ref":  "mkhamzanov/rsna-b1-ctrl",
+                            "url":  "https://www.kaggle.com/code/mkhamzanov/rsna-b1-ctrl",
+                            "title":  "rsna-b1-ctrl",
+                            "returned_script_version_id":  357832281,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20325538,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  11,
+                            "kernel_id":  138417437,
+                            "ref":  "jashsurendra/0-957-latest-dataset-score-in-one-click",
+                            "url":  "https://www.kaggle.com/code/jashsurendra/0-957-latest-dataset-score-in-one-click",
+                            "title":  "≈0.957 | Latest dataset| score in one click!",
+                            "returned_script_version_id":  357839552,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  12,
+                            "kernel_id":  138443280,
+                            "ref":  "jenillangaliya/rsna-knee-0-956-raptor-convnext-r7-ensemble",
+                            "url":  "https://www.kaggle.com/code/jenillangaliya/rsna-knee-0-956-raptor-convnext-r7-ensemble",
+                            "title":  "RSNA Knee 0.956: Raptor + ConvNeXt R7 Ensemble",
+                            "returned_script_version_id":  357889010,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  13,
+                            "kernel_id":  138447224,
+                            "ref":  "tahmidtawsif/rsna-knee-abnormality-detection-v13",
+                            "url":  "https://www.kaggle.com/code/tahmidtawsif/rsna-knee-abnormality-detection-v13",
+                            "title":  "RSNA_Knee_Abnormality_Detection_V13",
+                            "returned_script_version_id":  358092755,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  14,
+                            "kernel_id":  138453005,
+                            "ref":  "medvax/rsna-knee-r7-source-trial",
+                            "url":  "https://www.kaggle.com/code/medvax/rsna-knee-r7-source-trial",
+                            "title":  "RSNA Knee R7 Source Trial",
+                            "returned_script_version_id":  358041158,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  15,
+                            "kernel_id":  138455386,
+                            "ref":  "sibamsamanta07/rsna-0-957-latest-dataset",
+                            "url":  "https://www.kaggle.com/code/sibamsamanta07/rsna-0-957-latest-dataset",
+                            "title":  "RSNA≈0.957 | Latest dataset",
+                            "returned_script_version_id":  357916791,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  16,
+                            "kernel_id":  138462884,
+                            "ref":  "varshithakolupuri/rsna-knee-one-unused-checkpoint-lifts-the-0-956",
+                            "url":  "https://www.kaggle.com/code/varshithakolupuri/rsna-knee-one-unused-checkpoint-lifts-the-0-956",
+                            "title":  "RSNA Knee: One Unused Checkpoint Lifts the 0.956",
+                            "returned_script_version_id":  357929858,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  17,
+                            "kernel_id":  138478880,
+                            "ref":  "sujanmajhisuzan/rsna-knee-apex-grandmaster-v13-r7-superstack",
+                            "url":  "https://www.kaggle.com/code/sujanmajhisuzan/rsna-knee-apex-grandmaster-v13-r7-superstack",
+                            "title":  "RSNA Knee Apex Grandmaster V13 R7 Superstack",
+                            "returned_script_version_id":  357963495,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  18,
+                            "kernel_id":  138478990,
+                            "ref":  "jingshuifu/rsna-knee-a224-topview",
+                            "url":  "https://www.kaggle.com/code/jingshuifu/rsna-knee-a224-topview",
+                            "title":  "RSNA Knee a224 topview",
+                            "returned_script_version_id":  358300741,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  7,
+                            "input_source_id_set_key":  "154281,19120128,19122845,19134209,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  19,
+                            "kernel_id":  138480448,
+                            "ref":  "yuvrajlamba01/rsna-knee-multiscale-orthofoundation-sota-0-956",
+                            "url":  "https://www.kaggle.com/code/yuvrajlamba01/rsna-knee-multiscale-orthofoundation-sota-0-956",
+                            "title":  "RSNA Knee Multiscale OrthoFoundation SOTA (0.956+)",
+                            "returned_script_version_id":  357967581,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  20,
+                            "kernel_id":  138486483,
+                            "ref":  "jingshuifu/rsna-knee-a224-multiview",
+                            "url":  "https://www.kaggle.com/code/jingshuifu/rsna-knee-a224-multiview",
+                            "title":  "RSNA Knee a224 multiview",
+                            "returned_script_version_id":  358298268,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  7,
+                            "input_source_id_set_key":  "154281,19120128,19122845,19134209,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  21,
+                            "kernel_id":  138489906,
+                            "ref":  "picond/rsna-knee-r7-pinned-exact50-control",
+                            "url":  "https://www.kaggle.com/code/picond/rsna-knee-r7-pinned-exact50-control",
+                            "title":  "RSNA Knee R7 Pinned Exact50 Control",
+                            "returned_script_version_id":  358201410,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735,20700156",
+                            "explicit_private_input_count":  1,
+                            "explicit_private_source_ids":  [
+                                                                20700156
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  22,
+                            "kernel_id":  138500150,
+                            "ref":  "junquanshenhua/knee-r7c224-rerun",
+                            "url":  "https://www.kaggle.com/code/junquanshenhua/knee-r7c224-rerun",
+                            "title":  "knee-r7c224-rerun",
+                            "returned_script_version_id":  358010569,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  23,
+                            "kernel_id":  138506498,
+                            "ref":  "le4ves/rsna-knee-0-957-r7-blend",
+                            "url":  "https://www.kaggle.com/code/le4ves/rsna-knee-0-957-r7-blend",
+                            "title":  "RSNA Knee 0.957 R7 blend",
+                            "returned_script_version_id":  358022318,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  24,
+                            "kernel_id":  138517477,
+                            "ref":  "karttikjangid05/rsna-0-956-extra-checkpoint-explained",
+                            "url":  "https://www.kaggle.com/code/karttikjangid05/rsna-0-956-extra-checkpoint-explained",
+                            "title":  "RSNA 0.956: Extra Checkpoint Explained",
+                            "returned_script_version_id":  358049058,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  25,
+                            "kernel_id":  138522881,
+                            "ref":  "nursrijan/rsna-knee-r7-raptor-224-final",
+                            "url":  "https://www.kaggle.com/code/nursrijan/rsna-knee-r7-raptor-224-final",
+                            "title":  "RSNA Knee R7 Raptor 224 Final",
+                            "returned_script_version_id":  358057482,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  26,
+                            "kernel_id":  138523313,
+                            "ref":  "jingshuifu/rsna-knee-flip-tta",
+                            "url":  "https://www.kaggle.com/code/jingshuifu/rsna-knee-flip-tta",
+                            "title":  "RSNA Knee flip-TTA",
+                            "returned_script_version_id":  358058456,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  27,
+                            "kernel_id":  138533386,
+                            "ref":  "mayankraaz/rsna-knee-abnormality-pipeline",
+                            "url":  "https://www.kaggle.com/code/mayankraaz/rsna-knee-abnormality-pipeline",
+                            "title":  "RSNA Knee Abnormality Pipeline",
+                            "returned_script_version_id":  358322333,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  28,
+                            "kernel_id":  138555094,
+                            "ref":  "kupedata/gemini-4-argon-cooking-part-4",
+                            "url":  "https://www.kaggle.com/code/kupedata/gemini-4-argon-cooking-part-4",
+                            "title":  "GEMINI 4 ARGON COOKING PART 4",
+                            "returned_script_version_id":  358121983,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  29,
+                            "kernel_id":  138587874,
+                            "ref":  "sushanthtiruvaipati/rsna-knee-r7-raptor384-raptor224-mirror-blend",
+                            "url":  "https://www.kaggle.com/code/sushanthtiruvaipati/rsna-knee-r7-raptor384-raptor224-mirror-blend",
+                            "title":  "RSNA Knee: R7 + Raptor384 + Raptor224 mirror blend",
+                            "returned_script_version_id":  358396996,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  30,
+                            "kernel_id":  138623602,
+                            "ref":  "rjings/rsna-versia-8-multiscale-r224mask",
+                            "url":  "https://www.kaggle.com/code/rjings/rsna-versia-8-multiscale-r224mask",
+                            "title":  "rsna-versia-8-multiscale-r224mask",
+                            "returned_script_version_id":  358522184,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  17,
+                            "input_source_id_set_key":  "4533,154281,18229736,18673450,18716507,18839182,18842180,18879001,18956429,19120128,19122845,19134209,19395055,19395706,19862359,342671664,342849430",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  31,
+                            "kernel_id":  138623665,
+                            "ref":  "jingshuifu/rsna-knee-a224-blend",
+                            "url":  "https://www.kaggle.com/code/jingshuifu/rsna-knee-a224-blend",
+                            "title":  "RSNA Knee A224 blend",
+                            "returned_script_version_id":  358241007,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  32,
+                            "kernel_id":  138626365,
+                            "ref":  "jingshuifu/rsna-knee-a224-flip",
+                            "url":  "https://www.kaggle.com/code/jingshuifu/rsna-knee-a224-flip",
+                            "title":  "RSNA Knee A224 flip",
+                            "returned_script_version_id":  358246168,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  33,
+                            "kernel_id":  138628461,
+                            "ref":  "rudrpratapsingh/rsna-knee-four-public-models-one-rank-blend",
+                            "url":  "https://www.kaggle.com/code/rudrpratapsingh/rsna-knee-four-public-models-one-rank-blend",
+                            "title":  "RSNA Knee | Four public models, one rank blend",
+                            "returned_script_version_id":  358250422,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  34,
+                            "kernel_id":  138658889,
+                            "ref":  "varshithakolupuri/rsna-0-956-one-free-flip-68-ranks-up",
+                            "url":  "https://www.kaggle.com/code/varshithakolupuri/rsna-0-956-one-free-flip-68-ranks-up",
+                            "title":  "RSNA 0.956: One Free Flip, 68 Ranks Up",
+                            "returned_script_version_id":  358309699,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  35,
+                            "kernel_id":  138662269,
+                            "ref":  "mayankraaz/rsna-knee-r7-convnext-raptor-dual-stream",
+                            "url":  "https://www.kaggle.com/code/mayankraaz/rsna-knee-r7-convnext-raptor-dual-stream",
+                            "title":  "RSNA Knee R7 ConvNeXt Raptor Dual Stream",
+                            "returned_script_version_id":  358446637,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20731557",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  36,
+                            "kernel_id":  138671142,
+                            "ref":  "rjings/rsna-knee-four-public-models-rank-blend-20261014",
+                            "url":  "https://www.kaggle.com/code/rjings/rsna-knee-four-public-models-rank-blend-20261014",
+                            "title":  "Rsna Knee Four Public Models Rank Blend 20261014",
+                            "returned_script_version_id":  358334404,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  37,
+                            "kernel_id":  138675977,
+                            "ref":  "rjings/rsna-r224-anatomical-mirror-20261014",
+                            "url":  "https://www.kaggle.com/code/rjings/rsna-r224-anatomical-mirror-20261014",
+                            "title":  "Rsna R224 Anatomical Mirror 20261014",
+                            "returned_script_version_id":  358344261,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  38,
+                            "kernel_id":  138693168,
+                            "ref":  "yuvrajlamba01/rsna-knee-research-optimized",
+                            "url":  "https://www.kaggle.com/code/yuvrajlamba01/rsna-knee-research-optimized",
+                            "title":  "RSNA Knee Research Optimized",
+                            "returned_script_version_id":  358592164,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20287156,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  39,
+                            "kernel_id":  138702211,
+                            "ref":  "sushanthtiruvaipati/rsna-knee-r7-raptor384-raptor224-blend",
+                            "url":  "https://www.kaggle.com/code/sushanthtiruvaipati/rsna-knee-r7-raptor384-raptor224-blend",
+                            "title":  "RSNA Knee: R7 + Raptor384 + Raptor224 blend",
+                            "returned_script_version_id":  358397507,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  40,
+                            "kernel_id":  138714719,
+                            "ref":  "ryugohanai/rsna-tta224-reader-20261015",
+                            "url":  "https://www.kaggle.com/code/ryugohanai/rsna-tta224-reader-20261015",
+                            "title":  "RSNA TTA224 Reader 20261015",
+                            "returned_script_version_id":  358421928,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20325538,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  41,
+                            "kernel_id":  138765075,
+                            "ref":  "isotriage/rsna-knee-h957",
+                            "url":  "https://www.kaggle.com/code/isotriage/rsna-knee-h957",
+                            "title":  "RSNA Knee H957",
+                            "returned_script_version_id":  358582220,
+                            "best_public_score":  0.956,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  42,
+                            "kernel_id":  138104007,
+                            "ref":  "bliverrigpdoge/velci-kcd25-20",
+                            "url":  "https://www.kaggle.com/code/bliverrigpdoge/velci-kcd25-20",
+                            "title":  "velci kcd25 20",
+                            "returned_script_version_id":  357204606,
+                            "best_public_score":  0.955,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026,20564117",
+                            "explicit_private_input_count":  1,
+                            "explicit_private_source_ids":  [
+                                                                20564117
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  43,
+                            "kernel_id":  138615551,
+                            "ref":  "varianceofx/rsna-knee-quad-b1",
+                            "url":  "https://www.kaggle.com/code/varianceofx/rsna-knee-quad-b1",
+                            "title":  "RSNA Knee Quad B1",
+                            "returned_script_version_id":  358224782,
+                            "best_public_score":  0.955,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  6,
+                            "input_source_id_set_key":  "154281,19125270,20297367,20440357,20626303,20702202",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  44,
+                            "kernel_id":  138623822,
+                            "ref":  "jingshuifu/rsna-knee-w30",
+                            "url":  "https://www.kaggle.com/code/jingshuifu/rsna-knee-w30",
+                            "title":  "RSNA Knee w30",
+                            "returned_script_version_id":  358270697,
+                            "best_public_score":  0.955,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  45,
+                            "kernel_id":  138626336,
+                            "ref":  "jingshuifu/rsna-knee-a224-w30",
+                            "url":  "https://www.kaggle.com/code/jingshuifu/rsna-knee-a224-w30",
+                            "title":  "RSNA Knee A224 w30",
+                            "returned_script_version_id":  358246098,
+                            "best_public_score":  0.955,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  46,
+                            "kernel_id":  131474296,
+                            "ref":  "romantamrazov/rsna-knee-dinosaur-the-last",
+                            "url":  "https://www.kaggle.com/code/romantamrazov/rsna-knee-dinosaur-the-last",
+                            "title":  "RSNA Knee | DINOsaur the last? 🦖",
+                            "returned_script_version_id":  357458425,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20325538,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  47,
+                            "kernel_id":  135346023,
+                            "ref":  "matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed",
+                            "url":  "https://www.kaggle.com/code/matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed",
+                            "title":  "RSNA Knee V2 | Velciraptor DINOsaur Speed",
+                            "returned_script_version_id":  357167211,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  48,
+                            "kernel_id":  136407295,
+                            "ref":  "sanketnandkumarpatil/kaggle-rsna-knee",
+                            "url":  "https://www.kaggle.com/code/sanketnandkumarpatil/kaggle-rsna-knee",
+                            "title":  "Kaggle-rsna-knee",
+                            "returned_script_version_id":  358349017,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,18956429,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  49,
+                            "kernel_id":  137725613,
+                            "ref":  "heliosli/rsna-knee-blend-gold-dataset-restored",
+                            "url":  "https://www.kaggle.com/code/heliosli/rsna-knee-blend-gold-dataset-restored",
+                            "title":  "rsna-knee-blend-gold⭐⭐(Dataset restored)",
+                            "returned_script_version_id":  357152922,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  50,
+                            "kernel_id":  138049049,
+                            "ref":  "jenillangaliya/rsna-knee-lb-0-954-dual-sota-ensemble",
+                            "url":  "https://www.kaggle.com/code/jenillangaliya/rsna-knee-lb-0-954-dual-sota-ensemble",
+                            "title":  "RSNA Knee [LB 0.954]: Dual SOTA Ensemble",
+                            "returned_script_version_id":  357241354,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  51,
+                            "kernel_id":  138101066,
+                            "ref":  "guoxiangwangs/e0052-heliosli-rank-blend-public-adaptation",
+                            "url":  "https://www.kaggle.com/code/guoxiangwangs/e0052-heliosli-rank-blend-public-adaptation",
+                            "title":  "E0052 Heliosli Rank Blend Public Adaptation",
+                            "returned_script_version_id":  357199714,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  52,
+                            "kernel_id":  138121394,
+                            "ref":  "navazshfathi/rsna-knee-abnormality-detection-rsna-knee",
+                            "url":  "https://www.kaggle.com/code/navazshfathi/rsna-knee-abnormality-detection-rsna-knee",
+                            "title":  "RSNA Knee Abnormality Detection--rsna--knee",
+                            "returned_script_version_id":  357238071,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  53,
+                            "kernel_id":  138138691,
+                            "ref":  "guoxiangwangs/e0055-matterhorn-v22-reader-blend",
+                            "url":  "https://www.kaggle.com/code/guoxiangwangs/e0055-matterhorn-v22-reader-blend",
+                            "title":  "E0055 Matterhorn V22 Reader Blend",
+                            "returned_script_version_id":  357274311,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20325538,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  54,
+                            "kernel_id":  138139982,
+                            "ref":  "goodpjw2008/rsna-knee-coatnet-s6-2-5d-mil-lb-0-954",
+                            "url":  "https://www.kaggle.com/code/goodpjw2008/rsna-knee-coatnet-s6-2-5d-mil-lb-0-954",
+                            "title":  "RSNA Knee | CoAtNet + S6 + 2.5D MIL | LB 0.954",
+                            "returned_script_version_id":  357480643,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  6,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20536104,20557026,20577001",
+                            "explicit_private_input_count":  2,
+                            "explicit_private_source_ids":  [
+                                                                20536104,
+                                                                20577001
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  55,
+                            "kernel_id":  138142829,
+                            "ref":  "wocenmma/rsna-e030-compact35-native",
+                            "url":  "https://www.kaggle.com/code/wocenmma/rsna-e030-compact35-native",
+                            "title":  "RSNA E030 Compact35 Native",
+                            "returned_script_version_id":  357358987,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  56,
+                            "kernel_id":  138154722,
+                            "ref":  "sameerk2004/rsna-knee-sil-d5m-helios954",
+                            "url":  "https://www.kaggle.com/code/sameerk2004/rsna-knee-sil-d5m-helios954",
+                            "title":  "rsna-knee-sil-d5m-helios954",
+                            "returned_script_version_id":  357308108,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  57,
+                            "kernel_id":  138155640,
+                            "ref":  "medvax/rsna-knee-public-mirror-and-compact-trial",
+                            "url":  "https://www.kaggle.com/code/medvax/rsna-knee-public-mirror-and-compact-trial",
+                            "title":  "RSNA Knee Public Mirror and Compact Trial",
+                            "returned_script_version_id":  357471490,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  58,
+                            "kernel_id":  138174790,
+                            "ref":  "yuvrajlamba01/rsna-knee-v15-tri-hybrid-ensemble-0-954",
+                            "url":  "https://www.kaggle.com/code/yuvrajlamba01/rsna-knee-v15-tri-hybrid-ensemble-0-954",
+                            "title":  "RSNA Knee  V15 Tri-Hybrid Ensemble (0.954+) ",
+                            "returned_script_version_id":  357581507,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  59,
+                            "kernel_id":  138176942,
+                            "ref":  "rabari9999/rsna-knee-sota-apex-grandmaster-ensemble-lb-0-954",
+                            "url":  "https://www.kaggle.com/code/rabari9999/rsna-knee-sota-apex-grandmaster-ensemble-lb-0-954",
+                            "title":  "RSNA Knee SOTA Apex Grandmaster Ensemble LB 0 954",
+                            "returned_script_version_id":  357359661,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  60,
+                            "kernel_id":  138180901,
+                            "ref":  "jenillangaliya/rsna-knee-dual-sota-pipeline-lb-0-954",
+                            "url":  "https://www.kaggle.com/code/jenillangaliya/rsna-knee-dual-sota-pipeline-lb-0-954",
+                            "title":  "RSNA Knee | Dual SOTA Pipeline [LB 0.954+]",
+                            "returned_script_version_id":  357375218,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20590255",
+                            "explicit_private_input_count":  1,
+                            "explicit_private_source_ids":  [
+                                                                20590255
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  61,
+                            "kernel_id":  138228366,
+                            "ref":  "sujanmajhisuzan/rsna-knee-apex-grandmaster-v10-tri-engine-probit",
+                            "url":  "https://www.kaggle.com/code/sujanmajhisuzan/rsna-knee-apex-grandmaster-v10-tri-engine-probit",
+                            "title":  "RSNA Knee Apex Grandmaster V10 Tri-Engine Probit",
+                            "returned_script_version_id":  357472672,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  6,
+                            "input_source_id_set_key":  "154281,20297367,20325538,20440357,20493618,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  62,
+                            "kernel_id":  138236858,
+                            "ref":  "goodjane/rsna-knee-blend-raptor-r6-cnx-eq-fs-ss",
+                            "url":  "https://www.kaggle.com/code/goodjane/rsna-knee-blend-raptor-r6-cnx-eq-fs-ss",
+                            "title":  "rsna-knee-blend-raptor-r6-cnx-eq-fs-ss",
+                            "returned_script_version_id":  357491841,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20607511",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  63,
+                            "kernel_id":  138267267,
+                            "ref":  "luisszoboszlai/rsna-knee-validated-rank-ensemble",
+                            "url":  "https://www.kaggle.com/code/luisszoboszlai/rsna-knee-validated-rank-ensemble",
+                            "title":  "RSNA Knee Validated Rank Ensemble",
+                            "returned_script_version_id":  357672589,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  64,
+                            "kernel_id":  138324885,
+                            "ref":  "jenillangaliya/rsna-knee-2026-sota-0-954-solution",
+                            "url":  "https://www.kaggle.com/code/jenillangaliya/rsna-knee-2026-sota-0-954-solution",
+                            "title":  " RSNA Knee 2026: SOTA 0.954+ Solution",
+                            "returned_script_version_id":  357668000,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  65,
+                            "kernel_id":  138338107,
+                            "ref":  "blusexyx/rsna-knee-dinosaur-cv-final-2026-10-12",
+                            "url":  "https://www.kaggle.com/code/blusexyx/rsna-knee-dinosaur-cv-final-2026-10-12",
+                            "title":  "RSNA Knee DINOsaur CV final 2026-10-12",
+                            "returned_script_version_id":  357683020,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20325538,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  66,
+                            "kernel_id":  138340500,
+                            "ref":  "hitarthjain0/rsna-knee-coatnet-s6-25d-mil-0957",
+                            "url":  "https://www.kaggle.com/code/hitarthjain0/rsna-knee-coatnet-s6-25d-mil-0957",
+                            "title":  "RSNA Knee CoAtNet S6 25D MIL 0957",
+                            "returned_script_version_id":  357688430,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20325538,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  67,
+                            "kernel_id":  138393636,
+                            "ref":  "hitarthjain0/rsna-knee-target-gated-silver-sota",
+                            "url":  "https://www.kaggle.com/code/hitarthjain0/rsna-knee-target-gated-silver-sota",
+                            "title":  "RSNA Knee Target Gated Silver SOTA",
+                            "returned_script_version_id":  357796752,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20325538,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  68,
+                            "kernel_id":  138419897,
+                            "ref":  "yeshawang/rsna-20261013-top6-velciraptor",
+                            "url":  "https://www.kaggle.com/code/yeshawang/rsna-20261013-top6-velciraptor",
+                            "title":  "RSNA 20261013 top6 Velciraptor",
+                            "returned_script_version_id":  357844248,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  69,
+                            "kernel_id":  138442833,
+                            "ref":  "raihanjs/rsna-knee-fork-0954-goodpjw",
+                            "url":  "https://www.kaggle.com/code/raihanjs/rsna-knee-fork-0954-goodpjw",
+                            "title":  "Rsna Knee Fork 0954 Goodpjw",
+                            "returned_script_version_id":  357887824,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20325538,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  70,
+                            "kernel_id":  138453555,
+                            "ref":  "luisszoboszlai/rsna-knee-hitarth-reader-reproduction",
+                            "url":  "https://www.kaggle.com/code/luisszoboszlai/rsna-knee-hitarth-reader-reproduction",
+                            "title":  "RSNA Knee Hitarth Reader Reproduction",
+                            "returned_script_version_id":  357910391,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20325538,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  71,
+                            "kernel_id":  138483493,
+                            "ref":  "jingshuifu/rsna-knee-a224-w50",
+                            "url":  "https://www.kaggle.com/code/jingshuifu/rsna-knee-a224-w50",
+                            "title":  "RSNA Knee a224 w50",
+                            "returned_script_version_id":  358300803,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  72,
+                            "kernel_id":  138483518,
+                            "ref":  "jingshuifu/rsna-knee-raptor-multiview",
+                            "url":  "https://www.kaggle.com/code/jingshuifu/rsna-knee-raptor-multiview",
+                            "title":  "RSNA Knee raptor multiview",
+                            "returned_script_version_id":  358282982,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  7,
+                            "input_source_id_set_key":  "154281,19120128,19122845,19134209,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  73,
+                            "kernel_id":  138486497,
+                            "ref":  "jingshuifu/rsna-knee-raptor-topview",
+                            "url":  "https://www.kaggle.com/code/jingshuifu/rsna-knee-raptor-topview",
+                            "title":  "RSNA Knee raptor topview",
+                            "returned_script_version_id":  358288179,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  7,
+                            "input_source_id_set_key":  "154281,19120128,19122845,19134209,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  74,
+                            "kernel_id":  138688951,
+                            "ref":  "isotriage/rsna-knee-quad-b2",
+                            "url":  "https://www.kaggle.com/code/isotriage/rsna-knee-quad-b2",
+                            "title":  "RSNA Knee Quad B2",
+                            "returned_script_version_id":  358379108,
+                            "best_public_score":  0.954,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  9,
+                            "input_source_id_set_key":  "154281,19071687,19092884,19125270,20297367,20440357,20569229,20626303,20702202",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  75,
+                            "kernel_id":  138401730,
+                            "ref":  "sujanmajhisuzan/rsna-knee-apex-grandmaster-v12-superstack",
+                            "url":  "https://www.kaggle.com/code/sujanmajhisuzan/rsna-knee-apex-grandmaster-v12-superstack",
+                            "title":  "RSNA Knee Apex Grandmaster V12 Superstack",
+                            "returned_script_version_id":  357812688,
+                            "best_public_score":  0.953,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  76,
+                            "kernel_id":  138038784,
+                            "ref":  "jenillangaliya/rsna-knee-0-952-tri-hybrid-multi-scale-mil",
+                            "url":  "https://www.kaggle.com/code/jenillangaliya/rsna-knee-0-952-tri-hybrid-multi-scale-mil",
+                            "title":  "RSNA Knee 0.952: Tri-Hybrid Multi-Scale MIL",
+                            "returned_script_version_id":  357147919,
+                            "best_public_score":  0.952,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20440357,20528701,20528755",
+                            "explicit_private_input_count":  2,
+                            "explicit_private_source_ids":  [
+                                                                20528701,
+                                                                20528755
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  77,
+                            "kernel_id":  138352619,
+                            "ref":  "rainycloudss/rsna-knee-apex-grandmaster-stack-v20",
+                            "url":  "https://www.kaggle.com/code/rainycloudss/rsna-knee-apex-grandmaster-stack-v20",
+                            "title":  "RSNA Knee Apex Grandmaster Stack V20",
+                            "returned_script_version_id":  357719660,
+                            "best_public_score":  0.952,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  78,
+                            "kernel_id":  138385183,
+                            "ref":  "rainycloudss/rsna-knee-apex-grandmaster-stack-v21",
+                            "url":  "https://www.kaggle.com/code/rainycloudss/rsna-knee-apex-grandmaster-stack-v21",
+                            "title":  "RSNA Knee Apex Grandmaster Stack V21",
+                            "returned_script_version_id":  357835729,
+                            "best_public_score":  0.952,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  6,
+                            "input_source_id_set_key":  "154281,18842180,19044974,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  79,
+                            "kernel_id":  138750027,
+                            "ref":  "sushanthtiruvaipati/rsna-knee-perfinding-dino5-prior",
+                            "url":  "https://www.kaggle.com/code/sushanthtiruvaipati/rsna-knee-perfinding-dino5-prior",
+                            "title":  "RSNA Knee Perfinding Dino5 Prior",
+                            "returned_script_version_id":  358499911,
+                            "best_public_score":  0.952,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20601735",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  80,
+                            "kernel_id":  137129232,
+                            "ref":  "kiyoshiohno/rsna-knee-template",
+                            "url":  "https://www.kaggle.com/code/kiyoshiohno/rsna-knee-template",
+                            "title":  "RSNA Knee Template",
+                            "returned_script_version_id":  356743642,
+                            "best_public_score":  0.951,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  6,
+                            "input_source_id_set_key":  "154281,20297367,20325538,20440357,20457217,20502598",
+                            "explicit_private_input_count":  1,
+                            "explicit_private_source_ids":  [
+                                                                20502598
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  81,
+                            "kernel_id":  137654059,
+                            "ref":  "heliosli/rsna-knee-blend-gold",
+                            "url":  "https://www.kaggle.com/code/heliosli/rsna-knee-blend-gold",
+                            "title":  "rsna-knee-blend-gold⭐",
+                            "returned_script_version_id":  356373796,
+                            "best_public_score":  0.951,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20457217",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  82,
+                            "kernel_id":  137831248,
+                            "ref":  "samanyu1808/rsna-knee-blend3-please-upvote-if-useful",
+                            "url":  "https://www.kaggle.com/code/samanyu1808/rsna-knee-blend3-please-upvote-if-useful",
+                            "title":  "rsna-knee-blend3 please upvote if useful",
+                            "returned_script_version_id":  356690438,
+                            "best_public_score":  0.951,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  5,
+                            "input_source_id_set_key":  "154281,20297367,20325538,20440357,20495942",
+                            "explicit_private_input_count":  1,
+                            "explicit_private_source_ids":  [
+                                                                20495942
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  83,
+                            "kernel_id":  137885408,
+                            "ref":  "jenillangaliya/rsna-knee-dual-stage-sota-ensemble-lb-0-951",
+                            "url":  "https://www.kaggle.com/code/jenillangaliya/rsna-knee-dual-stage-sota-ensemble-lb-0-951",
+                            "title":  "RSNA Knee: Dual-Stage SOTA Ensemble [LB 0.951]",
+                            "returned_script_version_id":  356946432,
+                            "best_public_score":  0.951,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20440357,20528701,20528755",
+                            "explicit_private_input_count":  2,
+                            "explicit_private_source_ids":  [
+                                                                20528701,
+                                                                20528755
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  84,
+                            "kernel_id":  138161744,
+                            "ref":  "rainycloudss/rsna-knee-apex-grandmaster-stack-v14",
+                            "url":  "https://www.kaggle.com/code/rainycloudss/rsna-knee-apex-grandmaster-stack-v14",
+                            "title":  "RSNA Knee Apex Grandmaster Stack V14",
+                            "returned_script_version_id":  357324715,
+                            "best_public_score":  0.951,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  85,
+                            "kernel_id":  138163592,
+                            "ref":  "rainycloudss/rsna-knee-apex-grandmaster-stack-v15",
+                            "url":  "https://www.kaggle.com/code/rainycloudss/rsna-knee-apex-grandmaster-stack-v15",
+                            "title":  "RSNA Knee Apex Grandmaster Stack V15",
+                            "returned_script_version_id":  357328963,
+                            "best_public_score":  0.951,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  86,
+                            "kernel_id":  138240961,
+                            "ref":  "rainycloudss/rsna-knee-apex-grandmaster-stack-v18",
+                            "url":  "https://www.kaggle.com/code/rainycloudss/rsna-knee-apex-grandmaster-stack-v18",
+                            "title":  "RSNA Knee Apex Grandmaster Stack V18",
+                            "returned_script_version_id":  357493484,
+                            "best_public_score":  0.951,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20557026",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  87,
+                            "kernel_id":  134871202,
+                            "ref":  "romantamrazov/rsna-knee-dinosaur-v5",
+                            "url":  "https://www.kaggle.com/code/romantamrazov/rsna-knee-dinosaur-v5",
+                            "title":  "RSNA Knee | DINOsaur V5? 🦖 ",
+                            "returned_script_version_id":  357077179,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  3,
+                            "input_source_id_set_key":  "154281,20325538,20440357",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  88,
+                            "kernel_id":  136056127,
+                            "ref":  "matterhorn3838/rsna-knee-d4",
+                            "url":  "https://www.kaggle.com/code/matterhorn3838/rsna-knee-d4",
+                            "title":  "RSNA Knee D4",
+                            "returned_script_version_id":  356334953,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  3,
+                            "input_source_id_set_key":  "154281,20325538,20440357",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  89,
+                            "kernel_id":  137544628,
+                            "ref":  "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+                            "url":  "https://www.kaggle.com/code/sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+                            "title":  "RSNA Knee Apex Grandmaster Stack",
+                            "returned_script_version_id":  356192954,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  3,
+                            "input_source_id_set_key":  "154281,20325538,20440357",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  90,
+                            "kernel_id":  137557066,
+                            "ref":  "haideptry/rsna-knee-v2-vs-apex-comparative-study",
+                            "url":  "https://www.kaggle.com/code/haideptry/rsna-knee-v2-vs-apex-comparative-study",
+                            "title":  "RSNA Knee V2 vs Apex Comparative Study",
+                            "returned_script_version_id":  356305828,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,19395706,20325538,20440357",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  91,
+                            "kernel_id":  137574197,
+                            "ref":  "kozykappa/rsna-knee-gold-gated-triple-reader",
+                            "url":  "https://www.kaggle.com/code/kozykappa/rsna-knee-gold-gated-triple-reader",
+                            "title":  "RSNA Knee | Gold-Gated Triple Reader ",
+                            "returned_script_version_id":  356996086,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "4533,154281,20325538,20440357",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  92,
+                            "kernel_id":  137634742,
+                            "ref":  "hitarthjain0/rsna-knee-coatnet-convnext-mil-lb-0-950",
+                            "url":  "https://www.kaggle.com/code/hitarthjain0/rsna-knee-coatnet-convnext-mil-lb-0-950",
+                            "title":  "RSNA Knee 🦴 CoAtNet + ConvNeXt MIL | LB 0.950",
+                            "returned_script_version_id":  357275264,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  3,
+                            "input_source_id_set_key":  "154281,20325538,20440357",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  93,
+                            "kernel_id":  137649392,
+                            "ref":  "rabari9999/rsna-knee-lb-0-95",
+                            "url":  "https://www.kaggle.com/code/rabari9999/rsna-knee-lb-0-95",
+                            "title":  "RSNA Knee | LB 0.95+",
+                            "returned_script_version_id":  356676324,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,19395706,20325538,20440357",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  94,
+                            "kernel_id":  137655938,
+                            "ref":  "ranjeet258/rsna-knee-apex-b-under-150",
+                            "url":  "https://www.kaggle.com/code/ranjeet258/rsna-knee-apex-b-under-150",
+                            "title":  "rsna-knee-apex-b_Under_150",
+                            "returned_script_version_id":  356376940,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  3,
+                            "input_source_id_set_key":  "154281,20325538,20440357",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  95,
+                            "kernel_id":  137663416,
+                            "ref":  "waterjoe/rsna-knee-v2-velciraptor-dinosaur-speed",
+                            "url":  "https://www.kaggle.com/code/waterjoe/rsna-knee-v2-velciraptor-dinosaur-speed",
+                            "title":  "RSNA Knee V2 | Velciraptor DINOsaur Speed",
+                            "returned_script_version_id":  356406526,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  3,
+                            "input_source_id_set_key":  "154281,20325538,20440357",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  96,
+                            "kernel_id":  137690351,
+                            "ref":  "karttikjangid05/rsna-knee-rank-blend-apex-70-nartaa-30",
+                            "url":  "https://www.kaggle.com/code/karttikjangid05/rsna-knee-rank-blend-apex-70-nartaa-30",
+                            "title":  "RSNA Knee | Rank Blend: Apex 70 + nartaa 30",
+                            "returned_script_version_id":  356788051,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  3,
+                            "input_source_id_set_key":  "154281,20325538,20440357",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  97,
+                            "kernel_id":  137724996,
+                            "ref":  "newwang12/rsna-versia-5",
+                            "url":  "https://www.kaggle.com/code/newwang12/rsna-versia-5",
+                            "title":  "RSNA_Versia_5",
+                            "returned_script_version_id":  356505930,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  3,
+                            "input_source_id_set_key":  "154281,20325538,20440357",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  98,
+                            "kernel_id":  137748136,
+                            "ref":  "sameerk2004/rsna-knee-sil-d5c-triple224",
+                            "url":  "https://www.kaggle.com/code/sameerk2004/rsna-knee-sil-d5c-triple224",
+                            "title":  "rsna-knee-sil-d5c-triple224",
+                            "returned_script_version_id":  356543800,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  3,
+                            "input_source_id_set_key":  "154281,20325538,20440357",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  99,
+                            "kernel_id":  137857584,
+                            "ref":  "rabari9999/rsna-knee-sota-dual-engine-stack-lb-0-951",
+                            "url":  "https://www.kaggle.com/code/rabari9999/rsna-knee-sota-dual-engine-stack-lb-0-951",
+                            "title":  "RSNA Knee SOTA Dual-Engine Stack | LB 0.951+",
+                            "returned_script_version_id":  356802923,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  3,
+                            "input_source_id_set_key":  "154281,20325538,20440357",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        },
+                        {
+                            "position_in_returned_page":  100,
+                            "kernel_id":  137863821,
+                            "ref":  "omn1v3r53/omniverse-sota-rsna-knee-abnormality-detection",
+                            "url":  "https://www.kaggle.com/code/omn1v3r53/omniverse-sota-rsna-knee-abnormality-detection",
+                            "title":  "Omniverse SOTA RSNA Knee Abnormality Detection",
+                            "returned_script_version_id":  357732654,
+                            "best_public_score":  0.95,
+                            "has_linked_submission":  true,
+                            "input_count_including_competition":  4,
+                            "input_source_id_set_key":  "154281,20297367,20440357,20588112",
+                            "explicit_private_input_count":  0,
+                            "explicit_private_source_ids":  [
+
+                                                            ],
+                            "competition154281_present":  true
+                        }
+                    ],
+    "action_scope":  {
+                         "credentials_read":  false,
+                         "data_or_weight_download":  false,
+                         "source_code_download_by_this_actor":  false,
+                         "training_or_MRI_decode":  false,
+                         "external_upload_save_submit":  false,
+                         "old_records_modified":  false
+                     }
+}

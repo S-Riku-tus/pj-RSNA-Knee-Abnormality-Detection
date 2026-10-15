@@ -1,0 +1,684 @@
+{
+  "schema_version": "public_notebook_frontier_search_v1",
+  "actor": "/root/web_research",
+  "started_at_utc": "2026-10-15T07:37:37Z",
+  "recorded_at_utc": "2026-10-15T07:40:03Z",
+  "recorded_at_jst": "2026-10-15T16:40:03+09:00",
+  "scope_ja": "公開Notebookの自己記録0.956超、特に0.960超の再現可能recipeを探索する。今回の広域索引調査は候補発見と誤認排除であり、実ソース・重み・Kaggle推論・自己Publicの資格ではない。",
+  "required_latest_local_reads": [
+    "README.md first28",
+    "PROJECT.md first28",
+    "docs/validation.md first28",
+    "experiments/ledger.csv tail4"
+  ],
+  "file_preexisted": false,
+  "methods": [
+    "web.run search_query/open",
+    "search_service.web_run system2_search_query"
+  ],
+  "query_families": [
+    "site:kaggle.com/code RSNA or knee with numeric scores 0.957, 0.958, 0.959, 0.960, 0.961, 0.962, 0.963, 0.964, 0.965",
+    "site:kaggle.com/code knee with scores0.950,0.951,0.952,0.953,0.954,0.955,0.956",
+    "exact author/ref queries for evgendvorkin, heliosli, romantamrazov, kiyoshiohno",
+    "broad RSNA Knee Best Score/Public Score and raptor/ConvNeXt/Mattia queries",
+    "competition code scoreDescending direct open",
+    "alternate root/notebook/comments/input/log/output URLs and explicit known scriptVersionId"
+  ],
+  "coverage": {
+    "distinct_candidate_refs": 25,
+    "requested_competition_code_listing": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/code?sortBy=scoreDescending",
+    "listing_result": "not accessible via web tool",
+    "exhaustive_current_public_catalog_obtained": false,
+    "anonymous_official_HTTP_by_parent_in_progress_separate": true
+  },
+  "freshness_ja": "全ての今回取得数値はKaggleページを検索エンジンが索引化した本文のPublic/Best欄。crawlラベルは検索応答由来でありlive APIの取得日時ではない。相対投稿日・表示version・bestversion・last-successful fallbackを区別する。raw検索応答を独立ファイルとして保存していないので、そのraw SHAは記録しない。",
+  "candidate_global_qualifications": {
+    "own_current_score_not_retrieved": true,
+    "recorded_own_baseline": 0.956,
+    "recorded_own_baseline_date_jst": "2026-10-14",
+    "no_source_code_or_weight_download_in_this_search": true,
+    "no_training_MRI_or_external_mutations": true,
+    "Notebook_medal_badge_is_not_competition_medal": true,
+    "author_best_is_not_latest_run_score": true,
+    "visible_runtime_is_not_hidden_runtime": true,
+    "search_no_match_does_not_prove_absence": true
+  },
+  "candidates": [
+    {
+      "ref": "evgendvorkin/rsna-versia-7",
+      "url": "https://www.kaggle.com/code/evgendvorkin/rsna-versia-7",
+      "title": "RSNA Versia 7",
+      "retrieval_method": "web open root/comments/explicit358019432 notebook; search exact and author",
+      "result": "root/comments/explicit version inaccessible; search did not yield current metadata",
+      "current_Public": null,
+      "current_version": null,
+      "prior_evidence": {
+        "date_jst": "2026-10-14",
+        "author_Public": 0.956,
+        "version": 22,
+        "scriptVersionId": 358019432,
+        "own_reproduction_Public": 0.956,
+        "own_submission_id": 57164195,
+        "source": "experiments/V22R-official-Public956-Root-adoption-20261014.json"
+      },
+      "latest_live_version_verified": false,
+      "greater_than_own_recorded0956_verified": false,
+      "note_ja": "作者V22と自己V22Rは別実測。今回のWebツールでは作者最新を取得できていない。親が別途匿名HTTP確認を進めている。"
+    },
+    {
+      "ref": "heliosli/blend-mine-in-private-lb-luck-to-all-upvoters",
+      "url": "https://www.kaggle.com/code/heliosli/blend-mine-in-private-lb-luck-to-all-upvoters",
+      "title": "Blend Mine in Private LB, Luck to All Upvoters",
+      "retrieval_method": "web open root/comments; exact author queries",
+      "result": "inaccessible via web tool; no fresh Public or version",
+      "current_Public": null,
+      "current_version": null,
+      "prior_evidence": {
+        "date_jst": "2026-10-14",
+        "source": "experiments/public-research-096-20261014-v2.json",
+        "body91bytes_without_kernel_or_score": true,
+        "historical_author0956_not_freshly_verified": true
+      },
+      "latest_live_version_verified": false,
+      "greater_than_own_recorded0956_verified": false,
+      "note_ja": "本文未取得を削除・非公開・撤回の証拠としない。"
+    },
+    {
+      "ref": "romantamrazov/rsna-knee-dinosaur-v5",
+      "url": "https://www.kaggle.com/code/romantamrazov/rsna-knee-dinosaur-v5",
+      "title": "RSNA Knee DINOsaur V5?",
+      "retrieval_method": "web open root/comments; author exact queries",
+      "result": "root/comments returned zero body lines",
+      "current_Public": null,
+      "current_version": null,
+      "prior_evidence": {
+        "date_jst": "2026-10-14",
+        "author_Best": 0.95,
+        "best_version": 45,
+        "scriptVersionId": 357077179,
+        "source": "experiments/public-research-096-20261014-v2.json"
+      },
+      "latest_live_version_verified": false,
+      "greater_than_own_recorded0956_verified": false,
+      "note_ja": "10月14日のV45作者値は今回の現在値に読み替えない。"
+    },
+    {
+      "ref": "kiyoshiohno/rsna-knee-template",
+      "url": "https://www.kaggle.com/code/kiyoshiohno/rsna-knee-template",
+      "title": "RSNA Knee template",
+      "retrieval_method": "web open root/comments; exact author queries",
+      "result": "inaccessible via web tool",
+      "current_Public": null,
+      "current_version": null,
+      "prior_evidence": {
+        "date_jst": "2026-10-14",
+        "author_Best": 0.951,
+        "best_version": 9,
+        "source": "experiments/public-research-096-20261014-v2.json"
+      },
+      "latest_live_version_verified": false,
+      "greater_than_own_recorded0956_verified": false,
+      "note_ja": "bestと最新runの同一性は未確認。"
+    },
+    {
+      "ref": "guoxiangwangs/e0052-heliosli-rank-blend-public-adaptation",
+      "url": "https://www.kaggle.com/code/guoxiangwangs/e0052-heliosli-rank-blend-public-adaptation",
+      "title": "E0052 Heliosli Rank Blend Public Adaptation",
+      "score_observation": {
+        "indexed_Public": 0.954,
+        "indexed_Best": 0.954,
+        "indexed_best_version": 2,
+        "indexed_displayed_version": "2 of 2",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed root; direct open zero lines",
+      "index_crawl_label": "today",
+      "note_ja": "今回の新規広域探索で最も高い取得値。自己記録0.956を超えず、現行linked submissionは未確認。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed",
+      "url": "https://www.kaggle.com/code/matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed",
+      "title": "RSNA Knee V2 | Velciraptor DINOsaur Speed",
+      "score_observation": {
+        "indexed_Public": 0.95,
+        "indexed_Best": 0.95,
+        "indexed_best_version": 7,
+        "indexed_displayed_version": "7 of 8",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed root; direct open zero lines",
+      "index_crawl_label": "5 days ago",
+      "note_ja": "最後の成功runを表示し、最新V8はerrorとの索引表示。V7成功を最新完走と扱わない。",
+      "input_hints_not_pinned": [
+        "RSNA Knee 2.5D ConvNeXt reader",
+        "RSNA Knee selected SWA weights 0949 and 0945"
+      ],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+      "url": "https://www.kaggle.com/code/sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+      "title": "RSNA Knee Apex Grandmaster Stack",
+      "score_observation": {
+        "indexed_Public": 0.95,
+        "indexed_Best": 0.95,
+        "indexed_best_version": 1,
+        "indexed_displayed_version": "1 of 1",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed root/comments; direct open inaccessible",
+      "index_crawl_label": "5 days ago",
+      "note_ja": "Grandmaster等のタイトルやNotebook金メダル画像は競技順位・スコア改善を証明しない。",
+      "input_hints_not_pinned": [
+        "RSNA Knee 2.5D ConvNeXt reader",
+        "RSNA Knee selected SWA weights 0949 and 0945"
+      ],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "fuadmuhammad/rsna-knee-fast-parent-0-957-v2",
+      "url": "https://www.kaggle.com/code/fuadmuhammad/rsna-knee-fast-parent-0-957-v2",
+      "title": "RSNA Knee Fast Parent 0.957 v2",
+      "score_observation": {
+        "indexed_Public": 0.939,
+        "indexed_Best": 0.939,
+        "indexed_best_version": 1,
+        "indexed_displayed_version": "1 of 1",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed comments; direct root inaccessible",
+      "index_crawl_label": "last week",
+      "note_ja": "タイトル0.957に対し公式索引Public/Bestは0.939。0.957超え候補として採用しない。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "nikhil00718/rsna-knee-0-95-dinov2-v2",
+      "url": "https://www.kaggle.com/code/nikhil00718/rsna-knee-0-95-dinov2-v2",
+      "title": "RSNA Knee 0.95 - DINOv2 V2",
+      "score_observation": {
+        "indexed_Public": 0.809,
+        "indexed_Best": 0.809,
+        "indexed_best_version": 3,
+        "indexed_displayed_version": "3 of 3",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed root",
+      "index_crawl_label": "last month",
+      "note_ja": "タイトル0.95に対し公式索引Public/Bestは0.809。タイトルを成績と取り違えない。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "amanatar/rsna-knee-abnormality-detection",
+      "url": "https://www.kaggle.com/code/amanatar/rsna-knee-abnormality-detection",
+      "title": "RSNA Knee Abnormality Detection",
+      "score_observation": {
+        "indexed_Public": 0.943,
+        "indexed_Best": 0.943,
+        "indexed_best_version": 6,
+        "indexed_displayed_version": "7 of 7",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed root",
+      "index_crawl_label": "last week",
+      "note_ja": "表示version7とbestversion6を区別。最新linked submissionがV6と同じかは未確認。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "anhadmahajan06/rsna-knee-abnormality-detection",
+      "url": "https://www.kaggle.com/code/anhadmahajan06/rsna-knee-abnormality-detection",
+      "title": "RSNA Knee: Take Care Of Your Knee",
+      "score_observation": {
+        "indexed_Public": 0.936,
+        "indexed_Best": 0.936,
+        "indexed_best_version": 47,
+        "indexed_displayed_version": "48 of 48",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed root",
+      "index_crawl_label": "2 weeks ago",
+      "note_ja": "bestV47と表示V48を区別。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "nishantkharga/rsna-knee-full-4-arm-ensemble-v55",
+      "url": "https://www.kaggle.com/code/nishantkharga/rsna-knee-full-4-arm-ensemble-v55",
+      "title": "RSNA Knee: Full 4-arm ensemble v55",
+      "score_observation": {
+        "indexed_Public": 0.936,
+        "indexed_Best": 0.936,
+        "indexed_best_version": 56,
+        "indexed_displayed_version": "57 of 57",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed renamed-looking root plus old bend-the-knee-to-dinov3-ensembled-nk log/input/output",
+      "index_crawl_label": "6 days ago and older",
+      "note_ja": "旧slugのcomments索引ではbest0.935V13、別面はbest0.936V56。異なる索引時点を同一ライブ観測に統合しない。新旧ref同一性のAPI照合は未実施。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "vaihero/rsna-knee-effv1",
+      "url": "https://www.kaggle.com/code/vaihero/rsna-knee-effv1",
+      "title": "rsna-knee-effv1",
+      "score_observation": {
+        "indexed_Public": 0.94,
+        "indexed_Best": 0.94,
+        "indexed_best_version": 1,
+        "indexed_displayed_version": null,
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed input page",
+      "index_crawl_label": "last week",
+      "note_ja": "Inputに外部モデル群あり。入力の名前だけでは版・取得可能性・Gold履歴は未確定。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "paiky1995/rsna-knee-reproduce-raptor-then-fine-tune-on-it",
+      "url": "https://www.kaggle.com/code/paiky1995/rsna-knee-reproduce-raptor-then-fine-tune-on-it",
+      "title": "RSNA Knee: 0.926 LB, CoaTNet + fine-tune blend",
+      "score_observation": {
+        "indexed_Public": 0.926,
+        "indexed_Best": 0.926,
+        "indexed_best_version": 14,
+        "indexed_displayed_version": "14 of 14",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed root",
+      "index_crawl_label": "last month",
+      "note_ja": "タイトルと取得Publicが一致するが自己0.956未満。fine-tuneの再実行を開始しない。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "valentinonguyen/knee-sub-tonyrank",
+      "url": "https://www.kaggle.com/code/valentinonguyen/knee-sub-tonyrank",
+      "title": "knee sub tonyrank",
+      "score_observation": {
+        "indexed_Public": 0.941,
+        "indexed_Best": 0.941,
+        "indexed_best_version": 2,
+        "indexed_displayed_version": "2 of 2",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed root",
+      "index_crawl_label": "last week",
+      "note_ja": "複数armのtarget-specific ensemble。自己基準未満。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "tamerlanomralinov/rsna-knee-crazy-lb-tune",
+      "url": "https://www.kaggle.com/code/tamerlanomralinov/rsna-knee-crazy-lb-tune",
+      "title": "RSNA Knee | Crazy LB Tune",
+      "score_observation": {
+        "indexed_Public": 0.936,
+        "indexed_Best": 0.936,
+        "indexed_best_version": 3,
+        "indexed_displayed_version": "11 of 11",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed notebook",
+      "index_crawl_label": "6 days ago",
+      "note_ja": "表示V11とbestV3を区別。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "prvsiyan/head-and-shoulders-knees-and-toes",
+      "url": "https://www.kaggle.com/code/prvsiyan/head-and-shoulders-knees-and-toes",
+      "title": "Head and shoulders, knees and toes",
+      "score_observation": {
+        "indexed_Public": null,
+        "indexed_Best": 0.937,
+        "indexed_best_version": 38,
+        "indexed_displayed_version": "50 of 51",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "search_service indexed comments; separate older web notebook explicitV36",
+      "index_crawl_label": "last week and older",
+      "note_ja": "新しいcomments索引はlast successful V50of51・current error・best0.937V38。別の古いexplicitV36索引のPublic0.935/best0.936を現在値に統合しない。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "prvsiyan/rsna-knee-read-the-report-then-the-knee",
+      "url": "https://www.kaggle.com/code/prvsiyan/rsna-knee-read-the-report-then-the-knee",
+      "title": "RSNA Knee: read the report, then the knee",
+      "score_observation": {
+        "indexed_Public": null,
+        "indexed_Best": 0.906,
+        "indexed_best_version": 52,
+        "indexed_displayed_version": "62 of 62",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web/search_service indexed root",
+      "index_crawl_label": "last month",
+      "note_ja": "bestV52と表示V62を区別。TPU実行時間はhidden GPU推論の証拠ではない。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "pilkwang/rsna-knee-baseline-v1",
+      "url": "https://www.kaggle.com/code/pilkwang/rsna-knee-baseline-v1",
+      "title": "RSNA Knee baseline v1",
+      "score_observation": {
+        "indexed_Public": 0.891,
+        "indexed_Best": 0.891,
+        "indexed_best_version": 15,
+        "indexed_displayed_version": "15 of 15",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed root",
+      "index_crawl_label": "5 days ago",
+      "note_ja": "成熟した公開anchorだが目標との差を埋める新frontierではない。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "romanrozen/rsna-knee-data-structure-eda-baseline",
+      "url": "https://www.kaggle.com/code/romanrozen/rsna-knee-data-structure-eda-baseline",
+      "title": "RSNA Knee | Data structure, EDA, baseline",
+      "score_observation": {
+        "indexed_Public": 0.894,
+        "indexed_Best": 0.894,
+        "indexed_best_version": 14,
+        "indexed_displayed_version": "14 of 15",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed explicit scriptVersionId341202160",
+      "index_crawl_label": "3 weeks ago",
+      "note_ja": "明示旧V14の索引。V15の現在Publicは未確認。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "maverickss26/rsna-knee-restructured-version-2",
+      "url": "https://www.kaggle.com/code/maverickss26/rsna-knee-restructured-version-2",
+      "title": "rsna-knee-restructured Version 2",
+      "score_observation": {
+        "indexed_Public": 0.936,
+        "indexed_Best": 0.936,
+        "indexed_best_version": 3,
+        "indexed_displayed_version": null,
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed root",
+      "index_crawl_label": "last month",
+      "note_ja": "作者報告以外の再現資格なし。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "amanatar/rsna-knee-ultimate-0915-v5",
+      "url": "https://www.kaggle.com/code/amanatar/rsna-knee-ultimate-0915-v5",
+      "title": "RSNA Knee Ultimate 0915 V5",
+      "score_observation": {
+        "indexed_Public": 0.909,
+        "indexed_Best": 0.909,
+        "indexed_best_version": 1,
+        "indexed_displayed_version": null,
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed log",
+      "index_crawl_label": "last month",
+      "note_ja": "検索に現れた0.964は58gold上MCL、0.962はMedial MeniscusのCI上端。macroPublicは0.909であり高スコア候補に数えない。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "sushanthtiruvaipati/rsna-knee-raptor-coatnet-swa-v1",
+      "url": "https://www.kaggle.com/code/sushanthtiruvaipati/rsna-knee-raptor-coatnet-swa-v1",
+      "title": "RSNA Knee Raptor CoAtNet SWA v1",
+      "score_observation": {
+        "indexed_Public": 0.923,
+        "indexed_Best": 0.923,
+        "indexed_best_version": 1,
+        "indexed_displayed_version": null,
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed input",
+      "index_crawl_label": "last week",
+      "note_ja": "SWA名だけでは上流Gold選択履歴がないとは判定できない。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "mostakimhossain52/rsna-knee-abnormality-inference",
+      "url": "https://www.kaggle.com/code/mostakimhossain52/rsna-knee-abnormality-inference",
+      "title": "RSNA Knee Abnormality Inference",
+      "score_observation": {
+        "indexed_Public": null,
+        "indexed_Best": 0.605,
+        "indexed_best_version": 6,
+        "indexed_displayed_version": "18 of 18",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed root",
+      "index_crawl_label": "last month",
+      "note_ja": "InputにPrivate Dataset表示あり。公開ソースだけで再現可能とは判定しない。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    },
+    {
+      "ref": "mattiaangeli/bend-the-knee-to-dinov3-ensembled",
+      "url": "https://www.kaggle.com/code/mattiaangeli/bend-the-knee-to-dinov3-ensembled",
+      "title": "Bend the Knee to DinoV3 (ensembled)",
+      "score_observation": {
+        "indexed_Public": 0.922,
+        "indexed_Best": 0.922,
+        "indexed_best_version": 126,
+        "indexed_displayed_version": "104 of 126",
+        "latest_live_version_verified": false,
+        "linked_submission_id": null,
+        "score_kind": "Kaggle rendered Public/Best fields as indexed; not our reproduction"
+      },
+      "retrieval_method": "web search indexed root/notebook/input/output and explicit older versions",
+      "index_crawl_label": "last week and older",
+      "note_ja": "表示V104とbestV126が同居する索引。V126そのものの最新ソース・linked scoreは未確認。",
+      "input_hints_not_pinned": [],
+      "exact_source_and_Input_versions_acquired": false,
+      "code_source_static_audited": false,
+      "weights_downloaded": false,
+      "own_reproduced_Public": null,
+      "greater_than_own_recorded0956_verified": false
+    }
+  ],
+  "false_positive_controls": [
+    {
+      "url": "https://www.kaggle.com/code/fuadmuhammad/rsna-knee-fast-parent-0-957-v2/comments",
+      "found_number": 0.957,
+      "number_role": "title text",
+      "actual_indexed_Public": 0.939,
+      "decision_ja": "目標超えとして採用しない"
+    },
+    {
+      "url": "https://www.kaggle.com/code/nikhil00718/rsna-knee-0-95-dinov2-v2",
+      "found_number": 0.95,
+      "number_role": "title text",
+      "actual_indexed_Public": 0.809,
+      "decision_ja": "タイトルを成績としない"
+    },
+    {
+      "url": "https://www.kaggle.com/code/amanatar/rsna-knee-ultimate-0915-v5/log",
+      "found_number": 0.962,
+      "number_role": "gold single-finding CI upper bound",
+      "actual_indexed_Public": 0.909,
+      "decision_ja": "macroPublicと区別"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/734105",
+      "found_number": 0.957,
+      "number_role": "gold Medial OA AUC in HARD arm",
+      "decision_ja": "58件goldの所見別値をPublicNotebook成績にしない"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735767",
+      "found_number": 0.975,
+      "number_role": "participant forecast of eventual winning or medal score",
+      "decision_ja": "実現したスコアや公開解法として採用しない"
+    },
+    {
+      "url": "https://www.kaggle.com/code?types=competitions",
+      "found_number": 0.97128,
+      "number_role": "Predicting Smartphone Addiction entry",
+      "decision_ja": "別大会のスコアをRSNAへ流用しない"
+    }
+  ],
+  "outcome": {
+    "new_verified_author_Public_greater_than0956_count": 0,
+    "new_verified_author_Public_greater_than0960_count": 0,
+    "newly_discovered_highest_indexed_author_score": 0.954,
+    "newly_discovered_highest_ref": "guoxiangwangs/e0052-heliosli-rank-blend-public-adaptation",
+    "latest_main_four_authors_unresolved_by_this_actor": true,
+    "global_absence_claim": false,
+    "own_goal_achieved": false,
+    "recommended_parent_followup_refs": [
+      "evgendvorkin/rsna-versia-7",
+      "heliosli/blend-mine-in-private-lb-luck-to-all-upvoters",
+      "romantamrazov/rsna-knee-dinosaur-v5",
+      "kiyoshiohno/rsna-knee-template",
+      "guoxiangwangs/e0052-heliosli-rank-blend-public-adaptation",
+      "matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed",
+      "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+      "fuadmuhammad/rsna-knee-fast-parent-0-957-v2"
+    ],
+    "recommendation_ja": "親の別経路で主4作者の実metadataと公開code一覧を再取得する。>.956が確認された版はlinked submission、ソース、Input全版、実保存Docker、上流Gold履歴、Internet OFF提出契約を固定した後に実再現へ進む。索引値が低いだけで最新版の不在を断定せず、曖昧なタイトルだけを根拠に提出しない。"
+  },
+  "actions": {
+    "web_public_reads": true,
+    "new_record": true,
+    "data_or_weights_download": false,
+    "source_code_download": false,
+    "training": false,
+    "MRI_decode": false,
+    "credentials_read": false,
+    "upload_or_NotebookSave_or_submit": false
+  }
+}

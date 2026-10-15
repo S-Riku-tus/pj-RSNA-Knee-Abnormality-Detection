@@ -1,0 +1,231 @@
+{
+  "schema_version": "above0960_public_method_evidence_v1",
+  "actor": "/root/web_research",
+  "recorded_at_utc": "2026-10-15T07:57:26Z",
+  "date_jst": "2026-10-15",
+  "timestamp_note_ja": "調査を行った時点の記録時刻。Web各応答の秒単位取得時刻は個別保存していない。",
+  "scope_ja": "公式Public LBの0.960超チームの公開技術発言を照合し、0.961以上へ向けて検証可能な一要因候補を整理した。非公開資産の探索・アクセス、名前からの私的情報探索、学習開始はしていない。",
+  "leaderboard_evidence": {
+    "path": "artifacts/research/20261015-public-readonly-api-probe-v1/Public-GetLeaderboard.json",
+    "sha256": "2e59dcdbff081a93160c64f473c5f961202367351b7290da8ce0b90856eac402",
+    "bytes": 5568933,
+    "official_raw_rows": 6025,
+    "observed_max_displayed_Public": "0.967",
+    "strict_above0960_team_rows": 46,
+    "at_least0960_team_rows": 66,
+    "interpretation_ja": "今回保存済みrawの表示値で再計算。Public順位とPrivate順位を同一視せず、上位66件は0.960以上、厳密な0.960超は46件と区別する。作者の過去コメントの投稿時順位を今回の順位へ読み替えない。"
+  },
+  "current_membership_links": [
+    {
+      "public_username": "tuckerarrants",
+      "public_display_name": "Tucker Arrants",
+      "team_id": 16668884,
+      "current_raw_rank": 1,
+      "current_raw_team_Public": "0.967",
+      "use_ja": "公開発言者と現在のチーム所属の照合のみ。公開発言の手法が現在0.967を生んだという因果証拠ではない。"
+    },
+    {
+      "public_username": "tennogh",
+      "team_id": 16676548,
+      "current_raw_rank": 15,
+      "current_raw_team_Public": "0.963",
+      "use_ja": "過去の0.942/0.943技術投稿と現在のチームを区別する。"
+    },
+    {
+      "public_username": "kosuke123",
+      "public_display_name": "diet1236364",
+      "team_id": 16690341,
+      "current_raw_rank": 13,
+      "current_raw_team_Public": "0.964",
+      "use_ja": "display nameによる過去コメントの同定。現在0.964の再現可能recipe公開とは主張しない。"
+    },
+    {
+      "public_username": "optimo",
+      "team_id": 16830109,
+      "current_raw_rank": 31,
+      "current_raw_team_Public": "0.962",
+      "use_ja": "外部データ条件のスレッド参加のみ。性能手法の公表とは扱わない。"
+    }
+  ],
+  "search_scope": {
+    "method": "web search indexed Kaggle topic/profile bodies, direct public-profile open",
+    "technical_queries_targeted_public_authors": [
+      "Tucker Arrants",
+      "tennogh",
+      "Theo Viel",
+      "CentralyDS",
+      "Komil Parmar",
+      "Pavel",
+      "Volkopat",
+      "kakao-chan",
+      "tom1115",
+      "Wassim",
+      "Sergey Bryansky",
+      "Optimo",
+      "Claudio",
+      "Chris Nielsen",
+      "syamoji141",
+      "diet1236364",
+      "yuanzhe zhou",
+      "Tomoki Hirose"
+    ],
+    "exact_topic_title_queries": [
+      "Plateau at 0.903: sharing my pipeline and ablations, and looking for advice",
+      "RSNA 224px / 288px pooling",
+      "RSNA 32 slices"
+    ],
+    "nonRSNA_other_competition_results_discarded": true,
+    "direct_profiles": {
+      "tuckerarrants": "zero body lines",
+      "tennogh": "not accessible via web tool",
+      "centralyds": "not accessible via web tool",
+      "sggpls": "zero body lines"
+    },
+    "freshness_ja": "技術本文は検索索引で、相対投稿日や表示順位は現在値ではない。該当本文を得られないことを方法非公開・不存在の証明としない。"
+  },
+  "public_method_evidence": [
+    {
+      "id": "top1_small_controlled_weak_validation",
+      "url": "https://www.kaggle.com/tuckerarrants/discussion",
+      "publisher": "Tucker Arrants, original public technical comment",
+      "indexed_topic_title": "Plateau at 0.903: sharing my pipeline and ablations, and looking for advice",
+      "exact_topic_id_obtained": false,
+      "indexed_relative_post_date": "14d ago (not converted to absolute date)",
+      "primary_supported_facts_ja": [
+        "224/288pxのResNet34やEffNetB0と単純poolingを、低コストの対照実験の出発点として提案する。",
+        "小差の反復改善をreport-derived弱ラベルCVで比較し、58件GoldやLBだけでは0.002〜0.003程度の差を解像しにくいと指摘する。",
+        "同じfoldでモデルを比較し、検証のノイズ閾値を定めることを勧める。"
+      ],
+      "reported_score_role_ja": "コメントの0.94+は一般的な到達可能性の作者主張で、現在の0.967チーム提出の再現値ではない。",
+      "our_inference_ja": "追加の大規模backbone探索より、同じ教師・fold・seed・前処理を保持した比較を優先する根拠になる。既にF006/F007/F008を完了した本プロジェクトでは、まず保存済み予測と候補の正式結果を回収する。",
+      "excluded_author_practice_ja": "同プロフィールの別発言には58Goldを訓練に使う趣旨があるが、本プロジェクトのGold学習・checkpoint選択禁止に反するため採用しない。",
+      "full_current_recipe_or_weights_published_by_this_source": false,
+      "own_gain_proven": false
+    },
+    {
+      "id": "top1_backbone_confound_control",
+      "url": "https://www.kaggle.com/tuckerarrants/discussion",
+      "publisher": "Tucker Arrants, original public technical comment",
+      "indexed_topic_title": "Plateau at 0.903: sharing my pipeline and ablations, and looking for advice",
+      "indexed_relative_post_date": "12d ago (not converted to absolute date)",
+      "primary_supported_facts_ja": [
+        "DINOv2とResNetの比較はarchitectureだけでなく事前学習objectiveと事前学習データも同時に変わる、と指摘する。",
+        "別の弱ラベルやCV値とLB値を跨いだ数字比較では優劣を判断できない、と説明する。"
+      ],
+      "our_inference_ja": "MRI-COREや新CNNの導入は純粋なモデルサイズ実験ではない。公開recipe単位の比較ならその旨を明記し、事前学習法だけの効果とは主張しない。",
+      "full_current_recipe_or_weights_published_by_this_source": false,
+      "own_gain_proven": false
+    },
+    {
+      "id": "top15_OOF_and_TTA",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735304",
+      "publisher": "tennogh, original public comment",
+      "primary_supported_facts_ja": [
+        "288pxでraw0.942、TTA0.943を報告し、OOF pseudo-label指標とLBに相関が見られたと述べる。",
+        "独自ラベルが公開ラベルより測定上明確に良いわけではなく、細かな改善の積み重ねだと説明する。"
+      ],
+      "score_role_ja": "過去の作者自己報告。現在チーム0.963の全構成・TTA種類・同条件比較ログは未公開／本調査では未取得。",
+      "our_inference_ja": "正しいOOFと提出前に固定したTTAの比較は候補になるが、この投稿の+0.001を本プロジェクトへ加算しない。現親recipeに既に同じTTAがある場合は重ねない。",
+      "full_current_recipe_or_weights_published_by_this_source": false,
+      "own_gain_proven": false
+    },
+    {
+      "id": "top13_small_resolution_public_labels",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735304",
+      "publisher": "diet1236364 (matched to kosuke123 in saved official team-members raw)",
+      "primary_supported_facts_ja": [
+        "224px・同一モデルの5fold ensembleで0.929、教師はLLM出力ラベルのみと報告する。"
+      ],
+      "score_role_ja": "single modelという語は5fold ensembleを含む。現在0.964の提出を説明する公開recipeではない。",
+      "our_inference_ja": "高順位チームの初期ベースラインでも巨大解像度が必要とは限らないという補助的根拠。本文のLLM名に関する冗談を再現可能なラベル生成仕様として使わない。",
+      "full_current_recipe_or_weights_published_by_this_source": false,
+      "own_gain_proven": false
+    }
+  ],
+  "new_host_condition_evidence": {
+    "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/741819",
+    "title": "Is the Osteoarthritis Initiative (OAI) permitted as external data?",
+    "publisher": "Po-Hao Howard Chen, Competition Host",
+    "method": "web search indexed topic and comment body",
+    "exact_comment_id_and_absolute_post_time_obtained": false,
+    "primary_supported_facts_ja": [
+      "無料で、全参加者に一般的にアクセスでき、機関のreview/sign-offやlegal teamを必要としないなら、OAIの外部利用は競技規則に違反しないという条件付き回答。",
+      "OAI自体の利用条件についてはデータ提供者が決めるもので、競技主催者は判断できないと説明する。"
+    ],
+    "participant_interpretation_not_Host_ruling_ja": "Tuckerは機関sign-offが必要なので条件を満たさないと解釈している。この参加者の結論をHostの無条件禁止と書かない。",
+    "our_decision_ja": "無回答という旧説明は、この取得範囲では条件付きHost回答ありへ更新できる。今回の新規外部データ利用やMRI-COREの無条件許可を意味しない。既存公開重みの上流データ由来と適格性の監査を継続する。",
+    "new_data_acquisition_or_training_started": false
+  },
+  "supporting_comparison_scope": {
+    "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/746792",
+    "publisher": "Danial Zakaria, public selected-SWA author; not established here as an above0960 team member",
+    "support_ja": "同重み・同320px cropでanatomical mirroringを加え0.948から0.949という作者報告と、単純な全断面width flipでの低下を区別する。公開重みはGoldで選択され、OAI由来の条件も残る。",
+    "inference_ja": "plane-aware TTAの具体仕様を検討する補助資料に限定する。この低い単体スコアを高rank最終recipeや自己gainと呼ばない。"
+  },
+  "concrete_one_factor_comparison_plan": [
+    {
+      "priority": 1,
+      "candidate": "new_Helios_parent_reproduction_then_same_native20",
+      "action_ja": "親が新0.957公開recipeを元版のまま自己再現した後、同じF006両fold E12・同じnative20％の候補で、親だけ旧V22から新Heliosへ置き換える。",
+      "unchanged": [
+        "F006 checkpoint hashes",
+        "native coefficient0.20",
+        "label order and missing-value contract",
+        "native twofold selection policy",
+        "final UID completion checks"
+      ],
+      "evidence_ja": "新しい公式公開Codeの0.957は親側で発見済み。本調査では上位チームの補完性重視と弱CVの公開発言が比較の妥当性を補強する。",
+      "required_before_action_ja": "新親の版・Input・ソース・Docker・Gold履歴を監査し、可視成功・hidden完走・自己Publicを区別する。",
+      "training_required": false,
+      "source": "experiments/public-code-score-frontier-20261015.json",
+      "predicted_Public_gain": null,
+      "expected_success_probability": null
+    },
+    {
+      "priority": 2,
+      "candidate": "plane_aware_anatomical_mirror_only_if_absent",
+      "action_ja": "採用親とnative構成に解剖学的mirrorが既に含まれるかを先に確認し、含まれない場合だけ、同重み・同crop・同slice窓を保ち、原画像と正しい断面別mirror確率の事前固定平均を一要因候補として設計する。",
+      "unchanged": [
+        "model weights",
+        "crop geometry",
+        "series and slice sampling",
+        "folds",
+        "blend coefficients"
+      ],
+      "required_before_action_ja": "sagittalのslice軸とcoronal/axialの幅軸を区別し、人工方向検査、UID/ラベル列、FP32集約、visible/hidden時間を検証する。全plane一律hflipや既存TTA重複を避ける。",
+      "training_required": false,
+      "current_implementation": false,
+      "execution_eligibility_ja": "現在環境ではGPU/Torch未確認。コード・人工契約までを準備範囲とし、必要な実GPU確認は親の利用可能環境で行う。",
+      "predicted_Public_gain": null,
+      "expected_success_probability": null
+    },
+    {
+      "priority": 3,
+      "candidate": "weak_validation_before_any_new_crop_or_backbone_training",
+      "action_ja": "追加学習が必要になった場合の一要因比較を事前登録する。既存と同じgroup/fold/teacher/mask/seedで、cropまたはbackboneのどちらか一つだけを変更し、両foldのpaired弱比較を取る計画までに留める。",
+      "required_before_action_ja": "同じレポート・供給groupを分断せず、患者独立性を未確認で断定しない。全12とfixed10を別記し、checkpoint選択後holdout再利用を明示する。Goldでtrain/selectしない。",
+      "training_required": true,
+      "training_start_authorized_by_this_record": false,
+      "current_implementation": false,
+      "reason_deferred_ja": "高rankの現在0.961以上の完全公開recipeは今回取得しておらず、既存完了候補と新親のPublic結果を先に評価する方が直接的。",
+      "predicted_Public_gain": null
+    }
+  ],
+  "interpretation_limits": [
+    "公開Codeのscore順先頭100件max0.957という観測と、高rank参加者が方法を一切公表していないという主張は別。後者は成立せず、実際に技術発言は見つかった。",
+    "ただし高rank参加者の過去0.929/0.943発言は、現在の0.964/0.967最終構成や配布重みを証明しない。",
+    "名前・順位の高さを手法の因果効果の証拠にしない。公開の技術内容と実験比較の有無で評価する。",
+    "薄い靱帯・半月板に有効な特定cropが現在0.961以上を生んだという新しい高rank一次比較は今回未取得。新しいcrop倍率を根拠なく決めない。",
+    "Public差0.001や弱CV差を足して目標0.961へ到達すると予測しない。Private精度と達成確率は未推定。"
+  ],
+  "preserved_constraints": {
+    "Gold_fit_or_checkpoint_selection": 0,
+    "new_training_started": false,
+    "real_MRI_decode": false,
+    "model_or_dataset_download": false,
+    "private_assets_access_attempted": false,
+    "credentials_read": false,
+    "external_post_upload_save_submit": false,
+    "existing_records_modified": false
+  }
+}

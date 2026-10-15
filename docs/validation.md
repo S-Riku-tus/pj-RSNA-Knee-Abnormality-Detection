@@ -1,5 +1,91 @@
 # 準備内容の検証範囲
 
+## 10月15日19:21の採点確認後：P029M提出とP030M可視対照の独立照合
+
+19:33:56 JSTの追加公式Getも同じ377バイト・SHA9f435966…dc6cで、status／errorDescription／publicScoreはいずれも欠落したままです。[最終チェックポイント](../experiments/public957-final-checkpoint-20261015-1934.json)。状態欠落とCOMPLETE／失敗／精度0を混同せず、追加Submitもしていません。
+
+P029M V1の通常sessionはCOMPLETE。取得対象はCSV6件・receipt JSON2件・workerログ2件と通常ログだけで、ローカルにモデル本文やMRIは取得していません。[取得receipt](../artifacts/research/20261015-p029m-visible-output-audit-v1/download-receipt.json)。Rootは保存済み可視test.csv／sampleに対して6CSVの3UID・順序・正規12列・有限値・[0,1]を検証しました。各raw384/raw224/oursの平均同順位rank/Nから元の括弧順序で計算しfloat32へ量子化、最終CSV全36値のビットが一致。[Root監査](../artifacts/research/20261015-p029m-visible-output-audit-v1/root-independent-audit.json)、[独立監査](../artifacts/research/20261015-p029m-visible-output-audit-v1/independent-numeric-audit.json)。従来のfixed20プレビューとは順位式が異なり、代用していません。
+
+実stdout eventで9member guard成功は1件。traceback中のソース文字列を数えていません。blend receiptは各arm failure／both_failed全0、R6はscored3・fallback0・worker終了0、bundle fe055406。両workerは4fold・fp16・FLIP_TTA_READY・timeout falseを報告。fluid特徴の欠損1件は規定の欠損処理であり、検査未採点とは区別します。compile/eagerの最終study差と中間group差は別値で、FP32ビット同値や無言fallback皆無を証明したとは扱いません。
+
+提出直前にprivate／GPU／Internet OFF／candidate V1／stage V1／全候補セル一致／現在枠5を再確認し、`57225898`を19:01:51 JSTに1回Submit受理。19:21の公式Get/Listでもstatus／errorDescription／publicScoreがなく、hidden完走・採点成功・自己0.957は未資格です。公式枠は本日1・残4・累計28。[提出レビュー](../artifacts/research/20261015-p029m-submit-preflight-v1/manual-submit-review.json)。提出前GetはDockerのprivate-byod registry＋要求と同じ2757 digestを返しました。旧Getのキー欠落と区別し、古い監査JSONは取得当時の証拠として保持します。
+
+P030M V1/kernel138832933はTTA booleanだけをOFFにした可視対照として1回保存・実行しCOMPLETE。全セル・Input・設定のGet一致、元test/sampleに対する6CSVの3UID順と12列、全36値の再計算一致をRootと独立agentが確認しました。[Root](../artifacts/research/20261015-p030m-visible-output-audit-v1/root-independent-audit.json)、[独立監査](../artifacts/research/20261015-p030m-visible-output-audit-v1/independent-p030m-audit.json)。TTA OFFは実ASSETS_READY false・元OR条件とmanifestにoverrideなし・FLIP_TTA_READY 0・workerのflip_ttaキー不在で確認し、receiptに明示falseがあるとは主張しません。全arm failure 0／R6 scored3／worker終了0・timeout false。R6確率31/36値が変わる一方で3件内の順位は同一、最終CSVバイト同一も確認。hidden／Publicは未確認・Submit0です。
+
+P030Mの全体405.2秒とP029M453.7秒は単回比較で、未変更armの時間も変わっています。48.5秒差をすべてTTAの因果効果とせず、大規模実行や精度へ外挿しません。quota rawは108000秒許可／12237.127秒使用／予約0の観測値。最初のquotaキー名検査はSave前に停止し、実Saveは1回だけでした。typed durationは計算に使っていません。限定unittest53件の52成功・1skip、広域299件の未解決範囲は下記のままです。以下は各取得時点の履歴です。
+
+## 10月15日18:11：固定入力stage完了とP029M起動
+
+stage b1のtemp親未存在による取得前停止を保存し、新しいb2で親作成を修正しました。b2のraw Getではprivate/CPU/Internet ON/Inputなし/currentVersionNumber=1、送信した全セル本文と一致。通常sessionはCOMPLETEで、実stdoutの9ファイル検証成功JSONを確認しました。取得した2213バイトのprovenanceの全9項目を、元manifestから束縛したサイズ/SHAへ突合しています。計886,813,460バイトはKaggle上での既存公開ファイルのコピーで、ローカルモデル取得・デシリアライズ・MRI読込・学習ではありません。[記録](../experiments/p029m-frozen-input-private-run-20261015.json)。
+
+P029M V1/kernel138824627のSAVE_AND_RUN_ALLは18:11:16 JSTに1回受理。送信payloadはcode/configのみ、元数値コードは保持し、固定mount探索1行と全9member guardを追加。古い作者dataSources/runtime metadataは新launchcopyで除去しました。実mount/GPU forward/可視CSV/hidden/Publicの資格はまだfalse/null、Submit0です。P030MのTTA一箇所だけの対照は別途AST/byte/compile/独立レビュー済みですが未実行です。
+
+最終限定53件は52成功・1symlink skip・失敗/エラー0。[53件の全文ログ](../artifacts/research/20261015-p029-stage-fallback-validation-v1/selected-53-unittest.log)、[結果とコードSHA](../artifacts/research/20261015-p029-stage-fallback-validation-v1/validation.json)。旧45件に新tracked stage準備8件を加算したもので、旧artifact内8件は重複計数していません。親ディレクトリ未存在からのmain経路は人工rootとfake transferで実際に検証。元科学コード・ネット・実モデル/MRI・実学習をこの限定suiteでは実行していません。
+
+別途、agentが誤って広く実行した299件はfail9/error50/skip66で全体不成立です。[観測記録](../artifacts/research/20261015-p029-stage-fallback-validation-v1/broad-discovery-299-unresolved.json)。完全stdoutとbaseline比較がないため、全てを既存不具合と断定せず未解決とします。旧artifact不在や依存importに関する例があり、人工DICOM/CUDA学習のtest定義も含むため、この広域実行全体について外部操作/人工処理ゼロを保証しません。対象変更の検証根拠は保存した限定53件です。広域suiteは再実行・追加修正していません。以下の未認証・旧待機・途中RUNNING等は各取得時点の履歴です。
+
+## 10月15日17:47 JST観測：P029 first guardの失敗と認証後raw監査
+
+[P029 V2停止の正本](../experiments/p029-first-guard-failure-20261015.json)はkernel138818102／V2／ERROR・In [1]のメタデータ検査失敗です。期待R6 V1 manifestが一意に見つからず、科学セル・MRIデコード・モデル読込は未開始、正式Submit0・自己Public未測定。実mountのbundle／版を表示していないためR7接続とは断定しません。旧pollのsubstring成功boolはtraceback内のprintソースへの一致で、実stdoutの成功eventは0。guard成功や可視／hidden資格を発行しません。
+
+[認証後の提出・quota独立監査](../experiments/authenticated-progress-refresh-20261015.json)では、raw/typed計15証拠のサイズとSHA、Get/List4件の共有欄、27件の自己identity、最高Public0.956を再計算しました。旧3件はrawにCOMPLETE＋明示errorDescription＋publicScore欠落＋totalBytes0があり、SDK既定PENDING・説明文の旧pending・ゼロ精度には置き換えません。V22Rはraw Get/ListともCOMPLETE・0.956・報告エラーなしです。認証は成功済みで、旧未認証節は履歴です。
+
+17:21 JSTのlimits raw/typedはnumAllowedNow5・numTotal27で一致し、numTodayはrawにないため0と推定しません。GPU quotaのrawはtotal108000秒・used11361.972秒・reserved0秒、残96638.028秒。typedの21600秒や`11361.972.0s`は採用せず、rawからDecimalで計算しました。quota更新予定は10月17日09:00 JST、残量と提出枠は観測時点の値です。
+
+次のKaggle CPU staging案はソース準備・査読中です。公開固定V1のmanifest/member hashをKaggle上だけで検査する取得専用処理と、Internet OFFのMRI推論を分けます。現時点でstage完了・新mount・forward・hidden9時間・Publicの資格はなく、以前のP029 source／失敗runを上書きしません。以下の17:32 RUNNING等は旧観測の履歴です。
+
+## 10月15日17:32：認証後の提出結果とP029起動
+
+公式CLI OAuthの終了0・username `rsraki` を取得し、SDKでも同じアカウントを確認。認証コードやtokenを含み得るCLI標準出力/エラーはメモリ内で破棄し、認証値を手動表示・コピーしていません。認証済みGet4件/List/limits/GPU quotaはraw JSON本文と取得時刻・SHAを新規保存しました。[receipts](../artifacts/research/20261015-authenticated-submission-status-v1/receipts.json)。P028/P024/F006両foldはstatus=COMPLETEだけで成功と判定せず、errorDescriptionあり・Public欠損・totalBytes=0のhidden失敗と確認。V22RのみCOMPLETE・0.956・エラーなし。日次残5/累計27は今回の公式値です。
+
+P029の送信はcode/configのみ。QUICK_SAVE V1とSAVE_AND_RUN_ALL V2を各1回行い、Submitは0。元科学コード7セル不変・作者出力除去・R6 V1 manifest guard先頭追加を送信前後に検証しました。V1 Getのprivate/GPU/Internet OFF/全10セルは一致。ただしInput版は返却参照から版suffixが落ち、内部版IDは未返却です。元Notebook metadataにある版情報を実接続と見なしません。内部設定APIはOAuthで403となり、CommitAndRunの書込は試していません。
+
+V1で誤って指定したDocker registryは未実行のまま保持し、V2では作者実runの完全registry名とdigestに修正しました。[操作レビュー](../artifacts/kaggle/p029-r6-957-20261015-42fbc0e9ae14/batch-review-v2.json)。17:32:44 JSTのP029 V2は公式RUNNING、ログ0バイトで、manifest guard成功・forward・CSV・自己Publicは未資格です。
+
+最終オフラインunittestは45件・44成功・1スキップ・失敗/エラー0。[結果JSON](../artifacts/research/20261015-public957-followup-validation-v1/validation.json)、[ログ](../artifacts/research/20261015-public957-followup-validation-v1/unittest.log)。内訳は監査8成功/1skip、CSV14、既存契約7、P029準備7、P030準備8。これはKaggle実推論の合格ではありません。以下の未認証や旧提出待機は以前の取得時点の記述です。
+
+## 10月15日夕方：公開0.957候補・現在順位・P029準備
+
+匿名公式公開LBの全6025行についてrank集合1..6025、team ID対応、重複なし、自己rsraki/既知Submit57164195を照合しました。自己Public表示0.956・1029位、現Public金22/銀301/銅602が境界。保存時刻16:40:59 JST、正確なHTTP取得時刻は未記録です。Privateキーはなく、個別の旧3提出状態と現在枠は未確認のままです。[順位監査](../experiments/medal-frontier-audit-20261015.json)。
+
+公開Code一覧はID154281/SCORE_DESCENDING/EVERYONE/page1/100を要求し、100行降順・競技参照・linked有無・ID順を検証しました。0.957が3件で、うち1件は非公開Inputあり。`totalCount=0`の不整合があるため全件取得・全公開recipe不存在は証明しません。[一覧監査](../experiments/public-code-score-frontier-20261015.json)。
+
+P029は作者V1/script358332966/Submit57183099/公式表示0.957と一致する元Notebook638918B・SHA449ce778…bd02を完全コピー。最初のHTTP保存はPowerShell byte配列が数値列文字列になったため、その全バイト値から新しいexactファイルへ復元し、受信サイズ一致・JSON構文を確認しました。元の保存物も保持しています。全9セル・出力・metadataを保存し、7コードとembedded7pyはcompileだけを実施しました。元出力は作者の歴史的出力です。
+
+[P029 builder](../scripts/prepare_p029_public957.py)はソース/metadata SHA、linked提出のsource版、固定3Inputと内部版、実Docker、Internet、公開性、R6 V1の9ファイル名/サイズを照合してから新runを作ります。組立時にはR6 V1 manifest本文も未取得でしたが、その後公式CLIで4120バイトのメタデータだけを取得し、期待SHA6508…/bundle fe055406/歴史ソースSHAを突合、別preflightも成功しました。[追加監査](../experiments/p029-r6-v1-manifest-metadata-verification-20261015.json)。これはモデル本体・mounted版・forwardの検証ではありません。最新V2/R7誤接続を拒否する契約を維持し、元のP029 runは上書きしていません。元NotebookのGPU=falseと実run GPU=trueの差も保持し、将来の実保存T4×2を別確認します。
+
+人工unittestはP029追加7件成功。ソース非実行、SHA不一致、Input版/linked版/Docker/Internet/非公開/ファイル一覧不一致拒否、未知magic/非literal source拒否、既存run保全、R7 manifest拒否を検証しました。[独立静的監査](../experiments/p029-public957-static-audit-20261015.json)も原byte・manifest・生成verifier・builder SHAを再計算して準備範囲PASSです。GPU/可視Serving/hidden9時間/自己Publicの資格は発行していません。
+
+元recipeには成功UID集合ごとのrank、失敗時補完、224のFP32 fallback、既存/tmp/_fastread.py再利用等があります。8.3hは全処理hard timeoutではありません。新しいbatchで実経路と終了処理を確認する必要があります。SWAのGold選択露出・OAI条件・上流ライセンスを保持し、Gold clean/患者独立を主張しません。
+
+[P030 builder](../scripts/prepare_p030_tta_control.py)はR6 V1とP029ソース/manifestを固定し、TTA boolean一箇所だけのAST変更、他6コードセル・埋込7モジュールの同一、credit保持、作者旧出力/番号除去を検証しました。追加人工8件は成功。第二の科学的変更・重複/nested代入・非literal・R7 InputやTTAを有効化するmanifest・親SHA不一致・既存runを拒否します。元ソースにraiseを含む人工例でも実行せず準備できることを確認しています。実行/精度資格はfalseのままです。
+
+公式CLI2.2.4/SDK0.1.37をプロジェクトの新 `.venv` へ導入しました。標準認証は未認証・SystemExit、filesystem PermissionError=false。認証値は手動で読まず表示せず、出力を捨てた状態だけ記録しました。[認証状態](../artifacts/research/20261015-standard-kaggle-auth-check-v2/status.json)。ユーザーのログイン意向返信は完了確認と区別します。保存/実行/提出0、自動アップロード/提出コード追加0、MRI/モデル重み本体取得/学習0です。
+
+---
+
+## 2026-10-15：記録監査とCPU準備の検証境界
+
+自己Public最良0.956は、10月14日14:33の公式Get/Listが一致したという追跡済み記録です。今回新しく公式APIを照会して確認した値ではありません。P028 `57163437`、P024 `57166365`、F006両fold `57169291` の最終記録は未返却で、現在の状態は未確認です。10月14日の残枠1は派生値であり現在枠ではありません。
+
+作業開始時の `artifacts/` と `data/` はREADMEのみでした。以前のSHA参照を読みましたが、raw API本文・実checkpoint・予測CSV・V22/F006設計本体の照合はできていません。F006/F007/F008の計96epoch完了、native64/可視成功は過去の監査記録として区別します。モデル取得・MRIデコード・学習・Kaggle保存/実行/提出は今回実施していません。今回のCPU監査出力は新規runへ保存しました。
+
+`nvidia-smi` は利用できず、明示Python 3.11.9にはtorchがありません。CUDA forwardは未実施です。物理GPUがないとの断定はせず、今回利用可能なCUDA学習環境は未確認とします。既存学習CLIのCUDA必須チェックは変更していません。GPUコードは変更せず、今回の追加は標準ライブラリのオフライン準備のみです。
+
+Webでは公式概要・論文・公式コード・作者投稿を調査しました。Kaggle直接openの本文0行、プロフィール取得エラー、ブラウザinventory0件/in-app browser利用不可のため、自己提出スコア・日次枠・順位は更新できません。Rules全文の今回の再取得もできず、[10月4日の監査](research/kaggle-source-eligibility-20261004.json)を現在の新規確認に置き換えません。
+
+F006の弱比較は選択後holdout再利用、fold0方針の観測後定義、固定10と全12の差、全12 bootstrap未定義反復を保持します。患者独立性・未知データ改善は未証明です。今回の人工CSVテストを実Kaggle推論・本NotebookとのFP32同値・Public改善の証拠に流用しません。
+
+今回の [audit v2](../artifacts/research/20261015-recorded-progress-evidence-audit-v2/audit.json) は参照記述子30件（重複参照を別計数）について一致2・欠落28。SHA一致もファイル同一性の確認までで、公式スコアの真正性を再認証するものではありません。記録スコア0.956、現在スコアnull、現在残枠null、達成確率nullを出力します。認証名・認証ディレクトリ・root外への解決・非JSON/モデル参照・上限超過を内容読込前に拒否し、過去の出力ディレクトリも上書きしません。
+
+固定20%プレビューは全N平均同順位rank、二段階rank、UID集合/列順/重複/finite範囲検査、親順序維持、MCL/Synovitisと明示失敗UIDの元セル文字列保持を標準ライブラリで検証します。失敗UIDのnative値も含め入力は全Nの有限確率を要求し、欠損推論値を自動補完しません。入力のfold/モデル同一性・native平均のFP32集約・本Notebookとの等価・25出力・hidden/9時間・Publicは未検証です。
+
+最終確認はPython 3.11.9の標準 `unittest` で30件実行、**29件成功・1件スキップ・失敗/エラー0**。内訳は新監査8成功/1スキップ、新CSVプレビュー14成功、既存 `test_contracts.py` 7成功です。スキップは実symlink作成権限不足で、外部へresolveした参照を内容open前に拒否する模擬試験は成功しました。設計参照欠落時の出力未作成も確認しました。[結果JSON](../artifacts/research/20261015-cpu-continuation-validation-v1/validation.json)と[全文ログ](../artifacts/research/20261015-cpu-continuation-validation-v1/unittest.log)を保存。`git diff --check` は成功しています。
+
+新しい[人工6 UIDのrun](../artifacts/research/20261015-fixed20-synthetic-contract-v1/preview/manifest.json)ではnativeの行順を逆転し、1件の明示失敗を与えてCSVを生成しました。数値契約・元セル保持・ソース/入力/output SHAを確認しただけで、実MRI/教師/モデル予測は含みません。[集約記録](../experiments/cpu-continuation-audit-20261015.json)に入力・コードSHA、環境、採用理由、seedなし/新学習なし、参照fold0+1を記録し、ledgerは旧バイト列を維持して1行追記しました。
+
+---
+
 **10月14日14:59 JST：自己最良Public 0.956を維持し、S6＋F006両fold E12・固定20％の正式提出57169291を受理確認しました。目標0.960以上は未達・継続中です。** [最新の記録](../experiments/F006-bothfold-formal-Submit57169291-Public956-checkpoint-20261014.json)。可視3検査・20出力を再計算してRoot受理後、Submitを1回実行。V22Rは公式COMPLETE・自己0.956、P028・P024・F006両foldはPublic結果待ちで、旧提出は再送しません。本日4件・残枠1・累計27件は前回公式値と今回受理1件からの導出で、提出後の公式枠再照会値ではありません。
 
 F006の可視3検査成功はhidden完走やPublic精度の確認とは別です。F007も可視20出力はRoot受理済みで正式Submitは0。次は同じF006重み・同じ固定20％で、親モデルだけをS6から自己0.956のV22へ切り替える候補を検証します。V22作者報告0.956と自己値は区別し、Docker差37c64…／2757e…、公開重みのGold選択履歴の不確かさを保持します。MRI-COREは条件付き調査候補で、重み取得・実装・追加学習は開始していません。以下は過去時点の記録です。

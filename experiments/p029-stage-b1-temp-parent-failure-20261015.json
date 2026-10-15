@@ -1,0 +1,134 @@
+{
+  "schema_version": "P029_stage_b1_temp_parent_failure_v1",
+  "audit_at_UTC": "2026-10-15T08:58:24Z",
+  "status": "ERROR_BEFORE_ANY_DOWNLOAD",
+  "stage": {
+    "ref": "rsraki/p029-r6v1-stage-20261015-b1",
+    "kernel_id": 138822189,
+    "saved_version": 1,
+    "preserve_failed_V1": true,
+    "never_save_or_retry_same_ref": true,
+    "save_request_at_UTC": "2026-10-15T08:54:53.409069+00:00",
+    "save_response_at_UTC": "2026-10-15T08:54:55.690871+00:00",
+    "observed_at_UTC": "2026-10-15T08:57:42.575882+00:00",
+    "observed_at_JST": "2026-10-15T17:57:42.575882+09:00",
+    "provider_lastRunTime_raw": "2026-10-12T08:57:37.627904600Z",
+    "provider_lastRunTime_used_as_actual_request_or_observation_time": false,
+    "provider_timestamp_caveat": "The returned lastRunTime date precedes the recorded SaveAndRun request by three days. Preserve it as a provider field; do not substitute it for the independently recorded request/response/observation times."
+  },
+  "saved_settings_confirmed_from_Get": {
+    "author": "rsraki",
+    "isPrivate": true,
+    "enableGpu": false,
+    "enableInternet": true,
+    "enableTpu": false,
+    "machineShape": "None",
+    "dockerImage": "gcr.io/kaggle-images/python@sha256:81b1e7c4b4f0f2a7e0a33943c95754b1b7af6b30d65221633a284b6b601cd84a",
+    "currentVersionNumber": 1,
+    "source_cells_match_launch_copy": true,
+    "normalized_source_texts_match_reviewed_backup_all_three_cells": true,
+    "whole_notebook_bytes_claimed_equal_to_reviewed_backup": false,
+    "serialization_note": "Reviewed backup uses source lists; saved/launch notebooks use source strings. Joined cell source text is identical for all three cells. Launch metadata/serialization differ; do not claim original notebook byte equality."
+  },
+  "failure": {
+    "cell": "In [1]",
+    "exception": "FileNotFoundError",
+    "errno": 2,
+    "statement": "temporary.mkdir()",
+    "missing_path": "/kaggle/temp/p029-r6v1-stage-20261015-b1-unverified",
+    "cause": "The source assumed /kaggle/temp already existed and called mkdir without parents=True; the missing parent prevented creation of the fresh unverified directory.",
+    "causal_evidence": "The saved source calls temporary.mkdir before constructing its public HTTP opener and before the first download_verified call; the traceback stops exactly at that mkdir.",
+    "public_HTTP_opener_construction_reached": false,
+    "manifest_download_started_by_this_stage": false,
+    "weight_download_started_by_this_stage": false,
+    "model_deserialization_started": false,
+    "MRI_read_decode_or_training_started": false,
+    "output_copy_started": false,
+    "all_nine_files_verified": false,
+    "actual_remote_R6_files_verified": false,
+    "remote_R6_endpoint_support_tested_by_this_stage": false,
+    "own_Public": null,
+    "competition_Submit": 0
+  },
+  "separate_processes": {
+    "this_is": "A private CPU Internet-ON transport stage for existing public R6 V1 files, not the GPU prediction notebook and not a competition submission.",
+    "P029_original_inference": {
+      "ref": "rsraki/p029-r6-957-20261015-42fbc0e9ae14",
+      "kernel_id": 138818102,
+      "version": 2,
+      "status": "ERROR",
+      "cause": "Earlier first guard could not find exactly one expected R6 V1 manifest; actual mounted bundle/version was not observed.",
+      "record": "experiments/p029-first-guard-failure-20261015.json"
+    },
+    "earlier_hidden_rerun_failures": {
+      "submission_ids": [57163437, 57166365, 57169291],
+      "status": "COMPLETE with nonempty hidden-rerun errorDescription, absent Public score and zero output bytes",
+      "record": "experiments/authenticated-progress-refresh-20261015.json",
+      "same_error_as_stage_b1": false
+    },
+    "self_best_Public_still": 0.956,
+    "self_best_submission_id": 57164195,
+    "new_score_evidence_from_stage_b1": false
+  },
+  "next_b2_requirements": {
+    "new_ref_required": true,
+    "reuse_or_update_b1": false,
+    "prepare_missing_temp_parent": "Use parents=True with explicit /kaggle boundary and parent-symlink checks, while refusing any pre-existing unverified stage directory or final output.",
+    "synthetic_test_required": "A local artificial filesystem with absent temporary parent must reach the mocked metadata transfer without accessing network or real weights; symlink/boundary and existing-directory rejection must remain covered.",
+    "retain_R6_V1_and_all_nine_size_SHA_pins": true,
+    "retain_private_CPU_Internet_ON_stage_and_Internet_OFF_GPU_inference_separation": true,
+    "b2_source_preparation_or_peer_review_is_not_remote_success": true,
+    "require_later_stage_COMPLETE_and_genuine_nine_file_verification_before_inference": true
+  },
+  "evidence": [
+    {
+      "path": "artifacts/kaggle/p029-r6v1-stage-20261015-b1-launch-v1/source.ipynb",
+      "bytes": 22525,
+      "sha256": "f9482b856bc941bc175c02232d055b4d319b3ddaf0e831be388a4efc7bd8b21c"
+    },
+    {
+      "path": "artifacts/kaggle/p029-r6v1-stage-20261015-b1-launch-v1/save-run-request.json",
+      "bytes": 23172,
+      "sha256": "5611ef3c3e64d4f88da0c6d55be71c3c714ca6d2e96b800a34b37844384fe07d"
+    },
+    {
+      "path": "artifacts/kaggle/p029-r6v1-stage-20261015-b1-launch-v1/review.json",
+      "bytes": 1225,
+      "sha256": "90ba82a65929f7af80bb983d462bdeadbcf46af3cbb4d8f1f7d842aa713bfc78"
+    },
+    {
+      "path": "artifacts/kaggle/p029-r6v1-stage-20261015-b1-launch-v1/save-result.json",
+      "bytes": 894,
+      "sha256": "aa867cd93df94e0712a0842a8771156936a0f0599ee1fe599794f645fa4756c0"
+    },
+    {
+      "path": "artifacts/research/20261015-stage-readback-poll-01/get-raw.json",
+      "bytes": 25506,
+      "sha256": "140cb6df267474f1fdcc8f9d8f37f1d68ecf571e49247d65c306f03109b16958"
+    },
+    {
+      "path": "artifacts/research/20261015-stage-readback-poll-01/record.json",
+      "bytes": 942,
+      "sha256": "a4694b41546db29109fb4a64dc25f0c8c8fb5e9b3d9c8f28f6c9e3ba87789b31"
+    },
+    {
+      "path": "artifacts/research/20261015-stage-readback-poll-01/log.json",
+      "bytes": 6314,
+      "sha256": "7a289c0736a9b87905eb0071cb75c2b0b9b2415fc5e2b9cb9df8f44d21c94c82",
+      "receipt_log_bytes": 6263,
+      "receipt_log_sha256": "ed4c2103eff895e6a7d50869007db92e07f4ee1ab6eca3edfa203bf29b288f68",
+      "receipt_hash_reproduced_by": "Read UTF-8 text with universal newline conversion and re-encode as UTF-8/LF. The on-disk file has CRLF; both encodings are recorded separately."
+    }
+  ],
+  "audit_scope": {
+    "read_existing_public_or_own_Kaggle_metadata_and_logs": true,
+    "credentials_read": false,
+    "local_network": false,
+    "local_models_or_MRI_downloaded": false,
+    "scientific_notebook_executed_locally": false,
+    "audit_remote_Save_or_Submit": 0,
+    "already_recorded_parent_stage_SaveAndRun": 1,
+    "documentation_edited_by_this_audit": false,
+    "previous_run_artifacts_modified": false
+  }
+}

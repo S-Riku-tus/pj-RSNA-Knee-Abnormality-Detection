@@ -1,0 +1,220 @@
+{
+  "schema_version": "medal_frontier_primary_source_audit_v1",
+  "research_date_JST": "2026-10-15",
+  "prepared_by": "/root/history_audit",
+  "scope": "Public primary-source research and historical record audit; no authentication, model download, MRI inference, training, external posting or submission",
+  "question": "Does Public AUC strictly above 0.960 provide a safe competition-medal position?",
+  "conclusion_ja": "今回の匿名公開API実取得では0.960表示は47〜66位、0.961表示は35〜46位で、現在のPublic上は銀圏内に余裕がある。一方、金境界は22位・表示0.963、自己は0.956・1029位で現Public銅圏外。0.960超を最終メダル安全圏とは確約できない。最終順位は別のPrivate検査に依存するため、Public改善目標と最終メダルを区別する。",
+  "current_frontier": {
+    "retrieval_state": "Root successfully POSTed the grounded public GetLeaderboard endpoint using anonymous HTTP. This agent independently read and analyzed its saved complete JSON response.",
+    "raw_evidence": {
+      "path": "artifacts/research/20261015-public-readonly-api-probe-v1/Public-GetLeaderboard.json",
+      "bytes": 5568933,
+      "sha256": "2e59dcdbff081a93160c64f473c5f961202367351b7290da8ce0b90856eac402"
+    },
+    "retrieval_actor": "/root",
+    "retrieval_date_JST": "2026-10-15",
+    "exact_retrieval_at_UTC": null,
+    "exact_retrieval_at_JST": null,
+    "snapshot_local_saved_at_UTC": "2026-10-15T07:40:59.9464881Z",
+    "snapshot_local_saved_at_JST": "2026-10-15T16:40:59.9464881+09:00",
+    "timestamp_scope": "Root confirmed local file LastWriteTimeUtc. This is the local saved-snapshot time only, not an exact HTTP request or response timestamp. The script recorded no exact acquisition receipt, and the response body contains no acquisition timestamp.",
+    "live_leaderboard_rows_observed_by_this_agent": 6025,
+    "current_valid_ranked_team_count": 6025,
+    "total_competition_entrants_or_nonranked_teams_inferred": false,
+    "snapshot_integrity": {
+      "response_keys": ["publicLeaderboard", "teams"],
+      "public_rows": 6025,
+      "team_metadata_rows": 6025,
+      "minimum_official_rank": 1,
+      "maximum_official_rank": 6025,
+      "duplicate_official_ranks": 0,
+      "duplicate_leaderboard_team_ids": 0,
+      "unique_metadata_team_ids": 6025,
+      "missing_display_scores": 0,
+      "privateLeaderboard_key_returned": false,
+      "Private_accuracy_observed": false
+    },
+    "current_rank_by_displayed_score": {
+      "0.956": [287, 1212],
+      "0.957": [126, 286],
+      "0.960": [47, 66],
+      "0.961": [35, 46]
+    },
+    "current_displayed_score_bucket_sizes": {"0.956": 926, "0.957": 161, "0.958": 43, "0.959": 16, "0.960": 20, "0.961": 12, "0.962": 10, "0.963": 10, "0.964": 5, "0.965": 3, "0.966": 4, "0.967": 2},
+    "current_displayed_strictly_above_0960_count": 46,
+    "current_displayed_at_least_0960_count": 66,
+    "current_medal_cutoff_ranks": {"gold": 22, "silver": 301, "bronze": 602},
+    "cutoff_ranks_match_official_progression_formula": true,
+    "current_medal_cutoff_displayed_scores": {"gold": "0.963", "silver": "0.956", "bronze": "0.956"},
+    "observed_API_medal_bands": [
+      {"medal": "GOLD", "min_rank": 1, "max_rank": 22, "teams": 22},
+      {"medal": "SILVER", "min_rank": 23, "max_rank": 301, "teams": 279},
+      {"medal": "BRONZE", "min_rank": 302, "max_rank": 602, "teams": 301},
+      {"medal": null, "min_rank": 603, "max_rank": 6025, "teams": 5423}
+    ],
+    "boundary_examples_show_display_rounding": [
+      {"rank": 22, "displayScore": "0.963", "medal": "GOLD", "submissionId": 57152807},
+      {"rank": 23, "displayScore": "0.963", "medal": "SILVER", "submissionId": 57180128},
+      {"rank": 301, "displayScore": "0.956", "medal": "SILVER", "submissionId": 57187850},
+      {"rank": 302, "displayScore": "0.956", "medal": "BRONZE", "submissionId": 57187960},
+      {"rank": 602, "displayScore": "0.956", "medal": "BRONZE", "submissionId": 57166355},
+      {"rank": 603, "displayScore": "0.956", "medal": null, "submissionId": 57170492}
+    ],
+    "own_current_rank": 1029,
+    "own_current_percent_of_ranked_teams": 17.07883817427386,
+    "own_public_identity_binding": {
+      "userName": "rsraki",
+      "userId": 21271072,
+      "teamId": 17018016,
+      "teamName": "rsraki",
+      "matched_by": ["teamMembers.userName", "teamUpInfo.teamLeader.userName", "known V22R submission ID"],
+      "leaderboard_submissionId": 57164195,
+      "displayScore": "0.956",
+      "medal_field_present": false,
+      "submissionCount": 27,
+      "team_lastSubmissionDate_UTC": "2026-10-14T05:59:28.300Z",
+      "rank_improvement_needed_to_current_bronze_cutoff": 427,
+      "rank_improvement_needed_to_current_silver_cutoff": 728,
+      "current_daily_submission_allowance": null,
+      "individual_submission_COMPLETE_error_status_reverified": false,
+      "other_three_submissions_scores_or_states_inferred": false
+    },
+    "Public_rank_interpretation_ja": "表示0.957は全161件が現Public銀圏内、0.960/0.961も銀圏。表示0.956の926件は銀・銅・無メダルに跨ぐため表示スコアだけで判定せず公式rankを使う。APIのmedalは進行中Publicの帯表示で、最終授与済みメダルではない。",
+    "medal_safe_probability": null,
+    "current_medal_safety_established": false
+  },
+  "official_medal_policy": {
+    "url": "https://www.kaggle.com/progression/competitions",
+    "publisher": "Kaggle",
+    "retrieval_kind": "Official indexed page text retrieved 2026-10-15; direct open had no parsed body",
+    "index_crawl_age_as_returned": "last month",
+    "competition_eligibility": "Eligible competitions award competition-track medals according to standings; points and medals eligibility must be checked on the competition overview.",
+    "rounding": "Percentage calculations are rounded down",
+    "thresholds_by_number_of_teams_T": [
+      {"T_min": 0, "T_max": 99, "bronze": "floor(0.40*T)", "silver": "floor(0.20*T)", "gold": "floor(0.10*T)"},
+      {"T_min": 100, "T_max": 249, "bronze": "floor(0.40*T)", "silver": "floor(0.20*T)", "gold": "10"},
+      {"T_min": 250, "T_max": 999, "bronze": "100", "silver": "50", "gold": "10+floor(0.002*T)"},
+      {"T_min": 1000, "T_max": null, "bronze": "floor(0.10*T)", "silver": "floor(0.05*T)", "gold": "10+floor(0.002*T)"}
+    ],
+    "T_is_teams_not_entrants_or_individual_participants": true,
+    "gold_medal_cutoff_is_not_main_prize_top10_cutoff": true,
+    "current_competition_medal_eligibility": "Official competition overview/prizes indexed snapshot explicitly says Awards Points & Medals; snapshot is not current participation data.",
+    "eligibility_source": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview/prizes"
+  },
+  "public_private_and_ties": {
+    "competition_leaderboard_url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/leaderboard",
+    "retrieval_kind": "Official indexed competition leaderboard policy text retrieved 2026-10-15; index reports crawl two months ago; direct open has zero parsed lines",
+    "public_test_fraction_approximate": 0.30,
+    "final_private_test_fraction_approximate": 0.70,
+    "final_standings_may_differ_explicitly_stated": true,
+    "general_official_documentation": "https://www.kaggle.com/docs/competitions?lor=19",
+    "general_documentation_summary": "Public scores are feedback on a sample; final ranking uses the remaining private test data. High Public does not guarantee high Private.",
+    "displayed_bucket_is_not_exact_score_tie": true,
+    "general_full_precision_and_tiebreak_source": "https://www.kaggle.com/competitions/mastering-ordinal-regression-with-wine-data/overview/making-a-submission",
+    "general_platform_text_summary": "Kaggle ranks using full precision; for an exact score tie the earlier submission wins.",
+    "competition_specific_current_tiebreak_rules_body_retrieved": false,
+    "tie_policy_scope": "General Kaggle platform documentation; current RSNA-specific Rules body not freshly retrieved by this audit. Do not infer identical predictions or exact ties from three-decimal display scores."
+  },
+  "timeline": {
+    "source": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/",
+    "retrieval_kind": "Official indexed overview text retrieved 2026-10-15; crawl last week, relative 17-days-to-go text is stale and not used",
+    "entry_deadline_UTC": "2026-10-15T23:59:00+00:00",
+    "entry_deadline_JST": "2026-10-16T08:59:00+09:00",
+    "team_merger_deadline_UTC": "2026-10-15T23:59:00+00:00",
+    "team_merger_deadline_JST": "2026-10-16T08:59:00+09:00",
+    "final_submission_deadline_UTC": "2026-10-22T23:59:00+00:00",
+    "final_submission_deadline_JST": "2026-10-23T08:59:00+09:00",
+    "organizers_may_update_timeline": true,
+    "future_rank_change_forecast": null,
+    "empirical_frontier_change_20261014_to_saved_snapshot_20261015": {
+      "prior_displayed_above_0960": 37,
+      "current_displayed_above_0960": 46,
+      "prior_displayed_at_least_0960": 54,
+      "current_displayed_at_least_0960": 66,
+      "interpretation_ja": "前日の公式先頭100件では0.960表示以上の帯を全て収録していたため、その閾値以上の表示件数は37→46、54→66と増えている。これは集団の閾値集計であり、同一チームの順位変化や最終日までの増加率ではない。直線外挿やメダル確率には使わない。"
+    },
+    "reason_not_safe_ja": "締切前の他チームの改善、参加・統合によるチーム数と境界の変化、表示丸め、最終Private評価、実行失敗・ルール適格性を現在のPublic閾値だけでは確定できない。"
+  },
+  "historical_evidence_not_current": {
+    "recorded_own_Public": {
+      "score": "0.956",
+      "official_observation_at_JST": "2026-10-14T14:33:16.258546+09:00",
+      "candidate": "V22R",
+      "submission_ref": 57164195,
+      "source": "experiments/F006-bothfold-formal-Submit57169291-Public956-checkpoint-20261014.json",
+      "requeried_this_audit": false
+    },
+    "recorded_top100_20261014": {
+      "source": "experiments/public-research-096-20261014-v2.json",
+      "observed_UTC": "2026-10-14T01:56:58.809296+00:00",
+      "observed_JST": "2026-10-14T10:56:58.809296+09:00",
+      "rows": 100,
+      "maximum_displayed_score": "0.966",
+      "minimum_displayed_score": "0.957",
+      "displayed_at_least_0960": 54,
+      "displayed_strictly_above_0960": 37,
+      "displayed_equal_0960": 17,
+      "displayed_0960_bucket_row_positions_if_sorted": [38, 54],
+      "position_scope": "Historical sorted page positions inferred arithmetically; not current official ranks or exact full-precision score ties",
+      "displayed_0957_bucket_right_boundary_truncated_by_page": true,
+      "all_team_or_medal_boundary_count": false,
+      "raw_artifact_rechecked_in_this_audit": false,
+      "use_as_current_20261015_value": false
+    },
+    "older_top100": {
+      "source": "experiments/public-pages-EV-source-held-F0061-E5-publicLB-20261013.json",
+      "reported_observation_JST": "2026-10-13 around 02:51",
+      "displayed_strictly_above_0960": 28,
+      "scope": "Older one-page historical count only. Do not treat the 28-to-37 difference as a full competition growth rate, a matched-team panel, or a forecast."
+    },
+    "stale_search_counts_excluded": [
+      {"url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/", "indexed_teams": 5244, "relative_text": "17 days to go", "used_as_current": false},
+      {"url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview/prizes", "indexed_teams": 2953, "relative_text": "2 months to go", "used_as_current": false}
+    ]
+  },
+  "public_read_access_research": {
+    "account_credentials_searched_read_or_copied": false,
+    "SDK_import_authentication_or_env_scan_performed": false,
+    "web_direct_attempts": [
+      {"url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/leaderboard", "result": "No parsed body; zero lines"},
+      {"url": "https://www.kaggle.com/api/v1/competitions/rsna-knee-abnormality-detection/leaderboard/view", "result": "Not accessible via web tool"},
+      {"url": "https://www.kaggle.com/api/v1/competitions/rsna-knee-abnormality-detection/leaderboard/download", "result": "Not accessible via web tool"}
+    ],
+    "grounded_internal_read_endpoint": {
+      "primary_implementation_source": "https://raw.githubusercontent.com/NVIDIA/nvidia-kaggle/main/skills/nvidia-kaggle-skill/scripts/fetch_leaderboard_writeups.py",
+      "method": "POST",
+      "competition_resolution_url": "https://www.kaggle.com/api/i/competitions.CompetitionService/GetCompetition",
+      "competition_resolution_body": {"competitionName": "rsna-knee-abnormality-detection"},
+      "leaderboard_url": "https://www.kaggle.com/api/i/competitions.LeaderboardService/GetLeaderboard",
+      "leaderboard_body_from_recorded_competition_id": {"competitionId": 154281},
+      "expected_response_fields_from_source": ["teams", "publicLeaderboard", "privateLeaderboard"],
+      "anonymous_access_verified_by_this_agent": "Root performed a successful anonymous request; this agent independently analyzed its saved response",
+      "runtime_source": "https://raw.githubusercontent.com/NVIDIA/nvidia-kaggle/main/skills/nvidia-kaggle-skill/scripts/runtime.py",
+      "runtime_findings": "NVIDIA implementation uses /api/i, first GETs kaggle.com for XSRF cookie and sends JSON with X-XSRF-TOKEN. It also reads .env/Bearer credentials, so it was inspected as public source only and was not imported or executed.",
+      "scope": "Endpoint/payload grounded in public primary implementation; successful anonymous request and saved response were then supplied by Root. Authentication and Private results remain unobserved."
+    },
+    "official_CLI_source": {
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/src/kaggle/api/kaggle_api_extended.py",
+      "method": "competition_leaderboard_view",
+      "request": "ApiGetLeaderboardRequest with competition_name, page_size and page_token",
+      "response": "submissions and next_page_token",
+      "pagination_required_for_all_team_distribution": true,
+      "SDK_executed": false
+    },
+    "minimum_next_snapshot_contract": [
+      "Record observation UTC/JST, endpoint, exact request, raw body SHA and explicit Public selection.",
+      "Confirm current competition identity and number of valid ranked teams; entrants and participants are different counts.",
+      "Read enough pages or full Raw Data CSV to cover all ranks through bronze cutoff, including entire equal-display buckets.",
+      "Preserve explicit official ranks and full score strings; do not invent exact ties from displayed rounded scores.",
+      "Calculate medal cutoff ranks from current valid team count under official policy, then record score buckets at those ranks.",
+      "Compare 0.956, 0.957, 0.960 and 0.961 displayed-score positions as a point-in-time Public view only.",
+      "Do not infer final Private accuracy, final medal probability or guaranteed runtime from a Public rank snapshot."
+    ]
+  },
+  "untrained_candidate_search_implication_ja": "0.956超の公開Notebook候補を探す際は、作者Public・最新版のlinked submission・Input版・Docker・hidden実行を束縛する。Notebookの投票メダルは競技順位メダルではない。高いPublic報告だけでは公開重み利用可能性、自己再現、Privateの安全性を証明しない。",
+  "model_MRI_training_download_upload_post_or_Submit_calls": 0,
+  "new_medal_or_runtime_qualification_issued": false,
+  "analysis_checked_at_UTC": "2026-10-15T07:45:04+00:00",
+  "analysis_checked_at_JST": "2026-10-15T16:45:04+09:00"
+}

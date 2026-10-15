@@ -1,0 +1,151 @@
+{
+  "schema_version": "p030m_visible_pass_P029M_submit_unreturned_v1",
+  "recorded_utc": "2026-10-15T10:24:04.455546+00:00",
+  "latest_official_self_observation_utc": "2026-10-15T10:21:51.980259+00:00",
+  "account": "rsraki",
+  "own_official_best": {
+    "score": 0.956,
+    "submission": 57164195
+  },
+  "strict_goal_above_0_960_achieved": false,
+  "achievement_probability": null,
+  "P029M": {
+    "ref": "rsraki/p029m-r6-957-20261015-a91d20e5dd62",
+    "version": 1,
+    "kernel_id": 138824627,
+    "script_version_id_from_submission_list": 358619507,
+    "visible": "COMPLETE_3rows_36numeric_cells_MATCH",
+    "formal_submit_id": 57225898,
+    "formal_submit_count": 1,
+    "status_field_present": false,
+    "errorDescription_field_present": false,
+    "publicScore_field_present": false,
+    "official_score": null,
+    "resubmitted": false
+  },
+  "P030M": {
+    "ref": "rsraki/p030m-r6-off-20261015-c7e91ba5032f",
+    "version": 1,
+    "kernel_id": 138832933,
+    "visible": "COMPLETE_3rows_36numeric_cells_MATCH_root_and_peer",
+    "TTA_off_observed": true,
+    "guard9_exact_members_pass": true,
+    "all_arm_failed_studies": 0,
+    "compact_workers_exit0_timeout_false": true,
+    "formal_submit_count": 0,
+    "own_Public": null,
+    "source_sha256": "2283f8667e5bc75c3e7cd90850f8307f208151c2100d429b787ec8d9810b9bd1",
+    "final_csv_sha256": "1ebfe53cb93ba0b9705724721755b515e64f7703712bc6a1bdddbcd181a7342b",
+    "same_visible_final_csv_as_P029M": true,
+    "R6_probability_changed_cells": 31,
+    "R6_probability_cells_total": 36,
+    "same_visible_ranks_does_not_imply_same_hidden": true,
+    "timing": {
+      "P029M_total_s": 453.7,
+      "P030M_total_s": 405.2,
+      "difference_s": -48.5,
+      "observed_reduction_fraction": 0.10689883182719861,
+      "P029M_compact_s": 345.1,
+      "P030M_compact_s": 320.1,
+      "P029M_mean_gpu_s": 20.1,
+      "P030M_mean_gpu_s": 9.0,
+      "not_a_controlled_repeated_benchmark": true,
+      "Raptor_timing_also_varies_although_source_unchanged": true
+    },
+    "ready_for_later_manually_reviewed_Submit": true,
+    "hold_reason": "Wait for existing P029M hidden outcome; same infrastructure could share hidden failure"
+  },
+  "official_limits": {
+    "numToday": 1,
+    "numTotal": 28,
+    "numAllowedNow": 4
+  },
+  "author_historical_visible_comparison": {
+    "torch_and_gpu_match": true,
+    "NOTEBOOK_COMPLETE_except3timing_fields_match": true,
+    "correlation_fields_match": 48,
+    "not_hidden_or_own_AUC_proof": true
+  },
+  "decision_order": [
+    "P029M57225898 actual official score/error",
+    "If success and still below goal, fixed R6 TTAoff contrast P030M; if failure inspect actual cause first",
+    "Then separately fixed R7V2 bundle at TTAoff using full nine-member content guard and immutable stage",
+    "Repair old F006 hidden failure before parent-only V22/P029 best plus samefoldpair fixed20",
+    "Use group-preserving weak OOF complementarity for any later training; no Gold fit/select; no ungrounded Public gain or success probability"
+  ],
+  "local_model_download_MRI_decode_new_training": 0,
+  "automatic_upload_Submit_code_added": false,
+  "selected_tests": "53 run,52 PASS,1 symlink SKIP,0fail,error; broad299 unresolved",
+  "evidence": [
+    {
+      "path": "artifacts/research/20261015-p030m-visible-output-audit-v1/root-independent-audit.json",
+      "bytes": 11622,
+      "sha256": "634909fcee0827a881821b1a46a7a9bcb48e3ba8210d2367a5c623ae53d2e87e"
+    },
+    {
+      "path": "artifacts/research/20261015-p030m-visible-output-audit-v1/independent-p030m-audit.json",
+      "bytes": 22735,
+      "sha256": "2634fbfb0bb1d77b21189be41288ab44e113433230ae4fa16e85fe59c1ce1666"
+    },
+    {
+      "path": "artifacts/research/20261015-p030m-visible-output-audit-v1/submission.csv",
+      "bytes": 645,
+      "sha256": "1ebfe53cb93ba0b9705724721755b515e64f7703712bc6a1bdddbcd181a7342b"
+    },
+    {
+      "path": "artifacts/research/20261015-p030m-visible-output-audit-v1/blend_receipt.json",
+      "bytes": 1607,
+      "sha256": "bbe41e87f8ff1f35554cf6096fba8963fcf3a9e332f234b4660e155ed6d58ed2"
+    },
+    {
+      "path": "artifacts/research/20261015-p030m-visible-output-audit-v1/submission_receipt.json",
+      "bytes": 11860,
+      "sha256": "2947a3ff842152174e18c894b945db8325b474049e01af9b0aa7e88ca3f0f659"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-submit-p030m-run-status-04/p030m-status.json",
+      "bytes": 21,
+      "sha256": "8c65d9493ad080266a23df2675f847486fedc0546a88a91c866b812d970915b5"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-submission-status-05/submission.json",
+      "bytes": 377,
+      "sha256": "9f435966740d2dee31680f5d12027ad71c6c67ad85ac11f77b4c8bcaa164dc6c"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-submission-status-05/submissions.json",
+      "bytes": 13040,
+      "sha256": "76f6baf20ab33b8ce648eafb8a8b9d9e988e85450103de0c431af6a1bf7683cc"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-submission-status-05/limits.json",
+      "bytes": 46,
+      "sha256": "0918bd7cd95d62c75cb851edb803592e709652116ee8230b2b0fc7a970878a96"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-submission-status-05/receipts.json",
+      "bytes": 810,
+      "sha256": "4df81ae2209dcb579be732298ed2113be6d0795eb4205f06cd9a46b5d44e1a2b"
+    },
+    {
+      "path": "artifacts/kaggle/p030m-r6-off-20261015-c7e91ba5032f/future-manual-submit-plan.json",
+      "bytes": 1689,
+      "sha256": "6fe7a71a36ead7ec25bd7200d1d9a511386b1d442e122babf5f998dfecf3ecc8"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-aggregate-independent-review-v1/author-visible-comparison.json",
+      "bytes": 3407,
+      "sha256": "7d7ef314c2fd248950f22f75437b523fafab42af7c5e8625984ab8b4e28026bb"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-aggregate-independent-review-v1/audit.json",
+      "bytes": 5633,
+      "sha256": "1defb7fe104c3512d7cdb23b1a4641d9cdd9dc4721ab516b894ef57102272ffc"
+    },
+    {
+      "path": "experiments/p029m-visible-pass-Submit57225898-p030m-running-20261015.json",
+      "bytes": 7220,
+      "sha256": "119e33f85cc52f54faa2086260152754aa0571d6501e822f76fc2d75802bf9bc"
+    }
+  ]
+}

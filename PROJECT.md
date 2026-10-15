@@ -1,5 +1,180 @@
 # RSNA Knee プロジェクトの現在地
 
+## 2026-10-15 19:21 JSTの採点確認後：P029M提出済・P030Mの可視検証も完了
+
+19:33:56 JSTの追加Getも同じ377バイト・同じSHAで、提出57225898の状態／エラー／Publicは未返却です。[最終チェックポイント](experiments/public957-final-checkpoint-20261015-1934.json)。19:21の自己best照合と提出枠、下記の可視資格は維持し、新しい採点成功は主張しません。
+
+**自己最良の確認値は0.956、目標0.960超は未達です。** 作者公式表示0.957の固定R6 recipeを使った[P029M V1](https://www.kaggle.com/code/rsraki/p029m-r6-957-20261015-a91d20e5dd62)は通常sessionでCOMPLETEとなり、19:01:51 JSTに正式提出`57225898`を1回受理されました。19:21の公式Get/Listも状態・エラー・Publicフィールドを返していません。SDK既定値を公式状態へ置き換えず、自己0.957やhidden成功は未確認とします。[最新正本](experiments/p030m-visible-pass-P029M-submit-unreturned-20261015.json)。本日1件・残4・累計28は最新の公式値です。
+
+可視3検査について、元test.csvとsampleのID／12列順／有限値／値域を確認。raw384・raw224・R6の各成功集合の平均同順位rank/Nから、元recipeの式で全36個を独立再計算し、最終CSVのfloat32ビットが一致しました。別agentも36/36一致を確認。実stdoutで全9memberのサイズ/SHA guard成功、R6の4fold・TTA ON・T4×2、各armの検査単位failure 0、worker終了0を確認しました。453.7秒は可視recipe全体の所要時間で、固定setup時間ではありません。隠しデータの精度や9時間内完走を保証しません。
+
+提出直前の新しいGetではDockerが`gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f`と返り、要求／作者実runとdigestは一致しました。registry名は異なり、以前のGetでキーが欠落していたことも保持します。実ログはPython3.13／torch2.11.0+cu128です。
+
+[P030M V1](https://www.kaggle.com/code/rsraki/p030m-r6-off-20261015-c7e91ba5032f)（kernel138832933）も同じ固定stage-b2と全guardを使い、科学的変更をTTA True→Falseだけに限定して可視COMPLETE。Rootと独立agentが3UID／正規12列／全36値のfloat32再計算一致・全arm failure 0・TTA OFF経路を確認しました。可視全体453.7→405.2秒、R6 GPU平均20.1→9.0秒／検査。ただし未変更のRaptor時間やdecode時間も動いた1回比較で、壁時計差すべてをTTAへ帰属しません。R6確率は31/36値が変わりましたが3件内の各クラス順位は同じで、最終CSVはバイト同一です。hidden予測・スコアの同一性を意味しません。正式提出は0回、P029Mのhidden結果を確認してから判断します。R6 OFF→R7 OFFは次のbundle比較として分け、係数探索をしません。
+
+19:04 JSTの匿名公式Code先頭100件は18:24時点からID・スコア・版が不変、最高表示0.957、0.960以上0件でした。R7 V2のlinked提出も依然スコア欠落で、V1 best0.957をV2へ転記しません。公式Data説明の索引はhiddenが約1300検査と説明しています。可視3件と並行処理の平均から本番時間を単純比例で断定せず、8.3hの協調停止も全体9hのhard timeoutとは扱いません。[更新調査](experiments/public-frontier-hidden-runtime-refresh-20261015-1910.json)。ローカル実モデル取得・MRIデコード・追加学習は0。限定テストは引き続き53件中52成功・1skip、広域299件の未解決は保持します。以下は各時点の履歴です。
+
+## 2026-10-15 18:11 JST：R6 V1固定入力の実作成完了・P029M推論を開始
+
+固定入力用b2は非公開・CPU・Internet ON・InputなしのV1でCOMPLETE。Kaggle上だけで取得したR6 V1の9ファイル（計886,813,460バイト）について、全サイズ・全SHA一致を出力した検証JSONを照合しました。ローカルへ取得したのは2213バイトのprovenanceとログだけで、重み本文のローカル再ハッシュではありません。[追跡記録](experiments/p029m-frozen-input-private-run-20261015.json)。このstageはV1のまま更新しません。
+
+その前のb1は `/kaggle/temp` の親が存在せず取得前に停止しました。失敗したV1を保持し、親の境界を検査して明示作成する修正を新しいb2へ適用しています。[失敗記録](experiments/p029-stage-b1-temp-parent-failure-20261015.json)。再利用できる[オフライン準備CLI](scripts/prepare_p029_stage_fallback.py)も追加しました。新runとstage slugを必須にし、出力上書きを拒否、元ソース・メタデータのSHAを束縛し、古い作者Input metadataを除去します。自動upload/Submitコードは追加していません。
+
+18:11:16 JSTに[P029Mの非公開V1](https://www.kaggle.com/code/rsraki/p029m-r6-957-20261015-a91d20e5dd62)（kernel138824627）を1回保存・実行しました。元のR6/4fold/TTA ON・全数値処理・埋込7モジュールを保持し、固定stageの探索候補1行と、推論前の全9ファイルSHA検査だけを追加しています。Ortho/SWA/competitionと固定stage V1を接続し、旧R6 Datasetは接続しません。Internet OFF/T4/作者実runのDockerを要求。実mount・forward・CSV・hidden・自己Publicはまだ未確認で、正式Submitは0です。
+
+P030Mも同じ固定入力とguardを保持しTTA booleanだけをOFFにした未実行対照として準備し、独立静的レビューを通過しました。自己P029Mの再現結果を確認してから使用します。最終の限定unittestは53件・52成功・1スキップ。広域299件は失敗9/エラー50/skip66で未解決、baseline比較と完全ログもなく全体PASSは主張しません。[検証範囲](docs/validation.md)。以下は各時点の履歴です。
+
+## 2026-10-15 17:47 JST観測：P029は最初のmanifest検査で停止、Kaggle側V1 stagingを準備
+
+**自己最良Publicは0.956を維持し、目標0.960超は未達です。P029 V2は最初のメタデータ検査だけでERRORとなり、元の科学コード・MRI処理・モデル読込へ進んでいません。** 正式Submitは0です。[停止の正本](experiments/p029-first-guard-failure-20261015.json)はkernel `138818102`／V2／17:47:40 JSTの観測です。期待するR6 V1 manifestが一意に見つからず、実際のbundleや版は観測できていません。R7が接続された、重みが壊れている、モデル精度が低いとは判断しません。
+
+ログを文字列検索した旧pollの `R6_V1_guard_pass_line_present=true` は、tracebackが未実行のprintソースを表示したことによる誤検出でした。実stdoutの成功eventは0です。guardの成功、可視推論、hidden完走、自己0.957の証拠として使いません。未実行のV1、失敗したV2、元P029準備runは保持します。
+
+[認証後の独立監査](experiments/authenticated-progress-refresh-20261015.json)では、17:21 JSTの公式Get/Listが自己`rsraki`のV22R `57164195`＝COMPLETE・0.956・報告エラーなしで一致しました。旧P028/P024/F006両foldはCOMPLETEに加えてhidden再実行エラー・Public欠落・APIの`totalBytes=0`があり、採点待ちではありません。詳細原因はこの応答だけでは分かりません。提出可能数5・全27件もrawで確認し、旧3件を再送しません。
+
+同時刻のGPU quota rawでは108000秒中11361.972秒使用・予約0、残96638.028秒（26時間50分38.028秒）、更新予定は10月17日09:00 JSTです。typedでは108000秒が21600秒へ変化し、使用量文字列も破損しているため予算計算に使いません。残量は17:21時点の値であり、その後の実行や9時間以内完走を保証する値ではありません。
+
+次は別のCPU Notebookで、**公開R6 V1だけをKaggle上で取得し、manifest SHA6508…と全member SHAを検査して出力へstageする案を準備・査読中**です。ローカルPCへ重みやDICOMを取得せず、学習もしません。stageはInternet ONの取得専用、提出推論はInternet OFFを維持し、明示したNotebook出力mountを読む最小の接続変更を別候補として検証します。stageの保存・実行・完了、実mount、GPU推論、正式提出はそれぞれ別の資格です。以下のRUNNINGや未認証という記述は各時点の履歴として保持します。
+
+## 2026-10-15 17:32 JST：ログイン完了・旧3提出のhiddenエラー確定・P029実行中
+
+公式CLIのブラウザ認証が成功し、`rsraki` を確認しました。17:21 JSTの認証済み公式Get/Listでは、自己V22R `57164195` はCOMPLETE・Public 0.956・エラーなし。P028 `57163437`、P024 `57166365`、F006両fold `57169291` は**COMPLETEだがhidden再実行のunhandled errorあり・Publicなし・出力0バイト**でした。待機ではなく失敗として扱い、再送しません。可視成功をhidden資格へ転用できないことが実際にも確認されました。[取得証拠](artifacts/research/20261015-authenticated-submission-status-v1/receipts.json)。現在枠は公式 `numAllowedNow=5`、累計27。GPUは30時間中約3.156時間使用・予約0でした。
+
+P029のコードのみを新しい[非公開Notebook](https://www.kaggle.com/code/rsraki/p029-r6-957-20261015-42fbc0e9ae14)へ保存しました。V1はQUICK_SAVEで実行なし。作者出力・実行番号を除き、元の科学コード7セルとCreditsを保持し、先頭にR6 V1 manifestのハッシュ検査だけを追加しています。保存後Getで全10セルの本文一致・private・GPU・Internet OFFを確認しました。版付きGetは403で、版なしGetの返却currentVersionNumber=1を採用しています。Notebook内の作者metadataを実Input版の証拠には使いません。
+
+V1の未実行Docker指定にはregistry名の誤りがあったため、V2では作者実runの完全名 `gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f` に修正。1回だけSAVE_AND_RUN_ALLを行い、17:32:44 JSTの公式状態はRUNNING・ログ未返却です。[操作前レビュー](artifacts/kaggle/p029-r6-957-20261015-42fbc0e9ae14/batch-review-v2.json)、[受理結果](artifacts/kaggle/p029-r6-957-20261015-42fbc0e9ae14/batch-result-v2.json)。Inputの `/1` は実版固定の保証にはせず、冒頭の実manifest照合が不一致なら元コードへ進む前に停止します。実mount、T4の実数、forward、CSV、hidden、自己Publicはまだ未確認。正式Submitは0です。
+
+標準ライブラリの最終オフライン検証は45件実行・44成功・1スキップ・失敗/エラー0。[結果](artifacts/research/20261015-public957-followup-validation-v1/validation.json)。実symlink作成権限不足だけをスキップし、外部参照の模擬拒否は成功。以下の未認証・待機という記述は、それぞれの過去時点の履歴です。
+
+## 2026-10-15 夕方：公式公開順位表と0.957公開候補を直接確認
+
+**今回の匿名公式API取得で、自己 `rsraki` はPublic表示0.956・1029位／6025ランク付きチームと確認できました。自己0.956を超える作者Public表示0.957の公開候補を発見し、P029として元コード・Input版を固定した実行準備まで完了しました。自己0.957の再現・提出はまだ実施していません。** ユーザーの今回の到達目標は0.960超です。表示値による運用目標は0.961以上とし、従来の「0.960以上」と区別します。
+
+### 順位とメダルについての新しい根拠
+
+[匿名公式公開Leaderboard](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/leaderboard)を全6025行取得し、rank集合・チームID・自己のuserName/teamLeader/既知Submit57164195を照合しました。[監査記録](experiments/medal-frontier-audit-20261015.json)。保存時刻は16:40:59 JSTで、HTTP取得の正確な時刻は未記録です。Private結果は返っていません。
+
+- 表示0.956は926チーム、287〜1212位に集中。自己1029位は現Publicの銅帯外です。同じ表示値でも順位には大差があります。
+- 表示0.957の既存161チームは126〜286位。表示0.960は47〜66位、表示0.961は35〜46位です。これは現在の分布で、自己再現後の順位予測・保証ではありません。
+- APIが返す現Publicの帯は金22位まで、銀301位まで、銅602位まで。0.960超は現Publicの上位銀相当を狙う合理的な目標ですが、最終メダル安全圏の保証にはできません。
+- [公式LB説明](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/leaderboard)は約30%がPublic、残り約70%が最終評価と説明しています。終盤の改善・チーム数・Private順位の変化も未確定です。スコア表示が同じことと完全同点も区別します。
+
+自己の公開bestは新しく照合できましたが、P028/P024/F006両fold各提出のCOMPLETE/エラー/個別スコアや、現在の日次残枠は公開LBからは判断しません。
+
+### 0.956を超える公開候補の発見
+
+検索索引だけでなく、Kaggle公式公開JavaScriptで確認した読み取り専用APIから、競技ID154281・SCORE_DESCENDING・EVERYONEのCode一覧先頭100件を取得しました。実配列の降順、競技タグ、linked有無、ID順を照合済みです。0.957が3件、0.956が38件、取得範囲で0.960以上は0件でした。`totalCount=0`なのに100件返ったため全件数・全件取得を主張しません。[一覧監査](experiments/public-code-score-frontier-20261015.json)。
+
+- [Heliosli 0.9576という題名の公開Notebook](https://www.kaggle.com/code/heliosli/0-9576-latest-public-dataset-score-in-one-click?scriptVersionId=358332966)：**公式表示0.957・V1・script358332966・Submit57183099**。題名の0.9576は検証済みの精密スコアではありません。固定3外部Inputは公開メタデータで確認でき、これをP029の優先候補としました。
+- [Heliosli別公開版](https://www.kaggle.com/code/heliosli/this-one-is-old-version-0-957-new-one-you-can-use)：best V1は0.957ですが、最新V2/script358425369のlinked提出にはスコアが返っていません。bestを最新V2の実績へ付け替えません。
+- [R7＋Raptor＋knee-centred ConvNeXt](https://www.kaggle.com/code/bliverrigpdoge/r7-raptor-knee-centred-convnext?scriptVersionId=358269940)：V1のlinked0.957を確認しましたが、追加Inputに非公開フラグがあるため、そのまま再現できる候補にはしません。
+
+検索索引25候補と直接APIを別記録にしました。題名0.957でも実際は0.939の例を排除し、古い索引で0.950だったMatterhornが直接確認ではV9/0.954になったことも記録しました。旧「0.956超未発見」は検索時点の履歴で、今回の直接取得が新しい結論です。
+
+### P029：学習せずに試せる具体的な実行準備
+
+[P029 bundle manifest](artifacts/kaggle/p029-public957-r6-v1-20261015/manifest.json)、[元Notebookの完全コピー](artifacts/kaggle/p029-public957-r6-v1-20261015/source.ipynb)、[準備builder](scripts/prepare_p029_public957.py)、[独立静的監査](experiments/p029-public957-static-audit-20261015.json)を保存しました。638,918バイト・全9セルを保持し、7コードセルと埋込7モジュールをコンパイルしただけで実行していません。作者の旧出力は今回の自己結果ではありません。
+
+最も重要なのは、R6 Dataset **Version 1／内部版20611930／bundle fe055406fad6a12f／manifest SHA6508ce69…**の固定です。同じ `rsna-knee-r6-frozen-fe055406` の最新版V2は、同じファイル名のままR7へ置換されています。単に最新Inputを選ぶと採点時のrecipeになりません。OrthoとSWAもV1固定。別の `verify_frozen_input.py` はmanifestのSHAとbundleを確認し、V2/R7誤接続を拒否します。その後、公式CLIの匿名取得で**4120バイトのmanifestメタデータだけ**を取得し、期待SHA・bundle・歴史ソースSHA・verifier成功を確認しました。[追加証拠](experiments/p029-r6-v1-manifest-metadata-verification-20261015.json)。重み本体・Kaggle上のmountedファイル・GPU推論の照合は未実施です。組立時のP029 bundleは上書きせず保持しました。
+
+実行は次の順です。
+
+1. 自己rsrakiのログイン済み接続と現在の提出枠・既知提出結果を読み取り確認する。
+2. 新しい非公開候補として元コードと固定3Inputを保存する。Internet OFF、T4×2、採点時Docker `2757e0c7…` と実保存の設定・Input内部版を照合する。元Notebook内のGPU=falseと作者実runのGPU=trueは不一致があるため、実行設定を別途確認する。
+3. 新しいbatch環境でR6 V1 manifestの別preflightを実行し、可視推論の12列・UID・finite確率・失敗/補完・実重みハッシュ・終了処理を確認する。元コードの8.3h定数は全Notebookのhard timeout保証ではなく、可視3件の時間をhiddenへ単純外挿しない。
+4. 検証後に正式提出を独立した手動操作で1回実施し、完了・エラーなし・自己Publicを確認する。作者0.957と自己値を分け、結果不明のSave/Submitは再送しない。
+5. 自己値が0.956以下ならInput/Docker/ソース/失敗経路を点検し、改善として採用しない。上回れば新しい対照候補とする。係数探索へ直行しない。
+
+SWAの公開説明にはOAI由来の外部教師とGold58のcheckpoint選択再利用が明記され、競技を含む非商用の利用・改変・再配布について追記があります。ただし上流の全適格性が独立に監査完了したという意味ではありません。Orthoも上流ライセンスを保持します。自分のGoldによる学習・checkpoint/係数選択は0のまま、元Credits/OAI acknowledgementと継承履歴を保持します。
+
+### 0.960超へ進むための比較設計
+
+P029はR6＋flip TTAと、Raptor384/224の65:35混合を、Compactと50:50で合わせます。V22から複数要因が変わるため、差をR6単体・224単体へ帰属させません。最終rerankをしない式で、既存の固定20%プレビューツールとは別recipeです。
+
+次の公開作者V2もコードを取得して静的比較したところ、埋込7モジュールは同一ですが、**R6→R7と同時にFLIP_TTA=True→False**が変わっていました。そのまま「重みだけ変更」とは扱えません。P029再現後は、R6のままTTAだけOFFにする[P030対照](artifacts/kaggle/p030-r6-tta-off-control-v1-20261015/manifest.json)を先に比較し、その対照と作者R7/TTA OFF版を比較すれば、二要因を分けて判断できます。
+
+[P030 builder](scripts/prepare_p030_tta_control.py)は元ソースSHAを束縛し、cell6のboolean一箇所だけを変更したことをASTで確認します。2つのRaptor・埋込7モジュール・全係数は同じで、古い作者出力と実行番号を除き、未実行対照の説明を加えています。R6 V1の実manifestメタデータではflip_ttaが欠損するため、元コードの `manifest.get('flip_tta') OR FLIP_TTA` による勝手なTTA有効化も、固定版を使う条件で静的に排除しています。将来のKaggle mounted版と実際のTTA経路は別検証です。
+
+この3段比較は追加学習・モデルのローカル取得を要しません。作者R7 V2の自己/作者スコアは未確認で、0.960超への改善は保証しません。既存F006両foldの固定20%混合は、重み・元証拠を復旧し、新しい親との補完性を確認してからの別候補とします。
+
+[上位チームの公開手法調査](experiments/above960-public-methods-20261015.json)でも、現在0.963〜0.967の完全recipeは確認できませんでした。固定foldの弱検証で小差を積む、小型CNNや前処理・TTAを一要因ずつ比較するという根拠はあります。Gold58/Publicで微小差を選び続けず、report由来評価と画像由来評価の差を保持します。
+
+### 提出接続の現在状態
+
+プロジェクト内 `.venv` に公式Kaggle CLI2.2.4/SDK0.1.37を導入しました。標準認証の確認は未認証・SystemExitで終了し、権限エラーではありません。認証値の手動読込・表示・コピーはしていません。ブラウザ接続0件、Kaggle連携plugin検索も該当なしでした。ユーザーはログインを完了する意向を返信済みですが、完了連絡と認証成功の確認前に保存/実行/提出は進めません。
+
+```powershell
+.\.venv\Scripts\kaggle.exe auth login
+```
+
+認証情報や認証コードはチャットへ貼りません。ログイン後は同CLI/SDKでアカウントと枠を確認して進めます。今回追加したbuilderに自動アップロード・自動提出はありません。CUDA/PyTorchは引き続き利用できず、新規画像データ・重み本体取得、MRIデコード、学習は開始していません。
+
+---
+
+## 2026-10-15：GPUを利用できない今回の作業環境からの再監査
+
+**確認済みの最終記録は自己Public macro ROC AUC 0.956、目標0.960以上は未達。表示値の差は0.004です。今回Kaggleの自己提出結果を再取得できていないため、これを10月15日の現在値とは扱いません。** 過去の結果と今回の調査を分け、以下より後の更新ブロックはそれぞれ記載時点の履歴として読みます。
+
+### 前回までに到達した段階
+
+- 自己V22R、Submit `57164195` は10月14日14:33 JSTの公式Get/ListでCOMPLETE・0.956・エラーなしと記録されています。作者V22の報告0.956とは別の自己実測で、従来自己0.954から+0.002です。原典は [V22R採用記録](experiments/V22R-official-Public956-Root-adoption-20261014.json)。
+- P028 `57163437`、P024 `57166365`、S6＋F006両fold固定20% `57169291` は、[14:59の最終記録](experiments/F006-bothfold-formal-Submit57169291-Public956-checkpoint-20261014.json)ではPublic未返却です。現在も待機中なのか、採点済みなのか、失敗したのかは未確認です。結果不明の提出を再送しません。
+- 当日の4件・残1・累計27は、前回公式値に受理1件を足した派生値です。今回の日次残枠には転用できません。
+- F006/F007の各12epoch×2fold、F008の24epoch×2fold、計96epochは[前回のcheckpoint/CSV監査](experiments/goal-state-audit-20261014.json)で完了しています。古い「学習中」「待機」は現在の進行状態ではありません。
+- F006両foldはCPU復元、Kaggle上の64 MRI/256 forward、可視3検査/20出力を通過した記録があります。可視成功はhidden全件完走・9時間制限・Public改善の証明にはなりません。F007も可視20出力は成功、正式Submitは0です。
+
+### 今回の環境で確認できること
+
+作業開始時のcheckoutの `data/` と `artifacts/` はREADMEのみで、前回のモデル・予測・raw APIログ・V22親切替設計の実体はありません。追跡済みJSONの記録とハッシュ参照は読めますが、参照先の内容まで再計算したとは主張しません。既存成果物が別端末でも失われたことを意味しません。今回生成したCPU監査結果は新しいrunへ保存しています。
+
+今回 `nvidia-smi` とPyTorchは利用できませんでした。既定のPython shimはバージョン未選択ですが、`C:\Users\shiba\.pyenv\pyenv-win\versions\3.11.9\python.exe` を明示して標準ライブラリのテストは実行できます。GPUの物理的不存在は断定せず、学習可能なCUDA環境を今回確認できていない、と記録します。学習CLIのCUDAチェックは維持します。
+
+指定の[自己提出ページ](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/submissions)と[プロフィール](https://www.kaggle.com/rsraki)を照会しましたが、Web取得は本文なし/アクセスエラーで、接続済みブラウザも0件、in-app browserも利用不可でした。認証情報を探したり他プロジェクトからコピーしたりせず、自己スコア・日次枠・順位の最新値を未確認としています。
+
+### 0.960への見込みと優先順位
+
+0.956から0.960への差は、12所見のAUC改善の合計で概ね0.048です。仮に3所見だけが改善するなら平均+0.016が必要で、混合比20%から改善幅を計算することはできません。表示の丸めと評価標本の不確かさもあるため、達成率や成功確率を根拠なく数値化しません。
+
+[F006の固定10所見弱比較](experiments/f006-completed-twofold-selection-comparison-20261014.json)はfold0 +0.004010、fold1 +0.002311で、供給group条件付き区間も正です。ただしcheckpoint選択後の同じweak holdoutを再利用し、fold0の副選択方針は7epoch観測後に定義しています。MCL/Synovitisを除いた固定10と提出の全12は異なり、患者独立性も未確認です。fold0の全12 bootstrapは351/1000反復が未定義でした。これらの差を自己Publicへ加算できません。BCE主選択の混合は両foldで改善根拠を示していません。
+
+[F008の12→24epoch比較](experiments/f008-twofold-completed-weak-comparison-20261014.json)はfold1の固定10区間が0を跨ぎ、全12区間は両foldで0を跨ぎます。まず学習を48epochへ延長する根拠は弱く、完了済みモデルの正式結果を確定する方を優先します。
+
+1. 最新のGet/Listで既知の提出3件、自己最良、現在の日次枠を読み取り確認する。過去のPENDING既定値やraw欠落を公式の待機状態に置き換えない。
+2. S6＋F006両fold固定20%を対照として評価し、同じF006重み・同じ係数で親だけV22へ変える候補を比較する。旧P024から直接比較するとfold1と親の二要因が変わります。
+3. 次候補は全Nでの同順位平均rank、UID対応、MCL/Synovitisの親値保持、構造失敗UIDの全12元文字列復元をCPU人工データで確認する。これは本Notebookの組立・実重み復元・Kaggle資格とは別です。
+4. 元のV22/F006ソース・入力版・内容SHAを復旧した後、実組立容量、25出力、64検査、可視CSV、hidden完走/9時間、公式Publicの順に確認する。投影936,573Bは実組立の検証値ではありません。
+5. ここまでで不足が明確になった場合に限り、訓練partition内のラベル品質、局所crop/スライス密度等を一要因ずつ追加比較する。Goldを学習・checkpoint選択に使いません。
+
+### Webで再調査した事項
+
+[公式概要](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview)の検索索引本文では、参加/統合期限は10月16日08:59 JST、最終提出期限は**10月23日08:59 JST**です。12所見macro ROC AUC、Notebook9時間以内、Internet OFF、`submission.csv`という条件を確認しました。ただしページを直接openした本文は0行で、詳細Rules/Hostコメント全文の今回の再確認はできていません。日次5回/最終選択2件等の詳細は[10月4日の既存調査](docs/research/kaggle-source-eligibility-20261004.json)と区別します。検索結果の相対的な「残り日数」は現在の残日数に使用しません。
+
+[公開SWA作者の説明](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/746792)は、58件のGoldを訓練から除外しながらcheckpoint選択・開発には再利用したと明記しています。Gold指標改善でもPublicが低下した例があり、公開重みの継承履歴をGold cleanへ書き換えません。これは参加者本人の報告で、Hostによる適格性裁定ではありません。V22の要求Dockerと実保存Dockerの差も保持します。
+
+[MRI-CORE公式コード](https://github.com/mazurowski-lab/mri_foundation)はSAM ViT-B型2D/1024px/画像[0,1]を想定し、既存キャッシュへ単純差し替えできません。[論文v1](https://arxiv.org/html/2506.12186v1)の主評価はsegmentation、linear probeは部位・系列・施設分類で、膝12病変AUCではありません。[大会スレッド](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/737950)では適格性に関する質問があり、取得本文内でHostの確定許可/禁止を確認できません。[KneePreM v1](https://arxiv.org/abs/2609.31461v1)も新規調査しましたが、RSNA12所見の自己再現・公開重み/コード・OAI由来の適格性は未確認で、締切前の主候補へ昇格しません。
+
+今回検証できた新しい公開0.960以上の再現可能recipeはありません。これはそのようなrecipeが存在しないという結論ではありません。現実的な短期経路は、完了済み候補の採点確認とV22親切替の比較です。実行準備はGPUなしでも進められますが、精度の到達実証にはKaggle推論と公式採点が必要です。
+
+### 今回追加した実行準備
+
+- [記録と証拠の監査CLI](scripts/audit_recorded_progress.py)：最終checkpointの記録スコア・観測時刻と現在値を分離し、参照先のサイズ/SHAを照合します。実行結果は[新規audit v2](artifacts/research/20261015-recorded-progress-evidence-audit-v2/audit.json)。記述子30件中、2件一致・28件欠落でした。同じファイルを指す記述子も別計数で、学習成果の達成率ではありません。認証ファイル・root外参照・モデルを読みません。
+- [固定20%候補のCSVプレビュー](scripts/preview_fixed20_candidate.py)：親とnative平均の全N/12列CSVをUIDで照合し、二段階rankと失敗UID/未対応所見の親値保持を実装しました。Python floatのオフライン参照であり、実FP32推論との等価は未確認です。native平均自体の算出・モデルの同一性・失敗検出もこのツールの資格対象ではありません。
+- [今回の環境監査](docs/research/environment-20261015.json)と[Web調査の出典・取得限界](experiments/web-research-096-20261015.json)を新規保存しました。
+
+標準ライブラリでの監査例（出力先は未使用の新しい名前に変える）：
+
+```powershell
+& 'C:\Users\shiba\.pyenv\pyenv-win\versions\3.11.9\python.exe' scripts/audit_recorded_progress.py --output-dir artifacts/research/20261015-recorded-progress-evidence-audit-v3
+$env:PYTHONPATH=(Resolve-Path src).Path
+& 'C:\Users\shiba\.pyenv\pyenv-win\versions\3.11.9\python.exe' scripts/preview_fixed20_candidate.py --parent-csv 'path/to/parent.csv' --native-mean-csv 'path/to/native_mean.csv' --output-dir 'artifacts/research/fixed20-preview-new-run'
+```
+
+CSV例の入力パスは実ファイルへ、出力先は未使用のrun名へ置換します。実予測CSVが今回のコピーにはないため、ここで実モデルの候補CSVを生成したとは扱いません。新規成果物の上書き拒否・入力ハッシュ・数値契約と資格境界を記録します。
+
+最終検証は新監査8件＋新CSVプレビュー14件＋既存契約7件の**29件成功**、実symlink作成権限がない1件のみスキップ（外部パス解決拒否の代替試験は成功）でした。[人工6検査の保存例](artifacts/research/20261015-fixed20-synthetic-contract-v1/preview/manifest.json)と[検証ログ](artifacts/research/20261015-cpu-continuation-validation-v1/unittest.log)を新runへ保存し、[今回の集約記録](experiments/cpu-continuation-audit-20261015.json)とledgerへ追記しました。実精度の新しい測定値はありません。
+
+---
+
 **10月14日14:59 JST：自己最良Public 0.956を維持し、S6＋F006両fold E12・固定20％の正式提出57169291を受理確認しました。目標0.960以上は未達・継続中です。** [最新の記録](experiments/F006-bothfold-formal-Submit57169291-Public956-checkpoint-20261014.json)。可視3検査・20出力を再計算してRoot受理後、Submitを1回実行。V22Rは公式COMPLETE・自己0.956、P028・P024・F006両foldはPublic結果待ちで、旧提出は再送しません。本日4件・残枠1・累計27件は前回公式値と今回受理1件からの導出で、提出後の公式枠再照会値ではありません。
 
 F006の可視3検査成功はhidden完走やPublic精度の確認とは別です。F007も可視20出力はRoot受理済みで正式Submitは0。次は同じF006重み・同じ固定20％で、親モデルだけをS6から自己0.956のV22へ切り替える候補を検証します。V22作者報告0.956と自己値は区別し、Docker差37c64…／2757e…、公開重みのGold選択履歴の不確かさを保持します。MRI-COREは条件付き調査候補で、重み取得・実装・追加学習は開始していません。以下は過去時点の記録です。

@@ -1,0 +1,178 @@
+{
+  "schema_version": "public957_continuation_checkpoint_v1",
+  "at_UTC": "2026-10-15T09:29:33.553443+00:00",
+  "intent": "Own Public >0.960; author copy first if >own0.956; continue until concrete next steps; manual private Kaggle actions authorized",
+  "goal_achieved": false,
+  "own_best": {
+    "Public": "0.956",
+    "kind": "Own authenticated official Get/List COMPLETE noerror",
+    "submission": 57164195,
+    "at_UTC": "2026-10-15T08:21:06.785119+00:00",
+    "Public_rank_snapshot": 1029,
+    "ranked_teams_snapshot": 6025,
+    "rank_snapshot_saved_UTC": "2026-10-15T07:40:59.9464881Z"
+  },
+  "prior3_submissions": "P028/P024/F006bothfold hidden rerun unhandled errors, no score; do not resend",
+  "candidate": {
+    "name": "P029M",
+    "author_displayed_Public": "0.957",
+    "title0.9576_not_verified_precision": true,
+    "author_script": 358332966,
+    "own_Public": null,
+    "ref": "rsraki/p029m-r6-957-20261015-a91d20e5dd62",
+    "kernel_id": 138824627,
+    "version": 1,
+    "save_run_accepted_UTC": "2026-10-15T09:11:16.637607+00:00",
+    "latest_raw_status": "RUNNING",
+    "output_files_latest": 0,
+    "visible_forward_mounted_guard_CSV_hidden_Public_qualified": false,
+    "docker_requested": "gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+    "dockerImage_not_returned_by_actual_Get": true,
+    "author_exact_environment_reproduction_claimed": false,
+    "source_change": "Bounded mount finder branch and nine-member SHA guard; numerical cells and embedded7 unchanged; stale author metadata removed"
+  },
+  "fixed_input": {
+    "ref": "rsraki/p029-r6v1-stage-20261015-b2",
+    "kernel_id": 138823470,
+    "version": 1,
+    "status": "COMPLETE",
+    "never_update_stage": true,
+    "verified_remote_existing_public_files": 9,
+    "remote_copied_bytes": 886813460,
+    "local_model_bytes_downloaded": 0,
+    "local_provenance_bytes": 2213
+  },
+  "preserved_failures": [
+    "P029V2 first manifest guard absent/ambiguous, no original science cells started; actual input version unknown",
+    "stageb1 V1 missing temp parent, stopped before HTTP; fixed only in new b2"
+  ],
+  "next_order": [
+    "Await existing P029M; do not save or submit again while outcome unknown",
+    "Require exact mounted9 SHA stdout event, source/settings, actual CSV3UID12probability validation, failure accounting before one manual Submit",
+    "Refresh own submission limits and account immediately before Submit; old5 is observation not current guarantee",
+    "Get/List official submitted score; keep author and own values separate",
+    "Use P030M same R6 stage/TTAoff then verified R7/TTAoff to separate TTA and bundle, no coefficient search or gold selection",
+    "Resolve old3 hidden failures before F006 parent blend or more training"
+  ],
+  "prepared_P030M_only": true,
+  "R7_V2_manifest_verified_metadata_only": {
+    "bytes": 5211,
+    "flip_tta": false,
+    "author_V2_score_verified": false
+  },
+  "tests": {
+    "selected_run": 53,
+    "passed": 52,
+    "skipped": 1,
+    "failures": 0,
+    "errors": 0,
+    "broad299_repository_success": false,
+    "broad_failures": 9,
+    "broad_errors": 50,
+    "broad_skipped": 66,
+    "full_broad_log_baseline_not_available": true
+  },
+  "local_real_MRI_or_training_started_by_task": false,
+  "manual_remote_Save_actions_accepted": 5,
+  "competition_Submit_actions": 0,
+  "automatic_upload_submit_code_added": false,
+  "credentials_manually_read_displayed_copied": false,
+  "browser_UI_connected": false,
+  "user_optional_UI_status_question_pending": true,
+  "seed": null,
+  "new_training_folds": null,
+  "public_pretrained_reference_folds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "gold_policy": "Own gold label training/checkpoint/coefficient selection0; inherited public selection exposure retained, not Gold clean claim",
+  "evidence": [
+    {
+      "path": "experiments/medal-frontier-audit-20261015.json",
+      "bytes": 15839,
+      "sha256": "37f4904711a42d3e0d9e99e834b62a0fd954f0bf0eeb2b1a6df939eac9685e7f"
+    },
+    {
+      "path": "experiments/public-code-score-frontier-20261015.json",
+      "bytes": 149742,
+      "sha256": "d03faad222a1f98cd70c942623b69f0ef2cdeadb9fe6c0b771d3f27dc87a242e"
+    },
+    {
+      "path": "experiments/authenticated-progress-refresh-20261015.json",
+      "bytes": 11229,
+      "sha256": "e34fa9c9ff861898b66d7490452eb6aa6cbe7b626b50df268bf000549e45551f"
+    },
+    {
+      "path": "experiments/p029-public957-static-audit-20261015.json",
+      "bytes": 21781,
+      "sha256": "b92bba94faa39fe5f727f5ff8315894ad6eb081c02123bcb698a8588c503e663"
+    },
+    {
+      "path": "experiments/p029-first-guard-failure-20261015.json",
+      "bytes": 1341,
+      "sha256": "35cd312b0bf5dd523a2259a57c63e3bba0e184bca1538b2b54be064f4e3a1902"
+    },
+    {
+      "path": "experiments/p029-stage-b1-temp-parent-failure-20261015.json",
+      "bytes": 6858,
+      "sha256": "c76f5d63290540c78e9cf6c07a8665976d15d3ab862c7faa6b5e8e9cb818bdaf"
+    },
+    {
+      "path": "experiments/p029m-frozen-input-private-run-20261015.json",
+      "bytes": 14449,
+      "sha256": "981d745f4dc36b202f41491600aa1088c619b7fe1baedf0c707326c41176e814"
+    },
+    {
+      "path": "experiments/p030-author-r7-switch-static-comparison-20261015.json",
+      "bytes": 13256,
+      "sha256": "3f0a3564ea92e0dee9279fde3e5181f049e33bdca0c22891a31ff76c39c6f79e"
+    },
+    {
+      "path": "artifacts/research/20261015-p029m-raw-status-log-04/status-body.json",
+      "bytes": 26,
+      "sha256": "f836883807d4e72a4cd7b55fd27df744be8f78d569fa74b888512a07744e685f"
+    },
+    {
+      "path": "artifacts/research/20261015-p029-stage-fallback-validation-v1/validation.json",
+      "bytes": 3440,
+      "sha256": "d76a8d4e7d71dece55f0899506da1af8bb784bcfc02cd5dd9ff5a948614e8d21"
+    },
+    {
+      "path": "artifacts/research/20261015-p029-stage-fallback-validation-v1/broad-discovery-299-unresolved.json",
+      "bytes": 2840,
+      "sha256": "54b038a4a30437d83c479add6a922df07e5f60b4129e03c90a6f03ba007644b9"
+    },
+    {
+      "path": "artifacts/kaggle/p030m-r6-stage-b2-tta-off-control-v1-20261015/manifest.json",
+      "bytes": 7120,
+      "sha256": "bb08d85b70af78526588a17bc082d5a0004c033283167a769a943212d6b22897"
+    },
+    {
+      "path": "artifacts/kaggle/p029m-r6-957-20261015-a91d20e5dd62/review.json",
+      "bytes": 1637,
+      "sha256": "b1fc95afda7e4b67dc9ba3bcdff11fd2087377a95e581b4c1ee733fc072335b3"
+    },
+    {
+      "path": "artifacts/research/20261015-stage-b2-provenance-verification-v1/verification.json",
+      "bytes": 773,
+      "sha256": "e1df70dfb7e9c19dea1beae132f3b0f49733ea5c8d9ef5a92a8b4b456533854e"
+    },
+    {
+      "path": "artifacts/research/20261015-visible-test-metadata-v1/metadata-receipt.json",
+      "bytes": 977,
+      "sha256": "c525bdfb9838c5b9b7d7119716ef4f064e4e0bda43b2f7e8119c39b16468cdab"
+    },
+    {
+      "path": "artifacts/research/20261015-r7-v2-manifest-metadata-only-v1/receipt.json",
+      "bytes": 639,
+      "sha256": "a402bfb34b5ac87246537306e29295f57c4482de49ea5d00790918fb2609c5a6"
+    }
+  ],
+  "ledger_prefix_before": {
+    "bytes": 164681,
+    "sha256": "7b3cfceef176dc11eaa0827317d20ba208b497231623d5b2d7e1f599091d6103",
+    "backup": "artifacts/research/20261015-public957-running-checkpoint-v1/ledger-before.csv"
+  }
+}

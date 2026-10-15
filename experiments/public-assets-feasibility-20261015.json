@@ -1,0 +1,346 @@
+{
+  "schema_version": "public_asset_recipe_feasibility_20261015_v1",
+  "prepared_by": "/root/runtime_candidate",
+  "research_date_JST": "2026-10-15",
+  "research_cutoff_UTC": "2026-10-15T07:45:00+00:00",
+  "scope_ja": "公開重み・公開recipeの一次情報をWebで探索し、このcheckoutから実行準備可能な範囲を確認。親が新取得した匿名公式metadataを後段に補足。自己提出の最新結果や公開モデル全件の網羅調査ではない。",
+  "baseline": {
+    "own_last_recorded_Public": "0.956",
+    "own_submission_ref": 57164195,
+    "own_recorded_official_observation_JST": "2026-10-14T14:33:16.258546+09:00",
+    "current_own_Public_reverified_by_this_agent": false,
+    "requested_improvement": "strictly greater than 0.956",
+    "longer_term_target": ">=0.960",
+    "rounded_gap_to_0_960": "0.004",
+    "improvement_estimate_or_probability": null
+  },
+  "conclusion": {
+    "new_public_recipe_with_verified_linked_Public_above_0_956_found": false,
+    "new_R8_or_R9_dataset_verified": false,
+    "absence_of_all_such_recipes_or_assets_established": false,
+    "decision_ja": "今回閲覧できた一次索引と親取得の匿名公式metadataから、0.956超の正式スコアと公開source・固定Input版が結びつく新候補は確定できなかった。V22最新22は0.956、タイトル0.957のNotebookはlinked0.939。matterhornは古い検索索引の0.950から新metadataではV9・0.954へ更新されているが、自己記録0.956を上回らない。既知R7/SWAの再混合を新重みの発見とは扱わない。"
+  },
+  "fresh_parent_anonymous_API_supplement": {
+    "actor": "/root",
+    "local_verification_actor": "/root/runtime_candidate",
+    "research_date_JST": "2026-10-15",
+    "evidence_directory": "artifacts/research/20261015-public-legacy-viewmodels-v1",
+    "method": "Parent obtained anonymous Kaggle Notebook ViewModel responses; this agent read saved JSON metadata and rehashed it without network, models or outputs",
+    "index_history_policy": "The earlier indexed snapshots below are retained as historical observations; use this supplement for the newly observed author score/version facts",
+    "own_rsraki_submission_scores_requeried": false,
+    "records": [
+      {
+        "ref": "evgendvorkin/rsna-versia-7",
+        "evidence_path": "artifacts/research/20261015-public-legacy-viewmodels-v1/evgendvorkin--rsna-versia-7.json",
+        "evidence_bytes": 20514,
+        "evidence_sha256": "74e263a14e0a44b7896e4a6a74e5c590d266ce0bcfaee1ec5ff011a3184d0644",
+        "current_version": 22,
+        "total_versions": 22,
+        "scriptVersionId": 358019432,
+        "status": "COMPLETE",
+        "linked_submission_id": 57145959,
+        "linked_sourceScriptVersionId_equals_run_id": true,
+        "author_linked_Public": "0.956",
+        "author_best_Public": "0.956",
+        "best_version": 22,
+        "visible_run_seconds": 446.7016423,
+        "author_docker_digest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+        "dataset_Input_internal_versions": [20297367, 20440357, 20601735],
+        "interpretation": "Current public metadata still points to the prior V22 recipe; no R8/R9 successor in this Notebook's attached Input list"
+      },
+      {
+        "ref": "matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed",
+        "evidence_path": "artifacts/research/20261015-public-legacy-viewmodels-v1/matterhorn3838--rsna-knee-v2-velciraptor-dinosaur-speed.json",
+        "evidence_bytes": 21254,
+        "evidence_sha256": "135c1ff9d54fcfd7bc1d1f2480ab52aea8ccb38e2dc5313bd1b30d5714855700",
+        "current_version": 9,
+        "total_versions": 9,
+        "scriptVersionId": 357167211,
+        "status": "COMPLETE",
+        "linked_submission_id": 57052818,
+        "linked_sourceScriptVersionId_equals_run_id": true,
+        "author_linked_Public": "0.954",
+        "author_best_Public": "0.954",
+        "best_version": 9,
+        "visible_run_seconds": 197.43763,
+        "dataset_Inputs": [
+          {"ref": "heliosli/rsna-orthofoundation-fold0-epoch7-20261004", "internal_version": 20297367},
+          {"ref": "nartaa/rsna-knee-publication-swa-weights-20261007", "internal_version": 20440357},
+          {"ref": "heliosli/rsna-knee-compact-v1", "internal_version": 20557026}
+        ],
+        "interpretation": "Newer than the indexed V7/V8 observation; latest V9 is complete and scores0.954, still below own recorded0.956. Do not carry the old V8 error to the current version"
+      },
+      {
+        "ref": "fuadmuhammad/rsna-knee-fast-parent-0-957-v2",
+        "evidence_path": "artifacts/research/20261015-public-legacy-viewmodels-v1/fuadmuhammad--rsna-knee-fast-parent-0-957-v2.json",
+        "evidence_bytes": 157081,
+        "evidence_sha256": "3a19f7443e9a58dfac08eefcda14ad65002f4aed0001a955f3154c64b65d0500",
+        "current_version": 1,
+        "scriptVersionId": 352023373,
+        "status": "COMPLETE",
+        "linked_submission_id": 56516459,
+        "linked_sourceScriptVersionId_equals_run_id": true,
+        "author_linked_Public": "0.939",
+        "author_best_Public": "0.939",
+        "visible_run_seconds": 224.1634053,
+        "interpretation": "Fresh linked metadata confirms the 0.957 title is not the submitted score"
+      },
+      {
+        "ref": "sujanmajhisuzan/rsna-knee-apex-grandmaster-stack",
+        "evidence_path": "artifacts/research/20261015-public-legacy-viewmodels-v1/sujanmajhisuzan--rsna-knee-apex-grandmaster-stack.json",
+        "evidence_bytes": 19609,
+        "evidence_sha256": "0455fea29e2eb140789b2b245102696463df0d4040dc1c055c32ded24671e13d",
+        "current_version": 1,
+        "scriptVersionId": 356192954,
+        "status": "COMPLETE",
+        "linked_submission_id": 56969760,
+        "linked_sourceScriptVersionId_equals_run_id": true,
+        "author_linked_Public": "0.950",
+        "author_best_Public": "0.950",
+        "visible_run_seconds": 84.563499,
+        "interpretation": "Same source version as prior control; linked submission ID can differ from the older same-source scored submission record, so preserve both observations"
+      }
+    ],
+    "redirect_lead_from_parent": {
+      "old_ref": "heliosli/blend-mine-in-private-lb-luck-to-all-upvoters",
+      "new_canonical_lead": "heliosli/rsna-knee-blend-gold-old-dataset?scriptVersionId=357360972",
+      "new_canonical_source_or_score_verified_by_this_agent": false,
+      "follow_up_actor": "/root"
+    },
+    "runtime_scope": "All reported runTimeSeconds refer to the visible Notebook run, not hidden scoring runtime or a9hour guarantee"
+  },
+  "freshness_and_access": {
+    "fresh_Web_search_and_open_performed": true,
+    "Kaggle_search_results_are_indexed_snapshots": true,
+    "relative_updated_or_crawled_dates_are_not_exact_publish_dates": true,
+    "raw_current_notebook_source_obtained": false,
+    "raw_current_dataset_manifest_obtained": false,
+    "current_dataset_version_or_license_independently_reverified": false,
+    "direct_open_outcomes": [
+      {"url": "https://www.kaggle.com/datasets/heliosli/rsna-knee-compact-v1", "outcome": "Web tool not accessible"},
+      {"url": "https://www.kaggle.com/datasets/heliosli/rsna-knee-compact-r7cnxfsss", "outcome": "Web tool not accessible"},
+      {"url": "https://www.kaggle.com/datasets/heliosli/rsna-orthofoundation-fold0-epoch7-20261004", "outcome": "Web tool not accessible"},
+      {"url": "https://www.kaggle.com/datasets/nartaa/rsna-knee-publication-swa-weights-20261007", "outcome": "Title returned; parsed body 0 lines"},
+      {"url": "https://www.kaggle.com/datasets/goodpjw2008/rsna-knee-2-5d-convnext-reader", "outcome": "Title returned; parsed body 0 lines"},
+      {"url": "https://www.kaggle.com/code/evgendvorkin/rsna-versia-7", "outcome": "Web tool not accessible"},
+      {"url": "https://www.kaggle.com/api/v1/datasets/list?user=heliosli&sortBy=updated", "outcome": "Web tool not accessible"},
+      {"url": "https://www.kaggle.com/api/v1/datasets/list?user=nartaa&sortBy=updated", "outcome": "Web tool not accessible"}
+    ],
+    "search_families": [
+      "site:kaggle.com rsna-knee R8 / R9 / heliosli compact",
+      "site:kaggle.com/datasets RSNA Knee Compact / Publication / SWA / OrthoFoundation",
+      "site:kaggle.com/code RSNA Knee 0.957 / 0.958 / 0.959 / 0.960 / 0.961",
+      "site:kaggle.com/models RSNA Knee weights",
+      "RSNA Knee ConvNeXt / DINOv3 / EfficientNet / RadImageNet public weights"
+    ],
+    "important_search_limit_ja": "R8/R9が新slugになるとは限らない。既存heliosli/rsna-knee-compact-v1の最新版内で更新される可能性があるため、R8/R9という文字列の検索結果0件を後継重み不存在と解釈しない。"
+  },
+  "known_fixed_public_assets_from_prior_audit": [
+    {
+      "ref": "heliosli/rsna-knee-compact-r7cnxfsss/1",
+      "internal_dataset_version_id": 20601735,
+      "source_url": "https://www.kaggle.com/datasets/heliosli/rsna-knee-compact-r7cnxfsss/versions/1",
+      "fact_origin": "experiments/public-research-096-20261014-v2.json; prior audit, not a fresh dataset fetch",
+      "architecture": "ConvNeXt-small, 4fold, 384 input / 352 crop",
+      "prior_recipe_role": "V22 compact arm, rank weight 0.5",
+      "prior_changes_from_S6": ["cnx_r7 weights", "fastMRI and lesion-box auxiliary training", "report-derived latent-state targets", "Effusion fluid stacker", "Baker state stacker"],
+      "Gold_limit_ja": "manifest上gold学習0・trainerのofficial label読込falseとの作者記録を保持。上流のGoldに基づく設計・採用履歴を独立検証できておらず、Gold cleanとは扱わない。",
+      "next_specific_check": "Latest dataset version, updated timestamp, file list and small manifest; compare R7 weights and stacker hashes before adopting any apparent R8/R9"
+    },
+    {
+      "ref": "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1",
+      "internal_dataset_version_id": 20297367,
+      "source_url": "https://www.kaggle.com/datasets/heliosli/rsna-orthofoundation-fold0-epoch7-20261004/versions/1",
+      "fact_origin": "Prior tracked V22 Input binding",
+      "new_folds_or_new_checkpoints_verified_today": false,
+      "next_specific_check": "Check author dataset listing for genuinely new fold/checkpoint assets, then inspect training/selection provenance; do not change fold count by guessing filenames"
+    },
+    {
+      "ref": "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+      "internal_dataset_version_id": 20440357,
+      "source_url": "https://www.kaggle.com/datasets/nartaa/rsna-knee-publication-swa-weights-20261007/versions/1",
+      "fact_origin": "Prior tracked V22 Input binding; public title visible today",
+      "already_in_last_recorded_0_956_recipe": true,
+      "new_release_verified_today": false,
+      "Gold_limit_ja": "作者の一次投稿はGold58を学習から除外しselectionに再利用したと明記。自己Gold利用0と公開重みの選択履歴を分離する。",
+      "next_specific_check": "Inspect latest dataset version and the author's exact-scored inference source, distinguishing 0.949 accuracy checkpoint from 0.945 efficiency checkpoint"
+    },
+    {
+      "ref": "heliosli/rsna-knee-compact-v1/13",
+      "source_url": "https://www.kaggle.com/datasets/heliosli/rsna-knee-compact-v1",
+      "fact_origin": "Tracked P020 Notebook _P020_INPUT_REFS verified locally today",
+      "prior_recipe_role": "S6 control compact dependency",
+      "latest_version_verified_today": false,
+      "next_specific_check": "Read the existing slug's latest version metadata as well as searching new slugs; V13 is an old fixed baseline, not proof the latest version remains V13"
+    }
+  ],
+  "newly_examined_public_leads": [
+    {
+      "name": "RSNA Knee Fast Parent 0.957 v2",
+      "url": "https://www.kaggle.com/code/fuadmuhammad/rsna-knee-fast-parent-0-957-v2/comments",
+      "source_kind": "Kaggle primary Notebook page search snapshot",
+      "indexed_version": 1,
+      "indexed_total_versions": 1,
+      "title_number": "0.957",
+      "indexed_Public": "0.939",
+      "indexed_best_Public": "0.939",
+      "indexed_best_version": 1,
+      "indexed_visible_runtime_seconds": 224,
+      "accelerator": "T4 x2",
+      "visible_Input_titles": ["Knee MRI - Max-Span Dense Corpus", "Knee MRI - Native 384 Corpus", "Knee MRI - Native 384 Dense Corpus", "knee mri fold weights", "DINO v2 V1", "RSNA Knee E11 train", "RSNA Knee E13 train"],
+      "exact_dataset_versions_and_full_source_verified": false,
+      "decision": "Do not adopt as a 0.957 result; title and scored output disagree"
+    },
+    {
+      "name": "RSNA Knee V2 | Velciraptor DINOsaur Speed",
+      "url": "https://www.kaggle.com/code/matterhorn3838/rsna-knee-v2-velciraptor-dinosaur-speed",
+      "source_kind": "Kaggle primary Notebook page search snapshot",
+      "indexed_successful_version": 7,
+      "indexed_total_versions": 8,
+      "indexed_Public": "0.950",
+      "indexed_best_Public": "0.950",
+      "indexed_best_version": 7,
+      "indexed_visible_runtime_seconds": 96,
+      "accelerator": "T4 x2",
+      "latest_version_error_banner_in_index": true,
+      "visible_Input_titles": ["RSNA Knee 2.5D ConvNeXt reader", "RSNA Knee selected SWA weights 0949 and 0945"],
+      "Notebook_license_as_indexed": "Apache-2.0",
+      "exact_input_versions_and_full_source_verified": false,
+      "decision": "Lower than the recorded own 0.956; possible restoration/control source, not a newly demonstrated improvement"
+    },
+    {
+      "name": "RSNA Knee Apex Grandmaster Stack",
+      "url": "https://www.kaggle.com/code/sujanmajhisuzan/rsna-knee-apex-grandmaster-stack/comments",
+      "indexed_version": 1,
+      "indexed_Public": "0.950",
+      "indexed_visible_runtime_seconds": 85,
+      "accelerator": "T4 x2",
+      "fact_origin": "Kaggle primary page search snapshot today plus existing P005 audit",
+      "same_recipe_already_in_repository": "notebooks/public/14_submit_p005_public950_control.ipynb",
+      "decision": "Existing lower-scoring control; do not spend a new submission merely because the search result is recently crawled"
+    },
+    {
+      "name": "Reaching 0.949 with one CoAtNet: labels, native crops, and anatomical mirroring",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/746792",
+      "source_kind": "Author's primary competition writeup, search-indexed body",
+      "author": "Danial Zakaria",
+      "author_reported_Public": "0.949",
+      "author_reported_efficiency_model_Public": "0.945",
+      "recipe_summary": "One CoAtNet model, 384 training resolution, native320 inference crop, anatomical mirror probability average; SWA is an average of selected epochs",
+      "Gold_selection_exposure_explicit": true,
+      "exact_publish_time_established": false,
+      "already_consumed_by_V22_SWA_dependency": true,
+      "decision": "Existing upstream asset/provenance, not new independent evidence of >0.956; an extra copy would need model-hash inventory first"
+    },
+    {
+      "name": "NTejas two-arm ResNet50 recipe",
+      "url": "https://github.com/NTejas-1/RSNA-Knee-Abnormality-Detection",
+      "source_kind": "Author's primary public repository",
+      "public_checkpoint_dataset_ref_author_reported": "tejuuss/rsna-knee-arm-ckpts",
+      "checkpoint_count_author_reported": 10,
+      "checkpoint_total_size_author_reported": "981 MB",
+      "architectures": ["RadImageNet ResNet50", "ImageNet ResNet50"],
+      "author_reported_Public_with_public_reference": "0.941",
+      "author_reported_reference_Public": "0.940",
+      "Gold_evaluation_and_tuning_exposure": true,
+      "current_Kaggle_asset_version_license_and_linked_score_verified": false,
+      "decision": "A concrete alternative-encoder lead with published checkpoint ref, but no demonstrated gain on V22. Weak-label prediction correlation and exact weight inventory would be prerequisites; no additive +0.001 assumption"
+    },
+    {
+      "name": "Bend the Knee to DinoV3 (ensembled)",
+      "url": "https://www.kaggle.com/code/mattiaangeli/bend-the-knee-to-dinov3-ensembled",
+      "source_kind": "Kaggle primary Notebook page search snapshot",
+      "indexed_display_version": 104,
+      "indexed_total_versions": 126,
+      "indexed_best_version": 126,
+      "indexed_Public": "0.922",
+      "indexed_best_Public": "0.922",
+      "indexed_visible_runtime_seconds": 122,
+      "accelerator": "T4 x2",
+      "title_is_not_architecture_inventory": true,
+      "decision": "Useful only as a historical source family; no evidence that its title denotes a new fine-tuned DINOv3 weight or a score above V22"
+    },
+    {
+      "name": "Two-stage ConvNeXt DINOv3 pipeline",
+      "url": "https://github.com/mmatmath/rsna-knee-two-stage",
+      "source_kind": "Author's primary public repository",
+      "encoder_identifier_reported": "convnext_base.dinov3_lvd1689m",
+      "training_required_for_12_target_classifier": true,
+      "competition_specific_trained_weights_released_verified": false,
+      "author_Public_score_verified": null,
+      "decision": "Not a Kaggle Input attach-only inference improvement; do not substitute a generic encoder for a trained 12-target model"
+    },
+    {
+      "name": "OrthoFoundation-L dual-track repository",
+      "url": "https://github.com/Adityahulk/RSNA_Knee_detection",
+      "source_kind": "Author's primary public repository",
+      "published_inference_code": true,
+      "trained_ensemble_checkpoint_release_verified": false,
+      "Gold_training_or_override_in_author_pipeline": true,
+      "author_Public_score_verified": null,
+      "decision": "Code scaffold requiring training and using Gold, not a drop-in new public three-fold checkpoint; do not execute its training recipe under this project's Gold policy"
+    }
+  ],
+  "minimal_preparation_plan_without_local_weights": {
+    "preferred_candidate": "V22 public parent plus identical already-trained F006 twofold pair at pre-fixed20",
+    "scientific_factor": "Change only the parent S6 to V22; keep F006 epochs, fold membership, native model hashes, coefficient and mask policy fixed",
+    "new_training_required": false,
+    "local_weight_download_required": false,
+    "public_parent_inputs": [
+      "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1",
+      "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+      "heliosli/rsna-knee-compact-r7cnxfsss/1"
+    ],
+    "native_inputs": "Restore the exact already-bound F006 CLS0/CLS1 and REG0/REG1 Input refs from prior Serving receipts; the current checkout has pointer metadata only, so no substitute filenames or hashes are invented",
+    "parent_source": {
+      "author_ref": "evgendvorkin/rsna-versia-7",
+      "prior_fixed_version": 22,
+      "prior_fixed_scriptVersionId": 358019432,
+      "author_url": "https://www.kaggle.com/code/evgendvorkin/rsna-versia-7?scriptVersionId=358019432",
+      "own_saved_ref": "rsraki/v22r-5337d1fb5d51497da6fa98b9b486a313",
+      "own_saved_kernel_id": 138595030,
+      "own_saved_version": 1,
+      "prior_original_code_cell_count": 6,
+      "prior_saved_source_sha256": "b675e307ef722a14e0728766732a36844247435227fcaa49eeddb3e76eb3cc00",
+      "source_body_available_in_this_checkout": false,
+      "requirement": "Retrieve saved code/metadata only via an available approved read-only connection, then compare original six cells and actual Docker; do not manufacture equivalence from the old S6 Notebook"
+    },
+    "local_reusable_files_checked": [
+      {"path": "notebooks/public/29_submit_p020_restored_s6_public954_control.ipynb", "sha256": "0fd6ad9a45ecdb063080345ce7edbe6481b643b0995ec233aa96bebfbfa45a19", "role": "Exact old S6 source/control; 9 cells; input/content and final CSV guards can be inspected, but it is not V22 source"},
+      {"path": "notebooks/public/14_submit_p005_public950_control.ipynb", "sha256": "254c9c645c3ea87f3b99ae481b93fce5fdb84ceb0536f66bbdafb4a70ccd4e7a", "role": "Existing lower-score public control; restoration example only"},
+      {"path": "src/rsna_knee/contracts.py", "sha256": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b", "role": "Shared exact column/UID/range contract validation"}
+    ],
+    "necessary_sequence": [
+      "First read the three unresolved existing submission results and fresh official daily limits; do not resubmit the unknown old submissions",
+      "Read public author latest code/linked submission and latest dataset metadata; a new >0.956 exact-scored public recipe takes priority over speculative blending",
+      "Restore original V22 code and native Serving receipts into a new local code-only run directory; keep all previous source and evidence unchanged",
+      "Pin Input versions and mounted manifest/content hashes, actual saved Docker, original six V22 cells and all fixed F006 fingerprints",
+      "Compile generated cells and test synthetic full-N/failed-UID/tie-rank/column-order contracts without MRI or model loads locally",
+      "On Kaggle only, run the private candidate with mounted Input weights and Internet off; verify native64 and visible CSV/output contracts before formal submission",
+      "Measure load cost separately from per-study throughput and budget roughly1300 hidden studies under9hours; visible3-study notebook runtime alone cannot establish hidden runtime",
+      "If whole-run checks and fresh limits pass, manually submit a single candidate and record its own official result; do not add an automated uploader or submitter"
+    ],
+    "candidate_ready_for_Kaggle_Save_now": false,
+    "reasons": ["Original V22 six-cell source not present locally", "Prior native model/Input receipts are Git-excluded and missing here", "Current official scoring results and daily limits remain unverified by this agent", "New parent+native whole inference source/runtime not qualified"],
+    "expected_Public_gain": null,
+    "Gold_or_Public_coefficient_search_allowed": false
+  },
+  "submission_contract_primary_source": {
+    "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/",
+    "observed_via": "Fresh Web search indexed official overview",
+    "metric": "macro ROC AUC across12 findings",
+    "Notebook_GPU_runtime_limit_hours": 9,
+    "Internet_disabled_required": true,
+    "submission_filename": "submission.csv",
+    "full_Rules_retrieved_today_by_this_agent": false
+  },
+  "scope_safety": {
+    "model_weight_downloads": 0,
+    "MRI_or_teacher_or_credentials_read": 0,
+    "real_decode_or_forward_or_training": 0,
+    "external_upload_or_Notebook_Save_or_competition_Submit": 0,
+    "automatic_upload_or_submit_code_added": false,
+    "old_runs_overwritten": false,
+    "edited_file": "experiments/public-assets-feasibility-20261015.json"
+  }
+}

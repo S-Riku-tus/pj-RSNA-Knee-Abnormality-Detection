@@ -1,0 +1,302 @@
+{
+  "schema_version": "public_primary_web_research_for_Public0960_goal_v3",
+  "actor": "/root/web_research",
+  "created_at_utc": "2026-10-15T06:56:01.2799410Z",
+  "created_at_jst": "2026-10-15T15:56:01.2799410+09:00",
+  "research_date_jst": "2026-10-15",
+  "scope_ja": "既存の実験記録を踏まえた公開一次情報の再調査。新たなデータ・モデル取得、実MRI処理、学習、外部への投稿・保存・提出は行っていない。自己アカウントの現在値を新規取得した調査ではない。",
+  "retrieval": {
+    "method": "web.run search_query/open/find through functions orchestration",
+    "exact_request_time_per_source_recorded": false,
+    "time_scope_ja": "上記は調査結果の記録時刻。各Web応答には独立した取得時刻を付与していない。検索エンジンの索引更新日時やページ上の相対日時を現在時刻へ読み替えない。",
+    "no_new_research_after_parent_save_request": true,
+    "file_preexistence_checked": true,
+    "file_existed_before_creation": false,
+    "file_preexistence_check_meaning": "Test-Path returned False before creating this new record; no existing record was overwritten"
+  },
+  "local_context_read": [
+    "README.md",
+    "PROJECT.md",
+    "docs/validation.md",
+    "experiments/ledger.csv",
+    "docs/goal-096.md",
+    "experiments/public-research-096-20261014-v2.json",
+    "docs/competition.md",
+    "docs/research/kaggle-source-eligibility-20261004.json"
+  ],
+  "latest_own_account_access": {
+    "requested_urls": [
+      "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/submissions",
+      "https://www.kaggle.com/rsraki"
+    ],
+    "fresh_account_or_submission_body_obtained_by_this_actor": false,
+    "parent_reported_browser_inventory_empty": true,
+    "parent_reported_iab_unavailable": true,
+    "parent_browser_facts_independently_repeated_by_this_actor": false,
+    "limitation_ja": "親から共有されたブラウザー確認結果ではinventoryが空で、in-app browserも利用できない。現時点の提出状態・Public・提出枠・プロフィール順位は今回未確認。過去の提出受理やスコアを現在のライブ状態として報告しない。",
+    "no_upload_post_save_or_submit": true
+  },
+  "known_prior_own_evidence": {
+    "observed_jst": "2026-10-14 14:33 JST",
+    "source": "experiments/V22R-official-Public956-Root-adoption-20261014.json",
+    "own_account": "rsraki",
+    "own_Public": 0.956,
+    "own_submission_id": 57164195,
+    "prior_official_status": "COMPLETE",
+    "prior_official_get_and_list_agree": true,
+    "freshly_verified_on_20261015": false,
+    "author_score_is_separate": {
+      "author": "evgendvorkin",
+      "Notebook_version": 22,
+      "scriptVersionId": 358019432,
+      "author_reported_Public": 0.956,
+      "author_linked_submission_id": 57145959,
+      "author_url": "https://www.kaggle.com/code/evgendvorkin/rsna-versia-7?scriptVersionId=358019432",
+      "evidence_source": "experiments/public-research-096-20261014-v2.json",
+      "source_or_score_freshly_obtained_by_this_actor": false
+    },
+    "reproduction_scope": {
+      "prior_recorded_recipe": "six original code cells and three fixed external Input versions",
+      "author_requested_Docker_prefix": "37c64",
+      "own_saved_Docker_prefix": "2757e",
+      "exact_author_environment_reproduction_claimed": false,
+      "R7_only_causal_improvement_claimed": false,
+      "upstream_public_weights_Gold_selection_exposure_or_unknown_retained": true,
+      "private_score_or_patient_independence_proven": false
+    },
+    "prior_last_submission": {
+      "observed_jst": "2026-10-14 14:59 JST",
+      "source": "experiments/F006-bothfold-formal-Submit57169291-Public956-checkpoint-20261014.json",
+      "submission_id": 57169291,
+      "candidate": "S6 plus F006 bothfold E12, fixed native20 percent",
+      "accepted_at_prior_observation": true,
+      "Public_at_prior_observation": null,
+      "freshly_verified_on_20261015": false,
+      "prior_today4_remaining1_total27_were_derived_not_postsubmit_limits_read": true
+    },
+    "other_prior_pending": [
+      {"name": "P028", "submission_id": 57163437},
+      {"name": "P024", "submission_id": 57166365}
+    ],
+    "pending_is_prior_observation_not_current_assertion": true
+  },
+  "primary_sources": [
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview",
+      "retrieved_url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/",
+      "publisher": "RSNA / Kaggle",
+      "retrieval_method": "web search indexed body",
+      "supported_facts_ja": [
+        "評価は12所見のROC AUCの等重み平均で、正解率ではない。",
+        "参加・チーム統合期限は2026-10-15 23:59 UTC、最終提出は2026-10-22 23:59 UTC。",
+        "JST換算では参加・統合が10月16日08:59、最終提出が10月23日08:59。",
+        "提出NotebookはCPU/GPUとも9時間以内、Internet無効、出力名submission.csv。",
+        "概要では一般公開の外部データ・事前学習モデルを許可する。個別のアクセス条件とライセンス適合は別確認。"
+      ],
+      "freshness_limit_ja": "検索索引本文には残り17日等の古い相対表示がある。絶対日付のみを採用し、現在の詳細Rules全文確認とは区別する。",
+      "timeline_revision_timestamp": null
+    },
+    {
+      "url": "https://www.rsna.org/artificial-intelligence/ai-image-challenge/knee-mri-ai-challenge",
+      "publisher": "RSNA",
+      "retrieval_method": "web search indexed body",
+      "supported_facts_ja": [
+        "大会全体のデータ規模は世界19施設の5,000件超の膝MRIと約12言語のレポート。",
+        "この大会はMRIと読影文書を組み合わせて学習する競技として紹介されている。"
+      ],
+      "limit_ja": "全体規模の紹介であり、ローカルキャッシュ件数や配布train.csvの実測を代替しない。"
+    },
+    {
+      "url": "https://github.com/mazurowski-lab/mri_foundation",
+      "publisher": "MRI-CORE authors / mazurowski-lab",
+      "retrieval_method": "web open, README rendered body",
+      "revision_pin": "master branch as returned; commit SHA not obtained",
+      "supported_facts_ja": [
+        "SAM系ViT-Bの2D encoderを用い、MRIを2D sliceに分け、[0,1]に正規化する例を示す。",
+        "公式の実行例は1024px入力で、コードとモデルをApache 2.0とREADMEに記載する。",
+        "公開checkpointのGoogle Driveリンクを掲載している。"
+      ],
+      "not_verified": [
+        "checkpoint download success, bytes, SHA or tensor compatibility",
+        "checkpoint-specific licensing text or actual LICENSE-file completeness",
+        "competition Host permission for this checkpoint",
+        "training and inference compatibility with our existing 224/384 cache",
+        "RSNA twelve-finding Public improvement"
+      ],
+      "checkpoint_downloaded": false
+    },
+    {
+      "url": "https://arxiv.org/html/2506.12186v1",
+      "publisher": "MRI-CORE authors / arXiv",
+      "retrieval_method": "web open and find for knee/classification/linear/private",
+      "version": "2506.12186v1",
+      "supported_facts_ja": [
+        "主な実験は骨・筋・乳腺などのfew-shot/zero-shot segmentation。",
+        "linear probeの分類対象は身体部位、MRI系列、撮影施設で、RSNA膝12病変のROC AUCではない。",
+        "公開・非公開データを評価に使用し、データ利用に制限があると記載する。"
+      ],
+      "inference_ja": "MRI専用の表現学習としては研究候補だが、この論文だけから自己Public0.956を超える病変分類性能を予測できない。新入力処理と所見headの学習・提出時間の検証を要する。",
+      "RSNA_goal_gain_proven": false
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.31461v1",
+      "retrieved_url": "https://arxiv.org/abs/2609.31461",
+      "publisher": "KneePreM authors / arXiv",
+      "retrieval_method": "web open, abstract and submission history",
+      "version": "2609.31461v1",
+      "submitted_at_utc": "2026-09-25T16:11:45Z",
+      "supported_facts_ja": [
+        "膝特化の3D U-Net masked autoencoderをOAI 19,011 MRI series・4,791人で事前学習した。",
+        "fastMRI+、APM分類、SKM-TEA/APM segmentationなどで転移とラベル効率を評価した。"
+      ],
+      "research_only_candidate": true,
+      "not_verified": [
+        "public source code and usable pretrained checkpoint",
+        "checkpoint license and competition eligibility of OAI-derived weights",
+        "RSNA twelve-finding inference code or Public score"
+      ],
+      "inference_ja": "新しい研究候補として記録する。残り期間の主実行候補には昇格せず、既存モデルの正式結果確認を優先する。"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/737950",
+      "publisher": "Kaggle participants; Host ruling not newly obtained",
+      "retrieval_method": "web search indexed topic/comments; direct open returned zero lines",
+      "supported_facts_ja": [
+        "機関契約が必要なOAI・MRNet等のアクセス条件と、公開checkpointの扱いをHostへ質問するスレッド。",
+        "MRI-COREについて、private data由来checkpointとREADMEのライセンス表記の確認を求めるコメントがある。"
+      ],
+      "not_supported": [
+        "current official permission for MRI-CORE or OAI",
+        "current official prohibition of every OAI-derived or private-pretrained model",
+        "absence of a later Host reply outside retrieved indexed body"
+      ],
+      "decision_ja": "今回取得した範囲で許可・禁止とも確定しない。未取得のHost回答が存在しないとは主張しない。"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735304",
+      "publisher": "Model authors posting to Kaggle discussion",
+      "retrieval_method": "web search indexed topic/comments",
+      "supported_facts_ja": [
+        "参加者が288pxでraw0.942、TTA0.943などの単体モデル成績を報告している。",
+        "小型モデルや低解像度でも高成績を報告する例があり、モデル大型化だけが必要条件とは言えない。"
+      ],
+      "qualification_ja": "作者報告で、自己再現値ではない。索引上の相対投稿日・順位は現在値に読み替えず、重み配布や自己0.960達成の証拠とも扱わない。"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/746792",
+      "publisher": "Public SWA model author",
+      "retrieval_method": "web search indexed author topic; direct open unavailable",
+      "supported_facts_ja": [
+        "作者は58件のexpertラベルを学習から除外したが、checkpoint選択と開発に再利用したと説明する。",
+        "Goldの診断改善でもPublicが下がった実例と、crop/TTA/再学習の失敗比較を公開している。",
+        "欠損外部所見を負例にせずmaskしたことを明記する。"
+      ],
+      "qualification_ja": "公開説明の主張で、作者の非公開実験履歴を独立監査したものではない。既存V22Rの上流Gold選択露出を消さず、自己Gold非使用とは分ける。",
+      "current_weights_or_newer_version_obtained": false
+    }
+  ],
+  "direct_access_limits": [
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data",
+      "method": "web open",
+      "body_lines": 0,
+      "meaning_ja": "今回ツールで本文が返らなかった。データ消失やアクセス権喪失とは推定しない。"
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/rules",
+      "method": "web open",
+      "body_lines": 0,
+      "meaning_ja": "詳細規則を今回新規再確認できなかった。10月4日の保存済み公式本文と区別する。"
+    },
+    {
+      "url": "https://www.kaggle.com/code/evgendvorkin/rsna-versia-7",
+      "method": "web open",
+      "result": "not accessible via this tool",
+      "meaning_ja": "Notebook最新版本文や作者最新スコアを今回取得していない。削除・非公開化とは推定しない。"
+    }
+  ],
+  "prior_detailed_rules_evidence": {
+    "source_path": "docs/research/kaggle-source-eligibility-20261004.json",
+    "observed_jst": "2026-10-04T12:46:18.252090+09:00",
+    "official_methods": [
+      "KaggleApi.competition_list_pages(page_name='rules')",
+      "KaggleApi.forums_topic_show(topic_id=733965, page_size=None)"
+    ],
+    "host_url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733965",
+    "prior_confirmed_ja": [
+      "日次提出5回、最終選択2件。",
+      "Hosted LLM等の利用とレポートラベル抽出は、規則・契約・アクセス性・費用等の条件の下で許可。",
+      "NC制限があるという理由だけで競技側が一律禁止しない。データ提供者の条件は残る。"
+    ],
+    "newly_reconfirmed_full_rules_or_host_comments_on_20261015": false,
+    "project_Gold_train_or_checkpoint_selection_prohibition_retained": true,
+    "report_or_MRI_external_transfer_authorized_by_this_research": false
+  },
+  "goal_assessment": {
+    "metric": "own official Public macro ROC AUC",
+    "minimum": 0.96,
+    "prior_confirmed_own_baseline": 0.956,
+    "displayed_gap": 0.004,
+    "precision_limit_ja": "0.956は表示値。非丸めスコアを取得していないので厳密な差は未確定。AUCを診断正解率や達成率として扱わない。",
+    "derived_scale_ja": "表示差0.004は12所見AUC改善の合計約0.048に相当する。1所見だけなら約0.048、3所見なら平均約0.016、12所見なら平均約0.004の改善という尺度。弱ラベル差のPublicへの加算ではない。",
+    "prior_official_LB_evidence": {
+      "observed_utc": "2026-10-14T01:56:58.809296+00:00",
+      "evidence_path": "experiments/public-research-096-20261014-v2.json",
+      "first_page_rows": 100,
+      "max_displayed_Public": 0.966,
+      "at_least0960_count_on_this_page": 54,
+      "not_current_20261015_observation": true,
+      "not_all_teams_or_weights_availability_evidence": true
+    },
+    "assessment_ja": "競技として0.960は実在する水準で、自己0.956からの検証を続ける合理性はある。ただし有効な独立検証と候補別Public差が不足しており、達成確率・締切内到達・Private精度の数値保証は出せない。",
+    "weak_gains_added_to_Public": false,
+    "rank_blend_AUC_assumed_weighted_average": false,
+    "goal_achieved_by_this_research": false,
+    "downloadable_public_recipe_at_least0960_verified_by_search": false,
+    "global_absence_of_such_recipe_claimed": false
+  },
+  "next_actions_prioritized": [
+    {
+      "priority": 1,
+      "action_ja": "読み取り可能な環境でV22R・P028・P024・F006正式提出の現状態、Public、エラー、日次枠を再確認する。",
+      "reason_ja": "10月14日の採点待ちを今も待機中と推定せず、重複再提出を防ぐ。自己0.956の系譜を残す。",
+      "current_block_ja": "本調査では自己アカウントの最新本文を取得できていない。"
+    },
+    {
+      "priority": 2,
+      "action_ja": "S6＋F006両fold E12・固定20％の正式対照結果を確認し、可視3件とhidden完走・精度を別判定する。",
+      "reason_ja": "F006は既存両fold比較とnative64確認があり、新規学習なしで最も直接に残る仮説を評価できる。"
+    },
+    {
+      "priority": 3,
+      "action_ja": "同一F006重み・同一20％を保持し、親だけS6から自己再現V22へ切り替えた候補を準備・検証する。",
+      "reason_ja": "改善済み親と独自モデルの補完性を、一要因の変更として検証できる。混合AUCの改善は未保証。"
+    },
+    {
+      "priority": 4,
+      "action_ja": "UID・fold・mask・教師出所が一致する保存予測から補完性を評価し、F007/F008を追加する必要を判断する。",
+      "reason_ja": "F006優位と相関の高さを無視したモデル追加や比率探索を避け、既存完了runを先に使う。GoldやPublicでcheckpointを選ばない。"
+    },
+    {
+      "priority": 5,
+      "action_ja": "MRI-CORE・KneePreMは条件付き研究候補として保留し、追加計算は既存候補の結果から不足が判明した場合に限定する。",
+      "reason_ja": "新しい重み・入力契約・所見head・適格性・実行時間の未検証項目が多く、締切前に既存候補へ優先投入する根拠は不足する。"
+    }
+  ],
+  "record_quality_note": {
+    "prior_file": "experiments/public-research-096-20261014-v2.json",
+    "affected_fields": "priorities_max5 action_ja/reason_ja/qualification_ja/next_evidence_ja",
+    "finding_ja": "UTF8で読むと複数の日本語フィールドが多数の疑問符に置換されている。旧ファイルを変更せず、今回の日本語は英語の証拠とdocs/goal-096.mdから再構成した。",
+    "prior_file_modified": false
+  },
+  "actions_performed": {
+    "public_web_search_and_read": true,
+    "local_document_reads": true,
+    "new_research_record_created": true,
+    "credential_values_read_or_copied": false,
+    "competition_data_or_model_downloaded": false,
+    "local_actual_MRI_decode_or_training_started": false,
+    "external_upload_post_notebook_save_or_submit": false,
+    "automatic_upload_or_submission_code_added": false
+  }
+}

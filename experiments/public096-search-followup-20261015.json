@@ -1,0 +1,24 @@
+{
+  "schema_version": "higher_public_recipe_targeted_search_followup_v1",
+  "at_UTC": "2026-10-15T09:06:02.697155+00:00",
+  "queries": [
+    "site:kaggle.com/code/ \"rsna-knee\" \"0.960\"",
+    "site:kaggle.com/datasets/ \"rsna-knee\" \"0.96\"",
+    "site:kaggle.com/competitions/rsna-knee-abnormality-detection/discussion \"0.961\""
+  ],
+  "method": "web search primary Kaggle pages; no inference or score qualification",
+  "result": "No new reproducible >0.960 recipe established by these queries",
+  "relevant_primary_page": {
+    "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735767",
+    "title": "What Could the Final Ceiling Be for RSNA 2026?",
+    "interpretation": "Participant forecasts about final ceilings and possible public/private shakeup; predictions are not achieved scores or reproducible code. Relative indexed ages are not current ranking evidence."
+  },
+  "excluded_results": [
+    "Different LLM/cervical/whale/time-series competitions despite numeric keyword matches",
+    "Ria RSNA model results presentation is a dashboard with embedded sample numbers, not evidence of a scored >0.960 model",
+    "Nekkon report-label notebook log is not scored >0.960 inference evidence"
+  ],
+  "stronger_existing_evidence": "experiments/public-code-score-frontier-20261015.json official score-desc first100, highest observed0.957; not proof of universal absence",
+  "own_Public": "0.956 previously authenticated, unchanged by this search",
+  "success_probability": null
+}

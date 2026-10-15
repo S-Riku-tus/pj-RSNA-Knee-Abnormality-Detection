@@ -1,0 +1,59 @@
+{
+  "schema_version": "read_only_execution_environment_audit_v1",
+  "observed_at_UTC": "2026-10-15T06:57:51+00:00",
+  "observed_at_JST": "2026-10-15T15:57:51+09:00",
+  "scope": "This restricted execution environment; not a complete inventory of the user's desktop",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": {
+    "default_command": "python.bat via pyenv-win shim",
+    "default_command_result": "No global/local python version has been set yet",
+    "explicit_interpreter": "C:/Users/shiba/.pyenv/pyenv-win/versions/3.11.9/python.exe",
+    "explicit_interpreter_version": "3.11.9",
+    "explicit_interpreter_execution_succeeded": true,
+    "doctor_modules": {
+      "numpy": true,
+      "pydicom": false,
+      "PIL": true,
+      "torch": false,
+      "torchvision": false
+    },
+    "torch_spec": null,
+    "project_venv_interpreter_present": false,
+    "package_installation_performed": false
+  },
+  "gpu": {
+    "nvidia_smi_in_PATH": false,
+    "nvidia_smi_checked_paths": {
+      "C:/Windows/System32/nvidia-smi.exe": false,
+      "C:/Program Files/NVIDIA Corporation/NVSMI/nvidia-smi.exe": false
+    },
+    "Win32_VideoController_query": "Access denied by restricted environment",
+    "torch_cuda_is_available_executed": false,
+    "artificial_CUDA_forward_executed": false,
+    "usable_CUDA_training_runtime_established": false,
+    "physical_GPU_absence_established": false,
+    "interpretation": "CUDA training is not executable through the inspected Python environment; these checks do not prove that the user's physical RTX 4090 is absent"
+  },
+  "local_assets": {
+    "data_directory_at_initial_audit": ["README.md"],
+    "artifacts_directory_at_initial_audit": ["README.md"],
+    "referenced_artifacts_research_evidence_present_at_initial_audit": false,
+    "existing_DICOM_or_model_or_feature_cache_acquired": false,
+    "tracked_experiment_metadata_available": true,
+    "interpretation": "Tracked checkpoint claims can be reviewed, but referenced Git-excluded evidence and model files cannot be replayed from this checkout"
+  },
+  "checks_completed": {
+    "rsna_knee_doctor": "PASS using explicit Python 3.11.9",
+    "test_contracts": "7 PASS; artificial CSV data only",
+    "model_deserialization": false,
+    "real_MRI_decode": false,
+    "training": false,
+    "network_or_authentication": false,
+    "external_upload_or_submission": false
+  },
+  "limitations": [
+    "uv default cache enumeration failed with access denied; no dependency installation or cache-permission bypass was attempted",
+    "This report is a point-in-time environment observation, not a current Kaggle score or GPU inventory",
+    "No GPU forward or performance claim can be made from the successful standard-library tests"
+  ]
+}

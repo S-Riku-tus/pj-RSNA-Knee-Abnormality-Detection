@@ -1,0 +1,139 @@
+{
+  "schema_version": "p031_R7_TTAoff_static_hash_contract_Root_v1",
+  "recorded_utc": "2026-10-15T10:27:45.548369+00:00",
+  "state": "STATIC_PLAN_ONLY_NOT_A_RUNNABLE_OR_EXECUTED_NOTEBOOK",
+  "parent": {
+    "notebook": "rsraki/p030m-r6-off-20261015-c7e91ba5032f",
+    "version": 1,
+    "source_path": "artifacts/kaggle/p030m-r6-off-20261015-c7e91ba5032f/source.ipynb",
+    "source_sha256": "2283f8667e5bc75c3e7cd90850f8307f208151c2100d429b787ec8d9810b9bd1",
+    "visible_pass": true,
+    "Public": null
+  },
+  "only_scientific_factor": "Replace R6 bundle with whole R7 bundle. TTA stays OFF. Bundle factor includes four learned weights, state_spec and two learned stackers, not backbone-only.",
+  "future_public_R7_source": {
+    "url": "https://www.kaggle.com/datasets/heliosli/rsna-knee-r6-frozen-fe055406/versions/2",
+    "dataset_id": 12524886,
+    "internal_version_id": 20731557,
+    "manifest_path": "artifacts/research/20261015-r7-v2-manifest-metadata-only-v1/manifest.json",
+    "manifest_bytes": 5211,
+    "manifest_sha256": "c4bb0f7399ada9a020e0c15cae6252033cf0c4335e999961793a176063074ec6",
+    "bundle_id": "8c7b666e27dc0e8f",
+    "tag": "cnx_r7",
+    "flip_tta": false
+  },
+  "nine_expected_members": [
+    {
+      "file": "E_lrprior_s0_f0.pt",
+      "sha256": "ca8a76e024828793e0663e5a2a13461de17e820bed6789eafe3f155072d3612f",
+      "bytes": null,
+      "size_status": "not independently retrieved; do not invent from R6"
+    },
+    {
+      "file": "E_lrprior_s0_f1.pt",
+      "sha256": "fb432cf544f218608dbaecf7a8dd3c8b6a26b34a3dfe2dc198172c3e222d5910",
+      "bytes": null,
+      "size_status": "not independently retrieved; do not invent from R6"
+    },
+    {
+      "file": "E_lrprior_s0_f2.pt",
+      "sha256": "a9718ae111d6307492e724eb1767f0b5a77397d9a4d82c50c1e146b046523bf7",
+      "bytes": null,
+      "size_status": "not independently retrieved; do not invent from R6"
+    },
+    {
+      "file": "E_lrprior_s0_f3.pt",
+      "sha256": "073c22c71a9946c1457e37e56fec145f073a921da106b55a10884da01a40fc94",
+      "bytes": null,
+      "size_status": "not independently retrieved; do not invent from R6"
+    },
+    {
+      "file": "side_cls.pt",
+      "sha256": "ab623e2b619db4917639220fed15202e8c8aedd07c8e298a66a2afc0f153650a",
+      "bytes": null,
+      "size_status": "not independently retrieved; do not invent from R6"
+    },
+    {
+      "file": "state_spec.json",
+      "sha256": "2c976e70773b745cb357b992ba04946c157aa478e65d82f2883039c038b6ab3c",
+      "bytes": null,
+      "size_status": "not independently retrieved; do not invent from R6"
+    },
+    {
+      "file": "fluid_stacker.json",
+      "sha256": "be5a1664077300db1fdd0af8daaf44a3ebc41f91152e4f0ec124f805a7a51efb",
+      "bytes": null,
+      "size_status": "not independently retrieved; do not invent from R6"
+    },
+    {
+      "file": "state_stacker.json",
+      "sha256": "7b54a3f774dad3f842d68aaccbb03771806c26c0a3ca3a07fea8575a21f3ead3",
+      "bytes": null,
+      "size_status": "not independently retrieved; do not invent from R6"
+    },
+    {
+      "file": "manifest.json",
+      "sha256": "c4bb0f7399ada9a020e0c15cae6252033cf0c4335e999961793a176063074ec6",
+      "bytes": 5211,
+      "size_status": "verified tiny metadata size"
+    }
+  ],
+  "seven_embedded_modules_sha256_required_unchanged": {
+    "compact_infer.py": "8401812cd63737ec99839d317c4037c4efb445d1baec892fa7481bb30399cc2d",
+    "compact_train.py": "04df7e2e154b2c2521696908f272940c63ce17e9b6337b85847fee64504eeaba",
+    "knee_anchor_bank_v2.py": "e564807a129dfcd3c984348917436ee6083066a4d685340587ebd1d3ea14f309",
+    "probe_dual.py": "a6155eb08701f9bb746f838bc8ef8e2129c85f76a5c58e379692ffe2e76bbef0",
+    "probe_infer.py": "a6cc31448019c84be5868d0a2ff1d99719b23b0f86110efc03efff3ce6bd6980",
+    "px_cache.py": "b13e38a7ad3bd496f8027e02209653e224b0926db4f0853eeb0d076a2d6e2632",
+    "side_common.py": "bbcc5d027834e6a6fd48c4a8cf228e25661b7522c792587c840fe4d7cd5c0566"
+  },
+  "fixed_numerical_recipe": {
+    "FLIP_TTA": false,
+    "Raptor384_effective_weight": 0.325,
+    "Raptor224_effective_weight": 0.175,
+    "R7_effective_weight": 0.5,
+    "original_parenthesized_formula": ".5*((1-.35)*pct384+.35*pct224)+.5*pctR7",
+    "percentile": "average tied rank/N among each successful-arm set; source fallback rule unchanged",
+    "final_dtype": "float32",
+    "final_rerank": false,
+    "coefficient_search": false
+  },
+  "unchanged_inputs": [
+    "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1",
+    "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+    "rsna-knee-abnormality-detection"
+  ],
+  "required_implementation_before_run": [
+    "Fetch tiny current version-specific file metadata and pin known size where available without local weight download",
+    "Prepare fresh private CPU Internet-ON stage V1 with no competition/MRI Inputs; Kaggle-only anonymous download of the exact9 R7V2 files and complete SHA verification",
+    "Never update that completed stage V1; preserve stage-b2 R6 unchanged",
+    "Prepare new private GPU Internet-OFF inference with one explicit R7-stage mount and full9member preflight before either Raptor/model load",
+    "Compare all source/metadata/embedded modules against P030M; changes limited to bundle guards/mount/manifest identity and preparation notice",
+    "Read back source, privacy,Inputs, version and Docker; actual runtime still independently checked",
+    "Validate visible3 CSV/probabilities/independent rank recomputation/failure counts; do not infer hidden or AUC",
+    "Use fresh official quota and manually review a single Submit only if current parent outcomes justify it"
+  ],
+  "qualification": {
+    "runnable_package_prepared": false,
+    "stage_created": false,
+    "GPU_run": false,
+    "own_Public": null,
+    "author_V2_linked_score_verified": false,
+    "author_notebook_best_V1_0_957_is_not_V2_score": true,
+    "Gold_clean_or_patient_independent_claimed": false
+  },
+  "Gold_audit": {
+    "own_Gold_fit_or_select": 0,
+    "R7_gold_in_training0_and_official_labels_false": "author manifest claims only; not independent proof",
+    "SWA_Gold_checkpoint_selection_exposure": "inherited and retained"
+  },
+  "actions_by_this_contract_generation": {
+    "network": 0,
+    "model_body_read": 0,
+    "MRI_decode": 0,
+    "training": 0,
+    "upload": 0,
+    "Save": 0,
+    "Submit": 0
+  }
+}

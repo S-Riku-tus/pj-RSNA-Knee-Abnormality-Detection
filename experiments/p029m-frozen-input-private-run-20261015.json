@@ -1,0 +1,223 @@
+{
+  "schema_version": "P029M_frozen_input_private_run_v1",
+  "recorded_at_UTC": "2026-10-15T09:11:49Z",
+  "status": "R6_V1_STAGE_COMPLETE_P029M_SAVE_AND_RUN_ACCEPTED_INFERENCE_UNQUALIFIED",
+  "summary_ja": "Kaggle CPU上の新規private stage b2 V1は既存公開R6 V1の9ファイルをサイズ/SHA検証して完了した。ローカルへ取得したものはprovenanceとログ等のメタデータのみ。これを固定InputにするP029M V1のSaveAndRunは受け付けられたが、この記録ではP029Mの実mount、forward、CSV、hidden rerun、自己Publicスコアは未検証。",
+  "stage_b2": {
+    "ref": "rsraki/p029-r6v1-stage-20261015-b2",
+    "kernel_id": 138823470,
+    "version": 1,
+    "status": "COMPLETE",
+    "settings_confirmed_by_raw_Get_before_and_after_completion": {
+      "author": "rsraki",
+      "isPrivate": true,
+      "enableGpu": false,
+      "enableInternet": true,
+      "enableTpu": false,
+      "machineShape": "None",
+      "dockerImage": "gcr.io/kaggle-images/python@sha256:81b1e7c4b4f0f2a7e0a33943c95754b1b7af6b30d65221633a284b6b601cd84a",
+      "currentVersionNumber": 1
+    },
+    "first_readback_at_UTC": "2026-10-15T09:04:56.542072+00:00",
+    "first_readback_status": "RUNNING",
+    "complete_observed_at_UTC": "2026-10-15T09:09:12.146012+00:00",
+    "provenance_verified_locally_at_UTC": "2026-10-15T09:10:37.737931+00:00",
+    "runtime_provenance_verified_at_UTC_raw": "2026-10-15T09:04:44.495216+00:00",
+    "timestamp_policy": "Keep independent request/observation timestamps distinct from the stage runtime clock. The provider lastRunTime fields return 2026-10-12 dates despite the recorded 2026-10-15 operation, so they are not treated as acquisition or execution timestamps.",
+    "source_validation": {
+      "all_three_normalized_cell_source_texts_match_reviewed_b2_and_launch_copy": true,
+      "raw_saved_source_checked_after_COMPLETE": true,
+      "launch_notebook_bytes": 22956,
+      "launch_notebook_sha256": "979243b1f70e13c8394755230d9d1b37a30e6dced03414a5634da4e511774dcd",
+      "whole_notebook_byte_equality_to_prepared_list_serialization_claimed": false,
+      "temp_parent_fix": "Reject redirected /kaggle/temp parent and create the missing parent with parents=True, exist_ok=False; refuse prior stage output or unverified directory."
+    },
+    "runtime_verification": {
+      "original_dataset_ref": "heliosli/rsna-knee-r6-frozen-fe055406/1",
+      "original_dataset_id": 12524886,
+      "original_internal_dataset_version_id": 20611930,
+      "original_dataset_version": 1,
+      "bundle_id": "fe055406fad6a12f",
+      "manifest_sha256": "6508ce6921eda986c885b2226fa55dd4d2aa8e5fc570b4c007c9a60c05bfc648",
+      "member_count": 9,
+      "total_member_bytes": 886813460,
+      "all_nine_names_sizes_SHA_match_expected_pins": true,
+      "all_nine_provenance_entries_match_P029M_leading_guard_constants": true,
+      "genuine_stdout_summary": {
+        "stream_name": "stdout",
+        "time_seconds_from_log": 82.078649377,
+        "stage": "p029-r6v1-stage-20261015-b2",
+        "verified_files": 9,
+        "bundle_id": "fe055406fad6a12f",
+        "model_loads": 0,
+        "MRI": 0,
+        "keep_saved_version": 1
+      },
+      "evidence_kind": "The reviewed remote stage computes size/SHA during anonymous transfer and again after output copy, then emits its runtime provenance. Locally, the nine receipt entries were compared with pinned expected metadata and the saved stage source was checked. Model bytes were not downloaded or rehashed locally.",
+      "all_files_locally_opened_or_rehashed_as_model_bodies": false,
+      "model_deserialization": false,
+      "MRI_read_decode_or_training": false,
+      "competition_Submit": 0,
+      "local_model_bytes_downloaded": 0,
+      "provenance_metadata_downloaded_locally": {
+        "file": "artifacts/research/20261015-stage-b2-provenance-verification-v1/stage-provenance.json",
+        "bytes": 2213,
+        "sha256": "5dd95067c599747f009ebf1aa1b1e442c14ab51dd6af598c28299b6424734c99"
+      },
+      "preparation_snapshot_flag_correction": {
+        "field": "raw_HTTP_endpoint_not_yet_executed_or_verified",
+        "value_in_inherited_preparation_snapshot": true,
+        "current_runtime_state": "All nine version-1 public transfers succeeded with exact size/SHA and the stage completed.",
+        "stale_preparation_flag_used_as_current_status": false
+      }
+    },
+    "preservation_contract": {
+      "must_remain_private": true,
+      "must_remain_exact_V1": true,
+      "never_update_or_rerun_same_stage_ref": true,
+      "future_inference_must_reverify_all_nine_mounted_members_before_model_load": true,
+      "latest_R6_dataset_V2_or_R7_substitution_allowed": false
+    }
+  },
+  "P029M": {
+    "ref": "rsraki/p029m-r6-957-20261015-a91d20e5dd62",
+    "url": "https://www.kaggle.com/code/rsraki/p029m-r6-957-20261015-a91d20e5dd62",
+    "kernel_id": 138824627,
+    "version": 1,
+    "request_at_UTC": "2026-10-15T09:11:13.476067+00:00",
+    "SaveAndRun_accepted_at_UTC": "2026-10-15T09:11:16.637607+00:00",
+    "SaveAndRun_HTTP_status": 200,
+    "SaveAndRun_attempt": 1,
+    "execution_status": "NOT_POLLED_IN_THIS_RECORD",
+    "requested_settings": {
+      "isPrivate": true,
+      "enableGpu": true,
+      "enableInternet": false,
+      "enableTpu": false,
+      "machineShape": "NvidiaTeslaT4",
+      "dockerImagePinningType": "original",
+      "dockerImage": "gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+      "kernelExecutionType": "SAVE_AND_RUN_ALL"
+    },
+    "requested_inputs": {
+      "datasetDataSources": [
+        "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1",
+        "nartaa/rsna-knee-publication-swa-weights-20261007/1"
+      ],
+      "kernelDataSources": ["rsraki/p029-r6v1-stage-20261015-b2/1"],
+      "competitionDataSources": ["rsna-knee-abnormality-detection"],
+      "original_mutable_R6_dataset_also_attached": false
+    },
+    "source": {
+      "bytes": 620588,
+      "sha256": "2215c412c06efe5c3b61dbc963ed57edea875ac6448de3725ed5e411aca01ed5",
+      "request_text_bytes_equal_exact_source_file": true,
+      "original_author_P029_source_sha256": "449ce7786021dc17fa671783d86d6f5ae4e10638f013c93085eadaba847cbd02",
+      "original_seven_scientific_cells_same_except_one_bounded_find_mount_branch": true,
+      "bounded_branch": "cands += [INPUT / 'notebooks' / 'rsraki' / 'p029-r6v1-stage-20261015-b2' / slug]",
+      "leading_full_nine_member_guard_added": true,
+      "seven_embedded_module_literals_identical": true,
+      "original_author_markdown_and_credits_identical": true,
+      "historical_outputs_empty_and_execution_counts_null": true,
+      "stale_author_Input_IDs_and_runtime_metadata_removed": true,
+      "kaggle_metadata_exact": {"isGpuEnabled": true, "isInternetEnabled": false},
+      "numeric_recipe_changed": false,
+      "R6_fold_count": 4,
+      "R6_FLIP_TTA": true,
+      "all_successful_arms_blend": "0.325 * pct(raw384) + 0.175 * pct(raw224) + 0.5 * pct(R6); each percentile uses that arm's successful UID set and average ties; no extra rerank of the 65:35 Raptor half.",
+      "existing_missing_UID_and_fallback_behavior_changed": false
+    },
+    "qualification_as_of_this_record": {
+      "stage_transport_COMPLETE": true,
+      "P029M_settings_and_actual_Input_readback_verified": false,
+      "P029M_actual_mounted_all_nine_SHA_guard_pass_verified": false,
+      "fresh_GPU_forward_verified": false,
+      "visible_complete_CSV_verified": false,
+      "hidden_rerun_verified": false,
+      "competition_Submit": 0,
+      "own_Public_qualified": false,
+      "own_Public_score": null,
+      "runtime_under_limit_demonstrated": false,
+      "reason": "SaveAndRun acceptance and a complete CPU transport stage do not establish inference, hidden-rerun or score success."
+    }
+  },
+  "score_and_goal_boundary": {
+    "author_original_V1_linked_submission_id": 57183099,
+    "author_formatted_Public": 0.957,
+    "author_title_0_9576_confirmed_as_exact_score": false,
+    "current_verified_self_best_Public": 0.956,
+    "current_verified_self_best_submission_id": 57164195,
+    "self_best_status_source": "experiments/authenticated-progress-refresh-20261015.json",
+    "new_self_score_from_P029M_or_P030M": null,
+    "goal_self_Public_strictly_greater_than": 0.960,
+    "displayed_operational_target_at_least": 0.961,
+    "goal_achieved": false,
+    "medal_guaranteed": false
+  },
+  "previous_failures_preserved": [
+    {
+      "record": "experiments/p029-first-guard-failure-20261015.json",
+      "ref": "rsraki/p029-r6-957-20261015-42fbc0e9ae14",
+      "kernel_id": 138818102,
+      "version": 2,
+      "status": "ERROR",
+      "reason": "The original R6 Input first guard could not find exactly one expected V1 manifest; no actual mounted bundle/version was established."
+    },
+    {
+      "record": "experiments/p029-stage-b1-temp-parent-failure-20261015.json",
+      "ref": "rsraki/p029-r6v1-stage-20261015-b1",
+      "kernel_id": 138822189,
+      "version": 1,
+      "status": "ERROR_BEFORE_ANY_DOWNLOAD",
+      "reason": "Missing /kaggle/temp parent at temporary.mkdir; keep b1 unchanged and do not retry that ref."
+    }
+  ],
+  "P030M_prepared_control_reference": {
+    "directory": "artifacts/kaggle/p030m-r6-stage-b2-tta-off-control-v1-20261015",
+    "source_sha256": "2283f8667e5bc75c3e7cd90850f8307f208151c2100d429b787ec8d9810b9bd1",
+    "manifest_sha256": "bb08d85b70af78526588a17bc082d5a0004c033283167a769a943212d6b22897",
+    "independent_review": "artifacts/kaggle/p030m-r6-stage-b2-tta-off-control-v1-20261015/independent-static-review.json",
+    "review_scope": "Static PASS only: cell8 top-level FLIP_TTA True to False is the only scientific change; same stage b2 Input/member guard, metadata, other six scientific cells, seven embedded modules and credits. Compile only; unexecuted and no score qualification.",
+    "own_Public": null
+  },
+  "license_and_data_limits": {
+    "original_credits_and_OAI_notice_retained": true,
+    "SWA_Gold58_checkpoint_selection_exposure_retained": true,
+    "upstream_Gold_clean_independence_established": false,
+    "patient_independence_established": false,
+    "R6_license_Other_or_unknown_history_resolved": false,
+    "unconditional_public_redistribution_permission_established": false
+  },
+  "evidence_byte_hash_policy": "Every evidence bytes/SHA below is calculated from the actual local file bytes, without newline normalization. Receipt-level hashes of separately serialized text are not substituted for file hashes.",
+  "evidence": [
+    {"path": "artifacts/research/20261015-stage-b2-provenance-verification-v1/stage-provenance.json", "bytes": 2213, "sha256": "5dd95067c599747f009ebf1aa1b1e442c14ab51dd6af598c28299b6424734c99"},
+    {"path": "artifacts/research/20261015-stage-b2-provenance-verification-v1/verification.json", "bytes": 773, "sha256": "e1df70dfb7e9c19dea1beae132f3b0f49733ea5c8d9ef5a92a8b4b456533854e"},
+    {"path": "artifacts/research/20261015-stage-b2-provenance-verification-v1/get-after-complete-raw.json", "bytes": 25964, "sha256": "3fe96b885f9a1b99c4ac4d2325daa0dd8da9b110f3eeba8f2ce82c7c2e28c2b6"},
+    {"path": "artifacts/research/20261015-stage-b2-provenance-verification-v1/p029-r6v1-stage-20261015-b2.log", "bytes": 2341, "sha256": "347081a5ba516c0e20c34f2d4d794ea02f8c51aa2aff403cab8410aa53816bc6"},
+    {"path": "artifacts/research/20261015-stage-b2-readback-poll-01/record.json", "bytes": 913, "sha256": "4cb96b411d73caae32abf241c2ee145a97280c4c42eedc3c918333dd4713b783"},
+    {"path": "artifacts/research/20261015-stage-b2-readback-poll-01/get-raw.json", "bytes": 25964, "sha256": "3055620a74457d59a6e6ddb87006cf142097a0617cb4ee0aca13d642d6146efc"},
+    {"path": "artifacts/research/20261015-stage-b2-run-poll-02/record.json", "bytes": 268, "sha256": "6e20d5b72a0fb0c8fa22bb92177529dc3b8c8f4f930becaa297b2bec150f68a4"},
+    {"path": "artifacts/research/20261015-stage-b2-run-poll-02/run.log", "bytes": 2324, "sha256": "e8354286985d018a3aba9c5d5383809ddeebcc5d7dca468717111390a5ae75b9"},
+    {"path": "artifacts/kaggle/p029m-r6-957-20261015-a91d20e5dd62/source.ipynb", "bytes": 620588, "sha256": "2215c412c06efe5c3b61dbc963ed57edea875ac6448de3725ed5e411aca01ed5"},
+    {"path": "artifacts/kaggle/p029m-r6-957-20261015-a91d20e5dd62/review.json", "bytes": 1637, "sha256": "b1fc95afda7e4b67dc9ba3bcdff11fd2087377a95e581b4c1ee733fc072335b3"},
+    {"path": "artifacts/kaggle/p029m-r6-957-20261015-a91d20e5dd62/save-run-request.json", "bytes": 650707, "sha256": "6081ef7b8b709266bb136f0b2bbeddb48c4a5756e027a9847075593032dcc3cd"},
+    {"path": "artifacts/kaggle/p029m-r6-957-20261015-a91d20e5dd62/save-result.json", "bytes": 951, "sha256": "74158fb9773c46557cb9a52d746e9edb0e9bd4252b9d049b22731bf644238164"},
+    {"path": "artifacts/kaggle/p029m-r6-957-20261015-a91d20e5dd62/save-response-raw.json", "bytes": 174, "sha256": "443b66873e983581fc9ba024d7f8ec75c944bfdfa85ecb72e76fbf6a54fd45aa"},
+    {"path": "artifacts/kaggle/p029-r6v1-stage-20261015-b2-launch-v1/source.ipynb", "bytes": 22956, "sha256": "979243b1f70e13c8394755230d9d1b37a30e6dced03414a5634da4e511774dcd"},
+    {"path": "artifacts/kaggle/p029-r6v1-stage-20261015-b2-launch-v1/save-result.json", "bytes": 932, "sha256": "1d5f1d8050380820e9a771d1bc14451423525d36e12e77fb555f54d7c96ea53d"},
+    {"path": "artifacts/kaggle/p029-r6v1-stage-20261015-b2-launch-v1/review.json", "bytes": 1327, "sha256": "81c01464abc69e3e86a9f09cee6ecca63936ad6d12500c8bc914f3db1042ce03"},
+    {"path": "artifacts/kaggle/p030m-r6-stage-b2-tta-off-control-v1-20261015/source.ipynb", "bytes": 621080, "sha256": "2283f8667e5bc75c3e7cd90850f8307f208151c2100d429b787ec8d9810b9bd1"},
+    {"path": "artifacts/kaggle/p030m-r6-stage-b2-tta-off-control-v1-20261015/manifest.json", "bytes": 7120, "sha256": "bb08d85b70af78526588a17bc082d5a0004c033283167a769a943212d6b22897"},
+    {"path": "artifacts/kaggle/p030m-r6-stage-b2-tta-off-control-v1-20261015/independent-static-review.json", "bytes": 1807, "sha256": "e51ecbd6b73eb5c38a289c5d123efe028297b6592ced90c37b24fb464b975773"}
+  ],
+  "audit_scope": {
+    "local_metadata_and_source_text_only": true,
+    "credentials_read": false,
+    "network_calls_by_this_audit": 0,
+    "model_body_read_or_deserialization_by_this_audit": false,
+    "MRI_or_training_by_this_audit": false,
+    "SaveRun_or_Submit_by_this_audit": 0,
+    "previous_run_artifacts_overwritten": false,
+    "docs_or_ledger_edited": false
+  }
+}
