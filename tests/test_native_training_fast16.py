@@ -4,15 +4,19 @@ import copy
 import hashlib
 import importlib.util
 import json
+import math
+import random
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+import numpy as np
 import torch
 
-from rsna_knee.contracts import ID, TARGETS, write_csv
+from rsna_knee.contracts import ID, SUBMISSION_COLUMNS, TARGETS, index_studies, sha256, write_csv
 from rsna_knee.finetune_model import NativeTripletMIL
+from rsna_knee.metrics import evaluate_rows
 from rsna_knee.native_training_fast16 import (
     ENGINEERING_LINEAGE,
     RESOURCE_GATE_SCHEMA,
@@ -21,11 +25,13 @@ from rsna_knee.native_training_fast16 import (
     effective_observation_count,
     load_native_checkpoint,
     make_native_checkpoint,
+    native_epoch_learning_rates,
     native_source_hashes,
     observed_bce_sum,
     prefix_digest,
     preflight_native_training,
     read_prediction_ids,
+    retain_epoch_checkpoint,
     validate_native_config,
     validate_resource_gate,
 )
@@ -239,6 +245,229 @@ class NativeTrainContracts(unittest.TestCase):
             torch.save(invalid, self.root / "invalid-epoch.pt")
             with self.subTest(epoch=epoch), self.assertRaisesRegex(ValueError, "checkpoint epoch"):
                 load_native_checkpoint(self.root / "invalid-epoch.pt")
+
+    def named_optimizer(self):
+        parameters = [
+            torch.tensor([0.4, -0.2], dtype=torch.float64, requires_grad=True),
+            torch.tensor([0.3, 0.1], dtype=torch.float64, requires_grad=True),
+        ]
+        optimizer = torch.optim.AdamW([
+            {"params": [parameters[0]], "name": "head", "lr": CONFIG["train"]["learning_rate"]},
+            {"params": [parameters[1]], "name": "last2", "lr": CONFIG["online"]["encoder_learning_rate"]},
+        ], weight_decay=CONFIG["train"]["weight_decay"])
+        return parameters, optimizer
+
+    def test_default_constant_matches_existing_AdamW_updates_and_state_exactly(self):
+        for explicit in (False, True):
+            with self.subTest(explicit_constant=explicit):
+                config = copy.deepcopy(CONFIG)
+                if explicit:
+                    config["train"]["lr_schedule"] = {"name": "constant"}
+                self.assertIs(validate_native_config(config), config)
+                original, baseline = self.named_optimizer()
+                candidate, optimizer = self.named_optimizer()
+                for epoch in range(1, 13):
+                    initial_lrs = [group["lr"] for group in optimizer.param_groups]
+                    rates = native_epoch_learning_rates(optimizer, config, epoch)
+                    self.assertEqual(rates["learning_rate_multiplier"], 1.0)
+                    for group, original_lr in zip(optimizer.param_groups, initial_lrs):
+                        self.assertIs(group["lr"], original_lr)  # Constant never rewrites the original value.
+                    for index, (left, right) in enumerate(zip(original, candidate)):
+                        left.grad = torch.full_like(left, (epoch + index) * 0.03)
+                        right.grad = left.grad.clone()
+                    baseline.step()
+                    optimizer.step()
+                    self.assertEqual(baseline.state_dict()["param_groups"], optimizer.state_dict()["param_groups"])
+                    for left, right in zip(original, candidate):
+                        self.assertTrue(torch.equal(left, right))
+                        for key, value in baseline.state[left].items():
+                            self.assertTrue(torch.equal(value, optimizer.state[right][key]))
+
+    def test_late_cosine_is_only_training_factor_preserves_group_ratio_and_first_six_updates(self):
+        config = json.loads(
+            (ROOT / "configs/experiments/f006-dinov2-native-last2-late-cosine.json").read_text(encoding="utf-8")
+        )
+        without_schedule = copy.deepcopy(config)
+        without_schedule["train"].pop("lr_schedule")
+        self.assertNotEqual(without_schedule["reason"], CONFIG["reason"])
+        without_schedule["reason"] = CONFIG["reason"]  # Adoption reason is metadata, not a training factor.
+        self.assertEqual(without_schedule, CONFIG)
+        validate_native_config(config)
+        original, baseline = self.named_optimizer()
+        candidate, optimizer = self.named_optimizer()
+        expected = [1.0] * 6 + [0.9397114317029974, 0.775, 0.55, 0.325, 0.16028856829700258, 0.1]
+        for epoch, expected_factor in enumerate(expected, 1):
+            rates = native_epoch_learning_rates(optimizer, config, epoch)
+            self.assertAlmostEqual(rates["learning_rate_multiplier"], expected_factor, places=14)
+            self.assertAlmostEqual(rates["learning_rates"]["head"] / rates["learning_rates"]["last2"], 30.0)
+            for index, (left, right) in enumerate(zip(original, candidate)):
+                left.grad = torch.full_like(left, (epoch + index) * 0.03)
+                right.grad = left.grad.clone()
+            baseline.step()
+            optimizer.step()
+            if epoch <= 6:
+                for left, right in zip(original, candidate):
+                    self.assertTrue(torch.equal(left, right))
+            elif epoch == 7:
+                for left, right in zip(original, candidate):
+                    self.assertFalse(torch.equal(left, right))  # The changed LR reaches actual AdamW updates.
+        self.assertEqual(rates["learning_rates"], {"head": 0.0003 * 0.1, "last2": 1e-5 * 0.1})
+
+    def test_invalid_learning_rate_schedules_are_rejected_without_CUDA_or_optimizer_mutation(self):
+        bad_schedules = (
+            "late_cosine", {}, {"name": "linear"}, {"name": "constant", "min_factor": 0.1},
+            {"name": "late_cosine", "constant_epochs": 5, "min_factor": 0.1},
+            {"name": "late_cosine", "constant_epochs": 6.0, "min_factor": 0.1},
+            {"name": "late_cosine", "constant_epochs": True, "min_factor": 0.1},
+            {"name": "late_cosine", "constant_epochs": 6, "min_factor": 0.2},
+            {"name": "late_cosine", "constant_epochs": 6, "min_factor": float("nan")},
+        )
+        _, optimizer = self.named_optimizer()
+        initial_groups = copy.deepcopy(optimizer.state_dict()["param_groups"])
+        with patch("rsna_knee.native_training_fast16.ensure_cuda", side_effect=AssertionError("CUDA forbidden")), \
+             patch("torch.cuda.init", side_effect=AssertionError("CUDA forbidden")):
+            for schedule in bad_schedules:
+                config = copy.deepcopy(CONFIG)
+                config["train"]["lr_schedule"] = schedule
+                with self.subTest(schedule=schedule), self.assertRaisesRegex(ValueError, "learning rate schedule"):
+                    validate_native_config(config)
+                with self.assertRaisesRegex(ValueError, "learning rate schedule"):
+                    native_epoch_learning_rates(optimizer, config, 7)
+            for epoch in (0, 13, True, 1.5):
+                with self.subTest(epoch=epoch), self.assertRaisesRegex(ValueError, "integer epoch"):
+                    native_epoch_learning_rates(optimizer, CONFIG, epoch)
+        self.assertEqual(initial_groups, optimizer.state_dict()["param_groups"])
+
+    def test_QA_old_arm_configs_identical_and_candidate_last2_is_not_replaced(self):
+        spec = importlib.util.spec_from_file_location("native_fast16_QA_CLI", ROOT / "scripts/train_native_dinov2_fast16.py")
+        cli = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cli)
+        directory = ROOT / "configs/experiments"
+        configs = {
+            blocks: json.loads((directory / name).read_text(encoding="utf-8"))
+            for blocks, name in ((0, "f005-dinov2-native-frozen-control-fast16.json"),
+                                 (2, "f005-dinov2-native-last2-fast16.json"))
+        }
+        for requested in configs.values():
+            for blocks in (0, 2):
+                self.assertEqual(cli.qa_arm_config(requested, directory, blocks), configs[blocks])
+        candidate = json.loads((directory / "f006-dinov2-native-last2-late-cosine.json").read_text(encoding="utf-8"))
+        original = copy.deepcopy(candidate)
+        self.assertIs(cli.qa_arm_config(candidate, directory, 2), candidate)
+        self.assertEqual(cli.qa_arm_config(candidate, directory, 0), configs[0])
+        self.assertEqual(candidate, original)
+
+    def test_epoch_retention_roundtrips_both_schemas_and_preserves_best_last_and_RNG(self):
+        from rsna_knee.regional_training_fast16 import (
+            apply_regional_checkpoint,
+            load_regional_checkpoint,
+            make_regional_checkpoint,
+        )
+        from rsna_knee.regional_triplet_model import RegionalTripletMIL
+
+        regional_config = json.loads(
+            (ROOT / "configs/experiments/f005-dinov2-native-regional4x4-last2-fast16.json").read_text(encoding="utf-8")
+        )
+        provenance = {
+            **{key: "artificial contract fixture" for key in (
+                "source_url", "source_revision", "weights_url", "license", "reviewed_at", "exposure_audit"
+            )},
+            "weights_sha256": "1" * 64,
+            "source_tree_sha256": "2" * 64,
+            "pretraining": "generic_dinov2_lvd142m",
+            "competition_finetuned": False,
+            "gold_used_for_tuning": False,
+        }
+        for name, model_class, config, make, load, apply in (
+            ("CLS", NativeTripletMIL, CONFIG, make_native_checkpoint, load_native_checkpoint, apply_native_checkpoint),
+            ("REG", RegionalTripletMIL, regional_config, make_regional_checkpoint,
+             load_regional_checkpoint, apply_regional_checkpoint),
+        ):
+            with self.subTest(schema=name):
+                output = self.root / name
+                output.mkdir()
+                encoder = fixtures.ArtificialEncoder()
+                if name == "REG":
+                    # Inert artificial tensors satisfy the production suffix-count guard;
+                    # no genuine DINO assets are loaded and no encoder forward is run.
+                    for block in encoder.blocks[-2:]:
+                        extra = 3550464 // 2 - sum(parameter.numel() for parameter in block.parameters())
+                        block.register_parameter("artificial_contract_padding", torch.nn.Parameter(torch.zeros(extra)))
+                model = model_class(copy.deepcopy(encoder), copy.deepcopy(config), trainable_blocks=2,
+                                    window_chunk=16, checkpoint_last2=True).eval()
+                digest = prefix_digest(model)
+                best_bce = None
+                original_epoch_sha = None
+                for epoch, probability_value in ((1, 0.15), (2, 0.20), (3, 0.15)):
+                    with torch.no_grad():
+                        next(model.encoder.blocks[10].parameters()).add_(0.001)
+                        model.head.output_bias.add_(0.01)
+                    predictions = [
+                        {ID: "artificial-negative", **dict.fromkeys(TARGETS, probability_value)},
+                        {ID: "artificial-positive", **dict.fromkeys(TARGETS, 1 - probability_value)},
+                    ]
+                    truth = [
+                        {ID: "artificial-negative", **dict.fromkeys(TARGETS, "0")},
+                        {ID: "artificial-positive", **dict.fromkeys(TARGETS, "1")},
+                    ]
+                    predictions_path = output / f"epoch_{epoch:03d}_weak.csv"
+                    write_csv(predictions_path, SUBMISSION_COLUMNS, predictions)
+                    bce = -math.log(1 - probability_value)
+                    metrics = evaluate_rows(index_studies(truth), index_studies(predictions))
+                    record = {"epoch": epoch, "weak_bce": bce, "weak_macro_auc_12": metrics["macro_auc_12"],
+                              "metrics": metrics, "prediction_sha256": sha256(predictions_path)}
+                    checkpoint = make(model, provenance, fold=0, epoch=epoch, weak_bce=bce,
+                                      prefix_sha256=digest, audit={"synthetic": True}, artificial=True)
+                    torch.save(checkpoint, output / "last.pt")
+                    if best_bce is None or bce < best_bce:
+                        best_bce = bce
+                        torch.save(checkpoint, output / "best.pt")
+                    before = {alias: sha256(output / alias) for alias in ("best.pt", "last.pt")}
+                    torch_rng, python_rng, numpy_rng = torch.get_rng_state().clone(), random.getstate(), np.random.get_state()
+                    entry = retain_epoch_checkpoint(output, checkpoint, record, predictions_path)
+                    self.assertTrue(torch.equal(torch_rng, torch.get_rng_state()))
+                    self.assertEqual(python_rng, random.getstate())
+                    now_numpy_rng = np.random.get_state()
+                    self.assertEqual(numpy_rng[0], now_numpy_rng[0])
+                    np.testing.assert_array_equal(numpy_rng[1], now_numpy_rng[1])
+                    self.assertEqual(numpy_rng[2:], now_numpy_rng[2:])
+                    self.assertEqual(before, {alias: sha256(output / alias) for alias in before})
+                    self.assertEqual(entry["checkpoint_sha256"], before["last.pt"])
+                    self.assertEqual(entry["prediction_sha256"], sha256(predictions_path))
+                    self.assertEqual(entry["metrics"], metrics)
+                    retained = output / entry["checkpoint"]
+                    with self.assertRaisesRegex(ValueError, "Artificial"):
+                        load(retained)
+                    loaded = load(retained, allow_artificial=True)
+                    restored = model_class(copy.deepcopy(encoder), copy.deepcopy(config), trainable_blocks=2,
+                                           window_chunk=16, checkpoint_last2=True).eval()
+                    kwargs = {"allow_artificial": True} if name == "REG" else {}
+                    apply(restored, loaded, provenance, **kwargs)
+                    for key, tensor in model.state_dict().items():
+                        self.assertTrue(torch.equal(tensor, restored.state_dict()[key]), key)
+                    features, mask = torch.zeros(1, 3, 48, 384), torch.zeros(1, 3, 48, dtype=torch.bool)
+                    mask[0, 0, 0] = True
+                    inputs = (features, mask, torch.zeros(1, 3, 48), torch.zeros(1, 3, dtype=torch.long),
+                              torch.zeros(1, 3, 2))
+                    with torch.inference_mode():
+                        expected, actual = model.head(*inputs), restored.head(*inputs)
+                    self.assertEqual(tuple(actual.shape), (1, 12))
+                    self.assertTrue(torch.isfinite(actual).all())
+                    self.assertTrue(torch.equal(expected, actual))
+                    if epoch == 1:
+                        original_epoch_sha = entry["checkpoint_sha256"]
+                    self.assertEqual(sha256(output / "epoch_001.pt"), original_epoch_sha)
+                index = json.loads((output / "epoch_checkpoint_index.json").read_text(encoding="utf-8"))
+                self.assertEqual([entry["epoch"] for entry in index["checkpoints"]], [1, 2, 3])
+                self.assertEqual(index["aliases"]["best.pt"]["epoch"], 1)  # Earliest exact BCE tie remains selected.
+                self.assertEqual(index["aliases"]["last.pt"]["epoch"], 3)
+                self.assertFalse(index["resume_supported"])
+                self.assertEqual(load(output / "best.pt", allow_artificial=True)["epoch"], 1)
+                self.assertEqual(load(output / "last.pt", allow_artificial=True)["epoch"], 3)
+                before = {path.name: sha256(path) for path in output.iterdir()}
+                with self.assertRaisesRegex(ValueError, "existing epochs cannot be overwritten"):
+                    retain_epoch_checkpoint(output, checkpoint, record, predictions_path)
+                self.assertEqual(before, {path.name: sha256(path) for path in output.iterdir()})
 
     def test_fast16_rejects_old_config_schema_and_every_wrong_chunk(self):
         old = json.loads((ROOT / "configs/experiments/f005-dinov2-native-last2.json").read_text(encoding="utf-8"))

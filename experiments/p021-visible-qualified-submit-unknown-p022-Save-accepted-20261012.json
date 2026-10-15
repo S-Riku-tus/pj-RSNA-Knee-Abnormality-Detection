@@ -1,0 +1,190 @@
+{
+  "schema_version": "p021_visible_accepted_Submit_unknown_p022_codec_Save_accepted_progress_v1",
+  "observed_at_jst": "2026-10-12T17:41:04+09:00",
+  "reason": "Preserve visible inference acceptance and uncertain competition POST separately. Bind codec-only P022 to genuine new Root metadata, then wait for its own source/result/CSV acceptance before competition submission.",
+  "own_Public_best": "0.951",
+  "strict_above960_achieved": false,
+  "work_continues": true,
+  "P021_visible_results": {
+    "Root_acceptance": {
+      "path": "artifacts/research/20261012-p021-results-and-submit-tools-v2/Root-actual-acceptance.json",
+      "sha256": "4eeafc573d408bdb1108c5838f1451a8e4c9a99d5bdb9d8f6410f01fac13ec5f"
+    },
+    "ref": "rsraki/p021v2-df1e911482eb4d7c91a4e20d586b033e",
+    "kernel_id": 138292308,
+    "saved_version": 1,
+    "all_passed": true,
+    "rows": 3,
+    "targets": 12,
+    "two_T4": true,
+    "four_models_per_worker": true,
+    "fallback_count": 0,
+    "source_model_auxiliary_geometry_SHA_bound": true,
+    "original_latest_V2_fixed50_50_and_per_class_OA3_recipe": true,
+    "rank_population": "each arm own nonfailed",
+    "compact_CSV_format": "%.9g",
+    "FP32_all36_recomputed_exact": true,
+    "CSV_decimal_to_FP32_exact": true,
+    "submission_sha256": "5c4828369e39d80a6e67ece4e784206e99323120aff975216005755f7f7053dd",
+    "visible_runtime_and_CSV_qualified": true,
+    "hidden_completion_verified": false,
+    "author_best_Public": "0.956",
+    "author_latest_V2_Public": null,
+    "own_Public": null
+  },
+  "P021_competition_Submit_acceptance_unknown": {
+    "held": {
+      "path": "artifacts/research/20261012-p021-results-and-submit-tools-v2/actual-single-Submit-v1/held.json",
+      "sha256": "9b14ac52152aa83580fa90c0d39a450faf134d6c4ecbf3836cee025ec38a041f"
+    },
+    "at_utc": "2026-10-12T08:24:04.709836+00:00",
+    "actual_Submit_calls": 1,
+    "error_type_only": "HTTPError",
+    "HTTP_status_and_error_body_preserved": false,
+    "positive_submission_ref_preserved": false,
+    "remote_acceptance_unknown": true,
+    "resend_calls": 0,
+    "readonly_followup": {
+      "path": "artifacts/research/20261012-p021-unknown-Submit-readonly-tools-v1/actual-observation-v1/observation.json",
+      "sha256": "7cc6c894bf5f897b11599e1e61fd87792c928c3f90ca510675803fbe19827f92"
+    },
+    "followup_at_utc": "2026-10-12T08:36:59.289736+00:00",
+    "followup_list_rows": 20,
+    "more_pages_unread": true,
+    "whole_history_claimed": false,
+    "P021_candidate_submission_refs": [],
+    "P021_unique_correlated_submission_ref": null,
+    "daily_remaining_raw_and_typed": 4,
+    "no_match_or_unchanged_allowance_does_not_prove_rejected": true,
+    "SDK_primary_contract_research": {
+      "path": "artifacts/research/20261012-p021-CodeSubmission-contract-research-v1/report.json",
+      "sha256": "5f79cb453778d1825d1759a4c681f4bfa197d9eff21825dc18774ac9f83b91ff"
+    },
+    "specific_cause_or_universal_multiple_pending_ban_confirmed": false
+  },
+  "P022_codec_only_new_Save": {
+    "source_preparation": {
+      "path": "artifacts/research/20261012-p022-S6-native20-source-v2/report.json",
+      "sha256": "af2c7409e7cf41d9931a5eabc4bfc76fd84646ef8624436f7e0c3011f40b70e5"
+    },
+    "source_peer": {
+      "path": "artifacts/research/20261012-p022-S6-native20-source-v2/Root-source-peer.json",
+      "sha256": "97d8c344e2177818522a82422cc2425959b844d84d261bff371aa2ecbdb604d5"
+    },
+    "genuine_Root2_authority": {
+      "path": "artifacts/research/20261012-p022-S6-native20-root-v2/Root-authority.json",
+      "sha256": "226d380480209e8a9465d7ffe0ffc6df13b370d15804167e73921ae9c7f2500c"
+    },
+    "Root2_runtime_context": {
+      "path": "artifacts/research/20261012-p022-S6-native20-root-v2/Notebook-context.json",
+      "sha256": "5c9750c907cbe9cd6ce265a4ade4fc7adf217c769befb35717ae8996e8b48274"
+    },
+    "only_changed_Source9_member": "build_source.py",
+    "other8_source_bytes_unchanged": true,
+    "original5_literal_and_execution_boundary_changed": false,
+    "original_ZIP_and_all_raw_metadata_lengths_SHA_preserved": true,
+    "codec": "joint XZ/LZMA2 preset6 dict8MiB: uint64 ZIP length + raw ZIP + raw metadata JSON",
+    "original_four_model_reader_family50_native20_mask_UID_recovery_changed": false,
+    "final_API_source_bytes": 946315,
+    "fixed_internal_source_cap_bytes": 950000,
+    "margin_bytes": 3685,
+    "default_gate_passed": true,
+    "accepted_Save": {
+      "path": "artifacts/research/20261012-p022-S6-native20-root-v2/actual-serving-Save-attempt-v1/receipt.json",
+      "sha256": "60a1e750b9133e6f3d6f0f598fdec0e24cf12154dc98d5e44307b3be72f5f2ce"
+    },
+    "at_utc": "2026-10-12T08:37:59.459712+00:00",
+    "ref": "rsraki/p022m-3f74be0b51a04af3b5b0c9ee99cf116b",
+    "kernel_id": 138296990,
+    "saved_version": 1,
+    "private_Save_accepted": true,
+    "Root_official_Save_calls": 1,
+    "Root_Input_metadata_RPCs": 8,
+    "Root_quota_RPCs": 1,
+    "automatic_retry": false,
+    "API_source_sha256": "27b85fa659c67e126d3d3a9edbe9b51f68fc63eeabf7dd7f3801779d576ecacb",
+    "source_SHA_inventory": {
+      "phase_contracts.py": "78cf8858178fdc916c75f014a01e1cb416da9804abceae615ea7480360ee5ff8",
+      "mixed_serving_contracts.py": "bbb20ef2e775129d689a85c36675e08682277615ed378ba2178200cb76b8797e",
+      "serving_router.py": "fed09d54298b96eae4de5044d8c71686d653cdb079c3c182fb204b26011c0f3e",
+      "mixed_parent.py": "21700709fb1a3153ed8d4a901b69a724bac40eaa48f8715183af427561257b70",
+      "support_mask.py": "f092941f657a493c635d2e2329f8744f4ff0f0c06dc3419097d343ee08c3bf6b",
+      "build_source.py": "a4441578e27f075ec4acdf6458433784633f816b4f82ceaf3bbeac71d3a00927",
+      "serving-pins.json": "7db3eec3be8838fd7385438cf39287c4ab7584697d2c8885b62f29719a18aa82",
+      "uid_recovery_adapter.py": "e75c4f20a26d57a417ef2ebe761684ffae94cd6beec6de5c29a1c23a1534ef05",
+      "diagnostic_driver.py": "7b5c5e379726b94e7b1133dcd2df5963b7714f4ad1eef397e600fde86b371c5d"
+    },
+    "Input_display_version_refs": [
+      "heliosli/rsna-knee-compact-v1/13",
+      "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1",
+      "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+      "rsraki/rsna-dicom-decoders-py313-v1/1",
+      "rsraki/n392-l2f0-ff5a76c17ef944e7ac113afecf2ba947/1",
+      "rsraki/n392-l2f1-0f24696011244045bb8d4620a46683bb/1",
+      "rsraki/n392rg-f0-8e978296019046e3a9fff8fcb6a4901f/1",
+      "rsraki/n392rg-f1-82087594dae443ab82a701d9750b661a/1"
+    ],
+    "Save_API_suffix_preservation_claimed": false,
+    "own_saved_source_input_result_binding_accepted": false,
+    "actual_run_complete": false,
+    "whole_Serving_and_final_CSV_qualified": false,
+    "competition_Submit_calls": 0,
+    "own_Public": null
+  },
+  "P022_old_size_HOLD_preserved": {
+    "actual_codec_measurement": {
+      "path": "artifacts/research/20261012-p022-S6-native20-source-v2/actual-payload-codec-measurement.json",
+      "sha256": "eea7b0fe8e0bf82400b9aaec44f5dcc9f167a4d3944ab89086088539831762b2"
+    },
+    "old_Root1_runtime_context": {
+      "path": "artifacts/research/20261012-p022-S6-native20-root-v1/Notebook-context.json",
+      "sha256": "1402964702b6b2628598bffb98c4bbab6c8c43bcaf30708b08e6e42059d38ce5"
+    },
+    "old_actual_API_bytes": 1272956,
+    "internal_source_cap": 950000,
+    "local_build_status": "HOLD_before_Save",
+    "Save_calls": 0,
+    "old_Root1_and_Source1_overwritten": false
+  },
+  "f006_fold0": {
+    "epoch5_snapshot": {
+      "path": "artifacts/research/20261012-f006-live-progress-v1/epoch05-snapshot-v1.json",
+      "sha256": "2d509d786c4c913b0fc186b1ccac8e09e49ad24da5919eff902fdb8491b8f627"
+    },
+    "session_id": 38827,
+    "completed_epochs_in_snapshot": 5,
+    "fixed_total_epochs": 12,
+    "status": "running",
+    "seed": 20261002,
+    "fold": 0,
+    "cumulative_optimizer_updates": 1060,
+    "AMP_skips": 0,
+    "weak_BCE": 0.3015279738687503,
+    "weak_macro_AUC12": 0.8489434747197495,
+    "weak_fixed10_AUC": 0.8586677757243055,
+    "LR_multiplier": 1.0,
+    "LR_factor_active": false,
+    "BCE_same_epoch_delta": -2.2884353576557714e-06,
+    "fixed10_AUC_same_epoch_delta": -2.7330019574112185e-06,
+    "interim_checkpoint_adopted": false,
+    "weak_or_Public_improvement_claimed": false,
+    "fold1_decision_after_fold0_fixed12": true
+  },
+  "P020_last_dedicated_score_observation": {
+    "observation": {
+      "path": "artifacts/research/20261012-p020-scoring-status-tools-v1/observation-v5/observation.json",
+      "sha256": "47d4389d8ce07a8ab101131c255de9faa61199b810f67b89f1f072f8758a98c4"
+    },
+    "at_jst": "2026-10-12T17:11:06+09:00",
+    "submission_ref": 57098752,
+    "raw_status_and_Public_returned": false,
+    "typed_PENDING_is_default_only": true,
+    "own_Public": null
+  },
+  "documentation_update_only": {
+    "agent_Kaggle_auth_API_POST_Save_Submit_upload_GPU_MRI_teacher_model_body_calls": 0,
+    "live_trainer_CLI_config_edits": 0,
+    "past_experiment_records_overwritten": false
+  },
+  "next": "Bind genuine P022 saved source/status and bounded output; independently accept whole Serving and final CSV; refresh allowance before one authorized Submit. Resolve P021 acceptance using read-only evidence without resending. Finish fixed12 f006 fold0 before selection/fold1."
+}

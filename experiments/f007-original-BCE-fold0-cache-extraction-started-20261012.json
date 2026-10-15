@@ -1,0 +1,43 @@
+{
+  "schema_version": "Root_F007_original_BCE_fold0_actual_cache_extraction_start_snapshot_v1",
+  "Root_reported_started_at_JST": "2026-10-12 21:43 approximately",
+  "first_base": {
+    "parent": "f005-native-last2-fast16",
+    "fold": 0,
+    "epoch": 8,
+    "policy": "earliest_minimum_weak_BCE",
+    "retained_index": null,
+    "original_run_selected_or_checkpoint_changed": false
+  },
+  "Root_actual_origin": {
+    "path": "artifacts\\research\\20261012-f007-fold-specific-cache-and-residual-CLI-source-v4\\Root-actual-old-BCE-origin-fold0-v1.json",
+    "sha256": "65952fdbb413ff44905eb6920a7be7ae41bbf2de72e8f37534a5a1e453afd7d9"
+  },
+  "Root_actual_origin_issued": true,
+  "Root_actual_CUDA_extraction_started": true,
+  "Root_f006_process_exit_code_confirmed_before_start": 0,
+  "Root_actual_exec_session": 90205,
+  "output": "artifacts/cache/f007-original-BCE-CLS-plus16local-fold0-20261012-v1",
+  "model_producer": "Immutable original old f005 source8 and genuine original completed-BCE CPU proof/checkpoint",
+  "data_preflight_producer": "Separate current f006 source/config/QA; original model was not relabelled as current QA",
+  "Root_reported_start_scope": "CUDA pixel-cache preflight and strict model initialization/extraction; residual training not started",
+  "cache_complete_or_qualified_at_snapshot": false,
+  "initial_native_oracle_and_all821_saved12_prediction_equality_verified_at_snapshot": false,
+  "actual_residual_training_started": false,
+  "fold1_started": false,
+  "new_raw_MRI_batch_download_or_external_API_Save_Submit_upload_at_start": 0,
+  "actual_Public_gain_or_feature_utility_claimed": false,
+  "latest_official_snapshot": {
+    "path": "artifacts/research/20261012-three-candidate-scoring-status-tools-v1/delegated-observation-v5/observation.json",
+    "sha256": "4342b25c2be03ea41d52bc8bb9c4e2f609193f76f09ca7c0713a5c725fb54063",
+    "actor": "Root-authorized execution_audit",
+    "best": "0.954",
+    "remaining": 2
+  },
+  "next": "Root checks cache complete, one native oracle and all validation saved predictions before residual12; judge fold0 utility before fold1",
+  "documentation_actor": "execution_audit",
+  "documentation_scope_source_JSON_and_documents_only": true,
+  "documentation_actual_GPU_API_model_checkpoint_run_teacher_cache_payload_reads_or_calls": 0,
+  "old_source_or_raw_snapshot_rewritten": false,
+  "goal_strict_above960_achieved": false
+}

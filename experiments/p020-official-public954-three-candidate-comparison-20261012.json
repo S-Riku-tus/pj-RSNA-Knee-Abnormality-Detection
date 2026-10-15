@@ -1,0 +1,91 @@
+{
+  "schema_version": "p020_official_public954_current_comparison_snapshot_v1",
+  "observed_at_utc": "2026-10-12T10:36:20.085099+00:00",
+  "observed_at_jst": "2026-10-12T19:36:20.085099+09:00",
+  "Root_official_observation": {
+    "path": "artifacts/research/20261012-three-candidate-scoring-status-tools-v1/delegated-observation-v1/observation.json",
+    "sha256": "ebf897ef669d9631ae766b0cb4d0f91b8ecf298472ce56c5e5d487ee6a49932e"
+  },
+  "own_Public_best": "0.954",
+  "previous_own_Public_best": "0.951",
+  "best_delta": "0.003",
+  "strict_above960_achieved": false,
+  "work_continues": true,
+  "P020_S6only": {
+    "submission_ref": 57098752,
+    "own_Public": "0.954",
+    "Get_List_raw_typed_COMPLETE": true,
+    "Get_List_error_empty": true,
+    "author_report_and_own_reproduction_distinguished": true,
+    "kernel_binding": "Local genuine accepted Submit/Save/result lineage; Get did not independently reexpose full kernel identity."
+  },
+  "P022_S6plus_fixedNative20": {
+    "submission_ref": 57102110,
+    "own_Public": null,
+    "raw_status_absent": true,
+    "typed_default_PENDING_is_not_official_raw_status": true,
+    "native_addition_Public_effect_proven": false
+  },
+  "P021_latestV2_samebyte_mirror": {
+    "submission_ref": 57103408,
+    "own_Public": null,
+    "raw_status_absent": true,
+    "typed_default_PENDING_is_not_official_raw_status": true,
+    "old_HTTP_records_and_new_genuine_Submit_preserved": true
+  },
+  "fresh_allowance": {
+    "raw_and_typed_remaining": 2,
+    "raw_and_typed_numToday": 3,
+    "raw_and_typed_numTotal": 22,
+    "history_terminal_observed": true,
+    "daily_reset_independently_observed": false
+  },
+  "Root_readonly_RPC_counts": {
+    "GetSubmission": 3,
+    "ListSubmissions": 1,
+    "GetSubmissionLimits": 1
+  },
+  "automatic_retry_or_new_Submit": 0,
+  "f006_last_recorded_epoch8": {
+    "snapshot": {
+      "path": "artifacts/research/20261012-f006-live-progress-v1/epoch08-snapshot-v1.json",
+      "sha256": "23bbb6b1b7b403fdfa63bf15e193f317980462aef15d5fcb6ea9120dcde12486"
+    },
+    "completed_epochs": 8,
+    "fixed_total_epochs": 12,
+    "status": "running",
+    "weak_BCE": 0.2740430754469716,
+    "weak_fixed10_AUC": 0.8809001618406918,
+    "LR_multiplier": 0.775,
+    "same_epoch_BCE_delta": 0.0002847772237334345,
+    "same_epoch_fixed10_AUC_delta": 0.0003312096321490543,
+    "improvement_or_adoption_claimed": false
+  },
+  "selection_comparison_order": [
+    "Await P022 versus P020 native-addition effect and P021 official scores.",
+    "After genuine fixed12 completion, compare unchanged BCE control versus declared fixed10-AUC secondary rule using weak metrics.",
+    "Then choose the next candidate; new mixed model requires actual CPU/native64/visible evidence before Submission."
+  ],
+  "secondary_policy": {
+    "path": "experiments/f006-fixed10-AUC-selection-policy-20261012.json",
+    "sha256": "52dff1148d6610479723c0ddaedf1092a6e9e3513ac93b1867f230525235fef7",
+    "defined_after_observed_epoch7": true,
+    "same_epoch_best_SHA_reuse_no_duplicate_Submit": true
+  },
+  "isolated_mixed_loader_source_only": {
+    "path": "artifacts/research/20261012-f006-fold0-isolated-mixed-runtime-source-v1/preparation.json",
+    "sha256": "4fd7c7e2052229d8bad904ca163a2b86d2f73f3d2e742d28bd3e2b5ea28ec6ad",
+    "actual_CPU_native64_visible_or_accuracy_qualified": false
+  },
+  "epoch8_explanatory_figure": {
+    "path": "artifacts/research/20261012-f006-epoch8-progress-plot-v1/f005-f006-epoch8-three-panels.png",
+    "sha256": "a8c88e83bcadeea24bd7a0df0cac25966dcbd1f91eacf199809abb7f99d75916",
+    "future_BCE_AUC_predictions": false
+  },
+  "preserved_prior_tops": {
+    "path": "artifacts/research/20261012-p020-official-public954-documentation-v1/preserved-19p06-document-tops.json",
+    "sha256": "96a4b3bd31893a3bd8806a7226e49d323c032e08eeca3fecaa665e2de9fca2c2"
+  },
+  "documentation_agent_actual_run_model_checkpoint_teacher_MRI_GPU_Kaggle_API_reads_or_calls": 0,
+  "RNG_running_trainer_CLI_config_changed": false
+}

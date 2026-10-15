@@ -1,0 +1,166 @@
+{
+  "schema_version": "public_pages_EV_Source_held_F0061_E5_publicLB_metadata_aggregate_v1",
+  "actor": "/root/web_research; Root delegated metadata/docs only",
+  "at_utc": "2026-10-12T17:56:18.491848+00:00",
+  "own_qualified_Public": "0.954",
+  "strict_above960_achieved": false,
+  "evidence": {
+    "previous_0206_aggregate": {
+      "path": "experiments/official02p06-F007Source2-reviewed-F0061-E4-20261013.json",
+      "sha256": "2b7168ceb0ec44f6851b4dc6dcaf05ff5d2a12d7bc073e36987daef4a4b57f3c",
+      "bytes": 2743
+    },
+    "official_0206": {
+      "path": "artifacts/research/20261012-p026-focused-scoring-status-tools-v1/delegated-observation-v5/observation.json",
+      "sha256": "8630b8ee6764de030921f823e0ce036cb8fbadf5c456a4cc7eddf219d9178ead",
+      "bytes": 45986
+    },
+    "public_pages": {
+      "path": "artifacts/research/20261013-three-public-pages-metadata-readonly-v1/observation.json",
+      "sha256": "aad07e22cf0ac7387359c969709ca80f1a472d388611066991caae6127997f69",
+      "bytes": 20522
+    },
+    "EV_corrected_intent": {
+      "path": "artifacts/research/20261013-versia7-V21-single-source-static-audit-v2/intent.json",
+      "sha256": "7500c58d1a08d4294b720566f85b1539efae80f29abbd9e24bc0b74deb74227d",
+      "bytes": 1101
+    },
+    "EV_corrected_403": {
+      "path": "artifacts/research/20261013-versia7-V21-single-source-static-audit-v2/held.json",
+      "sha256": "e8c5a37e5eeccd7923e338d2c8817b9d710b7fb42ffe92cf7496d042b9234eae",
+      "bytes": 367
+    },
+    "EV_old_404": {
+      "path": "artifacts/research/20261013-versia7-V21-single-source-static-audit-v1/held.json",
+      "sha256": "c145ddaacf2477bbb9bf2a308995aa9b682e33d4f707164403c7ecc5cd9996f5",
+      "bytes": 339
+    },
+    "public_leaderboard_0251": {
+      "path": "artifacts/research/20261013-current-public-leaderboard-root-v1/observation.json",
+      "sha256": "40e20af1decae347c2447f57b7f699fe120528a42b0de8d362043d5cb230c9ba",
+      "bytes": 13904
+    },
+    "pending_specific_consent": {
+      "path": "experiments/three-reviewed-private-transfers-consent-pending-20261013.json",
+      "sha256": "032306b304d55a5634061240b07bd8a0941d034c15d971c3b89558ef7948cb2a",
+      "bytes": 3106
+    },
+    "P026_Native_compat_source_only": {
+      "path": "artifacts/research/20261013-p026-baseline-native20-compatibility-source-analysis-v1/analysis.json",
+      "sha256": "37d5030d2195edbba954b1fcbd6828615885824cc4fbf52abbbec0f6710d8f79",
+      "bytes": 16588
+    },
+    "prefetch_source_only": {
+      "path": "artifacts/research/20261013-native-pixel-next1-prefetch-source-v1/preparation.json",
+      "sha256": "66559fb84f6838f496574a15bd50b2ef3d39b38be0efca0bc4c0e2b34afffc52",
+      "bytes": 3271
+    }
+  },
+  "latest_own_submission_and_limits_observation_at_JST": "2026-10-13 02:06",
+  "P026_Get_List_raw_status_Public_error_fields_absent": true,
+  "SDK_default_PENDING_is_not_official_raw_status": true,
+  "limits_observed_0206_not_requeried_by_this_task": {
+    "numToday": 4,
+    "numAllowedNow": 1,
+    "numTotal": 23
+  },
+  "daily_reset_independently_observed": false,
+  "F0061_running_session": 41581,
+  "completed_epochs": 5,
+  "F0061_run_metadata": {
+    "source": {
+      "path": "artifacts/runs/f006-late-cosine-fold1-20261012-v1/run.json",
+      "sha256": "c82bcb77f837b9cb8169b8b83a0cd00ae44cc30a24b4e2efd304a50c82233285",
+      "bytes": 76179
+    },
+    "status": "running",
+    "fold": 1,
+    "seed": 20261002,
+    "history_rows": 5,
+    "latest_weak_metrics": {
+      "epoch": 5,
+      "weak_bce": 0.292824552501431,
+      "weak_macro_auc_12": 0.8505136489004462,
+      "optimizer_steps": 208,
+      "amp_skipped_steps": 0,
+      "elapsed_seconds": 10323.378865999985,
+      "learning_rate_multiplier": 1.0,
+      "learning_rates": {
+        "head": 0.0003,
+        "last2": 1e-05
+      }
+    },
+    "own_Gold_used_for_training_or_selection": false,
+    "Gold_evaluated": false,
+    "patient_independence_verified": false,
+    "checkpoint_or_predictions_or_pixel_payload_opened": false
+  },
+  "complete12_or_checkpoint_adoption_or_Public_gain_established": false,
+  "public3_metadata": [
+    {
+      "ref": "evgendvorkin/rsna-versia-7",
+      "current_display_version": 21,
+      "current_script_id": 357319238,
+      "current_linked_author_score": "0.954",
+      "best_author_score": "0.954",
+      "best_author_score_version": 21,
+      "current_run_status": "COMPLETE",
+      "score_is_not_own_reproduction": true,
+      "source_weights_qualified": false
+    },
+    {
+      "ref": "kiyoshiohno/rsna-knee-template",
+      "current_display_version": null,
+      "current_script_id": 357712345,
+      "current_linked_author_score": null,
+      "best_author_score": "0.951",
+      "best_author_score_version": 9,
+      "current_run_status": "CANCEL_ACKNOWLEDGED",
+      "score_is_not_own_reproduction": true,
+      "source_weights_qualified": false
+    },
+    {
+      "ref": "romantamrazov/rsna-knee-dinosaur-v5",
+      "current_display_version": 45,
+      "current_script_id": 357077179,
+      "current_linked_author_score": "0.950",
+      "best_author_score": "0.950",
+      "best_author_score_version": 45,
+      "current_run_status": "COMPLETE",
+      "score_is_not_own_reproduction": true,
+      "source_weights_qualified": false
+    }
+  ],
+  "EV_source_calls": {
+    "old_parameter_HTTP": 404,
+    "official_SDK_version_path_corrected_HTTP": 403,
+    "logical_calls_each": 1,
+    "automatic_retry_or_token_prefix_extra_trial": false,
+    "Source_body_obtained": false,
+    "static_comparison_with_P020_P021_performed": false,
+    "duplicate_withdrawn_private_credentials_invalid_or_all_public_weights_absent_inferred": false
+  },
+  "public_leaderboard_at_0251": {
+    "actor": "/root",
+    "at_utc": "2026-10-12T17:51:05.077448+00:00",
+    "rows_observed": 100,
+    "public_requested": true,
+    "max": "0.966",
+    "min": "0.956",
+    "strict_above960": 28,
+    "first_page_only_not_all_teams": true,
+    "additional_page_available": true,
+    "pagination_used": false,
+    "SDK_Get_read_wire": 1,
+    "public_Notebook_or_weights_or_own_achievement_established": false
+  },
+  "endpoint_error_scope": "Catalog ListKernels401 and version Source GetKernel403 are individual observations; public page6 and official public LB Get1 succeeded. No global SDK outage inferred.",
+  "three_specific_private_transfers_affirmative_response_observed": false,
+  "P024_P028_before_process_auto_review_rejections_preserved": true,
+  "private_upload_Save_Submit_or_resend_for_pending_three": 0,
+  "old_REG_consent_transferred_to_new_three": false,
+  "prefetch_and_P026_Native_compatibility_are_source_only_actual0": true,
+  "speed_capacity_or_Public_performance_gain_proven": false,
+  "this_documentation_task_model_MRI_teacher_cache_GPU_SDK_network_calls": 0,
+  "live_source_math_trainer_config_changed": false
+}

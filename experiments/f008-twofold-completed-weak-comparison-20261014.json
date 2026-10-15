@@ -1,0 +1,168 @@
+{
+  "schema_version": "f008_vs_f007_twofold_completed_weak_CSV_comparison_v1",
+  "date_JST": "2026-10-14",
+  "scope": "Completed BCE-selected F00824 versus BCE-selected F00712 with original REG and fixed FP32 mean50",
+  "change_factor": "residual training horizon12_to24_only",
+  "seed_training": 20261002,
+  "folds": [
+    {
+      "fold": 0,
+      "train_studies": 3386,
+      "valid_studies": 821,
+      "F007_selected_epoch": 12,
+      "F008_selected_epoch": 19,
+      "F007_weak_BCE": 0.2697704282449567,
+      "F008_weak_BCE": 0.2682728035281482,
+      "weak_BCE_difference": -0.0014976247168084766,
+      "fixed10_control_mixed_AUC": 0.8864983873946676,
+      "fixed10_new_mixed_AUC": 0.888013243928941,
+      "fixed10_macro_delta": 0.001514856534273342,
+      "fixed10_group_bootstrap": {
+        "requested_replicates": 1000,
+        "valid_replicates": 1000,
+        "undefined_entire_replicates": 0,
+        "seed": 20261012,
+        "fixed_target_count": 10,
+        "supplied_group_count": 812,
+        "percentile_interval_95": [
+          0.0001842426715126383,
+          0.0028860289030146783
+        ],
+        "mean_delta": 0.0015269561326712682,
+        "fraction_positive_delta": 0.99,
+        "quantile_method": "linear interpolation at (n-1)*q",
+        "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+        "post_checkpoint_selection_conditional_analysis": true,
+        "patient_independence_verified": false,
+        "population_generalization_or_Public_gain_established": false
+      },
+      "all12_macro_delta_auxiliary": 0.001308376116223456,
+      "all12_group_bootstrap_auxiliary": {
+        "requested_replicates": 1000,
+        "valid_replicates": 649,
+        "undefined_entire_replicates": 351,
+        "seed": 20261012,
+        "fixed_target_count": 12,
+        "supplied_group_count": 812,
+        "percentile_interval_95": [
+          -0.0010116152585656955,
+          0.0032388372458764876
+        ],
+        "mean_delta": 0.0013051049554532893,
+        "fraction_positive_delta": 0.8751926040061633,
+        "quantile_method": "linear interpolation at (n-1)*q",
+        "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+        "post_checkpoint_selection_conditional_analysis": true,
+        "patient_independence_verified": false,
+        "population_generalization_or_Public_gain_established": false
+      },
+      "undefined_observed_targets": [],
+      "all12_observed_AUC_defined": true,
+      "first12_original_prediction_SHA_metrics_train_and_weak_BCE_exact": true,
+      "config_semantic_sha256": "e27837ab653b6dc4155bc3489c5570795ccbf16a2e34bd3ba1dd107c44ff45db",
+      "run_training_source_sha256": "8bddd01f0c5ce4404a5da11b2c52c0eb74eb32f80832d18703d36a63fa49dd96",
+      "run_CLI_sha256": "50c4c172bea60e6150ce2e7a434cf26cec13b589b2136915521191fe082fa82c",
+      "comparison": {
+        "path": "artifacts\\research\\20261014-f008-vs-f007-weak-comparison-v1\\fold0-comparison.json",
+        "sha256": "04918e57019f27dc9a56a25010c82fe3c61238da17a5625842d2a160ff04df53",
+        "bytes": 28512
+      }
+    },
+    {
+      "fold": 1,
+      "train_studies": 3316,
+      "valid_studies": 891,
+      "F007_selected_epoch": 12,
+      "F008_selected_epoch": 24,
+      "F007_weak_BCE": 0.27517596638123926,
+      "F008_weak_BCE": 0.27435733422841646,
+      "weak_BCE_difference": -0.0008186321528227958,
+      "fixed10_control_mixed_AUC": 0.8877181655286821,
+      "fixed10_new_mixed_AUC": 0.8880470984018561,
+      "fixed10_macro_delta": 0.0003289328731742061,
+      "fixed10_group_bootstrap": {
+        "requested_replicates": 1000,
+        "valid_replicates": 1000,
+        "undefined_entire_replicates": 0,
+        "seed": 20261012,
+        "fixed_target_count": 10,
+        "supplied_group_count": 861,
+        "percentile_interval_95": [
+          -0.001798747053131248,
+          0.0030033303996730653
+        ],
+        "mean_delta": 0.0003080065335907578,
+        "fraction_positive_delta": 0.571,
+        "quantile_method": "linear interpolation at (n-1)*q",
+        "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+        "post_checkpoint_selection_conditional_analysis": true,
+        "patient_independence_verified": false,
+        "population_generalization_or_Public_gain_established": false
+      },
+      "all12_macro_delta_auxiliary": 0.0003123869917590647,
+      "all12_group_bootstrap_auxiliary": {
+        "requested_replicates": 1000,
+        "valid_replicates": 1000,
+        "undefined_entire_replicates": 0,
+        "seed": 20261012,
+        "fixed_target_count": 12,
+        "supplied_group_count": 861,
+        "percentile_interval_95": [
+          -0.002547154118882792,
+          0.003500061047082424
+        ],
+        "mean_delta": 0.0003263976037459451,
+        "fraction_positive_delta": 0.561,
+        "quantile_method": "linear interpolation at (n-1)*q",
+        "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+        "post_checkpoint_selection_conditional_analysis": true,
+        "patient_independence_verified": false,
+        "population_generalization_or_Public_gain_established": false
+      },
+      "undefined_observed_targets": [],
+      "all12_observed_AUC_defined": true,
+      "first12_original_prediction_SHA_metrics_train_and_weak_BCE_exact": true,
+      "config_semantic_sha256": "e27837ab653b6dc4155bc3489c5570795ccbf16a2e34bd3ba1dd107c44ff45db",
+      "run_training_source_sha256": "8bddd01f0c5ce4404a5da11b2c52c0eb74eb32f80832d18703d36a63fa49dd96",
+      "run_CLI_sha256": "50c4c172bea60e6150ce2e7a434cf26cec13b589b2136915521191fe082fa82c",
+      "comparison": {
+        "path": "artifacts\\research\\20261014-f008-vs-f007-weak-comparison-v1\\fold1-comparison.json",
+        "sha256": "f3f2080f6c955271052d31fcf96f7e7998a8c50197e314279ee24d754ac3a6b4",
+        "bytes": 28601
+      }
+    }
+  ],
+  "bootstrap_repeats": 1000,
+  "bootstrap_seed": 20261012,
+  "fixed10_excluded_targets": [
+    "MCL",
+    "Synovitis"
+  ],
+  "checkpoint_selection": "earliest minimum global observed weak BCE; fixed10 AUC remains diagnostic only",
+  "checkpoint_payload_rehash_or_model_restoration": false,
+  "execution_audit": {
+    "path": "artifacts\\research\\20261014-f008-vs-f007-weak-comparison-v1\\execution-audit.json",
+    "sha256": "68c87ee569ea244bc18dbf31c4cd715a2403a5f7e232aeece68207728c1006d4",
+    "bytes": 32819
+  },
+  "policy": {
+    "path": "experiments\\f008-original-BCE-CLS-residual24-prospective-policy-20261013.json",
+    "sha256": "d9ef4bd48cef79b49b83b778b0a4815a79cd8830a129f590e5965cd94da193d5",
+    "bytes": 2659
+  },
+  "post_checkpoint_selection_conditional": true,
+  "patient_independence_verified": false,
+  "Gold_training_selection_evaluation_or_read": false,
+  "Public_gain_established": false,
+  "own_best_Public_last_known": 0.954,
+  "new_Public_score": null,
+  "model_adopted": false,
+  "external_transmission_or_Submit": 0,
+  "interpretation": "Weak paired diagnostic evidence only. Reusing the same weak holdout for both checkpoint choices is outside bootstrap interval coverage; groups do not establish verified patient independence. No guarantee of0.960/Public gain.",
+  "next_step": "Root review the fixed comparison, independently hash retained checkpoint bytes before model adoption, then qualify any concrete inference package and obtain specific external-transfer authorization.",
+  "summary_artifact": {
+    "path": "artifacts\\research\\20261014-f008-vs-f007-weak-comparison-v1\\summary.json",
+    "sha256": "11321d0abe33ac5ee23e2e2891cd44a200ba4cf54021d96ab698183bce5c8bc1",
+    "bytes": 7498
+  }
+}

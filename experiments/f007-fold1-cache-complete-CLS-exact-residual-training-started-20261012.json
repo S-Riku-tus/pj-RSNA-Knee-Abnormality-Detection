@@ -1,0 +1,104 @@
+{
+  "schema_version": "f007_fold1_completed_cache_and_manual_residual_training_start_snapshot_v1",
+  "recorded_at_UTC": "2026-10-12T14:34:41.319494+00:00",
+  "documentation_actor": "execution_audit_metadata_only",
+  "Root_actual_cache_acceptance": {
+    "path": "artifacts/research/20261012-f007-fold1-cache-root-acceptance-v1/Root-actual-fold1-cache-binding.json",
+    "sha256": "f5373e41713444644a14efb83a286d7a0552517db2b2eec97982b09704697701"
+  },
+  "cache_actual": {
+    "actor": "Root",
+    "extraction_session": 71660,
+    "process_exit_code": 0,
+    "complete": true,
+    "cache_metadata_reference": {
+      "path": "artifacts/cache/f007-original-BCE-CLS-plus16local-fold1-20261012-v1/cache.json",
+      "sha256": "b410db5cc3c792546a5fc232f4a33808f0c71025b652cf0b1367ac1f1cd88763"
+    },
+    "CLS_head_reference": {
+      "path": "CLS-head.pt",
+      "sha256": "670da4dc6d1eff734e5a1fb79d342f65ef30ee27756c20ff7a9f0b0e2b934e95"
+    },
+    "origin_sha256": "16d3c778162ade8d509679262eaef9726a81e34a734b841dfdc736d4be92edee",
+    "CLI_sha256": "734e115eb182d6b22f199c77a1ece3c9a6253723d703e15791c937e154297b4c",
+    "NPZ_count": 4207,
+    "bytes": 7918878170,
+    "all_path_exists_sizes_count_and_head_raw_SHA_verified": true,
+    "feature7GB_payload_reopened_or_rehashed_by_Root_acceptance": false,
+    "frozen_head_tensor_separately_reconstructed_by_this_acceptance": false,
+    "all891x12_saved_CLS_probability_max_error": 0.0,
+    "native_oracle_first_valid_UIDs": 1,
+    "native_oracle_logits_exact": true,
+    "all891_full_native_forward_checked": false
+  },
+  "actual_residual_training_started": {
+    "actor": "Root",
+    "session": 59615,
+    "status": "RUNNING",
+    "output_run": "artifacts/runs/f007-original-BCE-CLS-preserving-local-residual-fold1-20261012-v1",
+    "base": "original f005 fold1 earliest minimum BCE selectedE9",
+    "seed": 20261002,
+    "original_encoder_and_CLS_head_frozen": true,
+    "trained_component": "local residual branch only",
+    "planned_epochs": 12,
+    "learning_rate": 0.0003,
+    "learning_rate_schedule": "constant",
+    "primary_checkpoint_selection": "earliest minimum observed weak BCE",
+    "own_Gold_training_selection": false,
+    "utility_known": false,
+    "interim_checkpoint_adopted": false,
+    "Public_gain_proven": false,
+    "native64_shared4model_Serving_or_external_hosting_qualified": false,
+    "original_CLI_config_modelProducer_dataPreflightProducer_not_rewritten": true
+  },
+  "planned_F006_fold1": {
+    "policy": {
+      "path": "experiments/f006-fold1-prospective-BCE-and-fixed10-AUC-policy-20261012.json",
+      "sha256": "8170b446c7932bcaa9d329eb1001585d4201f29c563d838e3900ee7c017e80f7"
+    },
+    "prospective_before_training": true,
+    "actual_training_started": false,
+    "after": [
+      "F007 fold1 residual12 completion",
+      "Root artificial F007 GPU probe"
+    ],
+    "fixed_epochs": 12,
+    "train_valid_studies": [
+      3316,
+      891
+    ],
+    "seed": 20261002,
+    "primary": "earliest minimum weak BCE; original run.selected/best untouched by secondary rule",
+    "secondary": "earliest maximum finite arithmetic mean of every fixed10 AUC across complete12; undefined target rejected",
+    "same_epoch_same_original_checkpoint_duplicate_candidate_or_Submit": false,
+    "duration_hours_estimate": 6,
+    "actual_fold1_duration_measured": false,
+    "Gold_or_Public_for_selection": false,
+    "external_upload_or_Save_approval_granted": false
+  },
+  "latest_official_unchanged": {
+    "at_JST": "2026-10-12 23:06",
+    "observer_actor": "Root-authorized local_analysis",
+    "Root_independent_read": true,
+    "P020": "0.954",
+    "P021": "0.954",
+    "P022": "hidden unhandled error; Public absent",
+    "P026": "raw status/Public absent; typed default is not observed official status",
+    "best": "0.954",
+    "today_accepted": 4,
+    "remaining": 1,
+    "goal_strict_above960": false
+  },
+  "external_actions": {
+    "P028": "concrete private Notebook Save auto-review rejected before CreateProcess; specific approval reply pending",
+    "P024": "separate concrete 104308640B private model upload auto-review rejected; specific approval reply pending",
+    "new_external_auth_Save_upload_Start_PUT_Create_calls": 0,
+    "alternative_destination_or_encoded_upload_retry_bypass": false,
+    "local_Root_origin_or_training_authority_does_not_imply_external_approval": true
+  },
+  "document_author_scope": {
+    "new_auth_API_GPU_MRI_model_run_checkpoint_feature_teacher_body_reads": 0,
+    "old_source_run_raw_records_or_approval_rejections_overwritten": false,
+    "live_trainer_CLI_config_edited": false
+  }
+}

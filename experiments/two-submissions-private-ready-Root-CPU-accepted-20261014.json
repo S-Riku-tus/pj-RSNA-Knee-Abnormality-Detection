@@ -1,0 +1,111 @@
+{
+  "schema_version": "Root_two_submissions_pending_private_resources_READY_CPU_acceptance_v1",
+  "actor": "root",
+  "at_utc": "2026-10-14T02:51:12.546065+00:00",
+  "at_jst": "2026-10-14T11:51:12.546065+09:00",
+  "evidence": {
+    "official": {
+      "path": "artifacts/research/20261014-two-candidate-official-scoring-tools-v1/root-observation-v1/observation.json",
+      "bytes": 57321,
+      "sha256": "e7db8173c4f8165cb078a01f7ddafd54386d7f453a1bc98f37f892a253244a70"
+    },
+    "known_prior": {
+      "path": "artifacts/research/20261012-four-candidate-scoring-status-tools-v1/delegated-observation-v2/observation.json",
+      "bytes": 57642,
+      "sha256": "1d2e9f07e721a914078c7e5347bff009f8c33ebc2fcf617d569881b92662ed0d"
+    },
+    "P024_ready": {
+      "path": "artifacts/research/20261014-private-Dataset-metadata-verification-v1/actual-p024-readonly-v1/Input-registry.json",
+      "bytes": 2065,
+      "sha256": "5db9227cd8502c99cc6a33a0d9c203ac7cc08c6c0cb648705a2bc77a8e049abe"
+    },
+    "F007_ready": {
+      "path": "artifacts/research/20261014-private-Dataset-metadata-verification-v1/actual-f007-readonly-v1/Input-registry.json",
+      "bytes": 2062,
+      "sha256": "7a985332cc852dc050f9328279ca4fc43fa6624a2977cfb6d42c3173f5ff4dcf"
+    },
+    "P024_CPU_Root": {
+      "path": "artifacts/research/20261014-p024-root-CPU-acceptance-v1/Root-CPU-component-acceptance.json",
+      "bytes": 5911,
+      "sha256": "fe345380b97676db58934f1bfddb630be9a6c2289d557b80fb82144b1b94d378"
+    },
+    "P024_source_peer_final": {
+      "path": "artifacts/research/20261014-p024-source3-independent-review-v1/source-review-final.json",
+      "bytes": 18636,
+      "sha256": "ebe49d82ed2480c8e2acdaaa5fa6e62d45143a9a5e8b33347b598496f8a41c9f"
+    },
+    "V22_visible": {
+      "path": "artifacts/research/20261014-versia22-private-reproduction-actualDocker-tools-v2/root-observation-v1/receipt.json",
+      "bytes": 3082,
+      "sha256": "de41cb775a399cc799dc81fa86ff08b676d67b859bb4c55d60347ec05fcbfaee"
+    },
+    "V22_Submit": {
+      "path": "artifacts/research/20261014-versia22-private-reproduction-actualDocker-tools-v2/submit-attempt-v1/receipt.json",
+      "bytes": 1076,
+      "sha256": "d23d859447b0134bb69f91cb2c6546e5037309f550b6f9fb688e3d50403a64db"
+    },
+    "V22_Docker_difference": {
+      "path": "artifacts/research/20261014-v22-saved-metadata-diagnostic-root-v1/observation.json",
+      "bytes": 1922,
+      "sha256": "742189e998b54657d197f77a29b0bec3a26130924497b32efbeeefd93c52eb83"
+    },
+    "public_research_corrected": {
+      "path": "experiments/public-research-096-20261014-v2.json",
+      "bytes": 19256,
+      "sha256": "fd9a054f592c4ecadbbbef0c538662befa2c1f5a4f3e0341233d265a32f6b9ed"
+    },
+    "prior_resumed_snapshot": {
+      "path": "experiments/goal-resume-comparisons-P028-submitted-20261014.json",
+      "bytes": 4281,
+      "sha256": "0606431a34a3c127df356bd2893e3c7917b6ee426ee0804a775ff251aef3e60a"
+    }
+  },
+  "own_confirmed_Public_best": "0.954",
+  "goal_operator": ">=",
+  "goal_value": 0.96,
+  "goal_achieved": false,
+  "formal_submissions": {
+    "P028": 57163437,
+    "V22R": 57164195
+  },
+  "own_Public_by_target": {
+    "P028": null,
+    "V22R": null
+  },
+  "raw_status_or_Public_not_returned_by_either_Get_List": true,
+  "typed_default_PENDING_is_not_official_status": true,
+  "official_today": 2,
+  "official_remaining_allowance": 3,
+  "official_total": 25,
+  "private_Datasets": {
+    "P024": {
+      "id": 12571388,
+      "private": true,
+      "version": 1,
+      "READY": true
+    },
+    "F007": {
+      "id": 12571495,
+      "private": true,
+      "version": 1,
+      "READY": true
+    }
+  },
+  "both_private_resource_name_size_inventories_verified": true,
+  "remote_content_SHA_or_internal_version_id_claimed": false,
+  "P024_new_four_CPU_independently_accepted_by_Root": true,
+  "P024_new_native64_or_Serving_qualified": false,
+  "F007_new_Input9_native64_qualified": false,
+  "V22_original_code6_preserved_actual_Docker_differs_from_author_request": true,
+  "local_MRI_decode_or_local_training_started_this_resumed_turn": false,
+  "Kaggle_visible_inference_MRI_started_and_completed_this_turn": true,
+  "prior_aggregate_MRI_scope_wording_correction": "Prior actual_MRI_or_training_started_by_this_resumed_turn=false was a local-only scope statement; Kaggle inference was actually launched and is separately recorded.",
+  "past_Create_guard_held_and_old_document_history_preserved": true,
+  "next_steps": [
+    "Qualify new P024/F007 native64 with mount-content SHA enforced before MRI",
+    "Read two submitted scores after useful work; do not repeat Submit",
+    "Only adopt measured Public improvement; continue toward >=0.960"
+  ],
+  "user_future_private_scope_authorized": true,
+  "automatic_upload_or_Submit_code_added": false
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": "official22p06_P026_accepted_P024_external_approval_review_held_snapshot_v1",
+  "official_observation": {
+    "evidence": {
+      "path": "artifacts/research/20261012-three-candidate-scoring-status-tools-v1/delegated-observation-v6/observation.json",
+      "sha256": "425caa16ab613a8764bceb68c5508611d6c6f8ff3b74d054a12cb63d0b08003b"
+    },
+    "at_utc": "2026-10-12T13:06:52.310369+00:00",
+    "actual_actor": "execution_audit explicitly authorized by Root",
+    "counts": {
+      "GetSubmission": 3,
+      "ListSubmissions": 1,
+      "GetSubmissionLimits": 1,
+      "Save_Submit_upload": 0
+    },
+    "P020": {
+      "submission_ref": 57098752,
+      "own_Public": "0.954",
+      "raw_typed_Get_List_COMPLETE": true,
+      "error_empty": true
+    },
+    "P022": {
+      "submission_ref": 57102110,
+      "own_Public": null,
+      "raw_status_returned": false,
+      "SDK_default_PENDING_is_not_official_raw_state": true,
+      "error_empty": true
+    },
+    "P021": {
+      "submission_ref": 57103408,
+      "own_Public": null,
+      "raw_status_returned": false,
+      "SDK_default_PENDING_is_not_official_raw_state": true,
+      "error_empty": true
+    },
+    "terminal_history_total": 23,
+    "raw_typed_NumToday": 4,
+    "raw_typed_NumAllowedNow": 1,
+    "highest_known_official_Public": "0.954",
+    "P026_GetSubmission_in_this_original3target_observer": 0,
+    "reset_time_independently_observed": false,
+    "delegated_manual_observations_completed": 6,
+    "delegated_total_RPCs": 30,
+    "new4target_observer_preparation_actor": "local_analysis"
+  },
+  "P026": {
+    "Root_actual_single_Submit_evidence": {
+      "path": "artifacts/research/20261012-p026-fixed20-reader-manual-tools-v1/actual-single-Submit-v1/receipt.json",
+      "sha256": "107d0524c82025036689ea2e95d65573b55390a25bf9cbfdd07aff2d0cb179fc"
+    },
+    "submitted_at_utc": "2026-10-12T13:01:09.508277+00:00",
+    "submission_ref": 57107853,
+    "kernel_id": 138327844,
+    "saved_version": 1,
+    "Root_actual_acceptance": {
+      "path": "artifacts\\research\\20261012-p026-root-actual-acceptance-v1\\Root-actual-acceptance.json",
+      "sha256": "4ecf201e8cfb60b2685536cdabe49ebfc6c2ac72bfc585cc6f2a98e66d6380aa"
+    },
+    "actual_threefold_prediction_FP32_mean_verified": true,
+    "whole12_and_fixed20_final_CSV_verified": true,
+    "actual_Submit_calls": 1,
+    "automatic_retry": false,
+    "new_own_Public_claimed": null
+  },
+  "P024_upload": {
+    "concrete_Root_review": {
+      "path": "artifacts/research/20261012-p024-AUC12-private-upload-root-v1/Root-concrete-upload-review.json",
+      "sha256": "1ae569df1e89f95ce6ee51afed65024ae6e4c6b393c210ac00ab2b2872ce8b9b"
+    },
+    "preserved_Root_intent_context": {
+      "path": "artifacts/research/20261012-p024-AUC12-private-upload-root-v1/Root-reviewed-upload-context-v1.json",
+      "sha256": "bffdbfb0e0573c0b2a3cad8a787a54106d050462a732858ffc94ffe0ae6b2333"
+    },
+    "destination": "rsraki/n392-aucf0-816d6df4187b4878a3ccd7234ffa14dd",
+    "private": true,
+    "intended_version": 1,
+    "files": 2,
+    "bytes": 104308640,
+    "audited_archive_members": 201,
+    "automatic_approval_review": "rejected before CLI process start",
+    "stated_rejection_reason": "Specific explicit user approval for this new learned-model payload and destination is missing; the API-submission goal alone was not accepted as authorization",
+    "Root_intent_or_local_inventory_review_is_not_external_permission_grant": true,
+    "actual_StartBlobUpload_detached_PUT_CreateDataset_calls": 0,
+    "actual_remote_bytes_or_Dataset_creation": 0,
+    "attempt_directory_created": false,
+    "Root_specific_user_approval_request_pending_at_report": true,
+    "prior_REG2_approval_transfer_or_indirect_alternative_upload_allowed": false,
+    "source_manual_helper_ready": {
+      "path": "artifacts/research/20261012-p024-AUC12-private-upload-tools-v1/preparation.json",
+      "sha256": "25f6df727c62debadc9f43531543604e53935207f66b7c9afdb0cb26de0dae79"
+    },
+    "new_private_Input_native64_Serving_Submit_accuracy_qualified": false,
+    "past_Root_plan_context_or_rejection_records_overwritten": false
+  },
+  "F007": {
+    "Root_session": 90205,
+    "fold": 0,
+    "original_BCE_epoch": 8,
+    "last_Root_report_at_JST": "21:45",
+    "Root_reported_feature_files_written": 511,
+    "cache_complete_or_qualified": false,
+    "residual_training_started": false,
+    "last_actual_progress_not_requeried_by_documentation_actor": true
+  },
+  "goal": {
+    "strict_above960_achieved": false,
+    "work_continues": true,
+    "overall_blocked_due_only_to_this_specific_upload_review": false,
+    "unaffected_work": [
+      "Existing4 accepted submissions official scoring",
+      "Root actual F007 local cache extraction",
+      "Source-only preparation and metadata documentation"
+    ]
+  },
+  "documentation_scope": {
+    "source_JSON_and_documents_only": true,
+    "actual_external_or_GPU_or_model_cache_teacher_MRI_payload_operations": 0,
+    "earlier_raw_snapshots_and_ledger_prefix_preserved": true
+  }
+}

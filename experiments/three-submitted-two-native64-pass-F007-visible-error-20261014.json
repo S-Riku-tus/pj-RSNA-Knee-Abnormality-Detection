@@ -1,0 +1,132 @@
+{
+  "schema_version": "Root_three_formal_submitted_two_native64_accepted_F007_Serving_ERROR_v1",
+  "actor": "/root",
+  "at_UTC": "2026-10-14T04:18:24.378066+00:00",
+  "at_JST": "2026-10-14T13:18:24.378066+09:00",
+  "evidence": {
+    "official": {
+      "path": "artifacts/research/20261014-three-candidate-official-scoring-tools-v1/root-observation-v1/observation.json",
+      "sha256": "2c9171d085e081c8e5ad1b00b90681fe19cb145c20b51be2e3c0e13116fdb960",
+      "bytes": 64540
+    },
+    "P024_native64_Root": {
+      "path": "artifacts/research/20261014-p024-native64-results-tools-v2/Root-native64-acceptance-v1/Root-native64-review.json",
+      "sha256": "a4ed7c7c5dc1420dd3299f098e404be33f6aac5287f9fdc7ac663135454d1e48",
+      "bytes": 57223
+    },
+    "P024_visible_Root": {
+      "path": "artifacts/research/20261014-p024-Source4-visible-root-acceptance-v1/Root-actual-acceptance.json",
+      "sha256": "306fd9282d58219cf12405d922e2748a82c4680bbf78c58042e92c4fdb7d6685",
+      "bytes": 2371
+    },
+    "F007_native64_Root": {
+      "path": "artifacts/research/20261014-f007-native64-acceptance-serving-root-v2/Root-issued-serving-v2/Root-native64-acceptance.json",
+      "sha256": "7b455de233e58ec29a23346ea0195dd373e1dcfe3d2b87569243074d0040ce7d",
+      "bytes": 6613
+    },
+    "F007_Serving_Save": {
+      "path": "artifacts/research/20261014-f007-native64-acceptance-serving-root-v2/Root-issued-serving-v2/actual-serving-Save-attempt-v1/receipt.json",
+      "sha256": "15bdff92eeff637b3c58c04b6a887718d85ecf003843da632d9ee1b76c40383b",
+      "bytes": 4354
+    },
+    "F007_Serving_status": {
+      "path": "artifacts/research/20261014-f007-Source4-Serving-manual-tools-v1/actual-observation-v1/status.json",
+      "sha256": "4a725805aec593ca1b28ecbfff7074b7c0954b10d4b55ea306b701ed305a2914",
+      "bytes": 110
+    },
+    "F007_Serving_source": {
+      "path": "artifacts/research/20261014-f007-Source4-Serving-manual-tools-v1/actual-observation-v1/source-binding.json",
+      "sha256": "875c871f2a3a7c890efd13a8fd7b545492fa9f70c5f17b0f0f0eab791d0d7d47",
+      "bytes": 3735
+    },
+    "direct_weak_comparison": {
+      "path": "artifacts/research/20261014-f006-vs-f007-direct-weak-complementarity-v1/summary.json",
+      "sha256": "9540ea59e28c979cea24141d0be2625700eab401e97c3e3ab26ba415294bfc64",
+      "bytes": 23672
+    },
+    "F006_fold1_CPU": {
+      "path": "artifacts/qa/20261014-f006-AUC12-fold1-CPU-reconstruction-v1/reconstruction.json",
+      "sha256": "4a015fece67409c2be02145cd52af99c7e9e1ada7dce6ed133c6a553ad43e915",
+      "bytes": 8456
+    }
+  },
+  "own_confirmed_Public_best": "0.954",
+  "goal_target": 0.96,
+  "goal_operator": ">=",
+  "goal_achieved": false,
+  "goal_status": "active",
+  "official_read_at_JST": "2026-10-14T13:11:41.493633+09:00",
+  "formal_submissions": {
+    "P028": 57163437,
+    "V22R": 57164195,
+    "P024": 57166365
+  },
+  "own_Public_by_target": {
+    "P028": null,
+    "V22R": null,
+    "P024": null
+  },
+  "formal_raw_status_Public_not_yet_returned": true,
+  "typed_default_PENDING_is_not_official_status": true,
+  "official_today": 3,
+  "official_remaining_allowance": 2,
+  "official_total": 26,
+  "P024_new_native64": {
+    "kernel_id": 138601076,
+    "decoded_studies": 64,
+    "full_forwards": 256,
+    "elapsed_seconds": 160.1553441220001,
+    "Root_accepted": true,
+    "new_model201_members_SHA_verified": true,
+    "CPU_GPU_alias_count": 0,
+    "fallback_count": 0
+  },
+  "F007_new_native64": {
+    "kernel_id": 138600811,
+    "actual_ref": "rsraki/f007-original12-native64",
+    "requested_ref_was_different_and_readonly_resolved": true,
+    "decoded_studies": 64,
+    "full_forwards": 256,
+    "elapsed_seconds": 166.21918193,
+    "Root_accepted": true,
+    "head_outer2_member3_SHA_verified": true,
+    "CPU_GPU_alias_count": 0,
+    "fallback_count": 0,
+    "residual_load2_current28_verified_by_completed_source_not_direct_receipt_field": true
+  },
+  "P024_visible": {
+    "kernel_id": 138603435,
+    "version": 1,
+    "Root_accepted_outputs": 20,
+    "rows": 3,
+    "success": 3,
+    "fallback": 0,
+    "submission_CSV_SHA256": "7115f8655d7f69856a44f7f7a88305aca6fe502cbe2336fa6f7e99608f11a7a8",
+    "same_stub_CSV_SHA_as_P028_is_not_hidden_prediction_equivalence": true,
+    "formal_submission": 57166365
+  },
+  "F007_visible": {
+    "kernel_id": 138605901,
+    "version": 1,
+    "ref": "rsraki/f007s6-b60d34b2a1874493d6c564f9b2fccba0",
+    "status": "ERROR",
+    "source_Input9_private_platform_bound": true,
+    "cause_not_yet_observed": true,
+    "Submit_calls": 0,
+    "Serving_or_Public_qualified": false
+  },
+  "direct_weak_decision": "Prefer F006 fixed10 AUC E12; fixed50 CLS blend with F007 lowers observed AUC in both folds; do not search ratios or infer Public gain",
+  "F006_fold1_E12_CPU_single_model_completed": true,
+  "F006_bothfold_newfour_CPU_transport_remote_qualification_pending": true,
+  "local_MRI_decode_or_local_training_started_this_resumed_turn": false,
+  "actual_local_CPU_model_reconstruction_delegated": true,
+  "Kaggle_real_MRI_inference_completed": true,
+  "own_Gold_training_or_checkpoint_selection": false,
+  "old_checkpoints_sources_errors_partial_issuance_and_claims_preserved": true,
+  "next": [
+    "Read and fix exact F007 Serving error log",
+    "Validate both F006 E12 models and prepare private transport",
+    "Read three official scores without resubmitting",
+    "Select subsequent baseline and candidate using measured results"
+  ]
+}

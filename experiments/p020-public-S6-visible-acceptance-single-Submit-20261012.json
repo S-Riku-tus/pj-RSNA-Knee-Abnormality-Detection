@@ -1,0 +1,93 @@
+{
+  "schema_version": "p020_public_S6_visible_acceptance_single_Submit_progress_v1",
+  "event_at_utc": "2026-10-12T06:53:40.760109+00:00",
+  "event_at_jst": "2026-10-12T15:53:40.760109+09:00",
+  "status": "OFFICIAL_SUBMIT_ACCEPTED_SCORE_PENDING",
+  "ref": "rsraki/p020s6-c59bdab3d9064e2788f7976b0935a8e9",
+  "kernel_id": 138279894,
+  "saved_version": 1,
+  "submission_ref": 57098752,
+  "API_source_sha256": "4a70f1188d0f815a7d2128f0c7817140313f821e141837309ab24e0f32732503",
+  "actual_Save_receipt_sha256": "f42e088ccd32cf65c4996278ad42ae6f6eb4646e57562d68a5d4274e63485552",
+  "Root_visible_acceptance": {
+    "path": "artifacts/research/20261012-p020-results-and-submit-tools-v3/Root-actual-acceptance.json",
+    "sha256": "45730b060d1b7347dac61843cb520ff2a1840395508d8b01088a3e96676dcaec"
+  },
+  "actual_Submit_receipt": {
+    "path": "artifacts/research/20261012-p020-results-and-submit-tools-v3/actual-single-Submit-v1/receipt.json",
+    "sha256": "2e717daf9ddefaa454a36d8055fbd5ac3356986f0bdeefdbc23349341b6bd8a1"
+  },
+  "Input_version_refs": [
+    "heliosli/rsna-knee-compact-v1/13",
+    "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+    "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1"
+  ],
+  "original_actual_read_producer_sha256": "ae30871a2168368cd19abb3e25e62227e58b094c900da16de70a8f6e31a6f2a9",
+  "original_actual_read_held_sha256": "b7b8df29e9d0e007587556f0dfa6a52f9169bdcebb919f42bd16776b9e78efad",
+  "local_verification_source_sha256": "69b54790c6fa514641519a926900b3b20a15d162d7c30629daccfc2a3386207b",
+  "submission_sha256": "2a174e07f516bfcbe062eb58436326dbad63b00a127d0042e07e80fad0beec68",
+  "visible_engineering": {
+    "raw_and_typed_Source_and_COMPLETE_bound": true,
+    "positive_result_body_GETs": 8,
+    "visible_all_test_studies": 3,
+    "targets": 12,
+    "controller_and_two_workers_all_scored": true,
+    "actual_four_S6_models_per_T4_worker": 4,
+    "actual_twoT4_FP16": true,
+    "raptor_failed": 0,
+    "ours_failed": 0,
+    "worker_timeout_or_fallback": 0,
+    "fixed_weights": {
+      "raptor": 0.7,
+      "ours": 0.3
+    },
+    "all36_final_values_independent_rank_FP32_exact": true,
+    "maximum_CSV_decimal_to_expected_FP32_difference": 2.384185793236071e-08,
+    "CSV_decimal_recast_to_FP32_exact": true,
+    "visible_notebook_receipt_seconds": 164.8,
+    "official_hidden_runtime_verified": false
+  },
+  "type_fixes": {
+    "output_terminal_wire": "raw nextPageToken omitted; typed optional field None; only None/empty/omitted terminal normalized, nonempty tokens remain exact",
+    "worker_exit_codes": "original probe_dual emits dict; exact JSON keys 0 and 1 with strict integer zero validated",
+    "original_v1_v2_failed_validation_observations_preserved": true,
+    "after_eight_bodies_no_new_API_or_download_for_fix": true,
+    "Root_local_acceptance_auth_API_GPU_MRI_model_calls": 0
+  },
+  "single_Submit": {
+    "actual_Submit_calls": 1,
+    "automatic_retry": false,
+    "file_name": "submission.csv",
+    "fresh_daily_allowance_before_Submit": 5,
+    "fresh_daily_allowance_after_Submit": 4,
+    "fresh_raw_Decimal_GPU_seconds": "97106.077187300",
+    "fresh_official_own_Public_best_before_Submit": "0.951",
+    "source_COMPLETE_and_all_local_evidence_rechecked_before_Submit": true
+  },
+  "author_Public": "0.954",
+  "official_scoring_observation": {
+    "path": "artifacts/research/20261012-p020-scoring-status-tools-v1/observation-v1/observation.json",
+    "at_utc": "2026-10-12T06:59:17.139294+00:00",
+    "GetSubmission_and_ListSubmissions_identity_match": true,
+    "raw_explicit_status": null,
+    "typed_Pending_is_default_not_official_status": true,
+    "raw_public_score": null,
+    "error_description_present": false,
+    "fresh_numAllowedNow_raw_and_typed": 4,
+    "no_minute_poll_or_retry": true,
+    "sha256": "e08d2e402f67298f476b70f8f8f0f47f541c4da4334280ad6c02155e93259bb8"
+  },
+  "own_Public": null,
+  "own_Public_best": "0.951",
+  "own_Gold_fit_or_selection": 0,
+  "Report_used_as_inference_feature": false,
+  "public_pretrained_Gold_prior_geometry_and_selection_history_preserved": true,
+  "actor": {
+    "Source_and_local_validation": "web_research",
+    "actual_Save_Read_Submit_and_independent_acceptance": "Root"
+  },
+  "source_author_API_GPU_MRI_model_calls": 0,
+  "goal_status": "active",
+  "strict_above960_achieved": false,
+  "next": "Observe exact submission57098752 and fresh allowance without retry or mutation; update own Public only from official scoring. Preserve P018 native256 and f006 training history."
+}

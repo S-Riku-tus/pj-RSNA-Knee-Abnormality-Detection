@@ -1,0 +1,53 @@
+{
+  "schema_version": "f007_original_BCE_CLS_fold1_replication_policy_v1",
+  "issued_by": "root",
+  "decision_before_fold1_feature_extraction_or_residual_training": true,
+  "fold": 1,
+  "first_fold": 1,
+  "origin_kind": "completed_original_BCE_best",
+  "selection_policy": "earliest_minimum_weak_BCE",
+  "selected_epoch_from_original_completed_run": 9,
+  "original_fold0_policy": {
+    "path": "experiments/f007-original-BCE-CLS-base-policy-20261012.json",
+    "sha256": "59358d3ac1261c886d8b2edb3a40d9487950f26d45a0ba06727cd143d7a800e9"
+  },
+  "completed_fold0_run": {
+    "path": "artifacts/runs/f007-original-BCE-CLS-preserving-local-residual-fold0-20261012-v1/run.json",
+    "sha256": "e593e6de3a7396cd213eabb8f85a0a4e2c1ba367a2c6f548267981989a8624c8"
+  },
+  "completed_fold0_root_acceptance": {
+    "path": "artifacts/research/20261012-f007-completed-root-acceptance-v1/Root-completed-run-and-cache-acceptance.json",
+    "sha256": "0e25468104d239e87ab546fc18632ae58701dd8ee0447a8817c1a1fd63b2ac46"
+  },
+  "completed_fold0_fixed50_weak_comparison": {
+    "path": "artifacts/research/20261012-f007-completed-mixed-comparison-root-v1/comparison.json",
+    "sha256": "09234b23b846a2ddbf779151fcd609521044314441c98bc4d0ab3f6061af5687",
+    "fixed10_macro_delta": 0.0015853514060517628,
+    "conditional_supplied_group_bootstrap_percentile_interval_95": [0.0005427527211300504, 0.002635359602369911],
+    "replicates": 1000,
+    "supplied_group_count": 812,
+    "patient_independence_verified": false,
+    "Public_gain_established": false
+  },
+  "adoption_reason": "The completed original-BCE fold0 residual improves the prespecified fixed50 weak comparison. Replicate exactly on fold1 before any twofold adoption; F006 AUC12 remains the larger fold0 weak candidate.",
+  "seed": 20261002,
+  "architecture": "Frozen original fold-specific CLS encoder and CLS head plus 16-local-descriptor residual",
+  "residual_dim": 32,
+  "trainable_residual_parameters": 15180,
+  "encoder_and_original_CLS_head_frozen": true,
+  "prototype_sha256": "b66bb012be1ed55445d0d4f7778aab9d8abc0c0daeb3ef1c4cd968e94fcc94c6",
+  "CLI_sha256": "734e115eb182d6b22f199c77a1ece3c9a6253723d703e15791c937e154297b4c",
+  "role_binder_sha256": "a91254486e1a1d1b7dd3ae5f95e199f910de219dd6dc1c4ded0fe38a75ca922b",
+  "optimizer": {"name": "AdamW", "learning_rate": 0.0003, "weight_decay": 0.01, "effective_batch_studies": 16, "gradient_clip": 1.0},
+  "epochs": 12,
+  "learning_rate_schedule": "constant",
+  "residual_checkpoint_selection": "earliest minimum global observed weak BCE after complete12",
+  "fixed10_AUC_role": "auxiliary diagnostic only",
+  "Gold_training_selection_evaluation": false,
+  "missing_labels": "masked, never replaced by zero",
+  "Report_features_at_inference": false,
+  "coefficient_search": false,
+  "supplied_group_fold_identity_preserved": true,
+  "patient_independence_verified": false,
+  "Kaggle_upload_Save_Submit_authority_issued_by_this_policy": false
+}

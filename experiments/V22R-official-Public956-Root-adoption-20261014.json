@@ -1,0 +1,224 @@
+{
+  "schema_version": "Root_V22R_own_official_Public956_adoption_v1",
+  "prepared_by": "/root/state_audit",
+  "evidence": {
+    "official": {
+      "path": "artifacts/research/20261014-three-candidate-official-scoring-tools-v1/root-observation-v6/observation.json",
+      "bytes": 64774,
+      "sha256": "f1d5739cede3d56272714a912a3d1bf780002ce33665c6869792ecc5a7d5dde5"
+    },
+    "prior_Root_applied_checkpoint": {
+      "path": "artifacts/research/20261014-F007-visible-F006-native64-pass-checkpoint-root-v1/Root-update-receipt.json",
+      "bytes": 2315,
+      "sha256": "ca55ba16aba70cf29a3ef3a0b4b8c289d4d5965eff93d18643e60cb00ff2bb1b"
+    },
+    "prior_Root_tracked_checkpoint": {
+      "path": "experiments/F007-visible-pass-F006-bothfold-native64-pass-20261014.json",
+      "bytes": 11377,
+      "sha256": "02f6e1404edc4cbf9ee2a70d9b8e5e2dc1ee3896638d22d00386364278f746ed"
+    },
+    "V22_source_review": {
+      "path": "artifacts/research/20261014-versia22-private-reproduction-source-v1/source-v3/source-review.json",
+      "bytes": 4948,
+      "sha256": "5ed8e8286cbe0d2feb8d88b43bb8027591afc174513de0af968a5da81ccb0116"
+    },
+    "MRI_CORE_feasibility": {
+      "path": "artifacts/research/20261014-MRI-CORE-local392-feasibility-v1/feasibility.json",
+      "bytes": 21768,
+      "sha256": "59b1b7af48720f639f755ec4b8fcd014a0a16124176aebf77a7755df28c03fe7"
+    },
+    "F006_native_Root": {
+      "path": "artifacts/research/20261014-f006-bothfold-native64-replay-tools-v1/Root-native64-acceptance-v1/Root-native64-review.json",
+      "bytes": 62347,
+      "sha256": "c5b7d1dd05eaaf9cb05d03c9f7a0e9d2311bb6a73360b7e2e564299c4501ca0d"
+    },
+    "F007_visible_Root": {
+      "path": "artifacts/research/20261014-f007-Serving-mask-visible-root-acceptance-v3/Root-actual-acceptance.json",
+      "bytes": 2410,
+      "sha256": "51c2513f0a928176aeb9245d64b9b20d50ae9aa02529ac632bfb96646e6ab7ef"
+    },
+    "V22_bounded_design": {
+      "path": "artifacts/research/20261014-v22-parent-F006-bothfold-bounded-design-v1/design.json",
+      "bytes": 12253,
+      "sha256": "17eec0525541dbcf5fa5ad8a72f67a9bb5a7afaece2f3ceb30662e483a2bf7f7"
+    },
+    "V22_Save": {
+      "path": "artifacts/research/20261014-versia22-private-reproduction-source-v1/save-attempt-v1/receipt.json",
+      "bytes": 420,
+      "sha256": "d8171825cff7377e0e78f30d9d613c3b18c43d0d960a403e63b7341f603becb8"
+    },
+    "V22_preparation": {
+      "path": "artifacts/research/20261014-versia22-private-reproduction-source-v1/source-v3/preparation.json",
+      "bytes": 617,
+      "sha256": "4001943a2d6f9f1cc0087ea03bc9385987132731404a33923e9f53d4c260c591"
+    },
+    "V22_source": {
+      "path": "artifacts/research/20261014-versia22-private-reproduction-source-v1/source-v3/kernel-source-exact.json",
+      "bytes": 537598,
+      "sha256": "b675e307ef722a14e0728766732a36844247435227fcaa49eeddb3e76eb3cc00"
+    },
+    "V22_Get": {
+      "path": "artifacts/research/20261014-versia22-private-reproduction-actualDocker-tools-v2/root-observation-v1/receipt.json",
+      "bytes": 3082,
+      "sha256": "de41cb775a399cc799dc81fa86ff08b676d67b859bb4c55d60347ec05fcbfaee"
+    },
+    "V22_source_binding": {
+      "path": "artifacts/research/20261014-versia22-private-reproduction-actualDocker-tools-v2/root-observation-v1/source-binding.json",
+      "bytes": 2537,
+      "sha256": "6160f2aa8141728764878ea37c1fd755871672098ab9e5237a9010eb7d156b4d"
+    },
+    "V22_status": {
+      "path": "artifacts/research/20261014-versia22-private-reproduction-actualDocker-tools-v2/root-observation-v1/status.json",
+      "bytes": 94,
+      "sha256": "8ddee935f69be3169c85c8f144e56641d9423769e1df673ef0549dd00974f401"
+    },
+    "V22_validation": {
+      "path": "artifacts/research/20261014-versia22-private-reproduction-actualDocker-tools-v2/root-observation-v1/validation.json",
+      "bytes": 859,
+      "sha256": "750d2f63d9e60a0354c3a08760a72cc54d609cef0cb9b33d3c8372345e5b0cdc"
+    },
+    "V22_Docker_diagnostic": {
+      "path": "artifacts/research/20261014-v22-saved-metadata-diagnostic-root-v1/observation.json",
+      "bytes": 1922,
+      "sha256": "742189e998b54657d197f77a29b0bec3a26130924497b32efbeeefd93c52eb83"
+    },
+    "V22_Submit": {
+      "path": "artifacts/research/20261014-versia22-private-reproduction-actualDocker-tools-v2/submit-attempt-v1/receipt.json",
+      "bytes": 1076,
+      "sha256": "d23d859447b0134bb69f91cb2c6546e5037309f550b6f9fb688e3d50403a64db"
+    }
+  },
+  "official_observation_at_UTC": "2026-10-14T05:33:16.258546+00:00",
+  "official_observation_at_JST": "2026-10-14T14:33:16.258546+09:00",
+  "adopted_current_best": {
+    "candidate": "V22R",
+    "submission_ref": 57164195,
+    "ref": "rsraki/v22r-5337d1fb5d51497da6fa98b9b486a313",
+    "kernel_id": 138595030,
+    "saved_version": 1,
+    "owner": "rsraki",
+    "own_official_Public": "0.956",
+    "raw_typed_Get_and_List_COMPLETE_no_error": true
+  },
+  "own_prior_official_Public_best": "0.954",
+  "own_confirmed_Public_best": "0.956",
+  "reported_Public_delta": "0.002",
+  "difference_scope": "Official reported rounded scores; no causal single-factor gain attribution",
+  "goal_target": 0.96,
+  "goal_operator": ">=",
+  "goal_status": "active",
+  "goal_achieved": false,
+  "author_and_own_scores": {
+    "author_reported_Public": 0.956,
+    "own_official_Public": "0.956",
+    "author": "evgendvorkin",
+    "author_version": 22,
+    "author_scriptVersionId": 358019432,
+    "source_URL": "https://www.kaggle.com/code/evgendvorkin/rsna-versia-7?scriptVersionId=358019432",
+    "equal_reported_score_is_not_author_environment_or_hidden_prediction_equivalence": true
+  },
+  "source_and_inputs": {
+    "original_code_cells": 6,
+    "original_six_code_cell_SHA": [
+      "3858126b82681ba469934c84a79f360eb199df59c16159b7a168df94e415cb37",
+      "d08db7bd194a78dac8c923a50048d098dd297223cc971e0fec40ba996d840e78",
+      "cb168cfe82f5a04114894f6c07bbd6daf0373ad2eb0dfcee34df3ecf625986af",
+      "8854088c97c0f259655919bef11c08bacc6a32dfe0b806f8f370748e400089b7",
+      "dee2b7a4c8baa21549c2509af29fa7226a6c9d0cbadced62e1a66ebdf92e13bd",
+      "e16f1596201850fd4a63680b27f603cb64e67176159be3d8ed78a4403fdb1700"
+    ],
+    "original_six_code_cells_byte_equal": true,
+    "original_inference_math_changed": false,
+    "separate_submission_guard_added": true,
+    "exact_Input_refs": [
+      "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1",
+      "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+      "heliosli/rsna-knee-compact-r7cnxfsss/1"
+    ],
+    "author_Input_internal_versions_reference_only": [
+      20297367,
+      20440357,
+      20601735
+    ],
+    "reproduction_source_sha256": "b675e307ef722a14e0728766732a36844247435227fcaa49eeddb3e76eb3cc00",
+    "R7_alone_accuracy_gain_attributed": false,
+    "all_recipe_components_attribution_retained": true
+  },
+  "runtime_environment": {
+    "requested_author_docker": "gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+    "actual_saved_docker": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+    "environment_difference_known_and_accepted_by_Root": true,
+    "strict_author_Docker_reproduction": false,
+    "original_code6_and_inference_math_unchanged": true,
+    "Root_diagnostic": {
+      "path": "artifacts\\research\\20261014-v22-saved-metadata-diagnostic-root-v1\\observation.json",
+      "sha256": "742189e998b54657d197f77a29b0bec3a26130924497b32efbeeefd93c52eb83"
+    }
+  },
+  "hidden_and_Gold_limits": {
+    "private_hidden_accuracy_observed": false,
+    "hidden_prediction_bytes_observed": false,
+    "full_hidden_UID_completion_independently_observed": false,
+    "own_Gold_read_train_checkpoint_or_coefficient_selection_this_goal": 0,
+    "public_weights_inherited_Gold_selection_history_unknown": true,
+    "inherited_Raptor_Gold58_selection_exposure_retained": true,
+    "Gold_clean_claimed": false,
+    "patient_independence_claimed": false
+  },
+  "own_Public_by_target": {
+    "P028": null,
+    "V22R": "0.956",
+    "P024": null
+  },
+  "unresolved_formal_submissions": {
+    "P028": 57163437,
+    "P024": 57166365
+  },
+  "P028_P024_old_submissions_resubmitted": false,
+  "official_today": 3,
+  "official_remaining_allowance": 2,
+  "official_total": 26,
+  "allowance_is_point_in_time_snapshot_not_future_guarantee": true,
+  "F007_visible": {
+    "actual_visible20_Root_accepted": true,
+    "Root_acceptance_sha256": "51c2513f0a928176aeb9245d64b9b20d50ae9aa02529ac632bfb96646e6ab7ef",
+    "formal_Submit_calls_at_prior_checkpoint": 0,
+    "own_Public": null,
+    "hidden_accuracy_qualified": false
+  },
+  "F006_bothfold": {
+    "actual_CPU_and_native64_Root_accepted": true,
+    "Root_native_acceptance_sha256": "c5b7d1dd05eaaf9cb05d03c9f7a0e9d2311bb6a73360b7e2e564299c4501ca0d",
+    "native64_MRI_count": 64,
+    "full_forward_calls": 256,
+    "new_CLS1_mounted_transport_SHA_Root_qualified": true,
+    "Serving_and_Public_qualified": false,
+    "formal_Submit_calls_at_checkpoint": 0
+  },
+  "MRI_CORE": {
+    "feasibility_sha256": "59b1b7af48720f639f755ec4b8fcd014a0a16124176aebf77a7755df28c03fe7",
+    "conditional_hold_until_current_results_justify": true,
+    "weights_downloaded": false,
+    "implementation_or_actual_forward_started": false,
+    "own_Gold_clean_claimed": false
+  },
+  "next": [
+    "Qualify S6 + same F006 twofold pair fixed20 visible Serving and one formal control submission",
+    "Then compare V22 + the same F006 pair/fixed20 with only baseline parent changed; source/runtime/output contracts before Submit",
+    "Read pending P028/P024 results without resubmitting; MRI-CORE remains a conditional research candidate"
+  ],
+  "scope": {
+    "local_metadata_and_documentation_only": true,
+    "external_Read_Save_Submit_upload_calls": 0,
+    "authentication_model_weight_GPU_MRI_teacher_reads": 0,
+    "training": 0,
+    "new_approval_barrier_added": false
+  },
+  "history": {
+    "prior_checkpoint_and_raw_Get_List_receipts_preserved": true,
+    "complete_five_file_before_bytes_backup_and_historical_doc_bodies_ledger_prefix_required": true
+  },
+  "actor": "/root",
+  "at_UTC": "2026-10-14T05:43:21.715594+00:00",
+  "at_JST": "2026-10-14T14:43:21.715594+09:00"
+}

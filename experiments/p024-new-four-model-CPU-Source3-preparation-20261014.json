@@ -1,0 +1,142 @@
+{
+  "schema_version": "P024_actual_delegated_four_model_CPU_Source3_preparation_v1",
+  "actor": "/root/state_audit",
+  "authorized_by": "/root",
+  "actual_execution_is_Root": false,
+  "Root_current_turn_CPU_restore_delegation": true,
+  "Root_independent_acceptance_issued": false,
+  "all_component_checks_passed": true,
+  "checks": {
+    "actual_four_model_CPU_reconstruction": true,
+    "one_original_generic_factory": true,
+    "four_original_selected_loads": true,
+    "four_original_strictapply": true,
+    "six_storage_alias_pairs_zero_aliases": true,
+    "source3_factory10_exact_CPU_producer_bytes": true,
+    "new_CLS0_f006_fixed10_E12_and_original_three_roles": true,
+    "forward_MRI_and_runtime_qualification_zero": true
+  },
+  "actual_CPU_receipt": {
+    "path": "artifacts/research/20261014-p024-new-mixed-CPU-v1/actual-reconstruction-audit-binding-v4/reconstruction.json",
+    "sha256": "ba6b43f795d1efd89b2b9e2d8462d359b2a1ab4b85acd6ae31f9f3e3f1377d22",
+    "bytes": 53546
+  },
+  "CPU_plan": {
+    "path": "artifacts/research/20261014-p024-new-mixed-CPU-v1/CPU-plan.json",
+    "sha256": "f11ec8ef463c84a402e22e264ca6126bc4f59174d817d2ec429468488a08ca61",
+    "bytes": 1055
+  },
+  "Source3_preparation": {
+    "path": "artifacts/research/20261014-p024-f006-fixed10-AUC-fold0-serving-source-v3-v2/preparation.json",
+    "sha256": "032abbc4fc3ed187424eb969ff8671eeebab12da1b19aa400720e74cb35366a0",
+    "bytes": 6625
+  },
+  "source2_original_Root_UIDcompletion_peer": {
+    "path": "artifacts/research/20261013-p024-Source2-root-static-review-v1/Root-source-peer.json",
+    "sha256": "a5bd198620aa21d20a00ab48ab62c39dc83ee8898df28660ebdfe985dde50be7",
+    "bytes": 1138
+  },
+  "pair_fingerprint_sha256": "f96781602fe73dd0c3f8e238d15313b986c09b60f3ece53c6d113df7c5182f30",
+  "model_fingerprints": {
+    "CLS:0": {
+      "model_class": "rsna_knee.finetune_model.NativeTripletMIL",
+      "checkpoint_sha256": "1df11d6bd2e4f700f527a755a822a2a3f74b7e0ada9aabe78174c12e592d3915",
+      "frozen_prefix_sha256": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+      "encoder_suffix_tensor_sha256": "ccccc55055b625eeba1f7c2ea9e796de26ff5399dfcb8e022c92e8cc10054607",
+      "head_tensor_sha256": "11af0a7b7aaa4f298764364c84ce619863110749b63df4f38ec39ce190d97774",
+      "CPU_receipt_sha256": "706082620ec9e8e0c0b6fdbb2edeeb6763f81220cbe62b688c1292853708b759",
+      "run_json_sha256": "e0e1006b6e37269a39c895b439de0051f7ab43f1c0a5532dd1e2f445fd303b81",
+      "selected_epoch": 12,
+      "weak_bce": 0.28650593644185945,
+      "candidateSelectedRule": "earliest_epoch_with_maximum_arithmetic_mean_AUC_over_all_fixed10_targets",
+      "candidate_descriptor_sha256": "8d8d2ff10b5143ef20adc320bc691a7224e5bc2f6400042cf7877a81b3615678",
+      "retainedEpochIndexSHA": "2d218cc7ca2e75b248eef2eed39776b9252fe6011aa6d2e3117baaaa77eaf833",
+      "original_BCE_selected_checkpoint_sha256": "6f62908c909fb4e2dfb6416fc7f764e0df8900502f28b6a865e8527c206db58d"
+    },
+    "CLS:1": {
+      "model_class": "rsna_knee.finetune_model.NativeTripletMIL",
+      "checkpoint_sha256": "0fb8a8ab774c843af3404b70ff0265ce350e46db19af2153f554b4366df1a4b7",
+      "frozen_prefix_sha256": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+      "encoder_suffix_tensor_sha256": "a354760a8394fba9aad9559622f6e7b85e33643edc617fc4360647538f7cf464",
+      "head_tensor_sha256": "4078782fbb21378d1d5af8cd97c54ea287ad6df4a0996f51878cb2a2104e8551",
+      "CPU_receipt_sha256": "5e203dcdba819a52e6e6f9087ad7730fd50763ee09f9202e7fea7a91cedc4a19",
+      "run_json_sha256": "f3a0ddc4762cc64840b10a1d5f79cbd3c910cbb735e0bb8a4848507560134fe3",
+      "selected_epoch": 9,
+      "weak_bce": 0.27969071834775916
+    },
+    "REG:0": {
+      "model_class": "rsna_knee.regional_triplet_model.RegionalTripletMIL",
+      "checkpoint_sha256": "8ff42302a8a54e8e8caa3e089f176c73144bc79c5577f0990c6efeba47d881ad",
+      "frozen_prefix_sha256": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+      "encoder_suffix_tensor_sha256": "278f20295b1729faa80deea972685f038b3edffde2ed37e0523ffa183324818e",
+      "head_tensor_sha256": "1b5bcabba082ef67f197037214884162efae4195c62386dc102224b9f4583f8c",
+      "CPU_receipt_sha256": "3e441a7f6b712e02698ac6ffdd03af0e22188a9ccc1014c55b2bf941d1adb2fa",
+      "run_json_sha256": "a46f9e82f0105727a35bd770c0b903f74f121e8f9e2193d488a60b427a042e36",
+      "selected_epoch": 8,
+      "weak_bce": 0.28030224999122455
+    },
+    "REG:1": {
+      "model_class": "rsna_knee.regional_triplet_model.RegionalTripletMIL",
+      "checkpoint_sha256": "eb640d7662cfaeb7df2d998a5f0f219494ccc0494abea91d0e95d7bbb1ac0714",
+      "frozen_prefix_sha256": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+      "encoder_suffix_tensor_sha256": "c9ac9728d1145a253144c0383c3dd3a6cf742e541822eb5a2b10823b1ec981b6",
+      "head_tensor_sha256": "2785d46eb7be0164a3d1fdd245945210e10ee34fc60dc18835ec02478d16cd62",
+      "CPU_receipt_sha256": "addb97d372643e848c858e39154cbc9e805a6efc1c6cbf7c963b8e189111a237",
+      "run_json_sha256": "9367b74d0346d18a7e8daee6508a9ba411233509529ef2e15f19901ceec06b70",
+      "selected_epoch": 10,
+      "weak_bce": 0.2779688899362838
+    }
+  },
+  "boundary_test_results": {
+    "shared_data_seed_resource_provenance": 8,
+    "str_bytes_exact_sourceZIP_and_other_payload_rejection": 2,
+    "existing_secondary_transport_and_NULLcontext_boundaries": 7,
+    "existing_Base85_codec_corruption_boundaries": 4,
+    "all_passed": true
+  },
+  "source_only_products": {
+    "native64": {
+      "binding": {
+        "path": "artifacts/research/20261014-p024-f006-fixed10-AUC-fold0-serving-source-v3-v2/source-only-native64-v1/serving-binding.json",
+        "sha256": "7b1be62a7f0ca4cd92322d80aacf060d111ff1180721997acc89cfa699aa1619",
+        "bytes": 17102
+      },
+      "API_source_bytes": 228885,
+      "genuine_new_context_injection_capacity_verified": false
+    },
+    "Serving": {
+      "binding": {
+        "path": "artifacts/research/20261014-p024-f006-fixed10-AUC-fold0-serving-source-v3-v2/source-only-Serving-v1/serving-binding.json",
+        "sha256": "efff928b9ee24a4049346c5caa0b88ff6f755f5c44c581f530a07bca095b58d9",
+        "bytes": 17101
+      },
+      "API_source_bytes": 528467,
+      "genuine_new_context_injection_capacity_verified": false
+    }
+  },
+  "initial_guard_stops_preserved": [
+    {
+      "source": "original_Source2",
+      "reason": "Complete resource-gate dictionary equality rejects legitimate f006/f005 producer QA differences",
+      "model_restore_started": false
+    },
+    {
+      "source": "CPU variant2",
+      "reason": "Blanket ZIP audit hook rejects immutable sealed source-code.zip hash reads",
+      "model_restore_started": false
+    },
+    {
+      "source": "CPU variant3",
+      "reason": "Actual CPU completed, independent review found original str(bytes) suffix hole; corrected variant4 CPU completed independently",
+      "previous_receipt_preserved": true
+    }
+  ],
+  "production_Source2_or_model_run_checkpoint_seal_raw_SHA_overwritten": false,
+  "model_numeric_preprocessing_mean_rank_mask_or_forward_code_changed": false,
+  "Source2_unchanged_source_qualification_claimed": false,
+  "Source3_Root_peer_or_CPU_acceptance_or_native64_context_issued": false,
+  "Kaggle_private_metadata_success_is_separate_from_cloud_content_hash_native64_or_Serving": true,
+  "GPU_forward_MRI_teacher_training_network_Save_Submit_or_external_mutation_by_CPU_agent": 0,
+  "own_Public_before_next_candidate": "0.954",
+  "own_P024_Public": null
+}

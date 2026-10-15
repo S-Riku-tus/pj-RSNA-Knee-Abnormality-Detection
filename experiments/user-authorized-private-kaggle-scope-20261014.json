@@ -1,0 +1,25 @@
+{
+  "schema_version": "user_authorized_private_kaggle_goal_scope_v1",
+  "recorded_date_JST": "2026-10-14",
+  "actor": "root",
+  "goal": "Own officially scored Public macro ROC AUC >= 0.960",
+  "user_question_reply_verbatim": "今回と今後の必要な非公開送信・実行・提出を承認",
+  "authorization_is_user_reply_not_root_inference": true,
+  "scope": {
+    "account": "rsraki",
+    "privacy": "private",
+    "allowed_contents": ["model weights", "inference code", "configuration", "aggregate validation results"],
+    "actions": ["necessary private uploads", "private Notebook save and execution", "manual competition submission"],
+    "duration": "This 0.960 goal, including the three previously reviewed transfers and necessary subsequent candidates",
+    "excluded_outbound_contents": ["MRI images", "Report text", "teacher label rows", "credentials"],
+    "verify_and_record_payload_and_destination_before_each_action": true,
+    "automatic_upload_or_submit_code_added": false
+  },
+  "reviewed_three_transfers": "experiments/three-reviewed-private-transfers-consent-pending-20261013.json",
+  "prior_auto_review_rejections_preserved": [
+    "experiments/p028-concrete-Notebook-Save-auto-review-held-20261012.json",
+    "experiments/official22p06-P026-submitted-P024-upload-review-held-20261012.json"
+  ],
+  "prior_rejections_do_not_count_as_successful_remote_actions": true,
+  "historical_strict_above_0960_rule": "Preserved in historical records; current user requested target uses >= 0.960"
+}

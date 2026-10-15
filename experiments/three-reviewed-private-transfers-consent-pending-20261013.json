@@ -1,0 +1,46 @@
+{
+  "schema_version": "three_concrete_reviewed_private_transfers_consolidated_consent_request_v1",
+  "current_own_official_Public": "0.954",
+  "strict_above960_achieved": false,
+  "actual_affirmative_response_observed": false,
+  "requested_options": ["今回＋今後の非公開送信を承認", "この3件だけ承認", "承認しない"],
+  "requested_future_scope_if_selected": "This >0.960 task only: model weights, inference code, settings and aggregate validation metadata sent to the user's own rsraki Kaggle account with private settings; content and destination verified and recorded before each action. No MRI, Report bodies, teacher rows or credentials in uploaded resources or code.",
+  "current_transfers": {
+    "P024": {
+      "type": "new_private_model_Dataset_V1",
+      "destination": "rsraki/n392-aucf0-816d6df4187b4878a3ccd7234ffa14dd",
+      "two_resource_bytes": 104308640,
+      "archive_sha256": "1816116880506a1a4dbcbec18f59f51d23acb5221e75c6bd9c62aba0a923b648",
+      "transport_manifest_sha256": "b48ff9f89999a8198f0f03d1324bd8239018cfec42788e97c38d59fdab9e598a",
+      "past_auto_review_rejection_preserved": true,
+      "actual_upload_or_retry": false
+    },
+    "P028": {
+      "type": "new_private_Notebook_Save_for_inference",
+      "destination": "rsraki/p022m-0e93fd1399c445dbb769ccb1e07bf6ed",
+      "API_source_bytes": 946931,
+      "API_source_sha256": "185dcdb9779f176fb4794a32d211625470820ab72e7f60db6185768d42cb905e",
+      "past_auto_review_rejection_preserved": true,
+      "actual_Save_or_retry": false
+    },
+    "F007_head2": {
+      "type": "new_private_model_Dataset_V1",
+      "destination": "rsraki/f007-head2-9810a289af3d4d29962eeeadc442aa71",
+      "two_resource_bytes": 816882,
+      "Create_metadata_bytes": 435,
+      "archive_sha256": "25b223de8e9b573afd2fe21fec94e6043304be039566c588106ffb624b3d24a1",
+      "transport_manifest_sha256": "dc4125b26014825ea414f07b51463bf803fbbd564e3bfead2f4426c5ecadeaf1",
+      "positive_inventory_audit_sha256": "fc40401a9d64a13a5aae68fa5f3831f9eb606e15b810dfa28f2bb5113731bed1",
+      "actual_shared_four_CPU_receipt_sha256": "77c7f1116b5f5279cdc7b8c4e7cb97c61e8f86d560f7056c46540a474343a65f",
+      "manual_uploader_source_preparation_sha256": "9e95752bd7fdc083975ead4e8851de65c2a4c82e67c8629a5c4376f6dec72148",
+      "Root_reviewed_all_uploader_and_gate_source": true,
+      "Root_default_unissued_consent_HOLD_before_auth_network": true,
+      "actual_upload_or_new_external_attempt": false
+    }
+  },
+  "why_required": "Auto-review rejected P024 model upload and P028 Notebook Save before process creation, stating specific new outbound content and destination approval was missing. Their old rejection evidence remains intact. No old REG approval or pending question is treated as consent to the new transfers.",
+  "pending_required_response_not_replaced_by_elapsed_time_or_preselection": true,
+  "existing_approved_REG2_transfers_already_completed": true,
+  "current_background_training": "F006 fold1 session41581; no concurrent GPU changes",
+  "local_analysis_continues_without_external_transfers": true
+}

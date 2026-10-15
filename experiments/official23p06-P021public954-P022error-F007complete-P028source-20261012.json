@@ -1,0 +1,185 @@
+{
+  "schema": "official23p06_P022_failure_F007_completed_P028_source_snapshot_v1",
+  "recorded_at_UTC": "2026-10-12T14:16:05.298740+00:00",
+  "record_actor": "execution_audit_documentation_metadata_only",
+  "evidence_pins": {
+    "official23p06": {
+      "path": "artifacts/research/20261012-four-candidate-scoring-status-tools-v1/delegated-observation-v2/observation.json",
+      "sha256": "1d2e9f07e721a914078c7e5347bff009f8c33ebc2fcf617d569881b92662ed0d"
+    },
+    "official22p36": {
+      "path": "artifacts/research/20261012-four-candidate-scoring-status-tools-v1/delegated-observation-v1/observation.json",
+      "sha256": "1cc040199ec4ef33db6221a6bef274573db46618e91b3d582c80e8394e5c21a1"
+    },
+    "F007_Root_completed": {
+      "path": "artifacts/research/20261012-f007-completed-root-acceptance-v1/Root-completed-run-and-cache-acceptance.json",
+      "sha256": "0e25468104d239e87ab546fc18632ae58701dd8ee0447a8817c1a1fd63b2ac46"
+    },
+    "F007_comparison": {
+      "path": "artifacts/research/20261012-f007-completed-mixed-comparison-root-v1/comparison.json",
+      "sha256": "09234b23b846a2ddbf779151fcd609521044314441c98bc4d0ab3f6061af5687"
+    },
+    "F007_CPU": {
+      "path": "artifacts/research/20261012-f007-actual-CPU-root-v1/actual-reconstruction-v1/reconstruction.json",
+      "sha256": "e8e9e1fe2a15c694b304ac5cb4e83d9844c927cd97a003a92b0e479964f2c700"
+    },
+    "F007_fold1_origin": {
+      "path": "artifacts/research/20261012-f007-original-BCE-fold1-origin-source-v2/Root-actual-old-BCE-origin-fold1-v1.json",
+      "sha256": "16d3c778162ade8d509679262eaef9726a81e34a734b841dfdc736d4be92edee"
+    },
+    "P022_static_diagnosis": {
+      "path": "artifacts/research/20261012-p022-hidden-error-static-diagnosis-v1/diagnosis.json",
+      "sha256": "817561251fd8566bdbf94cdcd319855873f35e5a2d56b8bdb53f3c3f80f6947d"
+    },
+    "P028_source_report": {
+      "path": "artifacts/research/20261012-p022-S6-native20-source-v3/report.json",
+      "sha256": "7694a8b41ac66b4cd626ff01d0fc1025faddaa0502a64e3ae246f1e2c277ac88"
+    },
+    "P028_Root_source_peer": {
+      "path": "artifacts/research/20261012-p022-S6-native20-source-v3/Root-source-peer.json",
+      "sha256": "694e61e61538f33e2f6108852ef866efe7eed73fc37d21b2e8538af40663aa32"
+    }
+  },
+  "official": {
+    "at_utc": "2026-10-12T14:06:40.540258+00:00",
+    "execution_actor": {
+      "name": "local_analysis",
+      "authorized_by": "root",
+      "delegated": true,
+      "delegation_id": "root_authorized_2306_readonly"
+    },
+    "RPC_counts": {
+      "GetSubmission": 4,
+      "ListSubmissions": 1,
+      "GetSubmissionLimits": 1
+    },
+    "own_Public_by_target": {
+      "P020": "0.954",
+      "P022": null,
+      "P021": "0.954",
+      "P026": null
+    },
+    "best": "0.954",
+    "strict_above960": false,
+    "allowance": {
+      "raw_field_names": [
+        "numAllowedNow",
+        "numToday",
+        "numTotal"
+      ],
+      "daily_reset_time_independently_observed": false,
+      "numToday": {
+        "raw_field_present": true,
+        "raw": 4,
+        "typed": 4,
+        "raw_omitted_typed_default_zero_not_independently_observed": false
+      },
+      "numAllowedNow": {
+        "raw_field_present": true,
+        "raw": 1,
+        "typed": 1,
+        "raw_omitted_typed_default_zero_not_independently_observed": false
+      },
+      "numTotal": {
+        "raw_field_present": true,
+        "raw": 23,
+        "typed": 23,
+        "raw_omitted_typed_default_zero_not_independently_observed": false
+      }
+    },
+    "raw_status_absent_is_SDK_default_not_official_pending": true,
+    "P022_error": "Get/List raw and typed COMPLETE with hidden unhandled error and no Public",
+    "P021": "Source3 same-bytes mirror / original latestV2 model math; own .954 distinct from original author V1 best .956"
+  },
+  "P022_diagnosis": {
+    "cause_confirmed": false,
+    "primary_candidate": "New parent rejects original valid S6 arm-specific UID\u88dc\u5b8c when raptor_failed or ours_failed is nonzero",
+    "additional_candidates": [
+      "ten-site Reader whitelist excludes other shape/decoder/header/mapping errors",
+      "full hidden cumulative deadline/resources"
+    ],
+    "visible3_64_256_global_count_or_UIDhash_cap_found": false,
+    "whole_nonstructural_failover_unchanged_forbidden": true,
+    "P026_uses_same_added_zero_failure_guard": false,
+    "P023_P024_share_exact_old_parent": true,
+    "hidden_traceback_endpoint_or_session_mapping_confirmed": false
+  },
+  "P028": {
+    "factor": "Original S6 valid UID\u88dc\u5b8c parent gate only; all model/preprocess/Native/rank/mask/final failed12 restoration math retained",
+    "source9_diff": [
+      "mixed_parent.py"
+    ],
+    "Root_source_peer_only": true,
+    "real_controller_and_parent_AST_receipt_semantics_CPU_csv_fixtures": 4,
+    "worker_global_unknownsource_failfast_retained": true,
+    "Root_manual_Save_Get_Submit_tools_ready": true,
+    "new_whole_Kaggle_runtime_qualified": false,
+    "actual_new_Save_Get_Submit_at_snapshot": 0,
+    "existing64_256_model_math_proof_scope_only": true,
+    "APIcap": 950000,
+    "opaque_old_metadata_size_only_reference": 946655,
+    "genuine_new_materialization_size_pending": true
+  },
+  "F007_fold0": {
+    "actual_actor": "Root",
+    "process_exit_code": 0,
+    "completed_epochs": 12,
+    "selected_rule": "earliest minimum weak BCE",
+    "selected_epoch": 12,
+    "weak_BCE": 0.2697704282449567,
+    "fixed10_AUC_auxiliary": 0.8823346103195998,
+    "run_sha256": "e593e6de3a7396cd213eabb8f85a0a4e2c1ba367a2c6f548267981989a8624c8",
+    "selected_checkpoint_sha256": "ea24ea2292bcb0f293ca9ed6177c354513f62b4f3be6652da584472984c5622b",
+    "selected_predictions_sha256": "2bfdda795d3c29f4812966e9877b353218ecd03ac5500266fddb063f80ef188e",
+    "cache_NPZ_count": 4207,
+    "cache_bytes": 7918878170,
+    "cache_manifest_paths_exists_size_all_rechecked_by_Root": true,
+    "feature7GB_body_rehashed_at_completed_acceptance": false,
+    "saved_original_CLS_max_probability_error_all821x12": 0.0,
+    "native_oracle_checked_UIDs": 1,
+    "all821_full_native_forwards_checked": false,
+    "comparison_fixed50_delta_fixed10": 0.0015853514060517628,
+    "group_bootstrap_95pct_CI": [
+      0.0005427527211300504,
+      0.002635359602369911
+    ],
+    "supplied_groups": 812,
+    "valid_bootstrap": 1000,
+    "bootstrap_total": 1000,
+    "postselection_conditional": true,
+    "patient_independence_confirmed": false,
+    "Public_gain_proven": false,
+    "strict_real_CPU_frozen_native_prefix_suffix_CLS_tensors_exact": true,
+    "CPU_models": 1,
+    "CPU_total_state_count": 28,
+    "new_residual_branch_parameters": 15180,
+    "new_shared_4model_or_Kaggle_native64_or_Serving_qualified": false
+  },
+  "F007_fold1": {
+    "actual_actor": "Root",
+    "first_base": "original f005 fold1 BCE-selectedE9",
+    "Source4_CLI_sha256": "734e115eb182d6b22f199c77a1ece3c9a6253723d703e15791c937e154297b4c",
+    "original_modelProducer_current_dataPreflightProducer_roles_separate": true,
+    "cache_extract_session": 71660,
+    "status": "RUNNING",
+    "Root_progress_at_JST": "2026-10-12 23:05:50",
+    "feature_NPZ_seen": 1331,
+    "cache_complete": false,
+    "full891_saved12_and_initial_oracle_accepted": false,
+    "residual_training_started": false
+  },
+  "next_decision": {
+    "Root_priority": "f006 separate fixed10 AUC-selectedE12 weak delta+.00401012; await specific private upload approval. P028 same-model parent gate repair may use last slot after genuine visible proof. F007fold1/cache progresses independently.",
+    "P024_specific_upload_auto_review_rejection_preserved": true,
+    "P024_external_upload_Start_PUT_Create": 0,
+    "Root_specific_user_approval_reply_pending": true,
+    "alternative_upload_or_old_REG2_approval_transfer": false,
+    "goal_active_unmet": true
+  },
+  "scope": {
+    "new_auth_or_API_calls_by_documentation_author": 0,
+    "GPU_MRI_training_checkpoint_run_cache_teacher_body_reads_by_author": 0,
+    "old_sources_live_trainer_CLI_config_edited": false,
+    "existing_SDK_authentication_manual_credentials_reads": 0
+  }
+}

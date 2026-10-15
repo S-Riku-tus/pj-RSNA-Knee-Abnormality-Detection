@@ -1,0 +1,224 @@
+{
+  "schema_version": "P026_official_terminal_Root_accepted_adoption_decision_metadata_aggregate_v1",
+  "actor": "/root/local_analysis; Root authorized local documentation only",
+  "at_utc": "2026-10-12T18:11:45.325934+00:00",
+  "own_qualified_Public": "0.954",
+  "strict_above960_achieved": false,
+  "goal_state_statement": "目標未達・作業を継続",
+  "evidence": {
+    "previous_0251_current_aggregate": {
+      "path": "experiments/public-pages-EV-source-held-F0061-E5-publicLB-20261013.json",
+      "sha256": "931541e3e3c9fa8534092be360e2f4272d42990bb4bef8efdaed29707871498b",
+      "bytes": 6823
+    },
+    "official_0306": {
+      "path": "artifacts/research/20261012-p026-focused-scoring-status-tools-v1/delegated-observation-v6/observation.json",
+      "sha256": "746e35e5e1e772257ed6170eb1b1e963f91a1cc5cd17bd4f547cda2620e2b555",
+      "bytes": 46373
+    },
+    "actual_P026_Save": {
+      "path": "artifacts/research/20261012-p026-fixed20-reader-manual-tools-v1/actual-single-Save-v1/receipt.json",
+      "sha256": "92fd1714e756ba229eeae352a26f8940968d034d2a09bf9519824f5c812c47a8",
+      "bytes": 1856
+    },
+    "actual_P026_visible_Root_acceptance": {
+      "path": "artifacts/research/20261012-p026-root-actual-acceptance-v1/Root-actual-acceptance.json",
+      "sha256": "4ecf201e8cfb60b2685536cdabe49ebfc6c2ac72bfc585cc6f2a98e66d6380aa",
+      "bytes": 3138
+    },
+    "actual_P026_Submit": {
+      "path": "artifacts/research/20261012-p026-fixed20-reader-manual-tools-v1/actual-single-Submit-v1/receipt.json",
+      "sha256": "107d0524c82025036689ea2e95d65573b55390a25bf9cbfdd07aff2d0cb179fc",
+      "bytes": 3406
+    },
+    "public_leaderboard_0251": {
+      "path": "artifacts/research/20261013-current-public-leaderboard-root-v1/observation.json",
+      "sha256": "40e20af1decae347c2447f57b7f699fe120528a42b0de8d362043d5cb230c9ba",
+      "bytes": 13904
+    },
+    "pending_specific_consent": {
+      "path": "experiments/three-reviewed-private-transfers-consent-pending-20261013.json",
+      "sha256": "032306b304d55a5634061240b07bd8a0941d034c15d971c3b89558ef7948cb2a",
+      "bytes": 3106
+    },
+    "P026_Native_compat_source_only": {
+      "path": "artifacts/research/20261013-p026-baseline-native20-compatibility-source-analysis-v1/analysis.json",
+      "sha256": "37d5030d2195edbba954b1fcbd6828615885824cc4fbf52abbbec0f6710d8f79",
+      "bytes": 16588
+    }
+  },
+  "official_0306_observation": {
+    "at_utc": "2026-10-12T18:06:22.167131+00:00",
+    "completed_at_utc": "2026-10-12T18:06:24.333610+00:00",
+    "execution_actor": {
+      "name": "local_analysis",
+      "authorized_by": "root",
+      "delegated": true,
+      "delegation_id": "root_authorized_0306_P026_focused"
+    },
+    "observer_source_sha256": "32f62a39d9edfe2c1703ab9fdd95d490a2b8bd58921f9ca5733156e3f40a3a17",
+    "RPC_counts": {
+      "GetSubmission": 1,
+      "ListSubmissions": 1,
+      "GetSubmissionLimits": 1
+    },
+    "P026_submission_ref": 57107853,
+    "Get_List_raw_typed_status": "COMPLETE",
+    "Get_List_raw_typed_Public": "0.953",
+    "Get_List_error_present": false,
+    "Get_List_consistency": true,
+    "Root_independent_saved_raw_and_SHA_review_accepted": true,
+    "Root_additional_Get_needed": false,
+    "kernel_identity_independently_reexposed": false,
+    "kernel_binding_scope": "local genuine accepted Submit/Save/result lineage; Get does not independently expose full kernel identity",
+    "saved_local_lineage": {
+      "ref": "rsraki/p026r20-3a7933733442465294773ddaafd8d692",
+      "kernel_id": 138327844,
+      "saved_version": 1
+    },
+    "fresh_allowance": {
+      "numToday": 4,
+      "numAllowedNow": 1,
+      "numTotal": 23
+    },
+    "daily_reset_independently_observed": false,
+    "List_only_other_scores_above_prior": []
+  },
+  "Root_adoption_decision_from_explicit_task_message": {
+    "P026_fixed_Reader20_adopted": false,
+    "reason": "Own official P026 Public0.953 did not exceed highest S6 control Public0.954.",
+    "next_native_baseline": "Own highest S6 control Public0.954",
+    "P026_baseline_switch_or_Reader_coefficient_search_or_extra_Submit": 0,
+    "P026_Native_compatibility_37d_preserved_source_only_for_future": true
+  },
+  "scheduled_readonly_delegation": {
+    "scheduled_0206_and_0306_completed": true,
+    "total_additional_RPCs_used": 6,
+    "maximum_authorized_RPCs": 9,
+    "scheduled_0406_cancelled_on_explicit_P026_COMPLETE": true,
+    "retry_or_future_new_observer_created_or_reserved": false
+  },
+  "retained_0251_metadata_not_requeried": {
+    "F0061_run_metadata": {
+      "source": {
+        "path": "artifacts/runs/f006-late-cosine-fold1-20261012-v1/run.json",
+        "sha256": "c82bcb77f837b9cb8169b8b83a0cd00ae44cc30a24b4e2efd304a50c82233285",
+        "bytes": 76179
+      },
+      "status": "running",
+      "fold": 1,
+      "seed": 20261002,
+      "history_rows": 5,
+      "latest_weak_metrics": {
+        "epoch": 5,
+        "weak_bce": 0.292824552501431,
+        "weak_macro_auc_12": 0.8505136489004462,
+        "optimizer_steps": 208,
+        "amp_skipped_steps": 0,
+        "elapsed_seconds": 10323.378865999985,
+        "learning_rate_multiplier": 1.0,
+        "learning_rates": {
+          "head": 0.0003,
+          "last2": 1e-05
+        }
+      },
+      "own_Gold_used_for_training_or_selection": false,
+      "Gold_evaluated": false,
+      "patient_independence_verified": false,
+      "checkpoint_or_predictions_or_pixel_payload_opened": false
+    },
+    "F0061_completed_epochs": 5,
+    "F0061_running_session": 41581,
+    "complete12_or_adoption_established": false,
+    "later_epoch_observation_in_this_task": false,
+    "public_leaderboard_at_0251": {
+      "actor": "/root",
+      "at_utc": "2026-10-12T17:51:05.077448+00:00",
+      "rows_observed": 100,
+      "public_requested": true,
+      "max": "0.966",
+      "min": "0.956",
+      "strict_above960": 28,
+      "first_page_only_not_all_teams": true,
+      "additional_page_available": true,
+      "pagination_used": false,
+      "SDK_Get_read_wire": 1,
+      "public_Notebook_or_weights_or_own_achievement_established": false
+    },
+    "public3_metadata": [
+      {
+        "ref": "evgendvorkin/rsna-versia-7",
+        "current_display_version": 21,
+        "current_script_id": 357319238,
+        "current_linked_author_score": "0.954",
+        "best_author_score": "0.954",
+        "best_author_score_version": 21,
+        "current_run_status": "COMPLETE",
+        "score_is_not_own_reproduction": true,
+        "source_weights_qualified": false
+      },
+      {
+        "ref": "kiyoshiohno/rsna-knee-template",
+        "current_display_version": null,
+        "current_script_id": 357712345,
+        "current_linked_author_score": null,
+        "best_author_score": "0.951",
+        "best_author_score_version": 9,
+        "current_run_status": "CANCEL_ACKNOWLEDGED",
+        "score_is_not_own_reproduction": true,
+        "source_weights_qualified": false
+      },
+      {
+        "ref": "romantamrazov/rsna-knee-dinosaur-v5",
+        "current_display_version": 45,
+        "current_script_id": 357077179,
+        "current_linked_author_score": "0.950",
+        "best_author_score": "0.950",
+        "best_author_score_version": 45,
+        "current_run_status": "COMPLETE",
+        "score_is_not_own_reproduction": true,
+        "source_weights_qualified": false
+      }
+    ],
+    "endpoint_error_scope": "Catalog ListKernels401 and version Source GetKernel403 are individual observations; public page6 and official public LB Get1 succeeded. No global SDK outage inferred."
+  },
+  "parallel_F007_Source3_and_F008_controller": {
+    "state": "preparing; completion and actual qualification unknown in this snapshot",
+    "actual_new_Input_native64_Serving_Public_qualification_claimed": false
+  },
+  "three_specific_private_transfers_affirmative_response_observed": false,
+  "P024_P028_before_process_auto_review_rejections_preserved": true,
+  "pending_three_external_transfers_Save_Upload_or_retry": 0,
+  "old_REG_consent_transferred_to_new_three": false,
+  "this_documentation_task_data_model_MRI_teacher_cache_GPU_SDK_network_API_calls": 0,
+  "live_source_math_trainer_config_or_other_agent_source_changed": false,
+  "historical_raw_and_old_current_block_snapshots": {
+    "README.md": {
+      "before": {
+        "path": "artifacts/research/20261013-p026-official953-terminal-adoption-docs-v1/before/README.md.raw",
+        "sha256": "4060802f6eb66624653007ce256ed608a9a99a6c6102ebb5b98035f4da010d55",
+        "bytes": 72770
+      },
+      "before_sha256": "4060802f6eb66624653007ce256ed608a9a99a6c6102ebb5b98035f4da010d55",
+      "after_sha256": "5c0f46b72a1e2507d6205b3de78d8327b7ad4ac1dd1095e1cfe47eb70b037f5b"
+    },
+    "PROJECT.md": {
+      "before": {
+        "path": "artifacts/research/20261013-p026-official953-terminal-adoption-docs-v1/before/PROJECT.md.raw",
+        "sha256": "0fe025f53ebf3f9311276933043b54c5982e425f397d83a91d03540340efd219",
+        "bytes": 218221
+      },
+      "before_sha256": "0fe025f53ebf3f9311276933043b54c5982e425f397d83a91d03540340efd219",
+      "after_sha256": "f5c7e56f26be8cc0340403a0c052b5a5d3d6f5d98b2326aff679a53b7fafad8f"
+    },
+    "docs__validation.md": {
+      "before": {
+        "path": "artifacts/research/20261013-p026-official953-terminal-adoption-docs-v1/before/docs__validation.md.raw",
+        "sha256": "f3d869da66bdcb93e58e53d7707f8ef8a5ba41d074bffffb69eb7becce8a5bb7",
+        "bytes": 301720
+      },
+      "before_sha256": "f3d869da66bdcb93e58e53d7707f8ef8a5ba41d074bffffb69eb7becce8a5bb7",
+      "after_sha256": "759ec6663752b636bedf0be6bb881f861548f0919107c0faf5c659e711b07da8"
+    }
+  }
+}

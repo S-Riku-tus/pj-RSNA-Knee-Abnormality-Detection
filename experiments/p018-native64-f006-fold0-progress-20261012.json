@@ -1,0 +1,100 @@
+{
+  "schema_version": "rsna_knee_milestone_v1",
+  "run_id": "p018-native64-f006-fold0-progress-20261012",
+  "at_utc": "2026-10-12T05:54:27+00:00",
+  "at_jst": "2026-10-12T14:54:27+09:00",
+  "seed": 20261002,
+  "goal_status": "active",
+  "own_best_Public": 0.951,
+  "strict_above960_achieved": false,
+  "P018": {
+    "fixed_recipe": "Same selected CLS/REG four models; fixed family50, baseline80/native20, MCL+Synovitis baseline restoration",
+    "remote_REG_bytes_qualified": true,
+    "REG_member_counts": [
+      193,
+      193
+    ],
+    "native64": {
+      "kernel_id": 138271136,
+      "saved_version": 1,
+      "actual_native64_qualified": true,
+      "MRI_cases": 64,
+      "actual_forward_calls": 256,
+      "elapsed_seconds": 154.98628958900008,
+      "fallback_count": 0,
+      "actual_twoT4": true,
+      "accuracy_Public_evaluated": false
+    },
+    "native256": {
+      "kernel_id": 138273767,
+      "saved_version": 1,
+      "root_reported_status": "RUNNING",
+      "status_scope": "Root task observation near14:52 JST; this documentation update makes no new API status request",
+      "actual_completion_or_256_qualification_verified": false
+    },
+    "new_Serving_executed": false,
+    "new_competition_Submit_calls": 0,
+    "new_Public": null
+  },
+  "f006": {
+    "run_directory": "artifacts/runs/f006-late-cosine-fold0-20261012-v1",
+    "status": "running",
+    "session_id_root_reported": 38827,
+    "fold": 0,
+    "train_studies": 3386,
+    "valid_studies": 821,
+    "fixed_epochs": 12,
+    "completed_epochs_at_local_snapshot": 0,
+    "partial_epoch_or_checkpoint_adopted": false,
+    "config_path": "configs/experiments/f006-dinov2-native-last2-late-cosine.json",
+    "config_file_sha256": "cc39cf18ea74e0b94eb7593a5223bf2dae0f7fbef059fd94e31dd1e1683ee21a",
+    "run_config_path": "artifacts/runs/f006-late-cosine-fold0-20261012-v1/config.json",
+    "run_config_sha256": "c58b75f96b49487942a77307ddd26784eca3eafb9fd9691be0301bed3db90e30",
+    "config_semantic_sha256": "d7c906d753430835e025c2b4f78c56e95bffe578c149a86662280b7b99213733",
+    "source_and_saved_run_config_semantically_equal": true,
+    "source_native_SHA256": "2ffa41e2fc650b61c5ccf2d5cf7c49974aff001025e604764238f6711efd44ef",
+    "resource_gate_SHA256": "057f7095e4c9af26db97abbc5f2edd5ef1284a9495ba8dd6da95ef1685cbd369",
+    "learning_rate_schedule": {
+      "name": "late_cosine",
+      "constant_epochs": 6,
+      "min_factor": 0.1
+    },
+    "selection_rule": "earliest minimum observed weak BCE after fixed12 completes",
+    "gold_used_for_training_or_selection": false,
+    "gold_evaluated": false,
+    "patient_independence_verified": false,
+    "new_Public": null,
+    "next_fold1_decision": "After fold0 fixed12 completes, audit saved epochs and compare against the samefold f005 baseline before deciding fold1."
+  },
+  "training_order_change": {
+    "previous_plan": "Measure P018 Public before new training",
+    "current_plan": "Run independent single-factor f006 fold0 while P018 Kaggle256 and later Serving/score are awaited",
+    "reason_ja": "P018\u306ePublic\u6e2c\u5b9a\u3092\u5f85\u3064\u65b9\u91dd\u3060\u3063\u305f\u304c\u3001\u65e7\u30e2\u30c7\u30eb\u3067\u306f\u63a1\u7528epoch\u4ee5\u964d\u306b\u8a13\u7df4BCE\u304c\u4e0b\u304c\u308b\u4e00\u65b9\u3067\u691c\u8a3cBCE\u304c\u60aa\u5316\u3057\u3066\u3044\u305f\u3002\u7d046\u6642\u9593\u3092\u8981\u3059\u308b\u5b66\u7fd2\u3092Kaggle\u306e\u5b9f\u884c\u30fb\u63a1\u70b9\u5f85\u3061\u3068\u4e26\u884c\u3055\u305b\u3001\u7d42\u76e4\u306e\u5b66\u7fd2\u7387\u6e1b\u8870\u3060\u3051\u3092\u56fa\u5b9a\u6761\u4ef6\u3067\u6bd4\u8f03\u3059\u308b\u3002Public\u6539\u5584\u306f\u672a\u8a3c\u660e\u3067\u3042\u308a\u3001Gold\u3084Public\u3092\u7528\u3044\u305f\u5b66\u7fd2\u30fb\u9078\u629e\u30fb\u4fc2\u6570\u8abf\u6574\u306f\u884c\u308f\u306a\u3044\u3002",
+    "single_factor": "Late learning-rate decay only; fixed input, teacher, seed, model, loss,12epochs and BCE selection; reason metadata updated separately",
+    "Public_improvement_established": false
+  },
+  "evidence": {
+    "remote_REG_bytes": {
+      "path": "artifacts/research/20261012-p018-regional-byte-results-tools-v1/actual-observation-v1/receipt.json",
+      "sha256": "88d5947e70e762d4cecbf42f6c225f4f57cbba5362faba9a6e8c490f782e5413"
+    },
+    "native64_Root_acceptance": {
+      "path": "artifacts/research/20261012-p018-mixed-native64-results-tools-v2/Root-native64-acceptance.json",
+      "sha256": "95f38c32b670cea3df009128b88894a1427c26dd367a58a2c7dac8bb0efae5cd"
+    },
+    "native256_launch_handoff": {
+      "path": "artifacts/research/20261012-p018-mixed-native256-root-v1/handoff.json",
+      "sha256": "aa3b3075a175a1b446331f18a43cba8dab8e1091630952d9a35693b6ea450768"
+    },
+    "f006_resource_gate": {
+      "path": "artifacts/research/20261012-f006-late-cosine-resource-gate-v1/resource-gate.json",
+      "sha256": "057f7095e4c9af26db97abbc5f2edd5ef1284a9495ba8dd6da95ef1685cbd369"
+    }
+  },
+  "documentation_update_scope": {
+    "API_GPU_MRI_model_teacher_Report_Gold_operations": 0,
+    "trainer_CLI_config_edits": 0,
+    "old_history_or_experiments_overwritten": false
+  },
+  "next": "Review actual native256 completion, qualify normal/fault Serving, recheck allowance and submit one fixed P018; separately complete and audit f006 fold0 before any fold1 decision."
+}

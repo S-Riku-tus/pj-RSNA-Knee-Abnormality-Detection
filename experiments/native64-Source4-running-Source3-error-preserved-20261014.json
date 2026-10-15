@@ -1,0 +1,161 @@
+{
+  "schema_version": "Root_native64_Source4_running_prior_ERROR_preserved_v1",
+  "actor": "/root",
+  "at_UTC": "2026-10-14T03:25:33.775584+00:00",
+  "at_JST": "2026-10-14T12:25:33.775584+09:00",
+  "evidence": {
+    "official": {
+      "path": "artifacts/research/20261014-two-candidate-official-scoring-tools-v1/root-observation-v3/observation.json",
+      "sha256": "d043f169bec26cf94952455a3e55a3746a7f0720ddd47c2c7632b3ef7ab16882",
+      "bytes": 57321
+    },
+    "known_prior_resolution": {
+      "path": "artifacts/research/20261014-two-submissions-private-ready-docs-root-v1/Root-known-prior-resolution.json",
+      "sha256": "8b88fa5d97923ba3ec21d5c8cfc002767425429e6fca819236aad1d236eacceb",
+      "bytes": 1026
+    },
+    "old_error": {
+      "path": "artifacts/research/20261014-p024-native64-results-tools-v1/actual-observation-v1/status.json",
+      "sha256": "8c16485fac2a119cc51ea6e7926fa7d18da1b993b481f4ad8775820bc2aba511",
+      "bytes": 185
+    },
+    "old_error_log_receipt": {
+      "path": "artifacts/research/20261014-p024-native64-error-diagnostics-v1/actual-error-observation-v1/receipt.json",
+      "sha256": "d0057216fac201469fca1a47b0f392881ed16c151ce94775cabf34c1f18842a3",
+      "bytes": 2118
+    },
+    "Source4_peer": {
+      "path": "artifacts/research/20261014-p024-native64-receipt-contract-review-v1/source-review-v2.json",
+      "sha256": "ae459c53a79a40a5f5313d53e8c02fc80a4660eb807a71b2e06be2cac6ae7d8d",
+      "bytes": 10915
+    },
+    "Source4_preparation": {
+      "path": "artifacts/research/20261014-p024-f006-fixed10-AUC-fold0-serving-source-v4/preparation.json",
+      "sha256": "a6b1363baca758426bb22bc66074985035b4b1f71250d2d9109126dbf55b73e9",
+      "bytes": 5054
+    },
+    "new_issued_context": {
+      "path": "artifacts/research/20261014-p024-native64-context-root-v2/Root-issuance-receipt.json",
+      "sha256": "794125795f67a3293e20b7d1db94fe69c5997d7db152b6729011ced2eb6755af",
+      "bytes": 1643
+    },
+    "new_Save": {
+      "path": "artifacts/research/20261014-p024-native64-context-root-v2/actual-native64-Save-v1/receipt.json",
+      "sha256": "a57f54c15dd9a2c60d8d9f89d82159cfcbe40a31617e4d861c89c7f3d9a6a605",
+      "bytes": 807
+    },
+    "new_status": {
+      "path": "artifacts/research/20261014-p024-native64-results-tools-v2/actual-observation-v1/status.json",
+      "sha256": "8f7aba94f090a3685c4934babb6d4b88ad7f900209f5377709722b8bcd6a5213",
+      "bytes": 189
+    },
+    "F007_Source4_peer": {
+      "path": "artifacts/research/20261014-f007-source4-independent-review-v1/source-review.json",
+      "sha256": "68ff485f29b0c08a86eaf84dfc207f1677334d51c64e1f14910f3a06fa1921f7",
+      "bytes": 22270
+    },
+    "F007_Save_projection": {
+      "path": "artifacts/research/20261014-f007-native64-manual-tools-v1/actual-native64-Save-v1/Save-response-projection.json",
+      "sha256": "2650dd98e072a941900942bb653538401a222bad2689335be0bd4afaa0b85f1b",
+      "bytes": 221
+    },
+    "F007_Save_held": {
+      "path": "artifacts/research/20261014-f007-native64-manual-tools-v1/actual-native64-Save-v1/held.json",
+      "sha256": "89838dd203e40570c72ebe1dd75bdf9a2be923baf7abe3d0eeaaa08f56dab53b",
+      "bytes": 364
+    },
+    "F007_Save_claim": {
+      "path": "artifacts/research/20261014-f007-native64-manual-tools-v1/single-native64-Save-attempt-claim.json",
+      "sha256": "1bea131a2bd57c703be41a5431e0eb8e451fb873045a5250a2178fa2dec0e4d5",
+      "bytes": 755
+    },
+    "authorization": {
+      "path": "experiments/user-authorized-private-kaggle-scope-20261014.json",
+      "sha256": "25f7d02ee7044ccffd54f207e8d5f8d4eb56d384e3607e7f3e80a72b21bd70ac",
+      "bytes": 1514
+    }
+  },
+  "goal": {
+    "metric": "official_own_Public_macro_ROC_AUC12",
+    "operator": ">=",
+    "target": 0.96,
+    "achieved": false
+  },
+  "own_confirmed_Public_best": "0.954",
+  "official_read_at_JST": "2026-10-14T12:23:33.021378+09:00",
+  "formal_submissions": {
+    "P028": 57163437,
+    "V22R": 57164195
+  },
+  "own_Public_by_target": {
+    "P028": null,
+    "V22R": null
+  },
+  "official_raw_status_Public_not_yet_returned": true,
+  "typed_default_PENDING_is_not_official_status": true,
+  "official_allowance": {
+    "numToday": {
+      "raw_field_present": true,
+      "raw": 2,
+      "typed": 2,
+      "raw_omitted_typed_default_zero_not_independently_observed": false
+    },
+    "numAllowedNow": {
+      "raw_field_present": true,
+      "raw": 3,
+      "typed": 3,
+      "raw_omitted_typed_default_zero_not_independently_observed": false
+    },
+    "numTotal": {
+      "raw_field_present": true,
+      "raw": 25,
+      "typed": 25,
+      "raw_omitted_typed_default_zero_not_independently_observed": false
+    }
+  },
+  "P024_prior": {
+    "kernel_id": 138598572,
+    "version": 1,
+    "status": "ERROR",
+    "observed_reason": "REGtransport received run subdirectory rather than exact /kaggle/working",
+    "driver_launched": false,
+    "native64_qualified": false
+  },
+  "P024_current": {
+    "kernel_id": 138601076,
+    "version": 1,
+    "ref": "rsraki/p024a-02430e0f9a3145a5baaa58e83f9b85fd",
+    "status": "RUNNING",
+    "source_bytes": 338527,
+    "only_changes": [
+      "REG work root",
+      "child --execute flag",
+      "CPU producer metadata transfer"
+    ],
+    "factory_models_preprocessing_numeric_math_changed": false,
+    "new_native64_Serving_Public_or_remote_content_qualified": false
+  },
+  "F007_current": {
+    "returned_kernel_id": 138600811,
+    "returned_version": 1,
+    "Save_calls": 1,
+    "response_guard_held": true,
+    "actual_remote_ref_not_yet_verified": true,
+    "read_only_resolution_required": true,
+    "repeat_Save_allowed": false,
+    "native64_Serving_Public_qualified": false
+  },
+  "local_MRI_decode_or_additional_local_training_started_this_resumed_turn": false,
+  "Kaggle_P028_V22_visible_MRI_completed": true,
+  "Kaggle_new_native64_MRI_counts_not_yet_observed": true,
+  "weak_deltas_are_not_added_to_Public": true,
+  "own_Gold_training_or_checkpoint_selection": false,
+  "old_sources_runs_errors_Save_claims_receipts_preserved": true,
+  "goal_status": "active",
+  "next": [
+    "Read and validate exact current native64 results",
+    "Resolve F007 Save with read-only exact-source metadata",
+    "Read official submitted scores without resubmitting",
+    "Compare F006 and F007 weak complementarity using predeclared equal blends"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "frozen_features_v1",
+  "seed": 20261002,
+  "n_folds": 5,
+  "reason": "f005 last2の固定12epochに対し学習率の終盤減衰だけを変更する。採用epoch後に訓練BCEが低下する一方で検証BCEが悪化した観測に基づく。入力・教師・seed・BCE最早選択を固定し、Gold/Publicによる調整は行わない。",
+  "preprocess": {
+    "version": "physical_letterbox_triplet_v1",
+    "image_size": 392,
+    "max_series": 3,
+    "slices_per_series": 48,
+    "percentiles": [
+      1,
+      99
+    ]
+  },
+  "encoder": {
+    "model_name": "dinov2_vits14",
+    "feature_dim": 384,
+    "batch_size": 16,
+    "precision": "fp16"
+  },
+  "head": {
+    "hidden_dim": 192,
+    "dropout": 0.2,
+    "pooling": "attention"
+  },
+  "train": {
+    "epochs": 12,
+    "batch_size": 16,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "num_workers": 0,
+    "selection": "bce",
+    "lr_schedule": {
+      "name": "late_cosine",
+      "constant_epochs": 6,
+      "min_factor": 0.1
+    }
+  },
+  "online": {
+    "schema_version": "native392_last2_training_fast16_v1",
+    "trainable_blocks": 2,
+    "microbatch_studies": 1,
+    "effective_batch_studies": 16,
+    "window_chunk": 16,
+    "checkpoint_last2": true,
+    "encoder_learning_rate": 1e-05,
+    "accumulation_denominator": "total_observed_labels_in_effective_batch",
+    "folds": [
+      0,
+      1
+    ],
+    "amp_grad_scaler": true
+  }
+}

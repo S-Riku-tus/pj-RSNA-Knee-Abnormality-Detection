@@ -1,0 +1,139 @@
+{
+  "schema_version": "Root_F006_bothfold_actual_CPU_private_READY_F007_final_mask_error_v1",
+  "actor": "/root",
+  "at_UTC": "2026-10-14T04:45:21.033102+00:00",
+  "at_JST": "2026-10-14T13:45:21.033102+09:00",
+  "evidence": {
+    "official": {
+      "path": "artifacts/research/20261014-three-candidate-official-scoring-tools-v1/root-observation-v3/observation.json",
+      "bytes": 64540,
+      "sha256": "e397aabfda929fcbb3b3917991415abb532dc7a0bc072fb72a7a5f0ea95ee55d"
+    },
+    "F006_CPU_Root": {
+      "path": "artifacts/research/20261014-f006-bothfold-CPU-root-acceptance-v1/Root-CPU-acceptance.json",
+      "bytes": 6819,
+      "sha256": "744f2c39144bad85d8de2a33266080af50c659cd4f163de58fe62b1788c9ecfa"
+    },
+    "F006_CPU_transport_peer": {
+      "path": "artifacts/research/20261014-f006-twofold-AUC12-state-peer-v1/peer-review-sealed-v2.json",
+      "bytes": 8692,
+      "sha256": "943a484e505e7194e7ed4b94c12296052771101c610406fceb4dda612f7cd502"
+    },
+    "F006_upload_peer": {
+      "path": "artifacts/research/20261014-f006-twofold-AUC12-state-peer-v1/upload-wrapper-peer.json",
+      "bytes": 4674,
+      "sha256": "26100d437547fd7f93979fcf3e5a3808ebb6b111ff0607ed696bb9dfb75aa457"
+    },
+    "F006_upload_held": {
+      "path": "artifacts/research/20261014-f006-twofold-AUC12-private-upload-tools-v1/actual-private-upload-v1/held.json",
+      "bytes": 556,
+      "sha256": "6ee4163d1188f73e0602acd606453e3660c5a95c01ffcc66ec00a48125ddd21d"
+    },
+    "F006_private_registry": {
+      "path": "artifacts/research/20261014-f006-fold1-private-metadata-tools-v1/actual-f006fold1-readonly-v1/Input-registry.json",
+      "bytes": 2071,
+      "sha256": "83ac9f6453e75e3c744066f9030057efd2f4df6bebc91bdd61d2cd3f0a459025"
+    },
+    "F006_private_observation": {
+      "path": "artifacts/research/20261014-f006-fold1-private-metadata-tools-v1/actual-f006fold1-readonly-v1/observation.json",
+      "bytes": 5357,
+      "sha256": "ee3c4d7cbebae82f0d35935a690cc3850d6040d652ea2920a3c4a1213bb55b72"
+    },
+    "F007_alias_Save": {
+      "path": "artifacts/research/20261014-f007-Serving-bootstrap-alias-wrapper-v2/actual-serving-Save-attempt-v1/receipt.json",
+      "bytes": 4149,
+      "sha256": "6684cd765d28b5fefb8b5fc1319b575c8de31b1ae1d188d4e552750702493555"
+    },
+    "F007_alias_status": {
+      "path": "artifacts/research/20261014-f007-Serving-alias-fix-manual-tools-v2/actual-observation-v2/status.json",
+      "bytes": 110,
+      "sha256": "4a725805aec593ca1b28ecbfff7074b7c0954b10d4b55ea306b701ed305a2914"
+    },
+    "F007_alias_source_binding": {
+      "path": "artifacts/research/20261014-f007-Serving-alias-fix-manual-tools-v2/actual-observation-v2/source-binding.json",
+      "bytes": 3735,
+      "sha256": "c752eb1cb4fe366c800752f8ffec020784c7a0bd3ba389d1fc34affa8bdf353a"
+    },
+    "F007_actual_final_mask_error_log": {
+      "path": "artifacts/research/20261014-f007-Serving-alias-error-log-v2/actual-error-log-v1/session-log.safe.log",
+      "bytes": 19343,
+      "sha256": "8b98832cb124fd436e41719cd55b0948817c0f2df7578cbbd58877d9f8bb96b7"
+    }
+  },
+  "own_confirmed_Public_best": "0.954",
+  "goal_target": 0.96,
+  "goal_operator": ">=",
+  "goal_achieved": false,
+  "goal_status": "active",
+  "official_read_at_JST": "2026-10-14T13:35:44.551631+09:00",
+  "formal_submissions": {
+    "P028": 57163437,
+    "V22R": 57164195,
+    "P024": 57166365
+  },
+  "own_Public_by_target": {
+    "P028": null,
+    "V22R": null,
+    "P024": null
+  },
+  "formal_raw_status_and_Public_absent_errors_empty": true,
+  "official_today": 3,
+  "official_remaining_allowance": 2,
+  "official_total": 26,
+  "known_equal_prior_P020_P021_only_not_new_unqueried_goal_claim": true,
+  "F006_bothfold_CPU": {
+    "Root_accepted": true,
+    "actual_factory": 1,
+    "actual_strictapply": 4,
+    "actual_checkpoint_load": 4,
+    "storage_pairs_checked": 6,
+    "alias_count": 0,
+    "forward_count": 0,
+    "unchanged_roles": [
+      "CLS:0",
+      "REG:0",
+      "REG:1"
+    ],
+    "new_CLS1_E12_checkpoint_SHA256": "0232ac154d7cb01526ef2bd923cfb1fcd6e96151a689fd6e903f0d01787f2f93"
+  },
+  "F006_fold1_private_Input": {
+    "ref": "rsraki/n392-aucf1-ddc10efce2d024a1d7a69884c47d50a7/1",
+    "dataset_id": 12573715,
+    "private": true,
+    "version": 1,
+    "status": "READY",
+    "PUT_calls": 2,
+    "Create_calls": 1,
+    "original_Create_response_guard_held_preserved": true,
+    "Root_resolved_by_readonly3_no_resend": true,
+    "resources": 2,
+    "total_bytes": 104306568,
+    "archive_members": 201,
+    "remote_content_SHA256_verified": false,
+    "internal_version_id": null,
+    "new_native64_Serving_Public_qualified": false
+  },
+  "F007_new_alias_fixed_job": {
+    "kernel_id": 138608301,
+    "version": 1,
+    "ref": "rsraki/f007s6-7c9f2a5248c74dd8b825695f73a1e493",
+    "old_Windows_alias_failure_fixed_before_first_preflight": true,
+    "actual_status": "ERROR",
+    "Submit_calls": 0,
+    "actual_error_stage": "In17 final support_mask.write_masked_final",
+    "actual_error": "KeyError serving_shas",
+    "visible_S6_original_stage_completed_rows": 3,
+    "new_whole_visible_Serving_or_Public_qualified": false,
+    "fix_scope_under_review": "Explicit serving metadata interface projection; full artificial mask/UID/finalCSV replay before new Save"
+  },
+  "old_P024_and_F007_native64_Root_acceptances_preserved": true,
+  "local_MRI_decode_or_additional_training_this_resumed_turn": false,
+  "delegated_actual_CPU_and_actual_Kaggle_MRI_inference_completed": true,
+  "MRI_Report_teacher_rows_credentials_outbound": false,
+  "all_prior_errors_claims_checkpoints_partial_issuance_and_BCE_controls_preserved": true,
+  "next": [
+    "Propagate both F006 secondary producers and new Input into fresh source and run actual native64",
+    "Verify all final F007 engineering metadata interfaces using artificial fixture",
+    "Read official scores without resubmitting"
+  ]
+}

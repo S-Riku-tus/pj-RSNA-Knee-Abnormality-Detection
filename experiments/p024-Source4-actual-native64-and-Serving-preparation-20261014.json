@@ -1,0 +1,67 @@
+{
+  "schema_version": "p024_Source4_actual_new_native64_and_issued_Serving_manual_handoff_v1",
+  "actor": "/root/state_audit",
+  "at_UTC": "2026-10-14T03:47:31.607567+00:00",
+  "actual_new_native64_Root_review": {
+    "path": "artifacts/research/20261014-p024-native64-results-tools-v2/Root-native64-acceptance-v1/Root-native64-review.json",
+    "sha256": "a4ed7c7c5dc1420dd3299f098e404be33f6aac5287f9fdc7ac663135454d1e48"
+  },
+  "actual_new_native64_independent_local_replay": {
+    "path": "artifacts/research/20261014-p024-native64-results-tools-v2/offline-replay-v2/validation.json",
+    "sha256": "995085c92800b9b5cca88c37fd59d43216d4e9346db932381b9da73a7a999678"
+  },
+  "actual_Source4_native64_kernel_id": 138601076,
+  "actual_Source4_native64_version": 1,
+  "actual_native64_qualified_by_Root": true,
+  "actual_new_CLS0_archive_and_every201_member_content_verified": true,
+  "actual_full_fold_forwards": 256,
+  "actual_native_decoded_UIDs": 64,
+  "actual_GPU_CPU_storage_alias_count": 0,
+  "same_CPU_factory10_model_fingerprints_and_source23_binds_qualification": true,
+  "actual_issued_Serving_launch": {
+    "path": "artifacts/research/20261014-p024-Source4-Serving-root-v1/launch-context.json",
+    "sha256": "095c3fcf4dde665d35cd6135905dc488220a320dd6594060d7d034a00445f356"
+  },
+  "actual_issued_Serving_source_bytes": 711264,
+  "actual_issued_Serving_materializer": {
+    "path": "artifacts/research/20261014-p024-Source4-Serving-root-v1/prepare_and_issue.py",
+    "sha256": "b73ce456cc2953faa8b8c4272d6213428649469411e01c292873dcba19e2695f"
+  },
+  "manual_tools": {
+    "save_once.py": {
+      "path": "artifacts/research/20261014-p024-Source4-Serving-manual-tools-v1/save_once.py",
+      "sha256": "fdf58c3c4afc44af0eabd1122f2c9cc3ac4d856cb906d15376b290bbed700e3a"
+    },
+    "get_once.py": {
+      "path": "artifacts/research/20261014-p024-Source4-Serving-manual-tools-v1/get_once.py",
+      "sha256": "36cb359361f7a19ae0348132623c530605192fd6a83741bbe9578ae458223886"
+    },
+    "payload_contracts.py": {
+      "path": "artifacts/research/20261014-p024-Source4-Serving-manual-tools-v1/payload_contracts.py",
+      "sha256": "49535e03b4ba2cf18535d64440d8fef87159fc02f4092c5b913808d2650321db"
+    },
+    "submit_once.py": {
+      "path": "artifacts/research/20261014-p024-Source4-Serving-manual-tools-v1/submit_once.py",
+      "sha256": "c5b0dfa5aec5d75f2899654323dbab4deddeafcffe29734029e581086725e6b9"
+    },
+    "submit_http_diagnostics.py": {
+      "path": "artifacts/research/20261014-p024-Source4-Serving-manual-tools-v1/submit_http_diagnostics.py",
+      "sha256": "1c770778e44fb98d9728ff880f3615fd603913542e748a2a020292e0991f876c"
+    }
+  },
+  "source23_S6original5_family50_fixed20_supportmask_UIDcompletion_factory_numerics_changed": false,
+  "manual_Save_Get20_Submit1_wire_functions_reused_from_successful_P028": true,
+  "local_Source4_Serving_Save_gate_and_offline_SDK_DTO_passed": true,
+  "native64_replay_mean_SHA_resource_cleanup_and_negative_contract_tests_passed": 10,
+  "auth_GPU_MRI_model_teacher_external_mutations_by_preparer_this_handoff": 0,
+  "old_Source3_failed_job_and_all_old_source_receipts_kept": true,
+  "whole_Serving_Public_and_goal0960_qualified_by_this_handoff": false,
+  "Root_only_next_steps": [
+    "single exact issued private Serving Save",
+    "raw/typed exactsource/COMPLETE then positive20 bodies",
+    "local twentybody CSV rank/mask/raw12 replay and Root visible acceptance",
+    "fresh source/status/quota/allowance then Submit1",
+    "official own score observation"
+  ],
+  "own_Public_score_new_P024": null
+}

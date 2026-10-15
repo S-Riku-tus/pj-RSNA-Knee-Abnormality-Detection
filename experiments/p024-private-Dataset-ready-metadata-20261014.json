@@ -1,0 +1,44 @@
+{
+  "schema_version": "P024_actual_created_private_READY_metadata_resolution_v1",
+  "execution_actor": "/root/state_audit",
+  "Root_delegated_readonly": true,
+  "date_JST": "2026-10-14",
+  "prior_Create_outcome_unknown_now_resolved_by_actual_metadata": true,
+  "dataset": {
+    "ref": "rsraki/n392-aucf0-816d6df4187b4878a3ccd7234ffa14dd/1",
+    "id": 12571388,
+    "private": true,
+    "status": "READY",
+    "version": 1,
+    "internal_version_id": null
+  },
+  "evidence": {
+    "observation.json": {
+      "path": "artifacts/research/20261014-private-Dataset-metadata-verification-v1/actual-p024-readonly-v1/observation.json",
+      "sha256": "bc733211d7778d1e1015f4fd8aa05a622c7df8ca2da82bc9a2a49fba23b22fb5",
+      "bytes": 5350
+    },
+    "Input-registry.json": {
+      "path": "artifacts/research/20261014-private-Dataset-metadata-verification-v1/actual-p024-readonly-v1/Input-registry.json",
+      "sha256": "5db9227cd8502c99cc6a33a0d9c203ac7cc08c6c0cb648705a2bc77a8e049abe",
+      "bytes": 2065
+    },
+    "delegated-execution-record.json": {
+      "path": "artifacts/research/20261014-private-Dataset-metadata-verification-v1/actual-p024-readonly-v1/delegated-execution-record.json",
+      "sha256": "eec3f9bff9591c7eea5c5bee55dd34f742bc38e46cfe7e7fe91189f8c675eb66",
+      "bytes": 1115
+    }
+  },
+  "read_calls": {
+    "GetDataset": 1,
+    "ListDatasetFiles": 1,
+    "GetDatasetStatus": 1,
+    "HTTP_send": 3
+  },
+  "Create_upload_download_calls": 0,
+  "exact_two_file_names_and_sizes_verified": true,
+  "remote_content_SHA256_verified": false,
+  "native64_Serving_Public_qualified": false,
+  "reupload_or_Create_retry_required": false,
+  "old_unknown_held_and_auto_review_rejection_evidence_preserved": true
+}

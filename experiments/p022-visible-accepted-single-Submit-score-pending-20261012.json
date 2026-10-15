@@ -1,0 +1,135 @@
+{
+  "schema_version": "p022_visible_root_accepted_single_official_Submit_score_pending_v1",
+  "observed_at_jst": "2026-10-12T18:06:21+09:00",
+  "reason": "Measure the fixed Native20 addition against the submitted S6-only P020 control. Visible source/result/final-CSV acceptance is separate from hidden scoring and Public improvement.",
+  "own_Public_best": "0.951",
+  "strict_above960_achieved": false,
+  "work_continues": true,
+  "P022_visible_acceptance": {
+    "Root_acceptance": {
+      "path": "artifacts/research/20261012-p022-S6-native20-results-tools-v3/Root-actual-acceptance.json",
+      "sha256": "98f1390f240262b2e374f9223027509587cad114ef7de6eecc9bb4c4660bec4b"
+    },
+    "ref": "rsraki/p022m-3f74be0b51a04af3b5b0c9ee99cf116b",
+    "kernel_id": 138296990,
+    "saved_version": 1,
+    "official_Notebook_status": "COMPLETE",
+    "actual_read": {
+      "path": "artifacts/research/20261012-p022-S6-native20-results-tools-v3/actual-observation-v1/receipt.json",
+      "sha256": "be4aa58fac955e24cb1c6fe4f7c6c51afab7428721fded9370f5394a569fcf32"
+    },
+    "getter_source_sha256": "45cad44b25cc373ef652a19a20c431d87b3c476d77091d83228b68802243d4ea",
+    "selected_output_body_GETs": 20,
+    "source_and_Input_bindings_verified": true,
+    "N": 3,
+    "S": 3,
+    "F": 0,
+    "original_four_model_FP32_mean_and_fullN_fixed20_rank_then_mask_restoration_recomputed": true,
+    "final_CSV_sha256": "7115f8655d7f69856a44f7f7a88305aca6fe502cbe2336fa6f7e99608f11a7a8",
+    "visible_successful_final_CSV_accepted_by_root": true,
+    "failed_UID_final_CSV_branch_exercised_in_this_visible_run": false,
+    "failed_branch_evidence_scope": "Previous CPU CSV contract and actual P019 fault64 are separate component evidence.",
+    "hidden_completion_verified": false,
+    "own_Public": null
+  },
+  "P022_official_Submit": {
+    "accepted_receipt": {
+      "path": "artifacts/research/20261012-p022-S6-native20-manual-Submit-tools-v2/actual-single-Submit-v1/receipt.json",
+      "sha256": "9fdccbd4af68f5067ff09252c6e989be601c714b19e2f18810ec1ba2cf80f4bc"
+    },
+    "at_utc": "2026-10-12T09:01:11.839704+00:00",
+    "submission_ref": 57102110,
+    "accepted": true,
+    "saved_version": 1,
+    "file_name": "submission.csv",
+    "actual_Submit_calls": 1,
+    "automatic_retry": false,
+    "raw_Decimal_GPU_seconds_before_Submit": "99813.289",
+    "daily_allowance_before_Submit": 4,
+    "own_Public_best_before_Submit": "0.951",
+    "own_Public": null,
+    "hidden_scoring_complete": false
+  },
+  "current_daily_allowance": {
+    "readonly_observation": {
+      "path": "artifacts/research/20261012-p021-unknown-Submit-readonly-tools-v1/actual-observation-v2/observation.json",
+      "sha256": "bf3db3b8bc6d15a97817c76d6d431757481fec668c587e85047dc638a2ed11c9"
+    },
+    "at_utc": "2026-10-12T09:02:15.679726+00:00",
+    "raw_numAllowedNow": 3,
+    "typed_numAllowedNow": 3,
+    "allowance_4_to3_is_consistent_with_the_accepted_P022_Submit": "Not evidence of P021 acceptance.",
+    "post_P022_unique_P021_submission_ref": null
+  },
+  "P021": {
+    "original_attempt": {
+      "path": "artifacts/research/20261012-p021-results-and-submit-tools-v2/actual-single-Submit-v1/held.json",
+      "sha256": "9b14ac52152aa83580fa90c0d39a450faf134d6c4ecbf3836cee025ec38a041f"
+    },
+    "Submit_attempts": 1,
+    "HTTPError_acceptance_unknown": true,
+    "resends": 0,
+    "latest_readonly_observation": {
+      "path": "artifacts/research/20261012-p021-unknown-Submit-readonly-tools-v1/actual-observation-v2/observation.json",
+      "sha256": "bf3db3b8bc6d15a97817c76d6d431757481fec668c587e85047dc638a2ed11c9"
+    },
+    "latest20_correlated_refs": [],
+    "more_pages_unread": true,
+    "no_match_does_not_prove_rejected": true
+  },
+  "P020_control": {
+    "submission_ref": 57098752,
+    "latest_dedicated_score_observation": {
+      "path": "artifacts/research/20261012-p020-scoring-status-tools-v1/observation-v6/observation.json",
+      "sha256": "05ad15991aab516acd8f94888090dd0f21aca63d751d4fcf73f82ffdb51adadc"
+    },
+    "observed_at_jst": "2026-10-12T17:50:44+09:00",
+    "raw_status_and_Public_returned": false,
+    "typed_PENDING_is_default_only": true,
+    "own_Public": null,
+    "purpose": "S6-only control for the fixed Native20 P022 comparison."
+  },
+  "f006_fold0": {
+    "latest_saved_comparison_snapshot": {
+      "path": "artifacts/research/20261012-f006-live-progress-v1/epoch06-snapshot-v1.json",
+      "sha256": "a77abda2a50de0366d116988f0ba077062f366d739a0a2530872e6595f09decc"
+    },
+    "snapshot_completed_epochs": 6,
+    "fixed_total_epochs": 12,
+    "session_id": 38827,
+    "training_continues": true,
+    "initial6_LR_multiplier": 1,
+    "LR_factor_begins_epoch": 7,
+    "weak_or_Public_improvement_claimed": false,
+    "next": "Compare epoch7-12 and final earliest-minimum weak BCE; decide fold1 after fixed12 fold0 completion.",
+    "weak_BCE_epoch6": 0.285276642290058,
+    "weak_AUC12_epoch6": 0.851427833840633,
+    "weak_fixed10_AUC_epoch6": 0.8715407815611405,
+    "cumulative_updates": 1272,
+    "AMP_skips": 0,
+    "LR_multiplier_epoch6": 1.0,
+    "BCE_same_epoch_delta": -4.845167722755672e-06,
+    "fixed10_AUC_same_epoch_delta": -1.1047666556684987e-05,
+    "next_epoch7_multiplier": 0.9397114317029974
+  },
+  "retained_lineage": {
+    "SourceV2_peer": {
+      "path": "artifacts/research/20261012-p022-S6-native20-source-v2/Root-source-peer.json",
+      "sha256": "97d8c344e2177818522a82422cc2425959b844d84d261bff371aa2ecbdb604d5"
+    },
+    "RootV2_authority": {
+      "path": "artifacts/research/20261012-p022-S6-native20-root-v2/Root-authority.json",
+      "sha256": "226d380480209e8a9465d7ffe0ffc6df13b370d15804167e73921ae9c7f2500c"
+    },
+    "accepted_Save": {
+      "path": "artifacts/research/20261012-p022-S6-native20-root-v2/actual-serving-Save-attempt-v1/receipt.json",
+      "sha256": "60a1e750b9133e6f3d6f0f598fdec0e24cf12154dc98d5e44307b3be72f5f2ce"
+    },
+    "old_size_HOLD_and_previous_records_overwritten": false
+  },
+  "documentation_update_only": {
+    "agent_Kaggle_API_POST_Save_Submit_GPU_MRI_model_teacher_calls": 0,
+    "running_trainer_CLI_config_edits": 0
+  },
+  "next": "Read official P020/P022 scoring and compare the S6-only versus fixed-Native20 submissions; preserve P021 no-resend policy; finish fixed12 f006 before selecting or starting fold1."
+}

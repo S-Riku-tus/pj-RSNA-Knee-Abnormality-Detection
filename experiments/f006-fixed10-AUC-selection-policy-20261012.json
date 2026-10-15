@@ -1,0 +1,45 @@
+{
+  "schema_version": "checkpoint_policy_prospective_secondary_comparison_v1",
+  "status": "specified_before_final_f006_metrics_no_model_adoption",
+  "defined_at_utc": "2026-10-12T09:44:48Z",
+  "observed_f006_completed_epochs_at_definition": 7,
+  "reason": "旧f005では両foldとも、BCEで選んだepochよりepoch10の固定10所見AUCが高い。現在のLR変更の対照は最早最小BCEのまま保持し、完了後の別比較として重み選択規則だけを変える候補を定める。",
+  "control": {
+    "run": "artifacts/runs/f006-late-cosine-fold0-20261012-v1/run.json",
+    "required_status": "complete",
+    "required_epochs": 12,
+    "selection": "earliest_epoch_with_minimum_global_observed_weak_BCE",
+    "existing_run_selected_and_best_checkpoint_overwritten": false
+  },
+  "secondary_policy": {
+    "selection": "earliest_epoch_with_maximum_arithmetic_mean_AUC_over_all_fixed10_targets",
+    "targets": ["ACL", "Medial Meniscus", "Lateral Meniscus", "Medial OA", "Lateral OA", "PF OA", "Effusion", "Baker's", "Contusion", "Fracture"],
+    "excluded_targets": ["MCL", "Synovitis"],
+    "exclusion_basis": "The existing final submission restores these two weakly supported targets to the public baseline; no Gold/Public-derived exclusions.",
+    "undefined_AUC_policy": "Reject the secondary candidate; never drop or replace an undefined target.",
+    "training_input_label_mask_group_seed_LR_and_model_math_changed": false,
+    "choice_from": "all twelve immutable retained epoch checkpoints and original history metrics",
+    "post_definition_coefficient_or_epoch_grid": false,
+    "identity_with_BCE_control_policy": "If selected epochs and checkpoint SHA coincide, record identity and do not submit a duplicate candidate.",
+    "existing_run_selected_field_modified": false
+  },
+  "historical_basis": {
+    "fold0": {"BCE_selected_epoch": 8, "BCE_selected_fixed10_AUC": 0.8805689522085427, "fixed10_AUC_best_epoch": 10, "fixed10_AUC_best_rounded": 0.885367},
+    "fold1": {"BCE_selected_epoch": 9, "BCE_selected_fixed10_AUC": 0.8800624500747695, "fixed10_AUC_best_epoch": 10, "fixed10_AUC_best_rounded": 0.884761},
+    "data_source": "Original completed f005 fold0/fold1 run.json history; final exact numbers will be derived from bound snapshots rather than rounded values.",
+    "historical_alternative_checkpoint_availability_verified": false,
+    "this_basis_establishes_Public_improvement": false
+  },
+  "completion_gate": [
+    "Complete the already-running fixed12 training; no partial checkpoint adoption or active trainer changes.",
+    "Verify retained checkpoint index, epoch metrics and selected checkpoint hashes against the final immutable run.",
+    "Compare weak fixed10 AUC and per-target corrected/harmed positive-negative pairs on identical validation UID/label masks.",
+    "Record weak validation reuse and unverified patient independence; do not describe exploratory selection as independent accuracy.",
+    "Only after the comparison decide which concrete checkpoint transport and submission candidate to prepare."
+  ],
+  "Gold_or_Public_training_selection_evaluation": false,
+  "models_uploaded_or_submitted_by_this_policy_record": 0,
+  "actual_model_or_GPU_execution_by_this_policy_record": 0,
+  "own_Public_best_at_definition": "0.951",
+  "strict_above960_achieved": false
+}

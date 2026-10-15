@@ -1,0 +1,111 @@
+{
+  "schema_version": "resumed_goal_completed_comparisons_P028_submitted_private_upload_verify_pending_v1",
+  "actor": "root",
+  "at_utc": "2026-10-14T02:09:11.959796+00:00",
+  "at_jst": "2026-10-14T11:09:11.959796+09:00",
+  "evidence": {
+    "state_audit": {
+      "path": "experiments/goal-state-audit-20261014.json",
+      "bytes": 14113,
+      "sha256": "d9a52e06104800feedc0c8d98cf37ae09a16429a24efd09c30083b9283c17b9a"
+    },
+    "F006_comparison": {
+      "path": "experiments/f006-completed-twofold-selection-comparison-20261014.json",
+      "bytes": 14830,
+      "sha256": "f9926885cbede350e5498a41ea252120c477fe01a3aebb7fe4e67b7c62dfa509"
+    },
+    "F008_comparison": {
+      "path": "experiments/f008-twofold-completed-weak-comparison-20261014.json",
+      "bytes": 7718,
+      "sha256": "a06c021405b64e5853a0f28262e133d3a483d4858675ab671ca1257bb39bd7db"
+    },
+    "public_research": {
+      "path": "experiments/public-research-096-20261014.json",
+      "bytes": 17763,
+      "sha256": "df370bb6928ec891589d70f3961d15f7fd66efd985b065de92e35ac4351c1e97"
+    },
+    "user_scope": {
+      "path": "experiments/user-authorized-private-kaggle-scope-20261014.json",
+      "bytes": 1514,
+      "sha256": "25f7d02ee7044ccffd54f207e8d5f8d4eb56d384e3607e7f3e80a72b21bd70ac"
+    },
+    "own_official": {
+      "path": "artifacts/research/20261012-p026-focused-scoring-status-tools-v1/root-observation-20261014-v2/observation.json",
+      "bytes": 46345,
+      "sha256": "423c2b9ed5c9cdd9f0e25a0431deadfa4a8fac5dcda20a8cd9c072ae7fb49061"
+    },
+    "P028_Save": {
+      "path": "artifacts/research/20261012-p028-original-S6-UID-completion-root-v1/actual-serving-Save-attempt-v1/receipt.json",
+      "bytes": 4045,
+      "sha256": "d041fc1f183ed262576369e1a88ed63068950834d5470ec9341d85995675ffd6"
+    },
+    "P028_visible_Root": {
+      "path": "artifacts/research/20261014-p028-visible-root-acceptance-v1/Root-actual-acceptance.json",
+      "bytes": 2013,
+      "sha256": "c206732a5cefd9a614e9ee1674c753ef44c433a1aea78a5b8a997445061c4abd"
+    },
+    "P028_Submit": {
+      "path": "artifacts/research/20261012-p028-original-S6-UID-completion-manual-tools-v1/actual-single-Submit-v1/receipt.json",
+      "bytes": 2899,
+      "sha256": "7e0336f0efa1a20fae178faee9a2dd71b15ebfdf6c645ea4d6e7fc57abea6b0f"
+    },
+    "P024_new_held": {
+      "path": "artifacts/research/20261014-private-upload-gcs-endpoint-fix-v1/actual-p024-private-upload-v1/held.json",
+      "bytes": 556,
+      "sha256": "6ee4163d1188f73e0602acd606453e3660c5a95c01ffcc66ec00a48125ddd21d"
+    },
+    "public_LB_first100": {
+      "path": "artifacts/research/20261014-current-public-leaderboard-root-v1/observation.json",
+      "bytes": 13982,
+      "sha256": "870bfded52d37f430d9f27a8c83aef58690a7e0c1964fb94ff4d9f74f22c8a02"
+    }
+  },
+  "target": {
+    "metric": "own official Public macro ROC AUC12",
+    "operator": ">=",
+    "value": 0.96
+  },
+  "own_confirmed_Public_best": "0.954",
+  "own_P026_Public": "0.953",
+  "goal_achieved": false,
+  "completed_training": {
+    "F006": "both folds12",
+    "F007": "both folds12",
+    "F008": "both folds24"
+  },
+  "all96_epoch_checkpoint_and_prediction_SHA_independently_verified": true,
+  "selection": "Prior BCE rules retained; separate F006 fixed10 AUC secondary candidate E12 in both folds",
+  "P028": {
+    "kernel_id": 138592375,
+    "version": 1,
+    "visible_rows": 3,
+    "visible_pass": true,
+    "submitted_once": true,
+    "submission_ref": 57163437,
+    "own_Public": null,
+    "hidden_complete": false
+  },
+  "private_user_consent_resolved": true,
+  "P024": {
+    "corrected_Start": 2,
+    "corrected_PUT": 2,
+    "Create": 1,
+    "Create_outcome": "unconfirmed",
+    "next_operation": "Read-only GetDataset and file inventory; never repeat unknown Create"
+  },
+  "public_V22": {
+    "author_Public": "0.956",
+    "own_Public": null,
+    "version": 22,
+    "recipe_reproduction_preparing": true
+  },
+  "remaining_allowance": {
+    "official_before_P028_Submit": 5,
+    "new_after_Submit_read": null,
+    "inferred_values_not_claimed_as_current": true
+  },
+  "local_Gold_training_or_selection_added": false,
+  "actual_MRI_or_training_started_by_this_resumed_turn": false,
+  "automatic_upload_or_submit_code_added": false,
+  "plan": "docs/goal-096.md"
+}

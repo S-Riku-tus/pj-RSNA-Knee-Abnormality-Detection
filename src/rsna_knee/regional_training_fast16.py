@@ -51,6 +51,7 @@ from .native_training_fast16 import (
     prefix_digest,
     read_manifest_structure,
     read_prediction_ids,
+    retain_epoch_checkpoint,
     suffix_keys,
     tensor_study,
 )
@@ -654,6 +655,7 @@ def train_regional(manifest_dir, index_path, output, config, fold, repo, weights
         "public_lb": None,
         "resume_supported": False,
         "denominator": "total observed weak cells per actual effective group, including final short group",
+        "epoch_checkpoint_index": "epoch_checkpoint_index.json",
     }
     dump_json(out / "run.json", record)
     generator = torch.Generator().manual_seed(config["seed"])
@@ -711,6 +713,7 @@ def train_regional(manifest_dir, index_path, output, config, fold, repo, weights
                 torch.save(checkpoint, out / "best.pt")
                 write_csv(out / "weak_valid_predictions.csv", SUBMISSION_COLUMNS, predictions)
                 record["selected"] = {**item, "checkpoint_sha256": sha256(out / "best.pt")}
+            retain_epoch_checkpoint(out, checkpoint, item, predictions_path)
             dump_json(out / "run.json", record)
             print(f"Regional epoch{epoch}/12: weak BCE={bce:.6f}, AUC12={metrics['macro_auc_12']}", flush=True)
         record.update(status="complete", elapsed_seconds=time.perf_counter() - start)

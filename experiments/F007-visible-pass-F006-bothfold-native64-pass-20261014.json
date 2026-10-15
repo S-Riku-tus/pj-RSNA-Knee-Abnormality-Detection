@@ -1,0 +1,260 @@
+{
+  "schema_version": "Root_F007_actual_visible20_F006_twofold_actual_native64_checkpoint_v1",
+  "prepared_by": "/root/research_096",
+  "evidence": {
+    "official": {
+      "path": "artifacts/research/20261014-three-candidate-official-scoring-tools-v1/root-observation-v5/observation.json",
+      "bytes": 64540,
+      "sha256": "e1fed0d1805fb187a52f5b8972e19e1805975b42f94c809e20fe334e3be225df"
+    },
+    "F006_CPU_Root": {
+      "path": "artifacts/research/20261014-f006-bothfold-CPU-root-acceptance-v1/Root-CPU-acceptance.json",
+      "bytes": 6819,
+      "sha256": "744f2c39144bad85d8de2a33266080af50c659cd4f163de58fe62b1788c9ecfa"
+    },
+    "F006_private_registry": {
+      "path": "artifacts/research/20261014-f006-fold1-private-metadata-tools-v1/actual-f006fold1-readonly-v1/Input-registry.json",
+      "bytes": 2071,
+      "sha256": "83ac9f6453e75e3c744066f9030057efd2f4df6bebc91bdd61d2cd3f0a459025"
+    },
+    "F006_source28_peer": {
+      "path": "artifacts/research/20261014-f006-fullsource-independent-review-v1/source-review.json",
+      "bytes": 7271,
+      "sha256": "42c2c811b7dfe8350e4d2ffa854c5080bd35457496db107b6530d78fb0ec9821"
+    },
+    "F006_staged_actual_peer": {
+      "path": "artifacts/research/20261014-f006-fullsource-independent-review-v1/staged-Root-issued-peer-v2.json",
+      "bytes": 5601,
+      "sha256": "79e2d6970d88439aca360645b4a744ad4082d52f10c686f34fb720e301139c4e"
+    },
+    "F006_Root_context": {
+      "path": "artifacts/research/20261014-f006-bothfold-native64-context-tools-v1/issued/Notebook-context.json",
+      "bytes": 6035,
+      "sha256": "7952ecf8ab788d3989a54008a978e5f6a92bd97f8b3eb16e4b986cdb37ecdfcc"
+    },
+    "F006_native_Save": {
+      "path": "artifacts/research/20261014-f006-bothfold-native64-manual-tools-v1/actual-native64-Save-v1/receipt.json",
+      "bytes": 817,
+      "sha256": "6dfe19c0c9b99cd105a931a3df2cb256a21f6ce5bea42f33a951d08c81ea898d"
+    },
+    "F006_native_Get": {
+      "path": "artifacts/research/20261014-f006-bothfold-native64-manual-tools-v1/actual-observation-v1/receipt.json",
+      "bytes": 3652,
+      "sha256": "69d865ee78cd18ed0e9fc2f6af8c5b031dd8ebb78e487d8a375566e2cab0b2db"
+    },
+    "F006_native_status": {
+      "path": "artifacts/research/20261014-f006-bothfold-native64-manual-tools-v1/actual-observation-v1/status.json",
+      "bytes": 191,
+      "sha256": "f94f8724ae66701d40021743f3828349894ce4aa433112125b39c15a4901dce4"
+    },
+    "F006_native_result": {
+      "path": "artifacts/research/20261014-f006-bothfold-native64-manual-tools-v1/actual-observation-v1/p024-native64-a0b3a0dc510f4f2ebd41a1e37c60bdc4/P024_NATIVE64_RESULT.json",
+      "bytes": 478885,
+      "sha256": "27e0d4ea92b7f01e38023af64fd4ba8c743b16faac591525c426db2853d646d6"
+    },
+    "F006_native_Root": {
+      "path": "artifacts/research/20261014-f006-bothfold-native64-replay-tools-v1/Root-native64-acceptance-v1/Root-native64-review.json",
+      "bytes": 62347,
+      "sha256": "c5b7d1dd05eaaf9cb05d03c9f7a0e9d2311bb6a73360b7e2e564299c4501ca0d"
+    },
+    "F007_Save": {
+      "path": "artifacts/research/20261014-f007-Serving-mask-plan-wrapper-v3/actual-serving-Save-attempt-v1/receipt.json",
+      "bytes": 4119,
+      "sha256": "f538b3dfab03f7b9b4f01c34b0572aed5d4a7790358ca2436c9eb01ceb2f3f6a"
+    },
+    "F007_Get": {
+      "path": "artifacts/research/20261014-f007-Serving-mask-fix-manual-tools-v3/actual-observation-v2/receipt.json",
+      "bytes": 5839,
+      "sha256": "bfc2dda551e830ee9a45124e76cda8e05b73e846fef5311653a7d33bac745dfb"
+    },
+    "F007_status": {
+      "path": "artifacts/research/20261014-f007-Serving-mask-fix-manual-tools-v3/actual-observation-v2/status.json",
+      "bytes": 116,
+      "sha256": "ee023df811ae8f83f551ee70a0e93500e46013f1082cbe46426592fba279e8a6"
+    },
+    "F007_visible_Root": {
+      "path": "artifacts/research/20261014-f007-Serving-mask-visible-root-acceptance-v3/Root-actual-acceptance.json",
+      "bytes": 2410,
+      "sha256": "51c2513f0a928176aeb9245d64b9b20d50ae9aa02529ac632bfb96646e6ab7ef"
+    },
+    "F007_success_handoff": {
+      "path": "artifacts/research/20261014-f007-Serving-mask-plan-wrapper-v3/success-handoff.json",
+      "bytes": 3729,
+      "sha256": "88e02076efa3b65a77fbe14d54a4e67f4ae188c8867d22dc75db9a3a4968fb9e"
+    },
+    "V22_bounded_design": {
+      "path": "artifacts/research/20261014-v22-parent-F006-bothfold-bounded-design-v1/design.json",
+      "bytes": 12253,
+      "sha256": "17eec0525541dbcf5fa5ad8a72f67a9bb5a7afaece2f3ceb30662e483a2bf7f7"
+    },
+    "V22_packaging": {
+      "path": "artifacts/research/20261014-v22-parent-F006-bothfold-bounded-design-v1/packaging-options.json",
+      "bytes": 6957,
+      "sha256": "32cb9ea8c8d4dec66ef9b8ad4518f7d2207e352097350bfb866dad19988b384f"
+    }
+  },
+  "own_confirmed_Public_best": "0.954",
+  "goal_target": 0.96,
+  "goal_operator": ">=",
+  "goal_achieved": false,
+  "goal_status": "active",
+  "official_observation_at_UTC": "2026-10-14T05:13:32.817757+00:00",
+  "official_observation_at_JST": "2026-10-14T14:13:32.817757+09:00",
+  "formal_submissions": {
+    "P028": 57163437,
+    "V22R": 57164195,
+    "P024": 57166365
+  },
+  "own_Public_by_target": {
+    "P028": null,
+    "V22R": null,
+    "P024": null
+  },
+  "formal_raw_status_and_Public_absent_errors_empty": true,
+  "typed_PENDING_is_default_not_observed_official_status": true,
+  "official_today": 3,
+  "official_remaining_allowance": 2,
+  "official_total": 26,
+  "List_only_equal_prior_rows": {
+    "refs": [
+      57103408,
+      57098752
+    ],
+    "Public": "0.954",
+    "Root_assessment": "Known previously resolved P020/P021; no new unknown better candidate and no new Get needed",
+    "raw_observer_generic_additional_Get_flag_retained": true,
+    "raw_observer_not_modified": true,
+    "new_List_only_score_adopted": false
+  },
+  "F006_CPU": {
+    "actual_Root_accepted": true,
+    "unchanged_roles_vs_P024": [
+      "CLS:0",
+      "REG:0",
+      "REG:1"
+    ],
+    "single_changed_role": "CLS:1 from f005 BCE9 to prospective F006 fixed10 AUC E12",
+    "seed": 20261002,
+    "folds": [
+      0,
+      1
+    ],
+    "Gold_fit_or_selection": false,
+    "weak_and_Public_not_interchanged": true
+  },
+  "F006_new_private_Input": {
+    "ref": "rsraki/n392-aucf1-ddc10efce2d024a1d7a69884c47d50a7/1",
+    "dataset_id": 12573715,
+    "display_version": 1,
+    "private": true,
+    "status": "READY",
+    "metadata_read_file_count": 2,
+    "metadata_read_file_sizes": [
+      104271921,
+      34647
+    ],
+    "internal_version_id": null,
+    "internal_version_id_unexposed_not_inferred": true,
+    "metadata_read_did_not_verify_content_SHA": true,
+    "subsequent_actual_native64_mounted_SHA_Root_accepted": true,
+    "old_Create_guard_error_preserved_no_resend": true
+  },
+  "F006_native64": {
+    "ref": "rsraki/p024a-2c2e571d3c6d44ee944f76fb17fbcad3",
+    "kernel_id": 138612732,
+    "saved_version": 1,
+    "Save_accepted_at_UTC": "2026-10-14T05:11:05.272742+00:00",
+    "API_source_bytes": 340957,
+    "API_source_sha256": "ac4d5895248a4f46dca970b70371f711084830c98634a1ee1cfdd9f020c6b6f3",
+    "source_count": 28,
+    "actual_status": "COMPLETE",
+    "Get_6JSON_observed_at_UTC": "2026-10-14T05:17:34.285186+00:00",
+    "Root_accepted_at_UTC": "2026-10-14T05:21:39.519057+00:00",
+    "Root_full_original_phase_replay_passed": true,
+    "actual_new_native64_qualified": true,
+    "actual_new_CLS1_remote_mounted_SHA_qualified": true,
+    "native_MRI_decode": 64,
+    "full_forward_calls": 256,
+    "elapsed_seconds": 153.62313240099996,
+    "CPU_and_GPU_storage_alias_count": 0,
+    "all64_FP32_fold_family_means_recomputed": true,
+    "array_SHA_count_per_UID": 5,
+    "both_CLS_exact_archive_member_counts": [
+      201,
+      201
+    ],
+    "resources_queue_and_cleanup_verified": true,
+    "speed_gain_claimed": false,
+    "actual_new_Serving_qualified": false,
+    "hidden_completion_verified": false,
+    "own_Public": null,
+    "formal_Submit_calls": 0,
+    "Save_and_Get_receipts_keep_original_point_in_time_qualification_false": true
+  },
+  "F007_visible": {
+    "ref": "rsraki/f007s6-e1c7408eab40479d9528dcbdfbf4e496",
+    "kernel_id": 138611286,
+    "saved_version": 1,
+    "actual_status": "COMPLETE",
+    "positive_output_bodies": 20,
+    "S": 3,
+    "F": 0,
+    "Root_accepted_at_UTC": "2026-10-14T05:10:37.085807+00:00",
+    "actual_visible_Serving_qualified": true,
+    "full20_local_replay_passed": true,
+    "original_F007_numerics_Source4_packet_Root_context_and_native64_proofs_preserved": true,
+    "current_CPU_and_twofold28head_class_model_fingerprints_bound": true,
+    "fixed20_fullN_rank_mask_UID_finalCSV_verified": true,
+    "submission_csv_sha256": "7115f8655d7f69856a44f7f7a88305aca6fe502cbe2336fa6f7e99608f11a7a8",
+    "visible_csv_same_prior_controls_not_hidden_equivalence": true,
+    "failed_UID_final_CSV_path_exercised_in_this_visible_run": false,
+    "failed_UID_fullCSV_engineering_fixture_passed_with_artificial_scope_retained": true,
+    "hidden_completion_verified": false,
+    "own_Public": null,
+    "formal_Submit_calls": 0,
+    "adopted_for_hidden_or_accuracy": false,
+    "old_ERROR_jobs_preserved": [
+      138605901,
+      138608301
+    ],
+    "no_resubmission_of_old_Save_claims": true
+  },
+  "V22_F006_bounded_design": {
+    "design_only": true,
+    "implementation_or_actual_combined_run_started": false,
+    "conditional_on_own_official_scores": true,
+    "V22_code6_and_guard7_source_bytes_preserved_in_design": true,
+    "native_family_and_fold_means_unchanged": true,
+    "combination": "rank_N(.8*rank_N(V22_B)+.2*rank_N(native_mean)); unsupported MCL/Synovitis to B; structural failed UID restores all12 original B CSV strings without rerank",
+    "baselineParent_switch_one_factor_control": "S6 + same F006 bothfold pair fixed20; direct comparison to P024 changes two factors",
+    "positive_output_contract_body_count": 25,
+    "literal_source_capacity_projection_bytes": 936573,
+    "capacity_projection_is_not_actual_materialized_source_qualification": true,
+    "code_only_private_Input_or_encoded_exact_source_are_authorized_routine_packaging_candidates": true,
+    "actual_combined_runtime_under9h_unverified": true,
+    "Public_gain_claimed": false,
+    "public_weights_inherited_gold_selection_history_uncertainty_retained": true
+  },
+  "scope": {
+    "this_helper_source_and_metadata_only": true,
+    "this_helper_auth_network_model_GPU_MRI_teacher_calls": 0,
+    "this_resumed_turn_local_MRI_decode": 0,
+    "this_resumed_turn_additional_training": 0,
+    "delegated_actual_CPU_restore_performed": true,
+    "actual_Kaggle_MRI_native64_and_visible_inference_performed": true,
+    "MRI_Report_teacher_rows_credentials_outbound": false,
+    "formal_Submit_not_automatically_started": true
+  },
+  "history": {
+    "previous_checkpoints_errors_partial_issuance_and_original_receipts_preserved": true,
+    "raw_document_bodies_and_ledger_prefix_preserved_by_Root_updater": true
+  },
+  "next": [
+    "Qualify F006 bothfold fixed20 visible Serving before considering one formal Submit",
+    "Read the three pending official scores without resubmitting",
+    "Consider V22 parent switch with the same F006 pair only after measured scores; actual source capacity and 25-output/runtime qualification remain required"
+  ],
+  "actor": "/root",
+  "at_UTC": "2026-10-14T05:29:40.252858+00:00",
+  "at_JST": "2026-10-14T14:29:40.252858+09:00"
+}

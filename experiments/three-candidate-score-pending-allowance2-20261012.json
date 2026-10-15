@@ -1,0 +1,60 @@
+{
+  "schema_version": "three_accepted_candidates_scoring_and_allowance_snapshot_v1",
+  "observed_at_utc": "2026-10-12T10:06:01.728960+00:00",
+  "observed_at_jst": "2026-10-12T19:06:01.728960+09:00",
+  "Root_observation": {
+    "path": "artifacts/research/20261012-three-candidate-scoring-status-tools-v1/actual-observation-v1/observation.json",
+    "sha256": "16b8ba494e5a9bfb74a35135ebd6d756a6c4dc3f5f6def3baa388e92552b91bb"
+  },
+  "prior_submission_snapshot": {
+    "path": "experiments/p021-mirror-source3-official-Submit-accepted-pending-20261012.json",
+    "sha256": "c5925c03b8454a4d1212d9b2af16b4f8046b0b298509dff7cbfaa96cdec94518"
+  },
+  "accepted_submissions": {
+    "P020_S6only": 57098752,
+    "P022_S6plus_fixedNative20": 57102110,
+    "P021_latestV2_samebyte_mirror": 57103408
+  },
+  "own_Public_by_target": {
+    "P020": null,
+    "P022": null,
+    "P021": null
+  },
+  "raw_scoring_status_returned_for_targets": false,
+  "target_errors_observed": false,
+  "typed_default_PENDING_not_official_raw_status": true,
+  "official_own_Public_best": "0.951",
+  "fresh_official_allowance": {
+    "raw_and_typed_remaining": 2,
+    "raw_and_typed_numToday": 3,
+    "raw_and_typed_numTotal": 22,
+    "reset_time_independently_observed": false
+  },
+  "whole_history": {
+    "count": 22,
+    "terminal_observed": true,
+    "more_pages_unread": false
+  },
+  "Root_readonly_RPC_counts": {
+    "GetSubmission": 3,
+    "ListSubmissions": 1,
+    "GetSubmissionLimits": 1
+  },
+  "Root_Save_Submit_upload_calls_in_this_observation": 0,
+  "strict_above960_achieved": false,
+  "work_continues": true,
+  "f006_last_recorded_snapshot": {
+    "path": "artifacts/research/20261012-f006-live-progress-v1/epoch07-snapshot-v1.json",
+    "sha256": "9597c6abb2b22bc81a3f27be08283f915ab3f9298f2797d810cf58fa85f5fba6",
+    "completed_epochs": 7,
+    "fixed_total_epochs": 12,
+    "improvement_or_adoption_claimed": false
+  },
+  "preserved_prior_top_bytes": {
+    "path": "artifacts/research/20261012-three-candidate-status-documentation-v1/preserved-18p56-document-tops.json",
+    "sha256": "ef5e56872f3f7e2f29fef336920514701f94b6745e03cf21915dfdbd5e9df6ed"
+  },
+  "documentation_only_agent_API_GPU_MRI_model_teacher_calls": 0,
+  "running_trainer_CLI_config_edits": 0,
+  "next": "Read the authorized official scoring observations; finish f006 fixed12 and compare BCE control versus the declared secondary fixed10-AUC selection before adoption."
+}

@@ -1,0 +1,262 @@
+{
+  "schema_version": "F007_Source3_reviewed_F008_waiting_F0061_E6_local_metadata_aggregate_v1",
+  "actor": "/root/local_analysis; Root authorized local metadata/documentation only",
+  "at_utc": "2026-10-12T18:34:00.922547+00:00",
+  "evidence": {
+    "prior_0306_terminal_adoption_aggregate": {
+      "path": "experiments/p026-official-public953-Root-adoption-decision-20261013.json",
+      "sha256": "237cab6327d8dc7a72f2792478f19cec1866d8cd7b068804dab4208607f6a59b",
+      "bytes": 9845
+    },
+    "F007_Source3_Root_review": {
+      "path": "artifacts/research/20261013-f007-source3-root-review-v1/Root-source-review.json",
+      "sha256": "280b0cbe5b89c6eaeb36a66e1f27f27ab6d43f2935592cfe29f44957bbebc3f2",
+      "bytes": 1323
+    },
+    "F008_Source2_Root_review": {
+      "path": "artifacts/research/20261013-f008-local-sequence-root-v1/Root-corrected-controller-source-review.json",
+      "sha256": "8c7fa77608aa77d07776f4781a94d6427552fadf06910c26636b0fc56f9db669",
+      "bytes": 923
+    },
+    "F008_Source2_Root_local_context": {
+      "path": "artifacts/research/20261013-f008-local-sequence-root-v1/Root-issued-local-training-context-v2.json",
+      "sha256": "945338b955540dd6f973641e9f1657a80e21fe26f61df5d99b5894ca5c69ceb4",
+      "bytes": 2383
+    },
+    "F008_Source1_preserved_context": {
+      "path": "artifacts/research/20261013-f008-local-sequence-root-v1/Root-issued-local-training-context.json",
+      "sha256": "c5af5efb2d5ed1ed9028eca5ffb23e1898b663ffbec35266d6b6f4fad01d1958",
+      "bytes": 1990
+    },
+    "F008_actual_waiting_controller": {
+      "path": "artifacts/research/20261013-f008-after-F0061-twofold-manual-controller-source-v2/actual-manual-sequence-v1/controller.json",
+      "sha256": "478d034ff6e30e558f2bd2e49b10796166baa5edf3980007fc8c05387e61dc29",
+      "bytes": 923
+    },
+    "F008_Source2_preparation": {
+      "path": "artifacts/research/20261013-f008-after-F0061-twofold-manual-controller-source-v2/preparation.json",
+      "sha256": "185821211adace2ed2e213c35536f6a74c6b29f2102981b040cba5dd6be75879",
+      "bytes": 5703
+    },
+    "F008_Source2_single_delta": {
+      "path": "artifacts/research/20261013-f008-after-F0061-twofold-manual-controller-source-v2/source-diff.json",
+      "sha256": "4085ee53d0298211a9d8849e29235f5d99977892dbbb9521017bbcb996b27a78",
+      "bytes": 1303
+    },
+    "F008_Source2_five_artificial_boundary_checks": {
+      "path": "artifacts/research/20261013-f008-after-F0061-twofold-manual-controller-source-v2/boundary-evidence-v2.json",
+      "sha256": "496042726ea6626a786ce30219d464f80faa5d4bdea5116c9b01651693bd4bbe",
+      "bytes": 1057
+    },
+    "F0061_constant_phase6_Root_metadata_progress": {
+      "path": "artifacts/research/20261013-f006-fold1-constant-phase-progress-v3/progress.json",
+      "sha256": "7151680299bed788dcc5a251d0276153a8746635c4d5a1c154a951338668bc91",
+      "bytes": 2503
+    },
+    "official_0306": {
+      "path": "artifacts/research/20261012-p026-focused-scoring-status-tools-v1/delegated-observation-v6/observation.json",
+      "sha256": "746e35e5e1e772257ed6170eb1b1e963f91a1cc5cd17bd4f547cda2620e2b555",
+      "bytes": 46373
+    },
+    "public_leaderboard_0251": {
+      "path": "artifacts/research/20261013-current-public-leaderboard-root-v1/observation.json",
+      "sha256": "40e20af1decae347c2447f57b7f699fe120528a42b0de8d362043d5cb230c9ba",
+      "bytes": 13904
+    },
+    "pending_specific_consent": {
+      "path": "experiments/three-reviewed-private-transfers-consent-pending-20261013.json",
+      "sha256": "032306b304d55a5634061240b07bd8a0941d034c15d971c3b89558ef7948cb2a",
+      "bytes": 3106
+    },
+    "P026_Native_compat_source_only": {
+      "path": "artifacts/research/20261013-p026-baseline-native20-compatibility-source-analysis-v1/analysis.json",
+      "sha256": "37d5030d2195edbba954b1fcbd6828615885824cc4fbf52abbbec0f6710d8f79",
+      "bytes": 16588
+    },
+    "actual_P026_Save": {
+      "path": "artifacts/research/20261012-p026-fixed20-reader-manual-tools-v1/actual-single-Save-v1/receipt.json",
+      "sha256": "92fd1714e756ba229eeae352a26f8940968d034d2a09bf9519824f5c812c47a8",
+      "bytes": 1856
+    },
+    "actual_P026_visible_Root_acceptance": {
+      "path": "artifacts/research/20261012-p026-root-actual-acceptance-v1/Root-actual-acceptance.json",
+      "sha256": "4ecf201e8cfb60b2685536cdabe49ebfc6c2ac72bfc585cc6f2a98e66d6380aa",
+      "bytes": 3138
+    },
+    "actual_P026_Submit": {
+      "path": "artifacts/research/20261012-p026-fixed20-reader-manual-tools-v1/actual-single-Submit-v1/receipt.json",
+      "sha256": "107d0524c82025036689ea2e95d65573b55390a25bf9cbfdd07aff2d0cb179fc",
+      "bytes": 3406
+    },
+    "F0061_immutable_E6_run_metadata_snapshot": {
+      "path": "artifacts/research/20261013-f007-Source3-F008-waiting-F0061-E6-docs-v1/before/F0061-run-metadata-observed-E6.json",
+      "sha256": "10f32e77fefcc1ccaf6ab28aa96e9ef7611a0cbdf48568c85943c68abe657174",
+      "bytes": 79220
+    }
+  },
+  "own_qualified_Public": "0.954",
+  "strict_above960_achieved": false,
+  "goal_state_statement": "目標未達・作業を継続",
+  "official_scores_and_limits_0306_retained_not_requeried": {
+    "at_utc": "2026-10-12T18:06:22.167131+00:00",
+    "completed_at_utc": "2026-10-12T18:06:24.333610+00:00",
+    "execution_actor": {
+      "name": "local_analysis",
+      "authorized_by": "root",
+      "delegated": true,
+      "delegation_id": "root_authorized_0306_P026_focused"
+    },
+    "observer_source_sha256": "32f62a39d9edfe2c1703ab9fdd95d490a2b8bd58921f9ca5733156e3f40a3a17",
+    "RPC_counts": {
+      "GetSubmission": 1,
+      "ListSubmissions": 1,
+      "GetSubmissionLimits": 1
+    },
+    "P026_submission_ref": 57107853,
+    "Get_List_raw_typed_status": "COMPLETE",
+    "Get_List_raw_typed_Public": "0.953",
+    "Get_List_error_present": false,
+    "Get_List_consistency": true,
+    "Root_independent_saved_raw_and_SHA_review_accepted": true,
+    "Root_additional_Get_needed": false,
+    "kernel_identity_independently_reexposed": false,
+    "kernel_binding_scope": "local genuine accepted Submit/Save/result lineage; Get does not independently expose full kernel identity",
+    "saved_local_lineage": {
+      "ref": "rsraki/p026r20-3a7933733442465294773ddaafd8d692",
+      "kernel_id": 138327844,
+      "saved_version": 1
+    },
+    "fresh_allowance": {
+      "numToday": 4,
+      "numAllowedNow": 1,
+      "numTotal": 23
+    },
+    "daily_reset_independently_observed": false,
+    "List_only_other_scores_above_prior": []
+  },
+  "Root_P026_not_adopted_next_native_S6_control954": {
+    "P026_fixed_Reader20_adopted": false,
+    "reason": "Own official P026 Public0.953 did not exceed highest S6 control Public0.954.",
+    "next_native_baseline": "Own highest S6 control Public0.954",
+    "P026_baseline_switch_or_Reader_coefficient_search_or_extra_Submit": 0,
+    "P026_Native_compatibility_37d_preserved_source_only_for_future": true
+  },
+  "public_leaderboard_0251_retained_not_requeried": {
+    "actor": "/root",
+    "at_utc": "2026-10-12T17:51:05.077448+00:00",
+    "rows_observed": 100,
+    "public_requested": true,
+    "max": "0.966",
+    "min": "0.956",
+    "strict_above960": 28,
+    "first_page_only_not_all_teams": true,
+    "additional_page_available": true,
+    "pagination_used": false,
+    "SDK_Get_read_wire": 1,
+    "public_Notebook_or_weights_or_own_achievement_established": false
+  },
+  "F0061": {
+    "session": 41581,
+    "status": "running",
+    "completed_epochs": 6,
+    "latest_weak_metrics": {
+      "epoch": 6,
+      "weak_bce": 0.29386906999289214,
+      "weak_macro_auc_12": 0.8612275431064628,
+      "optimizer_steps": 208,
+      "amp_skipped_steps": 0,
+      "elapsed_seconds": 12386.498561099987,
+      "learning_rate_multiplier": 1.0,
+      "learning_rates": {
+        "head": 0.0003,
+        "last2": 1e-05
+      }
+    },
+    "fixed12_complete_or_adopted": false,
+    "remaining_7_to12_schedule": "late_cosine",
+    "constant_phase_input_config_match_except_LR_schedule_reason": true,
+    "shared7_source_match_Root_reported": true,
+    "all6_multiplier1_steps208_skip0": true,
+    "maximum_absolute_BCE_delta_first6": 9.911026357278807e-06,
+    "maximum_absolute_AUC12_delta_first6": 3.833728243074486e-05,
+    "strict_binary_stochastic_reproduction_selection_model_or_Public_gain_established": false,
+    "later_epoch_progress_helper_reruns_scheduled": false
+  },
+  "F007_Source3_Root_accepted_source_preparation_only": {
+    "canonical_syntax_SHA_files": 16,
+    "runtime_source_pins": 15,
+    "old_components11_and_serving9_raw_preserved": true,
+    "unchanged_original_packet_members": 69,
+    "new_source_packet_members": 93,
+    "mask_metadata_schema_one_line_inverse_byteexact": true,
+    "original_numeric_math_models_input_role_and_protected_cells_preserved": true,
+    "new_Input_native64_Serving_Public_or_actual_metadata_fit": false,
+    "new_permission_issued": false
+  },
+  "F008_Root_manual_local_queue": {
+    "session": 45576,
+    "observed_controller": {
+      "F006_checkpoint_prediction_bodies_independently_verified": false,
+      "F006_completed_runtime_qualification_transferred_to_F008": false,
+      "F006_completion_required": true,
+      "F006_process_objects_pinned_by_creation_time_and_exe": true,
+      "Root_context_sha256": "945338b955540dd6f973641e9f1657a80e21fe26f61df5d99b5894ca5c69ceb4",
+      "actual_F008_training_started": false,
+      "children": [],
+      "controller_sha256": "090828f5628cd480d7f54452ea3c99167af51c52e7f8ad18de6eada7877521cf",
+      "external_authority": false,
+      "factor_pins_sha256": "556ca22ec6f99a8d0ec395f0634b9ea68dd0b969c11efd3153e87ccec50c7b0c",
+      "fold_launch_order": [
+        0,
+        1
+      ],
+      "model_feature_teacher_MRI_or_prediction_payload_reads_by_controller": 0,
+      "process_GPU_model_feature_teacher_network_reads_or_calls": null,
+      "schema_version": "f008_after_F0061_explicit_manual_local_controller_v1",
+      "status": "WAITING_FOR_F0061"
+    },
+    "Root_observation_JST": "2026-10-13 03:22",
+    "metadata_only_doc_recheck_at_utc": "2026-10-12T18:34:00.922547+00:00",
+    "local_sequence": "After pinned F006 fold0/fold1 process objects signal exit0 and genuine complete12 metadata, train frozen old BCE CLS zero residual24 fold0 then fold1",
+    "F008_started_or_GPU_child_launched": false,
+    "reserve_4090_no_additional_GPU_job": true,
+    "STOP_path": "artifacts/research/20261013-f008-after-F0061-twofold-manual-controller-source-v2/STOP",
+    "STOP_behavior": "Before/during predecessor wait HOLD; active child is never killed, finishes before HOLD and suppression of next fold",
+    "external_Upload_Save_Submit_authority": false,
+    "controller_process_reads_actual_count": null
+  },
+  "F008_Source1_failure_and_Source2_fix_preserved": {
+    "original_source_and_Root_context_c5af_preserved": true,
+    "genuine_nonempty_UTC_string_rejected_by_strictTrue_before_process_or_mkdir": true,
+    "old_actual_attempt_directory_at_issue": false,
+    "new_Source2_only_bool_predicate_one_line_inverse_byteexact": true,
+    "factor_pins_and_old4tests_raw_same": true,
+    "reported_artificial_test_count": 5,
+    "tests_reexecuted_by_this_doc_task": false,
+    "existing_F006_source_environment_process_optimizer_steps_changed": false
+  },
+  "three_specific_private_transfers_affirmative_response_observed": false,
+  "P024_P028_before_process_auto_review_rejections_preserved": true,
+  "pending_three_Upload_Save_Submit_or_resend": 0,
+  "old_REG_consent_transferred": false,
+  "this_task_data_model_teacher_MRI_cache_body_GPU_SDK_network_API_calls": 0,
+  "this_task_other_Source_trainer_CLI_config_or_environment_changed": false,
+  "tracked_automatic_external_action_code_added": false,
+  "history_and_current_block_raw_snapshots": {
+    "README.md": {
+      "before_sha256": "5c0f46b72a1e2507d6205b3de78d8327b7ad4ac1dd1095e1cfe47eb70b037f5b",
+      "after_sha256": "606fc81320bbcaa7f8a4862f4c40a255daea5ffe20fc2078fad24a170fe4f529",
+      "old_history_tail_sha256": "daf319a77fe9da547bc9d54184ab4f8e1df795fd62c0f9c38937865b428d5200"
+    },
+    "PROJECT.md": {
+      "before_sha256": "f5c7e56f26be8cc0340403a0c052b5a5d3d6f5d98b2326aff679a53b7fafad8f",
+      "after_sha256": "3e576a0d96c01c0204ca183582148d278e7e219cbaf76fc259d922f2095fe1e0",
+      "old_history_tail_sha256": "ce8ce7bc66efe244930994cfe75da6b89ccb890c0b12c6ef9ab237f0ab5b29a6"
+    },
+    "docs__validation.md": {
+      "before_sha256": "759ec6663752b636bedf0be6bb881f861548f0919107c0faf5c659e711b07da8",
+      "after_sha256": "263eb198868cce364a9217f64bec8fa66c9d81be798ee2794fbc8e3c291c135a",
+      "old_history_tail_sha256": "d20d6ab7f019465cd9043b4f591859ec53ddbc0a65db3dc3c2578f1bf1070e59"
+    }
+  }
+}

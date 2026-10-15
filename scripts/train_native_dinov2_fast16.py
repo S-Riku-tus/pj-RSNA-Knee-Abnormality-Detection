@@ -43,6 +43,14 @@ def add_assets(parser):
         parser.add_argument(f"--{name}", type=Path, required=True)
 
 
+def qa_arm_config(config, directory, blocks):
+    """Use the requested arm itself, keeping the existing opposite control."""
+    if blocks == config["online"]["trainable_blocks"]:
+        return config
+    name = "f005-dinov2-native-frozen-control-fast16.json" if blocks == 0 else "f005-dinov2-native-last2-fast16.json"
+    return validate_native_config(load_feature_config(Path(directory) / name))
+
+
 def qa(args):
     ensure_cuda()
     config = validate_native_config(load_feature_config(args.config))
@@ -110,8 +118,7 @@ def qa(args):
     records, checks = [], []
     arm_config_hashes = {}
     for blocks in (0, 2):
-        config_name = "f005-dinov2-native-frozen-control-fast16.json" if blocks == 0 else "f005-dinov2-native-last2-fast16.json"
-        arm_config = validate_native_config(load_feature_config(args.config.parent / config_name))
+        arm_config = qa_arm_config(config, args.config.parent, blocks)
         arm_config_hashes[str(blocks)] = json_hash(arm_config)
         torch.manual_seed(config["seed"])
         encoder.zero_grad(set_to_none=True)

@@ -1,0 +1,174 @@
+{
+  "schema_version": "rsna_knee_milestone_v1",
+  "run_id": "p020-public954-restored-S6-private-Save-current-research-20261012",
+  "at_utc": "2026-10-12T06:38:11.368420+00:00",
+  "at_jst": "2026-10-12T15:38:11.368420+09:00",
+  "goal_status": "active",
+  "own_best_Public": 0.951,
+  "strict_above960_achieved": false,
+  "public_research": {
+    "catalog_scope": "Official SCORE_DESCENDING first100 and DATE_RUN first40; no full public-catalog claim",
+    "source_and_linked_score_candidates_checked": 14,
+    "current_usable_parent": {
+      "ref": "heliosli/rsna-knee-blend-gold-dataset-restored",
+      "display_version": 3,
+      "script_id": 357152922,
+      "author_Public": "0.954",
+      "own_Public": null,
+      "source_sha256": "1dc9a5df79e2ed03848a89cf5ecdc139dfb76e1079bef1cc428a014f684d9d33"
+    },
+    "common_recipe": "Exact same original five code-cell bodies in restored Helios V3, Matterhorn V9, E0052 V2 and Sameer D5m V1; correlated S6/Raptor70:30 copies, not four independent improvements",
+    "restore": {
+      "old_retired_Input_version": 11,
+      "current_restored_Input_version": 13,
+      "manifest_SHA256": "1c1211e64b73f1f6433ade804816572db1a2aa5422ed9c57365184bc6a9517e6",
+      "manifest_V10_V13_R6V2_byte_identical": true,
+      "bundle": "209a32c8b50a6b1c",
+      "tag": "cnx_s6",
+      "fourfold_S6_weights_declarations_differ_from_prior_own_S5": true
+    },
+    "author955": {
+      "ref": "bliverrigpdoge/velci-kcd25-20",
+      "display_version": 1,
+      "script_id": 357204606,
+      "linked_Public": "0.955",
+      "private_student_dataset_id": 12499997,
+      "public_asset_complete_reproduction_available": false
+    },
+    "author956": {
+      "ref": "heliosli/blend-mine-in-private-lb-luck-to-all-upvoters",
+      "display_version": 1,
+      "script_id": 357284025,
+      "linked_Public": "0.956",
+      "scored_bundle": "fe055406fad6a12f",
+      "explicit_scored_Input_V1_file_listing_HTTP": 404,
+      "source_models_copied_to_TEMP_not_working": true,
+      "model_working_export_found": false,
+      "additional_Output_inventory_RPCs": 0,
+      "model_body_GETs": 0,
+      "latest_V2_changed_bundle": "209a32c8b50a6b1c",
+      "latest_V2_Public": null,
+      "latest_V2_changes_include_Net_infer_failure_rank_basis_and_half_weights": true,
+      "scored956_exact_reproduction_claimed": false
+    },
+    "licenses": "Source endpoints did not expose exact Notebook license; original credits/acknowledgement retained. No new license claim or model redistribution.",
+    "Gold": "S6 manifest declares gold_in_training0/official trainer labels false; fixed16 training precedes Gold predictions. Inherited Raptor58 selection and public state-prior/anchor Gold exposure remain; ownGold fit/selection/evaluation0; no clean OOF claim.",
+    "new_research_models_MRI_labels_Report_Save_Submit_upload_GPU": 0,
+    "small_manifests_only_body_GET_count": 2
+  },
+  "P020": {
+    "status": "PRIVATE_SINGLE_SAVE_ACCEPTED_RESULT_PENDING",
+    "ref": "rsraki/p020s6-c59bdab3d9064e2788f7976b0935a8e9",
+    "kernel_id": 138279894,
+    "saved_version": 1,
+    "author_Public": "0.954",
+    "own_Public": null,
+    "notebook": "notebooks/public/29_submit_p020_restored_s6_public954_control.ipynb",
+    "matched_predictor_contrast": "Own scored S5 to matched S6 checkpoint+source component; original Raptor and final70:30 retained, not a single training hyperparameter claim",
+    "recipe": "S6 convnext_small fourfold, bundle209a; per-finding percentile rank fixed Raptor0.7/S6 0.3",
+    "Input_display_version_refs": [
+      "heliosli/rsna-knee-compact-v1/13",
+      "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+      "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1"
+    ],
+    "Input_dataset_ids": {
+      "S6": 12385818,
+      "SWA": 12431568,
+      "Ortho": 12357722
+    },
+    "environment": "Private Original31481, NVIDIA_TESLA_T4, Internet OFF, SAVE_AND_RUN_ALL",
+    "source_bytes": 306470,
+    "source_sha256": "4a70f1188d0f815a7d2128f0c7817140313f821e141837309ab24e0f32732503",
+    "original_code_cells_preserved": 5,
+    "added_contract_only_cells": 2,
+    "Root_source_peer_checks": 10,
+    "guard_scope": "Exact manifest+model6+SWA+anchor+geometry8 SHA, dynamic allN UID/sample/12label/probability CSV contract; original math/reader/fallback retained",
+    "actual_Save_calls": 1,
+    "fresh_public_Input_metadata_calls": 3,
+    "fresh_quota_calls": 1,
+    "raw_Decimal_GPU_available_seconds_at_Save": "98637.918449500",
+    "automatic_retry": false,
+    "actual_competition_Submit_calls": 0,
+    "actual_whole_run_complete_or_runtime_qualified": false,
+    "hidden_complete_or_Public_improvement_proven": false,
+    "model_uploads_or_local_model_body_downloads": 0
+  },
+  "P018": {
+    "native64": "Qualified 64MRI/256forward/twoT4/fallback0; original evidence retained",
+    "native256_kernel_id": 138273767,
+    "saved_version": 1,
+    "root_reported_status": "RUNNING",
+    "observation_scope": "Root task report near15:31 JST; this writer performed no status API",
+    "actual256_completion_or_qualification_verified": false,
+    "new_Public": null
+  },
+  "f006": {
+    "run": "artifacts/runs/f006-late-cosine-fold0-20261012-v1",
+    "status": "running",
+    "fold": 0,
+    "seed": 20261002,
+    "fixed_epochs": 12,
+    "completed_epochs_at_local_metadata_snapshot": 1,
+    "epoch1": {
+      "weak_bce": 0.3777031019415888,
+      "weak_macro_auc_12": 0.7429961917004082,
+      "learning_rate_multiplier": 1.0,
+      "learning_rates": {
+        "head": 0.0003,
+        "last2": 1e-05
+      },
+      "optimizer_steps": 212,
+      "amp_skipped_steps": 0,
+      "elapsed_seconds": 1783.9304392999038
+    },
+    "old_samefold_E1_Root_reported": {
+      "weak_bce": 0.3777010221,
+      "weak_macro_auc_12": 0.7429936781
+    },
+    "E1_interpretation": "BCE difference about+2.1e-6 and AUC12+2.5e-6; LR factor1 before late decay, insufficient to infer effect",
+    "source_native_SHA256_preserved": "2ffa41e2fc650b61c5ccf2d5cf7c49974aff001025e604764238f6711efd44ef",
+    "gold_fit_selection_or_evaluation": false,
+    "partial_epoch_model_adopted_for_submit": false,
+    "trainer_CLI_config_changed_by_this_update": false,
+    "next": "Complete fixed12; select earliest minimal weak BCE and compare samefold before fold1 decision"
+  },
+  "evidence": {
+    "public_research": {
+      "path": "artifacts/research/20261012-public954-current-research-v1/research-conclusion.json",
+      "sha256": "6f0cbf4229bd8c3641dbe2da29dd6280361ce3515ee3b56f1b0e3e44541f1895"
+    },
+    "exact_author954_source_receipt": {
+      "path": "artifacts/research/20261012-public954-current-research-v1/current-source-observation-v1/07/receipt.json",
+      "sha256": "543160cb1489fe74ec638672cf24ae0f05f88368fc4a017076afa86418ce9b1b"
+    },
+    "exact_author956_V1_source_receipt": {
+      "path": "artifacts/research/20261012-public954-current-research-v1/helios956-explicit-V1-v1/receipt.json",
+      "sha256": "56888cbed6f374bf8f7272121edbb4556bdf1aeedb36e60cf1ea8bd6a4e101c2"
+    },
+    "956_export_static_inspection": {
+      "path": "artifacts/research/20261012-public954-current-research-v1/956-V1-model-export-static-analysis-v1.json",
+      "sha256": "8e3a6cffb067210e738114ca178824d5ff2493a1fc58c85e047071d8e0d6af99"
+    },
+    "P020_Source_peer": {
+      "path": "artifacts/research/20261012-p020-public-S6-restored-source-v1/Root-source-peer.json",
+      "sha256": "78dd00ad2ce7290857bbcc5055ed6d0af4a7bc053d1b2a250149df46a31a2232"
+    },
+    "P020_actual_Save_receipt": {
+      "path": "artifacts/research/20261012-p020-public-S6-root-v1/receipt.json",
+      "sha256": "f42e088ccd32cf65c4996278ad42ae6f6eb4646e57562d68a5d4274e63485552"
+    },
+    "P020_Save_helper_preparation": {
+      "path": "artifacts/research/20261012-p020-manual-Save-source-v1/preparation.json",
+      "sha256": "abe27e37a836bdb8323743b5728772a6fef1acc064f24677a32cc85586966743"
+    },
+    "f006_E1_metadata_snapshot": {
+      "path": "artifacts/research/20261012-public954-current-research-v1/f006-E1-run-metadata-snapshot-v1.json",
+      "sha256": "e15ca14d5b4a13d2d7f46a8b1c1cdacf07c0d1ee5b4982bdfa847e80b30c4e84"
+    }
+  },
+  "documentation_update_scope": {
+    "new_API_GPU_MRI_model_teacher_Report_Gold_operations": 0,
+    "old_history_experiments_or_training_files_overwritten": false
+  },
+  "next": "Validate bound P020 savedSource/Input/COMPLETE/wholeCSV, then Root single Submit and own official score. Parallel P018256 completion/Serving and f006 fixed12 continue; strict above0.960 goal active."
+}

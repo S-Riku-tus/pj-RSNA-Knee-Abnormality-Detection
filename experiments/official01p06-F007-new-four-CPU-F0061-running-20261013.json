@@ -1,0 +1,499 @@
+{
+  "schema_version": "official_and_local_scope_snapshot_v1",
+  "recorded_at_UTC": "2026-10-12T16:10:05.447860+00:00",
+  "documentation_actor": "execution_audit_metadata_and_docs_only",
+  "previous_snapshot_preserved": {
+    "path": "experiments/official00p06-F007-fold1-complete-F006-fold1-training-20261013.json",
+    "sha256": "99b1b10884fb6d98238b9e3001d6ee4b0dff01d9e1764bde4d6e6404fa9a3ad6"
+  },
+  "evidence_pins": {
+    "official01p06": {
+      "path": "artifacts/research/20261012-p026-focused-scoring-status-tools-v1/delegated-observation-v4/observation.json",
+      "sha256": "c66bd274958536d43eac8c6248ba7eb16170f436350f03bd434729c065522759"
+    },
+    "F007_new_four_CPU": {
+      "path": "artifacts/research/20261013-f007-new-shared-four-CPU-root-v1/actual-reconstruction-v1/reconstruction.json",
+      "sha256": "77c7f1116b5f5279cdc7b8c4e7cb97c61e8f86d560f7056c46540a474343a65f"
+    },
+    "F007_independent_default_metadata": {
+      "path": "artifacts/research/20261013-f007-new-shared-four-CPU-root-v1/metadata-precheck-v1/metadata-only.json",
+      "sha256": "1baa06f40514f661cec971d261f44f1c813a9339d5181c39ef47e3c114f1e5b6"
+    },
+    "F007_local_original_head_transport": {
+      "path": "artifacts/research/20261013-f007-two-head-local-transport-audit-root-v1/Root-positive-inventory-audit.json",
+      "sha256": "fc40401a9d64a13a5aae68fa5f3831f9eb606e15b810dfa28f2bb5113731bed1"
+    },
+    "F008_source_preparation": {
+      "path": "artifacts/research/20261013-f008-original-BCE-residual24-source-v1/preparation.json",
+      "sha256": "b5756b9e5c495d908ee03a0a28257f141104d866c278129c1cb5e9082b03fef2"
+    },
+    "fast16_source_only_timing_analysis": {
+      "path": "artifacts/research/20261013-fast16-bounded-prefetch-source-audit-v1/analysis.json",
+      "sha256": "045a40a8e1f5ca6d747a4e04e43cbc1583a7bd3e16d4aea7ceee0e32623b6088"
+    }
+  },
+  "official": {
+    "at_utc": "2026-10-12T16:06:22.034173+00:00",
+    "completed_at_utc": "2026-10-12T16:06:24.092214+00:00",
+    "execution_actor": {
+      "name": "local_analysis",
+      "authorized_by": "root",
+      "delegated": true,
+      "delegation_id": "root_authorized_0106_P026_focused"
+    },
+    "observer_source_sha256": "32f62a39d9edfe2c1703ab9fdd95d490a2b8bd58921f9ca5733156e3f40a3a17",
+    "target_results": {
+      "P026": {
+        "GetSubmission": {
+          "raw": {
+            "ref": 57107853,
+            "fileName": "submission.csv",
+            "submittedBy": "rsraki",
+            "submittedByRef": "rsraki",
+            "error_description_present": false,
+            "raw_field_names": [
+              "date",
+              "description",
+              "fileName",
+              "ref",
+              "submittedBy",
+              "submittedByRef",
+              "teamName",
+              "totalBytes",
+              "url"
+            ]
+          },
+          "typed": {
+            "ref": 57107853,
+            "status": "PENDING",
+            "publicScore": null,
+            "fileName": "submission.csv",
+            "submittedBy": "rsraki",
+            "submittedByRef": "rsraki",
+            "error_description_present": false,
+            "raw_field_names": [
+              "date",
+              "description",
+              "errorDescription",
+              "fileName",
+              "privateScore",
+              "publicScore",
+              "ref",
+              "status",
+              "submittedBy",
+              "submittedByRef",
+              "teamName",
+              "totalBytes",
+              "url"
+            ]
+          },
+          "assessment": {
+            "raw_status_present": false,
+            "raw_status": null,
+            "typed_status": "PENDING",
+            "typed_default_pending_not_official_raw_status": true,
+            "explicit_raw_typed_COMPLETE_without_error": false,
+            "error_empty": true,
+            "own_Public": null
+          }
+        },
+        "kernel_identity_independently_reexposed": false,
+        "kernel_binding_scope": "local genuine accepted Submit/Save/result lineage; Get does not independently expose full kernel identity",
+        "ListSubmissions": {
+          "raw": {
+            "ref": 57107853,
+            "fileName": "submission.csv",
+            "submittedBy": "rsraki",
+            "submittedByRef": "rsraki",
+            "error_description_present": false,
+            "raw_field_names": [
+              "date",
+              "description",
+              "fileName",
+              "ref",
+              "submittedBy",
+              "submittedByRef",
+              "teamName",
+              "totalBytes",
+              "url"
+            ]
+          },
+          "typed": {
+            "ref": 57107853,
+            "status": "PENDING",
+            "publicScore": null,
+            "fileName": "submission.csv",
+            "submittedBy": "rsraki",
+            "submittedByRef": "rsraki",
+            "error_description_present": false,
+            "raw_field_names": [
+              "date",
+              "description",
+              "errorDescription",
+              "fileName",
+              "privateScore",
+              "publicScore",
+              "ref",
+              "status",
+              "submittedBy",
+              "submittedByRef",
+              "teamName",
+              "totalBytes",
+              "url"
+            ]
+          },
+          "assessment": {
+            "raw_status_present": false,
+            "raw_status": null,
+            "typed_status": "PENDING",
+            "typed_default_pending_not_official_raw_status": true,
+            "explicit_raw_typed_COMPLETE_without_error": false,
+            "error_empty": true,
+            "own_Public": null
+          }
+        }
+      }
+    },
+    "own_Public_by_target": {
+      "P026": null
+    },
+    "highest_known_official_Public": "0.954",
+    "best_scope": "genuine prior P020/P0210.954 plus current corroborated P026 Get/List only",
+    "fresh_allowance": {
+      "raw_field_names": [
+        "numAllowedNow",
+        "numToday",
+        "numTotal"
+      ],
+      "daily_reset_time_independently_observed": false,
+      "numToday": {
+        "raw_field_present": true,
+        "raw": 4,
+        "typed": 4,
+        "raw_omitted_typed_default_zero_not_independently_observed": false
+      },
+      "numAllowedNow": {
+        "raw_field_present": true,
+        "raw": 1,
+        "typed": 1,
+        "raw_omitted_typed_default_zero_not_independently_observed": false
+      },
+      "numTotal": {
+        "raw_field_present": true,
+        "raw": 23,
+        "typed": 23,
+        "raw_omitted_typed_default_zero_not_independently_observed": false
+      }
+    },
+    "RPC_counts": {
+      "GetSubmission": 1,
+      "ListSubmissions": 1,
+      "GetSubmissionLimits": 1
+    },
+    "root_additional_Get_required": false,
+    "strict_above960_achieved": false
+  },
+  "prior_complete_Get_List_public": {
+    "P020": "0.954",
+    "P021": "0.954"
+  },
+  "prior_P022": "Explicit COMPLETE with hidden unhandled error; no Public score. Cause unconfirmed.",
+  "F007_twofold_completed_evidence_from_previous_snapshot": {
+    "F007_fold1": {
+      "actual_actor": "Root",
+      "session": 59615,
+      "process_exit_code": 0,
+      "status": "complete",
+      "epochs": 12,
+      "run_sha256": "d3e9485f1e22c9fc385c9529e0bcb0f707476e8433cf3c61ab902fcfe3402abc",
+      "selected_epoch": 12,
+      "selected_rule": "earliest minimum global observed weak BCE",
+      "weak_BCE": 0.27517596638123926,
+      "fixed10_AUC_auxiliary": 0.8816324818675172,
+      "selected_checkpoint": {
+        "path": "artifacts/runs/f007-original-BCE-CLS-preserving-local-residual-fold1-20261012-v1/epoch_012.pt",
+        "sha256": "305ae1de578b59529764b6e00b97edae76cc7ea15a054beadabe166b11481923",
+        "bytes": 406163
+      },
+      "selected_prediction": {
+        "path": "artifacts/runs/f007-original-BCE-CLS-preserving-local-residual-fold1-20261012-v1/epoch_012_weak.csv",
+        "sha256": "e2ce0435d3c4912561f5c4283e2d0e634b864680947c26368990e5ef6e540f0c",
+        "bytes": 274556
+      },
+      "all_retained12_checkpoint_and_prediction_SHA_rechecked_by_Root": true,
+      "cache_NPZ_count": 4207,
+      "cache_NPZ_bytes": 7918878170,
+      "cache_raw_payloads_reopened_by_this_acceptance": false,
+      "cache_feature_hashes_rechecked_by_this_acceptance": false,
+      "original_CLS_saved_probability_max_error_all891x12": 0.0,
+      "native_oracle_UIDs": 1,
+      "all891_full_native_forward_checked": false,
+      "encoder_and_CLS_frozen_every_epoch_source_bound": true,
+      "separate_actual_frozen_head_tensor_reconstruction_by_completed_acceptance": false,
+      "mixed_fixed50_fixed10_delta": 0.0013721686028267943,
+      "group_bootstrap": {
+        "requested_replicates": 1000,
+        "valid_replicates": 1000,
+        "undefined_entire_replicates": 0,
+        "seed": 20261012,
+        "fixed_target_count": 10,
+        "supplied_group_count": 861,
+        "percentile_interval_95": [
+          0.00021828126293725074,
+          0.002748215258640627
+        ],
+        "mean_delta": 0.0013692298740586187,
+        "fraction_positive_delta": 0.988,
+        "quantile_method": "linear interpolation at (n-1)*q",
+        "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+        "post_checkpoint_selection_conditional_analysis": true,
+        "patient_independence_verified": false,
+        "population_generalization_or_Public_gain_established": false
+      },
+      "patient_independence_and_Public_gain_established": false,
+      "new_Kaggle_Input_CPU64_visible_Serving_qualified": false
+    },
+    "F007_fold0_GPU_probe": {
+      "actual_actor": "Root",
+      "scope": "one restored model; local artificial input only",
+      "GPU": "NVIDIA GeForce RTX 4090",
+      "valid_windows": 3,
+      "wrapper_forward_calls": 2,
+      "frozen_AST_reference_passes": 1,
+      "encoder_window_images_total": 9,
+      "reference_max_logit_error": 0.0,
+      "padding_max_logit_error": 0.0,
+      "all_passed": true,
+      "actual_MRI_teacher_Gold_Report_cache_CSV_payload_reads": 0,
+      "new_four_model_twoT4_native64_Serving_accuracy_qualified": false
+    },
+    "scope": "Earlier actual complete12/single-model CPU/artificial single4090 evidence; exact original scopes retained, not new Kaggle/native64/Serving qualification."
+  },
+  "F007_new_shared_four_model_CPU": {
+    "actor": "root_explicit_manual_local_execute_once",
+    "session": 55431,
+    "process_exit_code": 0,
+    "all_passed": true,
+    "actual_reconstruction": {
+      "path": "artifacts/research/20261013-f007-new-shared-four-CPU-root-v1/actual-reconstruction-v1/reconstruction.json",
+      "sha256": "77c7f1116b5f5279cdc7b8c4e7cb97c61e8f86d560f7056c46540a474343a65f"
+    },
+    "context_sha256": "d23a4f4ad4a66f9fcc4ed5c4d7c3bc654cded4ee887f72c4b0ad7238f4a6a8b3",
+    "generic_factory_calls": 1,
+    "original_base_strict_apply_calls": 4,
+    "safe_residual_head_load_calls": 2,
+    "storage_alias_pairs_checked": 6,
+    "storage_alias_count": 0,
+    "REG_objects_unchanged": true,
+    "full_model_count": 4,
+    "FP32_CPU_eval_frozen": true,
+    "new_model_fingerprints": {
+      "CLS:0": {
+        "model_class": "f007_native_adapter.F007NativeResidualWrapper",
+        "frozen_prefix_sha256": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+        "encoder_suffix_tensor_sha256": "726bd2bdedfde3a6cf45f5019db2031279f6ba3704ead835ee9033c394b9c3e7",
+        "head_tensor_sha256": "882f47b8b72737cdec068d61b0be96cd8d0da319f3b4d669f65c85a106030a32",
+        "head_state_keys": [
+          "cls_head.geometry.bias",
+          "cls_head.geometry.weight",
+          "cls_head.output_bias",
+          "cls_head.output_weight",
+          "cls_head.plane.weight",
+          "cls_head.project.0.bias",
+          "cls_head.project.0.weight",
+          "cls_head.project.1.bias",
+          "cls_head.project.1.weight",
+          "cls_head.series_query",
+          "cls_head.slice_score.bias",
+          "cls_head.slice_score.weight",
+          "column.weight",
+          "geometry.bias",
+          "geometry.weight",
+          "output_bias",
+          "output_weight",
+          "plane.weight",
+          "project.0.bias",
+          "project.0.weight",
+          "project.1.bias",
+          "project.1.weight",
+          "region_columns",
+          "region_rows",
+          "row.weight",
+          "series_query",
+          "slice_query",
+          "window_query"
+        ]
+      },
+      "CLS:1": {
+        "model_class": "f007_native_adapter.F007NativeResidualWrapper",
+        "frozen_prefix_sha256": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+        "encoder_suffix_tensor_sha256": "a354760a8394fba9aad9559622f6e7b85e33643edc617fc4360647538f7cf464",
+        "head_tensor_sha256": "44bfdd9131a13d2a8151ee61482d2be84acbf29bb6f8a9ebefc84af9ef32cec6",
+        "head_state_keys": [
+          "cls_head.geometry.bias",
+          "cls_head.geometry.weight",
+          "cls_head.output_bias",
+          "cls_head.output_weight",
+          "cls_head.plane.weight",
+          "cls_head.project.0.bias",
+          "cls_head.project.0.weight",
+          "cls_head.project.1.bias",
+          "cls_head.project.1.weight",
+          "cls_head.series_query",
+          "cls_head.slice_score.bias",
+          "cls_head.slice_score.weight",
+          "column.weight",
+          "geometry.bias",
+          "geometry.weight",
+          "output_bias",
+          "output_weight",
+          "plane.weight",
+          "project.0.bias",
+          "project.0.weight",
+          "project.1.bias",
+          "project.1.weight",
+          "region_columns",
+          "region_rows",
+          "row.weight",
+          "series_query",
+          "slice_query",
+          "window_query"
+        ]
+      },
+      "REG:0": {
+        "model_class": "rsna_knee.regional_triplet_model.RegionalTripletMIL",
+        "frozen_prefix_sha256": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+        "encoder_suffix_tensor_sha256": "278f20295b1729faa80deea972685f038b3edffde2ed37e0523ffa183324818e",
+        "head_tensor_sha256": "1b5bcabba082ef67f197037214884162efae4195c62386dc102224b9f4583f8c",
+        "head_state_keys": [
+          "geometry.bias",
+          "geometry.weight",
+          "output_bias",
+          "output_weight",
+          "plane.weight",
+          "project.0.bias",
+          "project.0.weight",
+          "project.1.bias",
+          "project.1.weight",
+          "series_query",
+          "slice_score.bias",
+          "slice_score.weight"
+        ]
+      },
+      "REG:1": {
+        "model_class": "rsna_knee.regional_triplet_model.RegionalTripletMIL",
+        "frozen_prefix_sha256": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+        "encoder_suffix_tensor_sha256": "c9ac9728d1145a253144c0383c3dd3a6cf742e541822eb5a2b10823b1ec981b6",
+        "head_tensor_sha256": "2785d46eb7be0164a3d1fdd245945210e10ee34fc60dc18835ec02478d16cd62",
+        "head_state_keys": [
+          "geometry.bias",
+          "geometry.weight",
+          "output_bias",
+          "output_weight",
+          "plane.weight",
+          "project.0.bias",
+          "project.0.weight",
+          "project.1.bias",
+          "project.1.weight",
+          "series_query",
+          "slice_score.bias",
+          "slice_score.weight"
+        ]
+      }
+    },
+    "model_forward_calls": 0,
+    "GPU_network_API_teacher_NPZ_MRI_Report_reads": 0,
+    "Root_authority_issued_raw_result_field_preserved": false,
+    "new_Input_native64_visible_Serving_accuracy_qualified": false,
+    "CLI_print_summary_metadata_checks_passed": false,
+    "summary_false_origin": "Actual result omits metadata_checks_passed; CLI printed its default False. Independent default precheck metadata_checks_passed=True and actual reconstruction all_passed=True are distinct genuine records; no flags changed or retry performed."
+  },
+  "F007_two_original_heads_local_transport": {
+    "Root_positive_inventory_audit": {
+      "path": "artifacts/research/20261013-f007-two-head-local-transport-audit-root-v1/Root-positive-inventory-audit.json",
+      "sha256": "fc40401a9d64a13a5aae68fa5f3831f9eb606e15b810dfa28f2bb5113731bed1"
+    },
+    "intended_own_private_destination": "rsraki/f007-head2-9810a289af3d4d29962eeeadc442aa71",
+    "local_model_payload_bytes": 816882,
+    "dataset_metadata_bytes": 435,
+    "ZIP_members": [
+      "heads/fold0.pt",
+      "heads/fold1.pt",
+      "manifest.json"
+    ],
+    "original_checkpoint_bytes_copied_without_reserialization": true,
+    "MRI_Report_UID_teacher_feature_cache_credentials_payloads": false,
+    "actual_upload_API_calls": 0,
+    "external_user_approval_obtained": false,
+    "remote_private_dataset_id_version_bytes_verified": false,
+    "historical_pack_audit_new_four_CPU_flag_false_preserved": true,
+    "new_four_CPU_pass_is_separate_later_record": true
+  },
+  "F006_fold1_training": {
+    "status": "running",
+    "session": 41581,
+    "fixed_training_epochs": 12,
+    "latest_Root_reported_stdout_epoch": 2,
+    "weak_BCE_rounded_stdout": 0.340669,
+    "AUC12_auxiliary_stdout": 0.7712504764322482,
+    "source_of_epoch_values": "Root message; live run/model/cache/teacher reads by documentation agent0",
+    "prospective_policy": {
+      "path": "experiments/f006-fold1-prospective-BCE-and-fixed10-AUC-policy-20261012.json",
+      "sha256": "8170b446c7932bcaa9d329eb1001585d4201f29c563d838e3900ee7c017e80f7"
+    },
+    "primary_selection": "earliest minimum global observed weak BCE",
+    "secondary_selection": "earliest maximum all-defined finite fixed10 mean AUC",
+    "original_best_and_same_epoch_duplicate_policy_preserved": true,
+    "Gold_Public_selection": false,
+    "complete_or_adopted_or_Public_gain": false
+  },
+  "F008_source_preparation": {
+    "preparation": {
+      "path": "artifacts/research/20261013-f008-original-BCE-residual24-source-v1/preparation.json",
+      "sha256": "b5756b9e5c495d908ee03a0a28257f141104d866c278129c1cb5e9082b03fef2"
+    },
+    "CLI_sha256": "50c4c172bea60e6150ce2e7a434cf26cec13b589b2136915521191fe082fa82c",
+    "Root_default_HOLD_exit_code": 0,
+    "prospective_policy": {
+      "path": "experiments/f008-original-BCE-CLS-residual24-prospective-policy-20261013.json",
+      "sha256": "d9ef4bd48cef79b49b83b778b0a4815a79cd8830a129f590e5965cd94da193d5"
+    },
+    "original_CLS_config_epochs": 12,
+    "residual_horizon_epochs": 24,
+    "actual_fit_started": false,
+    "warm_start_F007_inference_checkpoint": false,
+    "fixed10_AUC_selection": false,
+    "current_GPU_priority": "existing F006 fold1 fixed12"
+  },
+  "performance_source_analysis": {
+    "analysis": {
+      "path": "artifacts/research/20261013-fast16-bounded-prefetch-source-audit-v1/analysis.json",
+      "sha256": "045a40a8e1f5ca6d747a4e04e43cbc1583a7bd3e16d4aea7ceee0e32623b6088"
+    },
+    "implemented_or_measured_prefetch": false,
+    "one_warmed_processed115_read_SHA_QC_seconds": 0.2705811000196263,
+    "single_serial_phase_read_share": 0.6295542624338936,
+    "full_epoch_CPU_bottleneck_or_speed_gain_proven": false,
+    "future_candidate": "one CPU worker next1 study; current+next host bound2, original UID/RNG/pixel/group/optimizer order retained; no live source edits"
+  },
+  "external_actions": {
+    "P024_new_private_payload_specific_approval_pending": true,
+    "P028_new_private_Notebook_Save_specific_approval_pending": true,
+    "auto_review_rejections_before_CreateProcess_preserved": true,
+    "new_Save_upload_external_retry_or_alternative_send": false,
+    "new_remote_Start_PUT_Create_Save_calls": 0,
+    "Root_local_training_or_artificial_GPU_authority_is_not_external_approval": true,
+    "latest_scope_note": "P024 upload and P028 new Notebook Save rejected by automatic approval review before process creation, specific user approvals remain pending, external retry/remote0. F007 local head transport has not been sent and has no external approval. Local Root CPU/training permission is separate from external transmission authority."
+  },
+  "goal": {
+    "strict_above_0_960": false,
+    "highest_self_Public": "0.954",
+    "status": "active_unachieved"
+  },
+  "documentation_scope": {
+    "API_GPU_model_cache_teacher_reads_or_calls": 0,
+    "source_trainer_config_edits": 0,
+    "old_raw_snapshots_and_ledger_prefix_preserved": true,
+    "single15_column_ledger_row_append": true
+  }
+}

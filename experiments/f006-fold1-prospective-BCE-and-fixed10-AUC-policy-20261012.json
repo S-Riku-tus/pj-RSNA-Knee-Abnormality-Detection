@@ -1,0 +1,120 @@
+{
+  "schema_version": "f006_fold1_prospective_primary_BCE_secondary_fixed10_AUC_policy_v1",
+  "status": "Root_issued_prospective_fold1_policy_before_training",
+  "issued_by": "root",
+  "root_authorized_training_start": true,
+  "prepared_at_UTC": "2026-10-12T14:00:27.774352+00:00",
+  "source_only": false,
+  "Root_reported_fold1_training_not_started_at_preparation": true,
+  "actual_fold1_run_metrics_read": false,
+  "target_run": "artifacts/runs/f006-late-cosine-fold1-20261012-v1",
+  "fold": 1,
+  "seed": 20261002,
+  "n_folds": 5,
+  "fixed12_required": true,
+  "expected_train_valid_studies": [
+    3316,
+    891
+  ],
+  "immutable_source_config_gate": {
+    "scripts/train_native_dinov2_fast16.py": {
+      "path": "scripts/train_native_dinov2_fast16.py",
+      "sha256": "a8032317f6271cae9e7bef67c29ebc04b548c923ea30134d43297bbbf20c4c84",
+      "bytes": 14807
+    },
+    "src/rsna_knee/native_training_fast16.py": {
+      "path": "src/rsna_knee/native_training_fast16.py",
+      "sha256": "2ffa41e2fc650b61c5ccf2d5cf7c49974aff001025e604764238f6711efd44ef",
+      "bytes": 38975
+    },
+    "configs/experiments/f006-dinov2-native-last2-late-cosine.json": {
+      "path": "configs/experiments/f006-dinov2-native-last2-late-cosine.json",
+      "sha256": "cc39cf18ea74e0b94eb7593a5223bf2dae0f7fbef059fd94e31dd1e1683ee21a",
+      "bytes": 1445
+    },
+    "artifacts/research/20261012-f006-late-cosine-resource-gate-v1/resource-gate.json": {
+      "path": "artifacts/research/20261012-f006-late-cosine-resource-gate-v1/resource-gate.json",
+      "sha256": "057f7095e4c9af26db97abbc5f2edd5ef1284a9495ba8dd6da95ef1685cbd369",
+      "bytes": 2611
+    }
+  },
+  "primary": {
+    "rule": "earliest_epoch_with_minimum_global_observed_weak_BCE",
+    "observed_cells_over_all12_targets": true,
+    "exact_tie": "earliest integer epoch",
+    "run_selected_and_best_follow_original_CLI": true,
+    "no_secondary_overwrite_of_run_selected_or_best": true
+  },
+  "secondary": {
+    "rule": "earliest_epoch_with_maximum_arithmetic_mean_AUC_over_all_fixed10_targets",
+    "targets": [
+      "ACL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ],
+    "excluded_targets": [
+      "MCL",
+      "Synovitis"
+    ],
+    "exclusion_basis": "The existing final submission restores these two weakly supported targets to the public baseline; no Gold/Public-derived exclusions.",
+    "all12_epochs_all10_finite_AUC_required": true,
+    "undefined_AUC_policy": "Reject the secondary candidate if any required target/epoch AUC is undefined; no dropped/replaced targets or epochs",
+    "exact_tie": "earliest integer epoch",
+    "same_epoch_and_checkpoint_SHA_as_primary": "record identity; no duplicate transport or Submit",
+    "selection_defines_new_fixed_training_epoch_budget": false
+  },
+  "retention": {
+    "index": "artifacts/runs/f006-late-cosine-fold1-20261012-v1/epoch_checkpoint_index.json",
+    "schema_version": "native392_epoch_suffix_head_retention_v1",
+    "checkpoints": "epoch_001.pt through epoch_012.pt",
+    "predictions": "epoch_001_weak.csv through epoch_012_weak.csv",
+    "all_original_history_prediction_checkpoint_SHAs_must_match": true,
+    "exclusive_epoch_creation_no_overwrite": true,
+    "last_pt_bytecopy_not_model_or_RNG_operation": true,
+    "resume_supported": false
+  },
+  "comparison": {
+    "samefold_original_control": {
+      "path": "artifacts/runs/f005-native-last2-fast16-fold1-20261009-v1/run.json",
+      "sha256": "f3a0ddc4762cc64840b10a1d5f79cbd3c910cbb735e0bb8a4848507560134fe3"
+    },
+    "control_raw_body_reopened_by_this_preparation": false,
+    "control_reference_source": {
+      "path": "experiments/f005-regional-epochs23-public-search-20261010.json",
+      "sha256": "e650fb0f85580ee18f4fb5b371592e9ffcb2aec77fd47aee780845368891efba",
+      "bytes": 7068
+    },
+    "expected_original_BCE_epoch": 9,
+    "old_AUC10_checkpoint_availability": "not inspected here; never reconstruct from a missing original epoch",
+    "only_training_factor": "late_cosine instead of constant learning rate; fixed source shared7/input/teacher/group/fold/seed/model/loss/12budget",
+    "secondary_changes_only_checkpoint_selection_rule": true,
+    "required_saved_prediction_comparison": "identical validation UID/observed-binary-missing masks; fixed10 main plus all12 auxiliary; per-target pair utility and fixed50 CLS/REG companion if available",
+    "weak_validation_reuse_is_conditional": true,
+    "patient_independence_verified": false,
+    "own_Public_gain_established": false
+  },
+  "Gold_training_checkpoint_selection_evaluation": 0,
+  "Public_checkpoint_or_coefficient_selection": 0,
+  "source_CLI_trainer_config_changed": false,
+  "model_teacher_cache_MRI_GPU_API_reads_or_calls": 0,
+  "Root_completion_review_required_before_adoption": true,
+  "issued_at_UTC": "2026-10-12T14:22:25.453302+00:00",
+  "Root_scheduling_constraint": "After F007 fold1 complete extraction/training and scheduled artificial GPU probe; no concurrent GPU model jobs",
+  "Root_control_metadata_reopened_before_issuance": true,
+  "Kaggle_upload_or_Save_authority_issued_by_this_policy": false,
+  "completed_fold0_fixed50_comparison": {
+    "path": "artifacts/research/20261012-f006-completed-mixed-comparison-v1/actual-comparison-v1.json",
+    "sha256": "3de507ac7e92ce6bf3949a44eabdc87d2b2573eca1807ab46b31c2d86c573023",
+    "AUC12_fixed10_delta": 0.004010121949587013,
+    "BCE_fixed10_delta": -0.00034757399722796535,
+    "conditional_after_checkpoint_selection": true,
+    "Public_gain_established": false
+  }
+}

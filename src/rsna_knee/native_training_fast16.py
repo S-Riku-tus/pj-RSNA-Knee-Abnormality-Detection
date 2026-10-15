@@ -12,6 +12,7 @@ import hashlib
 import json
 import math
 import random
+import shutil
 import time
 import zipfile
 from pathlib import Path
@@ -56,6 +57,44 @@ ENGINEERING_LINEAGE = {"version": "window_chunk16_v1", "base_native_training_sha
 INDEX_SCHEMA = "native392_pixel_archive_index_v1"
 
 
+def validate_native_learning_rate_schedule(schedule):
+    """Only the prespecified late decay is an alternative to the old constant LR."""
+    if schedule is None:
+        return {"name": "constant"}
+    if schedule == {"name": "constant"}:
+        return schedule
+    if (
+        not isinstance(schedule, dict)
+        or set(schedule) != {"name", "constant_epochs", "min_factor"}
+        or schedule["name"] != "late_cosine"
+        or type(schedule["constant_epochs"]) is not int
+        or schedule["constant_epochs"] != 6
+        or type(schedule["min_factor"]) is not float
+        or schedule["min_factor"] != 0.1
+    ):
+        raise ValueError("Invalid native learning rate schedule; use constant or fixed12 late_cosine 6/0.1")
+    return schedule
+
+
+def native_epoch_learning_rates(optimizer, config, epoch):
+    """Set both named groups from their original LRs; constant performs no write."""
+    if type(epoch) is not int or not 1 <= epoch <= 12:
+        raise ValueError("Native learning rate schedule requires an integer epoch1 through12")
+    schedule = validate_native_learning_rate_schedule(config["train"].get("lr_schedule"))
+    factor = 1.0
+    if schedule["name"] == "late_cosine" and epoch > schedule["constant_epochs"]:
+        phase = (epoch - schedule["constant_epochs"]) / (12 - schedule["constant_epochs"])
+        factor = schedule["min_factor"] + (1 - schedule["min_factor"]) * (1 + math.cos(math.pi * phase)) / 2
+    if schedule["name"] != "constant":
+        initial = {"head": config["train"]["learning_rate"], "last2": config["online"]["encoder_learning_rate"]}
+        for group in optimizer.param_groups:
+            group["lr"] = initial[group["name"]] * factor
+    return {
+        "learning_rate_multiplier": factor,
+        "learning_rates": {group["name"]: group["lr"] for group in optimizer.param_groups},
+    }
+
+
 def validate_native_config(config):
     validate_feature_config(config)
     expected = {
@@ -84,7 +123,9 @@ def validate_native_config(config):
         raise ValueError("Preserve the generic native392 encoder and fp16 CLS contract")
     if config["head"] != {"hidden_dim": 192, "dropout": 0.2, "pooling": "attention"}:
         raise ValueError("Preserve the original f002 head")
-    if config["train"] != {
+    settings = dict(config["train"])
+    validate_native_learning_rate_schedule(settings.pop("lr_schedule", None))
+    if settings != {
         "epochs": 12,
         "batch_size": 16,
         "learning_rate": 0.0003,
@@ -544,6 +585,60 @@ def evaluate_native(model, rows, store):
     return predictions, numerator / denominator
 
 
+def retain_epoch_checkpoint(output, checkpoint, record, predictions_path):
+    """Retain the already-saved suffix/head bytes without model or RNG operations."""
+    output = Path(output)
+    epoch = record["epoch"]
+    if type(epoch) is not int or epoch < 1:
+        raise ValueError("Epoch retention requires a completed positive integer epoch")
+    predictions_path = Path(predictions_path)
+    if (
+        checkpoint["epoch"] != epoch
+        or checkpoint["weak_bce"] != record["weak_bce"]
+        or predictions_path.resolve() != (output / f"epoch_{epoch:03d}_weak.csv").resolve()
+        or sha256(predictions_path) != record["prediction_sha256"]
+    ):
+        raise ValueError("Epoch checkpoint/metrics/prediction correspondence differs")
+    index_path = output / "epoch_checkpoint_index.json"
+    identity = {
+        "schema_version": "native392_epoch_suffix_head_retention_v1",
+        "checkpoint_schema": checkpoint["schema_version"],
+        "fold": checkpoint["fold"],
+        "targets": checkpoint["targets"],
+        "source_sha256": checkpoint["source_sha256"],
+        "selection_data": checkpoint["selection_data"],
+        "selection_rule": "minimum observed weak BCE; earliest exact tie",
+        "resume_supported": False,
+    }
+    if index_path.exists():
+        index = json.loads(index_path.read_text(encoding="utf-8"))
+        if any(index.get(key) != value for key, value in identity.items()):
+            raise ValueError("Epoch retention index belongs to different checkpoint provenance")
+    else:
+        index = {**identity, "checkpoints": []}
+    expected_epoch = len(index["checkpoints"]) + 1
+    if epoch != expected_epoch:
+        raise ValueError("Retain every epoch once in its original order; existing epochs cannot be overwritten")
+    retained_path = output / f"epoch_{epoch:03d}.pt"
+    with (output / "last.pt").open("rb") as source, retained_path.open("xb") as destination:
+        shutil.copyfileobj(source, destination)
+    entry = {
+        **record,
+        "predictions_csv": predictions_path.name,
+        "checkpoint": retained_path.name,
+        "checkpoint_sha256": sha256(retained_path),
+        "checkpoint_bytes": retained_path.stat().st_size,
+    }
+    index["checkpoints"].append(entry)
+    best = min(index["checkpoints"], key=lambda item: item["weak_bce"])
+    index["aliases"] = {
+        "best.pt": {"epoch": best["epoch"], "checkpoint_sha256": sha256(output / "best.pt")},
+        "last.pt": {"epoch": epoch, "checkpoint_sha256": entry["checkpoint_sha256"]},
+    }
+    dump_json(index_path, index)
+    return entry
+
+
 def train_native(manifest_dir, index_path, output, config, fold, repo, weights, provenance, gate_path):
     ensure_cuda()
     # Validate all metadata before creating a new run or reading the model checkpoint.
@@ -582,6 +677,7 @@ def train_native(manifest_dir, index_path, output, config, fold, repo, weights, 
         "targets": list(TARGETS),
         "gpu": torch.cuda.get_device_name(0),
         "environment": {"torch": str(torch.__version__), "numpy": np.__version__},
+        "learning_rate_schedule": validate_native_learning_rate_schedule(settings.get("lr_schedule")),
         "selection_data": "weak_validation",
         "selection_rule": "bce",
         "gold_used_for_training_or_selection": False,
@@ -590,6 +686,7 @@ def train_native(manifest_dir, index_path, output, config, fold, repo, weights, 
         "history": [],
         "public_lb": None,
         "resume_supported": False,
+        "epoch_checkpoint_index": "epoch_checkpoint_index.json",
         "microbatch_studies": 1,
         "effective_batch_studies": 16,
         "denominator": "sum observed teacher cells over each actual effective group, including the short final group",
@@ -599,6 +696,7 @@ def train_native(manifest_dir, index_path, output, config, fold, repo, weights, 
     selected, start = None, time.perf_counter()
     try:
         for epoch in range(1, settings["epochs"] + 1):
+            epoch_rates = native_epoch_learning_rates(optimizer, config, epoch)
             model.train()
             ordered = [training[index] for index in torch.randperm(len(training), generator=generator).tolist()]
             loss_sum, count = 0.0, 0
@@ -629,6 +727,7 @@ def train_native(manifest_dir, index_path, output, config, fold, repo, weights, 
             write_csv(predictions_path, SUBMISSION_COLUMNS, predictions)
             item = {
                 "epoch": epoch,
+                **epoch_rates,
                 "train_bce": loss_sum / count,
                 "weak_bce": bce,
                 "weak_macro_auc_12": metrics["macro_auc_12"],
@@ -650,6 +749,7 @@ def train_native(manifest_dir, index_path, output, config, fold, repo, weights, 
                 torch.save(checkpoint, out / "best.pt")
                 write_csv(out / "weak_valid_predictions.csv", SUBMISSION_COLUMNS, predictions)
                 record["selected"] = {**item, "checkpoint_sha256": sha256(out / "best.pt")}
+            retain_epoch_checkpoint(out, checkpoint, item, predictions_path)
             dump_json(out / "run.json", record)
             print(f"Native epoch {epoch}/12: weak BCE={bce:.6f}, AUC12={metrics['macro_auc_12']}", flush=True)
         record.update(status="complete", elapsed_seconds=time.perf_counter() - start)

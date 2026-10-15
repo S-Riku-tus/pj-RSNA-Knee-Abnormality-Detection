@@ -1,0 +1,312 @@
+{
+  "schema_version": "completed_f006_twofold_BCE_primary_fixed10_AUC_secondary_weak_comparison_v1",
+  "date_JST": "2026-10-14",
+  "folds": [
+    {
+      "fold": 0,
+      "secondary_descriptor": {
+        "schema_version": "f006_completed_fixed10_secondary_candidate_descriptor_v1",
+        "candidateSelectedRule": "earliest_epoch_with_maximum_arithmetic_mean_AUC_over_all_fixed10_targets",
+        "policy_sha256": "52dff1148d6610479723c0ddaedf1092a6e9e3513ac93b1867f230525235fef7",
+        "serialization_identity_clarification_sha256": "b1d8f6a2afae2f3171a2d6aeb385e6045079ae34bc4ce9f4e4f43ff78ba41aef",
+        "policy_defined_after_observed_epochs": 7,
+        "run_sha256": "e0e1006b6e37269a39c895b439de0051f7ab43f1c0a5532dd1e2f445fd303b81",
+        "retainedEpochIndexSHA": "2d218cc7ca2e75b248eef2eed39776b9252fe6011aa6d2e3117baaaa77eaf833",
+        "candidate_epoch": 12,
+        "control_BCE_epoch": 8,
+        "fixed10_AUC": 0.8831284034612052,
+        "weak_bce": 0.28650593644185945,
+        "checkpoint": {
+          "filename": "epoch_012.pt",
+          "raw_sha256": "1df11d6bd2e4f700f527a755a822a2a3f74b7e0ada9aabe78174c12e592d3915"
+        },
+        "retained_epoch_artifact_raw_sha256": "1df11d6bd2e4f700f527a755a822a2a3f74b7e0ada9aabe78174c12e592d3915",
+        "same_epoch_same_model": false,
+        "duplicate_candidate_transport_or_Submit_allowed": true,
+        "run_selected_changed": false,
+        "weak_validation_reuse": true,
+        "patient_independence_verified": false,
+        "own_Gold_or_Public_selection": false,
+        "actual_checkpoint_body_or_tensor_verified": false,
+        "model_adopted": false,
+        "actual_runtime_qualified": false,
+        "own_Public": null
+      },
+      "comparisons": {
+        "BCE": {
+          "epoch": 8,
+          "original_CLS_weak_BCE": 0.2740430754469716,
+          "prediction_sha256": "b7208cdb910bc1fe5978bd04ce3d8554b09b0d253646c313261bb141bcd43531",
+          "fixed10_old_mixed_AUC": 0.8849130359886159,
+          "fixed10_new_mixed_AUC": 0.8845654619913879,
+          "fixed10_macro_delta": -0.00034757399722796535,
+          "fixed10_group_bootstrap": {
+            "requested_replicates": 1000,
+            "valid_replicates": 1000,
+            "undefined_entire_replicates": 0,
+            "seed": 20261012,
+            "fixed_target_count": 10,
+            "supplied_group_count": 812,
+            "percentile_interval_95": [
+              -0.001059679562797243,
+              0.0002500966165354024
+            ],
+            "mean_delta": -0.0003770138086168157,
+            "fraction_positive_delta": 0.124,
+            "quantile_method": "linear interpolation at (n-1)*q",
+            "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+            "post_checkpoint_selection_conditional_analysis": true,
+            "patient_independence_verified": false,
+            "population_generalization_or_Public_gain_established": false
+          },
+          "all12_macro_delta_auxiliary": -0.0003460122415572253,
+          "all12_group_bootstrap_auxiliary": {
+            "requested_replicates": 1000,
+            "valid_replicates": 649,
+            "undefined_entire_replicates": 351,
+            "seed": 20261012,
+            "fixed_target_count": 12,
+            "supplied_group_count": 812,
+            "percentile_interval_95": [
+              -0.0009230349669143675,
+              0.00018986153191268075
+            ],
+            "mean_delta": -0.0003727882360655332,
+            "fraction_positive_delta": 0.09861325115562404,
+            "quantile_method": "linear interpolation at (n-1)*q",
+            "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+            "post_checkpoint_selection_conditional_analysis": true,
+            "patient_independence_verified": false,
+            "population_generalization_or_Public_gain_established": false
+          },
+          "undefined_observed_targets": []
+        },
+        "fixed10_AUC": {
+          "epoch": 12,
+          "original_CLS_weak_BCE": 0.28650593644185945,
+          "prediction_sha256": "8f75feced2e02584b6581c0ed124e1bdc79d370a312966fd0c976ce302f0b964",
+          "fixed10_old_mixed_AUC": 0.8849130359886159,
+          "fixed10_new_mixed_AUC": 0.8889231579382029,
+          "fixed10_macro_delta": 0.004010121949587013,
+          "fixed10_group_bootstrap": {
+            "requested_replicates": 1000,
+            "valid_replicates": 1000,
+            "undefined_entire_replicates": 0,
+            "seed": 20261012,
+            "fixed_target_count": 10,
+            "supplied_group_count": 812,
+            "percentile_interval_95": [
+              0.0018257845177027598,
+              0.006316886557536028
+            ],
+            "mean_delta": 0.00396085857059816,
+            "fraction_positive_delta": 1.0,
+            "quantile_method": "linear interpolation at (n-1)*q",
+            "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+            "post_checkpoint_selection_conditional_analysis": true,
+            "patient_independence_verified": false,
+            "population_generalization_or_Public_gain_established": false
+          },
+          "all12_macro_delta_auxiliary": 0.004750949388003615,
+          "all12_group_bootstrap_auxiliary": {
+            "requested_replicates": 1000,
+            "valid_replicates": 649,
+            "undefined_entire_replicates": 351,
+            "seed": 20261012,
+            "fixed_target_count": 12,
+            "supplied_group_count": 812,
+            "percentile_interval_95": [
+              0.001504392676251126,
+              0.00843915543201034
+            ],
+            "mean_delta": 0.004651111251751891,
+            "fraction_positive_delta": 1.0,
+            "quantile_method": "linear interpolation at (n-1)*q",
+            "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+            "post_checkpoint_selection_conditional_analysis": true,
+            "patient_independence_verified": false,
+            "population_generalization_or_Public_gain_established": false
+          },
+          "undefined_observed_targets": []
+        }
+      },
+      "source_comparison": {
+        "path": "artifacts\\research\\20261012-f006-completed-mixed-comparison-v1\\actual-comparison-v1.json",
+        "sha256": "3de507ac7e92ce6bf3949a44eabdc87d2b2573eca1807ab46b31c2d86c573023",
+        "bytes": 31301
+      },
+      "selection_policy_defined_after_observed_epochs": 7
+    },
+    {
+      "fold": 1,
+      "secondary_descriptor": {
+        "schema_version": "f006_fold1_prospective_completed_fixed10_secondary_candidate_descriptor_v1",
+        "candidateSelectedRule": "earliest_epoch_with_maximum_arithmetic_mean_AUC_over_all_fixed10_targets",
+        "policy_sha256": "8170b446c7932bcaa9d329eb1001585d4201f29c563d838e3900ee7c017e80f7",
+        "serialization_identity_clarification_sha256": "b1d8f6a2afae2f3171a2d6aeb385e6045079ae34bc4ce9f4e4f43ff78ba41aef",
+        "policy_defined_after_observed_epochs": 0,
+        "policy_declared_before_training": true,
+        "run_sha256": "ee7f7a8326e578c6a46fae0fa6b488e74208ac679a474fc73775667bcc362261",
+        "retainedEpochIndexSHA": "b06ac7e36b918f72b9736fedf153bd5b5c1dbb1a5135f478eb30fd47532285a2",
+        "candidate_epoch": 12,
+        "control_BCE_epoch": 9,
+        "fixed10_AUC": 0.882916297126442,
+        "weak_bce": 0.28139588925075215,
+        "checkpoint": {
+          "filename": "epoch_012.pt",
+          "raw_sha256": "0232ac154d7cb01526ef2bd923cfb1fcd6e96151a689fd6e903f0d01787f2f93"
+        },
+        "retained_epoch_artifact_raw_sha256": "0232ac154d7cb01526ef2bd923cfb1fcd6e96151a689fd6e903f0d01787f2f93",
+        "same_epoch_same_model": false,
+        "duplicate_candidate_transport_or_Submit_allowed": true,
+        "run_selected_changed": false,
+        "weak_validation_reuse": true,
+        "patient_independence_verified": false,
+        "own_Gold_or_Public_selection": false,
+        "actual_checkpoint_body_or_tensor_verified": false,
+        "model_adopted": false,
+        "actual_runtime_qualified": false,
+        "own_Public": null
+      },
+      "comparisons": {
+        "BCE": {
+          "epoch": 9,
+          "original_CLS_weak_BCE": 0.2794517170614139,
+          "prediction_sha256": "f665b090139e7d35fbd0633ab8640c933d13ac8f7c06b8899abea004750713c1",
+          "fixed10_old_mixed_AUC": 0.8863459969258551,
+          "fixed10_new_mixed_AUC": 0.8861807786471217,
+          "fixed10_macro_delta": -0.00016521827873333266,
+          "fixed10_group_bootstrap": {
+            "requested_replicates": 1000,
+            "valid_replicates": 1000,
+            "undefined_entire_replicates": 0,
+            "seed": 20261012,
+            "fixed_target_count": 10,
+            "supplied_group_count": 861,
+            "percentile_interval_95": [
+              -0.0013187103978032507,
+              0.0010095495938214297
+            ],
+            "mean_delta": -0.0001869320260832467,
+            "fraction_positive_delta": 0.365,
+            "quantile_method": "linear interpolation at (n-1)*q",
+            "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+            "post_checkpoint_selection_conditional_analysis": true,
+            "patient_independence_verified": false,
+            "population_generalization_or_Public_gain_established": false
+          },
+          "all12_macro_delta_auxiliary": 0.000209872715684913,
+          "all12_group_bootstrap_auxiliary": {
+            "requested_replicates": 1000,
+            "valid_replicates": 1000,
+            "undefined_entire_replicates": 0,
+            "seed": 20261012,
+            "fixed_target_count": 12,
+            "supplied_group_count": 861,
+            "percentile_interval_95": [
+              -0.0010502251081077197,
+              0.0013928265514331465
+            ],
+            "mean_delta": 0.00015690251707712742,
+            "fraction_positive_delta": 0.601,
+            "quantile_method": "linear interpolation at (n-1)*q",
+            "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+            "post_checkpoint_selection_conditional_analysis": true,
+            "patient_independence_verified": false,
+            "population_generalization_or_Public_gain_established": false
+          },
+          "undefined_observed_targets": []
+        },
+        "fixed10_AUC": {
+          "epoch": 12,
+          "original_CLS_weak_BCE": 0.28139588925075215,
+          "prediction_sha256": "7c052b7f16a86c9f8ee3bf0ef5f2807057acc7677f050e1337eac74b91274e7c",
+          "fixed10_old_mixed_AUC": 0.8863459969258551,
+          "fixed10_new_mixed_AUC": 0.8886570610806304,
+          "fixed10_macro_delta": 0.0023110641547751986,
+          "fixed10_group_bootstrap": {
+            "requested_replicates": 1000,
+            "valid_replicates": 1000,
+            "undefined_entire_replicates": 0,
+            "seed": 20261012,
+            "fixed_target_count": 10,
+            "supplied_group_count": 861,
+            "percentile_interval_95": [
+              0.0005219627398193704,
+              0.004213629521347703
+            ],
+            "mean_delta": 0.0023177683163872432,
+            "fraction_positive_delta": 0.997,
+            "quantile_method": "linear interpolation at (n-1)*q",
+            "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+            "post_checkpoint_selection_conditional_analysis": true,
+            "patient_independence_verified": false,
+            "population_generalization_or_Public_gain_established": false
+          },
+          "all12_macro_delta_auxiliary": 0.002194434291964114,
+          "all12_group_bootstrap_auxiliary": {
+            "requested_replicates": 1000,
+            "valid_replicates": 1000,
+            "undefined_entire_replicates": 0,
+            "seed": 20261012,
+            "fixed_target_count": 12,
+            "supplied_group_count": 861,
+            "percentile_interval_95": [
+              0.0003356460257986092,
+              0.0044986600131502
+            ],
+            "mean_delta": 0.002293939083761933,
+            "fraction_positive_delta": 0.985,
+            "quantile_method": "linear interpolation at (n-1)*q",
+            "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+            "post_checkpoint_selection_conditional_analysis": true,
+            "patient_independence_verified": false,
+            "population_generalization_or_Public_gain_established": false
+          },
+          "undefined_observed_targets": []
+        }
+      },
+      "source_comparison": {
+        "path": "artifacts\\research\\20261014-f006-fold1-fixed10-selection-comparison-v1\\fold1-comparison.json",
+        "sha256": "e77e320353402f5e4849b6c2ae475a040fc628fd0cd00f5cc1415328bd61052c",
+        "bytes": 34254
+      },
+      "selection_policy_defined_after_observed_epochs": 0
+    }
+  ],
+  "selection": "Original earliest minimum weak BCE preserved; separate earliest maximum finite mean fixed10 AUC",
+  "fixed12_completed": true,
+  "fixed10_excluded_targets": [
+    "MCL",
+    "Synovitis"
+  ],
+  "bootstrap_seed": 20261012,
+  "bootstrap_replicates": 1000,
+  "same_REG_and_fixed_FP32_mean50": true,
+  "Gold_reads_training_selection_evaluation": 0,
+  "original_BCE_best_checkpoint_or_run_selected_modified": false,
+  "coefficient_search": false,
+  "checkpoint_raw_payload_verified_by_this_analysis": false,
+  "post_checkpoint_selection_conditional": true,
+  "patient_independence_verified": false,
+  "full_twofold_OOF_or_Public_gain_established": false,
+  "new_Public": null,
+  "model_adopted": false,
+  "external_transmission_or_submission": 0,
+  "execution_audit": {
+    "path": "artifacts\\research\\20261014-f006-fold1-fixed10-selection-comparison-v1\\execution-audit.json",
+    "sha256": "bafc4e98d84fec92f8897f5863e10209f502d2d573241598571db4816d4b2f0a",
+    "bytes": 11957
+  },
+  "fold0_all12_supplement": {
+    "path": "artifacts\\research\\20261014-f006-fold1-fixed10-selection-comparison-v1\\fold0-all12-supplement.json",
+    "sha256": "fb0ff09cf8ef0cc27fd827c71f45c7ab3f72c5919976c1e8c6deb19177ea3fc7",
+    "bytes": 2413
+  },
+  "limitations": "Same weak holdouts selected the checkpoints. Fold0 secondary policy was defined after observing7 epochs; fold1 policy preceded training. No guarantee of new Public score or0.960 attainment. Recorded model hashes are writer references only.",
+  "summary_artifact": {
+    "path": "artifacts\\research\\20261014-f006-fold1-fixed10-selection-comparison-v1\\summary.json",
+    "sha256": "14165eacb7de2bf1d6f43ee65a8d57e193f8b1649f38cfabbad8b4caa68510b3",
+    "bytes": 14598
+  }
+}

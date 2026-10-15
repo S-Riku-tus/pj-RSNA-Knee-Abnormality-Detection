@@ -1,0 +1,28 @@
+{
+  "schema_version": "secondary_checkpoint_policy_serialization_identity_clarification_v1",
+  "at_utc": "2026-10-12T10:13:06Z",
+  "original_policy": {
+    "path": "experiments/f006-fixed10-AUC-selection-policy-20261012.json",
+    "sha256": "52dff1148d6610479723c0ddaedf1092a6e9e3513ac93b1867f230525235fef7"
+  },
+  "original_policy_epoch_selection_rule_targets_and_training_unchanged": true,
+  "original_policy_file_preserved": true,
+  "source_basis": {
+    "path": "src/rsna_knee/native_training_fast16.py",
+    "sha256": "2ffa41e2fc650b61c5ccf2d5cf7c49974aff001025e604764238f6711efd44ef",
+    "finding": "The same epoch checkpoint dictionary is saved separately to last.pt and, on weak-BCE improvement, best.pt; retained epoch files copy last.pt. Serialized archive bytes can differ without a learned-parameter difference.",
+    "actual_checkpoint_bytes_or_tensor_equality_measured_here": false
+  },
+  "same_selected_epoch": {
+    "rule": "Reuse the existing BCE-selected best.pt and its exact final run.selected checkpoint SHA for both candidate policies.",
+    "candidate_identity": "The same training epoch under both policies is one model, even if separately serialized retained-epoch bytes have a different SHA.",
+    "additional_transport_or_Submit": 0
+  },
+  "different_selected_epoch": {
+    "rule": "Bind the alternative epoch to the immutable retained checkpoint index SHA, actual epoch artifact SHA and original history metrics after fixed12 completion.",
+    "existing_run_selected_or_best_checkpoint_overwritten": false,
+    "model_adoption_issued_by_this_clarification": false
+  },
+  "checkpoint_model_GPU_MRI_teacher_Gold_Report_API_reads_or_calls": 0,
+  "strict_above960_achieved": false
+}

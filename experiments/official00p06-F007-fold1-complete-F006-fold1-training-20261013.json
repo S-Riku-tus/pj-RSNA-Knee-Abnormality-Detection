@@ -1,0 +1,195 @@
+{
+  "schema_version": "official00p06_F007_fold1_completed_F006_fold1_started_snapshot_v1",
+  "recorded_at_UTC": "2026-10-12T15:17:29.400617+00:00",
+  "documentation_actor": "execution_audit_metadata_only",
+  "evidence_pins": {
+    "F007_fold1_complete": {
+      "path": "artifacts/research/20261013-f007-fold1-completed-root-acceptance-v1/Root-completed-run-and-cache-acceptance.json",
+      "sha256": "1b08d266650aa2bf22981b5edfbd283150f5fe724a28d4fef682323ac8f4cbc7"
+    },
+    "F007_fold1_fixed50_comparison": {
+      "path": "artifacts/research/20261012-f007-completed-mixed-comparison-root-v1/fold1-comparison.json",
+      "sha256": "c45e0d5163476b8fab901fc2b83aa50770604c96d88496fb2945e640f3408731"
+    },
+    "F007_fold0_artificial_GPU": {
+      "path": "artifacts/qa/20261012-f007-fold0-adapter-artificial-GPU-proof-v1/artificial-GPU-proof.json",
+      "sha256": "3e203569f526f715c53c50347bdfed31aa4d907008542aad4e26b37ad4b78a76"
+    },
+    "F006_fold1_prospective_policy": {
+      "path": "experiments/f006-fold1-prospective-BCE-and-fixed10-AUC-policy-20261012.json",
+      "sha256": "8170b446c7932bcaa9d329eb1001585d4201f29c563d838e3900ee7c017e80f7"
+    },
+    "official_P026_00p06": {
+      "path": "artifacts/research/20261012-p026-focused-scoring-status-tools-v1/delegated-observation-v2/observation.json",
+      "sha256": "438f5609faf523cac8b4a324913caca925c8eccc0a65a28206d4a39bf4c27ec1"
+    },
+    "previous_F007_fold1_start": {
+      "path": "experiments/f007-fold1-cache-complete-CLS-exact-residual-training-started-20261012.json",
+      "sha256": "7a7bd618876af118a77e2576085d1bbf0ec3b9e0f2425b43608febdbf85bc02c"
+    }
+  },
+  "F007_fold1": {
+    "actual_actor": "Root",
+    "session": 59615,
+    "process_exit_code": 0,
+    "status": "complete",
+    "epochs": 12,
+    "run_sha256": "d3e9485f1e22c9fc385c9529e0bcb0f707476e8433cf3c61ab902fcfe3402abc",
+    "selected_epoch": 12,
+    "selected_rule": "earliest minimum global observed weak BCE",
+    "weak_BCE": 0.27517596638123926,
+    "fixed10_AUC_auxiliary": 0.8816324818675172,
+    "selected_checkpoint": {
+      "path": "artifacts/runs/f007-original-BCE-CLS-preserving-local-residual-fold1-20261012-v1/epoch_012.pt",
+      "sha256": "305ae1de578b59529764b6e00b97edae76cc7ea15a054beadabe166b11481923",
+      "bytes": 406163
+    },
+    "selected_prediction": {
+      "path": "artifacts/runs/f007-original-BCE-CLS-preserving-local-residual-fold1-20261012-v1/epoch_012_weak.csv",
+      "sha256": "e2ce0435d3c4912561f5c4283e2d0e634b864680947c26368990e5ef6e540f0c",
+      "bytes": 274556
+    },
+    "all_retained12_checkpoint_and_prediction_SHA_rechecked_by_Root": true,
+    "cache_NPZ_count": 4207,
+    "cache_NPZ_bytes": 7918878170,
+    "cache_raw_payloads_reopened_by_this_acceptance": false,
+    "cache_feature_hashes_rechecked_by_this_acceptance": false,
+    "original_CLS_saved_probability_max_error_all891x12": 0.0,
+    "native_oracle_UIDs": 1,
+    "all891_full_native_forward_checked": false,
+    "encoder_and_CLS_frozen_every_epoch_source_bound": true,
+    "separate_actual_frozen_head_tensor_reconstruction_by_completed_acceptance": false,
+    "mixed_fixed50_fixed10_delta": 0.0013721686028267943,
+    "group_bootstrap": {
+      "requested_replicates": 1000,
+      "valid_replicates": 1000,
+      "undefined_entire_replicates": 0,
+      "seed": 20261012,
+      "fixed_target_count": 10,
+      "supplied_group_count": 861,
+      "percentile_interval_95": [
+        0.00021828126293725074,
+        0.002748215258640627
+      ],
+      "mean_delta": 0.0013692298740586187,
+      "fraction_positive_delta": 0.988,
+      "quantile_method": "linear interpolation at (n-1)*q",
+      "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+      "post_checkpoint_selection_conditional_analysis": true,
+      "patient_independence_verified": false,
+      "population_generalization_or_Public_gain_established": false
+    },
+    "patient_independence_and_Public_gain_established": false,
+    "new_Kaggle_Input_CPU64_visible_Serving_qualified": false
+  },
+  "F007_fold0_GPU_probe": {
+    "actual_actor": "Root",
+    "scope": "one restored model; local artificial input only",
+    "GPU": "NVIDIA GeForce RTX 4090",
+    "valid_windows": 3,
+    "wrapper_forward_calls": 2,
+    "frozen_AST_reference_passes": 1,
+    "encoder_window_images_total": 9,
+    "reference_max_logit_error": 0.0,
+    "padding_max_logit_error": 0.0,
+    "all_passed": true,
+    "actual_MRI_teacher_Gold_Report_cache_CSV_payload_reads": 0,
+    "new_four_model_twoT4_native64_Serving_accuracy_qualified": false
+  },
+  "F006_fold1_training": {
+    "actual_actor": "Root",
+    "session": 41581,
+    "status": "RUNNING",
+    "run": "artifacts/runs/f006-late-cosine-fold1-20261012-v1",
+    "seed": 20261002,
+    "fold": 1,
+    "expected_train_valid": [
+      3316,
+      891
+    ],
+    "fixed_epochs": 12,
+    "policy_declared_before_actual_training": {
+      "path": "experiments/f006-fold1-prospective-BCE-and-fixed10-AUC-policy-20261012.json",
+      "sha256": "8170b446c7932bcaa9d329eb1001585d4201f29c563d838e3900ee7c017e80f7"
+    },
+    "primary": "earliest minimum weak BCE",
+    "secondary": "earliest maximum complete finite fixed10 mean AUC",
+    "secondary_does_not_overwrite_original_run_selected_best": true,
+    "same_epoch_same_checkpoint_duplicate_candidate": false,
+    "own_Gold_or_Public_selection": false,
+    "run_metrics_read_by_documentation_author": false,
+    "training_complete_or_new_checkpoint_adopted": false,
+    "model_or_config_body_source_changed": false
+  },
+  "official": {
+    "at_utc": "2026-10-12T15:06:28.216187+00:00",
+    "actor": {
+      "name": "local_analysis",
+      "authorized_by": "root",
+      "delegated": true,
+      "delegation_id": "root_authorized_0006_P026_focused"
+    },
+    "RPC_counts": {
+      "GetSubmission": 1,
+      "ListSubmissions": 1,
+      "GetSubmissionLimits": 1
+    },
+    "Root_independent_read": true,
+    "focused_target": "P02657107853",
+    "P026_raw_status_Public": null,
+    "P026_Get_List_error_empty": true,
+    "SDK_default_pending_is_not_observed_official_status": true,
+    "best_known_official_Public": "0.954",
+    "strict_above960": false,
+    "fresh_allowance": {
+      "raw_field_names": [
+        "numAllowedNow",
+        "numToday",
+        "numTotal"
+      ],
+      "daily_reset_time_independently_observed": false,
+      "numToday": {
+        "raw_field_present": true,
+        "raw": 4,
+        "typed": 4,
+        "raw_omitted_typed_default_zero_not_independently_observed": false
+      },
+      "numAllowedNow": {
+        "raw_field_present": true,
+        "raw": 1,
+        "typed": 1,
+        "raw_omitted_typed_default_zero_not_independently_observed": false
+      },
+      "numTotal": {
+        "raw_field_present": true,
+        "raw": 23,
+        "typed": 23,
+        "raw_omitted_typed_default_zero_not_independently_observed": false
+      }
+    },
+    "Root_reported_remaining": 1,
+    "Root_reported_numToday": 4,
+    "Root_reported_numTotal": 23,
+    "JST_date_changed_to_20261013": true,
+    "daily_reset_time_or_new_quota_reset_observed": false,
+    "prior_P020_P021_scores": "0.954 each",
+    "prior_P022": "hidden unhandled error; exact cause unconfirmed",
+    "focused_P026_Get_does_not_requery_all_other_targets": true
+  },
+  "external_actions": {
+    "P024_new_private_payload_specific_approval_pending": true,
+    "P028_new_private_Notebook_Save_specific_approval_pending": true,
+    "auto_review_rejections_before_CreateProcess_preserved": true,
+    "new_Save_upload_external_retry_or_alternative_send": false,
+    "new_remote_Start_PUT_Create_Save_calls": 0,
+    "Root_local_training_or_artificial_GPU_authority_is_not_external_approval": true
+  },
+  "goal": {
+    "strict_above960_achieved": false,
+    "active_work_continues": true
+  },
+  "documentation_scope": {
+    "GPU_auth_Kaggle_API_model_run_checkpoint_cache_teacher_MRI_body_reads": 0,
+    "historical_docs_raw_snapshots_ledger_prefix_source_trainer_CLI_config_preserved": true
+  }
+}

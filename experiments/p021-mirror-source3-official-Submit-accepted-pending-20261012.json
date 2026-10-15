@@ -1,0 +1,148 @@
+{
+  "schema_version": "p021_same_byte_mirror_source3_official_Submit_accepted_progress_v1",
+  "observed_at_jst": "2026-10-12T18:56:17+09:00",
+  "own_Public_best": "0.951",
+  "strict_above960_achieved": false,
+  "work_continues": true,
+  "reason": "The same-model-byte mirror changes only two Input-routing cells and preserves the latestV2 numeric recipe. The new saved slug passed its own visible inference and received a positive competition submission ref.",
+  "prior_HTTP_history_preserved": {
+    "earlier_snapshot": {
+      "path": "experiments/p021-http400-mirror-preparation-pair-review-20261012.json",
+      "sha256": "f0fbc60d9de34a0f9e88d93876606510adf76cbb80c04f25d3e11abc0545ef9a"
+    },
+    "old_slug_POST_calls": 2,
+    "old17_24_cause_unconfirmed": true,
+    "old18_25_HTTP400_nonversioned_dataset_rejection": true,
+    "redacted_specific_Input_not_identified": true,
+    "old_slug_replayed_after_ordinal2": false,
+    "automatic_retry": false
+  },
+  "new_SourceV3": {
+    "source_preparation": {
+      "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261012-p021-public-latestV2-source-v3\\preparation.json",
+      "sha256": "416d03041e8212bf0a9dd0af44794ac0c438a358b7fd213cc4a62e2e9449a390"
+    },
+    "source_peer": {
+      "path": "artifacts\\research\\20261012-p021-public-latestV2-source-v3\\Root-source-peer.json",
+      "sha256": "37c981d75c2fc53f206c4f525bd963a752aea31ed3465be9c1657fe9aab11eb6"
+    },
+    "API_source_sha256": "73618f7def7af28bb0fc3f1ea3046b5ca807fd5c2c291bbe66e374978a956cc8",
+    "API_source_bytes": 526675,
+    "same_model6_bytes_and_side_geometry_auxiliary_SHA": true,
+    "original6_literal_cells_unchanged": 4,
+    "Input_route_only_cells_changed": 2,
+    "numerical_5050_OA3_own_nonfailed_rank_and_9g_changed": false,
+    "embedded_source7_changed": false,
+    "Input_display_version_refs": [
+      "heliosli/rsna-knee-compact-v1/13",
+      "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+      "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1"
+    ],
+    "actual_internal_dataset_version_IDs_exposed": false
+  },
+  "new_Save_and_visible_CSV": {
+    "Save_receipt": {
+      "path": "artifacts/research/20261012-p021-public-latestV2-root-v2/receipt.json",
+      "sha256": "2aa24b2b702ed58ab13e69a077e20a03083d68706b306697ec4b693d5b301476"
+    },
+    "Save_at_utc": "2026-10-12T09:44:06.647129+00:00",
+    "ref": "rsraki/p021v3-a72d57ca37774c478180c987b577e907",
+    "kernel_id": 138309978,
+    "saved_version": 1,
+    "Save_calls": 1,
+    "actual_read": {
+      "path": "artifacts/research/20261012-p021-results-and-submit-tools-v3/actual-observation-v1/receipt.json",
+      "sha256": "85019a392e7de5f996ad862bc26efb462d3d2e705dfaf2b3cb816b86527a3d87"
+    },
+    "selected_output_body_GETs": 8,
+    "Root_acceptance": {
+      "path": "artifacts/research/20261012-p021-results-and-submit-tools-v3/Root-actual-acceptance.json",
+      "sha256": "c2918d93427a4c186b8f7ed9cfc067af518aea1320fd1ff4702511c37cf7531b"
+    },
+    "rows": 3,
+    "targets": 12,
+    "two_T4": true,
+    "four_models_per_worker": true,
+    "failures": 0,
+    "original36_FP32_recomputed": true,
+    "submission_sha256": "5c4828369e39d80a6e67ece4e784206e99323120aff975216005755f7f7053dd",
+    "CSV_byteidentical_to_pre_mirror_SourceV2": true,
+    "hidden_completion_verified": false,
+    "own_Public": null
+  },
+  "new_slug_first_competition_Submit": {
+    "accepted_receipt": {
+      "path": "artifacts/research/20261012-p021-results-and-submit-tools-v3/actual-single-Submit-v1/receipt.json",
+      "sha256": "4e1c655538a2f58416772cdad6ed8f89c53c81a6335b02c42ed1d792f6c3e591"
+    },
+    "at_utc": "2026-10-12T09:53:08.174488+00:00",
+    "submission_ref": 57103408,
+    "accepted": true,
+    "actual_Submit_calls": 1,
+    "automatic_retry": false,
+    "remaining_daily_before_Submit": 3,
+    "remaining_daily_after_Submit_unobserved": true,
+    "raw_Decimal_GPU_seconds_before_Submit": "99616.856",
+    "own_Public": null,
+    "hidden_scoring_complete": false
+  },
+  "three_accepted_candidates": {
+    "P020_S6only": 57098752,
+    "P022_S6plus_fixedNative20": 57102110,
+    "P021_latestV2_samebyte_mirror": 57103408,
+    "Public_scores_unreturned_in_current_evidence": true,
+    "best_retained": "0.951",
+    "purpose": "Compare official own scores; acceptance and visible CSV consistency do not prove accuracy improvement."
+  },
+  "f006_epoch7": {
+    "snapshot": {
+      "path": "artifacts/research/20261012-f006-live-progress-v1/epoch07-snapshot-v1.json",
+      "sha256": "9597c6abb2b22bc81a3f27be08283f915ab3f9298f2797d810cf58fa85f5fba6"
+    },
+    "fixed_total_epochs": 12,
+    "completed_epochs": 7,
+    "status": "running",
+    "BCE_selected_epoch_so_far": 7,
+    "adopted": false,
+    "LR_multiplier": 0.9397114317029974,
+    "weak_BCE": 0.2788910499616341,
+    "weak_AUC12": 0.8708670651293868,
+    "weak_fixed10_AUC": 0.8758949153847014,
+    "same_epoch_old_BCE_delta": -0.0009394750875240665,
+    "same_epoch_old_fixed10_AUC_delta": -0.0004225406509166252,
+    "improvement_claimed": false
+  },
+  "secondary_checkpoint_selection_policy": {
+    "policy": {
+      "path": "experiments/f006-fixed10-AUC-selection-policy-20261012.json",
+      "sha256": "52dff1148d6610479723c0ddaedf1092a6e9e3513ac93b1867f230525235fef7"
+    },
+    "defined_after_observing_epochs1_to7_before_final12": true,
+    "rule": "earliest maximum arithmetic mean AUC over all prespecified fixed10 targets",
+    "undefined_target_rejected": true,
+    "BCE_control_run_selected_and_weights_unchanged": true,
+    "same_checkpoint_means_no_duplicate_Submit": true,
+    "model_adoption_or_Submit_calls": 0,
+    "Gold_or_Public_selection": false,
+    "historical_basis": "Both completed f005 folds have fixed10 AUC best E10 versus BCE-selected E8/E9; old alternative checkpoint availability is unverified."
+  },
+  "diagnostic_references": {
+    "weak_pair_utility": {
+      "path": "artifacts/research/20261012-f005-fixed-mean50-pair-utility-v1/actual-fold0-and-fold1-pair-utility-v1.json",
+      "sha256": "9f85789f52edab360101ed53038a1d485ffce13e4d8b25d76d22534901d63a36"
+    },
+    "additional_primary_public_research": {
+      "path": "artifacts/research/20261012-post-P022-public-stronger-primary-web-v1/evidence.json",
+      "sha256": "4b1f87ff464f9c5c98d7a604f47a240ecd615f8f215379f513b01190311fb9d9"
+    },
+    "Public_improvement_proven": false,
+    "new_reproducible_above960_same_input_weight_candidate_verified": false,
+    "missing_Web_access_not_absence_claim": true
+  },
+  "documentation_update_only": {
+    "agent_Kaggle_API_Save_Submit_GPU_MRI_model_teacher_body_calls": 0,
+    "running_trainer_CLI_config_edits": 0,
+    "earlier_snapshots_overwritten": false
+  },
+  "next": "Read official scores and fresh allowance for the three accepted refs; finish fixed12 f006 and compare the fixed BCE control versus the declared secondary AUC selection before adoption."
+}

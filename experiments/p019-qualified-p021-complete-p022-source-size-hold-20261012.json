@@ -1,0 +1,167 @@
+{
+  "schema_version": "p019_actual_UID_recovery_p021_complete_p022_size_hold_progress_v1",
+  "observed_at_jst": "2026-10-12T17:11:37+09:00",
+  "reason_ja": "P019の実UID復旧受理をP022の前提へ結び、別候補P021の保存完了とサイズ制限によるP022の未実行を区別する。実出力確認後の単一提出と固定12epoch学習の完了を続ける。",
+  "own_Public_best": "0.951",
+  "strict_above960_achieved": false,
+  "work_continues": true,
+  "P019_actual_UID_recovery": {
+    "Root_acceptance": {
+      "path": "artifacts/research/20261012-p019-uid-recovery-native64-results-tools-v1/Root-actual-fault64-normal64-acceptance.json",
+      "sha256": "03ddfc5b3dcd4930a82089f54f72cb241a4a7e3cc53a7bc348ec057028ac7a2b"
+    },
+    "source_peer": {
+      "path": "artifacts/research/20261012-p019-uid-structural-recovery-independent-v2/review.json",
+      "sha256": "fe349696f4e11f9b66a3acc0c3893a03eca26f182da2857f568f220a4297ac82"
+    },
+    "p019_source_sha256": {
+      "phase_contracts.py": "78cf8858178fdc916c75f014a01e1cb416da9804abceae615ea7480360ee5ff8",
+      "mixed_serving_contracts.py": "feb83bd6a998de4731f20403dfd898898d82aa2594f164105ecd91ffb7135885",
+      "serving_router.py": "fed09d54298b96eae4de5044d8c71686d653cdb079c3c182fb204b26011c0f3e",
+      "mixed_parent.py": "a68463bdd88eeb08260248f61bf6612465c5b1998c4afd3c000d7911e49fc462",
+      "support_mask.py": "457ef4957726dff339dfea345410b45ca72630b8c55679399dce5f516dbd7982",
+      "build_source.py": "6a22e44a3c1432cecd01b914294747e585f3c698615aa24c60ebc34c5f42358d",
+      "serving-pins.json": "132a972ac28cea148f0b20b199bfe9cf9df101f71ba471ca7174d1644c17a525",
+      "uid_recovery_adapter.py": "e75c4f20a26d57a417ef2ebe761684ffae94cd6beec6de5c29a1c23a1534ef05",
+      "diagnostic_driver.py": "7b5c5e379726b94e7b1133dcd2df5963b7714f4ad1eef397e600fde86b371c5d"
+    },
+    "ref": "rsraki/p019n64-366c9105109e438588120a6e81e9806b",
+    "kernel_id": 138289877,
+    "saved_version": 1,
+    "official_status": "COMPLETE",
+    "runs": {
+      "fault64": {
+        "N": 64,
+        "S": 63,
+        "F": 1,
+        "forwards": 252,
+        "elapsed_seconds": 155.148656497,
+        "receipt": {
+          "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261012-p019-uid-recovery-native64-results-tools-v1\\actual-observation-v1\\P019_RECOVERY_NATIVE64\\fault64\\result.json",
+          "sha256": "031982dbd5d510ebee8db0f937520cf847150322e25bce1ba9fc69f6e31dcd66"
+        }
+      },
+      "normal64": {
+        "N": 64,
+        "S": 64,
+        "F": 0,
+        "forwards": 256,
+        "elapsed_seconds": 133.78928048400002,
+        "receipt": {
+          "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261012-p019-uid-recovery-native64-results-tools-v1\\actual-observation-v1\\P019_RECOVERY_NATIVE64\\normal64\\result.json",
+          "sha256": "fa96349896c183ea46d2ed2856387e8e5afa90b28e3d92b3d4e051876d1d7148"
+        }
+      }
+    },
+    "failed_UID_GPU_forwards": 0,
+    "failed_baseline_12_original_strings_verified": true,
+    "explicit_full_N_imputation_verified": true,
+    "successful_four_model_inputs_and_FP32_means_verified": true,
+    "two_T4_resources_owned_child_join_queue_cleanup_verified": true,
+    "exact_NoDICOM_origin_source_function_line_literal_SHA_bound": true,
+    "actual_native_UID_recovery_qualified": true,
+    "Serving_final_CSV_or_accuracy_qualified": false,
+    "rank_mask_final_CSV_evidence_is_CPU_component_only": true,
+    "own_Gold_fit_or_selection": false
+  },
+  "P021_public_latest_V2": {
+    "accepted_Save": {
+      "path": "artifacts/research/20261012-p021-public-latestV2-root-v1/receipt.json",
+      "sha256": "5a674ae6a7bc70b3f265574d567718dd2cd903340f4c4a2439fc9cdce41e2ac9"
+    },
+    "source_peer": {
+      "path": "artifacts\\research\\20261012-p021-public-latestV2-source-v2\\Root-source-peer.json",
+      "sha256": "a0211a82f64f605cc75c3097a37e43f15c756b8495c76901d6867d2194c65800"
+    },
+    "ref": "rsraki/p021v2-df1e911482eb4d7c91a4e20d586b033e",
+    "kernel_id": 138292308,
+    "saved_version": 1,
+    "actual_Save_calls": 1,
+    "official_CLI_status_observed_by_root": "COMPLETE",
+    "official_CLI_status_observed_at_jst": "2026-10-12T17:11+09:00",
+    "Source_bound_complete_output_or_CSV_accepted": false,
+    "competition_Submit_calls": 0,
+    "own_Public": null,
+    "author_best_Public": "0.956",
+    "author_latest_V2_Public": null,
+    "author_best_does_not_identify_latest_V2_score": true,
+    "API_source_sha256": "7f552282ecad02d6dd06120a582b90b1f7bbff5de11369beb4674253e54c5359"
+  },
+  "P022_local_build_size_HOLD": {
+    "source_v1_report": {
+      "path": "artifacts/research/20261012-p022-S6-native20-source-v1/report.json",
+      "sha256": "f3f353e0df6e786ee3b85c64648893772a1fa7f4a8f5f816ea2f571afe83c7f0"
+    },
+    "Root_runtime_context": {
+      "path": "artifacts/research/20261012-p022-S6-native20-root-v1/Notebook-context.json",
+      "sha256": "1402964702b6b2628598bffb98c4bbab6c8c43bcaf30708b08e6e42059d38ce5"
+    },
+    "actual_P019_binding": {
+      "path": "artifacts/research/20261012-p022-root-metadata-preparation-v1/author-actual-P019-certificate-binding-v1.json",
+      "sha256": "1a2d840050b5da564acb3dc2f4919f97e49a8b6883cbdf8b448e9dcefedf62a3"
+    },
+    "internal_API_source_guard_bytes": 950000,
+    "with_actual_Root_metadata_source_exceeds_guard": true,
+    "exact_excess_size_not_claimed": true,
+    "local_build_status": "HOLD_before_Save",
+    "actual_Save_calls": 0,
+    "source_v2_preparation": "raw_metadata_preserving_compression_in_progress",
+    "model_native_math_reader_input_weights_changed": false,
+    "baseline_native_rank_weights": [
+      0.8,
+      0.2
+    ],
+    "native_CLS_REG_weights": [
+      0.5,
+      0.5
+    ],
+    "whole_Serving_or_Public_qualified": false
+  },
+  "P020_official_score": {
+    "submission_ref": 57098752,
+    "observation": {
+      "path": "artifacts/research/20261012-p020-scoring-status-tools-v1/observation-v5/observation.json",
+      "sha256": "47d4389d8ce07a8ab101131c255de9faa61199b810f67b89f1f072f8758a98c4"
+    },
+    "observed_at_jst": "2026-10-12T17:11:06+09:00",
+    "raw_status_returned": false,
+    "own_Public": null,
+    "typed_PENDING_is_SDK_default_only": true,
+    "official_daily_remaining": 4
+  },
+  "f006_fold0": {
+    "run_metadata_at_read": {
+      "path": "artifacts/runs/f006-late-cosine-fold0-20261012-v1/run.json",
+      "sha256": "733e16c527bb594635f9abbdb2d7ec28ab54dc0d4f2e876de745d144097b1154"
+    },
+    "session_id": 38827,
+    "status": "running",
+    "completed_epochs_in_this_snapshot": 4,
+    "fixed_total_epochs": 12,
+    "train_studies": 3386,
+    "valid_studies": 821,
+    "seed": 20261002,
+    "fold": 0,
+    "selection_rule": "earliest_minimum_weak_BCE_after_fixed12",
+    "epoch4_weak_BCE": 0.30298273572127443,
+    "epoch4_weak_macro_AUC12": 0.8359944795632194,
+    "optimizer_steps_through_epoch4": 848,
+    "AMP_skips_through_epoch4": 0,
+    "epoch4_learning_rate_multiplier": 1.0,
+    "epoch4_learning_rates": {
+      "head": 0.0003,
+      "last2": 1e-05
+    },
+    "LR_change_begins_epoch": 7,
+    "interim_checkpoint_adopted": false,
+    "epoch1_to6_microdifferences_are_not_LR_improvement": true,
+    "native_trainer_source_sha256": "2ffa41e2fc650b61c5ccf2d5cf7c49974aff001025e604764238f6711efd44ef",
+    "own_Gold_or_Public_fit_or_selection": false
+  },
+  "documentation_update_only": {
+    "auth_API_GPU_MRI_model_teacher_payload_calls": 0,
+    "trainer_CLI_config_edits": 0,
+    "old_records_overwritten": false
+  },
+  "next": "P021 saved-source/result/CSV checks; P022 fresh compressed-source Root review then Serving and finalCSV checks; fresh limits then single authorized Submit; finish f006 fold0 before selection/fold1 decision"
+}

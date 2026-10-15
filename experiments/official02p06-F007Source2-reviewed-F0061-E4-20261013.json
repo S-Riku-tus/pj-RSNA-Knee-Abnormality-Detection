@@ -1,0 +1,62 @@
+{
+  "schema_version": "official02p06_F007_Source2_reviewed_F0061E4_aggregate_status_v1",
+  "at_UTC": "2026-10-12T17:14:10.970653+00:00",
+  "own_qualified_Public": "0.954",
+  "strict_above960_achieved": false,
+  "evidence": {
+    "official": {
+      "path": "artifacts/research/20261012-p026-focused-scoring-status-tools-v1/delegated-observation-v5/observation.json",
+      "sha256": "8630b8ee6764de030921f823e0ce036cb8fbadf5c456a4cc7eddf219d9178ead"
+    },
+    "source2": {
+      "path": "artifacts/research/20261013-f007-native64-serving-connection-source-v2/preparation.json",
+      "sha256": "4655d3bc5aeaef786d03c562f22676183044e4f552b2c1ae130c5a5381bec44f"
+    },
+    "Root_review": {
+      "path": "artifacts/research/20261013-f007-connection-source2-root-review-v1/Root-static-review.json",
+      "sha256": "cf3e34b65417b2c665dbd0fde662c24eda84b9e46ed6f9c409037b9d7165ab3e"
+    },
+    "artificial_CPU": {
+      "path": "artifacts/research/20261013-f007-shared-four-artificial-CPU-root-v1/actual-forward.json",
+      "sha256": "9b74eccc70030623ac6f3ccad254075c39042c74dbd38b93b5f258bbef58565a"
+    }
+  },
+  "P026_Get_List_raw_status_Public_error_fields_absent": true,
+  "SDK_default_PENDING_is_not_official_raw_status": true,
+  "fresh_official_limits": {
+    "numToday": 4,
+    "numAllowedNow": 1,
+    "numTotal": 23
+  },
+  "daily_reset_independently_observed": false,
+  "all_three_submission_reads_succeeded_despite_separate_catalog401": true,
+  "F0061_running_session": 41581,
+  "run_snapshot_sha256": "f9dd95d5c644d450f5377a3e64e1f6067484cfc7850cdc91572aa92d23bb1be0",
+  "completed_epochs": 4,
+  "latest_weak_metrics": {
+    "epoch": 4,
+    "weak_bce": 0.30739075737921767,
+    "weak_macro_auc_12": 0.8402544244123465,
+    "optimizer_steps": 208,
+    "amp_skipped_steps": 0,
+    "elapsed_seconds": 8263.47877529997
+  },
+  "complete12_or_checkpoint_adoption_or_Public_gain_established": false,
+  "F007_Source2_removed_four_unused_kwargs_only": true,
+  "Source1_preserved": true,
+  "source_packet_members": 81,
+  "other80_members_raw_unchanged": true,
+  "agent_meaningful_source_tests_passed": 4,
+  "15_source_files_undefined_names_detected": 0,
+  "reference_only_API_bytes": 927955,
+  "API_cap": 950000,
+  "actual_new_Input_metadata_API_fit_proven": false,
+  "new_Input_native64_parent_identity_bridge_visible_Serving_or_Public_qualified": false,
+  "three_private_transfers_specific_user_response_still_pending": {
+    "path": "experiments/three-reviewed-private-transfers-consent-pending-20261013.json",
+    "sha256": "032306b304d55a5634061240b07bd8a0941d034c15d971c3b89558ef7948cb2a"
+  },
+  "new_remote_upload_Save_Submit_or_retry": 0,
+  "own_Gold_training_or_selection": false,
+  "local_work_and_existing_training_continue": true
+}

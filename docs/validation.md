@@ -1,5 +1,189 @@
 # 準備内容の検証範囲
 
+**10月14日14:59 JST：自己最良Public 0.956を維持し、S6＋F006両fold E12・固定20％の正式提出57169291を受理確認しました。目標0.960以上は未達・継続中です。** [最新の記録](../experiments/F006-bothfold-formal-Submit57169291-Public956-checkpoint-20261014.json)。可視3検査・20出力を再計算してRoot受理後、Submitを1回実行。V22Rは公式COMPLETE・自己0.956、P028・P024・F006両foldはPublic結果待ちで、旧提出は再送しません。本日4件・残枠1・累計27件は前回公式値と今回受理1件からの導出で、提出後の公式枠再照会値ではありません。
+
+F006の可視3検査成功はhidden完走やPublic精度の確認とは別です。F007も可視20出力はRoot受理済みで正式Submitは0。次は同じF006重み・同じ固定20％で、親モデルだけをS6から自己0.956のV22へ切り替える候補を検証します。V22作者報告0.956と自己値は区別し、Docker差37c64…／2757e…、公開重みのGold選択履歴の不確かさを保持します。MRI-COREは条件付き調査候補で、重み取得・実装・追加学習は開始していません。以下は過去時点の記録です。
+
+
+**10月14日14:33 JST：自己再現V22Rの公式Public 0.956を確認し、現在の最良値として採用しました。従来0.954から+0.002、目標0.960以上は未達で継続中です。** [採用記録](../experiments/V22R-official-Public956-Root-adoption-20261014.json)。Submit57164195を自己アカウントの公式Get・ListともにCOMPLETE・0.956・エラーなしで確認。作者V22の報告0.956と自己値0.956は別記録です。P028・P024はPublic未返却で再提出せず、本日3件・残枠2・累計26件です。
+
+V22は元コード6セル・Input3固定版・推論式を保持しましたが、Dockerは作者要求37c64…から実保存2757e…へ変わっており、R7単独の改善や非公開精度・公開重みのGold cleanを断定しません。次はS6＋F006両foldの固定20％を正式対照として検証し、同じF006重み・同じ係数でV22へ親モデルだけ切り替えて比較します。F006の新native64・内容SHAとF007可視20出力はRoot受理済み。MRI-COREは条件付き調査候補に留め、重み取得・実装・学習は開始していません。以下は過去時点の記録です。
+
+
+**10月14日14:21 JST：確認済み自己最高Public 0.954。目標0.960以上は未達で、正式提出3件の採点待ちです。** [最新の記録](../experiments/F007-visible-pass-F006-bothfold-native64-pass-20261014.json)。14:13 JSTの公式Get／ListではP028・V22R・P024のraw状態とPublicは未返却、エラーなし。本日3件・残枠2・累計26件です。
+
+F007は可視3件・20出力の検証を通過しRoot受理、正式Submitは0です。F006両fold E12も64 MRI・256 forwardと新重みの内容SHA確認を通過しRoot受理しました。F006の提出推論・Publicはこれから検証します。次はF006を優先し、V22との組み合わせは公式スコアを見て判断します。ローカルMRIデコードと追加学習は0、CPU復元とKaggle MRI推論は実施済み。旧エラーを含む以下の記録は過去時点のものです。
+
+
+**10月14日13:45 JST：確認済み自己最高Public 0.954。目標0.960以上は未達で、正式提出3件の採点待ちです。** [今回の正本](../experiments/F006-bothfold-CPU-private-ready-F007-finalmask-error-20261014.json)。13:35 JSTの公式Get／ListはP028・V22R・P024のraw状態／Public未返却、エラーなし。本日3件・残枠2・累計26件です。
+
+F006両fold E12の新4モデルは実CPU復元と独立検証を通過しRoot受理。CLS0・REG0・REG1の実指紋は保持し、CLS1だけを置き換えました。fold1モデルの非公開Dataset12573715/V1はREADY・2ファイル名／サイズ一致を読み取りで確認済み。Create応答guardの停止を保存し再送せず解決しました。新しい推論ソースへ伝播中で、Kaggle上の内容SHA・新native64・Serving・Publicはまだ未検証です。
+
+F007のWindowsパス修正job138608301/V1はS6側の可視3件を完了後、最終mask処理でKeyError serving_shasとなりERROR。Submit0のまま、最終CSVまでのメタデータ契約を人工データで検証しています。元の数値コード・旧エラー・native64記録は保持。ローカルMRIデコードと追加学習は0、必要なCPU復元・Kaggle MRI推論は実施済み。以下は過去時点の記録です。
+
+
+**10月14日13:18 JST：自己最高Public 0.954、目標0.960以上は未達。3件を正式提出し採点待ちです。** [最新正本](../experiments/three-submitted-two-native64-pass-F007-visible-error-20261014.json)。13:11 JSTの公式Get／ListではP02857163437・V22R57164195・P02457166365のraw状態とPublicは未返却、エラーなし。本日3件・残枠2・累計26件を確認しました。
+
+P024新重みとF007残差モデルは、それぞれ64 MRI・256 forward・FP32集約・内容SHA・alias0・fallback0・資源／終了処理の検証を通過しRoot受理済み。P024は可視3件／20出力も再計算PASSし、Submit1受理。可視CSVがP028と同SHAでも、3件だけの順位一致でhidden予測同一とは判断しません。F007提出用job138605901V1はコード・Input9・設定一致を確認しましたがERROR終了。Submit0、原因ログを調査中でServing／Publicは未資格です。
+
+弱ラベルの直接比較ではF006 E12がF007 E12を両foldで上回り、事前固定50:50のCLS混合はAUCを下げました。比率探索はせずF006を優先。fold1 E12もCPU単体復元を通過し、両fold置換の新4モデル検証を準備中です。旧f005 E9とf006自身のBCE E9は別checkpointとして保持します。ローカルのMRIデコード・追加学習は0、必要なCPU復元とKaggle MRI推論は実施済み。以下は過去時点の記録です。
+
+
+**10月14日12:25 JST：自己最高Public 0.954、目標0.960以上は未達。改良モデルの新64検査テストは実行中です。** [最新正本](../experiments/native64-Source4-running-Source3-error-preserved-20261014.json)。P02857163437・V22R57164195は正式提出済み。12:23 JSTの公式Get／Listではraw状態・Publicは未返却、エラーなし、本日2件・残枠3・累計25件です。
+
+P024旧64検査job138598572V1は、REGモデル読み込みの作業ルート指定でdriver起動前にERROR。実MRI推論の資格は0です。旧コード・ログを保持し、作業ルート・明示実行フラグ・producer情報転記の3か所を独立5テストで修正確認しました。新Source4 job138601076V1は公式raw／typed RUNNING。モデル・前処理・数値処理は保持し、完走・結果・内容SHAはこれから確認します。
+
+F007の残差モデルも独立レビューと実API容量確認を通過し、Save1でkernel138600811V1が返りました。返却を扱うguardが停止したため、追加Saveせず実保存refとコードを読み取りで照合中です。自己Public・新native64・Servingの資格は発行していません。以下は過去時点の記録です。
+
+
+**10月14日11:51 JST：自己最高Public 0.954、目標0.960以上は未達。2候補を正式提出し採点待ちです。** [最新正本](../experiments/two-submissions-private-ready-Root-CPU-accepted-20261014.json)と[実行方針](goal-096.md)。最新公式Get／ListではP02857163437・V22R57164195のraw状態とPublicは未返却、エラーなし。SDK既定PENDINGを公式状態と推定しません。本日2件・残枠3・累計25件をraw／typedで確認しました。
+
+P028親guard対処版とV22公開recipeの自己候補は、可視推論・12確率CSV・順位計算の再検証を通過し、各1回Submit受理。V22は元6コード・3Input版を保持していますが、要求した作者Docker37c64と実保存2757が異なります。この差を束縛して記録し、作者環境の厳密再現とは主張しません。作者0.956と自己Public未返却を区別します。
+
+P024モデルDataset12571388とF007 head Dataset12571495は、実照会で非公開・V1・READY・正しい2ファイル名／サイズを確認済み。Create後の旧guard停止は保存し、再Createせず読み取りで保存実体を確定しました。remote内容SHAと内部版IDはAPI未公開なので未検証。Kaggle推論の起動前にmounted archive／member SHAを検査する境界で確認します。
+
+P024新4モデルはRoot委任CPU復元と独立査読を通過し、Rootがcomponentを受理。共有データauditと各resource provenanceを区別し、bytesパスの監査漏れも修正しました。モデル・前処理・数値処理は保持。新native64／Serving／Public資格はまだ未成立で、F007の新9Input接続も準備中です。F006固定10 AUC候補を優先し、弱差をPublicへ加算しません。
+
+今回のローカルMRIデコード・追加学習は0、Kaggleの可視MRI推論は実開始・完了済み。非公開送信・実行・手動提出はユーザーの今回＋今後の明示承認範囲で進めています。MRI・Report本文・教師行・認証情報の外部送信、自動アップロード・自動提出は追加していません。以下は過去時点の記録です。
+
+
+**10月14日11:09 JST：自己最高Publicは0.954。目標0.960以上は未達です。** [今回の正本](../experiments/goal-resume-comparisons-P028-submitted-20261014.json)と[実行方針](goal-096.md)。最新公式照会でP026は0.953、自己最高0.954を確認しました。
+
+旧記述の学習中／待機を再監査し、F006・F007両fold各12epoch、F008両fold各24epochの完了を確認。計96epochのcheckpoint／CSVとBCE bestのSHA、CSV契約を照合してPASSしました。F006固定10 AUC副選択E12の固定50:50弱比較差はfold0 +0.004010、fold1 +0.002311で条件付き区間も正。BCE主選択は保持。F00824はfold1の改善が不確かで、追加延長を優先しません。weak差をPublicへ加算せず、全12指標・欠損・選択後の検証再利用を別記しています。
+
+P028の修正版はprivate kernel138592375／V1の可視3件・20出力をRootが再検証してPASS、正式提出57163437を1回受理。hidden完走・新Publicはまだ未確認です。提出直前の公式残枠は5で、提出後の新しい枠を未照会のまま断定しません。
+
+ユーザーは今回と今後の必要な自己rsrakiへの非公開送信・実行・手動提出を明示承認済み。過去の審査拒否を保持し、未回答待ち状態は解消しました。P024は公式Google JSON upload endpointへの許可不足を修正し2ファイルのPUTが成功しましたが、Create1後の返却guardで受付未確定。同じCreateは再送せず、保存状態を読み取りで確認します。MRI・Report本文・教師行・認証情報は送信しません。
+
+Versia7 V22／script358019432は作者linked COMPLETE／0.956、3Input版を固定して自己再現を準備中。作者値と自己値を区別し、公開重みの上流gold利用が不明な部分も別監査に記録しました。現在の公式公開LB先頭100件は最高0.966、0.960以上54件。全件集計や利用可能重みの証拠とは扱いません。以下は過去時点の記録です。
+
+
+**10月13日03:34 JST更新：自己最高Publicは0.954、残り提出枠は1です。** [F007接続受理・F008待機・F006 E6の正本](../experiments/F007Source3-reviewed-F008-waiting-F0061-E6-local-20261013-v2.json)。03:06のRoot委任local_analysisによる公式Get／ListはP026のraw・typed COMPLETE／0.953／エラーなしで一致し、Rootが独立受理しました。本日カウンタ4・全23件・日枠リセット未観測。P026はS6 control 0.954を上回らず不採用とし、次のnative候補は最高S6 controlを基準に進めます。P026基準への切替・Reader係数探索・追加Submitは0。目標未達・作業を継続します。
+
+F006 fold1は6/12epoch（weak BCE 0.29386907・AUC12補助0.86122754・各208更新／skip0・累積12,386.50秒）まで完了し、学習は継続中です。定率6epochまで旧条件との入力・設定一致を確認。差は小さいものの、厳密再現・改善を証明しません。残る7〜12はlate cosine区間で、固定12epoch完了前の採用は行いません。
+
+F007接続Source3はRootの独立レビューを通過しましたが、source準備のみの受理で、新Input・native64・Serving・Public・実metadata容量の資格は未発行です。F008の手動キューsession45576はWAITING_FOR_F0061、process object固定済み・子プロセスなし・F008学習未開始。F006 fold1の両プロセスの終了0と固定12epoch完了後に、同じ旧BCE CLS・zero残差から24epochをfold0→fold1の順に実行する予約です。4090はこの順序で予約し、追加GPU jobは開始しません。Source2のSTOPで次の起動を抑止し、稼働中子プロセスは停止しません。外部送信の権限はありません。
+
+02:51にRootが[公式公開リーダーボード](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/leaderboard)を1回読み、取得上位100件は最高0.966・最小0.956、厳密な0.960超は28件でした。全件集計ではなく、次ページは未取得です。高スコアだけでは公開Notebook・重みの利用可能性や自己達成を証明しません。Notebook一覧401／Source403を全SDK障害とは扱いません。
+
+02:29の匿名公開metadataでは、[Versia7](https://www.kaggle.com/code/evgendvorkin/rsna-versia-7) V21の作者linked／bestは0.954、[Kiyoshi template](https://www.kaggle.com/code/kiyoshiohno/rsna-knee-template)の最新runは取消・linkedなし／bestはV9の0.951、[Dinosaur-v5](https://www.kaggle.com/code/romantamrazov/rsna-knee-dinosaur-v5) V45は0.950でした。自己再現値とは区別します。EV本文は旧指定404、公式SDK形式への修正指定403で未取得・静的比較HOLD。同score／Inputだけで重複・撤回・非公開・認証失効や公開重み全体の不在を断定しません。
+
+P024モデル、P028コード、F007モデル輸送の非公開送信3件の回答は未受領で、送信・再試行0を維持しています。P024／P028の具体的承認不足によるプロセス開始前の自動審査拒否を保存し、旧REG承認を新3件へ転用しません。ローカル作業と既存学習を継続します。以下は過去時点の記録です。
+
+
+**10月13日01:06 JST：自己最高Publicは0.954、厳密な0.960超えは未達です。** [最新公式観測・F007四モデルCPU復元・学習状況の正本](../experiments/official01p06-F007-new-four-CPU-F0061-running-20261013.json)。Root委任のlocal_analysisがP026のGet／List／limitsを読み、RootがrawとSHAを確認しました。P026のraw状態・Public・エラー項目はまだ未返却で、SDK既定PENDINGを公式状態とは扱いません。本日カウンタ4・残枠1・全履歴23件で、日枠リセット時刻は未観測です。
+
+F007は両foldの残差12epochを完了し、Rootが新しい四モデルをCPUで1回復元してPASSしました。generic factory1回、元checkpoint厳密適用4回、残差head安全読込2回、6組のstorage alias検査で共有0、REGは元objectを保持。forward／GPU／教師／MRI／ネットワークは0で、新Kaggle Input・native64・可視提出推論・Public精度の資格には進んでいません。元checkpointを保持した3メンバー・816,882Bのモデル用輸送はローカル準備だけで、外部未送信です。
+
+F006 fold1はsession41581で2/12epochまで進行中（Root stdoutのweak BCE 0.340669・AUC12補助0.77125048）、まだ完了・採用していません。F008は旧CLS設定12epochを保ち残差期間だけ24epochにする準備とdefault HOLDまでで、実学習0。先読み高速化案も未実装・未計測で、既存一件の読込比率約63%を全epochの律速や速度改善とは扱いません。P024の新モデル送信とP028の新Notebook Saveは、自動審査がプロセス開始前に拒否した具体的承認待ちで、外部送信・再試行0を維持しています。以下は過去時点の記録です。
+
+
+**10月13日：F007 fold1は12epochを完了し、F006 fold1の学習をRootが開始しました。** [最新公式照会・完了比較・実GPU確認・学習開始の正本](../experiments/official00p06-F007-fold1-complete-F006-fold1-training-20261013.json)。F007 session59615は終了コード0、元BCE規則の最早最良はE12で、weak BCE 0.27517597・固定10 AUC補助値0.88163248。Rootが全12 checkpoint／予測SHAと4207 NPZ・7,918,878,170Bの件数／サイズを受理しました。特徴7GB本文の再hashや、今回の凍結head tensor別復元は行っていません。全891件の保存CLS確率誤差0.0とnative oracle最初1件を区別します。
+
+fold1の固定50:50弱教師比較差は+0.00137217（861供給group・1,000回、条件付きbootstrap区間+0.00021828〜+0.00274822）。fold0も弱比較では改善していますが、checkpoint選択後の診断であり、患者独立性、全2fold OOF、Public改善は証明しません。Rootのfold0実CPU復元に続くRTX4090の人工GPU確認は、3有効窓・wrapper2回＋原AST参照1回、計9 encoder窓で参照logit誤差0.0・padding誤差0.0でした。実MRI／教師は0で、新4モデル共有・2T4 native64／Serving／精度資格には移していません。
+
+RootはF007 fold1完了と人工GPU確認後、開始前に定義したpolicyを維持してF006 fold1の固定12epoch学習を起動（session41581、新run）。主規則は最早最小weak BCE、副規則は全固定10項目が有限な最早最大平均AUC。元bestを副規則で上書きせず、同epochなら元checkpointを再利用して重複候補を作りません。Gold／Publicによる選択は0で、完了・途中採用・Public改善はまだ未確認です。
+
+00:06 JSTのRoot委任local_analysisによるP026個別Get／List／limits読み取りとRootの独立確認では、P026はraw状態・Public未返却、エラーなし。SDK既定PENDINGを公式状態とは扱いません。既知の自己最高はP020・P021の0.954、P022は前回確認のhiddenエラー。本日カウンタ4・全履歴23件・残枠1を維持し、JSTの日付変更から日枠リセットを推定しません。P024の新モデル送信とP028の新Notebook Saveは具体的承認待ち・開始前審査拒否／外部送信0を維持し、別送信で迂回しません。厳密な0.960超えは未達・作業を継続します。以下は時点ごとの履歴です。
+
+
+**10月12日23:30 JST：F007 fold1のcacheをRootが受理し、局所残差だけの12epoch学習を開始しました。** [cache完了・残差開始・次の計画の正本](../experiments/f007-fold1-cache-complete-CLS-exact-residual-training-started-20261012.json)。抽出session71660は終了コード0、4207 NPZ・7,918,878,170Bの全path／存在／サイズ／件数とCLS headのraw SHAを確認。全891検査・12所見の保存CLS確率との最大誤差は0.0です。native logitの直接oracleは最初1件でexact、全891件のfull native forward照合ではありません。7GB特徴本文の再open／hashや凍結head tensorの別復元とは区別します。
+
+Rootは旧f005 fold1の元BCE最良E9を起点に、encoderと元CLS headを凍結したまま、局所残差だけをconstant LR3e-4で学習開始（session59615、新run）。固定12epoch・元の最早最小weak BCE選択・Gold非使用を維持し、途中checkpointの採用、fold1の効用、Public改善はまだ主張しません。モデルproducerとデータ事前検査producerの役割、元source／run／configを保持しています。
+
+F006 fold1は開始前に固定12epochのBCE主選択と固定10 AUC副選択をRootが別規則で定めましたが、実学習はまだ0です。F007 fold1完了と人工GPU確認の後に進める計画で、所要約6時間は見積もり、fold1の実測ではありません。同epochなら元checkpointを再利用し、別モデルや重複提出を作りません。元bestを副規則で上書きせず、Gold／Publicで選択しません。
+
+最新公式は23:06のP020・P021自己Public 0.954、P022はhiddenエラー、P026はraw状態／Public未返却。本日受理4件・残枠1、厳密な0.960超えは未達です。P028の具体的Notebook SaveとP024の新モデル送信は、それぞれ自動審査が開始前に拒否して具体的承認待ち・外部送信0を維持。ローカル学習の許可を外部送信の承認とは扱わず、影響しない学習と採点確認を継続します。以下は時点ごとの履歴です。
+
+
+**10月12日：P028の実ソース946,931Bは上限950,000B内でローカル検証に通りましたが、外部Saveは承認待ち・実送信0です。** [具体的コード保存と審査停止の正本](../experiments/p028-concrete-Notebook-Save-auto-review-held-20261012.json)。Rootが新しい非公開Notebook rsraki/p022m-0e93fd1399c445dbb769ccb1e07bf6edのmetadata／ソースを生成し、defaultのオフラインDTO検証は終了コード0。モデル・数値処理を維持した元S6の検査別補完guard修正で、まだ新Kaggle実行・可視資格・Submitはありません。
+
+Rootの明示Save操作はCLI開始前に自動承認審査が拒否しました。理由は「新しい具体的コードと宛先への明示承認不足」。審査文はDataset送信と表現していますが、実際の予定APIはprivate NotebookのSaveKernelであり、新Dataset作成ではありません。この区別と元拒否記録を保全し、認証／Input照会／Quota照会／Save・remote送信は全て0、attempt dirも未作成です。Rootの具体的承認依頼への回答を待ち、同じ操作・別ref・encoded送信で迂回しません。P024の新104,308,640Bモデル／別宛先への具体的承認待ちも独立して維持します。
+
+最新公式は23:06のP020・P021自己Public 0.954、P022はhiddenエラー、P026はraw状態／Public未返却、本日4件・残枠1。F007 fold0はRootが12epoch完了と実CPU復元を受理し、弱比較は固定50%差+0.00158535ですがPublic改善を証明しません。fold1のcache抽出session71660は継続中で、完了・全891件照合・残差学習はまだ未受理／未開始です。影響しない採点確認とcache作業を続け、厳密な0.960超えは未達です。以下は時点ごとの履歴です。
+
+
+**10月12日23:06 JST：P020とP021は自己Public 0.954、P022はhidden再実行エラー、本日の残り提出枠は1です。** [公式結果・F007完了・P028修正準備の正本](../experiments/official23p06-P021public954-P022error-F007complete-P028source-20261012.json)。Rootが委任したlocal_analysisの読み取り6RPCとRootの独立確認で、P021のmirror版57103408はGet／Listともraw・typed COMPLETE／0.954／エラーなし。作者の旧V1最高0.956とは別の再現値です。P02257102110はCOMPLETEという処理終了状態でもerrorDescriptionがあり、Publicはありません。P02657107853はraw状態・Public未返却で、SDK既定PENDINGを公式状態とは扱いません。自己最高0.954・本日受理4件・全履歴23件・残枠1、厳密な0.960超えは未達です。
+
+P022の静的診断では、元S6が所定の検査別補完で有効CSVを出しても、追加親guardがarm失敗件数ゼロを要求して停止する条件を確認しました。hiddenの原因は未確定で、未知のreader例外や全件の時間・資源制約も残ります。P028としてこの親guardだけを修正するSource3をRootが査読し、元controller／親の実ASTと人工CSVで補完時のfullN bytes保持、worker異常・未知source拒否を確認しました。元モデル・前処理・Native固定20%・rank・mask・失敗12文字列復元は保持。P026には同じゼロ件条件がなく、P023／P024の共有親には波及します。新P028は手動tools準備までで、このsnapshotのSave／可視資格／Submitは0です。
+
+F007 fold0はRootが12epoch完了・終了コード0と全12 checkpoint／予測SHAを受理し、元BCE規則の最早最良はE12、weak BCE 0.26977043・固定10 AUC補助値0.88233461です。固定50:50の弱教師比較差は+0.00158535（812供給group・1,000回の条件付きbootstrap区間+0.00054275〜+0.00263536）。患者独立性・Public改善は証明しません。Rootの実CPU1モデル復元で元prefix／suffix／CLS tensorの一致と残差15,180 parameterを確認しましたが、新4モデル共有・Kaggle native64／Servingの資格には移していません。全821件の保存CLS確率誤差0.0とnative oracle最初1件は区別し、7GB特徴本文の再hashとは扱いません。
+
+F007 fold1は旧f005 BCE E9を起点にRootがcache抽出を開始（session71660）。23:05時点で1331 NPZ、cache完了・全891検査12所見照合・残差学習は未完／未開始です。Rootは弱教師比較でより大きな差を示すf006の別AUC12候補を優先しますが、その新非公開ペイロード送信は具体的承認待ちで外部送信0。P028の同モデル修正を可視検証して最後の枠を判断し、Goal作業を継続します。以下は時点ごとの履歴です。
+
+
+**10月12日：F007 fold0のcacheをRootが受理し、局所残差だけの12epoch学習を実開始しました。** [cache受理と学習開始の正本](experiments/f007-cache-complete-CLS-exact-residual-training-started-20261012.json)。4207 NPZ・7,918,878,170B（約7.38GiB）の抽出が終了コード0で完了し、全821検査・12所見の保存CLS確率は最大誤差0.0。nativeとの直接logit oracleは最初の1件でexact、全821件のfull native forward検査とは分けて記録します。Rootがencoderと元CLS headを凍結し、旧f005 BCE fold0／E8・constant LR3e-4のまま残差だけを学習開始（session77307）。weak／Gold／Publicを区別し、学習完了・効用・精度改善はまだ未確認です。
+
+最新公式は22:06の自己最高Public 0.954・本日受理4件・残枠1。P026提出57107853は受理済みで新Publicを主張しません。P024の具体的新モデル／宛先への送信は自動承認審査で拒否され、承認待ち・外部送信0を保全しています。実cache・残差学習と既提出採点を継続し、厳密な0.960超えは未達です。以下は時点ごとの履歴です。
+
+
+**10月12日22:06 JST：P026の正式提出57107853が受理され、本日4件・残り提出枠1です。** [公式照会・提出・送信審査の正本](experiments/official22p06-P026-submitted-P024-upload-review-held-20261012.json)。Rootが3fold raw平均と最終固定20% CSVを独立受理し、22:01に保存kernel138327844／V1を手動Submit1回・再送0で提出。Rootが委任したexecution_auditの22:06読み取り5RPCではP020の自己Public 0.954を維持、P022／P021のPublic・raw状態は未返却、エラーなし。全履歴23件の末尾と残枠1をraw・typed双方で確認しました。P026への個別Getはこの元3候補observerには含まれず、新しい4候補入口を準備中です。厳密な0.960超えは未達・作業を継続します。
+
+P024の新AUC12モデル2ファイル・104,308,640Bを新しい非公開Dataset rsraki/n392-aucf0-816d6df4187b4878a3ccd7234ffa14ddへ送る操作は、自動承認審査が「この新ペイロードと宛先への具体的なユーザー明示承認が不足し、API提出までという目標だけでは許容できない」として拒否しました。CLI開始前のためStart／PUT／Create・remote送信は全て0、attempt dirも未作成。Rootの具体的承認依頼を待ち、過去のREG2承認を流用せず、同じ送信や別経路の送信は行いません。元Root intent・査読・審査履歴は保全し、外部承認成立や新Input／推論資格とは扱いません。
+
+既存4提出の採点確認と、RootのF007 fold0／旧BCE E8 cache抽出は継続します。最後のRoot進捗は21:45の511 feature files・cache complete=Falseで、残差学習はまだ0。この送信停止だけでGoal全体をblockedとせず、影響しない作業を続けます。以下は時点ごとの履歴です。
+
+
+**10月12日21:43 JST頃：F007 fold0の特徴cache抽出をRootが実開始しました。** [実Originと開始記録](experiments/f007-original-BCE-fold0-cache-extraction-started-20261012.json)。f006の12epoch完了・終了コード0を確認後、旧f005の元BCE最良E8を厳密に束縛したOriginを発行し、RTX4090でCLS＋16局所特徴の抽出を起動（session90205）。モデルのproducerと現f006のデータ事前検査QAは別々に記録し、元run・checkpoint・sourceは保持しています。cacheの完了、最初1件のnative oracleと全821検査・12所見の保存予測一致はまだ未受理。残差学習・fold1・競技Submitは開始していません。最新公式結果は下記21:36の自己最高0.954・残枠2、厳密な0.960超えは未達・作業を継続します。
+
+
+**10月12日21:36 JST：自己最高Public 0.954、残り提出枠2を維持し、f006は固定12epochを完了しました。** [公式結果・完了比較・P026可視結果の正本](experiments/official21p36-f006-complete12-P026-visible-20261012.json)。Rootが明示委任したexecution_auditの実読み取り5RPCで、P020はGet／Listともraw・typed COMPLETE／0.954／エラーなし。P022／P021はPublicとraw状態未返却で、SDK既定PENDINGを公式状態とは扱いません。本日3件・全履歴22件の末尾確認。厳密な0.960超えは未達・作業を継続します。
+
+f006の元BCE選択はE8のままです。旧CLSを置き換える固定50:50の弱教師比較では、BCE候補の固定10 AUC差−0.00034757（供給group bootstrap 95%区間−0.00105968〜+0.00025010）、別規則のAUC候補E12は+0.00401012（+0.00182578〜+0.00631689）でした。812供給group・各1,000回が有効ですが、同じ弱検証集合でcheckpointを選んだ後の条件付き診断で、患者独立性・Public改善を証明しません。RootはE12を実CPUで厳密再構築して別bundleへ封印済み。新Kaggle入力・native64・可視推論・競技Submitの資格には移していません。
+
+P026は元P020に公開2.5D readerを固定20%追加し、Rootの保存kernel138327844／V1がCOMPLETE。全3検査成功・失敗0、3foldで9forward、約15.2秒、モデルSHAを確認しました。11結果の取得はSDK環境のNumPy不足でheldとなりましたが、元記録を保全し、Rootが同じ取得bytesを主.venvで再検算して全N最終CSV・36値のFP32契約を確認。3fold raw平均の独立再計算はこのsnapshotで未受理、Root提出認定・Submitは0です。F007は旧f005 BCE fold0／E8を起点にCLSを保ち局所残差だけを比較する方針とSource4を準備済み。実Origin・cache・学習はまだ0、fold1はfold0の効用判断後です。以下は時点ごとの履歴です。
+
+
+**10月12日20:36 JST：自己最高Public 0.954を維持し、残り提出枠は2です。** [公式結果・E10・CPU監査の正本](../experiments/official20p36-f006E10-P025CPU-audit-20261012.json)。Rootが委任したexecution_auditの実読み取り照会で、P02057098752はGet／Listともraw・typed COMPLETE／0.954／エラーなし。P02257102110とP02157103408はスコア・raw状態未返却で、SDK既定PENDINGを公式状態とは扱いません。本日受理3件・全履歴22件の末尾を確認し、厳密な0.960超えは未達です。
+
+f006はE10／12の学習中で、weak BCE 0.29639006、固定10 AUC 0.88149432、12項目AUC 0.88164164、LR倍率0.325です。旧同epochとの固定10 AUC差は−0.00387266で、改善・途中採用は主張しません。元BCE選択は暫定E8のまま保ち、固定12epoch完了後にBCEと別候補のAUC選択を比較します。稼働中のtrainer・CLI・configは維持します。
+
+P025の公開2.5D readerは、RootのKaggle CPU監査で3重みのSHA、安全なweights_only読込、各219 state／30,741,112 FP32要素の有限値と、元公開6ソースのUTF8本文・SHA・構文を確認しました。CPU監査だけで、Competition入力・MRI・教師・Gold実データ・forward・GPU・Submitは0、ローカル重み取得も0です。Gold利用・checkpoint選択とreader実装のソース監査を続け、推論・精度・提出資格には格上げしません。P023／P024の採用・次のSubmitは未決定、F007も準備段階です。目標未達・作業を継続します。以下は時点ごとの履歴です。
+
+
+**10月12日19:36 JST：公式採点でP020の自己Public 0.954を確認しました。** [正本と確認範囲](../experiments/p020-official-public954-three-candidate-comparison-20261012.json)。observer `ebf897ef…9932e` はGET3＋LIST1＋枠GET1の読み取り専用実結果。P02057098752はGet／Listのraw・typed COMPLETE・0.954・エラーなしが一致し、自己最高を0.954へ更新します。P022／P021はPublic・raw状態未返却、typed既定PENDINGを公式raw状態と混同しません。raw／typed残枠2・本日3・全22件末尾確認。P020の保存版束縛は既存のgenuine Save／Submit／結果chainで、Getがkernel全識別を再露出したとは主張しません。
+
+f006は保存E8 snapshot `23bbb6b1…12486` のweak指標のみを記録し、旧同epochよりAUCが0.0003312高い一方BCEは0.0002848高いため改善・採用0。[secondary選択](../experiments/f006-fixed10-AUC-selection-policy-20261012.json)はE7既観測後の定義で、元minBCE選択・best.ptを維持、同epochなら同best SHAを使って重複Submit0。[新隔離loader](../artifacts/research/20261012-f006-fold0-isolated-mixed-runtime-source-v1/preparation.json)は人工metadata6件・source compileのみ合格、実CPU／GPU forward／Serving／精度資格0です。次はP022／P021公式比較→固定12epoch完了のweak比較→次候補。本更新の実run／model／checkpoint／教師本文／MRI／GPU／Kaggle API読込・稼働中3source／RNG変更0、過去raw bytes・ledger prefixを保持します。目標未達・作業を継続します。
+
+**10月12日18:43 JST：P021のHTTP400と入力mirror修復準備を記録しました。** [原因と証拠の区別](../experiments/p021-http400-mirror-preparation-pair-review-20261012.json)。18:16の全21件terminal履歴SHA `58894424…24177` は同説明のP021提出なし・本日受理2件／残枠3。Rootの明示判断による18:25:33の追加1回はHTTP400、held SHA `704d11fa…3b2dc` に非版管理Dataset使用の具体的拒否を保存しました。旧17:24の原因は未確定で、汎用helperの `remote_acceptance_unknown:true` も上書きしません。redactされたDataset名から特定Inputを確定せず、認証・日枠・複数pendingを原因と呼びません。計POST2・自動retry0、同一6モデルSHAの版管理mirrorを用いるSource V3は準備完了・Root査読待ち・未Saveです。
+
+P020／P022の18:07／18:19照会はraw status・Public未返却／errorなし、SDK既定PENDINGと区別し、自己最高0.951・日枠3を保持します。[ペア効用集計](../artifacts/research/20261012-f005-fixed-mean50-pair-utility-v1/checks-and-compact-summary.json)は原選択予測／weak manifest／UID順序／欠損・soft・binary maskと支持数を束縛し、手計算3fixture後に実2foldを集計。固定10の修正／悪化は8,681／8,553と13,166／9,230、全24所見で元AUC差と一致・最大残差8.33e−17です。missing／softを0へ置換せず、係数探索・checkpoint／Gold／Report／モデル／MRI読込・GPU／API0。Public改善・公開主力OOF・患者独立性は未証明です。
+
+[追加公開調査](../artifacts/research/20261012-post-P022-public-stronger-primary-web-v1/analysis.md)の確認候補数0は限定的な観測結果で、取得不能を不存在と判定しません。f006 E6 snapshot `a77abda2…decc` は初6epochのLR倍率1、弱BCE 0.28527664・fixed10 AUC 0.87154078、1,272更新／skip0。微小差をLR改善とせず、固定12完了後に同じ選択規則で比較します。本記録更新はagentのKaggle通信・実モデル／MRI／教師本文読込・GPU0、稼働中trainer／CLI／config変更0。目標未達・作業を継続します。
+**10月12日18:06 JST：P022の可視結果・最終CSVと正式Submit1回を記録しました。** [正本と確認範囲](../experiments/p022-visible-accepted-single-Submit-score-pending-20261012.json)。Source V2／Root V2／kernel138296990／V1の保存Source・COMPLETEを束縛し、getter V3 `45cad44b…3d4ea` は指定20出力だけを取得。実receipt `be4aa58f…fcf32` に対しRootが再通信なしで再計算し、Root受理 `98f1390f…ec4b` を発行しました。全3UID・S3／F0、原4モデル平均・全N固定20%rank混合・mask・復元順序と最終CSV `7115f865…a7a8` を確認。今回F0のため失敗UIDの最終CSV復元枝は実可視推論では未行使で、既存CPU契約・P019実故障診断と区別します。hidden完走・精度の資格は未発行です。
+
+同保存V1から18:01:11にCreateCodeSubmission1回が57102110として受理、受付SHA `9fdccbd4…0f4bc`・再送0。直前raw GPU残量99,813.289秒・日枠4・自己最高0.951を確認し、18:02 observer `bf3db3b8…d11c9` でraw／typed残枠3を確認しました。P021の取得20件に対応refなし・追加ページ未読で受付不明を維持し、枠減少をP021受理の証拠としません。P020の17:50専用照会はraw状態／Public未返却。f006 E6比較を保持し、初6epochの差や可視推論成功を精度改善とは扱いません。本更新のagent通信・GPU・MRI・教師／モデル本文読込・稼働中3ソース編集0。厳密な0.960超えは未達・作業を継続します。
+
+**10月12日17:41 JST：P021の可視CSV受理と受付不明のSubmit、P022の新Save受付を記録しました。** [根拠の正本](../experiments/p021-visible-qualified-submit-unknown-p022-Save-accepted-20261012.json)。P021 Root受理SHA `4eeafc57…3ec5f` は保存Source／COMPLETE／モデル・補助入力・geometry SHA、全3UID×12列、2T4・各4モデル・fallback0、原latest V2の50:50・OA3項目・各arm自身の成功集合での平均tie百分位rankを確認。CSV `%.9g` の36値はFP32へ戻すと完全一致しました。17:24のCreateCodeSubmission1回はHTTPErrorで受理ref／HTTP status／error bodyが保存されず、held SHA `9b14ac52…041f` のまま再送0。17:36 observer SHA `7cc6c894…27f92` は1回の一覧20件に対応候補なし・追加ページ未読、raw／typed残枠4を確認し、全履歴の不存在や受理拒否を主張しません。公式SDK契約6項目の一致とpending制約調査を別記録に残し、例外型のみから原因を決めません。
+
+P022 Source V2はbuilderだけをjoint XZ／LZMA2へ変更、他8ソース・原5 literal・元ZIP／全raw metadataのSHAと長さを保持し、切断・余剰・展開長・SHA不一致をCPUで拒否しました。Root source peer SHA `97d8c344…604d5` はソース資格に限り、新Root V2 authority SHA `226d3804…2500c` のgenuine metadataで最終946,315B・固定上限950,000B・default gateを確認。Save受付SHA `60a1e750…5f2ce` は17:37、kernel138296990／V1、Input metadata8 RPC・quota1 RPC・Save1・再送0。旧Root V1の1,272,956B HOLD／Save0は保持します。P019 actual UID復旧とP018 component証拠を束縛しましたが、P022 whole Serving／final CSV／Publicの資格はまだfalseです。
+
+f006 E5比較snapshot SHA `2d509d78…f627` はmanifest／seed／fold／group／cache／configの比較に合格し、累計1060更新／skip0・LR倍率1・教師／予測／モデル本文読込0。初6epochの差をLR改善やPublic改善と扱いません。P020専用observation-v5（17:11）のraw採点状態／Public未返却・自己最高0.951を保持します。本更新はRootの既発行receiptを読むだけで、agentの認証API／GPU／MRI／教師／モデル本文読込・稼働中3ソース編集0。厳密な0.960超えは未達・作業を継続します。
+
+**10月12日17:11 JST：P019実fault64／normal64のRoot受理を記録しました。** [証拠と未確認範囲](../experiments/p019-qualified-p021-complete-p022-source-size-hold-20261012.json)。Source9独立査読SHA `fe349696…7ac82`、Root実受理SHA `03ddfc5b…c7a2b`、同kernel138289877／V1・非公開Original／T4／OFF／Input5を照合。指定14 JSONだけを取得し、故障64件はS63＋F1・252forward・155.15秒、通常64件はS64＋F0・256forward・133.79秒でした。原REG0コードとcommon readerのSHA／関数／literal raise行をKaggle出所へ対応させ、NoDICOMの構造失敗だけを認めました。失敗UIDのGPU forward0、全N補完・原12文字列一致、成功UIDの元4forward・入力SHA・FP32 fold／family平均、2T4・queue／owned child／一時資源の終了をRootが独立検算し、認定時API／GPU／MRI／モデル本文読込0です。最終rank／mask／CSVはCPUコンポーネント証拠で、この実診断のServing最終CSV・精度資格はfalseです。
+
+P021はSource査読と手動Save受付SHA `5a674ae6…e2ac9` を保持し、kernel138292308／V1の公式CLI COMPLETEを17:11に観測しました。結果本文・提出CSV・自己Publicの受理はこれからです。P022は実Root metadataを束縛するとソースが内部950,000B上限を超え、local build HOLD・Save0。metadata原bytesを保持する圧縮Source V2を準備し、新ソースの照合後に実Servingを検証します。P020 observation-v5（17:11）はraw status／Public未返却、typed PENDINGはSDK既定、raw／typed日枠4・自己最高0.951。f006はrun metadataのみを読みE4完了・running・848更新／skip0・LR倍率1を確認し、epoch7前の数値差をLR改善と呼びません。本記録更新の通信・モデル本文／教師／MRI読込・GPU実行0、稼働中trainer／CLI／configの変更0。厳密な0.960超えは未達・作業を継続します。
+
+**10月12日16:20 JST：P018実native256の保存版・実結果を取得し、Rootが独立受理しました。** [証拠と未確認範囲](../experiments/p018-native256-qualified-p022-source-preparation-20261012.json)。kernel138273767／V1のraw／typed COMPLETE・保存Sourceを確認後、8個の小容量診断本文だけを取得。実MRI256件・4モデル1,024forward、入力5SHA×256・原phase契約、FP32 fold／family平均の再計算、2T4・fallback0・queue／worker／一時資源の後処理を確認しました。Root受理SHA `8ea46921…f8f00`、raw receipt SHA `6983914f…92b9f`。実推論633.24秒、GPU標本最大891／889MiB、RSS標本合計4.43GBは共有ページ重複を含み、待ち時間や厳密なメモリピークと同一視しません。Serving・Public精度の資格は未発行。P020の16:19照会はGet／一覧で存在を再確認、raw状態／Public未返却・日枠4。P022は独立ソース査読に合格しましたが、P019 fault64／normal64とP022実Servingはこれからです。自己最高0.951、厳密0.960超え未達を維持します。
+
+**10月12日16:15 JST：P022の基準S6への差替えをソースのみで確認しました。** [差分と未発行資格](../artifacts/research/20261012-p022-S6-native20-source-v1/report.json)。P019 V2正本SHA `04b049bd…ccf89` と作者S6 V3 raw SHA `1dc9a5df…d9d33`、P020実可視受理 `45730b06…dcaec` を固定。原5セルのP012との一致は `[true,true,false,false,true]` で、Raptorと最終70:30が同じです。Native数学・reader・rank20・transport・UID recovery・router・diagnosticは元bytesを保持し、maskは親SHA定数だけ、mixed_parentはcleanup source variantの1フィールドだけを変更しました。cleanupの新コピーはS6の親／原5セルとvariantを厳密照合し、strict memory・process ownership・閾値・clear1の操作を保持。compact公開V13と他7役同一を確認し、source588,500B／69member・全Pythonと生成セルのcompileが成功しました。実推論・モデル本文取得・API0、追加GPU数学テスト0です。P020可視3件をP022やhiddenの実証拠に転用せず、runtime authority・P018256／P01964／P022 Servingの必要受理はnull、独立査読待ち、自己Publicと精度改善は未評価です。
+
+**10月12日15:59 JST：P020の提出受理と読み取り専用の公式照合を記録しました。** [検証正本](../experiments/p020-public-S6-visible-acceptance-single-Submit-20261012.json)。保存Source／Input13／1／1／COMPLETE、8body実SHA、全3UID・12列、worker2T4・4モデルずつ・FP16・失敗0と70:30最終FP32の36値一致をRootが受理し、同kernel138279894／V1から提出57098752を1回受理。raw Decimal GPU・日枠5・公式自己最高0.951を直前に確認しました。修正したwire terminal／worker辞書型の元V1・V2・held・取得producer SHAを残し、V3純検算で再API／再ダウンロード0、実通信actorはRootです。15:59のGetSubmissionと一覧はref一致・errorなし、raw状態／Publicは未返却。typed既定PENDINGは公式状態と呼ばず、fresh日枠raw／typed4のみを確定します。hidden完走・自己0.954・精度改善・厳密0.960超えは未証明で、最高0.951とgoal activeを維持し、既存UTF8履歴を保持しています。
+
+**10月12日15:53 JST：P020の可視推論・独立FP32検算を受理し、公式Submit1回を確認しました。** [結果と境界](../experiments/p020-public-S6-visible-acceptance-single-Submit-20261012.json)。raw／typed保存Source・kernel138279894／V1・Input13／1／1・COMPLETE一致、許可した8ファイルだけの実GET、全3UIDと12列・有限確率、入力モデル／補助／geometry SHA、2T4・各4モデル・FP16・controller／worker失敗0を確認。終了コードの原writerは辞書型で、取得側の配列仮定をV3で修正しました。元V2reader `ae308…` とheld `b7b8…`・8bodyの実SHAを変更せず、検算source `69b547…` で全36値の70:30平均tie百分位rank・FP32を再計算し、Root受理SHA `45730b06…dcaec` を発行。CSV小数表現との差最大約2.38e-8はFP32へ戻すと完全一致しました。再API・再ダウンロード0です。提出直前に新しいSource／COMPLETE・raw Decimal GPU・公式自己最高0.951・日枠5を確認し、同kernelV1／submission.csvの公式提出57098752を1回だけ受理、再送0。hidden完走・自己0.954・精度改善は未確認で、最高0.951とgoal activeを維持します。Source／検算担当と実通信／Root受理担当を記録し、既存のUTF8履歴を保持しています。
+
+**10月12日15:38 JST：配布が復元された公開S6をP020として非公開保存し、実結果を待っています。** [実証拠と検証境界](../experiments/p020-public954-restored-S6-private-Save-current-research-20261012.json)。Kaggle公式の保存source／metadataとpublic viewを照合し、restored V3／script357152922の作者Public 0.954を確認。現V13・旧V10・R6V2のmanifestはSHA `1c1211e6…9517e6` まで一致。P020原5コードセルのbytes／順序とcredits、embedded7 source、manifestの学習source4、guardモデル6・SWA・anchor・geometry8をRootが独立10項目で確認しました。追加2セルと原5セルの構文、人工CSV全2件受入れ／部分1件拒否は成功。API source306,470B／SHA `4a70f118…32503`、単発Save受理receipt SHA `f42e088c…85552`。Input3／quota1／Save1、競技Submit0、actual whole-run・hidden・自己Publicの資格は未発行です。
+
+0.955 Notebookは私有student Inputを含み、0.956 V1はbundle `fe055406fad6a12f` のInput一覧404。元sourceのモデルcopy先は一時領域でworkingへのweight exportは検出せず、Outputのモデル本文取得0。最新版V2はS6に差替え、Net・reader・失敗行rank基準・混合比も変わるため作者0.956を引き継ぎません。S6は作者manifestのGold訓練0・official trainer labels false、固定16epochのdeploy後にGold予測を出すsourceを確認しましたが、Raptor58選択と公開prior／anchorのGold履歴を除いたclean OOFとは呼びません。自分のGold fit／選択／評価0、Report特徴0、モデル再配布0。P018256はRootのRUNNING報告のみで成功未確認。f006 E1はLRfactor1・head3e-4／last2 1e-5・steps212／skip0、weak BCEとAUC12は旧同epochとの微差であり採用理由にはしません。既14:54記録と学習source `2ffa41e2…44ef` は保持しました。
+
+**10月12日14:54 JST：REG2のremoteバイトとP018のnative64を検証し、native256は実結果待ちです。** [実確認の記録](../experiments/p018-native64-f006-fold0-progress-20261012.json)。REG2件それぞれ193memberが一致。Root-native64-acceptanceのSHA `95f38c32b670cea3df009128b88894a1427c26dd367a58a2c7dac8bb0efae5cd` を固定し、kernel138271136／V1のMRI64件・256forward・154.986秒・fallback0・2T4を確認しました。native256 kernel138273767／V1は保存受理済みですが実結果未確認です。256・Serving・Submit・Publicの資格を64件の成功から転用していません。
+
+f006の最終configで全144窓・pixel16とprocessed115のGPU QAは6項目合格・失敗0、optimizer0です。元のpixel16・DINO GPU19項目の証拠とSHAを保持し、gate `057f7095e4c9af26db97abbc5f2edd5ef1284a9495ba8dd6da95ef1685cbd369` を固定しました。fold0の実学習はsource `2ffa41e2fc650b61c5ccf2d5cf7c49974aff001025e604764238f6711efd44ef`、weak訓練3,386件・検証821件、固定12epochでrunningです。変更要因は終盤のLR減衰のみで、BCE・欠損mask・入力・教師・seedを保持します。Goldの学習・選択・評価0、途中checkpoint採用0です。P018のPublic測定後に学習する順序を変更して並行実行していますが、Public改善は未証明です。fold0の完了後に比較してfold1を判断し、weakの結果をPublic改善とは扱いません。自己最高0.951、goal active、厳密な0.960超え未達を維持します。
+
+**10月12日13:44 JST：再開後の公式結果とREG2入力metadataを確認しました。** [正本と検証境界](../experiments/goal-resume-analysis-20261012.json)。Kaggle SDK専用環境 `artifacts/tools/kaggle-venv` と通常認証を用い、P016／P017のraw・typed明示COMPLETE、有限Public 0.951、errorなしを同一提出番号で確認。公式枠5件、GPU残量101,707.236秒。最新一覧ではP014／P015のCOMPLETE欄にerrorDescriptionがありスコアなしのため、隠し採点成功と区別しました。Public LBは明示public指定・1ページ50件のみ、最高0.966／0.960超27件で追加ページ0です。
+
+具体的な2宛先・4ファイルへのユーザー承認後、REGのPUT4／Create2を実行しました。旧getterが要求するCreate応答refが未返却で元heldを保持。成功Create receiptを作らず、元intent・成功PUT・heldを検証する限定復旧getterでGetDataset／GetDatasetStatus／ListDatasetFiles(V1)各1回、計6 RPCから両private／V1／READY／正2名前・サイズを確認しました。再送・更新・公開化0、認証情報の表示・コピー0。remote BIN実bytes／193memberの一致、Kaggle実MRI64／256、Servingと新Publicはまだ資格外です。ソース点検ではvisible件数・UID・test SHA固定や256予算のServing転用は検出されませんでした。一方、構造読込1件の失敗で全件を基準へ戻す経路があるため、P017同点から追加モデルの寄与は判定できません。保存済み弱予測の補完性とepoch比較を、Public・Gold・独立P012 OOFと混同しません。自己最高0.951／厳密な0.960超え未達を保持して継続します。以下は履歴です。
+
 **10月11日01:08 JST：3ターン継続した承認阻害を監査し、実returned status=blockedを記録しました。** [監査記録](../experiments/p018-specific-upload-three-turn-blocked-audit-20261011.json)。2つの直前記録と現在のattemptなしを照合し、具体的新REG承認待ちが3連続ターンで継続、Source準備完了後に独立監査もimpasseを確認。旧CLS fold1承認を新REGへ転用せず、Start／PUT／Create0を維持します。P016v5／P017v9は各Get1で401、同P016 handleを新SDK clientでv6 Get1再確認しても401。観測HTTP401は採点ERROR／terminalの証拠ではなく、認証原因・失効は未確定です。この新認証阻害を3ターンと数えていません。既存ジョブの再起動／再提出・認証値の直接読取／表示／コピー0。自己最高0.951でcompleteは未成立、目的は公式Public厳密0.960超えのままです。以下は履歴です。
 
 **10月11日01:00 JST：追加学習の判断と、別経路での公式採点照合を記録しました。** [根拠](../experiments/p018-next-training-decision-official-list-crosscheck-20261011.json)。固定12epochの4run原SHAを再照合し、E12は採用epochよりweak検証BCEが大きくtrain BCEが小さいことを確認。これはepoch延長／容量拡大の改善を保証せず、現fold2／last4もCLI・schemaの資格外です。GetSubmissionのPrimary SDKでrequest ref1項目・正規endpoint・PENDING enum0既定値を確認、指定漏れはありません。ListSubmissions firstpage20を1RPC／HTTP1・64KiB上限・追加ページ／再送なしで読み、57044321／57042712だけ保存。2件は存在しますがraw状態／PublicなしでUNKNOWN、実採点中や隠し完走は未証明です。新REGの承認回答は未取得、attemptなし・Start／PUT／Create0を維持。新モデル・教師・Report・Gold・GPU操作0、自己最高0.951を保持します。以下は履歴です。

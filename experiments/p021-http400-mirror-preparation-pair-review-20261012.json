@@ -1,0 +1,203 @@
+{
+  "schema_version": "p021_specific_HTTP400_versioned_mirror_preparation_weak_pair_utility_progress_v1",
+  "observed_at_jst": "2026-10-12T18:43:02+09:00",
+  "own_Public_best": "0.951",
+  "strict_above960_achieved": false,
+  "work_continues": true,
+  "reason": "Repair the observed non-versioned Dataset submission constraint using an equal-model-byte versioned Input mirror; preserve the published latestV2 numeric recipe and await P020/P022 own scoring. Weak pair utility informs diagnostics, not Public improvement.",
+  "P021_previous_unknown_attempt": {
+    "held": {
+      "path": "artifacts/research/20261012-p021-results-and-submit-tools-v2/actual-single-Submit-v1/held.json",
+      "sha256": "9b14ac52152aa83580fa90c0d39a450faf134d6c4ecbf3836cee025ec38a041f"
+    },
+    "at_jst": "2026-10-12T17:24:04+09:00",
+    "actual_POST_calls": 1,
+    "original_HTTP_cause_confirmed": false,
+    "original_held_overwritten": false
+  },
+  "P021_Root_explicit_additional_attempt": {
+    "predecision_full_history": {
+      "path": "artifacts/research/20261012-p021-full-history-readonly-tools-v1/actual-observation-v1/observation.json",
+      "sha256": "588944247e55a1ab3cd13f9e2511057c579ef89627670fca1ed5a543f3c24177"
+    },
+    "full_history_at_utc": "2026-10-12T09:16:35.732213+00:00",
+    "terminal_raw_typed_history_rows": 21,
+    "more_pages_unread": false,
+    "exact_P021_description_any_time_refs": [],
+    "numToday_before": 2,
+    "daily_remaining_before": 3,
+    "negative_history_is_not_absolute_proof_of_nonacceptance": true,
+    "Root_manual_ordinal": 2,
+    "held": {
+      "path": "artifacts/research/20261012-p021-explicit-single-retry-tools-v1/actual-single-Submit-v1/held.json",
+      "sha256": "704d11fa7bcc36c6e92a838507d9b5e3f58ee0323a207a290a43c33d8993b2dc"
+    },
+    "at_utc": "2026-10-12T09:25:33.245792+00:00",
+    "actual_additional_POST_calls": 1,
+    "original_plus_additional_POST_calls": 2,
+    "automatic_retry": false,
+    "HTTP_status": 400,
+    "safe_error_scalars": {
+      "error.code": "400",
+      "error.message": "Submission not allowed:  Your Notebook uses non-versioned datasets [[REDACTED_LONG_TOKEN]] (see Dataset Settings)."
+    },
+    "specific_nonversioned_dataset_rejection_observed": true,
+    "generic_remote_acceptance_unknown_field_preserved": true,
+    "redacted_specific_Dataset_name_resolved": false,
+    "old_17_24_cause_assumed_same": false,
+    "authentication_daily_quota_or_multiple_pending_cause_claimed": false,
+    "no_additional_POST_to_old_Notebook_after_ordinal2": true
+  },
+  "P021_fresh_SourceV3_mirror_preparation": {
+    "status": "source_preparation_complete_Root_review_pending_not_Saved",
+    "Root_reported_model6_SHA_identity": true,
+    "original_Input": "heliosli/rsna-knee-compact-r6cnxfsss/2",
+    "candidate_versioned_mirror_Input": "heliosli/rsna-knee-compact-v1/13",
+    "models_numeric_latestV2_recipe_preserved": true,
+    "original_fixed50_50_own_nonfailed_rank_OA3_recipe_changed": false,
+    "specific_r6_is_the_failed_server_Dataset": "Plausible inference only; safe error has redacted name and does not identify which Input.",
+    "fresh_Notebook_V1_nonce_planned": true,
+    "new_Save_calls": 0,
+    "new_runtime_or_CSV_qualified": false,
+    "new_competition_Submit_calls": 0,
+    "source_preparation": {
+      "path": "artifacts/research/20261012-p021-public-latestV2-source-v3/preparation.json",
+      "sha256": "416d03041e8212bf0a9dd0af44794ac0c438a358b7fd213cc4a62e2e9449a390"
+    },
+    "source_audit": {
+      "path": "artifacts/research/20261012-p021-public-latestV2-source-v3/source-audit.json",
+      "sha256": "7129692a525cf4526b8aa0bfda659b8627f76df8598c514aed0014f67fe5cb9c"
+    },
+    "declared_fresh_ref": "rsraki/p021v3-a72d57ca37774c478180c987b577e907",
+    "API_source_bytes": 526675,
+    "original6_literal_unchanged_cells": 4,
+    "only_Input_route_changed_cells": 2,
+    "nonrouting_numeric_code_reverse_diff_exact": true,
+    "all_embedded_source7_preserved": true,
+    "requested_Input_versions_and_content_SHA_are_not_actual_internal_version_ID_exposure": true,
+    "actual_new_Notebook_Submit_versionability_proven": false,
+    "mirror_actual_small_body_evidence": [
+      {
+        "receipt": {
+          "path": "artifacts/research/20261012-public954-current-research-v1/three-explicit-manifests-v1/02/receipt.json",
+          "sha256": "4ed41c94788befb8f79b358ff724fabc7e35e5b8c383959f03062423dd35171e"
+        },
+        "manifest": {
+          "path": "artifacts/research/20261012-public954-current-research-v1/three-explicit-manifests-v1/02/manifest.json",
+          "sha256": "1c1211e64b73f1f6433ade804816572db1a2aa5422ed9c57365184bc6a9517e6"
+        }
+      },
+      {
+        "receipt": {
+          "path": "artifacts/research/20261012-public954-current-research-v1/three-explicit-manifests-v1/03/receipt.json",
+          "sha256": "772fa67462e40c67e15f4f2ae6dd9ec2c4278c4e552a0a909d7fdd59eb24c606"
+        },
+        "manifest": {
+          "path": "artifacts/research/20261012-public954-current-research-v1/three-explicit-manifests-v1/03/manifest.json",
+          "sha256": "1c1211e64b73f1f6433ade804816572db1a2aa5422ed9c57365184bc6a9517e6"
+        }
+      }
+    ]
+  },
+  "P020_P022_official_score_observations": {
+    "P020": {
+      "observation": {
+        "path": "artifacts/research/20261012-p020-scoring-status-tools-v1/observation-v7/observation.json",
+        "sha256": "7939d852a2be81aa4a156036619c78e81a420bc696fd39dac7dc66752a74b044"
+      },
+      "at_jst": "2026-10-12T18:07:17+09:00",
+      "submission_ref": 57098752,
+      "raw_status_or_Public_returned": false,
+      "error_present": false,
+      "own_Public": null
+    },
+    "P022": {
+      "observation": {
+        "path": "artifacts/research/20261012-p022-scoring-status-tools-v1/actual-observation-v1/observation.json",
+        "sha256": "abb3dded2e3b127293c22195ac81c355d00ac0bd7abdaed7cf53e653d2c0c76a"
+      },
+      "at_jst": "2026-10-12T18:19:15+09:00",
+      "submission_ref": 57102110,
+      "raw_status_or_Public_returned": false,
+      "error_present": false,
+      "own_Public": null
+    },
+    "SDK_typed_PENDING_is_default_only": true,
+    "daily_remaining_confirmed": 3,
+    "own_best": "0.951"
+  },
+  "weak_selected_pair_utility": {
+    "actual_2fold_result": {
+      "path": "artifacts/research/20261012-f005-fixed-mean50-pair-utility-v1/actual-fold0-and-fold1-pair-utility-v1.json",
+      "sha256": "9f85789f52edab360101ed53038a1d485ffce13e4d8b25d76d22534901d63a36"
+    },
+    "checks_and_summary": {
+      "path": "artifacts/research/20261012-f005-fixed-mean50-pair-utility-v1/checks-and-compact-summary.json",
+      "sha256": "e58fe7f721beaead26309c80e6f20db1076a1b18823d5e4cbb731c3d30bf7e32"
+    },
+    "fixed10_primary": [
+      {
+        "pairs": 415025,
+        "improved_pairs": 8681,
+        "worsened_pairs": 8553,
+        "same_order_pairs": 397791,
+        "macro_pair_utility_AUC_delta": 0.004344083780073257,
+        "fold": 0
+      },
+      {
+        "pairs": 467291,
+        "improved_pairs": 13166,
+        "worsened_pairs": 9230,
+        "same_order_pairs": 444895,
+        "macro_pair_utility_AUC_delta": 0.006283546851085693,
+        "fold": 1
+      }
+    ],
+    "all24_target_AUC_delta_equals_pair_utility": true,
+    "maximum_identity_residual": 8.326672684688674e-17,
+    "fixed_coefficient": [
+      0.5,
+      0.5
+    ],
+    "coefficient_search": false,
+    "original_prediction_manifest_UID_support_missing_soft_binary_masks_bound": true,
+    "missing_or_soft_labels_imputed_zero": false,
+    "checkpoint_Gold_Report_model_MRI_GPU_API_reads_or_calls": 0,
+    "patient_independence_verified": false,
+    "Public_improvement_or_public_primary_OOF_established": false
+  },
+  "additional_primary_public_research": {
+    "evidence": {
+      "path": "artifacts/research/20261012-post-P022-public-stronger-primary-web-v1/evidence.json",
+      "sha256": "4b1f87ff464f9c5c98d7a604f47a240ecd615f8f215379f513b01190311fb9d9"
+    },
+    "analysis_path": "artifacts/research/20261012-post-P022-public-stronger-primary-web-v1/analysis.md",
+    "observed_end_utc": "2026-10-12T09:15:04Z",
+    "new_verified_above960_scored_source_with_accessible_matching_weights_count": 0,
+    "unavailable_or_unobserved_candidates_not_declared_absent": true,
+    "new_public_copy_adoption": 0,
+    "simple_image_size_increase_reproposed": false,
+    "priority": "Own P020/P022 scoring plus fixed12 f006 completion."
+  },
+  "f006_fold0": {
+    "snapshot": {
+      "path": "artifacts/research/20261012-f006-live-progress-v1/epoch06-snapshot-v1.json",
+      "sha256": "a77abda2a50de0366d116988f0ba077062f366d739a0a2530872e6595f09decc"
+    },
+    "snapshot_completed_epochs": 6,
+    "fixed_total_epochs": 12,
+    "training_continues": true,
+    "LR_multiplier_epoch6": 1.0,
+    "cumulative_updates": 1272,
+    "AMP_skips": 0,
+    "weak_BCE": 0.285276642290058,
+    "weak_fixed10_AUC": 0.8715407815611405,
+    "initial6_tiny_delta_is_not_LR_improvement": true
+  },
+  "documentation_update_only": {
+    "agent_Kaggle_auth_API_Save_Submit_GPU_MRI_model_teacher_body_calls": 0,
+    "running_trainer_CLI_config_edits": 0,
+    "old_records_overwritten": false
+  },
+  "next": "Complete mirror SourceV3; fresh private Save and own source/output/CSV checks before one manual new submission. Compare P020/P022 own scores when returned. Finish fixed12 f006 and use epoch7+ final weak selection comparisons."
+}

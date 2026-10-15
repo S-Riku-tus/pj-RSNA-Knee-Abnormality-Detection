@@ -1,0 +1,262 @@
+{
+  "schema_version": "official21p36_f006_complete12_P026_visible_snapshot_v1",
+  "snapshot_scope": "21:36 official observation plus Root's completed12 and P026 visible result update; later acceptance/Submit are not asserted",
+  "goal": {
+    "strict_target_above": "0.960",
+    "highest_official_own_Public": "0.954",
+    "achieved": false,
+    "work_continues": true
+  },
+  "official_scoring": {
+    "evidence": {
+      "path": "artifacts/research/20261012-three-candidate-scoring-status-tools-v1/delegated-observation-v5/observation.json",
+      "sha256": "4342b25c2be03ea41d52bc8bb9c4e2f609193f76f09ca7c0713a5c725fb54063"
+    },
+    "at_utc": "2026-10-12T12:36:29.992200+00:00",
+    "actual_RPC_actor": "execution_audit, explicitly authorized by Root",
+    "counts": {
+      "GetSubmission": 3,
+      "ListSubmissions": 1,
+      "GetSubmissionLimits": 1,
+      "Save_Submit_upload": 0
+    },
+    "P020": {
+      "submission_ref": 57098752,
+      "raw_typed_Get_List_COMPLETE": true,
+      "error_empty": true,
+      "own_Public": "0.954"
+    },
+    "P022": {
+      "submission_ref": 57102110,
+      "own_Public": null,
+      "raw_status_returned": false,
+      "typed_default_PENDING_is_not_observed_official_status": true,
+      "error_empty": true
+    },
+    "P021": {
+      "submission_ref": 57103408,
+      "own_Public": null,
+      "raw_status_returned": false,
+      "typed_default_PENDING_is_not_observed_official_status": true,
+      "error_empty": true
+    },
+    "raw_typed_limits": {
+      "numToday": 3,
+      "numAllowedNow": 2,
+      "numTotal": 22
+    },
+    "history_terminal": true,
+    "reset_time_independently_observed": false
+  },
+  "f006": {
+    "completed12_evidence": {
+      "path": "artifacts/research/20261012-f006-live-progress-v1/completed12-snapshot-v1.json",
+      "sha256": "82d8fd0c5cab04d75c5cf2e998e0df8c9d25f70a95ce618b21b6b3fa075387e6"
+    },
+    "Root_actual_training_actor": true,
+    "status": "complete",
+    "fold": 0,
+    "primary_earliest_BCE_selection": {
+      "status": "complete",
+      "selection_scope": "final",
+      "epoch": 8,
+      "train_bce": 0.2204480976533185,
+      "weak_bce": 0.2740430754469716,
+      "weak_macro_auc_12": 0.877539005718614,
+      "weak_fixed10_macro_auc": 0.8809001618406918,
+      "per_target_auc_fixed10": {
+        "ACL": 0.8905587275693312,
+        "Medial Meniscus": 0.8920370737291681,
+        "Lateral Meniscus": 0.7693091981428034,
+        "Medial OA": 0.9140123761436544,
+        "Lateral OA": 0.8377669828051507,
+        "PF OA": 0.8458994708994709,
+        "Effusion": 0.9397872340425532,
+        "Baker's": 0.9078157377397588,
+        "Contusion": 0.9038287062239158,
+        "Fracture": 0.9079861111111112
+      },
+      "optimizer_steps": 212,
+      "optimizer_step_opportunities": 212,
+      "amp_skipped_steps": 0,
+      "cumulative_elapsed_seconds": 16105.60091259994,
+      "epoch_elapsed_seconds": 2062.746073700022,
+      "gpu_peak_reserved_bytes": 1163919360,
+      "rates": {
+        "multiplier": 0.775,
+        "groups": {
+          "head": 0.00023249999999999999,
+          "last2": 7.75e-06
+        },
+        "origin": "run.history"
+      },
+      "prediction_sha256_metadata_only": "b7208cdb910bc1fe5978bd04ce3d8554b09b0d253646c313261bb141bcd43531",
+      "checkpoint_sha256_metadata_only": "6f62908c909fb4e2dfb6416fc7f764e0df8900502f28b6a865e8527c206db58d"
+    },
+    "primary_run_selected_or_best_changed": false,
+    "fixed10_secondary_candidate": {
+      "schema_version": "f006_completed_fixed10_secondary_candidate_descriptor_v1",
+      "candidateSelectedRule": "earliest_epoch_with_maximum_arithmetic_mean_AUC_over_all_fixed10_targets",
+      "policy_sha256": "52dff1148d6610479723c0ddaedf1092a6e9e3513ac93b1867f230525235fef7",
+      "serialization_identity_clarification_sha256": "b1d8f6a2afae2f3171a2d6aeb385e6045079ae34bc4ce9f4e4f43ff78ba41aef",
+      "policy_defined_after_observed_epochs": 7,
+      "run_sha256": "e0e1006b6e37269a39c895b439de0051f7ab43f1c0a5532dd1e2f445fd303b81",
+      "retainedEpochIndexSHA": "2d218cc7ca2e75b248eef2eed39776b9252fe6011aa6d2e3117baaaa77eaf833",
+      "candidate_epoch": 12,
+      "control_BCE_epoch": 8,
+      "fixed10_AUC": 0.8831284034612052,
+      "weak_bce": 0.28650593644185945,
+      "checkpoint": {
+        "filename": "epoch_012.pt",
+        "raw_sha256": "1df11d6bd2e4f700f527a755a822a2a3f74b7e0ada9aabe78174c12e592d3915"
+      },
+      "retained_epoch_artifact_raw_sha256": "1df11d6bd2e4f700f527a755a822a2a3f74b7e0ada9aabe78174c12e592d3915",
+      "same_epoch_same_model": false,
+      "duplicate_candidate_transport_or_Submit_allowed": true,
+      "run_selected_changed": false,
+      "weak_validation_reuse": true,
+      "patient_independence_verified": false,
+      "own_Gold_or_Public_selection": false,
+      "actual_checkpoint_body_or_tensor_verified": false,
+      "model_adopted": false,
+      "actual_runtime_qualified": false,
+      "own_Public": null
+    },
+    "original_policy_defined_after_observed_epochs": 7,
+    "mixed_fixed50_weak_comparison_evidence": {
+      "path": "artifacts/research/20261012-f006-completed-mixed-comparison-v1/actual-comparison-v1.json",
+      "sha256": "3de507ac7e92ce6bf3949a44eabdc87d2b2573eca1807ab46b31c2d86c573023"
+    },
+    "mixed_fixed50_results": {
+      "BCE": {
+        "epoch": 8,
+        "fixed10_macro_delta": -0.00034757399722796535,
+        "fixed10_old_mixed_AUC": 0.8849130359886159,
+        "fixed10_new_mixed_AUC": 0.8845654619913879,
+        "fixed10_group_bootstrap": {
+          "requested_replicates": 1000,
+          "valid_replicates": 1000,
+          "undefined_entire_replicates": 0,
+          "seed": 20261012,
+          "fixed_target_count": 10,
+          "supplied_group_count": 812,
+          "percentile_interval_95": [
+            -0.001059679562797243,
+            0.0002500966165354024
+          ],
+          "mean_delta": -0.0003770138086168157,
+          "fraction_positive_delta": 0.124,
+          "quantile_method": "linear interpolation at (n-1)*q",
+          "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+          "post_checkpoint_selection_conditional_analysis": true,
+          "patient_independence_verified": false,
+          "population_generalization_or_Public_gain_established": false
+        }
+      },
+      "fixed10_AUC": {
+        "epoch": 12,
+        "fixed10_macro_delta": 0.004010121949587013,
+        "fixed10_old_mixed_AUC": 0.8849130359886159,
+        "fixed10_new_mixed_AUC": 0.8889231579382029,
+        "fixed10_group_bootstrap": {
+          "requested_replicates": 1000,
+          "valid_replicates": 1000,
+          "undefined_entire_replicates": 0,
+          "seed": 20261012,
+          "fixed_target_count": 10,
+          "supplied_group_count": 812,
+          "percentile_interval_95": [
+            0.0018257845177027598,
+            0.006316886557536028
+          ],
+          "mean_delta": 0.00396085857059816,
+          "fraction_positive_delta": 1.0,
+          "quantile_method": "linear interpolation at (n-1)*q",
+          "sampling": "Resample supplied groups with replacement; identical multiplicities in both arms.",
+          "post_checkpoint_selection_conditional_analysis": true,
+          "patient_independence_verified": false,
+          "population_generalization_or_Public_gain_established": false
+        }
+      }
+    },
+    "same_weak_holdout_reused_for_checkpoint_selection": true,
+    "group_bootstrap_conditional_after_selection": true,
+    "patient_independence_verified": false,
+    "Public_gain_established": false,
+    "secondary_Root_actual_CPU_proof": {
+      "path": "artifacts/qa/20261012-f006-fixed10-AUC-epoch12-fold0-CPU-reconstruction-v1/reconstruction.json",
+      "sha256": "706082620ec9e8e0c0b6fdbb2edeeb6763f81220cbe62b688c1292853708b759"
+    },
+    "secondary_Root_sealed_bundle": {
+      "path": "artifacts/research/20261012-f006-fixed10-secondary-seal-source-v1/candidateAUC12-fold0/bundle.json",
+      "sha256": "cae0e8367fb3de19b0179055300cb711c3c054ee3a6d4b6aa78775c033cc9ffd"
+    },
+    "secondary_Kaggle_Input_native64_visible_Submit_qualified": false,
+    "secondary_upload_or_model_adoption_claimed": false
+  },
+  "P026": {
+    "Root_actual_private_Save": {
+      "path": "artifacts/research/20261012-p026-fixed20-reader-manual-tools-v1/actual-single-Save-v1/receipt.json",
+      "sha256": "92fd1714e756ba229eeae352a26f8940968d034d2a09bf9519824f5c812c47a8"
+    },
+    "kernel_id": 138327844,
+    "saved_version": 1,
+    "ref": "rsraki/p026r20-3a7933733442465294773ddaafd8d692",
+    "source_v4": {
+      "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261012-p026-P020-fixed20-reader-source-v4\\preparation.json",
+      "sha256": "8d221d48baf217f523292402633f5317cfb0812d4875bbf8880a7e6880d381a9"
+    },
+    "Root_observed_official_CLI_COMPLETE_at_JST": "21:28",
+    "Root_actual_Get_held_original": {
+      "path": "artifacts/research/20261012-p026-fixed20-reader-manual-tools-v1/actual-observation-v1/held.json",
+      "sha256": "35f184b46dc35088d1e868bde8b49b29399a46250950e079c52465230946fbcc"
+    },
+    "actual_small_result_body_GETs": 11,
+    "getter_SDK_environment_NumPy_missing": true,
+    "original_held_not_overwritten": true,
+    "Root_main_venv_local_revalidation_of_same_held11_body_hashes_and_fullN_CSV_FP32_contract": true,
+    "Root_reported_reader": {
+      "N": 3,
+      "S": 3,
+      "F": 0,
+      "actual_model_forward_calls": 9,
+      "res": 256,
+      "backbone": "convnext_tiny.fb_in22k_ft_in1k",
+      "seconds": 15.215269525999986,
+      "three_model_SHA_verified": true
+    },
+    "protected_original_P020_baseline_CSV_sha256": "2a174e07f516bfcbe062eb58436326dbad63b00a127d0042e07e80fad0beec68",
+    "final_fixed20_CSV_sha256": "1b8360936e46d1e3a0f612ca1c220021dda6a481834086fc9cb3275ca796720f",
+    "independent_threefold_raw_prediction_mean_replay": "pending at this Root snapshot",
+    "Root_Submit_certificate_issued_at_snapshot": false,
+    "actual_Submit_calls_at_snapshot": 0,
+    "own_Public": null,
+    "hidden_runtime_or_accuracy_qualified": false,
+    "local_model_or_MRI_body_downloads": 0
+  },
+  "F007": {
+    "Root_prospective_base_policy": {
+      "path": "experiments/f007-original-BCE-CLS-base-policy-20261012.json",
+      "sha256": "59358d3ac1261c886d8b2edb3a40d9487950f26d45a0ba06727cd143d7a800e9"
+    },
+    "first_base": "old f005 original completed BCE best fold0 epoch8, constant residual LR3e-4; local residual architecture factor only",
+    "source4_handoff": {
+      "path": "artifacts/research/20261012-f007-fold-specific-cache-and-residual-CLI-source-v4/handoff.json",
+      "sha256": "97f2b8608db6ea55be074209c8bacb90bf16268a6de583ef17d3d095332e54d0"
+    },
+    "model_and_current_data_QA_producers_separate_original_metadata_not_rewritten": true,
+    "actual_origin_cache_or_training_at_snapshot": false,
+    "fold1_deferred": true
+  },
+  "next": [
+    "Wait for genuine P022/P021 official scores while completing independent P026 fold-mean replay and Root decision for the remaining2 slots",
+    "If useful, Root may use actual secondary CPU seal for isolated new native64/visible inference; old component throughput does not qualify new weights",
+    "Root may materialize the old-BCE fold0 F007 origin after completed12; then manually extract and compare residual on unchanged weak holdout"
+  ],
+  "documentation_actor_scope": {
+    "Source_JSON_and_documents_only": true,
+    "actual_API_GPU_training_model_checkpoint_teacher_MRI_payload_reads_or_calls_in_this_update": 0,
+    "live_trainer_CLI_config_or_run_checkpoint_edits": 0,
+    "earlier_raw_snapshots_document_tails_ledger_prefix_preserved": true
+  }
+}

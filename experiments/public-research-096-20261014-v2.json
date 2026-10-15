@@ -1,0 +1,359 @@
+{
+  "schema_version": "public_primary_research_for_Public0960_goal_v2",
+  "actor": "/root/research_096",
+  "at_utc": "2026-10-14T02:18:36.452599+00:00",
+  "at_jst": "2026-10-14T11:18:36.452599+09:00",
+  "research_date_jst": "2026-10-14",
+  "goal": {
+    "metric": "Kaggle Public macro ROC AUC",
+    "minimum": 0.96,
+    "own_qualified_baseline_at_task_start": 0.954,
+    "own_baseline_evidence": [
+      "experiments/p026-official-public953-Root-adoption-decision-20261013.json",
+      "experiments/F007Source3-reviewed-F008-waiting-F0061-E6-local-20261013-v2.json"
+    ],
+    "historical_strict_above0960_policy_is_not_current_threshold": true,
+    "achieved_by_this_research": false
+  },
+  "primary_sources": {
+    "V22": "https://www.kaggle.com/code/evgendvorkin/rsna-versia-7?scriptVersionId=358019432",
+    "CompactR7": "https://www.kaggle.com/datasets/heliosli/rsna-knee-compact-r7cnxfsss/versions/1",
+    "Ortho": "https://www.kaggle.com/datasets/heliosli/rsna-orthofoundation-fold0-epoch7-20261004/versions/1",
+    "SWA": "https://www.kaggle.com/datasets/nartaa/rsna-knee-publication-swa-weights-20261007/versions/1",
+    "LB": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/leaderboard",
+    "single_model": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735304",
+    "bottleneck": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735826",
+    "ensemble": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/742926",
+    "capacity": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735154",
+    "ceiling": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735767"
+  },
+  "source_freshness": {
+    "web_search_discussions": "Search indexed pages; publication exact dates not independently established. Relative posts and crawling freshness are not current official score evidence.",
+    "V22": "Fresh anonymous official UI and dataset API fetched 2026-10-14 JST, source and Input versions bound.",
+    "LB": "Fresh Root official public one-page read 2026-10-14 JST accepted; no anonymous all-team estimate."
+  },
+  "V22_fresh": {
+    "observed_jst": "2026-10-14T10:53:30.291660+09:00",
+    "url": "https://www.kaggle.com/code/evgendvorkin/rsna-versia-7?scriptVersionId=358019432",
+    "Notebook_version": 22,
+    "scriptVersionId": 358019432,
+    "author_Public": 0.956,
+    "linked_submission_id": 57145959,
+    "linked_source_equal_script": true,
+    "status": "COMPLETE",
+    "own_Public": null,
+    "Inputs": [
+      {
+        "sourceId": 154281,
+        "databundleVersionId": 20902466,
+        "mountSlug": "competitions/rsna-knee-abnormality-detection"
+      },
+      {
+        "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+        "sourceId": 20297367,
+        "datasetId": 12357722,
+        "mountSlug": "datasets/heliosli/rsna-orthofoundation-fold0-epoch7-20261004"
+      },
+      {
+        "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+        "sourceId": 20440357,
+        "datasetId": 12431568,
+        "mountSlug": "datasets/nartaa/rsna-knee-publication-swa-weights-20261007"
+      },
+      {
+        "sourceType": "DATA_SOURCE_TYPE_DATASET_VERSION",
+        "sourceId": 20601735,
+        "datasetId": 12520391,
+        "mountSlug": "datasets/heliosli/rsna-knee-compact-r7cnxfsss"
+      }
+    ],
+    "Input_version_refs": [
+      "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1",
+      "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+      "heliosli/rsna-knee-compact-r7cnxfsss/1"
+    ],
+    "Input_internal_versions": [
+      20297367,
+      20440357,
+      20601735
+    ],
+    "own_models_downloaded": false,
+    "source_hashes_verified_static": true,
+    "handoff_path": "artifacts\\research\\20261014-public-versia7-v22-audit-v1\\Root-handoff-v2.json",
+    "handoff_sha256": "209ba48436c247a016a4e90e48986cf6e08c9909c83419c4548fb1dae760a910",
+    "source_notebook_sha256": "e33b762564dfcd013d6bab39bc90ae3feab933d67376b5670d9787a9c6c60224",
+    "metadata_path": "artifacts\\research\\20261014-public-versia7-v22-audit-v1\\metadata-safe.json",
+    "metadata_sha256": "a6ff8285d38b4163b75c28f92e867b1ef866c1e7d2d398a443f7887e49975c6e",
+    "compact_manifest_wrapper_file": {
+      "path": "artifacts\\research\\20261014-public-versia7-v22-audit-v1\\compact-manifest-v1.json",
+      "sha256": "1ad24bd1034cd2a3698b1e0ef159837feeb0f4c80d947a2aaeba00100b88ef2a"
+    },
+    "compact_Input_manifest_raw_file": {
+      "path": "artifacts\\research\\20261014-public-versia7-v22-audit-v1\\compact-manifest-v1-raw.json",
+      "sha256": "c4bb0f7399ada9a020e0c15cae6252033cf0c4335e999961793a176063074ec6",
+      "bytes": 5211,
+      "dataset_ref": "heliosli/rsna-knee-compact-r7cnxfsss/1",
+      "internal_version_id": 20601735
+    }
+  },
+  "other_fresh_metadata_summary": [
+    {
+      "url": "https://www.kaggle.com/code/kiyoshiohno/rsna-knee-template",
+      "request_version": 1,
+      "observed_UTC": "2026-10-14T01:50:21.983277+00:00",
+      "author_best": 0.951,
+      "best_version": 9,
+      "most_recent_run_id": 357953488,
+      "most_recent_run_status_not_observed_this_call": true,
+      "own_Public": null
+    },
+    {
+      "url": "https://www.kaggle.com/code/romantamrazov/rsna-knee-dinosaur-v5",
+      "request_version": 1,
+      "observed_UTC": "2026-10-14T01:50:57.674378+00:00",
+      "author_best": 0.95,
+      "best_version": 45,
+      "best_scriptVersionId": 357077179,
+      "own_Public": null
+    },
+    {
+      "url": "https://www.kaggle.com/code/heliosli/blend-mine-in-private-lb-luck-to-all-upvoters",
+      "request_version": 1,
+      "observed_UTC": "2026-10-14T01:50:57.875111+00:00",
+      "HTTP": 200,
+      "body_bytes": 91,
+      "kernel_and_run_and_best_fields_absent": true,
+      "historical_author0p956_not_freshly_verified": "artifacts/research/20261012-public954-current-research-v1/helios956-explicit-V1-v1/receipt.json",
+      "reason_private_deleted_revoked_not_inferred": true
+    }
+  ],
+  "leaderboard_fresh_Root": {
+    "evidence_path": "artifacts\\research\\20261014-current-public-leaderboard-root-v1\\observation.json",
+    "sha256": "870bfded52d37f430d9f27a8c83aef58690a7e0c1964fb94ff4d9f74f22c8a02",
+    "observed_UTC": "2026-10-14T01:56:58.809296+00:00",
+    "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/leaderboard",
+    "public_requested": true,
+    "rows_observed": 100,
+    "max": "0.966",
+    "min": "0.957",
+    "at_least0960_count": 54,
+    "strict_above0960_count": 37,
+    "equal0960_count": 17,
+    "more_pages_available": true,
+    "pagination_used": false,
+    "only_first100_not_total_team_counts": true,
+    "public_Notebook_weights_available_or_own_achievement_proven": false
+  },
+  "recipe_vs_ownS6": {
+    "baseline_source_path": "artifacts\\research\\20261012-p020-public-S6-restored-source-v1\\P020_public_S6.ipynb",
+    "Raptor_source_and_exec_raw_SHA_equal": true,
+    "mainline_CODE_SHA_all8_equal": true,
+    "old_bundle": "209a32c8b50a6b1c",
+    "new_bundle": "8c7b666e27dc0e8f",
+    "old_compact": [
+      "ConvNeXt-small",
+      "4fold",
+      "384size/352crop",
+      "cnx_s6"
+    ],
+    "new_compact": [
+      "ConvNeXt-small",
+      "4fold",
+      "384size/352crop",
+      "cnx_r7",
+      "fastMRI+lesion-box auxiliary train0.3",
+      "report-derived latent-state targets",
+      "Effusion fluid stacker",
+      "Baker state stacker"
+    ],
+    "rank_weights_old": {
+      "Raptor": 0.7,
+      "Compact": 0.3
+    },
+    "rank_weights_new": {
+      "Raptor": 0.5,
+      "Compact": 0.5
+    },
+    "failed_rank_basis_changed": "all rows -> each model non-failed rows only; one-sided failures use other model rank",
+    "compact_controller_failure_cap_changed": "default3percent ->100percent controller, parent stage3 rejects>50percent; static only",
+    "factor_interpretation": "fixed public whole recipe replacement. Architecture remains ConvNeXt-small; aux task, labels/state configuration, trained weights, stackers, blend weights and failure ranking differ. Not one causal hyperparameter ablation.",
+    "no_model_weights_or_real_inference_qualification": true
+  },
+  "Gold_audit": {
+    "compact_manifest_gold_in_training_author_claim": 0,
+    "compact_manifest_official_labels_read_by_trainer_author_claim": false,
+    "trainer_gold_pool_disjoint_assert_source_lines": [
+      2004,
+      2008,
+      2011,
+      2013
+    ],
+    "trainer_gold_strict_prior_empty_assert": true,
+    "trainer_deploy_weights_fixed16_epochEMA_no_gold_checkpoint_selector_seen_in_source": true,
+    "trainer_generates58_gold_predictions_for_author_external_eval": true,
+    "stacker_fit_records_OOF4344_report_targets": true,
+    "state_stacker_adopted": [
+      "Baker's"
+    ],
+    "fluid_stacker_adopted": [
+      "Effusion"
+    ],
+    "fluid_Effusion_adoption_override": {
+      "what": "classes.Effusion.adopt = true by user decision (\"keep Effusion; drop Baker's\"), regardless of the pre-registered +0.003 rule; Baker's not fitted (dropped)",
+      "rule_said": "DROP (explicit-only gain +0.0012 < +0.003; corrected gain +0.0015 >= 0)",
+      "fit_raw": "/root/autodl-tmp/rsna_align_s0/post_r7/fluid_stacker_r7_fit_raw.json",
+      "fit_raw_md5": "589ea5a48886012b2a4616158eadd461",
+      "applied": "2026-10-12 03:48:54",
+      "by_script": "post_r6/refit_fluid_stacker_r6.sh (= post_r5/refit_fluid_stacker_r5.sh's override)"
+    },
+    "actual_training_inputs_weights_history_independently_verified": false,
+    "upstream_arch_label_geometry_stackers_rule_hyperparams_selected_using_gold_unknown": true,
+    "Raptor_gold58_selection_exposure_inherited_from_S6": true,
+    "own_gold_read_train_checkpoint_selection": 0,
+    "patient_independence_verified": false,
+    "NoKneeCoT_author_claim": "No KneeCoT inputs or derivatives; gold never trained"
+  },
+  "offline_scope": {
+    "stage2_HF_HUB_OFFLINE1_and_HF_HUB_DISABLE_TELEMETRY1": true,
+    "pip_uses_no_index_no_deps_attached_wheels": true,
+    "embedded_inference_net_initialization": {
+      "compact_infer_Net_init": null,
+      "compact_train_timm_pretrained_condition": "init==timm; inference passes None ->False",
+      "side_model_pretrained": false,
+      "probe_infer_dinov3_pretrained": false
+    },
+    "no_requests_urllib_http_socket_import_in7_embedded_sources": true,
+    "source_contains_training_module_but_it_is_imported_not_main_executed_by_inference": true,
+    "actual_cloud_code_wheels_not_downloaded_or_reaudited": true,
+    "mainline_cloud_CODE_SHA_equal_accepted_S6_all8": true,
+    "private_mirror_expected_GPU": "NvidiaTeslaT4x2",
+    "private_mirror_expected_Internet": false,
+    "private_mirror_should_keep_original_code5_and_manifest_fallback_math_plus_separate_whole_UID_csv_guard": true,
+    "visible_run_is3studies_not_hidden_runtime_evidence": true,
+    "native_GPU_artificial_contract_not_performed_by_this_task": true
+  },
+  "retrieval_failures_and_limits": {
+    "PowerShell_InvokeWebRequest_TLS_transport_failed": true,
+    "Windows_curl_schannel_failed_no_credentials_transport": "SEC_E_NO_CREDENTIALS; not Kaggle account credential failure",
+    "wrong_namespace_GetKernelViewModel_nonlegacy_3HTTP404": "Endpoint namespace error, not Notebook absent. Correct Legacy public endpoint succeeded.",
+    "EV_prior_authenticated_source_HTTP403_20261013": "Historical single endpoint scope only. Fresh public rendered HTML succeeded anonymously today.",
+    "anonymous_LB_greater_than4MB_bound": "Held no score data used; Root official bounded page succeeded.",
+    "search_index_no_Public0p960_notebook_found": "Search queries did not verify any downloadable public >=0.960 recipe; not a global absence claim.",
+    "new_dataset_file_listing_manifest_and_small_stackers_only": "No actual model weights downloaded; exact7embeddedsource manifests verified; cloud_code.zip/wheels/upstreammodeldata not newly acquired.",
+    "source_html_to_ipynb_limit": "rendered HTML highlighted input_area pre text. Outputs/execution counts erased. Markdown text_render plain text extracted before code cells; original interleaving not guaranteed; original ipynb metadata not claimed."
+  },
+  "author_primary_discussion_reports": [
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735304",
+      "claims": [
+        "Participant reported 0.942 raw, 0.943 with TTA at 288px",
+        "Participant reported single5-fold DINOv2 0.929 at224px",
+        "Participant reported correlation0.83 externalmodel arm worth+0.004Public"
+      ],
+      "own_reproduction": false,
+      "weight_and_code_available_from_discussion_proven": false
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735154",
+      "claims": [
+        "Participant Small-to-Base3.9xcompute CVgain0.0011 below reported0.0020noise",
+        "Preprocessing normalization contract mismatch identified on RAD-DINO"
+      ],
+      "own_reproduction": false
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/742926",
+      "claims": [
+        "Participant recommendation change preprocessing/inputrepresentation/architecture/backbone/augmentation/schedule",
+        "Model disagreement important to ensemble complementarity"
+      ],
+      "causal_0960_guarantee": false
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735826",
+      "claims": [
+        "Top participant emphasized softlabels and independence from publiccode"
+      ],
+      "own_reproduction": false
+    }
+  ],
+  "priorities_max5": [
+    {
+      "rank": 1,
+      "action_ja": "??Versia7 V22???recipe???????Notebook?????0.954???0.956??????Public??????",
+      "reason_ja": "10/14??metadata?COMPLETE?linked0.956??script ID?????R7????????V1?Raptor?????DICOM8module???S6???????????????",
+      "qualification_ja": "??recipe????????????70:30?50:50?newtrainedR7?fluid/state stacker?failure rank??????????????????????????????????",
+      "next_evidence_ja": "version1/??Input3??pin?offline T4x2???UID???weights SHA?fallback???Root?????????Submit???HTML446.7??3??run?hidden?1300?runtime???????",
+      "urls": [
+        "https://www.kaggle.com/code/evgendvorkin/rsna-versia-7?scriptVersionId=358019432",
+        "https://www.kaggle.com/datasets/heliosli/rsna-knee-compact-r7cnxfsss/versions/1"
+      ]
+    },
+    {
+      "rank": 2,
+      "action_ja": "??F006???12epoch???F007/F008???????12/24epoch???paired weak???????????????native????????????????",
+      "reason_ja": "??F007?encoder/CLS???zero???fold0/1?weak??50:50???+0.00158535/+0.00137217?4090????????????????Publiccontrol?ConvNeXt/Raptor?????DINO????????????????",
+      "qualification_ja": "checkpoint????weak???bootstrap?Public?????????????F006/F008???run?????Root???Gold?????????native?????Public?????????",
+      "next_evidence_ja": "????BCE??????10??AUC?????????run/??SHA/?group/Missingmask??????native serving64??forward??UID????model bundle??????",
+      "urls": [
+        "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735304",
+        "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/742926"
+      ]
+    },
+    {
+      "rank": 3,
+      "action_ja": "????????????group??paired???????native??????????????Publiccontrol???????????",
+      "reason_ja": "?????????????????????????????0.83??external arm?Public+0.004????0.956?0.960????????????????????????????",
+      "qualification_ja": "???????????weaklabel??fold?????OOF??????????Raptor?all-data/gold????????clean??OOF??????????nativefold????????mask???????group??????",
+      "next_evidence_ja": "??UID???label-free????????????weakOOF??????????????classoverride?Public??????????",
+      "urls": [
+        "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735304",
+        "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/742926"
+      ]
+    },
+    {
+      "rank": 4,
+      "action_ja": "?????????????????????partition????????label???????????????",
+      "reason_ja": "0.94????????labels?????????????????softlabel??????R7?state-level?????report prior????????MCL?OA?Effusion?Synovitis????????????????????",
+      "qualification_ja": "gold58????label???checkpoint?????????mask????????0?????R7?????labels/stateprior?gold???????????",
+      "next_evidence_ja": "??train-report150queue???????????seed/fold/group/inputhash??????????paired????fold????",
+      "urls": [
+        "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735826",
+        "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735304",
+        "https://www.kaggle.com/datasets/heliosli/rsna-knee-compact-r7cnxfsss/versions/1"
+      ]
+    },
+    {
+      "rank": 5,
+      "action_ja": "???????????backbone/labels/fold???crop????????????????????????????????",
+      "reason_ja": "??????Small?Base3.9?compute??weakCV+0.0011???noise0.0020??null????????R7??????fastMRI??box???????view?fluid volume?????supervision??????????",
+      "qualification_ja": "??fastMRI/OAI/SKM-TEA????licensing/provenance?????????????????????workspace???????????DICOM??????????????",
+      "next_evidence_ja": "????????Kaggle????????4090???forward/CSV??????????????????renderer/label??Report????????",
+      "urls": [
+        "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735154",
+        "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735826",
+        "https://www.kaggle.com/datasets/heliosli/rsna-knee-compact-r7cnxfsss/versions/1"
+      ]
+    }
+  ],
+  "auth_credentials_read_or_copy": 0,
+  "external_Save_upload_Submit": 0,
+  "actual_model_MRI_training_forward": 0,
+  "user_authorized_root_handles_external_actions": true,
+  "task_complete_scope": "Independent public research and static source/input metadata audit; goal achievement requires actual Root reproduction and official Public results.",
+  "supersedes_unchanged_v1": {
+    "path": "experiments\\public-research-096-20261014.json",
+    "sha256": "df370bb6928ec891589d70f3961d15f7fd66efd985b065de92e35ac4351c1e97",
+    "reason": "Clarify local wrapper hash versus raw Input manifest hash; prior documents preserved."
+  },
+  "hash_scope_amendment": {
+    "ambiguous_v1_field": "Root-handoff.json compact_manifest_SHA",
+    "v1_field_was_wrapper_hash": "1ad24bd1034cd2a3698b1e0ef159837feeb0f4c80d947a2aaeba00100b88ef2a",
+    "Input_raw_manifest_hash": "c4bb0f7399ada9a020e0c15cae6252033cf0c4335e999961793a176063074ec6",
+    "raw_bytes": 5211,
+    "raw_retrieval_receipt": "artifacts\\research\\20261014-public-versia7-v22-audit-v1\\manifest-raw-download-receipt.json",
+    "source_model_math_configuration_edited": false,
+    "external_V22_Save_at_parent_report": 0,
+    "observer_source521d_not_modified": true
+  }
+}

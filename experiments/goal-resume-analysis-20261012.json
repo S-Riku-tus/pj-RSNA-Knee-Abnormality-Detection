@@ -1,0 +1,157 @@
+{
+  "schema_version": "rsna_knee_resumed_above960_goal_current_analysis_v1",
+  "experiment_id": "goal-resume-analysis-20261012",
+  "at_utc": "2026-10-12T04:45:38.042101+00:00",
+  "at_JST": "2026-10-12T13:45:38.042101+09:00",
+  "baseline_commit": "74fe5ce",
+  "own_best_Public": "0.951",
+  "strict_goal": "official error-free COMPLETE Public > 0.960",
+  "goal_achieved": false,
+  "today_allowed_now_observed": 5,
+  "GPU_available_seconds_observed": 101707.236,
+  "P016": {
+    "submission": 57044321,
+    "status": "COMPLETE",
+    "Public": "0.951",
+    "error": false
+  },
+  "P017": {
+    "submission": 57042712,
+    "status": "COMPLETE",
+    "Public": "0.951",
+    "error": false,
+    "hidden_native_success_vs_whole_test_fallback_not_distinguished": true
+  },
+  "P014_P015": {
+    "submissions": [
+      57031186,
+      57031981
+    ],
+    "status_field": "COMPLETE",
+    "error_description_present": true,
+    "Public": null,
+    "scored_success": false,
+    "exact_hidden_root_cause_not_observed": true
+  },
+  "public_leaderboard_first_page": {
+    "page_rows": 50,
+    "observed_max": "0.966",
+    "strict_above960_count_in_page": 27,
+    "all_team_counts_medal_threshold_own_rank_not_inferred": true
+  },
+  "P018": {
+    "user_specific_private_upload_approval": true,
+    "payload_files": 4,
+    "payload_total_bytes": 208822289,
+    "actual_PUT_calls": 4,
+    "actual_Create_calls": 2,
+    "resends": 0,
+    "Create_exactref_response_guard_held": true,
+    "private_V1_READY_positive2_independently_observed_for_both": true,
+    "dataset_ids": [
+      12526561,
+      12526584
+    ],
+    "remote_byte_CPU64_256_Serving_still_pending": true,
+    "fixed_recipe": "CLS foldmean50 + REG foldmean50, familymean50, baseline80/native20, MCL+Synovitis baseline",
+    "weak_fixed10_AUC_CLS": [
+      0.880569,
+      0.880062
+    ],
+    "weak_fixed10_AUC_familymean50": [
+      0.884913,
+      0.886346
+    ],
+    "weak_validation_is_not_Public_or_independent_P012_OOF": true
+  },
+  "prioritized_next_work": [
+    "P018 exact remote bytes -> native64 -> native256 -> normal/fault Serving -> fresh allowance -> one Submit -> official score",
+    "Predeclare P019 UID-level structural-read recovery; success predictions retained, explicit failed UID baseline restoration, model/OOM/hash errors fail",
+    "Keep per-epoch weights and prediction/metric/SHA index for new runs without changing BCE selection or training",
+    "After completed comparisons choose one training factor: late-epoch learning-rate decay; keep cache, folds, teacher, losses and model fixed",
+    "Confirm promising direction on second fold and retain scored successful final candidate before deadline"
+  ],
+  "training_evidence": {
+    "all_four_completed12_curves": "train loss improves after selected epoch while validation loss worsens",
+    "simple_epoch_extension_or_last4_not_justified": true,
+    "CLS_E10_selected_epoch_fixed10_AUC_deltas": [
+      0.004798,
+      0.004699
+    ],
+    "E10_weights_not_retained_in_prior_runs": true
+  },
+  "public_asset_research": {
+    "S6": {
+      "author_Public": "0.954",
+      "script_id": 356507041,
+      "Notebook_version": 1,
+      "weights_currently_unavailable_in_prior_V11_retirement_record": true,
+      "own_reproduction": false
+    },
+    "FastParent_title957": {
+      "actual_author_Public_prior_observation": "0.939"
+    },
+    "four_arm_V57": {
+      "actual_author_Public_prior_observation": "0.936"
+    },
+    "OrthoFoundation_MSK5M": {
+      "RSNA_Public_not_observed": true,
+      "weight_LICENSE_open_issue": "https://github.com/ytrsk/OrthoFoundation-MSK-5M/issues/1"
+    },
+    "new_available_above951_complete_recipe_not_confirmed": true,
+    "search_absence_is_not_proof_no_recipe_exists": true
+  },
+  "official_sources": [
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview",
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/leaderboard",
+    "https://www.kaggle.com/docs/competitions",
+    "https://www.kaggle.com/c/dunnhumbychallenge/forums/t/901/submission-when-does-the-clock-reset"
+  ],
+  "deadlines_JST": {
+    "entry_team_merge": "2026-10-16T08:59:00+09:00",
+    "final_submission": "2026-10-23T08:59:00+09:00"
+  },
+  "constraints": {
+    "own_Gold_fit_selection": 0,
+    "missing_teacher_replaced_with0": false,
+    "patient_independence_claimed": false,
+    "bulk_local_DICOM_download": false,
+    "automatic_upload_submission_code_added": false,
+    "new_competition_Submits_this_turn_so_far": 0,
+    "old_runs_or_baseline_overwritten": false
+  },
+  "evidence": {
+    "current_allowance_and_submission_history": {
+      "path": "artifacts/research/20261012-current-kaggle-read-v1/observation.json",
+      "sha256": "0f443cb29113fb6fa63d1eb683c5263fe4e8d2206e87f4aa942237d005771d25"
+    },
+    "current_public_first50": {
+      "path": "artifacts/research/20261012-current-kaggle-read-v1/public-leaderboard-observation.json",
+      "sha256": "433e2a21fc3b8964a0aa040e3ed110bd4e24060e7756338c140a708f77fb3bc5"
+    },
+    "P016": {
+      "path": "artifacts/research/20261010-p016-official-score-tools-source-v1/official-observation-20261012-resume-v3/observation.json",
+      "sha256": "7fdf633138c301571f5d5aacbe26fd896c751f15458882354140650fdd07a237"
+    },
+    "P017": {
+      "path": "artifacts/research/20261010-p017-official-score-tools-source-v1/official-observation-20261012-resume-v3/observation.json",
+      "sha256": "fba176658d9fafcd0d4e4f56ec835eb6300ff5dc7ee549f5e88dd2bbb7baf064"
+    },
+    "REG0_metadata": {
+      "path": "artifacts/research/20261012-p018-create-recovery-metadata-v1/actual-fold0-metadata-v1/observation.json",
+      "sha256": "f515b21e4a479dfaed94adf14be61a5a1f60fda772a48a4258b7dd6965d589ab"
+    },
+    "REG1_metadata": {
+      "path": "artifacts/research/20261012-p018-create-recovery-metadata-v1/actual-fold1-metadata-v1/observation.json",
+      "sha256": "e304f1156e5afc197d177e12935d70c79b2d8ffef6b64511ae1e189395abc644"
+    },
+    "REG0_unknown_Create_original": {
+      "path": "artifacts/research/20261010-p018-regional-private-upload-root-v2/fold0-attempt-v2/held.json",
+      "sha256": "5c854b2a7f2fb7f9196c1d0bd62c0682b8b6e48289798a89be796ee3d85b1e6b"
+    },
+    "REG1_unknown_Create_original": {
+      "path": "artifacts/research/20261010-p018-regional-private-upload-root-v2/fold1-attempt-v2/held.json",
+      "sha256": "5c854b2a7f2fb7f9196c1d0bd62c0682b8b6e48289798a89be796ee3d85b1e6b"
+    }
+  }
+}

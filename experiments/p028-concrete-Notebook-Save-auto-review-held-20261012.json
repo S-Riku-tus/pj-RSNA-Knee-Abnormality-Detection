@@ -1,0 +1,75 @@
+{
+  "schema": "p028_concrete_private_Notebook_Save_local_ready_external_review_rejection_v1",
+  "recorded_at_UTC": "2026-10-12T14:18:11.292068+00:00",
+  "actor": "execution_audit_documentation_metadata_only",
+  "previous_snapshot": {
+    "path": "experiments/official23p06-P021public954-P022error-F007complete-P028source-20261012.json",
+    "sha256": "9f2bcc4bbaa3d9e97bde3b907a9a9be05d97c7e7aea9259c4d1b6906379aa3ac"
+  },
+  "Root_actual_local_materialization": {
+    "actor": "Root",
+    "launch": {
+      "path": "artifacts/research/20261012-p028-original-S6-UID-completion-root-v1/launch-context.json",
+      "sha256": "6bab2cb29c2bfb0308903b007e0faceaa0277105317bd93e76a3a8d262a05559"
+    },
+    "API_source_bytes": 946931,
+    "API_source_SHA256": "185dcdb9779f176fb4794a32d211625470820ab72e7f60db6185768d42cb905e",
+    "hardcap": 950000,
+    "default_offline_DTO_exit_code": 0,
+    "ref": "rsraki/p022m-0e93fd1399c445dbb769ccb1e07bf6ed",
+    "whole_new_runtime_qualified": false
+  },
+  "external_action_intended": {
+    "method": "Kaggle ApiSaveKernelRequest / SaveKernel",
+    "object": "private Notebook Save-and-run",
+    "target_ref": "rsraki/p022m-0e93fd1399c445dbb769ccb1e07bf6ed",
+    "new_Dataset_Create_requested": false,
+    "code_not_new_trained_model_payload": true
+  },
+  "automatic_approval_review": {
+    "outcome": "REJECTED",
+    "before_CLI_CreateProcess": true,
+    "reported_reason_as_given_by_Root": "\u975e\u516c\u958bKaggle Dataset\u3078\u30b3\u30fc\u30c9946931B\u5916\u90e8\u9001\u4fe1\u3001\u5177\u4f53\u7684\u30b3\u30fc\u30c9/\u5b9b\u5148\u3078\u306e\u660e\u793a\u627f\u8a8d\u4e0d\u8db3",
+    "review_described_Dataset_but_intended_API_is_Notebook_Save": true,
+    "specific_Code_and_Notebook_destination_user_approval_request_issued_by_Root": true,
+    "user_reply_pending": true,
+    "local_Root_metadata_authority_is_not_external_review_approval": true,
+    "authentication_calls": 0,
+    "Input_metadata_RPCs": 0,
+    "GPU_quota_RPCs": 0,
+    "Save_RPCs": 0,
+    "remote_write": 0,
+    "actual_Save_attempt_directory_created": false,
+    "same_Save_retry_or_other_ref_or_encoded_upload_bypass": false
+  },
+  "parallel_P024": {
+    "separate_specific_new_private_model_upload_approval_pending": true,
+    "bytes": 104308640,
+    "destination": "rsraki/n392-aucf0-816d6df4187b4878a3ccd7234ffa14dd",
+    "StartBlob_PUT_Create_remote_calls": 0,
+    "old_REG2_approval_transfer": false
+  },
+  "official_latest": {
+    "source_snapshot": "2026-10-12 23:06 JST",
+    "actual_observer_actor": "Root-authorized local_analysis",
+    "P020": "0.954",
+    "P021": "0.954",
+    "P022": "COMPLETE plus hidden error; Public absent",
+    "P026": "raw state/Public absent",
+    "best": "0.954",
+    "today_accepted": 4,
+    "remaining": 1,
+    "strict_above960": false
+  },
+  "unaffected_work": {
+    "F007_fold0": "Root complete12 and strict CPU frozen prefix/suffix/CLS equality accepted; new shared4model/native64/Serving not qualified",
+    "F007_fold1": "Root cache extraction session71660 RUNNING; last23:05:50 1331NPZ; complete/full891saved12/train pending",
+    "existing_submission_scoring_observation_continues": true,
+    "overall_goal_blocked": false
+  },
+  "scope": {
+    "API_auth_GPU_model_MRI_run_checkpoint_cache_teacher_body_reads_by_document_author": 0,
+    "old_Run_Source_receipts_approval_rejection_records_overwritten": false,
+    "new_authority_issued_by_document_author": false
+  }
+}
