@@ -1,0 +1,60 @@
+{
+  "schema_version": "anonymous_public_metadata_observation_summary_v1",
+  "date_jst": "2026-10-16",
+  "approximate_time_jst": "15:00",
+  "observer": "delegated public_research agent",
+  "raw_http_response_saved": false,
+  "exact_http_timestamp_recorded": false,
+  "response_sha256": null,
+  "public_kernel_metadata": {
+    "method": "POST",
+    "endpoint": "https://www.kaggle.com/api/i/kernels.LegacyKernelsService/GetKernelViewModel",
+    "request": {
+      "authorUserName": "heliosli",
+      "kernelSlug": "this-is-best-public-dataset-new-version-0-9576",
+      "versionNumber": 1,
+      "kernelVersionId": 0,
+      "tab": "notebook"
+    },
+    "observed": {
+      "source_script_version_id": 358332966,
+      "kernel_version_number": 1,
+      "run_status": "COMPLETE",
+      "best_public_score": 0.957,
+      "linked_submission_id": 57233614,
+      "linked_submission_source_script_version_id": 358332966,
+      "linked_submission_score_formatted": "0.957",
+      "input_internal_version_ids": [20297367, 20440357, 20611930],
+      "author_visible_runtime_seconds": 458.3095856,
+      "accelerator": "T4"
+    },
+    "not_evidence_of": [
+      "own authenticated submission status refresh",
+      "unrounded 0.9576 score",
+      "current hidden runtime",
+      "mounted model contents or local weight hash verification"
+    ]
+  },
+  "versia22_metadata": {
+    "same_endpoint": true,
+    "authorUserName": "evgendvorkin",
+    "kernelSlug": "rsna-versia-7",
+    "versionNumber": 22,
+    "observed_source_script_version_id": 358019432,
+    "observed_status": "COMPLETE",
+    "observed_author_best_public_score": 0.956
+  },
+  "public_code_frontier_attempt": {
+    "method": "GET",
+    "endpoint": "https://www.kaggle.com/api/v1/kernels/list",
+    "parameters": {
+      "competition": "rsna-knee-abnormality-detection",
+      "sortBy": "scoreDescending",
+      "pageSize": 100,
+      "page": 1
+    },
+    "http_status": 401,
+    "additional_attempts": 0,
+    "meaning": "This request was unauthorized; no refreshed frontier or global access conclusion"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "research_document_validation_v1",
+  "date_jst": "2026-10-16",
+  "actual_preview_synthetic_case": {
+    "input_values": [
+      0.6,
+      0.61,
+      0.64,
+      0.65
+    ],
+    "failed_uid": "D",
+    "observed_acl": [
+      0.25,
+      0.5,
+      0.75,
+      0.65
+    ],
+    "parent_auc": 1,
+    "preview_auc": 0.6666666666666666,
+    "unsupported_columns_preserved": true,
+    "artifact_dir": "artifacts\\research\\20261016-goal096-review-rank-check-v1"
+  },
+  "alternative_success_subset_rank_counterexample": {
+    "parent_rank": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "success_uids": [
+      "lowest_only"
+    ],
+    "mixed_lowest": 0.28,
+    "second_parent": 0.2,
+    "rank_inversion": true,
+    "hypothetical_contract_not_current_preview": true
+  },
+  "ledger": {
+    "old_bytes": 167119,
+    "old_sha256": "0a98ef7c4a1f76436496feea4db10b729342cce20bbd0d479494b3f2cccb5fd7",
+    "prefix_byte_exact_assertion_passed_immediately_after_append": true,
+    "rows_after_including_header": 281,
+    "all_rows_15_columns": true,
+    "appended_id": "user-confirmed-P029M-Public957-research-20261016",
+    "appended_row_count": 1
+  },
+  "attachment_sha256": "107ae97011d51a06b38ea0569e5c69d4c144e59fc46d32ad756f13b32cce01c7",
+  "reviewed_document_sha256": {
+    "README.md": "7513703bf7c4a19731917ee63cd3bb7862c295ad6a27959e70c5a20b4786ecc3",
+    "PROJECT.md": "8997e9e1a79e5c8477e143cde745a4f12722b64f1cfc71a3cce72c4984e61693",
+    "docs/validation.md": "2e83890e225797a4c4c954450f90252ae7117643817d75aaf8700cdd33f7d94c",
+    "docs/goal-096.md": "4802658329d50c5cf4f706e5fad100a6e6bef21561857f74f333d03c43fdba65",
+    "docs/research/20261016-goal096-review-v1/report.md": "c663661fe9d4f3fdfc062a9df828d7eabcb34f15df4b5b4ff9f35edfff829694",
+    "docs/research/20261016-goal096-review-v1/public-metadata-observations.json": "4adef3db280ee5b42d1f2acf6bc87655c2597614a3cc85eb598583d46404bdbe",
+    "experiments/user-confirmed-public957-research-20261016.json": "d814849efc1804329454b74cc4edda526a5d77b3cc61ab48faf7f681c4c9ecaf"
+  },
+  "gpu_mri_model_training_network_submission_during_this_verification": false,
+  "broad_suite_rerun": false
+}

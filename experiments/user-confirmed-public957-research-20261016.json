@@ -1,0 +1,48 @@
+{
+  "schema_version": "user_confirmed_score_and_research_v1",
+  "observed_date_jst": "2026-10-16",
+  "status": "USER_CONFIRMED_PUBLIC957_RESEARCH_COMPLETE_TARGET960_UNMET",
+  "submission_id": "57225898",
+  "candidate": "P029M V1 fixed R6 TTA ON",
+  "own_public_lb": 0.957,
+  "score_evidence": {
+    "type": "user_explicit_confirmation_in_conversation",
+    "statement": "提出57225898で0.957を確認済み",
+    "independent_own_authenticated_api_refresh_performed": false,
+    "previous_saved_official_observation": "2026-10-15 19:33:56 JST: submission score/status/error unreturned; own best previously 0.956",
+    "previous_evidence": "experiments/public957-final-checkpoint-20261015-1934.json",
+    "unrounded_score_known": false
+  },
+  "target": {
+    "metric": "own Public macro ROC AUC across 12 findings",
+    "minimum_displayed_score": 0.960,
+    "achieved": false,
+    "private_performance_not_inferred": true
+  },
+  "report": "docs/research/20261016-goal096-review-v1/report.md",
+  "priority": [
+    "Preserve successful P029M code, frozen assets and submission lineage",
+    "Measure P030M Compact TTA OFF against fixed R6 ON",
+    "Measure R7 bundle OFF against R6 OFF without coefficient sweep",
+    "In parallel diagnose F006 hidden failure and define failure-aware rank contract",
+    "Measure fixed20 native CLS0/CLS1 E12 plus retained REG0/REG1 against adopted parent",
+    "If indicated compare one intensity augmentation with fixed weak folds"
+  ],
+  "independent_review_findings": [
+    "Partial native failure can invert ranks after restoring raw parent values",
+    "Equal percentile scale does not solve mismatched rank populations under partial failure",
+    "Re-ranking parent before blending changes successful-case ensemble semantics",
+    "Averaging two folds on one validation fold is not automatically OOF",
+    "Existing F006 weak gain is not the incremental gain over P029M"
+  ],
+  "scope": {
+    "real_mri_decode": false,
+    "model_download_or_load": false,
+    "training": false,
+    "external_upload_or_submission": false,
+    "own_credentials_read": false,
+    "inference_or_training_code_changed": false,
+    "public_web_and_anonymous_metadata_read": true,
+    "synthetic_rank_counterexamples": 2
+  }
+}

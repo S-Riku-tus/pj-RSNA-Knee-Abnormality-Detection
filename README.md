@@ -1,5 +1,7 @@
 # RSNA Knee Abnormality Detection
 
+**2026-10-16：提出57225898（P029M）の自己Public 0.957をユーザーが確認済み。次の目標は0.960以上です。** 当方の今回の公式API再照会ではなく、[ユーザー確認記録](experiments/user-confirmed-public957-research-20261016.json)として更新しました。[調査レポート](docs/research/20261016-goal096-review-v1/report.md)はR6 TTA比較→R7 bundle比較と、並行するF006 hidden失敗・rank統合の診断を推奨。今回は調査・文書更新のみで、モデル／MRI取得・学習・Kaggle保存・提出は実行していません。以下は各時点の履歴です。
+
 **10月15日19:21 JSTの採点確認後：公開0.957候補の自己推論P029Mは可視検証を通過し、正式提出57225898を1回受理されました。自己最良の確認値は引き続き0.956、目標0.960超は未達です。** 新提出の公式Get/Listには状態・エラー・Publicがまだ返っていません。同じ固定R6でTTAだけOFFのP030Mも可視検証を完了し、両候補とも3検査×12ラベル・36値のfloat32再計算一致・検査単位failure 0を確認。P030Mは未提出でP029Mの結果を待ちます。可視全体453.7→405.2秒は1回ずつの観測で、精度改善やhidden完走の証明ではありません。公式枠は本日1件／残4／累計28。[最新正本](experiments/p030m-visible-pass-P029M-submit-unreturned-20261015.json)、[次の判断順序](docs/goal-096.md)、[検証範囲](docs/validation.md)。以下は各時点の履歴です。
 
 **10月15日17:47 JST観測：自己最良は0.956。P029 V2は最初のR6 V1 manifest検査でERROR停止し、科学推論・MRI処理・モデル読込・正式Submitは0です。** [停止の正本](experiments/p029-first-guard-failure-20261015.json)。期待manifestが見つからないか複数だったため、実mountがR7だったとは断定しません。次は公開R6 V1をKaggleのCPU側だけで取得・全ハッシュ照合する別stageを準備しています。自己認証済みで、[17:21の公式照会](experiments/authenticated-progress-refresh-20261015.json)は自己0.956、旧3提出はhidden失敗、提出可能数5・累計27。目標0.960超は未達です。詳細は [PROJECT.md](PROJECT.md)、検証境界は [docs/validation.md](docs/validation.md) を参照。以下は各観測時点の履歴です。
