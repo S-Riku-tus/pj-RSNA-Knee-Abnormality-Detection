@@ -1,0 +1,41 @@
+{
+  "schema_version": "documentation_only_final_plan_validation_v1",
+  "date_jst": "2026-10-16",
+  "checks": {
+    "new_json_syntax": true,
+    "report_local_links": true,
+    "ledger_all_rows_15_columns": true,
+    "ledger_previous_prefix_byte_exact": true,
+    "previous_research_report_unchanged": true,
+    "score_user_confirmation_not_fresh_api": true,
+    "one_candidate_budget_is_assumption_not_live_quota": true,
+    "no_final_candidate_qualification_issued": true
+  },
+  "ledger": {
+    "reviewed_prior_rows": 280,
+    "ledger_rows_after": 281,
+    "old_bytes": 167757,
+    "old_sha256": "09a30b4f3fc4206d2c7b09a59281e9894f609d77451e659cf4a1f5dd3ccac2a5",
+    "prefix_preserved": true
+  },
+  "local_links_checked": [
+    "../20261016-goal096-review-v1/report.md",
+    "evidence-index.json",
+    "decision.json",
+    "../20261016-goal096-review-v1/report.md",
+    "verification.json"
+  ],
+  "document_sha256": {
+    "README.md": "553b8f5441c4495e38d0a4a2af861d29d9b9a9cedf4a86baa75133edee886657",
+    "PROJECT.md": "c0821afba9045b424b2cf88042f9495ce9d7c148219ad1304689ea86a77f354c",
+    "docs/validation.md": "6c401bfb7ddeab48a1d804bdbe69f8f2913204fea1586f734d343395fb6a7587",
+    "docs/goal-096.md": "31f2b2ae134d92f7233023c2f23119c6317d0ac9bec2ef681335b5564dabee0d",
+    "docs/roadmap.md": "55e3398c0e04137ab4b581a80768ba14d05b9a72ea8e48cfb8e7d75d8fa61519",
+    "docs/research/20261016-final-submission-plan-v1/report.md": "7c130a252caed03764b8e2e85a0de4a32b5401eb0b91d4a24dc06edd05906e26",
+    "docs/research/20261016-final-submission-plan-v1/decision.json": "515f0aacabfaae3ce927230bf973fb2ca10d4797accb7d782624320d95475bb7",
+    "docs/research/20261016-final-submission-plan-v1/evidence-index.json": "fb13da5ab7023b8a4931d2e6460829005c5abd135cb858a0f8abd286d0a45d02"
+  },
+  "independent_strategy_review": "No major issue; OOF wording clarified to refer to self-trained model evaluation",
+  "model_mri_training_inference_upload_save_submit_this_turn": false,
+  "synthetic_rank_or_full_test_suite_rerun": false
+}

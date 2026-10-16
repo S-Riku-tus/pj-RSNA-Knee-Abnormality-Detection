@@ -1,5 +1,11 @@
 # 準備内容の検証範囲
 
+## 2026-10-16追記：最後に近い提出の総合計画の検証範囲
+
+[総合計画](research/20261016-final-submission-plan-v1/report.md)は既存台帳全280行と重要な採点・弱比較・エラーの集約JSONを照合した文書です。Public欄の進捗上の自己最高値と個別提出の値を区別し、全rawログや全モデルの独立再現とはしていません。参照先とSHAは[evidence-index.json](research/20261016-final-submission-plan-v1/evidence-index.json)、文書リンク・JSON・台帳15列と旧prefix保持の検証は[verification.json](research/20261016-final-submission-plan-v1/verification.json)に保存します。
+
+原則追加1候補は作業計画の仮定で、実際の残枠・厳密なユーザー上限を確認したものではありません。候補の各条件は将来の実行前要件であり、F006やR7の提出資格を新たに発行していません。前回の人工反例は参照のみで、今回の再実行は0。推論／学習コード変更、実MRI・モデル読込／取得、学習、Kaggle保存実行／提出、ライブAPI/Web再照会は0です。旧テスト結果・未解決事項も更新していません。
+
 ## 2026-10-16：自己0.957のユーザー確認と調査の検証境界
 
 提出57225898の自己Public 0.957は、今回のユーザーの明示回答による確認です。当方の認証済みGet/List再照会、未丸め値、現在順位・残枠・GPU quotaの再確認は行っていません。[確認記録](../experiments/user-confirmed-public957-research-20261016.json)。10/15のraw証拠と未返却記録は変更していません。

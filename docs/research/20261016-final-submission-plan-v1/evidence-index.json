@@ -1,0 +1,425 @@
+{
+  "schema_version": "final_submission_plan_evidence_index_v1",
+  "date_jst": "2026-10-16",
+  "ledger_review": {
+    "reviewed_prior_rows": 280,
+    "ledger_rows_after": 281,
+    "old_bytes": 167757,
+    "old_sha256": "09a30b4f3fc4206d2c7b09a59281e9894f609d77451e659cf4a1f5dd3ccac2a5",
+    "prefix_preserved": true
+  },
+  "warning": "The public_lb column also contains incumbent scores on progress rows; these are not all separate scored experiments.",
+  "selected_scored_or_user_confirmed_records": [
+    {
+      "experiment_id": "p001-public-model-reproduction",
+      "status": "scored",
+      "public_lb": "0.924",
+      "decision": "primary scored baseline; retain successful submission and fixed source"
+    },
+    {
+      "experiment_id": "r001-bn-rank50-fold0",
+      "status": "scored",
+      "public_lb": "0.749",
+      "decision": "retain as secondary scored baseline; prioritize public pretrained candidate over additional ResNet18 training"
+    },
+    {
+      "experiment_id": "p002-dinosaur-v32-current-pins-v1",
+      "status": "scored",
+      "public_lb": "0.937",
+      "decision": "new primary scored baseline; retain immutable successful source; compare p003 once"
+    },
+    {
+      "experiment_id": "p005-own-public0950-scored-20261008",
+      "status": "COMPLETE_own_score_API_verified",
+      "public_lb": "0.950",
+      "decision": "Adopt own950 incumbent; preserve937 and priorpending history"
+    },
+    {
+      "experiment_id": "p006-own-public0950-scored-not-promoted-20261008",
+      "status": "COMPLETE_own0950_no_displayed_gain_not_promoted",
+      "public_lb": "0.950",
+      "decision": "Keep p005k16;no displayed improvement and greater compute"
+    },
+    {
+      "experiment_id": "p007-own-public0950-scored-not-promoted-20261008",
+      "status": "COMPLETE_own0950_no_displayed_gain_not_promoted",
+      "public_lb": "0.950",
+      "decision": "Keep original p005 k16 plain; no displayed gain and extra computation"
+    },
+    {
+      "experiment_id": "p008-own-public0950-scored-not-promoted-20261008",
+      "status": "COMPLETE_own0950_no_displayed_gain_not_promoted",
+      "public_lb": "0.950",
+      "decision": "Keep cheaper p005 baseline"
+    },
+    {
+      "experiment_id": "p009-fov160-official-Public0948-rejected-20261008",
+      "status": "COMPLETE_self_scored",
+      "public_lb": "0.948",
+      "decision": "NONADOPTED; own950 p005/FOV140 retained"
+    },
+    {
+      "experiment_id": "p011-actual-ownPublic0950-20261009",
+      "status": "COMPLETE_NOT_ADOPTED",
+      "public_lb": "0.950",
+      "decision": "No gain at returned precision; preserve original P005 own950"
+    },
+    {
+      "experiment_id": "p012-own-public951-scored-20261009",
+      "status": "OFFICIAL_COMPLETE_SCORED",
+      "public_lb": "0.951",
+      "decision": "New ownbest951; preserve p005950 control; goal955_then_strictAbove960"
+    },
+    {
+      "experiment_id": "p013-own-public950-scored-20261009",
+      "status": "OFFICIAL_COMPLETE_SCORED_NOT_ADOPTED",
+      "public_lb": "0.950",
+      "decision": "Preserve ownP012951; select P012 as nativeTwofold fixed20 parent"
+    },
+    {
+      "experiment_id": "p020-official-public954-three-candidate-comparison-20261012",
+      "status": "OFFICIAL_P020_COMPLETE_OWNPUBLIC954_P022_P021_UNRETURNED",
+      "public_lb": "0.954",
+      "decision": "Await_P022_P021_then_fixed12_f006_BCE_vs_secondaryfixed10AUC_then_nextCandidate"
+    },
+    {
+      "experiment_id": "p026-official-public953-Root-adoption-decision-20261013",
+      "status": "ROOT_ACCEPTED_P026_COMPLETE_PUBLIC953_NOT_ADOPTED_CONTROL954",
+      "public_lb": "0.953",
+      "decision": "Do_not_adopt_P026_continue_native_from_own_S6control954"
+    },
+    {
+      "experiment_id": "V22R-official-Public956-Root-adoption-20261014",
+      "status": "own_official_Public956_Root_adoption",
+      "public_lb": "0.956",
+      "decision": "Adopt own0.956; next S6+F006 bothfold fixed20 formal control then V22+samepair fixed20; pending P028/P024 no resubmit"
+    },
+    {
+      "experiment_id": "user-confirmed-P029M-Public957-research-20261016",
+      "status": "USER_CONFIRMED_PUBLIC957_RESEARCH_COMPLETE",
+      "public_lb": "0.957",
+      "decision": "Target>=0.960_unmet;P030_then_R7OFF_parallel_F006_hidden_and_rank_contract"
+    }
+  ],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "available": true,
+      "role": "current_entrypoint",
+      "bytes": 2002,
+      "sha256": "6d4b488b7e5bfec558518ce1f450fb1f43607a93c3421ec46e45965ffcec2ce8"
+    },
+    {
+      "path": "README.md",
+      "available": true,
+      "role": "current_entrypoint",
+      "bytes": 89380,
+      "sha256": "553b8f5441c4495e38d0a4a2af861d29d9b9a9cedf4a86baa75133edee886657"
+    },
+    {
+      "path": "PROJECT.md",
+      "available": true,
+      "role": "current_entrypoint",
+      "bytes": 266151,
+      "sha256": "c0821afba9045b424b2cf88042f9495ce9d7c148219ad1304689ea86a77f354c"
+    },
+    {
+      "path": "docs/validation.md",
+      "available": true,
+      "role": "current_entrypoint",
+      "bytes": 336662,
+      "sha256": "6c401bfb7ddeab48a1d804bdbe69f8f2913204fea1586f734d343395fb6a7587"
+    },
+    {
+      "path": "docs/goal-096.md",
+      "available": true,
+      "role": "current_entrypoint",
+      "bytes": 21024,
+      "sha256": "31f2b2ae134d92f7233023c2f23119c6317d0ac9bec2ef681335b5564dabee0d"
+    },
+    {
+      "path": "docs/roadmap.md",
+      "available": true,
+      "role": "current_entrypoint",
+      "bytes": 27962,
+      "sha256": "55e3398c0e04137ab4b581a80768ba14d05b9a72ea8e48cfb8e7d75d8fa61519"
+    },
+    {
+      "path": "docs/competition.md",
+      "available": true,
+      "role": "current_entrypoint",
+      "bytes": 6825,
+      "sha256": "5bb1eb1d0f6379baaf3bcbdadadbae73b94532af1116b98781fff64d27abf0b0"
+    },
+    {
+      "path": "experiments/ledger.csv",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 168357,
+      "sha256": "faeea4002a150f900f96bfb88234a551dc108247f9febaf272bc37ed1896f08f"
+    },
+    {
+      "path": "docs/research/20261016-goal096-review-v1/report.md",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 19977,
+      "sha256": "c663661fe9d4f3fdfc062a9df828d7eabcb34f15df4b5b4ff9f35edfff829694"
+    },
+    {
+      "path": "docs/research/20261016-goal096-review-v1/public-metadata-observations.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 2060,
+      "sha256": "4adef3db280ee5b42d1f2acf6bc87655c2597614a3cc85eb598583d46404bdbe"
+    },
+    {
+      "path": "docs/research/20261016-goal096-review-v1/verification.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 2308,
+      "sha256": "8dec4edf6adf9fa74fa7507d0f106fc10c2cabc7e73d05c972bd3bb92f1af7b1"
+    },
+    {
+      "path": "experiments/user-confirmed-public957-research-20261016.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 2245,
+      "sha256": "d814849efc1804329454b74cc4edda526a5d77b3cc61ab48faf7f681c4c9ecaf"
+    },
+    {
+      "path": "experiments/p005-scored-review-20261008.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 2844,
+      "sha256": "74a32741f229612be6161404dd55b3f8e1fac2910c473b75b4d8d1a9b4fc54b2"
+    },
+    {
+      "path": "experiments/p006-scored-review-20261008.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 1588,
+      "sha256": "9cddd5c207071747de83f132d8d42dd690465b44e1052a6301015e778a55caa3"
+    },
+    {
+      "path": "experiments/p007-scored-review-20261008.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 1591,
+      "sha256": "2701a433e778be0680327e6d0ee062018bd6729be33d80327e19cb6570eff14e"
+    },
+    {
+      "path": "experiments/p008-scored-review-20261008.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 1163,
+      "sha256": "0643620c4241112b09f57c17e6bbd6e5fa93cf840aa8ec7ff2cec3c8e28d3b44"
+    },
+    {
+      "path": "experiments/p009-scored-review-20261008.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 1571,
+      "sha256": "2a44a1c1450b6ed350b162f6f2966e239fd66b4aac92544ab7a825aa9f9ecd53"
+    },
+    {
+      "path": "experiments/p011-scored-review-20261009.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 1431,
+      "sha256": "33c0f62a13e144509d91604d943835b960b6bb003cf6ea8d121568a25ac32eda"
+    },
+    {
+      "path": "experiments/p013-own950-p012-native-parent-decision-20261009.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 3446,
+      "sha256": "a8553b770d032eecf69054bceccf944b35602c8c0466f135a9d44588e5f7bbd1"
+    },
+    {
+      "path": "experiments/p020-official-public954-three-candidate-comparison-20261012.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 3992,
+      "sha256": "d2401c33591cb80135b1b73a3698e2c7a5f469c93178dcb8b3dadf053c87378b"
+    },
+    {
+      "path": "experiments/p026-official-public953-Root-adoption-decision-20261013.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 9845,
+      "sha256": "237cab6327d8dc7a72f2792478f19cec1866d8cd7b068804dab4208607f6a59b"
+    },
+    {
+      "path": "experiments/V22R-official-Public956-Root-adoption-20261014.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 10243,
+      "sha256": "f3a75135152edeee12fb9aff6ee9141f648ae3788277cc82a61c8ddcc8b2c578"
+    },
+    {
+      "path": "experiments/authenticated-progress-refresh-20261015.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 11229,
+      "sha256": "e34fa9c9ff861898b66d7490452eb6aa6cbe7b626b50df268bf000549e45551f"
+    },
+    {
+      "path": "experiments/goal-state-audit-20261014.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 14113,
+      "sha256": "d9a52e06104800feedc0c8d98cf37ae09a16429a24efd09c30083b9283c17b9a"
+    },
+    {
+      "path": "experiments/f006-completed-twofold-selection-comparison-20261014.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 14830,
+      "sha256": "f9926885cbede350e5498a41ea252120c477fe01a3aebb7fe4e67b7c62dfa509"
+    },
+    {
+      "path": "experiments/f008-twofold-completed-weak-comparison-20261014.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 7718,
+      "sha256": "a06c021405b64e5853a0f28262e133d3a483d4858675ab671ca1257bb39bd7db"
+    },
+    {
+      "path": "experiments/p029-public957-static-audit-20261015.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 21781,
+      "sha256": "b92bba94faa39fe5f727f5ff8315894ad6eb081c02123bcb698a8588c503e663"
+    },
+    {
+      "path": "experiments/p031-r7-off-static-hash-contract-Root-20261015.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 6321,
+      "sha256": "97203bc9a70e97954379b0bf1df7a904541e376f6dc131512c02e832b5a255fe"
+    },
+    {
+      "path": "experiments/public957-final-checkpoint-20261015-1934.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 1930,
+      "sha256": "c561e40cf62adaff83a04d5a459631f7a2bb46a3ac9d3092668af3b0de9ec735"
+    },
+    {
+      "path": "scripts/preview_fixed20_candidate.py",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 9505,
+      "sha256": "502f5f909cc33b68f5fa06302c849824342fe7232e1719d953a2b87c07c46800"
+    },
+    {
+      "path": "src/rsna_knee/native_training_fast16.py",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 38975,
+      "sha256": "2ffa41e2fc650b61c5ccf2d5cf7c49974aff001025e604764238f6711efd44ef"
+    },
+    {
+      "path": "src/rsna_knee/feature_imaging.py",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 17356,
+      "sha256": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546"
+    },
+    {
+      "path": "configs/experiments/f006-dinov2-native-last2-late-cosine.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 1445,
+      "sha256": "cc39cf18ea74e0b94eb7593a5223bf2dae0f7fbef059fd94e31dd1e1683ee21a"
+    },
+    {
+      "path": "artifacts/research/20261014-f006-vs-f007-direct-weak-complementarity-v1/summary.json",
+      "available": true,
+      "role": "historical_primary_or_prior_research_reference",
+      "bytes": 23672,
+      "sha256": "9540ea59e28c979cea24141d0be2625700eab401e97c3e3ab26ba415294bfc64"
+    }
+  ],
+  "historical_user_analyses": [
+    {
+      "path": "docs/research/user-analysis-20261002.txt",
+      "sha256": "32d2d89ba817eec7c1d31a72785115dae9422180d97b24160a5b7ec4c70ba046",
+      "bytes": 34335,
+      "scope_this_turn": "opening_summary_review_only",
+      "opening_nonempty_lines": [
+        "## 結論：参加する価値はあります。ただし、「ノートPCを操作端末にして、KaggleのGPUを使う」方針をおすすめします",
+        "今回確認した現在開催中の対象は、**2026年の「RSNA Knee Abnormality Detection」**です。膝のMRIから12種類の異常を予測するコンペで、公式に **「Awards Points & Medals」**と表示されており、コンペティションの銅メダル以上を獲得できる対象です。RSNAは毎年テーマが変わるため、2025年の脳動脈瘤検出コンペとは区別する必要があります。:chatgpt-content-reference{index=\"0\"}",
+        "調査したうえでの私の判断は、次のとおりです。"
+      ]
+    },
+    {
+      "path": "docs/research/user-analysis-20261004.txt",
+      "sha256": "ee844f85bf1281db9d8e3a1a1f0261249ea887414c472dfd97a60e927fcb9f97",
+      "bytes": 32959,
+      "scope_this_turn": "opening_summary_review_only",
+      "opening_nonempty_lines": [
+        "リポジトリの実験記録と実装を確認したところ、現状は、**「学習・評価・提出準備の土台はできているが、自作モデルの識別性能はまだ弱く、Epoch数を増やす前に切り分けるべき問題がある」**という状態です。",
+        "私なら、今の設定をそのまま50 Epochへ延長するのではなく、評価の記録を整える → 事前学習済みモデルで比較する → ラベルと画像の見せ方を改善する → 有望なモデルだけ複数fold・アンサンブルへ進める、という順番にします。",
+        "以下では、リポジトリから確認できた結果、コードから分かった問題候補、公開手法から得られる知見、具体的な実験計画を分けて説明します。なお、今回はコードと保存された実験集計を確認したもので、Git管理対象外のMRIキャッシュ・重み・個別予測CSVを取得して再学習・再評価したわけではありません。"
+      ]
+    },
+    {
+      "path": "docs/research/user-analysis-p003-improvement-20261006.txt",
+      "sha256": "4c741c7d044593b87818fed8063bb34336d5785fc45c94c898ae53a5d410dd30",
+      "bytes": 34676,
+      "scope_this_turn": "opening_summary_review_only",
+      "opening_nonempty_lines": [
+        "結論",
+        "今回のp003は、予測を作る中核については「公開0.943レシピの再現」です。独自に学習した新モデルではありません。一方、入力の固定、モデルの欠落検知、予測の再計算による検査、実行時間の診断などは、あなたのリポジトリ側で追加した改善です。 「完全に何も考えずコピーしただけ」でも、「独自の機械学習手法で0.943まで伸ばした」でもなく、この二つを分けるのが正確です。生成スクリプトでも、公開コードの保持と training_performed: False が明記されています。",
+        "そして、0.953を目指す次の主軸は、公開Notebookをさらに足し続けることよりも、現在の公開アンサンブルを保持しながら、教師ラベルと画像表現を改善した「自分で学習する補完モデル」を一つ作ることだと判断します。ただし、最初に解決すべき評価上の問題があります。現在の公開モデル群は、独立した検証だと思って使いたくなるGold58を、すでにモデル選択に利用しています。この問題を無視すると、ローカルでは改善しても提出では改善しない実験を繰り返しやすくなります。"
+      ]
+    },
+    {
+      "path": "docs/research/user-analysis-post0937-1-20261005.txt",
+      "sha256": "c9783549a1e1dad271eefe5597e222acdeb11cf309bc6996a7acbea866732977",
+      "bytes": 27032,
+      "scope_this_turn": "opening_summary_review_only",
+      "opening_nonempty_lines": [
+        "今回の0.937は、「自作ResNet18の学習をひたすら延長するより、実績のある公開学習済みモデルを主力にする」という方針を支持する結果です。ただし、ここから0.945、0.955を目指す段階では、公開Notebookをさらに何本も足すだけではなく、現在の構成と重複している部分を減らし、まだ拾えていない情報を補うことが重要になります。",
+        "今回の調査から、私の推奨は次のように整理できます。",
+        "0.945に向けては、0.937の成功版を固定したうえで、Public 0.943と表示される公開構成を一つだけ比較し、同時に推論を高速化する。"
+      ]
+    },
+    {
+      "path": "docs/research/user-analysis-post0937-2-20261005.txt",
+      "sha256": "3d8edb0f610fea0688ff2b0848211c973d4332cbae23a24b2337012aaba0c3b7",
+      "bytes": 28386,
+      "scope_this_turn": "opening_summary_review_only",
+      "opening_nonempty_lines": [
+        "追加調査で、前回の提案をさらに具体化できる点と、優先順位を修正した方がよい点が見つかりました。",
+        "特に重要なのは、次の三点です。",
+        "第一に、0.943候補は、現在のp002にモデルを少し追加しただけではありません。追加CoAtNet群、予測を平均する順序、所見別の配分、高速化の実装が異なります。"
+      ]
+    },
+    {
+      "path": "docs/research/user-analysis-public-model-20261005.txt",
+      "sha256": "6e11c3a947a0420b6203fb6ad0736cf4194865f2431a37cbde9c47eb5e7581fc",
+      "bytes": 24392,
+      "scope_this_turn": "opening_summary_review_only",
+      "opening_nonempty_lines": [
+        "今回は、開発の主軸を切り替えるべきだと判断します。あなたの「0.924を出した公開モデルを土台にして、それを改善した方が効率的ではないか」という考えは、現在のGitHubの状態と今回の0.749を踏まえると妥当です。",
+        "現在の自作モデルにも改善の余地はあります。しかし、「自作モデルが以前より良くなったこと」と「0.924を超えるための効率的な開発になっていること」は別です。 これまでの工程は前者には成果がありましたが、後者を十分に優先できていませんでした。",
+        "今回確認したのは、S-Riku-tus/pj-RSNA-Knee-Abnormality-Detection の最新コミット ea27fbd、2026年10月4日23:39 JST更新の内容です。モデル・画像処理の実装、実験結果、判断記録、公開モデルの調査記録を読みました。リポジトリ上ではまだr001のPublicが未測定なので、0.749は今回あなたが報告した新しい結果として加えて判断しています。ここで学習やKaggle提出を再実行したわけではありません。"
+      ]
+    },
+    {
+      "path": "docs/research/user-analysis-review-20261004.txt",
+      "sha256": "46d3986fec3e44831b100958d89559ce69289e5487af45515aaf8cb65d546377",
+      "bytes": 22881,
+      "scope_this_turn": "opening_summary_review_only",
+      "opening_nonempty_lines": [
+        "GitHubの最新の実装・設定・実験集計を確認したところ、前回から実際に前進しています。ただし、「5 epochで十分に試した」「これ以上学習しても伸びない」と判断できる状態ではありません。",
+        "特に今回は、BCEという損失では2 epoch目が最良なのに、コンペの採点に近いAUCは5 epoch目まで改善していることが重要です。私なら次は、評価・保存方法を整えたうえでの長めの学習と、公開されている強いモデル・前処理の再現を進めます。小さなベースラインの確認だけを続ける段階からは、そろそろ移ってよいと思います。",
+        "今回確認した対象は、S-Riku-tus/pj-RSNA-Knee-Abnormality-Detection の、**2026年10月4日13:20 JSTのコミット 05b0710**です。以下では、GitHubに保存された実験結果と、私が実装から確認した事実を分けて説明します。なお、ローカルにある元のMRI・全予測CSV・checkpointを取得してGPU学習を再実行したわけではないため、実行結果については保存された集計に基づく評価です。"
+      ]
+    }
+  ],
+  "live_web_or_authenticated_kaggle_refresh_this_turn": false,
+  "all_raw_logs_models_or_mri_independently_revalidated": false
+}

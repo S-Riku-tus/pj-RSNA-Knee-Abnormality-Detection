@@ -1,0 +1,46 @@
+{
+  "schema_version": "last_submission_planning_v1",
+  "date_jst": "2026-10-16",
+  "status": "DOCUMENTED_PLAN_ONLY_NO_FINAL_CANDIDATE_QUALIFIED",
+  "user_intent": "Previous research should be saved and consolidated considering this may be among the last submissions",
+  "baseline": {
+    "candidate": "P029M V1 fixed R6 Compact TTA ON",
+    "submission_id": "57225898",
+    "public_score": 0.957,
+    "evidence_type": "user_explicit_confirmation",
+    "fresh_own_api_refresh_performed": false
+  },
+  "target_minimum_displayed_public": 0.960,
+  "submission_budget_assumption": {
+    "planned_additional_scored_candidates": 1,
+    "strict_user_imposed_limit": false,
+    "live_remaining_allowance_known": false,
+    "ordinary_saved_runs_are_not_scored_submissions": true
+  },
+  "supersedes_default": "Mandatory scored chain P030M then R7 OFF then F006 from previous broad research plan",
+  "preparation_priority": "P029M plus existing F006 bothfold E12 CLS and retained bothfold REG at fixed20",
+  "final_candidate_selected": null,
+  "preparation_priority_is_not_proven_performance_ranking": true,
+  "alternative": "R7 only if version-bound positive evidence and execution readiness become available; no mandatory P030 scored intermediate",
+  "candidate_gates": [
+    "Recover and preserve exact successful P029M lineage",
+    "Fix candidate model identities, masks, weights and numerical aggregation",
+    "Validate full-population ranks, partial failure and FP32 semantics",
+    "Provide execution evidence addressing prior hidden failures and diverse input conditions",
+    "Measure time and memory including final aggregation and cleanup",
+    "Document weak validation scope and plausible incremental signal without claiming independent public-parent OOF"
+  ],
+  "default_if_gates_unmet": "Do not add a scored submission; preserve user-confirmed 0.957 baseline",
+  "new_training_in_default_plan": false,
+  "automatic_upload_or_submission_added": false,
+  "actions_this_turn": {
+    "new_inference_or_training": false,
+    "model_or_mri_download_or_load": false,
+    "external_upload_or_kaggle_save_or_submit": false,
+    "live_kaggle_or_web_refresh": false,
+    "new_synthetic_rank_execution": false,
+    "documentation_and_readonly_local_audit": true
+  },
+  "previous_research_report": "docs/research/20261016-goal096-review-v1/report.md",
+  "current_report": "docs/research/20261016-final-submission-plan-v1/report.md"
+}
