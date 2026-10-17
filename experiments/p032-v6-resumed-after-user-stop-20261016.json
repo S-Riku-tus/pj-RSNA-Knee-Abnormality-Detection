@@ -1,0 +1,66 @@
+{
+  "schema_version": "p032_v6_resumed_execution_v1",
+  "date_jst": "2026-10-16",
+  "user_confirmed_stop_of_both_old_jobs": true,
+  "old_diagnostic_official_status": "CANCEL_ACKNOWLEDGED",
+  "old_serving_official_status": "CANCEL_ACKNOWLEDGED",
+  "old_P032_failure_cause_now_confirmed_from_logs": true,
+  "confirmed_failure": "spawn unpickle imports common/serving_router.py:15; ModuleNotFoundError trusted_sources; lost pool results remain awaited",
+  "proof": "artifacts/research/20261016-p032-cancelled-native-log-diagnosis-v1/verification.json",
+  "earlier_P024_F006_hidden_failure_cause_confirmed": false,
+  "source_fix_validation": "artifacts/research/20261016-p032-spawn-router-fix-validation-v1/validation.json",
+  "own_best_Public": "0.957",
+  "own_best_submission": 57225898,
+  "successful_parent_preserved": true,
+  "runs": {
+    "diagnostic": {
+      "ref": "rsraki/p032d-f006192-v6-20261016-5fb4556304",
+      "kernel_id": 138998302,
+      "version": 1,
+      "source_sha256": "5fb45563041874537108882ff868c7f643269011a00a4d150f636f2bb56c2942",
+      "readback": {
+        "kernel_id": 138998302,
+        "version": 1,
+        "private": true,
+        "GPU": true,
+        "Internet": false,
+        "all_executable_cells_equal": true,
+        "docker_equal": true,
+        "datasets_equal": true,
+        "kernel_inputs_equal": true,
+        "competition_equal": true
+      },
+      "completion_not_yet_confirmed": true
+    },
+    "serving": {
+      "ref": "rsraki/p032-f00620-v6-20261016-8b3ebedb47",
+      "kernel_id": 138998378,
+      "version": 1,
+      "source_sha256": "8b3ebedb47c5b2bf4c3f67f6447743501fb043dc908b6347f2ad72d7a26c5895",
+      "readback": {
+        "kernel_id": 138998378,
+        "version": 1,
+        "private": true,
+        "GPU": true,
+        "Internet": false,
+        "all_executable_cells_equal": true,
+        "docker_equal": true,
+        "datasets_equal": true,
+        "kernel_inputs_equal": true,
+        "competition_equal": true
+      },
+      "completion_not_yet_confirmed": true
+    }
+  },
+  "post_stop_quota_seconds": {
+    "used": 23861.4739841,
+    "reserved": 0,
+    "allowed": 108000
+  },
+  "scope": {
+    "new_Save_and_Run_accepted": 2,
+    "new_formal_Submit_calls": 0,
+    "local_MRI_model_download_load_or_training": 0,
+    "Public_improvement_verified": false
+  }
+}

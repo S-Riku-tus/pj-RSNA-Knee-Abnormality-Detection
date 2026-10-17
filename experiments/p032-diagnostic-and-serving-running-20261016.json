@@ -1,0 +1,64 @@
+{
+  "schema_version": "p032_two_owned_runs_checkpoint_v1",
+  "date_jst": "2026-10-16",
+  "status": "P032_DIAGNOSTIC_AND_VISIBLE_SERVING_RUNNING_SUBMIT0",
+  "authorization": "experiments/p032-user-authorized-execution-start-20261016.json",
+  "own_baseline": {
+    "submission": 57225898,
+    "official_public": "0.957",
+    "official_status": "COMPLETE",
+    "positive_output_bytes": 247222,
+    "saved_evidence": "artifacts/research/20261016-f006-execution-v1/recovery/P029M-submission57225898-raw.json"
+  },
+  "diagnostic": {
+    "ref": "rsraki/p032d-f006192-20261016-a0130053d5",
+    "kernel_id": 138983547,
+    "saved_version": 1,
+    "source_sha256": "a1d74b2d5b982d8c65b20d92ade27cec3904f36d189082344b3f84189b0e3846",
+    "mode": "192 metadata-stratified new training-side MRI studies, no labels or Report",
+    "latest_observed_status": "RUNNING",
+    "completion_or_forward_not_yet_confirmed": true,
+    "live_stream_initialization_events": 10,
+    "live_stream_no_later_progress_event_not_proof_of_success_or_deadlock": true
+  },
+  "serving": {
+    "ref": "rsraki/p032-f00620-20261016-f217cd973c",
+    "kernel_id": 138987949,
+    "saved_version": 1,
+    "source_sha256": "549be70ac8dd6beab9c679adc641cb97ebb9da5734e847396609725eafb82f8a",
+    "source_bytes": 535001,
+    "mode": "Actual P029M parent then isolated four-model native component then fixed20 blend",
+    "SaveKernel_accepted": true,
+    "visible_result_not_yet_verified": true
+  },
+  "fixed20_contract": {
+    "parent_rerank": false,
+    "final_rerank": false,
+    "target_count": 10,
+    "parent_unchanged_targets": ["MCL", "Synovitis"],
+    "fullN_native_rank": true,
+    "FP32_separate_multiply_add": true,
+    "any_native_failure_disables_affected_entire_column": true,
+    "all_disabled_receipt_means_no_accuracy_comparison": true
+  },
+  "tests": {
+    "targeted_count": 48,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "synthetic_GPU_bit_mismatches": 0,
+    "real_F006_head_artificial_forward": true,
+    "full_encoder_or_real_checkpoint_not_exercised_locally": true,
+    "source_lint_only_v3_changes": true
+  },
+  "scope": {
+    "accepted_Save_and_Run_calls": 2,
+    "formal_Submit_calls": 0,
+    "new_training": false,
+    "local_MRI_or_model_download_or_load": false,
+    "GPU_MRI_execution_on_Kaggle_requested": true,
+    "existing_model_and_MRI_inputs_remain_on_Kaggle": true,
+    "upload_or_submit_automation_code_added": false
+  },
+  "next": "Inspect both existing runs, fix any actual error without altering baseline or duplicating Submit, validate native contribution and final CSV then manually issue one reviewed formal Submit"
+}

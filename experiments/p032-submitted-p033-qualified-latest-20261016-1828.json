@@ -1,0 +1,53 @@
+{
+  "schema_version": "p032_p033_latest_handoff_checkpoint_v1",
+  "as_of_JST": "2026-10-16 18:28",
+  "official_observation": {
+    "observation_path": "artifacts\\research\\20261016-f006-execution-v1\\formal-submit-v6-v1\\final-refresh-20261016T092802519021Z",
+    "observed_at_utc": "2026-10-16T09:28:03.687240+00:00",
+    "submission": {
+      "ref": 57262934,
+      "totalBytes": 0,
+      "date": "2026-10-16T09:11:46.977Z",
+      "description": "P032-v6 F00620: own P029M R6 TTA parent + fixed20 four-model native rank; FP32 no parent rerank; MCL/Synovitis kept; diag192 F0, visible3 F0 independent replay; ownGold0",
+      "fileName": "submission.csv",
+      "submittedBy": "rsraki",
+      "submittedByRef": "rsraki",
+      "teamName": "rsraki",
+      "url": "/submissions/57262934/57262934.raw"
+    },
+    "list_match": {
+      "ref": 57262934,
+      "totalBytes": 0,
+      "date": "2026-10-16T09:11:46.977Z",
+      "description": "P032-v6 F00620: own P029M R6 TTA parent + fixed20 four-model native rank; FP32 no parent rerank; MCL/Synovitis kept; diag192 F0, visible3 F0 independent replay; ownGold0",
+      "fileName": "submission.csv",
+      "submittedBy": "rsraki",
+      "submittedByRef": "rsraki",
+      "teamName": "rsraki",
+      "url": "/code/rsraki/p032-f00620-v6-20261016-8b3ebedb47?scriptVersionId=358950692"
+    },
+    "limits": {
+      "numToday": 1,
+      "numTotal": 30,
+      "numAllowedNow": 4
+    },
+    "formal_Submit_calls": 1,
+    "P033_Submit_calls": 0,
+    "own_best_confirmed": "0.957",
+    "target0960_verified": false
+  },
+  "P032_qualified_and_submitted": "experiments/p032-v6-formal-Submit57262934-score-unreturned-20261016.json",
+  "P033_qualified_not_submitted": "experiments/p033-visible-pass-parent-weight-vector-unsubmitted-20261016.json",
+  "target0960_achieved": false,
+  "new_best_not_claimed": true,
+  "next_action_after_official_outcome": "If P032>=.960 record target. If lower/failed, evaluate formal P033 published958 fixed-vector parent control; no duplicate P032 Submit or coefficient grid. Keep P029M957.",
+  "local_docs_updated": [
+    "PROJECT.md",
+    "docs/validation.md",
+    "docs/goal-096.md",
+    "README.md",
+    "experiments/ledger.csv"
+  ],
+  "all_private_visible_runs_terminal": true,
+  "no_pending_permission_question": true
+}

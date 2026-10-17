@@ -1,0 +1,56 @@
+{
+  "schema_version": "p032_v6_formal_submission_checkpoint_v1",
+  "date_jst": "2026-10-16",
+  "status": "FORMAL_SUBMIT57262934_ACCEPTED_OFFICIAL_SCORE_UNRETURNED",
+  "submission_id": 57262934,
+  "kernel_id": 138998378,
+  "kernel_ref": "rsraki/p032-f00620-v6-20261016-8b3ebedb47",
+  "kernel_version": 1,
+  "script_version_id": 358950692,
+  "source_sha256": "8b3ebedb47c5b2bf4c3f67f6447743501fb043dc908b6347f2ad72d7a26c5895",
+  "submission_acceptance_raw": "artifacts\\research\\20261016-f006-execution-v1\\formal-submit-v6-v1\\submit-response-raw.json",
+  "official_get_list_limits_evidence": "artifacts\\research\\20261016-f006-execution-v1\\formal-submit-v6-v1\\official-observation-20261016T091202113109Z",
+  "raw_status_field_present": false,
+  "raw_public_score_field_present": false,
+  "Public_score": null,
+  "hidden_completion_not_claimed": true,
+  "visible_qualification": {
+    "studies": 3,
+    "failures": 0,
+    "native_active_targets": 10,
+    "numeric_changed_cells": 26,
+    "rank_changed_cells": 6,
+    "all36_independent_FP32_replayed": true,
+    "parent_MCL_Synovitis_preserved": true,
+    "whole_notebook_seconds": 483.06550469099994,
+    "native_seconds": 38.20699196700002,
+    "proof": "artifacts/research/20261016-f006-execution-v1/serving-v6-independent-audit.json"
+  },
+  "engineering_diagnostic": {
+    "new_studies": 192,
+    "failures": 0,
+    "logical_fold_forward_calls": 768,
+    "native_seconds": 464.035937106,
+    "all2304_independent_FP32_replayed": true,
+    "four_model_fingerprints_and_spawn_source_verified": true,
+    "selection_uses_metadata_no_labels": true,
+    "not_accuracy_or_hidden_qualification": true,
+    "proof": "artifacts/research/20261016-p032-v6-diagnostic-independent-audit-v1/verification.json"
+  },
+  "old_P032_import_failure_now_confirmed_and_fixed": "artifacts/research/20261016-p032-cancelled-native-log-diagnosis-v1/verification.json",
+  "earlier_P024_hidden_errors_cause_still_unconfirmed": true,
+  "own_best_retained": {
+    "submission_id": 57225898,
+    "official_status": "COMPLETE",
+    "official_Public": "0.957"
+  },
+  "limits_after_submit": {
+    "numToday": 1,
+    "numTotal": 30,
+    "numAllowedNow": 4
+  },
+  "formal_Submit_calls": 1,
+  "new_training_or_local_MRI_model_download_load": 0,
+  "target0960_verified": false,
+  "next": "Poll existing57262934; no duplicate Submit; keep baseline. Prepare published author958 parent-weight-vector-only control separately; do not equate author958 to own score."
+}

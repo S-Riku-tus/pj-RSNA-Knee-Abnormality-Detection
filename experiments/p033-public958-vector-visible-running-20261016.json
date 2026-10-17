@@ -1,0 +1,62 @@
+{
+  "schema_version": "p033_public958_vector_visible_control_checkpoint_v1",
+  "date_jst": "2026-10-16",
+  "status": "PRIVATE_VISIBLE_CONTROL_RUNNING_SUBMIT0",
+  "ref": "rsraki/p033-r6-classweights-20261016-v1",
+  "kernel_id": 139000655,
+  "version": 1,
+  "source_sha256": "57284b71d271c3d4bf09595a6acade490ea911c8f7438a595724f260f3f28ccb",
+  "only_scientific_change": "Published fixed per-target Raptor blend dictionary; four targets change together",
+  "coefficient_vector": {
+    "Medial OA": 0.5,
+    "Lateral OA": 0.2,
+    "PF OA": 0.6,
+    "Synovitis": 0.8,
+    "Baker's": 0.35
+  },
+  "TTA_ON": true,
+  "A224": 0.35,
+  "same_R6_b2_V1_and_9_member_guard": true,
+  "unchanged_successful_parent7_of8_code_cells": true,
+  "F006_included": false,
+  "model_or_MRI_or_training_locally": 0,
+  "author_report": {
+    "public_score": "0.958",
+    "scored_source": 358751289,
+    "submission_id": 57253057,
+    "source_url": "https://www.kaggle.com/code/heliosli/blend-mine-in-private-lb-luck-to-all-upvoters?scriptVersionId=358751289",
+    "investigation": "artifacts/research/20261016-public958-readonly-v1/static-analysis.json",
+    "upper_bound_not_asserted": "Official score-sorted first100 public notebooks only; no private/global optimum claim"
+  },
+  "own_Public": null,
+  "actual_saved_readback": {
+    "kernel_id": 139000655,
+    "version": 1,
+    "private": true,
+    "GPU": true,
+    "Internet": false,
+    "all_executable_cells_equal": true,
+    "docker_equal": true,
+    "datasets_equal": true,
+    "kernel_inputs_equal": true,
+    "competition_equal": true
+  },
+  "tests": {
+    "new_unittest": 10,
+    "ruff_pass": true,
+    "independent_artificial36_FP32_bits_match": true,
+    "proof": "artifacts/research/20261016-p033-independent-review-v1/review.json"
+  },
+  "scope": {
+    "private_Save_and_Run_accepted": 1,
+    "formal_Submit_calls": 0,
+    "new_model_download_or_training": 0
+  },
+  "parent_successful_submission57225898_preserved": true,
+  "existing_P032_formal_submit": {
+    "id": 57262934,
+    "score_unreturned": true,
+    "no_duplicate_submit": true
+  },
+  "next": "Validate P033 actual visible output; decide formal control only after existing P032 official outcome. No coefficient grid."
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": "p033_visible_pass_published958_vector_control_v1",
+  "date_jst": "2026-10-16",
+  "status": "VISIBLE_PASS_UNSUBMITTED_AUTHOR958_OWN_UNSCORED",
+  "ref": "rsraki/p033-r6-classweights-20261016-v1",
+  "kernel_id": 139000655,
+  "kernel_version": 1,
+  "source_sha256": "57284b71d271c3d4bf09595a6acade490ea911c8f7438a595724f260f3f28ccb",
+  "official_visible_status": "COMPLETE",
+  "visible_studies": 3,
+  "failures": 0,
+  "all36_independent_FP32_bits_match": true,
+  "all_9_R6_member_SHA_and_7_inference_module_SHA_verified": true,
+  "actual_both_T4_worker_exits_zero": true,
+  "R6_TTA_ON_A224_035_unchanged": true,
+  "scientific_factor": "Published fixed W_RAPTOR_C vector only; four target coefficients change together",
+  "published_vector": {
+    "Medial OA": 0.5,
+    "Lateral OA": 0.2,
+    "PF OA": 0.6,
+    "Synovitis": 0.8,
+    "Baker's": 0.35
+  },
+  "F006_added": false,
+  "visible_blend_total_seconds": 501.2,
+  "visible_submission_sha256": "5dd9febae16c11b76450eecb92bbc67669214f71cdd6edce69ec48a02376d7b4",
+  "independent_audit": "artifacts\\research\\20261016-p033-visible-real-audit-v1\\audit.json",
+  "independent_audit_sha256": "33b35c9c0f23b34c377e45a51a9e1daa9fad0e66ac27eab5742d54c41ca7c8a5",
+  "author_Public": {
+    "score": "0.958",
+    "source": 358751289,
+    "submission": 57253057,
+    "url": "https://www.kaggle.com/code/heliosli/blend-mine-in-private-lb-luck-to-all-upvoters?scriptVersionId=358751289"
+  },
+  "own_Public": null,
+  "same_raw_arms_oldvector_vs_newvector_numeric_changes": 4,
+  "same_raw_arms_other8_target_columns_unchanged": true,
+  "historical_raw_numeric_difference_not_new_model_claim": {
+    "R6_all36_exact": true,
+    "Raptor384_224_rank_differences": 0
+  },
+  "formal_Submit_calls": 0,
+  "local_MRI_model_download_load_or_new_training": 0,
+  "own_successful_P029M_Public957_preserved": true,
+  "existing_P032_formal_submission": {
+    "id": 57262934,
+    "official_observed_at_UTC": "2026-10-16T09:25:15Z",
+    "Public_and_status_fields_still_absent": true,
+    "new_Submit_not_repeated": true
+  },
+  "next": "Wait for existing57262934 official score; preserve own957. If needed, use this already-qualified published-vector parent control before changing other factors; no coefficient grid."
+}

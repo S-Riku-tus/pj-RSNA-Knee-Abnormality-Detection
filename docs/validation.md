@@ -1,5 +1,25 @@
 # 準備内容の検証範囲
 
+**2026-10-16：v6の実診断・可視統合を独立検証し、正式提出57262934を1回受理しました。** [提出記録](../experiments/p032-v6-formal-Submit57262934-score-unreturned-20261016.json)。新192件は失敗0・768forward・464.036秒、2304値を別FP32計算で全bit一致、4モデル指紋・spawn解決先・queue終了・cleanupも照合。[診断の独立監査](../artifacts/research/20261016-p032-v6-diagnostic-independent-audit-v1/verification.json)。可視3件は483.066秒で完走し、native10列有効／失敗0、数値26セル・順位6セルの変化、MCL／Synovitis保持、親・fold/family平均・最終全36値の独立一致を確認。[可視独立監査](../artifacts/research/20261016-f006-execution-v1/serving-v6-independent-audit.json)。正式SubmitのGet/Listにはまだ状態・Publicがなく、hidden完走・hiddenでのnative寄与・精度改善は主張しません。以下は各時点の検証履歴です。
+
+P033は公開作者0.958の係数vectorだけを反映した別の親対照で、F006は加えていません。標準unittest10件・ruff・人工36値の別FP32照合・監査器の人工17拒否例を通過。実Kaggle可視3件は501.2秒・fallback0・両worker exit0で、全36最終値もbit一致しました。[実監査](../artifacts/research/20261016-p033-visible-real-audit-v1/audit.json)、[記録](../experiments/p033-visible-pass-parent-weight-vector-unsubmitted-20261016.json)。同raw3系統上では親vectorから数値4セル・順位2セルが変化し、非変更8列は同一。過去の親runとはR6全36値が一致、Raptor2本は小さな数値差があり順位差0でした。raw値の全面同一やhidden改善は主張しません。新4所見vectorを一括変更した対照であり、各所見の係数の個別因果効果ではありません。P033は正式Submit0・自己Public未測定です。
+
+## 2026-10-16継続：v6 spawn修正54件PASS、Kaggle CPU起動9.866秒PASS
+
+[最新記録](../experiments/p032-v6-ready-CPU-startup-pass-GPU-capacity-wait-20261016.json)と[修正検証](../artifacts/research/20261016-p032-spawn-router-fix-validation-v1/validation.json)を保存しました。限定54件はcontracts7・旧preview14・新fixed20 22・adapter11で、failure／error／skipすべて0、対象6ファイルのruffも成功。人工同名moduleの本物のspawnで、親キャッシュが正しくても子が別moduleを読む事象を再現し、修正後の正常終了を確認。実sealed sourceのfresh spawnもorigin・raw SHA一致／torch未importを確認しました。v5からのruntime変更は新childだけで、親・元89ソース・モデルpin・Input・数値計算は不変です。
+
+公式COMPLETEのCPU診断138990364/V1は、同じbootstrap・4本の元transport・メタデータpairを9.865827788秒で検証しました。Kaggleのfresh検索先も修正前common→修正後servingとなり、親のloaded originと一致。禁止した重いライブラリのimport試行0、モデルdeserialize／reconstruct／forward0、GPU初期化0、MRI decode0。一時モデル・ソース・メタデータの3ディレクトリを全削除し、Outputはreceipt1本でした。実保存の全コードセル・Input9・private／CPU／Internet OFF／DockerをGet照合済みです。Notebookのシリアライズ文字列は同一ではありません。
+
+この成功は推論・hidden完走・精度の資格にはしません。旧Servingの親3件は454.427秒時点で完了し、各arm失敗0／Compact worker終了0を確認しましたが、追加nativeは未確認。旧2本の最終公式状態はRUNNINGです。v5追加Save1回はGPU同時2本制限で拒否・ID発行0、再送していません。SDK／公式MCPで取消session IDを取得できず、ユーザーへ旧2本のStopを依頼。v6 sourceは作成済みですが新GPU実行・正式Submitは0、自己Public0.957を保持しています。
+
+## 2026-10-16実行再開：P032の限定テスト・実GPU人工照合・Kaggle起動
+
+自己57225898の公式rawはCOMPLETE・Public0.957・出力247222Bで、ユーザー申告を独立照会しました。新P032は[起動チェックポイント](../experiments/p032-diagnostic-and-serving-running-20261016.json)へ保存。48件はcontracts7・旧preview14・新fixed20 22・新adapter5で全成功／skip0。旧preview成功を新契約の資格へ転用せず、新moduleを別に検証しています。[限定ログ](../artifacts/research/20261016-f006-execution-v1/targeted-48-tests.log)。
+
+RTX4090の人工1300件×対象10列は独立Torch CUDA FP32とのbit不一致0。F006設定のFrozenFeatureHeadへ人工特徴を通し有限4×12出力とCSV契約を確認しました。[GPU記録](../artifacts/research/20261016-f006-execution-v1/fixed20-gpu-numeric-check.json)。実encoder・checkpoint・MRIはこのローカル検証で使用していません。P032 v3は未使用import等のlintだけを修正し、起動済み診断v2と元成功版は保持。
+
+Kaggle診断138983547/V1は実保存コード・private・Input・Docker一致をGet確認、RUNNING・live初期化10eventsを取得。forwardや192件完走はまだ未確認です。新Serving138987949/V1もSaveを1回受理しましたが、可視結果・内容SHA・native寄与・hidden・Public改善の資格はまだありません。2Save／Submit0、MRI／既存重みはKaggle内のInput参照だけで、ローカル取得や新学習は0。旧広域299件の未解決状態は保持します。
+
 ## 2026-10-16追記：最後に近い提出の総合計画の検証範囲
 
 [総合計画](research/20261016-final-submission-plan-v1/report.md)は既存台帳全280行と重要な採点・弱比較・エラーの集約JSONを照合した文書です。Public欄の進捗上の自己最高値と個別提出の値を区別し、全rawログや全モデルの独立再現とはしていません。参照先とSHAは[evidence-index.json](research/20261016-final-submission-plan-v1/evidence-index.json)、文書リンク・JSON・台帳15列と旧prefix保持の検証は[verification.json](research/20261016-final-submission-plan-v1/verification.json)に保存します。

@@ -1,5 +1,31 @@
 # RSNA Knee プロジェクトの現在地
 
+**2026-10-16 18:11 JST：P032-v6を正式提出し、提出57262934の受理を公式確認しました。** 192件診断は全成功・構造失敗0・768モデルforward、最終2304値を別FP32計算で全bit一致。提出候補の可視3件も全成功で、対象10列にnative20%が実際に寄与し、親から数値26セル／順位6セルが変化しました。親・native平均・最終の全36値を独立再計算し、MCL／Synovitis保持と正常終了を確認。新Public・hidden完走はまだ公式未返却、自己最高0.957を保持しています。[提出と検証の正本](experiments/p032-v6-formal-Submit57262934-score-unreturned-20261016.json)。公式残枠は本日1件・累計30件・追加可能4件です。以下は各時点の履歴です。
+
+採点待ちの間に、[作者Public 0.958の採点版](https://www.kaggle.com/code/heliosli/blend-mine-in-private-lb-luck-to-all-upvoters?scriptVersionId=358751289)を追加確認しました。R6やTTAを変えず、Synovitis／Lateral OA／PF OA／Baker’sのRaptor係数をまとめて変更した版です。この公開済み固定vectorだけを自己P029Mへ反映したP033（kernel139000655/V1）は可視3件・失敗0で完走し、全36値を独立FP32再計算で一致確認。R6の9ファイルSHA、埋込7モジュール、両GPU worker終了も確認しました。[P033の記録](experiments/p033-visible-pass-parent-weight-vector-unsubmitted-20261016.json)。作者0.958と自己スコアは区別し、P033は**未提出**です。
+
+18:28 JSTの公式Get/Listでも、57262934の状態・Publicは未返却です。正式提出は本日1件・追加可能4件。次はこの既存提出の公式結果を確認して判断します。0.960以上ならその達成を記録し、未達なら新たな係数探索より、この資格確認済みP033の親対照を優先できます。hiddenでnativeが無効化された可能性はPublic平均だけでは判定できません。現時点で、新たな自己精度改善や0.960達成は主張しません。新学習・ローカルMRI／モデル取得は行っていません。
+
+## 2026-10-16継続：spawn衝突を修正、Kaggle CPU起動確認に成功、GPU枠の解放待ち
+
+自己最高は公式確認済みの**Public 0.957（提出57225898）**を保持しています。目標0.960は未達で、今回の正式Submitはまだ0です。[現在の実行チェックポイント](experiments/p032-v6-ready-CPU-startup-pass-GPU-capacity-wait-20261016.json)を正本とします。
+
+新P032の子プロセスで、`trusted_imports`後の検索順により、親が保持する`serving/serving_router.py`と別の`common/serving_router.py`をspawn子が読み込む不具合を発見しました。子のタスク復元時の終了が結果待ちの長期化につながり得ます。正本ディレクトリを優先し、親のキャッシュに頼らず新規解決先とSHAを確認するv6へ修正。人工例の実spawnで修正前後を再現し、元実ソースのfresh spawnも確認、限定54テスト・ruffを通過しました。親の科学コード・4モデル・元89ソース・FP32集約と固定20%は保持しています。旧RUNNINGジョブの実トレースは未取得なので、停止原因そのものの確定とは区別します。
+
+GPUなしの非公開`p032-cpu-startup-20261016-735352c148` V1／kernel138990364は公式COMPLETE。元bootstrap→4モデルbytesの検証・展開→メタデータbind→検索順の検証を**9.866秒**で完了し、Kaggleでも修正前の誤った解決先と修正後の正本を確認しました。モデルの復元・forward・GPU初期化・MRIデコードは0で、一時モデル・ソース・メタデータを削除し、Outputは小さなreceiptだけです。これは起動確認であり、F006予測や精度の検証ではありません。
+
+旧診断`p032d-f006192-20261016-a0130053d5`と旧候補`p032-f00620-20261016-f217cd973c`は最終照会時RUNNING。後者は親の可視3件PASS・fallback0まで確認できましたが、追加nativeと最終混合は未確認です。観測版v5の追加Saveは`Maximum batch GPU session count of 2 reached.`で拒否され、kernel IDは発行されていません。取消APIに必要なsession IDは公式SDKから取得できず、公式MCPの取得も権限拒否のため、ユーザーへ**この旧2本だけのStop／Cancel**を依頼しました。成功済みP029Mには触れません。
+
+v6の192件診断・提出候補、Input固定、実行payloadは準備済みです。枠が空いたら修正版で実推論を行い、失敗mask・native実効寄与・最終CSVを確認して正式提出と採点確認へ進みます。v6の新Saveや新Public改善はまだありません。過去の「原則1候補」は計画上の仮定で、今回のユーザーによる実行・提出の明示許可を制限するものではありません。
+
+## 2026-10-16実行再開：自己0.957を公式確認、F00620%の診断と可視候補を起動
+
+ユーザーの「提出して精度を上げる」という明示依頼で、調査のみから実行へ移りました。公式APIで提出57225898のCOMPLETE・Public **0.957**・出力247222B・エラー欄なしを確認。成功版を変更せず、新しいP032を準備しました。[再開の記録](experiments/p032-diagnostic-and-serving-running-20261016.json)。
+
+新統合は親を再順位化せず`0.8*s+0.2*rank_N(native)`をFP32で計算し、MCL／Synovitisを保持。列単位fallbackとnative成功数・実効重み・親からの差・全無効を記録します。48限定テストと人工GPU数値照合を通過し、実F006集約headの人工forwardも成功しました。実encoder・checkpointのローカル読込ではありません。
+
+192件の新構造層別MRI診断は非公開`p032d-f006192-20261016-a0130053d5` V1／kernel138983547で実行中。中断後に既存RUNNINGを読み取りで確認し、重複起動していません。別の新非公開`p032-f00620-20261016-f217cd973c` V1／kernel138987949で、元P029M→独立native→最終CSVの可視3件を保存実行しました。どちらもInternet OFF・T4×2・既存Input9。完走・新native寄与・hidden精度はまだ未確認、正式Submitは0です。ローカルモデル／MRI取得・実学習は0。以下は各時点の履歴です。
+
 ## 2026-10-16追記：最後に近い提出へ向けて一候補へ絞る計画
 
 ユーザーの「これが最後くらいの提出になる」という意向を受け、[総合計画](docs/research/20261016-final-submission-plan-v1/report.md)と[判断の前提](docs/research/20261016-final-submission-plan-v1/decision.json)を新しい文書として保存しました。既存調査は保持。自己0.957（Submit57225898・ユーザー確認）を保護し、追加正式提出は原則1候補という計画上の仮定へ絞ります。実際の残枠や厳密なユーザー指定上限は未確認です。

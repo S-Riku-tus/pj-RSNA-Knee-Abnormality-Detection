@@ -1,5 +1,11 @@
 # RSNA Knee Abnormality Detection
 
+**2026-10-16 18:11 JST：修正版P032-v6を正式提出し、提出57262934の受理を確認しました。** 192件診断・可視3件とも失敗0、独立FP32再計算とnative実寄与の検証を通過。採点結果は未返却で、自己最高0.957を保持しています。[提出記録](experiments/p032-v6-formal-Submit57262934-score-unreturned-20261016.json)、[現在地](PROJECT.md)、[検証範囲](docs/validation.md)を参照してください。以下は各時点の履歴です。
+
+追加で確認した作者0.958の固定係数だけのP033も可視検証を完了しましたが、こちらは未提出です。[資格と比較範囲](experiments/p033-visible-pass-parent-weight-vector-unsubmitted-20261016.json)。次の判断は既存57262934の採点結果に基づいて行います。
+
+**2026-10-16継続：自己Public 0.957を保持し、F006追加候補のspawn不具合を修正しました。** 修正版v6は54テスト・ruff成功。KaggleのCPU起動確認も9.866秒で完了しましたが、GPUの旧2実行が枠を占有しているため、修正版の実推論と正式提出はまだです。旧2本のStop／Cancelを依頼済みで、成功済み提出57225898は変更していません。[現在の状態と次の実行](PROJECT.md)、[検証範囲](docs/validation.md)、[実行記録](experiments/p032-v6-ready-CPU-startup-pass-GPU-capacity-wait-20261016.json)を参照してください。以下は各時点の履歴です。
+
 **2026-10-16追記：次が最後に近い提出という意向を反映し、[最終候補を絞る総合計画](docs/research/20261016-final-submission-plan-v1/report.md)を保存しました。** 自己0.957を保護し、追加正式提出は原則1候補という計画上の仮定で準備します。F006固定20%の運用・rank契約を優先確認し、条件が整わなければ0.957を保持。前回の複数候補の連続採点は標準経路から外します。これは実際の残枠の観測でも新たな提出実績でもありません。
 
 **2026-10-16：提出57225898（P029M）の自己Public 0.957をユーザーが確認済み。次の目標は0.960以上です。** 当方の今回の公式API再照会ではなく、[ユーザー確認記録](experiments/user-confirmed-public957-research-20261016.json)として更新しました。[調査レポート](docs/research/20261016-goal096-review-v1/report.md)はR6 TTA比較→R7 bundle比較と、並行するF006 hidden失敗・rank統合の診断を推奨。今回は調査・文書更新のみで、モデル／MRI取得・学習・Kaggle保存・提出は実行していません。以下は各時点の履歴です。

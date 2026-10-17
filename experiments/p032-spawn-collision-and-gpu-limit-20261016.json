@@ -1,0 +1,52 @@
+{
+  "schema_version": "p032_continuation_observations_v1",
+  "date_jst": "2026-10-16",
+  "status": "OLD_GPU_RUNS_RUNNING_STATIC_SPAWN_DEFECT_REPRODUCED_FIX_PREPARATION",
+  "own_best_public": "0.957",
+  "serving": {
+    "kernel_id": 138987949,
+    "version": 1,
+    "parent_visible_pass": true,
+    "parent_completion_log_seconds": 454.426906955,
+    "parent_rows": 3,
+    "parent_fallback_studies": 0,
+    "log_evidence": "artifacts\\research\\20261016-f006-execution-v1\\live-logs\\p032-f00620-20261016-f217cd973c\\20261016T074929266133Z\\events.json",
+    "log_sha256": "490599c65426cc2591dd6ef8b6f189c508727ec1418fbcdf907a89752c64bfce",
+    "full_candidate_complete": false,
+    "native_contribution_verified": false
+  },
+  "diagnostic": {
+    "kernel_id": 138983547,
+    "version": 1,
+    "complete": false,
+    "last_status": "RUNNING",
+    "no_progress_not_proof_of_completion": true
+  },
+  "observed_v5_attempt": {
+    "Save_calls": 1,
+    "kernel_ID_issued": false,
+    "raw_response": "artifacts\\research\\20261016-f006-execution-v1\\diagnostic-observed-v5-launch-v1\\save-response-raw.json",
+    "error": "Maximum batch GPU session count of 2 reached.",
+    "second_Save_not_retried": true
+  },
+  "engineering_defect": {
+    "type": "spawn_child_module_name_collision",
+    "parent_cached_module": "serving/serving_router.py",
+    "fresh_spawn_resolution_after_trusted_imports": "common/serving_router.py",
+    "static_artificial_spawn_reproduction": true,
+    "actual_live_traceback_not_obtained_yet": true,
+    "fix": "Restore pinned serving directory first; verify fresh PathFinder origin and source SHA",
+    "models_or_numerical_recipe_changed": false
+  },
+  "cancellation": {
+    "calls": 0,
+    "kernel_ID_not_guessed_as_session_ID": true,
+    "SDK_and_MCP_require_session_ID": true,
+    "MCP_get_permission_denied": true,
+    "user_async_Stop_requested_for_two_new_jobs": true,
+    "P029M_preserved": true
+  },
+  "formal_Submit_calls": 0,
+  "target0960_achieved": false,
+  "next": "CPU startup probe; resume V6 diagnostics and serving after a GPU slot is released; validate actual contribution and final CSV then manually submit."
+}

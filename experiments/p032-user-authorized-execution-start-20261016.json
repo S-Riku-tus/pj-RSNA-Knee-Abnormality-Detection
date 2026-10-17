@@ -1,0 +1,46 @@
+{
+  "schema_version": "p032_authorized_execution_start_v1",
+  "date_jst": "2026-10-16",
+  "status": "RECOVERED_SELF_BASELINE_AND_SOURCES_IMPLEMENTING_FIXED20",
+  "user_authorization": {
+    "text": "これらの情報を踏まえて何をするかを確認し、適切に進めてください。なんでもして良いので、とにかく提出して精度を上げてください。",
+    "interpretation": "Prepare, verify and execute an improvement candidate and formally submit to own Kaggle account; prior one-candidate count was a planning assumption, not a strict limit",
+    "preserve_successful_baseline": true,
+    "no_automatic_upload_or_submission_code_added": true
+  },
+  "own_official_baseline": {
+    "submission_id": 57225898,
+    "status": "COMPLETE",
+    "public_score_text": "0.957",
+    "error_field_present": false,
+    "total_bytes": 247222,
+    "evidence": "artifacts/research/20261016-f006-execution-v1/recovery/P029M-submission57225898-raw.json",
+    "user_report_independently_refreshed": true
+  },
+  "fresh_allowance": {"numTotal": 29, "numAllowedNow": 5},
+  "gpu_quota_raw_seconds": {
+    "total": 108000,
+    "used": 12667.264,
+    "reserved": 0,
+    "remaining": 95332.736,
+    "refresh_jst": "2026-10-17 09:00"
+  },
+  "source_recovery_receipts": "artifacts/research/20261016-f006-execution-v1/recovery/receipts.json",
+  "recovered": ["P029M V1", "fixed R6 stage V1", "F006 bothfold Serving V1", "F006 bothfold native64 V1"],
+  "recovered_source_byte_identity": {
+    "native64_matches_prior_exact_sha": true,
+    "P029M_source_container_bytes_differ_prior": true,
+    "P029M_scientific_cell_identity_pending": true
+  },
+  "candidate": "P032: preserve P029M R6/TTAON and add existing F006 CLS0/1 E12 plus retained REG0/1 at fixed20",
+  "next": [
+    "Confirm successful parent scientific source cells and frozen Inputs",
+    "Implement and independently test parent-preserving FP32 full-N blend with failure/contribution receipts",
+    "Build sequential P029M then native runtime with resource release and bounded subprocess",
+    "Run representative Kaggle MRI diagnostic and visible submission contract",
+    "Formally submit one reviewed fixed candidate and read official outcome"
+  ],
+  "qualifications_not_yet_issued": ["new MRI diagnostic", "new saved candidate", "new hidden completion", "improved Public score"],
+  "submission_performed_this_turn": false,
+  "new_training_started": false
+}

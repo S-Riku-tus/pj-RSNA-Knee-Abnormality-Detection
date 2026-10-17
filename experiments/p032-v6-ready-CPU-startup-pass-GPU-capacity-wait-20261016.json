@@ -1,0 +1,118 @@
+{
+  "schema_version": "p032_v6_ready_after_actual_CPU_startup_v1",
+  "date_jst": "2026-10-16",
+  "status": "FIX_VERIFIED_CPU_GPU_CAPACITY_WAIT_SUBMIT0",
+  "authorization": "experiments/p032-user-authorized-execution-start-20261016.json",
+  "own_best": {
+    "source": "official API recheck",
+    "submission_id": 57225898,
+    "status": "COMPLETE",
+    "public_score": "0.957",
+    "preserved": true
+  },
+  "problem": {
+    "defect": "Spawn imports common/serving_router.py after trusted_imports alters sys.path although parent cache holds serving/serving_router.py",
+    "failure_mechanism": "Pool worker can die during task unpickle before error callback; bounded pipeline waits for missing result",
+    "static_real_spawn_reproduced": true,
+    "old_live_job_traceback_obtained": false,
+    "live_failure_cause_not_claimed_confirmed": true
+  },
+  "fix": {
+    "source": "scripts/p032_native_child.py",
+    "change": "Restore sealed serving directory precedence and verify cache-independent PathFinder origin and raw SHA before execution",
+    "models_or_arithmetic_changed": false,
+    "all_89_native_source_members_unchanged": true,
+    "v6_serving": {
+      "source": "artifacts/kaggle/p032-p029m-f006-fixed20-20261016-v6/source.ipynb",
+      "bytes": 540490,
+      "sha256": "8b3ebedb47c5b2bf4c3f67f6447743501fb043dc908b6347f2ad72d7a26c5895"
+    },
+    "v6_diagnostic192": {
+      "source": "artifacts/kaggle/p032-f006-diagnostic192-20261016-v6/source.ipynb",
+      "bytes": 373349,
+      "sha256": "5fb45563041874537108882ff868c7f643269011a00a4d150f636f2bb56c2942"
+    }
+  },
+  "tests": {
+    "modules": [
+      "test_contracts",
+      "test_preview_fixed20_candidate",
+      "test_fixed20_blend",
+      "test_p032_adapter"
+    ],
+    "tests": 54,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "successful": true,
+    "log_sha256": "3f3463a6569b845c891e0d74116b877897ee7b0b250d368f90473eb3cc7b773d"
+  },
+  "ruff_exit_code": 0,
+  "actual_Kaggle_CPU_probe": {
+    "ref": "rsraki/p032-cpu-startup-20261016-735352c148",
+    "kernel_id": 138990364,
+    "version": 1,
+    "official_status": "COMPLETE",
+    "receipt_complete": true,
+    "elapsed_seconds": 9.865827788000047,
+    "receipt": "artifacts\\research\\20261016-f006-execution-v1\\observations\\p032-cpu-startup-20261016-735352c148\\20261016T080056880458Z\\files\\P032_CPU_STARTUP\\receipt.json",
+    "receipt_sha256": "a6381b601625922b35037a95173e0c71840af921638bd81835f1ff139d62fc34",
+    "exact_bootstrap_transport_metadata_pair": true,
+    "wrong_router_before": "/kaggle/working/P018_SOURCE/common/serving_router.py",
+    "correct_router_after": "/kaggle/working/P018_SOURCE/serving/serving_router.py",
+    "fresh_lookup_matches_loaded": true,
+    "model_deserialization_reconstruction_forward_calls": 0,
+    "GPU_initialization_calls": 0,
+    "MRI_decode_calls": 0,
+    "temporary_model_source_metadata_removed": true,
+    "final_Output_file_count": 1,
+    "input_and_saved_code_readback": "all executable code cells, same 9 Inputs, private, CPU and InternetOFF verified; notebook serialization differs"
+  },
+  "old_jobs_to_stop": [
+    {
+      "ref": "rsraki/p032d-f006192-20261016-a0130053d5",
+      "version": 1,
+      "kernel_id": 138983547,
+      "last_official_status": "RUNNING"
+    },
+    {
+      "ref": "rsraki/p032-f00620-20261016-f217cd973c",
+      "version": 1,
+      "kernel_id": 138987949,
+      "last_official_status": "RUNNING",
+      "parent_visible3_PASS_and_fallback0": true,
+      "whole_candidate_not_qualified": true
+    }
+  ],
+  "capacity": {
+    "new_v5_Save_attempts": 1,
+    "kernel_ID_issued": false,
+    "raw_error": "Maximum batch GPU session count of 2 reached.",
+    "repeated_when_full": false,
+    "cancel_API_needs_session_ID": true,
+    "session_ID_not_available_from_authenticated_official_SDK": true,
+    "official_MCP_get_permission": "kernels.get denied",
+    "guessed_cancel_IDs_or_delete_calls": 0,
+    "user_async_Stop_requested_for_only_the_two_new_jobs": true
+  },
+  "scope": {
+    "successful_new_Save_and_Run_count_in_current_continuation": 1,
+    "successful_run_type": "CPU startup only",
+    "rejected_GPU_Save_attempts": 1,
+    "new_v6_remote_Save_calls": 0,
+    "formal_Submit_calls": 0,
+    "local_model_MRI_download_load_or_new_training": 0,
+    "target0960_verified": false
+  },
+  "next": [
+    "Stop or wait for completion of old two owned GPU runs; never modify successful P029M",
+    "Save_and_Run one reviewed V6 diagnostic and V6 serving when GPU capacity is available",
+    "Inspect current actual failure masks, native contribution and FP32 final CSV contract",
+    "Submit the reviewed qualified candidate manually through official API and poll official score"
+  ],
+  "evidence": [
+    "experiments/p032-spawn-collision-and-gpu-limit-20261016.json",
+    "artifacts/research/20261016-p032-spawn-router-fix-validation-v1/validation.json",
+    "artifacts/research/20261016-p032-cpu-startup-preparation-v1/validation.json"
+  ]
+}
