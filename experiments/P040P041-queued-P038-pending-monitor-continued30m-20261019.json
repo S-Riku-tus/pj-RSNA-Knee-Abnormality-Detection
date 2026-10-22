@@ -1,0 +1,162 @@
+{
+  "schema_version": "P040P041_queued_P038_unreturned_readonly_monitor_continued30m_v1",
+  "at_UTC": "2026-10-19T10:48:42.938436+00:00",
+  "interval_starting_baseline_UTC": "2026-10-19T10:18:49.289430+00:00",
+  "first_new_poll_UTC": "2026-10-19T10:21:14.318920+00:00",
+  "last_UTC": "2026-10-19T10:48:30.434421+00:00",
+  "observations": 14,
+  "total_observations_since_start": 24,
+  "state_changes": 0,
+  "all_HTTP200": true,
+  "latest_states": {
+    "P040": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P041": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P038": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_score_present": false,
+      "Public": null,
+      "error": null,
+      "totalBytes": 0
+    }
+  },
+  "quota_single_requested_observation": {
+    "at_UTC": "2026-10-19T10:23:17.524385+00:00",
+    "states": {
+      "P040": {
+        "raw_status_present": false,
+        "raw_status": null,
+        "raw_failure": null,
+        "typed_status": "QUEUED",
+        "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+      },
+      "P041": {
+        "raw_status_present": false,
+        "raw_status": null,
+        "raw_failure": null,
+        "typed_status": "QUEUED",
+        "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+      },
+      "P038": {
+        "raw_status_present": false,
+        "raw_status": null,
+        "raw_score_present": false,
+        "Public": null,
+        "error": null,
+        "totalBytes": 0
+      }
+    },
+    "quota": {
+      "quotaRefreshTime": "2026-10-24T00:00:00Z",
+      "gpuQuota": {
+        "timeUsed": "10626.483s",
+        "timeReserved": "0s",
+        "totalTimeAllowed": "108000s",
+        "minimumTimeAllowed": "108000s",
+        "hasEverRun": true
+      },
+      "tpuQuota": {
+        "timeUsed": "0s",
+        "timeReserved": "0s",
+        "totalTimeAllowed": "72000s",
+        "minimumTimeAllowed": "72000s"
+      }
+    },
+    "new_Save_Submit_upload_GPU": 0,
+    "quota_read_calls": 1
+  },
+  "raw_QUEUED_omission_not_failure": true,
+  "missing_Public_not_zero": true,
+  "next30minute_interval_authorized_by_root": true,
+  "activity": {
+    "Save": 0,
+    "Submit": 0,
+    "upload": 0,
+    "GPU_start": 0,
+    "quota_reads": 1
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T102113348186Z/summary.json",
+      "bytes": 1301,
+      "sha256": "41d6e396bcc22e7940a4541a2162eda6caa0bd5eb67d5fcdf6abfa83fbe60496"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T102316346881Z/summary.json",
+      "bytes": 1301,
+      "sha256": "b9694ec922a9485c9e8880f590c541b422c7c0f3ba03aaeec2978b9784ea67f0"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T102534142893Z/summary.json",
+      "bytes": 1301,
+      "sha256": "c3b5c13f669068963cc6ae2dc3628fd8786980fc09d8a24324f247df8436a99f"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T102739008806Z/summary.json",
+      "bytes": 1301,
+      "sha256": "3057ebafa2f6507ef78d307f73f228e6fb851b51cb7f1f6804a86e8a75bedcdc"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T102943628805Z/summary.json",
+      "bytes": 1301,
+      "sha256": "dbbae69c64695d60391de78ed2776de0f15bac3b736fb7e32635c6657847b55c"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T103146109828Z/summary.json",
+      "bytes": 1301,
+      "sha256": "89f63f353348fd67028f5e66606d98e11fae0afa8686d51c8e65034418172835"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T103351198597Z/summary.json",
+      "bytes": 1301,
+      "sha256": "dbe5a90c71eee053dbd878b987083d0d091bebfef43ae7ab90c8af1ede7b5a7b"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T103601510994Z/summary.json",
+      "bytes": 1301,
+      "sha256": "3be6c7fc9c90e8cfbd79581d1fc17f64b512012f22cd8febfbf25c2198af2976"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T103802911259Z/summary.json",
+      "bytes": 1301,
+      "sha256": "667efa37ba917f51eb21f5e4ac80e08383c603c9112b57f5b02fd79c6da6db89"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T104005110072Z/summary.json",
+      "bytes": 1301,
+      "sha256": "d7344eb051abd83f2add3d4625c8d53cadc59790be4228a7ec944d46fc004434"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T104207745710Z/summary.json",
+      "bytes": 1301,
+      "sha256": "5b6bd7971601576066b75f95edda4ad24bd9f4281bd206be628abaab2b02080c"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T104412720252Z/summary.json",
+      "bytes": 1301,
+      "sha256": "78886a06f7137ac433ea88473d8284ab9492e682cad1d2a2881aabbeff92e003"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T104614990161Z/summary.json",
+      "bytes": 1301,
+      "sha256": "76e002ff1236858222be5e9dcb37ed515c234b15bf61832031aeb7dc33e1285d"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T104829397552Z/summary.json",
+      "bytes": 1301,
+      "sha256": "9f6b3faa4b2d05189c8e8646d8248f12762c40b88940d6a0748ff74b4942d077"
+    }
+  ]
+}

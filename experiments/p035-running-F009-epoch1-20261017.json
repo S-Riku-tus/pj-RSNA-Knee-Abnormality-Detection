@@ -1,0 +1,64 @@
+{
+  "at_utc": "2026-10-17T02:30:59.733774+00:00",
+  "status": "P035_VISIBLE_AND192_RUNNING_F009_EPOCH1_COMPLETE",
+  "own_best": {
+    "Public": "0.957",
+    "submission": 57225898,
+    "preserved": true
+  },
+  "goal": "own Public>=0.960 unachieved",
+  "accepted_formal_unscored": {
+    "P033": 57290868,
+    "P034": 57291440,
+    "P036": 57291580
+  },
+  "last_official_poll": "artifacts/research/20261017-official-submission-observer-v1/poll-20261017T022418326973Z",
+  "P035": {
+    "source_serving_sha256": "0b67f4d7b8131b5855421e456b108c89b6a407e8a680441fd6f1b11d555ab9ea",
+    "source_diag_sha256": "bfc2fa11b476011959f54c77c35294ceb03c473c6cb9f162f41aa25ac07e823f",
+    "serving": {
+      "ref": "rsraki/p035-isolated20-20261017-0b67f4d7b8",
+      "kernel": 139138353,
+      "version": 1,
+      "official_status": "RUNNING"
+    },
+    "diagnostic": {
+      "ref": "rsraki/p035d-isolated192-20261017-bfc2fa11b4",
+      "kernel": 139138405,
+      "version": 1,
+      "official_status": "RUNNING"
+    },
+    "one_factor": "owned perUID CPU executor and positively bound operational failure recovery vsP034",
+    "preserved": "parent, 89 native sources, 4 model fingerprints, reader, fixed alpha20/success-subset, Inputs9/Docker/T4",
+    "independent_qualification": "artifacts/research/20261017-p035-runtime-independent-review-v2/qualification.json",
+    "CPU_artificial_pack_cases": 6,
+    "CPU_executor_Linux_tests_PASS": 14,
+    "canonical_negative_cases_rejected": 21,
+    "root_Save_readback": "launch-v2 both all cells/settings/Inputs pass",
+    "actual_MRI_GPU_coverage_180s_deadline": "not yet verified",
+    "new_Save_calls": 2,
+    "formal_Submit_calls": 0
+  },
+  "F009": {
+    "run": "artifacts\\runs\\f009-gamma-late-cosine-fold0-20261017-v1",
+    "status": "running",
+    "history_epochs": 1,
+    "epoch1_optimizer_steps": 212,
+    "epoch1_amp_skipped_steps": 0,
+    "epoch1_seconds": 1721.206968399987,
+    "epoch1_train_bce": 0.4143691025979315,
+    "epoch1_weak_bce": 0.3784222997658661,
+    "epoch1_weak_auc12": 0.7331076176750914,
+    "epoch1_gamma_draws": 3386,
+    "epoch1_checkpoint_sha256": "c7414e36d006463170aa6bebdd57342f97a2e2fb2372d00445ee7989c22e6e54",
+    "epoch1_predictions_sha256": "dfe36f663a251dd2e3c4649fbcba1a364e7e37ffc9386a713543a4a9b63e7685",
+    "snapshot": "artifacts\\research\\20261017-p035-execution-v1\\F009-epoch1-observation\\run-snapshot.json",
+    "snapshot_sha256": "904479549f55e6d99e12352af943c1dcd684347314fde4d0885c1c400a748eff",
+    "unified_session": 12150,
+    "actual_python_pid": 22392,
+    "latest_policy": "experiments/f009-evaluation-policy-v2-prescore-20261017.json",
+    "decision": "complete fixedE12 before adoption or conditional fold1; no metric-based intervention"
+  },
+  "public_frontier": "artifacts/research/20261017-public-frontier-refresh-v2/summary.json",
+  "score_improvement_claimed": false
+}

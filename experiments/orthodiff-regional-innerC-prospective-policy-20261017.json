@@ -1,0 +1,344 @@
+{
+  "schema_version": "orthodiff_regional1024_inner4_common_C_outer2_policy_v1",
+  "declared_at_UTC": "2026-10-17T05:49:20.422561+00:00",
+  "status": "DESIGN_ONLY_AFTER_REGIONAL_C1_OUTER01_RESULTS_BEFORE_ANY_NEW_INNER_C_FIT_OR_OUTER2_METRIC",
+  "scope": "One new algorithmic factor: train-only inner4 selection of a single common L2 inverse-regularization C on frozen regional1024 features. Existing C1 recipes remain HOLD.",
+  "original_fixed_C1_regional_policy": {
+    "path": "artifacts/research/20261017-orthodiff-regional-head-preparation-v1/prospective-policy.json",
+    "bytes": 15358,
+    "sha256": "c6796180a208c1b56f7aeee28154d537081e34d7927874978cf4d255c4590ff7"
+  },
+  "observed_adaptive_history": {
+    "0": {
+      "run": {
+        "path": "artifacts/runs/orthodiff-regional-head-fold0-fixed20-20261017-v1/run.json",
+        "bytes": 9040,
+        "sha256": "3696dd139493bbdb67dc51e936a264f037cacd7d167c4b250fb7a452d883c382"
+      },
+      "evaluation": {
+        "path": "artifacts/runs/orthodiff-regional-head-fold0-fixed20-20261017-v1/evaluation.json",
+        "bytes": 23607,
+        "sha256": "da9b91bb5ec8d4e423369d571e60b5fb8dfa5b3cc3a3c619cf434afcc84091b5"
+      },
+      "numeric_model": {
+        "path": "artifacts/runs/orthodiff-regional-head-fold0-fixed20-20261017-v1/numeric-model.json",
+        "bytes": 452629,
+        "sha256": "53745189403c130c35a9b9fb8f57cd1b818bd8daf8893b1197b9dc4114b138cc"
+      },
+      "independent_audit": {
+        "path": "artifacts/research/20261017-orthodiff-regional-head0-actual-independent-v1/verification.json",
+        "bytes": 14918,
+        "sha256": "56adfab4c69b69c3ef83432fd9d3f0ca11624960dac373050c55474452ed5d14"
+      },
+      "fixed10_control_auc": 0.8831284034612052,
+      "fixed10_candidate_auc": 0.8857501851353456,
+      "delta": 0.002621781674140422,
+      "engineering_qualified": true
+    },
+    "1": {
+      "run": {
+        "path": "artifacts/runs/orthodiff-regional-head-fold1-fixed20-20261017-v1/run.json",
+        "bytes": 10146,
+        "sha256": "ebe20d81c276fe69ab813cb692195fa7222acd7bace334f1a0059436fd7345ec"
+      },
+      "evaluation": {
+        "path": "artifacts/runs/orthodiff-regional-head-fold1-fixed20-20261017-v1/evaluation.json",
+        "bytes": 23666,
+        "sha256": "66f2f877461cf4fe00e8f7b54df299eb52d7b972699f559830f1750337d5a4e8"
+      },
+      "numeric_model": {
+        "path": "artifacts/runs/orthodiff-regional-head-fold1-fixed20-20261017-v1/numeric-model.json",
+        "bytes": 454155,
+        "sha256": "e3361862a9a0f2c72d0f6d8a33a7e39ffbb768df2743da63d749357156a62c32"
+      },
+      "independent_audit": {
+        "path": "artifacts/research/20261017-orthodiff-regional-head1-actual-independent-v1/verification.json",
+        "bytes": 16701,
+        "sha256": "892634e737f44f34b21dbaf5061b4059987bf88d8d9f1f621164c1b4b8a8b96b"
+      },
+      "fixed10_control_auc": 0.882916297126442,
+      "fixed10_candidate_auc": 0.8805753271819589,
+      "delta": -0.0023409699444830734,
+      "engineering_qualified": true
+    }
+  },
+  "old_C1_joint_screen": false,
+  "previous_global256_and_fluid256_results_also_informed_hypothesis": true,
+  "old_outer01_results_not_used_in_new_C_objective_or_new_primary_gate": true,
+  "outer2_is_not_pristine_never_used_data": "Older outer0/1 fits included fold2 weak training labels, and hypothesis/representation choices adapt to earlier experiments. This stage has not evaluated outer2 as a holdout; do not claim an unbiased whole-project nested-CV estimate or independent patients.",
+  "feature_bundle": {
+    "path": "artifacts/research/20261017-orthodiff-regional-actual-v1/qualified-feature-bundle.json",
+    "bytes": 3056,
+    "sha256": "d892f0f94a6b98a172c6644564e8769ad8395b3a2223093313b95062123340d5"
+  },
+  "feature_contract": {
+    "dimension": 1024,
+    "success": 3063,
+    "failure": 1144,
+    "source_sha256": "52842d703bcf05c762a6bf44a2c520fbdd47589239f553cc5aaabbaa7220024e",
+    "FD_availability_mixed": false,
+    "pooling_preprocess_noise_contrast_UID_groups_folds_unchanged": true,
+    "raw_features_read_in_this_preparation": false
+  },
+  "metadata_split": {
+    "path": "artifacts/research/20261017-orthodiff-regional-inner4-C-prospective-v1/metadata-split.json",
+    "bytes": 3497,
+    "sha256": "58132a6a00b96798859694100836ee0a2ba2a34ed0ad067198437ec2bb7a26e5"
+  },
+  "original_weak_file_pin_reference_only": {
+    "bytes": 747826,
+    "sha256": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a"
+  },
+  "raw_weak_or_Gold_file_opened_in_this_preparation": false,
+  "target_boundary": {
+    "future_training_view": "Verify original file/cohort hashes, parse metadata UID/fold/group/source for every row, and skip fold2 before any target-cell access, target projection, number conversion, label validation or target retention. Return weak targets only for exactly3319 outertrain UIDs; only2409 feature-success rows can fit.",
+    "shared_CSV_physical_bytes": "Whole-file hashing and CSV syntax parsing can process bytes containing outer2 targets. No claim that these bytes are physically unread. The forbidden operation is logical access/projection/conversion/storage/use of heldout target cells.",
+    "outer2_view": "Only888 metadata UID/group/fold/source records plus independently qualified features/failure mask. No target columns or support counts returned, saved, fitted or scored until the separate controlled release stage.",
+    "old_load_weak_inputs_forbidden": "H.load_weak_inputs and existing regional loaders project/validate targets for all4207 rows, so they must not be used for this new training boundary.",
+    "Gold_or_Report": "Never use Gold label files/columns, Report text, Public score or leaderboard for C selection or this gate. Gold exclusions are inherited from the pinned metadata audit; no Gold target file read is needed."
+  },
+  "seed": 20261002,
+  "environment": {
+    "python": "3.9.18",
+    "numpy": "1.22.3",
+    "scipy": "1.7.3",
+    "scikit-learn": "1.6.1",
+    "CPU_threads": 1,
+    "new_packages_or_installation": false
+  },
+  "targets_in_contract_order": [
+    "ACL",
+    "MCL",
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Lateral OA",
+    "PF OA",
+    "Effusion",
+    "Synovitis",
+    "Baker's",
+    "Contusion",
+    "Fracture"
+  ],
+  "selected_fixed10": [
+    "ACL",
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Lateral OA",
+    "PF OA",
+    "Effusion",
+    "Baker's",
+    "Contusion",
+    "Fracture"
+  ],
+  "head_constants": {
+    "solver": "lbfgs",
+    "penalty": "l2",
+    "fit_intercept": true,
+    "class_weight": null,
+    "max_iter": 2000,
+    "tol": 0.0001,
+    "random_state": 20261002,
+    "warm_start": false,
+    "missing_labels": "skip per-target missing labels; only observed0/1, never fill0",
+    "standardization": "One float64 StandardScaler per inner train partition, fit on its successful training features only (population variance, constant columns scale1), shared by its12 heads. Never include inner-validation or outer2 features in fitting the scaler.",
+    "shared_C_across_12_heads": true
+  },
+  "selection": {
+    "C_grid_in_declared_order": [
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "inner_heldout_original_folds": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "group_assignments": "Reuse unchanged original folds; supplied/report groups cannot cross train/validation. Do not reshuffle, make new folds or split a multi-study group.",
+    "objective": "For each C, mean of the4 innerfold macro fixed10 standalone head AUCs; equivalently equal mean of all40 finite AUCs. Use successful inner-validation rows with target-observed0/1 only, same UID/missing mask for every C. No native baseline, rankmix, pooled crossfold AUC, BCE or auxiliary target contributes to selection.",
+    "score_precision": "Compute standalone AUC from float64 numeric-model probabilities using the pinned H metric/rank algorithm, no score rounding or FP32 rankmix in the selection objective. Deployment FP32 rankmix remains unchanged.",
+    "preflight_support": "Before any C fit, require two observed classes in every fixed10 target's successful inner-train and successful inner-validation subset for each innerfold. If any of40 comparisons is undefined, HOLD the entire recipe; do not omit/replace targets or folds.",
+    "C_ineligibility": "If any fixed10 inner head for a C has ConvergenceWarning, other fit warning, nonfinite parameters/probabilities or fails numeric JSON/NumPy/sklearn FP32 parity, mark that entire C ineligible. Do not alter max_iter/tol, retry, warm-start or add another C.",
+    "auxiliary_targets": "MCL/Synovitis use the same C whenever supported but never influence C score. Insufficient classes/nonconvergence stays explicit unsupported with null coefficients/NaN predictions; never fill0 or replace labels. They remain baseline-only at rankmix.",
+    "all_C_ineligible": "HOLD, no model refit, no replacement grid or alternative objective.",
+    "tie_rule": "Let smax be maximum eligible unrounded score. Among Cs with smax-score <=1e-12 choose the smallest numeric C (strongest L2 regularization). No statistical significance or outer result enters the tie.",
+    "C1_wins": "Keep winner C1 without an additional retry; record that the selected numerical regularization equals the old C1 value. This does not reverse the old outer01 HOLD or prove shrinkage improved anything.",
+    "maximum_fits": "4 Cs x4 innerfolds x12 heads =192 inner fits, plus at most12 heads in ONE selected-C outertrain refit. Auxiliary unsupported targets may reduce count. No repeated seeds or second search."
+  },
+  "one_model_and_prediction_seal": {
+    "refit": "Exactly one12-head numeric model at selected common C on all2409 successful outertrain rows (original folds0/1/3/4), train-only scaler. No refit for losing Cs, no alternative C1 outer2 comparator, no per-target C and no model ensemble.",
+    "refit_failure": "If any fixed10 head is unqualified or numerical export parity fails, HOLD. Do not fall back to the second-ranked C or change target masks/hyperparameters.",
+    "outer2_predictions": "Generate and seal raw float64 probabilities and their FP32 values for exactly654 successful outer2 UIDs, plus full888 UID order/failure234 metadata; missing feature rows have no head vector, never a zero vector. Do not attach target columns or compute outer2 AUC yet.",
+    "seal_fields": [
+      "policy_SHA256",
+      "producer_source_SHA256",
+      "original_cohort_SHA256",
+      "feature_bundle_SHA256",
+      "training_only_label_view_SHA256",
+      "environment",
+      "selection_table_SHA256",
+      "chosen_C",
+      "numeric_model_SHA256",
+      "outer2_metadata_SHA256",
+      "outer2_prediction_SHA256"
+    ],
+    "future_test_model": "Only this single sealed selected-C outertrain model is eligible for later transport consideration. Training on all4207, a second model, an ensemble or a new representation requires a separately recorded prospective decision; none is authorized by this plan.",
+    "existing_adapters": "Old256/fold0 adapter and existing FD/regional fold0/1 adapter do not qualify this new outer2 producer/C metadata. Future transport needs its own source/qualification binding."
+  },
+  "outer2_control_and_gate": {
+    "current_F006_fold2_E12_control_exists": false,
+    "required_control": "New independent F006 fold2 fixedepoch12 control for exactly888 UID set, pinned source/config/checkpoint/prediction hashes and engineering audit. Never substitute trained-on-fold2 F006 fold0/1 predictions, bestBCE/maxAUC checkpoint or their ensemble.",
+    "control_preparation": {
+      "path": "artifacts/research/20261017-f006-fold2-implementation-v1/verification.json",
+      "bytes": 3734,
+      "sha256": "6e4ca5c47a139fd59741bfe4a379ae8947544db6732be836ba7aac5a9c2f9612"
+    },
+    "release_order": "First freeze selected-C model and outer2 predictions without targets. Wait for qualified F006 fold2 E12 control. Root separately authorizes outer2 target-view release after checking prediction/control seals. Then evaluate this ONE candidate ONCE; no target-dependent changes after release.",
+    "primary": "Unchanged H rank_blend/evaluate math: baseline s0=FP32 average_rank(F006 raw)/888 for full outer2, assert baseline/raw masked AUC equality. Supported fixed10 successful head q=FP32 average_rank(FP32 headprob)/654; mix FP32(.8*s0)+FP32(.2*q) with separate products then FP32sum. Preserve baseline bits for failed features, MCL/Synovitis and unsupported/degenerate head. Primary is mean fixed10 masked AUC delta over ALL888 outer2 rows.",
+    "proposed_gate_frozen_here": "Engineering-qualified input/model/control, all fixed10 refit heads qualified, and full888 fixed10 AUC delta>0 permits root to CONSIDER one Public candidate. delta<=0 or any unqualified primary AUC means HOLD, no coefficient/C/target/region/retry search on the same outer2 result. Positive does not authorize upload or guarantee Public gain.",
+    "secondary_report_only": "All12 and per-target AUC, success-only paired raw/rank baseline equality and head/blend AUC, coverage/domain/label support, BCE, paired supplied-group bootstrap1000 seed20261012 and95%CI. CI/BCE never choose C, weights or pass/fail.",
+    "outer01": "No new refits/re-evaluation on outer0/1 for this recipe; historical results remain adaptive context only, not an extra pass/fail screen."
+  },
+  "implementation_design": {
+    "new_namespace_only": true,
+    "unchanged_H_functions": [
+      "predict_numeric",
+      "average_rank_fp32",
+      "rank_blend",
+      "metric",
+      "paired_group_bootstrap",
+      "evaluate"
+    ],
+    "fit_numeric_C1_literal": "Old H.fit_numeric hardcodes C1. Implement a new isolated producer with a reviewed clone/parameterized fit_numeric_C; apart from validated C argument and new provenance, assert original fit/scaler/solver/numeric-export function AST equivalence. Do not edit H or monkeypatch old fit/LogisticRegression.",
+    "new_files_later": "Separate inner-C producer/CLI, training-only label-view constructor, selection/seal artifact schema, outer2-release evaluator and narrowly scoped CPU synthetic QA. Exact names/hash freeze after root design review; nothing implemented here.",
+    "required_CPU_QA_later": "Artificial group/outer2 target sentinel verifies target projection exclusion; inner scaler leakage guard; grid/objective/common-C/tie/ineligible paths; numeric model JSON/FP32 parity; label-missing and UID alignment. No real weak fit until root instruction.",
+    "no_queue_autolaunch_API": true
+  },
+  "immutable_before_pins": {
+    "src/rsna_knee/orthodiff_weak_head.py": {
+      "path": "src/rsna_knee/orthodiff_weak_head.py",
+      "bytes": 27829,
+      "sha256": "e1149f8e88eeba0f32418e8ee4986cd41ef5aae208a31142cd907689958d78e7"
+    },
+    "src/rsna_knee/orthodiff_regional_features.py": {
+      "path": "src/rsna_knee/orthodiff_regional_features.py",
+      "bytes": 12728,
+      "sha256": "1363055c2d9493fd9018b8d9c0f7f0f1da52dba6277a30bbc9c865e12add855d"
+    },
+    "src/rsna_knee/orthodiff_numpy_head.py": {
+      "path": "src/rsna_knee/orthodiff_numpy_head.py",
+      "bytes": 6603,
+      "sha256": "7be4c09ac4672239fb9b608ead76a60261e670e84b36ea9971a5b30a3215d7d3"
+    },
+    "src/rsna_knee/orthodiff_candidate_numpy.py": {
+      "path": "src/rsna_knee/orthodiff_candidate_numpy.py",
+      "bytes": 14475,
+      "sha256": "26b9b75a6cc9f1c8ef7465585a0edd96ae54673daf67c5e5addf171811210ac3"
+    },
+    "src/rsna_knee/native_training_fast16.py": {
+      "path": "src/rsna_knee/native_training_fast16.py",
+      "bytes": 39698,
+      "sha256": "9f5c3b490374201f72cc73ebf11a26f8a8163945387d4d493e7a04c08e729d57"
+    },
+    "src/rsna_knee/finetune_model.py": {
+      "path": "src/rsna_knee/finetune_model.py",
+      "bytes": 9512,
+      "sha256": "c43bcedf1d97b713528b4157a0a9c8867741b785d58c5be084cd7072c2b2c624"
+    },
+    "scripts/train_native_dinov2_fast16.py": {
+      "path": "scripts/train_native_dinov2_fast16.py",
+      "bytes": 15333,
+      "sha256": "3e005de950c67aef7b8813f633755ff49ad39d13578df55f15d09b0b48dd3674"
+    },
+    "src/rsna_knee/f006_fold2_training.py": {
+      "path": "src/rsna_knee/f006_fold2_training.py",
+      "bytes": 39183,
+      "sha256": "3cead055b1a06c46b6e0b774fcee681ae0f84f9f55ecb13df2fae2b65adeaabf"
+    },
+    "src/rsna_knee/f006_fold2_model.py": {
+      "path": "src/rsna_knee/f006_fold2_model.py",
+      "bytes": 6109,
+      "sha256": "6befcaa880e13581ef776fc52e3d47d0d4f6d4776e73ee67e2ed8e25ab70193f"
+    },
+    "scripts/train_f006_fold2_fast16.py": {
+      "path": "scripts/train_f006_fold2_fast16.py",
+      "bytes": 14835,
+      "sha256": "00af5d90efc18259d4a1ad30c79b33af57acf3b4ea8e2190ab106473defbf7d0"
+    },
+    "scripts/fit_orthodiffusion_regional_head.py": {
+      "path": "scripts/fit_orthodiffusion_regional_head.py",
+      "bytes": 18967,
+      "sha256": "8982a65b7d2f4fe0c19196c1cbae8632a427513433a5de40fd2bd4e23f7066cd"
+    },
+    "scripts/fit_orthodiffusion_fluid_composite_head.py": {
+      "path": "scripts/fit_orthodiffusion_fluid_composite_head.py",
+      "bytes": 18690,
+      "sha256": "e1947983134687a52d1be7c338b48900276365c7b7bf8f2327bb0a43db0ef99a"
+    },
+    "artifacts/research/20261017-orthodiff-fullweak-preparation-v1/weak-head-prospective-policy-v2.json": {
+      "path": "artifacts/research/20261017-orthodiff-fullweak-preparation-v1/weak-head-prospective-policy-v2.json",
+      "bytes": 12476,
+      "sha256": "2b9704b70ab4197129e87db5e77fd08fd5a39c3c37ef950eac12a51cf0162b21"
+    },
+    "artifacts/research/20261017-orthodiff-regional-head-preparation-v1/prospective-policy.json": {
+      "path": "artifacts/research/20261017-orthodiff-regional-head-preparation-v1/prospective-policy.json",
+      "bytes": 15358,
+      "sha256": "c6796180a208c1b56f7aeee28154d537081e34d7927874978cf4d255c4590ff7"
+    },
+    "artifacts/research/20261017-orthodiff-fluid-composite-head-preparation-v1/prospective-policy.json": {
+      "path": "artifacts/research/20261017-orthodiff-fluid-composite-head-preparation-v1/prospective-policy.json",
+      "bytes": 13564,
+      "sha256": "105bda1d86b677925356249d913a69abd9c03d4c950c86fc96589e8a79787abe"
+    },
+    "artifacts/runs/orthodiff-regional-head-fold0-fixed20-20261017-v1/run.json": {
+      "path": "artifacts/runs/orthodiff-regional-head-fold0-fixed20-20261017-v1/run.json",
+      "bytes": 9040,
+      "sha256": "3696dd139493bbdb67dc51e936a264f037cacd7d167c4b250fb7a452d883c382"
+    },
+    "artifacts/runs/orthodiff-regional-head-fold0-fixed20-20261017-v1/evaluation.json": {
+      "path": "artifacts/runs/orthodiff-regional-head-fold0-fixed20-20261017-v1/evaluation.json",
+      "bytes": 23607,
+      "sha256": "da9b91bb5ec8d4e423369d571e60b5fb8dfa5b3cc3a3c619cf434afcc84091b5"
+    },
+    "artifacts/runs/orthodiff-regional-head-fold0-fixed20-20261017-v1/numeric-model.json": {
+      "path": "artifacts/runs/orthodiff-regional-head-fold0-fixed20-20261017-v1/numeric-model.json",
+      "bytes": 452629,
+      "sha256": "53745189403c130c35a9b9fb8f57cd1b818bd8daf8893b1197b9dc4114b138cc"
+    },
+    "artifacts/runs/orthodiff-regional-head-fold1-fixed20-20261017-v1/run.json": {
+      "path": "artifacts/runs/orthodiff-regional-head-fold1-fixed20-20261017-v1/run.json",
+      "bytes": 10146,
+      "sha256": "ebe20d81c276fe69ab813cb692195fa7222acd7bace334f1a0059436fd7345ec"
+    },
+    "artifacts/runs/orthodiff-regional-head-fold1-fixed20-20261017-v1/evaluation.json": {
+      "path": "artifacts/runs/orthodiff-regional-head-fold1-fixed20-20261017-v1/evaluation.json",
+      "bytes": 23666,
+      "sha256": "66f2f877461cf4fe00e8f7b54df299eb52d7b972699f559830f1750337d5a4e8"
+    },
+    "artifacts/runs/orthodiff-regional-head-fold1-fixed20-20261017-v1/numeric-model.json": {
+      "path": "artifacts/runs/orthodiff-regional-head-fold1-fixed20-20261017-v1/numeric-model.json",
+      "bytes": 454155,
+      "sha256": "e3361862a9a0f2c72d0f6d8a33a7e39ffbb768df2743da63d749357156a62c32"
+    }
+  },
+  "limitations": [
+    "C is inverse L2 strength; smaller C may reduce capacity but does not lower the fixed20 rankmix weight. Once ranked, compressed probability scale alone does not reduce contribution.",
+    "Train-validation gaps support an overfitting hypothesis, not proof that C selection fixes the much weaker standalone representation or its complementarity to F006.",
+    "Fixed regional1024 uses the previously selected RSNA adapter; author orientation/SAP equivalence and causal failure reason are not established.",
+    "Only observed0/1 weak labels, nonrandom75% feature coverage, supplied/report group independence only; Gold, patient independence, Public accuracy and0.960 remain unqualified.",
+    "This bounded inner grid is planned model selection on training data, not a retune of the failed old outer01 C1 recipe. Hypothesis adaptation to old outcomes is disclosed."
+  ],
+  "activity_this_declaration": {
+    "plan_and_metadata_only": true,
+    "new_real_or_artificial_head_fit": 0,
+    "new_outer2_AUC_or_label_support_computation": 0,
+    "raw_weak_target_cells_read": 0,
+    "raw_regional_features_read": 0,
+    "MRI_Gold_Report_Torch_GPU_network_model_load_Save_Submit": 0,
+    "old_source_policy_model_config_or_running_process_mutation": 0
+  }
+}

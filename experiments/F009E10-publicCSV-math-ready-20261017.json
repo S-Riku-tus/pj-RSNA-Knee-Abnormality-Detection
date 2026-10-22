@@ -1,0 +1,156 @@
+{
+  "schema_version": "F009E10_and_innerC_parent_preserving_CSV_math_preparation_milestone_v1",
+  "at_UTC": "2026-10-17T06:50:05.281832+00:00",
+  "own_confirmed_Public_best": 0.957,
+  "target_Public": 0.96,
+  "target_achieved": false,
+  "previous_milestone": {
+    "path": "experiments/F009E9-guards-ready-innerC-Kaggle-numeric-PASS-20261017.json",
+    "bytes": 19243,
+    "sha256": "89a2584b214a69e2c9742b18410b6ced58a8cbb88a4b680bc69d024cceca748a"
+  },
+  "previous_goal_turn_classification": "progress: actual sealed-model Kaggle CPU384 numerical confirmation and fixed12 tool preparation",
+  "status": "F009E10_LIVE_CSV_MATH_CPU_PASS_ACTUAL_INFERENCE_AND_ACCURACY_PENDING",
+  "F009": {
+    "same_run": "artifacts/runs/f009-gamma-late-cosine-fold0-20261017-v1",
+    "status": "running",
+    "completed_epochs": 10,
+    "optimizer_steps": 2120,
+    "AMP_skips": 0,
+    "elapsed_seconds": 17246.1854934,
+    "elapsed_semantics": "last cumulative history elapsed, not sum of cumulative entries",
+    "observation": {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch10-observation/observation.json",
+      "bytes": 594,
+      "sha256": "b8d0b59916121e0fc332eff92d2015d049c46fb34c9388484041869896f13170"
+    },
+    "unchanged_primary_policy": "F009_study_gamma_prospective_fixed12_policy_v2",
+    "primary_policy_sha256": "de5a6aa743d2d663f98244322958bf4b8154908238384112a7badf2df1e2d42c",
+    "source8_current_unchanged": true,
+    "new_interim_accuracy_selection_or_hyperparameter_change": false,
+    "actual_E12_comparison": false,
+    "next": "same fixedE12 guarded primary once complete; positive engineering/0skip=>samefold1, elseF006fold2 first"
+  },
+  "innerC_Public_CSV_math": {
+    "source": {
+      "path": "src/rsna_knee/orthodiff_inner_c_public_blend.py",
+      "bytes": 5829,
+      "sha256": "7f7e240a79db5e8b61c3d57cafb3da80171f71e0fda5a81b12d94e51cecf0882"
+    },
+    "tests": {
+      "path": "tests/test_orthodiff_inner_c_public_blend.py",
+      "bytes": 4784,
+      "sha256": "0601e9e657d73138c84c085fd976df3eaacac354533896f1cf06f288508c518c"
+    },
+    "artificial_tests": 5,
+    "Ruff": "PASS",
+    "independent_CPU_peer_passed": true,
+    "math": "Quantize success head probs toFP32, average-tie percentile rank success subset, separate FP32 .8*parent_success and .2*headrank then FP32add. No final or parent rerank.",
+    "unchanged_cells": "featurefail rows/MCL/Synovitis/unsupported/Nvalid<2/constantFP32: original values/types/CSVstrings retained. Changedcells only .9g roundtrip.",
+    "row_UID_order_preserved": true,
+    "column_scope": "Mapping column-name-set validation only. Actual future controller must independently validate exact ordered header [ID,*canonical12] and parent/testUID join before call.",
+    "actual_parent_selection_or_overlay": false,
+    "actualmodel_source33af_preserved": true,
+    "actual_candidate_or_Public_qualified": false,
+    "pure_arithmetic_frozen_before_any_actual_overlay": true
+  },
+  "dynamic_test_feature_controller": {
+    "design_and_helper_closure_peer_passed": true,
+    "implementation_in_progress": true,
+    "minimal": "New offlinebuilder+runtime, testUID-only, frozen scientific helper/pool/normalization-forward, strictEMA one-load, T4child/CPUhead and exactsuccess-failure partition. No research4207/3063/1144 journals/features/teachers.",
+    "root_review": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-test-feature-controller-design-v1/root-review.json",
+      "bytes": 2049,
+      "sha256": "ae633785e43fcf37bd41cdb682248f53f0f01565e9c074099ffabdf9350840d5"
+    },
+    "actual_input_parent_Image_GPU_inference_or_stage_qualified": false,
+    "old_design_math_unfrozen_note": "Historical design leaves final parent+pipeline unselected. Pure arithmetic only was separately frozen in new ba28 policy; no actual parent/transport qualification."
+  },
+  "F009_CLS_pair_sealer": {
+    "consumer_v1_artificial3_and_Ruff_passed": true,
+    "evidence": {
+      "path": "artifacts/research/20261017-f009-pair-stage-preparation-v1/verification.json",
+      "bytes": 5194,
+      "sha256": "fc16b1b56ad8d2050bd40f7f6fdbb3257827e793cd003b4f5c6e0bbb5074089f"
+    },
+    "kept_REG": "FixedREG0E8/REG1E10 original Input/ref/fingerprints, no REGbody copied in this preparation.",
+    "production_CPU_registry_empty_in_this_v1": true,
+    "actual_CPU_producer": "implementation in progress; v1consumer alone cannot qualify tensor reconstruction",
+    "actual_checkpoint_copy_pair_stage_or_fourmodel_runtime_qualified": false,
+    "next": "New actual strictCPU producer and reviewed source-bound receipts, then positivebothfold gates, later transport192+visible; no automatic upload"
+  },
+  "official_state_inherited_last_observation": {
+    "last_UTC": "2026-10-17T06:36:55+00:00",
+    "five_formal_status_Public_raw_omitted": true,
+    "numToday": 5,
+    "numTotal": 35,
+    "additional_slots_treated_as": 0,
+    "no_new_formal_Submit": true,
+    "P038_visible_qualified_waiting": true,
+    "public_frontier_UTC": "2026-10-17T06:32:40+00:00",
+    "author_top100_max": 0.958,
+    "scope_limited_count_ge0959": 0,
+    "repolled_in_this_milestone": false
+  },
+  "activity": {
+    "existing_GPU_training_continues": true,
+    "new_GPU_fit": 0,
+    "new_CPUNumeric_model_fit": 0,
+    "actualteacher_or_modelbody_or_MRI_for_this_arithmetic_work": 0,
+    "external_Save_Submit": 0,
+    "old_training_source_policies_sealedmodel_modified": false,
+    "new_source_and_artificial_CPU_implementation_only": true
+  },
+  "limits": [
+    "Artificial math/engineering never proves weak or Publicgain.",
+    "OwnGold not used; upstream pretraining/Gold and patient independence remain unverified.",
+    "Other implementation tasks continue separately and are not claimed completed by this milestone."
+  ],
+  "evidence": {
+    "artifacts/research/20261017-f009-gamma-preparation-v1/epoch10-observation/observation.json": {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch10-observation/observation.json",
+      "bytes": 594,
+      "sha256": "b8d0b59916121e0fc332eff92d2015d049c46fb34c9388484041869896f13170"
+    },
+    "artifacts/research/20261017-f009-gamma-preparation-v1/epoch10-observation/run-snapshot.json": {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch10-observation/run-snapshot.json",
+      "bytes": 102091,
+      "sha256": "216480f4fcd6d099c3a121f450152582cfcdb2a058a92a323672ade760f25d3c"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-public-blend-preparation-v1/policy.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-public-blend-preparation-v1/policy.json",
+      "bytes": 2515,
+      "sha256": "ba28db19a7e4d6b22e3e3a5e4624552bda8a19db575d810064eec87488c42f07"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-public-blend-preparation-v1/verification.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-public-blend-preparation-v1/verification.json",
+      "bytes": 1382,
+      "sha256": "431f77b0648462ffd38cb851546f8f3275bb7d2db2b097cd8f2706c18438ab0c"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-public-blend-peer-v1/review.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-public-blend-peer-v1/review.json",
+      "bytes": 3097,
+      "sha256": "428858cadf1dd2ae4f276c078cdab94904f369ff91618618e2b4beda855402f9"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-test-feature-controller-design-v1/design.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-test-feature-controller-design-v1/design.json",
+      "bytes": 17010,
+      "sha256": "ad3def59c37a0a9d08f5ff52ffaee0b93b4ee07725909b5df0bf889f65eac85b"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-test-feature-controller-design-v1/root-review.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-test-feature-controller-design-v1/root-review.json",
+      "bytes": 2049,
+      "sha256": "ae633785e43fcf37bd41cdb682248f53f0f01565e9c074099ffabdf9350840d5"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-controller-helper-peer-v1/review.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-controller-helper-peer-v1/review.json",
+      "bytes": 6462,
+      "sha256": "8cef77aa74191accf7ac94e025ad6d0622df252e0c245cf033b02de46193e5e2"
+    },
+    "artifacts/research/20261017-f009-pair-stage-preparation-v1/verification.json": {
+      "path": "artifacts/research/20261017-f009-pair-stage-preparation-v1/verification.json",
+      "bytes": 5194,
+      "sha256": "fc16b1b56ad8d2050bd40f7f6fdbb3257827e793cd003b4f5c6e0bbb5074089f"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "at_utc": "2026-10-17T01:50:14.622498+00:00",
+  "status": "P032_OFFICIAL957_P033_FORMAL_ACCEPTED_SCORE_PENDING",
+  "objective": "own Public >=0.960",
+  "own_best": {
+    "submission": 57225898,
+    "Public": "0.957",
+    "preserved": true
+  },
+  "P032": {
+    "submission": 57262934,
+    "status": "COMPLETE",
+    "Public": "0.957",
+    "totalBytes": 247204,
+    "source": "artifacts/research/20261016-f006-execution-v1/formal-submit-v6-v1/poll-20261017T014410806323Z/get-submission.json",
+    "native_hidden_contribution": "unknown; possible all-native-disabled or parent fallback; size close to parent is indirect only"
+  },
+  "P033": {
+    "submission": 57290868,
+    "kernel": 139000655,
+    "version": 1,
+    "slug": "rsraki/p033-r6-classweights-20261016-v1",
+    "source_sha256": "57284b71d271c3d4bf09595a6acade490ea911c8f7438a595724f260f3f28ccb",
+    "status_field_present": false,
+    "public_score": null,
+    "author_Public": "0.958",
+    "change": "published fixed W_RAPTOR_C vector only; no F006",
+    "visible_qualifications": "3 studies; failures0; independent36 FP32 bits matched",
+    "official_review": "artifacts\\research\\20261017-p033-formal-submit-v1\\review.json",
+    "accepted_response": "artifacts\\research\\20261017-p033-formal-submit-v1\\submit-response-raw.json"
+  },
+  "fresh_pre_submit_limits": {
+    "numTotal": 30,
+    "numAllowedNow": 5
+  },
+  "fresh_pre_submit_quota": {
+    "quotaRefreshTime": "2026-10-24T00:00:00Z",
+    "gpuQuota": {
+      "timeUsed": "0s",
+      "timeReserved": "0s",
+      "totalTimeAllowed": "108000s",
+      "minimumTimeAllowed": "108000s",
+      "hasEverRun": true
+    },
+    "tpuQuota": {
+      "timeUsed": "0s",
+      "timeReserved": "0s",
+      "totalTimeAllowed": "72000s",
+      "minimumTimeAllowed": "72000s"
+    }
+  },
+  "authorization": "Latest user asks continue execution and submissions until own0.960; old one-candidate limit was a planning assumption",
+  "next": [
+    "Follow existing57290868 without duplicate submit",
+    "Verify fresh public scored sources and avoid duplicate recipes",
+    "Investigate P032 hidden fallback and successful-UID integration contract",
+    "Prepare one pre-fixed train-only intensity augmentation against existing same-E12 weak fold; no Gold selection"
+  ],
+  "actions_this_checkpoint": {
+    "manual_formal_Submit": 1,
+    "new_Save": 0,
+    "new_training": 0,
+    "local_MRI_decode": 0,
+    "model_download": 0
+  },
+  "ledger_before": {
+    "rows": 284,
+    "bytes": 170968,
+    "sha256": "6ad4772da4b7dae8ce8e7f0d0e9ffd7772f0c3a5cabb355cfe5b8261fe44fc81"
+  }
+}

@@ -1,0 +1,394 @@
+{
+  "schema_version": "F009E9_final_comparison_tools_ready_innerC_actual_Kaggle_numeric_PASS_milestone_v1",
+  "recorded_at_UTC": "2026-10-17T06:39:06.218235+00:00",
+  "own_confirmed_Public_best": 0.957,
+  "target_Public": 0.96,
+  "target_achieved": false,
+  "status": "ACTUAL_ARTIFICIAL_INPUT_KAGGLE_NUMERIC_PASS_F009E9_LIVE_ACCURACY_UNPROVEN",
+  "previous_milestone": {
+    "path": "experiments/orthodiff-innerC-selected-sealed-F009E8-20261017.json",
+    "bytes": 13367,
+    "sha256": "3a56b18d86c81b8e28f6cee50f375701283d2a5b8f92753e65a5f86a6289fe27"
+  },
+  "F009": {
+    "same_existing_run": "artifacts/runs/f009-gamma-late-cosine-fold0-20261017-v1",
+    "completed_epochs": 9,
+    "optimizer_steps": 1908,
+    "AMP_skips": 0,
+    "last_history_cumulative_elapsed_seconds": 15519.558306599996,
+    "observation": {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch9-observation/observation.json",
+      "bytes": 598,
+      "sha256": "04b6d58a32b746f0d7823bf9d1d6ecab2cca37abe64ded15dc64a9211d98b83b"
+    },
+    "live_OS_check": {
+      "at_UTC": "2026-10-17T06:37:21+00:00",
+      "PID": 22392,
+      "same_start_unix_ms": 1792202300990,
+      "CPU_seconds": 16317.03125,
+      "same_interpreter_path_confirmed": true
+    },
+    "interim_metric_or_parameter_selection": false,
+    "actual_E12_evaluation_performed": false,
+    "future_manual_E12_argv_source": "artifacts/research/20261017-f009-eval-v2-guarded-preparation-v1/manual.json",
+    "fold0_wrapper": "21c4e3089953d59f6da30fcb82fff3e27f5f3ecef1e20f4a96e22d561c5ba76b",
+    "unchanged_original_math": "f3b0784834d9dd57cfb63cb33b50f09669a65c83bf02e329c3e1e1c145b48bd9",
+    "v2_gate": "engineering plus fixed10 paired E12 AUCdelta strictly>0 and zeroAMPskip; BCE/1000groupCI report-only",
+    "actual_input_prescore_hashes_qualified": true,
+    "actual_E12_checkpoint_body_hashes_still_required_at_evaluation": true
+  },
+  "fold1_preparation": {
+    "prospective_policy": {
+      "path": "experiments/f009-fold1-fixed12-joint-screen-prospective-20261017.json",
+      "bytes": 6414,
+      "sha256": "9f42cd771db3f6bac92d275769636a451d3ef4dacd35e245a53d888c17ec2420"
+    },
+    "same_recipe_seed_config_12epochs": true,
+    "fit_started": false,
+    "evaluator_CPU_artificial_and_peer_passed": true,
+    "joint_screen": "Each originalfold0 and originalfold1 strictpositive pairedE12 fixed10delta AND engineering/zeroAMPskip. No mean/pool/favorablefold rescue.",
+    "scope_limit": "Legacy weak_truth validates all4207 label rows after guards, then extracts891 fold1. This is not a no-otherfold-target-projection qualification."
+  },
+  "REG50_preparation": {
+    "source_CPU_artificial4_and_peer_passed": true,
+    "same_fixed_REG0_selected_epoch": 8,
+    "main_CLS_epochs": 12,
+    "rule": "each inputFP32, addFP32, divideexact2FP32",
+    "actual_secondary_evaluated": false,
+    "report_only_no_primary_or_fold1_gate_override": true,
+    "not_claimed_testtime_fourmodel_mean_equivalence": true
+  },
+  "F009_source14_namespace": {
+    "core_source8_preserved": true,
+    "support6_import_closure_bound": true,
+    "CPU_artificial4_actual_source_import_and_peer_passed": true,
+    "actual_model_instantiation_weight_load_or_GPU_forward_qualified": false
+  },
+  "innerC_selected_model": {
+    "model_sha256": "c9b5ae26d0ad5895903002ff6bfd2c4947bed152c070c749588be8c76710a714",
+    "C": 0.01,
+    "outer_fold": 2,
+    "train_success": 2409,
+    "outer_UIDs": 888,
+    "outer_feature_success": 654,
+    "outer_feature_failures": 234,
+    "new_fit_this_milestone": false,
+    "outer2_labels_or_AUC_accessed": false,
+    "outer2_evaluator_artificial5_and_peer_passed": true,
+    "root_actual_outer_target_release_created": false,
+    "prerequisite": "New originalF006fold2 completedfixedE12 qualified control, then same888 fixed20/10target onecomparison",
+    "old_C1_twofold_recipe_hold_preserved": true
+  },
+  "actual_Kaggle_numeric_runtime": {
+    "root_audit": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-numpy-kaggle-cpu-v1/root-actual-runtime-audit.json",
+      "bytes": 3618,
+      "sha256": "1d814ee9ef059b5a7b97d6b71727697d889c2864bea5b53503e7f7fe73578efe"
+    },
+    "independent_audit": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-numpy-kaggle-cpu-independent-v1/review.json",
+      "bytes": 7600,
+      "sha256": "7364827b0f428e3911e9fcf6e49c4c1ba3381b510f7062eb1634a1c44b9a6857"
+    },
+    "ref": "rsraki/orthodiff-innerc-numpy-cpu-20261017-v1",
+    "kernelId": 139175515,
+    "version": 1,
+    "official_status": "COMPLETE",
+    "private_offline_CPU_TPUoff_Input0_Docker2757_readback_passed": true,
+    "Save_calls": 1,
+    "formal_Submit": 0,
+    "reference_environment": {
+      "python": "3.9.18",
+      "numpy": "1.22.3"
+    },
+    "actual_environment": {
+      "python": "3.13.15",
+      "numpy": "2.1.3",
+      "Torch_imported": false,
+      "sklearn_imported": false
+    },
+    "features": "Artificial32x1024 only, no MRI or actual training/test features",
+    "FP32_probabilities": 384,
+    "reference_and_independent_oracle_FP32_mismatches": 0,
+    "float64_reference_max_difference_report_only": 1.5543122344752192e-15,
+    "bytes_downloaded": 4486,
+    "adoption_qualification_file_created": false,
+    "outer2_Public_accuracy_preprocessing_rank_blend_or_hidden_qualified": false,
+    "readback_correction": "One accepted Save; literal latest Get returned404, then installedSDK-standard unset Get succeeded. No secondSave."
+  },
+  "F006fold2_preparation": {
+    "source_CPU_qualified_preserved": true,
+    "manual_sequence_helper_and_preflight_capture_ready": true,
+    "actual_new_GPU_QA_preflight_or_fit_started": false,
+    "manual_path": "artifacts/research/20261017-f006-fold2-manual-executable-v1/manual-powershell.txt",
+    "gate_assembler_path": "artifacts/research/20261017-f006-fold2-manual-executable-v1/assemble_resource_gate.py"
+  },
+  "execution_order": "After fixedF009f0E12 guarded primary, positive->sameF009f1 first thenF006f2; nonpositive->F006f2 first, noF009f1. One localGPUfit at a time.",
+  "official_submission_observations": {
+    "observed_UTC": "2026-10-17T06:36:55+00:00",
+    "submissions": [
+      {
+        "ref": 57290868,
+        "raw_status_present": false,
+        "raw_Public_present": false,
+        "status": null,
+        "Public": null,
+        "totalBytes": 0,
+        "errorDescription": null,
+        "evidence": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T063652772629Z/57290868.json",
+          "bytes": 464,
+          "sha256": "d431a723e0b8bb77c13675e81c5b03b61193b2b96d6de0bc7439c73960e3b2b6"
+        }
+      },
+      {
+        "ref": 57291440,
+        "raw_status_present": false,
+        "raw_Public_present": false,
+        "status": null,
+        "Public": null,
+        "totalBytes": 0,
+        "errorDescription": null,
+        "evidence": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T063652772629Z/57291440.json",
+          "bytes": 475,
+          "sha256": "cd1b762c28856067876a11cbf3b256d41a5e2ae956dc207d86e9ef786428e891"
+        }
+      },
+      {
+        "ref": 57291580,
+        "raw_status_present": false,
+        "raw_Public_present": false,
+        "status": null,
+        "Public": null,
+        "totalBytes": 0,
+        "errorDescription": null,
+        "evidence": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T063652772629Z/57291580.json",
+          "bytes": 461,
+          "sha256": "d758892c078175df363884ba55d8830cb00e63447f46c16b4540fd944a2402ef"
+        }
+      },
+      {
+        "ref": 57292346,
+        "raw_status_present": false,
+        "raw_Public_present": false,
+        "status": null,
+        "Public": null,
+        "totalBytes": 0,
+        "errorDescription": null,
+        "evidence": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T063652772629Z/57292346.json",
+          "bytes": 473,
+          "sha256": "862ab7cde687f6b4718ff9359ad7ea1078cc2bcb103466f0cf5da162e4eeea0a"
+        }
+      },
+      {
+        "ref": 57293138,
+        "raw_status_present": false,
+        "raw_Public_present": false,
+        "status": null,
+        "Public": null,
+        "totalBytes": 0,
+        "errorDescription": null,
+        "evidence": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T063652772629Z/57293138.json",
+          "bytes": 504,
+          "sha256": "0e5dda9fb76baa89e908da5e9363f20506ba5b838c403c4393368d9960577c80"
+        }
+      }
+    ],
+    "limits": {
+      "numToday": 5,
+      "numTotal": 35
+    },
+    "limits_evidence": {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T063652772629Z/limits.json",
+      "bytes": 28,
+      "sha256": "eb4d91f15e658d9bc5316244fd956e706187432c2d581b150914465e999b92ef"
+    },
+    "raw_numAllowedNow_present": false,
+    "additional_slots_treated_as": 0,
+    "SDK_default_PENDING_is_not_explicit_server_execution_status": true,
+    "new_own_Public_confirmed": false,
+    "duplicate_submission_calls": 0
+  },
+  "public_frontier": {
+    "observed_UTC": "2026-10-17T06:32:40.026010+00:00",
+    "scope": "single official score-sorted public Code first100 only",
+    "highest_author_displayed_score": 0.958,
+    "atleast0959": 0,
+    "high0958": 5,
+    "newhigh_or_source_or_input_changes": 0,
+    "evidence": {
+      "path": "artifacts/research/20261017-public-frontier-refresh-v6/summary-v2.json",
+      "bytes": 11703,
+      "sha256": "e9ec0596e425a50fad32d7037f62d509938ae6098257d0f554dd7b2a022a8fd2"
+    },
+    "author_score_is_not_own_score": true,
+    "initial_summary_wrong_flat_input_parser_preserved_superseded_by_v2_from_same_raw": true
+  },
+  "P038": {
+    "visible_qualified_unsubmitted_retained": true,
+    "formal_Submit": 0,
+    "next": "Manual formal candidate after actual positivequota and ownbest<.960, with current metadata/source preflight"
+  },
+  "limits": [
+    "No conversion of weak delta or artificial numeric pass into Public gain.",
+    "OwnGold is excluded from fit/selection/evaluation; upstream public-weight Gold use and patient independence remain unverified.",
+    "Repeated weak holdouts and historical adaptation are preserved; outer2 is not globallypristine."
+  ],
+  "activity_this_milestone": {
+    "new_local_GPU_jobs": 0,
+    "existing_F009_GPU_fit_continued": true,
+    "new_local_CPU_model_fits": 0,
+    "actual_numeric_model_on_artificial_features_predictions": 384,
+    "new_private_offline_CPU_Kaggle_SaveAndRun": 1,
+    "formal_Submit_calls": 0,
+    "new_raw_MRI_DICOM_downloads_or_decode": 0,
+    "new_Gold_weak_target_or_outer2_metric_projection_for_this_runtime_audit": 0,
+    "old_frozen_training_source_or_policy_changed": false
+  },
+  "evidence": {
+    "experiments/orthodiff-innerC-selected-sealed-F009E8-20261017.json": {
+      "path": "experiments/orthodiff-innerC-selected-sealed-F009E8-20261017.json",
+      "bytes": 13367,
+      "sha256": "3a56b18d86c81b8e28f6cee50f375701283d2a5b8f92753e65a5f86a6289fe27"
+    },
+    "artifacts/research/20261017-f009-gamma-preparation-v1/epoch9-observation/observation.json": {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch9-observation/observation.json",
+      "bytes": 598,
+      "sha256": "04b6d58a32b746f0d7823bf9d1d6ecab2cca37abe64ded15dc64a9211d98b83b"
+    },
+    "artifacts/research/20261017-f009-gamma-preparation-v1/epoch9-observation/run-snapshot.json": {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch9-observation/run-snapshot.json",
+      "bytes": 98232,
+      "sha256": "78dc8f0de6239470698f8e53718c1b48e8f9c4eef883aaee97f6c3b225b5f571"
+    },
+    "experiments/f009-evaluation-policy-v2-prescore-20261017.json": {
+      "path": "experiments/f009-evaluation-policy-v2-prescore-20261017.json",
+      "bytes": 9505,
+      "sha256": "de5a6aa743d2d663f98244322958bf4b8154908238384112a7badf2df1e2d42c"
+    },
+    "artifacts/research/20261017-f009-eval-v2-guarded-preparation-v1/verification.json": {
+      "path": "artifacts/research/20261017-f009-eval-v2-guarded-preparation-v1/verification.json",
+      "bytes": 2008,
+      "sha256": "981359fca2682c31c62dfe12255c4bbe77ece2f777bf85cc80efd388d20e9e65"
+    },
+    "artifacts/research/20261017-f009-guarded-wrapper-source-peer-v1/review.json": {
+      "path": "artifacts/research/20261017-f009-guarded-wrapper-source-peer-v1/review.json",
+      "bytes": 2891,
+      "sha256": "c06189b200b444ee388ece09c4b3498ce7326b0480717b9b7c8433636112b4de"
+    },
+    "artifacts/research/20261017-f009-v2-actual-input-metadata-preflight-v1/verification.json": {
+      "path": "artifacts/research/20261017-f009-v2-actual-input-metadata-preflight-v1/verification.json",
+      "bytes": 7217,
+      "sha256": "6d21dd24e009ce71a48e0315977d56b09b1e7e05d29202f9f484b271ccfa8677"
+    },
+    "experiments/f009-fold1-fixed12-joint-screen-prospective-20261017.json": {
+      "path": "experiments/f009-fold1-fixed12-joint-screen-prospective-20261017.json",
+      "bytes": 6414,
+      "sha256": "9f42cd771db3f6bac92d275769636a451d3ef4dacd35e245a53d888c17ec2420"
+    },
+    "artifacts/research/20261017-f009-fold1-manual-readiness-v1/manual-commands.json": {
+      "path": "artifacts/research/20261017-f009-fold1-manual-readiness-v1/manual-commands.json",
+      "bytes": 6182,
+      "sha256": "cc15e4150ce68b9389d7aa1709e82cae51af95e3ef573c8ac3de43218a908262"
+    },
+    "artifacts/research/20261017-f009-fold1-fixed12-evaluator-preparation-v1/verification.json": {
+      "path": "artifacts/research/20261017-f009-fold1-fixed12-evaluator-preparation-v1/verification.json",
+      "bytes": 6118,
+      "sha256": "9410dad7b0b9b9f4e726c25bc1fa86963be97a1d37da33aa2f557e763024c65a"
+    },
+    "artifacts/research/20261017-f009-fold1-evaluator-source-peer-v1/review.json": {
+      "path": "artifacts/research/20261017-f009-fold1-evaluator-source-peer-v1/review.json",
+      "bytes": 2850,
+      "sha256": "d25d82948e5f1138642907d7ee8844bb83098a1cefe1d741a66601fa536a0afa"
+    },
+    "artifacts/research/20261017-f009-reg50-secondary-preparation-v1/policy.json": {
+      "path": "artifacts/research/20261017-f009-reg50-secondary-preparation-v1/policy.json",
+      "bytes": 5548,
+      "sha256": "7f5cbc2d4769e6f39d4ad0c09634d53c3dd5197a2a9875a5fa8f466387932455"
+    },
+    "artifacts/research/20261017-f009-reg50-secondary-preparation-v1/qualification.json": {
+      "path": "artifacts/research/20261017-f009-reg50-secondary-preparation-v1/qualification.json",
+      "bytes": 3748,
+      "sha256": "7e39f63568f1771eef28424e6a7df2fe891caf3531333a6ca10cfed26be2e1b9"
+    },
+    "artifacts/research/20261017-f009-reg50-secondary-source-peer-v1/review.json": {
+      "path": "artifacts/research/20261017-f009-reg50-secondary-source-peer-v1/review.json",
+      "bytes": 2041,
+      "sha256": "e5004797388d39d4c6624672035719f7a4c36ccf4b56c818b0c88cc83c28d4dd"
+    },
+    "artifacts/research/20261017-f009-source-namespace-implementation-v1/verification.json": {
+      "path": "artifacts/research/20261017-f009-source-namespace-implementation-v1/verification.json",
+      "bytes": 4457,
+      "sha256": "a6f25b0d3d94236cac20166790f25bf78293b9ddc46f44abd5a8693fc1496ad1"
+    },
+    "artifacts/research/20261017-f009-source-namespace-independent-v1/review.json": {
+      "path": "artifacts/research/20261017-f009-source-namespace-independent-v1/review.json",
+      "bytes": 3886,
+      "sha256": "84c90082be706026b7a28c98a99fea9ee4cca362315ab3f87ddf2d2e712a4a06"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-outer2-evaluator-implementation-v1/qualification.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-outer2-evaluator-implementation-v1/qualification.json",
+      "bytes": 3704,
+      "sha256": "7b62cabdec7cd9cfb17efae900eb6fc52f4cad62f617f6aff301b50f9e4e7858"
+    },
+    "artifacts/research/20261017-orthodiff-outer2-evaluator-source-peer-v1/review.json": {
+      "path": "artifacts/research/20261017-orthodiff-outer2-evaluator-source-peer-v1/review.json",
+      "bytes": 2432,
+      "sha256": "c8fa156d70c4c02882cb7d80529a499c19e13ce67bfef4a9d1d9e65ad300efbb"
+    },
+    "artifacts/research/20261017-f006-fold2-manual-executable-v1/verification.json": {
+      "path": "artifacts/research/20261017-f006-fold2-manual-executable-v1/verification.json",
+      "bytes": 3480,
+      "sha256": "47a81f66f053cc5e03d9ca0e3fc0a956cda7a674e37855d296246558178782e0"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-numpy-preparation-v1/verification.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-numpy-preparation-v1/verification.json",
+      "bytes": 2616,
+      "sha256": "c1c860453c5d29db20307042013e732a20d4011ef70c8afed9651114325941e9"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-numpy-independent-v1/review.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-numpy-independent-v1/review.json",
+      "bytes": 3748,
+      "sha256": "f36ae799b2f491056209187078c04db5db3d84adc85ee8ec5a40bd9d4b50e949"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-numpy-cpu-builder-peer-v1/review.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-numpy-cpu-builder-peer-v1/review.json",
+      "bytes": 4421,
+      "sha256": "25124962ae937c8be42dd661def137c4fd43cfce8caaca60a1f3d79f1746a1de"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-numpy-kaggle-cpu-v1/prospective-policy.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-numpy-kaggle-cpu-v1/prospective-policy.json",
+      "bytes": 1266,
+      "sha256": "e6ca7b9afbba604316003290a87f9bfeeb74938ce706dab5d11c57c3ddaabd46"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-numpy-kaggle-cpu-v1/preparation.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-numpy-kaggle-cpu-v1/preparation.json",
+      "bytes": 1546,
+      "sha256": "5c70f54c0543e49c549cdf5d4fb0802f8068e60171226c977bc8564578cb63ff"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-numpy-kaggle-cpu-v1/launch-v1/saved-readback-audit.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-numpy-kaggle-cpu-v1/launch-v1/saved-readback-audit.json",
+      "bytes": 571,
+      "sha256": "cfc0830f9b3c34fee74475821501274a6ce76d7eb8adc181a2b5e2c2a55a0430"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-numpy-kaggle-cpu-v1/root-actual-runtime-audit.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-numpy-kaggle-cpu-v1/root-actual-runtime-audit.json",
+      "bytes": 3618,
+      "sha256": "1d814ee9ef059b5a7b97d6b71727697d889c2864bea5b53503e7f7fe73578efe"
+    },
+    "artifacts/research/20261017-orthodiff-innerC-numpy-kaggle-cpu-independent-v1/review.json": {
+      "path": "artifacts/research/20261017-orthodiff-innerC-numpy-kaggle-cpu-independent-v1/review.json",
+      "bytes": 7600,
+      "sha256": "7364827b0f428e3911e9fcf6e49c4c1ba3381b510f7062eb1634a1c44b9a6857"
+    },
+    "artifacts/research/20261017-public-frontier-refresh-v6/summary-v2.json": {
+      "path": "artifacts/research/20261017-public-frontier-refresh-v6/summary-v2.json",
+      "bytes": 11703,
+      "sha256": "e9ec0596e425a50fad32d7037f62d509938ae6098257d0f554dd7b2a022a8fd2"
+    }
+  }
+}

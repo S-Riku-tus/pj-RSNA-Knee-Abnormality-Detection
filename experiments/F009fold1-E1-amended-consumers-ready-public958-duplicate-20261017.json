@@ -1,0 +1,225 @@
+{
+  "schema_version": "F009fold1_E1_live_new_amended_consumers_sourcequalified_public958_duplicate_v1",
+  "at_UTC": "2026-10-17T08:33:15.110091+00:00",
+  "own_confirmed_Public_best": "0.958",
+  "target_Public": "0.960",
+  "target_achieved": false,
+  "previous_goal_turn_classification": "PROGRESS: actualfold0 E12 positive +samefold1 manually started; ownP036958 confirmed; reviewed new evaluation frozen before firstfold1 metric.",
+  "current_goal_turn_classification": "PROGRESS plus VERIFIED_WAIT: live PID2772 repeatedly observed; completedE1 counters; newCPUproducer/sealer source+artificial+independent qualification; authoritative publicfrontier and exactnew958duplicate verified.",
+  "runtime": {
+    "run": "artifacts/runs/f009-gamma-late-cosine-fold1-20261017-v1",
+    "PID": 2772,
+    "StartTime_JST": "2026-10-17T16:49:06+09:00",
+    "OS_live_latest_chunk": "6f0570",
+    "latest_observed_CPU_seconds": 2314.828125,
+    "OS_Responding": true,
+    "completed_epoch_observation": {
+      "path": "artifacts/research/20261017-f009-fold1-progress-v1/epoch1-counter-observation.json",
+      "bytes": 1046,
+      "sha256": "e0b632b604c01cf45ab26657a0d661835a32579df01a75dc63f8bc8d4e9a091f"
+    },
+    "completed_epochs": 1,
+    "recorded_completed_epoch_updates": 208,
+    "recorded_completed_epoch_opportunities": 208,
+    "recorded_completed_epoch_AMP_skips": 0,
+    "interim_metric_values_projected_or_selected": false,
+    "same_config_seed_source_unchanged": true,
+    "stopped_or_restarted": false
+  },
+  "consumer_source_preparation": {
+    "design": {
+      "path": "experiments/f009-amended-consumer-preparation-design-20261017.json",
+      "bytes": 6290,
+      "sha256": "01417f83fca4abf80334afbb56942a1296298e6c1634abb3f30192230b71d6e0"
+    },
+    "producer": {
+      "path": "src/rsna_knee/f009_cpu_proof_v2.py",
+      "bytes": 30911,
+      "sha256": "fc2fbf7ab581bc6258817ac9fb189de966ce8b2d074b531e7bf3b642d1fe0705"
+    },
+    "producer_CLI": {
+      "path": "scripts/check_f009_E12_cpu_v2.py",
+      "bytes": 1542,
+      "sha256": "8f57bd7688d5507af8fce7151793acb1c2e0a185401ef474234a4b4605d9667d"
+    },
+    "producer_final": {
+      "path": "artifacts/research/20261017-f009-cpu-proof-v2-preparation-v1/verification-final.json",
+      "bytes": 3049,
+      "sha256": "f0d8d5f13e5c36e76e92b9d4264097015eded60c538274c2e1e87dce2095da16"
+    },
+    "producer_peer": {
+      "path": "artifacts/research/20261017-f009-cpu-proof-v2-independent-v1/review.json",
+      "bytes": 2435,
+      "sha256": "02bbf8d436d635ec72033fd80786145226e52d89ac68bb102365c4d3ca11cbab"
+    },
+    "producer_artificial_CPU_tests": 7,
+    "sealer": {
+      "path": "src/rsna_knee/f009_pair_stage_v3.py",
+      "bytes": 22626,
+      "sha256": "cc7c77f012c320452f0a3232196d77f38da077a6a91e1576903d6967bda157e7"
+    },
+    "sealer_CLI": {
+      "path": "scripts/seal_f009_E12_pair_v3.py",
+      "bytes": 994,
+      "sha256": "9e8559205736624df2b84537c71345f375f0f15ddac43cf7c6a3e3c0bafce84e"
+    },
+    "sealer_final": {
+      "path": "artifacts/research/20261017-f009-pair-stage-v3-preparation-v1/verification-final.json",
+      "bytes": 2555,
+      "sha256": "e0579466eaef4a69c504efc3e864b39c8a1ea93117e99221707d0a1b613ac78e"
+    },
+    "sealer_peer": {
+      "path": "artifacts/research/20261017-f009-pair-stage-v3-independent-v1/review.json",
+      "bytes": 2429,
+      "sha256": "7de256d113bc685572a2b2a8a551860e589f3e9a55e98f3a0ea364600a5faf7e"
+    },
+    "sealer_artificial_tests": 5,
+    "root_direct_review": {
+      "path": "artifacts/research/20261017-f009-amended-consumers-root-review-v1/review.json",
+      "bytes": 826,
+      "sha256": "3ebc481ed99427bf7238c094414cb2f5280b28ee1e8ff92136e475f08cf407b5"
+    },
+    "new_source_qualification": "PASS_SOURCE_PREPARATION_ONLY",
+    "numerical_CPU_pre_return_AST_and_tensor_validation_loop_preserved": true,
+    "old_sources_policies_results_and_registry_unchanged": true,
+    "qualification": "Exact6documents SHA crossbindings; actualcomparison flags; originalv1machine/jointfalseHOLD; statistics8copied unchanged; exactoldcontrolE10skip1/candidateallzero; strict positive eachfold.",
+    "CPU_receipt_schema": "f009_strict_CPU_amended_eval_v2",
+    "pair_schema": "f009_fixed_E12_two_CLS_amended_source14_local_pair_v3",
+    "explicitly_not_yet_performed": {
+      "actual_fold1_E12_comparison": true,
+      "actual_CPU_model_reconstruction": true,
+      "actual_CLS_pair_stage": true,
+      "Kaggle_transport_or_runtime_qualification": true,
+      "own_Public_improvement_from_F009": true
+    },
+    "no_public_parent_or_scientific_recipe_choice_changed": true
+  },
+  "official_account": {
+    "summary": {
+      "path": "artifacts/research/20261017-official-account-observation-082143972204Z/summary-v2.json",
+      "bytes": 1105,
+      "sha256": "f99b4476a46cc5faa2a4c1894ba7cc1b1b680e358047702b2c4b02dd03df21de"
+    },
+    "observed_at_UTC": "2026-10-17T08:21:44.710469+00:00",
+    "rank": 837,
+    "teams": 6126,
+    "deadline_UTC": "2026-10-22T23:59:00Z",
+    "deadline_JST": "2026-10-23T08:59:00+09:00",
+    "maxDaily": 5,
+    "numToday": 5,
+    "numTotal": 35,
+    "extra_formal_slots_treated_as": 0,
+    "GPU_used_seconds": 10626.483,
+    "GPU_reserved_seconds": 0.0,
+    "GPU_total_seconds": 108000.0,
+    "GPU_available_arithmetic_seconds": 97373.517,
+    "GPU_refresh_UTC": "2026-10-24T00:00:00Z",
+    "daily_submission_reset_verified": false,
+    "GPU_availability_is_not_a_daily_submission_slot": true
+  },
+  "official_submissions_latest": {
+    "poll_directory": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T082633734257Z",
+    "P03357290868": {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T082633734257Z/57290868.json",
+      "bytes": 511,
+      "sha256": "b2c6a8bae958e3fa127624e428f44bd212ce710cbecfdcabac5dddb634616914"
+    },
+    "P03657291580": {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T082633734257Z/57291580.json",
+      "bytes": 508,
+      "sha256": "f5ca4807e364ac0b9a91aab2fb1a7dcec10f489bd633375ba98a3e4b2a69620b"
+    },
+    "both": "COMPLETE own Public.958",
+    "remaining_three": [
+      {
+        "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T082633734257Z/57291440.json",
+        "bytes": 475,
+        "sha256": "cd1b762c28856067876a11cbf3b256d41a5e2ae956dc207d86e9ef786428e891"
+      },
+      {
+        "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T082633734257Z/57292346.json",
+        "bytes": 473,
+        "sha256": "862ab7cde687f6b4718ff9359ad7ea1078cc2bcb103466f0cf5da162e4eeea0a"
+      },
+      {
+        "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T082633734257Z/57293138.json",
+        "bytes": 504,
+        "sha256": "0e5dda9fb76baa89e908da5e9363f20506ba5b838c403c4393368d9960577c80"
+      }
+    ],
+    "omitted_status_Public_fields": "No returned result; not failure/score0/explicitPENDING",
+    "limits": {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T082633734257Z/limits.json",
+      "bytes": 28,
+      "sha256": "eb4d91f15e658d9bc5316244fd956e706187432c2d581b150914465e999b92ef"
+    },
+    "new_formal_Submit": 0
+  },
+  "public_frontier": {
+    "summary": {
+      "path": "artifacts/research/20261017-public-frontier-refresh-v8/summary.json",
+      "bytes": 15264,
+      "sha256": "094ddce46a779e134b26a0778f7fea10a84e6723ef1988521a134353db675333"
+    },
+    "verification": {
+      "path": "artifacts/research/20261017-public-frontier-refresh-v8/verification.json",
+      "bytes": 926,
+      "sha256": "cf43cf4ee7c803bd0d877d7e4583c61d133f9451f8c5d1086e2c8646abd8b2d5"
+    },
+    "observed_at_JST": "2026-10-17T17:24:11.694788+09:00",
+    "scope": "One anonymous official score-sorted top100",
+    "max_author_Public": 0.958,
+    "at_least_0_959": 0,
+    "known_five_latest_source_Input_score_changes": 0,
+    "new_threshold_0_958_ref": "lavinwins/top-1-gold",
+    "new_high_does_not_mean_new_source_or_better_than_own958": true,
+    "outside_top100_private_unknown": true
+  },
+  "new_public_fork_audit": {
+    "review": {
+      "path": "artifacts/research/20261017-lavinwins-top1gold-scored-review-v1/review.json",
+      "bytes": 14449,
+      "sha256": "7db9c1d369960a1ee3f54d54b63b428823cf0b974841cdeb9413898c88c54b6d"
+    },
+    "root_independent_cell_equivalence": {
+      "path": "artifacts/research/20261017-lavinwins-top1gold-root-equivalence-v1/review.json",
+      "bytes": 2893,
+      "sha256": "cd97a1babbd6f63c74b0dc9aa40706ca1b9d9dbacd52f0267364cc32eaf642ce"
+    },
+    "ref": "lavinwins/top-1-gold",
+    "kernel": 138762260,
+    "best_scored_version": 4,
+    "script_version": 359191499,
+    "author_submission": 57291942,
+    "author_Public": "0.958",
+    "own_Public_of_this_ref": null,
+    "best_not_assumed_from_latest": true,
+    "all9cells_all7code_same_as_cached_LavinV5_and_HeliosV1": true,
+    "P033_final_science_AST_same": true,
+    "new_scientific_recipe_established": false,
+    "decision": "No new Notebook implementation/run/submission: this supplies no new improvement factor; retain current bounded candidate order.",
+    "Gold_scope": {
+      "Gold_title_proves_label_use": false,
+      "new_Gold_training_or_selection_established": false,
+      "inherited_exposure": "The same core comment in all matched sources says upstream Raptor used all training studies and Gold58 for selection. This is inherited source history, not a new Gold-label operation established by the title.",
+      "Gold_clean_or_patient_independent_claim": false
+    },
+    "anonymous_reads": "View/versionhistory/source only; source639555B, no MRI/model/datasetbody/credentials or mutation."
+  },
+  "preserved_candidates_and_successes": "OwnP033/P036 .958 and P029M/P032 .957 retained; P039 first prepared formal candidate and P038 second, subject to freshquota and goalunmet/runtimequalification.",
+  "next": [
+    "Continue exactly currentF009fold1 fixed12, counters only beforefinal; no interim score/epoch/target selection.",
+    "On completeE12 root manually runs already reviewed amended evaluator once, keeps legacyHOLD and separatev2result.",
+    "Only after actual strictpositive eachfold+candidatezero and manualrootreview construct fresh newCPUv2 spec and proofs, then sealer3 localpair; realKaggle transport/diagnosis/visible remains separate.",
+    "After current fit run prepared F006fold2 QA/preflight/fit, then single sealed C=.01 outer2 comparison under unchanged policy.",
+    "Track exact pendingformal results and realdailyquota; submit existing qualifiedP039 first whenallowed if own<.960, retainP038; stop newsubmissions only after exactbound own>=.960."
+  ],
+  "limits": [
+    "This is source preparation and an active fit, not actual model adoption or goalachievement.",
+    "Amended evaluation was declared afterfold0 andfold1fitstart, before firstfold1metric; legacyv1HOLD unchanged.",
+    "Repeated weakholdouts/historic selection and unknown patient independence remain.",
+    "Publicexternal weights retain known upstreamGold58 selection history; do not call them Goldclean or independent weakCV proof. OwnGold fitting/selection remains0.",
+    "Equivalent code does not prove identical notebook outputs/metadata/hidden predictions or additivePublic gains.",
+    "No new automatic upload/Save/Submit code, no newfit/modeldownload/MRIdecode in consumer preparation."
+  ]
+}

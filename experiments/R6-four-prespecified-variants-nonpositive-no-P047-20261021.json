@@ -1,0 +1,58 @@
+{
+  "at_UTC": "2026-10-21T02:56:49.407823+00:00",
+  "status": "FOUR_FIXED_CHOICES_FAIL_BOTH_BANK_POSITIVITY_NO_R6_FORMAL",
+  "result": "artifacts/research/20261021-R6-frozen-overall-selection-v1/result.json",
+  "result_SHA": "a34744ff96abaedd2e3558371913dc173d81087440cef7ae6784f7d3333d59f9",
+  "counts": {
+    "0": 809,
+    "1": 855
+  },
+  "paired_successes": {
+    "0": 809,
+    "1": 855
+  },
+  "fixed10": {
+    "0": {
+      "baseline": 0.952241961764296,
+      "tta_off": 0.9519166550285776,
+      "tta_quarter": 0.9522981121295265,
+      "no_calibration": 0.9485339687396712,
+      "crop320": 0.9516889943492078
+    },
+    "1": {
+      "baseline": 0.961766418129114,
+      "tta_off": 0.9601625776445827,
+      "tta_quarter": 0.9611774937103604,
+      "no_calibration": 0.9569005524970431,
+      "crop320": 0.9616684541749014
+    }
+  },
+  "deltas": {
+    "tta_off": {
+      "0": -0.0003253067357184003,
+      "1": -0.001603840484531327
+    },
+    "tta_quarter": {
+      "0": 5.615036523054506e-05,
+      "1": -0.000588924418753578
+    },
+    "no_calibration": {
+      "0": -0.003707993024624767,
+      "1": -0.00486586563207092
+    },
+    "crop320": {
+      "0": -0.0005529674150881458,
+      "1": -9.796395421257653e-05
+    }
+  },
+  "selected_variant": null,
+  "decision": "Keep originalR6. NoP047payload/Save/formal, no perlabel/weight/compoundrescue. OldP033best.958retained.",
+  "bothprobes_100percent_common_success": true,
+  "uncropped_fluid_exact": true,
+  "original_replay_max_abs": 8.48437456957285e-08,
+  "crop_replay_max_abs": 8.817969221475153e-08,
+  "upstream_scope": "Declared fold exclusion only; upstream membership/Gold/auxiliary exposure not independently certified; repeated weakvalidation, no whole-parent OOF.",
+  "ownGoldfitselect": 0,
+  "formalSubmit": 0,
+  "goal959": false
+}

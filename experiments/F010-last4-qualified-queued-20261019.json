@@ -1,0 +1,168 @@
+{
+  "schema_version": "F010_own_model_strengthening_qualified_deferred_local_training_v1",
+  "at_UTC": "2026-10-19T03:39:42.114706+00:00",
+  "status": "F010_GPU_QUALIFIED_WAITING_F009_TERMINAL_COMPLETE_NOT_F010_TRAINED",
+  "own_confirmed_Public_best": "0.958",
+  "new_accuracy_improvement_confirmed": false,
+  "user_observation": "No Public improvement has been demonstrated by own-native additions. Treat this as adverse efficacy evidence, not merely dismiss it because endpoints differ.",
+  "inference_boundary": "Weak AUC below0.958 does not mathematically prove lower official AUC; weakness, label mismatch and error redundancy must be investigated.",
+  "prior_Public_contrasts": "P029M957 -> P032/P034/P035957; P039 uses strongest958parent and is pending, not counted as gain. Hidden runtime errors are not scored failures.",
+  "scientific_hypothesis": "Improve standalone learning capacity before another coefficient search. Preserve F006 image/teacher/head/seed/fold/LR/loss/schedule; unfreeze DINO suffix2->4 blocks only.",
+  "trainable_encoder_parameters": {
+    "old": 3550464,
+    "new": 7100928
+  },
+  "head_parameters_unchanged": 83352,
+  "generic_initialization_unchanged": true,
+  "raw_DICOM_or_new_data_or_new_weights_downloaded": false,
+  "old_sources_and_runs_unchanged": true,
+  "prospective_policy": {
+    "path": "artifacts/research/20261019-f010-last4-root-v1/prospective-policy.json",
+    "bytes": 8183,
+    "sha256": "b7117059abc2d89c48524522472ddc20f7cd61476c4647d8f76aee2a252331da"
+  },
+  "config": {
+    "path": "configs/experiments/f010-dinov2-native-last4-late-cosine.json",
+    "bytes": 1479,
+    "sha256": "d8effe7e213719accde9b3fa5e14b05ed7c6322d45bb316ee39f11a84bf6e49a"
+  },
+  "source_freeze": {
+    "path": "artifacts/research/20261019-f010-last4-preparation-v2/final-source-freeze.json",
+    "bytes": 1621,
+    "sha256": "48ef5b110d15bae4fa51e9f7550671583dec3eeeef25ddac4be91bd4e2925e26"
+  },
+  "CPU_artificial_tests": 21,
+  "actual_CUDA_QA": [
+    {
+      "evidence": {
+        "path": "artifacts/qa/f010-last4-artificial144-20261019-v1/NATIVE392_QA_SUMMARY.json",
+        "bytes": 8776,
+        "sha256": "90403310a177fb5bf58b12df3faea8a8b58054ec8f1c72edb829878f65ee62cf"
+      },
+      "status": "f010_last4_label_free_QA_fast16_complete",
+      "valid_triplets": 144,
+      "checks": 6,
+      "last4_peak_reserved_bytes": 1556086784,
+      "model_optimizing_steps": 0
+    },
+    {
+      "evidence": {
+        "path": "artifacts/qa/f010-last4-processed115-20261019-v1/NATIVE392_QA_SUMMARY.json",
+        "bytes": 9440,
+        "sha256": "ebcb2fde7a2cada82e0ea52e7aa9160dbcf20e2ab7b968d8793320a7f0438970"
+      },
+      "status": "f010_last4_label_free_QA_fast16_complete",
+      "valid_triplets": 115,
+      "checks": 6,
+      "last4_peak_reserved_bytes": 1417674752,
+      "model_optimizing_steps": 0
+    }
+  ],
+  "source_bound_resource_gate": {
+    "path": "artifacts/research/20261019-f010-last4-root-v1/resource-gate.json",
+    "bytes": 2111,
+    "sha256": "772f118cd088565b1400c3c3105f716da5224c599b399bbdbb0edc98208d3691"
+  },
+  "fresh_preflight": {
+    "ready": true,
+    "train_studies": 3386,
+    "valid_studies": 821,
+    "cache_studies": 4207,
+    "fitting_performed": false,
+    "tool_chunk": "d44884"
+  },
+  "deferred_local_job": {
+    "state": {
+      "status": "waiting",
+      "at_UTC": "2026-10-19T03:39:28.216968+00:00",
+      "dependency_completed_epochs": 1,
+      "metrics_projected": false,
+      "fit_dispatches": 0
+    },
+    "waiter_PID": 10452,
+    "launcher_PID": 18024,
+    "manual_launch_UTC": "2026-10-19T03:34:27.8967274+00:00",
+    "dependency": "artifacts/runs/f009-gamma-late-cosine-fold1-20261019-retry1/run.json",
+    "plan": {
+      "path": "artifacts/research/20261019-f010-deferred-training-v1/plan.json",
+      "bytes": 46988,
+      "sha256": "e1728289248e48b26ee0aa1705ad074ef560e0f98cccde8785546c24f9e4284b"
+    },
+    "waiter_source": {
+      "path": "artifacts/research/20261019-f010-deferred-training-v1/wait_and_train.py",
+      "bytes": 9589,
+      "sha256": "5bae3e72e7727c77fbb92c2fa14c77f33154317de86de0eea69e7c3b49a6bb4e"
+    },
+    "waiter_tests": {
+      "root": 8,
+      "independent": 11
+    },
+    "independent_concrete_plan": {
+      "path": "artifacts/research/20261019-f010-concrete-plan-independent-v1/review.json",
+      "bytes": 73780,
+      "sha256": "3aba83f302c7da366ae92273c18b40144f77b83cc65f2c239106bd21bbc61906"
+    },
+    "max_future_fits": 1,
+    "fold": 0,
+    "output": "artifacts/runs/f010-last4-late-cosine-fold0-20261019-v1",
+    "wait_deadline_JST": "2026-10-19T22:00:00+09:00",
+    "automatic_evaluation_or_fold1": false,
+    "automatic_Save_Submit_upload": false,
+    "no_dispatch_yet": true
+  },
+  "rough_F010_fit_hours": [
+    7,
+    10
+  ],
+  "rough_duration_not_guarantee": true,
+  "frozen_E12_evaluator": {
+    "path": "artifacts/research/20261019-f010-last4-root-v1/evaluate_fixed12.py",
+    "bytes": 23798,
+    "sha256": "658c9e21e4112c0a3523c4ecf7a197d74a9affb7a1476bc470098b07a4cea365"
+  },
+  "evaluator_preparation": {
+    "path": "artifacts/research/20261019-f010-last4-root-v1/evaluator-verification.json",
+    "bytes": 5015,
+    "sha256": "5e8abc0b8a2177455199746b362210b0c5e48f99c7ca06a26a78c6d40c4e2dae"
+  },
+  "evaluator_independent": {
+    "path": "artifacts/research/20261019-f010-evaluator-independent-v1/review.json",
+    "bytes": 835,
+    "sha256": "725e4fb56dcfffa6250da1abf6a712fbc3536d92028377e510142e4d069aaa4a"
+  },
+  "evaluator_artificial_tests": {
+    "producer": 10,
+    "independent": 6
+  },
+  "actual_E12_comparison": false,
+  "primary_screen": "Same821UID/masks/group, each12epochs212updates0skip; fixed10 meanAUCdelta>0; BCE/CI/reportall12 cannot rescue. Future fold1 requires separate root review.",
+  "old_fold1_control_known_issue": "HistoricalF006fold1 has one E10 AMP skip; this policy is fold0-only and does not silently authorize a fold1 exception. Predeclare any followup handling before starting that candidate.",
+  "ensemble_analysis": "F006/F009 rankcorrmedian .99787; blend50 below bestF009. CLS/REG has weak complementarity across twofolds but own Public gain remains unproven. Same-holdout public958parent predictions unavailable.",
+  "diversity_evidence": {
+    "path": "experiments/native-model-diversity-Public-evidence-20261019.json",
+    "bytes": 11272,
+    "sha256": "19b5014ab8d57f2b4df0df3e9a1af58bfae6367ab3982f34a756c9be1c94220b"
+  },
+  "public_training_research": {
+    "path": "experiments/public-training-recipes-and-F010-priority-20261019.json",
+    "bytes": 11771,
+    "sha256": "55875c75936095dc10a796fbbad0fa63d23bd7900c1267419e8c1c2b0c0d6098"
+  },
+  "public_JEV_scope_correction": {
+    "path": "experiments/public-JEV-Gold-exposure-scope-correction-20261019.json",
+    "bytes": 9966,
+    "sha256": "f4ff2b3464e84e041da347818103ac0492964da20caa6a17ad86a5d306f650ad"
+  },
+  "teacher_decision": "Keep current teacher for this one-factor experiment. Gold-informed public report teachers are not categorically prohibited solely for upstream exposure; a distinct label-source experiment needs direct-value lineage/masks, Gold58+sharedgroup exclusion and transparent upstream exposure audit. No such new teacher is fitted now.",
+  "own_Gold_training_checkpoint_or_recipe_selection": false,
+  "patient_independence_verified": false,
+  "Public_first_target": ">=0.959",
+  "overall_next_target": ">0.960",
+  "user_own_model_aspiration": "Own trained pipeline around0.960; not yet demonstrated by any current record",
+  "next": [
+    "Wait sameF009 terminal unchanged; reviewed one-job F010fold0 starts locally if dependency/source/config/QA/metadata remain valid.",
+    "Observe terminalF010E12 then run pinned comparison once. If nonpositive HOLD, not alternateepoch/target/weight rescue.",
+    "If positive, declare independent fold1 comparator handling before fit, verify same factor; official Public gain is a separate requirement.",
+    "Separate label-source or CNN/crop experiments remain possible after provenance audit and time/resource review; do not import Gold choices without recording them."
+  ]
+}

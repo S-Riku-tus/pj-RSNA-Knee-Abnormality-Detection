@@ -1,0 +1,50 @@
+{
+  "at_UTC": "2026-10-20T12:06:43.733290+00:00",
+  "status": "BOTH_REUSED_WEAK_FOLDS_FIXED_NATIVE50_POSITIVE_NO_CUDA_MRI_RELEASE",
+  "result": {
+    "path": "artifacts/research/20261020-P048-native50-paired-weak-prospective-v1/result.json",
+    "bytes": 30364,
+    "sha256": "e748dd5b2acf0237412d5f75f6b02caf8c3846611f1bd28f1e85f99536fba2f3"
+  },
+  "policy": {
+    "path": "artifacts/research/20261020-P048-native50-paired-weak-prospective-v1/policy.json",
+    "bytes": 8269,
+    "sha256": "0f24b3625e4d555795cadfe4409ba81087d2c5dcdec5c5f17775993173c1842f"
+  },
+  "source": {
+    "path": "scripts/check_p048_native50_weak.py",
+    "bytes": 7282,
+    "sha256": "024004bb862a6b7904333bd5948ce719ec8f82aac96141895eada30985629adf"
+  },
+  "source_artifactV2": {
+    "path": "artifacts/kaggle/p048-f013-native20-source-only-20261020-v2/source.ipynb",
+    "bytes": 559016,
+    "sha256": "12d6bcdc4c8340675572241e9f2d181ba57f23821326360e4b3eabc656daf0d7"
+  },
+  "folds": {
+    "0": {
+      "N": 821,
+      "control_fixed10": 0.8889231579382029,
+      "F013_fixed10": 0.8896242444917316,
+      "delta": 0.0007010865535287403
+    },
+    "1": {
+      "N": 891,
+      "control_fixed10": 0.8886570610806304,
+      "F013_fixed10": 0.8890273420833885,
+      "delta": 0.0003702810027581549
+    }
+  },
+  "all6_run_CSV_checkpoint_hashes_and_writer_metrics_match": true,
+  "same_perfold_heldout_CLS_and_REG_UID_mask_group": true,
+  "P039_actual_control_CLS_E12_not_BCE_best": true,
+  "REGfixed_E8_E10": true,
+  "independent_FP32_mean_and_pair_AUC_identity_checked": true,
+  "source_tests7_and_ruff_PASS": true,
+  "native50_gate_required_in_new_builder_and_runtime": true,
+  "actual_entry_enabled": false,
+  "old_F009_HOLD_unchanged": true,
+  "actual_GPU_or_MRI_or_Save_Submit": 0,
+  "ownGoldfitselect": 0,
+  "limits": "Repeatedweakfolds; eachonlymatchingheldoutCLS+REG proxy, not fullservingtwofoldOOF or P033wholeOOF. No native20/weightsearch; noPublicgainassertion. Originalstandalonef1CIcontainszero. Prior/currentGPU/MRI/independentCSV/freshgoalquota gatesstillrequired."
+}

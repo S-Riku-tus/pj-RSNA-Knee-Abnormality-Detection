@@ -1,0 +1,19 @@
+{
+  "at_UTC": "2026-10-20T02:43:04.361329+00:00",
+  "status": "ACTIVE_0959_GOAL_UNMET_NEW_SCOPE",
+  "new_authorization": "User explicitly requests continue until own official Public>=0.959, broad investigation/analysis/experiments/manual submissions within competition limits. Prior four-only scope completed; this is new authorization.",
+  "best": "0.958",
+  "old_results": {
+    "P038": "0.957",
+    "P040": "0.957",
+    "P041": "0.958",
+    "P042": "0.957"
+  },
+  "quota": "fresh0/40/5",
+  "GPU": "Preserve existing process PID19472 per explicit user reply; no kill/preemption",
+  "first_bounded_candidate_policy": "artifacts\\research\\20261020-goal959-root-resume-and-P043-policy-v1\\P043-prospective-policy.json",
+  "lineage_static": "R6 manifest folds4, not assumed clean global holdout. Source UID-hash fold function inspectable; Raptor trained allpool so full-parent cleanOOF absent.",
+  "team_compute": "Subagents unavailable due account usage error; root continuing tools/analysis independently. No repeated failed agent calls.",
+  "goal_not_complete": true,
+  "no_automatic_upload_or_submit_code": true
+}

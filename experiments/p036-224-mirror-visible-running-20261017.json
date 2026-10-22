@@ -1,0 +1,53 @@
+{
+  "at_utc": "2026-10-17T02:09:27.638541+00:00",
+  "status": "SAVE1_VISIBLE_RUNNING_SUBMIT0",
+  "goal": "own Public>=0.960 unachieved; ownbest0.957 preserved",
+  "candidate": "P036",
+  "ref": "rsraki/p036-224-mirror-20261017-v1",
+  "kernel": 139135844,
+  "version": 1,
+  "source_sha256": "44be198b41208edd3f01e9897deb76f44ae88bdf30ac8d728b50d17db87c31b9",
+  "source": "artifacts/kaggle/p036-p033-224-mirror-20261017-v1/source.ipynb",
+  "only_factor": "Raptor224 anatomical mirror TTA relative to fixed P033",
+  "mirror": {
+    "sagittal_slots0_1": "reverse triplet channel1",
+    "coronal_axial_slots2_3_4": "reverse image width-1",
+    "stage": "raw uint8 before per-channel LUT/crop/resize/normalization",
+    "mean": "0.5*(plain sigmoid FP32 + mirrored sigmoid FP32)",
+    "label_swap": false,
+    "XLA_branch_changed": false
+  },
+  "other7code_cells_fixed": true,
+  "inputs": {
+    "datasets": 2,
+    "kernelstage": 1,
+    "competition": 1,
+    "total": 4
+  },
+  "models_TTA_R6_b2guard_and_classweights_fixed": true,
+  "F006_R7_Reader_included": false,
+  "parentP033_formal_submission": 57290868,
+  "parentP033_own_Public": null,
+  "author_goodpjw_multifactor_recipe_Public": "0.958; not mirror-only evidence",
+  "qualification": {
+    "CPU_tests": 10,
+    "ruff": "PASS",
+    "independent_AST_CPU": "artifacts/research/20261017-p036-independent-review-v1/review.json",
+    "artificial_CUDA": "artifacts/research/20261017-p036-artificial-CUDA-v1/verification.json",
+    "actual_saved_readback": "artifacts/research/20261017-p036-execution-v1/launch-v1/saved-readback-audit.json",
+    "visible_completion": false,
+    "hidden_completion": false,
+    "own_Public": false
+  },
+  "actions": {
+    "Save": 1,
+    "Submit": 0,
+    "model_download_local": 0,
+    "real_MRI_local": 0,
+    "new_training": 0
+  },
+  "time_risk": "One extra224 model pass per successful study; hidden9h time remains unverified",
+  "private": true,
+  "Internet": false,
+  "GPU": "T4x2"
+}

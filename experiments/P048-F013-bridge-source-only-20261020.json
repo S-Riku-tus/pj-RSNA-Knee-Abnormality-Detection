@@ -1,0 +1,54 @@
+{
+  "at_UTC": "2026-10-20T11:54:21.986473+00:00",
+  "status": "SOURCE_ONLY_DISABLED_NO_REAL_MODEL_RECONSTRUCTION_GPU_MRI_OR_SUBMIT",
+  "hypothesis": "ExactP039 except2fixedCLS F006E12 -> F009gammaE12 underseparateF013scope. REG/native392/FP32fold50family50/native20/P0338 fixed.",
+  "policy": {
+    "path": "artifacts/research/20261020-P048-F013-P039-bridge-prospective-v1/policy.json",
+    "bytes": 3480,
+    "sha256": "f14432a21fd6f19bcb776fadff374f7d2c88c8aee42ae63f50238192f5cb1540"
+  },
+  "source_artifact": {
+    "path": "artifacts/kaggle/p048-f013-native20-source-only-20261020-v1/source.ipynb",
+    "bytes": 553977,
+    "sha256": "70132d970cabef301200097be155a98b11d94f1c7cbed0d607a867cfd512dcbd"
+  },
+  "code": {
+    "scripts/f013_p039_bridge.py": {
+      "path": "scripts/f013_p039_bridge.py",
+      "bytes": 22268,
+      "sha256": "163b96a35068bdeb4baf52424e6bf43613e7cff66586097eb57a54cef93b8ff1"
+    },
+    "scripts/prepare_p048_f013_native20.py": {
+      "path": "scripts/prepare_p048_f013_native20.py",
+      "bytes": 10210,
+      "sha256": "2b18ea674f96b74ed7a36928de87d647bca31a0a4e02c30acabf1421bcb58e6b"
+    },
+    "tests/test_f013_p039_bridge.py": {
+      "path": "tests/test_f013_p039_bridge.py",
+      "bytes": 6706,
+      "sha256": "441629b2a68a437779ab903e1152b0afd17f33656b0a246efd285bdd25e73fda"
+    }
+  },
+  "checks": {
+    "six_stdlib_tests_pass": true,
+    "ruff_pass": true,
+    "separate_current_execute_only3_declared_AST_boundaries": true,
+    "original_child_bootstrap_and_run_AST_exact": true,
+    "all_original_other7members_byteexact": true,
+    "original_native20_blendcall_and_numericconstants_exact": true,
+    "newpair_REG_math_immutable_secondfactor_rejected": true,
+    "no_actual_GPUproof_sourceentry_raises_beforeparent": true,
+    "empty_GPUproof_refused": true,
+    "localTorch_imported": false
+  },
+  "review_method": "Root separate frozen-source/AST/numericliteral/member comparison; subagents unavailable due usage limit, not independent-person review.",
+  "eligibility": "Await actualF013 priorCUDA bothfixedfolds; actualbuilderdisabledwithoutrootpinnednewproof. Serving itself rechecks current8models on2T4 before firstMRI and exact4modelconsumer means/padding/gamma/state. No oldconsumer/HOLD edits.",
+  "actual_entry_enabled": false,
+  "new_saved_kernel_version": null,
+  "old_F009_HOLD_unchanged": true,
+  "qualified_for_formal_Submit": false,
+  "actual_GPU_MRI_train_Save_Submit_upload": 0,
+  "ownGold_fit_select": 0,
+  "upstream_P033_public_gold_exposure": "Inherited separatelyaudited publicassets; not cleanwholepipelineOOF claim.",
+  "priority": "R6positivechoicefirst; awaitP045score, >=959closesgoal; P046conditionalalternative. AtmostoneP048manualformal aftercurrentvisiblequalification, freshsource/quota/rootreview; total2remaining."
+}

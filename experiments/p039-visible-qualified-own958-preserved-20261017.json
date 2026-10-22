@@ -1,0 +1,228 @@
+{
+  "schema_version": "P039_visible_actual_qualified_root_and_independent_v1",
+  "at_UTC": "2026-10-17T07:35:45.033540+00:00",
+  "own_confirmed_Public_best": "0.958",
+  "target_Public": "0.960",
+  "target_achieved": false,
+  "previous_goal_turn_classification": "progress: P033 own958 confirmed and P039 manually started",
+  "current_goal_turn_classification": "progress: P039 actual COMPLETE with native participation and independently exact output arithmetic",
+  "P039": {
+    "ref": "rsraki/p039-p033-native20-20261017-v2",
+    "kernel": 139182563,
+    "version": 1,
+    "source_sha256": "6453b3d09787abab07205d832c0176f0e78d050127e98d83c9f835bc5f799452",
+    "official_status": "COMPLETE",
+    "actual_visible_qualification": "PASS rootauditor and independent sortedtie/Fraction/struct oracle",
+    "coverage": {
+      "N": 3,
+      "S": 3,
+      "F_structural": 0,
+      "F_operational": 0
+    },
+    "native_full_model_forwards": 12,
+    "native_models": 4,
+    "executed_source_members": 89,
+    "active_targets": 10,
+    "native_blended_cells": 30,
+    "changed_numeric_and_text_cells": 26,
+    "changed_rank_cells": 4,
+    "rank_change_targets": [
+      "Lateral Meniscus",
+      "Effusion"
+    ],
+    "parent_FP32_values_checked": 36,
+    "native_fold_family_mean_FP32_values_checked_independent": 72,
+    "native_final_mean_FP32_values_checked": 36,
+    "final_overlay_FP32_values_checked": 36,
+    "all_bit_mismatches": 0,
+    "MCL_Synovitis_parent_text_preserved_cells": 6,
+    "failed_row_parent_text_in_actual_run": "No failures occurred; artificial failure qualification remains separate",
+    "whole_elapsed_seconds": 489.584940198,
+    "native_elapsed_seconds": 42.78684801700001,
+    "download_files": 22,
+    "download_total_bytes": 234273,
+    "output_inventory_count": 928,
+    "optional_startup_file_absent": "P032/P018_MIXED_STARTUP.json; startup and fourmodel proof validated from native-result/adapter/transport",
+    "final_CSV": {
+      "path": "artifacts/research/20261017-p039-execution-v1/observations/p039-p033-native20-20261017-v2/20261017T073144383201Z/files/submission.csv",
+      "bytes": 896,
+      "sha256": "d884a92f2bdac264b702a739f3ea10fc2131bc7331e23866eac5c87c119f48e4"
+    },
+    "parent_CSV": {
+      "path": "artifacts/research/20261017-p039-execution-v1/observations/p039-p033-native20-20261017-v2/20261017T073144383201Z/files/P032/parent-submission.csv",
+      "bytes": 646,
+      "sha256": "5dd9febae16c11b76450eecb92bbc67669214f71cdd6edce69ec48a02376d7b4"
+    },
+    "whole_extension_failure_or_noactive_native_is_fatal": true,
+    "formal_Submit": 0,
+    "own_Public": null,
+    "hidden_or_Public_gain_qualified": false,
+    "candidate_scientific_factor": "P033 classvector parent only over unchanged original native20/UIDreader/failuremask/FP32math"
+  },
+  "official_latest": {
+    "at_UTC": "2026-10-17T07:32:58.070962+00:00",
+    "P03357290868": "COMPLETE .958",
+    "remaining_four": "status/Public raw omitted; errorabsent/output0B, not status failure orzero",
+    "limits": {
+      "numToday": 5,
+      "numTotal": 35,
+      "maxDaily": 5,
+      "extra_slots_treated_as": 0
+    },
+    "new_formal_Submit": 0,
+    "reset_time_known": false
+  },
+  "F009": {
+    "same_run": "artifacts/runs/f009-gamma-late-cosine-fold0-20261017-v1",
+    "latest_complete_epoch_snapshot": 11,
+    "updates": 2332,
+    "AMP_skips": 0,
+    "actual_E12_primary_comparison": false,
+    "interim_selection_or_training_changes": false,
+    "live_PID_last_observed": 22392,
+    "next": "Complete same E12 then guarded fixed10 delta>0 ANDengineering0skip=>samefold1, else F006fold2 first"
+  },
+  "public_frontier": "16:24 top100 authorMax958, fiveknown, no new>=959 or sourceInputchanges; outside/privateunknown",
+  "next": [
+    "Preserve own successful P033958 and previous957 versions",
+    "Retain qualified P039 and P038 without duplicate Save; actual quota/remainingofficialresults determine formal priority",
+    "Actual unchanged F009 E12 guarded comparison next; no interim score selection",
+    "Fixed innerC outer2 still sealed until newF006fold2E12 control; no newtargets released"
+  ],
+  "activity": {
+    "new_Save_in_this_milestone": 0,
+    "new_formal_Submit": 0,
+    "new_local_GPU_fit": 0,
+    "existing_F009_fit_continues": true,
+    "download_MRI_models_or_source_archive": 0,
+    "ownGold_fit_select_eval": 0
+  },
+  "limits": [
+    "Visible3 arithmetic and engineering cannot prove hidden coverage or Publicgain",
+    "Input refs/version requests pinned and runtime fingerprints bound; mounted version identities are not independently observed",
+    "P035 inherited process monitor is not qualified by separate innerC POSIX rehearsal",
+    "Upstream public pretraining/Gold use and patient independence remain separate unresolved provenance scopes"
+  ],
+  "ledger_before": {
+    "rows": 316,
+    "bytes": 192131,
+    "sha256": "b1b602da9b4d96ac87019d808e30274ade5440a92cac2e3e1544e38721f8c5f0"
+  },
+  "evidence": [
+    {
+      "path": "experiments/p039-P033958-native20-GPU-running-20261017.json",
+      "bytes": 9543,
+      "sha256": "0ea8cbb58808974617eae487191d5d8b2eb763917c6b1a87c9e8d9868d7a3eba"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/root-actual-output-audit-v1.json",
+      "bytes": 12663,
+      "sha256": "c05934ae1a97211c463d3d4082ba5ceadeb01c649cc81cdd5ab32e350bcc9eb9"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/root-output-auditor-source-review.json",
+      "bytes": 1651,
+      "sha256": "afaed3d29701cb8fe3cde83cf90087300fb9304baba3b295bc424e9411aa3a33"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/audit-preparation.json",
+      "bytes": 3629,
+      "sha256": "c4444c136b5b2826f07a97155e8aae6882993488df6058765dbae4a22ebb00fd"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-output-auditor-source-peer-v1/review.json",
+      "bytes": 3728,
+      "sha256": "d9a458a7e3817ae38acb97d5004274e7b48ba96fe9c409854602ee664b2676f1"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-actual-independent-v1/review.json",
+      "bytes": 10715,
+      "sha256": "4e2d20cafd0a64f21d3c0e31b128f8b6441da69eb20ccc60bee50f39d5bd03b0"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/observations/p039-p033-native20-20261017-v2/20261017T073144383201Z/status.json",
+      "bytes": 21,
+      "sha256": "8c65d9493ad080266a23df2675f847486fedc0546a88a91c866b812d970915b5"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/observations/p039-p033-native20-20261017-v2/20261017T073144383201Z/receipts.json",
+      "bytes": 5673,
+      "sha256": "8cb8f32d49333a27bca99bedc98e7a6a23da334b570f65973d82e379780c31cd"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/observations/p039-p033-native20-20261017-v2/20261017T073144383201Z/files/P032/execution-receipt.json",
+      "bytes": 21821,
+      "sha256": "08a29e7365eaba5847b0bfc02a4058ee3cbe1f34d03250e4c32c6dc5775dcd3f"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/observations/p039-p033-native20-20261017-v2/20261017T073144383201Z/files/submission.csv",
+      "bytes": 896,
+      "sha256": "d884a92f2bdac264b702a739f3ea10fc2131bc7331e23866eac5c87c119f48e4"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/observations/p039-p033-native20-20261017-v2/20261017T073144383201Z/files/P032/parent-submission.csv",
+      "bytes": 646,
+      "sha256": "5dd9febae16c11b76450eecb92bbc67669214f71cdd6edce69ec48a02376d7b4"
+    },
+    {
+      "path": "artifacts/research/20261017-public-frontier-refresh-v7/summary.json",
+      "bytes": 13992,
+      "sha256": "50601a33bb163dc1ca0f8e23af0f194e81e169145e8e09a237fd1bb5b5ac878c"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T073258070962Z/57290868.json",
+      "bytes": 511,
+      "sha256": "b2c6a8bae958e3fa127624e428f44bd212ce710cbecfdcabac5dddb634616914"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T073258070962Z/57290868.receipt.json",
+      "bytes": 168,
+      "sha256": "fba459fed3297ff31329f4d09655bf1ca50407faed44bc81cd83885d80616589"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T073258070962Z/57291440.json",
+      "bytes": 475,
+      "sha256": "cd1b762c28856067876a11cbf3b256d41a5e2ae956dc207d86e9ef786428e891"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T073258070962Z/57291440.receipt.json",
+      "bytes": 168,
+      "sha256": "bc2efadfaa9ea01a9893f680461690acc08e4f2ca5dcf1b8ad1eb0af6fa814cf"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T073258070962Z/57291580.json",
+      "bytes": 461,
+      "sha256": "d758892c078175df363884ba55d8830cb00e63447f46c16b4540fd944a2402ef"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T073258070962Z/57291580.receipt.json",
+      "bytes": 168,
+      "sha256": "f497d6ad6308f21cc8c486758b835e4eafaa0894b69fc8634f856075f1f5823a"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T073258070962Z/57292346.json",
+      "bytes": 473,
+      "sha256": "862ab7cde687f6b4718ff9359ad7ea1078cc2bcb103466f0cf5da162e4eeea0a"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T073258070962Z/57292346.receipt.json",
+      "bytes": 168,
+      "sha256": "138648cad4bb31df63c737de7b8ad64dec8711d13df301379b5a8db3b6652431"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T073258070962Z/57293138.json",
+      "bytes": 504,
+      "sha256": "0e5dda9fb76baa89e908da5e9363f20506ba5b838c403c4393368d9960577c80"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T073258070962Z/57293138.receipt.json",
+      "bytes": 168,
+      "sha256": "ee0025bd2d5690f10be46c584f66acdc388c05ec437a517d24d50e5783da6c9b"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T073258070962Z/limits.json",
+      "bytes": 28,
+      "sha256": "eb4d91f15e658d9bc5316244fd956e706187432c2d581b150914465e999b92ef"
+    }
+  ]
+}

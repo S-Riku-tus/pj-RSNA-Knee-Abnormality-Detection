@@ -1,0 +1,181 @@
+{
+  "schema_version": "P040P041_queued_P038_latest_readonly_monitor30m_v1",
+  "at_UTC": "2026-10-19T12:19:28.827063+00:00",
+  "interval_starting_baseline_UTC": "2026-10-19T11:48:35.263041+00:00",
+  "first_new_poll_UTC": "2026-10-19T11:51:10.236561+00:00",
+  "last_UTC": "2026-10-19T12:19:13.540933+00:00",
+  "observations": 14,
+  "total_observations_since_start": 66,
+  "selector": "latest: version_label omitted",
+  "state_changes": 0,
+  "all_HTTP200": true,
+  "latest_states": {
+    "P040": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P041": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P038": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_score_present": false,
+      "Public": null,
+      "error": null,
+      "totalBytes": 0
+    }
+  },
+  "requested_single_ListAndLimits_crosscheck": {
+    "at_UTC": "2026-10-19T12:00:03.454172+00:00",
+    "request": "One requested own ListSubmissions(page_size100) and limits supplement to normal3read",
+    "listing_count": 37,
+    "pagination_exhausted": true,
+    "own_all": true,
+    "P038_ref": 57391696,
+    "P038_Get_List_comparison": {
+      "status": {
+        "Get_present": false,
+        "Get": null,
+        "List_present": false,
+        "List": null,
+        "match": true
+      },
+      "publicScore": {
+        "Get_present": false,
+        "Get": null,
+        "List_present": false,
+        "List": null,
+        "match": true
+      },
+      "errorDescription": {
+        "Get_present": false,
+        "Get": null,
+        "List_present": false,
+        "List": null,
+        "match": true
+      },
+      "totalBytes": {
+        "Get_present": true,
+        "Get": 0,
+        "List_present": true,
+        "List": 0,
+        "match": true
+      }
+    },
+    "all_fields_match": true,
+    "limits": {
+      "numToday": 2,
+      "numTotal": 37,
+      "numAllowedNow": 3
+    },
+    "extra_read_calls": 2,
+    "Save_Submit_newGPU": 0,
+    "receipts": [
+      {
+        "label": "submissions",
+        "at_UTC": "2026-10-19T12:00:03.217790+00:00",
+        "http": 200,
+        "bytes": 17924,
+        "sha256": "de4be39a385c2f93ef756aacd2ec4575138402ad599d6ddcee80ffe1b7c64de2"
+      },
+      {
+        "label": "limits",
+        "at_UTC": "2026-10-19T12:00:03.453172+00:00",
+        "http": 200,
+        "bytes": 46,
+        "sha256": "416b4b06f21b7c52935a8bfed45dffaba05e016a6f7f62190eb3403efe4bc827"
+      }
+    ]
+  },
+  "raw_QUEUED_omission_not_failure": true,
+  "missing_Public_not_zero": true,
+  "next30minute_interval_authorized_by_root": true,
+  "activity": {
+    "Save": 0,
+    "Submit": 0,
+    "upload": 0,
+    "GPU_start": 0,
+    "extra_ListSubmissions": 1,
+    "extra_GetSubmissionLimits": 1
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T115108097028Z/summary.json",
+      "bytes": 1301,
+      "sha256": "107e9eb8d3332ec248239ac8a13b9a9b8d31df7bf0ae5f3cf39932fa68997912"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T115316931408Z/summary.json",
+      "bytes": 1301,
+      "sha256": "40bd537bbc2e9ec2543f5f8d339793fd510976088d4904e1bc20af4c0194e3c8"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T115524434465Z/summary.json",
+      "bytes": 1301,
+      "sha256": "08421906cd7f71e862ddb3a227012a7a720098e756ebb4fa15b4184f35655f05"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T115736310413Z/summary.json",
+      "bytes": 1301,
+      "sha256": "501cfccc65d5b02a9f8a512d0e542deba7e0e97958c2dcfcdf65cf9f0e606e91"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T120001473479Z/summary.json",
+      "bytes": 1301,
+      "sha256": "a38b81a1cf33d55147f06b81f9e1f960f519e9a89db8426859867a0417040a27"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T120219336033Z/summary.json",
+      "bytes": 1301,
+      "sha256": "2f08f2877213a2788c0769e4e2fe34ecdf986a88a6dd8a142bd47d17ed0dfd1b"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T120424872156Z/summary.json",
+      "bytes": 1301,
+      "sha256": "09f7144edc0a91ffb107b51b212fc96877628f40c11acb6cd0cf2bba1a5ad78f"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T120633966532Z/summary.json",
+      "bytes": 1301,
+      "sha256": "7620d0f310d248eb414232185f7c91451dfc232c4795eb79381f60a52ee7295d"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T120840503442Z/summary.json",
+      "bytes": 1301,
+      "sha256": "8ec030989ff3adf5ccf92564a2dca03d1327c1acf814d8cdf1f9c03139c4d578"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T121050110937Z/summary.json",
+      "bytes": 1301,
+      "sha256": "c81f71e7e3f93624907a5a30749b1bd35a57902659056abfb163bc45c69ec94c"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T121254888021Z/summary.json",
+      "bytes": 1301,
+      "sha256": "4e545cf4def16140bf538562b08c2afaf512a4ff902d829e76b082c52f33e8c7"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T121458769257Z/summary.json",
+      "bytes": 1301,
+      "sha256": "6d461de12980332004de34d72efe545ac75f125646d512bcbfd4fd8f2d0ea119"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T121704029543Z/summary.json",
+      "bytes": 1301,
+      "sha256": "85d8b8537559e93cb679d77720bd51b180cbdb2f5719cc23eaa33096ca59682e"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T121912550759Z/summary.json",
+      "bytes": 1301,
+      "sha256": "1f2a366a7ee895be3a7f143884480ef19bccac117a686b3b251bbd5e166d4b09"
+    }
+  ]
+}

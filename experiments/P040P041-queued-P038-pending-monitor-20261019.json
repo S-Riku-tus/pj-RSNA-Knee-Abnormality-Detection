@@ -1,0 +1,96 @@
+{
+  "schema_version": "P040P041_queued_P038_unreturned_readonly_monitor_v1",
+  "at_UTC": "2026-10-19T10:19:07.561341+00:00",
+  "first_UTC": "2026-10-19T09:59:39.851200+00:00",
+  "last_UTC": "2026-10-19T10:18:49.289430+00:00",
+  "observations": 10,
+  "per_candidate_status_calls": 10,
+  "P038_GetSubmission_calls": 10,
+  "state_changes": 0,
+  "all_HTTP200": true,
+  "latest_states": {
+    "P040": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P041": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P038": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_score_present": false,
+      "Public": null,
+      "error": null,
+      "totalBytes": 0
+    }
+  },
+  "raw_QUEUED_omission_not_failure": true,
+  "missing_Public_not_zero": true,
+  "interval_completed_not_jobs_completed": true,
+  "activity": {
+    "Save": 0,
+    "Submit": 0,
+    "upload": 0,
+    "GPU_start": 0
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T095938899801Z/summary.json",
+      "bytes": 1300,
+      "sha256": "c72b7c39d92a117df3523ec732b3b5d7af7027d087c8bf5659f098e5064194bb"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T100150578307Z/summary.json",
+      "bytes": 1301,
+      "sha256": "c758b6c5e65f08964d96c810db332276cbbd4033bd82ed8975b0047a92caf233"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T100403635518Z/summary.json",
+      "bytes": 1301,
+      "sha256": "2a01789d84774293f338909562118719325e16208868ba79084f45d762ee45b8"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T100605967893Z/summary.json",
+      "bytes": 1301,
+      "sha256": "71a132932021cab29ef8d7f354cfebb22a603c92f1ffbd59b8629dcdef297852"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T100812784072Z/summary.json",
+      "bytes": 1301,
+      "sha256": "13283dede21acdba7ea2f5681360be7a6ef63ccc6a4586b702e3fdcb7373b547"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T101022142169Z/summary.json",
+      "bytes": 1301,
+      "sha256": "f6f7909427fe83274dd9d4d3bc0570919c1cd4276bcde78af2b81336d5ef3849"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T101230077336Z/summary.json",
+      "bytes": 1301,
+      "sha256": "c403d005aa9bd6b95217be379148f4cb8dff74b390204d575481d6367fbf0e38"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T101434055178Z/summary.json",
+      "bytes": 1301,
+      "sha256": "554fe1be82efc81eab67f5d7407ec4fd4ba73b43161532ee36d23ab7929ffe33"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T101641584394Z/summary.json",
+      "bytes": 1301,
+      "sha256": "f72f5691abbb78b3d5aaccb635a8f0647681ead0d8ac1b7dc0c1b8e1cc4826e7"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T101848297003Z/summary.json",
+      "bytes": 1301,
+      "sha256": "40ed699a73cf2acb2b6d20bbd5f8611741f327d84db9f564f99c3f8652f82f8a"
+    }
+  ]
+}

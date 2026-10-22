@@ -1,0 +1,48 @@
+{
+  "at_UTC": "2026-10-20T04:03:48.420399+00:00",
+  "accepted": true,
+  "kernelId": 139736510,
+  "ref": "rsraki/p045-p033-dino5-20261020-v1",
+  "version": 1,
+  "all_checks_passed": true,
+  "checks": {
+    "ref": true,
+    "kernel_id": true,
+    "version": true,
+    "all_source_cells": true,
+    "privateGPUofflineNoTPU": true,
+    "shape": true,
+    "Docker": true,
+    "datasets": true,
+    "kernels": true,
+    "competition": true
+  },
+  "status": "VISIBLE_RUNNING_NOT_FORMAL_TARGET959_UNMET",
+  "manual_Save_calls": 1,
+  "formal_Submit_calls": 0,
+  "source": "artifacts/kaggle/p045-p033-dino5-20261020-v1/source.ipynb",
+  "source_SHA": "aea1f6c6950d51ac2b64bf471424597a9ad2074b0a0d1b3ec60f40ce92fba994",
+  "policy": "artifacts/research/20261020-P045-DINO5-prospective-v1/policy.json",
+  "policy_SHA": "c59c79187d5e19c540a748f4ff01b8d756b47aba8ac65adc50d1f3f1cde6d6f0",
+  "CPU_asset_qualification": "artifacts/research/20261020-P045-dino5-CPU-asset-execution-v1/qualification.json",
+  "tests": {
+    "unittest": 7,
+    "result": "PASS",
+    "ruff": "PASS"
+  },
+  "DINO_upstream_Gold_train_selection": "UNKNOWN",
+  "own_Gold_fit_select": 0,
+  "best_own_Public": "0.958",
+  "goal959_achieved": false,
+  "official_pending_refs": [
+    57420128,
+    57420634
+  ],
+  "limits_at_preflight": {
+    "numToday": 2,
+    "numTotal": 42,
+    "numAllowedNow": 3
+  },
+  "existing_GPU19472_preserved": true,
+  "no_automatic_upload_or_Submit_code_added": true
+}

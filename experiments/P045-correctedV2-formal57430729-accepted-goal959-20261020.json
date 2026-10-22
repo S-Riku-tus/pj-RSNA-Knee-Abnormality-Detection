@@ -1,0 +1,67 @@
+{
+  "at_UTC": "2026-10-20T09:00:03.145512+00:00",
+  "accepted": true,
+  "ref": 57430729,
+  "kernelId": 139737264,
+  "kernel_ref": "rsraki/p045-p033-dino5-20261020-v2",
+  "saved_version": 1,
+  "artifact_revision": "P045 V2",
+  "own_status_raw": null,
+  "own_Public_raw": null,
+  "error": null,
+  "owner_description_file_match": true,
+  "limits": {
+    "numToday": 3,
+    "numTotal": 43,
+    "numAllowedNow": 2,
+    "limitedByTotal": false
+  },
+  "fullList_rows": 43,
+  "fullList_exhausted": true,
+  "same_ref_List_binding_rows": 1,
+  "actual_scriptVersionId_from_same_ref_List": 360274333,
+  "manual_formal_calls": 1,
+  "automatic_retry": false,
+  "best_own_Public": "0.958",
+  "goal959_achieved": false,
+  "pending_not_zero": true,
+  "receipts": [
+    {
+      "label": "manual-Submit-once",
+      "at_UTC": "2026-10-20T09:00:01.922261+00:00",
+      "HTTP": 200,
+      "bytes": 16,
+      "SHA": "3eecaade41e498d1ebb727e3f0faf0594d7830c2cead71f35c3a9de968acf3b4"
+    },
+    {
+      "label": "accepted-owned-Get",
+      "at_UTC": "2026-10-20T09:00:02.113950+00:00",
+      "HTTP": 200,
+      "bytes": 599,
+      "SHA": "95553bdb49af24ffeaf32c279b52fede4c1bc0e3d2aa05e19626a2022f4b803d"
+    },
+    {
+      "label": "after-Submit-limits",
+      "at_UTC": "2026-10-20T09:00:02.319314+00:00",
+      "HTTP": 200,
+      "bytes": 46,
+      "SHA": "1e36d40758b250da8bac64e495aa7e8d2cdd8c13f7a63fbf0a5202aeb6df5848"
+    },
+    {
+      "label": "after-Submit-full-own-list",
+      "at_UTC": "2026-10-20T09:00:03.142517+00:00",
+      "HTTP": 200,
+      "bytes": 21698,
+      "SHA": "0c8dfafb8ff195f5263cd2892ae97ce65aebf76290aeac82062d9d2389b54f4c"
+    }
+  ],
+  "status": "OWN_FORMAL_ACCEPTED_PUBLIC_PENDING",
+  "qualification": "artifacts/research/20261020-P045-v2-actual-visible-qualification-v1/provenance-and-numeric-review.json",
+  "source_SHA": "2d0525ba7ee0af4bce4e936a481a2f34ab1d185832fa4b2c617b6c081bed35b4",
+  "DINO_upstream_Gold_train_selection": "UNKNOWN",
+  "own_Gold_fit_select": 0,
+  "V1_formal_eligible": false,
+  "best958_retained": true,
+  "target959_unmet": true,
+  "no_automatic_upload_or_Submit_code_added": true
+}

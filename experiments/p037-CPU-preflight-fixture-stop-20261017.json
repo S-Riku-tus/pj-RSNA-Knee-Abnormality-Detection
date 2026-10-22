@@ -1,0 +1,29 @@
+{
+  "at_utc": "2026-10-17T02:52:58.230867+00:00",
+  "status": "P037_CPU_PREFLIGHT_STOPPED_BEFORE_SCIENCE_FIXTURE_PATH",
+  "own_best_Public": "0.957",
+  "goal0960_unmet": true,
+  "P037_CPU": {
+    "kernel": 139142087,
+    "version": 1,
+    "ref": "rsraki/p037c-preflight6-20261017-v1",
+    "source_sha256": "d972582913ab788bd5301abc22c64b5d667d409dc15c87b58d4e16712965c55c",
+    "official_status": "COMPLETE",
+    "test_complete": false,
+    "error": "Public Reader decoder fixtures/reference required",
+    "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "requested_Docker_37c64_honored": true,
+    "fixed_Input_count": 6,
+    "root_source_settings_readback_passed": true,
+    "forward_GPU_MRI_Report_Gold_reads": 0,
+    "scope": "21 model bundle member SHA guards followed by synthetic decoder preflight only; no model deserialization",
+    "guard_receipt_limit": "Trace reaches decoder fixture check after verify_members loop; individual hash receipts lost on exception in wrapper v1, so no complete member receipt exported",
+    "raw_result": "artifacts\\research\\20261017-p037-cpu-preflight-execution-v1\\observations\\p037c-preflight6-20261017-v1\\20261017T025159397246Z\\files\\P037_PREFLIGHT.json",
+    "raw_sha256": "d8551edc4f91d3ca6f097f521396f60cb84e5a990a039464514e83656b7c8168",
+    "Save_calls": 1,
+    "formal_Submit_calls": 0
+  },
+  "action": "Keep v1 immutable; investigate actual public fixture and wheel locations from pinned author source/metadata; prepare v2 retaining strict all-fixture success before scientific inference; preserve partial progress evidence",
+  "P035": "formal57292346 accepted, all four new Public scores pending",
+  "F009": "same running fold0 training; fixedE12 policy v2"
+}

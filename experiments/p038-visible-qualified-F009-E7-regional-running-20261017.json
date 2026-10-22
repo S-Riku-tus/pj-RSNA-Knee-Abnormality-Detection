@@ -1,0 +1,210 @@
+{
+  "schema_version": "p038_visible_qualified_F009_E7_regional_running_v1",
+  "at_UTC": "2026-10-17T05:30:01.210381+00:00",
+  "own_best_Public": 0.957,
+  "goal_Public": 0.96,
+  "goal_achieved": false,
+  "prior_record": {
+    "path": "experiments/orthodiff-fluid-complete-head0-hold-P038-running-20261017.json",
+    "bytes": 14457,
+    "sha256": "d88310bf5b21bd78bba82de45d071ff472d3f48cc22cfd6e077a00d98547b993"
+  },
+  "P038": {
+    "kernelId": 139163240,
+    "version": 1,
+    "ref": "rsraki/p038-helios-v6-fixed-20261017-v3",
+    "official_COMPLETE": true,
+    "source": {
+      "path": "artifacts/kaggle/p038-helios-v6-fixed-recipe-20261017-v3/source.ipynb",
+      "bytes": 198738,
+      "sha256": "9e3669dd1542f0cde2457fcc9b54ccb4bac013832583c26f93b88711f1a87370"
+    },
+    "save_payload": {
+      "path": "artifacts/research/20261017-p038-gpu-execution-v1/launch-v3/payload.json",
+      "bytes": 201579,
+      "sha256": "63a55ad4de1fe5330445126d0edba159f158b0da6ea86b388bb2ba0a2e9550ac"
+    },
+    "readback": {
+      "path": "artifacts/research/20261017-p038-gpu-execution-v1/launch-v3/saved-readback-audit.json",
+      "bytes": 472,
+      "sha256": "7aa29c31590b45061319ca666b16a819b41acb47c8585f621de2b7c50d819199"
+    },
+    "official_observation": "artifacts/qa/p038g3/20261017T052452650221Z",
+    "small_text_downloads": 43,
+    "downloaded_bytes": 99719,
+    "actual_audit": {
+      "path": "artifacts/research/20261017-p038-gpu-output-audit-v1/actual-audit.json",
+      "bytes": 21286,
+      "sha256": "1fa466776f3d6107e73cd4ec43b34317bd74b1c4501838e6a3a505155f327b27"
+    },
+    "independent_second_math_and_v3_peer": {
+      "path": "artifacts/research/20261017-p038-auditor-v3-independent-v1/review.json",
+      "bytes": 3146,
+      "sha256": "03e809ac2af668f956ced4148d40bce1f09f65cfc61d50fdd5cb75c9e3a632ab"
+    },
+    "transport_reconciliation": {
+      "path": "artifacts/research/20261017-p038-gpu-output-audit-v1/event-transport-reconciliation.json",
+      "bytes": 3646,
+      "sha256": "a0a9c3aaffa3d3cd9cfcc9acd5a0150ad5e02d7417fd901d7c204ac3f90104e1"
+    },
+    "auditor_v3": {
+      "path": "artifacts/research/20261017-p038-gpu-output-audit-v1/audit_output_v3.py",
+      "bytes": 28307,
+      "sha256": "4b67be448b74cf42543905cdba99f69a45aafdf6a8d29398cd5abb45df22cfab"
+    },
+    "math_oracle": {
+      "path": "artifacts/research/20261017-p038-gpu-output-audit-v1/math_oracle.py",
+      "bytes": 3975,
+      "sha256": "f7c406ae99baaf2992524aab271f037d3c3489b55b17da02117496ce53d05760"
+    },
+    "final_csv": {
+      "path": "artifacts/qa/p038g3/20261017T052452650221Z/files/submission.csv",
+      "bytes": 830,
+      "sha256": "5e9ba665f3e30642e18dbb555eb7cbd16ab8a659ffb5f7226c72aaac44c9df1b"
+    },
+    "original_author_V6": {
+      "source": 359117069,
+      "submission": 57280318,
+      "Public": 0.958
+    },
+    "science_cells": 8,
+    "science_cell_total_seconds": 469.00474856000005,
+    "typed_end_seconds": 490.013317029,
+    "Raptor384_224_R6_UIDs": 3,
+    "UID_fallback_studies": 0,
+    "Reader_models": 3,
+    "Reader_k": 16,
+    "middle36FP32_exact": true,
+    "final36FP64_exact": true,
+    "Reader_changed_numeric_cells": 30,
+    "Reader_changed_rank_order_targets": [
+      "Effusion"
+    ],
+    "final_visible_same_bytes_as_P037": true,
+    "hidden_same_score_inferred": false,
+    "R7_added": false,
+    "224_mirror_added": false,
+    "author_final_known_timm_pydicom_versions_reached_by_original_science": true,
+    "limitations": [
+      "Visible3 control only; no hidden duration/coverage or own score proof.",
+      "Raptor body guards are source-bound successful child execution, not independently downloaded/rehash-measured model payloads.",
+      "Get omits Input version suffixes; exact requested versions plus guarded members are bound, not exhaustive every-Input byte validation.",
+      "No independent official test/sample CSV was downloaded; source test-contract assertions plus worker UID and all output CSV coverage are bound.",
+      "Reader3 active outputs and successful original branch are proved; its original per-slot load_series exceptions are silently skipped and no count is exposed. Reader all-slot decode-failure0 is not proved; no MRI/weights were independently rerun.",
+      "Global environment snapshots do not exhaustively fingerprint child imports. Original Reader checkFalse optional installs/fallback logic remain unchanged.",
+      "P038 reproduces the complete author recipe, not a single-factor gain. Gold/license history is inherited unchanged; own Gold fit/selection0."
+    ],
+    "decision": "visible engineering qualified candidate; formal Submit only with quota, after refreshing existing results; own Public remains unmeasured",
+    "formal_Submit": 0
+  },
+  "F009": {
+    "same_run_continues": true,
+    "completed_epochs": 7,
+    "optimizer_updates": 1484,
+    "AMP_skips": 0,
+    "observation": {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch7-observation/observation-v2.json",
+      "bytes": 748,
+      "sha256": "ad1759a4416b9e60a049b2cb9702a14e0c8e820c4eff0d3fc973afbf01cfe24e"
+    },
+    "run_snapshot": {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch7-observation/run-snapshot.json",
+      "bytes": 90583,
+      "sha256": "4647306db23c35f0534c4543f2b1177d9eab8406596ea2bbc1d7f71566d341e7"
+    },
+    "elapsed_seconds_cumulative": 12070.612172099994,
+    "interim_selection_or_config_change": false,
+    "fixed12_evaluation_policy": {
+      "path": "experiments/f009-evaluation-policy-v2-prescore-20261017.json",
+      "bytes": 9505,
+      "sha256": "de5a6aa743d2d663f98244322958bf4b8154908238384112a7badf2df1e2d42c"
+    }
+  },
+  "regional": {
+    "kernelId": 139160976,
+    "version": 1,
+    "same_existing_job": true,
+    "official_status_observation": "artifacts/qa/odr1/20261017T052009872349Z",
+    "last_live_recorded": 1856,
+    "last_live_success_with_parent_parity": 1361,
+    "last_live_inherited_failures": 495,
+    "whole_output_qualified": false,
+    "head_fit": 0
+  },
+  "fixed_head_diagnosis": {
+    "report-with-train-gap.txt": {
+      "path": "artifacts/research/20261017-orthodiff-fixed-head-failure-diagnosis-v1/report-with-train-gap.txt",
+      "bytes": 6467,
+      "sha256": "d7b22948d38d6ace8c019a7ddf4a5c567e6940205de13dc51f2c53e5c0ba0e64"
+    },
+    "decision-with-train-gap.json": {
+      "path": "artifacts/research/20261017-orthodiff-fixed-head-failure-diagnosis-v1/decision-with-train-gap.json",
+      "bytes": 12860,
+      "sha256": "a5bd62128eff4b2e5a79a624439d62905b1c92ec6281a689d8a9a0559eee75d0"
+    },
+    "train-gap-diagnostic.json": {
+      "path": "artifacts/research/20261017-orthodiff-fixed-head-failure-diagnosis-v1/train-gap-diagnostic.json",
+      "bytes": 28429,
+      "sha256": "8a7610c52d5f5bcbcaae79a32c7287c9b6b9ab14a171ad2e60916da80f26a542"
+    },
+    "verification.json": {
+      "path": "artifacts/research/20261017-orthodiff-fixed-head-failure-diagnosis-v1/verification.json",
+      "bytes": 2280,
+      "sha256": "06050fc078d467234c6feca6b1ff4dc392d92d5dbe116b08e23731ea55bbe0ef"
+    },
+    "old_PD_f0_train_valid10_auc": [
+      0.879846,
+      0.711683
+    ],
+    "old_PD_f1_train_valid10_auc": [
+      0.880165,
+      0.695379
+    ],
+    "FD_f0_train_valid10_auc": [
+      0.870192,
+      0.716212
+    ],
+    "C_or_alpha_search_performed": false,
+    "new_fit": 0,
+    "interpretation": "overfitting concern and weak representation coexist; evaluate already running regional factor first; shrinking probability amplitude alone does not shrink rank20 weight"
+  },
+  "competition": {
+    "official_read": {
+      "path": "artifacts/research/20261017-competition-deadline-refresh-v1/competition-raw.json",
+      "bytes": 3026,
+      "sha256": "fbfd0ee09bc21704818db08461c07a6c9ffeef1c94384a40d03bbe8319df3885"
+    },
+    "receipt": {
+      "path": "artifacts/research/20261017-competition-deadline-refresh-v1/receipt.json",
+      "bytes": 169,
+      "sha256": "70552043ad13bb207d56fdf96b7788beb7b2882df0a1fca42d6b952c1544d849"
+    },
+    "deadline_UTC": "2026-10-22T23:59:00Z",
+    "deadline_JST": "2026-10-23 08:59 JST",
+    "userRank_at_read": 968,
+    "teamCount_at_read": 6120,
+    "maxDailySubmissions": 5,
+    "userHasEntered": true
+  },
+  "five_formal_submissions": {
+    "last_official_read": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T051838189516Z",
+    "new_status_Public_fields_returned": false,
+    "numToday": 5,
+    "numTotal": 35,
+    "additional_quota_treated_as": 0,
+    "resubmits": 0
+  },
+  "next": [
+    "Complete regional features actual qualification then preregistered head0; positive engineering screen only then head1.",
+    "Finish same F009 fixedE12 and compare with original F006 E12.",
+    "Prepare isolated original-F006 fold2 extension; current production interface onlyfold0/1 so newconfig alone cannot run. No oldsource mutation or automatic launch.",
+    "Review five existing formal results and quota before prioritizing P038 or a validated own-model candidate."
+  ],
+  "scope": {
+    "Gold_fit_select_eval": 0,
+    "Report_for_inference": 0,
+    "local_MRI_model_bulk_download": 0,
+    "new_formal_Submit": 0,
+    "Public_improvement_verified": false
+  }
+}

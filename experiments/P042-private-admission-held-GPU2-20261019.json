@@ -1,0 +1,50 @@
+{
+  "schema_version": "P042_private_admission_held_GPU2_v1",
+  "at_UTC": "2026-10-19T10:51:34.762953+00:00",
+  "status": "PRIVATE_SAVE_ADMISSION_REJECTED_BATCH_GPU2_NO_KERNEL_VERSION",
+  "candidate": "P042",
+  "destination": "rsraki/p042-rank-rr-20261019-v1",
+  "expected_version": 1,
+  "manual_Save_attempts": 1,
+  "accepted_Saves": 0,
+  "formal_Submit_calls": 0,
+  "response_HTTP": 200,
+  "platform_error": "Maximum batch GPU session count of 2 reached.",
+  "kernelId_or_version_returned": false,
+  "previous_existence_Get403": {
+    "dispatched": false,
+    "Save_attempts": 0,
+    "not404": true
+  },
+  "not_automatic_approval_rejection": true,
+  "independent_review": {
+    "path": "artifacts/research/20261019-p042-capacity-admission-independent-v1/review.json",
+    "bytes": 5033,
+    "sha256": "454b9b89d230c21d39388c7d314c8632bef258559ed0da3a953b03e49f6bc219"
+  },
+  "source": {
+    "path": "artifacts/kaggle/p042-rank-rr-20261019-v1/source.ipynb",
+    "bytes": 176927,
+    "sha256": "92b1b13935540b5737b92b3ba927194aab419b3513ef01e907c1c7411823f3d3"
+  },
+  "save_payload": {
+    "path": "artifacts/kaggle/p042-rank-rr-20261019-v1/save-payload.json",
+    "bytes": 178931,
+    "sha256": "c93ca0ea5e970a95c8dd85d846324cd12d28197c4f24c30154ce090806414ebb"
+  },
+  "source_and_scientific_factor_unchanged": true,
+  "actual_visible_hidden_Public_or_improvement_qualified": false,
+  "no_automatic_or_blind_retry": true,
+  "next": "After proven batch GPU slot release, reread owned exact slug/version and duplicates; fresh quota/source/Input/root review; at most one new manual Save. Keep this rejected attempt and earlier zero-dispatch error.",
+  "F010_last_observed": {
+    "at_UTC": "2026-10-19T10:45:08.426911+00:00",
+    "status": "running",
+    "completed_epochs": 1,
+    "updates": 212,
+    "opportunities": 212,
+    "AMP_skips": 0,
+    "metrics_used_for_selection": false,
+    "fixedE12_evaluation_pending": true
+  },
+  "new_API_Send_Save_Submit_data_download_or_tests_by_reviewer": 0
+}

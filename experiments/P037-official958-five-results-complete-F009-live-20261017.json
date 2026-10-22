@@ -1,0 +1,177 @@
+{
+  "schema_version": "P037_official958_all_five_complete_F009_live_v1",
+  "at_UTC": "2026-10-17T09:15:52.720012+00:00",
+  "own_confirmed_Public_best": "0.958",
+  "target_Public": "0.960",
+  "goal_achieved": false,
+  "current_goal_turn_classification": "PROGRESS: P037 official958 resolves lastpendingformal and completebinding checked; conditional sourcepreparation inprogress. VERIFIED_WAIT: samePID2772 observed live, fixed12 incomplete.",
+  "official_poll_at_JST": "2026-10-17T18:11:48+09:00",
+  "official_results": [
+    {
+      "candidate": "P033",
+      "submission": 57290868,
+      "status": "COMPLETE",
+      "own_Public": "0.958",
+      "raw": {
+        "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T091148246426Z/57290868.json",
+        "bytes": 511,
+        "sha256": "b2c6a8bae958e3fa127624e428f44bd212ce710cbecfdcabac5dddb634616914"
+      },
+      "receipt": {
+        "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T091148246426Z/57290868.receipt.json",
+        "bytes": 168,
+        "sha256": "0f10f85c5f5690dd10ee7d2ab736e967f821298972fd3c5639f0974c069fd765"
+      }
+    },
+    {
+      "candidate": "P034",
+      "submission": 57291440,
+      "status": "COMPLETE",
+      "own_Public": "0.957",
+      "raw": {
+        "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T091148246426Z/57291440.json",
+        "bytes": 522,
+        "sha256": "0b9dc95d539814a0042c6e802a2ac79725ce77bfe909e510953eff1094e15b17"
+      },
+      "receipt": {
+        "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T091148246426Z/57291440.receipt.json",
+        "bytes": 168,
+        "sha256": "038ffa1bb3e5e361ede302d9998c23b70b3abcf70989f5f70f696f5dd08728ce"
+      }
+    },
+    {
+      "candidate": "P036",
+      "submission": 57291580,
+      "status": "COMPLETE",
+      "own_Public": "0.958",
+      "raw": {
+        "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T091148246426Z/57291580.json",
+        "bytes": 508,
+        "sha256": "f5ca4807e364ac0b9a91aab2fb1a7dcec10f489bd633375ba98a3e4b2a69620b"
+      },
+      "receipt": {
+        "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T091148246426Z/57291580.receipt.json",
+        "bytes": 168,
+        "sha256": "f91daf488d4812089438aca12b55be30cb240d2124cfd754bdf60d67eaec4dea"
+      }
+    },
+    {
+      "candidate": "P035",
+      "submission": 57292346,
+      "status": "COMPLETE",
+      "own_Public": "0.957",
+      "raw": {
+        "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T091148246426Z/57292346.json",
+        "bytes": 520,
+        "sha256": "2d4361d411b98ef3f7b3b1d42f6dd5abedf89ea131da809ef2eb97d81d2e7408"
+      },
+      "receipt": {
+        "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T091148246426Z/57292346.receipt.json",
+        "bytes": 168,
+        "sha256": "9da673336008f585ec4336ddf4cddcfde904c1ae0c06e17b66c3772c72ede6f9"
+      }
+    },
+    {
+      "candidate": "P037",
+      "submission": 57293138,
+      "status": "COMPLETE",
+      "own_Public": "0.958",
+      "raw": {
+        "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T091148246426Z/57293138.json",
+        "bytes": 551,
+        "sha256": "7880f8bb8ab280c96905f49780a4cc23805d1547bcdb537abed4c85e9b790b1d"
+      },
+      "receipt": {
+        "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T091148246426Z/57293138.receipt.json",
+        "bytes": 168,
+        "sha256": "114b6616f51816dd72ab5d3c9d351c5c4db283cbc16a68c854ca225ab8f27c1b"
+      }
+    }
+  ],
+  "all_five_results_returned": true,
+  "unreturned_formals": 0,
+  "limits": {
+    "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T091148246426Z/limits.json",
+    "bytes": 28,
+    "sha256": "eb4d91f15e658d9bc5316244fd956e706187432c2d581b150914465e999b92ef"
+  },
+  "numToday": 5,
+  "numTotal": 35,
+  "maxDaily_last_observed": 5,
+  "extra_slots_treated_as": 0,
+  "daily_reset_verified": false,
+  "P037_binding": {
+    "request": {
+      "path": "artifacts/research/20261017-p037-formal-submit-v1/request.json",
+      "bytes": 509,
+      "sha256": "7293be82fb88c8f10cdac84a00f993dba0ae6af192cc8f8a039a7d87173585f5"
+    },
+    "acceptance": {
+      "path": "artifacts/research/20261017-p037-formal-submit-v1/submit-response-raw.json",
+      "bytes": 16,
+      "sha256": "70d9adb7f746f77d5128ea9cfa7d9bc87b793f38101c24b3837b1333dd95032c"
+    },
+    "preSubmit_rootreview": {
+      "path": "artifacts/research/20261017-p037-formal-submit-v1/review.json",
+      "bytes": 1582,
+      "sha256": "eec0c087305232495cce49a6679a3b8da674c354ac11c0db85d622085b8b1868"
+    },
+    "source": {
+      "path": "artifacts/kaggle/p037-goodpjw-v26-fixed-recipe-20261017-v2/source.ipynb",
+      "bytes": 248369,
+      "sha256": "07bea17aa45d6fe86a7357d0f8091cec71b963e4d1da9069c42a7afc23170001"
+    },
+    "kernel": 139143442,
+    "version": 1,
+    "ref": "rsraki/p037-goodv26-fixed-20261017-v2",
+    "actual_recipe": "Fixed Goodpjw V26/source358890016 full recipe; actualR7share0.4, Reader3; externaldescriptionR7off is a previously recorded typo.",
+    "correction_and_source_evidence": {
+      "path": "experiments/f009-fold1-v2-wrapper-and-next-submissions-20261017.json",
+      "bytes": 5139,
+      "sha256": "09e99f634ad218cbb444a6e12ea3cddd8507cc66398c373caaaf3942402d39d8"
+    },
+    "author_Public": "0.958",
+    "own_Public": "0.958",
+    "scope": "The submitted whole recipe yields own958. Rounded tie does not establish hidden-arm coverage, identical hidden predictions to P033/P036, or R7/Reader individual effect. CSVbytes do not establish hiddenN."
+  },
+  "F009fold1": {
+    "status": "running",
+    "completed_epochs_observed": 3,
+    "counter_observation": {
+      "path": "artifacts/research/20261017-f009-fold1-progress-v1/epoch3-counter-observation.json",
+      "bytes": 1069,
+      "sha256": "3aa3d83766f21fd01896b3e7bac796b5c866a8328d57081a36aa4a62a2f7fc7a"
+    },
+    "recorded_completed_epoch_updates": 624,
+    "recorded_completed_epoch_opportunities": 624,
+    "recorded_completed_epoch_AMP_skips": 0,
+    "interim_metric_values_projected_or_selected": false,
+    "same_PID": 2772,
+    "actual_E12_comparison": false
+  },
+  "conditional_next_F009_comparison_plan": {
+    "path": "experiments/f009-P039-parent-fixed20-CLS-pair-conditional-20261017.json",
+    "bytes": 15554,
+    "sha256": "37bb0c60826da6deddda0e3929fd8aeb4a2f56ad91371af9dab365835a69bba2"
+  },
+  "source_preparation_status": "Newoffline transport and mixedfourmodel reconstruction are being prepared; no actualF009model/transport/runtime/public qualification claimed. Final source tests/reviews recorded separately whencomplete.",
+  "next": [
+    "Stop periodic five-result polling because allfiveCOMPLETE; use freshsubmission quota/results checks whenneeded, next quota-only observation can be hourly whilecap5used.",
+    "Continue exactcurrentF009fixed12 and one-time frozenjoint evaluation; no interimscore/epoch/target/alpha changes.",
+    "AfteractualjointPASS and strictCPUv2/sealer3 then actualtransport/mixedruntime validation, same192+visible and independentFP32 qualification; only then manualformal ifquota+own<960.",
+    "ExistingqualifiedP039 first and P038second whenquota available; F009conditional, never replace ownsuccessful958 artifacts.",
+    "Afterthisfitterminal preparedF006fold2 QA/preflight/fit then sealedC.01 outer2 screen."
+  ],
+  "activity": {
+    "new_formal_Submit": 0,
+    "Kaggle_Save": 0,
+    "new_fit": 0,
+    "model_MRI_CPbody_GPU_access_in_record": 0,
+    "automatic_upload_Save_Submit_code": 0
+  },
+  "limitations": [
+    "Goal960unmet; displayedtie is not exactunroundedgain0.",
+    "KnownupstreamGold58selection exposure retained, ownGoldfit/select0, patientindependenceunknown.",
+    "Frozen amendedevaluation timing/error disclosure and originalv1HOLD remainunchanged."
+  ]
+}

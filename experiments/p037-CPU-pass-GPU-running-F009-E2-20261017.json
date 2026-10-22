@@ -1,0 +1,72 @@
+{
+  "at_utc": "2026-10-17T03:02:55.764861+00:00",
+  "status": "P037_CPU7_PASS_GPU_RUNNING_F009_E2_FOUR_SCORES_PENDING",
+  "own_best": {
+    "submission": 57225898,
+    "Public": "0.957",
+    "preserved": true
+  },
+  "goal": "own Public>=0.960 unachieved",
+  "accepted_formals": {
+    "P033": 57290868,
+    "P034": 57291440,
+    "P036": 57291580,
+    "P035": 57292346
+  },
+  "last_official_observation": "artifacts/research/20261017-four-formal-observer-v1/poll-20261017T025731840617Z",
+  "official_limits": {
+    "numToday": 4,
+    "numTotal": 34,
+    "numAllowedNow": 1
+  },
+  "P037_CPU": {
+    "kernel": 139143030,
+    "version": 1,
+    "source_sha256": "dc8c306c7783967804b8c6eeba69a6645503d194c3339e9c1aa548bbe882554c",
+    "official_status": "COMPLETE",
+    "complete": true,
+    "members_SHA_size_verified": 21,
+    "own_fixture_files_SHA_size_verified": 6,
+    "all_four_synthetic_compression_syntaxes_shape_dtype_values_exact": true,
+    "Reader_ABI_wheels": 3,
+    "python": "3.12.13",
+    "root_audit": "artifacts\\research\\20261017-p037-cpu-preflight-execution-v2\\root-result-audit.json",
+    "root_audit_sha256": "8caee4a77304ba0da64df10eaab7e1795c99e563caee28fc78de7d7a52b7650f",
+    "independent_audit": "artifacts\\research\\20261017-p037-cpu-actual-independent-v2\\audit.json",
+    "independent_audit_sha256": "7d35f261ad9dd0e3afcea149b2c004b798f3d664a540299bd4ab1132522a0e87",
+    "actual_model_deserialization_forward_MRI_Report_Gold_GPU": 0,
+    "old_v1_stop_preserved": true
+  },
+  "P037_GPU": {
+    "kernel": 139143442,
+    "version": 1,
+    "ref": "rsraki/p037-goodv26-fixed-20261017-v2",
+    "source_sha256": "07bea17aa45d6fe86a7357d0f8091cec71b963e4d1da9069c42a7afc23170001",
+    "official_first_status": "RUNNING",
+    "Input_count": 7,
+    "requested_and_actual_Docker": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+    "same_as_actual_CPU_env": true,
+    "private_T4_InternetOFF": true,
+    "all_code_and_markdown_text_same": true,
+    "readback_serialization_note": "prepared author markdown uses list-of-lines; Get string normalization. All textSHA/types same, initial rawtype assertion retained, no Save retry",
+    "frozen_recipe": "all15 science same v1; 14 bytesame original V26, R6stage1line only",
+    "scope": "multi-factor authorPublic958 fullpackage reproduction, not R7/Reader isolated improvement",
+    "operational_v2": "dedicated runtime namespace; own synthetic fixture seventhInput/strict3ReaderABIplugins; all21members; copy existing CSV observations",
+    "actual_model_arm_coverage_finalCSV_math": "pending",
+    "upstream_Gold_exposure": "inherited uncertain; ownGoldfit/select0",
+    "GPU_Save_calls": 1,
+    "formal_Submit_calls": 0
+  },
+  "F009": {
+    "run": "artifacts\\runs\\f009-gamma-late-cosine-fold0-20261017-v1",
+    "status": "running",
+    "epochs_completed": 2,
+    "unified_session": 12150,
+    "actual_python_pid": 22392,
+    "last_confirmed_updates_total": 424,
+    "AMP_skips_total": 0,
+    "adoption": "fixedE12 same weak folds/masks/groups v2policy; no interim change"
+  },
+  "limited_extra_web_research": "artifacts/research/20261017-discussion-github-limited-v1/summary.json",
+  "accuracy_improvement_claimed": false
+}

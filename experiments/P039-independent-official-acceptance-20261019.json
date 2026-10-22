@@ -1,0 +1,99 @@
+{
+  "schema_version": "P039_independent_accepted_official_readonly_audit_v1",
+  "at_UTC": "2026-10-19T02:41:10.232808+00:00",
+  "actor": "independent_official_state_agent",
+  "all_checks_passed": true,
+  "checks": {
+    "request_exact_same_six_fields_as_original": true,
+    "root_review_and_dispatch_request_SHA_match": true,
+    "preflight_SHA_matches_and_allchecks_passed": true,
+    "request_saved_candidate_binding": true,
+    "local_source_SHA_matches_review_and_preflight": true,
+    "root_accepted_response_ref_and_independent_Get_ref": true,
+    "owner_and_team_exact": true,
+    "description_exact": true,
+    "submission_file_exact": true,
+    "quota_after_one_root_submission": true
+  },
+  "submission_ref": 57378810,
+  "official_ACCEPTED_confirmed": true,
+  "status": null,
+  "Public": null,
+  "raw_status_present": false,
+  "raw_Public_present": false,
+  "classification": "accepted_score_unreturned",
+  "official_limits": {
+    "numToday": 1,
+    "numTotal": 36,
+    "numAllowedNow": 4
+  },
+  "saved_version_binding": "Exact outgoing six-field request binds rsraki/p039-p033-native20-20261017-v2 V1; request SHA joins root review/dispatch and ref response; independent Get joins accepted ref/owner/description/file. Pending Get URL does not itself expose server scriptVersionId.",
+  "server_scriptVersionId_independently_observed_in_pending_Get": false,
+  "own_best_previous_confirmed": "0.958",
+  "new_Public_gain_claimed": false,
+  "zero_missing_status_or_score_inferred": false,
+  "do_not_resubmit": true,
+  "activity": {
+    "new_Submit": 0,
+    "new_Save": 0,
+    "upload": 0,
+    "GPU": 0,
+    "MRI": 0,
+    "training": 0,
+    "independent_GetSubmission_calls": 1,
+    "independent_GetSubmissionLimits_calls": 1
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-p039-root-manual-submit-v1/root-review.json",
+      "bytes": 2191,
+      "sha256": "2bb6da8ee3c2455668726e3a4ec45e60287c01f2bc3a15d22445e69ee6d7ebac"
+    },
+    {
+      "path": "artifacts/research/20261019-p039-root-manual-submit-v1/request.json",
+      "bytes": 566,
+      "sha256": "ac283d8f4f588195e7ed60f5743e30efafd7da4126fc5b8f54611776301501be"
+    },
+    {
+      "path": "artifacts/research/20261019-p039-root-manual-submit-v1/manual-dispatch.json",
+      "bytes": 300,
+      "sha256": "a71570ee321cf95bc5ecc6ba151779d0aa69ed51e1119bee8fcfd7b6b6a6bb13"
+    },
+    {
+      "path": "artifacts/research/20261019-p039-root-manual-submit-v1/submit-response-raw.json",
+      "bytes": 16,
+      "sha256": "6d92f3d4c84cb72965ef2b2fca0eb7aaa5d5e9562962ea6191b72f74e04aec70"
+    },
+    {
+      "path": "artifacts/research/20261019-p039-root-manual-submit-v1/accepted-submission-raw.json",
+      "bytes": 553,
+      "sha256": "699fddaf237cf27d1ecaafc9b0a7361698189814d1c21b1f7064bc88c4af20fc"
+    },
+    {
+      "path": "artifacts/research/20261019-p039-root-manual-submit-v1/summary.json",
+      "bytes": 410,
+      "sha256": "6693ad1b0fb271fea256756745309f87af0281f8f2dbead98abdfa3a41719f8d"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/verified-submit-preflight-v2.json",
+      "bytes": 13630,
+      "sha256": "e7cf6a45f5414789cdd2289dd23f51b8865dcf6db6475210fdab0988368a40c7"
+    },
+    {
+      "path": "artifacts/research/20261019-p039-independent-acceptance-v1/observation-20261019T024109476336Z/submission57378810.json",
+      "bytes": 553,
+      "sha256": "699fddaf237cf27d1ecaafc9b0a7361698189814d1c21b1f7064bc88c4af20fc"
+    },
+    {
+      "path": "artifacts/research/20261019-p039-independent-acceptance-v1/observation-20261019T024109476336Z/limits.json",
+      "bytes": 46,
+      "sha256": "15df7b0c8777681a19c504ec93b8314c7e9c5089160fe486b5d02bf7b66335ce"
+    },
+    {
+      "path": "artifacts/research/20261019-p039-independent-acceptance-v1/observation-20261019T024109476336Z/receipts.json",
+      "bytes": 440,
+      "sha256": "a64176aafb1b55c944eade6e25eeebb1932709971420a83f71b64ca366c9b76d"
+    }
+  ],
+  "observation_directory": "artifacts/research/20261019-p039-independent-acceptance-v1/observation-20261019T024109476336Z"
+}

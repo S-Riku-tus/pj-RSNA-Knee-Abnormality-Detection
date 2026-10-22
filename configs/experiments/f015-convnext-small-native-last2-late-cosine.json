@@ -1,0 +1,55 @@
+{
+  "schema_version": "f015_convnext_native392_v1",
+  "seed": 20261002,
+  "n_folds": 5,
+  "reason": "Controlled encoder-choice screen vs F006 fixed E12. ConvNeXtSmall ImageNet22k->1k, pooled768, last2 finalstage blocks replace DINOv2CLS384 last2. Architecture/init/width/suffix count are coupled. Same native392cache/teacher/mask/groupfold/seed/headfamily/12epoch/optimizer/schedule; no gamma; fixedE12 only and independentfold1 gate. F015 chosen prospectively before any F014 or F015 numerical accuracy is consulted; not a Tiny result-driven change.",
+  "preprocess": {
+    "version": "physical_letterbox_triplet_v1",
+    "image_size": 392,
+    "max_series": 3,
+    "slices_per_series": 48,
+    "percentiles": [
+      1,
+      99
+    ]
+  },
+  "encoder": {
+    "model_name": "convnext_small.fb_in22k_ft_in1k_384",
+    "feature_dim": 768,
+    "batch_size": 16,
+    "precision": "fp16"
+  },
+  "head": {
+    "hidden_dim": 192,
+    "dropout": 0.2,
+    "pooling": "attention"
+  },
+  "train": {
+    "epochs": 12,
+    "batch_size": 16,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "num_workers": 0,
+    "selection": "bce",
+    "lr_schedule": {
+      "name": "late_cosine",
+      "constant_epochs": 6,
+      "min_factor": 0.1
+    }
+  },
+  "online": {
+    "schema_version": "f015_convnext_native392_last2_fast16_v1",
+    "trainable_blocks": 2,
+    "microbatch_studies": 1,
+    "effective_batch_studies": 16,
+    "window_chunk": 16,
+    "checkpoint_last2": true,
+    "encoder_learning_rate": 1e-05,
+    "accumulation_denominator": "total_observed_labels_in_effective_batch",
+    "folds": [
+      0,
+      1
+    ],
+    "amp_grad_scaler": true
+  }
+}

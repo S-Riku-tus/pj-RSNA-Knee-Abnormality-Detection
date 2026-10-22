@@ -1,0 +1,25 @@
+{
+  "at_UTC": "2026-10-20T09:30:29.200728+00:00",
+  "status": "CPU_TEACHER_SCREEN_NONPOSITIVE_NO_ADOPTION",
+  "run": "artifacts/runs/f011-cpu-teacher-screen-fold0-20261020-v1",
+  "completion_SHA": "e3a9244f6ef79faf962f804992b83bd908cb81bb7ec2e983b5ec5789bdf07d1f",
+  "fixed10_weak_AUC": {
+    "A": 0.83783004973149,
+    "B": 0.8251553308787493,
+    "C": 0.8329815808303032
+  },
+  "values_only_B_minus_A": -0.01267471885274074,
+  "support_only_C_minus_B": 0.007826249951553899,
+  "whole_C_minus_A": -0.004848468901186842,
+  "weak_validation_UIDs": 821,
+  "train_UIDs": 3386,
+  "resources": "16.093sec,1CPUthread,noTorch/noCUDA/noMRIdecode/noGPUencoderlearning",
+  "tests": "4analyticalPASS andruffPASS",
+  "same_old_weak_valid_mask": true,
+  "decision": "No F011 fold1/promotion/Submit. Raw JEV values hurt this fixedhead; broadening supervision partially recovered but didnot beatA. Treat this as repeatedweakholdout screen, not clinical/Publictruth. Consider separately preregistered train-only teacher calibration or declared-R6fold pairedprobe.",
+  "own_Gold_train_select": 0,
+  "upstream_JEV_Gold_selection": "KNOWN anddisclosed",
+  "goal959_achieved": false,
+  "best_own_Public": ".958",
+  "existing_GPU_PID19472_preserved": true
+}

@@ -1,0 +1,277 @@
+{
+  "schema_version": "orthodiff_full4207_actual_fixed_head0_weak_positive_v1",
+  "at_UTC": "2026-10-17T04:42:53.964648+00:00",
+  "own_best_Public": 0.957,
+  "goal_Public": 0.96,
+  "goal_achieved": false,
+  "full_kernel": {
+    "ref": "rsraki/orthodiff-sag-fullweak4207-20261017-v2",
+    "kernelId": 139150600,
+    "version": 1,
+    "official_status": "COMPLETE",
+    "source_sha256": "15bb2d6c7c224021f95a304b08eb9e3644164ea8373f4ae6ec1c7afc77582e1f",
+    "observation": "artifacts/qa/odf1/20261017T043720406874Z"
+  },
+  "full_coverage": {
+    "requested": 4207,
+    "recorded": 4207,
+    "success": 3063,
+    "failure": 1144,
+    "success_strata": {
+      "PD_FS_fallback": 1951,
+      "PD_nonFS": 1112
+    },
+    "failure_reason_types": {
+      "PilotDataError": 1144
+    }
+  },
+  "feature_coverage_by_original_fold": {
+    "0": {
+      "requested": 821,
+      "success": 594,
+      "failure": 227
+    },
+    "1": {
+      "requested": 891,
+      "success": 637,
+      "failure": 254
+    },
+    "2": {
+      "requested": 888,
+      "success": 654,
+      "failure": 234
+    },
+    "3": {
+      "requested": 778,
+      "success": 557,
+      "failure": 221
+    },
+    "4": {
+      "requested": 829,
+      "success": 621,
+      "failure": 208
+    }
+  },
+  "prior32_comparison": {
+    "passed": true,
+    "UID_joined": 32,
+    "success": 24,
+    "failure": 8,
+    "scientific_metadata_and_selected16_SOP_pins_equal": true,
+    "normalized_noisy_mid2_pooled_SHA_and_6144_FP32_bits_equal": true,
+    "ignored": [
+      "timing",
+      "temporary paths",
+      "process-start CPU/CUDA RNG state hashes; each run must restore its own states"
+    ]
+  },
+  "full_resources": {
+    "peak_cuda_reserved_bytes": 1314914304,
+    "peak_cuda_allocated_bytes": 1274514944,
+    "peak_process_RSS_bytes": 1723572224,
+    "total_seconds": 2438.0590773549998
+  },
+  "MRI_orientation_equivalent_to_author_NIfTI": false,
+  "raw_pixel_or_mid2_mean_replay_independent": false,
+  "actual_mapping_branch_counts": {
+    "transpose": 0,
+    "flip_rows": 0,
+    "flip_columns": 0
+  },
+  "photometric_counts": {
+    "MONOCHROME2": 3063
+  },
+  "input_evidence": {
+    "artifacts/research/20261017-orthodiff-fullweak-actual-audit-v1/verification.json": {
+      "path": "artifacts/research/20261017-orthodiff-fullweak-actual-audit-v1/verification.json",
+      "bytes": 10564,
+      "sha256": "7fbc160b8715e69dc506b64e9187f55a2c2b67925bf6a5b0a4a95adf943c8270"
+    },
+    "artifacts/research/20261017-orthodiff-weak-head-preparation-v1/qualified-feature-bundle.json": {
+      "path": "artifacts/research/20261017-orthodiff-weak-head-preparation-v1/qualified-feature-bundle.json",
+      "bytes": 1993,
+      "sha256": "525094b583c7cd821769fac56b9e64a524d5ef185a4a9eb689f91480b31ce83c"
+    },
+    "artifacts/research/20261017-orthodiff-head-fold0-actual-independent-v1/review.json": {
+      "path": "artifacts/research/20261017-orthodiff-head-fold0-actual-independent-v1/review.json",
+      "bytes": 10013,
+      "sha256": "14fc07e4d995cb444d84b936c2779c33b9a6a004a55009313ec45475e046f359"
+    },
+    "artifacts/research/20261017-orthodiff-head0-root-continuation-review-v1/review.json": {
+      "path": "artifacts/research/20261017-orthodiff-head0-root-continuation-review-v1/review.json",
+      "bytes": 2598,
+      "sha256": "37d6fa77fce3a60be0421010af8ca194ee525d8094eb7a0532edf8a38e62a4d4"
+    },
+    "artifacts/research/20261017-orthodiff-head0-actual-numpy-transport-v1/verification.json": {
+      "path": "artifacts/research/20261017-orthodiff-head0-actual-numpy-transport-v1/verification.json",
+      "bytes": 667,
+      "sha256": "81d45c7677837c91d03b568c5907af1f4023e9a01d60559fd5efbce7d56423a3"
+    },
+    "artifacts/research/20261017-orthodiff-fluid-subset-actual-v1/subset.json": {
+      "path": "artifacts/research/20261017-orthodiff-fluid-subset-actual-v1/subset.json",
+      "bytes": 1713951,
+      "sha256": "c0e52bf58e46579d28d090cd25168130033f8b749098359ec95bdc425144c178"
+    }
+  },
+  "head_run": {
+    "path": "artifacts/runs/orthodiff-head-fold0-fixed-v2-20261017-v1",
+    "run": {
+      "path": "artifacts/runs/orthodiff-head-fold0-fixed-v2-20261017-v1/run.json",
+      "bytes": 5799,
+      "sha256": "5678ff9b20129244533c78854b37c4378d4ab2e68df5b42ffc17fdedef24fe95"
+    },
+    "evaluation": {
+      "path": "artifacts/runs/orthodiff-head-fold0-fixed-v2-20261017-v1/evaluation.json",
+      "bytes": 23602,
+      "sha256": "a2435940c4d80ef2b3666a4e139e04fb3163d644a8dc5147a7d85637c2fbf056"
+    },
+    "numeric_model": {
+      "path": "artifacts/runs/orthodiff-head-fold0-fixed-v2-20261017-v1/numeric-model.json",
+      "bytes": 118017,
+      "sha256": "969d8f50413227efc921ccedfcae3c41cd8e7be401aa9c056325a0fff96a0cbd"
+    },
+    "source_and_inputs": {
+      "policy": {
+        "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261017-orthodiff-fullweak-preparation-v1\\weak-head-prospective-policy-v2.json",
+        "bytes": 12476,
+        "sha256": "2b9704b70ab4197129e87db5e77fd08fd5a39c3c37ef950eac12a51cf0162b21"
+      },
+      "qualified_bundle": {
+        "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261017-orthodiff-weak-head-preparation-v1\\qualified-feature-bundle.json",
+        "bytes": 1993,
+        "sha256": "525094b583c7cd821769fac56b9e64a524d5ef185a4a9eb689f91480b31ce83c"
+      },
+      "qualification": {
+        "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261017-orthodiff-fullweak-actual-audit-v1\\verification.json",
+        "bytes": 10564,
+        "sha256": "7fbc160b8715e69dc506b64e9187f55a2c2b67925bf6a5b0a4a95adf943c8270"
+      },
+      "qualified_feature_files": {
+        "records": {
+          "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\qa\\odf1\\20261017T043720406874Z\\files\\orthodiff-fullweak4207\\ORTHODIFF_FULLWEAK_RECORDS.jsonl",
+          "bytes": 43631430,
+          "sha256": "88f21991d784a88f0b6f73e7526afd29326ce35a1483283d644000f3f62e58fd"
+        },
+        "summary": {
+          "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\qa\\odf1\\20261017T043720406874Z\\files\\orthodiff-fullweak4207\\ORTHODIFF_FULLWEAK_SUMMARY.json",
+          "bytes": 358489,
+          "sha256": "7cb0ad8d003edc036bfc11e203e1c329c3a4d92057cb3541a8aae984ae97a883"
+        },
+        "status": {
+          "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\qa\\odf1\\20261017T043720406874Z\\files\\orthodiff-fullweak4207\\ORTHODIFF_FULLWEAK_STATUS.json",
+          "bytes": 769,
+          "sha256": "04ffc34d6afcc48b828f501c59104bace84500610dea5d5307cb9210c2694fa6"
+        }
+      },
+      "F006_E12_control": {
+        "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\runs\\f006-late-cosine-fold0-20261012-v1\\epoch_012_weak.csv",
+        "bytes": 253423,
+        "sha256": "8f75feced2e02584b6581c0ed124e1bdc79d370a312966fd0c976ce302f0b964"
+      },
+      "cohort": {
+        "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261017-orthodiff-fullweak-preparation-v1\\cohort.json",
+        "bytes": 1045139,
+        "sha256": "86d976f55bb67bd3a738679625c9281aead06b0c7f01d7c894ffe870ead65246"
+      },
+      "source_pins": {
+        "fit_orthodiffusion_weak_head.py": {
+          "bytes": 11629,
+          "sha256": "014929a9c54fcdaed0e24403c92a8f09a8c9425269a146a252785260236f1ccc"
+        },
+        "orthodiff_weak_head.py": {
+          "bytes": 27829,
+          "sha256": "e1149f8e88eeba0f32418e8ee4986cd41ef5aae208a31142cd907689958d78e7"
+        },
+        "contracts.py": {
+          "bytes": 7720,
+          "sha256": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+        }
+      },
+      "environment": {
+        "versions": {
+          "python": "3.9.18",
+          "numpy": "1.22.3",
+          "scipy": "1.7.3",
+          "scikit-learn": "1.6.1"
+        },
+        "executable": "C:\\Users\\Casper4\\.conda\\envs\\TFGPU_shiba_2025\\python.exe",
+        "platform": "win32",
+        "Torch_imported": false,
+        "new_packages_installed": false
+      }
+    },
+    "seed": 20261002,
+    "fold": 0,
+    "original_train": 3386,
+    "successful_train": 2469,
+    "original_valid": 821,
+    "successful_valid": 594,
+    "missing_valid_features": 227,
+    "heads": {
+      "qualified": 12
+    },
+    "numeric_roundtrip": {
+      "JSON_model_roundtrip": true,
+      "sklearn_NumPy_max_abs_difference": 1.1102230246251565e-16,
+      "sklearn_NumPy_FP32_bitwise_equal": true,
+      "pickle_joblib_used": false,
+      "CPU_threads": 1,
+      "validation_labels_used_for_fit_or_selection": false,
+      "on_disk_JSON_reload_exact_numeric_predictions": true
+    },
+    "elapsed_seconds": 2.7969999999913853
+  },
+  "evaluation": {
+    "fixed10_control_auc": 0.8831284034612052,
+    "fixed10_candidate_auc": 0.8835598407463919,
+    "fixed10_delta": 0.00043143728518663105,
+    "all12_auxiliary_delta": 0.0003595310709888592,
+    "raw_rank_masked_AUC_exactly_equal_all_targets": true,
+    "fixed10_heads_qualified": true,
+    "continuation_screen_passed": true,
+    "BCE_and_CI_report_only": true,
+    "limitations": [
+      "reused weak holdout, not public-parent independent OOF",
+      "feature coverage may be selected nonrandomly",
+      "supplied/report groups are not verified patient identity",
+      "no Public/hidden/clinical or0.960 guarantee"
+    ]
+  },
+  "paired_group_CI_report_only": {
+    "low_2.5_percent": -0.003286146748120853,
+    "high_97.5_percent": 0.0038225294688838604,
+    "defined_draws": 1000,
+    "requested_draws": 1000
+  },
+  "root_decision": "same original fold1 with fixed scientific head/scaler/rank20 rules; require both fold deltas>0 and engineering PASS before considering a Public candidate; no alpha/target search",
+  "Public_improvement_verified": false,
+  "Gold_fit_selection_evaluation": false,
+  "patient_independence_verified": false,
+  "fallback_metadata": {
+    "subset1080_selected1077_unavailable3": true,
+    "feature_or_MRI_extraction": 0,
+    "adopted": false
+  },
+  "F009": {
+    "observation": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch5-observation/observation.json",
+    "completed_epochs": 5,
+    "optimizer_updates": 1060,
+    "AMP_skips": 0,
+    "next": "continue same run fixed E12 then policy-v2"
+  },
+  "five_formal_submissions": {
+    "refs": [
+      57290868,
+      57291440,
+      57291580,
+      57292346,
+      57293138
+    ],
+    "latest_observation": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T043514381571Z",
+    "raw_status_and_Public_fields_absent": true,
+    "today": 5,
+    "total": 35,
+    "additional_slots_treated_as": 0
+  },
+  "next": "freeze and independently review separate original fold1 CLI/policy; root fit; prepare only separate availability-recovery arm"
+}

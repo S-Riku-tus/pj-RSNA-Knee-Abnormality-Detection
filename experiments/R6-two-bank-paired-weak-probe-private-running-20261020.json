@@ -1,0 +1,47 @@
+{
+  "at_UTC": "2026-10-20T09:43:33.780593+00:00",
+  "accepted": true,
+  "kernelId": 139794653,
+  "ref": "rsraki/r6-paired-weak-probe-20261020-v1",
+  "saved_version": 1,
+  "artifact_revision": "R6 paired probe V1",
+  "all_checks_passed": true,
+  "checks": {
+    "ref": true,
+    "kernel_id": true,
+    "saved_version": true,
+    "all_source_cells": true,
+    "private_GPU_offline_noTPU": true,
+    "shape": true,
+    "Docker": true,
+    "datasets": true,
+    "kernels": true,
+    "competition": true
+  },
+  "status": {
+    "status": "QUEUED",
+    "failureMessage": null
+  },
+  "manual_Save_calls": 1,
+  "formal_Submit_calls": 0,
+  "stage": "PRIVATE_PROBE_ONLY_NEVER_FORMAL_SUBMIT",
+  "policy": "artifacts/research/20261020-R6-paired-weak-probe-prospective-v1/policy.json",
+  "source_SHA": "ce1848aadbffc1ecb00c966e39227c5da926b7461afa2f31f894b8c2012d1c5b",
+  "1664_selected_studies": true,
+  "two_weak_banks": [
+    809,
+    855
+  ],
+  "exact_original_assets_cells": [
+    0,
+    5
+  ],
+  "pre_MRI_artificial_GPU_direct_OFF_replay_required": true,
+  "new_MRI_forward_completed": false,
+  "goal959_achieved": false,
+  "own_Public_best": "0.958",
+  "pending_P045": 57430729,
+  "remaining_formal_slots": 2,
+  "existing_GPU19472_preserved": true,
+  "limitations": "Declared heldout fold routing consistent with public trainer; actual upstream membership/Gold/auxiliary pretraining and patient independence not independently certified."
+}

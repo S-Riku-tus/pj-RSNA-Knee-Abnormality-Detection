@@ -1,0 +1,44 @@
+{
+  "at_UTC": "2026-10-20T03:33:01.356069+00:00",
+  "accepted": true,
+  "kernelId": 139732287,
+  "ref": "rsraki/p044-reader-mirror-20261020-v1",
+  "version": 1,
+  "checks": {
+    "ref": true,
+    "kernel_id": true,
+    "current_version": true,
+    "all_source_cells": true,
+    "private_GPU_offline_noTPU": true,
+    "shape": true,
+    "docker": true,
+    "datasets": true,
+    "kernels": true,
+    "competition": true
+  },
+  "all_checks_passed": true,
+  "status": "VISIBLE_RUNNING_NOT_FORMAL",
+  "manual_Save_calls": 1,
+  "formal_Submit_calls": 0,
+  "receipts": [
+    {
+      "label": "accepted-current-source",
+      "HTTP": 200,
+      "bytes": 278236,
+      "SHA": "d8652017a0615518a8878d91f27c5a3041899ff522f1a3361451e7c26629ba3c"
+    },
+    {
+      "label": "accepted-v1-status",
+      "HTTP": 200,
+      "bytes": 20,
+      "SHA": "8a320f75d49b24da756707eb933391ebbd38a94fbad259c43663a4626c585475"
+    }
+  ],
+  "source": "artifacts/kaggle/p044-reader-mirror-20261020-v1/source.ipynb",
+  "policy": "artifacts/research/20261020-P044-reader-mirror-prospective-v1/prospective-policy.json",
+  "best_own_Public": "0.958",
+  "goal959_achieved": false,
+  "actual_artificial_and_real_output_qualification_pending": true,
+  "existing_GPU_preserved": true,
+  "no_automatic_upload_submit_code_added": true
+}

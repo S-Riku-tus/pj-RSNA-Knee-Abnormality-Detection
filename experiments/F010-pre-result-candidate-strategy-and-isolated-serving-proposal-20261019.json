@@ -1,0 +1,174 @@
+{
+  "schema_version": "F010_pre_result_candidate_strategy_and_isolated_serving_proposal_v1",
+  "declared_at_UTC": "2026-10-19T13:32:48.486678+00:00",
+  "status": "SOURCE_ONLY_PROSPECTIVE_ANALYSIS_NOT_CANDIDATE_ADOPTION_OR_PLAN_CHANGE",
+  "scope": {
+    "F010_run_history_AUC_predictions_checkpoints_or_labels_read": false,
+    "training_started_stopped_or_changed": false,
+    "new_training_run": false,
+    "API_upload_Save_Submit_tests_or_model_forward": 0,
+    "shared_docs_or_existing_sources_modified": false
+  },
+  "decision_now": "Keep the existing four-comparison plan and P042 as planned. Fold0 E12 PASS alone cannot qualify F010 as a replacement. Root may reassess only after all existing adoption and serving gates pass.",
+  "frozen_F010_gate": {
+    "policy": {
+      "path": "artifacts/research/20261019-f010-last4-root-v1/prospective-policy.json",
+      "bytes": 8183,
+      "sha256": "b7117059abc2d89c48524522472ddc20f7cd61476c4647d8f76aee2a252331da"
+    },
+    "evaluator": {
+      "path": "artifacts/research/20261019-f010-last4-root-v1/evaluate_fixed12.py",
+      "bytes": 23798,
+      "sha256": "658c9e21e4112c0a3523c4ecf7a197d74a9affb7a1476bc470098b07a4cea365"
+    },
+    "candidate_config": {
+      "path": "configs/experiments/f010-dinov2-native-last4-late-cosine.json",
+      "bytes": 1479,
+      "sha256": "d8effe7e213719accde9b3fa5e14b05ed7c6322d45bb316ee39f11a84bf6e49a"
+    },
+    "F006_control_config": {
+      "path": "configs/experiments/f006-dinov2-native-last2-late-cosine.json",
+      "bytes": 1445,
+      "sha256": "cc39cf18ea74e0b94eb7593a5223bf2dae0f7fbef059fd94e31dd1e1683ee21a"
+    },
+    "only_learning_factor": "Same generic DINO/392px triplets/teacher/head/seed20261002/fold/loss/late-cosine12epochs; unfreeze suffix blocks10,11 to blocks8,9,10,11, no gamma.",
+    "fold0_required": "Complete history and retention index exactly epochs1..12; fixed E12 files match hashes; each arm every epoch212 opportunities/updates, zero skips, total2544; same821 UID/observation masks/groups/source/config/data and finite values.",
+    "primary": "Same fixed10 mean weak AUC delta(candidate E12 minus F006 E12)>0; no alternate epoch, target, coefficient, BCE or CI rescue.",
+    "fold0_PASS_means": "Eligibility for root manual review of a separate prospective fold1 experiment only.",
+    "adoption": "Both folds independently positive and engineering-qualified before new CPU/runtime/submission preparation or adoption; official Public remains required for a competition-gain claim.",
+    "fold1_known_skip": "Historical F006 fold1 has one E10 AMP skip. Existing F010 policy has no exception and the fold0 evaluator does not audit fold1. Do not extend F009/v2 or any historical control exception automatically.",
+    "fold1_required_next": "Before any fold1 candidate fit, root must freeze a separate same-factor comparison and its exact control handling. Keeping zero-skip parity requires a fresh matched F006 fold1 control if the historical skipped run cannot pass; no re-selection of its other epoch or implicit skip allowance."
+  },
+  "relative_evidence_if_all_gates_eventually_PASS": {
+    "potential_advantage_over_P042": "A replicated prospective last2-to-last4 gain on both fixed weak folds supplies direct own-training evidence for improved standalone CLS discrimination; P042 currently has a mathematical distribution-normalization hypothesis and source/oracle checks, without held-out accuracy evidence.",
+    "limit": "This would strengthen the training hypothesis, not establish a greater probability of Public gain than P042. Weak teachers and repeated holdout development differ from hidden labels; new CLS errors may overlap parent/REG. Existing native additions including P039 have not demonstrated a Public increase beyond the known0.958.",
+    "composite_test": "A clean future contrast is P039 unchanged parent/REG/folds/native alpha0.20/rank/masks/readers versus replacement of both CLS fold models by their fixed-E12 F010 counterparts. Fold0-only replacement or F010-only alpha1 is a different, undeclared comparison.",
+    "validation_caution": "Do not treat the other-fold model predictions on a weak validation fold as out-of-fold evidence: that model may have trained on those labels. No public-parent OOF comparison is established by this source review."
+  },
+  "P039_compatibility_and_transport": {
+    "manifest": {
+      "path": "artifacts/kaggle/p039-p033-native20-20261017-v2/manifest.json",
+      "bytes": 28440,
+      "sha256": "a5b6109cdfba4c198550daa53efcfc029325f94ebe97de721278b8f31d18043e"
+    },
+    "policy": {
+      "path": "artifacts/kaggle/p039-p033-native20-20261017-v2/policy.json",
+      "bytes": 1020,
+      "sha256": "573ea6d2d1f7cc57844fc6018c07f751657d7b5b5c637603230f1a55b9af5d54"
+    },
+    "source_pins_byte_match_P039_embedded_members": {
+      "serving/isolated_mixed_runtime.py": {
+        "path": "artifacts/research/20261016-f006-execution-v1/static-native-source/serving/isolated_mixed_runtime.py",
+        "bytes": 12232,
+        "sha256": "8dc5a290814e8b017267598fd3c44f4c359ccf0c61d11685131d3363d7e037f7"
+      },
+      "serving/isolated_contracts.py": {
+        "path": "artifacts/research/20261016-f006-execution-v1/static-native-source/serving/isolated_contracts.py",
+        "bytes": 20247,
+        "sha256": "8383eb97d376bb3267858314901d4ce94d11ff7e412a62286567c1d38dd4036f"
+      },
+      "serving/mixed_serving_contracts.py": {
+        "path": "artifacts/research/20261016-f006-execution-v1/static-native-source/serving/mixed_serving_contracts.py",
+        "bytes": 23961,
+        "sha256": "b944bdff3c6dd90a31596ba4e43422da8b3b2622614d451d31c25be148a6262c"
+      },
+      "serving/original_f006_online_contracts.py": {
+        "path": "artifacts/research/20261016-f006-execution-v1/static-native-source/serving/original_f006_online_contracts.py",
+        "bytes": 12042,
+        "sha256": "b919ad337462aee18dd3592faff47c850b81c10ebc7656ff58f7112a46066096"
+      },
+      "serving/secondary_contracts.py": {
+        "path": "artifacts/research/20261016-f006-execution-v1/static-native-source/serving/secondary_contracts.py",
+        "bytes": 10252,
+        "sha256": "3c7fc42fe584afb4368d418e6a7ed4757edc0e593228becfa589ed55b4c404c3"
+      },
+      "serving/fold1_secondary_contracts.py": {
+        "path": "artifacts/research/20261016-f006-execution-v1/static-native-source/serving/fold1_secondary_contracts.py",
+        "bytes": 10336,
+        "sha256": "7f8ba70f40692b50e8225aa9b5aaef3c838b8f9727323baa807cd7a6f8d708c7"
+      }
+    },
+    "existing_models": [
+      "F006 CLS fold0",
+      "F006 CLS fold1",
+      "unchanged REG fold0",
+      "unchanged REG fold1"
+    ],
+    "existing_strict_contract": "NativeTripletMIL/last2, blocks10/11 and3550464 encoder parameters; fixed class/schema/CPU FP32 fingerprints and four independent objects. Existing CLS selections are E12; REG selections stay unchanged.",
+    "F010_contract": "F010Last4MIL and f010_last4_generic_dino_suffix_head_fast16_v1; exactly56 suffix keys from blocks8/9/10/11,7100928 trainable encoder parameters;83352 head parameters; prefix excludes all four trained blocks and retains frozen final norm.",
+    "drop_in_compatible": false,
+    "required_new_consumer": "Separate last4-aware descriptor and strict loader/CPU sealer/transport/runtime, preserving old F006 guards. Renaming F010 to an old schema, slicing away blocks8/9, or forcing old prefix/class checks would misreconstruct or reject the model.",
+    "future_runtime_requirements": "Strict exact E12/schema/source/config/provenance/target/pixel contracts; full CPU FP32 reconstruction and prefix/suffix/head fingerprints; independent objects/no aliases across all four models; label-free artificial forward and exact submission UID/12-column/order/finite contract; Kaggle Python3.13/private CPU then bounded GPU qualification before formal use.",
+    "future_transport_requirements": "New candidate-only pinned sealed bundles, exact inventory/bytes/SHA and fresh private/versioned transport receipts for both CLS folds. Preserve existing REG/public parent Inputs and code; no automatic uploads. Source audit and explicit root review precede any remote action.",
+    "failure_contract": "P039 success-subset population and failed cell parent text remain fixed; all-native-disabled or whole-extension failure remains fatal; no silent parent-only rescue."
+  },
+  "time_and_budget": {
+    "F010_policy_estimate_hours_per_fold": [
+      7,
+      10
+    ],
+    "additional_after_fold0_PASS": "At least a new reviewed fold1 F010 fit plus any matched no-skip F006 control rerun, frozen comparisons, new CPU/seal/transport/inference audits. This is not same-day-ready merely because fold0 finishes before GPU queues.",
+    "control_rerun_and_CPU_audit_hours": "Not measured in this source-only review; do not promise a deadline.",
+    "Kaggle_GPU_queue_time": "Unbounded from these facts; CPU D001/D002 success does not qualify GPU availability.",
+    "formal_remaining_root_observed": 3,
+    "existing_P040_P041_queue_P042_unaccepted_source_and_four_comparison_plan": "Preserved; no slot cancellation, replacement or submission authorized by this memo."
+  },
+  "source_evidence": {
+    "F010_model": {
+      "path": "src/rsna_knee/f010_last4_model.py",
+      "bytes": 9281,
+      "sha256": "eae4e5ea2f90d0191ee38f72f4d9fb5051cbbe189fd9dce1faf7e933e506a91e"
+    },
+    "F010_training": {
+      "path": "src/rsna_knee/f010_last4_training.py",
+      "bytes": 39973,
+      "sha256": "ac99aa780490db8f2c430d97cb4b7040ae2061dba1c0135a7809c3ca1174e66d"
+    },
+    "F006_model": {
+      "path": "src/rsna_knee/finetune_model.py",
+      "bytes": 9512,
+      "sha256": "c43bcedf1d97b713528b4157a0a9c8867741b785d58c5be084cd7072c2b2c624"
+    },
+    "P039_builder": {
+      "path": "scripts/prepare_p039_p033_f006.py",
+      "bytes": 16769,
+      "sha256": "9d32ee7461eb1c6f036c47c2021e5e802ce44f365a20c00053a001a08d386200"
+    },
+    "P042_prospective_policy": {
+      "path": "artifacts/research/20261019-p042-rank-renormalization-preparation-v1/prospective-policy.json",
+      "bytes": 2198,
+      "sha256": "91df6a64decaa4203a3864f7939ee4f01c7c08fe215df12f449024071b98f5ba"
+    }
+  },
+  "proposal_for_root_boundary_review_before_implementation": {
+    "recommendation": "Prepare isolated source-only last4 serving contracts and artificial tests in parallel now: this reduces later engineering delay and can serve future F010 experiments. Prioritize exact strict reconstruction and failure rejection, not deployable trained bundles. Scientific adoption and current submission plan remain gated.",
+    "value_limit": "Preparation can be abandoned if F010 HOLD; no investment or positive fold0 result can waive both-fold adoption. It does not make the current final slot an F010 submission.",
+    "proposed_new_boundary": "artifacts/research/20261019-f010-last4-serving-source-v1",
+    "proposed_components": [
+      "last4 fixed-E12 metadata consumer",
+      "last4 CPU strict reconstruction/check script",
+      "new sealer and pure transport inventory validator without uploader",
+      "separate last4 CLS plus existing REG four-model runtime adapter",
+      "standard-library synthetic negative contracts and artificial forward recipe",
+      "immutable preparation manifest/source SHA/qualification-pending descriptors"
+    ],
+    "running_source_pin_metadata": {
+      "path": "artifacts/research/20261019-f010-deferred-training-v1/plan.json",
+      "bytes": 46988,
+      "sha256": "e1728289248e48b26ee0aa1705ad074ef560e0f98cccde8785546c24f9e4284b"
+    },
+    "running_pin_count": 185,
+    "proposed_boundary_disjoint_from_all_185_pinned_paths": true,
+    "must_not_edit": [
+      "Existing src/rsna_knee files",
+      "Existing scripts/configs or185 pinned files",
+      "Running F010 run directory and checkpoints",
+      "Original F010 policy/evaluator/resource gate",
+      "Old F006/P039 CPU/sealer/transport/runtime/source artifacts",
+      "Old F009 HOLD/v2 exception and old waiter"
+    ],
+    "isolation_method": "Only new files under the proposed artifact boundary; copy pinned model/trainer source bytes or use explicit read-only source references. New consumer modules have unique names and cannot mutate shared modules, source hashes or an executing run. Snapshot exact read-only source hashes; reject mismatches. Never import modules with training side effects.",
+    "during_source_preparation_forbidden": "Real checkpoint or prediction/label body reads, training/preflight/model loads, actual CPU/GPU reconstruction, new experiments, uploads/Save/Submit, and qualification/adoption flags.",
+    "next_action": "Root reviews this boundary and independent consumer-difference memo before any implementation. This record itself implements nothing."
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "at_UTC": "2026-10-20T10:16:56.798029+00:00",
+  "status": "PRIMARY_METHOD_RESEARCH_NO_REPRODUCIBLE_PUBLIC959_FOUND_IN_SCOPE",
+  "scope": "Evening officialpublic top100 scored plus targeted0.959/0.960/0.96/pseudolabel search,6officialdiscussion pages and selected10bodies/7replythreads; no exhaustive nonexistence claim.",
+  "higher_public_reproducible_found": false,
+  "author_reported_not_own": [
+    "735304: singleConvNeXtT5fold.959; OOFimagepseudo mixtures reported by colum2131/ArchitKonde; otherreply reports weak/goldlift withoutPubliclift",
+    "746792: ownsameCoAtNetmirror.948to.949, broaderhistory confoundedchanges",
+    "748011: author15submissions weakCV/Publiccorrelation.87, not our estimate; publictie rank/precision comments disagree, not scoregroundtruth",
+    "750318: participants report5to6hqueue; not definitive state for our own runs"
+  ],
+  "new_unscored_sources": [
+    {
+      "ref": "eeshanvaghjiani2004/rsna-knee-s6-60-n40-balanced-blend",
+      "saved_version": 1,
+      "source_SHA": "a40f7b4149661157f2451ff5dba99ba7b94781f79fd702e90bf3e48e8928332c",
+      "official_author_score": null,
+      "claim": "Expected0.956to0.959, not actualresult",
+      "decision": "Do not spend slot solely on expectedscore; olderS6/CoAtNet/Reader/teamblend lineage not new validatedbetter model"
+    },
+    {
+      "ref": "rjings/rsna-a5-tri-anchor-20261014",
+      "saved_version": 1,
+      "source_SHA": "323d559c61ef4ccbbd324befd1d62aef4f0e3920821459d6fabb8fd6cdc8c541",
+      "official_author_score": null,
+      "claim": "Target0.960to0.964 with unsupported mathematicalceiling language",
+      "decision": "No substantiatedgain; sameMattia5foldordering family alreadyisolatedinP045, older.954anchor and variableperlabelweights, no extraformal on titleclaim"
+    }
+  ],
+  "score_resolution_tool": {
+    "ref": "varshithakolupuri/rsna-knee-real-scores-of-every-public-notebook",
+    "saved_version": 1,
+    "source_SHA": "4ca68dad28017a62d011c6a3faf4f391dfa4e4390ca7ab0b0935c9c734842ee5",
+    "finding": "Reads samebestPublicScore, not hiddenprecision reconstruction. No unroundedownscore inferred."
+  },
+  "research_roots": [
+    "artifacts/research/20261020-public-method-discussions-evening-v1",
+    "artifacts/research/20261020-public-unscored-high-title-search-v1",
+    "artifacts/research/20261020-public-score-resolution-tool-audit-v1"
+  ],
+  "best_own_Public": ".958",
+  "goal959_unmet": true,
+  "OwnGold_newMRI_modeldownload_GPU_train_Save_Submit": 0,
+  "next": "AwaitP045official; R6sourceheldout-two-bankTTA/postprocessor/crop controlled validation; P04620 conditionalonly."
+}

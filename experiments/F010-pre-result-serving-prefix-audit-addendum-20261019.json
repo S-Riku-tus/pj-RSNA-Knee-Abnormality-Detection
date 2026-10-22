@@ -1,0 +1,68 @@
+{
+  "schema_version": "F010_prospective_isolated_serving_prefix_definition_addendum_v1",
+  "at_UTC": "2026-10-19T13:33:33.291565+00:00",
+  "base_strategy_canonical": {
+    "path": "experiments/F010-pre-result-candidate-strategy-and-isolated-serving-proposal-20261019.json",
+    "bytes": 12788,
+    "sha256": "560e69c2da4727d8c9e25070483fd734e20fbd3f1408e59e48480aef3ca34854"
+  },
+  "status": "SOURCE_ONLY_ROOT_BOUNDARY_REVIEW_REQUIRED_IMPLEMENTATION0",
+  "finding": "P039 bind_pairs requires equality of CLS and REG frozen_prefix_sha256 as well as encoder_provenance. This equality is specific to the old common last2 suffix definition.",
+  "F010_prefix_definition": "Hash all encoder state except trained blocks8/9/10/11; final norm included and frozen.",
+  "REG_prefix_definition": "Unchanged old last2: hash all encoder state except trained blocks10/11, so generic blocks8/9 remain inside its prefix digest.",
+  "consequence": "Identical audited generic starting bytes do not make these differently defined digest streams equal. New last4 CLS plus old last2 REG cannot satisfy old cross-family prefix equality by changing names or metadata.",
+  "proposed_new_contract": "In a separate consumer only, require the same raw generic weight/source/provenance SHA identity across families, then independently reconstruct and verify CLS prefix with last4 definition and REG prefix with its unchanged last2 definition. Verify exact learned suffix and head tensor fingerprints for each family/fold, exact per-family parameter counts, and no cross-object aliases. Preserve all original guards and their byte pins.",
+  "family_parameters": {
+    "CLS_F010_encoder": 7100928,
+    "REG_existing_encoder": 3550464,
+    "head_each": 83352,
+    "CLS_blocks": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "REG_blocks": [
+      10,
+      11
+    ]
+  },
+  "forbidden": [
+    "Set a reported prefix SHA equal to another family without reconstructing",
+    "Drop learned blocks8/9 from F010 checkpoint",
+    "Modify old P039/F006 guards or running F010 source to bypass them",
+    "Use a same-object/self-equality check in place of the distinct families",
+    "Treat this engineering proposal as fold1 skip or adoption permission"
+  ],
+  "source_pins": {
+    "P039_exact_binder": {
+      "path": "artifacts/research/20261016-f006-execution-v1/static-native-source/serving/isolated_contracts.py",
+      "bytes": 20247,
+      "sha256": "8383eb97d376bb3267858314901d4ce94d11ff7e412a62286567c1d38dd4036f"
+    },
+    "P039_exact_runtime": {
+      "path": "artifacts/research/20261016-f006-execution-v1/static-native-source/serving/isolated_mixed_runtime.py",
+      "bytes": 12232,
+      "sha256": "8dc5a290814e8b017267598fd3c44f4c359ccf0c61d11685131d3363d7e037f7"
+    },
+    "F010_prefix_and_suffix": {
+      "path": "src/rsna_knee/f010_last4_training.py",
+      "bytes": 39973,
+      "sha256": "ac99aa780490db8f2c430d97cb4b7040ae2061dba1c0135a7809c3ca1174e66d"
+    },
+    "old_prefix_and_suffix": {
+      "path": "src/rsna_knee/native_training_fast16.py",
+      "bytes": 39698,
+      "sha256": "9f5c3b490374201f72cc73ebf11a26f8a8163945387d4d493e7a04c08e729d57"
+    },
+    "REG_imports_old_prefix": {
+      "path": "src/rsna_knee/regional_training_fast16.py",
+      "bytes": 34979,
+      "sha256": "2006a481f635f988c2540f03ed7b737dc11a79707e9415c6e48cb3eec3810282"
+    }
+  },
+  "all_existing_science_and_plan_gates_preserved": true,
+  "both_folds_independently_positive_required": true,
+  "185_running_pin_targets_changed": 0,
+  "new_API_Save_Submit_model_load_labels_metrics_tests": 0
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": "f009_gamma_originalfold1_fixed12_and_joint_screen_prospective_v1",
+  "declared_at_UTC": "2026-10-17T06:20:34.721684+00:00",
+  "status": "FIXED_BEFORE_FOLD1_FIT_OR_METRICS_AND_BEFORE_FOLD0_E12_COMPARISON",
+  "user_goal": {
+    "own_best": 0.957,
+    "target_Public": 0.96,
+    "verified_target_achieved": false
+  },
+  "unchanged_fold0_policy": {
+    "path": "experiments/f009-evaluation-policy-v2-prescore-20261017.json",
+    "bytes": 9505,
+    "sha256": "de5a6aa743d2d663f98244322958bf4b8154908238384112a7badf2df1e2d42c"
+  },
+  "scope": "Specify the already planned same-recipe originalfold1 confirmation; no change to fold0 gate, training, gamma range, targets or alpha.",
+  "fold1_start_requires": "Existing unchanged v2 fold0 fixed12 engineering plus fixed10 AUCdelta>0 with zero AMPskips; root reviews result and guarded-input proof, then manually preflights and starts one fit. No automatic starts.",
+  "manual_training_readiness": {
+    "path": "artifacts/research/20261017-f009-fold1-manual-readiness-v1/manual-commands.json",
+    "bytes": 6182,
+    "sha256": "cc15e4150ce68b9389d7aa1709e82cae51af95e3ef573c8ac3de43218a908262"
+  },
+  "new_run": "artifacts/runs/f009-gamma-late-cosine-fold1-20261017-v1",
+  "training": {
+    "config": {
+      "path": "configs/experiments/f009-dinov2-native-last2-late-cosine-study-gamma.json",
+      "bytes": 1699,
+      "sha256": "1a0a1d396660c6e326fd0f78962867b8243a3ac0e9b87fe2bb98dbea5f59297f"
+    },
+    "fold": 1,
+    "seed": 20261002,
+    "epochs": 12,
+    "unconditional_primary_checkpoint": "epoch_012.pt",
+    "primary_predictions": "epoch_012_weak.csv",
+    "best_BCE_auxiliary_only": true,
+    "train": 3316,
+    "validation": 891,
+    "cache": 4207,
+    "supplied_report_group_overlap": 0,
+    "augmentation": "unchanged study-common gamma U[0.85,1.15], training-only, dedicated CPU generator; disabled at val/inference",
+    "new_source_config_or_hyperparameter_changes": false
+  },
+  "fixed_control": {
+    "run": {
+      "path": "artifacts/runs/f006-late-cosine-fold1-20261012-v1/run.json",
+      "bytes": 97729,
+      "sha256": "ee7f7a8326e578c6a46fae0fa6b488e74208ac679a474fc73775667bcc362261"
+    },
+    "retention_index": {
+      "path": "artifacts/runs/f006-late-cosine-fold1-20261012-v1/epoch_checkpoint_index.json",
+      "bytes": 40927,
+      "sha256": "b06ac7e36b918f72b9736fedf153bd5b5c1dbb1a5135f478eb30fd47532285a2"
+    },
+    "epoch12_predictions": {
+      "path": "artifacts/runs/f006-late-cosine-fold1-20261012-v1/epoch_012_weak.csv",
+      "bytes": 275385,
+      "sha256": "7c052b7f16a86c9f8ee3bf0ef5f2807057acc7677f050e1337eac74b91274e7c"
+    },
+    "checkpoint_sha_source": "Exact epoch12 entry in frozen retention index; actual file body hash is verified at completed-comparison guard, not loaded for this declaration.",
+    "no_fold0_or_other_trained_onfold1_models": true
+  },
+  "evaluation": {
+    "fold": 1,
+    "original_UIDs": 891,
+    "labels": "original same weak fold1 per-target observed0/1-or-missing mask; preserve missing, no zero fill or complete-case filtering",
+    "fixed10": [
+      "ACL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ],
+    "primary": "Same unchanged v2 paired AUC math: unweighted mean of all ten defined per-target candidateE12-minus-controlE12 AUCs on exactly same891 rows/observed masks",
+    "source_math": "Reuse exact v2 fixed_mean/paired/weighted_auc formulas; any fold1 engineering adapter must be source-pinned and checked before first fold1 metric.",
+    "engineering": "completed1..12, fixed fold1/seed/config/source/cache/manifest; retained E12 checkpoint/index and finite predictions, exact891 UID set, zero AMPskip and no unexplained optimizer/integrity issues",
+    "report_only": [
+      "per-target/all12 support/AUC",
+      "weak BCE",
+      "paired supplied-group bootstrap1000 seed20261012 and95%CI",
+      "same fixedREG50 mixture diagnostic from v2 remains planned; existing v2 source does not yet implement this diagnostic"
+    ],
+    "BCE_CI_significance_thresholds_used_for_adoption": false,
+    "Gold_Report_Public_selection_or_new_metric_read_this_declaration": false
+  },
+  "joint_candidate_screen": {
+    "required": "Both originalfold0 and originalfold1 engineering pass and fixed10 paired E12 deltas strictly>0. Undefined or nonpositive in either =>HOLD gamma candidate.",
+    "no_pool_or_average_override": true,
+    "no_favorable_fold_only_use": true,
+    "no_posthoc_gamma_seed_epoch_C_alpha_target_search": true,
+    "positive_screen_is_not_Public_gain_proof": true
+  },
+  "future_test_recipe": {
+    "four_to_four": "Replace old CLS NativeTripletMIL0/1 with sealed fixedE12 F0090/1. Keep old REG RegionalTripletMIL0/1, parentP029M scientific cells, fixed20 success ranks and owned executor.",
+    "design": {
+      "path": "artifacts/research/20261017-f009-future-transport-design-v1/summary.json",
+      "bytes": 3477,
+      "sha256": "38493a05aca50151f992cfc06cdc1c9145bdb258635641cef2857b6679bec597"
+    },
+    "source14_package_preparation": {
+      "path": "artifacts/research/20261017-f009-source-namespace-implementation-v1/verification.json",
+      "bytes": 4457,
+      "sha256": "a6f25b0d3d94236cac20166790f25bf78293b9ddc46f44abd5a8693fc1496ad1"
+    },
+    "stage_or_model_or_adoption_qualified": false,
+    "minimum_next": "After joint screen: strictCPU checkpoint/source/tensor proof, new binding/transport input refs, actual192+visible/FP32/timeout checks, then one root-manual formal submission if quota and ownbest<.960."
+  },
+  "limits": [
+    "Repeated weak holdouts after historic checkpoint/model development; not independent whole-project nested CV.",
+    "Supplied/report groups preserved; patient independence and generic-pretraining data overlap unverified.",
+    "OldF006E12 selection history differs from prospectiveF009 fixed12; CIs are conditional descriptions.",
+    "No Public0.960 guarantee or interpolation of weak delta into Public score."
+  ],
+  "activity": {
+    "metadata_hash_and_prospective_declaration_only": true,
+    "new_fit_GPU_API_model_binary_MRI_label_projection_or_metric": 0,
+    "existing_policy_source_config_model_modified": false
+  }
+}

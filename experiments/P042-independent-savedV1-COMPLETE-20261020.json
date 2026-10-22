@@ -1,0 +1,67 @@
+{
+  "schema_version": "P042_independent_savedV1_official_COMPLETE_terminal_v1",
+  "at_UTC": "2026-10-19T16:49:44.256627+00:00",
+  "observed_UTC": "2026-10-19T16:49:16.705509+00:00",
+  "ref": "rsraki/p042-rank-rr-20261019-v1",
+  "kernel_id": 139595447,
+  "actual_saved_version": 1,
+  "state": {
+    "raw_status_present": true,
+    "raw_status": "COMPLETE",
+    "typed_status": "COMPLETE",
+    "raw_failure": null,
+    "raw_omitted_status_is_SDK_default_not_error": false
+  },
+  "formal_results": {
+    "P040": {
+      "ref": 57402883,
+      "raw_status_present": false,
+      "status": null,
+      "raw_Public_present": false,
+      "Public": null,
+      "error": null,
+      "bytes": 0
+    },
+    "P041": {
+      "ref": 57402914,
+      "raw_status_present": false,
+      "status": null,
+      "raw_Public_present": false,
+      "Public": null,
+      "error": null,
+      "bytes": 0
+    }
+  },
+  "formal_monitor_continues": true,
+  "stable_P042_status_reads_stopped": true,
+  "actual_visible_numeric_qualified": false,
+  "activity": {
+    "additional_API": 0,
+    "Save": 0,
+    "Submit": 0,
+    "cancel": 0,
+    "GPU_start": 0
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T164915055461Z/P040-submission-57402883.json",
+      "bytes": 528,
+      "sha256": "e55bd0e9cd2eac58fd55ce0a77efc75adb60b6cecbe2a8152cc6f0c117bbac04"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T164915055461Z/P041-submission-57402914.json",
+      "bytes": 542,
+      "sha256": "8ab7c0893b825120d07c1d850d55a314be3681c85a91fd97d334b9eae982a2f0"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T164915055461Z/P042-status-V1.json",
+      "bytes": 21,
+      "sha256": "8c65d9493ad080266a23df2675f847486fedc0546a88a91c866b812d970915b5"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T164915055461Z/summary.json",
+      "bytes": 1562,
+      "sha256": "501f50662a8216a79de292395c50a7436a247462ce20f1c15665bbc86c81090c"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": "F009_amended_consumer_source_preparation_design_v1",
+  "declared_at_UTC": "2026-10-17T08:16:01.819871+00:00",
+  "purpose": "Prepare necessary separately versioned consumers of the sealed amended evaluation while the same fold1 fit is live; no model bodies or actual CPU proof/stage until actual joint conditions pass.",
+  "own_Public_best": "0.958",
+  "goal_Public": "0.960",
+  "goal_achieved": false,
+  "previous_goal_turn": "PROGRESS: actualfold0 E12 comparison, samefold1 manual start, P036 COMPLETE .958, immutable policy correction and reviewed evaluator frozen before first recordedfold1metric.",
+  "current_goal_turn_runtime_observation": {
+    "classification_at_start": "VERIFIED_WAIT",
+    "OS_training_PID": 2772,
+    "StartTime_JST": "2026-10-17T16:49:06+09:00",
+    "GetProcess_chunks": [
+      "86b85f",
+      "e72827",
+      "96737d"
+    ],
+    "CPU_seconds_increasing": [
+      1163.078125,
+      1239.328125,
+      1426.953125
+    ],
+    "NVIDIA_compute_process_PID_and_executable_matched": true,
+    "CIM_query_denied": "Read-only Get-Process plus NVIDIA safely succeeded instead; no restart or escalation required"
+  },
+  "decision": "Source preparation may proceed now; all actual model-body/CPU reconstruction/local stage remain conditional on completed originalfold1 and positive amended joint screen. Scientific training/evaluation thresholds remain unchanged.",
+  "policy": {
+    "path": "experiments/f009-fold1-fixed12-joint-screen-premetric-amendment-v2-20261017.json",
+    "bytes": 11987,
+    "sha256": "bf53e1828784df4d0da793cea6014f055ca9e5948dc5013cf368b646dd328a90"
+  },
+  "source_readiness_not_model_release": {
+    "path": "experiments/f009-fold1-v2-wrapper-and-next-submissions-20261017.json",
+    "bytes": 5139,
+    "sha256": "09e99f634ad218cbb444a6e12ea3cddd8507cc66398c373caaaf3942402d39d8"
+  },
+  "impact_map_English_corrected": {
+    "path": "artifacts/research/20261017-f009-amended-qualification-impact-v1/impact-map-v2.json",
+    "bytes": 27179,
+    "sha256": "d5d2314b94ea20bfdc108298d1ca6e73f62eff4e6e3a0a4b116ef191425efdea"
+  },
+  "legacy_sources_immutable": [
+    {
+      "path": "src/rsna_knee/f009_cpu_proof.py",
+      "bytes": 16628,
+      "sha256": "1d2cbdc18212454d97aca2a768ed2dc6f89492a757644c7e91de03e0eeb066f1"
+    },
+    {
+      "path": "scripts/check_f009_E12_cpu.py",
+      "bytes": 1517,
+      "sha256": "3f8f89acbeacdf5a62f7a282eb7f2a6ebb7f072ebb584ffefcb835768534885e"
+    },
+    {
+      "path": "src/rsna_knee/f009_pair_stage_v2.py",
+      "bytes": 21564,
+      "sha256": "b1687e813ecdecfadff8b5adc21e02577a5c57998cc0891899fa4034f1043813"
+    },
+    {
+      "path": "scripts/seal_f009_E12_pair_v2.py",
+      "bytes": 989,
+      "sha256": "c8170ab76bec95965d9c0c4a16df907159cc1cf880734137b01e5f0784d2e8dd"
+    },
+    {
+      "path": "src/rsna_knee/f009_source_namespace.py",
+      "bytes": 11862,
+      "sha256": "cd2b5fd71355801b67f4f4596487d42728e4974f84b10eac15155ef35c6e5526"
+    }
+  ],
+  "new_files_intended": [
+    "src/rsna_knee/f009_cpu_proof_v2.py",
+    "scripts/check_f009_E12_cpu_v2.py",
+    "tests/test_f009_cpu_proof_v2.py",
+    "src/rsna_knee/f009_pair_stage_v3.py",
+    "scripts/seal_f009_E12_pair_v3.py",
+    "tests/test_f009_pair_stage_v3.py"
+  ],
+  "common_metadata_API": "validate_amended_joint_metadata(root, qualification) in newproducer; stdlib only, no model/checkpointbody/Torch/GPU/network before all metadata guards",
+  "qualification_exact_pin_keys": [
+    "result0",
+    "guard0",
+    "result1",
+    "guard1",
+    "legacy_guard1",
+    "legacy_comparison1"
+  ],
+  "producer_input_schema": {
+    "schema_version": "f009_CPU_proof_amended_root_inputs_v2",
+    "exact_keys": [
+      "schema_version",
+      "qualification",
+      "folds",
+      "provenance"
+    ],
+    "folds": "0 and1 only; each exact run,index pins"
+  },
+  "CPU_receipt_schema": "f009_strict_CPU_amended_eval_v2",
+  "sealer_input_schema": {
+    "schema_version": "f009_pair_stage_amended_root_pins_v3",
+    "exact_keys": [
+      "schema_version",
+      "qualification",
+      "folds"
+    ],
+    "folds": "0 and1 only; each exact run,index,CPU,expected_CPU_producer_sha256"
+  },
+  "mandatory_gates": [
+    "Source-pinned originalfold0 positive guarded result and new amended fold1 result/receipt",
+    "Explicit SHA binding of new policy/declaration/epoch0 snapshot/newwrapper and untouched original v1 source/policy",
+    "Separately bound legacyguard and legacycomparison remain machinefalse/jointfalse HOLD; no schema conversion or pass fabrication",
+    "All copied statistics in newresult equal unchanged originalcomparison",
+    "Candidate exact12 zero-skip history eachfold and finite losses; exact immutable historicalcontrol E10onlyskip1 accounting",
+    "Each fold primary fixed10 delta strictlypositive independently; no average/favorablefold/BCE/CI/REG50 rescue",
+    "All completed actual run/index/source/config/cache/generic metadata before any checkpointbody",
+    "New exact CPU producer/CLI schema/provenance bindings; oldregistry and receipts not silently accepted",
+    "Strict CPU numerical logic preserved with independently checked AST; new schema/CLI/qualification descriptors only differ",
+    "New sealer source14/CPUtensor/frozenprefix/class/load/finite/noForward/noGPU/gammaRNG guards retained; freshoutput/exactcopy/atomic/failure incomplete",
+    "Two new CLS E12 models plus existing unchanged REG0/1 references; still4 logical models; transport/Submit qualification separate"
+  ],
+  "prohibited": [
+    "Mutate any old source, policy, guard, result, registry or completed run",
+    "Treat source readiness release as completed model adoption",
+    "Read actual current fold1 metrics/checkpoint/model or launch new training/GPU during this preparation",
+    "Add automatic Save/Submit/upload or launch triggers"
+  ],
+  "actual_model_CPU_stage_or_adoption_this_design": false,
+  "actual_newcomparison_Save_Submit": 0,
+  "current_official_snapshot": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T081334687899Z",
+  "public_frontier_next": "Prepared separate bounded v8 observer; no anonymous refresh before17:24JST; root manual only"
+}

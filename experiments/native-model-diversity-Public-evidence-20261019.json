@@ -1,0 +1,271 @@
+{
+  "schema_version": "native_model_diversity_and_Public_evidence_audit_v1",
+  "at_UTC": "2026-10-19T03:23:55.261029+00:00",
+  "status": "COMPLETED_WEAK_SAMEFOLD_DIAGNOSTIC_PUBLIC_NATIVE_GAIN_UNPROVEN",
+  "comparisons": [
+    {
+      "name": "CLS_F009_fold0_fixed12",
+      "evidence": {
+        "path": "artifacts/research/20261019-native-diversity-samefold-v1/CLS_F009_fold0_fixed12.json",
+        "bytes": 34628,
+        "sha256": "c3585a1f6bb1905b88ae8acf91dd211e35ef8ce84e0ce9e432dbfa2a55029321"
+      },
+      "fold": 0,
+      "checkpoint_rule": "fixed12",
+      "fixed10": {
+        "targets": [
+          "ACL",
+          "Medial Meniscus",
+          "Lateral Meniscus",
+          "Medial OA",
+          "Lateral OA",
+          "PF OA",
+          "Effusion",
+          "Baker's",
+          "Contusion",
+          "Fracture"
+        ],
+        "macro_auc": {
+          "left": 0.8831284034612052,
+          "right": 0.8848211853250774,
+          "fixed_FP32_probability_mean50": 0.8839984136921902
+        },
+        "mean50_delta_from_left": 0.0008700102309849855,
+        "mean50_delta_from_right": -0.0008227716328871315
+      },
+      "rank_correlation_median_fixed10": 0.9978698828691648,
+      "residual_correlation_median_fixed10": 0.9984864028942104,
+      "pair_error_overlap_fixed10": {
+        "pairs": 415025,
+        "both_incorrect": 47611,
+        "left_incorrect_right_correct": 2821,
+        "left_correct_right_incorrect": 1834,
+        "pair_totals_are_descriptive_not_macro_auc": true
+      }
+    },
+    {
+      "name": "CLS_REG_fold0_selected",
+      "evidence": {
+        "path": "artifacts/research/20261019-native-diversity-samefold-v1/CLS_REG_fold0_selected.json",
+        "bytes": 34795,
+        "sha256": "fd551c7993498a8a24107c7e0441c6aa5d369e997b3a23d87071a3b594e7a9fe"
+      },
+      "fold": 0,
+      "checkpoint_rule": "selected",
+      "fixed10": {
+        "targets": [
+          "ACL",
+          "Medial Meniscus",
+          "Lateral Meniscus",
+          "Medial OA",
+          "Lateral OA",
+          "PF OA",
+          "Effusion",
+          "Baker's",
+          "Contusion",
+          "Fracture"
+        ],
+        "macro_auc": {
+          "left": 0.8809001618406918,
+          "right": 0.8767555789407847,
+          "fixed_FP32_probability_mean50": 0.8845654619913879
+        },
+        "mean50_delta_from_left": 0.0036653001506961047,
+        "mean50_delta_from_right": 0.00780988305060315
+      },
+      "rank_correlation_median_fixed10": 0.9381279776204641,
+      "residual_correlation_median_fixed10": 0.935781986310016,
+      "pair_error_overlap_fixed10": {
+        "pairs": 415025,
+        "both_incorrect": 37603,
+        "left_incorrect_right_correct": 13699,
+        "left_correct_right_incorrect": 21649,
+        "pair_totals_are_descriptive_not_macro_auc": true
+      }
+    },
+    {
+      "name": "CLS_REG_fold1_selected",
+      "evidence": {
+        "path": "artifacts/research/20261019-native-diversity-samefold-v1/CLS_REG_fold1_selected.json",
+        "bytes": 34921,
+        "sha256": "55c433b7dbca36d8bd32a33b9e53a7097d6fe4cc7d830c169f714000a53532e3"
+      },
+      "fold": 1,
+      "checkpoint_rule": "selected",
+      "fixed10": {
+        "targets": [
+          "ACL",
+          "Medial Meniscus",
+          "Lateral Meniscus",
+          "Medial OA",
+          "Lateral OA",
+          "PF OA",
+          "Effusion",
+          "Baker's",
+          "Contusion",
+          "Fracture"
+        ],
+        "macro_auc": {
+          "left": 0.8805490447343048,
+          "right": 0.8806778837082054,
+          "fixed_FP32_probability_mean50": 0.8861807786471217
+        },
+        "mean50_delta_from_left": 0.005631733912816905,
+        "mean50_delta_from_right": 0.005502894938916314
+      },
+      "rank_correlation_median_fixed10": 0.8968430315821181,
+      "residual_correlation_median_fixed10": 0.9147672923986243,
+      "pair_error_overlap_fixed10": {
+        "pairs": 467291,
+        "both_incorrect": 44153,
+        "left_incorrect_right_correct": 21853,
+        "left_correct_right_incorrect": 22256,
+        "pair_totals_are_descriptive_not_macro_auc": true
+      }
+    }
+  ],
+  "interpretation": {
+    "public_native_addition_gain_established": false,
+    "user_concern_supported": "Existing scored native-addition candidates have shown no displayed Public gain. Weak diversity alone is insufficient to justify more native weight sweeps.",
+    "CLS_REG": "Samefold fixed50 improves existing CLS weak fixed10 in both completed folds, but no public-parent heldout predictions exist for a valid public-parent complementarity test.",
+    "F009_gamma": "E12 rank correlation median0.99787 and residual0.99849 show almost identical predictions; candidate alone exceeds old/candidate50. Treat as small single-model revision, not a diverse ensemble family.",
+    "public958_same_holdout_predictions": "NOT_ACQUIRED",
+    "weak_auc_cannot_be_compared_to_Public958": true,
+    "visible3_unlabeled_not_used_for_diversity": true
+  },
+  "model_structure": {
+    "common": "DINOv2 ViT-S/14,392px,at most3 series x48 adjacent-slice triplets,attention192/dropout0.2,train last2 blocks,12epochs,seed20261002,effectivebatch16,same4207reportweak and original supplied-group folds",
+    "CLS_F006": "CLS descriptors; late cosine after6epochs",
+    "REG": "CLS plus16 normalized fixed4x4 patch means per triplet; same generic encoder and cohort,constant LR",
+    "F009": "F006 plus train-only study-common gamma U[.85,1.15] only; fixedE12 compared; fold1 running not opened",
+    "labels": "vmohitrao DatasetV3 report-only weak extraction; missing remains excluded; no own Gold use; author Gold non-use declaration not independently authenticated"
+  },
+  "weaknesses_observed": {
+    "lateral_meniscus_CLS_AUC_fold0_1": [
+      0.7693091981428034,
+      0.7577552049564152
+    ],
+    "statement": "Lateral meniscus is weak on both folds, while selected weak Synovitis fold0 has only one negative and MCL has11/16 positives. Input/anatomy/label quality and model capacity are hypotheses to test, not causes proved by these CSVs."
+  },
+  "public_native_history": [
+    {
+      "candidate": "P028",
+      "submission": 57163437,
+      "baseline": "S6 public0.954",
+      "change": "same earlier native20 with runtime parent completion repair",
+      "Public": null,
+      "result": "hidden error; no accuracy comparison",
+      "evidence": "experiments/authenticated-progress-refresh-20261015.json"
+    },
+    {
+      "candidate": "P024",
+      "submission": 57166365,
+      "baseline": "S6 public0.954",
+      "change": "F006 CLS0 E12 with other fixed native models",
+      "Public": null,
+      "result": "hidden error; no accuracy comparison",
+      "evidence": "experiments/authenticated-progress-refresh-20261015.json"
+    },
+    {
+      "candidate": "F006_bothfold_S6",
+      "submission": 57169291,
+      "baseline": "S6 public0.954",
+      "change": "F006 both CLS folds E12 in fixed20",
+      "Public": null,
+      "result": "hidden error; no accuracy comparison",
+      "evidence": "experiments/authenticated-progress-refresh-20261015.json"
+    },
+    {
+      "candidate": "P032",
+      "submission": 57262934,
+      "baseline_submission": 57225898,
+      "baseline_Public": "0.957",
+      "change": "F006 native20 fixed10 overlay",
+      "Public": "0.957",
+      "displayed_gain": "0.000",
+      "hidden_native_participation": "unverified; parent fallback allowed",
+      "evidence": "experiments/p032-result957-p033-submit57290868-20261017.json"
+    },
+    {
+      "candidate": "P034",
+      "submission": 57291440,
+      "baseline_submission": 57225898,
+      "baseline_Public": "0.957",
+      "control_candidate": "P032",
+      "change": "retain successful native UIDs with partial failures; model and20 unchanged",
+      "Public": "0.957",
+      "displayed_gain": "0.000",
+      "hidden_native_participation": "unverified; parent fallback allowed",
+      "evidence": "experiments/P034P035-official957-F009fold1-E2-runtime-audit-20261017.json"
+    },
+    {
+      "candidate": "P035",
+      "submission": 57292346,
+      "baseline_submission": 57225898,
+      "baseline_Public": "0.957",
+      "control_candidate": "P034",
+      "change": "owned UID execution/operational recovery; model and20 unchanged",
+      "Public": "0.957",
+      "displayed_gain": "0.000",
+      "hidden_native_participation": "unverified; parent fallback allowed",
+      "evidence": "experiments/P034P035-official957-F009fold1-E2-runtime-audit-20261017.json"
+    },
+    {
+      "candidate": "P039",
+      "submission": 57378810,
+      "baseline_submission": 57290868,
+      "baseline_Public": "0.958",
+      "change": "same F006four-model native20 over P033 classvector parent",
+      "Public": null,
+      "result": "unreturned in latest available local record, not queried in this analysis",
+      "evidence": "experiments/P039-independent-official-acceptance-20261019.json"
+    }
+  ],
+  "recommendation": "Prioritize stronger own training/data/representations with valid fixed holdouts. Preserve Public958. Do not infer independence or improvement from correlation alone; no new native-alpha sweep or submission authorized by this diagnostic.",
+  "validation": {
+    "stdlib_unittest": 13,
+    "unittest": "PASS",
+    "ruff": "PASS",
+    "saved_per_target_AUC_recomputed_from_CSV": "PASS",
+    "exact_positive_negative_pair_AUC_delta_identity": "PASS",
+    "samefold_UID_and_group_and_missing_mask": "PASS",
+    "completed_both_arms_before_payload": "PASS",
+    "new_fit_or_GPU_or_model_or_MRI_or_network": 0,
+    "Gold_and_outer2_metrics": 0,
+    "ongoing_fold1_metadata_and_predictions_accessed": 0
+  },
+  "source_evidence": [
+    {
+      "path": "src/rsna_knee/ensemble_diversity.py",
+      "bytes": 4594,
+      "sha256": "56cd4cc58b11584e520cd861b4b56a1bf9c9093a8aac80c9e7e0549759879a48"
+    },
+    {
+      "path": "scripts/analyze_native_ensemble_diversity.py",
+      "bytes": 10697,
+      "sha256": "265b59ffc287a1c2386cc47b574374a281f55f9f7e26a7da2a1020015c9b40a8"
+    },
+    {
+      "path": "tests/test_ensemble_diversity.py",
+      "bytes": 6654,
+      "sha256": "155ee8b17399345dc26a1cd61398fa2b67e347813c1c99812d9b9a4397296e17"
+    },
+    {
+      "path": "src/rsna_knee/metrics.py",
+      "bytes": 2030,
+      "sha256": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c"
+    },
+    {
+      "path": "src/rsna_knee/contracts.py",
+      "bytes": 7720,
+      "sha256": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+    }
+  ],
+  "limits": [
+    "Exploratory reuse of weak holdouts; selected epochs have selection bias.",
+    "Per-target residuals share labels; pair totals are not pooled macro AUC.",
+    "FP32 probability50 diagnostic differs from deployed rank overlay; no coefficient fitting.",
+    "Supplied group/duplicate reports are protected but patient independence remains unknown.",
+    "Historical no-score runtime errors do not measure predictive weakness; rounded equal scores do not prove exact equality."
+  ]
+}

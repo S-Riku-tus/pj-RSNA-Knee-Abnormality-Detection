@@ -1,0 +1,263 @@
+{
+  "schema_version": "orthodiff_head_transport_ready_F009_E5_milestone_v1",
+  "recorded_at_UTC": "2026-10-17T04:25:34.455245+00:00",
+  "experiment_id": "orthodiff-head-transport-ready-F009E5-20261017",
+  "own_best_Public": 0.957,
+  "goal_Public": 0.96,
+  "goal_achieved": false,
+  "config_seed_fold": {
+    "Ortho_full_seed": 20261017,
+    "weak_head_seed": 20261002,
+    "weak_head_fold": 0,
+    "original_fold_seed": 20261002,
+    "head_train3386_valid821": true,
+    "F009_seed": 20261002,
+    "F009_fold": 0,
+    "head_policy": {
+      "path": "artifacts/research/20261017-orthodiff-fullweak-preparation-v1/weak-head-prospective-policy-v2.json",
+      "bytes": 12476,
+      "sha256": "2b9704b70ab4197129e87db5e77fd08fd5a39c3c37ef950eac12a51cf0162b21"
+    },
+    "F009_config": {
+      "path": "configs/experiments/f009-dinov2-native-last2-late-cosine-study-gamma.json",
+      "bytes": 1699,
+      "sha256": "1a0a1d396660c6e326fd0f78962867b8243a3ac0e9b87fe2bb98dbea5f59297f"
+    }
+  },
+  "NumPy_head_transport": {
+    "source": {
+      "path": "src/rsna_knee/orthodiff_numpy_head.py",
+      "bytes": 6603,
+      "sha256": "7be4c09ac4672239fb9b608ead76a60261e670e84b36ea9971a5b30a3215d7d3"
+    },
+    "qualification": {
+      "path": "artifacts/research/20261017-orthodiff-numpy-adapter-v1/verification-v2.json",
+      "bytes": 5953,
+      "sha256": "969250d08af4c73f1738be1a23eed3937595fe68d396922c486d40e49d8b7d97"
+    },
+    "single_fold0_only": true,
+    "numeric_model_SHA_and_trainer_source_SHA_required": true,
+    "pickle_sklearn_Torch": false,
+    "current_trainer_source": {
+      "path": "src/rsna_knee/orthodiff_weak_head.py",
+      "bytes": 27829,
+      "sha256": "e1149f8e88eeba0f32418e8ee4986cd41ef5aae208a31142cd907689958d78e7"
+    },
+    "QA": {
+      "NumPy_versions": [
+        "1.22.3",
+        "2.5.3"
+      ],
+      "finite_FP32_cells": 451,
+      "FP32_bit_differences": 0,
+      "FP64_max_abs_difference": 8.881784197001252e-16,
+      "invalid_cases_rejected_each_environment": 15,
+      "source_predictor_byte_AST_equal": true,
+      "ruff_pass": true,
+      "coefficients_or_rounding_adjusted": false
+    },
+    "actual_trained_model_Kaggle_runtime_and_GPU_feature_requalification_still_required": true
+  },
+  "fluid_sensitive_fallback_metadata_preparation": {
+    "qualification": {
+      "path": "artifacts/research/20261017-orthodiff-fluid-fallback-preparation-v1/qualification.json",
+      "bytes": 4275,
+      "sha256": "f81e8ec7ac2ee6464d9a17af04d7ea52e2f2f34723f36ebeb74689bed45a1778"
+    },
+    "public_peer": {
+      "path": "artifacts/research/20261017-orthodiff-fluid-fallback-peer-v1/review.json",
+      "bytes": 3620,
+      "sha256": "03e0bf45cc38f19eeedba1728d5e01069ae26e2c7162154428c78009b343277e"
+    },
+    "frozen_spec": {
+      "path": "artifacts/research/20261017-orthodiff-pooling-contrast-audit-v1/fluid_sensitive_fallback_preregistered.json",
+      "bytes": 5356,
+      "sha256": "4326c03108ebe1d00ff833d8da4ebec891ba19d50d9bc6f7c14a3d494d2d92ff"
+    },
+    "source_preparation_QA_passed": true,
+    "synthetic_tests": 3,
+    "ruff_pass": true,
+    "adopted": false,
+    "actual_subset_written_or_qualified": false,
+    "fallback_feature_or_head_qualified": false,
+    "rule_scope": "Only completed-qualified parent unknown-PD-family failures, then Sagittal+FluidSensitive CSV metadata; FStrue thenFSfalse thenSeriesUID. No TRTE/PD inference, retry or success overwrite.",
+    "limits": "No final4207 journal consumed; current742 failures do not define fallback eligible count. Separate future reader/features/merge/head qualification required."
+  },
+  "current_jobs": {
+    "Ortho_full4207": {
+      "kernel_id": 139150600,
+      "version": 1,
+      "source": {
+        "path": "artifacts/kaggle/orthodiff-sag-fullweak4207-20261017-v2/source.ipynb",
+        "bytes": 148992,
+        "sha256": "15bb2d6c7c224021f95a304b08eb9e3644164ea8373f4ae6ec1c7afc77582e1f"
+      },
+      "official_status": "RUNNING",
+      "official_status_evidence": {
+        "path": "artifacts/qa/odf1/20261017T042335610306Z/status.json",
+        "bytes": 20,
+        "sha256": "8a320f75d49b24da756707eb933391ebbd38a94fbad259c43663a4626c585475"
+      },
+      "latest_SSE_events": {
+        "path": "artifacts/research/20261017-orthodiff-fullweak-execution-v1/live/20261017T042334590974Z/events.json",
+        "bytes": 34769,
+        "sha256": "c5a17c233a6e125d253a846a2d66290f4f24be35718a4833f0174aacde51e384"
+      },
+      "SSE_receipt": {
+        "path": "artifacts/research/20261017-orthodiff-fullweak-execution-v1/live/20261017T042334590974Z/receipt.json",
+        "bytes": 362,
+        "sha256": "f37de72561a118a7736a4c27c243d17fbdfa46e172cffc36a874f35ca44e1a5d"
+      },
+      "latest_progress": {
+        "phase": "feature_success_recorded",
+        "elapsed_seconds": 1650.387396113,
+        "complete": false,
+        "requested": 4207,
+        "recorded": 2752,
+        "success": 2010,
+        "failure": 742,
+        "journal_prefix_SHA256": "42fa516f43168ab158e7e4c51e7ce2f148f4ea06f9d708e161aaa29f1135b957"
+      },
+      "final_complete_or_4207_feature_qualification": false,
+      "limits": {
+        "CUDA_reserved_bytes": 15032385536,
+        "process_RSS_bytes": 8589934592,
+        "total_seconds": 28800,
+        "clock": "UID-boundary cooperative and posthoc, not a hard C decoder timeout"
+      },
+      "source_or_PD_baseline_changed": false
+    },
+    "F009": {
+      "status": "same local run ongoing after E5",
+      "PID": 22392,
+      "observation": {
+        "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch5-observation/observation.json",
+        "bytes": 384,
+        "sha256": "6a873a35db3d30dd1e8991d97c6d976d75aadc4804a568eac863b67ab14797f0"
+      },
+      "run_snapshot": {
+        "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch5-observation/run-snapshot.json",
+        "bytes": 82857,
+        "sha256": "6c17d2a5021954af2776ee3aba3bc819c7d559c8dc5613000072758da8ed95bb"
+      },
+      "completed_epochs": 5,
+      "optimizer_steps": 1060,
+      "AMP_skips": 0,
+      "cumulative_elapsed_seconds": 8619.699388799985,
+      "checkpoint_rule": "fixedE12 only; no interim selection",
+      "prospective_policy_v2": {
+        "path": "artifacts/research/20261017-f009-gamma-preparation-v1/prospective-policy-v2.json",
+        "bytes": 9505,
+        "sha256": "de5a6aa743d2d663f98244322958bf4b8154908238384112a7badf2df1e2d42c"
+      },
+      "source_config_process_changed": false
+    }
+  },
+  "formal_submissions": {
+    "List35_snapshot": {
+      "path": "artifacts/research/20261017-own-submissions-refresh-v1/20261017T041637184730Z/list.json",
+      "bytes": 16447,
+      "sha256": "2edb7426297e4c70fe353dfab1f1682e9ccdac438c15dddea09433f16999be5f"
+    },
+    "List_observed_at_UTC": "2026-10-17T04:16:37.184730Z",
+    "latest_Get_observation_dir": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T042116889376Z",
+    "five_new_accepted": {
+      "P033": {
+        "submission_id": 57290868,
+        "status_field_present": false,
+        "publicScore_field_present": false,
+        "latest_Get": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T042116889376Z/57290868.json",
+          "bytes": 464,
+          "sha256": "d431a723e0b8bb77c13675e81c5b03b61193b2b96d6de0bc7439c73960e3b2b6"
+        }
+      },
+      "P034": {
+        "submission_id": 57291440,
+        "status_field_present": false,
+        "publicScore_field_present": false,
+        "latest_Get": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T042116889376Z/57291440.json",
+          "bytes": 475,
+          "sha256": "cd1b762c28856067876a11cbf3b256d41a5e2ae956dc207d86e9ef786428e891"
+        }
+      },
+      "P036": {
+        "submission_id": 57291580,
+        "status_field_present": false,
+        "publicScore_field_present": false,
+        "latest_Get": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T042116889376Z/57291580.json",
+          "bytes": 461,
+          "sha256": "d758892c078175df363884ba55d8830cb00e63447f46c16b4540fd944a2402ef"
+        }
+      },
+      "P035": {
+        "submission_id": 57292346,
+        "status_field_present": false,
+        "publicScore_field_present": false,
+        "latest_Get": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T042116889376Z/57292346.json",
+          "bytes": 473,
+          "sha256": "862ab7cde687f6b4718ff9359ad7ea1078cc2bcb103466f0cf5da162e4eeea0a"
+        }
+      },
+      "P037": {
+        "submission_id": 57293138,
+        "status_field_present": false,
+        "publicScore_field_present": false,
+        "latest_Get": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T042116889376Z/57293138.json",
+          "bytes": 504,
+          "sha256": "0e5dda9fb76baa89e908da5e9363f20506ba5b838c403c4393368d9960577c80"
+        }
+      }
+    },
+    "known_best_COMPLETE": [
+      {
+        "id": 57225898,
+        "Public": 0.957,
+        "status": "COMPLETE"
+      },
+      {
+        "id": 57262934,
+        "Public": 0.957,
+        "status": "COMPLETE"
+      }
+    ],
+    "raw_missing_fields_are_not_a_confirmed_PENDING_status_or_zero_score": true,
+    "limits_raw": {
+      "numToday": 5,
+      "numTotal": 35
+    },
+    "limits_pin": {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T042116889376Z/limits.json",
+      "bytes": 28,
+      "sha256": "eb4d91f15e658d9bc5316244fd956e706187432c2d581b150914465e999b92ef"
+    },
+    "numAllowedNow_field_present": false,
+    "SDK_numAllowedNow_default": 0,
+    "additional_formal_calls_treated_as_available_now": 0,
+    "new_formal_API_calls_in_this_record": 0
+  },
+  "real_head_fit_or_new_weak_metric": 0,
+  "non_adoption": [
+    "No Public0.960 evidence; published author scores remain separate from own confirmed0.957",
+    "NumPy adapter is artificial transport qualification, not actual model/accuracy qualification",
+    "Fluid-sensitive/TRTE/DP alternatives have not changed the frozen PD full run or the head policy",
+    "Two-head pooling, Public parent-score fusion and fold1 execution are not implemented or adopted"
+  ],
+  "next": [
+    "Keep the same full4207 job; require final independent source/4207 journal/FP32/RNG/prior32 qualification",
+    "Only after qualification root manually seals expected-SHA feature bundle then runs the fixed fold0 CPU head/evaluator",
+    "Preserve conditional-success and full821 rankbaseline comparisons; BCE/groupCI report-only; no parameter search",
+    "Continue F009 unchanged toE12 and use its frozen v2 evaluation; preserve interim records",
+    "Observe the already accepted5 official results at appropriate intervals; no extra formal call now"
+  ],
+  "activity_this_record": {
+    "production_source_config_policy_or_running_process_changes": 0,
+    "actual_model_labels_MRI_GPU_API_network_fit_newmetric_Save_Submit": 0,
+    "PROJECT_README_docs_written": false,
+    "only_new_experiment_and_one_ledger_row": true
+  }
+}

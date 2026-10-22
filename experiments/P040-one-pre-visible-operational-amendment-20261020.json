@@ -1,0 +1,42 @@
+{
+  "at_UTC": "2026-10-19T15:20:51.682938+00:00",
+  "status": "P040_ONLY_OPERATIONAL_GATE_AMENDMENT_BEFORE_FORMAL_RESULT",
+  "user_scope": "User explicitly authorizes four additional considered manual submissions and continued work to last; P038 completed957, three remain; own best958 preserved",
+  "unchanged_ML_factor": "P033 classvector four literal values only; seven other science cells byte-identical; fixed Inputs/weights/preprocessing/targets/seed behavior",
+  "original_operational_gate": "Actual visible output and independent real CSV arithmetic before formal",
+  "limited_amendment": "For P040 only, allow one manually reviewed regular SDK code-submission request for the already saved SAVE_AND_RUN_ALL V1 while its visible worker remains queued, based on source/artificial/runtime guard evidence. No claim of actual visible qualification or improvement. This does not change F010 or any ML adoption criteria.",
+  "evidence": [
+    "P033 own COMPLETE958 and parent seven science cells exact",
+    "P04013 static checks and shared9 actual thin-wrapper artificial cases passed; combined P040/P041 static27 is not P04027",
+    "D002 actual original first3058B stage guard through nested IPython verified nine pinned R6 files; this is NOT full GPU inference",
+    "Saved private139586868/V1 code/Input4/Docker/T4 readback; require fresh exact preflight again",
+    "Fixed independent numeric oracle prepared before real outputs"
+  ],
+  "official_parallel_feature": {
+    "url": "https://www.kaggle.com/discussions/product-feedback/269953",
+    "confirmed": "Staff documents editor commit+submit parallel without waiting for output",
+    "not_confirmed": "The specific public SDK call on an existing QUEUED V1 is not guaranteed by that editor contract; server may refuse or wait on the commit"
+  },
+  "risk": "Real GPU execution, final visible CSV and real36FP32 oracle are unverified. This is a legitimate considered candidate submission, not a claim that software/source checks predict Public gain. Runtime may fail; server acceptance is unknown.",
+  "decision_rationale": "After over five hours of visible queue, parent-model invariance and exact small fusion change plus independent artificial/CPU guard evidence support one bounded attempt under explicit user submission authority. A server refusal or ambiguity triggers records and reconciliation, never blind retry. Keep existing GPU runs.",
+  "no_saved_automatic_upload_Save_Submit_code": true,
+  "max_manual_create_code_submission_calls": 1,
+  "formal_remaining_before": 3,
+  "peer": "artifacts\\research\\20261020-p040-pre-visible-software-independent-review-v1\\review.json",
+  "peer_sha256": "5f5fa9a154bc86a169d7523a3cbf7192bc7c57a5b7336f813e50a662ca129839",
+  "source": "artifacts\\kaggle\\p040-p033-vector-20261019-v1\\source.ipynb",
+  "source_sha256": "8a76e6709a078289dae0c0b4d964aced9fe6ed98c50ecf6aec0489e28b44db8c",
+  "payload_sha256": "00369666f71e1bc71222ebecf9c8bc21a9c5ddbe0b8d01d8426370c4ffb9c1ef",
+  "request": "artifacts\\research\\20261020-p040-root-pre-visible-manual-submit-v1\\request.json",
+  "request_sha256": "fcae3fb40f49706291e89bf8405c12c384ead4e434e0937fa6eb3b606ba06731",
+  "before_dispatch": [
+    "Fresh exact saved V1 code/settings/Input readback",
+    "Fresh status",
+    "Fresh limits and full own list; no duplicate/current scope conflict"
+  ],
+  "after_dispatch": [
+    "Capture raw response once",
+    "Get exact returned ref and verify owner/file/description if accepted",
+    "Read limits; accepted total should38 and remaining2; no new attempts on error or ambiguity"
+  ]
+}

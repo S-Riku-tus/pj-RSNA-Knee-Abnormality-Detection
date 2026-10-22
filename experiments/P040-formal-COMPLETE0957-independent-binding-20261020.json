@@ -1,0 +1,77 @@
+{
+  "schema_version": "P040_formal_terminal_Public0957_independent_binding_v1",
+  "at_UTC": "2026-10-19T21:30:55.338521+00:00",
+  "observed_UTC": "2026-10-19T21:30:33.817038+00:00",
+  "all_checks_passed": true,
+  "checks": {
+    "terminal_ref_matches_accepted_request_list": true,
+    "own_owner_team_exact": true,
+    "terminal_COMPLETE_Public0957_nonempty": true,
+    "file_description_date_same_accepted_request": true,
+    "prior_independent_acceptance_all9checks_pass": true,
+    "saved_kernel_V1_pinned_via_acceptance": true,
+    "exact_same_ref_List_scriptVersionId_observed": true
+  },
+  "ref": 57402883,
+  "owner": "rsraki",
+  "status": "COMPLETE",
+  "Public": "0.957",
+  "kernel_id": 139586868,
+  "saved_version": 1,
+  "server_scriptVersionId_observed_in_prior_same_ref_own_List": 360007491,
+  "terminal_state": {
+    "ref": 57402883,
+    "raw_status_present": true,
+    "status": "COMPLETE",
+    "raw_Public_present": true,
+    "Public": "0.957",
+    "error": null,
+    "bytes": 247218
+  },
+  "own_best_stays": "0.958",
+  "no_new_gain_demonstrated": true,
+  "remaining_formal_results": [
+    "P04157402914",
+    "P04257403458"
+  ],
+  "continue_readonly_monitor": true,
+  "accepted_remaining": 0,
+  "activity": {
+    "additional_API_beyond_loop": 0,
+    "Save": 0,
+    "Submit": 0,
+    "GPU_start": 0
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T213032880522Z/P040-submission-57402883.json",
+      "bytes": 575,
+      "sha256": "72be5185d6ae984c119a6a40a4485842ee03f037ba6b555642c185b0de7adef9"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T213032880522Z/summary.json",
+      "bytes": 1911,
+      "sha256": "870c3d31fc990875b5428c704e3dd178a2d712cfa079e2f72cda56698426c930"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/request.json",
+      "bytes": 539,
+      "sha256": "0e2d5179f3f552f91bea5d3749cbf478b4cfaa7fd3d3fe77575547df16adaec1"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/submission-get-raw.json",
+      "bytes": 528,
+      "sha256": "e55bd0e9cd2eac58fd55ce0a77efc75adb60b6cecbe2a8152cc6f0c117bbac04"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-independent-formal-acceptance-v1/review.json",
+      "bytes": 4366,
+      "sha256": "194994d15fe1aafd6321b59359ddc6ca654af4d494fcf726f4e1e7b792da7b9e"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/final-acceptance-reconciliation-v1/summary.json",
+      "bytes": 4313,
+      "sha256": "8cb85268848c07ae1ca2bc57583156c1b42746a66647088cc8d633665f41a1db"
+    }
+  ]
+}

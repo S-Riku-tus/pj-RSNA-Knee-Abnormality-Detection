@@ -1,0 +1,267 @@
+{
+  "schema_version": "evening_P039958_official_P038_readonly_preflight_v1",
+  "at_UTC": "2026-10-19T09:42:26.495566+00:00",
+  "all_checks_passed": true,
+  "checks": {
+    "P039_ref_owner_description": true,
+    "P039_COMPLETE958": true,
+    "self_list_complete": true,
+    "P039_in_full_list": true,
+    "quota_at_least_one": true,
+    "P038_no_duplicate": true,
+    "P038_kernel_saved_v1": true,
+    "P038_latest_v1_and_blob_exact": true,
+    "P038_prior_success_blob_exact": true,
+    "P038_all_local_code_exact": true,
+    "P038_source_file_SHA_exact": true,
+    "P038_all_runtime_Input_meta_exact": true,
+    "P038_COMPLETE": true,
+    "P038_prior_actual_and_peer_and_CSV_SHA_exact": true,
+    "LB_unique_and_descending": true
+  },
+  "own_best_official": 0.958,
+  "P039": {
+    "ref": 57378810,
+    "status": "COMPLETE",
+    "Public": "0.958",
+    "raw_status_present": true,
+    "raw_score_present": true,
+    "url": "/submissions/57378810/57378810.raw",
+    "server_scriptVersionId": null,
+    "new_displayed_gain": 0.0
+  },
+  "official_limits": {
+    "numToday": 1,
+    "numTotal": 36,
+    "numAllowedNow": 4
+  },
+  "submission_count": 36,
+  "rank": 1094,
+  "teams": 6207,
+  "deadline_UTC": "2026-10-22T23:59:00Z",
+  "deadline_JST": "2026-10-23T08:59:00+09:00",
+  "LB": {
+    "read_rows": 1400,
+    "counts": {
+      "0.969": 1,
+      "0.968": 3,
+      "0.967": 4,
+      "0.966": 5,
+      "0.965": 5,
+      "0.964": 7,
+      "0.963": 16,
+      "0.962": 22,
+      "0.961": 18,
+      "0.960": 40,
+      "0.959": 62,
+      "0.958": 1212,
+      "0.957": 5
+    },
+    "959plus": 183,
+    "strictly_above960": 81,
+    "full958plateau": true,
+    "first958rank": 184,
+    "last958rank": 1395
+  },
+  "P038": {
+    "ref": "rsraki/p038-helios-v6-fixed-20261017-v3",
+    "kernelId_not_scriptVersionId": 139163240,
+    "version": 1,
+    "COMPLETE": true,
+    "source": {
+      "path": "artifacts/kaggle/p038-helios-v6-fixed-recipe-20261017-v3/source.ipynb",
+      "bytes": 198738,
+      "sha256": "9e3669dd1542f0cde2457fcc9b54ccb4bac013832583c26f93b88711f1a87370"
+    },
+    "raw_blob_source_SHA": "66dadcb07e69fc40607feb7d4ff311c1de57352a5438e8c098434b86d3dd6ce6",
+    "input_refs_count": 7,
+    "manual_request_only": {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/P038-request-review-only.json",
+      "bytes": 583,
+      "sha256": "9a34dcb193ef5d44f78012490b1971f65145fb8c7de56e21c023d78c39f95ba6"
+    },
+    "visible_same_P037_CSV": true,
+    "candidate_science": "Whole public author V6 recipe, no R7 or224mirror; distinct whole pipeline from P037, not a single-factor improvement.",
+    "mounted_Input_version_ID_independently_observed": false,
+    "hidden_or_Public_gain_qualified": false,
+    "root_manual_submit_only": true,
+    "refresh_quota_duplicate_if_state_changes": true
+  },
+  "interpretation": "P039 displayed958 ties parent; no native Public gain demonstrated. P038 is qualified for one considered manual whole-recipe comparison, with no demonstrated >958 advantage and visible output identical to P037.",
+  "activity": {
+    "new_Submit": 0,
+    "new_Save": 0,
+    "new_upload": 0,
+    "new_GPU": 0,
+    "training": 0,
+    "MRI_models_download": 0
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-p039-root-manual-submit-v1/request.json",
+      "bytes": 566,
+      "sha256": "ac283d8f4f588195e7ed60f5743e30efafd7da4126fc5b8f54611776301501be"
+    },
+    {
+      "path": "artifacts/research/20261017-p038-gpu-execution-v1/launch-v3/get-saved-raw.json",
+      "bytes": 256438,
+      "sha256": "1d6c8228b5d2a1d7597cc2fdc3bc867c629476d2384c928f44bf713c8b05888a"
+    },
+    {
+      "path": "experiments/p038-visible-qualified-F009-E7-regional-running-20261017.json",
+      "bytes": 9439,
+      "sha256": "a5caee61aedf412623315e7c2a68317b8f2e440024b6c825b6f9edd6f872db21"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/competition.json",
+      "bytes": 3039,
+      "sha256": "938f97041f255cab98df2b8c1c53dd6fbf69058e46aa30f0d68581dad2cab7b4"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/competition.receipt.json",
+      "bytes": 196,
+      "sha256": "29c2775dbd305d848309bd6e668473c37b82a32c00daeb32af8b85192c6e141c"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page1.json",
+      "bytes": 22570,
+      "sha256": "ed6ca09aa270b8f5e6acef65a70c8fb9d72ba9c108685acad84164625716a613"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page1.receipt.json",
+      "bytes": 203,
+      "sha256": "fbd8754f54321c0da11d65e781087a8eaab1ce23e394a76371f0277180543274"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page2.json",
+      "bytes": 22446,
+      "sha256": "1b3c1306a88c4399e8ba194be283daab411abe077927840f650106e780dfb8f6"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page2.receipt.json",
+      "bytes": 203,
+      "sha256": "c1521d5a8470ae41a6ea24ce820b595d0d53463e2278ac0b09380fc9eba3c7cc"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page3.json",
+      "bytes": 22101,
+      "sha256": "8ba13d7a1de7d98628c72322ba5ac345fc03d1577ee6b009021a1c58cd43fb8b"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page3.receipt.json",
+      "bytes": 203,
+      "sha256": "6b0a98b3744fdcab685f32dfc4712ab8a22c68e2eb251924f0c0c07d9705782d"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page4.json",
+      "bytes": 22106,
+      "sha256": "8324221ed4459b8337731eea6f961d5b0128e64761b2db55c2b3e071b184866f"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page4.receipt.json",
+      "bytes": 203,
+      "sha256": "345a74b364d226f7637962a743b1d86f303b5970bfb34afd619a756be091ccf7"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page5.json",
+      "bytes": 22053,
+      "sha256": "daa94397013be9635887c70db15c56498fbbf9c5267883130a388198aaac8a50"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page5.receipt.json",
+      "bytes": 203,
+      "sha256": "8703e3f741318f1035554e31e768018ae3b75690de7096e8d21b2bb0af5bba7c"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page6.json",
+      "bytes": 22039,
+      "sha256": "a9b572b3d61b28b928b1478049cc986d9083b5fa1d22e3a9bc2eaddf211b6386"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page6.receipt.json",
+      "bytes": 203,
+      "sha256": "567393069363536c39592290a6d1f5efd97255f7e1c4e898bbf93ef9da51989f"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page7.json",
+      "bytes": 22331,
+      "sha256": "9f82aa90833245280cafecadcb8222fdc2772ae3530a5fcbfdff34f4ef9422cf"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/leaderboard-page7.receipt.json",
+      "bytes": 203,
+      "sha256": "dbc9a97f453a3d22cac1877cc4121146470b62577c7bdc7121a85a16b15f683c"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/limits.json",
+      "bytes": 46,
+      "sha256": "15df7b0c8777681a19c504ec93b8314c7e9c5089160fe486b5d02bf7b66335ce"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/limits.receipt.json",
+      "bytes": 189,
+      "sha256": "a68182ac0dd566bef33e2f73365a6141f95e09d91ee24238323da7adfcc5e11c"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/P038-latest-get.json",
+      "bytes": 256460,
+      "sha256": "560b9828e79875f91a413c80345c0e500a72290fee5c9aef2b03973470e95103"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/P038-latest-get.receipt.json",
+      "bytes": 202,
+      "sha256": "6c1924ef28e6b7a550708832c2f97e40afa379e21471ecb2b202b8089409c02a"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/P038-request-review-only.json",
+      "bytes": 583,
+      "sha256": "9a34dcb193ef5d44f78012490b1971f65145fb8c7de56e21c023d78c39f95ba6"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/P038-v1-get.json",
+      "bytes": 256460,
+      "sha256": "bbccc695561857a882fa428d4faef333d7a1be81abfc12706fcc1fc535b00be1"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/P038-v1-get.receipt.json",
+      "bytes": 198,
+      "sha256": "05bb88f0ca8df252c50dec917dcdc2b7737d29c9b3d1a60acb6d9b4178d50f5a"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/P038-v1-status.json",
+      "bytes": 21,
+      "sha256": "8c65d9493ad080266a23df2675f847486fedc0546a88a91c866b812d970915b5"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/P038-v1-status.receipt.json",
+      "bytes": 197,
+      "sha256": "77198892945da4761dc580dfee0a8992aa992c88b7ca666757bf8d1f4c96963f"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/P03957378810.json",
+      "bytes": 600,
+      "sha256": "789211392600d85f56b1975b08311e717363cf7983b3b3dc77382fa8addc0bca"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/P03957378810.receipt.json",
+      "bytes": 196,
+      "sha256": "94132506eaf0f28ec87da0d70356764e357f140548f12e2e992ba8a9a62a25bf"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/receipts.json",
+      "bytes": 3011,
+      "sha256": "0af16f1133b97c8a26a49dedfddca2c22e5146d258ea70b3525778f1ded0da23"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/submissions.json",
+      "bytes": 17318,
+      "sha256": "f825073b2a8a8e32e7da8c081a9a8d36bacd166c5e379e2eb8bdb2e62141d0c6"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z/submissions.receipt.json",
+      "bytes": 197,
+      "sha256": "20511e26eb4e76decd4854d68b4b8b911904c59bdd59e59c3f11c2e94725c2a6"
+    }
+  ],
+  "observation_directory": "artifacts/research/20261019-evening-official-P038-preflight-v1/observation-20261019T094220164959Z"
+}

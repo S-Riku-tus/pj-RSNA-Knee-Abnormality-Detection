@@ -45,7 +45,7 @@ from .feature_contracts import (
     validate_fold_audit,
 )
 from .feature_imaging import load_frozen_encoder
-from .finetune_model import NativeTripletMIL
+from .finetune_model import NativeTripletMIL, validate_study_gamma
 from .metrics import evaluate_rows
 from .runtime import check_split, ensure_cuda
 from .triplet_cache import extract_pixel_study, load_archive_study, pixel_contract
@@ -97,6 +97,7 @@ def native_epoch_learning_rates(optimizer, config, epoch):
 
 def validate_native_config(config):
     validate_feature_config(config)
+    augmentation = validate_study_gamma(config.get("augmentation"))
     expected = {
         "schema_version": "native392_last2_training_fast16_v1",
         "trainable_blocks": (0, 2),
@@ -125,6 +126,11 @@ def validate_native_config(config):
         raise ValueError("Preserve the original f002 head")
     settings = dict(config["train"])
     validate_native_learning_rate_schedule(settings.pop("lr_schedule", None))
+    if augmentation is not None and (
+        online["trainable_blocks"] != 2
+        or validate_native_learning_rate_schedule(config["train"].get("lr_schedule"))["name"] != "late_cosine"
+    ):
+        raise ValueError("Study gamma extends only the fixed F006 last2 late-cosine condition")
     if settings != {
         "epochs": 12,
         "batch_size": 16,
@@ -691,6 +697,8 @@ def train_native(manifest_dir, index_path, output, config, fold, repo, weights, 
         "effective_batch_studies": 16,
         "denominator": "sum observed teacher cells over each actual effective group, including the short final group",
     }
+    if model.study_gamma is not None:
+        record["training_augmentation"] = model.training_augmentation_contract()
     dump_json(out / "run.json", record)
     generator = torch.Generator().manual_seed(config["seed"])
     selected, start = None, time.perf_counter()
@@ -739,6 +747,9 @@ def train_native(manifest_dir, index_path, output, config, fold, repo, weights, 
                 "prediction_sha256": sha256(predictions_path),
                 "gpu_peak_reserved_bytes": torch.cuda.max_memory_reserved(),
             }
+            if model.study_gamma is not None:
+                item["training_augmentation"] = model.training_augmentation_contract()
+                record["training_augmentation"] = model.training_augmentation_contract()
             record["history"].append(item)
             checkpoint = make_native_checkpoint(
                 model, provenance, fold=fold, epoch=epoch, weak_bce=bce, prefix_sha256=prefix_sha, audit=audit

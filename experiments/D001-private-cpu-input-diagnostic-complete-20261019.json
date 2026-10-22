@@ -1,0 +1,51 @@
+{
+  "schema_version": "D001_private_CPU_Input_diagnostic_complete_v1",
+  "at_UTC": "2026-10-19T12:49:23.532762+00:00",
+  "recorded_at_UTC": "2026-10-19T12:56:04.089563+00:00",
+  "status": "PRIVATE_CPU_V1_COMPLETE_MINIMAL_MARKER_VERIFIED",
+  "ref": "rsraki/d001-rsna-inputs-cpu-20261019-v1",
+  "kernel_id": 139613277,
+  "version": 1,
+  "private": true,
+  "GPU": false,
+  "TPU": false,
+  "internet": false,
+  "same_P040_Input_reference_sets_and_original_Docker_readback": true,
+  "saved_cell_source_exact": true,
+  "official_status": "COMPLETE",
+  "marker": {
+    "path": "artifacts/research/20261019-d001-root-private-cpu-execution-v1/diagnostic-output-read-v1/D001-diagnostic.json",
+    "bytes": 432,
+    "sha256": "29d1aa0fe6f26744c3252c94ccea8dbc2c8788c9abf930681921cd3d35d4926d"
+  },
+  "marker_time_UTC": "2026-10-19T12:46:40.948937+00:00",
+  "marker_time_JST": "2026-10-19T21:46:40.948937+09:00",
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "input_root_exists": true,
+  "input_top_level_count": 3,
+  "input_top_level_names": [
+    "competitions",
+    "datasets",
+    "notebooks"
+  ],
+  "MRI_decodes": 0,
+  "Report_reads": 0,
+  "model_loads": 0,
+  "training_steps": 0,
+  "manual_CPU_Save_calls": 1,
+  "formal_Submit_calls": 0,
+  "independent_review": {
+    "path": "artifacts/research/20261019-d001-cpu-complete-independent-v1/review.json",
+    "bytes": 4673,
+    "sha256": "2b6c190fe06f781fe23db5c57c327af4a14ac07ece0c3e1823953aba23577219"
+  },
+  "previous_start_record_preserved": {
+    "path": "experiments/D001-private-cpu-input-diagnostic-started-20261019.json",
+    "bytes": 1913,
+    "sha256": "4054e2a9e67b7c6d77f89323004130749221e9a0900e4b920f252d13e2afe5a4"
+  },
+  "qualification": "Only the minimal CPU job startup, immediate mount category names and small returned output are confirmed.",
+  "GPU_availability_full_model_Input_content_versionIDs_or_accuracy_qualified": false,
+  "GPU_queue_cause_established": false,
+  "new_API_Save_Submit_download_or_tests_by_reviewer": 0
+}

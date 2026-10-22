@@ -1,0 +1,92 @@
+{
+  "schema_version": "F009_fold1_amended_wrapper_root_release_for_future_E12_and_bounded_next_submissions_v1",
+  "at_UTC": "2026-10-17T08:06:55.767256+00:00",
+  "own_Public_best": "0.958",
+  "target": "0.960",
+  "target_achieved": false,
+  "parent_milestone": {
+    "path": "experiments/F009E12-positive-fold1-running-P036958-20261017.json",
+    "bytes": 12119,
+    "sha256": "e4e7c5b77377970d9ef577c437eb41a5dadf64f1482cb81a1c5173107fb8ec82"
+  },
+  "wrapper": {
+    "path": "artifacts/research/20261017-f009-fold1-amended-evaluator-v2/evaluate_amended.py",
+    "bytes": 14657,
+    "sha256": "bcf9fbe5dad5c7f1faae6761548b1d8786d5a24d1c25525f5e9f5d2ea289bcce"
+  },
+  "source_freeze": {
+    "path": "artifacts/research/20261017-f009-fold1-amended-evaluator-v2/source-freeze.json",
+    "bytes": 624,
+    "sha256": "c92ef310b99ae9937df9b4cce41f8f62d6bb04db4d0cf19af1eec1ac6c071b4d"
+  },
+  "preparation": {
+    "path": "artifacts/research/20261017-f009-fold1-amended-evaluator-v2/verification.json",
+    "bytes": 3483,
+    "sha256": "22d4fdbae69945faa452e5a7862176589591199a596bae825fcda7ad692ff117"
+  },
+  "independent_peer": {
+    "path": "artifacts/research/20261017-f009-fold1-amended-evaluator-independent-v1/review.json",
+    "bytes": 4548,
+    "sha256": "6eb0d0cc8d9a3af83ac65f83666871f6884c466b05f4e633312e1ce7daf96107"
+  },
+  "wrapper_freeze_before_first_recorded_candidate_metric": {
+    "path": "artifacts/research/20261017-F009E12-positive-fold1-record-v1/wrapper-freeze-before-first-metric-observation.json",
+    "bytes": 1360,
+    "sha256": "9c7ff5f4a1c5bb4bffb17287452af66b0152283eb8beb53c93b482acbdf8d7ab"
+  },
+  "root_review": {
+    "source_and_artificial_tests_directly_read": true,
+    "defaultCLI_actually_executed_chunk": "ee7b5a",
+    "defaultCLI_exit_code": 0,
+    "defaultCLI_actual_input_read": false,
+    "fixed_source_SHA_verified_after_freeze": true,
+    "original_v1_source_guard_result_not_modified": true,
+    "exact_control_exception_scope_only": true,
+    "candidate_all12_zero_mandatory": true,
+    "unchanged_legacy_compare_called_once": true,
+    "legacy_guard_and_comparison_machinefalse_jointfalse_HOLD_preserved": true,
+    "separate_v2_schema": true,
+    "strict_both_folds_positive": true,
+    "BCE_CI_REG50_report_only": true,
+    "fully_prefit_registration_claimed": false,
+    "release": "READY_FOR_ROOT_MANUAL_COMPLETED_E12_EVALUATION_ONLY"
+  },
+  "manual_future_evaluation": {
+    "path": "artifacts/research/20261017-f009-fold1-amended-evaluator-v2/manual.json",
+    "bytes": 1186,
+    "sha256": "19016fd24ebdbdb78fe582af39ec61b35abe8cdca5d4c84698f4df189e048401"
+  },
+  "actual_F009fold1_comparison_executed": false,
+  "actual_F009_model_stage_or_adoption_qualified": false,
+  "legacy_CPU_producer_sealer_compatible": false,
+  "next_submission_strategy_proposal": {
+    "path": "artifacts/research/20261017-pending-results-submission-priority-v1/proposal.json",
+    "bytes": 15474,
+    "sha256": "42fd632fa5ef248e6cfb885c188ac85b52140700df3f6d0ced27da3aeb5c8cad"
+  },
+  "root_next_submission_priority": {
+    "accepted_as_conditional_work_order": true,
+    "first_current_prepared_candidate": "Existing qualified private P039 exact frozenV1",
+    "second_current_prepared_candidate": "Existing qualified private P038 exact frozenV1",
+    "requires": "Goal unmet and fresh verified quota; exact actualsource/Input/runtime qualification valid. Known unresolved shared runtime failure must be addressed, but missing scores alone are not failures.",
+    "pending_formal_goal_success": "If any own successful exactbound submission >=.960, record and stop new submissions",
+    "no_all_pending_results_required_as_permission_gate": true,
+    "new_alpha_target_recipe_search": false,
+    "current_quota": "Last16:59JST5today/35total; extra0treated; no guessed reset time",
+    "F009_queue": "Only after actual fixedE12 v2 eachfoldstrictpositive, zero candidateAMP, new source-bound strictCPU/pairseal/transport/actualKaggle qualification. Existing future parent assumptions require explicit concrete review, never silent mutation.",
+    "innerC_queue": "CurrentF009fold1 then F006fold2; only afterwards single sealedC=.01 outer2 evaluation under its original policy"
+  },
+  "P037_description_correction": {
+    "external_description_R7off_is_typo": true,
+    "actual_scientific_R7_share": 0.4,
+    "scope": "Pinned actual scientificcell/blendreceipt/stdout/audit in linked proposal; do not interpret as R7off ablation. Existing description/source untouched.",
+    "visibleP037P038same_three_row_SHA_does_not_prove_hidden_equality": true
+  },
+  "new_fit_Save_Submit_or_score_in_this_addendum": 0,
+  "limits": [
+    "Root release qualifies only future evaluation source, not the unfinished candidate or Public improvement.",
+    "Post-fit-start/pre-first-metric engineering amendment with immutable originalv1HOLD, not fully prefit preregistration.",
+    "Oldcontrol2495 requiredcandidate2496 actual updates; no equal-update-count claim.",
+    "Repeated weak holds and unknown patient independence remain."
+  ]
+}

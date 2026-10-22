@@ -1,0 +1,46 @@
+{
+  "schema_version": "frozen_features_v1",
+  "seed": 20261002,
+  "n_folds": 5,
+  "reason": "F006 E12と同じ初期重み・教師・group/fold・12epoch・late cosineで、train-onlyのstudy共通gamma Uniform[0.85,1.15]一種類だけを追加する。専用CPU Generator(seed20261002)を使いshuffle/dropoutの乱数列を消費せず、全series/triplet/隣接3chで指数を共有する。評価・推論は無拡張、端点0/255を保持。Gold/Publicで範囲・epoch・所見maskを選ばず、まずfold0 E12同士を比較し、有望ならfold1で確認する。",
+  "preprocess": {
+    "version": "physical_letterbox_triplet_v1",
+    "image_size": 392,
+    "max_series": 3,
+    "slices_per_series": 48,
+    "percentiles": [1, 99]
+  },
+  "encoder": {
+    "model_name": "dinov2_vits14",
+    "feature_dim": 384,
+    "batch_size": 16,
+    "precision": "fp16"
+  },
+  "head": {"hidden_dim": 192, "dropout": 0.2, "pooling": "attention"},
+  "train": {
+    "epochs": 12,
+    "batch_size": 16,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "num_workers": 0,
+    "selection": "bce",
+    "lr_schedule": {"name": "late_cosine", "constant_epochs": 6, "min_factor": 0.1}
+  },
+  "online": {
+    "schema_version": "native392_last2_training_fast16_v1",
+    "trainable_blocks": 2,
+    "microbatch_studies": 1,
+    "effective_batch_studies": 16,
+    "window_chunk": 16,
+    "checkpoint_last2": true,
+    "encoder_learning_rate": 0.00001,
+    "accumulation_denominator": "total_observed_labels_in_effective_batch",
+    "folds": [0, 1],
+    "amp_grad_scaler": true
+  },
+  "augmentation": {
+    "schema_version": "native392_train_study_gamma_v1",
+    "minimum": 0.85,
+    "maximum": 1.15
+  }
+}

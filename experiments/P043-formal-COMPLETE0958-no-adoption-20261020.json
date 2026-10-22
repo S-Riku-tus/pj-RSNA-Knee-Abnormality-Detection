@@ -1,0 +1,57 @@
+{
+  "at_UTC": "2026-10-20T09:02:40.643102+00:00",
+  "status": "OWN_OFFICIAL_COMPLETE_PUBLIC0958_DISPLAY_TIE",
+  "ref": 57420128,
+  "kernelId": 139726098,
+  "saved_version": 1,
+  "actual_scriptVersionId": 360257351,
+  "official_Public": "0.958",
+  "raw_owned_Get": {
+    "path": "artifacts/research/20261020-P045-v2-root-formal-submit-v1/owned-result-57420128-raw.json",
+    "bytes": 587,
+    "sha256": "a2c40b4392d75923360351a0389e0ef500065eeb768ab2af7dcd2b07524d25a3"
+  },
+  "fresh_fullList_binding": {
+    "path": "artifacts/research/20261020-P045-v2-root-formal-submit-v1/full-own-list-1-raw.json",
+    "bytes": 21066,
+    "sha256": "11d5317cc42a8ff919ac4f9b770092cf3bc67aba1fa1c5e59298daa34f2d6998"
+  },
+  "owned_Get": {
+    "ref": 57420128,
+    "totalBytes": 381605,
+    "date": "2026-10-20T03:26:27.643Z",
+    "description": "P043: fixed Hazen normal-score pooling of the same three P033 branches. Original eight science cells, Inputs, A224=.35 and class weights fixed; any original branch failure preserves all12 parent CSV strings. Visible parent36FP32 and final36FP32 separately verified. No own Gold fit/select; inherited upstream exposure.",
+    "fileName": "submission.csv",
+    "publicScore": "0.958",
+    "status": "COMPLETE",
+    "submittedBy": "rsraki",
+    "submittedByRef": "rsraki",
+    "teamName": "rsraki",
+    "url": "/submissions/57420128/57420128.raw"
+  },
+  "same_ref_List_row": {
+    "ref": 57420128,
+    "totalBytes": 381605,
+    "date": "2026-10-20T03:26:27.643Z",
+    "description": "P043: fixed Hazen normal-score pooling of the same three P033 branches. Original eight science cells, Inputs, A224=.35 and class weights fixed; any original branch failure preserves all12 parent CSV strings. Visible parent36FP32 and final36FP32 separately verified. No own Gold fit/select; inherited upstream exposure.",
+    "fileName": "submission.csv",
+    "publicScore": "0.958",
+    "status": "COMPLETE",
+    "submittedBy": "rsraki",
+    "submittedByRef": "rsraki",
+    "teamName": "rsraki",
+    "url": "/code/rsraki/p043-gauss-rank-20261020-v3?scriptVersionId=360257351"
+  },
+  "decision": "Do not adopt Gaussian pool as newbest. Preserve simpler P033958; equality atdisplayprecision is not evidence of identical hiddenpredictions or exactlyzero latent effect. No own>=959 achieved. ContinuependingP044/P045 and independentweak research.",
+  "best_own_Public": "0.958",
+  "goal959_achieved": false,
+  "P044_pending": true,
+  "P045_pending_ref": 57430729,
+  "limits_now": {
+    "numToday": 3,
+    "numTotal": 43,
+    "numAllowedNow": 2,
+    "limitedByTotal": false
+  },
+  "approval_review_outage": "13:20 attempt not executed due reviewerusage quota; normal auth/approval read succeeded17:54 after16:37 reset, no bypass; no action duplicated"
+}

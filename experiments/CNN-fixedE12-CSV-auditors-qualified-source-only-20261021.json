@@ -1,0 +1,72 @@
+{
+  "at_UTC": "2026-10-21T04:25:18.428094+00:00",
+  "status": "PURE_STDLIB_SYNTHETIC_TESTS_PASS_NO_REAL_WEAK_DIAGNOSIS",
+  "F014": {
+    "tests": 17,
+    "policy": {
+      "path": "artifacts/research/20261021-F014-fixed12-CSV-audit-prospective-v1/policy.json",
+      "bytes": 39517,
+      "SHA": "f9f250020d45858a1380814f6a7ffba577dbcb5052fb888812ac2f9cdb6bdb93"
+    },
+    "source": {
+      "path": "scripts/check_f014_fixed12_weak.py",
+      "bytes": 26475,
+      "SHA": "17900862a170127fb73059aacdcde8ef1f0c32cc1d648bad88d9356e956c835e"
+    },
+    "tests_source": {
+      "path": "tests/test_f014_fixed12_weak.py",
+      "bytes": 14888,
+      "SHA": "211b10ed24b470dc0d1d90348934620cf3e8ecbfa46775a82065017b518601d2"
+    }
+  },
+  "F015": {
+    "tests": 22,
+    "policy": {
+      "path": "artifacts/research/20261021-F015-fixed12-CSV-audit-prospective-v1/policy.json",
+      "bytes": 39506,
+      "SHA": "8aa011f07a664fd76af8e7321a9878b7b820444d51d40544225aec20f1c4f913"
+    },
+    "source": {
+      "path": "scripts/check_f015_fixed12_weak.py",
+      "bytes": 26475,
+      "SHA": "8b7c73b49b35d8ec33690b6d218af679262d1f939375599d684ae3cde877efbe"
+    },
+    "tests_source": {
+      "path": "tests/test_f015_fixed12_weak.py",
+      "bytes": 21322,
+      "SHA": "89fd038db93dacfad19aca97c391521bc1117b49adbfc0adfbc7390d17ca75d4"
+    }
+  },
+  "root_actual_commands": [
+    {
+      "command": ".venv/Scripts/python.exe -B -m unittest discover -s tests -p test_f014_fixed12_weak.py",
+      "exit_code": 0,
+      "tests": 17
+    },
+    {
+      "command": ".venv/Scripts/python.exe -B -m unittest discover -s tests -p test_f015_fixed12_weak.py",
+      "exit_code": 0,
+      "tests": 22
+    },
+    {
+      "command": "ruff check scripts/check_f014_fixed12_weak.py scripts/check_f015_fixed12_weak.py tests/test_f014_fixed12_weak.py tests/test_f015_fixed12_weak.py",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": "ExactoldF006fixedE12/all12retentionbytepins, source16/18/config/data/env/group/missingmasks/UID/fold/complete12epoch/AMPactual+skip=opportunity/fixedlatecosine; independentaverage-tiepairwiseAUC/fixed10mean>0. Readonly, notmodeltensororservingqualification.",
+  "guards": [
+    "No BCEbest alias orintermediateepochs asendpoint",
+    "GoldID/groupprojectionandexistinghashonly; noGoldnumericteacher",
+    "Checkpointstreamhashonly; noTorchNumPy/model/GPU/MRI/network",
+    "Complete12epochs allguardsbeforeanyrealpredictionmetrics",
+    "Freshoutputartifactonly",
+    "Bothfoldspositive required before separatefuturecandidateeligibility"
+  ],
+  "real_CNN_prediction_or_weak_metric_diagnosis_executed": false,
+  "training_source16_18_changed": false,
+  "Kaggle_Save_Submit_upload": 0
+}

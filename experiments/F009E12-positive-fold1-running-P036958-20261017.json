@@ -1,0 +1,260 @@
+{
+  "schema_version": "F009_fold0_fixed12_positive_fold1_live_and_P036958_milestone_v1",
+  "at_UTC": "2026-10-17T08:02:02.403624+00:00",
+  "own_confirmed_Public_best": "0.958",
+  "target_Public": "0.960",
+  "target_achieved": false,
+  "goal_turn_progress": "Actual F009fold0 E12 complete and independently positive; same-recipe fold1 manually preflighted and started; P036 own958 officially confirmed",
+  "fold0": {
+    "run": "artifacts/runs/f009-gamma-late-cosine-fold0-20261017-v1",
+    "status": "complete",
+    "fixed_E12": true,
+    "updates": 2544,
+    "opportunities": 2544,
+    "AMP_skips": 0,
+    "primary_fixed10_control_AUC": 0.8831284034612052,
+    "primary_fixed10_candidate_AUC": 0.8848211853250774,
+    "primary_fixed10_delta": 0.0016927818638720836,
+    "fixed10_interval_report_only": {
+      "valid_resamples": 1000,
+      "undefined_resamples": 0,
+      "percentile_95_interval": [
+        0.0004346963749654231,
+        0.0029984440375271115
+      ]
+    },
+    "BCE_report_only": {
+      "control": 0.28650593644185945,
+      "candidate": 0.28332473836762445,
+      "delta": -0.0031811980742350032
+    },
+    "start_fold1_gate": true,
+    "primary_result": {
+      "path": "artifacts/research/20261017-f009-fixed12-guarded-result-v1/comparison-v2.json",
+      "bytes": 8852,
+      "sha256": "267df283dc9454f3306b12f040de375511c679d59a25bd9dc31b62c8112bf5ce"
+    },
+    "guard_receipt": {
+      "path": "artifacts/research/20261017-f009-fixed12-guarded-result-v1/guard-receipt.json",
+      "bytes": 7031,
+      "sha256": "c6a7b623d90994ac59ba7c1665fccdff85d8c62206235011d5a2555e05987120"
+    },
+    "independent_gate_review": {
+      "path": "artifacts/research/20261017-f009-fold0-E12-independent-gate-v1/verification.json",
+      "bytes": 4441,
+      "sha256": "31dd44002c633d5cdca24e25cd1f554e3da33b8e449fdc91391ac9c90fa45f2a"
+    },
+    "original_policy": {
+      "path": "experiments/f009-evaluation-policy-v2-prescore-20261017.json",
+      "bytes": 9505,
+      "sha256": "de5a6aa743d2d663f98244322958bf4b8154908238384112a7badf2df1e2d42c"
+    },
+    "candidate_E12_checkpoint_SHA": "16ff8220be0155779587f48705b161f2b789c2a1425367b94544a9daa21f2e63",
+    "candidate_E12_prediction_SHA": "2c9d6aa4f8bef3ac9209701414ba6e021978e594ef6eef987d5ba8033f07b0c0"
+  },
+  "REG50_secondary": {
+    "report": {
+      "path": "artifacts/research/20261017-f009-reg50-fold0-secondary-result-v1/secondary-result.json",
+      "bytes": 10204,
+      "sha256": "aca325b7717ddba99c205a89733cc0b9a0b5db87a81dfb5c4c3511de93d0c16d"
+    },
+    "fixed10_delta": 0.0007010865535287625,
+    "fixed10_95CI": [
+      -3.502614541612353e-05,
+      0.0013930405358554038
+    ],
+    "same_REG0_selected_epoch": 8,
+    "report_only": true,
+    "can_override_primary_or_fold1_gate": false
+  },
+  "fold1": {
+    "run": "artifacts/runs/f009-gamma-late-cosine-fold1-20261017-v1",
+    "status_last_observed": "running",
+    "actual_train_PID": 2772,
+    "actual_train_StartTime_JST": "2026-10-17T16:49:06+09:00",
+    "unified_training_session": 43236,
+    "config": {
+      "path": "configs/experiments/f009-dinov2-native-last2-late-cosine-study-gamma.json",
+      "bytes": 1699,
+      "sha256": "1a0a1d396660c6e326fd0f78962867b8243a3ac0e9b87fe2bb98dbea5f59297f"
+    },
+    "seed": 20261002,
+    "train": 3316,
+    "valid": 891,
+    "cache": 4207,
+    "same_recipe_only_fold_and_output_changed": true,
+    "fixed_E12_evaluation_only": true,
+    "interim_metrics_not_read_for_selection": true,
+    "source_and_config_revalidated_after_start": true,
+    "observed_launch_review": {
+      "path": "artifacts/research/20261017-f009-fold1-execution-v1/observed-launch-review-after-start.json",
+      "bytes": 5230,
+      "sha256": "85494ad45c1234da3c5f0f6cf5b475a81ea3cb2f666f4465013b5b9b34961187"
+    },
+    "actual_completion_time_unknown": "Fold0 elapsed20696.877s is reference only; do not treat ETA as completion"
+  },
+  "protocol_correction": {
+    "procedural_error": "Root continued dependent manual train exec after prestart record builder returned exit_code1. Failed assertion was oldcontrol all-zeroAMP, not source/config/input mismatch.",
+    "error_record": {
+      "path": "artifacts/research/20261017-f009-fold1-execution-v1/start-record-check-failure-and-observed-launch.json",
+      "bytes": 2893,
+      "sha256": "645441b31496a8a5d9d8ddfba4107888bbf8f622691c07a580c478e2ea0d0f5a"
+    },
+    "original_v1_policy": {
+      "path": "experiments/f009-fold1-fixed12-joint-screen-prospective-20261017.json",
+      "bytes": 6414,
+      "sha256": "9f42cd771db3f6bac92d275769636a451d3ef4dacd35e245a53d888c17ec2420"
+    },
+    "original_v1_evaluator": {
+      "path": "artifacts/research/20261017-f009-fold1-fixed12-evaluator-preparation-v1/evaluate_fold1.py",
+      "bytes": 22307,
+      "sha256": "c8e244461dbf45be68fff13328f2a774df1fbf5ed69e8c109ee84b0f421e352c"
+    },
+    "original_v1_joint_screen": "HOLD_BY_KNOWN_CONTROL_SKIP1_IRRESPECTIVE_OF_FUTURE_SCORES",
+    "old_artifacts_unchanged": true,
+    "amended_v2_policy": {
+      "path": "experiments/f009-fold1-fixed12-joint-screen-premetric-amendment-v2-20261017.json",
+      "bytes": 11987,
+      "sha256": "bf53e1828784df4d0da793cea6014f055ca9e5948dc5013cf368b646dd328a90"
+    },
+    "v2_declaration": {
+      "path": "artifacts/research/20261017-f009-fold1-premetric-amendment-v2/declaration-receipt.json",
+      "bytes": 890,
+      "sha256": "939394e0a10c01ab109a441ba1ab898a8e2038d60bf18ec85145444475f7ee6e"
+    },
+    "v2_declared_at_UTC": "2026-10-17T07:58:35.123611+00:00",
+    "declaration_timing": {
+      "after_fold0_result": true,
+      "after_fold1_fit_start": true,
+      "before_first_fold1_recorded_metric": true,
+      "candidate_fold1_metric_read": false,
+      "fully_prefit_preregistration": false
+    },
+    "policy_independent_review": {
+      "path": "artifacts/research/20261017-f009-fold1-amendment-v2-independent-v1/review.json",
+      "bytes": 6872,
+      "sha256": "cb4ad0f55d1c61b601dc310f9721abd88ad20553f2053325f02afa2d9916c103"
+    },
+    "only_allowed_exception": "Exact pinned historical control E10 207updates/208opportunities/1AMPskip; all other oldepochs208/208/0; oldtotal2495/2496/1",
+    "candidate_required": "All12epochs208/208/0; total2496/2496/0",
+    "science": "Same original weak UID/missing masks/fixed10 E12 paired math/seed; no CI/BCE/REG50 gate; strict positive delta in EACH fold, no pooling or favorable-fold rescue",
+    "engineering_text_priority": "Copied old engineering prose zeroAMP applies to original v1; v2 only_exception and exactcontrol/candidate schedules override that one oldcontrol condition.",
+    "consumer_scope": "Separate v2 evaluator/result/receipt and reviewed new consumers required. Legacy CPUproducer/sealer/transport may not accept v2.",
+    "stage_or_adoption_qualified": false
+  },
+  "official_observation": {
+    "at_UTC": "2026-10-17T07:59:09.550686+00:00",
+    "submissions": [
+      {
+        "ref": 57290868,
+        "status": "COMPLETE",
+        "status_field_present": true,
+        "Public": "0.958",
+        "score_field_present": true,
+        "totalBytes": 247221,
+        "raw": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T075909550686Z/57290868.json",
+          "bytes": 511,
+          "sha256": "b2c6a8bae958e3fa127624e428f44bd212ce710cbecfdcabac5dddb634616914"
+        }
+      },
+      {
+        "ref": 57291440,
+        "status": null,
+        "status_field_present": false,
+        "Public": null,
+        "score_field_present": false,
+        "totalBytes": 0,
+        "raw": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T075909550686Z/57291440.json",
+          "bytes": 475,
+          "sha256": "cd1b762c28856067876a11cbf3b256d41a5e2ae956dc207d86e9ef786428e891"
+        }
+      },
+      {
+        "ref": 57291580,
+        "status": "COMPLETE",
+        "status_field_present": true,
+        "Public": "0.958",
+        "score_field_present": true,
+        "totalBytes": 247044,
+        "raw": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T075909550686Z/57291580.json",
+          "bytes": 508,
+          "sha256": "f5ca4807e364ac0b9a91aab2fb1a7dcec10f489bd633375ba98a3e4b2a69620b"
+        }
+      },
+      {
+        "ref": 57292346,
+        "status": null,
+        "status_field_present": false,
+        "Public": null,
+        "score_field_present": false,
+        "totalBytes": 0,
+        "raw": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T075909550686Z/57292346.json",
+          "bytes": 473,
+          "sha256": "862ab7cde687f6b4718ff9359ad7ea1078cc2bcb103466f0cf5da162e4eeea0a"
+        }
+      },
+      {
+        "ref": 57293138,
+        "status": null,
+        "status_field_present": false,
+        "Public": null,
+        "score_field_present": false,
+        "totalBytes": 0,
+        "raw": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T075909550686Z/57293138.json",
+          "bytes": 504,
+          "sha256": "0e5dda9fb76baa89e908da5e9363f20506ba5b838c403c4393368d9960577c80"
+        }
+      }
+    ],
+    "limits": {
+      "numToday": 5,
+      "numTotal": 35
+    },
+    "limits_raw": {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T075909550686Z/limits.json",
+      "bytes": 28,
+      "sha256": "eb4d91f15e658d9bc5316244fd956e706187432c2d581b150914465e999b92ef"
+    },
+    "maxDaily_last_official": 5,
+    "extra_slots_treated_as": 0,
+    "reset_time_known": false,
+    "omitted_fields_mean": "No returned score/status; not a failure, not explicit PENDING, not score0",
+    "new_Save_Submit_in_this_milestone": 0
+  },
+  "retained_candidates": {
+    "P039": "Private kernel139182563/V1 COMPLETE and actualvisible/mathroot+peer PASS; ownPublic unknown, Submit0",
+    "P038": "Private kernel139163240/V1 COMPLETE and actualvisible/mathroot+peer PASS; ownPublic unknown, Submit0",
+    "own_successes": "P03357290868 and P03657291580 .958, P029M57225898 and P03257262934 .957 preserved"
+  },
+  "public_frontier_last_checked": {
+    "JST": "2026-10-17 16:24",
+    "scope": "Official public score-sorted top100",
+    "max_author_score": "0.958",
+    "new_at_least_0_959": 0,
+    "snapshot": {
+      "path": "artifacts/research/20261017-public-frontier-refresh-v7/summary.json",
+      "bytes": 13992,
+      "sha256": "50601a33bb163dc1ca0f8e23af0f194e81e169145e8e09a237fd1bb5b5ac878c"
+    },
+    "outside_top100_or_private_unknown": true
+  },
+  "next": [
+    "Continue exactly current F009fold1 run; before fixedE12 inspect status/counters only, no interim score selection.",
+    "Qualify separate newv2 evaluation wrapper before using it. At E12 manually run guarded comparison once, preserve originalv1HOLD and separatev2 result.",
+    "Only if newv2 eachfoldstrictpositive and candidatezero: new strictCPU proof, source-bound pair seal, real Kaggle diagnosis/visible qualification, then formal submission when quota permits.",
+    "Run already prepared F006fold2 QA/preflight/fit after current GPU fit; evaluate sealed C=.01 head on original outer2 once under its fixed policy.",
+    "Track remaining3 formalresults and actualquota; retain P039/P038, no duplicate submission, keep own .958; .960 remains unachieved."
+  ],
+  "limits": [
+    "Repeated weak holdouts and historical selections remain; supplied group does not verify independent patients.",
+    "Late engineering amendment after fold0 result and fold1 fit start, not fully prefit preregistration.",
+    "Oldcontrol2495 versus candidate2496 actual updates required; do not claim exact update parity.",
+    "Positive weak delta and modeltransport QA do not imply Public delta or guarantee .960.",
+    "No own Gold fit/select/evaluation, no bulk MRI/model downloads, no new automatic Save/Submit code."
+  ]
+}

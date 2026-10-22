@@ -1,0 +1,32 @@
+{
+  "at_UTC": "2026-10-19T15:00:03.377423+00:00",
+  "status": "ONE_OF_FOUR_COMPLETE_THREE_MANUAL_COMPARISONS_REMAIN",
+  "P038": {
+    "ref": 57391696,
+    "status": "COMPLETE",
+    "own_Public": "0.957",
+    "author_Public": "0.958",
+    "kernel_id": 139163240,
+    "version": 1,
+    "server_scriptVersionId": 359238727,
+    "independent_terminal_binding": "experiments/P038-terminal-binding-independent-20261019.json",
+    "totalBytes": 379742
+  },
+  "own_best_retained": "0.958",
+  "target_0959_and_above0960": "NOT_ACHIEVED",
+  "P040_vector_only": "QUEUED; actual visible output then independent numerical check required",
+  "P041_Reader_only": "QUEUED; actual positive Reader participation and numerical check required",
+  "P042_intermediate_rr_rank": "Source ready; one prior capacity rejection; no accepted version; admit after confirmed GPU slot release",
+  "decision": "Continue existing staged comparisons. Negative whole-recipe result does not identify which component caused loss and does not establish standalone vector or Reader harm. Two-factor scientific decomposition has recorded operational limitations; no Public improvement is assumed.",
+  "additional_formal_completed": 1,
+  "additional_formal_remaining": 3,
+  "last_official_limits": {
+    "numToday": 2,
+    "numTotal": 37,
+    "numAllowedNow": 3,
+    "at_JST": "2026-10-19 23:46"
+  },
+  "new_Submit_Save": 0,
+  "Gold_selection_or_coefficients_changed": false,
+  "F010": "FixedE12/bothfold gates unchanged; E6 counters1272/1272 skip0"
+}

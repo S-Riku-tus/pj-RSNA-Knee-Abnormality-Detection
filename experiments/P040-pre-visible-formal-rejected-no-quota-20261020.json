@@ -1,0 +1,100 @@
+{
+  "schema_version": "P040_pre_visible_manual_formal_attempt_rejected_no_quota_closed_v1",
+  "recorded_at_UTC": "2026-10-19T15:26:46.831657+00:00",
+  "status": "P040_SINGLE_OPERATIONAL_EXCEPTION_CLOSED_KAGGLE_REJECTED_ACCEPTED0_QUOTA0",
+  "candidate": "P040",
+  "owner_slug": "rsraki/p040-p033-vector-20261019-v1",
+  "kernel_id": 139586868,
+  "kernel_version": 1,
+  "file_name": "submission.csv",
+  "request": {
+    "path": "artifacts/research/20261020-p040-root-pre-visible-manual-submit-v1/request.json",
+    "bytes": 634,
+    "sha256": "fcae3fb40f49706291e89bf8405c12c384ead4e434e0937fa6eb3b606ba06731"
+  },
+  "dispatch": {
+    "path": "artifacts/research/20261020-p040-root-pre-visible-manual-submit-v1/manual-dispatch.json",
+    "bytes": 667,
+    "sha256": "e9567a3424f5b23bba24607b3ba146e0a66d2f4e3750726fa1baf04f8077715f"
+  },
+  "attempt_at_UTC": "2026-10-19T15:24:38.813286+00:00",
+  "attempt_at_JST": "2026-10-20T00:24:38.813286+09:00",
+  "actual_manual_create_code_submission_calls": 1,
+  "accepted_submissions": 0,
+  "submission_ref": null,
+  "response": {
+    "origin": "Kaggle HTTP response, not automatic approval review",
+    "http": 400,
+    "status": "FAILED_PRECONDITION",
+    "message": "Submission not allowed:  Internal Error: Could not get Notebook Run information. Did not find provided Notebook Output File.",
+    "raw": {
+      "path": "artifacts/research/20261020-p040-root-pre-visible-manual-submit-v1/error-response-raw.json",
+      "bytes": 190,
+      "sha256": "d5779efad99e2ef0b51d931ef2cf27bbc98d58b24ffad4d6dbd4136ac3fc90a4"
+    }
+  },
+  "actual_visible_qualified": false,
+  "actual_model_GPU_execution_or_accuracy_qualified_by_this_attempt": false,
+  "quota_before": {
+    "numToday": 2,
+    "numTotal": 37,
+    "numAllowedNow": 3
+  },
+  "quota_after": {
+    "numToday": 2,
+    "numTotal": 37,
+    "numAllowedNow": 3
+  },
+  "quota_consumed": 0,
+  "own_submission_total_delta": 0,
+  "reconciliation_at_UTC": "2026-10-19T15:25:24.789946+00:00",
+  "full_own_unique_rows": 37,
+  "pagination_exhausted": true,
+  "P040_refs": [],
+  "reconciliation": {
+    "path": "artifacts/research/20261020-p040-root-pre-visible-manual-submit-v1/reconciliation-v1/summary.json",
+    "bytes": 553,
+    "sha256": "90864cb3e1c3dd2cf46fcbac548117dee9ffc0ac76c824a6bc81c3fbacd3a31a"
+  },
+  "independent_review": {
+    "path": "artifacts/research/20261020-p040-pre-visible-rejection-independent-v1/review.json",
+    "bytes": 4437,
+    "sha256": "f0b70a12dec89016daeeaffe551350b6a958994cd7dfc0a707e6cbacb8f5e43c"
+  },
+  "operational_closure": {
+    "pre_visible_exception_ended": true,
+    "pending_version_Submit_retry_permitted": false,
+    "blind_retry": false,
+    "actual_visible_gate_restored": true,
+    "next_formal_gate": "Actual P040 saved execution COMPLETE, valid final output and existing independent real CSV/source/settings qualification before a new root-reviewed formal request.",
+    "P040_P041_GPU_jobs_cancelled": false,
+    "P042_source_or_ML_criteria_F010_or_other_source_changed": false
+  },
+  "current_user_four_additional_plan": {
+    "completed_accepted_count": 1,
+    "completed_candidate": "P038",
+    "submission_ref": 57391696,
+    "status": "COMPLETE",
+    "own_Public": "0.957",
+    "totalBytes": 379742,
+    "remaining_formal_submissions": 3,
+    "own_confirmed_displayed_best": "0.958",
+    "new_improvement_established": false
+  },
+  "source": {
+    "path": "artifacts/kaggle/p040-p033-vector-20261019-v1/source.ipynb",
+    "bytes": 177551,
+    "sha256": "8a76e6709a078289dae0c0b4d964aced9fe6ed98c50ecf6aec0489e28b44db8c"
+  },
+  "payload": {
+    "path": "artifacts/kaggle/p040-p033-vector-20261019-v1/save-payload.json",
+    "bytes": 179745,
+    "sha256": "00369666f71e1bc71222ebecf9c8bc21a9c5ddbe0b8d01d8426370c4ffb9c1ef"
+  },
+  "reviewer_activity": {
+    "new_API_Save_Submit_download_or_tests": 0,
+    "model_checkpoint_Gold_MRI_AUC_or_training_reads": 0,
+    "shared_PROJECT_docs_ledger_edited": false
+  },
+  "old_request_reviews_preflight_v1_false_v2_and_all_artifacts_preserved": true
+}

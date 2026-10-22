@@ -1,0 +1,10 @@
+{
+  "at_UTC": "2026-10-20T10:51:31.876821+00:00",
+  "status": "FEASIBILITY_ONLY_NOT_TRAINING_READY_NO_WEIGHTS_DOWNLOADED",
+  "research": "artifacts/research/20261020-ConvNeXtTiny-generic-asset-feasibility-v1/feasibility.json",
+  "research_SHA": "81b6d6f3b433d1cd947484ab3f82751a29e7371567c8858956b0557599299a5f",
+  "own_Public": null,
+  "author959_is_not_own_or_reproduced": true,
+  "weight_download_GPU_MRI_training": 0,
+  "decision": "Keep asconditionalfutureencoderpackage; currentR6/P045first. Separateimplementationandpreregistrationrequired; nottrainingready."
+}

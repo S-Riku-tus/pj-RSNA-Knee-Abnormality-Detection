@@ -1,0 +1,39 @@
+{
+  "at_utc": "2026-10-17T02:22:39.089758+00:00",
+  "status": "THREE_FORMAL_ACCEPTED_RESULTS_PENDING_F009_TRAINING_ACTIVE",
+  "own_best": {
+    "submission": 57225898,
+    "Public": "0.957",
+    "preserved": true
+  },
+  "goal": "own Public>=0.960 unachieved",
+  "accepted_this_day": {
+    "P033": 57290868,
+    "P034": 57291440,
+    "P036": 57291580
+  },
+  "official_observation": "artifacts/research/20261017-official-submission-observer-v1/poll-20261017T021735124801Z",
+  "new_score_status_fields_present": false,
+  "official_limits": {
+    "numToday": 3,
+    "numTotal": 33,
+    "numAllowedNow": 2
+  },
+  "F009": {
+    "run": "artifacts/runs/f009-gamma-late-cosine-fold0-20261017-v1",
+    "status": "running",
+    "unified_session": 12150,
+    "launcher_pid": 16948,
+    "actual_python_pid": 22392,
+    "latest_eval_policy": "experiments\\f009-evaluation-policy-v2-prescore-20261017.json",
+    "policy_v2_sha256": "de5a6aa743d2d663f98244322958bf4b8154908238384112a7badf2df1e2d42c",
+    "E12_selection_fixed": true,
+    "primary": "fixed10 AUC gain >0 and engineering pass",
+    "BCE": "secondary report-only; rank-based objective; change before any candidate epoch metric",
+    "prescore_observation": "11:18:13 JST history0/no epoch files; old policy and all core/launch hashes preserved"
+  },
+  "CPU_executor_QA": "experiments/isolated-uid-Kaggle-CPU14PASS-20261017.json",
+  "P035": "offline opt-in integration/review underway; GPU serving/Submit not qualified yet",
+  "P033_P034_P036_final_Submit_retries": 0,
+  "latest_self_score_improvement_claimed": false
+}

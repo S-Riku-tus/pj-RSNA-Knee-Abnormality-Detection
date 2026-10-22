@@ -1,0 +1,194 @@
+{
+  "schema_version": "P034_P035_official957_F009fold1_E2_runtime_audit_v1",
+  "at_UTC": "2026-10-17T08:49:29.955413+00:00",
+  "own_confirmed_Public_best": "0.958",
+  "target_Public": "0.960",
+  "target_achieved": false,
+  "goal_turn_classification": "PROGRESS: two new official returned results; fixed-run E2 observed. VERIFIED_WAIT: exact current F009fold1 process remains live; fixed12 incomplete.",
+  "previous_canonical": {
+    "path": "experiments/F009fold1-E1-amended-consumers-ready-public958-duplicate-20261017.json",
+    "bytes": 11653,
+    "sha256": "b105f851417d95bfa3a0131741faae49efdb01e479fb7703548a6e98ea119a62"
+  },
+  "official_results": {
+    "observed_at_JST": "2026-10-17T17:41:30+09:00",
+    "results": [
+      {
+        "candidate": "P033",
+        "submission": 57290868,
+        "status": "COMPLETE",
+        "Public": "0.958",
+        "raw": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T084130906204Z/57290868.json",
+          "bytes": 511,
+          "sha256": "b2c6a8bae958e3fa127624e428f44bd212ce710cbecfdcabac5dddb634616914"
+        },
+        "receipt": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T084130906204Z/57290868.receipt.json",
+          "bytes": 168,
+          "sha256": "6d0ecb1124511f9f877682d387a86609ea971a3a5b88281757a3d98e6e068d9b"
+        }
+      },
+      {
+        "candidate": "P034",
+        "submission": 57291440,
+        "status": "COMPLETE",
+        "Public": "0.957",
+        "raw": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T084130906204Z/57291440.json",
+          "bytes": 522,
+          "sha256": "0b9dc95d539814a0042c6e802a2ac79725ce77bfe909e510953eff1094e15b17"
+        },
+        "receipt": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T084130906204Z/57291440.receipt.json",
+          "bytes": 168,
+          "sha256": "8d6b740682a5cdd4ac7870c4687608d68ee016df383c4e05450b554a9497c0de"
+        }
+      },
+      {
+        "candidate": "P036",
+        "submission": 57291580,
+        "status": "COMPLETE",
+        "Public": "0.958",
+        "raw": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T084130906204Z/57291580.json",
+          "bytes": 508,
+          "sha256": "f5ca4807e364ac0b9a91aab2fb1a7dcec10f489bd633375ba98a3e4b2a69620b"
+        },
+        "receipt": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T084130906204Z/57291580.receipt.json",
+          "bytes": 168,
+          "sha256": "185f0048ef5cbe3e753cc4ded8e1c93f1438db25b6bb71b5899c6cd4652b2ace"
+        }
+      },
+      {
+        "candidate": "P035",
+        "submission": 57292346,
+        "status": "COMPLETE",
+        "Public": "0.957",
+        "raw": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T084130906204Z/57292346.json",
+          "bytes": 520,
+          "sha256": "2d4361d411b98ef3f7b3b1d42f6dd5abedf89ea131da809ef2eb97d81d2e7408"
+        },
+        "receipt": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T084130906204Z/57292346.receipt.json",
+          "bytes": 168,
+          "sha256": "1ac38f4ceab15cf42ee7db3764aa97beef74eaa16ac04cdc30b1356d9e2a00b2"
+        }
+      },
+      {
+        "candidate": "P037",
+        "submission": 57293138,
+        "status": null,
+        "Public": null,
+        "raw": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T084130906204Z/57293138.json",
+          "bytes": 504,
+          "sha256": "0e5dda9fb76baa89e908da5e9363f20506ba5b838c403c4393368d9960577c80"
+        },
+        "receipt": {
+          "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T084130906204Z/57293138.receipt.json",
+          "bytes": 168,
+          "sha256": "a9be94283bd054156b06dd2df7eef1eeeab3ef4b340fe830c7c2ec6e08532edf"
+        }
+      }
+    ],
+    "new_results": [
+      "P03457291440 COMPLETE0.957",
+      "P03557292346 COMPLETE0.957"
+    ],
+    "still_unreturned": "P03757293138 fields omitted, not explicit failure/PENDING/zero score.",
+    "limits": {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T084130906204Z/limits.json",
+      "bytes": 28,
+      "sha256": "eb4d91f15e658d9bc5316244fd956e706187432c2d581b150914465e999b92ef"
+    },
+    "numToday": 5,
+    "numTotal": 35,
+    "extra_slots_treated_as": 0,
+    "daily_reset_verified": false,
+    "new_Submit": 0
+  },
+  "interpretation": [
+    "P034/P035 do not improve displayed ownPublic; this is not a claim of exact unrounded equality.",
+    "Their COMPLETE0.957 result does not establish hidden native participation or native coverage: old whole-extension parent-only fallback was permitted.",
+    "P033/P0360.958 remain preserved. P037 actual source uses R7share0.4; its external submission description R7off is a previously recorded typo, not the execution truth."
+  ],
+  "F009fold1": {
+    "counter_observation": {
+      "path": "artifacts/research/20261017-f009-fold1-progress-v1/epoch2-counter-observation.json",
+      "bytes": 1318,
+      "sha256": "63322bfc3270b693298f0bfdd7c1b0aedddcc37624f01870a306e7ba57091884"
+    },
+    "same_PID": 2772,
+    "completed_epochs": 2,
+    "fixed_target_epochs": 12,
+    "recorded_completed_epoch_updates": 416,
+    "recorded_completed_epoch_opportunities": 416,
+    "recorded_completed_epoch_AMP_skips": 0,
+    "cumulative_elapsed_seconds": 3430.0505111000093,
+    "interim_score_values_projected_or_selected": false,
+    "source": {
+      "path": "scripts/train_native_dinov2_fast16.py",
+      "bytes": 15333,
+      "sha256": "3e005de950c67aef7b8813f633755ff49ad39d13578df55f15d09b0b48dd3674"
+    },
+    "config": {
+      "path": "configs/experiments/f009-dinov2-native-last2-late-cosine-study-gamma.json",
+      "bytes": 1699,
+      "sha256": "1a0a1d396660c6e326fd0f78962867b8243a3ac0e9b87fe2bb98dbea5f59297f"
+    },
+    "only_E12_comparison_allowed": true,
+    "actual_fold1_comparison_CPU_reconstruction_or_pair_stage_done": false,
+    "legacy_v1_HOLD_unchanged": true,
+    "amended_v2_declared_after_fit_start_before_first_recorded_metric": true
+  },
+  "bounded_runtime_review": {
+    "review": {
+      "path": "artifacts/research/20261017-p039-runtime-priority-readonly-v1/review.json",
+      "bytes": 13176,
+      "sha256": "008470fe629104840e2f4f21939983af1bfbb1ded5de31d097cf82f7074cbeaf"
+    },
+    "P035diagnostic_192_S192_F0_native_seconds": 869.21933452,
+    "UID_mean_seconds": 8.664246953010421,
+    "UID_max_seconds": 21.53093851199992,
+    "P039visible3_native_seconds": 42.78684801700001,
+    "P039visible3_whole_seconds": 489.584940198,
+    "submit_to_score_visibility_delay_is_not_hidden_compute_time": true,
+    "hidden_N_full_runtime_native_coverage_unconfirmed": true,
+    "review_P035_formal_unreturned_subsection_is_historical_0826_not_latest": true,
+    "new_shared_fatal_failure_established": false
+  },
+  "hidden_log_access_scope": {
+    "review": {
+      "path": "artifacts/research/20261017-p035-hidden-log-access-audit-v1/review.json",
+      "bytes": 3667,
+      "sha256": "be9e7a0957ab69439163b5a0381b4ab825864b8654afacb74cdc8e52d7acf568"
+    },
+    "normal_owner_API_or_acceptance_missing_hidden_session_ID": true,
+    "visible_notebook_logs_not_hidden_grading_logs": true,
+    "do_not_guess_IDs_or_substitute_submission_ref": true,
+    "extra_API_calls_or_prediction_CSV_downloads_in_access_audit": 0
+  },
+  "public_frontier": "Latest actual17:24 official score-sorted top100 maxauthor0.958, >=0.959 none in that bounded scope. Newly scored LavinV4 exact source duplicate; previous canonical holds primary evidence. No new better recipe established.",
+  "next": [
+    "Continue same F009fold1 to fixed12, with counters only before completion.",
+    "After completeE12 manually run frozen amended evaluator once; preserve legacyHOLD; actualstrictpositive bothfolds and candidatezero are required before CPUv2/stagev3.",
+    "At next eligible formal slot fresh-check actual result/quota, submit existing qualifiedP039 first if own<0.960 and no directly observed sharedfatalerror; keepP038 second. P034/P035 displayed0.957 alone do not prove a sharedfatalerror.",
+    "After this fit terminal, use prepared F006fold2 QA/preflight/fit, then frozen C0.01 outer2 evaluation once."
+  ],
+  "actions_this_record": {
+    "new_fit": 0,
+    "configuration_or_scientific_recipe_changes": 0,
+    "local_GPU_tests_during_fit": 0,
+    "Kaggle_Save": 0,
+    "formal_Submit": 0,
+    "new_automatic_upload_Save_Submit_code": 0
+  },
+  "limitations": [
+    "Goal0.960 remains unmet; localweak improvements do not imply Public increments.",
+    "Historical weakholdout selection and unknown patient independence persist. OwnGold fit/select0; known externalRaptorGold58selection history remains disclosed.",
+    "NewCPUproducer/sealer are sourcequalified only; actualpair/model runtime and ownPublic qualification await real completefold1 results."
+  ]
+}

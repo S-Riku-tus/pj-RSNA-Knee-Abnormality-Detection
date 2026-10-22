@@ -1,0 +1,66 @@
+{
+  "at_UTC": "2026-10-20T03:26:29.855658+00:00",
+  "accepted": true,
+  "ref": 57420128,
+  "kernelId": 139726098,
+  "saved_version": 1,
+  "kernel_ref": "rsraki/p043-gauss-rank-20261020-v3",
+  "own_official_status_raw": null,
+  "own_official_Public_raw": null,
+  "error": null,
+  "bytes": 0,
+  "owner_description_file_match": true,
+  "limits": {
+    "numToday": 1,
+    "numTotal": 41,
+    "numAllowedNow": 4
+  },
+  "fullList_rows": 41,
+  "fullList_pagination_exhausted": true,
+  "same_ref_List_binding_rows": 1,
+  "actual_scriptVersionId_from_same_ref_List": 360257351,
+  "manual_formal_calls": 1,
+  "automatic_retry": false,
+  "best_own_Public": "0.958",
+  "goal959_achieved": false,
+  "pending_not_zero": true,
+  "receipts": [
+    {
+      "label": "manual-Submit-once",
+      "at_UTC": "2026-10-20T03:26:28.655714+00:00",
+      "HTTP": 200,
+      "bytes": 16,
+      "SHA": "6a5a8f47057a2ba74ce2de787dd762bb9fdd5f8e322ddde9161e002a73e2f1db"
+    },
+    {
+      "label": "accepted-owned-Get",
+      "at_UTC": "2026-10-20T03:26:28.873121+00:00",
+      "HTTP": 200,
+      "bytes": 540,
+      "SHA": "aeb95b7ea45c0dac4c35f35ee8d5d06d5ec1b9ec6cedb2346870bb456dfddd5f"
+    },
+    {
+      "label": "after-Submit-limits",
+      "at_UTC": "2026-10-20T03:26:29.061995+00:00",
+      "HTTP": 200,
+      "bytes": 46,
+      "SHA": "1ec13fb8d5e556cf191d70a6b185ff4fc04db6a69bca0b0369938020c1dd6dc0"
+    },
+    {
+      "label": "after-Submit-full-own-list",
+      "at_UTC": "2026-10-20T03:26:29.855658+00:00",
+      "HTTP": 200,
+      "bytes": 20422,
+      "SHA": "b6cde2ea5c39bf7fdc849d145b2c68b6f3d216768117ddea067db5e63a7fe387"
+    }
+  ],
+  "status": "OWN_FORMAL_ACCEPTED_SCORE_PENDING",
+  "source_binding": "kernel139726098/V1 scriptVersionId360257351 observed in same-ref own official List",
+  "acceptance_summary_SHA": "92828c39b4fca0aa4b7d061f2fc807d8f3635a2d8411a0557c6bd3e7559f6bcd",
+  "qualification": "artifacts/research/20261020-P043-actual-visible-qualification-v1/provenance-and-numeric-review.json",
+  "request": "artifacts/research/20261020-P043-root-formal-submit-v1/request.json",
+  "best958_retained": true,
+  "target959_unmet": true,
+  "new_proposed_P044": "prepared only, no Save/Submit yet; one mirror224 factor relativeP041; GPU artificial QA onKaggle required",
+  "no_automatic_Submit_code_added": true
+}

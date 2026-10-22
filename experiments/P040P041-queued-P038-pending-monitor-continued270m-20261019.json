@@ -1,0 +1,140 @@
+{
+  "schema_version": "P040P041_queued_P038_latest_readonly_monitor30m_v6",
+  "at_UTC": "2026-10-19T14:50:38.584372+00:00",
+  "interval_starting_baseline_UTC": "2026-10-19T14:20:24.515770+00:00",
+  "first_new_poll_UTC": "2026-10-19T14:22:59.147362+00:00",
+  "last_UTC": "2026-10-19T14:50:17.882842+00:00",
+  "observations": 13,
+  "total_observations_since_start": 134,
+  "selector": "latest: version_label omitted",
+  "main3_state_changes": 0,
+  "all_completed_poll_HTTP200": true,
+  "all_attempts_HTTP200": false,
+  "auth_failed_attempts": 1,
+  "auth_failure": {
+    "at_UTC": "2026-10-19T14:38:07.307216+00:00",
+    "HTTP": 401,
+    "endpoint": "P040 GetKernelSessionStatus latest",
+    "partial_poll": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T143807307216Z",
+    "remaining_two_reads_not_reached": true,
+    "Notebook_ERROR_inferred": false
+  },
+  "normal_SDK_OAuth_recovery": {
+    "method": "KaggleCredentials.refresh_access_token through public SDK, suppressed output; credential values not read/displayed/copied",
+    "at_UTC": "2026-10-19T14:39:19+00:00",
+    "first_successful_main3_poll_UTC": "2026-10-19T14:39:20+00:00",
+    "code_or_credentials_file_manual_edit": false
+  },
+  "latest_states": {
+    "P040": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P041": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P038": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_score_present": false,
+      "Public": null,
+      "error": null,
+      "totalBytes": 0
+    }
+  },
+  "raw_QUEUED_omission_not_failure": true,
+  "missing_Public_not_zero": true,
+  "next30minute_interval_authorized_by_root": true,
+  "activity": {
+    "Save": 0,
+    "Submit": 0,
+    "upload": 0,
+    "GPU_start": 0,
+    "extra_notebook_or_submission_reads": 0,
+    "normal_SDK_auth_refresh": 1
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T142257076411Z/summary.json",
+      "bytes": 1301,
+      "sha256": "adb4ac9bcb6da9869d677f6caa89af581e4bfef986626f872bfcde6d57ec3c0f"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T142507609560Z/summary.json",
+      "bytes": 1301,
+      "sha256": "111f4c38aa7255cab175c33dd37dee1054e4754e3823471318a84e86766e610b"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T142714898709Z/summary.json",
+      "bytes": 1301,
+      "sha256": "02c51a43e6b29ee5270cdd1558658c1612ed7926af375a5a00d84bb722757a26"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T142928334746Z/summary.json",
+      "bytes": 1301,
+      "sha256": "498fed65799237b91e35d6a0232d8dc5b6e6f72a94fa57cd14ff21620a63729c"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T143141136145Z/summary.json",
+      "bytes": 1301,
+      "sha256": "ac165a2498a140f46f755ae24474b24e17226a506c95bbd3c09f2ab1bb4f15ea"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T143348641415Z/summary.json",
+      "bytes": 1301,
+      "sha256": "f76a7436c3fa3e60d14ec2bbc5b01e0796b9ecbf0f246644a8ebb638ad748015"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T143600880942Z/summary.json",
+      "bytes": 1301,
+      "sha256": "553f65431d99776993b8a45d3eb962eea95439004c637d469aefd8df1d600c2c"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T143919704686Z/summary.json",
+      "bytes": 1301,
+      "sha256": "eb94c028dff52c4aade259c18ff0e5c96926b2e370459d6b90f86c24ecd07ec3"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T144152370753Z/summary.json",
+      "bytes": 1301,
+      "sha256": "78bbaed3924b5366e8ad2b5987accd077127ca811faf93333f38a94f5ebaa008"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T144356269875Z/summary.json",
+      "bytes": 1301,
+      "sha256": "6255d044f76b8f75f8c79aeaf7bd8df934692cd2f7a162d95dc813aefdfec532"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T144605512281Z/summary.json",
+      "bytes": 1301,
+      "sha256": "b3377307ec30aadcb05dca18a9a8a17024163f320c49a6c99b3faac95d860a06"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T144815392526Z/summary.json",
+      "bytes": 1301,
+      "sha256": "e99a17d13e336007a76983208faa113f807e7994d0e6f875f3f512cb06c4c707"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T145016907129Z/summary.json",
+      "bytes": 1301,
+      "sha256": "11e18590ff320b552e12dcee4ad5b468f1d0ddd95d31bf28d3bd3c12f0a2b5ae"
+    },
+    {
+      "path": "artifacts/research/20261019-monitor-OAuth-recovery-v1/intent.json",
+      "bytes": 1152,
+      "sha256": "2f52f0b1cad6f3cbb3e05322356dc10650ad5e8f3d6e79674233aa445977a3a7"
+    },
+    {
+      "path": "artifacts/research/20261019-monitor-OAuth-recovery-v1/SDK-refresh-result.json",
+      "bytes": 331,
+      "sha256": "3c751eef7ffd70929ff6530eaed2e61c938986411b9c387af22614ed0ba8fbd5"
+    }
+  ]
+}

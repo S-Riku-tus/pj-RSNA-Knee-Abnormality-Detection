@@ -1,0 +1,95 @@
+{
+  "at_UTC": "2026-10-20T11:31:39.222619+00:00",
+  "status": "STANDALONE_CPU_STRICT_FINITE_BOTHFOLD_PASS_NO_CUDA_OR_MRI_RELEASE",
+  "kernelId": 139809994,
+  "saved_version": 1,
+  "source_SHA": "c5e48819da14f2300206ae84d00557bf96c290e573ee5c0ede2d81102879553e",
+  "checks": {
+    "complete2fold": true,
+    "policy": true,
+    "package": true,
+    "old_HOLD": true,
+    "noMRI_Gold_fit": true,
+    "not_formallyqualified": true,
+    "fold0_identity": true,
+    "fold0_finite_strict": true,
+    "fold0_artificial": true,
+    "fold0_CPUonly": true,
+    "fold1_identity": true,
+    "fold1_finite_strict": true,
+    "fold1_artificial": true,
+    "fold1_CPUonly": true
+  },
+  "all_pass": true,
+  "actual_output": {
+    "path": "artifacts/research/20261020-F013-root-CPU-execution-v1/poll-20261020T112931021784Z/files/F013-CPU-qualification/completion.json",
+    "bytes": 2118,
+    "sha256": "f030184530944cfb075d8720df0fa28b92c23de7c2633f330fbf8e70032466ed"
+  },
+  "receipt": {
+    "complete": true,
+    "folds": [
+      {
+        "complete": true,
+        "fold": 0,
+        "epoch": 12,
+        "checkpoint_SHA": "16ff8220be0155779587f48705b161f2b789c2a1425367b94544a9daa21f2e63",
+        "frozen_prefix_SHA": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+        "strict_tensor_counts": {
+          "encoder_suffix": 28,
+          "head": 12
+        },
+        "finite_exact_suffix_head_roundtrip": true,
+        "eval_gamma_disabled": true,
+        "artificial_FP32_normalized392_encoder_and_head": true,
+        "all12_finite": true,
+        "masked_padding_exact": true,
+        "allmissing_image_rejected": true,
+        "Torch": "2.11.0+cu128",
+        "CUDA_initialized": false,
+        "MRI_Report_Gold_training_reads": 0,
+        "full_native_model_CUDA_forward_qualified": false,
+        "original_F009_engineering_HOLD_unchanged": true,
+        "qualified_for_formal_Submit": false
+      },
+      {
+        "complete": true,
+        "fold": 1,
+        "epoch": 12,
+        "checkpoint_SHA": "6805bfa94b1356b71d474d6dd918518749a42dd08ed791d403aa4c256c3e4d78",
+        "frozen_prefix_SHA": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+        "strict_tensor_counts": {
+          "encoder_suffix": 28,
+          "head": 12
+        },
+        "finite_exact_suffix_head_roundtrip": true,
+        "eval_gamma_disabled": true,
+        "artificial_FP32_normalized392_encoder_and_head": true,
+        "all12_finite": true,
+        "masked_padding_exact": true,
+        "allmissing_image_rejected": true,
+        "Torch": "2.11.0+cu128",
+        "CUDA_initialized": false,
+        "MRI_Report_Gold_training_reads": 0,
+        "full_native_model_CUDA_forward_qualified": false,
+        "original_F009_engineering_HOLD_unchanged": true,
+        "qualified_for_formal_Submit": false
+      }
+    ],
+    "policy_SHA": "9b7d6e581be8aa6ac4f83fad910f1399488183d2e2ba6defdc29097723c2f5de",
+    "package_manifest_SHA": "69bcd8f922697e7fe6a8c761393312f524f3336be27cf041fffd25a0c7b6c0be",
+    "MRI_Report_Gold_newfit_Save_Submit": 0,
+    "GPU_forward_or_actualMRI_qualified": false,
+    "original_F009_HOLD_unchanged": true,
+    "qualified_for_formal_Submit": false
+  },
+  "downloaded_files": 7,
+  "downloaded_bytes": 5676,
+  "root_review": "Static executedsource and outputhashchecks, not a separate-person review",
+  "decision": "Finite exactcheckpoint reconstruction demonstrated; AMPskipdoesnot implynonfinitetensors intheseE12weights. KeeporiginalHOLD. Need newF013-scoped fullnative CUDA/serving/actualMRI/component/fusion qualification; noformal fromCPUproof.",
+  "qualified_for_Submit": false,
+  "best_own_Public": ".958",
+  "goal959_achieved": false,
+  "P045_pending": 57430729,
+  "localGPU19472_preserved": true
+}

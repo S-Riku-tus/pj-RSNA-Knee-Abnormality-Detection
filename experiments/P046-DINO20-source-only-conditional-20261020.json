@@ -1,0 +1,22 @@
+{
+  "at_UTC": "2026-10-20T10:00:43.444796+00:00",
+  "status": "SOURCE_ONLY_INERT_CONDITIONAL_ON_P045_OFFICIAL958",
+  "manifest": "artifacts/kaggle/p046-p033-dino20-20261020-v1/manifest.json",
+  "manifest_SHA": "59e3b44da7989d7d48e01f0fcf0f3312e4829309aee77097cdc5e6cfbd4f745e",
+  "policy": "artifacts/research/20261020-P046-DINO20-prospective-v1/policy.json",
+  "policy_SHA": "5a211bd382877723b1d1824923d6e527f0da010388f78d850c2b7fe407a75f6b",
+  "source_SHA": "f3a911ae3de8c45df61ef241f2b1a155c7f4281027c733bf58bddcb4306def30",
+  "singlefactor": "DINOweight.10to.20 parent.90to.80",
+  "all8_parent_producer_preprocessing_Inputs_fixed": true,
+  "internal_output_namespace": "P045 inherited; externalcandidateP046",
+  "tests": "3testsPASS; fractional paircount oracle/all16failurecombos; ASTonly3numericconstant+doc changes; transportproducerInputs/oldsource preserved; ruffPASS",
+  "no_actual20percent_visible_qualification": true,
+  "eligible_for_Save_or_Submit_now": false,
+  "P045_pending_ref": 57430729,
+  "condition": "P045 ownCOMPLETE exactly.958 and goalunmet; reject if<=.957; stop if>=.959; exactvisiblequalification/source/quota stillrequired",
+  "R6positive_two_bank_candidate_priority": true,
+  "local_Torch_CUDA_MRI_Gold_API_writes": 0,
+  "exploratory_no_validated_accuracy_gain": true,
+  "upstreamDINO_training_Gold_history": "UNKNOWN",
+  "goal959_achieved": false
+}

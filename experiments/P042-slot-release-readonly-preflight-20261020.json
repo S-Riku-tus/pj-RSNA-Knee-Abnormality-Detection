@@ -1,0 +1,117 @@
+{
+  "schema_version": "P042_slot_release_readonly_qualified_uncertainty_review_v1",
+  "at_UTC": "2026-10-19T16:38:02.452757+00:00",
+  "all_checks_passed": true,
+  "checks": {
+    "normal_own_auth_and_positive_private_P040V1": true,
+    "prior_P040_P041_explicit_COMPLETE": true,
+    "prior_P042_GPU2_Save_explicit_reject_no_id": true,
+    "full_profile149_two_pages_complete": true,
+    "no_identifiable_P042_accepted_row": true,
+    "latest403_and_v1_404_captured": true,
+    "gpu_quota_reservation_zero": true,
+    "no_remote_write": true
+  },
+  "own_account": "rsraki",
+  "P042_expected_ref": "rsraki/p042-rank-rr-20261019-v1",
+  "P042_accepted_kernel_id_observed": null,
+  "P042_accepted_version_observed": null,
+  "P042_identifiable_profile_rows": 0,
+  "P042_title_search_anonymous_stubs": 1,
+  "all_profile_anonymous_stubs": 4,
+  "latest_exact_Get_HTTP": 403,
+  "v1_exact_Get_HTTP": 404,
+  "latest403_used_as_absence": false,
+  "complete_absence_claimed": false,
+  "interpretation": "No accepted P042 version was identified/readable. Search stub may represent an unaccepted/draft/private shell; this is not resolved by403. Do not assume next saved version1. Both previous GPU jobs are explicitly COMPLETE; no active GPU slot count endpoint was identified or invoked. Quota timeReserved0 supports available time only, not guaranteed admission. Root may review one new manual admission using fresh exact returned kernel/version and rebind readback; no automatic retry.",
+  "GPU_quota": {
+    "quotaRefreshTime": "2026-10-24T00:00:00Z",
+    "gpuQuota": {
+      "timeUsed": "11531.119s",
+      "timeReserved": "0s",
+      "totalTimeAllowed": "108000s",
+      "minimumTimeAllowed": "108000s",
+      "hasEverRun": true
+    },
+    "tpuQuota": {
+      "timeUsed": "0s",
+      "timeReserved": "0s",
+      "totalTimeAllowed": "72000s",
+      "minimumTimeAllowed": "72000s"
+    }
+  },
+  "GPU_hours_used": 3.203088611111111,
+  "prior_main_terminal_evidence": "artifacts/research/20261020-p040-p041-official-complete-change-v1/summary.json",
+  "read_calls": {
+    "title_List": 1,
+    "full_PROFILE_List": 2,
+    "positive_P040GetV1": 1,
+    "P042Get_latest": 1,
+    "P042Get_v1": 1,
+    "GPU_quota": 1
+  },
+  "activity": {
+    "Save": 0,
+    "Submit": 0,
+    "cancel": 0,
+    "upload": 0,
+    "GPU_start": 0
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261020-p042-slot-release-readonly-preflight-v1/accelerator-quota.json",
+      "bytes": 285,
+      "sha256": "62f98652bbf4ddc37b2d41fde0426162d3cc1a97caa3784dc5651cfd081bc99c"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-slot-release-readonly-preflight-v1/owned-P042-title-page-1.json",
+      "bytes": 81,
+      "sha256": "31243fe28cbea58e763554d557e57780e4fedae4e0a2b15376633748932a82db"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-slot-release-readonly-preflight-v1/positive-owned-P040-V1.json",
+      "bytes": 229973,
+      "sha256": "0f54031d8ea84f0b759590c6ac7e459fd61b11b97437a53f137450d459ba70f7"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-slot-release-readonly-preflight-v1/receipts.json",
+      "bytes": 666,
+      "sha256": "99e8e907d5d8cfe20e2eace0036dbe28ae4dcc02529c153a4af463f705ab1a7c"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-slot-release-readonly-preflight-v1/summary.json",
+      "bytes": 3372,
+      "sha256": "4013dc4ec4c944906551c178f5b29c556c3e09e9b52be1822d505f4461f4929d"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-slot-release-readonly-preflight-v1/exact-read-and-pagination-v1/own-profile-page-2.json",
+      "bytes": 7303,
+      "sha256": "a5e521c071c749c11828c04386dce55e29647775c1d62be2298850759c463ea0"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-slot-release-readonly-preflight-v1/exact-read-and-pagination-v1/P042-Get-latest.json",
+      "bytes": 116,
+      "sha256": "11519ba740db0cbca6f7ea6d4034752151f4f0bb5a4d059da2b17b34673405b5"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-slot-release-readonly-preflight-v1/exact-read-and-pagination-v1/P042-Get-v1.json",
+      "bytes": 65,
+      "sha256": "4d4aa587ea83ee3d094bd87beabc659e62ce3503758bddc13ff7bb52cf5e7ef5"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-slot-release-readonly-preflight-v1/exact-read-and-pagination-v1/summary.json",
+      "bytes": 2040,
+      "sha256": "7560782b6270e0742990424bdac662dccd407e55635ad834219d017bab7db473"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-slot-release-readonly-preflight-v1/own-profile-resolution-v1/own-profile-page-1.json",
+      "bytes": 16055,
+      "sha256": "7f5b64225e8c4a6b72f4a327259bc2494c4f729bbf7a23dbdd283ff83cb208bc"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-slot-release-readonly-preflight-v1/own-profile-resolution-v1/summary.json",
+      "bytes": 6727,
+      "sha256": "b8d627492b5715aed74e2cc6226262fe1efbe5f890a52cc354beca2e181d3b57"
+    }
+  ]
+}

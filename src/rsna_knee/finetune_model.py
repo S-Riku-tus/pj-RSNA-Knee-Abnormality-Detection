@@ -13,6 +13,26 @@ from torch.utils.checkpoint import checkpoint
 
 from .feature_model import FrozenFeatureHead
 
+STUDY_GAMMA_CONFIG = {
+    "schema_version": "native392_train_study_gamma_v1",
+    "minimum": 0.85,
+    "maximum": 1.15,
+}
+
+
+def validate_study_gamma(value):
+    """The single prespecified augmentation; absence keeps the historical path."""
+    if value is None:
+        return None
+    if (
+        not isinstance(value, dict)
+        or set(value) != set(STUDY_GAMMA_CONFIG)
+        or value != STUDY_GAMMA_CONFIG
+        or any(type(value[key]) is not float for key in ("minimum", "maximum"))
+    ):
+        raise ValueError("Use only the fixed train-only study gamma range0.85..1.15")
+    return dict(value)
+
 
 class NativeTripletMIL(nn.Module):
     def __init__(self, encoder, config, *, trainable_blocks=0, window_chunk=4, checkpoint_last2=False):
@@ -28,6 +48,15 @@ class NativeTripletMIL(nn.Module):
         self.encoder, self.head = encoder, FrozenFeatureHead(config)
         self.config, self.trainable_blocks, self.window_chunk = config, trainable_blocks, window_chunk
         self.checkpoint_last2 = checkpoint_last2
+        self.study_gamma = validate_study_gamma(config.get("augmentation"))
+        self._gamma_generator = None
+        self._gamma_draws = 0
+        self._gamma_observed = None
+        if self.study_gamma is not None:
+            if type(config.get("seed")) is not int or config["seed"] < 0:
+                raise ValueError("Study gamma requires the recorded nonnegative integer seed")
+            # An isolated CPU stream leaves shuffle, dropout and CUDA RNG unchanged.
+            self._gamma_generator = torch.Generator(device="cpu").manual_seed(config["seed"])
         self.encoder.requires_grad_(False)
         if trainable_blocks:
             for block in self.encoder.blocks[-trainable_blocks:]:
@@ -61,6 +90,38 @@ class NativeTripletMIL(nn.Module):
         # Frozen norm parameters still transmit the gradient to the suffix.
         return self.encoder.norm(tokens)[:, 0].to(torch.float16).float()
 
+    def sample_training_gamma(self, studies, device):
+        """One exponent per study, shared over every series/window/channel."""
+        if self.study_gamma is None or not self.training:
+            return None
+        if type(studies) is not int or studies < 1:
+            raise ValueError("A positive study count is required for gamma sampling")
+        sampled = torch.empty(studies, dtype=torch.float32, device="cpu").uniform_(
+            self.study_gamma["minimum"], self.study_gamma["maximum"], generator=self._gamma_generator
+        )
+        bounds = (float(sampled.min()), float(sampled.max()))
+        if self._gamma_observed is not None:
+            bounds = (min(bounds[0], self._gamma_observed[0]), max(bounds[1], self._gamma_observed[1]))
+        self._gamma_draws += studies
+        self._gamma_observed = bounds
+        return sampled.to(device=device)
+
+    def training_augmentation_contract(self):
+        if self.study_gamma is None:
+            return None
+        return {
+            **self.study_gamma,
+            "applies_to": "training_forward_only_before_ImageNet_normalization",
+            "unit": "study; shared across series, triplets and adjacent channels",
+            "formula": "float32(pixel_uint8 / 255) ** gamma; no uint8 requantization",
+            "endpoints": "0 and255 remain0 and1 before normalization",
+            "rng": "dedicated CPU torch.Generator; global CPU/CUDA/shuffle RNG not consumed",
+            "seed": self.config["seed"],
+            "draws": self._gamma_draws,
+            "observed_range": None if self._gamma_observed is None else list(self._gamma_observed),
+            "validation_and_inference": "disabled; no draw and no power operation",
+        }
+
     def forward(self, images, mask, positions, planes, flags):
         p = self.config["preprocess"]
         expected = (mask.shape[0], p["max_series"], p["slices_per_series"])
@@ -70,9 +131,14 @@ class NativeTripletMIL(nn.Module):
             raise ValueError("Every study requires at least one valid slice")
         flattened = images.reshape(-1, 3, 392, 392)
         indices = mask.reshape(-1).nonzero(as_tuple=False).flatten()
+        gammas = self.sample_training_gamma(images.shape[0], images.device)
         encoded = []
         for offset in range(0, len(indices), self.window_chunk):
-            batch = flattened.index_select(0, indices[offset : offset + self.window_chunk]).float().div(255)
+            selected = indices[offset : offset + self.window_chunk]
+            batch = flattened.index_select(0, selected).float().div(255)
+            if gammas is not None:
+                studies = torch.div(selected, p["max_series"] * p["slices_per_series"], rounding_mode="floor")
+                batch = batch.pow(gammas.index_select(0, studies)[:, None, None, None])
             mean = batch.new_tensor([0.485, 0.456, 0.406])[None, :, None, None]
             std = batch.new_tensor([0.229, 0.224, 0.225])[None, :, None, None]
             with torch.autocast(
@@ -88,7 +154,7 @@ class NativeTripletMIL(nn.Module):
         return self.head(features, mask, positions, planes, flags)
 
     def parameter_contract(self):
-        return {
+        contract = {
             "trainable_encoder_names": [name for name, value in self.encoder.named_parameters() if value.requires_grad],
             "trainable_encoder_parameters": sum(
                 value.numel() for value in self.encoder.parameters() if value.requires_grad
@@ -106,3 +172,6 @@ class NativeTripletMIL(nn.Module):
             "checkpoint_factor": "optional suffix activation recomputation; separate from the last2 biological factor",
             "feature_quantization": "fp16 CLS then fp32, matching frozen feature cache storage",
         }
+        if self.study_gamma is not None:
+            contract["training_augmentation"] = self.training_augmentation_contract()
+        return contract

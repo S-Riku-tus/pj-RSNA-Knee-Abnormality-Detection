@@ -1,0 +1,49 @@
+{
+  "at_UTC": "2026-10-20T09:41:00.358189+00:00",
+  "status": "OWN_OFFICIAL_COMPLETE_PUBLIC0958_DISPLAY_TIE",
+  "ref": 57420634,
+  "kernelId": 139732287,
+  "saved_version": 1,
+  "actual_scriptVersionId": 360266199,
+  "official_Public": "0.958",
+  "owned_Get": {
+    "ref": 57420634,
+    "totalBytes": 379741,
+    "date": "2026-10-20T03:45:28.910Z",
+    "description": "P044: exact P036 anatomical mirror224 cell only on scored P041 Reader baseline. Other8of9 science cells, old class weights/A224=.35, Reader3 end-mode and7Inputs fixed. Current artificial CPU/CUDA mirror and4decoder QA passed; parent36FP32/final36FP64 separately verified. No R7/Gaussian/new ownGold fit/select; upstream exposure inherited.",
+    "fileName": "submission.csv",
+    "publicScore": "0.958",
+    "status": "COMPLETE",
+    "submittedBy": "rsraki",
+    "submittedByRef": "rsraki",
+    "teamName": "rsraki",
+    "url": "/submissions/57420634/57420634.raw"
+  },
+  "raw_owned_Get": {
+    "path": "artifacts/research/20261020-P044-root-formal-submit-v1/poll-20261020T093031921510Z/owned-Get-57420634.json",
+    "bytes": 608,
+    "sha256": "bdc00b917191e6e30b289e00108168efe0d8ac14f93f7a3f047c091f364d1079"
+  },
+  "same_ref_List_version_binding": {
+    "ref": 57420634,
+    "totalBytes": 0,
+    "date": "2026-10-20T03:45:28.910Z",
+    "description": "P044: exact P036 anatomical mirror224 cell only on scored P041 Reader baseline. Other8of9 science cells, old class weights/A224=.35, Reader3 end-mode and7Inputs fixed. Current artificial CPU/CUDA mirror and4decoder QA passed; parent36FP32/final36FP64 separately verified. No R7/Gaussian/new ownGold fit/select; upstream exposure inherited.",
+    "fileName": "submission.csv",
+    "submittedBy": "rsraki",
+    "submittedByRef": "rsraki",
+    "teamName": "rsraki",
+    "url": "/code/rsraki/p044-reader-mirror-20261020-v1?scriptVersionId=360266199"
+  },
+  "list_version_binding_path": "artifacts/research/20261020-P045-v2-root-formal-submit-v1/after-Submit-full-own-list-raw.json",
+  "decision": "No newbest evidence; preserve simpler P033958. Display tie is not proof of exact hidden equality. Continue P045 pending and R6 paired weak probe.",
+  "best_own_Public": "0.958",
+  "goal959_achieved": false,
+  "P045_pending_ref": 57430729,
+  "limits_latest": {
+    "numToday": 3,
+    "numTotal": 43,
+    "numAllowedNow": 2
+  },
+  "local_GPU19472_preserved": true
+}

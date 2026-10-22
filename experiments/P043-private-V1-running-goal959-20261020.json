@@ -1,0 +1,47 @@
+{
+  "at_UTC": "2026-10-20T03:03:13.630619+00:00",
+  "status": "VISIBLE_RUNNING_FORMAL_NOT_SUBMITTED_TARGET959_UNMET",
+  "candidate": "P043",
+  "ref": "rsraki/p043-gauss-rank-20261020-v3",
+  "kernelId": 139726098,
+  "saved_version": 1,
+  "source": {
+    "path": "artifacts/kaggle/p043-gauss-rank-20261020-v3/source.ipynb",
+    "bytes": 183351,
+    "SHA": "98b7fc856bd1e69d34239e2e8a6a9ab2a443956ac8b604730ee55d5db3d7a926"
+  },
+  "root_review": {
+    "path": "artifacts/research/20261020-P043-root-visible-execution-v1/root-prelaunch-review.json",
+    "bytes": 3247,
+    "SHA": "dac3d3599a0a9da3e4b02214a6861240183694e9c8329099f0d8f0382eb83788"
+  },
+  "official_acceptance_readback": {
+    "path": "artifacts/research/20261020-P043-root-visible-execution-v1/accepted-reconciliation-v2.json",
+    "bytes": 1506,
+    "SHA": "17a6b500657dab9362324cf58b6d90fcef3fac3bc8703e95fe456ac78129c585"
+  },
+  "factor": "Hazen normal score pooling of three original branches, same fixed weights, failure-row parent strings preserved",
+  "parent8source_byte_exact": true,
+  "parent_attribution_markdown_preserved": true,
+  "same4Input_refs_private_offline_T4_Docker": true,
+  "actual_model_MRI_work": "Only Kaggle visible inference running; no local model/MRI download or newlocal GPU work",
+  "best_own_Public": "0.958",
+  "own_P043_Public": null,
+  "goal_at_least0959_achieved": false,
+  "manual_Save_calls": 1,
+  "formal_Submit_calls": 0,
+  "latest_limits": {
+    "numToday": 0,
+    "numTotal": 40,
+    "numAllowedNow": 5
+  },
+  "tests": {
+    "stdlib_unittest": 11,
+    "ruff": "PASS",
+    "prior_actual3CSV_replay": "36parent +36normalpool FP32 bits verified by separate erfc/bisection oracle; same author; not new P043 execution/accuracy qualification"
+  },
+  "notes": "Server accepted once; /code/ prefix in returnedref caused local postcondition stop and was reconciled with actual currentV1source/status. No resave.",
+  "localGPU": "User explicitly preserves PID19472, training waits for availability",
+  "next": "Read-only specific V1 status; after COMPLETE acquire all named current-run smalloutputs and numerical/provenance audit, then root manual formal Submit if qualified. Continue until ownofficial>=959.",
+  "auto_upload_or_Submit_code_added": false
+}

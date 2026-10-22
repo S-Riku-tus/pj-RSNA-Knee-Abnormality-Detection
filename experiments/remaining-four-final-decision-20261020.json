@@ -1,0 +1,226 @@
+{
+  "schema": "authorized_four_final_root_adoption_decision_v1",
+  "at_UTC": "2026-10-19T22:23:29.826218+00:00",
+  "scope_completed": "All four authorized manual submissions and their official final scores are complete. The requested score improvement remains unmet.",
+  "results": [
+    {
+      "candidate": "P038",
+      "ref": 57391696,
+      "status": "COMPLETE",
+      "own_official_Public": "0.957",
+      "saved_kernel_id": 139163240,
+      "saved_version": 1,
+      "server_scriptVersionId_observed_in_same_ref_official_List": 359238727,
+      "source_ref": "rsraki/p038-helios-v6-fixed-20261017-v3",
+      "factor": "Adapted author V6 combined recipe: altered class vector plus Reader",
+      "displayed_delta_vs_prior": "-0.001",
+      "decision": "Do not adopt",
+      "source": {
+        "path": "artifacts/kaggle/p038-helios-v6-fixed-recipe-20261017-v3/source.ipynb",
+        "bytes": 198738,
+        "sha256": "9e3669dd1542f0cde2457fcc9b54ccb4bac013832583c26f93b88711f1a87370"
+      },
+      "terminal_raw": {
+        "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T145652734112Z/P03857391696.json",
+        "bytes": 615,
+        "sha256": "e3abf54db4a0fa6579f85fda09ba4eb99db7122d1e8c5069a93d9a4c5a318c41"
+      }
+    },
+    {
+      "candidate": "P040",
+      "ref": 57402883,
+      "status": "COMPLETE",
+      "own_official_Public": "0.957",
+      "saved_kernel_id": 139586868,
+      "saved_version": 1,
+      "server_scriptVersionId_observed_in_same_ref_official_List": 360007491,
+      "source_ref": "rsraki/p040-p033-vector-20261019-v1",
+      "factor": "Only four class-vector values changed as one factor on P033",
+      "displayed_delta_vs_prior": "-0.001",
+      "decision": "Do not adopt",
+      "source": {
+        "path": "artifacts/kaggle/p040-p033-vector-20261019-v1/source.ipynb",
+        "bytes": 177551,
+        "sha256": "8a76e6709a078289dae0c0b4d964aced9fe6ed98c50ecf6aec0489e28b44db8c"
+      },
+      "terminal_raw": {
+        "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T213032880522Z/P040-submission-57402883.json",
+        "bytes": 575,
+        "sha256": "72be5185d6ae984c119a6a40a4485842ee03f037ba6b555642c185b0de7adef9"
+      }
+    },
+    {
+      "candidate": "P041",
+      "ref": 57402914,
+      "status": "COMPLETE",
+      "own_official_Public": "0.958",
+      "saved_kernel_id": 139586937,
+      "saved_version": 1,
+      "server_scriptVersionId_observed_in_same_ref_official_List": 360007627,
+      "source_ref": "rsraki/p041-p033-reader-20261019-v1",
+      "factor": "Only fixed Reader contribution added to original P033",
+      "displayed_delta_vs_prior": "0.000",
+      "decision": "Preserve display tie; do not replace baseline",
+      "source": {
+        "path": "artifacts/kaggle/p041-p033-reader-20261019-v1/source.ipynb",
+        "bytes": 207179,
+        "sha256": "0c06b802d34d6cee85b5156fb30ae1b20f7b09c747550639c40547e2ad1e5c7a"
+      },
+      "terminal_raw": {
+        "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T221803751143Z/P041-submission-57402914.json",
+        "bytes": 589,
+        "sha256": "cacbeef384351a5243462f8fb37056e392d4e87c755dcdad15aa5812f2d62f9d"
+      }
+    },
+    {
+      "candidate": "P042",
+      "ref": 57403458,
+      "status": "COMPLETE",
+      "own_official_Public": "0.957",
+      "saved_kernel_id": 139595447,
+      "saved_version": 1,
+      "server_scriptVersionId_observed_in_same_ref_official_List": 360127421,
+      "source_ref": "rsraki/p042-rank-rr-20261019-v1",
+      "factor": "Only intermediate Raptor-half percentile rerank before original outer fusion",
+      "displayed_delta_vs_prior": "-0.001",
+      "decision": "Do not adopt",
+      "source": {
+        "path": "artifacts/kaggle/p042-rank-rr-20261019-v1/source.ipynb",
+        "bytes": 176927,
+        "sha256": "92b1b13935540b5737b92b3ba927194aab419b3513ef01e907c1c7411823f3d3"
+      },
+      "terminal_raw": {
+        "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T221131667518Z/P042-submission-57403458.json",
+        "bytes": 616,
+        "sha256": "7d9d7c9c6b25680dd70db57811959fe5fa1480e5e68b03add1915d059574d3db"
+      }
+    }
+  ],
+  "accepted_additional_of_four": 4,
+  "remaining_user_formal": 0,
+  "pending_results": 0,
+  "no_new_submission_after_daily_reset": true,
+  "baseline": {
+    "candidate": "P033",
+    "ref": 57290868,
+    "own_official_Public": "0.958",
+    "source": {
+      "path": "artifacts/kaggle/p033-p029m-public958-weights-20261016-v1/source.ipynb",
+      "bytes": 620839,
+      "sha256": "57284b71d271c3d4bf09595a6acade490ea911c8f7438a595724f260f3f28ccb"
+    },
+    "binding": {
+      "path": "experiments/p033-official958-ownbest-20261017.json",
+      "bytes": 9883,
+      "sha256": "44fe2bc11e19aa21e6dfb401b3c3034b5f43c432e301c3f2752b118a5f0ce7f4"
+    }
+  },
+  "best_of_four": "0.958",
+  "best_after_four": "0.958",
+  "displayed_gain_over_prior": "0.000",
+  "target_at_least0959_achieved": false,
+  "target_strictly_above0960_achieved": false,
+  "adopted_new_candidates": [],
+  "incumbent_retained": "P033 original958; preserve existing958 submissions and P041 tie artifacts",
+  "decision_rule": {
+    "path": "artifacts/research/20261020-four-results-prospective-interpretation-v1/declaration.json",
+    "bytes": 2702,
+    "sha256": "f59f76e32f9153b88998567c2a501165676129bb5c0b7f6e0b29afdff03d9fbd"
+  },
+  "rule_applied_without_posthoc_amendment": true,
+  "official_four_results": {
+    "path": "experiments/remaining-four-all-official-terminal-independent-20261020.json",
+    "bytes": 11589,
+    "sha256": "3949082ff7045be23700959a8c232e205842d37566715df63eec1f26446041ba"
+  },
+  "observer_stopped": {
+    "path": "artifacts/research/20261020-final-four-official-terminal-independent-v1/observer-stopped.json",
+    "bytes": 1571,
+    "sha256": "94c03574d96303bfade9b2c42fc731838d5e0bbfb3bef9936f1efa4f6fcaac34"
+  },
+  "independent_root_peers": {
+    "P040": {
+      "path": "artifacts/research/20261020-p040-terminal-root-peer-review-v1/review.json",
+      "bytes": 12344,
+      "sha256": "79652a6d9324885f3233dc7351f7aab5538948af72fddf7ed826fb7755b1afc4"
+    },
+    "P041": {
+      "path": "artifacts/research/20261020-p041-terminal-root-peer-review-v1/review-v2.json",
+      "bytes": 16739,
+      "sha256": "12dfb11667f46bcee780640a6ce486747b4cad072bbd9f34ade8b7ff9fbb775b"
+    },
+    "P042": {
+      "path": "artifacts/research/20261020-p042-terminal-root-peer-review-v1/review.json",
+      "bytes": 7753,
+      "sha256": "9bbdf243ab995621576ee42f4364aaf13b38b741eadf31ea298e9d1157b0d4d5"
+    },
+    "interpretation": {
+      "path": "artifacts/research/20261020-all-four-terminal-prospective-interpretation-peer-v1/review-v2.json",
+      "bytes": 15674,
+      "sha256": "74244c81fa5904bb1bb3a9335b6d5a53a01b333000561bbd0651cfc7b114b6b8"
+    }
+  },
+  "interpretation": [
+    "P040 vector and P042 intermediate rerank lowered displayed ownPublic for these fixed recipes; neither is adopted.",
+    "P041 Reader tied the display. This demonstrates no displayed improvement, not exact unrounded equality, benefit, harm or universal ineffectiveness.",
+    "P038 author V6 reported958 remains distinct from own adapted957. P038/P040 equal957 does not isolate Reader effect or a clean factorial interaction.",
+    "Three-decimal leaderboard steps do not reveal how top teams improve; no assertion of a specific top-team method follows from the observed increments.",
+    "Visible three-UID arithmetic/provenance qualification does not estimate hidden accuracy, hidden model participation or full fallback rates.",
+    "Four adaptive Public comparisons with no matched clean parent OOF provide no independent significance test or error bar; do not infer hidden score digits."
+  ],
+  "public_research": {
+    "bounded_snapshot": {
+      "path": "artifacts/research/20261020-public-frontier-once-150346Z/summary.json",
+      "bytes": 992,
+      "sha256": "1fcedf5303d3927585508358af038384697916d004d5416fd175296811afa169"
+    },
+    "scope": "Official score-desc public top100 and known version-bound sources checked around2026-10-20T00:03JST; no usable reproduced above958 in this researched set, not a claim about every public notebook or future updates.",
+    "author958_vs_own957_binding": {
+      "path": "artifacts/research/20261020-p038-author-version-score-binding-readonly-v1/review.json",
+      "bytes": 10877,
+      "sha256": "62ceffc592eeb9f4798eed16dc4f8fa65a93c232c3d671615d471f04be5164d5"
+    }
+  },
+  "next_research_proposals_not_started": [
+    "Audit checkpoint/teacher training and selection UID/group coverage, Gold exposure and target lineage before claiming clean common heldout or parent OOF predictions; unknown coverage stays unknown.",
+    "On a prospectively fixed common nonGold group split, target order and missing-label mask, test one complementary information factor and incremental ensemble value across folds. Do not sweep Public blend coefficients from these four scores.",
+    "Before another long training commitment, predeclare effective-step/scale/finite diagnostics and any bounded matched complete-state AMP experiment. Do not use inference-only checkpoints as optimizer/scaler/RNG resumes."
+  ],
+  "F010": {
+    "canonical": {
+      "path": "experiments/F010-fixed12-final-engineering-HOLD-20261020.json",
+      "bytes": 2567,
+      "sha256": "859970709d6353c4c93b81443f8ed24f0321aba46696349af4a9a4da1f283561"
+    },
+    "completed_epochs": 12,
+    "updates": 2543,
+    "opportunities": 2544,
+    "AMPskips": 1,
+    "training_exit_code": 0,
+    "elapsed_seconds": 35697.59921,
+    "frozen_evaluator_calls": 1,
+    "frozen_evaluator_exit_code": 1,
+    "engineering_status": "HOLD on prospective zeroAMP gate; no primary efficacy comparison",
+    "model_quality_conclusion": null,
+    "release_adoption_fold1_consumer_eligible": false,
+    "no_skip_exception_earlyepoch_rescue_or_refit": true
+  },
+  "audit_boundaries": {
+    "own_Gold_fit_or_checkpoint_selection": 0,
+    "public_upstream_Gold_exposure": "Separately audited, not certified absent or erased by removing Gold rows",
+    "weak_Gold_Public": "Separate evidence",
+    "patient_independence": "Not established beyond supplied group/report split checks",
+    "missing_labels": "Masked, not zero",
+    "Input_versions": "Frozen requests plus actual content guards retained in provenance audits; normalized SavedGet refs alone do not prove mounted versions"
+  },
+  "operations": {
+    "automatic_upload_or_submit_code_added": false,
+    "root_manual_submissions_only": true,
+    "additional_API_after_all_terminal": 0,
+    "closeout_new_fit_or_GPU_start": 0,
+    "monitor_stopped": true,
+    "prior_artifacts_preserved": true,
+    "review_corrections": "P041 peer v2 corrects only auditor Input-order comparison; interpretation peer v2 fixes only a corrupted display field. No candidate/source/scientific changes."
+  },
+  "records": "PROJECT.md and docs/validation.md updated; append-only ledger checked by final root closure receipt."
+}

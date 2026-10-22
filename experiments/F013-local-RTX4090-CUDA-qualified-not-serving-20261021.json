@@ -1,0 +1,137 @@
+{
+  "schema_version": "F013_local_RTX4090_actual_artificial_CUDA_root_evidence_v1",
+  "at_UTC": "2026-10-21T03:02:46.029085+00:00",
+  "all_pass": true,
+  "checks": {
+    "local_policy_pin": true,
+    "driver_source_pin": true,
+    "original_GPU_helper_pin": true,
+    "inverse_AST_only_hardware_guard": true,
+    "actual_single_RTX4090": true,
+    "resource_free_before_bothfolds": true,
+    "bothfold_complete_fixedE12": true,
+    "fixed_checkpoint_files": true,
+    "original_class": true,
+    "full_native392_GPU_finite12": true,
+    "padding_bitexact": true,
+    "allmissing_refused": true,
+    "eval_gamma_global_CPU_CUDA_RNG_unchanged": true,
+    "all_strict_weights_preserved": true,
+    "same_fixed_CPU_reference_tolerance": true,
+    "all181_staged_bytes_preserved": true,
+    "no_MRI_Gold_Report_training_network_upload": true,
+    "old_HOLD_untouched": true,
+    "current_twoT4_gate_retained": true
+  },
+  "source_SHA": "9fa7baa0ee224396294a944edef319a6888e128a1daff8f0fe842fba382b9d43",
+  "GPU": "NVIDIA GeForce RTX 4090",
+  "kernelId": null,
+  "saved_version": null,
+  "local_result": {
+    "schema_version": "F013_local_RTX4090_actual_artificial_CUDA_v1",
+    "complete": true,
+    "policy_SHA": "5da3be045253c1d52582d42da669fa24b31767924c78b19b8581e33334fd57f4",
+    "source_SHA": "9fa7baa0ee224396294a944edef319a6888e128a1daff8f0fe842fba382b9d43",
+    "original_GPU_helper_SHA": "d55b4cf4bd3aec386d10251add5be29693b3be3eb0e7bf8a79f663dfcd6b3d75",
+    "only_one_hardware_guard_constant_changed_inverse_AST_exact": true,
+    "GPU": "NVIDIA GeForce RTX 4090",
+    "devices": 1,
+    "resources_before_each_fold": [
+      {
+        "GPU": "NVIDIA GeForce RTX 4090",
+        "free_MiB": 23255.0,
+        "used_MiB": 884.0,
+        "utilization_percent": 4.0
+      },
+      {
+        "GPU": "NVIDIA GeForce RTX 4090",
+        "free_MiB": 23324.0,
+        "used_MiB": 815.0,
+        "utilization_percent": 1.0
+      }
+    ],
+    "folds": [
+      {
+        "complete": true,
+        "fold": 0,
+        "epoch": 12,
+        "checkpoint_SHA": "16ff8220be0155779587f48705b161f2b789c2a1425367b94544a9daa21f2e63",
+        "frozen_prefix_SHA": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+        "class": "source14.finetune_model.NativeTripletMIL",
+        "GPU": "NVIDIA GeForce RTX 4090",
+        "Torch": "2.10.0+cu128",
+        "full_native392_forward_finite12": true,
+        "valid_triplets": 4,
+        "all3planes": true,
+        "padding_pixel_0_vs255_logits_bitexact": true,
+        "allmissing_rejected_beforeencoder": true,
+        "evalgamma_and_CPU_CUDA_RNG_unchanged": true,
+        "suffix_head_prefix_unchanged": true,
+        "CPUmanual_FP32_reference_probability_maxabs": 0.00012734532356262207,
+        "fixed_probability_tolerance": 0.005,
+        "MRI_Report_Gold_labels_training_reads": 0,
+        "original_F009_HOLD_unchanged": true,
+        "realMRI_or_finalfusion_qualified": false
+      },
+      {
+        "complete": true,
+        "fold": 1,
+        "epoch": 12,
+        "checkpoint_SHA": "6805bfa94b1356b71d474d6dd918518749a42dd08ed791d403aa4c256c3e4d78",
+        "frozen_prefix_SHA": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+        "class": "source14.finetune_model.NativeTripletMIL",
+        "GPU": "NVIDIA GeForce RTX 4090",
+        "Torch": "2.10.0+cu128",
+        "full_native392_forward_finite12": true,
+        "valid_triplets": 4,
+        "all3planes": true,
+        "padding_pixel_0_vs255_logits_bitexact": true,
+        "allmissing_rejected_beforeencoder": true,
+        "evalgamma_and_CPU_CUDA_RNG_unchanged": true,
+        "suffix_head_prefix_unchanged": true,
+        "CPUmanual_FP32_reference_probability_maxabs": 0.0004927217960357666,
+        "fixed_probability_tolerance": 0.005,
+        "MRI_Report_Gold_labels_training_reads": 0,
+        "original_F009_HOLD_unchanged": true,
+        "realMRI_or_finalfusion_qualified": false
+      }
+    ],
+    "all_181_staged_members_preserved": true,
+    "original_F009_HOLD_unchanged": true,
+    "MRI_Report_Gold_training_API_Save_Submit_upload": 0,
+    "Kaggle_T4_realMRI_fusion_or_Public_qualified": false,
+    "future_actual_current_8_models_twoT4_GPU_QA_still_required_before_nativeMRI": true
+  },
+  "evidence_files": {
+    "completion.json": {
+      "bytes": 3069,
+      "sha256": "f05a47669cacd44685c0a051335e220ce2ab0d532bee23a04ca4efc854d25fcc"
+    },
+    "fold0.json": {
+      "bytes": 884,
+      "sha256": "0db32f27a7715ee98f8102a5a0a2091290d1c7034809fec4cd9944f9f512112b"
+    },
+    "fold1.json": {
+      "bytes": 883,
+      "sha256": "0e7070e821fb4b1af217092936d777ca61f14980b223179b61a035de24fcbee8"
+    },
+    "fold0.stdout.txt": {
+      "bytes": 64,
+      "sha256": "af7609c2dc7c5f9ca27845924f9097cbf4de8cf6b5f603d2c09483636aa9df3a"
+    },
+    "fold1.stdout.txt": {
+      "bytes": 63,
+      "sha256": "6b404bed91080bf8a84c134d48ac374df385cdb66f2f6a151d6eea20590cb7bf"
+    },
+    "fold0.stderr.txt": {
+      "bytes": 1682,
+      "sha256": "8d0cfb288bc4f06f647bad4e17c6a9983786731fc81db85424fc2e4ae3e30921"
+    },
+    "fold1.stderr.txt": {
+      "bytes": 1682,
+      "sha256": "8d0cfb288bc4f06f647bad4e17c6a9983786731fc81db85424fc2e4ae3e30921"
+    }
+  },
+  "scope": "ActualRTX4090only; noKaggleT4/MRI/fusion/Publicclaim. Current8models2T4proofstillmandatory. Originalmasterallowslocalwhenfree.",
+  "MRI_Gold_Report_train_Save_Submit_upload": 0
+}

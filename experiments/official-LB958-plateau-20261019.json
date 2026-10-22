@@ -1,0 +1,81 @@
+{
+  "schema_version": "official_public_display958_plateau_v1",
+  "at_UTC": "2026-10-19T02:39:29.396510+00:00",
+  "read_rows": 1400,
+  "read_pages": 7,
+  "score_counts_in_read_rows": {
+    "0.969": 1,
+    "0.968": 3,
+    "0.967": 2,
+    "0.966": 6,
+    "0.965": 4,
+    "0.964": 7,
+    "0.963": 16,
+    "0.962": 22,
+    "0.961": 18,
+    "0.960": 35,
+    "0.959": 63,
+    "0.958": 1167,
+    "0.957": 56
+  },
+  "entire_958_plateau_observed": true,
+  "display958_first_rank": 178,
+  "display958_last_rank": 1344,
+  "teams_959_or_higher": 177,
+  "teams_960_or_higher": 114,
+  "teams_strict_above960": 79,
+  "zero_remote_writes": true,
+  "pagination_tokens_are_not_score_precision": true,
+  "exact_unrounded_scores_or_private_LB_not_inferred": true,
+  "receipts": [
+    {
+      "page": 1,
+      "http": 200,
+      "bytes": 22533,
+      "sha256": "d4a6e9b96fb9a885433c655b159f9f11dab5d1d2af2e9ca92bcefe9b7e5c025f",
+      "at_utc": "2026-10-19T02:39:27.010575+00:00"
+    },
+    {
+      "page": 2,
+      "http": 200,
+      "bytes": 22168,
+      "sha256": "db4112c4ab7f0484f8e11e6a399e601ca9bb18bce73c79d9368c5271e9b1c79a",
+      "at_utc": "2026-10-19T02:39:27.333223+00:00"
+    },
+    {
+      "page": 3,
+      "http": 200,
+      "bytes": 22089,
+      "sha256": "31c20f96a642aa8c570238635222990e7f02cb8cf2a39f681e8c1c3ca501debf",
+      "at_utc": "2026-10-19T02:39:27.643885+00:00"
+    },
+    {
+      "page": 4,
+      "http": 200,
+      "bytes": 22222,
+      "sha256": "6f2d9af2fd9cccc2f99d96c2dde90f3fa898fd28bcf07068026d86d7555b90fe",
+      "at_utc": "2026-10-19T02:39:27.962433+00:00"
+    },
+    {
+      "page": 5,
+      "http": 200,
+      "bytes": 22069,
+      "sha256": "b51e2467fdb62384b0b07025040d5680884defbd56ae4bd841602297977207c0",
+      "at_utc": "2026-10-19T02:39:28.278551+00:00"
+    },
+    {
+      "page": 6,
+      "http": 200,
+      "bytes": 22061,
+      "sha256": "e45a823984ff4aafc9f6cf460bfffff36cb629f4b348dc009ffb7583b586264e",
+      "at_utc": "2026-10-19T02:39:28.643890+00:00"
+    },
+    {
+      "page": 7,
+      "http": 200,
+      "bytes": 22088,
+      "sha256": "7e3dd84e4cb236f65da5f717993330ee5390bae100dabca3ef43487c75e312c9",
+      "at_utc": "2026-10-19T02:39:29.396510+00:00"
+    }
+  ]
+}

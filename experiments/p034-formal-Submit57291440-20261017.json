@@ -1,0 +1,51 @@
+{
+  "at_utc": "2026-10-17T02:11:50.406435+00:00",
+  "status": "P034_FORMAL_ACCEPTED_PUBLIC_PENDING",
+  "own_best": {
+    "submission": 57225898,
+    "Public": "0.957",
+    "preserved": true
+  },
+  "goal": "own Public>=0.960 not yet verified",
+  "P034": {
+    "submission": 57291440,
+    "kernel": 139135231,
+    "version": 1,
+    "source_sha256": "d1e6187ac3db5d5cf76eedb4b0df8ae9d1d6ed4e4b4a096f1cabb11882806d1b",
+    "visible_official_status": "COMPLETE",
+    "whole_visible_seconds": 499.4635864359999,
+    "native_child_seconds": 37.71443679499998,
+    "successful_studies": 3,
+    "structural_failures": 0,
+    "native_active_targets": 10,
+    "native_blended_cells": 30,
+    "final_cells_FP32_replayed": 36,
+    "numeric_changed_cells": 26,
+    "rank_changed_cells": 6,
+    "visible_final_SHA256": "cbb1351e91501caa53e45bae472595f0f36b3009e99a43ca820daad64f5b2831",
+    "visible_final_same_as_P032": true,
+    "same_complete_coverage_contract": "actual new partial branch only artificial tested; no MRI failure in visible",
+    "formal_score_status_fields_present": false,
+    "hidden_native_contribution_and_Public_verified": false
+  },
+  "one_factor": "P032 parent+F00620 unchanged except partial native failure contract; successful Nvalid ranks, failed exactparent, partialsingleton_constant disabled",
+  "same_models_89source_9Inputs": true,
+  "review": "artifacts\\research\\20261017-p034-formal-submit-v1\\review.json",
+  "accepted_raw": "artifacts\\research\\20261017-p034-formal-submit-v1\\submit-response-raw.json",
+  "independent_audit": "artifacts\\research\\20261017-p034-visible-independent-audit-v1\\actual-visible-audit-v1.json",
+  "independent_audit_sha256": "36ba0f0dfc15e1cee30252fc80f6607d1c7cd4cbf8ce6b3dd7b03509669b1bf9",
+  "P033": {
+    "submission": 57290868,
+    "Public": null,
+    "resubmitted": false
+  },
+  "P036": "kernel139135844/V1 RUNNING; 224 mirror only relative P033, not yet submitted",
+  "F009": "fold0 localtraining continues; fixed E12 weak comparison pending",
+  "official_limits_before_this_submit": {
+    "numToday": 1,
+    "numTotal": 31,
+    "numAllowedNow": 4
+  },
+  "new_manual_Submit_calls": 1,
+  "no_new_accuracy_claim": true
+}

@@ -1,0 +1,313 @@
+{
+  "schema_version": "F009_fold1_fixed12_joint_screen_known_control_AMP_premetric_amendment_v2",
+  "declared_at_UTC": "2026-10-17T07:58:35.123611+00:00",
+  "status": "DECLARED_AFTER_FIT_START_BEFORE_FIRST_RECORDED_OR_OBSERVED_CANDIDATE_FOLD1_METRIC",
+  "change_timing": {
+    "after_fold0_result": true,
+    "after_fold1_fit_start": true,
+    "before_first_fold1_recorded_metric": true,
+    "candidate_fold1_metric_read": false,
+    "fully_prefit_preregistration": false
+  },
+  "reason": "Immutable historical control has exactly one recorded protective AMP skip at E10, so original both-arms-zero v1 screen must remain HOLD. Declare only this exact engineering exception before candidate fold1 metrics, retaining original science.",
+  "original_policy_immutable": {
+    "path": "experiments/f009-fold1-fixed12-joint-screen-prospective-20261017.json",
+    "bytes": 6414,
+    "sha256": "9f42cd771db3f6bac92d275769636a451d3ef4dacd35e245a53d888c17ec2420"
+  },
+  "original_evaluator_immutable": {
+    "path": "artifacts/research/20261017-f009-fold1-fixed12-evaluator-preparation-v1/evaluate_fold1.py",
+    "bytes": 22307,
+    "sha256": "c8e244461dbf45be68fff13328f2a774df1fbf5ed69e8c109ee84b0f421e352c"
+  },
+  "original_policy_screen_status": "HOLD_BY_KNOWN_HISTORICAL_CONTROL_SKIP_IRRESPECTIVE_OF_CANDIDATE_PERFORMANCE",
+  "procedural_failure_record": {
+    "path": "artifacts/research/20261017-f009-fold1-execution-v1/start-record-check-failure-and-observed-launch.json",
+    "bytes": 2893,
+    "sha256": "645441b31496a8a5d9d8ddfba4107888bbf8f622691c07a580c478e2ea0d0f5a"
+  },
+  "fold0_primary_result": {
+    "path": "artifacts/research/20261017-f009-fixed12-guarded-result-v1/comparison-v2.json",
+    "bytes": 8852,
+    "sha256": "267df283dc9454f3306b12f040de375511c679d59a25bd9dc31b62c8112bf5ce"
+  },
+  "fold0_guard": {
+    "path": "artifacts/research/20261017-f009-fixed12-guarded-result-v1/guard-receipt.json",
+    "bytes": 7031,
+    "sha256": "c6a7b623d90994ac59ba7c1665fccdff85d8c62206235011d5a2555e05987120"
+  },
+  "fold0_policy_immutable": {
+    "path": "experiments/f009-evaluation-policy-v2-prescore-20261017.json",
+    "bytes": 9505,
+    "sha256": "de5a6aa743d2d663f98244322958bf4b8154908238384112a7badf2df1e2d42c"
+  },
+  "candidate_epoch0_snapshot": {
+    "path": "artifacts/research/20261017-f009-fold1-premetric-amendment-v2/current-fold1-run-epoch0-snapshot.json",
+    "bytes": 60029,
+    "sha256": "9ebb83ba5df1b708f73f0097781a50c0c0d814bdbc36cd273ddb927bfe974e70"
+  },
+  "actual_training_session": 43236,
+  "new_run": "artifacts/runs/f009-gamma-late-cosine-fold1-20261017-v1",
+  "training_unchanged": {
+    "config": {
+      "path": "configs/experiments/f009-dinov2-native-last2-late-cosine-study-gamma.json",
+      "bytes": 1699,
+      "sha256": "1a0a1d396660c6e326fd0f78962867b8243a3ac0e9b87fe2bb98dbea5f59297f"
+    },
+    "fold": 1,
+    "seed": 20261002,
+    "epochs": 12,
+    "unconditional_primary_checkpoint": "epoch_012.pt",
+    "primary_predictions": "epoch_012_weak.csv",
+    "best_BCE_auxiliary_only": true,
+    "train": 3316,
+    "validation": 891,
+    "cache": 4207,
+    "supplied_report_group_overlap": 0,
+    "augmentation": "unchanged study-common gamma U[0.85,1.15], training-only, dedicated CPU generator; disabled at val/inference",
+    "new_source_config_or_hyperparameter_changes": false
+  },
+  "immutable_historical_control": {
+    "run": {
+      "path": "artifacts/runs/f006-late-cosine-fold1-20261012-v1/run.json",
+      "bytes": 97729,
+      "sha256": "ee7f7a8326e578c6a46fae0fa6b488e74208ac679a474fc73775667bcc362261"
+    },
+    "retention_index": {
+      "path": "artifacts/runs/f006-late-cosine-fold1-20261012-v1/epoch_checkpoint_index.json",
+      "bytes": 40927,
+      "sha256": "b06ac7e36b918f72b9736fedf153bd5b5c1dbb1a5135f478eb30fd47532285a2"
+    },
+    "epoch12_predictions": {
+      "path": "artifacts/runs/f006-late-cosine-fold1-20261012-v1/epoch_012_weak.csv",
+      "bytes": 275385,
+      "sha256": "7c052b7f16a86c9f8ee3bf0ef5f2807057acc7677f050e1337eac74b91274e7c"
+    },
+    "checkpoint_sha_source": "Exact epoch12 entry in frozen retention index; actual file body hash is verified at completed-comparison guard, not loaded for this declaration.",
+    "no_fold0_or_other_trained_onfold1_models": true
+  },
+  "required_control_history": [
+    {
+      "epoch": 1,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 2,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 3,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 4,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 5,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 6,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 7,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 8,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 9,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 10,
+      "optimizer_steps": 207,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 1
+    },
+    {
+      "epoch": 11,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 12,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    }
+  ],
+  "required_control_totals": {
+    "optimizer_steps": 2495,
+    "optimizer_step_opportunities": 2496,
+    "amp_skipped_steps": 1
+  },
+  "required_candidate_history": [
+    {
+      "epoch": 1,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 2,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 3,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 4,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 5,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 6,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 7,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 8,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 9,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 10,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 11,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    },
+    {
+      "epoch": 12,
+      "optimizer_steps": 208,
+      "optimizer_step_opportunities": 208,
+      "amp_skipped_steps": 0
+    }
+  ],
+  "required_candidate_totals": {
+    "optimizer_steps": 2496,
+    "optimizer_step_opportunities": 2496,
+    "amp_skipped_steps": 0
+  },
+  "only_exception": "Allow exactly pinned historical control ee7f7a8326e578c6a46fae0fa6b488e74208ac679a474fc73775667bcc362261 E10 207/208/1; no other control or candidate exception.",
+  "retained_engineering_guards": [
+    "All old source/config/cache/manifest/group/UID guards",
+    "Both completed fixed E12 and retained checkpoint stream-body hashes",
+    "Exact finite predictions and original observed-or-missing weak masks",
+    "Finite recorded training and validation loss scalars",
+    "Exact per-epoch and total update/opportunity/skip accounting",
+    "Candidate must have zero skipped steps in all12 epochs"
+  ],
+  "AMP_interpretation": "GradScaler can protect parameters by omitting a step for non-finite gradients; this does not prove the underlying overflow cause or complete tensor health. Preserve checkpoint integrity and actual inference qualification separately.",
+  "scientific_evaluation_unchanged": {
+    "fold": 1,
+    "original_UIDs": 891,
+    "labels": "original same weak fold1 per-target observed0/1-or-missing mask; preserve missing, no zero fill or complete-case filtering",
+    "fixed10": [
+      "ACL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ],
+    "primary": "Same unchanged v2 paired AUC math: unweighted mean of all ten defined per-target candidateE12-minus-controlE12 AUCs on exactly same891 rows/observed masks",
+    "source_math": "Reuse exact v2 fixed_mean/paired/weighted_auc formulas; any fold1 engineering adapter must be source-pinned and checked before first fold1 metric.",
+    "engineering": "completed1..12, fixed fold1/seed/config/source/cache/manifest; retained E12 checkpoint/index and finite predictions, exact891 UID set, zero AMPskip and no unexplained optimizer/integrity issues",
+    "report_only": [
+      "per-target/all12 support/AUC",
+      "weak BCE",
+      "paired supplied-group bootstrap1000 seed20261012 and95%CI",
+      "same fixedREG50 mixture diagnostic from v2 remains planned; existing v2 source does not yet implement this diagnostic"
+    ],
+    "BCE_CI_significance_thresholds_used_for_adoption": false,
+    "Gold_Report_Public_selection_or_new_metric_read_this_declaration": false
+  },
+  "joint_candidate_screen": {
+    "required": "Original fixed fold0 and original fixed fold1 fixed10 E12 paired AUC deltas must EACH be strictly positive; both candidate engineering checks pass and historical-control exact exception holds. Undefined/nonpositive in either => HOLD.",
+    "no_pool_or_favorable_fold_override": true,
+    "BCE_CI_REG50_report_only": true,
+    "fixed_epoch_seed_gamma_targets_alpha_unchanged": true
+  },
+  "evaluation_implementation_requirement": {
+    "unchanged_v1_guards_and_compare_called_once": true,
+    "preserve_original_v1_guard_and_comparison_as_HOLD": true,
+    "separate_v2_receipt_and_result_required": true,
+    "no_monkeypatch_or_legacy_metadata_mutation": true,
+    "no_new_target_or_checkpoint_selection": true
+  },
+  "consumer_compatibility": {
+    "legacy_v1_CPU_producer_sealer_transport_may_accept_v2": false,
+    "new_consumers_require_independent_source_bound_review": true,
+    "stage_model_adoption_or_Public_qualified": false
+  },
+  "limits": [
+    "Amendment after fold0 result and fold1 fit start, before fold1 first metric; not fully prefit preregistration.",
+    "Control has2495 actual updates versus required candidate2496; do not claim exact update-count parity.",
+    "Repeated weak holdouts with historical selection, patient independence unverified, no Gold fitting/selection.",
+    "Positive weak screen does not establish own Public gain or .960 achievement."
+  ],
+  "automation": {
+    "new_fit_or_Save_or_Submit_triggered_by_policy": false,
+    "existing_policy_evaluator_results_modified": false
+  }
+}

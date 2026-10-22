@@ -1,0 +1,232 @@
+{
+  "schema_version": "D001_complete_D002_v2_accepted_F010_E4_canonical_bundle_v1",
+  "recorded_at_UTC": "2026-10-19T13:05:16.836064+00:00",
+  "status": "D001_MINIMAL_CPU_COMPLETE_D002_V2_ACCEPTED_MARKER_PENDING_F010_E4_RUNNING",
+  "D001": {
+    "canonical": {
+      "path": "experiments/D001-private-cpu-input-diagnostic-complete-20261019.json",
+      "bytes": 2065,
+      "sha256": "30bf2e3e74a7b45bede36fdcccbbcb55cad3de5143788912f670c4d652d2b8b9"
+    },
+    "independent_complete_peer": {
+      "path": "artifacts/research/20261019-d001-cpu-complete-independent-v1/review.json",
+      "bytes": 4673,
+      "sha256": "2b6c190fe06f781fe23db5c57c327af4a14ac07ece0c3e1823953aba23577219"
+    },
+    "ref": "rsraki/d001-rsna-inputs-cpu-20261019-v1",
+    "kernel_id": 139613277,
+    "version": 1,
+    "official_status": "COMPLETE",
+    "marker": {
+      "path": "artifacts/research/20261019-d001-root-private-cpu-execution-v1/diagnostic-output-read-v1/D001-diagnostic.json",
+      "bytes": 432,
+      "sha256": "29d1aa0fe6f26744c3252c94ccea8dbc2c8788c9abf930681921cd3d35d4926d"
+    },
+    "marker_time_UTC": "2026-10-19T12:46:40.948937+00:00",
+    "marker_time_JST": "2026-10-19T21:46:40.948937+09:00",
+    "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "input_top_level_names": [
+      "competitions",
+      "datasets",
+      "notebooks"
+    ],
+    "MRI_decodes": 0,
+    "Report_reads": 0,
+    "model_loads": 0,
+    "training_steps": 0,
+    "manual_CPU_Save_calls": 1,
+    "formal_Submit_calls": 0,
+    "qualified_scope": "Minimal private CPU startup, immediate Input root category names and a small returned output only.",
+    "GPU_model_Input_content_versionIDs_accuracy_or_competition_score_qualified": false,
+    "GPU_queue_cause_established": false
+  },
+  "D002_v2": {
+    "observation_at_UTC": "2026-10-19T13:03:42.668905+00:00",
+    "ref": "rsraki/d002-rsna-stage-cpu-20261019-v2",
+    "kernel_id": 139616178,
+    "version": 1,
+    "status": "ACCEPTED_QUEUED_ACTUAL_MARKER_PENDING",
+    "typed_first_status": "KernelWorkerStatus.QUEUED",
+    "raw_status_JSON_empty_enum_omitted": true,
+    "request_source": {
+      "path": "artifacts/kaggle/d002-rsna-stage-cpu-20261019-v2/source.ipynb",
+      "bytes": 10605,
+      "sha256": "64c481f23f4bbe9524752b3cb954f83cacdc5fae94c3ecbe9ce403df1214647c"
+    },
+    "request_payload": {
+      "path": "artifacts/kaggle/d002-rsna-stage-cpu-20261019-v2/save-payload.json",
+      "bytes": 11965,
+      "sha256": "c8163192f9ddf79d40e5fd336a370b95d5a0f9f581738d6a9912e01dc2777a8d"
+    },
+    "request_payload_text_SHA256": "64c481f23f4bbe9524752b3cb954f83cacdc5fae94c3ecbe9ce403df1214647c",
+    "manifest": {
+      "path": "artifacts/kaggle/d002-rsna-stage-cpu-20261019-v2/manifest.json",
+      "bytes": 5602,
+      "sha256": "fd266fea371600945f89f97ed300a7b588e952b946cd190db7e7bdbe11ae67d7"
+    },
+    "independent_source_peer": {
+      "path": "artifacts/research/20261019-d002-independent-source-review-v2/review.json",
+      "bytes": 2360,
+      "sha256": "7d8e47e6c607ecab8355d5ca32d8c158bc030537c63b67ee068b865dd416a491"
+    },
+    "saved_notebook_JSON_and_code_cell_exact": true,
+    "remote_source_serialization": "Kaggle blob JSON is compact; parsed notebook and cell strings match requested source exactly; byte SHA of JSON representation is not treated as identical.",
+    "private": true,
+    "GPU": false,
+    "TPU": false,
+    "internet": false,
+    "machine_shape_request_present": false,
+    "readback_machineShape": "None",
+    "P040_same_Input4_reference_sets": true,
+    "requested_dataset_refs": [
+      "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+      "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1"
+    ],
+    "requested_kernel_refs": [
+      "rsraki/p029-r6v1-stage-20261015-b2/1"
+    ],
+    "requested_competition_refs": [
+      "rsna-knee-abnormality-detection"
+    ],
+    "saved_Input_refs_versionless_match": true,
+    "mounted_Input_content_and_actual_version_IDs_qualified": false,
+    "original_Docker_requested_and_digest_readback_exact": true,
+    "docker_image": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+    "docker_image_pinning_type": "original",
+    "guard_source_SHA256": "411e9598b806757de14adf8de6e586eae3209c0460797f8e24eeb65fdf960536",
+    "guard_source_bytes": 3058,
+    "guard_unchanged": true,
+    "pre_dispatch_enum_error": {
+      "manual_Save_calls": 0,
+      "formal_Submit_calls": 0,
+      "classification": "Local enum error before Save dispatch, as reported by root; not an API admission attempt or auto-review rejection."
+    },
+    "actual_manual_Save_calls": 1,
+    "accepted_kernel_versions": 1,
+    "formal_Submit_calls": 0,
+    "actual_marker_pending": true,
+    "official_COMPLETE_verified": false,
+    "valid_diagnostic_marker_verified": false,
+    "error_marker_absence_verified": false,
+    "qualification_all_required": [
+      "Exact owner/slug/V1 official COMPLETE",
+      "Valid matching D002-diagnostic.json, guard source and nine-member facts",
+      "D002-error.json absent"
+    ],
+    "cleanup_failure_qualified": false,
+    "stdout_alone_qualified": false,
+    "GPU_model_whole_Input_or_accuracy_qualified": false,
+    "receipt_SHA_and_bytes_verified": true,
+    "root_evidence": {
+      "summary.json": {
+        "path": "artifacts/research/20261019-d002-root-private-cpu-execution-v2/summary.json",
+        "bytes": 403,
+        "sha256": "75445216d497769a8e9aabe561060c3cacdbf4a9ffbbcffd932dd3494ba487d2"
+      },
+      "root-prelaunch-review.json": {
+        "path": "artifacts/research/20261019-d002-root-private-cpu-execution-v2/root-prelaunch-review.json",
+        "bytes": 1420,
+        "sha256": "f0b1ebbca181968f7fd9a2b9a147120e8d1251d960d05e199c3ebcaa8af2fecd"
+      },
+      "manual-save-dispatch.json": {
+        "path": "artifacts/research/20261019-d002-root-private-cpu-execution-v2/manual-save-dispatch.json",
+        "bytes": 362,
+        "sha256": "887443123c2105bc6720d782068e907fa16f7423c33c29f088da64b86131bb4f"
+      },
+      "receipts.json": {
+        "path": "artifacts/research/20261019-d002-root-private-cpu-execution-v2/receipts.json",
+        "bytes": 1068,
+        "sha256": "2ed960c4161269aa914556de920531b144a0169863cfe1e5ea4c3801079505c5"
+      },
+      "save-response-raw.json": {
+        "path": "artifacts/research/20261019-d002-root-private-cpu-execution-v2/save-response-raw.json",
+        "bytes": 168,
+        "sha256": "af826f959dcc6690e37bdb0e6f98249354183dcb8a20217c3892c64feb4f1c9d"
+      },
+      "saved-get-raw.json": {
+        "path": "artifacts/research/20261019-d002-root-private-cpu-execution-v2/saved-get-raw.json",
+        "bytes": 13551,
+        "sha256": "3460a57726cfccdf6c14663f962cdef48f67fb68e59674ccf643f17f986d30ea"
+      },
+      "status-first-raw.json": {
+        "path": "artifacts/research/20261019-d002-root-private-cpu-execution-v2/status-first-raw.json",
+        "bytes": 2,
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    }
+  },
+  "F010_E4": {
+    "snapshot": {
+      "path": "artifacts/research/20261019-f010-counter-liveness-observation-v2/summary.json",
+      "bytes": 2644,
+      "sha256": "f5341f42fda03e52ae967a8b8d8f8942a4246fb5d2b7e15c8c44f7b076fdae09"
+    },
+    "observation_at_UTC": "2026-10-19T13:02:52.749468+00:00",
+    "run": "artifacts/runs/f010-last4-late-cosine-fold0-20261019-v1",
+    "status_at_observation": "running",
+    "completed_epochs": 4,
+    "counters": [
+      {
+        "epoch": 1,
+        "optimizer_steps": 212,
+        "optimizer_step_opportunities": 212,
+        "amp_skipped_steps": 0,
+        "elapsed_seconds": 2616.4480677999672
+      },
+      {
+        "epoch": 2,
+        "optimizer_steps": 212,
+        "optimizer_step_opportunities": 212,
+        "amp_skipped_steps": 0,
+        "elapsed_seconds": 5659.885674499965
+      },
+      {
+        "epoch": 3,
+        "optimizer_steps": 212,
+        "optimizer_step_opportunities": 212,
+        "amp_skipped_steps": 0,
+        "elapsed_seconds": 8721.085379599943
+      },
+      {
+        "epoch": 4,
+        "optimizer_steps": 212,
+        "optimizer_step_opportunities": 212,
+        "amp_skipped_steps": 0,
+        "elapsed_seconds": 11766.899680199975
+      }
+    ],
+    "optimizer_steps": 848,
+    "optimizer_step_opportunities": 848,
+    "AMP_skipped_steps": 0,
+    "wall_elapsed_since_manual_launch_seconds": 11826.14065,
+    "training_PID_present": true,
+    "launcher_PID_present": true,
+    "GPU_counter_snapshot": {
+      "name": "NVIDIA GeForce RTX 4090",
+      "utilization_percent": 83,
+      "memory_used_MiB": 6543,
+      "memory_total_MiB": 24564
+    },
+    "intermediate_AUC_or_metrics_used": false,
+    "checkpoint_selection_or_evaluation_or_training_stop": false,
+    "fixed_E12_gate_F009_HOLD_and_old_waiter_unchanged": true,
+    "snapshot_only_no_long_term_watcher": true
+  },
+  "formal_submission_budget": {
+    "remaining": 3,
+    "basis": "Root observed state at this task; D001/D002 private diagnostic Saves consume no competition formal Submit in these records.",
+    "new_formal_Submit_calls_for_this_bundle": 0,
+    "P040_P041_queues_and_P042_capacity_hold_preserved": true
+  },
+  "reviewer_activity": {
+    "local_file_evidence_only": true,
+    "new_API_Save_Submit_download_training_stop_tests": 0,
+    "shared_README_PROJECT_docs_ledger_edited": false
+  },
+  "prior_canonical_and_artifacts_preserved": true,
+  "bundle_independent_local_review": {
+    "path": "artifacts/research/20261019-d001-complete-d002v2-accepted-f010e4-bundle-v1/review.json",
+    "bytes": 884,
+    "sha256": "ff8b223098ebf20599428355cb113e5d57de30ad3f2988f47faf88f5862cf4d7"
+  }
+}

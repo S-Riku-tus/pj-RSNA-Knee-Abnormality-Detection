@@ -160,9 +160,85 @@ def diagnostic_fixture(plan, work, count, *, temporary_root=None):
     return root.parent, baseline, remove_fixture
 
 
+def execute_native_router(args, active, plan, router, *, task_source_sha256, started):
+    """Opt-in operational wrapper; default calls the original router directly."""
+    if getattr(args, "native_executor", "legacy-pool") == "legacy-pool":
+        return router.execute(active, plan, started)
+    require(args.native_executor == "isolated-uid", "Unknown native executor")
+    from p032blend.operational_uid_recovery import execute_router_with_operational_recovery
+
+    return execute_router_with_operational_recovery(
+        router, active, plan, started, task_source_sha256=task_source_sha256, uid_deadline_seconds=180.0)
+
+
+def emit_native_adapter(args, result, work, io, pair, spawn_router, *, started):
+    """Separate typed operational failures, preserving the legacy output branch."""
+    import time
+
+    isolated = getattr(args, "native_executor", "legacy-pool") == "isolated-uid"
+    if isolated:
+        from p032blend.operational_uid_recovery import RESULT_SCHEMA, write_native_projection
+
+        require(result.get("schema_version") == RESULT_SCHEMA and result.get("complete") is True
+                and result.get("operational_recovery_contract_passed") is True,
+                "New operational native execution did not complete its own contract")
+        projection = write_native_projection(result, work / "isolated-uid-projection")
+        failure = result["structural_failures"]
+        operational = result["operational_failures"]
+        native, mask = Path(projection["native_csv"]), Path(projection["failure_mask_csv"])
+        failed_uids = result["failure_UID_union"]
+    else:
+        require(result.get("complete") is True and result.get("phase_contract_passed") is True,
+                "New native execution did not complete")
+        failure, operational = result["structural_failures"], {}
+        failed_uids = list(failure)
+        native = work / "native-mean.csv"
+        with native.open("x", encoding="utf-8", newline="") as stream:
+            writer = csv.writer(stream)
+            writer.writerow([io.ID, *io.TARGETS])
+            for row in result["probabilities_test_order"]:
+                writer.writerow([row[io.ID], *row["probabilities"]])
+        mask = work / "native-failures.csv"
+        with mask.open("x", encoding="utf-8", newline="") as stream:
+            writer = csv.writer(stream)
+            writer.writerow([io.ID])
+            writer.writerows([[row[io.ID]] for row in result["probabilities_test_order"] if row[io.ID] in failure])
+    adapter = {
+        "schema_version": "p032_f006_native_adapter_v1", "complete": True,
+        "mode": args.mode, "studies": result["studies"], "successful_studies": result["studies"] - len(failed_uids),
+        "structural_failure_count": len(failure), "structural_failure_UIDs": list(failure),
+        "structural_failures_forwarded_to_column_disable_mask": True,
+        "native_csv": str(native), "failure_mask_csv": str(mask),
+        "native_csv_sha256": io.sha(native), "failure_mask_sha256": io.sha(mask),
+        "native_result_sha256": io.sha(args.output),
+        "model_fingerprints": result["reconstruction_component"]["model_fingerprints"],
+        "pair_fingerprint_sha256": pair["pair_fingerprint_sha256"],
+        "elapsed_seconds": time.monotonic() - started,
+        "new_parent_integration_not_old_S6_qualification": True,
+        "spawn_router_source": spawn_router,
+        "historical_native_result_parent_fields_scope": "inherited metadata only; not new-parent certificates",
+        "inference_math_unchanged": True, "rank_or_final_CSV_written_here": False,
+        "own_Gold_fit_select_or_evaluate": False, "Public_accuracy_measured": False,
+    }
+    if isolated:
+        adapter.pop("structural_failures_forwarded_to_column_disable_mask", None)
+        adapter.pop("structural_failures_forwarded_to_cell_failure_mask", None)
+        adapter.update(schema_version="p035_f006_isolated_uid_adapter_v1", native_executor="isolated-uid",
+                       native_result_schema=result["schema_version"], operational_recovery_contract_passed=True,
+                       structural_failures_forwarded_to_cell_failure_mask=True,
+                       operational_failure_count=len(operational), operational_failure_UIDs=list(operational),
+                       total_failure_count=len(failed_uids), failure_UID_union=failed_uids,
+                       failure_mask_is_structural_operational_union=True,
+                       old_structural_failure_claimed_for_operational=False,
+                       coverage=result["coverage"], executor_receipts=result["executor_receipts"],
+                       legacy_quarantine_removed=result["legacy_quarantine_removed"],
+                       legacy_phase_and_fallback_assertions_not_new_qualification=True)
+    dump(work / "adapter-receipt.json", adapter)
+    return adapter
+
+
 def run(args):
     import sys
-    import time
 
     # BOOTSTRAP is assigned by the offline builder. It is the exact recovered
     # native64 source cell: positive source hashes and historical metadata only.
@@ -229,49 +305,22 @@ def run(args):
                              permission_sha="P032_USER_AUTHORIZED_NEW_PARENT_ADAPTER")
     progress("execute", "begin", mode=args.mode, studies=len(test), budget_seconds=args.budget_seconds)
     try:
-        result = serving_router.execute(active, plan, STARTED)
+        result = execute_native_router(args, active, plan, serving_router,
+                                       task_source_sha256=c.source_shas()["serving_router.py"], started=STARTED)
     except BaseException as error:
         progress("execute", "error", mode=args.mode, error_type=type(error).__name__)
         raise
     finally:
         remove_fixture()
     progress("execute", "end", mode=args.mode, complete=result.get("complete"),
-             phase_contract_passed=result.get("phase_contract_passed"))
-    require(result.get("complete") is True and result.get("phase_contract_passed") is True,
-            "New native execution did not complete")
+             phase_contract_passed=result.get("phase_contract_passed"),
+             operational_recovery_contract_passed=result.get("operational_recovery_contract_passed"))
     require(result["studies"] == len(test) and result["targets"] == list(io.TARGETS),
             "New native UID/target contract differs")
-    failure = result["structural_failures"]
-    require(set(failure) <= set(test), "Unknown structural failure UID")
-    native = work / "native-mean.csv"
-    with native.open("x", encoding="utf-8", newline="") as stream:
-        writer = csv.writer(stream)
-        writer.writerow([io.ID, *io.TARGETS])
-        for row in result["probabilities_test_order"]:
-            # Failed legacy imputation is explicitly propagated below. Its
-            # placeholder numbers must never enter native percentile ranks.
-            writer.writerow([row[io.ID], *row["probabilities"]])
-    mask = work / "native-failures.csv"
-    with mask.open("x", encoding="utf-8", newline="") as stream:
-        writer = csv.writer(stream)
-        writer.writerow([io.ID])
-        writer.writerows([[key] for key in test if key in failure])
-    dump(work / "adapter-receipt.json", {
-        "schema_version": "p032_f006_native_adapter_v1", "complete": True,
-        "mode": args.mode, "studies": len(test), "successful_studies": len(test) - len(failure),
-        "structural_failure_count": len(failure), "structural_failure_UIDs": list(failure),
-        "structural_failures_forwarded_to_column_disable_mask": True,
-        "native_csv": str(native), "failure_mask_csv": str(mask),
-        "native_csv_sha256": io.sha(native), "native_result_sha256": io.sha(args.output),
-        "model_fingerprints": result["reconstruction_component"]["model_fingerprints"],
-        "pair_fingerprint_sha256": pair["pair_fingerprint_sha256"],
-        "elapsed_seconds": time.monotonic() - STARTED,
-        "new_parent_integration_not_old_S6_qualification": True,
-        "spawn_router_source": spawn_router,
-        "historical_native_result_parent_fields_scope": "inherited metadata only; not new-parent certificates",
-        "inference_math_unchanged": True, "rank_or_final_CSV_written_here": False,
-        "own_Gold_fit_select_or_evaluate": False, "Public_accuracy_measured": False,
-    })
+    require(set(result["structural_failures"]) <= set(test), "Unknown structural failure UID")
+    if getattr(args, "native_executor", "legacy-pool") == "isolated-uid":
+        require(set(result["operational_failures"]) <= set(test), "Unknown operational failure UID")
+    emit_native_adapter(args, result, work, io, pair, spawn_router, started=STARTED)
 
 
 def main():
@@ -283,6 +332,7 @@ def main():
     parser.add_argument("--baseline", type=Path)
     parser.add_argument("--budget-seconds", type=float, required=True)
     parser.add_argument("--diagnostic-count", type=int, default=192)
+    parser.add_argument("--native-executor", choices=("legacy-pool", "isolated-uid"), default="legacy-pool")
     args = parser.parse_args()
     require(args.mode == "diagnostic" or args.baseline is not None, "Serving requires completed parent")
     require(120 <= args.budget_seconds <= 28800 and 1 <= args.diagnostic_count <= 256, "Finite child limits required")

@@ -1,0 +1,208 @@
+{
+  "schema_version": "F009_new_Kaggle_serving_route_source_preparation_and_live_F1_E4_v1",
+  "at_UTC": "2026-10-17T09:48:25.031238+00:00",
+  "own_confirmed_Public_best": "0.958",
+  "target_Public": "0.960",
+  "target_achieved": false,
+  "goal_turn_classification": "PROGRESS: new metadata validator, driver/router and offline Notebook builder source implemented; artificial tests and independent review; completedF1 E4. VERIFIED_WAIT: actual fixedE12 incomplete.",
+  "official_results": {
+    "path": "experiments/P037-official958-five-results-complete-F009-live-20261017.json",
+    "bytes": 8145,
+    "sha256": "365d30aff677ab76d48838af0b5a0725c83c56b02737466487cc3e0b3844f5e7"
+  },
+  "latest_formals": {
+    "P03357290868": "0.958 COMPLETE",
+    "P03457291440": "0.957 COMPLETE",
+    "P03657291580": "0.958 COMPLETE",
+    "P03557292346": "0.957 COMPLETE",
+    "P03757293138": "0.958 COMPLETE"
+  },
+  "quota": "Last official18:11 numToday5/numTotal35; knownmaxDaily5, extra0treated/resetunverified. AllfiveCOMPLETE; no fullrepeat polls and no newSubmit.",
+  "public_frontier": {
+    "path": "artifacts/research/20261017-public-frontier-refresh-v9/summary.json",
+    "bytes": 14788,
+    "sha256": "f14e39e7f1f146c3d229f61da159836276597bf5d2eaa993b373e11f73aa65d1"
+  },
+  "public_frontier_scope": "18:24 officialanonymousscore-top100 maxauthor958x6; >=9590; knownsix source/Input/scorechanges0; outside100/privateunknown.",
+  "conditional_comparison": {
+    "path": "experiments/f009-P039-parent-fixed20-CLS-pair-conditional-20261017.json",
+    "bytes": 15554,
+    "sha256": "37bb0c60826da6deddda0e3929fd8aeb4a2f56ad91371af9dab365835a69bba2"
+  },
+  "previous_source_qualification": {
+    "path": "experiments/F009-transport-mixed-source-ready-public958-frontier-20261017.json",
+    "bytes": 9897,
+    "sha256": "3e29e9b3e50042bb27da2e1ded69908d81b8efb2adc65d4ac10a5d716546de51"
+  },
+  "new_source": {
+    "context": {
+      "source": {
+        "path": "src/rsna_knee/f009_kaggle_context.py",
+        "bytes": 18421,
+        "sha256": "37a058c38f3002a9857a26c88601fb73fc9df73710af6d0c1b4248eef06fea97"
+      },
+      "tests": {
+        "path": "tests/test_f009_kaggle_context.py",
+        "bytes": 14124,
+        "sha256": "5d1bbb8906aecbe84eb17a06c9aa43cd73bffc149cf1c607bbe0eec712a10e62"
+      },
+      "verification": {
+        "path": "artifacts/research/20261017-f009-kaggle-context-preparation-v1/verification.json",
+        "bytes": 1841,
+        "sha256": "9e4e61a741123690101b0f5939f9c2ce939c476d92d49f436901607c8d2acf80"
+      },
+      "completion": {
+        "path": "artifacts/research/20261017-f009-kaggle-context-preparation-v1/completion.json",
+        "bytes": 1108,
+        "sha256": "c286e21bb1b6d3dea2e20ede9842d366560b0e597cc89fda6ddb1e9b37b01f49"
+      },
+      "manual": {
+        "path": "artifacts/research/20261017-f009-kaggle-context-preparation-v1/manual.json",
+        "bytes": 2408,
+        "sha256": "7c3f0059f7b996125674b333ffb0edeb2a449b60822c0ccc1c1fea69fe4cf3a2"
+      },
+      "peer": {
+        "path": "artifacts/research/20261017-f009-kaggle-context-independent-v1/review.json",
+        "bytes": 2799,
+        "sha256": "a60c08132ced97c2435ebf69b9e9c189f54f90b3c556e8401e44168bf6091710"
+      }
+    },
+    "driver": {
+      "source": {
+        "path": "src/rsna_knee/f009_kaggle_driver.py",
+        "bytes": 28783,
+        "sha256": "af9fbbce18c254019f4fb728f04d328ac1e78bf5e70cc0af4ccab5b9e88ba6e9"
+      },
+      "tests": {
+        "path": "tests/test_f009_kaggle_driver.py",
+        "bytes": 16440,
+        "sha256": "465b5a4e4fe1fcff0d8064d019f8b611abdf23e9b8a671a683033728ad04ed57"
+      },
+      "verification": {
+        "path": "artifacts/research/20261017-f009-kaggle-driver-preparation-v1/verification.json",
+        "bytes": 4617,
+        "sha256": "2e0b17e42667274f2045c0ebd8faf65486e1cf619d4cdc34b612d03f08386dea"
+      }
+    },
+    "Notebook_builder": {
+      "source": {
+        "path": "scripts/prepare_f009_p033_native20.py",
+        "bytes": 32760,
+        "sha256": "c9ac8bf2ad667c0f733ae19a96686c66c916bb74051352d647211b7a8afa651e"
+      },
+      "tests": {
+        "path": "tests/test_prepare_f009_p033_native20.py",
+        "bytes": 11603,
+        "sha256": "d5f9b72487a2636879c33e51638f21782aa92513d70240785b2f787ecbb85fae"
+      },
+      "verification": {
+        "path": "artifacts/research/20261017-f009-notebook-preparation-v1/verification.json",
+        "bytes": 7863,
+        "sha256": "8e04bf8dde4b5354f3361d3c046e9f4ee6566488d75b5be3b4f9aeb415a55d0d"
+      },
+      "Notebook": {
+        "path": "artifacts/research/20261017-f009-notebook-preparation-v1/source-only-pack-v1/source.ipynb",
+        "bytes": 460052,
+        "sha256": "848411522b6698295b903f8e9d5408e45071f5973ca99ecca6c87445af6e0601"
+      },
+      "manifest": {
+        "path": "artifacts/research/20261017-f009-notebook-preparation-v1/source-only-pack-v1/manifest.json",
+        "bytes": 21522,
+        "sha256": "477f2cbac1149ce1ff7a6a82f70c659b14fe4dd2cdb1e37a3924ed95cbd2e521"
+      },
+      "context": {
+        "path": "artifacts/research/20261017-f009-notebook-preparation-v1/source-only-pack-v1/context.json",
+        "bytes": 1111,
+        "sha256": "807f63a6504c6b94664cd290f1864ad333fbc09ac677282e9427431ff80e6eb8"
+      }
+    }
+  },
+  "independent_integration_peer": {
+    "path": "artifacts/research/20261017-f009-kaggle-integration-independent-v1/review.json",
+    "bytes": 2325,
+    "sha256": "7e17cf6e2810a59b08da87904e0f267e781158971faf9055ba155643a43bd14a"
+  },
+  "root_actual_sourcepack_review": {
+    "path": "artifacts/research/20261017-f009-kaggle-integration-root-v1/verification.json",
+    "bytes": 1149,
+    "sha256": "6a84a36f9cb82332a678b0321cb836f7fbb717b1a09c37fde3f269bc2b550b59"
+  },
+  "test_totals": {
+    "context_stdlib": 6,
+    "driver_stdlib": 5,
+    "builder_stdlib": 7,
+    "total": 18,
+    "passed": true,
+    "context_peer_probes": 9,
+    "integration_peer_cases": 4,
+    "actual_GPU_or_model_work": 0
+  },
+  "prepared_pack": {
+    "source_members": 108,
+    "full_source_and_metadata_archive_members": 116,
+    "old_component_sources_retained_byte_exact": 89,
+    "support_modules": 8,
+    "generated_support_init": 1,
+    "parent_eight_cells_byte_exact": true,
+    "entry_enabled": false,
+    "Save_payload_present": false,
+    "actual_qualified_root_release_issued": false,
+    "same192_diagnostic_entrypoint_implemented": false,
+    "serving_route_SOURCE_preparation_only": true,
+    "actual_candidate_complete": false
+  },
+  "key_fixes_and_guards": [
+    "OldBOOTSTRAP ends in oldpreflight; never execute it. Parse verified literals to reuse component source only.",
+    "Actualsix documents/seven bindings/newCPU/source14 metadata via frozen8c consumer before model/archive access; legacyHOLD preserved.",
+    "Rootmetadata release binds model evidence. Final context/source SHA review and actualsupport module origin/spec/hash guards independently bind executing code.",
+    "Input7 dataset slugs and4model mounts unique; fixedREG2+parent2+decoder+kernel+competition exact9.",
+    "Generated shim normalizes successful driver dict return to exit0, propagates failures. Independent actualmain-to-shim artificial test passed.",
+    "Newmixed receives documents in fourthpositional argument and source-bound CPU permission; CPU andGPU leases close on success and exception.",
+    "Same UID180/4fullforwards/FP32/failureunion/successsubset20 formulas; sourceonly108 is derived inventory and does not inherit old89 runtime qualification."
+  ],
+  "fold1_live": {
+    "path": "artifacts/research/20261017-f009-fold1-progress-v1/epoch4-counter-observation.json",
+    "bytes": 3040,
+    "sha256": "1865e16b44aff7a3e67405bc311a7215e42fbe1ca8e9385b3dac3367606a1422"
+  },
+  "fold1_counters": {
+    "completed_epochs": 4,
+    "fixed_total_epochs": 12,
+    "optimizer_steps": 832,
+    "optimizer_opportunities": 832,
+    "AMP_skipped_steps": 0,
+    "PID": 2772,
+    "same_run_continues": true,
+    "E4_elapsed_seconds": 6876.2817708000075
+  },
+  "projection_incident": "18:39 PowerShell defaultencoding ConvertFromJson failed; rawrun payload appeared in stderr (chunk9a4dc0). No intermediate score used for selection; CLI/config/policy/wrapper unchanged and hashchecked. Subsequent projection Python read_bytes/countkeys only. Exactdetail retained inE4observation; no claim of zero accidental metric exposure.",
+  "unchanged_rules": [
+    "Complete actualfixedE12 then frozen amended evaluator once; bothfold individuallypositive/candidate AMP0 required, no singlefold/BCE/CI/REG50rescue.",
+    "Oldv1HOLD and oldcontrols remain; historical F1controlE10 oneAMPskip only exactexception.",
+    "Gold fit/select0; traininggroup/fold fixed; patient independence unknown.",
+    "No localGPUtest while liveactualfit. No automatic upload/Save/Submit code added."
+  ],
+  "next_actions": [
+    "Continue sameF1 PID2772 until actualE12; no restart or metric-driven rule changes.",
+    "Implement separate same192 fixedorderedUID metadata fixture/diagnostic entrypoint; currentserving192argument only CLI compatibility.",
+    "Only on actualjointPASS: actual strictCPUv2 forboth E12, sealer3, offline transport/newprivateInputs, newGPUartificial/actual192/visible/independentFP32 qualification.",
+    "Freshquota/currentgoal/COMPLETE/version/source/Input/duplicate checks then manual existingqualifiedP039 first, P038 second ifstill<960.",
+    "AfterGPUfree, use already prepared gates for F006fold2 and sealedC=.01 outer2 evaluation; do not reuse outer2-trained controls."
+  ],
+  "actual_actions_this_milestone": {
+    "new_training_start_stop": 0,
+    "new_model_CP_MRI_reads": 0,
+    "local_GPUtest": 0,
+    "new_qualified_model_pair_or_transport": 0,
+    "Kaggle_Save_or_Submit": 0
+  },
+  "ledger_before": {
+    "data_rows": 323,
+    "sha256": "23f534880ba933aeeed3148e26517c48ddfd254dc21492c7c4bd17ebfeffc41f"
+  },
+  "limitations": [
+    "New source qualification and fourfold localweak screen are not proof of Publicgain/960.",
+    "Actual192entry, actualmodels/mountedInputs/GPU/192/visible and officialscore remain unqualified.",
+    "Oldexternal RaptorGold58 selection exposure remains disclosed; ownGold fit/select0."
+  ]
+}

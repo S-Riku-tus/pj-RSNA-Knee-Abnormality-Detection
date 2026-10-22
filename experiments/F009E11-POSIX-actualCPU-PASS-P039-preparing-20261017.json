@@ -1,0 +1,127 @@
+{
+  "schema_version": "F009E11_actual_POSIX_CPU_and_P039_source_preparation_milestone_v1",
+  "at_UTC": "2026-10-17T07:16:23.554242+00:00",
+  "own_confirmed_Public_best": "0.958",
+  "target_Public": "0.960",
+  "target_achieved": false,
+  "previous_goal_turn_classification": "progress: official P033 own .958, no extra Submit",
+  "current_goal_turn_classification": "progress: actual Kaggle CPU OS-boundary confirmation, F009 E11, direct own958-parent candidate source preparation",
+  "F009": {
+    "schema_version": "f009_fixed12_progress_observation_v1",
+    "at_UTC": "2026-10-17T07:15:31.704768+00:00",
+    "completed_epochs": 11,
+    "optimizer_steps": 2332,
+    "AMP_skips": 0,
+    "status": "running",
+    "run_snapshot_sha256": "c0c8649bfc1e6bc74e76d83f5ebbceaa6b5c70d3e918099058fa9ba14f67e5f9",
+    "elapsed_seconds": 18974.206755699997,
+    "elapsed_semantics": "last cumulative history elapsed, not sum of cumulative entries",
+    "interim_selection_or_parameter_change": false,
+    "canonical_evaluation_policy_sha256": "de5a6aa743d2d663f98244322958bf4b8154908238384112a7badf2df1e2d42c",
+    "same_run": "artifacts/runs/f009-gamma-late-cosine-fold0-20261017-v1",
+    "fixed_E12_evaluation": false,
+    "new_training_or_interim_metric_selection": false,
+    "next": "same fixedE12 guarded primary then strictlypositive+engineering/0skip=>samefold1, else F006fold2 first"
+  },
+  "actual_POSIX_CPU": {
+    "ref": "rsraki/innerc-supervisor-posix-cpu-20261017-v1",
+    "kernel": 139180926,
+    "version": 1,
+    "official_status": "COMPLETE",
+    "source_sha256": "76f31abfd771604e79694a45fd20576e378113f735eeb8f01fba767e25d3e339",
+    "harness_sha256": "3f56595075573e8e674a3b3dd928ee33c37ed7d07653a2d9f8b2b8bdc1030724",
+    "environment": "Kaggle Docker2757; Linux; Python3.13.15; private/offline/CPU/TPUoff/Input0",
+    "cases": 6,
+    "direct_artificial_children": 5,
+    "elapsed_seconds": 1.0388954669999748,
+    "result_download_bytes": 6645,
+    "independent_and_root_actual_audit": "PASS",
+    "verified": [
+      "normal0/nonzero7 waitidWNOWAIT twice, identity retained during validation, explicit wait thenECHILD",
+      "SIGTERM ignored thenstillalive at.20024s beforeSIGKILL, wait-9/ECHILD",
+      "harness artificial deadline thenTERM-15 exit, unreapedownedidentity retained throughcleanup andwait",
+      "self/harness sharedPG refusal withzero group signal, negativefixture directownedchildonlykill/reap",
+      "all5reaped, ownedtemporaryremoved, no descendants spawned, no newnumpy/torch/sklearn imports"
+    ],
+    "not_qualified": [
+      "full feature/head _pipeline or _run_child actual child-launch boundary",
+      "model/MRI/GPU/Public or parent9h integration",
+      "hard SIGKILL of harness/Notebook or descendant cleanup"
+    ],
+    "numpy_preexisting": true,
+    "Save_calls": 1,
+    "formal_Submit": 0
+  },
+  "P039": {
+    "status": "new source preparation and artificialQA/peer in progress; no API or actual run",
+    "scientific_factor": "exact successful P033 parent class vector over original P035 isolated native20",
+    "unchanged": "native4model fingerprints/source89/readers/masks/successsubset FP32 .8+.2 and retained parentfailedcells",
+    "critical_audit": "bare parent swap would fail old weight binding and return parent-only; explicitP033binding/accurateperclassmetadata/fatalwholeextension are required",
+    "old_P033_and_P035_preserved": true,
+    "new_visible_hidden_or_Public_qualified": false,
+    "P035_official_score_unknown": true,
+    "not_duplicate_in_saved_manifest_subset_only": true,
+    "formal_priority": "retain readyP038; do not mechanically put author958 clone ahead of directown958+native20; decide from actual qualification/remainingresults andfreshquota",
+    "predicted_Public_gain_guaranteed": false
+  },
+  "official_state": {
+    "last_observation_UTC": "2026-10-17T07:05:36.333465+00:00",
+    "P033_COMPLETE_Public": "0.958",
+    "other_four_rawstatus_Public_omitted": true,
+    "numToday": 5,
+    "numTotal": 35,
+    "extra_slots_treated_as": 0,
+    "new_formal_Submit": 0
+  },
+  "activity": {
+    "new_Kaggle_CPU_Save": 1,
+    "new_Kaggle_GPU_Save": 0,
+    "new_formal_Submit": 0,
+    "existing_F009_GPU_fit_continues": true,
+    "new_GPU_fit": 0,
+    "MRI_model_checkpoint_targets_for_POSIX_work": 0,
+    "new_scientific_fit_or_Gold_use": 0
+  },
+  "ledger_before": {
+    "rows": 314,
+    "bytes": 190903,
+    "sha256": "b3f9500f8ca1cd7401c02a06073fddc77071dcc7a7f29356c61d20b018ea7467"
+  },
+  "evidence": [
+    {
+      "path": "experiments/p033-official958-ownbest-20261017.json",
+      "bytes": 9883,
+      "sha256": "44fe2bc11e19aa21e6dfb401b3c3034b5f43c432e301c3f2752b118a5f0ce7f4"
+    },
+    {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch11-observation/observation.json",
+      "bytes": 599,
+      "sha256": "4753cb563b7b047703d0db3431b34ce99e38c0e16dd5f47628d178f7377d7e1f"
+    },
+    {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch11-observation/run-snapshot.json",
+      "bytes": 105956,
+      "sha256": "c0c8649bfc1e6bc74e76d83f5ebbceaa6b5c70d3e918099058fa9ba14f67e5f9"
+    },
+    {
+      "path": "artifacts/research/20261017-innerC-supervisor-POSIX-CPU-v1/root-actual-runtime-audit.json",
+      "bytes": 3023,
+      "sha256": "1b340d4130de268a48d0fabf72800d70829f473aad389b013af845eec617d8b9"
+    },
+    {
+      "path": "artifacts/research/20261017-innerC-supervisor-POSIX-actual-peer-v1/review.json",
+      "bytes": 5716,
+      "sha256": "834f2e54b2de33476d35bf22c222d0062235030153cacadd657d9dbca80feae3"
+    },
+    {
+      "path": "artifacts/qa/innerc-posix-cpu-v1/20261017T071254647697Z/files/INNER_C_POSIX_CPU.json",
+      "bytes": 6645,
+      "sha256": "2cec51a8976651488598533bc5517d58f21ffe180f00d7252b786cd58c155710"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-parent958-readonly-audit-v1/audit.json",
+      "bytes": 15714,
+      "sha256": "601df13c891674f950f283f22b16d4d1fc1e89f3399e00064e26a4e514f1086d"
+    }
+  ]
+}

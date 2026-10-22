@@ -1,0 +1,53 @@
+{
+  "at_utc": "2026-10-17T02:18:24.390584+00:00",
+  "status": "P036_FORMAL_ACCEPTED_PUBLIC_PENDING",
+  "own_best": {
+    "Public": "0.957",
+    "submission": 57225898,
+    "preserved": true
+  },
+  "goal": "own Public>=0.960 not yet verified",
+  "P036": {
+    "submission": 57291580,
+    "kernel": 139135844,
+    "version": 1,
+    "source_sha256": "44be198b41208edd3f01e9897deb76f44ae88bdf30ac8d728b50d17db87c31b9",
+    "official_visible_status": "COMPLETE",
+    "visible_seconds": 413.9,
+    "visible_studies": 3,
+    "all_arm_failures": 0,
+    "final_FP32_replayed": 36,
+    "bit_mismatches": 0,
+    "visible_final_sha256": "0df03e0fd8cf7f03d87f6a234f2417d2c31a6c98bfd952b122077965e4a53ca4",
+    "only_factor": "Raptor224 anatomical mirror FP32 probability TTA vs P033; R6/classvector/4Inputs/other7code fixed",
+    "numeric_final_changes_vs_P033": 4,
+    "final_rank_changes_vs_P033": 0,
+    "224_raw_numeric_changes": 36,
+    "224_raw_rank_changes": 4,
+    "Raptor384_small_numeric_drift_but_rank_changes": 0,
+    "Compact_vs_P033": "byte-identical",
+    "source_runtime_mirror_path": "8savedcells + writefile/launch samepath + CUDA/T4/XLA unavailable +224done; written /tmp script not in Output",
+    "plain_and_mirror_vectors_separately_exported": false,
+    "speedup_claim": false,
+    "hidden_runtime_accuracy_verified": false
+  },
+  "independent_audit": "artifacts\\research\\20261017-p036-visible-independent-audit-v1\\actual-v2\\p036-audit.json",
+  "independent_audit_sha256": "137ee60de9d907ec3796724fa6bfc945aaa951ccf5d8b4f742e19d32fdac33f2",
+  "root_formal_review": "artifacts\\research\\20261017-p036-formal-submit-v1\\review.json",
+  "accepted_raw": "artifacts\\research\\20261017-p036-formal-submit-v1\\submit-response-raw.json",
+  "official_post_all_three_submissions": {
+    "snapshot": "artifacts/research/20261017-official-submission-observer-v1/poll-20261017T021735124801Z",
+    "pending_refs": [
+      57290868,
+      57291440,
+      57291580
+    ],
+    "new_score_and_status_fields_absent": true,
+    "numToday": 3,
+    "numTotal": 33,
+    "numAllowedNow": 2
+  },
+  "F009": "same fold0 localtraining; no new metric observed yet",
+  "new_manual_Submit_calls": 1,
+  "new_accuracy_gain_claimed": false
+}

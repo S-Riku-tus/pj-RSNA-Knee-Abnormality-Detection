@@ -1,0 +1,56 @@
+{
+  "at_UTC": "2026-10-21T04:00:30+00:00",
+  "status": "READONLY_REFRESH_NO_NEW_PUBLIC959_PRIMARY_EVIDENCE",
+  "researcher": "frontier_refresh delegated readonly agent",
+  "scope": "Official anonymousKaggle ListKernels scoreDESC100/dateRun100 pluswebprimarysearch; notproofallpublicassetsorprivatemethods",
+  "queries": [
+    {
+      "order": "scoreDESC",
+      "HTTP": 200,
+      "rows": 100,
+      "response_SHA": "8ecabe45d24adbfae3886de64024cedda860457c004b84f36fa987e8edb4812a"
+    },
+    {
+      "order": "dateRun",
+      "HTTP": 200,
+      "rows": 100,
+      "response_SHA": "b3b505de91a25a1750992ad1b28ba32fd876cacf0ce0e768affeb479ac7ddb73"
+    }
+  ],
+  "best_author_public_metadata": 0.958,
+  "author_score_above958_count_in_score100": 0,
+  "score100_source_version_changes_vs_prior_2100": 0,
+  "known_sources": [
+    {
+      "ref": "evgendvorkin/rsna-versia-7",
+      "source_version_id": 360116244,
+      "author_reported_best_Public": 0.958,
+      "recorded_runtime_seconds": 576
+    },
+    {
+      "ref": "heliosli/this-is-best-public-dataset-new-version-0-9586",
+      "source_version_id": 359224783,
+      "author_reported_best_Public": 0.958,
+      "title": "0.9586 is title text; not own orofficial>=959proof"
+    },
+    {
+      "ref": "alia22/notebooka35d630793",
+      "source_version_id": 351984135,
+      "author_score": null,
+      "runtime_seconds": 11,
+      "new_to_recent_list_but_created": "2026-09-22",
+      "evidence": "LLMreportlabels+wikiwords; notnew959candidate"
+    },
+    {
+      "ref": "ryanholbrook/rsna-knee-abnormalities-efficiency-lb",
+      "source_version_id": 360561987,
+      "author_score": null,
+      "runtime_seconds": 27,
+      "evidence": "efficiencyaggregateutility; noaccuracygainproof"
+    }
+  ],
+  "raw_response_persistence": "Agenttoolresultonly, hashes reportedbyagent; rawHTTPbytesnotstored inworkspace. Thisrecord preservesresearchreport, notindependentrawresponseaudit.",
+  "self_reproduction": "No newownresult inthisrefresh; ownofficialbest958 recordedelsewhere",
+  "ownGold_numeric_labels_model_download_Save_Submit_upload_training": 0,
+  "decision": "Do not spendquota onunchanged958duplicates. ContinuealreadyqualifiedP048formal andnewF014controlledtraining."
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": "F009_fold1_full_restart_running_root_milestone_v1",
+  "at_UTC": "2026-10-19T02:46:38.681374+00:00",
+  "status": "FULL12_RESTART_RUNNING_NOT_EVALUATED",
+  "own_best_confirmed_Public": "0.958",
+  "first_target": ">=0.959",
+  "next_target": ">0.960",
+  "goal_achieved": false,
+  "original_run": "artifacts/runs/f009-gamma-late-cosine-fold1-20261017-v1",
+  "original_run_preserved": true,
+  "original_completed_epochs": 5,
+  "original_updates": 1040,
+  "original_AMP_skips": 0,
+  "original_status_running_was_stale": true,
+  "original_interruption_cause": "unknown",
+  "resume_supported": false,
+  "inference_weights_only_not_resumable": true,
+  "new_run": "artifacts/runs/f009-gamma-late-cosine-fold1-20261019-retry1",
+  "started_at_UTC": "2026-10-19T02:45:31.3768400+00:00",
+  "launcher_PID": 4148,
+  "observed_actual_training_PID": 22332,
+  "actual_process_observation_tool_chunk": "98ab15",
+  "actual_training_CPU_seconds_at_observation": 49.65625,
+  "observed_GPU_utilization_percent": 83,
+  "observed_GPU_memory_MiB": 2369,
+  "raw_stdout_stderr_saved_outside_run": true,
+  "same_original_config_seed_fold_sources_environment": true,
+  "seed": 20261002,
+  "fold": 1,
+  "epochs": 12,
+  "train_studies": 3316,
+  "valid_studies": 891,
+  "cache_studies": 4207,
+  "startup_history_length": 0,
+  "completed_epoch_counters_do_not_measure_live_epoch": true,
+  "full_training_completion": false,
+  "actual_E12_comparison": false,
+  "model_release_or_Public_gain_qualified": false,
+  "rough_duration_hours": 5.7343,
+  "rough_duration_is_not_guarantee": true,
+  "root_fresh_CUDA_preflight": {
+    "ready": true,
+    "train_studies": 3316,
+    "valid_studies": 891,
+    "cache_studies": 4207,
+    "fit": false,
+    "tool_chunk": "0d1cec"
+  },
+  "frozen_before_retry_fit_and_first_metric": true,
+  "primary_checkpoint": "epoch_012.pt",
+  "primary_predictions": "epoch_012_weak.csv",
+  "candidate_all12_zero_skips_required": true,
+  "each_fold_strictly_positive_fixed10_required": true,
+  "BCE_CI_REG50_report_only": true,
+  "old_v1_HOLD_and_v2_exact_control_exception_preserved": true,
+  "artificial_tests": {
+    "producer": 9,
+    "independent_negative_tests": 5,
+    "independent_negative_observations": 6,
+    "Ruff": "PASS"
+  },
+  "independent_review_after_launch_but_source_fixed_before_launch": true,
+  "retention_guard_fix": "Independent test found E12-only index and extraE13 could pass former source. New frozen source requires both-arm exact12 integer epochs1..12 before any comparison. Former source and freeze retained. Specification, mathematics and scientific thresholds unchanged.",
+  "future_downstream_consumers": "Existing CPUv2/sealer/transport do not yet accept new v3 result. Explicit new consumers/real CPU proof/transport/fixed192 diagnosis/visible inference/independent arithmetic remain prerequisites after actual joint pass.",
+  "next_frozen_evaluation_command": "artifacts/research/20261019-f009-fold1-recovery-evaluator-v3/manual-v3.json",
+  "old_training_sources_changed_in_this_task": false,
+  "new_data_or_weights_downloaded": 0,
+  "raw_DICOM_decoded": 0,
+  "own_gold_fit_selection_or_eval": false,
+  "automatic_evaluation_stage_upload_or_submission": false,
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-f009-fold1-recovery-preparation-v1/recovery-policy.json",
+      "bytes": 40330,
+      "sha256": "a9baf014df7ed1fabf601fadb6241ec1b7263c44c2bbcc73136ed1818611a66b"
+    },
+    {
+      "path": "artifacts/research/20261019-f009-fold1-root-restart-v1/launch-guard-v2.json",
+      "bytes": 4142,
+      "sha256": "ac482b1e2a41f20349df4d32a784413effc41da358ad9bc7103025ac6fb91516"
+    },
+    {
+      "path": "artifacts/research/20261019-f009-fold1-root-restart-v1/manual-launch.json",
+      "bytes": 2167,
+      "sha256": "83d48603146e7e2981271d6847484ca8e68e0752bcb0fb420e3be05ca11d27d9"
+    },
+    {
+      "path": "artifacts/research/20261019-f009-fold1-root-restart-v1/startup-observation.json",
+      "bytes": 708,
+      "sha256": "2a094580ad7654709885ffb9e360ea61023d9353e296f67966f4395a3eb4e311"
+    },
+    {
+      "path": "artifacts/research/20261019-f009-fold1-recovery-evaluator-v3/source-freeze-v3.json",
+      "bytes": 2850,
+      "sha256": "5409d79a32911624aed489b3017b59755ddaf192a865f7bd94e3660effaebfb4"
+    },
+    {
+      "path": "artifacts/research/20261019-f009-recovery-independent-v2/review.json",
+      "bytes": 13439,
+      "sha256": "aea814e150fb0d1163d5f9cb1ac1cd0ed87251df2c19588b84c2c2ab733a6438"
+    }
+  ]
+}

@@ -1,5 +1,388 @@
 # RSNA Knee プロジェクトの現在地
 
+**2026-10-21 13:25 JST・公式bestは0.958、目標0.959は未達です。P048 V4（正式ref57464683）は同一IDのGetで採点待ち（status/Publicともnull）を確認し、本日の残りは4枠です。ConvNeXt TinyとSmallは両方fold0の固定E12学習中です。** 以下の過去時刻の記述は履歴です。
+
+Tinyはlauncher PID20048／実Python PID26668／exec82461、Smallはlauncher PID7792／実Python PID26468／exec48503で生存を確認しました。既存ユーザー処理PID19472の自然終了後に開始し、停止・優先度変更はしていません。[Smallの開始記録](experiments/F015-ConvNeXtSmall-artificial-qualified-fold0-running-20261021.json)では公式generic重みのSHA確認、実RTX4090の人工12項目PASS（全144window forward/backward・厳密復元・prefix不変・使用量1,108MiB）、元F006/Tinyと同一の3,386学習/821検証・入力hashを確認しました。Tinyの保護source16も不変です。開始前の空きはVRAM21,564MiB、RAM16.88GiBでした。Tinyの256件間隔が3回連続210秒超、fold見込み12時間超、または空きRAM4GiB未満なら、SmallだけをSTOP_REQUESTEDで停止する条件を事前固定しました。精度を見て並行候補を選んだわけではありません。
+
+[固定E12のCSV監査](experiments/CNN-fixedE12-CSV-auditors-qualified-source-only-20261021.json)はTiny17試験・Small22試験とRuffを通過しました。旧F006のE12/全12epoch保持物、source16/18、group・欠損mask・UID・環境・実更新/skip・固定10所見AUCを照合し、BCE best aliasは候補に使いません。実CNNの精度診断は12epoch完了後まで未実行で、fold1もまだ開始していません。両foldが正でも、tensor有限性・厳密再構成・Kaggle実GPU/MRI・CSV検算・正式採点は別に確認します。Linux推論用の依存wheel3本をhash固定して保存しましたが、稼働環境への導入や外部アップロードはしていません。
+
+**2026-10-21 13:03 JST・P048 V4を正式提出ref57464683として受理し、採点待ちです。公式最高0.958・目標0.959未達、本日1/5件使用・残4枠です。** [正式受付](artifacts/research/20261021-P048-v4-root-formal-submit-v2/summary.json)は本人Getと全44件Listの同一refを結合し、kernel139941816／Kaggle V1・source05b8b300…を確認しました。受付時のstatus/Publicはnullで、結果はまだ返っていません。以下の未提出・監査未完の記述は、それぞれの時点の履歴です。
+
+提出前に[P048 V4の実出力監査](artifacts/research/20261021-P048-v4-root-visible-execution-v1/root-independent-actual-audit.json)の71項目を通過しました。現重み・CPU厳密復元・2T4人工確認、可視3/3検査成功・失敗0、native36値/親36値のFP32別計算と最終36値の文字列一致を確認しています。別agentのFraction順位計算・UID別executor確認と、追加取得したreceipt.sha256の一致も[提出前記録](artifacts/research/20261021-P048-v4-root-formal-submit-v2/root-preSubmit-review.json)へ結合しました。固定20%や元P033/REG等は維持し、V3 ERRORの復元親は提出していません。可視成功や順位変化をPublic改善と解釈せず、正式結果を待ちます。
+
+F014 fold0は[13:03 JST時点の進捗](artifacts/runs/f014-convnext-tiny-fold0-20261021-v1/progress.json)でepoch1の768/3386検査、更新48/機会48・AMP skip0です。途中の精度で選択せず、固定E12と事前条件を維持して学習を継続します。fold1は未実施です。
+
+**2026-10-21 12:59 JST・公式最高0.958、目標0.959は未達です。P045は公式0.956で不採用、R6の事前4案も採用条件を満たしませんでした。P048の修正版V4は可視実行COMPLETEですが、独立監査・正式Submitはまだです。F014のfold0学習をRTX 4090で開始しました。** 以下の10月20日以前の状態・残枠・待機記録は履歴です。
+
+[P045正式結果](experiments/P045-formal-COMPLETE0956-DINO-rejected-20261021.json)はref57430729のGetと全43件の同一ref Listを結合し、scriptVersionId360274333・Public0.956を確認しました。DINO固定10%追加は採用せず、事前条件に従いP046の20%案もSave・正式提出なしで棄却します。[R6の確定判断](experiments/R6-four-prespecified-variants-nonpositive-no-P047-20261021.json)は共通成功1,664/1,664件、bank0/1=809/855件で、TTAなし・TTA1/4・補正なし・crop320のいずれも両bankの固定10所見差が正になりませんでした。元R6と公式bestを保持し、P047の実候補生成・Save・正式提出は行いません。追加の係数・所見別救済でこの判定を置き換えません。
+
+[F013のローカルCUDA資格](experiments/F013-local-RTX4090-CUDA-qualified-not-serving-20261021.json)は固定E12の両foldについて人工native392入力の12出力有限、padding不変、全画像欠測拒否、重み・prefix不変、eval gammaとCPU/CUDA乱数状態不変等19項目を通過しました。FP32 CPU参照との差は0.0001274／0.0004928未満で、事前上限0.005以内です。これはRTX 4090での人工確認であり、元F009のAMP-HOLDは維持します。Kaggleの現8モデル・2T4・実MRI・融合は別に確認します。
+
+P048はP039のCLS固定E12の2本だけをF013へ置き換え、REG・前処理・fold/家族50%平均・native20%・P033の8セルを固定します。[V3の実出力](artifacts/research/20261021-P048-root-visible-execution-v1/poll-20261021T032305413266Z/summary.json)はERRORで、Torchの先行importが既存のcuBLAS初期化前提に違反しました。元guardを保持してimport順だけを直したV4（kernel139941816／Kaggle V1、source `05b8b300cc397ae61de643b7788601f3963da489fb366cb7530ddf6946b0ccca`）は[12:57 JST取得の可視出力](artifacts/research/20261021-P048-v4-root-visible-execution-v1/poll-20261021T035729991215Z/summary.json)でCOMPLETE、native3検査成功・構造/運用失敗0・子exit0です。両版とも正式提出はまだ0。V4のモデル・CPU/GPU証跡とCSV数式を別計算で照合してから正式提出の可否を決め、可視成功をPublic改善とは扱いません。
+
+F014はDINOv2からConvNeXt Tinyへの独立したencoder選択の比較です。構造・一般事前学習重み・特徴幅768・学習suffixが連動するため、構造だけの効果とは主張しません。人工GPUの12項目を通過後、既存処理を停止せずGPU解放を確認し、[手動起動記録](artifacts/research/20261021-F014-fold0-root-prelaunch-v1/launch.json)のPID20048／exec82461でfold0を開始しました。[run記録](artifacts/runs/f014-convnext-tiny-fold0-20261021-v1/run.json)はrunning、学習3,386・検証821、seed20261002、既存native392キャッシュ・教師/mask/group分割を固定、Goldの学習・選択・評価なしです。固定E12でF006対照と比較し、条件を満たすまでfold1は開始しません。fold1・精度評価・採用・Kaggle提出は未実施です。
+
+**2026-10-20 21:06 JST・P048は固定REGとの50%平均でも両weak foldが正でした。公式最高0.958・目標0.959未達、P045採点待ち、R6の2件は実行中、残り2提出です。** [追加検証](experiments/P048-native50-paired-weak-positive-sourceV2-20261020.json)：fold0は0.888923→0.889624（+0.000701）、fold1は0.888657→0.889027（+0.000370）。P039の実際のCLS E12を対照とし、REGは既存E8/E10、FP32平均50%を固定。6run/予測/重みのハッシュ、元writer指標、UID/欠損mask/groupを照合しました。同じfoldの除外モデルだけを使った家族平均の診断であり、実提出の2fold平均やP033全体のOOFではありません。反復したweak検証上の小差で、Public改善は未確認です。source V2では両fold正を必須にし、7試験とruffを通過しましたが、人工CUDA未完のため実行は無効のままです。
+
+**2026-10-20 20:55 JST・公式最高0.958、目標0.959未達。P045は採点待ち、R6の2検証は実行中、提出枠は残り2回です。** F013の人工CUDA確認のSaveはKaggleのGPUバッチ同時2件制限で未受理です。新kernel/versionはなく、推論失敗ではありません。[未受理の正本](experiments/F013-artificial-CUDA-source-ready-GPU-concurrency-wait-20261020.json)。R6が自然終了してから、最新の目標・枠・保存版を照合して手動で再試行します。既存ローカルGPU処理PID19472は維持します。
+
+[P048の別経路](experiments/P048-F013-bridge-source-only-20261020.json)を実行無効のsourceとして準備しました。P039のCLS固定E12を2本だけF013へ替え、REG・画像処理・fold/家族平均・native20%・P033の8セルを固定します。6件の標準ライブラリ試験とruffは通過。元のbootstrap/run・残り7ファイルは保持し、routerの変更は3つの構築/証跡境界に限定しています。旧F009のHOLDとconsumerは無変更です。実際の人工CUDA証跡なしでは開始を拒否し、実行時も現在の8モデルの人工確認をMRIより先に要求します。実モデル結合・MRI・Save・正式提出はまだ0です。
+
+**2026-10-20 20:30 JST：F013の2fold固定E12はCPUで有限・厳密復元と人工入力を通過しました。自己最高0.958・目標0.959未達、P045採点待ち、R6検証2件はRUNNING・残り2枠です。** [CPU結果正本](experiments/F013-fixed-E12-CPU-qualified-not-release-20261020.json)。各foldのsuffix28/head12 tensorが有限・元checkpointとbit一致、frozen prefix67a05dff…を復元前後で保持、人工392px encoder/headの12出力有限・padding汚染不変・全画像欠測拒否・eval gamma draw0を確認しました。CPUログ/記録7ファイル5,676B・取得エラー0、14項目を照合しました。これらのE12でAMP skipが非有限重みを生んだ証拠はありませんが、元HOLDは維持し、旧consumerも無変更です。新しいF013経路での完全なnative CUDA・実MRI・旧REG/固定20%融合との結合が必要で、提出資格はまだありません。
+
+**2026-10-20 20:28 JST：自己最高0.958・目標0.959未達、P045採点待ち、R6検証2件はRUNNING、本日残り2枠です。** 元352はfold0=396/396・fold1=400/400完了、fold2/3処理を公式ログで確認しました。P047の条件付き生成器は一要因変換・厳密採否・実行順・4仮想候補の輸送を11試験とruffで確認しましたが、実際の候補は未選択です。[P047準備](experiments/P047-selected-R6-conditional-tools-only-20261020.json)。
+
+[F013再分析](experiments/F013-F009-matched-counter-fixed12-exploratory-positive-20261020.json)では、旧F009の固定E12について対照/候補ともfold1の更新2495・機会2496・E10スキップ1で一致し、gamma候補の固定10平均AUC差はfold0 +0.001693・fold1 +0.000902でした。fold1の95%区間は[−0.000298,+0.002114]でゼロを含み、後付けの探索分析です。旧F009のHOLDと旧consumerは変更せず、別scopeの厳密復元・有限性を確認します。自作重み2個・元source14等29.35MBを非公開Dataset12730408/V1へ手動PUT2回/Create1回で受理し、[CPU検証139809994/V1](experiments/F013-fixed-E12-private-CPU-running-20261020.json)がRUNNINGです。入力は自分のprivate2件のみ、競技/MRI/Report/Goldなし、正式提出0。CPU結果・今後のCUDA/実MRI資格は未完、既存GPU19472維持を継続します。
+
+**2026-10-20 19:38 JST：R6の352/320両検証が人工GPU/direct ON・OFF対replayを通過し、実MRIを処理中です。自己最高0.958・目標0.959未達、P045採点待ち、本日残り2枠です。** [crop320のGPU確認](experiments/R6-crop320-artificial-GPU-pass-MRI-running-20261020.json)。crop320はCLI変更行・誤差2.646e-10/5.537e-10・fold0/1開始を公式ログで確認しました。全foldの成功率と弱ラベル評価はまだです。読み取り専用の監視は最初の終了・エラーで停止し、rootが実出力の資格を確認します。監視はSave/Submit/モデル取得/学習を行いません。正式予測CSVの公式取得APIはP044に403を返したため、取得なし・別経路再試行なしと記録しました。既存ローカルGPU19472維持を継続します。
+
+**2026-10-20 19:24 JST：元R6 probeの人工GPU/direct ON・OFF対replayを通過し、実MRIのfold0/1処理へ進みました。公式最高0.958・目標0.959未達、P045採点待ち・残り2枠です。** [GPU確認の正本](experiments/R6-probe-artificial-GPU-pass-MRI-running-20261020.json)。公式ログストリームで誤差3.256e-10/3.973e-10とfold0=396・fold1=400の開始を確認しました。8秒のログ待受idle timeoutはクライアントの読み取り終了であり、worker失敗とは扱いません。実MRIの成功率・弱ラベル精度はまだ未確認です。crop320は受理・実行待ち。既存GPU19472は19:18にも使用中で維持し、新しいローカルGPU学習は開始していません。
+
+**2026-10-20 19:16 JST：自己最高0.958・目標0.959未達、P045採点待ち、本日残り2枠です。元R6検証139794653/V1はRUNNING、切り出し320検証139798784/V1は受理・QUEUEDです。** [切り出し比較](experiments/R6-crop320-paired-weak-probe-private-queued-20261020.json)・[判断メモ](docs/goal959-analysis-20261020.md)。切り出し以外の元3セルとruntime/worker/重み/入力を保持し、CLIのcrop引数352→320だけを変更しました。元の3候補とcrop320の計4候補は、両検証の共通成功集団で比較し、両bankの固定10平均AUC差が正・最小差が最大の1案だけを選ぶ方針を、結果解析前に固定しています。cropの複合TTA/後処理案は評価しません。3引数/輸送試験・3採否試験とruffを通過し、人工GPU/実画像/実精度の確認はまだです。R6からの正式提出は最大1案。P046はP045公式0.958の場合だけ検討するsourceのみ、既存GPU19472維持を継続します。
+
+**2026-10-20 19:01 JST：自己最高0.958・目標0.959未達。P045採点待ち、R6の非提出用検証V1は実行待ちです。** [R6検証の正本](experiments/R6-two-bank-paired-weak-probe-private-running-20261020.json)：kernel139794653/V1の全ソース・3入力・private/offline/T4/Dockerを照合し、特定V1とSDK標準の現在版でQUEUEDを確認しました。検証結果はまだありません。F012の学習側だけの教師確率補正はC=0.832982→D=0.835253へ改善しましたが、旧教師A=0.837830には届かず、事前基準に従い追加fold・採用・提出を見送ります。[F012結果](experiments/F012-CPU-train-calibration-nonpositive-20261020.json)。[P046](experiments/P046-DINO20-source-only-conditional-20261020.json)はDINO比率だけ20%へ変えたsourceのみを準備しました。P045が公式0.958だった場合に限って検討し、0.957以下なら棄却、0.959以上なら追加提出不要とします。P046のSave/実画像推論/正式提出は0です。残り2枠・既存GPU処理維持を継続します。
+
+**2026-10-20 18:41 JST：P044も公式0.958でした。自己最高0.958・目標0.959未達、P045 ref57430729は採点待ち、本日残り2枠です。** [P044結果](experiments/P044-formal-COMPLETE0958-no-adoption-20261020.json)。既存GPU処理PID19472は維持します。固定特徴量のCPU教師比較F011は、旧教師A=0.837830、JEVの値だけを置換したB=0.825155、JEVの有限値へ教師範囲を広げたC=0.832982（同じweak fold0・固定10所見平均AUC）で、改善の根拠にならずfold1・採用・提出へ進めません。[F011記録](experiments/F011-CPU-teacher-screen-nonpositive-20261020.json)。次はR6公開ソースのfold規則に従い、各検査の除外foldだけで2検証集団を推論する非提出用probeを準備しました。1664検査・group分離・自分のGold非利用・人工GPU確認を先に行い、TTAと既存後処理を事前固定の基準で比較します。7試験とruffは通過、実GPU/MRI検証はまだです。公開重みの学習集団・上流Gold/補助学習履歴の独立証明と患者独立性は未確認です。
+
+**2026-10-20 18:00 JST：P043は公式0.958で同点、P044・新たに提出したP045は採点待ちです。自己最高0.958・目標0.959未達、本日3件使用・残り2枠です。** [P043結果正本](experiments/P043-formal-COMPLETE0958-no-adoption-20261020.json)・[P045提出正本](experiments/P045-correctedV2-formal57430729-accepted-goal959-20261020.json)。P043のGaussian融合は新bestとして採用せずP033を維持します。P045修正版は親36FP32＋最終36FP64の別実装検算と実出力26項目を通過し、全43件の公式Listでref57430729＝kernel139737264/Kaggle V1＝scriptVersionId360274333を照合しました。DINO5重みの上流Gold利用履歴は不明として記録し、自分のGold fit/selectは0です。旧P045 V1は提出していません。13:20に審査サービス上限で未実行となった採点再照会は17:54に通常経路で復旧し、審査回避・重複Submitは0です。ローカルGPUは17:55にも既存PID19472が使用中で維持、GPU画像学習は空き待ちです。固定特徴量によるCPUの教師比較F011はpolicy準備済み・まだfit前です。
+
+**2026-10-20 13:10 JST：P045は整数順位合計へ直した別artifact V2を非公開実行中です。旧V1は正式提出しません。** [修正版の記録](experiments/P045-corrected-V2-private-running-goal959-20261020.json)。追加人工例で、同じ5fold順位合計が浮動小数点の加算順により0.56と0.5599999999999999へ分かれることを確認しました。結果の精度を見る前に修正方針を記録し、各foldの平均順位を2倍した整数の和で同順位を保つ形へ変更しました。5重み・10%・8親セル・前処理・DINO producer・8入力は同じです。8人工試験とruff、別実装Fraction oracleの人工60FP64照合/誤った同点分割の拒否がPASSです。新kernel139737264のKaggle保存版1は全セル/入力/設定10項目一致・RUNNING。元kernel139736510は保存して互換性監査にのみ使用し、両方とも正式提出0です。P043/P044は13:08照会でも採点待ち、最高0.958・目標0.959未達・残り3枠・既存GPU維持を継続します。
+
+**2026-10-20 13:04 JST：P045の非公開Kaggle実行がRUNNINGです。公式0.959未達、P043/P044採点待ち・自己最高0.958・本日残り3枠を維持します。** [実行正本](experiments/P045-private-V1-running-goal959-20261020.json)。元P033の8科学セルをbyte保持し、公開DINOv3 5-foldの順位成分を固定10%だけ加える別仮説です。まずCPU専用監査kernel139734838/V1で5重み各94,000,039Bと全ハッシュ、各180 tensor keyと12出力を確認し、同梱timm1.0.22 wheelは公式PyPIのSHAと一致しました。新candidate kernel139736510/V1の全セル/8入力/非公開offlineT4設定を10項目で照合しました。7人工試験とruffはPASSですが、実モデルのlabel順/全key厳密ロード・人工CPU/CUDA・実MRI/CSV検算はこれからです。上流DINOの教師とGold選択履歴は不明で、clean OOFとは呼びません。P045は正式提出0件、既存ローカルGPU処理は維持します。
+
+**2026-10-20 12:45 JST：P044を正式提出57420634として受理しました。P043 ref57420128と合わせて2件を採点追跡中、公式0.959未達・自己最高0.958です。** [P044提出正本](experiments/P044-formal57420634-accepted-goal959-20261020.json)。人工CPU/CUDA反転・4種人工decoder・R6成功3/失敗0・Reader3完走・親36値FP32/最終36値FP64の別実装検算など実出力23項目を通過し、全42件の公式Listでkernel139732287/V1・scriptVersionId360266199・受付番号の対応を照合しました。P044の可視3件の最終CSVは以前のP041と同じですが、隠れた全件や精度の同一性は示しません。本日は2件使用・残り3枠です。既存GPU処理を維持し、採点と別系統モデルの調査を続けます。
+
+**2026-10-20 12:38 JST：F010の新scope数値診断は末尾4block案を支持せず、旧engineering HOLDを維持します。** [別記録](experiments/F010-newscope-fixed12-exploratory-negative-20261020.json)。旧evaluator・policy・HOLDを変更せず、既知のE10更新スキップ1回を記録した探索診断だけを固定E12で行いました。同じ821 UID/group/mask・固定10所見のweak平均AUCはF006対照0.883128、F010 0.878995、差−0.004134、group bootstrap95%区間[−0.013539, +0.005372]です。過去から反復したweak holdoutであり、真の悪化やPublicへの差を断定しません。新診断3試験がPASS、Gold・他fold教師・GPU・重みロード・再学習は0です。F010の採用・fold1・提出へ進まず、教師品質や別系統の多様性へ調査を移します。P043採点待ち・P044可視実行中・公式目標0.959未達は継続中です。
+
+**2026-10-20 12:33 JST：P044の非公開Kaggle GPU実行がRUNNINGです。公式0.959は未達、自己最高0.958を維持しています。** [実行記録](experiments/P044-private-V1-running-goal959-20261020.json)。P041に対して反転224の1セルだけを変更し、残り8/9セルとReader・7入力・Dockerを保持しました。kernel139732287/V1の保存ソースと設定10項目を照合済みです。人工CPU/CUDA QAと今回の実出力の検証はこれからで、P044の正式提出はまだ0件です。P043正式提出57420128は12:31照会でも採点待ち、本日は1件使用・残り4枠です。既存のGPU処理PID19472を維持しています。
+
+**2026-10-20 12:26 JST：P043を正式提出57420128として受理し、採点を追跡しています。自己最高0.958・目標0.959未達です。** [提出正本](experiments/P043-formal57420128-accepted-goal959-20261020.json)。可視COMPLETE・現行V1の全ソース/設定/入力・全40件の重複なしを照合し、親36値＋新36値のFP32検算と実行記録15項目を通過して手動提出しました。実可視3件は失敗0、Gaussian変換で数値36個は変わりましたが、この3件の最終順位は不変であり精度推定には使いません。本日は1件使用・残4枠。次のP044はP041へP036の鏡像224セルだけを組み合わせる別仮説として準備済みですが、まだ可視推論・正式提出を行っていません。
+
+**2026-10-20 12:02 JST：新候補P043のKaggle可視推論がRUNNINGです。公式0.959の目標は未達で、自己最高0.958を保持しています。** [実行正本](experiments/P043-private-V1-running-goal959-20261020.json)。kernel139726098/V1・非公開offline T4・同じ4入力で受理し、保存ソースと設定を照合しました。元P033の8コードセルと出典表記を保持し、3枝のHazen normal-score融合だけを追加しています。標準unittest 11件・ruff・以前の可視3件を用いた別計算の検算を通過しましたが、新runの出力資格や精度の確認はこれからです。手動Saveは1回、正式提出は0件で、本日は残5枠。ユーザー指示で既存GPU処理を維持し、ローカル新学習は始めていません。
+
+**2026-10-20 11:40 JST：新しい依頼として、公式Public 0.959以上の達成まで継続します。現在の自己最高は0.958で、目標は未達です。** [新scopeと事前方針](experiments/goal959-resumed-scope-and-P043-prospective-20261020.json)。昨日の4件はすべて採点済みです。本日の公式枠は11:34照会で0件使用・残5件、既存のGPU処理はユーザー指示で維持し、ローカル新学習は空き次第とします。新しい比較P043では、モデル・係数・入力を固定し、3枝の順位の融合方法だけをnormal-score poolingへ変える仮説を事前記録しました。まだ可視推論・正式提出・改善確認はありません。公開モデル調査と学習範囲の監査も続けます。以下の「追加4件のみ・承認残0」は前回scopeの履歴です。
+
+**2026-10-20 07:18 JSTに最後の未採点だったP041を確認し、承認された追加4件はすべて公式COMPLETEとなりました。自己最高は0.958のままで、0.959以上・0.960超の目標は未達です。** [公式結果の独立正本](experiments/remaining-four-all-official-terminal-independent-20261020.json)・[最終採否と次の検証方針](experiments/remaining-four-final-decision-20261020.json)。採点待ちは0、追加提出の承認残は0です。監視も終了しました。
+
+| 提出版 | 比較した変更 | 自分の公式Public | 採否 |
+| --- | --- | --- | --- |
+| P038 / ref57391696 | 作者V6の全体レシピを既存環境へ適用 | 0.957 | 不採用 |
+| P040 / ref57402883 | P033の融合比率ベクトルだけを変更 | 0.957 | 不採用 |
+| P041 / ref57402914 | P033へReaderだけを追加 | 0.958 | 同点として保存、基準は変更しない |
+| P042 / ref57403458 | 融合前のRaptor順位だけを再正規化 | 0.957 | 不採用 |
+
+既存のP033などの0.958を保持します。P041は構成を増やしても表示スコアの改善が確認できなかったため、基準の置き換えは行いません。同点表示は未表示桁の同一性やReaderの改善・悪化を証明しません。また、上位のスコアが0.001刻みに見えることだけでは、同じ幅ずつ改善する特定の手順を使っているとは判断できません。
+
+次の優先事項は、追加のPublic比率探索より先に、学習範囲を監査した予測を共通のgroup分割・欠損ラベルmaskで比較できる検証基盤を整えることです。公開重みの学習範囲が不明な予測をOOFとは呼ばず、weak・gold・Publicを分け、相補的な候補の改善が別foldでも続くことを確認してから新しい提出候補を選びます。今回調べた公開Notebookの範囲では、自分の0.959以上に結び付く再現可能な候補は確認できませんでした。公開候補全体に存在しないという結論ではありません。
+
+並行したF010は固定12 epochを正常終了しましたが、2,543/2,544更新・AMPスキップ1回により[事前の工程条件で採用保留](experiments/F010-fixed12-final-engineering-HOLD-20261020.json)です。条件を緩めたり途中epochを採用したりせず、主AUC比較・fold1・提出推論への展開には進んでいません。以下は各時点の履歴です。
+
+**2026-10-20 07:11 JSTの公式結果：P042も0.957でした。4件中3件が0.957で確定し、P041だけ採点待ちです。自己最高0.958・目標0.959未達を維持しています。** [判断正本](experiments/remaining-four-after-P042957-P041-pending-20261020.json)・[P042の提出版照合](experiments/P042-formal-COMPLETE0957-independent-binding-20261020.json)。中間Raptor順位の再正規化は今回のPublicを改善せず、この案は採用しません。最後に提出したP042の採点は終わりましたが、先に提出したP041の公式結果まで確認を継続します。追加提出の承認残は0です。F010は固定12 epoch完了・工程条件による採用保留のままです。以下は各時点の履歴です。
+
+**2026-10-20 06:30 JSTの公式結果：P040は0.957でした。自己最高0.958を保持し、提出済みP041・P042の採点を続けて確認します。** [今回の判断](experiments/remaining-four-after-P040957-two-pending-20261020.json)・[提出版と公式結果の照合](experiments/P040-formal-COMPLETE0957-independent-binding-20261020.json)。P040は融合比率だけを変更した比較で、この比率ベクトルは採用しません。P038の0.957と同点でもReaderの効果や個別の比率の良否は判定できません。追加4件はすべて受付済み・承認残0、0.959以上は未達です。F010は固定12 epoch完了・工程条件による採用保留を維持しています。以下は各時点の履歴です。
+
+**2026-10-20 04:49 JST：追加4件は提出済みで、P040・P041・P042の公式採点を待っています。自己最高は0.958、0.959以上は未達です。** [提出正本](experiments/remaining-four-all-accepted-awaiting-results-20261020.json)。F010は12 epochを完了し、学習プロセスの終了コード0を確認しました。更新2,543/2,544回・E10のAMPスキップ1回により、[事前の工程条件に従って採用保留](experiments/F010-fixed12-final-engineering-HOLD-20261020.json)です。固定evaluatorを変更せず一度実行し、工程条件で終了コード1となることを独立監査22項目で確認しました。これは学習の異常終了や精度悪化の判定ではありません。ラベル・予測・checkpointの内容や主AUCの比較には進まず、条件の緩和・別epochの救済・fold1への展開は行っていません。残る3件の公式結果を引き続き追跡します。以下は各時点の履歴です。
+
+**2026-10-20 03:54 JST：提出済みP040/P041/P042は引き続き採点待ちです。追加4件の受付は完了、承認残0・自己最高0.958を維持しています。** [提出正本](experiments/remaining-four-all-accepted-awaiting-results-20261020.json)。F010は[E11・2,331/2,332更新・AMPスキップ累計1](artifacts/research/20261020-f010-eleven-epoch-AMP-HOLD-counter-observation-v1/summary.json)。E10でのengineering HOLDを維持し、最後のE12まで学習を継続しています。完了後は[固定検証の起動プラン](artifacts/research/20261020-f010-fixed12-final-invocation-review-v1/plan.json)どおり、変更していないevaluatorで工程条件を確認して記録を閉じます。AMP倍率成長は[原因未確定の検討](artifacts/research/20261020-amp-scale-growth-readonly-hypothesis-v1/memo.json)にとどめ、新しい実験や条件変更は行っていません。以下は各時点の履歴です。
+
+**2026-10-20 03:06 JST：追加4件は提出済み、P040/P041/P042の公式採点待ちです。自己最高0.958、0.959以上はまだ未確認です。** [提出正本](experiments/remaining-four-all-accepted-awaiting-results-20261020.json)。F010は[E10のAMPスキップ1によるengineering HOLD](experiments/F010-E10-AMP-HOLD-fixed12-continue-20261020.json)を記録しました。累計2,119/2,120更新で、事前のzero AMP条件を満たさないため採用・公開・fold1・推論consumerへ進めません。学習自体は予定した固定E12まで継続し、AUC比較や別epochへの変更は行っていません。原因は未確定です。正式3件の結果追跡を継続しています。以下は各時点の履歴です。
+
+**2026-10-20 02:17 JST：追加4件は提出済み、P040/P041/P042の採点待ちを継続しています。自己最高0.958、0.959以上はまだ未確認です。** [提出の正本](experiments/remaining-four-all-accepted-awaiting-results-20261020.json)。F010は[E9・1,908/1,908更新・AMPスキップ0](artifacts/research/20261020-f010-nine-epoch-counter-observation-v1/summary.json)で固定E12を継続中です。新しい3件のスコアを見る前に[採用・解釈方針](artifacts/research/20261020-root-prescore-adoption-and-f010-E9-v1/decision.json)を記録し、0.958超の資格版がなければ元の基準を維持します。次目標「0.960超」は0.960そのものでは未達です。F010のfold1対照の検討は事前監査だけで、新しい学習や数値条件の変更は始めていません。以下は各時点の履歴です。
+
+**2026-10-20 02:06 JST：許可された追加4件はすべて正式受理されました。残る3件の採点結果まで継続中です。自己最高0.958、0.959以上はまだ未確認です。** [正本](experiments/remaining-four-all-accepted-awaiting-results-20261020.json)。P038 ref57391696は公式0.957、P040 ref57402883・P041 ref57402914・P042 ref57403458は採点待ちです。制限APIは本日5件・累計40件・残り0枠、ユーザー承認範囲の残りも0件で、日付が変わっても追加提出しません。未採点を0点とは扱いません。
+P042は原GPU kernel139595447/V1のまま、実親36値・変更後36値のFP32 bit一致とprovenance 33項目を確認して最後の提出を行いました。監査ファイルの配信502は解消し、V4の一式11ファイルだけで検算しています。推論再実行・データ推定補完・予備版の採用はありません。最後の残枠0がraw応答で省略されたためローカル確認処理が一度停止しましたが、正式受理と所有Get、標準SDKの0、全40件の照合を確認済みで再送していません。F010は固定E12の学習を継続しています。以下は各時点の履歴です。
+
+**2026-10-20 01:43 JST：追加4件のうち3件を正式受理、残り1件を進行中です。自己最高0.958、0.959以上は未達です。** [今回の正本](experiments/remaining-four-three-accepted-last-running-20261020.json)。P038は公式0.957、P040（配合比のみ・ref57402883）とP041（Readerのみ・ref57402914）は採点待ちです。両候補は可視COMPLETE後、独立数値検証と保存ソース・実行記録の照合を通して手動提出しました。制限APIは本日4件・累計39件・残り1枠で、ユーザー承認範囲の残りも1件です。未採点値を0とは扱いません。
+最後のP042はGPU枠解放後の手動Saveでkernel139595447/V1として受理され、全ソースと設定を照合し、すでに公式RUNNINGです。元の科学条件は変更していません。実出力の検証後に最後の提出を行い、全結果まで継続します。F010はE8/12・1,696更新・AMPスキップ0で固定E12を継続しています。以下は各時点の履歴です。
+
+**2026-10-20 01:26 JST：P040・P041が両方とも公式RUNNINGへ変わりました。正式比較は残り3件、自己最高0.958・目標0.959以上は未達です。** [状態変化の正本](experiments/P040P041-official-RUNNING-change-20261020.json)。可視実出力はまだ未確認で、独立数値確認後に提出します。P042は既存ジョブの終了とGPU枠の解放を確認してから進めます。F010は[E8・1,696/1,696更新・AMPスキップ0](experiments/F010-eight-epoch-counters-continue-20261020.json)で継続中です。途中AUCを使わず固定E12の条件を維持しています。以下は各時点の履歴です。
+
+**2026-10-20 01:08 JST：追加4件のうちP038は0.957で完了、残り3件を継続中です。自己最高0.958、0.959以上は未達です。** P040・P041は保存済みですが実行状態の応答は引き続き省略形`{}`（SDK解釈QUEUED）、P042は同時GPU枠の解放待ちです。待機原因は確定していません。[独立経路調査](artifacts/research/20261020-legitimate-low-cost-submission-options-independent-v1/review.json)では、保存済み可視3件のCSVだけでhidden全件の比較を作る経路は確認できませんでした。
+別実行モードの最小CPU診断[D003](experiments/D003-private-CPU-interactive-unqualified-20261020.json)は手動Save1回がHTTP例外となり、直後の所有一覧0件と既存非公開診断の読取成功を照合しました。受理版・実行・出力は未確認、正式提出枠とGPU消費は0、再試行しません。例外本文を保持できなかったためHTTP状態・原因は不明です。既存GPUジョブとF010学習は維持し、実出力の独立検証後に提出する条件を継続しています。以下は各時点の履歴です。
+
+**2026-10-20 00:35 JST：P038（57391696）は公式COMPLETE・Public 0.957でした。残3比較を最後の正式結果まで継続中です。** [判断正本](experiments/remaining-four-after-P038957-20261019.json)、[独立binding確認](experiments/P038-terminal-binding-independent-20261019.json)。自己最高0.958は保持し、0.959以上は未達。作者報告0.958と自分の再現0.957を区別します。
+
+合成比率とReaderを同時に変えたP038の結果だけでは、どちらが悪化要因かは判定できません。準備済みのP040（比率のみ）・P041（Readerのみ）を独立した比較として続けます。両件はGPU実行待ち、P042は同時2GPU枠の解放待ちで、正式な追加提出は残3回です。F010は[E7・1,484/1,484更新・AMPスキップ0](artifacts/research/20261020-f010-seven-epoch-counter-observation-v1/summary.json)、固定E12・両foldの採用条件を維持しています。自分の提出済み予測CSVを調べる任意診断は正規APIがHTTP403を返したため取得不可で終了し、再試行・別経路は使っていません。
+
+長時間待機へのP040限定の運用例外として、ソース・人工データ・保存版を独立確認後に正規APIへ1回正式要求しましたが、出力ファイル未生成のHTTP400で受付されませんでした。[独立照合正本](experiments/P040-pre-visible-formal-rejected-no-quota-20261020.json)は受付0・枠消費0、累計37件・残3回を確認しています。この経路は終了し、実可視出力と独立数値確認後の提出条件へ戻しました。GPUジョブ・科学要因・F010の採用条件は変更していません。作者V6の0.958は[版別リンクを確認済み](artifacts/research/20261020-p038-author-version-score-binding-readonly-v1/review.json)ですが、P038はR6配置・デコーダ・guardへの適応を含み、全Input・実行が完全同一とは断定しません。以下は各時点の履歴です。
+
+**2026-10-19 23:44 JST：残4比較を最後の正式結果まで継続しています。** P038（57391696）は採点待ち、P040/P041はGPU実行待ち、P042は同時GPU2枠の解放待ちです。追加4件のうち正式受付1件・残3件、自己最高0.958、0.959以上は未達です。元のGPUジョブは保持しています。22:29の公式再照会でも出力0・GPU使用時間不変、22:52の公式監視も変化なしです。
+
+切り分け用の非公開CPU診断[D001](experiments/D001-private-cpu-input-diagnostic-complete-20261019.json)と[D002 v2](experiments/D002-v2-private-cpu-stage-diagnostic-complete-20261019.json)は公式COMPLETEでした。D002 kernel139616178/V1は元P040/P041と同じ3058Bのguardを実IPythonで1回実行し、既存R6の9ファイル計886,813,460Bのサイズ・SHA、bundle、4foldを8.85秒で確認しました。成功JSONだけを取得し、エラー出力はありません。モデル復元・MRI/Report/ラベル読取・学習・GPU呼出し・正式提出は0です。確認できた範囲は共通R6のbyte整合性とCPU起動経路であり、GPU待機原因・全Inputの実マウント版ID・モデル推論・精度は未確認です。
+
+[F010のE6観測](artifacts/research/20261019-f010-six-epoch-counter-observation-v1/summary.json)は1,272/1,272更新・AMPスキップ0、学習継続中です。途中AUCやcheckpoint選択を使わず、固定E12を待ちます。事前の推論互換性分析ではCLS last4/REG last2のprefix指紋の定義が異なるため新しいfamily別復元が必要と判明しましたが、既存方針の両fold合格条件を維持し、推論実装は始めていません。[22:04の公開上位100件](artifacts/research/20261019-public-frontier-once-130441Z/summary.json)も作者最高0.958、0.958超0件で、既知上位のsource/Input/scoreに変更はありませんでした。以下は各時点の履歴です。
+
+**2026-10-19 21:47 JST：残4比較を継続しています。P038は採点待ち、P040・P041は実行待ち、P042はGPU2枠の解放待ちです。自己最高0.958、0.959以上は未達、正式提出は残3枠です。** 長時間待機の切り分けとして、同じInput4参照・Dockerで、MRI・Report・重みを読まない軽量CPU診断[D001](experiments/D001-private-cpu-input-diagnostic-started-20261019.json)をrootが1回手動SaveAndRunしました。非公開kernel139613277/V1・GPU/TPU/通信OFFを保存Getで確認し、診断marker待ちです。元のGPUジョブとF010学習は保持しています。この診断の成功だけではGPU推論や精度の資格にはしません。
+
+21:00の公式Get/ListはP038の採点未返却で一致し、本日2件・累計37件・残3枠でした。21:20の[公開一次調査](experiments/public959-primary-followup-20261019-122009Z.json)も最高作者0.958で、実行可能な0.959以上の新候補はありません。0.960のDiscussionには公開source/重みがなく、0.959予想のNotebookは公式ERRORでした。作者の4教師データ・約60variantという説明は来歴の主張として記録し、Gold選択監査や既存ラベルは変更していません。F010の最終保存観測はE3・636/636更新・AMPスキップ0です。以下は各時点の履歴です。
+
+**2026-10-19 19:54 JST：残4比較を継続中。P038は正式受付後の採点待ち、P040・P041は実行待ち、P042はGPU同時2枠の制限で実行受付待ちです。自己最高0.958、0.959以上は未達です。** 最後の候補を早めに待機列へ入れるため、P042の固定sourceをrootが一度だけ手動SaveAndRun要求しましたが、Kaggleは`Maximum batch GPU session count of 2 reached.`を返し、kernel/versionの受付値は返しませんでした。[独立照合の正本](experiments/P042-private-admission-held-GPU2-20261019.json)。その前の存在確認Get403は送信前停止であり、真正Save試行は1回・受付0・正式Submit0です。先行2件のいずれかの完了を確認してから所有slug/versionを再確認し、新しいrootレビューで手動実行します。ソース・比較要因は変更していません。
+
+残3候補の正式申請用JSONは[独立照合済み](artifacts/research/20261019-remaining-three-inert-request-independent-v1/review.json)ですが、実CSV・数値の資格は全件未完了です。Kaggle状態照会は明示V1と公式CLI相当latestの両方でQUEUEDを確認しました。公開上位100件も19:09〜19:31の3回確認で作者最高0.958のままです。F010は[保存済みのE1観測](artifacts/research/20261019-f010-first-epoch-counter-observation-v1/summary.json)で212/212更新・AMPスキップ0、同じGPU学習を継続中。途中指標を採用には使わず、固定E12を待ちます。以下は各時点の履歴です。
+
+**2026-10-19 19:00 JST：P039は正式0.958で、自己最高は変わりません。ユーザー承認の残4提出を最後まで進めます。** [今回の4比較](experiments/remaining-four-staged-plan-20261019.json)。P038を18:44に1件提出（57391696）して採点待ち、本日2／累計37／残3枠です。P040（P033の係数4値だけ）・P041（P033へReader段だけ）はsource／人工試験と独立レビューを通過し、private Kaggle V1へ保存・可視実行の待機中です。P042（Raptor2本の合成後の中間順位正規化だけ）もsource資格を通過し、実可視検証はこれからです。新しいPublic改善は未確認。元0.958を保全し、各候補の実推論と独立数値確認後にrootが1件ずつ手動提出します。
+
+F009 retryは全12epochを完了しましたがE10に候補AMPスキップ1回（2495/2496更新）があり、固定採用条件で[HOLD](experiments/F009-retry-fixed12-candidate-AMP-HOLD-v2-20261019.json)です。固定v3は数学呼出し前にexit1、追加のpaired比較・例外追加・別checkpoint探索・モデル輸送は行っていません。学習時のweak成績は記録済みですが今回の選択には参照せず、モデルの精度が悪い／NaNという意味にはしません。
+
+F010の旧待機ジョブもF009の工程条件を検出してdispatchせず停止しました。旧拒否を保全し、gamma採用とは独立したF006対照の末尾2→4block比較として[別手動起動](artifacts/research/20261019-f010-root-independent-fit-v1/manual-launch.json)を宣言し、18:45:46からfold0を学習中です。元185pinとCUDA preflightを再確認し、実PID23168／launcher24024・GPU稼働・初期history0を確認しました。元policy／QA／固定E12評価器・入力・教師・seed・foldを維持します。この学習の完了や採用を今回4枠の前提にはせず、独立のモデル強化として続けます。以下は各時点の履歴です。
+
+**2026-10-19 12:42 JST：独自モデルの本体強化へ進み、新F010をGPU検証済み・学習待機にしました。自己最高0.958で、新しい精度改善はまだ未確認です。** [実装・実行の正本](experiments/F010-last4-qualified-queued-20261019.json)。現行独自モデルの追加によるPublic改善は未実証です。旧0.957親に対するP032／P034／P035は全て0.957でした。0.958親のP039（57378810）は12:40の公式確認でも採点未返却・エラーなし。本日1件／累計36件・残4枠です。weakとPublicの数字の大小を原因の証明とせず、単体性能と誤りの補完性を分けて改善します。
+
+[同じfoldでの誤り分析](experiments/native-model-diversity-Public-evidence-20261019.json)では、CLS＋REGの固定50%平均はweak固定10所見で両fold改善しましたが、Public改善は示していません。F006とgamma変更F009の順位相関中央値は0.99787、50%平均はF009単体より低く、gamma版を別の多様性モデルとして加える根拠は弱い結果です。公開0.958親の同じholdout予測は未取得で、その親との誤り相関は測定できていません。
+
+[公開学習コードの調査](experiments/public-training-recipes-and-F010-priority-20261019.json)で、データ作成・教師生成・学習設定まで確認できるS6 ConvNeXtレシピを見つけ、10件のtextを取得しました。解剖位置に基づく局所crop、3slice入力、空間／検査内attention、soft教師などが参考になります。作者0.950は読取失敗時のCoAtNet fallbackを含むpipeline値です。[Gold利用範囲の補足](experiments/public-JEV-Gold-exposure-scope-correction-20261019.json)では、JEVの上流Gold-informed選択とGold実値の直接混入を区別しました。上流曝露だけで公開教師を全面禁止にはせず、別の教師実験は直接混入・58件／共有group除外・mask・上流曝露を監査して検討します。今回F010へ教師変更は持ち込みません。
+
+F010は既存F006の画像392px・教師4207件・head・seed・group/fold・損失・LR・12epochを維持し、DINOv2の学習対象だけ末尾2→4blockへ増やします。encoder学習パラメータは3,550,464→7,100,928、head83,352は同じです。CPU人工21試験・独立レビュー、新sourceのGPU人工144窓と既存processed115窓の各6確認、CUDA preflightを通過しました。元F006/F009のsource・runは変更していません。実精度の検証とは区別します。
+
+12:34:27に手動起動したローカル待機PID10452（launcher18024）は、F009 retryの完全12epoch・208更新×12・skip0を待っています。新モデルの学習はまだ始まっていません。依存学習が正常完了し固定185pinとCUDA preflightが通った場合だけ、F010 fold0を別runへ1回起動します。待機開始期限は本日22:00 JST、F010学習の所要7〜10時間は目安。自動評価・fold1起動・外部upload／Save／Submitはありません。固定E12を821 UID・同mask/groupで旧F006 E12と比較し、正の差と工程条件を満たす場合に別foldを検討します。[評価器](artifacts/research/20261019-f010-last4-root-v1/evaluator-verification.json)は人工10＋独立6試験とRuffを通過し、実比較は未実施です。以下は各時点の履歴です。
+
+**2026-10-19 11:47 JST：自己最高0.958。第一目標は公式0.959以上、その次は0.960超です。P039を1件だけ正式提出し、採点待ちです。** [今回の判断と根拠](experiments/strategy-0959-0960-P039-20261019.json)。提出57378810は11:40に受理され、11:47の公式確認でもstatus／Publicは未返却・エラーなし。失敗や0点とは扱いません。本日1件／累計36件、残り4枠です。直近5件はP033・P036・P037が0.958、P034・P035が0.957。強いP033親へ既存独自4モデルを固定20%で加えるP039を比較し、残る枠は結果と追加検証を踏まえて使います。
+
+[公式LB調査](experiments/official-LB958-plateau-20261019.json)では1038位／6196チーム、表示0.958は178〜1344位の1167チーム、0.959以上は177チームでした。[公開Notebook上位100件](experiments/public-frontier-primary-static-review-20261019.json)の作者最高は0.958で、0.959以上は0件。新0.958 fork2件のコードは同一でした。特定上位者の0.966→0.967の理由は未確認ですが、公式Discussionには段階的改善とTTAの本人報告があります。既存0.958を固定し、一要因の改善と異なる予測の追加を検証します。公開版の表示スコア・最新版・採点版・Input版を区別します。
+
+**F009 fold1の旧「学習中」記録は現在の状態ではありません。** 10月17日19:12のE5・1040更新・AMPスキップ0で止まり、元PIDとE12成果物はありません。原因は未確定です。推論用checkpointにoptimizer／scaler／RNGがないため継ぎ足さず、[別runの同条件12epoch](experiments/F009-fold1-full-restart-live-20261019.json)を11:45:31に手動起動しました。実学習PID22332／launcher4148、4090の稼働を確認。元runを保全し、同じseed20261002・fold1・config・8ソース・教師・cache・環境を維持しています。所要約6時間は目安です。途中の成績を採用に使わず固定E12を待ちます。
+
+新run用の[評価手順](artifacts/research/20261019-f009-fold1-recovery-evaluator-v3/manual-v3.json)は起動前に固定しました。人工9試験＋独立5試験・Ruffが通過し、保存epoch一覧の検査不足も独立負例で発見・修正済みです。旧数学・旧HOLD・旧対照E10の既知スキップ1回だけの例外を保持します。候補全12epochスキップ0・両foldそれぞれの固定10所見AUC差が正であることが必要です。最終独立レビューは起動後・初epoch完了前に通過。実E12評価は未実施で、既存CPU復元／輸送は新v3結果に未対応です。共同条件を通った場合に別版consumer、実CPU、固定192件診断・可視推論・独立計算を準備します。Goldを自分の学習・選択には使わず、公開重みの既知Gold58選択曝露と患者独立性未確認は残します。以下は各時点の履歴です。
+
+**2026-10-17 18:48 JST：自己最高0.958、目標0.960は未達です。独自F009用の起動処理・入力検証・Notebookのソース準備が、人工試験18件と独立レビューを通過しました。** [今回の正本](experiments/F009-Kaggle-serving-source-ready-fold1-E4-20261017.json)。旧モデル専用の起動処理は実行せず、新CLS2本と固定REG2本を扱う別経路へ接続しました。ソース108ファイル・全体116ファイルを実際に数え、P033の科学計算8セルと既存89ソースの一致を確認しました。新Notebookは実行無効・Save用JSONなしです。実モデル・実GPU・提出の成功とは区別します。
+
+同じfold1は[4/12epoch](artifacts/research/20261017-f009-fold1-progress-v1/epoch4-counter-observation.json)・832更新／832機会・AMPスキップ0で継続中です。固定E12後に凍結済み評価を1回行い、両foldの条件を通った場合だけ実CPU復元・モデル束・輸送へ進みます。途中の成績による採用条件の変更はありません。18:39の表示処理で文字コードエラーが生じ、ツールのエラー出力へrun本文が含まれた件も記録しました。以後はPythonでカウンタだけを表示し、設定・評価方針・親の計画は変更していません。
+
+**次の未完作業は、保存済みの同じ192件を使う診断入口の実装です。** 現在の`diagnostic-count=192`は提出用CLIの互換確認で、192件診断の対応・通過を意味しません。その後に実192件診断、可視推論、別計算によるFP32・失敗マスク確認が必要です。既存P039優先・P038次候補という提出順は維持し、提出枠を新しく確認して進めます。最後の公式枠確認は18:11、本日5件／累計35件・追加枠0扱いです。公開調査は18:24の公式上位100件で作者最高0.958のまま。台帳324行・15列・ID重複なし。以下は各時点の履歴です。
+
+**2026-10-17 18:28 JST：F009のオフライン輸送と、新CLS2本＋既存REG2本の復元・平均計算のコードが、人工試験と独立レビューを通過しました。自己最高0.958・目標0.960未達は変わりません。** [今回の正本](experiments/F009-transport-mixed-source-ready-public958-frontier-20261017.json)。[輸送処理](src/rsna_knee/f009_transport.py)は版8c613…、[混在モデルの復元処理](src/rsna_knee/f009_mixed_runtime.py)は版736958…を固定しました。実F009の重み・モデル束・輸送・GPU推論はまだ行っていません。
+
+輸送は人工試験6件と独立した途中失敗の試験を通過しました。全ファイルを一時ディレクトリで完成させてからまとめて保存し、途中失敗時に完了記録が残らないことを確認しました。復元処理は人工CPU試験5件＋独立4件を通過し、各foldの実ソース・クラス、旧REGの正本、4モデルの独立性、元と同じFP32平均、推論時gamma無効と乱数状態を確認しました。人工encoder・人工checkpointでの確認であり、実モデルの成功とは区別します。
+
+次は新しいrouter／native child／Notebookへ接続します。GPU用モデル作成後のCPU containerと、終了時のGPU containerを明示的にcloseする必要があります。現在のfold1は固定12epochを続け、最後に凍結済み評価を1回実行します。両foldの条件通過後にだけ実CPU復元・モデル束作成・Kaggleの192検査と可視推論へ進みます。18:24の匿名公式上位100件は作者最高0.958が6件、0.959以上0件、既知6件のsource／Input版／score変更0でした。Heliosのslug変更は同じkernel／sourceであり、新しい改善とは扱いません。P039優先・P038次候補、提出枠0扱い・自己0.960未満という現状を維持しています。台帳323行・15列・ID重複なし。以下は各時点の履歴です。
+
+**2026-10-17 18:15 JST：P037（57293138）も公式COMPLETE・Public 0.958になりました。提出済み5件は全件採点済みで、自己最高0.958・目標0.960未達です。** [今回の正本](experiments/P037-official958-five-results-complete-F009-live-20261017.json)。P033・P036・P037が0.958、P034・P035が0.957です。P037の受理応答・保存版139143442/V1・source07bea17a…・所有者・正式結果を照合しました。全体レシピの自己再現値であり、隠れた採点データでの各armの参加や、R7／Reader単独の効果は未確認です。既存の提出説明にあるR7offは誤記で、実コードのR7比率は0.4です。
+
+独自F009 fold1は同じrunで[完了E3](artifacts/research/20261017-f009-fold1-progress-v1/epoch3-counter-observation.json)まで進み、624更新／624機会・AMPスキップ0、累計経過5,150.82秒です。固定E12完了前の成績値は投影・選択していません。現在は、条件通過後に必要となるオフライン輸送と新旧4モデルの復元処理を、人工CPU試験の範囲で準備しています。実F009モデルの復元・輸送・Kaggle推論は未実施です。
+
+18:11のlimitsは本日5／累計35で、追加枠0扱い・回復時刻未確認です。結果未返却は0件になったため、この5件を繰り返し照会する工程は終了します。枠は必要時に新しく確認し、目標未達なら検証済みP039を優先、P038を次候補として保持します。F009は両foldの条件と新しい実推論の検証を通過した場合だけ提出候補にします。台帳322行・15列・ID重複なし。以下は各時点の履歴です。
+
+**2026-10-17 18:02 JST：F009が両foldの条件を満たした場合の提出比較を、P039を対照とする別計画として固定しました。自己最高0.958・目標0.960未達は変わりません。** [条件付き比較の正本](experiments/f009-P039-parent-fixed20-CLS-pair-conditional-20261017.json)。自己0.958のP033由来の親、全所見の係数、native20%、対象10所見、REG0=E8・REG1=E10、失敗union・UID180秒・全体失敗時の扱いをP039と揃え、CLS0／1の固定E12重み2本だけをF009へ置換する計画です。旧P029M親の計画は保全しました。
+
+宣言時点でfold1はE2の成績を既に記録していますが、値は表示・参照していません。最終E12比較前の輸送・親構成の宣言であり、学習前や最初の成績記録前の登録とは扱いません。凍結済み評価・両foldの正の差・候補スキップ0・旧HOLDは変更していません。実CPU復元、新モデル束・輸送、実192検査と可視推論、独立数値確認を経る必要があります。既存P039優先・P038次候補という順序も維持し、F009は条件付きです。台帳は321行で、今回の行に未取得のモデル成績は記入していません。以下は各時点の履歴です。
+
+**2026-10-17 17:49 JST：P034（57291440）・P035（57292346）は公式COMPLETE・Public 0.957でした。自己最高はP033・P036の0.958、目標0.960は未達です。** [今回の正本](experiments/P034P035-official957-F009fold1-E2-runtime-audit-20261017.json)。17:41の公式応答をref・所有者・HTTP・bytes・SHAまで再照合しました。結果未返却はP037（57293138）だけで、status／Publicの省略を失敗や0点とは扱いません。本日5／累計35件、追加枠0扱い・新Submit0です。枠の回復時刻は未確認です。
+
+同じF009 fold1は[完了E2の記録](artifacts/research/20261017-f009-fold1-progress-v1/epoch2-counter-observation.json)で2/12 epoch・416更新／416機会・AMPスキップ0、経過時間は累計3,430.05秒です。同一PID2772・起動時刻16:49:06 JST・CPU使用時間の増加も確認しました。途中のAUC・BCEを選択に使わず、固定E12完了後に凍結済み評価を1回実行します。旧v1のHOLDを残し、別v2で両foldの正の差と候補スキップ0を満たした後にだけ、準備済みCPU復元・モデル束作成へ進みます。
+
+P034・P035は表示上の改善がありません。ただし旧版では独自部分全体の失敗時に親へ戻るため、このスコアだけで採点用データでの独自モデルの参加や処理件数は断定できません。[通常APIでのログ参照範囲](artifacts/research/20261017-p035-hidden-log-access-audit-v1/review.json)も確認し、隠れた採点実行IDとの正規の紐付けは未取得です。[実行時間の監査](artifacts/research/20261017-p039-runtime-priority-readonly-v1/review.json)では既存192検査の独自処理869.22秒・失敗0を再確認しました。提出からスコア表示までの約5時間は、待ち時間を含み得るため推論時間としては扱いません。この監査内の17:26時点のP035未返却記述は、今回の正式結果で更新されています。
+
+次の正式比較は、枠・最新結果を再確認し、自己0.960未満なら既存の可視推論検証済みP039を優先、P038を次候補として保持します。P039は自己0.958の親へ独自4モデルを20%加える版です。[提出内容の確認用JSONと版の根拠](artifacts/research/20261017-p039-manual-submit-binding-v1/binding-review.json)も保存しました。標準APIのowner／slug／明示的な保存版1／submission.csvを固定した準備で、まだ提出していません。可視3検査の成功は隠れた全件の成功保証ではありません。現在の学習後は準備済みF006 fold2と封印済みC=0.01の外側評価を進めます。公開調査の最新確認は17:24の公式上位100件で作者最高0.958のままです。以下は各時点の履歴です。
+
+**2026-10-17 17:33 JST：自己最高0.958、目標0.960は未達です。同じF009 fold1が1/12 epoch・208更新・AMPスキップ0まで完了し、学習を続けています。** [今回の正本](experiments/F009fold1-E1-amended-consumers-ready-public958-duplicate-20261017.json)、[epoch1のカウンタ確認](artifacts/research/20261017-f009-fold1-progress-v1/epoch1-counter-observation.json)。OS上の同一PID2772と起動時刻16:49:06 JST、CPU使用時間の継続増加も確認しました。途中のAUC・BCEは選択に使わず、固定E12を待ちます。
+
+新v2評価結果を扱う[CPU復元処理v2](src/rsna_knee/f009_cpu_proof_v2.py)と[ローカル保存処理v3](src/rsna_knee/f009_pair_stage_v3.py)を別版で準備しました。人工CPU試験7件・保存処理の人工試験5件・Ruff・独立レビューが通過し、rootも復元のreturn前の全ASTと40tensor検査ループが旧版と同一であることを確認しました。[CPU最終証跡](artifacts/research/20261017-f009-cpu-proof-v2-preparation-v1/verification-final.json)、[保存処理最終証跡](artifacts/research/20261017-f009-pair-stage-v3-preparation-v1/verification-final.json)。旧方針・旧HOLD・旧ソース・旧registryは変更していません。実fold1比較・実CPUモデル復元・実モデル束作成・Kaggle輸送はまだです。両foldの実評価が条件を満たした後にだけ実行します。
+
+17:24の公式スコア順上位100件は作者最高0.958、0.959以上0件でした。[新たな0.958 forkの調査](artifacts/research/20261017-lavinwins-top1gold-scored-review-v1/review.json)では、`lavinwins/top-1-gold`の採点版V4／359191499／提出57291942を明示的に結合しました。全9セル・7コードセルが取得済みLavin V5・Helios V1と一致し、P033の科学計算も同じです。[rootの別比較](artifacts/research/20261017-lavinwins-top1gold-root-equivalence-v1/review.json)でもセルsourceのUTF8 bytesが一致しました。新しい改善要因ではないため追加実行は見送ります。表題のGoldから新たなラベル使用は断定せず、既知の上流Raptor Gold58選択歴と、自分のGold不使用は区別します。
+
+17:21の公式順位は837位／6,126チーム、締切は10月23日08:59 JSTです。[公式状態](artifacts/research/20261017-official-account-observation-082143972204Z/summary-v2.json)。17:26の正式結果はP033・P036が0.958、P034・P035・P037は未返却。本日5／累計35、追加枠0扱い・新Submit0です。GPU残量の計算値は約27時間で、提出回数の枠とは別です。枠と結果を再確認し、目標未達なら既存の検証済みP039を先行、P038を次候補として保持します。GPUでは同じfold1を完了させ、その後に準備済みF006 fold2と封印済みC=0.01の外側評価を進めます。以下は各時点の履歴です。
+
+**2026-10-17 17:07 JST：F009 fold0の固定E12比較が完了し、同設定のfold1を4090で学習中です。自己最高0.958、目標0.960は未達です。** [今回の正本](experiments/F009E12-positive-fold1-running-P036958-20261017.json)、[fold0実比較](artifacts/research/20261017-f009-fixed12-guarded-result-v1/comparison-v2.json)、[独立確認](artifacts/research/20261017-f009-fold0-E12-independent-gate-v1/verification.json)。固定10所見のweak平均AUCは対照0.883128から0.884821、差+0.001693。全12epoch・2,544更新・AMPスキップ0と入力・コード・checkpointのSHA照合を確認しました。CI・BCEは報告専用で、Publicの増分を意味しません。
+
+fold1は16:49:06 JSTに新runで起動し、元seed・gamma範囲・固定12epoch・前処理・ラベル欠損処理を維持しています。開始記録スクリプトの失敗後も起動を続けた不備は[別記録](artifacts/research/20261017-f009-fold1-execution-v1/start-record-check-failure-and-observed-launch.json)へ保存しました。失敗原因は旧F006 fold1対照のE10に既知のAMPスキップ1回があったことで、設定・入力・ソースの不一致ではありません。[起動後の照合](artifacts/research/20261017-f009-fold1-execution-v1/observed-launch-review-after-start.json)は通過しています。
+
+旧「両側スキップ0」方針と評価コードは変更せず、旧方針での共同採用判定はHOLDです。[別版v2方針](experiments/f009-fold1-fixed12-joint-screen-premetric-amendment-v2-20261017.json)を16:58:35 JST、fold1のhistoryが空の時点で宣言し、[独立監査](artifacts/research/20261017-f009-fold1-amendment-v2-independent-v1/review.json)を通過しました。例外はSHA固定の旧対照E10の1回だけで、新候補は全12epochでスキップ0、両foldそれぞれの正のAUC差が必要です。これはfold0結果・fold1起動後の修正で、学習開始前の登録とは扱いません。旧対照2,495更新と候補に要求する2,496更新の差、旧consumerとの非互換も残します。
+
+新v2評価コードは17:04:17 JSTにSHA固定し、その後17:04:58の実runもhistory=[]でした。[根拠と実行条件](experiments/f009-fold1-v2-wrapper-and-next-submissions-20261017.json)、[人工試験と独立監査の最終証跡](artifacts/research/20261017-f009-fold1-amended-evaluator-v2/verification-final.json)。人工5試験・別担当の11負例／9判定例を通過し、rootもコードと通常CLIの入力未読動作を確認しました。実fold1の比較はまだ実行していません。完了後に旧数学を1回呼び、旧HOLDと新v2の結果を分けて保存します。
+
+16:59の公式照会ではP033（57290868）とP036（57291580）がCOMPLETE／0.958、P034・P035・P037はstatus／Public未返却でした。本日5／累計35・追加枠0扱い、再提出0です。枠が確認できて目標未達なら既存の検証済みP039を先行し、P038を次候補として保持します。P035に共通する実運用上の失敗が判明した場合は原因を確認しますが、単なる採点未返却を失敗とは扱いません。次は現在のfold1の固定E12評価、その後に準備済みF006 fold2と封印済みC=0.01モデルの外側評価を進めます。
+
+既提出P037の説明文にある「R7off」は誤記で、実コード・実receiptはR7比率0.4です。[照合と提出順の根拠](artifacts/research/20261017-pending-results-submission-priority-v1/proposal.json)へ訂正を保存しました。R7の有無だけの比較とは解釈しません。P037／P038の可視3行の最終SHAが同じでも、hidden予測の一致は未確認です。以下は各時点の履歴です。
+
+**2026-10-17 16:35 JST：P039は実可視推論・独立数値確認まで完了しました。自己最高0.958、目標0.960は未達です。** [最新の正本](experiments/p039-visible-qualified-own958-preserved-20261017.json)、[root監査](artifacts/research/20261017-p039-execution-v1/root-actual-output-audit-v1.json)、[別計算による確認](artifacts/research/20261017-p039-actual-independent-v1/review.json)。kernel139182563/V1は公式COMPLETE。全体489.58秒、独自モデル部分42.79秒で、可視3検査すべて成功・失敗0、4モデルの計12 forwardを確認しました。
+
+10所見30セルに独自予測が参加し、親から26値・4順位セルが変わりました。P033親3系統の合成36値、独自4モデルの平均36値、最終20%合成36値は独立した順位・FP32計算と全一致。MCL／Synovitisの6セルは親の文字列を保持しています。正常実行と参加の確認であり、hiddenやPublic改善の証拠ではありません。実失敗行は今回なく、失敗処理の人工確認とは区別します。
+
+16:32の公式再照会でもP033がCOMPLETE／自己0.958、残る4提出はstatus／Public未返却。本日5／累計35・追加枠0扱いのため新しい正式Submitは0です。P039とP038の成功版を保持し、実際の枠と残る採点を確認して提出順を決めます。並行するF009は直近11/12 epoch・2,332更新・skip0。同じrunの固定E12を既定のguard付き評価で比較し、正なら同条件fold1、非正ならF006 fold2を先行します。以下は各時点の履歴です。
+
+16:24の追加確認：P039は公式RUNNINGで、出力はまだ返っていません。公開Codeスコア順上位100件の作者最高は引き続き0.958・既知5件、0.959以上と既知版のsource／Input参照変更は範囲内0でした。自己最高0.958を保持して検証を継続します。[追加観測](artifacts/research/20261017-p039-running-record-v1/public-frontier-and-first-status-supplement.json)。
+
+**2026-10-17 16:21 JST：新候補P039をKaggle GPUで起動しました。自己最高0.958、目標0.960は未達です。** [最新の実行記録](experiments/p039-P033958-native20-GPU-running-20261017.json)。kernel139182563/V1・`rsraki/p039-p033-native20-20261017-v2`は公式RUNNING。全4コードセル、private／T4／GPU／TPU OFF／通信OFF／Docker2757、9 Inputの正規化参照を保存Getで照合しました。Input版は要求参照を固定していますが、Getは版を省略するため実runtimeのハッシュ・fingerprint確認が必要です。
+
+科学変更は成功したP033親の固定クラス係数のみです。既存native4モデル・89ソース・合成20%・成功UID内のFP32順位合成・失敗セル保持を固定しています。新しい親照合と記録を整え、追加全体の失敗や寄与0は例外で停止させます。人工5試験・Ruff・独立レビュー・root確認を通過し、別計算で正常／部分失敗の72セルが一致しました。実可視推論、hidden、Public改善はまだ未確認です。旧P035の監視実装を保持しており、別のinnerC POSIX試験の資格を転用していません。
+
+16:19の正式結果はP033がCOMPLETE／0.958、残る4件はstatus／Public未返却。本日5／累計35・追加枠0扱いで、新しい正式Submitは0です。P038も保持し、実検証・残る結果・公式枠を踏まえて提出順を決めます。F009は11/12 epoch・2,332更新・skip0の同一runを継続し、固定E12比較を待っています。最新の公式順位は818位／6,123チーム、締切は10月23日08:59 JSTです。以下は各時点の履歴です。
+
+**2026-10-17 16:15 JST：自己最高0.958・目標0.960未達です。F009は11/12 epoch・2,332更新・AMP skip0まで進みました。** [最新の正本](experiments/F009E11-POSIX-actualCPU-PASS-P039-preparing-20261017.json)、[E11観測](artifacts/research/20261017-f009-gamma-preparation-v1/epoch11-observation/observation.json)。最終行の累積elapsedは18,974.21秒。固定E12の比較と次の学習順は変更せず、途中精度で選択していません。
+
+非公開Kaggle CPU・Input0のkernel139180926/V1は公式COMPLETEでした。人工プロセス6ケース・直接の子5つで、未回収状態の検査、TERM無視後のKILL、タイムアウト、自己／既存グループへの操作拒否、全子の回収と一時ディレクトリ除去を実環境で確認しました。[実監査](artifacts/research/20261017-innerC-supervisor-POSIX-CPU-v1/root-actual-runtime-audit.json)、[独立確認](artifacts/research/20261017-innerC-supervisor-POSIX-actual-peer-v1/review.json)。約1.04秒のOS境界確認であり、実MRI・モデル・feature/head全体・親との9時間枠統合・Public改善の資格は含みません。
+
+P039は、成功したP033親0.958とP035の既存native20%を接続する新候補として別領域で準備しています。科学変更は親の固定クラス係数のみ。旧親専用の照合でnativeが無効になる問題を避けるため、P033の識別情報とクラス別の記録を更新し、追加処理全体の失敗やnative寄与0を実行失敗とします。個別UID失敗時の親セル保持・4モデル・合成割合・数値演算は維持します。P035の正式成績は未返却で、P039の実推論・精度も未確認です。P038も保持し、正式提出の順序は実検証・残る採点・実際の枠に基づいて決めます。以下は各時点の履歴です。
+
+**2026-10-17 16:05 JST：P033・提出57290868が公式COMPLETE／自己Public 0.958となりました。自己最高を0.001更新し、目標0.960まであと0.002です。** [結果・根拠・残作業](experiments/p033-official958-ownbest-20261017.json)、[公式raw](artifacts/research/20261017-five-formal-observer-v1/poll-20261017T070535948730Z/57290868.json)。成功したkernel139000655/V1と以前の0.957版を保持します。これは公開の固定クラス別係数を再現した改善であり、独自学習による増分とは区別します。表示以上の未丸め精度は推測しません。
+
+残るP034／P036／P035／P037はraw status／Publicがまだ省略されています。本日5／累計35、追加枠0扱いのため再送しません。P038は可視検証済みのまま保持し、公式枠の回復と直前のsource／Input確認後に正式提出します。
+
+独自F009は同じ4090 runを継続し、直近の確定snapshotは10/12 epoch・2,120更新・AMP skip0です。固定E12の主比較が正かつ工程条件を満たせば同条件fold1、非正ならF006 fold2を先行します。途中成績で方針を変更しません。新Cモデルの外側fold2評価は、固定済みモデル・予測を保持したまま新しいF006 fold2対照の完成後に実施します。
+
+動的test特徴抽出controllerは人工7試験、F009のCPU復元producerと別sealer v2は人工5試験、専有子プロセス監視は人工5試験を通過し、各sourceの独立レビューとroot確認を終えました。中断時も子を回収し、拡張失敗を従来版だけの成功提出として隠さない契約です。現在はKaggle CPU上の人工プロセスによる実POSIX終了・回収確認を準備中。実モデル復元・MRI推論・親との統合・採用資格はこれからです。以下は各時点の履歴です。
+
+**2026-10-17 15:50 JST：F009は10/12 epoch・2,120更新・AMP skip0で同じrunを継続中です。自己最高0.957、目標0.960は未達です。** [今回の正本](experiments/F009E10-publicCSV-math-ready-20261017.json)、[E10観測](artifacts/research/20261017-f009-gamma-preparation-v1/epoch10-observation/observation.json)。累積elapsed17,246.19秒。固定E12比較の基準・学習条件は変更していません。
+
+15:52 JSTの公式照会でも新5提出のstatus／Publicはraw省略、本日5／累計35・追加枠0扱いです。[追跡記録](artifacts/research/20261017-F009E10-publicCSV-record-v1/post-record-observation-1552.json)。同じ学習PIDの稼働も確認し、再送・学習再起動は行っていません。
+
+新C単一モデル用の[固定20% CSV算術](src/rsna_knee/orthodiff_inner_c_public_blend.py)は人工5試験・Ruff・独立レビューを通過しました。成功UIDのhead確率だけをFP32で順位化し、親の元予測と別々のFP32積・和で合成します。失敗UID・MCL／Synovitis・未対応・成功2件未満・FP32定数列は元のCSVセルを保持。親の選択・実合成・正式提出はまだです。実CSVのヘッダー順は、将来controllerが正規13列と完全一致を確認してからこの算術へ渡します。
+
+test用の特徴抽出は、研究用4,207件やjournalに依存しない動的UID経路の設計・helper閉包確認を終え、隔離実装中です。F009のCLS2本とsource14を封印するツールも人工ファイルで3試験を通過しましたが、実CPU復元proofのproducerが残り、実sealingは拒否する状態です。これらの準備をモデルの精度・実推論資格とは扱いません。次は予定どおり固定E12の主比較を行い、条件が正なら同条件fold1、非正ならF006 fold2を先行します。以下は各時点の履歴です。
+
+**2026-10-17 15:37 JST：最終比較の実行準備と、封印モデルの実Kaggle CPU数値検証を完了しました。自己最高0.957、目標0.960は未達です。** [今回の正本](experiments/F009E9-guards-ready-innerC-Kaggle-numeric-PASS-20261017.json)。F009は9/12 epoch・1,908更新・AMP skip0で、同じRTX4090 runが稼働中です。途中成績による変更はせず、固定E12を同じF006 E12と比較します。
+
+学習側inner4で選んだC=0.01の単一モデルについて、人工32入力・384予測をNumPy1.22.3とKaggleのNumPy2.1.3で比較し、FP32 bitsが全一致しました。[実数値監査](artifacts/research/20261017-orthodiff-innerC-numpy-kaggle-cpu-v1/root-actual-runtime-audit.json)。非公開・offline・CPU・Input0のkernel139175515/V1は公式COMPLETE、別の内積・sigmoid計算でも一致。実MRIの推論・外側fold2 AUC・Publicの改善を確認した資格ではありません。
+
+F009の最終評価は、現在の入力・ソース・両E12 checkpointの実SHAを確認してから既存計算を一度呼ぶwrapperを用意しました。改善時のfold1評価、報告専用の固定REG50副診断、新Cの外側fold2評価も人工試験と別担当のsource確認まで完了。F009の新ソース14本を隔離する仕組みを整え、提出環境で旧model classへ戻る問題を防ぎます。実モデルの組込み資格は今後の比較と推論検証で判断します。
+
+実行順は既定どおり、F009 fold0の固定E12差が正で工程条件を満たせば同条件のfold1、次にF006 fold2。非正ならF006 fold2を先行します。gamma候補は両foldそれぞれの差が正であることが必要です。新Cの外側評価は、固定済みモデル・予測を保持して新F006 fold2対照の完成後に一度だけ行います。
+
+15:32の公式Code上位100件では作者最高0.958・0.959以上0、新しい高得点のsource／Input変更0でした。[調査結果](artifacts/research/20261017-public-frontier-refresh-v6/summary-v2.json)。15:36の公式再照会でも既提出5件のstatus／Publicはraw省略、本日5／累計35で追加枠0扱い。自己スコアの上昇はまだ確認できていません。可視資格済みP038を保持し、正式提出は公式枠と結果を確認して進めます。以下は各時点の履歴です。
+
+**2026-10-17 15:04 JST：学習側だけのC選択を実行し、C=0.01の1モデルと評価用予測を封印・数値確認しました。自己最高0.957、目標0.960は未達です。** [今回の実行記録](experiments/orthodiff-innerC-selected-sealed-F009E8-20261017.json)。元fold0／1／3／4だけのinner4で、固定10所見×4分割のstandalone AUC平均を比較しました。全4候補が工程条件を満たし、事前の最大値規則で0.01を選択しています。
+
+| 共通C | 学習側inner4の固定10平均AUC |
+| ---: | ---: |
+| 0.001 | 0.713808 |
+| 0.01 | 0.728854 |
+| 0.1 | 0.716118 |
+| 1 | 0.698955 |
+
+選択した設定だけで成功2,409件を学習し、12分類器が警告なしで収束。外側fold2は全888件のmetadataと成功654件の予測を先に固定しました。[独立監査](artifacts/research/20261017-orthodiff-innerC-target-free-actual-audit-v1/verification.json)で、学習側だけの標準化と全7,848予測のFP32一致を確認。外側ラベル・AUCは未解封、Public候補の採用資格もまだです。元のC1両fold案は保留を維持します。
+
+次は新しいF006 fold2固定E12対照が揃ってから、この1モデルを全888件で一度だけ比較します。F009は8/12 epoch・1,696更新・skip0で継続中。まず固定E12を評価し、既定条件で正なら同じgammaのfold1を先行、その後F006 fold2、非正ならF006 fold2を先行する方針です。P038は可視資格済みの提出候補として保持。14:52の公式List35件でも新5提出のスコアは未返却で、同じ候補を再送しません。rawのstatus省略とSDK既定PENDINGを区別して記録しました。以下は各時点の履歴です。
+
+15:06 JSTの公式Get再照会でも新5件の状態・Publicはraw省略、本日5／累計35、追加枠0扱いです。[追跡と将来設計の記録](artifacts/research/20261017-innerC-sealed-F009E8-record-v1/post-record-observation-1506.json)。採用時のF009は4モデル中のNativeTripletMIL 2本だけを置換し、RegionalTripletMIL 2本を維持する設計。新Cモデルは単一モデルの別経路で、提出用の親は未選択です。いずれも条件付きの設計までで、実装・新GPU・stage・Submitは未実施です。
+
+**2026-10-17 14:52 JST：次の一要因は、学習側inner4だけで共通の正則化Cを選ぶ別レシピです。自己最高0.957、目標0.960は未達です。** [事前方針](experiments/orthodiff-regional-innerC-prospective-policy-20261017.json)を固定し、rootと別担当の設計確認を終えました。元のregional1024・元group/fold・対象10所見・20%合成は維持し、C候補0.001／0.01／0.1／1を学習側の4分割だけで比較します。勝者1モデルの予測を先に封印し、新しいF006 fold2固定E12対照の完成後に全888検査を一度だけ評価する計画です。旧C1両foldの保留は維持します。現在は隔離実装・人工CPU確認までを進行し、新実データfit・fold2主評価は未実施です。
+
+F009は同じrunで8/12 epoch・1,696更新・AMP skip0へ到達しました。[E8観測](artifacts/research/20261017-f009-gamma-preparation-v1/epoch8-observation/observation.json)。途中指標で条件を変えず固定E12まで継続します。P038は可視資格済みの候補として保持し、既提出5件の新スコアと追加枠は引き続き追跡します。以下は各時点の履歴です。
+
+**2026-10-17 14:46 JST：2×2特徴の全件監査と両fold評価を終え、この固定20%レシピも採用保留にしました。自己最高0.957、目標0.960は未達です。** [今回の正本](experiments/orthodiff-regional-twofold-HOLD-F006fold2-CPU-ready-20261017.json)。kernel139160976/V1は公式COMPLETE。成功3,063件すべてで元の入力・mid_2・global256計算との一致、元失敗1,144行のbyte一致、追加3,136,512個のFP32値とSHAを確認しました。元の検査・group・fold・coverageを変えていません。
+
+以下は弱ラベルの同じ検証検査・固定10所見平均AUCの差です。Publicの上昇幅ではありません。
+
+| 特徴・固定20%レシピ | fold0の差 | fold1の差 | 判断 |
+| --- | ---: | ---: | --- |
+| 元のglobal256 | +0.000431 | −0.004510 | 保留 |
+| Fluid_Sensitive追加 | −0.000612 | 未実行 | 事前規則で保留 |
+| 固定2×2／1024次元 | +0.002622 | −0.002341 | 両fold条件未達で保留 |
+
+2×2の両runは12分類器が正常収束し、独立再計算で予測・全rank合成セル・各AUC・1000回group CIが一致しました。両CIは0を跨ぎ、統計的な改善・悪化の確定とは扱いません。fold0だけの採用、係数や所見の選び直し、条件不成立の2head合成は行いません。[fold0監査](artifacts/research/20261017-orthodiff-regional-head0-actual-independent-v1/verification.json)、[fold1監査](artifacts/research/20261017-orthodiff-regional-head1-actual-independent-v1/verification.json)。
+
+F006を元fold2で学習できる別namespaceのモデル・trainer・CLIも準備しました。旧モデルのbytesと数値処理を保ち、fold／schema／source結合の境界だけを変更。CPU人工5件・Ruff・独立2分担のコード監査がPASSです。[実装証拠](artifacts/research/20261017-f006-fold2-implementation-v1/verification.json)。旧F006／F009と共有6moduleは不変。新resource gate・GPU確認・実学習はまだで、現在のF009固定E12評価後に実行順を判断します。学習側だけのinnerCVで正則化を選び、新fold2対照で評価する別案も設計中です。既存の負のレシピは変更しません。
+
+F009は同じPID22392で稼働し、E7／1,484更新／skip0。P038は可視資格済みの提出候補として保持。正式5件は14:44の公式照会でも状態・新Public未返却、本日の追加枠0扱いです。14:34の公開Code上位100件にも新0.959以上はなく、既知作者0.958の5件が最高でした。以下は各時点の履歴です。
+
+**2026-10-17 14:30 JST：公開作者0.958の別レシピP038は可視推論と2系統の数値監査を通過しました。自己最高0.957、目標0.960は未達です。** [正本](experiments/p038-visible-qualified-F009-E7-regional-running-20261017.json)。kernel139163240/V1は公式COMPLETE。可視3検査のRaptor384／224／R6はfallback0、Reader3モデル参加を確認し、中間36値FP32・最終36値FP64が別実装2系統で一致しました。全43小出力99,719Bを照合済み、最終CSVは830B。作者8セルの計算は約469秒、事前確認を含む終端ログは約490秒です。
+
+P038は提出候補として準備できましたが、本日5件を提出済みで追加枠0扱いのため正式Submitはまだ0です。既提出5件の結果と枠を再照会して提出順を決めます。作者0.958を自己値とは呼びません。可視3件の最終CSVはP037と同一ですが、hidden全体やスコアの同一性を示しません。Readerの内部slot読込失敗数も独立には取得できていません。
+
+F009は同じrunでE7／1,484更新／AMP skip0を保存し、固定E12へ継続。[E7観測の正本](artifacts/research/20261017-f009-gamma-preparation-v1/epoch7-observation/observation-v2.json)。2×2分割特徴のrunも継続し、14:31の最終確認は3,232件／成功2,362／元失敗継承870。[継続観測](artifacts/research/20261017-P038-visible-E7-milestone-record-v1/continuing-jobs-observation-1432.json)。元global256固定20%とFD固定20%は保留です。既モデルの追加fitなし診断では学習・検証AUCに差があり、表現の弱さと汎化の問題を分けて検討します。[診断](artifacts/research/20261017-orthodiff-fixed-head-failure-diagnosis-v1/report-with-train-gap.txt)。
+
+公式大会情報の14:28確認では968位／6,120チーム、締切は2026-10-23 08:59 JST、1日最大5提出です。F006 fold2用の将来準備も進めますが、現trainerはfold0／1限定のため、別実装・別gateの資格が必要です。既存F009のsourceや学習条件は変更していません。以下は各時点の履歴です。
+
+**2026-10-17 14:19 JST：追加画像1,080件の実監査は成功しましたが、固定20%合成のhead0は採用条件を満たしませんでした。自己最高0.957、目標0.960は未達です。** [結果と実行記録](experiments/orthodiff-fluid-complete-head0-hold-P038-running-20261017.json)。Fluid_Sensitive runは公式COMPLETE・1,055成功／25失敗。失敗は斜位・方向条件22件とmetadata候補なし3件です。元成功3,063件のFP32値を維持したまま、全4,207件中4,118成功／89なしの特徴を封印・再読込検証しました。画像・モデル本体のローカル取得はありません。
+
+元fold0の学習3,386件中3,310件、検証821件中808件に特徴があり、12分類器とも正常収束しました。固定10所見平均AUCは0.8831284→0.8825163、差−0.00061206、95% group bootstrap区間は−0.004581〜+0.003117。[独立数値監査](artifacts/research/20261017-orthodiff-fluid-head0-actual-independent-v1/verification.json)でtrain-only標準化・9,696予測・baseline／合成各9,852セル・各AUCとCIが一致。統計的悪化とは断定せず、事前の負delta規則に従ってこの固定レシピは保留し、fold1へ進めません。共通成功594件の副次改善で全821件の主評価を置き換えません。
+
+公開作者0.958のP038はCPU実確認・独立監査を通過し、[可視GPU推論](https://www.kaggle.com/code/rsraki/p038-helios-v6-fixed-20261017-v3)をkernel139163240/V1で開始。全保存セル・Input7・private／offline／T4／Dockerを確認しました。作者V6の全体レシピで、自己0.958の再現やReader単独効果は未確認です。同Dockerでも一部ライブラリ版が作者と違う点を記録しています。2×2分割特徴のkernel139160976/V1とF009固定E12への学習も継続。正式5件は14:18の公式照会でも状態・新Public未返却、本日追加枠0扱いです。以下は各時点の履歴です。
+
+**2026-10-17 14:08 JST：2×2分割特徴の実GPU抽出を開始しました。自己最高0.957、目標0.960は未達です。** [実行記録](experiments/orthodiff-regional-GPU-running-FD704-20261017.json)。新runはkernel139160976/V1、非公開・offline・T4・Docker2757。保存後の全セル・Input4を照合済みです。元の3,063成功で入力・系列・連続16枚・mid_2・global256の全件一致を必須にし、1,144失敗は画像を再読込せず元の行を継承します。追加するのは固定TL/TR/BL/BRの平均を連結した1,024次元特徴だけです。最初の160件は122成功／38失敗継承で進行中。これは全件資格や精度改善の証拠ではありません。
+
+実RTX4090の人工pool試験は、独立計算・CPU・CUDAの2,048個のFP32値が完全一致し、入力と乱数状態も保持しました。[試験記録](artifacts/research/20261017-orthodiff-regional2x2-actual-artificial-GPU-v1/verification.json)。別案のFluid_Sensitive追加推論も同じkernel139158713/V1で継続し、704件中692成功／12失敗。元3,063成功は上書きしません。両案それぞれに事前方針と検証器を用意し、全件の実出力監査後に新head0、改善時だけ同条件のhead1へ進みます。元global256／固定20%群はfold1低下により保留のままです。
+
+新たに公開作者の0.958をV6／source359117069／提出57280318と結合しました。最新未結合版と分け、P038として全体レシピの再現を準備中です。自己再現値ではありません。正式5提出は14:03の公式照会でも状態・新Public未返却、本日の追加枠0扱い。F009は同じrunのE6／1,272更新／skip0から固定E12へ継続しています。以下は各時点の履歴です。
+
+**2026-10-17 13:53 JST：OrthoDiffusionの元の20%合成は別foldで低下し、採用を保留しました。自己最高0.957、目標0.960は未達です。** [今回の記録](experiments/orthodiff-head1-hold-fluid1080-running-F009-E6-20261017.json)。元の全件run・kernel139150600/V1は公式COMPLETE、特徴3,063成功／1,144なし。全journal・UID順・784,128個のFP32特徴・先行32件との一致、元4,102 group／5 fold／Gold UID・group重複0を確認済みです。元成功特徴を維持し、名前不明1,080件だけの追加推論を別runで開始しました。MRI本体はローカルへ取得していません。
+
+先行する[固定32件試験](experiments/orthodiff-MRI32-S24-F8-20261017.json)はkernel139148870/V1で公式COMPLETE・独立監査PASS。PD-FS18件／非FS PD6件の24成功、残り8件はPD表記不明として除外し、検査・系列の補充やゼロ特徴の捏造はありません。ラベル・Report・学習0で、MRIはKaggle内のみで処理しました。
+
+重み1回の厳密復元、24回の特徴推論、連続16枚×24の384 SOP、6144個のFP32特徴値とSHA、乱数復元を確認。全体64.18秒、前処理中央値0.816秒／特徴抽出中央値0.183秒、CUDA予約最大約1.22 GiBでした。[独立監査](artifacts/research/20261017-orthodiff-mri-pilot-independent-audit-v1/verification.json)。画像本体・raw中間特徴を出力していないため、画像変換やpool平均の独立再計算は未実施です。24件は全てMONO2・面内transpose／flipなしで、他枝の実MRI資格や全件対応率・分類精度はまだ主張しません。
+
+同32件の撮影header68系列もCPUで確認済みです。別表記DPと保守的TR／TE案は未知1件にだけ該当し、残る7件を埋めるための閾値変更は行いません。[照合結果](artifacts/research/20261017-orthodiff-header32-rule-audit-v1/report.md)。全件baselineのPD規則は保持しました。運搬はJSONL追記・小status・32件ごとのstdout・終端全体SHAで、8時間は検査間の協調上限でありデコーダの強制中断ではありません。
+
+[journal検証CLI](scripts/validate_orthodiffusion_fullweak.py)が実出力の資格を発行した後、[分類器CLI](scripts/fit_orthodiffusion_weak_head.py)を実行しました。元fold0の学習3,386件のうち成功2,469件だけで標準化と12分類器を学習。12所見とも収束し警告0、検証821件のうち特徴成功594件・なし227件です。欠損を0に変えず、検証側を標準化の学習に使っていません。
+
+独立監査でtrain-only標準化、実予測7,128値、baselineと合成各9,852セル、各AUCとbootstrap1000回を再現しました。[fold0監査](artifacts/research/20261017-orthodiff-head-fold0-actual-independent-v1/review.json)。[NumPy推論adapter](src/rsna_knee/orthodiff_numpy_head.py)によるfold0実モデルの7,128値も、既存NumPy 1.22.3／2.5.3でFP32一致。Kaggle実環境の資格は今後の確認です。
+
+[事前head方針v2](artifacts/research/20261017-orthodiff-fullweak-preparation-v1/weak-head-prospective-policy-v2.json)の固定20%合成では、fold0の固定10所見平均AUCは0.8831284→0.8835598、差+0.00043144。続く元fold1・891件は0.8829163→0.8784068、差−0.00450951でした。fold1の95%区間も−0.008226〜−0.001295で、実予測7644値・baseline／合成各10692セル・各AUC／CIが独立再計算で一致。[fold1監査](artifacts/research/20261017-orthodiff-head-fold1-actual-independent-v1/review.json)。新指標より前に固定した両fold差>0の条件を満たさないため、元のexplicit-PD／global256／20%群は候補化を保留。係数・対象所見は選び直していません。これはPublic親の再順位化とは別の弱ラベル診断です。
+
+次の別runは[Fluid_Sensitive追加推論](https://www.kaggle.com/code/rsraki/orthodiff-sag-fluid1080-20261017-v3)、kernel139158713/V1。固定metadata subset1080件のうち候補系列1077／候補なし3で、元成功3063件との交差0。非公開・offline・T4・同Docker・Input3と全2セルをreadback確認し、13:52の公式状態RUNNING／stdout64成功・失敗0まで確認しました。原readerからPD名の分類・check2文だけを別routeで外し、幾何・中央連続16・画素処理・重み・特徴計算・乱数を維持。T2等を含む可能性があり、PD確認済とは呼びません。全件資格・新head評価・採用はまだです。
+
+局所病変をglobal平均が薄める仮説に対し、固定2×2分割の1024次元特徴も別の一要因としてoffline準備中です。元3063成功で同じ入力・mid_2・global値との一致を必須にする設計で、追加availability案とは混ぜません。人工CPU試験までで、実GPU・新headは未実行です。
+
+F009は同じrunでE6／1,272更新／skip0を13:51に保存し、固定E12へ継続。[E6の観測記録](artifacts/research/20261017-f009-gamma-preparation-v1/epoch6-observation/observation.json)。13:16の公式自己提出一覧は全35件を返し、旧P029M／P032のCOMPLETE・0.957と、新正式5件の状態／スコア未返却を確認。13:50の各Submit再照会でも新スコアは未返却でした。本日の追加枠0扱い、公開Code上位100件の12:38確認でも新0.959以上はありません。以下は各時点の履歴です。
+
+**2026-10-17 12:36 JST：OrthoDiffusionの人工GPU特徴抽出試験が成功し、独立監査を通過しました。自己最高0.957・目標0.960未達は変わりません。** [現在の正本](experiments/orthodiff-artificial-GPU-pass-F009-E3-five-pending-20261017.json)。kernel139147175/V1で固定資産9件を再検査し、`weights_only`によるEMA全257 key・34524545 parameters・13 schedule bufferの厳密一致を確認。T4の選択GPUで人工入力1×1×16×256×256から`t=100 / mid_2`の256次元特徴を抽出し、同seed反復一致・別seed変化・CPUと可視2GPUの乱数状態復元を確認しました。
+
+3回のdenoiser呼出に対しdecoder／最終出力層の呼出は0。CUDA予約peak約1.22 GiB、RSS peak約1.46 GiB、人工試験全体34.41秒で事前資源条件を通過しました。[実receiptの独立監査](artifacts/research/20261017-orthodiff-artificial-independent-audit-v1/verification.json)。768個のpool FP32値と記録SHAは独立照合しましたが、raw mid_2を出力していないため平均pool自体の別計算は0、実処理のsource結合による確認です。これは人工特徴・資源の資格で、MRIデータ、分類精度、Public改善、hidden処理量の資格ではありません。
+
+独自F009はE3まで完了し、累計636更新／AMP skip0で同じRTX4090 runを継続中。[E3観測](artifacts/research/20261017-f009-gamma-preparation-v1/epoch3-observation/observation.json)。固定E12・評価方針v2を維持し、途中epochの採用は行いません。P033／P034／P036／P035／P037の正式5提出は12:29 JSTの公式照会でも状態・Public未返却。本日5／累計35、追加枠0扱い（rawの`numAllowedNow`省略とSDK既定0を区別）で再提出しません。
+
+次のOrthoDiffusion 32検査pilotは事前仕様とoffline実装の準備中で、実MRIデコードはまだ0です。連続16slice・向き・系列選択・失敗規則を固定し、既存sampled16 cacheと同一視しません。以下は各時点の履歴です。
+
+
+**2026-10-17 12:23 JST：P037を正式提出57293138として受理しました。自己最高0.957を保持し、目標0.960は未達です。** [現在の正本](experiments/p037-five-formals-orthodiff-assets-F009-E2-20261017.json)。12:18 JSTの公式照会では新5件の状態・Publicは全件未返却。本日5件／累計35件、追加提出は0枠扱いです。`numAllowedNow`はrawで省略され、SDK既定0であることを区別します。既存提出を再送せず、次の枠回復時刻は未確認です。
+
+| 候補 | 比較の範囲 | 受理済み提出 |
+| --- | --- | --- |
+| P033 | P029Mの公開済み所見別係数vectorだけを変更 | 57290868 |
+| P034 | P032のnative部分失敗時に成功セルを残す | 57291440 |
+| P036 | P033のRaptor224に解剖学的鏡映だけを追加 | 57291580 |
+| P035 | P034の数値契約を保持しUIDごとの所有プロセスと期限付き回収へ変更 | 57292346 |
+| P037 | 作者Goodpjw V26のRaptor／R6／R7／Readerを含む固定全体レシピ | 57293138 |
+
+P037は可視3件で各armの成功ログ、R6／R7失敗0、21資産・6人工fixtureのSHA、全15科学セル・6保存時点を確認。中間36値のFP32と最終36値のFP64を別実装でも完全一致と検証し、Reader段の順位vector変化はEffusionの1所見でした。[独立再検算](artifacts/research/20261017-p037-visible-second-independent-v1/audit.json)。作者0.958は自己値ではなく、この全体比較からR7／Reader単独の改善やhidden完走を断定しません。
+
+OrthoDiffusionのCPU資産stage（kernel139145710/V1）も公式COMPLETE・独立監査PASSです。公開genericのsagittal重み1本と固定source8の計9件を検証し、source8の実本文SHA／Git blobも独立照合しました。[資産監査](artifacts/research/20261017-orthodiff-sagittal-stage-independent-audit-v1/verification-v2.json)。重み552919566B／SHAはKaggleの固定stream guardとreceiptに基づき、ローカル重み取得は0、SDK listingの独立サイズ欄はありません。これは資産準備の資格で、checkpoint復元・科学依存closure・人工GPU資源・連続16sliceの新pilot・精度は未資格です。
+
+独自F009は12:22:40 JSTのroot監視で同じRTX4090 runが継続中、最終確認は2/12 epoch・累計424更新／AMP skip0です。train-onlyのstudy共通gammaだけを変え、[事前方針v2](experiments/f009-evaluation-policy-v2-prescore-20261017.json)の固定E12同士で評価します。BCEは副評価で、途中epoch・Gold・Publicによるcheckpoint選択は行いません。以下は各時点の履歴です。
+
+
+**2026-10-17 12:03 JST：P037修正版のCPU事前試験を通過し、固定公開レシピのGPU推論を開始しました。** [現在の正本](experiments/p037-CPU-pass-GPU-running-F009-E2-20261017.json)。CPU kernel139143030/V1は21モデル資産・6人工fixtureのSHA／サイズ、4圧縮形式すべての形状・型・画素値一致を確認。Reader提供のcp312対応3 wheelで成功し、独立監査も通過しました。作者環境Docker37c64／Python3.12.13を実確認済みです。旧CPU v1の未合格記録は保持しています。
+
+GPU版kernel139143442/V1は公式RUNNING。全コード・Input7・非公開T4・Internet OFF・CPUと同じDockerをreadback照合しました。Markdownのlist／string表現の違いは内容SHA一致で確認し、保存し直していません。作者Goodpjw V26の15科学セルはv1と同じで、元版からはR6 stage探索の1行だけを変更。Raptor／R6／R7／Readerを含む全体レシピの再現で、各要因単独の効果とは扱いません。各armの実参加・最終CSVの独立再計算を終えてから正式提出を判断します。
+
+自己最高0.957・目標0.960未達を維持し、正式提出済み4件は11:57の照会でも新スコア・状態が未返却。本日4件／追加可能1件です。独自F009は2/12 epoch・累計424更新／skip0を確認し、同じrunを継続中。追加の限定Web一次調査でも、0.959以上と再現recipeを結合できる新候補は確認できませんでした。[調査範囲](artifacts/research/20261017-discussion-github-limited-v1/report.md)。以下は各時点の履歴です。
+
+**2026-10-17 11:50 JST：P035を正式提出57292346として受理しました。自己最高0.957、目標0.960は未達です。** [今回の正本](experiments/p035-formal-Submit57292346-20261017.json)。P033＝57290868、P034＝57291440、P036＝57291580、P035＝57292346の4件を採点追跡中で、11:48の公式照会では全件スコア・状態が未返却。本日4件／累計34件／追加可能1件です。既存3件は再提出していません。
+
+P035は可視3件・診断192件とも構造失敗0／運用失敗0で完走。可視の親・最終36値、4モデルの144値、192件のnative2304値を独立検証し、旧方式と同じ配列・予測を確認しました。全子プロセスの回収・一時ファイル削除も完了。[監査の集約](artifacts/research/20261017-p035-diagnostic-independent-audit-v1/summary.json)。一方、192件は464.0→869.2秒と遅く、UID最大21.53秒に対し期限180秒。今回の正常時の計算保持と終了の資格であり、hidden全体の時間・追加モデルの実寄与・精度改善はまだ確認できません。
+
+F009は同じ4090学習runを継続中。11:56にE2完了・累計424更新／skip0を確認し、採用判断は事前方針v2の固定E12比較を待ちます。[E2観測](artifacts/research/20261017-f009-gamma-preparation-v1/epoch2-observation/observation.json)。公開作者0.958の別レシピGoodpjw V26は、R7／Readerを含む全体再現候補P037として準備しました。11:51のCPU事前確認は、公開Readerに試験用fixture自体が含まれず、科学推論前に停止。作者Docker37c64の保存は確認でき、既存の人工DICOM4形式を追加Inputで検証する修正版を準備しています。[停止の正本](experiments/p037-CPU-preflight-fixture-stop-20261017.json)、[再現調査](artifacts/research/20261017-goodpjw-v26-reproduction-audit-v1/report.md)。R7／Reader単独の効果や自己0.958再現を主張するものではありません。以下は各時点の履歴です。
+
+**2026-10-17 11:31 JST：P035の可視推論・192検査診断を開始し、F009のE1完了を確認しました。** 自己最高0.957、目標0.960未達、新3件の正式採点は未返却です。[今回の正本](experiments/p035-running-F009-epoch1-20261017.json)。P035はP034のモデル・前処理・固定20%を保ち、UIDごとの所有CPUプロセスと期限付き回収だけを変更。Linux人工14件、実pack結合6ケース、証拠改変21負例を検証後、非公開V1のkernel139138353／139138405を起動しました。保存後の全コード・Input9・T4・Docker・Internet OFFも照合済みです。実MRIでの180秒期限・GPU予測・hidden完走はこれから確認し、正式Submitはまだ0です。
+
+F009のE1は1721秒、optimizer更新212／skip0、gamma抽選3386を記録。同じ学習runを継続し、途中のweak指標では採用せず、事前方針v2の固定E12比較を待ちます。11:26の公開Code上位100件は引き続き作者最高0.958で、新たな0.959以上は確認できませんでした。以下は各時点の履歴です。
+
+**2026-10-17 11:22 JST：3候補の正式提出を受理し、独自F009の学習を継続しています。自己最高0.957、目標0.960は未達です。** [現在の正本](experiments/continuation-three-submitted-F009-running-20261017.json)。新3件の自己スコア・状態は公式未返却で、重複提出はしていません。公式残枠は本日3件・累計33件・追加可能2件です。
+
+| 候補 | 一要因の比較 | 正式提出 | 可視検証 |
+| --- | --- | --- | --- |
+| P033 | 作者0.958の固定所見別係数をP029Mへ適用 | 57290868 | 3件・失敗0・36値独立一致 |
+| P034 | P032の部分失敗時に成功nativeセルを残す | 57291440 | 3件・失敗0・native30セル・36値独立一致 |
+| P036 | P033の224モデルへ解剖学的鏡映だけを追加 | 57291580 | 3件・失敗0・36値独立一致 |
+
+F009は同じfold0・seed20261002・12epochでtrain-only gammaだけを追加して学習中です。後続foldの判断は[評価方針v2](experiments/f009-evaluation-policy-v2-prescore-20261017.json)を使用します。新指標が出る前の11:18:13 JSTにhistory0・epochファイルなしを記録し、固定E12・固定10所見AUC改善・工程条件を維持したまま、校正に敏感なBCEを副評価へ変更。旧方針・コード・設定・gate・起動記録は保持しています。
+
+子プロセス異常への新executorは、Kaggle CPUで**Linux人工14試験すべて成功・skip0**を確認しました。66MBの配列転送、UID対応、hard exit／timeout、SIGKILL、同process group・全終了／cleanupを検証。[CPU資格](experiments/isolated-uid-Kaggle-CPU14PASS-20261017.json)。実MRI・GPU推論・180秒期限の妥当性や精度の資格ではありません。P035のopt-in統合を準備中です。以下は各時点の履歴です。
+
+**2026-10-17 11:11 JST：P034も正式提出し、提出57291440の受理を確認しました。** 公式COMPLETE、可視3件・失敗0・native10列／30セル有効。全36最終値・native36値・現在raw3armの親36値を独立FP32再計算で一致確認し、MCL／Synovitis保持、4モデル、source／Input、spawn、queue／process／temp終了も照合しました。[正式提出の正本](experiments/p034-formal-Submit57291440-20261017.json)。全件成功した今回の可視CSVはP032と同じSHAで、新しい部分失敗時の処理は人工例での検証です。P033（57290868）とP034の自己スコアは未返却、最高0.957・目標0.960未達を保持します。
+
+P036（kernel139135844/V1）も公式RUNNINGです。公開別レシピから224モデルの解剖学的鏡映だけを追加し、他7セル・係数・R6／Input4を固定。CPU10件・独立600画素／平均12値・人工CUDAの軸／境界／forwardを確認後、保存内容を照合しました。[P036の記録](experiments/p036-224-mirror-visible-running-20261017.json)。可視完走と自己採点は未検証。F009の実学習は同じrunで継続中です。以下は各時点の履歴です。
+
+**2026-10-17 11:03 JST：P033の採点を追跡しながら、P034の可視推論と独自モデルF009の学習を開始しました。** [実行の正本](experiments/p034-running-f009-training-started-20261017.json)。P034（kernel139135231/V1）は公式RUNNINGで、保存後のコード・Input9・環境も一致。P032から変えるのはnativeの部分失敗処理だけです。成功検査の`N_valid`で順位化し、失敗セルは親文字列を保持。部分列の成功数不足・FP32定数は混合せず、全件成功時は従来と一致します。限定62テスト、GPUの12498値、独立監査54876セルを通過。子プロセス全体の異常・timeoutで全親へ戻す処理は残っており、hiddenでのnative寄与や精度は未確認です。正式Submitはまだ0です。
+
+F009は既存キャッシュとRTX4090でfold0の実学習中です。元F006とseed20261002・group/fold・12epoch・学習率を固定し、train-onlyのstudy共通gamma拡張0.85〜1.15だけを追加。CPU32件・GPU19＋6＋6チェック、新source-bound gate、当方の独立preflight（学習3386／検証821）を通過して起動しました。E12同士のweak比較を事前固定し、改善とBCE非悪化・正常完了を満たす場合にfold1へ進みます。Goldで学習・選択・評価せず、元DICOMの一括取得もありません。約30分の旧E1実測に対し、起動数分時点はhistory0ですがOSのCPU・I/O増加を確認しています。
+
+最新の公式公開Code上位100件は作者0.958が4件、0.959以上は確認0。追加の同点版はコピー／private本体／複数変更を区別しました。[調査証拠](artifacts/research/20261017-public-frontier-v1/frontier-summary.json)。新基盤候補OrthoDiffusionは重み公開を確認しましたが、連続16sliceという入力契約が既存キャッシュと異なります。MRI-COREもcheckpointの充足監査が必要で、どちらも新重み取得・採用はしていません。[基盤調査](artifacts/research/20261017-independent-model-research-v1/static-audit.json)。自己最高は0.957、目標0.960は未達です。以下は各時点の履歴です。
+
+**2026-10-17 10:49 JST：P032の正式結果は自己Public 0.957でした。目標0.960は未達で、P033を提出57290868として正式受理しました。** P032（57262934）は公式Get/ListでCOMPLETE・0.957・247204B。成功版P029M（57225898、0.957・247222B）を保持します。P033は公開作者0.958の固定所見別係数だけを適用した親対照で、可視3件・失敗0・36値の独立FP32照合済み。提出直前にも8コードセル・版V1・Input4・private／Internet OFF／T4を再確認しました。P033の自己スコアと状態はまだ公式未返却で、作者0.958とは区別します。[今回の正本](experiments/p032-result957-p033-submit57290868-20261017.json)。
+
+P032の同点から「F006を混ぜても効果がない」とはまだ判断しません。可視ではnative有効時645→897Bになりましたが、本番は親単独とほぼ同じサイズで、全native無効化または親fallbackの疑いがあります。別runのサイズ差と丸めスコアだけでは確定できず、hiddenの失敗数・実効重み・CSVは取得できていません。成功検査を残す失敗処理の契約を検討し、最新公開上位の採点版も調査中です。ユーザーの最新指示に従い、0.960へ向けた実行と提出を継続します。以前の「原則1候補」は旧計画の仮定です。以下は各時点の履歴です。
+
 **2026-10-16 18:11 JST：P032-v6を正式提出し、提出57262934の受理を公式確認しました。** 192件診断は全成功・構造失敗0・768モデルforward、最終2304値を別FP32計算で全bit一致。提出候補の可視3件も全成功で、対象10列にnative20%が実際に寄与し、親から数値26セル／順位6セルが変化しました。親・native平均・最終の全36値を独立再計算し、MCL／Synovitis保持と正常終了を確認。新Public・hidden完走はまだ公式未返却、自己最高0.957を保持しています。[提出と検証の正本](experiments/p032-v6-formal-Submit57262934-score-unreturned-20261016.json)。公式残枠は本日1件・累計30件・追加可能4件です。以下は各時点の履歴です。
 
 採点待ちの間に、[作者Public 0.958の採点版](https://www.kaggle.com/code/heliosli/blend-mine-in-private-lb-luck-to-all-upvoters?scriptVersionId=358751289)を追加確認しました。R6やTTAを変えず、Synovitis／Lateral OA／PF OA／Baker’sのRaptor係数をまとめて変更した版です。この公開済み固定vectorだけを自己P029Mへ反映したP033（kernel139000655/V1）は可視3件・失敗0で完走し、全36値を独立FP32再計算で一致確認。R6の9ファイルSHA、埋込7モジュール、両GPU worker終了も確認しました。[P033の記録](experiments/p033-visible-pass-parent-weight-vector-unsubmitted-20261016.json)。作者0.958と自己スコアは区別し、P033は**未提出**です。

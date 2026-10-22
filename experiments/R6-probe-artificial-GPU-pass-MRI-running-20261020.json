@@ -1,0 +1,26 @@
+{
+  "at_UTC": "2026-10-20T10:23:45.856157+00:00",
+  "status": "ARTIFICIAL_GPU_DIRECT_ON_OFF_REPLAY_PASS_REAL_WEAK_INFERENCE_RUNNING",
+  "kernelId": 139794653,
+  "saved_version": 1,
+  "source_SHA": "ce1848aadbffc1ecb00c966e39227c5da926b7461afa2f31f894b8c2012d1c5b",
+  "stream_evidence": "artifacts/research/20261020-R6-pair-probe-root-execution-v1/stream-20261020T102110Z/summary.json",
+  "stream_body_SHA": "efc055caa61fd96a5248cbc557ea1af65e0a547ce1a421fec55e678c353a45c0",
+  "stream_HTTP": 200,
+  "synthetic_directON_replay_maxabs": 3.2557063642246753e-10,
+  "synthetic_directOFF_replay_maxabs": 3.972825558112847e-10,
+  "before_new_probe_MRI_gate_pass": true,
+  "actual_weak_MRI_workers_started": {
+    "0": 396,
+    "1": 400
+  },
+  "actual_weak_success_count_known": false,
+  "weak_accuracy_evaluated": false,
+  "client_stream_idle_timeout_is_not_worker_failure": true,
+  "own_Gold_fit_select": 0,
+  "formal_Submit_for_probe": 0,
+  "goal959_achieved": false,
+  "best_own_Public": ".958",
+  "P045_pending": 57430729,
+  "local_GPU19472_preserved": true
+}

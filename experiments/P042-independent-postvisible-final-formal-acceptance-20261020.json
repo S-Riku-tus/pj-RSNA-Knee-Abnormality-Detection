@@ -1,0 +1,167 @@
+{
+  "schema_version": "P042_independent_postvisible_final_formal_acceptance_v1",
+  "at_UTC": "2026-10-19T17:06:50.620389+00:00",
+  "all_checks_passed": true,
+  "checks": {
+    "single_ref_accepted_response_Get_independent_List": true,
+    "own_owner_and_team_exact": true,
+    "file_description_date_exact": true,
+    "sixkey_inert_request_exact_savedV1": true,
+    "request_SHA_review_exact": true,
+    "actual_provenance_numeric_preflight_pins_exact": true,
+    "root_visible_actual_qualification": true,
+    "limits_increment_once_raw_zero_omission_typed0": true,
+    "full40ownList_all4refs_exact_once": true,
+    "pending_not_zero_or_failure": true
+  },
+  "accepted_ref": 57403458,
+  "owner": "rsraki",
+  "saved_kernel": 139595447,
+  "saved_version": 1,
+  "state": {
+    "ref": 57403458,
+    "raw_status_present": false,
+    "status": null,
+    "raw_Public_present": false,
+    "Public": null,
+    "error": null,
+    "bytes": 0
+  },
+  "own_best_stays": "0.958",
+  "remaining_user_accepted_formal": 0,
+  "four_authorized_accepted_refs": {
+    "P038": 57391696,
+    "P040": 57402883,
+    "P041": 57402914,
+    "P042": 57403458
+  },
+  "root_local_postcondition_error": {
+    "at_UTC": "2026-10-19T17:04:43.984482+00:00",
+    "label": "limits-after",
+    "error_type": "KeyError",
+    "HTTP_status": null,
+    "dispatch_called": true,
+    "accepted_ref_observed": 57403458,
+    "no_retry": true,
+    "reconcile_before_any_new_formal": true
+  },
+  "root_local_KeyError_is_not_submission_ERROR": true,
+  "raw_numAllowedNow0_omission_confirmed_by_standard_SDK_typed_zero": true,
+  "no_retry_or_further_formal_in_scope": true,
+  "public_pending_not_zero": true,
+  "formal3monitor_continues_until_results_or_root_stop": true,
+  "activity": {
+    "additional_API_beyond_watch_and_authorized_once_reconciliation": 0,
+    "Save": 0,
+    "Submit": 0,
+    "upload": 0,
+    "GPU_start": 0
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/error.json",
+      "bytes": 266,
+      "sha256": "acab4a8cc9e8f862113932c305a84fb804bef506677039769fb0b45c0bbc3055"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/limits-after-raw.json",
+      "bytes": 28,
+      "sha256": "05d58a56214fadd1eb70d74e5c9af4c5f828239bf2759f280e65f563117edbc0"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/limits-before-raw.json",
+      "bytes": 46,
+      "sha256": "3a7b0a824ff7e25149d985e9f3e2dc8b2362d795e65f4c6c001b75e3022b7d10"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/list-before-raw.json",
+      "bytes": 19109,
+      "sha256": "ef6f11d1bdb45b5a15f2f046213d169c56f6a9133ff9da01535d4edb04c1fc27"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/manual-dispatch.json",
+      "bytes": 252,
+      "sha256": "b3c9114b44e600494123197f5f70711caaa016fd5b54d2ea0c8b4de84303f6c9"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/preflight-kernel-raw.json",
+      "bytes": 228681,
+      "sha256": "618a9a7ca56eb956019a5dd2502e50d0578c014880244e4b074e3f8cf99bf326"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/preflight-limits-raw.json",
+      "bytes": 46,
+      "sha256": "3a7b0a824ff7e25149d985e9f3e2dc8b2362d795e65f4c6c001b75e3022b7d10"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/preflight-list-raw.json",
+      "bytes": 19109,
+      "sha256": "ef6f11d1bdb45b5a15f2f046213d169c56f6a9133ff9da01535d4edb04c1fc27"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/preflight-receipts.json",
+      "bytes": 866,
+      "sha256": "328a10b7d800cee64a1abe8f6321fc1bc045098a6df64a771d3b87db44fc53d0"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/preflight-status-raw.json",
+      "bytes": 21,
+      "sha256": "8c65d9493ad080266a23df2675f847486fedc0546a88a91c866b812d970915b5"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/preflight.json",
+      "bytes": 912,
+      "sha256": "29d43df549015bb113b6fcd5a22b4c3d25daf0f38b9b53ace6a806dcfb188cf5"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/receipts.json",
+      "bytes": 1279,
+      "sha256": "6461b2011a2a1902255775cf06fa4a2408c35a45081d43d83790cca2692b6330"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/request.json",
+      "bytes": 576,
+      "sha256": "877ad64bb6831ecb47f687c275e1878f8b49f60674b730268dacb064ccbb45b6"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/root-review.json",
+      "bytes": 3257,
+      "sha256": "6a5ab35331bfdaef7c7001e619cbb38ca1e6647171a38fcbe52a969140068114"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/status-before-raw.json",
+      "bytes": 21,
+      "sha256": "8c65d9493ad080266a23df2675f847486fedc0546a88a91c866b812d970915b5"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/submission-get-raw.json",
+      "bytes": 569,
+      "sha256": "4c0a468a87cee867e4c2dcd84dd1b054996c0f9915c521d218c44a24dc729c4e"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/submission-response-raw.json",
+      "bytes": 16,
+      "sha256": "6bd0885ab7c688ced67b9fc8484c6b7a175fdd56235108fd7651e350dd02bebf"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/summary.json",
+      "bytes": 1188,
+      "sha256": "ca029b849df89758978a77c92e140a5c7dacb7bd730e92a08b22dab7e23621f3"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T170623246895Z/summary.json",
+      "bytes": 1883,
+      "sha256": "4b5ed8bd0ea193a0c68bca9d66564b0755da8c4d2f75f9af4b94786cc26652b4"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T170623246895Z/P042-submission-57403458.json",
+      "bytes": 569,
+      "sha256": "4c0a468a87cee867e4c2dcd84dd1b054996c0f9915c521d218c44a24dc729c4e"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/final-acceptance-reconciliation-v1/summary.json",
+      "bytes": 4313,
+      "sha256": "8cb85268848c07ae1ca2bc57583156c1b42746a66647088cc8d633665f41a1db"
+    }
+  ]
+}

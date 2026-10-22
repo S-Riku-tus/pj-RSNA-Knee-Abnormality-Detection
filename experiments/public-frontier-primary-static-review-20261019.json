@@ -1,0 +1,48 @@
+{
+  "experiment_id": "public-frontier-primary-static-review-20261019",
+  "status": "READ_ONLY_OFFICIAL_TOP100_MAX958_NO959_NEWFORK_DUPLICATE",
+  "observation_JST": "2026-10-19T11:34:37.542528+09:00",
+  "author_public_maximum": 0.958,
+  "own_reproduction_score": null,
+  "official_observed_top100": 100,
+  "author_at_least959": 0,
+  "author_at_least960": 0,
+  "new958_forks": 2,
+  "new_fork_code_byte_identical": true,
+  "latest_vs_scored_and_Input_versions_bound": true,
+  "private_logic_not_a_public_reproduction_candidate": true,
+  "scientific_improvement_cause_for_specific_top_966_to967": null,
+  "user_targets": {
+    "first_displayed_Public_at_least": 0.959,
+    "next_displayed_Public_strictly_greater_than": 0.96,
+    "old_goal_records_not_rewritten": true
+  },
+  "decision_ja": "新公開forkを追加提出する根拠なし。独自改善の一要因比較と最有望1件の検証を優先。",
+  "gold_audit": {
+    "our_gold_read_or_evaluation": false,
+    "new_weights_downloaded": 0,
+    "inherited_public_weight_status": "Previous20261017 audit: shared upstream Gold58 selection exposure remains; Reader authors declare Gold58 not trained, but checkpoint/architecture/target-weight selection independence not established.",
+    "new_sources_do_not_prove_gold_cleanliness": true,
+    "private_logic_cannot_be_audited_from_public_launcher": true,
+    "dataset_specific_licenses_not_replaced_by_blanket_permission": true
+  },
+  "review": {
+    "path": "artifacts/research/20261019-public-frontier-v1/review.json",
+    "bytes": 23031,
+    "sha256": "464242d47a5d63e16d288d105d66e9f1cfb09fa8fffa4aa8800f5293d11369b1"
+  },
+  "actions": {
+    "anonymous_frontier_requests": 1,
+    "anonymous_updated_view_requests": 4,
+    "public_notebook_text_downloads": 4,
+    "credentials_read": 0,
+    "own_API_calls": 0,
+    "weight_MRI_downloads": 0,
+    "real_MRI_decode": 0,
+    "training": 0,
+    "forward": 0,
+    "Save": 0,
+    "Submit": 0,
+    "external_upload": 0
+  }
+}

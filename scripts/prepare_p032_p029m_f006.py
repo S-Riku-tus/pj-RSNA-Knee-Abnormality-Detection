@@ -140,17 +140,29 @@ def cell(kind, text):
     return value
 
 
-def prepare(output, *, recovery=RECOVERY, mode="serving", diagnostic_count=192):
+def prepare(output, *, recovery=RECOVERY, mode="serving", diagnostic_count=192,
+            blend_policy="fullN-column", native_executor="legacy-pool"):
     output, recovery = Path(output), Path(recovery)
     if output.exists() or output.is_symlink():
         raise FileExistsError("Use a fresh P032 run directory")
     if mode not in ("serving", "diagnostic") or not 1 <= diagnostic_count <= 256:
         raise ValueError("Invalid P032 mode/count")
+    if blend_policy not in ("fullN-column", "success-subset"):
+        raise ValueError("Unknown fixed20 blend contract")
+    if native_executor not in ("legacy-pool", "isolated-uid"):
+        raise ValueError("Unknown native executor")
+    if native_executor == "isolated-uid" and blend_policy != "success-subset":
+        raise ValueError("The isolated UID candidate fixes the existing success-subset blend policy")
     parent, parent_review = inspect_parent(recovery / "P029M-source.ipynb")
     bootstrap, native_review = inspect_native(recovery / "F006-native64-source.ipynb")
     child = "BOOTSTRAP = " + repr(bootstrap) + "\n" + (ROOT / "scripts/p032_native_child.py").read_text(encoding="utf-8-sig")
     # Keep future import in the legal first statement position.
     child = child.replace("from __future__ import annotations\n", "", 1)
+    if blend_policy == "success-subset":
+        old = '"structural_failures_forwarded_to_column_disable_mask": True'
+        if child.count(old) != 1:
+            raise ValueError("Expected one original failure-mask receipt field")
+        child = child.replace(old, '"structural_failures_forwarded_to_cell_failure_mask": True')
     compile(child, "p032_native_child.py", "exec")
     extension = (ROOT / "scripts/p032_parent_extension.py").read_text(encoding="utf-8-sig")
     files = {"p032_native_child.py": child.encode(),
@@ -158,6 +170,13 @@ def prepare(output, *, recovery=RECOVERY, mode="serving", diagnostic_count=192):
              "p032blend/__init__.py": b"",
              "p032blend/contracts.py": (ROOT / "src/rsna_knee/contracts.py").read_bytes(),
              "p032blend/fixed20_blend.py": (ROOT / "src/rsna_knee/fixed20_blend.py").read_bytes()}
+    if blend_policy == "success-subset":
+        files["p032blend/success20_blend.py"] = (ROOT / "src/rsna_knee/success20_blend.py").read_bytes()
+    if native_executor == "isolated-uid":
+        for name in ("isolated_uid_executor.py", "operational_uid_recovery.py"):
+            files["p032blend/" + name] = (ROOT / "src/rsna_knee" / name).read_bytes()
+    policy_argument = "" if blend_policy == "fullN-column" else ", blend_policy=" + repr(blend_policy)
+    executor_argument = "" if native_executor == "legacy-pool" else ", native_executor=" + repr(native_executor)
     for name, raw in files.items():
         compile(raw, name, "exec")
     raw_bundle = zip_sources(files)
@@ -167,13 +186,30 @@ def prepare(output, *, recovery=RECOVERY, mode="serving", diagnostic_count=192):
                     "exec(compile(" + repr(extension) + ", 'p032_parent_extension.py', 'exec'), globals())\n"
                     "_p032_runtime = restore_runtime(" + repr(packed) + ", " + repr(digest(raw_bundle)) + ")\n"
                     "_p032_result = execute(globals(), runtime=_p032_runtime, started=_p032_started, "
-                    "mode=" + repr(mode) + ", diagnostic_count=" + repr(diagnostic_count) + ")\n")
+                    "mode=" + repr(mode) + ", diagnostic_count=" + repr(diagnostic_count) + policy_argument + executor_argument + ")\n")
     compile(final_source, "P032-final-cell", "exec")
     notice = cell("markdown", "# P032: existing P029M + existing F006 pair, fixed 20%\n\n"
                   "Private, Internet OFF, T4 x2. No training or API submission. "
                   "Parent scientific cells are preserved. Native errors/timeouts retain the parent CSV "
                   "and are explicitly not an accuracy comparison. MCL/Synovitis retain parent values. "
                   "The previous hidden failure cause is unknown.\n")
+    if blend_policy == "success-subset":
+        notice = cell("markdown", "# P034: P029M + F00620, successful-study fallback contract\n\n"
+                      "Only the integration failure contract changes from P032-v6: native ranks use "
+                      "N_valid successful studies; failed cells retain exact parent text. Partial columns "
+                      "require at least two successful studies with distinct FP32 scores. Complete-coverage results are unchanged. "
+                      "No parent/final rerank, imputation or weight search. The parent, four models and "
+                      "original reader are fixed. Native errors/timeouts still restore the parent; this "
+                      "does not fix a global lost-worker stall. Selection bias from failed readers is possible.\n")
+    if native_executor == "isolated-uid":
+        notice = cell("markdown", "# P035: fixed P034 success20 with isolated UID execution\n\n"
+                      "Parent, four native models, reader, FP32 inference math and successful-study fixed20 are unchanged. "
+                      "Only the operational executor/projection changes: owned CPU subprocess per UID, same process group, "
+                      "180-second UID deadline, positive task/result SHA and separate operational failure ledger. "
+                      "Structural and operational failures share an explicit exclusion mask; both retain parent text. "
+                      "Unexpected task/model/schema exceptions still restore the completed parent. Legacy router JSON "
+                      "is quarantined and reclassified into a new result schema. No old phase/fallback qualification "
+                      "or Public gain is inherited. Requires new Linux CPU and native/visible qualification.\n")
     book = copy.deepcopy(parent)
     if mode == "serving":
         for item in book["cells"]:
@@ -223,7 +259,7 @@ def prepare(output, *, recovery=RECOVERY, mode="serving", diagnostic_count=192):
         )
         extension_runner = (
             "_p032_result = execute(globals(), runtime=_p032_runtime, started=_p032_started, "
-            "mode='serving', diagnostic_count=" + repr(diagnostic_count) + ")\n"
+            "mode='serving', diagnostic_count=" + repr(diagnostic_count) + policy_argument + executor_argument + ")\n"
         )
         for name, value in (("compressed-setup", setup), ("parent-runner", parent_runner),
                             ("extension-runner", extension_runner)):
@@ -235,6 +271,8 @@ def prepare(output, *, recovery=RECOVERY, mode="serving", diagnostic_count=192):
         raise ValueError(f"P032 Notebook exceeds conservative API source capacity: {len(serialized)}")
     manifest = {
         "schema_version": "p032_offline_preparation_v1", "mode": mode, "diagnostic_count": diagnostic_count,
+        "blend_policy": blend_policy,
+        "native_executor": native_executor,
         "source_sha256": digest(serialized), "source_bytes": len(serialized),
         "parent_execution_transport": "hashed_exact_cells_IPython_run_cell" if compressed_parent else "inline_unchanged_cells",
         "inline_notebook_source_bytes_before_capacity_fallback": inline_bytes,
@@ -246,12 +284,27 @@ def prepare(output, *, recovery=RECOVERY, mode="serving", diagnostic_count=192):
         "platform": {"docker": DOCKER, "Internet": False, "GPU": "Tesla T4 x2"},
         "integration": {"native_weight": 0.2, "parent_reranked": False, "final_reranked": False,
                         "FP32_separate_multiply_add": True,
-                        "structural_failure_disables_entire_native_column": True,
+                        "structural_failure_disables_entire_native_column": blend_policy == "fullN-column",
+                        "native_rank_population": "full_N" if blend_policy == "fullN-column" else "N_valid_successful_studies",
+                        "failed_native_cells_retain_parent_text": True,
+                        "partial_constant_native_contributes": False,
+                        "complete_coverage_matches_P032_numeric_contract": True,
                         "native_child_timeout_or_exception_retains_parent_CSV_and_records_no_comparison": True,
                         "whole_notebook_budget_seconds": 30600, "final_reserve_seconds": 300,
                         "diagnostic_native_budget_limit_seconds": 3600,
                         "serving_native_budget_limit_seconds": 28800,
                         "old_S6_parent_gate_or_two_controller_cleanup_not_reused": True},
+        "operational_executor": {
+            "selected": native_executor, "one_factor_relative_to_P034": native_executor == "isolated-uid",
+            "parent_models_reader_math_alpha_success_subset_fixed": native_executor == "isolated-uid",
+            "max_concurrent_CPU_readers": 2, "hard_worker_limit": 4,
+            "uid_deadline_seconds": 180 if native_executor == "isolated-uid" else None,
+            "native_result_schema": "native_isolated_uid_operational_recovery_v1" if native_executor == "isolated-uid" else None,
+            "operational_failure_is_not_old_structural_failure": True,
+            "legacy_router_JSON_quarantined_outside_Output": native_executor == "isolated-uid",
+            "failure_mask_is_structural_operational_union": native_executor == "isolated-uid",
+            "new_runtime_qualification_inherited": False,
+        },
         "observability": {"child_faulthandler_repeat_seconds": 120,
                           "child_stage_begin_end_events": True,
                           "parent_stage_begin_end_events": ["execute", "import_torch", "CUDA_available",
@@ -264,6 +317,24 @@ def prepare(output, *, recovery=RECOVERY, mode="serving", diagnostic_count=192):
                   "new_visible_complete": False, "new_hidden_complete": False, "Public_gain_verified": False},
         "environment": {"python": platform.python_version()},
     }
+    if native_executor == "isolated-uid":
+        observed = ROOT / (
+            "artifacts/research/20261017-isolated-uid-cpu-execution-v1/observations/"
+            "isolated-uid-cpu-qa-20261017-75c2ae8688/20261017T022112027790Z/files/cpu-uid-qa-verification.json")
+        if observed.is_file():
+            proof = json.loads(observed.read_bytes())
+            module_sha = manifest["runtime_files"]["p032blend/isolated_uid_executor.py"]["sha256"]
+            expected_proof_sha = "69d72a018774b15edecd592480e35420928cb93b973abf663e78a2550297c8ac"
+            if (digest(observed.read_bytes()) != expected_proof_sha or proof.get("complete") is not True
+                    or proof["source_bindings"]["src/rsna_knee/isolated_uid_executor.py"]["sha256"] != module_sha):
+                raise ValueError("Linux artificial executor reference/source binding differs")
+            manifest["operational_executor"]["Linux_CPU_component_reference"] = {
+                "kernel_id": 139137393, "version": 1,
+                "ref": "rsraki/isolated-uid-cpu-qa-20261017-75c2ae8688",
+                "verification_sha256": expected_proof_sha, "tests_PASS": proof["tests"]["run"],
+                "skips": proof["tests"]["skipped"], "source_sha256": module_sha,
+                "scope": "artificial executor component only; operational shim/real MRI/GPU/180s/Public not qualified",
+            }
     output.mkdir(parents=True, exist_ok=False)
     (output / "source.ipynb").write_bytes(serialized)
     (output / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -276,8 +347,11 @@ def main(argv=None):
     parser.add_argument("--recovery", type=Path, default=RECOVERY)
     parser.add_argument("--mode", choices=("serving", "diagnostic"), default="serving")
     parser.add_argument("--diagnostic-count", type=int, default=192)
+    parser.add_argument("--blend-policy", choices=("fullN-column", "success-subset"), default="fullN-column")
+    parser.add_argument("--native-executor", choices=("legacy-pool", "isolated-uid"), default="legacy-pool")
     args = parser.parse_args(argv)
-    result = prepare(args.output, recovery=args.recovery, mode=args.mode, diagnostic_count=args.diagnostic_count)
+    result = prepare(args.output, recovery=args.recovery, mode=args.mode, diagnostic_count=args.diagnostic_count,
+                     blend_policy=args.blend_policy, native_executor=args.native_executor)
     print(json.dumps({key: result[key] for key in ("mode", "source_bytes", "source_sha256")}))
 
 

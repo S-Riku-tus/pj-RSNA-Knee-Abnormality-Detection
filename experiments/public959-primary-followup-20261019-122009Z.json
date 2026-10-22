@@ -1,0 +1,10 @@
+{
+  "schema": "public959_primary_followup_index_v1",
+  "review": "artifacts\\research\\20261019-public959-primary-followup-122009Z\\primary-followup-review.json",
+  "review_sha256": "c14437b38a4d2e3837c7cecfdf083596352ea89fa412c57f2406ecd379e2f7d8",
+  "decision": "No newly justified public >=0.959 execution candidate. Maintain the already frozen final candidate plan.",
+  "max_author_best": 0.958,
+  "new_qualified_candidates": 0,
+  "own_new_submissions": 0,
+  "Gold_selection_audit_not_cleared": true
+}

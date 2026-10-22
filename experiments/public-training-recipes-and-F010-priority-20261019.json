@@ -1,0 +1,125 @@
+{
+  "schema_version": "public_training_recipes_F010_priority_20261019_v2",
+  "date_jst": "2026-10-19",
+  "actor": "/root/training_recipe_research",
+  "main_evidence": "artifacts/research/20261019-public-training-recipes-v1/research-analysis.json",
+  "status": "PRIMARY_TRAINING_TEXT_AUDITED_F010_LAST4_CHOSEN_BY_ROOT_NOT_TRAINED_BY_THIS_AGENT",
+  "result_ja": "公開方式は学習データ・ラベル生成・モデル構成まで調べられる。新たにS6作者0.950のexact training textと公開target/poolの存在を確認した。しかし公開教師JEVのGold58選択曝露を検出し、丸ごとの転用は除外。rootの次要因F010は既存教師・392画像・group/foldを保ち、DINOv2末尾2blockから4blockへの解凍だけを変更する。",
+  "public_pipeline_score_correction_ja": "nartaa S6の0.950は主力ConvNeXt checkpoint1本だが、読めない検査には0.949CoAtNet fallbackが入るpipelineの作者Public値。純粋ConvNeXt単体全検査の実測値や我々の再現値と同一視しない。既存public親+独自blend提出も独自単体スコアではない。",
+  "comparison_matrix": [
+    {
+      "recipe": "Current F006/F009 native DINOv2S",
+      "data_creation": "Kaggle DICOM physicalsort,series p1/p99 uint8,physical-aspect letterbox392; maximal3series (plane-diverse, fluid-sensitive/fat-suppressed priority) x48adjacent3-slice windows; processed cache only local",
+      "targets": "vmohitrao report_weak4207, missing masked, existing suppliedgroup+duplicatereport grouped5folds, Gold excluded",
+      "model": "generic DINOv2S/14 last2 trainable, CLS384, finding-specific slice attention then series attention; regional4x4 branch already separately implemented",
+      "train": "fixed12epoch; seed20261002; microstudy1/effective16; chunk16; encLR1e-5,head3e-4; latecosine6/0.1; F009onlystudycommongamma",
+      "validation": "weak BCE/primaryfixed10/all12 separate, fold0/1 repeateddevelopment not untouchedholdout; current fixedF009E12 awaits completedfold1",
+      "ready": "existing cache+code+genericinit; no new imageacquisition required",
+      "source": "configs/experiments/f006-dinov2-native-last2-late-cosine.json"
+    },
+    {
+      "recipe": "Nartaa S6 all-data authorPublic0.950 pipeline",
+      "data_creation": "fullfield plus100mm local views; SKM-TEA anatomyanchor; cache320crop288;3slice physicalstep3.5mm;64trainingwindows; inference fullcover stride3",
+      "targets": "4349reportweak-86localdiskdeletions=4263; JEVblendsoft targets plus priorfill; Gold58 rows blank. 86 removal is NOT qualityscreen",
+      "model": "ConvNeXt-small ImageNet22k_ft1k allencoder trainable; per-finding spatial attention plus windowMIL; state/extent/pairrank/rareboost OFF",
+      "train": "E16fixed,seed42,batch2,AdamW1e-4/1e-3,wd.05,warmup5%+cosinezero,bf16,gradcheckpoint,clip5,noEMA/noSWA",
+      "validation": "checkpointE16 fixed/noGold58checkpointselection per source; upstream Gold-selected JEV and parent geometrydevelopment remain",
+      "ready": "DatasetV5 exact trainer/argv/targets/pool/labelbuilder public, text10selected downloaded; external code/anatomy dependencies and new cache adaptation needed",
+      "source": "artifacts/research/20261019-public-training-recipes-v1/training-text/training_code/README.md"
+    },
+    {
+      "recipe": "Original Raptor / advanced CoAtNet Global96/D4",
+      "data_creation": "nativephysicalcrop then fixedstacks336/384; old44slices vs later64/96 and94windows are differentversions; fiveplane/sequence slots inlaterrecipe",
+      "targets": "originalreportsoftlabelsnotfullyprovided; advancedpublicteachers may combinepublicsources; OAI used only separatepublishedDanialCoAtbranch",
+      "model": "generic pretrained CoAtNet2,2.5Dtriplets,findingMIL; advanced FS-conditioned/depthzone adapters",
+      "train": "originaltrain12windows/eval24,16epochs; advanced94inferencewindows; selectedtop3weightaverage and sometimes recalibration",
+      "validation": "Gold58 selects epoch,adapter,architecture in published manifests; no cleanOOF claim",
+      "ready": "code/preprocessedcorpus public; original fullteacher missing; cannot reuse Gold-selected selection workflow",
+      "source": "artifacts/research/20261003-label-audit/dreaddevelopment/knee-mri-training-the-twelve-finding-model.py"
+    },
+    {
+      "recipe": "R6/R7 published mainstage",
+      "data_creation": "v4 fullFOV+100mm knee/PF/posterior/medial/lateral locals, anatomicalsidecanonical, thin3Dstacksaveragedinto~slabs, series_companded intensity",
+      "targets": "reportstates,binaries,softprior construct; detailed originalstate_targets/OOF correspondence missing inexistingpublicmanifest",
+      "model": "ConvNeXt-small,4fold,spatial+windowattention,optionalstateevidence/extent/pairranking; R7 addsstate stacker",
+      "train": "manifest4foldx16ep,batch2,176windows,crop352; full encoder fine-tuning",
+      "validation": "authorhashfold not guaranteed supplygroup/patientindependent; source cropcomment mentions Goldmontages; pretrainedcompetitionencoder after newheadsplit is not cleanOOF",
+      "ready": "inferencebundle ready, originalfulltrainingdataset notcertified; exactcode alone insufficient",
+      "source": "artifacts/research/20261017-independent-model-research-v1/report.md"
+    },
+    {
+      "recipe": "Latest DINOv5 training source as saved20261004",
+      "data_creation": "multi-family frozenfeatures plus heads andmodel specificpreprocessing; historical DINOsaur V32 not identical tolatesttrain",
+      "targets": "Gold overwrites softtargets, Goldlossweight2, perGoldfold training usesotherGoldfolds",
+      "model": "DINO-family plus ConvNeXt/Rad/CoAtpublicensemble invariousversions",
+      "train": "heads on frozenfeatures, Gold-based epoch/folddevelopment",
+      "validation": "cannot call ownGold-independent after downstream foldsplit/distillation",
+      "ready": "model-family design references only; currentGold-policy blocks directtrainingworkflow",
+      "source": "artifacts/research/20261004-public-contract/romantamrazov/rsna-knee-dinosaur-v5-train-latest/source-code.py"
+    }
+  ],
+  "why_not_copy_JEV_teacher": {
+    "observed_version": 5,
+    "source": "artifacts/research/20261019-public-training-recipes-v1/jev-labels-view.json",
+    "concrete_selection": "Gold58 chooses9steven+3pilkwang columns; JEV6prompt members per-targetAUCweighted; global0.95/0.05 blend selected; thresholdcalibration and eval74mix",
+    "project_rule": "gold画像由来ラベルを学習やcheckpoint選択に使わない。公開重み・ラベルのgold利用は別途監査する。",
+    "decision_ja": "CC0だけではGold非使用を意味しない。公開教師のgold行を削除しても、Goldで選んだ列・prompt・係数の影響は残る。JEVblendを新自作教師へそのまま使わず、現vmohitraoとmaskを保持する。"
+  },
+  "root_selected_next_factor": {
+    "id": "F010",
+    "factor": "DINOv2 last2 to last4 trainability only",
+    "rationale_ja": "成功公開モデルは疾病教師による全encoder適応を使う。一方、現nativeはDINO最終2blockしか適応していない。既存GPU/cache/servingを保つ小さい変更として適応容量を増やす比較を優先する。公開結果からlast4が良いことが直接示されたわけではない。",
+    "unchanged": ["weakteacher and observedmask", "groupfold+seed", "native3923x48cache", "allnormalization/crops/sampling", "attentionhead", "optimizer and LR plan", "fixedepoch12", "existingF009run"],
+    "resource_ja": "現F009完了後に一度だけfold0を起動するローカルrunnerをrootが別途準備。新last4のGPU資源人工確認と実時間予算を測定し、既存6h/last2をlast4の保証時間へ転用しない。",
+    "this_agent_training_started": false,
+    "Public_gain_or_0960_promise": null
+  },
+  "remaining_candidates_after_F010": [
+    {
+      "candidate": "finding-specific spatial attention",
+      "value_ja": "S6はper-findingqueryでspatialmapをpool。現CLSは全位置を一表現へ圧縮し、既存REG4x4は位置情報は残すが固定pool。",
+      "remaining_ja": "DINOpatchtokensの新head/gradient/servingを要する。既存regional4x4と比較し、新attentionだけの要因に限定。F010と同時変更しない。",
+      "clean_source": "training-text/training_code/s6/train_s6f0_all.py:410"
+    },
+    {
+      "candidate": "per-class normalised masked BCE",
+      "value_ja": "S6bce_softはclassごとの観測weight正規化後mean、現native全観測cell合算と相違。macro評価との寄与を整える仮説。",
+      "remaining_ja": "既存teacher/maskを保持しeffective16全体のclassdenominatorで算出、0supportclass除外。少数MCL/Synovitisのnoise増幅に注意し、fixed10/all12の両方を報告。採用優先はF010より後。",
+      "clean_source": "training-text/training_code/s6/train_s6f0_all.py:526"
+    },
+    {
+      "candidate": "generic CNN fullfine-tune",
+      "value_ja": "S6はConvNeXtS+独自labelで作者0.950。新backboneを既存cacheで試すならarchitecture+pretraining全体比較となる。",
+      "remaining_ja": "genericiniteligibility/strictload、既存392入力に合わせたmodel契約・全encoderVRAM・speed・samegroupOOF・newservingが必要。名前だけでcompetitionfinetunedcheckpointへ置換しない。"
+    },
+    {
+      "candidate": "anatomical crop and wider sequence coverage",
+      "value_ja": "publicv4はfullFOVを残し100mmのjoint/PF/posterior/medial/lateralを使い、薄3Dを物理slab平均。現max3plane優先はnonfluid系列を捨てる場合がある。",
+      "remaining_ja": "現在cacheのletterboxだけから失われたnativecrop細部は戻らない。Kaggle新processedcache、train/infer共通metadata、groupgold除外、pixelgeometryQC、disk/timeが必要。公開crop設計のGoldmontages由来をそのままclean設計と呼ばない。",
+      "source": "artifacts/research/20261017-independent-model-research-v1/r6-embedded-exact/px_cache.py:83"
+    },
+    {
+      "candidate": "better report softlabels without Gold selection",
+      "value_ja": "Host定義に対応するmultilingual state/negation/severityとunaddressedを明示して学習教師を改善する余地。",
+      "remaining_ja": "生成prompt/sourcecode/sourceversionとGold選択履歴を監査、現weakfoldの教師を変えると単純AUC比較が自己参照になり得る。report手確認の別固定auditsetが必要。外部LLM呼出や費用を自動発生させず、Goldでcolumnmixやpromptを選ばない。"
+    }
+  ],
+  "ensemble_acceptance_ja": "同じgroup未学習のOOFで単体AUC、rank残差相関、陽陰性discordantpair、事前固定blend差を調べる。低いcorrelationだけでは採用せず、単体が低くても同じ誤りを減らすかを評価。競技finetuned公開親にcleanOOFがない場合、親とのweakblend改善を独立検証と主張しない。Publicは5枠/日を固定候補だけに使う。",
+  "limits": [
+    "Public0.950 pipelineや過去上位の自己報告から、我々の独自0.960到達を予測しない。",
+    "Gold58固定E16未選択とGold由来teacher/geometry開発の非使用は別。",
+    "同一report/groupを分割しない。患者独立性は未確認。",
+    "singlecheckpoint主力でfallbackがあればpipeline scoreと明記。"
+  ],
+  "verification": {
+    "selected_public_text_files": 10,
+    "author_SHA256SUMS_exact_matches": 7,
+    "Python_AST_without_import": 5,
+    "public_code_executed": 0,
+    "weights_labels_images_downloaded": 0,
+    "MRI_decode_GPU_training": 0,
+    "Kaggle_Save_Submit_upload": 0,
+    "credentials_read": 0,
+    "PROJECT_validation_ledger_edits": 0
+  }
+}

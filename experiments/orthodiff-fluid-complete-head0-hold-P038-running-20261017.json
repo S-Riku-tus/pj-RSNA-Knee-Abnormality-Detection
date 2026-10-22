@@ -1,0 +1,321 @@
+{
+  "schema_version": "orthodiff_fluid_complete_head0_hold_P038_GPU_running_v1",
+  "at_UTC": "2026-10-17T05:19:07.802032+00:00",
+  "own_best_Public": 0.957,
+  "goal_Public": 0.96,
+  "goal_achieved": false,
+  "prior_record": {
+    "path": "experiments/orthodiff-regional-GPU-running-FD704-20261017.json",
+    "bytes": 8931,
+    "sha256": "a024c905cfd9960e215fea26bc719ef3a524c916a0987d882efbb6f5ac57f8e1"
+  },
+  "fluid_extraction": {
+    "source": {
+      "path": "artifacts/kaggle/orthodiff-sag-fluid1080-20261017-v3/source.ipynb",
+      "bytes": 197007,
+      "sha256": "4b8237aa96f44e1a4365180bba5fd2b65782549ad0f0833a6d7e4213a01209b0"
+    },
+    "kernelId": 139158713,
+    "version": 1,
+    "official_observation": "artifacts/qa/odff1/20261017T051523509233Z",
+    "actual_qualification": {
+      "path": "artifacts/research/20261017-orthodiff-fluid-actual-audit-v1/verification.json",
+      "bytes": 10875,
+      "sha256": "251a28c46c039ca493aedf3b9b2161b8d95dd224f626db5c92b1dcb517588d28"
+    },
+    "coverage": {
+      "requested": 1080,
+      "recorded": 1080,
+      "success": 1055,
+      "failure": 25,
+      "success_strata": {
+        "fluid_sensitive_FS": 1055
+      },
+      "failure_reason_types": {
+        "PilotDataError": 25
+      }
+    },
+    "composite": {
+      "path": "artifacts/research/20261017-orthodiff-fluid-composite-actual-v1/qualified-feature-bundle.json",
+      "bytes": 3219,
+      "sha256": "26d2a7d5248bfb7e265bb12b3c89a059119ef239a9998250c48911d3ecc91446"
+    },
+    "load_verification": {
+      "path": "artifacts/research/20261017-orthodiff-fluid-composite-actual-v1/load-verification.json",
+      "bytes": 917,
+      "sha256": "26447537b5220b7dee77e17f27dbc0b9e90aabd726a0d58fc7acf7e0d070a81b"
+    },
+    "combined_success": 4118,
+    "combined_failure": 89,
+    "parent3063_success_bits_unchanged": true,
+    "failure_reasons": {
+      "not_sagittal_or_oblique_normal": 19,
+      "oblique_inplane_axes_not_permutation": 3,
+      "fluid_sensitive_metadata_unavailable": 3
+    },
+    "confirmed_PD": false
+  },
+  "fluid_head0": {
+    "run": {
+      "path": "artifacts/runs/orthodiff-fluid-head-fold0-fixed20-20261017-v1/run.json",
+      "bytes": 9420,
+      "sha256": "cc0d36b58cc6bfa1e61b46619b6d80f897028517762ed1f6ad603a1866b853c5"
+    },
+    "evaluation": {
+      "path": "artifacts/runs/orthodiff-fluid-head-fold0-fixed20-20261017-v1/evaluation.json",
+      "bytes": 23599,
+      "sha256": "8ca2634b34df61fde64f7a0e255d7f95ac29b3e732892e48ee7ba2145f9de56e"
+    },
+    "model": {
+      "path": "artifacts/runs/orthodiff-fluid-head-fold0-fixed20-20261017-v1/numeric-model.json",
+      "bytes": 121364,
+      "sha256": "bf195201855b8ec087af05a21db7c02c23b1452506151a7d4c75a0f75115462a"
+    },
+    "policy": {
+      "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261017-orthodiff-fluid-composite-head-preparation-v1\\prospective-policy.json",
+      "bytes": 13564,
+      "sha256": "105bda1d86b677925356249d913a69abd9c03d4c950c86fc96589e8a79787abe"
+    },
+    "all_inputs": {
+      "policy": {
+        "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261017-orthodiff-fluid-composite-head-preparation-v1\\prospective-policy.json",
+        "bytes": 13564,
+        "sha256": "105bda1d86b677925356249d913a69abd9c03d4c950c86fc96589e8a79787abe"
+      },
+      "qualified_composite_bundle": {
+        "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261017-orthodiff-fluid-composite-actual-v1\\qualified-feature-bundle.json",
+        "bytes": 3219,
+        "sha256": "26d2a7d5248bfb7e265bb12b3c89a059119ef239a9998250c48911d3ecc91446"
+      },
+      "qualified_composite_receipt": {
+        "schema_version": "orthodiff_parent_fluid_composite_bundle_v1",
+        "qualified": true,
+        "parent": {
+          "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261017-orthodiff-weak-head-preparation-v1\\qualified-feature-bundle.json",
+          "bytes": 1993,
+          "sha256": "525094b583c7cd821769fac56b9e64a524d5ef185a4a9eb689f91480b31ce83c"
+        },
+        "parent_qualification": {
+          "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261017-orthodiff-fullweak-actual-audit-v1\\verification.json",
+          "bytes": 10564,
+          "sha256": "7fbc160b8715e69dc506b64e9187f55a2c2b67925bf6a5b0a4a95adf943c8270"
+        },
+        "child_qualification": {
+          "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261017-orthodiff-fluid-actual-audit-v1\\verification.json",
+          "bytes": 10875,
+          "sha256": "251a28c46c039ca493aedf3b9b2161b8d95dd224f626db5c92b1dcb517588d28"
+        },
+        "child_files": {
+          "records": {
+            "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\qa\\odff1\\20261017T051523509233Z\\files\\orthodiff-fluid-fallback1080\\ORTHODIFF_FLUID_FALLBACK_RECORDS.jsonl",
+            "bytes": 14168387,
+            "sha256": "86435005601ea526ecef5a9f66a016f8274d930ac83de589128dc53d3431d447"
+          },
+          "summary": {
+            "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\qa\\odff1\\20261017T051523509233Z\\files\\orthodiff-fluid-fallback1080\\ORTHODIFF_FLUID_FALLBACK_SUMMARY.json",
+            "bytes": 135244,
+            "sha256": "83efd4a92b6369048fcd2163488eb75c40cdc9d58c5497ca28a102952c469f56"
+          },
+          "status": {
+            "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\qa\\odff1\\20261017T051523509233Z\\files\\orthodiff-fluid-fallback1080\\ORTHODIFF_FLUID_FALLBACK_STATUS.json",
+            "bytes": 758,
+            "sha256": "760ab9856e628ab5e37eff9ff77c7aa0c4902ce896536152a8b6e31eecb897a9"
+          }
+        },
+        "parent_source_sha256": "15bb2d6c7c224021f95a304b08eb9e3644164ea8373f4ae6ec1c7afc77582e1f",
+        "child_source_sha256": "4b8237aa96f44e1a4365180bba5fd2b65782549ad0f0833a6d7e4213a01209b0",
+        "UID_order_sha256": "911f91fbc914213db045780675d6518a8cc4a49808599bbb74f2f247bc30eb82",
+        "requested_count": 4207,
+        "parent_success_count": 3063,
+        "child_coverage": {
+          "requested": 1080,
+          "recorded": 1080,
+          "success": 1055,
+          "failure": 25,
+          "success_strata": {
+            "fluid_sensitive_FS": 1055
+          },
+          "failure_reason_types": {
+            "PilotDataError": 25
+          }
+        },
+        "combined_success_count": 4118,
+        "combined_failure_count": 89,
+        "merge_proof": {
+          "parent_success_features_byte_exact": true,
+          "parent_success_overwrite_count": 0,
+          "child_success_additions_only": true,
+          "same4207_UID_group_fold_structure": true,
+          "unrecovered_parent_failures_retained": true,
+          "parent_PD_and_child_fluid_strata_distinct": true
+        },
+        "scope": "Qualified feature availability transport only; no head fitting, candidate adoption or accuracy claim"
+      },
+      "F006_E12_control": {
+        "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\runs\\f006-late-cosine-fold0-20261012-v1\\epoch_012_weak.csv",
+        "bytes": 253423,
+        "sha256": "8f75feced2e02584b6581c0ed124e1bdc79d370a312966fd0c976ce302f0b964"
+      },
+      "cohort": {
+        "path": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261017-orthodiff-fullweak-preparation-v1\\cohort.json",
+        "bytes": 1045139,
+        "sha256": "86d976f55bb67bd3a738679625c9281aead06b0c7f01d7c894ffe870ead65246"
+      },
+      "strict_PD_comparison_pins": {
+        "full_rankmix20": {
+          "path": "artifacts/runs/orthodiff-head-fold0-fixed-v2-20261017-v1/cv-rankmix20.csv",
+          "bytes": 243802,
+          "sha256": "47eaa3a83e1ec549626c39d2a396d397d1446c7599d46a22fa06d7a1baaabb77"
+        },
+        "success_head_predictions": {
+          "path": "artifacts/runs/orthodiff-head-fold0-fixed-v2-20261017-v1/head-valid-success.csv",
+          "bytes": 181329,
+          "sha256": "adf8cfd16fbc33b11114b308555117aed64c845d7d0e52e82ac11dc39f171dbb"
+        }
+      },
+      "source_pins": {
+        "fit_orthodiffusion_fluid_composite_head.py": {
+          "bytes": 18690,
+          "sha256": "e1947983134687a52d1be7c338b48900276365c7b7bf8f2327bb0a43db0ef99a"
+        },
+        "orthodiff_weak_head.py": {
+          "bytes": 27829,
+          "sha256": "e1149f8e88eeba0f32418e8ee4986cd41ef5aae208a31142cd907689958d78e7"
+        },
+        "contracts.py": {
+          "bytes": 7720,
+          "sha256": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+        },
+        "orthodiff_fluid_features.py": {
+          "bytes": 12830,
+          "sha256": "732b3349d585c9024518c36bdf08b49f86470429650aec35ae7535b8592c85ad"
+        },
+        "orthodiff_fluid_fallback.py": {
+          "bytes": 8842,
+          "sha256": "5e1e3063db7c258ba26d96a48cc5eedfbd2bbe4197a45ea78b2087a0a133a185"
+        },
+        "fit_orthodiffusion_weak_head.py": {
+          "bytes": 11629,
+          "sha256": "014929a9c54fcdaed0e24403c92a8f09a8c9425269a146a252785260236f1ccc"
+        },
+        "fit_orthodiffusion_weak_head_fold1.py": {
+          "bytes": 18579,
+          "sha256": "718f6c44c996b993738f1124f9486acca33a1458843376c8151973dac95e1ead"
+        }
+      },
+      "environment": {
+        "versions": {
+          "python": "3.9.18",
+          "numpy": "1.22.3",
+          "scipy": "1.7.3",
+          "scikit-learn": "1.6.1"
+        },
+        "executable": "C:\\Users\\Casper4\\.conda\\envs\\TFGPU_shiba_2025\\python.exe",
+        "platform": "win32",
+        "Torch_imported": false,
+        "new_packages_installed": false
+      }
+    },
+    "independent_numeric_audit": {
+      "path": "artifacts/research/20261017-orthodiff-fluid-head0-actual-independent-v1/verification.json",
+      "bytes": 14614,
+      "sha256": "86fc03c91dd5e81abd9979a918c1ad19e6dc9cf6246b5191ef466b023c763f50"
+    },
+    "independent_summary": {
+      "path": "artifacts/research/20261017-orthodiff-fluid-head0-actual-independent-v1/summary.json",
+      "bytes": 10591,
+      "sha256": "01829b34eee2ccbd82c7445a54086180b9eed77db57968494d05a83f108bb4e0"
+    },
+    "original_train": 3386,
+    "original_valid": 821,
+    "successful_train": 3310,
+    "successful_valid": 808,
+    "all12_heads": {
+      "qualified": 12
+    },
+    "control10_auc": 0.8831284034612052,
+    "candidate10_auc": 0.882516340381245,
+    "delta10_auc": -0.0006120630799603899,
+    "CI_report_only": {
+      "low_2.5_percent": -0.004580562365310382,
+      "high_97.5_percent": 0.003116843625697887,
+      "defined_draws": 1000,
+      "requested_draws": 1000
+    },
+    "engineering_qualified": true,
+    "continuation_screen_passed": false,
+    "decision": "HOLD_THIS_FIXED20_AVAILABILITY_RECIPE; no fold1/no alpha or target retuning",
+    "secondary_common594_positive_does_not_override_primary_full821_gate": true,
+    "fold1_fit_or_new_Submit": 0
+  },
+  "P038": {
+    "author_scored_source": 359117069,
+    "author_version": 6,
+    "author_Submit": 57280318,
+    "author_Public": 0.958,
+    "own_Public": null,
+    "CPU_kernel": 139162287,
+    "CPU_actual_audit": {
+      "path": "artifacts/research/20261017-p038-cpu-actual-independent-v1/audit.json",
+      "bytes": 8645,
+      "sha256": "fe2abc5711770a62208e8750d67d92b4bcf33c1aa720f10abd2bea70f3e57ead"
+    },
+    "GPU_kernel": 139163240,
+    "GPU_version": 1,
+    "GPU_slug": "rsraki/p038-helios-v6-fixed-20261017-v3",
+    "GPU_source": {
+      "path": "artifacts/kaggle/p038-helios-v6-fixed-recipe-20261017-v3/source.ipynb",
+      "bytes": 198738,
+      "sha256": "9e3669dd1542f0cde2457fcc9b54ccb4bac013832583c26f93b88711f1a87370"
+    },
+    "GPU_launch": "artifacts/research/20261017-p038-gpu-execution-v1/launch-v3",
+    "GPU_readback_audit": {
+      "path": "artifacts/research/20261017-p038-gpu-execution-v1/launch-v3/saved-readback-audit.json",
+      "bytes": 472,
+      "sha256": "7aa29c31590b45061319ca666b16a819b41acb47c8585f621de2b7c50d819199"
+    },
+    "GPU_status_first": "RUNNING",
+    "actual_visible_GPU_qualified": false,
+    "source_peer": {
+      "path": "artifacts/research/20261017-p038-source-independent-v1/review.json",
+      "bytes": 2878,
+      "sha256": "f56198fe19c9debd10d3adfec082b40fa7693745ad079758dec147b69517ba24"
+    },
+    "limitations": [
+      "Author package versions timm1.0.25/pydicom3.0.1 differ from current base1.0.29/3.0.2 despite same Docker; per-cell environment receipt preserved.",
+      "CPU12positive guards cover R6nine+Reader3, not actualbodySHA of Raptor2; fixedV1/previous loader provenance inherited.",
+      "No Reader isolated-effect/hidden completion/Public reproduction claim."
+    ],
+    "formal_Submit": 0
+  },
+  "regional": {
+    "kernel": 139160976,
+    "version": 1,
+    "same_run_continues": true,
+    "full_actual_qualification": false,
+    "head_fit": 0
+  },
+  "F009": {
+    "same_run": true,
+    "last_known_completed_epoch": 6,
+    "optimizer_updates": 1272,
+    "AMP_skips": 0,
+    "interim_selection": false
+  },
+  "official_new5": {
+    "observation": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T051838189516Z",
+    "numToday": 5,
+    "numTotal": 35,
+    "status_and_Public_fields_returned": false,
+    "additional_quota_treated_as": 0,
+    "resubmission": 0
+  },
+  "next": "Keep regional extraction and F009 fixed12 run. Finish P038 visible and independent math. Diagnose fixed-head limitations without changing held recipes; qualify a different prospective experiment separately.",
+  "scope": {
+    "Gold_fit_select_eval": 0,
+    "Report_for_inference": 0,
+    "local_MRI_bulk_download": 0,
+    "new_formal_Submit": 0,
+    "Public_improvement_verified": false
+  }
+}

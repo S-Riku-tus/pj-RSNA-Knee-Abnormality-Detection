@@ -1,0 +1,45 @@
+{
+  "at_utc": "2026-10-17T02:22:39.089758+00:00",
+  "status": "OFFICIAL_CPU_COMPLETE_LINUX14PASS_0SKIP",
+  "kernel": 139137393,
+  "version": 1,
+  "ref": "rsraki/isolated-uid-cpu-qa-20261017-75c2ae8688",
+  "source_sha256": "75c2ae86887521b7cae00cbbcab3633391c6c389d60a720d527c17af84468066",
+  "executor_sha256": "685ec00ccc595ccb274817f960c28bdd3bc5926657f52e222c86863e5806d8f8",
+  "root_result_audit": "artifacts\\research\\20261017-isolated-uid-cpu-execution-v1\\launch-v2\\root-result-audit.json",
+  "root_audit_sha256": "7ebe46e3e19bac79abc836e28ced303654eb567ca4da7358860963f332d95ba6",
+  "runtime": {
+    "system": "Linux",
+    "Python": "3.13.15",
+    "NumPy": "2.1.3"
+  },
+  "tests": {
+    "run": 14,
+    "pass": 14,
+    "failure": 0,
+    "error": 0,
+    "skip": 0
+  },
+  "proof": [
+    "OwnedUID tuple or carrier UID bound to request before callback",
+    "Source origin/SHA checked before import and unpickle",
+    "66382848B and five NumPy arrays exact without pipe deadlock",
+    "Hard exit lost-result timeout detected; next UID can continue",
+    "SIGTERM-ignoring artificial worker SIGKILL(-9) and reaped",
+    "Same parent process group; all owned PID and temp cleanup"
+  ],
+  "scope": "Artificial CPU executor mechanics only; real MRI/180s threshold/actual GPU serving and Public accuracy not qualified",
+  "actual_actions": {
+    "Save": 1,
+    "formal_competition_Submit": 0,
+    "MRI": 0,
+    "model_load": 0,
+    "GPU": 0,
+    "training": 0
+  },
+  "private": true,
+  "Internet": false,
+  "Input_count": 0,
+  "readback_empty_Input_fields_omitted_by_API": true,
+  "next": "P035 optional child integration with separate operational/structural ledgers and success-subset mask; independent review before GPU Save"
+}

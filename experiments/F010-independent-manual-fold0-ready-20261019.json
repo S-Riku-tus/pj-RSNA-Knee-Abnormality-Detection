@@ -1,0 +1,102 @@
+{
+  "schema_version": "F010_independent_manual_fold0_ready_v1",
+  "at_UTC": "2026-10-19T09:45:09.165217+00:00",
+  "status": "DECLARED_185PINS_VERIFIED_FRESH_PREFLIGHT_PASS_FIT_NOT_STARTED",
+  "declaration": {
+    "path": "artifacts/research/20261019-f010-independent-manual-start-v1/declaration.json",
+    "bytes": 46224,
+    "sha256": "5b1855f4012d3be8c3e46edd9be71e31a78d3b7bbc61a47e9dc79c8e840103f6"
+  },
+  "readiness": {
+    "path": "artifacts/research/20261019-f010-independent-manual-start-v1/readiness.json",
+    "bytes": 2158,
+    "sha256": "6bdb4ccbf287c75f9db77a500a5eef89d365d504c093c6b86a478ead81f7f624"
+  },
+  "manual_commands": {
+    "path": "artifacts/research/20261019-f010-independent-manual-start-v1/manual-commands.json",
+    "bytes": 1940,
+    "sha256": "d34f2fcb368c0527ed917b4736bf6a19e101d334278780c69b710f8d10e0a8f1"
+  },
+  "old_waiter_stopped_preserved": {
+    "path": "artifacts/research/20261019-f010-deferred-training-v1/stopped.json",
+    "bytes": 260,
+    "sha256": "82facf3b5d38a3f103a9b809fb69cf5a3704f42e1883944d3b6a25308ae89091"
+  },
+  "old_waiter_plan_preserved": {
+    "path": "artifacts/research/20261019-f010-deferred-training-v1/plan.json",
+    "bytes": 46988,
+    "sha256": "e1728289248e48b26ee0aa1705ad074ef560e0f98cccde8785546c24f9e4284b"
+  },
+  "old_waiter_refusal_not_changed": true,
+  "decision": "Choose existing prospective F006-based last4 F010 experiment as a separate manual local one-fold0 experiment. This is not an exception for F009 gamma adoption and does not restart or bypass the old waiter implementation.",
+  "F009_HOLD_preserved": true,
+  "F009_candidate_AMP_exception_added": false,
+  "candidate_run": "artifacts/runs/f010-last4-late-cosine-fold0-20261019-v1",
+  "candidate_run_absent": true,
+  "seed": 20261002,
+  "fold": 0,
+  "epochs": 12,
+  "only_ML_factor": "last2 encoder blocks10/11 to last4 blocks8/9/10/11; no augmentation, same F006 teacher/cache/preprocess/seed/fold/head/loss/LR/schedule",
+  "source_config_inputs_generic_QA_all185_pins_before_and_after_preflight_match": true,
+  "prospective_policy": {
+    "path": "artifacts/research/20261019-f010-last4-root-v1/prospective-policy.json",
+    "bytes": 8183,
+    "sha256": "b7117059abc2d89c48524522472ddc20f7cd61476c4647d8f76aee2a252331da"
+  },
+  "frozen_evaluator": {
+    "path": "artifacts/research/20261019-f010-last4-root-v1/evaluate_fixed12.py",
+    "bytes": 23798,
+    "sha256": "658c9e21e4112c0a3523c4ecf7a197d74a9affb7a1476bc470098b07a4cea365"
+  },
+  "fresh_preflight": {
+    "ready": true,
+    "train_studies": 3386,
+    "valid_studies": 821,
+    "cache_studies": 4207,
+    "fitting_performed": false
+  },
+  "fresh_preflight_elapsed_seconds": 6.912470899987966,
+  "environment": {
+    "python": "3.12.13 (main, Jun 11 2026, 04:05:29) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\.venv\\Scripts\\python.exe",
+    "torch": "2.10.0+cu128",
+    "numpy": "2.5.3",
+    "CUDA": "12.8",
+    "CUDA_available": true,
+    "GPU_count": 1
+  },
+  "GPU_snapshot_csv": "NVIDIA GeForce RTX 4090, 610.88, 24564, 884, 23255, 6",
+  "disk_free_GiB": 180.9305648803711,
+  "new_pin_helper_authentication_or_Gold_body_read": false,
+  "existing_preflight_Gold_scope": "Original preflight reads Gold UID/source/group structure and hashes Gold file for leakage-audit identity; no Gold finding values are converted/evaluated/used for selection. Original code unchanged.",
+  "MRI_decode_model_checkpoint_load_forward_or_real_fit": false,
+  "manual_future_train_argv": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "scripts/train_f010_last4_fast16.py",
+    "train",
+    "--manifest",
+    "data/manifests/v1-vmohitrao-research",
+    "--index",
+    "data/native392/v2-20261009/full-index.json",
+    "--config",
+    "configs/experiments/f010-dinov2-native-last4-late-cosine.json",
+    "--fold",
+    "0",
+    "--resource-gate",
+    "artifacts/research/20261019-f010-last4-root-v1/resource-gate.json",
+    "--output",
+    "artifacts/runs/f010-last4-late-cosine-fold0-20261019-v1",
+    "--repo",
+    "artifacts/qa/f009-generic-v2/generic-assets/encoder/dinov2-source",
+    "--weights",
+    "artifacts/qa/f009-generic-v2/generic-assets/encoder/dinov2_vits14_pretrain.pth",
+    "--provenance",
+    "artifacts/qa/f009-generic-v2/generic-assets/encoder/encoder-provenance.json"
+  ],
+  "max_new_manual_fit": 1,
+  "automatic_evaluation_or_fold1_or_retry": false,
+  "new_network_upload_Save_Submit": 0,
+  "accuracy_improvement_unconfirmed": true,
+  "future_conditions": "Unchanged prospective fixedE12 vs fixedF006E12, same821UID/masks/group, all12 epochs212 updates/opportunities andskip0, fixed10 delta>0; report-only BCE/CI cannot rescue, manual fold1 declaration only after separate review."
+}

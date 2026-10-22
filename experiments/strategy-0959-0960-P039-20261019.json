@@ -1,0 +1,129 @@
+{
+  "schema_version": "staged_Public959_then_above960_strategy_v1",
+  "date_JST": "2026-10-19",
+  "status": "P039_MANUALLY_ACCEPTED_SCORE_PENDING_F009_FULL12_RETRY_RUNNING",
+  "user_targets": {
+    "first_official_displayed_Public": ">=0.959",
+    "second_official_displayed_Public": ">0.960",
+    "historical_0960_milestone_records_preserved": true,
+    "either_target_achieved": false
+  },
+  "baseline": {
+    "own_best_confirmed_Public": "0.958",
+    "P033": {"submission": 57290868, "status": "COMPLETE", "Public": "0.958"},
+    "P034": {"submission": 57291440, "status": "COMPLETE", "Public": "0.957"},
+    "P035": {"submission": 57292346, "status": "COMPLETE", "Public": "0.957"},
+    "P036": {"submission": 57291580, "status": "COMPLETE", "Public": "0.958"},
+    "P037": {"submission": 57293138, "status": "COMPLETE", "Public": "0.958"},
+    "successful_versions_and_predictions_overwritten": false
+  },
+  "official_snapshot_before_new_submission": {
+    "at_JST": "2026-10-19T11:39:00+09:00",
+    "rank": 1038,
+    "teams": 6196,
+    "displayed958_rank_interval": [178, 1344],
+    "displayed958_teams": 1167,
+    "displayed_at_least959_teams": 177,
+    "displayed_strictly_above960_teams": 79,
+    "deadline_JST": "2026-10-23T08:59:00+09:00",
+    "source": "experiments/official-LB958-plateau-20261019.json",
+    "future_rank_or_private_score_guaranteed": false
+  },
+  "public_notebook_research": {
+    "source": "experiments/public-frontier-primary-static-review-20261019.json",
+    "official_score_sorted_entries_observed": 100,
+    "maximum_author_Public": "0.958",
+    "author_Public_at_least959_observed": 0,
+    "new958_forks": 2,
+    "new_forks_have_byte_identical_code": true,
+    "decision_ja": "今回の調査範囲に0.959以上の再現可能な公開近道はない。既知レシピのforkだけで追加提出しない。最新版と採点版、非公開Inputに置かれた推論本体を区別する。",
+    "unobserved_public_or_private_solutions": "unknown"
+  },
+  "scientific_reasoning_ja": [
+    "0.958同点の増加は公開レシピの普及と整合する。表示3桁の同点だけでは丸め前スコアやhidden予測の一致は分からない。",
+    "本人発言には段階的改善やTTAによる0.001改善例がある。一方、特定上位者の0.966から0.967への原因は不明で、順位履歴から手法を断定しない。",
+    "AUCを改善するには陽性と陰性の順位の誤りを減らす必要がある。単独列の閾値変更や厳密単調変換だけを改善候補にしない。",
+    "同じ予測を出すモデルを増やすより、異なる誤りをするモデルが有望。ただし低相関そのものや可視3例の順位変化は改善証拠ではなく、未学習側の同じgroup/foldでの比較が必要。",
+    "独自モデルのweak AUCはReport由来教師の再現度であり、Public正解ラベルのAUCとは区別する。Public0.001への換算はしない。",
+    "P034/P035は旧0.957親への独自モデル追加で表示改善を実証していない。この反証を残した上で、最強の自己0.958親に同じ独自モデルを加えるP039を1件だけ正式比較する。"
+  ],
+  "reference_primary_sources": [
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735304",
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/742926"
+  ],
+  "new_formal_submission": {
+    "candidate": "P039",
+    "ref": "rsraki/p039-p033-native20-20261017-v2",
+    "kernel_id": 139182563,
+    "saved_version": 1,
+    "submission": 57378810,
+    "accepted_at_UTC": "2026-10-19T02:40:01.710502+00:00",
+    "Public": null,
+    "status_field_present_in_acceptance": false,
+    "Public_field_present_in_acceptance": false,
+    "score_missing_means": "accepted_score_unreturned, not failed or zero",
+    "root_manual_calls": 1,
+    "new_Save_or_model_upload": 0,
+    "after_limits": {"numToday": 1, "numTotal": 36, "numAllowedNow": 4},
+    "new_automatic_upload_or_submit_code_added": false,
+    "root_evidence": "artifacts/research/20261019-p039-root-manual-submit-v1/summary.json",
+    "independent_acceptance": "experiments/P039-independent-official-acceptance-20261019.json",
+    "last_official_observation_UTC": "2026-10-19T02:47:07.818982+00:00",
+    "last_official_observation": "artifacts/research/20261019-p039-root-manual-submit-v1/result-observation-20261019T024707049293Z/summary.json",
+    "independent_predecision_review": "artifacts/research/20261019-p039-decision-independent-v1/review-v2.json",
+    "rationale_ja": "自己P033の0.958親・独自4モデル・固定20%・10所見を保持した未提出候補。全体失敗や独自寄与0は停止。実可視3検査とFP32独立計算は通過済み。hidden参加とスコア改善は未確認。"
+  },
+  "submission_budget_policy": {
+    "initial_decision_maximum_manual_submissions": 1,
+    "consume_all_five_is_not_an_objective": true,
+    "wait_for_P039_result_before_new_coefficient_search": true,
+    "next_candidate_requires": "A different, explicitly justified scientific comparison, validated runtime and fresh official quota; no automatic submission",
+    "P038": "Retained as a qualified author958 recipe; lower priority than an independently supported own improvement, no submission now",
+    "baseline_always_retained": true
+  },
+  "F009_recovery": {
+    "original_run": "artifacts/runs/f009-gamma-late-cosine-fold1-20261017-v1",
+    "original_status_text": "running",
+    "actual_completed_epochs": 5,
+    "recorded_updates": 1040,
+    "recorded_AMP_skips": 0,
+    "original_process_observed": false,
+    "E12_exists": false,
+    "interruption_cause": "unknown",
+    "resume_supported": false,
+    "optimizer_scaler_RNG_saved": false,
+    "original_run_preserved": true,
+    "new_run": "artifacts/runs/f009-gamma-late-cosine-fold1-20261019-retry1",
+    "decision": "Full12 restart from original generic initialization, same config/seed/fold/source/cache/teacher, fresh output; never append7 epochs from inference-only E5 weights",
+    "recovery_policy": "artifacts/research/20261019-f009-fold1-recovery-preparation-v1/recovery-policy.json",
+    "recovery_policy_sha256": "a9baf014df7ed1fabf601fadb6241ec1b7263c44c2bbcc73136ed1818611a66b",
+    "evaluator_source_freeze": "artifacts/research/20261019-f009-fold1-recovery-evaluator-v3/source-freeze-v3.json",
+    "evaluator_source_freeze_sha256": "5409d79a32911624aed489b3017b59755ddaf192a865f7bd94e3660effaebfb4",
+    "fresh_CUDA_preflight": "PASS train3316 valid891 cache4207 fittingfalse",
+    "training_started_in_this_initial_record": false,
+    "subsequent_training_launch_confirmed": true,
+    "training_launch_UTC": "2026-10-19T02:45:31.3768400+00:00",
+    "actual_training_PID": 22332,
+    "running_milestone": "experiments/F009-fold1-full-restart-live-20261019.json",
+    "final_independent_review": "artifacts/research/20261019-f009-recovery-independent-v2/review.json",
+    "index_guard_fix_ja": "独立人工負例で旧版の保存epoch一覧の検査不足を発見。両側12件・整数epoch1..12を要求する元spec通りに修正し、修正前source/freezeを保全。数学と科学条件は不変。最終source固定は起動前、最終独立レビューは起動後。",
+    "old_HOLD_and_v2_exception_preserved": true,
+    "final_screen": "fixedE12 only, same10targets, eachfold positive, candidate all12 zero skips; BCE/CI report only; exact historical control E10skip1 exception not broadened",
+    "CPU_transport_and_runtime_release": "Existing path-bound consumers do not yet accept new v3 results; prepare explicitly after actual joint pass, never bypass checks"
+  },
+  "next_steps": [
+    "Record P039 official score when returned; never resubmit on status/score omission.",
+    "Complete the same already-running frozen12epoch retry in the new directory; do not select interim metrics or append an incomplete run.",
+    "After terminal E12, run the frozen recovery evaluation once; reject gamma if either fold fails its unchanged criterion.",
+    "Only after joint pass, qualify new CPU release/transport/fixed192 diagnosis/visible inference and independent arithmetic before considering a separate manual submission.",
+    "Keep prepared F006fold2 and sealedC=.01 outer2 evaluation after the current fit; do not select recipes using the sealed outer labels prematurely."
+  ],
+  "provenance_limits": {
+    "own_gold_training_checkpoint_or_recipe_selection": false,
+    "inherited_public_weights_Gold58_selection_exposure_resolved": false,
+    "patient_independence_verified": false,
+    "mounted_Input_version_ids_independently_observed": false,
+    "raw_DICOM_bulk_download": false,
+    "no_future_background_submission_or_scheduled_automation": true
+  }
+}

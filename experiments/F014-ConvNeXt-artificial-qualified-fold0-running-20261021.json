@@ -1,0 +1,62 @@
+{
+  "at_UTC": "2026-10-21T04:05:31.172537+00:00",
+  "status": "ARTIFICIAL_GPU_PASS_FIXED_E12_FOLD0_RUNNING",
+  "model": "ConvNeXtTiny genericImageNet22k->1k prelogits768 last2finalblocks",
+  "intervention_scope": "Encoderchoice architecture/init/width/suffixcoupled; notpurearchitectureeffect",
+  "policy": {
+    "path": "artifacts/research/20261021-F014-ConvNeXt-encoder-prospective-v1/policy.json",
+    "bytes": 5042,
+    "SHA": "c86f51554480c4cb3be08745f569d8c56111bd5e825d2ceecde80ce8a377a68b"
+  },
+  "root_prelaunch": {
+    "path": "artifacts/research/20261021-F014-fold0-root-prelaunch-v1/root-review.json",
+    "bytes": 56951,
+    "SHA": "6f45d21ef90653d11ba3bd50db31cb4c8635dfd436cd9cbeda0e55134b8500c7"
+  },
+  "launch": {
+    "path": "artifacts/research/20261021-F014-fold0-root-prelaunch-v1/launch.json",
+    "bytes": 1056,
+    "SHA": "a7c584e72a998de94984033863e62a9f442fc34164da85b56de53702503ee4f0"
+  },
+  "run_metadata": {
+    "path": "artifacts/runs/f014-convnext-tiny-fold0-20261021-v1/run.json",
+    "bytes": 60212,
+    "SHA": "bc768ff96d55a19eeee3bc718068a98b2d7150b54186bb505195b5ce927bd959"
+  },
+  "resource_gate": {
+    "path": "artifacts/qa/f014-convnext-native392-20261021-v1/resource-gate.json",
+    "bytes": 4089,
+    "SHA": "d9687049a59dcf03bfe098560e970cebf8d95ab0ed0ee61d84af78c27f84ad5b"
+  },
+  "run": "artifacts/runs/f014-convnext-tiny-fold0-20261021-v1",
+  "fold": 0,
+  "pid": 20048,
+  "exec_session": 82461,
+  "seed": 20261002,
+  "training_studies": 3386,
+  "valid_studies": 821,
+  "weak_cache_studies": 4207,
+  "data_hashes_equal_F006control": true,
+  "actual_RTX4090_QA_checks": 12,
+  "artificial_peak_reserved_MiB": 978,
+  "QA_accuracy_claim": false,
+  "first_progress_snapshot": {
+    "epoch": 1,
+    "train_studies_completed": 1024,
+    "train_studies_total": 3386,
+    "optimizer_steps": 64,
+    "optimizer_opportunities": 64,
+    "elapsed_seconds": 462.04685799998697
+  },
+  "primary_endpoint": "FixedE12 weak10meanAUC excludingMCL/Synovitis > F006fixedE12; completefinite/source/mask/groupguards beforemanualfold1. Bothfoldspositive required beforefuturecandidate. Nointermediateepochselection.",
+  "budget_seconds": 43200,
+  "fold1_started": false,
+  "auto_next_fold": false,
+  "other_user_process_terminated": false,
+  "previous_PID19472": "Observedabsentbeforemanualstart; userpreservationhonored",
+  "ownGoldfitselect": 0,
+  "Gold_scope": "ID/group exclusionandexistingbytehash only; noGoldnumericalimage labels",
+  "patient_independence_verified": false,
+  "rawDICOM_local_download": 0,
+  "Kaggle_upload_Save_Submit": 0
+}

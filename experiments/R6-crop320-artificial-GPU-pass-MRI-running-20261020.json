@@ -1,0 +1,22 @@
+{
+  "at_UTC": "2026-10-20T10:38:05.338236+00:00",
+  "status": "CROP320_ARTIFICIAL_GPU_DIRECT_ON_OFF_REPLAY_PASS_REAL_WEAK_INFERENCE_RUNNING",
+  "kernelId": 139798784,
+  "saved_version": 1,
+  "source_SHA": "827cdba4e1c2a253b8a8a7e2c093a6473919b685a1f7205c0a6babcca4dfe318",
+  "stream_evidence": "artifacts/research/20261020-goal959-evening-readonly-monitor-v1/stream-320-20261020T103712874606Z/summary.json",
+  "stream_body_SHA": "de4d0ef70b55824d482bafeecb6c6f8fca7ebc6cd6ace8f5f50156a289a8bd3e",
+  "synthetic_directON_replay_maxabs": 2.645704167900109e-10,
+  "synthetic_directOFF_replay_maxabs": 5.536545007178706e-10,
+  "crop_override352to320_observed": true,
+  "real_fold0_1_start_observed": true,
+  "actual_weak_success_count_known": false,
+  "weak_accuracy_evaluated": false,
+  "client_idle_timeout_not_worker_failure": true,
+  "own_Gold_fit_select": 0,
+  "formal_Submit_for_probe": 0,
+  "goal959_achieved": false,
+  "best_own_Public": ".958",
+  "P045_pending": 57430729,
+  "local_GPU19472_preserved": true
+}

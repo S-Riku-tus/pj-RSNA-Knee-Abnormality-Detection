@@ -1,0 +1,328 @@
+{
+  "schema_version": "orthodiff_innerC_sealed_F009E8_milestone_v1",
+  "recorded_at_UTC": "2026-10-17T06:04:23.262917+00:00",
+  "own_confirmed_Public_best": 0.957,
+  "target_Public": 0.96,
+  "target_achieved": false,
+  "status": "TRAIN_ONLY_COMMON_C_SELECTED_AND_OUTER2_PREDICTIONS_SEALED_ENGINEERING_PASS_NO_OUTER2_METRICS",
+  "previous_milestone": {
+    "path": "experiments/orthodiff-regional-twofold-HOLD-F006fold2-CPU-ready-20261017.json",
+    "bytes": 27478,
+    "sha256": "c4ff8c90bb832039a0e29104e4d568348fb574de7285a448e4fc51352def0918"
+  },
+  "one_new_algorithmic_factor": "Choose one shared C on inner folds0/1/3/4; fixed regional1024 features/groups/masks/targets/seed/solver/20% retained. Old fixedC1 recipes stay HOLD.",
+  "selected_common_C": 0.01,
+  "selection_table": [
+    {
+      "C": 0.001,
+      "eligible": true,
+      "standalone_inner_fixed10_mean_AUC": 0.7138082133304972,
+      "completed_inner_partitions": 4
+    },
+    {
+      "C": 0.01,
+      "eligible": true,
+      "standalone_inner_fixed10_mean_AUC": 0.7288539193303776,
+      "completed_inner_partitions": 4
+    },
+    {
+      "C": 0.1,
+      "eligible": true,
+      "standalone_inner_fixed10_mean_AUC": 0.7161180079509741,
+      "completed_inner_partitions": 4
+    },
+    {
+      "C": 1.0,
+      "eligible": true,
+      "standalone_inner_fixed10_mean_AUC": 0.6989554521634415,
+      "completed_inner_partitions": 4
+    }
+  ],
+  "selection_interpretation": "These are training-side inner standalone head AUCs; not outer2, F006 blend, Public, or a predicted Public gain. All4 Cs eligible; declared max-score/tie rule chose0.01.",
+  "populations": {
+    "original_outertrain": 3319,
+    "successful_outertrain": 2409,
+    "original_outer2": 888,
+    "successful_outer2": 654,
+    "failed_features_outer2": 234,
+    "dimension": 1024,
+    "fixed10_for_selection": 10,
+    "total_targets": 12,
+    "heldout_original_fold": 2,
+    "inner_original_folds": [
+      0,
+      1,
+      3,
+      4
+    ]
+  },
+  "model_and_prediction_seal": {
+    "run": {
+      "path": "artifacts/runs/orthodiff-regional-inner4-C-outer2-sealed-20261017-v1/run.json",
+      "bytes": 4947,
+      "sha256": "837efc5e61c104cceddcf1bd5f91d4c57fe58c4404fdb4f064fe06e86845d401"
+    },
+    "model": {
+      "path": "artifacts/runs/orthodiff-regional-inner4-C-outer2-sealed-20261017-v1/numeric-model.json",
+      "bytes": 462989,
+      "sha256": "c9b5ae26d0ad5895903002ff6bfd2c4947bed152c070c749588be8c76710a714"
+    },
+    "seal": {
+      "path": "artifacts/runs/orthodiff-regional-inner4-C-outer2-sealed-20261017-v1/outer2-prediction-seal.json",
+      "bytes": 5118,
+      "sha256": "11cbdcf1752960a9bb96edbaefc55d61c1325e5eaaef5e07d8be3cbf9f536934"
+    },
+    "f64_predictions": {
+      "path": "artifacts/runs/orthodiff-regional-inner4-C-outer2-sealed-20261017-v1/outer2-success-probabilities-f64.csv",
+      "bytes": 202380,
+      "sha256": "791304a77cb5a1af0a1314118aa27456e2f579393ffa533584b63255b75c2ff8"
+    },
+    "f32_predictions": {
+      "path": "artifacts/runs/orthodiff-regional-inner4-C-outer2-sealed-20261017-v1/outer2-success-probabilities-f32.csv",
+      "bytes": 139639,
+      "sha256": "ba463a05f83689a17ce22bb138f170159ee3c030e9bac99ad6d6f1aeb77e5c54"
+    },
+    "training_only_label_view": {
+      "path": "artifacts/runs/orthodiff-regional-inner4-C-outer2-sealed-20261017-v1/training-only-label-view.json",
+      "bytes": 1643393,
+      "sha256": "c674e098d561f2503ca2d5fc8489c09598fc50d079c0ae91c9833dd19a17a1d7"
+    },
+    "selection": {
+      "path": "artifacts/runs/orthodiff-regional-inner4-C-outer2-sealed-20261017-v1/inner-C-selection.json",
+      "bytes": 26895,
+      "sha256": "4535e443da59c81dec19a9ddf4f542225a26659a34383b0c269bbd6dfd5f42b7"
+    },
+    "metadata": {
+      "path": "artifacts/runs/orthodiff-regional-inner4-C-outer2-sealed-20261017-v1/outer2-metadata-only.json",
+      "bytes": 497629,
+      "sha256": "a05cc7fc9ea13d654c5c4f9e7a7c8fb07cf88475c0bf5157235ed9f59baee8df"
+    },
+    "successful_targets": 12,
+    "final_warnings": 0,
+    "elapsed_seconds": 12.76600000000326,
+    "environment": {
+      "versions": {
+        "python": "3.9.18",
+        "numpy": "1.22.3",
+        "scipy": "1.7.3",
+        "scikit-learn": "1.6.1"
+      },
+      "executable": "C:\\Users\\Casper4\\.conda\\envs\\TFGPU_shiba_2025\\python.exe",
+      "platform": "win32",
+      "Torch_imported": false,
+      "new_packages_installed": false
+    }
+  },
+  "engineering_proof": {
+    "references": [
+      {
+        "path": "experiments/orthodiff-regional-innerC-prospective-policy-20261017.json",
+        "bytes": 21244,
+        "sha256": "dd26d15c5b27c624c08eeee84e65d828b4c0df572854dc301af149954a1c2c6f"
+      },
+      {
+        "path": "artifacts/research/20261017-orthodiff-regional-inner4-C-prospective-v1/root-design-review.json",
+        "bytes": 1510,
+        "sha256": "b496cdd2363b9d708fa5a1570833fa40473a0be7b8f2f58d13a21f289de33ea5"
+      },
+      {
+        "path": "artifacts/research/20261017-orthodiff-innerC-design-peer-v1/review.json",
+        "bytes": 2406,
+        "sha256": "476468cfb6ef2e3cc3b6f672816ab448ac655a1ec4e10305d73e44ab162a5f98"
+      },
+      {
+        "path": "artifacts/research/20261017-orthodiff-regional-inner4-C-implementation-v1/verification.json",
+        "bytes": 3734,
+        "sha256": "b183274b19ad43e7afe4f4d5af76b46bc8f90b5ebfcf81e61832806b6b3e810d"
+      },
+      {
+        "path": "artifacts/research/20261017-orthodiff-innerC-implementation-peer-v1/review.json",
+        "bytes": 2915,
+        "sha256": "98e6b304690ad07e7f811a94d687cc94edc88e246ab082079c9e113cb550c833"
+      },
+      {
+        "path": "artifacts/research/20261017-orthodiff-innerC-execution-v1/fit-review.json",
+        "bytes": 2479,
+        "sha256": "dfc4fbc14d5f429892b65822741cb7c51e1ac73a048ddaa20fa731dad113f718"
+      },
+      {
+        "path": "artifacts/research/20261017-orthodiff-innerC-execution-v1/launch.json",
+        "bytes": 1501,
+        "sha256": "f46a4ed28815c38f35339ee733c37466ac271abbacd9dc773eb8ecbb7c45ac46"
+      },
+      {
+        "path": "artifacts/research/20261017-orthodiff-innerC-execution-v1/completion.json",
+        "bytes": 575,
+        "sha256": "33abf94e51529c9acaa44201fed10e12d9fd953e84e13a3c68e437176fa47d85"
+      },
+      {
+        "path": "artifacts/research/20261017-orthodiff-innerC-target-free-audit-preparation-v1/qualification.json",
+        "bytes": 3025,
+        "sha256": "48974b41bae640012b7594e6ef5e8eeea2267ffe0de9858269e87ea9eab75884"
+      },
+      {
+        "path": "artifacts/research/20261017-orthodiff-innerC-target-free-actual-audit-v1/verification.json",
+        "bytes": 8038,
+        "sha256": "644ecd0657d1b200b3b3fb39aace5f1eaef709d413808c945905780878b94879"
+      }
+    ],
+    "producer_artificial_tests": 7,
+    "source_peer_passed": true,
+    "auditor_artificial_tests": 4,
+    "actual_independent_predictions": {
+      "total_cells": 7848,
+      "finite_FP32_cells_bitwise_equal": 7848,
+      "unsupported_cells_mask_equal": 0,
+      "float64_max_abs_difference": 4.996003610813204e-16,
+      "FP32_mismatch_count": 0,
+      "H_predict_numeric_or_sklearn_predict_used": false,
+      "algorithm": "stdlib standardization, math.fsum dot and stable sigmoid; both CSVs independently parsed"
+    },
+    "actual_independent_scaler": {
+      "train_success": 2409,
+      "dimension": 1024,
+      "qualified_targets": [
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "mean_max_abs_difference": 0.0,
+      "variance_max_abs_difference": 2.914335439641036e-16,
+      "scale_max_abs_difference": 5.551115123125783e-16,
+      "moment_tolerance": {
+        "relative": 1e-12,
+        "absolute": 1e-12
+      },
+      "algorithm": "stdlib math.fsum population moments on successful outertrain only"
+    },
+    "actual_auditor_runtime": {
+      "executable": "C:\\Users\\Casper4\\.conda\\envs\\TFGPU_shiba_2025\\python.exe",
+      "python": "3.9.18",
+      "installed_NumPy_version": "1.22.3",
+      "producer_environment_is_a_separate_input_receipt": true
+    },
+    "selection_audit_scope": {
+      "selected_C": 0.01,
+      "eligible_C_count": 4,
+      "arithmetic_and_recorded_masks_qualified": true,
+      "inner_predictions_or_models_independently_replayed": false,
+      "recorded_inner_AUCs_and_fit_eligibility_independently_verified": false
+    },
+    "limits": "Inner models/predictions were not exported; actual audit checks recorded masks/selection arithmetic and final model/predictions, not independent replay of inner AUCs/convergence."
+  },
+  "target_boundary": {
+    "outer2_logical_target_projection_or_conversion_or_retention_or_metric": false,
+    "raw_shared_CSV_bytes_may_pass_through_hashing_or_syntax_parser": true,
+    "old_all_target_loader_used": false,
+    "Gold_Report_used": false,
+    "old_folds0_1_training_had_included_fold2_weak_labels": true,
+    "not_globally_pristine_or_patient_independent": true
+  },
+  "adoption": {
+    "old_C1_joint_qualification": false,
+    "old_C1_recipes_remain_HOLD": true,
+    "new_selected_C_outer2_AUC": null,
+    "Public_candidate_adoption_qualified": false,
+    "next_required": "Qualified independent F006fold2 fixedE12 control888 UID/checkpoint/source/config/predictions, then root review and one declared full888 rank20 comparison. No second C or per-target/alpha rescue.",
+    "single_sealed_model_only": true,
+    "all4207_refit_or_multi_model_mean": false
+  },
+  "F009": {
+    "observation": {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch8-observation/observation.json",
+      "bytes": 598,
+      "sha256": "58ebd4c8bd5154a75254df77cb92e7d100a7cd891057670aa3ddb95ce306e2c5"
+    },
+    "snapshot": {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch8-observation/run-snapshot.json",
+      "bytes": 94397,
+      "sha256": "82dc56bfe5905701e863a96646536fbc8dcac6cf573ef4f5bda473006241b258"
+    },
+    "live_PID_22392_observed_at_UTC": "2026-10-17T06:03:35Z",
+    "live_OS_CPU_seconds": 14343.171875,
+    "completed_epochs": 8,
+    "optimizer_steps": 1696,
+    "AMP_skips": 0,
+    "evaluation_policy": {
+      "path": "experiments/f009-evaluation-policy-v2-prescore-20261017.json",
+      "bytes": 9505,
+      "sha256": "de5a6aa743d2d663f98244322958bf4b8154908238384112a7badf2df1e2d42c"
+    },
+    "interim_selection_or_source_change": false
+  },
+  "F006fold2": {
+    "source_CPU_qualification": {
+      "path": "artifacts/research/20261017-f006-fold2-implementation-v1/verification.json",
+      "bytes": 3734,
+      "sha256": "6e4ca5c47a139fd59741bfe4a379ae8947544db6732be836ba7aac5a9c2f9612"
+    },
+    "manual_GPU_preparation": {
+      "path": "artifacts/research/20261017-f006-fold2-gpu-manual-final-v1/verification.json",
+      "bytes": 4860,
+      "sha256": "921b8d3df0a0a01bacd4b5eb8e37b754c77b439709238dcd7d71eef01a0a9a19"
+    },
+    "new_GPU_QA_gate_preflight_or_fit_performed": false
+  },
+  "official_submission_observations": {
+    "five_formal_refs": [
+      57290868,
+      57291440,
+      57291580,
+      57292346,
+      57293138
+    ],
+    "latest_List_at_UTC": "2026-10-17T05:52:21.003312+00:00",
+    "diagnosis": {
+      "path": "artifacts/research/20261017-submission-status-readonly-diagnosis-v1/diagnosis.json",
+      "bytes": 12490,
+      "sha256": "b3dd39f7beb692a293cbe2cfe1a78101731f22dbce06ab6e97769f5a6d729639"
+    },
+    "independent_SDK_semantics": {
+      "path": "artifacts/research/20261017-submission-status-sdk-independent-v1/review.json",
+      "bytes": 3659,
+      "sha256": "54e97bcbdba783d7d139ab9e5d89e23bd06bfef09787c4e83f8e9effdbd63909"
+    },
+    "raw_status_and_Public_fields_omitted": true,
+    "official_SDK_status_default": "PENDING=0 inferred from omission, not explicit execution progress",
+    "known_complete_control": {
+      "ref": 57262934,
+      "status": "COMPLETE",
+      "Public": 0.957
+    },
+    "new_score_found": false,
+    "resubmitted": false,
+    "additional_formal_quota_treated_as": 0,
+    "reset_time_verified": false
+  },
+  "P038": {
+    "visible_engineering_ready": true,
+    "actual_audit": {
+      "path": "artifacts/research/20261017-p038-gpu-output-audit-v1/actual-audit.json",
+      "bytes": 21286,
+      "sha256": "1fa466776f3d6107e73cd4ec43b34317bd74b1c4501838e6a3a505155f327b27"
+    },
+    "formal_Submit_performed": false,
+    "author_Public": 0.958,
+    "own_Public": null
+  },
+  "future_order_advisory": {
+    "path": "artifacts/research/20261017-post-F009-execution-order-review-v1/decision-short.json",
+    "bytes": 5299,
+    "sha256": "e8edd2008062328f20fba8cfeed5f702850b89851fe934a845fb00d0a4ab2da7"
+  },
+  "activity_this_milestone": {
+    "one_actual_CPU_training_only_inner_search_and_selected_refit": true,
+    "GPU_training_F009_continues": true,
+    "new_GPU_fit_Kaggle_Save_or_Submit_or_model_download_or_MRI": 0,
+    "old_recipes_or_source_changed": false
+  }
+}

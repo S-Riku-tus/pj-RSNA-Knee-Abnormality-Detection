@@ -1,0 +1,61 @@
+{
+  "at_UTC": "2026-10-20T11:28:26.284854+00:00",
+  "accepted": true,
+  "kernelId": 139809994,
+  "ref": "rsraki/f013-fixed-e12-cpu-qualification-20261020-v1",
+  "saved_version": 1,
+  "artifact_revision": "F013 CPU qualifier V1",
+  "all_checks_passed": true,
+  "checks": {
+    "ref": true,
+    "kernel_id": true,
+    "saved_version": true,
+    "all_source_cells": true,
+    "private_CPU_offline_noTPU": true,
+    "no_GPU_shape": true,
+    "Docker": true,
+    "datasets": true,
+    "kernels": true,
+    "competition": true
+  },
+  "status": "STANDALONE_F013_PRIVATE_CPU_RUNNING_NO_FORMAL_SUBMIT",
+  "manual_Save_calls": 1,
+  "formal_Submit_calls": 0,
+  "policy": "artifacts/research/20261020-P048-F013-fixed-weights-qualification-policy-v1/policy.json",
+  "policy_SHA": "9b7d6e581be8aa6ac4f83fad910f1399488183d2e2ba6defdc29097723c2f5de",
+  "source_SHA": "c5e48819da14f2300206ae84d00557bf96c290e573ee5c0ede2d81102879553e",
+  "private_model_Input": {
+    "at_UTC": "2026-10-20T11:26:41.654201+00:00",
+    "all_checks_passed": true,
+    "dataset_id": 12730408,
+    "ref": "rsraki/f013-gamma-e12-qualification-20261020-v1",
+    "isPrivate": true,
+    "version": 1,
+    "status": {
+      "status": "READY"
+    },
+    "files": {
+      "f013-models.bin": 29338738,
+      "package-manifest.json": 13295
+    },
+    "remote_internal_SHA_not_yet_observed": true,
+    "manual_PUT": 2,
+    "manual_Create": 1,
+    "retry": false,
+    "Save_Submit": 0
+  },
+  "model_package_bytes": 29338738,
+  "own_fixed_E12_candidate_checkpoints": 2,
+  "models_not_locally_deserialized": true,
+  "GPU_ownMRI_Report_Gold_newtraining_reads": 0,
+  "original_F009_HOLD_and_consumers_unchanged": true,
+  "legacy_release_pass_claim": false,
+  "CPU_qualification_completed": false,
+  "actual_GPU_and_MRI_needed_later": true,
+  "qualified_for_Submit": false,
+  "best_own_Public": ".958",
+  "goal959_achieved": false,
+  "P045_pending": 57430729,
+  "remaining_slots": 2,
+  "existing_GPU19472_preserved": true
+}

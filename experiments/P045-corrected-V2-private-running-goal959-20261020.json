@@ -1,0 +1,57 @@
+{
+  "at_UTC": "2026-10-20T04:09:39.569230+00:00",
+  "accepted": true,
+  "kernelId": 139737264,
+  "ref": "rsraki/p045-p033-dino5-20261020-v2",
+  "saved_version": 1,
+  "artifact_revision": "P045 V2",
+  "all_checks_passed": true,
+  "checks": {
+    "ref": true,
+    "kernel_id": true,
+    "saved_version": true,
+    "all_source_cells": true,
+    "private_GPU_offline_noTPU": true,
+    "shape": true,
+    "Docker": true,
+    "datasets": true,
+    "kernels": true,
+    "competition": true
+  },
+  "status": "CORRECTED_ARTIFACT_V2_VISIBLE_RUNNING_NOT_FORMAL",
+  "manual_Save_calls": 1,
+  "formal_Submit_calls": 0,
+  "source": "artifacts/kaggle/p045-p033-dino5-20261020-v2/source.ipynb",
+  "source_SHA": "2d0525ba7ee0af4bce4e936a481a2f34ab1d185832fa4b2c617b6c081bed35b4",
+  "policy": "artifacts/research/20261020-P045-DINO5-prospective-v1/policy.json",
+  "tie_amendment": "artifacts/research/20261020-P045-DINO5-tie-safety-amendment-v1/amendment.json",
+  "original_artifact_V1_formal_eligible": false,
+  "old_V1_saved_kernel139736510_retained": true,
+  "same_DINO_producer_models_parent8_Inputs": true,
+  "tests": {
+    "unittest": 8,
+    "result": "PASS",
+    "ruff": "PASS"
+  },
+  "independent_oracle": {
+    "path": "artifacts/research/20261020-P045-independent-CSV-oracle-v1/preparation.json",
+    "synthetic_FP64": 60,
+    "wrong_tie_split_refused": true,
+    "actual_csv_not_read_yet": true
+  },
+  "best_own_Public": "0.958",
+  "goal959_achieved": false,
+  "limits": {
+    "numToday": 2,
+    "numTotal": 42,
+    "numAllowedNow": 3
+  },
+  "pending_refs": [
+    57420128,
+    57420634
+  ],
+  "DINO_upstream_Gold_history": "UNKNOWN",
+  "own_Gold_fit_select": 0,
+  "existing_GPU_preserved": true,
+  "no_automatic_upload_Submit_code_added": true
+}

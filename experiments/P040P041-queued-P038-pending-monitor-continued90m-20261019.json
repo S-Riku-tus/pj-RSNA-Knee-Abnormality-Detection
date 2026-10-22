@@ -1,0 +1,170 @@
+{
+  "schema_version": "P040P041_queued_P038_readonly_monitor_mixed_selector30m_v1",
+  "at_UTC": "2026-10-19T11:48:52.233878+00:00",
+  "interval_starting_baseline_UTC": "2026-10-19T11:18:05.224789+00:00",
+  "first_new_poll_UTC": "2026-10-19T11:20:32.677185+00:00",
+  "last_UTC": "2026-10-19T11:48:35.263041+00:00",
+  "observations": 14,
+  "v1_selector_polls": 7,
+  "latest_selector_polls": 7,
+  "total_observations_since_start": 52,
+  "state_changes": 0,
+  "all_HTTP200": true,
+  "latest_states": {
+    "P040": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P041": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P038": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_score_present": false,
+      "Public": null,
+      "error": null,
+      "totalBytes": 0
+    }
+  },
+  "selector_transition": {
+    "at_UTC": "2026-10-19T11:35:43.761439+00:00",
+    "selector": "version_label omitted; official CLI latest selector",
+    "latest_currentVersionNumber": {
+      "P040": 1,
+      "P041": 1
+    },
+    "states": {
+      "P040": {
+        "raw_status_present": false,
+        "raw_status": null,
+        "raw_failure": null,
+        "typed_status": "QUEUED",
+        "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+      },
+      "P041": {
+        "raw_status_present": false,
+        "raw_status": null,
+        "raw_failure": null,
+        "typed_status": "QUEUED",
+        "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+      },
+      "P038": {
+        "raw_status_present": false,
+        "raw_status": null,
+        "raw_score_present": false,
+        "Public": null,
+        "error": null,
+        "totalBytes": 0
+      }
+    },
+    "changed_vs_latest_v1_read": [],
+    "metadata_receipts": [
+      {
+        "label": "P040",
+        "at_UTC": "2026-10-19T11:35:43.001732+00:00",
+        "http": 200,
+        "bytes": 229951,
+        "sha256": "694e56782885859548cfbd0c84a535f03547e836457c482fdc075d49dd0b5686"
+      },
+      {
+        "label": "P041",
+        "at_UTC": "2026-10-19T11:35:43.758232+00:00",
+        "http": 200,
+        "bytes": 268053,
+        "sha256": "8d07d04c87dab4508741ea77537c54f6017e93877679de6c9cd812c796a2ba5e"
+      }
+    ],
+    "Save_Submit_newGPU": 0,
+    "old_v1_source_preserved": true
+  },
+  "raw_QUEUED_omission_not_failure": true,
+  "missing_Public_not_zero": true,
+  "next30minute_interval_authorized_by_root": true,
+  "activity": {
+    "Save": 0,
+    "Submit": 0,
+    "upload": 0,
+    "GPU_start": 0,
+    "extra_latest_metadata_reads": 2
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T112031071007Z/summary.json",
+      "bytes": 1301,
+      "sha256": "434dff0b9b7f75fa2cc0d2529ec6b2eefb14ba8755663f0cdbd0fd2b1358f182"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T112236336739Z/summary.json",
+      "bytes": 1301,
+      "sha256": "02c65c301adf7e4eee5d6b153dfdcb54e99fdcf7b6e2fabab11ff67b84df503a"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T112446133860Z/summary.json",
+      "bytes": 1301,
+      "sha256": "524b0c62c4242ce26aba39d48f490d558396b148f74dfba5350abac877c1f9c1"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T112651606500Z/summary.json",
+      "bytes": 1301,
+      "sha256": "197df3a76f9fcfdb415a993a30ac1013ee93d96422e5c4e52f28feb620864c6b"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T112902587369Z/summary.json",
+      "bytes": 1301,
+      "sha256": "0e5b6f5784ed28544e314c49eb895975a699a23a4bd6677f8e4c9263969ae159"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T113108175511Z/summary.json",
+      "bytes": 1301,
+      "sha256": "2f3bc7e52cb1019427e3901a33118fb694b0eaa820705f69a0d0db9ae9cd547a"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T113320929427Z/summary.json",
+      "bytes": 1301,
+      "sha256": "ef40e54666fd100a23b05d3acc0d5a9f1decca3456a2a60c90e5050af5862a5e"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T113541110777Z/summary.json",
+      "bytes": 1300,
+      "sha256": "b1e6a7f1f6a7ffbc0756394b9f23e1ea3f4f274458bb3ade073a742415ed1d11"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T113800401302Z/summary.json",
+      "bytes": 1301,
+      "sha256": "a9255413e4fa24dc35be2e6cd93f9502512d777c726d8d00d87bd21aadc95af5"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T114005779187Z/summary.json",
+      "bytes": 1301,
+      "sha256": "9b90ed07befb98bcec27b876068462e5faf72e9166e49d0732b5d413cfa35f21"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T114210356741Z/summary.json",
+      "bytes": 1301,
+      "sha256": "0b6beb0886c1db111670291a8726e62ae6807726844642627ab82ddc5336ade5"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T114420803958Z/summary.json",
+      "bytes": 1301,
+      "sha256": "54fb6106b0718a1ac99f32ef0aac08b17e4d5beb4c77dc75aa4ba50baa0f7103"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T114628415501Z/summary.json",
+      "bytes": 1301,
+      "sha256": "f71b0ce808eb5edc8c1bc220fe57aba2c3c42afb207fc0a511f90be029b7157f"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T114833829687Z/summary.json",
+      "bytes": 1301,
+      "sha256": "d664a09a5942d7f166292a6409fd41d44ed176dc0c521ed03bfb5e2b915a5d3e"
+    }
+  ]
+}

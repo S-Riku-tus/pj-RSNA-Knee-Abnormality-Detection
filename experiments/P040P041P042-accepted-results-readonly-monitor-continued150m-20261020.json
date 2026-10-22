@@ -1,0 +1,129 @@
+{
+  "schema_version": "remaining_formal_results_readonly_monitor_next30m_v6",
+  "at_UTC": "2026-10-19T19:45:57.375883+00:00",
+  "interval_baseline_UTC": "2026-10-19T19:15:02.068781+00:00",
+  "first_new_UTC": "2026-10-19T19:17:15.579509+00:00",
+  "last_UTC": "2026-10-19T19:45:48.516950+00:00",
+  "observations": 15,
+  "total_observations_since_P042_admission": 90,
+  "all_completed_read_HTTP200": true,
+  "formal_state_change_polls": 0,
+  "latest_formal_states": {
+    "P040": {
+      "ref": 57402883,
+      "raw_status_present": false,
+      "status": null,
+      "raw_Public_present": false,
+      "Public": null,
+      "error": null,
+      "bytes": 0
+    },
+    "P041": {
+      "ref": 57402914,
+      "raw_status_present": false,
+      "status": null,
+      "raw_Public_present": false,
+      "Public": null,
+      "error": null,
+      "bytes": 0
+    },
+    "P042": {
+      "ref": 57403458,
+      "raw_status_present": false,
+      "status": null,
+      "raw_Public_present": false,
+      "Public": null,
+      "error": null,
+      "bytes": 0
+    }
+  },
+  "P042_visible_COMPLETE_pinned_not_repolled": true,
+  "accepted_remaining": 0,
+  "own_best_stays": "0.958",
+  "missing_status_Public_not_zero_or_failure": true,
+  "next30minute_interval_continues_until_results_or_rootstop": true,
+  "activity": {
+    "Save": 0,
+    "Submit": 0,
+    "cancel": 0,
+    "GPU_start": 0,
+    "extra_reads": 0
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T191713649425Z/summary.json",
+      "bytes": 1883,
+      "sha256": "52cfbf8c6455b45e1f804673dfed1bda0e3f641dcce7e1a5e6b24afa794f89bd"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T191919115164Z/summary.json",
+      "bytes": 1883,
+      "sha256": "b0b746eb78c8e030c02cfda7e13dc7d8d05c6891ba53e25b2f004b7f12d668b0"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T192119484355Z/summary.json",
+      "bytes": 1883,
+      "sha256": "b34375fb0fe0cc371625b8c6e94134659c908645b2a584411230143117d98933"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T192321492097Z/summary.json",
+      "bytes": 1883,
+      "sha256": "4ea047661d7998c3e50095a02a6269bda4fde6c4d54559ea1b8ee99ce358d29d"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T192521591278Z/summary.json",
+      "bytes": 1883,
+      "sha256": "fd2cf4f65cb1a23e25d045d8bf88c8137263100351214fa54330c7d69db590e4"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T192723174686Z/summary.json",
+      "bytes": 1883,
+      "sha256": "a9e76b4fb5f8903bf3706e6204a1fb325fde7b81f8a60de001168bdce223d9a5"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T192926262690Z/summary.json",
+      "bytes": 1883,
+      "sha256": "90cc8b462b5630605fcf8bbd0090fb885e3ff5a64707ba9a7812eb198f34465d"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T193130073480Z/summary.json",
+      "bytes": 1883,
+      "sha256": "f503fbe6bfa3a0e26c21db107e985321c227a9cae1bdeb362d062b72c43037ce"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T193331708475Z/summary.json",
+      "bytes": 1883,
+      "sha256": "4dcf7ad88c52421f57aed31ddaecb2dfa87df495677689f598945b94c2d38fc1"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T193534427392Z/summary.json",
+      "bytes": 1883,
+      "sha256": "9cd4ea53155e949d8be372c70cb8e6c8bd0fcd1c5fbfc4f4e63bb32dc371e2e0"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T193737568629Z/summary.json",
+      "bytes": 1883,
+      "sha256": "da99b998c321c626605136c35b6ef61863ce732a84122bb37732280c7c232383"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T193942494819Z/summary.json",
+      "bytes": 1883,
+      "sha256": "9525da1d1589ade202c6c26816f33f637f7fd560bb30d996af05c4fba4bb5703"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T194145588537Z/summary.json",
+      "bytes": 1883,
+      "sha256": "6b0e242142a1d3c685035d1cce1d674d3898bc21718bdb0df844c242b48aac58"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T194345938404Z/summary.json",
+      "bytes": 1883,
+      "sha256": "5b628e6044960f895501598366e156a092e36ef0ce315c2fddb2f1acbb4d2fc0"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T194547042744Z/summary.json",
+      "bytes": 1883,
+      "sha256": "e498f4fcbf8a8f0d5c846c7362f3e5683a59ebbb19d163c98b4b5bc1fe3a221a"
+    }
+  ]
+}

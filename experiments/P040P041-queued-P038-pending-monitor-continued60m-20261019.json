@@ -1,0 +1,117 @@
+{
+  "schema_version": "P040P041_queued_P038_unreturned_readonly_monitor_continued30m_v2",
+  "at_UTC": "2026-10-19T11:18:20.627562+00:00",
+  "interval_starting_baseline_UTC": "2026-10-19T10:48:30.434421+00:00",
+  "first_new_poll_UTC": "2026-10-19T10:50:57.716482+00:00",
+  "last_UTC": "2026-10-19T11:18:05.224789+00:00",
+  "observations": 14,
+  "total_observations_since_start": 38,
+  "state_changes": 0,
+  "all_HTTP200": true,
+  "latest_states": {
+    "P040": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P041": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P038": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_score_present": false,
+      "Public": null,
+      "error": null,
+      "totalBytes": 0
+    }
+  },
+  "raw_QUEUED_omission_not_failure": true,
+  "missing_Public_not_zero": true,
+  "next30minute_interval_authorized_by_root": true,
+  "activity": {
+    "Save": 0,
+    "Submit": 0,
+    "upload": 0,
+    "GPU_start": 0,
+    "quota_reads": 0
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T105056638290Z/summary.json",
+      "bytes": 1301,
+      "sha256": "c6c8cdd93dc4286e8a4eb3554439994bbe5b5dcebf95441065470fce3c8e0194"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T105304098231Z/summary.json",
+      "bytes": 1301,
+      "sha256": "077cf347fcd495742596343ed732364adb9487e3278c816ca151e89ddddc4e98"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T105507499080Z/summary.json",
+      "bytes": 1301,
+      "sha256": "6e1b905bdf783cdd6009d069d7c0b52907d95c80d189eb547d60d37257bbab24"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T105711599630Z/summary.json",
+      "bytes": 1301,
+      "sha256": "4027d3ddee2ca33f19b9d79637311b28fd0ef1dcf89f5b702608f92c7de13a8d"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T105915538225Z/summary.json",
+      "bytes": 1301,
+      "sha256": "d08b6d83f0d6ac401d07840241ec7bdee01ce415c73c89a662cabfaa639aa9ca"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T110117717301Z/summary.json",
+      "bytes": 1301,
+      "sha256": "97f65444486cd6604976f1d18a020acafec0a7cc534b1fff7ee1187f91b93430"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T110320996285Z/summary.json",
+      "bytes": 1301,
+      "sha256": "0d444121e65dce8d88ed15f6788cea23e921a1b924a864e002cbb6c7b1955a6c"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T110527685731Z/summary.json",
+      "bytes": 1301,
+      "sha256": "b3729794532067246b661718b90b5b4e09469ab67a02ea7d5501b91792781dd3"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T110731626609Z/summary.json",
+      "bytes": 1301,
+      "sha256": "83819fc30599e590069ac167d46437a68bfc61a9517ddc9f5e230f487da9adcb"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T110935150164Z/summary.json",
+      "bytes": 1301,
+      "sha256": "22c39bf97dd7eb6889e21357642ec00920b2612083dad45d82680998e47f563f"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T111140527734Z/summary.json",
+      "bytes": 1301,
+      "sha256": "89648d78c227fe4c27985c710e6177ee29e73ea59d502e2af32e1dd887d692f3"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T111344917668Z/summary.json",
+      "bytes": 1301,
+      "sha256": "cab5489180298ccd06fb6dc0ccb559791b881c815fb25c8e4fbf3f782306653e"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T111547672861Z/summary.json",
+      "bytes": 1301,
+      "sha256": "a465ad50050a91709f89c1c340d68c3b0cc07487b05c4349772c530fd1039f08"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-v1/poll-20261019T111803206808Z/summary.json",
+      "bytes": 1301,
+      "sha256": "03cbad18bce13974ae0ede69f5f9a27b9f0ddb51fa596320b8e48d71fe04a417"
+    }
+  ]
+}

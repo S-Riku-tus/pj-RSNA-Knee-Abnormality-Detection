@@ -1,0 +1,51 @@
+{
+  "at_UTC": "2026-10-20T11:14:38.114493+00:00",
+  "status": "EXPLORATORY_BOTH_FOLD_WEAK_POSITIVE_ORIGINAL_ENGINEERING_HOLD_UNCHANGED",
+  "diagnostic": {
+    "path": "artifacts/research/20261020-F013-F009-matched-counter-diagnostic-v1/result.json",
+    "bytes": 24817,
+    "sha256": "b9882d6007e354622ccd90a66913852b4a62695a28b5d4af0b102488a9af1374"
+  },
+  "fixed10_means_fold1": {
+    "control": 0.882916297126442,
+    "candidate": 0.8838186796677361
+  },
+  "fold0_delta": 0.0016927818638720836,
+  "fold1_delta": 0.0009023825412940556,
+  "fold1_group_CI95_reportonly": {
+    "valid_resamples": 1000,
+    "undefined_resamples": 0,
+    "percentile_95_interval": [
+      -0.00029770630602090535,
+      0.0021144956509481865
+    ]
+  },
+  "fold1_weak_BCE": {
+    "control": 0.28139588925075215,
+    "candidate": 0.2799671186639567,
+    "delta": -0.0014287705867954692
+  },
+  "matched_optimizer_counts": {
+    "control": {
+      "optimizer_steps": 2495,
+      "optimizer_step_opportunities": 2496,
+      "amp_skipped_steps": 1
+    },
+    "candidate": {
+      "optimizer_steps": 2495,
+      "optimizer_step_opportunities": 2496,
+      "amp_skipped_steps": 1
+    }
+  },
+  "candidateE12_SHA": "6805bfa94b1356b71d474d6dd918518749a42dd08ed791d403aa4c256c3e4d78",
+  "old_HOLD_unchanged": true,
+  "old_v3_engineering_and_joint_passed": false,
+  "direct_adoption_or_Submit_from_this_diagnostic": false,
+  "decision": "Positive exploratory gamma effect on both existing weakfolds; CI crosses0. Retain originalHOLD and no oldconsumer relaxation. Consider separatelydeclared bounded reconstruction/finite/artificialGPU/actualinference qualification only; no new checkpoint selection.",
+  "3tests_ruff_PASS": true,
+  "model_deserialization_GPU_MRI_newtraining_Save_Submit": 0,
+  "own_Gold_fit_select": 0,
+  "Public_gain_established": false,
+  "goal959_achieved": false,
+  "best_own_Public": ".958"
+}

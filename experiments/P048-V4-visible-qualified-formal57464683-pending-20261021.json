@@ -1,0 +1,54 @@
+{
+  "at_UTC": "2026-10-21T04:05:31.172537+00:00",
+  "status": "VISIBLE_QA_PASS_FORMAL_ACCEPTED_PENDING",
+  "ref": 57464683,
+  "kernelId": 139941816,
+  "saved_version": 1,
+  "source_SHA": "05b8b300cc397ae61de643b7788601f3963da489fb366cb7530ddf6946b0ccca",
+  "formal_request": {
+    "path": "artifacts/research/20261021-P048-v4-root-formal-submit-v2/request.json",
+    "bytes": 677,
+    "SHA": "5ed894c54de75294edce578bdd7fe174be539088bd7380b5111b867233ba45a4"
+  },
+  "formal_acceptance": {
+    "path": "artifacts/research/20261021-P048-v4-root-formal-submit-v2/summary.json",
+    "bytes": 1204,
+    "SHA": "a2c8f7d86424daa4972c8f2528888cd968ca0f0cfb3b0736e3858f5b3add12e1"
+  },
+  "visible_root_audit": {
+    "path": "artifacts/research/20261021-P048-v4-root-visible-execution-v1/root-independent-actual-audit.json",
+    "bytes": 4678,
+    "SHA": "853728fed9db9fe66743f144fa41e90430fdd0e0d5d954556a3b2758950ff9aa"
+  },
+  "root_checks": 71,
+  "parallel_independent_review": "p048_audit: read-only 26evidencechecks plus fresh Fractionrank/struct-FP32 native36/parent36/final36 and3UIDexecutorchecks PASS; no file/network/GPUwrites",
+  "visible_coverage": {
+    "N": 3,
+    "S": 3,
+    "F_structural": 0,
+    "F_operational": 0
+  },
+  "visible_submission_SHA": "d884a92f2bdac264b702a739f3ea10fc2131bc7331e23866eac5c87c119f48e4",
+  "intervention": "Only2CLS F006fixedE12->F013gammafixedE12, sameREG2/P0338/preprocess/fold50/family50/native20/MCLSynovitisexclusion/parentweights/A224.35",
+  "weak_native50_deltas": [
+    0.0007010865535287403,
+    0.0003702810027581549
+  ],
+  "weak_scope": "Repeated matchedheldout, not fullparentOOF ortrue2foldservingOOF; noPublicgainproof",
+  "status_raw": null,
+  "public_score_raw": null,
+  "pending_is_not_zero": true,
+  "best_own_official_Public": 0.958,
+  "goal959_verified": false,
+  "limits_after": {
+    "numToday": 1,
+    "numTotal": 44,
+    "numAllowedNow": 4
+  },
+  "max_formal_calls_for_candidate": 1,
+  "automatic_retry": false,
+  "ownGoldfitselect": 0,
+  "old_F009_HOLD_unchanged": true,
+  "upstream_exposure": "Inheritedpublicmodels, notindependentlycertified",
+  "no_automated_upload_or_Submit_code_added": true
+}

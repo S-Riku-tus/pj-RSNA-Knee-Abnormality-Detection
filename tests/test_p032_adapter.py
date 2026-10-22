@@ -44,7 +44,7 @@ def write_csv(path, rows):
 
 
 class ParentBoundaryTests(unittest.TestCase):
-    def run_extension(self, child_outcome):
+    def run_extension(self, child_outcome, *, blend_policy="fullN-column", native_executor="legacy-pool"):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
         base = Path(temporary.name)
@@ -53,7 +53,7 @@ class ParentBoundaryTests(unittest.TestCase):
         data.mkdir()
         (package / "p032blend").mkdir(parents=True)
         (package / "p032blend/__init__.py").write_text("")
-        for name in ("contracts.py", "fixed20_blend.py"):
+        for name in ("contracts.py", "fixed20_blend.py", "success20_blend.py"):
             shutil.copyfile(ROOT / "src/rsna_knee" / name, package / "p032blend" / name)
         # Real saved parent's CSV field strings; change native order independently.
         rows = [{ID: str(i + 1), **{target: value for target in TARGETS}}
@@ -80,12 +80,26 @@ class ParentBoundaryTests(unittest.TestCase):
                       for i, value in enumerate(("0.9", "0.1", "0.5"))]
             write_csv(target / "native-mean.csv", native)
             mask = target / "native-failures.csv"
-            mask.write_text(ID + "\n" + ("2\n" if child_outcome == "structural" else ""))
-            (target / "native-result.json").write_text("{}")
-            (target / "adapter-receipt.json").write_text(json.dumps({
+            mask.write_text(ID + "\n" + ("2\n" if child_outcome in ("structural", "operational") else ""))
+            result_path = target / "native-result.json"
+            result_path.write_text(json.dumps({"schema_version": "native_isolated_uid_operational_recovery_v1",
+                                              "complete": True, "operational_recovery_contract_passed": True})
+                                   if native_executor == "isolated-uid" and child_outcome != "bad-typed" else "{}")
+            adapter = {
                 "complete": True, "studies": 3,
                 "structural_failure_count": int(child_outcome == "structural"),
-                "native_csv": str(target / "native-mean.csv"), "failure_mask_csv": str(mask)}))
+                "native_csv": str(target / "native-mean.csv"), "failure_mask_csv": str(mask)}
+            if native_executor == "isolated-uid":
+                self.assertIn("--native-executor", argv)
+                self.assertEqual(argv[argv.index("--native-executor") + 1], "isolated-uid")
+                adapter.update(schema_version="p035_f006_isolated_uid_adapter_v1", native_executor="isolated-uid",
+                               operational_recovery_contract_passed=True,
+                               failure_mask_is_structural_operational_union=True,
+                               operational_failure_count=int(child_outcome == "operational"),
+                               failure_UID_union=["2"] if child_outcome in ("structural", "operational") else [],
+                               native_result_schema="native_isolated_uid_operational_recovery_v1",
+                               native_result_sha256=hashlib.sha256(result_path.read_bytes()).hexdigest())
+            (target / "adapter-receipt.json").write_text(json.dumps(adapter))
             return {"complete": True, "timeout": False, "returncode": 0}
 
         def mapped(value):
@@ -98,7 +112,8 @@ class ParentBoundaryTests(unittest.TestCase):
                 patch("multiprocessing.active_children", return_value=[]), \
                 patch.dict(sys.modules, {"torch": types.SimpleNamespace(cuda=cuda)}):
             result = extension.execute({"DATA": data}, runtime=package,
-                                       started=extension.time.monotonic(), mode="serving")
+                                       started=extension.time.monotonic(), mode="serving", blend_policy=blend_policy,
+                                       native_executor=native_executor)
         actual = final.read_bytes()
         for name in tuple(sys.modules):
             if name == "p032blend" or name.startswith("p032blend."):
@@ -131,6 +146,19 @@ class ParentBoundaryTests(unittest.TestCase):
         import io
 
         old, new = [list(csv.DictReader(io.StringIO(body.decode()))) for body in (before, actual)]
+        for left, right in zip(old, new):
+            self.assertEqual(left["MCL"], right["MCL"])
+            self.assertEqual(left["Synovitis"], right["Synovitis"])
+
+    def test_success_subset_policy_retains_failed_uid_and_uses_other_uids(self):
+        result, before, actual = self.run_extension("structural", blend_policy="success-subset")
+        self.assertTrue(result["complete"])
+        self.assertFalse(result["all_native_disabled"])
+        self.assertTrue(result["native_contribution_used"])
+        self.assertEqual(result["blend_policy"], "success-subset")
+        old, new = [list(csv.DictReader(io.StringIO(body.decode()))) for body in (before, actual)]
+        self.assertEqual(new[1], old[1])
+        self.assertNotEqual(new[0]["ACL"], old[0]["ACL"])
         for left, right in zip(old, new):
             self.assertEqual(left["MCL"], right["MCL"])
             self.assertEqual(left["Synovitis"], right["Synovitis"])

@@ -1,0 +1,111 @@
+{
+  "schema_version": "P040_independent_postvisible_formal_acceptance_v1",
+  "at_UTC": "2026-10-19T16:43:02.607373+00:00",
+  "all_checks_passed": true,
+  "checks": {
+    "single_ref_accepted_response_Get_independent": true,
+    "own_owner_and_team_exact": true,
+    "file_description_date_exact": true,
+    "sixkey_inert_request_savedV1": true,
+    "request_SHA_review_exact": true,
+    "actual_provenance_numeric_preflight_pins_exact": true,
+    "root_visible_actual_qualification": true,
+    "limits_increment_once": true,
+    "pending_not_zero_or_failure": true
+  },
+  "accepted_ref": 57402883,
+  "owner": "rsraki",
+  "saved_kernel": 139586868,
+  "saved_version": 1,
+  "state": {
+    "ref": 57402883,
+    "raw_status_present": false,
+    "status": null,
+    "raw_Public_present": false,
+    "Public": null,
+    "error": null,
+    "bytes": 0
+  },
+  "own_best_stays": "0.958",
+  "remaining_user_accepted_formal": 2,
+  "public_pending_not_zero": true,
+  "activity": {
+    "additional_API_beyond_watch": 0,
+    "Save": 0,
+    "Submit": 0,
+    "upload": 0,
+    "GPU_start": 0
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/limits-after-raw.json",
+      "bytes": 46,
+      "sha256": "4bed480cb66f9883266f832d4441ec3eb24ebf82f21d5413fa3e78c628ebf832"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/limits-before-raw.json",
+      "bytes": 46,
+      "sha256": "416b4b06f21b7c52935a8bfed45dffaba05e016a6f7f62190eb3403efe4bc827"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/list-before-raw.json",
+      "bytes": 17971,
+      "sha256": "f7f023dbe0daae295fdebf3821fe4d2b516aa2d5c4042fdd88e5557c66ec20eb"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/manual-dispatch.json",
+      "bytes": 271,
+      "sha256": "c0eb073f442a68ee7c9183265959dcd2a617d0f1c48e533b09d28ac34f022d6e"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/receipts.json",
+      "bytes": 1279,
+      "sha256": "8b7bec09953b125a0522dc714963c9156f1477530e1696bfe3a9f9a8a7f35958"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/request-preparation.json",
+      "bytes": 559,
+      "sha256": "047b6360b62115dc89b5cf05547fbdee4436207f31fb5a77e45a5dd5381ec4c1"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/request.json",
+      "bytes": 539,
+      "sha256": "0e2d5179f3f552f91bea5d3749cbf478b4cfaa7fd3d3fe77575547df16adaec1"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/root-review.json",
+      "bytes": 2647,
+      "sha256": "9a4ce4159ae235e4b21dd7d41c21098460e637a242acbf1379d447c1d751bd96"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/status-before-raw.json",
+      "bytes": 21,
+      "sha256": "8c65d9493ad080266a23df2675f847486fedc0546a88a91c866b812d970915b5"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/submission-get-raw.json",
+      "bytes": 528,
+      "sha256": "e55bd0e9cd2eac58fd55ce0a77efc75adb60b6cecbe2a8152cc6f0c117bbac04"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/submission-response-raw.json",
+      "bytes": 16,
+      "sha256": "e4244ebc472fd39285abd290352c9ae927bebc426c9ba8d5051a7cdf365feccd"
+    },
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/summary.json",
+      "bytes": 630,
+      "sha256": "5653cbb28c1b29c0ad673a4383cbb131825fa009cae68465f0387149fe727572"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T164246314330Z/summary.json",
+      "bytes": 1119,
+      "sha256": "5260ba678b07d9e1ae48b15978bddbbaa0aabd4d11a3b858a727646765afc3b0"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T164246314330Z/P040-submission-57402883.json",
+      "bytes": 528,
+      "sha256": "e55bd0e9cd2eac58fd55ce0a77efc75adb60b6cecbe2a8152cc6f0c117bbac04"
+    }
+  ]
+}

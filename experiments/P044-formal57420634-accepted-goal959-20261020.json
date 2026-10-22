@@ -1,0 +1,65 @@
+{
+  "at_UTC": "2026-10-20T03:45:31.311353+00:00",
+  "accepted": true,
+  "ref": 57420634,
+  "kernelId": 139732287,
+  "saved_version": 1,
+  "kernel_ref": "rsraki/p044-reader-mirror-20261020-v1",
+  "own_official_status_raw": null,
+  "own_official_Public_raw": null,
+  "error": null,
+  "bytes": 0,
+  "owner_description_file_match": true,
+  "limits": {
+    "numToday": 2,
+    "numTotal": 42,
+    "numAllowedNow": 3,
+    "limitedByTotal": false
+  },
+  "fullList_rows": 42,
+  "fullList_pagination_exhausted": true,
+  "same_ref_List_binding_rows": 1,
+  "actual_scriptVersionId_from_same_ref_List": 360266199,
+  "manual_formal_calls": 1,
+  "automatic_retry": false,
+  "best_own_Public": "0.958",
+  "goal959_achieved": false,
+  "pending_not_zero": true,
+  "receipts": [
+    {
+      "label": "manual-Submit-once",
+      "at_UTC": "2026-10-20T03:45:30.120394+00:00",
+      "HTTP": 200,
+      "bytes": 16,
+      "SHA": "1ec13b5f53414311b0b14010bc28d6d52f4123886376a197e78a501056728fbc"
+    },
+    {
+      "label": "accepted-owned-Get",
+      "at_UTC": "2026-10-20T03:45:30.311344+00:00",
+      "HTTP": 200,
+      "bytes": 561,
+      "SHA": "08279f39d3348b9e74eac7f3221f0929481d2a218dc2c6ae0c15066d46df0e88"
+    },
+    {
+      "label": "after-Submit-limits",
+      "at_UTC": "2026-10-20T03:45:31.078042+00:00",
+      "HTTP": 200,
+      "bytes": 46,
+      "SHA": "7b92c1ad0a624a5962cc5dfe659f07b166cd39923e3e8912148a23f099f6fe76"
+    },
+    {
+      "label": "after-Submit-full-own-list",
+      "at_UTC": "2026-10-20T03:45:31.311353+00:00",
+      "HTTP": 200,
+      "bytes": 21019,
+      "SHA": "56597d887ef9eeab54dc95e5fc2782cdd808e2b4135d07dc35171592b20fc1ce"
+    }
+  ],
+  "status": "OWN_FORMAL_ACCEPTED_PUBLIC_PENDING",
+  "qualification": "artifacts/research/20261020-P044-actual-visible-qualification-v1/provenance-and-numeric-review.json",
+  "source_SHA": "8e2bb3ed325ba63ec7bf9581c08456220439ffa3ddaef95cdf9741c0aadec09c",
+  "target959_unmet": true,
+  "best958_retained": true,
+  "existing_GPU_preserved": true,
+  "no_automatic_upload_or_Submit_code_added": true
+}

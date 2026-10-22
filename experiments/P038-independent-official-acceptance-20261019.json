@@ -1,0 +1,85 @@
+{
+  "schema_version": "P038_independent_accepted_official_readonly_audit_v1",
+  "at_UTC": "2026-10-19T09:45:44.799603+00:00",
+  "all_checks_passed": true,
+  "checks": {
+    "ref_root_response_accepted_and_independent_Get_exact": true,
+    "owner_team_exact": true,
+    "description_and_file_exact": true,
+    "request_SHA_review_dispatch_exact": true,
+    "request_original_review_JSON_exact": true,
+    "preflight_SHA_and_PASS_exact": true,
+    "saved_version1_request_binding": true,
+    "source_and_kernel_binding_exact": true,
+    "quota_today2_total37_left3": true
+  },
+  "submission_ref": 57391696,
+  "accepted": true,
+  "status": null,
+  "Public": null,
+  "raw_status_present": false,
+  "raw_Public_present": false,
+  "classification": "accepted_score_unreturned_not_zero_or_failure",
+  "limits": {
+    "numToday": 2,
+    "numTotal": 37,
+    "numAllowedNow": 3
+  },
+  "pending_server_scriptVersionId_unobserved": true,
+  "activity": {
+    "GetSubmission": 1,
+    "GetSubmissionLimits": 1,
+    "Submit": 0,
+    "Save": 0,
+    "upload": 0,
+    "GPU": 0
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-evening-p038-root-manual-submit-v1/request.json",
+      "bytes": 583,
+      "sha256": "9a34dcb193ef5d44f78012490b1971f65145fb8c7de56e21c023d78c39f95ba6"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-p038-root-manual-submit-v1/root-review.json",
+      "bytes": 1451,
+      "sha256": "cf9c542102763dd8baeba02159b0e9466eb793985b19cb00b38e896531276097"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-p038-root-manual-submit-v1/manual-dispatch.json",
+      "bytes": 320,
+      "sha256": "63c2c560def2edc33c2af5a55175f49d8ed14b933b24f7a862947d037ce25200"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-p038-root-manual-submit-v1/submit-response-raw.json",
+      "bytes": 16,
+      "sha256": "4f207c4cb1148d20ccb7076004fbd57a8917bd0cd0859e43176ff65fe1b1aea8"
+    },
+    {
+      "path": "artifacts/research/20261019-evening-p038-root-manual-submit-v1/accepted-submission-raw.json",
+      "bytes": 568,
+      "sha256": "587c124c9fc351e33385cd4f80226ed2765b241a7884f6591d49048cae88ac9a"
+    },
+    {
+      "path": "experiments/P039958-evening-P038-official-preflight-20261019.json",
+      "bytes": 11952,
+      "sha256": "9d8326b5a28b3c837972277dafaa6950a3caed6c03c68ba7fbd8f1c38937e152"
+    },
+    {
+      "path": "artifacts/research/20261019-p038-independent-acceptance-v1/observation-20261019T094543646957Z/limits.json",
+      "bytes": 46,
+      "sha256": "416b4b06f21b7c52935a8bfed45dffaba05e016a6f7f62190eb3403efe4bc827"
+    },
+    {
+      "path": "artifacts/research/20261019-p038-independent-acceptance-v1/observation-20261019T094543646957Z/P03857391696.json",
+      "bytes": 568,
+      "sha256": "587c124c9fc351e33385cd4f80226ed2765b241a7884f6591d49048cae88ac9a"
+    },
+    {
+      "path": "artifacts/research/20261019-p038-independent-acceptance-v1/observation-20261019T094543646957Z/receipts.json",
+      "bytes": 420,
+      "sha256": "b05b912bd70e8353d9bc010cc07545f61a0b6b21df79f51ed9dcb3c0d554bcb4"
+    }
+  ],
+  "observation": "artifacts/research/20261019-p038-independent-acceptance-v1/observation-20261019T094543646957Z"
+}

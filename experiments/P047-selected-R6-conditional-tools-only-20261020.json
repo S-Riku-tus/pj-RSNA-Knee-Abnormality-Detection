@@ -1,0 +1,12 @@
+{
+  "at_UTC": "2026-10-20T11:10:06.899165+00:00",
+  "status": "CONDITIONAL_TOOLS_ONLY_NO_REAL_SELECTION_OR_CANDIDATE_PAYLOAD",
+  "research": "artifacts/research/20261020-P047-selected-R6-source-preparation-v1/preparation.json",
+  "research_SHA": "666194c40854b320f76a7e40f0ac7402bf404169e883698b73524ad27405904b",
+  "tests_total": 11,
+  "ruff_PASS": true,
+  "actual_CUDA_MRI_and_Save_Submit": 0,
+  "decision": "No winnerchosen; waitcompletecontrolledprobes; toolsnotaccuracyqualification",
+  "own_Public_best": ".958",
+  "goal959_achieved": false
+}

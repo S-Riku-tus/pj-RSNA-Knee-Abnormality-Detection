@@ -1,0 +1,27 @@
+{
+  "at_UTC": "2026-10-20T09:50:06.732139+00:00",
+  "status": "CPU_CALIBRATION_RECOVERS_PART_OF_TEACHER_LOSS_BUT_FAILS_GATE_NO_ADOPTION",
+  "run": "artifacts/runs/f012-cpu-train-calibration-fold0-20261020-v1/completion.json",
+  "run_SHA": "c93e9dbc55252379a7a7faab178acf7da784e7ce51f11ad8008fcceb09fa3def",
+  "policy": "artifacts/research/20261020-F012-CPU-train-calibration-prospective-v1/policy.json",
+  "fixed10_weak_AUC": {
+    "A_prior": 0.83783004973149,
+    "C_prior": 0.8329815808303032,
+    "D": 0.8352527085089643
+  },
+  "D_minus_A": -0.002577341222525731,
+  "D_minus_C": 0.002271127678661111,
+  "C_reproduction_max_abs": 7.382983113757291e-15,
+  "seconds": 2.7660000000032596,
+  "decision": "Fails D>A gate; no fold1/image training/release/formal submission. Preserve F011 negative result and original P033958.",
+  "tests": "4 analytical tests incl exhaustive independent monotone partition oracle and ruff PASS",
+  "training_cohort": 3386,
+  "validation_cohort": 821,
+  "own_Gold_fit_select": 0,
+  "GPU_Torch_MRI": 0,
+  "upstreamJEV_Gold_selection_known": true,
+  "patient_independence_verified": false,
+  "Public_effect_established": false,
+  "goal959_unmet": true,
+  "local_GPU19472_preserved": true
+}

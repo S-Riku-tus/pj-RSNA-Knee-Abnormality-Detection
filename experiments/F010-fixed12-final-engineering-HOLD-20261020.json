@@ -1,0 +1,51 @@
+{
+  "schema": "F010_fixed12_final_engineering_HOLD_canonical_v1",
+  "at_UTC": "2026-10-19T19:45:43.901720+00:00",
+  "status": "TRAINING_COMPLETE_FIXED12_ENGINEERING_HOLD_NO_PRIMARY_COMPARISON",
+  "run": "artifacts/runs/f010-last4-late-cosine-fold0-20261019-v1",
+  "fold": 0,
+  "seed": 20261002,
+  "completed_epochs": 12,
+  "optimizer_updates": 2543,
+  "optimizer_step_opportunities": 2544,
+  "AMP_skips": 1,
+  "E10": {
+    "epoch": 10,
+    "optimizer_steps": 211,
+    "optimizer_step_opportunities": 212,
+    "amp_skipped_steps": 1
+  },
+  "expected_frozen_requirement": "Each of12 epochs:212 updates,212 opportunities,0 AMP skips; total2544 updates.",
+  "unchanged_frozen_evaluator_once": {
+    "exit_code": 1,
+    "stdout_bytes": 0,
+    "stderr_bytes": 1149,
+    "stderr_sha256": "2a89eab821f0603000ac4395000b4a13bc526204f828c2feac2d71ad64068ed6",
+    "error": "ValueError: Every epoch must have212 updates/opportunities and0 skips",
+    "comparison_json_absent": true,
+    "primary_math_and_weakCSV_prediction_checkpoint_payload_hash_not_reached": true,
+    "stored_metrics_metadata_may_be_parsed_or_consistency_checked": true
+  },
+  "independent_review": {
+    "path": "artifacts\\research\\20261020-f010-fixed12-final-engineering-independent-v1\\review.json",
+    "bytes": 8056,
+    "sha256": "a437dbe1e3100973925503c1dad6d14a648afbccc4665874569bf6eb590b22eb"
+  },
+  "independent_checks_passed": true,
+  "source_policy_preserved": {
+    "evaluator_sha256": "658c9e21e4112c0a3523c4ecf7a197d74a9affb7a1476bc470098b07a4cea365",
+    "policy_sha256": "b7117059abc2d89c48524522472ddc20f7cd61476c4647d8f76aee2a252331da",
+    "candidate_run_json_SHA_from_existing_counter_receipts": "74b2abdd4de224daa5ebbf8627aa40e765ac9d56ae649404d85ac4b9a2054e3f"
+  },
+  "decision": "Retain baseline. Do not release/adopt/startfold1/prepare consumer, add skip allowance, select earlier checkpoint or compute alternate primary metrics for this run.",
+  "interpretation": "Training completed; the prospective engineering gate rejected it. This is not a model-quality verdict or training-crash claim. Scaler-growth remains an unproven hypothesis.",
+  "Public": "Three already accepted P040/P041/P042 results remain pending per parent task state; no lookup or additional submission. Own best0.958 unchanged by this local engineering audit.",
+  "activity": {
+    "evaluator_import_or_rerun": 0,
+    "tests": 0,
+    "primary_math": 0,
+    "metrics_checkpoint_prediction_weakCSV_model_label_reads": 0,
+    "GPU_fit_API_Save_Submit": 0,
+    "source_policy_config_docs_ledger_changes": 0
+  }
+}

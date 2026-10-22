@@ -1,0 +1,203 @@
+{
+  "schema_version": "P039_confirmed958_parent_native20_manual_GPU_running_v1",
+  "at_UTC": "2026-10-17T07:22:27.953145+00:00",
+  "own_confirmed_Public_best": "0.958",
+  "target_Public": "0.960",
+  "target_achieved": false,
+  "previous_goal_turn_classification": "progress: actual POSIX CPU sixcases/fivechildren andF009E11, directcandidate prepared",
+  "current_goal_turn_classification": "progress: root manual GPU execution of new own958+native20 candidate and exact saved readback",
+  "P039": {
+    "kernel": 139182563,
+    "version": 1,
+    "ref": "rsraki/p039-p033-native20-20261017-v2",
+    "official_state_first": "RUNNING",
+    "source_sha256": "6453b3d09787abab07205d832c0176f0e78d050127e98d83c9f835bc5f799452",
+    "payload_sha256": "5d87fac88699e0ebcfbaf42d75b1559dddcac30ec88a329fb7add758af606ce7",
+    "scientific_delta": "exact confirmed own P033 .958 fixed W_RAPTOR_C parent only; no R7/Reader/mirror/newalpha/model changes",
+    "engineering_delta": "P033 source/cell/weightreceipt binding; accurate per-target nominal metadata; whole extension/timeout/receipt mismatch/noactive now raises instead of parent-only successful output",
+    "native": "same4model fingerprints,89source,7native runtime members,9Inputs,isolated UID180s,unionfailuremask,successrankFP32 .8+.2,failed/MCL/Synovitis parentcells unchanged",
+    "old_P033_and_P035_preserved": true,
+    "source_artificial_qualification": "5CPUtests/Ruff/sourcepeer/root PASS; independent wholewrapper positive/partial72cells exact stdlib FP32; allfailed raises/restores parent",
+    "saved_Get": "all4codecells exact; private/GPU/T4/TPUoff/offline/Docker2757 and normalized9Input refs exact",
+    "Input_version_limit": "Get omits version; requested refs pinned, actual runtime hashes/fingerprints must still be checked",
+    "P035_inherited_monitor_not_qualified_by_innerC_POSIX_rehearsal": true,
+    "new_actual_visible_or_hidden_Public_qualified": false,
+    "formal_Submit": 0,
+    "next": "read-only status/output, actual parent36+native/mask/fingerprints and exactFP32replay, then actualquota/formal decision"
+  },
+  "F009": {
+    "same_run": "artifacts/runs/f009-gamma-late-cosine-fold0-20261017-v1",
+    "latest_snapshot_epoch": 11,
+    "updates": 2332,
+    "AMP_skips": 0,
+    "fixed_E12_comparison": false,
+    "next": "unchanged guarded fixedE12 screen then prescribedsingleGPU branch"
+  },
+  "official_latest": {
+    "at_UTC": "2026-10-17T07:19:21.007477+00:00",
+    "P03357290868": "COMPLETE .958",
+    "other_four": "rawstatus/Public omitted; errorabsent/0B; do not infer failure orzero",
+    "limits": {
+      "numToday": 5,
+      "numTotal": 35,
+      "maxDaily": 5,
+      "extra_slots_treated_as": 0
+    },
+    "new_formal_Submit": 0
+  },
+  "competition_current": {
+    "userRank": 818,
+    "teamCount": 6123,
+    "deadline_UTC": "2026-10-22T23:59:00Z",
+    "deadline_JST": "2026-10-23 08:59 JST",
+    "previous_observed_rank": 968,
+    "rank_comparison_limit": "Different observation times and team counts; do not isolate causal rank effect."
+  },
+  "P038": "visiblequalified retained, notformallysubmitted; finalpriority from actualresults/qualifications/freshquota, not author958alone",
+  "activity": {
+    "new_manual_private_Kaggle_GPU_Save": 1,
+    "new_formal_Submit": 0,
+    "automatic_upload_or_Submit_code_added": false,
+    "new_local_GPU_fit": 0,
+    "existing_F009_fit_continues": true,
+    "new_model_or_MRI_download_to_local": 0,
+    "ownGold_fit_select_eval": 0
+  },
+  "limits": [
+    "No Public .959/.960 or native gain guarantee",
+    "Visible3 inference cannot prove hidden runtime or Public gain",
+    "Old source/policies/model/input hashes retain their original scopes; no qualification inflation"
+  ],
+  "ledger_before": {
+    "rows": 315,
+    "bytes": 191528,
+    "sha256": "88041169e84877a785e8a968f96cc8b59f23adf432be79e2309358493256c9cc"
+  },
+  "evidence": [
+    {
+      "path": "artifacts/kaggle/p039-p033-native20-20261017-v2/source.ipynb",
+      "bytes": 564930,
+      "sha256": "6453b3d09787abab07205d832c0176f0e78d050127e98d83c9f835bc5f799452"
+    },
+    {
+      "path": "artifacts/kaggle/p039-p033-native20-20261017-v2/save-payload.json",
+      "bytes": 568385,
+      "sha256": "5d87fac88699e0ebcfbaf42d75b1559dddcac30ec88a329fb7add758af606ce7"
+    },
+    {
+      "path": "artifacts/kaggle/p039-p033-native20-20261017-v2/policy.json",
+      "bytes": 1020,
+      "sha256": "573ea6d2d1f7cc57844fc6018c07f751657d7b5b5c637603230f1a55b9af5d54"
+    },
+    {
+      "path": "artifacts/kaggle/p039-p033-native20-20261017-v2/manifest.json",
+      "bytes": 28440,
+      "sha256": "a5b6109cdfba4c198550daa53efcfc029325f94ebe97de721278b8f31d18043e"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-parent958-readonly-audit-v1/audit.json",
+      "bytes": 15714,
+      "sha256": "601df13c891674f950f283f22b16d4d1fc1e89f3399e00064e26a4e514f1086d"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-offline-preparation-v1/verification-final.json",
+      "bytes": 2530,
+      "sha256": "10b9f3535bee033e6743c0eb561b6835a4e9a730e6d5ef77b50900e9569872e4"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-offline-independent-v1/review.json",
+      "bytes": 2556,
+      "sha256": "a5f995e3ead19a396abff23706cd318fb59bf960949d0c0049e026f7f5dfc4a4"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/launch-v1/manual-review.json",
+      "bytes": 1986,
+      "sha256": "bf3336e5ac99ec44e7ce926d1f99e7663a0f760c78b18041fa2a166bc653c4ea"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/launch-v1/save-response-raw.json",
+      "bytes": 166,
+      "sha256": "8dee85ab94aef1e32b934852430cbb125214a1a91cfe4b96f610d41b0516de80"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/launch-v1/get-saved-raw.json",
+      "bytes": 728729,
+      "sha256": "52e4ce54eec0bbb2c3e8ec2dd59b687afcfb4f138758fc727aa199b554f33d11"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/launch-v1/saved-readback-audit.json",
+      "bytes": 787,
+      "sha256": "73e61c617ef3b018eb214a5ef230a8357a2e7b87c9cab85fb3b3e45940af6517"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/pre-save-observation-v1/receipts.json",
+      "bytes": 432,
+      "sha256": "a741028d6ee12c9b15d25d47438686a7994ebc27873a4ccad8d7359182ff8f54"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/pre-save-observation-v1/competition.json",
+      "bytes": 3026,
+      "sha256": "5b1704ebb67ca7c9366bf1cd42393e1d110ae855a33f65d1ddb89e3291b1de25"
+    },
+    {
+      "path": "artifacts/research/20261017-p039-execution-v1/pre-save-observation-v1/accelerator-quota.json",
+      "bytes": 285,
+      "sha256": "59eb604ac8dd977baf1399a85951e8962e4f6b73aa94c79f241fa2e94f87148c"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T071921007477Z/57290868.json",
+      "bytes": 511,
+      "sha256": "b2c6a8bae958e3fa127624e428f44bd212ce710cbecfdcabac5dddb634616914"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T071921007477Z/57290868.receipt.json",
+      "bytes": 168,
+      "sha256": "53e3d3cf90e4df24d8ab375f181f5e60a54829cf87df733e3815882a0ad01194"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T071921007477Z/57291440.json",
+      "bytes": 475,
+      "sha256": "cd1b762c28856067876a11cbf3b256d41a5e2ae956dc207d86e9ef786428e891"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T071921007477Z/57291440.receipt.json",
+      "bytes": 168,
+      "sha256": "eb755901d69df956f2c9a5109e758a7b2a39ca58a71b08f2dc0d4dc5f5b20b7b"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T071921007477Z/57291580.json",
+      "bytes": 461,
+      "sha256": "d758892c078175df363884ba55d8830cb00e63447f46c16b4540fd944a2402ef"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T071921007477Z/57291580.receipt.json",
+      "bytes": 168,
+      "sha256": "29c502462474aa5b78e9e71f873a5330192c94a1dc3f0bbe260d5c1e602a8384"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T071921007477Z/57292346.json",
+      "bytes": 473,
+      "sha256": "862ab7cde687f6b4718ff9359ad7ea1078cc2bcb103466f0cf5da162e4eeea0a"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T071921007477Z/57292346.receipt.json",
+      "bytes": 168,
+      "sha256": "20cf99746ddc558396322cce30078ed3afe6867c512c7eb314182568692e5b87"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T071921007477Z/57293138.json",
+      "bytes": 504,
+      "sha256": "0e5dda9fb76baa89e908da5e9363f20506ba5b838c403c4393368d9960577c80"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T071921007477Z/57293138.receipt.json",
+      "bytes": 168,
+      "sha256": "a00f306a95c8239bcbe2b24607d2903a19cb271358bbbeb625d8b08a8755f9f8"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T071921007477Z/limits.json",
+      "bytes": 28,
+      "sha256": "eb4d91f15e658d9bc5316244fd956e706187432c2d581b150914465e999b92ef"
+    }
+  ]
+}

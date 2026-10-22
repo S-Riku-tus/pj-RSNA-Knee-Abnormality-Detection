@@ -1,0 +1,12 @@
+{
+  "at_UTC": "2026-10-20T11:57:15.999615+00:00",
+  "status": "OFFICIAL_PUBLIC_TOP100_UNCHANGED_MAX_AUTHOR0958",
+  "evidence": "artifacts/research/20261020-public-frontier-2100-root-refresh-v1/rich-anonymous/summary.json",
+  "top100_max_author_reported": 0.958,
+  "author_above958": 0,
+  "changed_top100_versions_since1811": 0,
+  "own_reproduction": false,
+  "unscored_not_zero": true,
+  "scope": "scoreDESC100/dateRun100; no exhaustiveabsence/privateabsence claim",
+  "Save_Submit_or_asset_download": 0
+}

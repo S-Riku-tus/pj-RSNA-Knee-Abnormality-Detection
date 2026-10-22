@@ -1,0 +1,77 @@
+{
+  "at_UTC": "2026-10-19T17:07:30.791529+00:00",
+  "status": "ALL4_ADDITIONAL_ACCEPTED_THREE_SCORES_PENDING",
+  "accepted_additional_of4": 4,
+  "remaining_user_accepted_formal": 0,
+  "current_best_own_Public": "0.958",
+  "target959_achieved_as_of_now": false,
+  "P038": {
+    "ref": 57391696,
+    "status": "COMPLETE",
+    "Public": "0.957",
+    "canonical": "experiments/P038-terminal-binding-independent-20261019.json"
+  },
+  "pending_formals": {
+    "P040": {
+      "ref": 57402883,
+      "saved_kernel_id": 139586868,
+      "version": 1,
+      "official_status": null,
+      "Public": null,
+      "interpretation": "Accepted pending; omitted status/score not zero",
+      "root_summary": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/summary.json",
+      "root_summary_sha256": "5653cbb28c1b29c0ad673a4383cbb131825fa009cae68465f0387149fe727572"
+    },
+    "P041": {
+      "ref": 57402914,
+      "saved_kernel_id": 139586937,
+      "version": 1,
+      "official_status": null,
+      "Public": null,
+      "interpretation": "Accepted pending; omitted status/score not zero",
+      "root_summary": "artifacts/research/20261020-p041-root-post-visible-manual-submit-v1/summary.json",
+      "root_summary_sha256": "05dd1b8c7ae5d3dd30694b1988e4dcd28b8f3e68d1cb8ed926488c54db6e0572"
+    },
+    "P042": {
+      "ref": 57403458,
+      "saved_kernel_id": 139595447,
+      "version": 1,
+      "official_status": null,
+      "Public": null,
+      "interpretation": "Accepted pending; omitted status/score not zero",
+      "root_summary": "artifacts/research/20261020-p042-root-post-visible-manual-submit-v1/summary.json",
+      "root_summary_sha256": "ca029b849df89758978a77c92e140a5c7dacb7bd730e92a08b22dab7e23621f3"
+    }
+  },
+  "independent_full40_reconciliation": {
+    "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/final-acceptance-reconciliation-v1/summary.json",
+    "sha256": "8cb85268848c07ae1ca2bc57583156c1b42746a66647088cc8d633665f41a1db"
+  },
+  "limits_raw_after_last": {
+    "numToday": 5,
+    "numTotal": 40
+  },
+  "limits_typed_after_last": {
+    "numToday": 5,
+    "numTotal": 40,
+    "numAllowedNow": 0
+  },
+  "P042_local_postcondition_note": "AcceptedCreate+ownedGet succeeded; rawzero numAllowedNow omitted caused localKeyError; error preserved and SDKtypedzero/full40ownList independently reconciled; no resubmit",
+  "P042_actual_qualification": {
+    "parent_FP32": 36,
+    "final_FP32": 36,
+    "provenance_checks": 33,
+    "actual_UIDs": 3,
+    "failure_union": 0,
+    "within_run_changed_values": 10,
+    "visible_final_rank_changes": 0,
+    "failed_row_string_check": "vacuous0 actual failures, synthetic tests separate",
+    "numeric_peer": "artifacts/research/20261020-p042-actual-numeric-oracle-v1/completion.json",
+    "source_runtime_peer": "artifacts/research/20261020-p042-actual-provenance-review-v1/review.json"
+  },
+  "delivery_issue": "Two partialreadattempts hit502; V4onecompleteactualrun11files23985B HTTP200 errors0 used, no reconstruction or mixedpartialdirs. FlatGPUv2inertunused;D004notcreated;originalGPUV1only.",
+  "model_audit": "OwnGoldfit/select0; inheritedpublicweightGoldexposure separatelydisclosed; weak/gold/Publicdistinct; visible3doesnotqualifyhiddenaccuracy",
+  "F010": "Independentlast4fold0 fixed12training continues E8/1696of1696/AMPskip0; no interimAUCselection, bothfoldgates unchanged",
+  "next": "Read-only monitorthreeformalresults until terminal andfinalreport; do not reset scope at UTCday change; no extraSave/Submit. Continuefixed12F010autonomous research within gates.",
+  "automatic_Send_code_added": false
+}

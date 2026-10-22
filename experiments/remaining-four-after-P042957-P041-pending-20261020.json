@@ -1,0 +1,77 @@
+{
+  "at_UTC": "2026-10-19T22:12:28.675848+00:00",
+  "status": "ALL4_ACCEPTED_THREE_COMPLETE0957_P041_ONLY_PENDING",
+  "accepted_additional_of4": 4,
+  "remaining_user_formal": 0,
+  "no_additional_submission_even_after_daily_reset": true,
+  "current_best_own_Public": "0.958",
+  "target_at_least0959_achieved": false,
+  "target_strictly_above0960_achieved": false,
+  "terminal": {
+    "P038": {
+      "ref": 57391696,
+      "Public": "0.957",
+      "status": "COMPLETE",
+      "canonical": {
+        "path": "experiments/P038-terminal-binding-independent-20261019.json",
+        "sha256": "a4998ff261e914d0884048736e86e7ee47d0324d57b2dfc7c293063822424ce5",
+        "bytes": 4130
+      }
+    },
+    "P040": {
+      "ref": 57402883,
+      "Public": "0.957",
+      "status": "COMPLETE",
+      "canonical": {
+        "path": "experiments/P040-formal-COMPLETE0957-independent-binding-20261020.json",
+        "sha256": "38244472b9b689b85636f3e2f2b9b04a53300ed8e1c6103965067eb155e95c3e",
+        "bytes": 2811
+      },
+      "root_peer": {
+        "path": "artifacts/research/20261020-p040-terminal-root-peer-review-v1/review.json",
+        "sha256": "79652a6d9324885f3233dc7351f7aab5538948af72fddf7ed826fb7755b1afc4",
+        "bytes": 12344
+      }
+    },
+    "P042": {
+      "ref": 57403458,
+      "Public": "0.957",
+      "status": "COMPLETE",
+      "kernel": 139595447,
+      "version": 1,
+      "official_scriptVersionId": 360127421,
+      "canonical": {
+        "path": "experiments/P042-formal-COMPLETE0957-independent-binding-20261020.json",
+        "sha256": "52b708da1c1bf542402ef7cdcc7e695326859aec6ff15b8e8fdcc1f3c3b53420",
+        "bytes": 2791
+      }
+    }
+  },
+  "pending": {
+    "P041": {
+      "ref": 57402914,
+      "kernel": 139586937,
+      "version": 1,
+      "Public": null,
+      "omitted_score_not_zero": true
+    }
+  },
+  "decision": "Do not adopt P042 intermediate rr-rerank or P040 vector. Retain958baseline. Continue sole pending P041 result, no more formal submissions.",
+  "interpretation_limits": [
+    "This P042 intermediate Raptor-half rerank candidate fails to improve displayed ownPublic; do not generalize to every normalization.",
+    "Final strictly monotone transform alone preserves ranking, but P042 changes intermediate component scaling before fusion; no assertion that it is a final monotone-only transform.",
+    "Public rounding, small trial count, inherited upstream exposure and missing clean parent OOF preclude population significance or causal attribution.",
+    "OwnGoldfit/select0; visible actual three-UID numerical qualification is not a hidden metric estimate."
+  ],
+  "prospective_interpretation": {
+    "path": "artifacts/research/20261020-four-results-prospective-interpretation-v1/declaration.json",
+    "sha256": "f59f76e32f9153b88998567c2a501165676129bb5c0b7f6e0b29afdff03d9fbd",
+    "bytes": 2702
+  },
+  "F010": {
+    "path": "experiments/F010-fixed12-final-engineering-HOLD-20261020.json",
+    "sha256": "859970709d6353c4c93b81443f8ed24f0321aba46696349af4a9a4da1f283561",
+    "bytes": 2567
+  },
+  "no_model_or_label_read_no_new_Save_Submit": true
+}

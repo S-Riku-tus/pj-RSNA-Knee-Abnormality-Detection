@@ -1,0 +1,30 @@
+{
+  "at_UTC": "2026-10-20T11:40:11.796428+00:00",
+  "status": "SAVE_REJECTED_BY_KAGGLE_TWO_LIVE_GPU_BATCH_LIMIT",
+  "artifact": "artifacts/kaggle/f013-artificial-cuda-20261020-v1",
+  "source_SHA": "c801dbf33a0432aff56df1334d0d4341e0136d8867aff7c74fd0b5ffe88cf75d",
+  "policy_SHA": "6682d35c4c3e55a51e5e6c3f8b43883be5438f83874d173095556d1ffc73dbed",
+  "rejection": {
+    "at_UTC": "2026-10-20T11:40:11.796428+00:00",
+    "accepted": false,
+    "new_kernel_or_version_handle": null,
+    "status": "SAVE_REJECTED_BY_KAGGLE_TWO_LIVE_GPU_BATCH_LIMIT",
+    "raw_error": "Maximum batch GPU session count of 2 reached.",
+    "raw_response": {
+      "path": "artifacts/research/20261020-F013-root-artificial-CUDA-execution-v1/manual-Save-once-raw.json",
+      "bytes": 57,
+      "sha256": "33bfaef75fc90ec86a1dc14517d13ecbd7ba8af3a778e43f84e43d04734f43cd"
+    },
+    "manual_Save_attempts": 1,
+    "automatic_retry": false,
+    "GPU_forward_executed": false,
+    "formal_Submit": 0,
+    "existing_R6_two_runs_preserved": true,
+    "next": "Wait authoritativeR6terminal then freshprofile/quota/goalcheck and one newmanualSave; no repeatedSave while2live",
+    "output_wording_correction": "One-shot wrapper printedaccepted:trueunconditionally; rawerror/refempty/kernel0/versionnull areauthoritative. Thisrecordexplicitlycorrectsacceptancestatus; no successfuljobclaimed."
+  },
+  "CPUbothfold_integrity_PASS": true,
+  "actual_CUDA_MRI_Submit": 0,
+  "original_F009_HOLD_unchanged": true,
+  "goal959_achieved": false
+}

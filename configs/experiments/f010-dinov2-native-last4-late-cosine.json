@@ -1,0 +1,55 @@
+{
+  "schema_version": "frozen_features_v1",
+  "seed": 20261002,
+  "n_folds": 5,
+  "reason": "F006 gammaなし固定E12との一要因比較。generic DINO/392px cache/教師/seed/fold/head/opt/LR/12epochを維持し、解凍encoderを末尾2blockから末尾4block(8..11)へ増やす。final normは凍結。Gold/Public/途中epochで選ばず、E12同士の固定10 weak比較後に別fold確認。",
+  "preprocess": {
+    "version": "physical_letterbox_triplet_v1",
+    "image_size": 392,
+    "max_series": 3,
+    "slices_per_series": 48,
+    "percentiles": [
+      1,
+      99
+    ]
+  },
+  "encoder": {
+    "model_name": "dinov2_vits14",
+    "feature_dim": 384,
+    "batch_size": 16,
+    "precision": "fp16"
+  },
+  "head": {
+    "hidden_dim": 192,
+    "dropout": 0.2,
+    "pooling": "attention"
+  },
+  "train": {
+    "epochs": 12,
+    "batch_size": 16,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "num_workers": 0,
+    "selection": "bce",
+    "lr_schedule": {
+      "name": "late_cosine",
+      "constant_epochs": 6,
+      "min_factor": 0.1
+    }
+  },
+  "online": {
+    "schema_version": "f010_native392_last4_training_fast16_v1",
+    "trainable_blocks": 4,
+    "microbatch_studies": 1,
+    "effective_batch_studies": 16,
+    "window_chunk": 16,
+    "checkpoint_last2": true,
+    "encoder_learning_rate": 1e-05,
+    "accumulation_denominator": "total_observed_labels_in_effective_batch",
+    "folds": [
+      0,
+      1
+    ],
+    "amp_grad_scaler": true
+  }
+}

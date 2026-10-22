@@ -1,0 +1,214 @@
+{
+  "schema_version": "orthodiff_regional2x2_GPU_running_and_new_heads_ready_v1",
+  "at_UTC": "2026-10-17T05:07:55.031781+00:00",
+  "own_best_Public": 0.957,
+  "goal_Public": 0.96,
+  "goal_achieved": false,
+  "prior_record": {
+    "path": "experiments/orthodiff-head1-hold-fluid1080-running-F009-E6-20261017.json",
+    "bytes": 13888,
+    "sha256": "67b559c6b7fb4968817b1280e87c951f7d32e653d8f36fcf943ba454c268ae17"
+  },
+  "regional": {
+    "kernelId": 139160976,
+    "version": 1,
+    "slug": "rsraki/orthodiff-sag-regional2x2-20261017-v1",
+    "source": {
+      "path": "artifacts/kaggle/orthodiff-sag-regional2x2-20261017-v1/source.ipynb",
+      "bytes": 153068,
+      "sha256": "52842d703bcf05c762a6bf44a2c520fbdd47589239f553cc5aaabbaa7220024e"
+    },
+    "payload": {
+      "path": "artifacts/research/20261017-orthodiff-regional2x2-execution-v1/launch-v1/payload.json",
+      "bytes": 153970,
+      "sha256": "2a5cf7bd9e9ef414cbea11d0aafaa892cbf4d6dd9f65f1dfc33cebaaddbc4bed"
+    },
+    "Save_response": {
+      "path": "artifacts/research/20261017-orthodiff-regional2x2-execution-v1/launch-v1/save-response-raw.json",
+      "bytes": 180,
+      "sha256": "1ed08666054501ee1f1101e00a1731a4759111418db95e50237d9c0f867a7227"
+    },
+    "saved_readback_audit": {
+      "path": "artifacts/research/20261017-orthodiff-regional2x2-execution-v1/launch-v1/saved-readback-audit.json",
+      "bytes": 447,
+      "sha256": "8a8bf583b7617f73e885b0d6bd1a4f93828b9bfe00f52739541b2e3f6b8b9728"
+    },
+    "quota_before": {
+      "quotaRefreshTime": "2026-10-24T00:00:00Z",
+      "gpuQuota": {
+        "timeUsed": "6715.967910700s",
+        "timeReserved": "0s",
+        "totalTimeAllowed": "108000s",
+        "minimumTimeAllowed": "108000s",
+        "hasEverRun": true
+      },
+      "tpuQuota": {
+        "timeUsed": "0s",
+        "timeReserved": "0s",
+        "totalTimeAllowed": "72000s",
+        "minimumTimeAllowed": "72000s"
+      }
+    },
+    "artificial_actual4090_pool_QA": {
+      "path": "artifacts/research/20261017-orthodiff-regional2x2-actual-artificial-GPU-v1/verification.json",
+      "bytes": 1110,
+      "sha256": "e1da294dac32580c30a6dcd9ae1977604579122a0c3d1fa08fcf7461d0450139"
+    },
+    "source_peer": {
+      "path": "artifacts/research/20261017-orthodiff-regional2x2-independent-v1/review.json",
+      "bytes": 1408,
+      "sha256": "f868282aaf4bf9d6abef738c0efb6beca0fdb225f0f1636d61f72eb95cb7fbf2"
+    },
+    "live": {
+      "events": {
+        "path": "artifacts/research/20261017-orthodiff-regional2x2-execution-v1/live/20261017T050521914426Z/events.json",
+        "bytes": 4907,
+        "sha256": "79dd68b000b71a5df83b0fd9008296a74636ea6c5ca434e4e3edb99d729888e4"
+      },
+      "receipt": {
+        "path": "artifacts/research/20261017-orthodiff-regional2x2-execution-v1/live/20261017T050521914426Z/receipt.json",
+        "bytes": 346,
+        "sha256": "0e262be16b632c1cdb0757e392f8a7aeb105e67069f48236456945631416ec3a"
+      },
+      "last_progress": {
+        "phase": "feature_success_recorded",
+        "elapsed_seconds": 109.88889270400003,
+        "complete": false,
+        "requested": 4207,
+        "recorded": 160,
+        "success": 122,
+        "failure": 38,
+        "journal_prefix_SHA256": "13e563dc42bddd75791c7aef677acfe8fd8a5d3abfe3b563b879c9bd64d6c3ca"
+      }
+    },
+    "factor": "same original3063 success, same1144 inherited failure; global256 proof preserved; extra fixed TL/TR/BL/BR mean/concat1024 only",
+    "availability_FD_mixed": false,
+    "actual_features_qualified": false,
+    "actual_head_fit": 0
+  },
+  "fluid1080": {
+    "kernelId": 139158713,
+    "version": 1,
+    "same_existing_job": true,
+    "live": {
+      "events": {
+        "path": "artifacts/research/20261017-orthodiff-fluid-execution-v1/live/20261017T050711673413Z/events.json",
+        "bytes": 11272,
+        "sha256": "07ea1c43581b991d8cdaca29e33c6bc513e4c451d62ea2b10930ee5ec2d04053"
+      },
+      "receipt": {
+        "path": "artifacts/research/20261017-orthodiff-fluid-execution-v1/live/20261017T050711673413Z/receipt.json",
+        "bytes": 359,
+        "sha256": "bff0a2ed08c1e16961557a12e3751280f67b32d1d8f15c56446c1df8c95f21de"
+      },
+      "last_progress": {
+        "phase": "feature_success_recorded",
+        "elapsed_seconds": 1034.703251799,
+        "complete": false,
+        "requested": 1080,
+        "recorded": 704,
+        "success": 692,
+        "failure": 12,
+        "journal_prefix_SHA256": "f9585c30f31fa33b8205484160fb47e51aceff5134f3a8dc5e811808120160e3"
+      }
+    },
+    "actual_features_qualified": false,
+    "actual_head_fit": 0
+  },
+  "new_head_preparation": {
+    "FD_transport_QA": {
+      "path": "artifacts/research/20261017-orthodiff-fluid-composite-transport-preparation-v1/qualification.json",
+      "bytes": 3473,
+      "sha256": "a588b1e3ee0e8ca5e1d2e5951421dddd46c9a3c83e6809eb4fdb64beec3168a3"
+    },
+    "FD_transport_peer": {
+      "path": "artifacts/research/20261017-orthodiff-fluid-helper-peer-v1/review.json",
+      "bytes": 3623,
+      "sha256": "d4732bfdf5a75d7057c4ce3745fe4e533b3c61adef38ac8328d41d70a78a77c4"
+    },
+    "FD_head_source_peer": {
+      "path": "artifacts/research/20261017-orthodiff-fluid-head-source-independent-v1/review.json",
+      "bytes": 1325,
+      "sha256": "f4a8817f60f7f40bd2d9567e2dac340fa27f231a55f0665380cc40d93c45df4f"
+    },
+    "regional_transport_QA": {
+      "path": "artifacts/research/20261017-orthodiff-regional-transport-preparation-v1/qualification.json",
+      "bytes": 2906,
+      "sha256": "3256638d9096fc4309e613eb8cc118f045e7919cc21902abd76ead0b49c30019"
+    },
+    "regional_transport_root_peer": {
+      "path": "artifacts/research/20261017-orthodiff-regional-transport-root-peer-v1/review.json",
+      "bytes": 1746,
+      "sha256": "97ec02821e2721f220b2ad0c217a857479d766dc198a7d1b73ad6549c2ef70a4"
+    },
+    "regional_head_source_peer": {
+      "path": "artifacts/research/20261017-orthodiff-regional-head-source-independent-v1/review.json",
+      "bytes": 1393,
+      "sha256": "e10ac4671738d32f531d5a1bf88b4430b6839207f93d69cc3e9d87ad75c49d3d"
+    },
+    "FD_policy": {
+      "path": "artifacts/research/20261017-orthodiff-fluid-composite-head-preparation-v1/prospective-policy.json",
+      "bytes": 13564,
+      "sha256": "105bda1d86b677925356249d913a69abd9c03d4c950c86fc96589e8a79787abe"
+    },
+    "regional_policy": {
+      "path": "artifacts/research/20261017-orthodiff-regional-head-preparation-v1/prospective-policy.json",
+      "bytes": 15358,
+      "sha256": "c6796180a208c1b56f7aeee28154d537081e34d7927874978cf4d255c4590ff7"
+    },
+    "new_numpy_adapter_QA": {
+      "path": "artifacts/research/20261017-orthodiff-fd-regional-numpy-adapter-v1/verification.json",
+      "bytes": 5378,
+      "sha256": "33828e75fe1758b17598c170a24ecee44741518d57eb5dd9691464f13a6ccdb0"
+    }
+  },
+  "F009": {
+    "same_run": true,
+    "last_saved_E6": {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch6-observation/observation.json",
+      "bytes": 338,
+      "sha256": "71024a06e518083b947f2644e84ed0f9ee195e30bf6536787595d98557234190"
+    },
+    "interim_selection": false,
+    "eval_policy": {
+      "path": "experiments/f009-evaluation-policy-v2-prescore-20261017.json",
+      "bytes": 9505,
+      "sha256": "de5a6aa743d2d663f98244322958bf4b8154908238384112a7badf2df1e2d42c"
+    }
+  },
+  "official_new5": {
+    "observation": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T050351869159Z",
+    "status_and_Public_fields_returned": false,
+    "numToday": 5,
+    "numTotal": 35,
+    "additional_formal_quota_treated_as": 0,
+    "resubmit": 0
+  },
+  "public_frontier": {
+    "record": {
+      "path": "artifacts/research/20261017-public-frontier-refresh-v4/summary.json",
+      "bytes": 14968,
+      "sha256": "2dee4597c19a6bddfa298f7a6ed351df809008f8e1e4aed47891ec06d70457a8"
+    },
+    "new_author_V6_source": 359117069,
+    "author_Submit": 57280318,
+    "author_score": 0.958,
+    "own_reproduced": false,
+    "latest_unbound_source_separate": 359224783,
+    "P038": "offline preparation only"
+  },
+  "original_PD_global256_fixed20": {
+    "fold0_delta": 0.00043143728518663105,
+    "fold1_delta": -0.004509509409893242,
+    "joint_gate_passed": false,
+    "decision": "hold; no alpha or target retuning"
+  },
+  "decision": "continue actual FD and regional extraction in separate runs; seal only after complete exact actual audit; each new recipe fold0 positive then root review then original fold1; bothpositive plus engineering needed before candidate",
+  "scope": {
+    "Gold_fit_select_eval": 0,
+    "Report_for_inference": 0,
+    "local_MRI_bulk_download": 0,
+    "new_formal_Submit": 0,
+    "accuracy_improvement_claim": false
+  }
+}

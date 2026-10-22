@@ -1,0 +1,91 @@
+{
+  "at_UTC": "2026-10-19T16:44:17.356911+00:00",
+  "accepted_additional_of4": 3,
+  "remaining_user_accepted_formal": 1,
+  "own_best_Public": "0.958",
+  "target959_achieved": false,
+  "P038": {
+    "ref": 57391696,
+    "status": "COMPLETE",
+    "Public": "0.957"
+  },
+  "P040": {
+    "at_UTC": "2026-10-19T16:42:04.372840+00:00",
+    "candidate": "P040",
+    "accepted_ref": 57402883,
+    "saved_kernel_id": 139586868,
+    "saved_version": 1,
+    "qualified_actual_visible": true,
+    "manual_formal_calls_this_run": 1,
+    "limits_before": {
+      "numToday": 2,
+      "numTotal": 37,
+      "numAllowedNow": 3
+    },
+    "limits_after": {
+      "numToday": 3,
+      "numTotal": 38,
+      "numAllowedNow": 2
+    },
+    "remaining_user_accepted_formal": 2,
+    "official_Get_status_present": false,
+    "status": null,
+    "Public": null,
+    "accepted_not_scored_as_zero": true,
+    "best_Public": "0.958",
+    "no_retry": true
+  },
+  "P041": {
+    "at_UTC": "2026-10-19T16:43:04.059423+00:00",
+    "candidate": "P041",
+    "accepted_ref": 57402914,
+    "saved_kernel_id": 139586937,
+    "saved_version": 1,
+    "qualified_actual_visible": true,
+    "manual_formal_calls_this_run": 1,
+    "limits_before": {
+      "numToday": 3,
+      "numTotal": 38,
+      "numAllowedNow": 2
+    },
+    "limits_after": {
+      "numToday": 4,
+      "numTotal": 39,
+      "numAllowedNow": 1
+    },
+    "remaining_user_accepted_formal": 1,
+    "official_Get_status_present": false,
+    "status": null,
+    "Public": null,
+    "accepted_not_scored_as_zero": true,
+    "best_Public": "0.958",
+    "no_retry": true
+  },
+  "P042": {
+    "accepted_saved_kernel_id": 139595447,
+    "actual_version": 1,
+    "formal_ref": null,
+    "latest_official_state": "RUNNING at16:40:34UTC independently bound",
+    "source_unchanged_sha256": "92b1b13935540b5737b92b3ba927194aab419b3513ef01e907c1c7411823f3d3"
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261020-p040-root-post-visible-manual-submit-v1/summary.json",
+      "sha256": "5653cbb28c1b29c0ad673a4383cbb131825fa009cae68465f0387149fe727572"
+    },
+    {
+      "path": "artifacts/research/20261020-p041-root-post-visible-manual-submit-v1/summary.json",
+      "sha256": "05dd1b8c7ae5d3dd30694b1988e4dcd28b8f3e68d1cb8ed926488c54db6e0572"
+    },
+    {
+      "path": "artifacts/research/20261020-p042-root-visible-execution-after-slot-release-v2/summary.json",
+      "sha256": "3a981d78bef76c7eb5f06057e5b5ceeb79ee4435ef5082277cb8d21587c5f947"
+    }
+  ],
+  "P040_numeric_peer": "artifacts/research/20261020-p040-actual-numeric-oracle-v1/completion.json",
+  "P041_numeric_peer": "artifacts/research/20261020-p041-actual-numeric-oracle-v1/completion.json",
+  "source_runtime_peer_dir": "artifacts/research/20261020-p040-p041-actual-provenance-review-v1",
+  "accepted_formal_counts": "P0402ndof4;P0413rdof4; P0381stof4. Earlier rejected previsible request consumed0. No daily-reset extra authorized scope.",
+  "F010": "E8/12,1696of1696,AMPskip0; fixed12 and bothfold gates unchanged",
+  "next": "Continue last P042 qualification and one manual formal request, monitor all final accepted results; no automaticSendcode"
+}

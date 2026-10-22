@@ -1,0 +1,70 @@
+{
+  "schema_version": "P040P041_latest_official_RUNNING_state_change_v1",
+  "at_UTC": "2026-10-19T16:27:12.648559+00:00",
+  "observed_UTC": "2026-10-19T16:25:55.277163+00:00",
+  "P040": {
+    "raw_status_present": true,
+    "raw_status": "RUNNING",
+    "raw_failure": null,
+    "typed_status": "RUNNING",
+    "interpretation": "explicit_official_status"
+  },
+  "P041": {
+    "raw_status_present": true,
+    "raw_status": "RUNNING",
+    "raw_failure": null,
+    "typed_status": "RUNNING",
+    "interpretation": "explicit_official_status"
+  },
+  "P038": {
+    "raw_status_present": true,
+    "raw_status": "COMPLETE",
+    "raw_score_present": true,
+    "Public": "0.957",
+    "error": null,
+    "totalBytes": 379742
+  },
+  "changed_since_previous": [
+    "P040",
+    "P041"
+  ],
+  "all_three_HTTP200": true,
+  "selector": "latest version_label omitted; last saved V1 no subsequent save",
+  "slot_release_inferred": false,
+  "actual_visible_qualification": false,
+  "monitor_continues_until_terminal": true,
+  "activity": {
+    "new_account_calls": 0,
+    "Save": 0,
+    "Submit": 0,
+    "cancel": 0,
+    "GPU_start": 0
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T162554251757Z/P03857391696.json",
+      "bytes": 615,
+      "sha256": "e3abf54db4a0fa6579f85fda09ba4eb99db7122d1e8c5069a93d9a4c5a318c41"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T162554251757Z/P040.json",
+      "bytes": 20,
+      "sha256": "8a320f75d49b24da756707eb933391ebbd38a94fbad259c43663a4626c585475"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T162554251757Z/P041.json",
+      "bytes": 20,
+      "sha256": "8a320f75d49b24da756707eb933391ebbd38a94fbad259c43663a4626c585475"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T162554251757Z/receipts.json",
+      "bytes": 620,
+      "sha256": "a2817a1457d140c3163bb6f36cc9f6dbfab4a2f1781b2b84fac728a491d0385c"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T162554251757Z/summary.json",
+      "bytes": 1302,
+      "sha256": "c35b17415c14e97214d42800d85e31c36874545df433421161563335a05477f6"
+    }
+  ]
+}

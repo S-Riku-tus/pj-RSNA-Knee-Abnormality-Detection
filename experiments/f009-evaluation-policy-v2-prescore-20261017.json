@@ -1,0 +1,186 @@
+{
+  "schema_version": "F009_study_gamma_prospective_fixed12_policy_v2",
+  "prepared_at_utc": "2026-10-17T02:18:13.334057+00:00",
+  "client_date_jst": "2026-10-17",
+  "status": "EVALUATION_POLICY_V2_FIXED_BEFORE_FIRST_NEW_METRIC",
+  "candidate": "F009 train-only study-common gamma Uniform[0.85,1.15]",
+  "only_ML_factor": "gamma augmentation; unchanged generic initialization, last2/head, cache, teacher, seed, folds, schedule, loss and epochs",
+  "config": {
+    "path": "configs/experiments/f009-dinov2-native-last2-late-cosine-study-gamma.json",
+    "sha256": "1a0a1d396660c6e326fd0f78962867b8243a3ac0e9b87fe2bb98dbea5f59297f",
+    "bytes": 1699
+  },
+  "control_config_preserved": {
+    "path": "configs/experiments/f006-dinov2-native-last2-late-cosine.json",
+    "sha256": "cc39cf18ea74e0b94eb7593a5223bf2dae0f7fbef059fd94e31dd1e1683ee21a",
+    "bytes": 1445
+  },
+  "seed": 20261002,
+  "initial_fold": 0,
+  "gamma_rng": {
+    "generator": "dedicated torch CPU Generator",
+    "seed": 20261002,
+    "draws": "one per study training forward; all series/windows/channels share the draw",
+    "global_CPU_CUDA_and_shuffle_RNG_consumed": false
+  },
+  "candidate_checkpoint_rule": "epoch_012.pt paired with epoch_012_weak.csv only; no epoch search",
+  "original_primary_training_selection": "earliest minimum weak BCE retained separately in best.pt; never substitute it for E12",
+  "control_run": {
+    "path": "artifacts/runs/f006-late-cosine-fold0-20261012-v1/run.json",
+    "sha256": "e0e1006b6e37269a39c895b439de0051f7ab43f1c0a5532dd1e2f445fd303b81",
+    "bytes": 97539
+  },
+  "control_E12_prediction": {
+    "path": "artifacts/runs/f006-late-cosine-fold0-20261012-v1/epoch_012_weak.csv",
+    "sha256": "8f75feced2e02584b6581c0ed124e1bdc79d370a312966fd0c976ce302f0b964",
+    "bytes": 253423
+  },
+  "control_E12_weak_BCE": 0.28650593644185945,
+  "main_comparison": "F009 CLS E12 vs F006 CLS E12 on the same unchanged fold0 weak examples/masks",
+  "primary_metric": "unweighted mean AUC of fixed10 targets (all12 except MCL and Synovitis)",
+  "secondary": [
+    "per-finding AUC and observed positive/negative/missing support",
+    "all12 auxiliary AUC",
+    "weak BCE",
+    "same fixed REG50 mixture diagnostic"
+  ],
+  "paired_bootstrap": {
+    "unit": "supplied group",
+    "seed": 20261012,
+    "repeats": 1000,
+    "scope": "conditional interval report only; no search or independent-patient claim"
+  },
+  "fold1_start_gate": {
+    "completed_epochs": 12,
+    "fold0_fixed10_AUC_delta": ">0",
+    "engineering": "complete run; finite predictions/gradients, source/cache integrity and no unexplained skipped optimizer steps",
+    "automatic_start": false,
+    "root_review_required": true,
+    "weak_BCE": "report-only; no non-worsening threshold",
+    "engineering_machine_checks": [
+      "completed epochs exactly 1..12 with E12 checkpoint/index/prediction names and finite probabilities",
+      "unchanged fold0/seed/config/source/manifest/pixel-index and no own Gold use",
+      "zero AMP skipped steps; no unexplained optimizer or integrity issue under manual root review"
+    ],
+    "interpretation": "Continuation screening on a reused weak holdout, not statistical proof or Public accuracy guarantee. Bootstrap CI and per-target results are reported without extra posthoc gates."
+  },
+  "validation_scope": "Repeated weak holdout; not independent OOF for public parent, patient independence unverified; improvement does not guarantee Public or0.960",
+  "Gold_fit_selection_evaluation": false,
+  "planned_run_directory": "artifacts/runs/f009-gamma-late-cosine-fold0-20261017-v1",
+  "input_cache": {
+    "path": "data/native392/v2-20261009/full-index.json",
+    "sha256": "7d373ae85098758a8bc322b4e65079de07e998f7b7cd42a5a2d26cc4577eae31",
+    "bytes": 318002,
+    "studies": 4207,
+    "shards": 24,
+    "archive_bytes_stat_checked": 113509018067,
+    "all_summary_hashes_verified": true,
+    "full_pixel_archive_rehash_this_preparation": false,
+    "manifest_sha256": {
+      "manifest.json": "976abfe212ce23ad8112f16cb61d2c8172bb837ad50aed7ac88886760fc2cabf",
+      "weak.csv": "700e3da8016d80fd87bde2d1c189ef755ce5e5f89717ebac44d011c967a8371a",
+      "gold.csv": "f86a67cf9c5704c37bbe0d7912b308cd7497a2804918c0cc5e8e2008a0b16bad",
+      "fold-audit-v2.json": "bca25c48af792853ff1c19eac8e728462696dd869681bd8a3285dc7fcdbc4e24"
+    },
+    "fingerprint": "9a5031f46277c4ed55de3dbb25a23487f3f401cb55d2a676558e407163488491"
+  },
+  "resource_gate": {
+    "path": "artifacts/research/20261017-f009-gamma-preparation-v1/resource-gate.json",
+    "sha256": "706acc680901e904c5cbfc9400f7a01599356b96dd5e69b088f826d58a178e84",
+    "bytes": 2826
+  },
+  "source_sha256": {
+    "native_training_fast16.py": "9f5c3b490374201f72cc73ebf11a26f8a8163945387d4d493e7a04c08e729d57",
+    "finetune_model.py": "c43bcedf1d97b713528b4157a0a9c8867741b785d58c5be084cd7072c2b2c624",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b"
+  },
+  "assets": {
+    "path": "artifacts/qa/f009-generic-v2/generic-assets/extraction-receipt.json",
+    "sha256": "a770341b524f68d9c0da9442c3247b3213a366d0a51f51cca8b10869f54ab979",
+    "bytes": 31328
+  },
+  "CPU_tests": {
+    "run": 32,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "log": {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/cpu-tests.txt",
+      "sha256": "bdcde2ae12db828572bb27cafbc0eba26ca7ff84bfa9e99d261f4e8f56819d97",
+      "bytes": 6089
+    }
+  },
+  "GPU_receipts": {
+    "processed_QA": {
+      "path": "artifacts/qa/f009-gamma-processed115-v1/NATIVE392_QA_SUMMARY.json",
+      "sha256": "209930a592cd82e1e8f462983b0dc6f7eabd27f1c16f69fc85f3d12f1a19cf9e",
+      "bytes": 9979
+    },
+    "fast16_full144_QA": {
+      "path": "artifacts/qa/f009-gamma-full144-v1/NATIVE392_QA_SUMMARY.json",
+      "sha256": "042bbfb141872d3a5dd28c1aaff0d0e2000e26216ab9b9ab729f93ff1141c023",
+      "bytes": 9311
+    },
+    "generic_artificial_profile": {
+      "path": "artifacts/qa/f009-generic-v2/DINO_LAST2_PROFILE_SUMMARY.json",
+      "sha256": "05e6838385e75b4baedb59823baffb449ac89109a97375b5afb89ff0f8ab4fec",
+      "bytes": 44018
+    }
+  },
+  "preparation_failure_preserved": {
+    "path": "artifacts/research/20261017-f009-gamma-preparation-v1/generic-artificial-profile-v1",
+    "cause": "Windows path length during generic-source extraction before model load; retry succeeded in fresh short artifacts/qa/f009-generic-v2"
+  },
+  "version_relation": {
+    "supersedes_evaluation_gate_only": {
+      "path": "artifacts\\research\\20261017-f009-gamma-preparation-v1\\prospective-policy.json",
+      "sha256": "d51a5ce6bc681a820f55c53c303d2bd769084366a8d93581f10a7e87dfea1eec",
+      "bytes": 6507
+    },
+    "original_v1_evaluator_preserved": {
+      "path": "artifacts\\research\\20261017-f009-gamma-preparation-v1\\evaluate_fixed12.py",
+      "sha256": "d996093437697d8ab7edd69db30ad787617ad4a1eb33fadc6e2f494d04eee5c9",
+      "bytes": 8734
+    },
+    "old_launch_record_and_training_source_unchanged": true
+  },
+  "pre_metric_observation": {
+    "observed_at_utc": "2026-10-17T02:18:13.334057+00:00",
+    "original_run_path": "artifacts\\runs\\f009-gamma-late-cosine-fold0-20261017-v1\\run.json",
+    "original_run_sha256": "9619aaa634e875c53640823a2f3d4b1c244c326bcb37652abca49bd9cc409162",
+    "original_run_bytes": 60029,
+    "snapshot": {
+      "path": "artifacts\\research\\20261017-f009-gamma-preparation-v1\\pre-score-v2\\run-snapshot.json",
+      "sha256": "9619aaa634e875c53640823a2f3d4b1c244c326bcb37652abca49bd9cc409162",
+      "bytes": 60029
+    },
+    "status": "running",
+    "history_count": 0,
+    "epoch_output_names": [],
+    "epoch_012_checkpoint_and_predictions_exist": false,
+    "new_F009_metric_values_observed": false,
+    "scope": "Only current run metadata and output names inspected; no model/checkpoint/MRI or label data read."
+  },
+  "change": "Weak BCE non-worsening removed from the fold1 continuation gate; BCE remains fully reported.",
+  "rationale": [
+    "The intended endpoint is AUC and native scores are subsequently ranked. Calibration-sensitive BCE is not a necessary condition for ranking improvement.",
+    "An increasing transformation can preserve ranks/AUC while changing BCE; AUC can improve while BCE worsens.",
+    "This correction is fixed before the first F009 metric, not chosen after observing whether the candidate passes.",
+    "Fixed E12, fixed10 target set, positive mean AUC delta, engineering checks, and manual root review are unchanged."
+  ],
+  "weak_BCE_policy": {
+    "role": "secondary report only",
+    "gate_threshold": null,
+    "finite_value_still_required_for_engineering_integrity": true
+  },
+  "evaluation_policy_actions": {
+    "training_started_stopped_restarted_or_modified": false,
+    "config_source_gate_or_launch_modified": false,
+    "models_MRI_GPU_network_Save_Submit": 0
+  }
+}

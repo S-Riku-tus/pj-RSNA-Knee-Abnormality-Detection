@@ -1,0 +1,91 @@
+{
+  "schema_version": "F009_retry_fixedE12_candidate_AMP_HOLD_v2",
+  "at_UTC": "2026-10-19T09:42:38.537310+00:00",
+  "status": "E12_COMPLETE_CANDIDATE_SKIP1_FROZEN_ENGINEERING_HOLD_NO_AUC_READ",
+  "own_Public_best_user_reported": 0.958,
+  "first_goal": 0.959,
+  "second_goal": "strictly above0.960",
+  "local_audit_observes_no_new_Public_score": true,
+  "execution": {
+    "path": "artifacts/research/20261019-f009-fold1-retry-E12-guarded-execution-v1/execution.json",
+    "bytes": 5504,
+    "sha256": "068cb26b48b0ed6a86a2ac3a5e94b0a6d8709f1296f7dbed2a3d892ed895ba61"
+  },
+  "frozen_evaluator": {
+    "path": "artifacts/research/20261019-f009-fold1-recovery-evaluator-v3/source-freeze-v3.json",
+    "bytes": 2850,
+    "sha256": "5409d79a32911624aed489b3017b59755ddaf192a865f7bd94e3660effaebfb4"
+  },
+  "recovery_policy": {
+    "path": "artifacts/research/20261019-f009-fold1-recovery-preparation-v1/recovery-policy.json",
+    "bytes": 40330,
+    "sha256": "a9baf014df7ed1fabf601fadb6241ec1b7263c44c2bbcc73136ed1818611a66b"
+  },
+  "candidate_run": "artifacts/runs/f009-gamma-late-cosine-fold1-20261019-retry1",
+  "original_interrupted_run_unchanged": true,
+  "original_interrupted_run_pin": {
+    "path": "artifacts/runs/f009-gamma-late-cosine-fold1-20261017-v1/run.json",
+    "bytes": 82937,
+    "sha256": "a0bd37a60671bbfaf255496d847cd7e2e9e0735f555573290cc430d968befa96"
+  },
+  "config": {
+    "path": "configs/experiments/f009-dinov2-native-last2-late-cosine-study-gamma.json",
+    "bytes": 1699,
+    "sha256": "1a0a1d396660c6e326fd0f78962867b8243a3ac0e9b87fe2bb98dbea5f59297f"
+  },
+  "seed": 20261002,
+  "fold": 1,
+  "primary_epoch": 12,
+  "selected_best_checkpoint_used": false,
+  "sole_ML_factor_preserved": "Train-only study-common gamma0.85..1.15 compared with same fixedE12 F006 control; no config/source/seed/fold/data/hyperparameter changes in full12 restart.",
+  "candidate_engineering": {
+    "completed_epochs": 12,
+    "train_studies": 3316,
+    "validation_studies": 891,
+    "optimizer_steps": 2495,
+    "optimizer_step_opportunities": 2496,
+    "AMP_skipped_steps": 1,
+    "exception_epoch": 10,
+    "exception_epoch_optimizer_steps": 207,
+    "exception_epoch_opportunities": 208,
+    "exception_epoch_AMP_skips": 1,
+    "training_elapsed_seconds": 24384.424595799996,
+    "completion_run_lastwrite_UTC": "2026-10-19T09:31:59.409964+00:00",
+    "frozen_requirement": "All12 candidate epochs208 updates/208 opportunities/skip0; totals2496/2496/0.",
+    "passed": false
+  },
+  "decision": "HOLD. Do not adopt, stage, restore actual model, transport or submit this F009 candidate under the frozen policy. Do not extend the historical-control skip exception to candidate.",
+  "frozen_wrapper_executed_once": true,
+  "frozen_wrapper_exit_code": 1,
+  "engineering_rejection_before_mathematics": true,
+  "mathematical_comparison_calls": 0,
+  "candidate_fold1_AUC_BCE_values_projected_or_used": false,
+  "joint_candidate_screen_passed": false,
+  "old_v1_HOLD_unchanged": true,
+  "separate_v2_exception_scope_unchanged": "Only exact SHA-pinned historical F006 control E10 skip1, never candidate.",
+  "fold0_result_not_a_joint_override": true,
+  "no_AUC_CI_BCE_REG50_favorable_fold_or_checkpoint_rescue": true,
+  "no_new_exception_retraining_model_load_forward_GPU_usage_or_network": true,
+  "F010_job_process_not_modified": true,
+  "next": "Keep self958 baseline; independent metadata/exit audit, continue other separately declared candidates. No new F009 consumer implementation justified for this failed candidate.",
+  "downstream_status": {
+    "CPU_restoration_pair_and_transport_allowed": false,
+    "recovery_v3_consumer_implementation_started": false,
+    "existing_CPUv2_pairv3_transport_v1_relaxed": false,
+    "reason": "Joint engineering screen did not pass and no recovery-comparison-v3 result exists."
+  },
+  "independent_review_pending": true,
+  "limitations": [
+    "AMP protective step skip alone does not establish NaN model parameters or overflow cause.",
+    "No paired fixed10 fold1 AUC difference was computed in this evaluation attempt. Training-history metrics already exist but were not projected or used; do not claim accuracy improvement or degradation.",
+    "Weak labels and supplied groups differ from Public; patient independence remains unverified.",
+    "Completion is not pipeline or Public qualification."
+  ],
+  "supersedes_wording_only": {
+    "path": "experiments/F009-retry-fixed12-candidate-AMP-HOLD-20261019.json",
+    "bytes": 4332,
+    "sha256": "ad8597d2bdbd0de9a46da84afb9deee8f5bc5bc61af6950d33418aba876edf91"
+  },
+  "record_corrected_at_UTC": "2026-10-19T09:43:03.298440+00:00",
+  "wording_correction": "Training itself already records weak metrics. This audit did not project or use them, and the additional paired fixed10 primary comparison was rejected before computation. No accuracy outcome is inferred from the engineering HOLD."
+}

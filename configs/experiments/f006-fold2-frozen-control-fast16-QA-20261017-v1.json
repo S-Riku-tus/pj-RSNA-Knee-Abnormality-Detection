@@ -1,0 +1,49 @@
+{
+  "schema_version": "frozen_features_v1",
+  "seed": 20261002,
+  "n_folds": 5,
+  "reason": "Use paired window_chunk16 engineering based on artificial full144 throughput; all biological/training factors remain prespecified. New native392 paired online frozen control. Match microbatch1/effective16, observed-cell accumulation, fixed f002 head/seed/folds/BCE selection to last2.",
+  "preprocess": {
+    "version": "physical_letterbox_triplet_v1",
+    "image_size": 392,
+    "max_series": 3,
+    "slices_per_series": 48,
+    "percentiles": [
+      1,
+      99
+    ]
+  },
+  "encoder": {
+    "model_name": "dinov2_vits14",
+    "feature_dim": 384,
+    "batch_size": 16,
+    "precision": "fp16"
+  },
+  "head": {
+    "hidden_dim": 192,
+    "dropout": 0.2,
+    "pooling": "attention"
+  },
+  "train": {
+    "epochs": 12,
+    "batch_size": 16,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "num_workers": 0,
+    "selection": "bce"
+  },
+  "online": {
+    "schema_version": "native392_last2_training_fast16_v1",
+    "trainable_blocks": 0,
+    "microbatch_studies": 1,
+    "effective_batch_studies": 16,
+    "window_chunk": 16,
+    "checkpoint_last2": true,
+    "encoder_learning_rate": 1e-05,
+    "accumulation_denominator": "total_observed_labels_in_effective_batch",
+    "folds": [
+      2
+    ],
+    "amp_grad_scaler": true
+  }
+}

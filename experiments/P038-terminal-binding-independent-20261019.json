@@ -1,0 +1,104 @@
+{
+  "schema_version": "P038_terminal_local_binding_independent_v1",
+  "at_UTC": "2026-10-19T14:58:38.452719+00:00",
+  "all_checks_passed": true,
+  "checks": {
+    "terminal_ref_matches_accepted_and_request": true,
+    "owner_and_team_match_request": true,
+    "terminal_COMPLETE_and_public0957": true,
+    "terminal_file_and_description_match_accepted_request": true,
+    "terminal_accepted_date_exact": true,
+    "sixkey_request_and_saved_v1_binding": true,
+    "request_SHA_review_exact": true,
+    "preflight_SHA_review_exact": true,
+    "source_file_SHA_review_preflight_exact": true,
+    "prior_independent_acceptance_pass": true,
+    "kernel_id_review_preflight_exact": true,
+    "list_same_ref_owner_description_and_slug": true,
+    "server_scriptVersionId_observed_not_inferred": true,
+    "preflight_all_checks_and_complete": true,
+    "terminal_no_error_output_nonempty": true
+  },
+  "submission_ref": 57391696,
+  "owner": "rsraki",
+  "status": "COMPLETE",
+  "Public": "0.957",
+  "saved_kernel_id": 139163240,
+  "saved_version": 1,
+  "server_scriptVersionId_observed_in_List_URL": 359238727,
+  "server_scriptVersionId_source": "official ListSubmissions row for same ref at 23:46 JST; not inferred from kernel id",
+  "source_sha256": "9e3669dd1542f0cde2457fcc9b54ccb4bac013832583c26f93b88711f1a87370",
+  "own_best_stays": "0.958",
+  "score_is_public_LB_not_gold_validation": true,
+  "completed_one_of_remaining_four": true,
+  "formal_remaining_at_last_limits": 3,
+  "new_activity": {
+    "API": 0,
+    "Save": 0,
+    "Submit": 0,
+    "upload": 0,
+    "model_or_MRI_or_submission_download": 0
+  },
+  "evidence": [
+    {
+      "name": "raw",
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T145652734112Z/P03857391696.json",
+      "bytes": 615,
+      "sha256": "e3abf54db4a0fa6579f85fda09ba4eb99db7122d1e8c5069a93d9a4c5a318c41"
+    },
+    {
+      "name": "request",
+      "path": "artifacts/research/20261019-evening-p038-root-manual-submit-v1/request.json",
+      "bytes": 583,
+      "sha256": "9a34dcb193ef5d44f78012490b1971f65145fb8c7de56e21c023d78c39f95ba6"
+    },
+    {
+      "name": "review",
+      "path": "artifacts/research/20261019-evening-p038-root-manual-submit-v1/root-review.json",
+      "bytes": 1451,
+      "sha256": "cf9c542102763dd8baeba02159b0e9466eb793985b19cb00b38e896531276097"
+    },
+    {
+      "name": "dispatch",
+      "path": "artifacts/research/20261019-evening-p038-root-manual-submit-v1/manual-dispatch.json",
+      "bytes": 320,
+      "sha256": "63c2c560def2edc33c2af5a55175f49d8ed14b933b24f7a862947d037ce25200"
+    },
+    {
+      "name": "accepted",
+      "path": "artifacts/research/20261019-evening-p038-root-manual-submit-v1/accepted-submission-raw.json",
+      "bytes": 568,
+      "sha256": "587c124c9fc351e33385cd4f80226ed2765b241a7884f6591d49048cae88ac9a"
+    },
+    {
+      "name": "response",
+      "path": "artifacts/research/20261019-evening-p038-root-manual-submit-v1/submit-response-raw.json",
+      "bytes": 16,
+      "sha256": "4f207c4cb1148d20ccb7076004fbd57a8917bd0cd0859e43176ff65fe1b1aea8"
+    },
+    {
+      "name": "prior_audit",
+      "path": "experiments/P038-independent-official-acceptance-20261019.json",
+      "bytes": 3293,
+      "sha256": "5e0f3922f76830d86b53b7bdef834fb41b5724528c6c970565f2b5a4880a0225"
+    },
+    {
+      "name": "preflight",
+      "path": "experiments/P039958-evening-P038-official-preflight-20261019.json",
+      "bytes": 11952,
+      "sha256": "9d8326b5a28b3c837972277dafaa6950a3caed6c03c68ba7fbd8f1c38937e152"
+    },
+    {
+      "name": "root_list",
+      "path": "artifacts/research/20261019-root-submission-list-limits-2346-v1/list-1.json",
+      "bytes": 17924,
+      "sha256": "de4be39a385c2f93ef756aacd2ec4575138402ad599d6ddcee80ffe1b7c64de2"
+    },
+    {
+      "name": "source",
+      "path": "artifacts/kaggle/p038-helios-v6-fixed-recipe-20261017-v3/source.ipynb",
+      "bytes": 198738,
+      "sha256": "9e3669dd1542f0cde2457fcc9b54ccb4bac013832583c26f93b88711f1a87370"
+    }
+  ]
+}

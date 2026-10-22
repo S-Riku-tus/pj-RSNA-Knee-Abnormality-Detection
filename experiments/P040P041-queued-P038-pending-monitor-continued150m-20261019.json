@@ -1,0 +1,145 @@
+{
+  "schema_version": "P040P041_queued_P038_latest_readonly_monitor30m_v2",
+  "at_UTC": "2026-10-19T12:50:30.805872+00:00",
+  "interval_starting_baseline_UTC": "2026-10-19T12:19:13.540933+00:00",
+  "first_new_poll_UTC": "2026-10-19T12:21:42.941116+00:00",
+  "last_UTC": "2026-10-19T12:50:14.933369+00:00",
+  "observations": 14,
+  "total_observations_since_start": 80,
+  "selector": "latest: version_label omitted",
+  "main3_state_changes": 0,
+  "all_HTTP200": true,
+  "latest_states": {
+    "P040": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P041": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P038": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_score_present": false,
+      "Public": null,
+      "error": null,
+      "totalBytes": 0
+    }
+  },
+  "requested_temporary_D001_watch": {
+    "at_UTC": "2026-10-19T12:47:49.942394+00:00",
+    "ref": "rsraki/d001-rsna-inputs-cpu-20261019-v1",
+    "kernel_id": 139613277,
+    "known_saved_version": 1,
+    "selector": "latest, version_label omitted",
+    "state": {
+      "raw_status_present": true,
+      "raw_status": "COMPLETE",
+      "typed_status": "COMPLETE",
+      "failure": null
+    },
+    "changed_since_previous": false,
+    "terminal": true,
+    "deadline_UTC": "2026-10-19T13:17:00+00:00",
+    "receipt": {
+      "at_UTC": "2026-10-19T12:47:49.940394+00:00",
+      "http": 200,
+      "bytes": 21,
+      "sha256": "8c65d9493ad080266a23df2675f847486fedc0546a88a91c866b812d970915b5"
+    },
+    "extra_D001_read_calls": 1,
+    "Save_Submit_GPU": 0,
+    "CPU_completion_is_not_GPU_science_or_Input_version_qualification": true
+  },
+  "D001_watch_stopped_after_first_COMPLETE": true,
+  "D001_complete_not_GPU_science_or_Input_version_qualification": true,
+  "raw_QUEUED_omission_not_failure": true,
+  "missing_Public_not_zero": true,
+  "next30minute_interval_authorized_by_root": true,
+  "activity": {
+    "Save": 0,
+    "Submit": 0,
+    "upload": 0,
+    "GPU_start": 0,
+    "extra_D001_status": 1
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T122141943098Z/summary.json",
+      "bytes": 1301,
+      "sha256": "784a7b8eb81a469f8fb174c504db5286d4a1a12a822b218eded5fe34c99ca4bb"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T122351839034Z/summary.json",
+      "bytes": 1301,
+      "sha256": "cd7f1c172838ea68dd8695e258191f8769165cd837b8100019822dd574ab1769"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T122559207327Z/summary.json",
+      "bytes": 1301,
+      "sha256": "afdbe1b7308be667b3a70e2de94acac6f2138a547877076b40ff55f896720b5a"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T122804835143Z/summary.json",
+      "bytes": 1301,
+      "sha256": "19034fd7fbbab0e4d7ac5a4cca017cd09ff7f5f4ba1c41fd7502e76c4195a90a"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T123010999407Z/summary.json",
+      "bytes": 1301,
+      "sha256": "da7df4cf8d21fbaa3c55b18ce03867112c6e452da3990f97a0d8e57b31920c20"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T123222335356Z/summary.json",
+      "bytes": 1301,
+      "sha256": "12c2c5daa893c4c6d63dbc8a520caa9bca63e74b6164b21a17af76b145c04459"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T123431318345Z/summary.json",
+      "bytes": 1301,
+      "sha256": "6be5aff25560d757ba56b0e322b7d1786303b9cff6d430708935f8ce325581f1"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T123644925781Z/summary.json",
+      "bytes": 1301,
+      "sha256": "382edc7cf3e8d78a6405c5c59db88305f0cf1caf918a2527ea1f155b1e945d7c"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T123853390641Z/summary.json",
+      "bytes": 1301,
+      "sha256": "4c11ba7b1f20467083bfe4edd5d23cb9fe2ba38b96dd84b80ac49da424580555"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T124104577615Z/summary.json",
+      "bytes": 1301,
+      "sha256": "19be914d01fdf79e1c59ca98c0f48f7cd07b96169d5e1a209c1364c5f13c9882"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T124309760960Z/summary.json",
+      "bytes": 1301,
+      "sha256": "8b22802b8ed574a520265242571f41346d475db872c1cf7a41e646f19187b364"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T124516528137Z/summary.json",
+      "bytes": 1301,
+      "sha256": "bffe048e2fd8f401d9d1dff600acb153c3c40c19db06609f8e7052539e5f4e2b"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T124747097288Z/summary.json",
+      "bytes": 1301,
+      "sha256": "03ef4403a980e744f5f01c76a95218c34372fe2c12fb6c3c7ba1321863be63dc"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T125013046357Z/summary.json",
+      "bytes": 1301,
+      "sha256": "bf33f864abb79e445adb73846cc814a00b21c344d1f5baf563042b1ae76307e3"
+    }
+  ]
+}

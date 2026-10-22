@@ -1,0 +1,230 @@
+{
+  "schema_version": "P033_own_official958_newbest_and_runtime_preparation_milestone_v1",
+  "at_UTC": "2026-10-17T07:06:44.001262+00:00",
+  "official_observation_UTC": "2026-10-17T07:05:36.333465+00:00",
+  "own_confirmed_Public_best": "0.958",
+  "target_Public": "0.960",
+  "target_achieved": false,
+  "displayed_gap_to_target": "0.002",
+  "previous_goal_turn_classification": "progress: F009E10 observed and pure CSV arithmetic frozen; no score gain then",
+  "current_goal_turn_classification": "progress: actual official new own best .958 and reviewed candidate runtime source",
+  "P033": {
+    "submission": 57290868,
+    "status": "COMPLETE",
+    "own_Public": "0.958",
+    "author_Public": "0.958",
+    "kernel": 139000655,
+    "version": 1,
+    "slug": "rsraki/p033-r6-classweights-20261016-v1",
+    "source_sha256": "57284b71d271c3d4bf09595a6acade490ea911c8f7438a595724f260f3f28ccb",
+    "totalBytes": 247221,
+    "observed_HTTP": 200,
+    "change": "published fixed W_RAPTOR_C vector only over own frozen P029M R6V1 4fold TTA ON A224.35; no F006",
+    "class_weights": "Raptor LOA.20 PFOA.60 Synovitis.80 Bakers.35 others.50",
+    "visible_qualification": "3 UID; no failure; independent36FP32 replay",
+    "preserve_successful_version": true,
+    "original_description_pending_is_historical": true,
+    "interpretation": "Actual own displayed improvement .957 to .958. Reproduction of published fixed weights; not evidence of independently learned .001 gain or unrounded .958 precision."
+  },
+  "previous_own957": {
+    "P029M": 57225898,
+    "P032": 57262934,
+    "preserved": true
+  },
+  "official_five_submissions": [
+    {
+      "ref": 57290868,
+      "status": "COMPLETE",
+      "Public": "0.958",
+      "raw_status_present": true,
+      "raw_Public_present": true,
+      "totalBytes": 247221
+    },
+    {
+      "ref": 57291440,
+      "status": null,
+      "Public": null,
+      "raw_status_present": false,
+      "raw_Public_present": false,
+      "totalBytes": 0
+    },
+    {
+      "ref": 57291580,
+      "status": null,
+      "Public": null,
+      "raw_status_present": false,
+      "raw_Public_present": false,
+      "totalBytes": 0
+    },
+    {
+      "ref": 57292346,
+      "status": null,
+      "Public": null,
+      "raw_status_present": false,
+      "raw_Public_present": false,
+      "totalBytes": 0
+    },
+    {
+      "ref": 57293138,
+      "status": null,
+      "Public": null,
+      "raw_status_present": false,
+      "raw_Public_present": false,
+      "totalBytes": 0
+    }
+  ],
+  "submission_limits": {
+    "raw": {
+      "numToday": 5,
+      "numTotal": 35
+    },
+    "additional_slots_treated_as": 0,
+    "reset_time_known": false
+  },
+  "P038": {
+    "visible_qualified": true,
+    "formally_submitted": false,
+    "requires_fresh_positive_quota_and_metadata_source_preflight": true
+  },
+  "F009": {
+    "same_run": "artifacts/runs/f009-gamma-late-cosine-fold0-20261017-v1",
+    "latest_complete_snapshot_epochs": 10,
+    "updates": 2120,
+    "AMP_skips": 0,
+    "last_cumulative_elapsed_seconds": 17246.1854934,
+    "fixed_E12_primary_evaluated": false,
+    "interim_accuracy_used_for_selection": false,
+    "next": "guarded fixedE12 once complete; strictlypositive + engineering zeroSkip => samefold1, otherwise F006fold2 first"
+  },
+  "new_engineering_preparation": {
+    "dynamic_test_controller": "7 artificial CPU tests, Ruff, source peer and root PASS; actual entry remains disabled; no MRI or actual T4 qualification",
+    "F009_CPU_producer_and_sealer_v2": "5 artificial CPU tests, Ruff, source peer and root PASS; real generic encoder/checkpoint reconstruction and pair stage not yet performed; old v1 unchanged",
+    "POSIX_child_supervisor": "5 fake CPU tests, Ruff, source peer and root PASS; interrupts fixed; actual POSIX signal rehearsal being prepared; parent rollback cannot become successful parent-only submission",
+    "new_parent_or_actual_overlay_selected": false,
+    "scientific_adoption_or_accuracy_claim_from_artificial_tests": false
+  },
+  "activity": {
+    "read_only_official_submission_Get": 5,
+    "read_only_official_limits_Get": 1,
+    "new_manual_formal_Submit": 0,
+    "new_Save": 0,
+    "new_GPU_fit": 0,
+    "existing_F009_fit_continues": true,
+    "own_Gold_fit_select_eval": 0,
+    "actual_checkpoint_model_MRI_for_engineering_preparation": 0
+  },
+  "remaining": [
+    "Observe remaining four formal results without duplicate Submit",
+    "Complete unchanged F009 fold0 E12 and guarded fixed comparison; continue prescribed single GPU order",
+    "Actual POSIX CPU artificial rehearsal; selected-parent full runtime and resource integration remain required",
+    "Wait actual independent F006fold2 E12 before sealed innerC outer2 evaluation; no outer2 labels released yet",
+    "Formal candidates only with fresh quota and source/input/visible qualification; own .960 not guaranteed"
+  ],
+  "limits": [
+    "Public score is returned as rounded string; no undisclosed precision inferred",
+    "Public recipe pretraining Gold provenance and patient independence remain unverified",
+    "Old rows, policies, scientific sources, sealed model and successful kernels remain preserved"
+  ],
+  "ledger_before": {
+    "rows": 313,
+    "bytes": 190378,
+    "sha256": "0c1513a2ef933ffbb9ac546a8719e0499191d18e563a104ec2241e8295ec8f8d"
+  },
+  "evidence": [
+    {
+      "path": "experiments/p032-result957-p033-submit57290868-20261017.json",
+      "bytes": 2648,
+      "sha256": "2a89c6a6a7c1529746656e8665b0b257ab74ee36a4213bf7ffed2c5e14b16fdf"
+    },
+    {
+      "path": "artifacts/research/20261017-f009-strict-CPU-producer-preparation-v1/verification.json",
+      "bytes": 4514,
+      "sha256": "15b0114090232f70e290de828da4b7c85e0f37138bcccbeb45f27dcc8e0f7b88"
+    },
+    {
+      "path": "artifacts/research/20261017-f009-strict-CPU-producer-preparation-v1/root-source-review.json",
+      "bytes": 1982,
+      "sha256": "45ff686974343297ba32297e3f4e1b98aa6d80350aa440c922ea5b1052ded351"
+    },
+    {
+      "path": "artifacts/research/20261017-orthodiff-innerC-test-controller-implementation-v1/verification-final.json",
+      "bytes": 2352,
+      "sha256": "ba2bb1afbe075dde8b991fa3e410edbd136db621008e352a9b0ed59510bdaa5e"
+    },
+    {
+      "path": "artifacts/research/20261017-orthodiff-innerC-test-controller-implementation-v1/root-source-review.json",
+      "bytes": 2197,
+      "sha256": "adae62fef433e0c99de932230f351d0ff29ec13355fd272aa5648cbae5cd232c"
+    },
+    {
+      "path": "artifacts/research/20261017-orthodiff-innerC-supervisor-preparation-v1/verification-final.json",
+      "bytes": 2128,
+      "sha256": "87a8fa80e5b7af666312614b2552ba336916701fac732287b8c611a2c1feb9df"
+    },
+    {
+      "path": "artifacts/research/20261017-orthodiff-innerC-supervisor-preparation-v1/root-source-review.json",
+      "bytes": 1558,
+      "sha256": "5872c3be26f97e1678f03bde1dd1f789c8e88760173dfe54b81f38238fc16b7c"
+    },
+    {
+      "path": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch10-observation/observation.json",
+      "bytes": 594,
+      "sha256": "b8d0b59916121e0fc332eff92d2015d049c46fb34c9388484041869896f13170"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T070535948730Z/57290868.json",
+      "bytes": 511,
+      "sha256": "b2c6a8bae958e3fa127624e428f44bd212ce710cbecfdcabac5dddb634616914"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T070535948730Z/57290868.receipt.json",
+      "bytes": 168,
+      "sha256": "1b7eba8f7fc2a61b72e02a739781fbc6cc813b8575a176bc2f26be30d71e0b30"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T070535948730Z/57291440.json",
+      "bytes": 475,
+      "sha256": "cd1b762c28856067876a11cbf3b256d41a5e2ae956dc207d86e9ef786428e891"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T070535948730Z/57291440.receipt.json",
+      "bytes": 168,
+      "sha256": "fe678a584584abe71c0f162c8d52a66bbe372bd5ea8fc270e5b80800a2ccae6d"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T070535948730Z/57291580.json",
+      "bytes": 461,
+      "sha256": "d758892c078175df363884ba55d8830cb00e63447f46c16b4540fd944a2402ef"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T070535948730Z/57291580.receipt.json",
+      "bytes": 168,
+      "sha256": "6a5d47a3d11f93fbfcb2de058fb695b4c62f1da14356f74541a529af81bebac9"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T070535948730Z/57292346.json",
+      "bytes": 473,
+      "sha256": "862ab7cde687f6b4718ff9359ad7ea1078cc2bcb103466f0cf5da162e4eeea0a"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T070535948730Z/57292346.receipt.json",
+      "bytes": 168,
+      "sha256": "12720c5e42e6171834145df2318af64e22fbfd392c016f2a9a5cb49ea74d72fa"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T070535948730Z/57293138.json",
+      "bytes": 504,
+      "sha256": "0e5dda9fb76baa89e908da5e9363f20506ba5b838c403c4393368d9960577c80"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T070535948730Z/57293138.receipt.json",
+      "bytes": 168,
+      "sha256": "c2ae8a17f9df35d9ac3da8a5b298d5123ae983290cdd5e90bcf68d5ee02116b1"
+    },
+    {
+      "path": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T070535948730Z/limits.json",
+      "bytes": 28,
+      "sha256": "eb4d91f15e658d9bc5316244fd956e706187432c2d581b150914465e999b92ef"
+    }
+  ]
+}

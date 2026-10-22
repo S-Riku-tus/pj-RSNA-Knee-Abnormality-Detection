@@ -1,0 +1,41 @@
+{
+  "at_UTC": "2026-10-21T04:09:57.883623+00:00",
+  "reviewer": "p048_audit delegated readonly agent",
+  "status": "NO_CRITICAL_DEFECT_FOUND_CONTINUE_FIXED_E12",
+  "reviewed": "Actualsource16/runningrun/resourcegatebytes; noGPU/modeldeserialize/MRI/labels/externalwrite/fileedits",
+  "findings": [
+    "Frozenprefix no_grad only; last2suffix checkpoint nonreentrant withgrad",
+    "cast/index_copy/head differentiable;prefixweight/noGrad QAactualPASS",
+    "9,526,272suffixparams+157,848headparams inoptimizer",
+    "observedlabelindexbeforemaskedBCE; effective16 actualobservationdenominator preserved",
+    "AMPactualposthookupdates notskip; clipafterunscale onfinitegrad; CUDAguardbeforeinputs",
+    "BCEbest aliases differfromfixedE12: futurecomparisonandpackage MUSTuseepoch_012.pt/epoch_012_weak.csv only"
+  ],
+  "future_Linux": [
+    "Freshchild cuBLAS/offline beforeTorch",
+    "Exactsource16relativepaths/bytes; noWindowsnewlineconversion",
+    "timm1.0.22+safetensors0.6.2 Linuxnativewheel; neverWindowsDLL",
+    "GenericCNNfullstrictload/removeclassifier thennewCNNsuffix/head; neverDINOencoderclone",
+    "SeparateactualCPU/T4/currentMRI/CSVQA, no4090-onlyinheritance"
+  ],
+  "source_pins_from_run": {
+    "convnext_model.py": "5bb76633e5f9c7321f6eeaf5a32215c378647d5d0aec8da51e2fa072c4af6555",
+    "convnext_training.py": "744d2737943eaa97793c41bb990116a383512600d2e7d93d0a933ac51fb3b4c2",
+    "native_training_fast16.py": "9f5c3b490374201f72cc73ebf11a26f8a8163945387d4d493e7a04c08e729d57",
+    "finetune_model.py": "c43bcedf1d97b713528b4157a0a9c8867741b785d58c5be084cd7072c2b2c624",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+    "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+    "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+    "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05",
+    "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+    "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+    "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a"
+  },
+  "training_source_changes": 0,
+  "stop_necessary": false
+}

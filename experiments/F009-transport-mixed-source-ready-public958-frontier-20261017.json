@@ -1,0 +1,194 @@
+{
+  "schema_version": "F009_transport_mixed_source_preparation_qualified_public_frontier_v1",
+  "at_UTC": "2026-10-17T09:27:53.245689+00:00",
+  "own_confirmed_Public_best": "0.958",
+  "target_Public": "0.960",
+  "target_achieved": false,
+  "goal_turn_classification": "PROGRESS: P037 official958, completedF1 E3, actualconditionaltransport+mixedruntime source implementation and artificial+independent qualification. VERIFIED_WAIT: exactF1PID2772 remains live, E12 incomplete.",
+  "official_results": {
+    "path": "experiments/P037-official958-five-results-complete-F009-live-20261017.json",
+    "bytes": 8145,
+    "sha256": "365d30aff677ab76d48838af0b5a0725c83c56b02737466487cc3e0b3844f5e7"
+  },
+  "all_five_formals_complete": true,
+  "unreturned_formals": 0,
+  "quota": "Last18:11 numToday5/numTotal35; knownmaxDaily5, extra0treated/resetunverified; no newSubmit. Stopfullfive-result repeats now.",
+  "conditional_comparison": {
+    "path": "experiments/f009-P039-parent-fixed20-CLS-pair-conditional-20261017.json",
+    "bytes": 15554,
+    "sha256": "37bb0c60826da6deddda0e3929fd8aeb4a2f56ad91371af9dab365835a69bba2"
+  },
+  "transport": {
+    "source": {
+      "path": "src/rsna_knee/f009_transport.py",
+      "bytes": 37627,
+      "sha256": "8c613c2c2d24fc6b1d1c6222482c581b03ac5027c15b10f5e7116e7f7056af47"
+    },
+    "CLI": {
+      "path": "scripts/prepare_f009_transport.py",
+      "bytes": 2101,
+      "sha256": "6a4b3398218053c5ff2c5ae0cc4773766c93592105860a860c62c657cc2c654c"
+    },
+    "tests": {
+      "path": "tests/test_f009_transport.py",
+      "bytes": 11468,
+      "sha256": "f4c5c5f0d55ac447dccb9414e99d7a3d8f46e4b220373cbb5566e8a89b5652a3"
+    },
+    "completion": {
+      "path": "artifacts/research/20261017-f009-transport-preparation-v1/completion-v2.json",
+      "bytes": 2208,
+      "sha256": "36191ed45e91a331c642ce9d23ed5b2eaeb190d58f53943ef22c82fe4d3b06c3"
+    },
+    "verification": {
+      "path": "artifacts/research/20261017-f009-transport-preparation-v1/verification-v2.json",
+      "bytes": 2133,
+      "sha256": "ea0a2758a659d48a0f3eb93d52971baf1d6d5c6a77122808ca15a52c7257d561"
+    },
+    "peer": {
+      "path": "artifacts/research/20261017-f009-transport-independent-v2/review.json",
+      "bytes": 1343,
+      "sha256": "138a67cb9f0c7442cb132432d9aedcfa533f269a33120a80dd85347fab2d917c"
+    },
+    "manual": {
+      "path": "artifacts/research/20261017-f009-transport-preparation-v1/manual-v2.json",
+      "bytes": 2970,
+      "sha256": "684f7775c284379aa35d4f528cee7b17f69fc60483fcb8216af785447fe7301d"
+    },
+    "artificial_tests": 6,
+    "Ruff": "PASS",
+    "root_delta_review": "Exact old4d2 source preserved; AST only_pack changed. All metadata/source/qual guards and schemas unchanged.",
+    "resolved_failure": "Late second-fold-marker or final-rename failure no longer leaves a published complete pack. Private owned sibling staging, validatedsameparent atomicpublish, withdrawcomplete markers onfailure. Independently injectedbothfaults.",
+    "portable_contract": "Exact6qualification/7bindings/CPUv2/source14/oldREG/plan37bb, positive nondata inventory, streamed bounded ZIP members, metadata-first checkpoint processing, six Inputfiles, no tensor import/network/API.",
+    "actual_model_pack_unpack": 0
+  },
+  "mixed_runtime": {
+    "source": {
+      "path": "src/rsna_knee/f009_mixed_runtime.py",
+      "bytes": 36749,
+      "sha256": "73695814776300ed7c2edd8f2ba535f99b2af9afe4c335346ff06ac1530f6a90"
+    },
+    "tests": {
+      "path": "tests/test_f009_mixed_runtime.py",
+      "bytes": 22849,
+      "sha256": "6a38ad4ec6e320e35f5c0914e0f2431868b7c3af01043fc8b5c5daee6dfa6744"
+    },
+    "completion": {
+      "path": "artifacts/research/20261017-f009-mixed-runtime-preparation-v1/completion.json",
+      "bytes": 1869,
+      "sha256": "e2ef67a3331e295b32af5cc35e62ea4db0fbbffbd2c3b4a4a929be824c6c099e"
+    },
+    "verification": {
+      "path": "artifacts/research/20261017-f009-mixed-runtime-preparation-v1/verification.json",
+      "bytes": 12275,
+      "sha256": "959c177dbb3ed7ca339365f9c3fbf84063236018197089c251bc5b58cfaa553b"
+    },
+    "peer": {
+      "path": "artifacts/research/20261017-f009-mixed-runtime-independent-v1/review.json",
+      "bytes": 3362,
+      "sha256": "fc255b47ad85c46893c0b67c435b08ad673c08c02dc7ce58d7b5dfef3d3b08ab"
+    },
+    "manual": {
+      "path": "artifacts/research/20261017-f009-mixed-runtime-preparation-v1/manual.json",
+      "bytes": 6196,
+      "sha256": "8111d54e6d57ea3f5a8ddde983ad16279106b575c6a395c4c6130326a35cc243"
+    },
+    "own_artificial_CPU_tests": 5,
+    "independent_additional_CPU_tests": 4,
+    "Ruff": "PASS",
+    "CUDA_init_in_CPU_tests": false,
+    "class_scope": "Perfold separate actualF009source14 class; originalREG cf3 source/class retained; CPUproducer namespace provenance distinct from new runtimeclass; one fakegeneric factory, four full model objects and strict artificial suffix28/head12, FP32 means/evalgamma0/RNG/nonalias.",
+    "numeric_consumeFour_AST_exact_after_functionname_only": true,
+    "GPU_bridge_scope": "Source checks all28 ownershippairs; returns same12 withindevicepairs asoldrouter. ActualtwoT4transfer remainsDEFERRED.",
+    "integration_seam_fix": "Earlier807e source preserved. Final736 acceptsrouter fourthpositional documents, derivesfreshmanifestpins frompair, comparespair/views/documents.",
+    "mandatory_router_lifecycle": "After successful GPUcontainer creation callcpu_models.close thennull; finallycallmodels.close. OnGPUtransferfailure retain+finallycloseCPUowner; do not rely onGC. Ownnamespaceleasescloseonlywhenallcontainersreleased.",
+    "actual_CPU_model_reconstruction_or_GPU_qualification": false
+  },
+  "public_frontier": {
+    "summary": {
+      "path": "artifacts/research/20261017-public-frontier-refresh-v9/summary.json",
+      "bytes": 14788,
+      "sha256": "f14e39e7f1f146c3d229f61da159836276597bf5d2eaa993b373e11f73aa65d1"
+    },
+    "verification": {
+      "path": "artifacts/research/20261017-public-frontier-refresh-v9/verification.json",
+      "bytes": 1763,
+      "sha256": "8ce465fd0aacb74749337ceed874a84c2a0ff397eed2d31654e05d1ed6771719"
+    },
+    "raw": {
+      "path": "artifacts/research/20261017-public-frontier-refresh-v9/public-frontier.json",
+      "bytes": 380265,
+      "sha256": "b334009fa2d86232abd87dcca18804df464f04cbcd8f4137bd6cf01330c41c78"
+    },
+    "at_JST": "2026-10-17T18:24:11+09:00",
+    "anonymous_metadata_reads": 1,
+    "top100_unique_score_descending": true,
+    "max_author_Public": 0.958,
+    "author_0958_count": 6,
+    "at_least_0959": 0,
+    "at_least_0960": 0,
+    "known6_source_Input_score_changes": 0,
+    "root_recomputed_max_from_raw_tool_chunk": "ac624a",
+    "Helios_slug_rename_only": "kernel138670458 source359224783 unchanged; title/slug0-9576 to0-9586 is not new science.",
+    "new_recipe_established": false,
+    "outside_top100_private_unknown": true
+  },
+  "live_training": {
+    "run": "artifacts/runs/f009-gamma-late-cosine-fold1-20261017-v1",
+    "PID": 2772,
+    "StartTime_JST": "2026-10-17T16:49:06+09:00",
+    "latest_OS_witness_tool_chunk": "cd8f71",
+    "CPU_seconds": 5585.96875,
+    "Responding": true,
+    "completed_epoch_observation": {
+      "path": "artifacts/research/20261017-f009-fold1-progress-v1/epoch3-counter-observation.json",
+      "bytes": 1069,
+      "sha256": "3aa3d83766f21fd01896b3e7bac796b5c866a8328d57081a36aa4a62a2f7fc7a"
+    },
+    "completed_epochs": 3,
+    "recorded_completed_updates": 624,
+    "recorded_completed_opportunities": 624,
+    "recorded_completed_AMP_skips": 0,
+    "interim_score_values_projected_or_selected": false
+  },
+  "protected": {
+    "training_CLI": {
+      "path": "scripts/train_native_dinov2_fast16.py",
+      "bytes": 15333,
+      "sha256": "3e005de950c67aef7b8813f633755ff49ad39d13578df55f15d09b0b48dd3674"
+    },
+    "config": {
+      "path": "configs/experiments/f009-dinov2-native-last2-late-cosine-study-gamma.json",
+      "bytes": 1699,
+      "sha256": "1a0a1d396660c6e326fd0f78962867b8243a3ac0e9b87fe2bb98dbea5f59297f"
+    },
+    "original_v1_HOLD_and_separate_amended_v2_unchanged": true
+  },
+  "next": [
+    "Implement newrouter/nativechild/Notebook offlineintegration usingthese reviewed exactsources, preserveP039parent/numeric/ownedUID180/union/fatalfailures and actualnewinventory; noold89receipt qualification transfer.",
+    "ContinuefixedF1E12; rootone-timefrozenamendedcomparison; bothfoldstrictpositiveandcandidatezero then actualCPUv2/sealer3.",
+    "Only then actualmodelpack/privateInputtransport, artificialGPU and192+visibleKaggle/independentFP32 checks; manualSubmit subjectfreshquota+own<960.",
+    "ExistingqualifiedP039first/P038second onactualslot; no duplicates/newrecipealpha search.",
+    "Aftercurrentfitterminal preparedF006fold2 QA/preflight/fit then single sealedC.01 outer2 screen."
+  ],
+  "not_yet_qualified": [
+    "ActualF009fold1E12comparison",
+    "ActualF009CPUstrictmodel restoration/localpair",
+    "Actualmodeltransport",
+    "CompleteNotebook/routerintegration",
+    "GPU/twoT4/hiddeninference/latency",
+    "OwnPublicF009gain or0.960"
+  ],
+  "actions": {
+    "new_fit": 0,
+    "local_GPUtests_during_fit": 0,
+    "actual_CP_encoder_MRI_downloads_in_preparation": 0,
+    "Kaggle_Save_Submit": 0,
+    "automatic_upload_Save_Submit_code_added": false
+  },
+  "limits": [
+    "Sourcepreparation tests use fakeencoder and syntheticcheckpoints, actualModelqualificationFalse.",
+    "Repeatedweakholds/historicalcheckpointselection and unequaloldcontrolupdates remain; patientindependenceunknown.",
+    "OwnGoldfit/select0; inheritedexternalRaptorGold58selection exposure staysdisclosed.",
+    "Officialown>=960 is necessary forgoalsuccess, currentlyunmet."
+  ]
+}

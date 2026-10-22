@@ -1,0 +1,121 @@
+{
+  "schema_version": "orthodiff_fullweak_running_header_diagnostic_F009_E4_v1",
+  "at_UTC": "2026-10-17T04:01:14.941808+00:00",
+  "own_best_Public": 0.957,
+  "goal_Public": 0.96,
+  "goal_achieved": false,
+  "full_kernel": {
+    "ref": "/code/rsraki/orthodiff-sag-fullweak4207-20261017-v2",
+    "url": "https://www.kaggle.com/code/rsraki/orthodiff-sag-fullweak4207-20261017-v2",
+    "versionNumber": 1,
+    "kernelId": 139150600
+  },
+  "launch": "artifacts\\research\\20261017-orthodiff-fullweak-execution-v1\\launch-v2",
+  "official_status_last_observed": "RUNNING",
+  "source": {
+    "bytes": 148992,
+    "sha256": "15bb2d6c7c224021f95a304b08eb9e3644164ea8373f4ae6ec1c7afc77582e1f"
+  },
+  "fixedInputs3_private_offline_T4_Docker_readback_pass": true,
+  "cohort": {
+    "requested_count": 4207,
+    "UID_order_sha256": "911f91fbc914213db045780675d6518a8cc4a49808599bbb74f2f247bc30eb82",
+    "UID_group_fold_sha256": "cf400b297af0470af716fd3ecbb13f68b7248a09bbe75f5425cafa303d3c2051",
+    "fold_counts": {
+      "1": 891,
+      "0": 821,
+      "3": 778,
+      "4": 829,
+      "2": 888
+    },
+    "group_count": 4102,
+    "non_singleton_group_count": 35,
+    "non_singleton_study_count": 140,
+    "Gold_UID_overlap": 0,
+    "Gold_supplied_group_overlap": 0
+  },
+  "science_parity": {
+    "frozen_pilot_helpers_loaded_by_exact_runtime_pin": true,
+    "numerical_forward_block_byte_identical": true,
+    "numerical_forward_block_sha256": "3bcdc83b58cd6c60b81867ad536de5934256a356230c1f29b9b1bfa70e284646",
+    "success_record_dictionary_AST_identical": true,
+    "explicit_PD_series_geometry_continuous16_float64_resize_strictEMA_eval_RNG_changed": false,
+    "operational_only_changes": [
+      "all4207 UIDs including nonsingleton groups",
+      "index metadata once preserving withinUID series order",
+      "durable append-only records JSONL with incremental digest",
+      "small status at every UID",
+      "small flushed stdout every32 records and model-loaded/terminal events",
+      "single terminal summary and final journal rehash",
+      "8h cooperative/posthoc full-cohort wall budget"
+    ]
+  },
+  "latest_live_progress": {
+    "phase": "feature_success_recorded",
+    "elapsed_seconds": 250.565363378,
+    "complete": false,
+    "requested": 4207,
+    "recorded": 384,
+    "success": 288,
+    "failure": 96,
+    "journal_prefix_SHA256": "5f71ef6f2d7d12081e371ff7fc73cb1d67f0e2713d866b5175fb19e9a5bb497e"
+  },
+  "official_SSE_events": "artifacts\\research\\20261017-orthodiff-fullweak-execution-v1\\live\\20261017T040017587849Z\\events.json",
+  "official_SSE_events_sha256": "d06c82f961e6a9b2d83ebe36f3d700adfc4e6addaba25d2df9cfb7c7b6ad7f3d",
+  "SSE_observation_timeout_is_not_job_terminal": true,
+  "full_coverage_feature_or_accuracy_qualified": false,
+  "operational_limits": {
+    "CUDA_reserved_bytes": 15032385536,
+    "process_RSS_bytes": 8589934592,
+    "total_seconds": 28800,
+    "UID_boundary_cooperative_clock_check": true,
+    "hard_C_decoder_timeout": false
+  },
+  "head_policy": "artifacts\\research\\20261017-orthodiff-fullweak-preparation-v1\\weak-head-prospective-policy-v2.json",
+  "head_policy_sha256": "2b9704b70ab4197129e87db5e77fd08fd5a39c3c37ef950eac12a51cf0162b21",
+  "head_policy_v1_superseded_before_new_metric": "CV raw probability versus rank mismatch corrected with same821 rank baseline; original v1 retained; public parent unchanged",
+  "real_weak_head_fit_or_metric": 0,
+  "same32_MRI_record": "experiments/orthodiff-MRI32-S24-F8-20261017.json",
+  "header_diagnostic": {
+    "kernel_id": 139149736,
+    "version": 1,
+    "status": "COMPLETE",
+    "receipt": "artifacts/qa/odh1/20261017T035032830160Z/files/ORTHODIFF_HEADER32.json",
+    "receipt_sha256": "db1a57c776a1b8c1169edd7a78ab9b903e01d817ff7b0b530c4e5b400935092e",
+    "same32": true,
+    "headers": 68,
+    "failures": 0,
+    "pixel_decode": 0,
+    "actual_audit": "artifacts/research/20261017-orthodiff-header32-actual-audit-v1/verification.json",
+    "rules_audit": "artifacts/research/20261017-orthodiff-header32-rule-audit-v1/summary.json",
+    "rules_accepted_into_full_baseline": false,
+    "DP_or_conservative_TRTE_additional_study_candidate_count": 1,
+    "unresolved_other7_preserved": true
+  },
+  "F009": {
+    "run": "artifacts/runs/f009-gamma-late-cosine-fold0-20261017-v1",
+    "PID": 22392,
+    "latest_epoch_observation": "artifacts/research/20261017-f009-gamma-preparation-v1/epoch4-observation/observation.json",
+    "completed_epochs": 4,
+    "optimizer_steps": 848,
+    "AMP_skips": 0,
+    "interim_selection": false,
+    "policy": "experiments/f009-evaluation-policy-v2-prescore-20261017.json"
+  },
+  "five_submissions": {
+    "refs": [
+      57290868,
+      57291440,
+      57291580,
+      57292346,
+      57293138
+    ],
+    "latest_official_observation": "artifacts/research/20261017-five-formal-observer-v1/poll-20261017T035403242474Z",
+    "status_and_score_unreturned": true,
+    "today": 5,
+    "total": 35,
+    "additional_slots_treated_as": 0,
+    "new_formal_calls_this_turn": 0
+  },
+  "next": "wait same full job; validate terminal4207 journal and same32 parity; implement frozen weak head/evaluator; fit only after qualification"
+}

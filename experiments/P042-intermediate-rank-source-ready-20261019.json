@@ -1,0 +1,55 @@
+{
+  "schema_version": "P042_intermediate_rank_source_ready_v1",
+  "at_UTC": "2026-10-19T09:53:05.322702+00:00",
+  "status": "OFFLINE_SOURCE_PREPARED_10_ARTIFICIAL_TESTS_PASS_ACTUAL_UNQUALIFIED",
+  "own_Public_best": 0.958,
+  "own_new_Public": null,
+  "slug": "rsraki/p042-rank-rr-20261019-v1",
+  "source": {
+    "path": "artifacts/kaggle/p042-rank-rr-20261019-v1/source.ipynb",
+    "bytes": 176927,
+    "sha256": "92b1b13935540b5737b92b3ba927194aab419b3513ef01e907c1c7411823f3d3"
+  },
+  "manifest": {
+    "path": "artifacts/kaggle/p042-rank-rr-20261019-v1/manifest.json",
+    "bytes": 6474,
+    "sha256": "a05c72b49099a9ece44d1fc022d47178e593074e237066a7e4a52ff672b23615"
+  },
+  "verification": {
+    "path": "artifacts/research/20261019-p042-rank-renormalization-preparation-v1/verification.json",
+    "bytes": 2369,
+    "sha256": "98f8e3ae961f352f658a8c437c75d18dd6602427e5be2f009607a3b1acef9551"
+  },
+  "prospective_policy": {
+    "path": "artifacts/research/20261019-p042-rank-renormalization-preparation-v1/prospective-policy.json",
+    "bytes": 2198,
+    "sha256": "91df6a64decaa4203a3864f7939ee4f01c7c08fe215df12f449024071b98f5ba"
+  },
+  "only_scientific_factor": "Fallback-aware Raptor half rr is percentile-ranked again over Raptor-half success cohort before original fixed class blend with original R6rank; not a final monotone rank transformation.",
+  "parent": "P033 officialSubmit57290868 own0.958 source57284b71...",
+  "parent_all8_science_cells_byte_AST_exact": true,
+  "all12_failure_row_strings_preserved": true,
+  "rr_population": "All rows where rap_fail is false; includes fallback rr when only one Raptor arm succeeded.",
+  "apply_rows": "Only r384_fail|r224_fail|our_fail is false; other entire parent12-cell strings held.",
+  "fixed_parent_weights_A224_TTA_models_decoder_Input": true,
+  "artificial_unittest_cases": 10,
+  "ruff": "PASS",
+  "source_bytes": 176927,
+  "inputs": {
+    "datasets": [
+      "nartaa/rsna-knee-publication-swa-weights-20261007/1",
+      "heliosli/rsna-orthofoundation-fold0-epoch7-20261004/1"
+    ],
+    "kernels": [
+      "rsraki/p029-r6v1-stage-20261015-b2/1"
+    ],
+    "competitions": [
+      "rsna-knee-abnormality-detection"
+    ],
+    "total": 4
+  },
+  "no_new_Gold_Report_training_or_GPU": true,
+  "automatic_upload_Save_Submit_code_added": false,
+  "actual_visible_hidden_or_Public_gain_qualified": false,
+  "next": "Independent source/runtime review; root manual actualKaggle inference then independent parent/new FP32/mask/CSV replay and saved source/Input readback; root manual formal Submit only after qualification."
+}

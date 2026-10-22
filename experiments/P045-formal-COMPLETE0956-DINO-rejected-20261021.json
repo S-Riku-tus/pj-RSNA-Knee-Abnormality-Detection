@@ -1,0 +1,18 @@
+{
+  "at_UTC": "2026-10-21T02:51:19.953869+00:00",
+  "P045_ref": 57430729,
+  "status": "COMPLETE",
+  "own_Public": 0.956,
+  "kernelId": 139737264,
+  "Kaggle_saved_version": 1,
+  "scriptVersionId": 360274333,
+  "source_artifact_version": "correctedV2",
+  "source_SHA": "2d0525ba7ee0af4bce4e936a481a2f34ab1d185832fa4b2c617b6c081bed35b4",
+  "same_ref_Get_and_full_List_binding_pass": true,
+  "own_total": 43,
+  "own_best_Public": 0.958,
+  "goal959_achieved": false,
+  "decision": "RejectP045DINO10, keepP033best. RejectP046DINO20 perpredeclared P045<=.957 condition; noP046Save/formal.",
+  "formal_or_Save_upload": 0,
+  "P046_decision": "Reject withoutSaveorformal becauseactualP045.956 <=.957, perpredeclaredpolicy"
+}

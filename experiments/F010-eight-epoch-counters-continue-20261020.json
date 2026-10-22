@@ -1,0 +1,30 @@
+{
+  "schema_version": "F010_eight_epoch_counter_snapshot_continue_v1",
+  "recorded_at_UTC": "2026-10-19T16:26:19.564878+00:00",
+  "status": "E8_COUNTERS_COMPLETE_TRAINING_CONTINUES_NO_MODEL_SELECTION",
+  "run": "artifacts/runs/f010-last4-late-cosine-fold0-20261019-v1",
+  "run_status_at_observation": "running",
+  "completed_epochs_projected": 8,
+  "updates": 1696,
+  "opportunities": 1696,
+  "AMP_skipped_steps": 0,
+  "E8_elapsed_seconds": 23975.5081871,
+  "counter_snapshot": {
+    "path": "artifacts/research/20261020-f010-eight-epoch-counter-observation-v1/summary.json",
+    "bytes": 2892,
+    "sha256": "68ea7fe7dba0d9b2cd187d58170bbbdba80e9e1b1a7e3fe6aeb12cfa3e36b789"
+  },
+  "observed_run_json": {
+    "path": "artifacts/runs/f010-last4-late-cosine-fold0-20261019-v1/run.json",
+    "bytes": 85721,
+    "sha256": "f170c067d0962cb4d3fcf690f9ae7bebc89296cfac7d725624b72fe5a2992152",
+    "mtime_UTC": "2026-10-19T16:25:25.880021+00:00",
+    "mtime_ns": 1792427125880020700,
+    "size_mtime_stable_across_read": true
+  },
+  "AUC_checkpoint_predictions_labels_or_quality_used": false,
+  "fixed_E12_policy_and_185_training_pins_preserved": true,
+  "adoption_or_fold1_or_new_CPU_runtime_preparation_authorized_by_E8": false,
+  "next": "Continue the same run to fixed E12; no alternate checkpoint or interim quality decision.",
+  "reviewer_new_API_Submit_Save_training_tests_or_shared_docs_edits": 0
+}

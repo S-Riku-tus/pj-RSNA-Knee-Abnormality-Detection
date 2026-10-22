@@ -1,0 +1,45 @@
+{
+  "at_UTC": "2026-10-21T04:36:51.226645+00:00",
+  "status": "E1_CPU_SERIALIZATION_AND_STRICT_ROUNDTRIP_PASS_NOT_ACCURACY_OR_E12_RELEASE",
+  "scope": "FirstcompletedcheckpointE1chosenbytimebeforeanyCNNaccuracyconsultation. Detectserialization/reconstructionfailureearlywhilefixedE12trainingcontinues.",
+  "prospective_policy": {
+    "path": "artifacts/research/20261021-F014-first-retained-checkpoint-engineering-prospective-v1/policy.json",
+    "bytes": 3392,
+    "SHA": "242e3719d749fe43339a69308fee3a0fe05fd19c3229d00b08943c61ae7391a8"
+  },
+  "engineering_script": {
+    "path": "artifacts/research/20261021-F014-first-retained-checkpoint-engineering-prospective-v1/engineering_cpu.py",
+    "bytes": 5579,
+    "SHA": "13cf34ddc64d53eb87f7b027a93d68545e205723759655f5c457fa0af45631bc"
+  },
+  "actual_result": {
+    "path": "artifacts/qa/f014-first-retained-E1-CPU-engineering-20261021-v1/result.json",
+    "bytes": 1263,
+    "SHA": "c0f057d1bb36606f4137c2e10d5011efe22e2bbc0356b5e600f6270553267dad"
+  },
+  "actual_checks": {
+    "weights_only_original_E1_identity": true,
+    "generic_prefix_before_apply": true,
+    "exact_finite_suffix18_head12_roundtrip": true,
+    "artificial_FP32_normalized392_and12finite": true,
+    "masked_padding_poison_exact": true,
+    "allmissing_refused": true,
+    "RNG_unchanged": true,
+    "prefix_unchanged_after_forward": true,
+    "all_selected_tensors_unchanged_after_forward": true,
+    "CPU_only_noCUDA": true
+  },
+  "checkpoint_SHA": "7392ebb6ca378a8337df8cd1fd18f1aaf1dc9fa51ea8cff521b1e9aaf31c300f",
+  "epoch": 1,
+  "fold": 0,
+  "CUDA_initialized": false,
+  "model_device": "cpu",
+  "selected_suffix_tensors": 18,
+  "head_tensors": 12,
+  "source16_unchanged": true,
+  "accuracy_or_BCE_consulted": false,
+  "E12_or_Kaggle_or_Public_candidate_qualified": false,
+  "ownGold_MRI_weakCSV_Report_teacher_training_API_Save_Submit": 0,
+  "local_probe_correction": "Unneeded CUDAavailabilityFalse assumption failed onWindowswithCUDA_VISIBLE_DEVICES empty. Prespecified CPUdevice/noCUDAinitialization guardsunchangedandpassed; noGPUallocations. Exactrecordinprospectivedir.",
+  "decision": "ContinuefixedE12; selectedE12mustseparatelystrictrestoreandweakprimarypass. NoearlyE1candidate."
+}

@@ -128,6 +128,7 @@ def qa(args):
             .eval()
         )
         prefix_sha = prefix_digest(model)
+        augmentation_before = model.training_augmentation_contract()
         with torch.no_grad():
             before = model(**inputs)
         # Serialize an explicitly artificial checkpoint. It cannot enter real inference.
@@ -149,6 +150,7 @@ def qa(args):
             after = model(**inputs)
         difference = float((before - after).abs().max())
         assert difference == 0 and bool(torch.isfinite(after).all())
+        assert model.training_augmentation_contract() == augmentation_before
         checks.append(
             {
                 "name": f"{'freeze' if blocks == 0 else 'last2'} checkpoint strict roundtrip",
@@ -164,6 +166,10 @@ def qa(args):
         torch.cuda.synchronize()
         began = time.perf_counter()
         logits = model(**inputs)
+        augmentation_after = model.training_augmentation_contract()
+        if augmentation_after is not None:
+            assert augmentation_before["draws"] == 0 and augmentation_after["draws"] == 1
+            assert 0.85 <= augmentation_after["observed_range"][0] <= augmentation_after["observed_range"][1] <= 1.15
         torch.cuda.synchronize()
         forward_seconds = time.perf_counter() - began
         targets = torch.tensor([[0, 1] * 6], device="cuda", dtype=torch.float32)
@@ -220,6 +226,7 @@ def qa(args):
                 "loss_numerator": numerator,
                 "grad_scaler_scale": scaler.get_scale(),
                 "scaler_step_or_update_calls": 0,
+                "training_augmentation": augmentation_after,
             }
         )
         del model, logits, scaler

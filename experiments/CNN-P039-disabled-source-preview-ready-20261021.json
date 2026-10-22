@@ -1,0 +1,52 @@
+{
+  "at_UTC": "2026-10-21T04:29:45.976382+00:00",
+  "status": "DISABLED_SOURCE_PREVIEW_ONLY_NO_ACTUAL_RUNTIME",
+  "policy": {
+    "path": "artifacts/research/20261021-CNN-P039-disabled-preview-prospective-v1/policy.json",
+    "bytes": 4843,
+    "SHA": "8edaa47d44ca058c7c62de8bc1389ed6e5343f6bc25a3677506d81667470937d"
+  },
+  "preparation": {
+    "path": "artifacts/research/20261021-CNN-P039-disabled-preview-prospective-v1/preparation-evidence.json",
+    "bytes": 4150,
+    "SHA": "5a5d9113590576581b1276c2c25227121e6c1b643e19fdbd80ec08434a5d19af"
+  },
+  "bridge_source": {
+    "path": "scripts/cnn_p039_bridge.py",
+    "bytes": 15377,
+    "SHA": "7dc9f204443dece685de21b7c2c6fe35deee7b58134e21d53efcade942636f46"
+  },
+  "builder_source": {
+    "path": "scripts/prepare_cnn_p039_preview.py",
+    "bytes": 5421,
+    "SHA": "5eddea6128c3477d1adf29ca04b3e87ad1f0c5742374cd31619c361e4778d910"
+  },
+  "tests_source": {
+    "path": "tests/test_cnn_p039_preview.py",
+    "bytes": 7881,
+    "SHA": "c1a0d0ff2173126309960decc55015a65189a4acc40d0896ab793e89ceeec609"
+  },
+  "representative_Tiny_preview_manifest": {
+    "path": "artifacts/research/20261021-CNN-P039-disabled-preview-prospective-v1/tiny-preview-v1/pinmanifest.json",
+    "bytes": 11850,
+    "SHA": "63bff122d2b90825609f2978ff7f51f0676dbdb89c6b36e79942079887ee4329"
+  },
+  "Small_preview": "Sameonecandidatebuildertested; noactualSmallpreviewgenerated",
+  "tests": 8,
+  "tests_and_Ruff": "Agentfrontier_refresh andindependentdocs_current actualPASS",
+  "Tiny16_Small18_source_hashes_untouched": true,
+  "preserved_science": "OriginalP039outerreference/P0338/REG2/rawrouter/fold50/family50/native20/excludedMCLSynovitis/typedfailureunion",
+  "prepared": "Originalbyteproducerbundles/namespace/importclosure/modelidentity/genericmetadata/Linuxwheellock/interfaces/preconditions only",
+  "runtime_not_implemented": [
+    "GenericCNNmodelCPU/GPUconstructor integration",
+    "Currentcheckpoint/packageproof",
+    "Current8modeltwoT4QA",
+    "ActualCNNMRI/CSV"
+  ],
+  "actualentry": "execute/prepare_package/stub refuseunconditionallybeforeproof/flagread",
+  "real_weak_accuracy_or_checkpoint_access": 0,
+  "trainedweights_or_wheels_included": false,
+  "newuploadable_Notebook_or_Savepayload": false,
+  "modelconstruct_GPU_MRI_fit_network_upload_Save_Submit": 0,
+  "decision": "AfterbothfoldfixedE12positive, implementactualruntimeasseparatenewsourcewithcurrentproof. Previewdoesnotreleasecandidate."
+}

@@ -170,13 +170,22 @@ def parent_contract(path, test, sample, package):
     return validate_submission(path, test, sample)
 
 
-def execute(namespace, *, runtime, started, mode="serving", diagnostic_count=192):
+def execute(namespace, *, runtime, started, mode="serving", diagnostic_count=192,
+            blend_policy="fullN-column", native_executor="legacy-pool"):
+    if blend_policy not in ("fullN-column", "success-subset"):
+        raise ValueError("Unknown fixed20 blend contract")
+    if native_executor not in ("legacy-pool", "isolated-uid"):
+        raise ValueError("Unknown native executor")
+    if native_executor == "isolated-uid" and blend_policy != "success-subset":
+        raise ValueError("The isolated UID candidate fixes the existing success-subset blend policy")
     parent_progress("execute", "begin", mode=mode, runtime=str(runtime))
     work = Path("/kaggle/working/P032")
     work.mkdir(exist_ok=False)
     package = Path(runtime)
     receipt = {
         "schema_version": "p032_p029m_f006_fixed20_execution_v1", "mode": mode,
+        "blend_policy": blend_policy,
+        "native_executor": native_executor,
         "complete": False, "native_complete": False, "all_native_disabled": True,
         "native_contribution_used": False,
         "accuracy_comparison_status": "NOT_MEASURED_NATIVE_EXTENSION_NOT_COMPLETE",
@@ -263,6 +272,8 @@ def execute(namespace, *, runtime, started, mode="serving", diagnostic_count=192
                 "--diagnostic-count", str(diagnostic_count)]
         if mode == "serving":
             argv += ["--baseline", str(parent)]
+        if native_executor == "isolated-uid":
+            argv += ["--native-executor", native_executor]
         parent_progress("native_child", "begin", mode=mode, budget_seconds=budget,
                         child_script=str(package / "p032_native_child.py"), result_path=str(result))
         child = run_child(argv, work / "native-child.log", budget, mode=mode)
@@ -275,6 +286,23 @@ def execute(namespace, *, runtime, started, mode="serving", diagnostic_count=192
         adapter = json.loads((work / "adapter-receipt.json").read_text())
         if adapter.get("complete") is not True:
             raise RuntimeError("Native adapter did not complete")
+        if native_executor == "isolated-uid":
+            if (adapter.get("schema_version") != "p035_f006_isolated_uid_adapter_v1"
+                    or adapter.get("native_executor") != "isolated-uid"
+                    or adapter.get("operational_recovery_contract_passed") is not True
+                    or adapter.get("failure_mask_is_structural_operational_union") is not True):
+                raise RuntimeError("The new isolated UID adapter qualification differs")
+            native_result = json.loads(result.read_text())
+            if (native_result.get("schema_version") != "native_isolated_uid_operational_recovery_v1"
+                    or native_result.get("operational_recovery_contract_passed") is not True
+                    or "phase_contract_passed" in native_result
+                    or "fallback_count" in native_result
+                    or adapter.get("native_result_sha256") != sha(result)):
+                raise RuntimeError("The new typed result/adapter SHA binding differs")
+            receipt.update(native_operational_failures=adapter["operational_failure_count"],
+                           native_failure_UID_union=adapter["failure_UID_union"],
+                           operational_recovery_contract_passed=True,
+                           native_result_schema=adapter["native_result_schema"])
         receipt["native_complete"] = True
         receipt["native_adapter_receipt_sha256"] = sha(work / "adapter-receipt.json")
         receipt["native_result_sha256"] = sha(result)
@@ -285,7 +313,10 @@ def execute(namespace, *, runtime, started, mode="serving", diagnostic_count=192
                            accuracy_comparison_status="ENGINEERING_DIAGNOSTIC_ONLY_NO_SUBMISSION",
                            no_submission_csv_written=True)
             return receipt
-        from p032blend.fixed20_blend import blend_csv
+        if blend_policy == "success-subset":
+            from p032blend.success20_blend import blend_csv
+        else:
+            from p032blend.fixed20_blend import blend_csv
 
         blended = work / "fixed20"
         numerical = blend_csv(parent, adapter["native_csv"], blended,

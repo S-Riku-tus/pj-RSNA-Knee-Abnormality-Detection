@@ -1,0 +1,333 @@
+{
+  "schema_version": "official_state_and_P039_manual_preflight_readonly_v1",
+  "at_UTC": "2026-10-19T02:38:37.474191+00:00",
+  "observation": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z",
+  "all_checks_passed": false,
+  "checks": {
+    "P039_saved_candidate": true,
+    "P038_saved_candidate": true,
+    "all35_submissions_own": true,
+    "list_complete_no_nexttoken": true,
+    "five_formal_results_exact": true,
+    "current_quota_available": true,
+    "own_best958": true,
+    "P039_no_duplicate": true,
+    "P038_no_duplicate": true,
+    "P039_inert_request_binding": false
+  },
+  "own_official_best": "0.958",
+  "remaining_to_first_target959": "0.001",
+  "next_user_target": "strictly above 0.960",
+  "target_achieved": false,
+  "rank": 1038,
+  "teams": 6196,
+  "deadline_UTC": "2026-10-22T23:59:00Z",
+  "deadline_JST": "2026-10-23T08:59:00+09:00",
+  "limits_raw": {
+    "numTotal": 35,
+    "numAllowedNow": 5
+  },
+  "max_daily": 5,
+  "five_results": [
+    {
+      "ref": 57290868,
+      "status": "COMPLETE",
+      "Public": "0.958"
+    },
+    {
+      "ref": 57291440,
+      "status": "COMPLETE",
+      "Public": "0.957"
+    },
+    {
+      "ref": 57291580,
+      "status": "COMPLETE",
+      "Public": "0.958"
+    },
+    {
+      "ref": 57292346,
+      "status": "COMPLETE",
+      "Public": "0.957"
+    },
+    {
+      "ref": 57293138,
+      "status": "COMPLETE",
+      "Public": "0.958"
+    }
+  ],
+  "kernels": {
+    "P039": {
+      "ref": "rsraki/p039-p033-native20-20261017-v2",
+      "id": 139182563,
+      "version": 1,
+      "code_cells": 4,
+      "checks": {
+        "latest_and_v1_blob_exact": true,
+        "latest_version1": true,
+        "prior_saved_blob_exact": true,
+        "all_local_code_cells_exact": true,
+        "all_required_metadata_fields_exact": true,
+        "kernel_id": true,
+        "COMPLETE": true,
+        "private_offline_T4_GPU_TPUoff": true
+      },
+      "passed": true,
+      "source_file": {
+        "path": "artifacts/kaggle/p039-p033-native20-20261017-v2/source.ipynb",
+        "bytes": 564930,
+        "sha256": "6453b3d09787abab07205d832c0176f0e78d050127e98d83c9f835bc5f799452"
+      },
+      "raw_blob_source_sha256": "c44a7aada9b8324234d111b165dfb9461773c43594d8695d77c1a0bca70ae8b8",
+      "input_total": 9,
+      "metadata_nonbinding_differences": [
+        "lastRunTime",
+        "categoryIds"
+      ],
+      "pinned_mounted_Input_version_ID_independently_observed": false
+    },
+    "P038": {
+      "ref": "rsraki/p038-helios-v6-fixed-20261017-v3",
+      "id": 139163240,
+      "version": 1,
+      "code_cells": 2,
+      "checks": {
+        "latest_and_v1_blob_exact": true,
+        "latest_version1": true,
+        "prior_saved_blob_exact": true,
+        "all_local_code_cells_exact": true,
+        "all_required_metadata_fields_exact": true,
+        "kernel_id": true,
+        "COMPLETE": true,
+        "private_offline_T4_GPU_TPUoff": true
+      },
+      "passed": true,
+      "source_file": {
+        "path": "artifacts/kaggle/p038-helios-v6-fixed-recipe-20261017-v3/source.ipynb",
+        "bytes": 198738,
+        "sha256": "9e3669dd1542f0cde2457fcc9b54ccb4bac013832583c26f93b88711f1a87370"
+      },
+      "raw_blob_source_sha256": "66dadcb07e69fc40607feb7d4ff311c1de57352a5438e8c098434b86d3dd6ce6",
+      "input_total": 7,
+      "metadata_nonbinding_differences": [
+        "lastRunTime",
+        "categoryIds"
+      ],
+      "pinned_mounted_Input_version_ID_independently_observed": false
+    }
+  },
+  "LB_first200": {
+    "observed": 200,
+    "score_counts": {
+      "0.969": 1,
+      "0.968": 3,
+      "0.967": 2,
+      "0.966": 6,
+      "0.965": 4,
+      "0.964": 7,
+      "0.963": 16,
+      "0.962": 22,
+      "0.961": 18,
+      "0.960": 35,
+      "0.959": 63,
+      "0.958": 23
+    },
+    "teams_ge959": 177,
+    "teams_gt960": 79,
+    "first_958_rank": 178,
+    "958_plateau_end_not_observed": true
+  },
+  "manual_root_submission": {
+    "candidate": "P039",
+    "maximum_new_submissions_in_current_decision": 1,
+    "request": {
+      "path": "artifacts/research/20261017-p039-manual-submit-binding-v1/request-review-only.json",
+      "bytes": 566,
+      "sha256": "ac283d8f4f588195e7ed60f5743e30efafd7da4126fc5b8f54611776301501be"
+    },
+    "not_executed_by_this_agent": true,
+    "need_fresh_guard_if_state_changes": true,
+    "official_submission_id_record_then_no_ambiguous_retry": true
+  },
+  "authorization": {
+    "path": "experiments/user-authorized-private-kaggle-scope-20261014.json",
+    "bytes": 1514,
+    "sha256": "25f7d02ee7044ccffd54f207e8d5f8d4eb56d384e3607e7f3e80a72b21bd70ac"
+  },
+  "limitations": [
+    "Visible3 and saved-source identity do not establish hidden participation or Public improvement.",
+    "Raw SDK blob-source SHA differs from local notebook-file SHA due to serialization; both are recorded separately.",
+    "Input reference sets are equal; independently observed mounted Input version IDs remain unavailable.",
+    "No inference about exact unrounded scores is made from displayed three-decimal Public values."
+  ],
+  "activity": {
+    "new_Save": 0,
+    "new_Submit": 0,
+    "new_upload": 0,
+    "new_GPU": 0,
+    "new_training": 0,
+    "standard_own_OAuth_refresh_save": true,
+    "credentials_displayed_or_manually_read": false
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/57290868.json",
+      "bytes": 511,
+      "sha256": "b2c6a8bae958e3fa127624e428f44bd212ce710cbecfdcabac5dddb634616914"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/57290868.receipt.json",
+      "bytes": 175,
+      "sha256": "c98c6bbdc3a758901d2ca070e4404873cc8f33405ce501733cf6efd2382e5079"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/57291440.json",
+      "bytes": 522,
+      "sha256": "0b9dc95d539814a0042c6e802a2ac79725ce77bfe909e510953eff1094e15b17"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/57291440.receipt.json",
+      "bytes": 175,
+      "sha256": "8a53ea2f769a23ec8e577e15a0c3cfca4a1876ad334502c196236f56285cc6f0"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/57291580.json",
+      "bytes": 508,
+      "sha256": "f5ca4807e364ac0b9a91aab2fb1a7dcec10f489bd633375ba98a3e4b2a69620b"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/57291580.receipt.json",
+      "bytes": 175,
+      "sha256": "b0cd19ad3cd5e24f3f2fe53fe30add003a7328daf5bf37f970478c66054c03e2"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/57292346.json",
+      "bytes": 520,
+      "sha256": "2d4361d411b98ef3f7b3b1d42f6dd5abedf89ea131da809ef2eb97d81d2e7408"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/57292346.receipt.json",
+      "bytes": 175,
+      "sha256": "49fa1e996af900c5d39acd0ed691c05f1bba7ae5f85ed0d4eeeed28f4781a900"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/57293138.json",
+      "bytes": 551,
+      "sha256": "7880f8bb8ab280c96905f49780a4cc23805d1547bcdb537abed4c85e9b790b1d"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/57293138.receipt.json",
+      "bytes": 175,
+      "sha256": "5d0670aece6b4633bf797a7ae426f4473794d3938ee6c808ca3a287b9a95bd2d"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/competition.json",
+      "bytes": 3039,
+      "sha256": "58d47adc6ae781cfb4a4dabcaad4cf7b60656adde50af891fb3b941cf2943c1e"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/competition.receipt.json",
+      "bytes": 176,
+      "sha256": "de7a7fe0b5cd7bd8ebad2e710c6c2b94da21a689cabc219db45f57fe59a5b4c8"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/leaderboard.json",
+      "bytes": 22533,
+      "sha256": "d008f38cc9a37d39cda52827387be5883fbcea80109a4e4b4e6d3a015aaa4b23"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/leaderboard.receipt.json",
+      "bytes": 177,
+      "sha256": "f9fd5ad5015e292e6d58f08c9e354098f9b19b0100891224764f5cd04099f7e1"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/limits.json",
+      "bytes": 33,
+      "sha256": "35925e70c7563ef95613d5f45bc9a101a8930a31827bae904ec39e122612410c"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/limits.receipt.json",
+      "bytes": 174,
+      "sha256": "f16eeb4d034a17a8186bb0bdf64340e9ffb38fd6493feb06d4e0dadf8ccf6abb"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/P038-get.json",
+      "bytes": 256460,
+      "sha256": "55ab4dcd3cd2a4cb23267ffec2ab90714256c2dc1c6919dc73f6cf5c68afc840"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/P038-get.receipt.json",
+      "bytes": 178,
+      "sha256": "39d01877e51af7e7dd62bd080aa89b385f863f36d40022f9132ceb56e28f6c7c"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/P038-latest-get.json",
+      "bytes": 256457,
+      "sha256": "0335b29b7ad3ae5681b02ef3842a17e7d844610c665e05df1d4f9d62eafbf33d"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/P038-latest-get.receipt.json",
+      "bytes": 178,
+      "sha256": "e2027e33f7aa5ee7dcab9c92f3876bfdab2e7e7caf59029332c0aede58073473"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/P038-status.json",
+      "bytes": 21,
+      "sha256": "8c65d9493ad080266a23df2675f847486fedc0546a88a91c866b812d970915b5"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/P038-status.receipt.json",
+      "bytes": 174,
+      "sha256": "674ee862a4a91031e5720c8d71388f8ac7d2e27867b5e09a761abd0cfa418000"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/P039-get.json",
+      "bytes": 728751,
+      "sha256": "3af467434707459605387057d76b1dc39f1b4fd7505f1c47725936fd4a2754b8"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/P039-get.receipt.json",
+      "bytes": 178,
+      "sha256": "92fc64c47df3316f56ae55543f515cb34201be644ab33d7a1d471a41814016f0"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/P039-latest-get.json",
+      "bytes": 728751,
+      "sha256": "f8c8303a16fd910adae28d1cacb9c76ef1a8ba0ac2f3cce911126b947135ab6b"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/P039-latest-get.receipt.json",
+      "bytes": 178,
+      "sha256": "e2206c829c526ee65cdff4262dbbc07fb7ff0c5fe51297e93425c7f6b409b234"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/P039-status.json",
+      "bytes": 21,
+      "sha256": "8c65d9493ad080266a23df2675f847486fedc0546a88a91c866b812d970915b5"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/P039-status.receipt.json",
+      "bytes": 174,
+      "sha256": "77af47101694647492a97bc335a6e1ad5bbafb49ee76de9048be3a2b331651a1"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/receipts.json",
+      "bytes": 3256,
+      "sha256": "7e13b4e9f457eb6abb7cb7563875c3580724ee2927923a7cc8901a5f1fdfc28a"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/submissions.json",
+      "bytes": 16682,
+      "sha256": "522fe1110591470e159530d0c11a424387676da388fcae0ed48adb6683cb7708"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/submissions.receipt.json",
+      "bytes": 177,
+      "sha256": "b72b49dc4d7ba31c619bd5dd0d52c1f638e29e982c10a5570bc4317111dea97d"
+    },
+    {
+      "path": "artifacts/research/20261019-official-state-readonly-v1/observation-20261019T023743754903Z/summary.json",
+      "bytes": 1635,
+      "sha256": "ec835ce4a7f2486acb85defcbda1f9b4db1041ae8aa9bf9e5c92757765ecca54"
+    }
+  ]
+}

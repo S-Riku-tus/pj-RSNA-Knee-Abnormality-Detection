@@ -1,0 +1,90 @@
+{
+  "at_UTC": "2026-10-21T04:21:58.309983+00:00",
+  "status": "ARTIFICIAL12CHECKPASS_FIXED_E12_FOLD0_RUNNING",
+  "model": "ConvNeXtSmall genericImageNet22k->1k prelogits768 last2finalblocks",
+  "intervention_scope": "Encoderchoicearchitecture/genericinit/featurewidth/suffixcoupled; notpurearchitectureattribution",
+  "policy": {
+    "path": "artifacts/research/20261021-F015-ConvNeXtSmall-prospective-v1/policy.json",
+    "bytes": 7946,
+    "SHA": "45d4cf42149064f2205f061223fa297f602ca64f64927b5bf26f3fa362b95dfb"
+  },
+  "root_prelaunch": {
+    "path": "artifacts/research/20261021-F015-fold0-root-prelaunch-v1/root-review.json",
+    "bytes": 58022,
+    "SHA": "aa96ce5c8442cd39819790673383b80be7590a6bfb44b95a1b3e2c5adda21554"
+  },
+  "launch": {
+    "path": "artifacts/research/20261021-F015-fold0-root-prelaunch-v1/launch.json",
+    "bytes": 1091,
+    "SHA": "4c7d06db7541f92f17f754d6dd33467ced32e0a3956d1f55fa67488b056a4dcc"
+  },
+  "resource_gate": {
+    "path": "artifacts/qa/f015-convnext-small-native392-20261021-v1/resource-gate.json",
+    "bytes": 4291,
+    "SHA": "6c131e8051014b2764d4541f48f82849e9691b0bac1f246d3727f79d091f1f49"
+  },
+  "acquisition": {
+    "path": "artifacts/pretrained/f015-convnext-small-fb22k-384-20261021-v1/acquisition.json",
+    "bytes": 1225,
+    "SHA": "e792800cae0c98963f51e3848e82053b75565b7084b642d038705030baf5b3eb"
+  },
+  "preparation": {
+    "path": "artifacts/research/20261021-F015-ConvNeXtSmall-prospective-v1/preparation-evidence.json",
+    "bytes": 6122,
+    "SHA": "874e685016c80c499b98e21135c9a761763dbd5515abe0d7cfba72c3a3957916"
+  },
+  "run": "artifacts/runs/f015-convnext-small-fold0-20261021-v1",
+  "pid": 7792,
+  "exec_session": 48503,
+  "fold": 0,
+  "seed": 20261002,
+  "train_studies": 3386,
+  "valid_studies": 821,
+  "source18_SHA": {
+    "convnext_small_model.py": "e744d03266b29e6dc3f6c22318af9e1c290c4bdafdaec5754d23a6953a45018f",
+    "convnext_small_training.py": "7d3c25b9e70f7e84bd9bd097f31bee8166763003fb3ae4cc582ad2db507c7163",
+    "convnext_model.py": "5bb76633e5f9c7321f6eeaf5a32215c378647d5d0aec8da51e2fa072c4af6555",
+    "convnext_training.py": "744d2737943eaa97793c41bb990116a383512600d2e7d93d0a933ac51fb3b4c2",
+    "native_training_fast16.py": "9f5c3b490374201f72cc73ebf11a26f8a8163945387d4d493e7a04c08e729d57",
+    "finetune_model.py": "c43bcedf1d97b713528b4157a0a9c8867741b785d58c5be084cd7072c2b2c624",
+    "feature_model.py": "af85d8eaed6015ed2ddb7f0b2029eca446471876750ebde60bed403cf8ced0e1",
+    "triplet_cache.py": "0b4c666407cb72d7ef3249f479af1e13cca1b4422b18f18cebf3eed2b768f26f",
+    "feature_imaging.py": "de36a21929b482eee897b12e06bb9964cee59beab6a9bc2b2d44c15ace279546",
+    "feature_contracts.py": "be76ecc28b14491f4d1a0a459794c7f94456e845ce0e46c46ced699bfaf54ed6",
+    "imaging.py": "07a114888cde19ae0e5799f2de48c6751ec9c4b5637ec1f4f4c220f2911db9ff",
+    "contracts.py": "aa246fd1a49ecbe88f1795f49904ef9675f119c935e99b9ffd5eee8220cbc71b",
+    "checkpoints.py": "4ffc94da42c34798c263360ecdb4af7340f417d653cb7e37ad1b6169937be541",
+    "metrics.py": "c5f3944e55392ae8a98fd6ed79b140a95d7af58fc3d3537d41ceefcc4c3b4f1c",
+    "runtime.py": "09c7ee998e1c3be02f0ed3f00db6acc92351ea374fcf8a469c8d4fcc57233f05",
+    "diagnostics.py": "aa89c9f29a8c641d005405b306f060a782c864d3e35a3b3371c7d3ffb4c1428a",
+    "inputs.py": "2399ebaaf1f1c9fe3e3bcc302c90d2afa8f81c5352e16f5af6ae03efe93ff87f",
+    "model.py": "86d21b96701c7ca99231fce3ddbd8f8d1c0967d81059b42787ef831cf203a96a"
+  },
+  "protected_Tiny_source16_unchanged": true,
+  "datahashes_match_F006_and_Tiny": true,
+  "actual_QA": {
+    "checks": 12,
+    "full144_peak_reserved_MiB": 1108,
+    "CPUstrict_artificial_roundtrip": true,
+    "finite12andallsuffixheadgrad": true,
+    "prefixbitunchanged": true,
+    "maskedpadding_allmissing": true,
+    "accuracy_qualified": false
+  },
+  "prestart_capacity": {
+    "RAM_available_GiB": 16.883468627929688,
+    "GPU_free_MiB": 21564,
+    "prior90sample_meanGPUutilization_percent": 14.844444444444445
+  },
+  "parallel_Tiny_interference_gate": "StoponlySmall bySTOP_REQUESTED if3consecutiveTiny256UIDintervals>210s orTinyprojectedfold>12h orRAMavailable<4GiB. NoTiny/userprocessstop/repriority.",
+  "fixed_endpoint": "OnlyE12weak10meanAUC delta>0vsoriginalF006E12 withfullguards beforemanualfold1. Nointermediateepoch/BCEbest/alpha/perlabelselection.",
+  "Tiny_Small_validation_accuracy_consulted_before_launch": false,
+  "budget_seconds": 43200,
+  "fold1_started": false,
+  "auto_next_fold": false,
+  "ownGoldnumeric_fit_select_evaluate": 0,
+  "patient_independence_verified": false,
+  "rawDICOM_download": 0,
+  "Kaggle_Save_Submit_upload": 0,
+  "no_autoexternal_code_added": true
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "remaining_four_user_authorized_manual_comparisons_v1",
+  "date_JST": "2026-10-19",
+  "user_instruction": "P039 is0.958; remaining4 may be submitted appropriately; continue until last submission; seek at least0.959",
+  "own_best_confirmed_Public": "0.958",
+  "first_goal": ">=0.959",
+  "next_goal": ">0.960",
+  "goal_achieved": false,
+  "P039": {
+    "submission": 57378810,
+    "official_status": "COMPLETE",
+    "Public": "0.958",
+    "conclusion": "No displayed Public gain demonstrated by current native20 addition; no exact unrounded-gain or hidden-coverage inference."
+  },
+  "baseline": "P033 submission57290868 COMPLETE0.958; source57284b71d271c3d4bf09595a6acade490ea911c8f7438a595724f260f3f28ccb; artifacts preserved",
+  "scope": {
+    "maximum_additional_manual_submissions": 4,
+    "submit_until_last_reviewed_comparison": true,
+    "no_automatic_upload_or_Submit_code": true,
+    "fresh_quota_savedsource_Input_runtime_and_duplicate_check_each_time": true,
+    "new_models_or_data_download_required_for_current_four": false
+  },
+  "stages": [
+    {
+      "order": 1,
+      "candidate": "P038",
+      "factor": "Qualified public authorV6 whole recipe: alternate classvector and Reader overlay, no R7 or224mirror",
+      "status": "MANUALLY_ACCEPTED_SCORE_PENDING",
+      "submission": 57391696,
+      "saved_version": 1,
+      "accepted_at_UTC": "2026-10-19T09:44:27.188162+00:00",
+      "after_limits": {"numToday": 2, "numTotal": 37, "numAllowedNow": 3},
+      "root_evidence": "artifacts/research/20261019-evening-p038-root-manual-submit-v1/summary.json",
+      "independent_acceptance": "experiments/P038-independent-official-acceptance-20261019.json",
+      "limits": "Author958 and visibleCSVsameP037 are adverse/no-improvement evidence; hidden equality and improvement are unproven. Treat as one considered whole-recipe comparison."
+    },
+    {
+      "order": 2,
+      "candidate": "P040",
+      "factor": "P033 classvector four values only: LateralOA.2->.15, PFOA.6->.65, Synovitis.8->.85, Baker.35->.30",
+      "status_at_declaration": "OFFLINE_PREPARED_SOURCE_REVIEW_PENDING",
+      "scope": "All other parent science/weights/inputs remain fixed; no Reader/R7/native/mirror added."
+    },
+    {
+      "order": 3,
+      "candidate": "P041",
+      "factor": "Exact P033 parent eight cells plus exact P038 Reader overlay only",
+      "status_at_declaration": "OFFLINE_PREPARED_SOURCE_REVIEW_PENDING",
+      "scope": "Original parent vector fixed; same Reader3 checkpoints and per-target weights; require positive Reader participation rather than silent whole-parent fallback."
+    },
+    {
+      "order": 4,
+      "candidate": "P042",
+      "factor": "Intermediate Raptorhalf percentile-rank normalization only before unchanged outer P033 fusion",
+      "status_at_declaration": "SOURCE_PREPARATION_IN_PROGRESS",
+      "hypothesis": "A weighted mean of two percentile-rank columns has a different marginal distribution from a single ranked R6 column. Re-ranking the intermediate Raptorhalf may improve the effective balance without selecting new weights. This is an unproven fusion hypothesis, not a final monotone transformation claimed to improve AUC.",
+      "frozen": "Same P033 parent/threefamily predictions/A224.35/classvector/TTA; no coefficient, label or checkpoint search.",
+      "rank_population": "all rows with rap_fail=false including original single-Raptor fallback rr",
+      "application": "threefamilies-success rows only; any union-failure row retains parent twelve cell strings exactly"
+    }
+  ],
+  "comparative_interpretation": "P033/P040/P041 share the exact successful parent. P038 provides a both-factor whole-recipe reference; strict2x2 attribution requires separate proof that no other scientific computation differs. Its operational/source/runtime differences must be recorded rather than silently treated as a perfect fourth corner.",
+  "F009": {
+    "canonical": "experiments/F009-retry-fixed12-candidate-AMP-HOLD-v2-20261019.json",
+    "completed_epochs": 12,
+    "updates": 2495,
+    "opportunities": 2496,
+    "candidate_E10_skips": 1,
+    "old_frozen_adoption_gate": "HOLD unchanged; no new candidate skip exception",
+    "fixed_E12_guard_execution": "exit1 before mathematical comparison; no new paired metric used for selection",
+    "weights_release_or_deployment": false
+  },
+  "F010": {
+    "manual_declaration": "artifacts/research/20261019-f010-independent-manual-start-v1/declaration.json",
+    "root_prelaunch": "artifacts/research/20261019-f010-root-independent-fit-v1/root-prelaunch-review.json",
+    "root_launch": "artifacts/research/20261019-f010-root-independent-fit-v1/manual-launch.json",
+    "manual_start_UTC": "2026-10-19T09:45:46.6088182+00:00",
+    "actual_training_PID": 23168,
+    "launcher_PID": 24024,
+    "run": "artifacts/runs/f010-last4-late-cosine-fold0-20261019-v1",
+    "status": "RUNNING_INDEPENDENT_F006_BASED_LAST4_EXPERIMENT",
+    "old_waiter_rejection_and_F009_HOLD_unchanged": true,
+    "science": "No gamma; same F006 initialization/teacher/input/seed/fold/head/loss/LR/12epochs, only suffix last2->last4",
+    "first_counter_observation": "history0; no interim metrics projected; 3386train/821valid",
+    "not_a_requirement_for_current_four": true,
+    "Public_gain_qualified": false
+  },
+  "validation_limits": [
+    "The baseline public family has no clean heldout OOF here; weak or visible prediction changes cannot estimate Public gain.",
+    "Current candidates are explicitly bounded exploratory comparisons, not statistical proof of0.001 or a guarantee.",
+    "No Gold label rows are read for fitting or choosing checkpoints/recipes. Public upstream Gold58 selection exposure remains separately recorded.",
+    "Supplied study/report/group folds stay fixed; patient independence is not established.",
+    "New sources must pass actual visible inference and independent FP32/FP64 arithmetic before each manual formal submission."
+  ],
+  "completion_rule": "Continue through four considered manual submissions and record their official results; do not mark0.959 achieved without an own official score. If all four fail to reach it, report that plainly."
+}

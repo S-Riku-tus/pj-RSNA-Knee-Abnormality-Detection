@@ -1,0 +1,103 @@
+{
+  "schema_version": "public_JEV_Gold_exposure_scope_correction_v1",
+  "date_jst": "2026-10-19",
+  "actor": "/root/training_recipe_research",
+  "status": "CORRECTED_OVERBROAD_PROHIBITION_REPORT_PROB_UPSTREAM_SELECTION_SEPARATED",
+  "main_correction_ja": "先の『JEV教師をそのまま自作学習へ導入不可』『Gold58で選んだ教師はすべて学習禁止』という解釈は広すぎた。AGENTSはGold画像ラベルの学習・checkpoint選択への使用を禁じ、公開重み・ラベルの上流Gold利用は別途監査するとしている。Goldで混合元や係数を選んだReport由来確率と、Gold画像の実ラベル値を学習targetへ直接コピー・上書きする処理を区別する。本記録は新たな絶対禁止を作らない。",
+  "authoritative_rule": {
+    "path": "AGENTS.md",
+    "exact_text_ja": "gold画像由来ラベルを学習やcheckpoint選択に使わない。公開重み・ラベルのgold利用は別途監査する。",
+    "application_ja": "自分のrunでGold画像ラベル値を学習targetへ直接混入させたり、その値でcheckpointを選んだりしない。公開資産の上流曝露は由来を明示して監査し、その履歴を後付けgroup分割や行削除で消えたと扱わない。上流がGold-informedであるだけで公開資産すべてを自動的に禁止する、とは読み替えない。"
+  },
+  "source_evidence": [
+    {
+      "id": "JEV_card_V5",
+      "path": "artifacts/research/20261019-public-training-recipes-v1/jev-labels-view.json",
+      "source_url": "https://www.kaggle.com/datasets/riadmohamed42/jev-knee-labels",
+      "observed_version": 5,
+      "confirmed_ja": "作者説明では全trainingstudyのReport由来softprob。Gold58 AUCでsteven9列・pilkwang3列を選び、JEV6promptのper-targetAUC-weighted平均を作り、hard-swap/JEVを0.95/0.05で合成。これらは上流Gold-informed選択の明示的証拠。",
+      "not_confirmed_ja": "生成全sourceとlabelsCSV本文は未取得。Gold58画像の実ラベル値をHYBRID_labels_scores.csvへ直接コピー/上書きした処理があるかは、取得済みcardだけでは確定できない。直接混入の証拠は今回発見していないが、全上流で非混入とも認証しない。"
+    },
+    {
+      "id": "nartaa_label_builder_exact_V5",
+      "path": "artifacts/research/20261019-public-training-recipes-v1/training-text/training_code/labels/build_blendjev.py",
+      "sha256": "676b05c04f25c4e940f3cf42a22d6ccc18426d87c3583d93c4e5469a5a6b095d",
+      "confirmed_ja": "入力B=labels_v1_blend.parquetのrowsetにJ=JEV HYBRID_labels_scores.csvをUIDでreindexし、JEV欠損ならB、有限なら(B+J)/2。Goldラベル値を読む引数・読み込み・上書きはこのbuilderにない。",
+      "limitation_ja": "BとJの上流生成全体を閉じていないため、builder自体にGold値読取がないことを最終CSVの完全なGold非混入証明へ拡張しない。"
+    },
+    {
+      "id": "nartaa_S6_target_builder_exact_V5",
+      "path": "artifacts/research/20261019-public-training-recipes-v1/training-text/training_code/s6/make_data.py",
+      "sha256": "a8c5e1c6772464e7963864060fe7a508c44f597dd0368c5cddc0fd9f093ba545",
+      "confirmed_ja": "train.csvはGoldUIDをnotna maskから同定してfold=-1集合と照合する。bjとGoldUIDの共通部分が空であることをassert。非Gold行のみをReportprobからL|priorへ書き、Gold58行の全教師列をblankにする。train_idsはGoldUIDを排除する。ここでは画像Gold値をtrainingtargetへ書き込む処理を認めない。",
+      "limitation_ja": "Gold画像ラベルの存在maskによるUID除外と、Gold値による教師生成は異なる。作者foldsが我々の供給group/reportgroupを保つことまではこのsourceから確認できない。実target本文を再監査していない。"
+    },
+    {
+      "id": "nartaa_S6_checkpoint_selection_exact_V5",
+      "path": "artifacts/research/20261019-public-training-recipes-v1/training-text/training_code/README.md",
+      "sha256": "f86f136760ccef8afe2414e4e1693f4570fb29e707a5022a8dfaed95b7201b9c",
+      "confirmed_ja": "S6all-dataは固定epoch16、EMA/SWAなし、Gold58でcheckpointを選んでいないと記載し、取得trainer/runconfigと整合。",
+      "limitation_ja": "この固定checkpoint方針は、上流labelblend選択や移植元geometry開発のGold曝露を消さない。S6pipelineを全面的Gold-freeとは呼ばない。"
+    },
+    {
+      "id": "Pilkwang_report_reader_static_fragment",
+      "path": "artifacts/research/20261003-label-audit/pilkwang-labels/api_labeler.py",
+      "confirmed_ja": "取得済みreaderのpromptはReportに書かれたYES/NO/UNKとseverityを抽出し、その出力をto_scoresへ渡す。検査ごとのGold実値をpromptへ渡す箇所は確認したファイル範囲にない。",
+      "limitation_ja": "to_scores本体や最終配布CSVの完全生成closureを今回確認していない。Goldを使うスコアmapping選択と実値上書きの両方を、未取得コードまで一括認定しない。"
+    },
+    {
+      "id": "Steven_report_labels_card_saved_V6",
+      "path": "artifacts/research/20261003-label-audit/stevenleehans/dataset-metadata.json",
+      "confirmed_ja": "作者説明はReport由来確率で、Synovitis補完や複数labeller blendのGold58評価・選択を説明する。",
+      "limitation_ja": "report-derivedというcard記述は直接Gold値上書き不存在の完全source証明ではない。上流Gold-informed履歴と、未確認の直接値混入を分けて記録する。"
+    }
+  ],
+  "classification": {
+    "JEV_Gold_informed_source_prompt_blend_selection": "CONFIRMED_BY_AUTHOR_CARD_V5",
+    "JEV_direct_image_Gold_value_overwrite_into_distributed_HYBRID_scores": "UNKNOWN_FULL_GENERATOR_AND_PAYLOAD_NOT_AUDITED_NO_EVIDENCE_FOUND",
+    "nartaa_build_blendjev_direct_Gold_value_read_or_overwrite_in_inspected_builder": "NOT_PRESENT_IN_INSPECTED_EXACT_SOURCE",
+    "nartaa_S6_Gold58_UIDs_excluded_from_training_targets_and_pool": "SOURCE_ASSERTS_EXCLUSION_AND_WRITES_BLANK_GOLD_TARGETS",
+    "nartaa_final_report_probability_payload_entire_upstream_noninjection_certified": false,
+    "nartaa_S6_checkpoint_selection_uses_Gold58": "SOURCE_SAYS_NO_FIXED_E16",
+    "new_JEV_teacher_categorically_prohibited_by_this_audit": false,
+    "new_JEV_teacher_adopted_for_F010": false
+  },
+  "current_run_decision": {
+    "F010_teacher_unchanged": true,
+    "teacher": "existing vmohitrao report_weak source and masks",
+    "factor": "DINOv2 suffix trainability last2 to last4 only",
+    "reason_ja": "F010へ新教師を同時導入すると、encoder適応範囲と教師の二要因になるため今回の比較へ持ち込まない。JEVが絶対禁止だから除外する、という理由ではない。既存の固定E12/group/fold/seed/工程条件は変更しない。",
+    "manual_waiter_plan_or_running_job_changed": false
+  },
+  "separate_label_experiment_possible_scope": {
+    "eligible_for_further_audit_not_auto_adopted": true,
+    "approach_ja": "公開Reportprob教師は、別の一要因実験として評価を検討できる。まず公開生成sourceと版のclosureを調べ、直接Gold実値の混入の有無と上流Gold-informed選択を別欄に記録する。Gold58UIDと共有group/reportgroupを訓練・選択対象から除外し、自分のGold画像ラベルでprompt/列/係数/epochを新たに選ばない。",
+    "missing_contract_ja": "欠損値・unknown marker・未言及priorの意味をsource別に確認し、欠損を陰性0へ置換しない。既存画像/config/seed/groupfoldを固定した教師だけの比較とする。公開のpriorfillを無検討にmaskと同一視しない。",
+    "validation_scope_ja": "教師を変更したモデルを各自の教師で採点すれば自己参照になるため、比較用targetsと固定holdoutは予め共通化する。上流教師のGold曝露を含むものを独立Gold-free検証と呼ばない。Report手確認auditやweakOOFと公式Publicを区別する。",
+    "source_integrity_ja": "CSVのGold58行削除だけで上流Goldのprompt/column/係数選択履歴は消えない。この曝露は採用可否の監査対象であり、自動的な全面禁止や、完全に無影響という保証のどちらにも変換しない。",
+    "no_new_permission_requirement_created": true,
+    "this_record_authorizes_no_new_tool_action": "This is a scope correction, not a dataset download or fit launch command. Root may continue within the user's existing research authorization."
+  },
+  "supersedes_only_normative_overstatements": [
+    {
+      "path": "artifacts/research/20261019-public-training-recipes-v1/research-analysis.json",
+      "fields": ["main_findings_ja", "new_primary_sources.jev.Gold_selection_ja", "s6_exact_source_recipe.targets_ja"],
+      "overstatement_ja": "Gold-selected JEV component blocks direct adoption / この教師をそのまま自作学習に導入すべきではない、という一律禁止の読み方を本補足の限定判断へ修正する。上流Gold選択の事実自体は維持。"
+    },
+    {
+      "path": "experiments/public-training-recipes-and-F010-priority-20261019.json",
+      "fields": ["result_ja", "why_not_copy_JEV_teacher.decision_ja", "remaining_candidates_after_F010"],
+      "overstatement_ja": "JEVを丸ごと転用除外という表現は、F010の一要因比較に同時導入しない判断に限定する。別教師実験まで永久禁止しない。"
+    }
+  ],
+  "execution": {
+    "new_label_payload_downloads": 0,
+    "Gold_value_reads": 0,
+    "MRI_model_payload_reads": 0,
+    "source_executed": 0,
+    "GPU_or_training": 0,
+    "external_API_or_remote_mutation": 0,
+    "F010_plan_source_config_policy_changes": 0,
+    "PROJECT_validation_ledger_edits": 0
+  }
+}

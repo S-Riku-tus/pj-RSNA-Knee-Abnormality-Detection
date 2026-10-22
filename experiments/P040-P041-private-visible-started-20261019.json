@@ -1,0 +1,50 @@
+{
+  "schema_version": "P040_P041_source_qualified_manual_private_visible_starts_v1",
+  "at_UTC": "2026-10-19T10:01:16.130412+00:00",
+  "status": "WAITING_FOR_ACTUAL_VISIBLE_RESULT",
+  "candidates": [
+    {
+      "at_UTC": "2026-10-19T09:54:45.866707+00:00",
+      "candidate": "P040",
+      "ref": "rsraki/p040-p033-vector-20261019-v1",
+      "kernel_id": 139586868,
+      "version": 1,
+      "saved_source_all_code_exact": true,
+      "Input_and_execution_settings_readback_exact": true,
+      "source_sha256": "8a76e6709a078289dae0c0b4d964aced9fe6ed98c50ecf6aec0489e28b44db8c",
+      "status": {},
+      "actual_qualification_pending": true,
+      "manual_Save_calls": 1,
+      "manual_Submit_calls": 0
+    },
+    {
+      "at_UTC": "2026-10-19T09:55:17.124955+00:00",
+      "candidate": "P041",
+      "ref": "rsraki/p041-p033-reader-20261019-v1",
+      "kernel_id": 139586937,
+      "version": 1,
+      "saved_source_all_code_exact": true,
+      "Input_and_execution_settings_readback_exact": true,
+      "source_sha256": "0c06b802d34d6cee85b5156fb30ae1b20f7b09c747550639c40547e2ad1e5c7a",
+      "status": {},
+      "actual_qualification_pending": true,
+      "manual_Save_calls": 1,
+      "manual_Submit_calls": 0
+    }
+  ],
+  "source_peer": "artifacts/research/20261019-p040-p041-independent-source-v1/review.json",
+  "source_tests": {
+    "producer": 7,
+    "independent_static": 27,
+    "independent_wrapper": 9,
+    "Ruff": "PASS"
+  },
+  "actual_CSV_or_new_MRI_forward_qualified": false,
+  "formal_Submit": 0,
+  "new_manual_private_Save": 2,
+  "no_automatic_upload_or_Submit_code": true,
+  "mask_and_small_CSV_observer": "artifacts/research/20261019-four-comparison-observer-v1/observe.py",
+  "independent_numeric_oracle": "artifacts/research/20261019-independent-factorial-oracle-v1/preparation.json",
+  "baseline_own_Public": "0.958",
+  "own_candidate_Public": null
+}

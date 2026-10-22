@@ -1,0 +1,50 @@
+{
+  "schema_version": "F010_E10_AMP_HOLD_fixed12_continues_v1",
+  "recorded_at_UTC": "2026-10-19T18:06:21.394436+00:00",
+  "status": "ENGINEERING_HOLD_E10_SKIP1_FIXED12_TRAINING_CONTINUES",
+  "run": "artifacts/runs/f010-last4-late-cosine-fold0-20261019-v1",
+  "run_status_at_observation": "running",
+  "completed_epochs_projected": 10,
+  "updates": 2119,
+  "optimizer_step_opportunities": 2120,
+  "AMP_skipped_steps": 1,
+  "E10": {
+    "epoch": 10,
+    "optimizer_steps": 211,
+    "optimizer_step_opportunities": 212,
+    "amp_skipped_steps": 1,
+    "elapsed_seconds": 29913.909096699965
+  },
+  "counter_snapshot": {
+    "path": "artifacts/research/20261020-f010-ten-epoch-AMP-HOLD-counter-observation-v1/summary.json",
+    "bytes": 4016,
+    "sha256": "851a4787c2768e9ace3c58ab1ce35db206c80bfcd1ead338a70b632b4243f80b"
+  },
+  "observed_run_json": {
+    "path": "artifacts/runs/f010-last4-late-cosine-fold0-20261019-v1/run.json",
+    "bytes": 91841,
+    "sha256": "ad816ed3aa54badf22b4c92aa394bec545e5bf3afe36cd5b1176850999149d1c",
+    "mtime_UTC": "2026-10-19T18:04:24.379561+00:00",
+    "mtime_ns": 1792433064379560900,
+    "size_mtime_stable_across_read": true
+  },
+  "frozen_policy": {
+    "path": "artifacts/research/20261019-f010-last4-root-v1/prospective-policy.json",
+    "bytes": 8183,
+    "sha256": "b7117059abc2d89c48524522472ddc20f7cd61476c4647d8f76aee2a252331da"
+  },
+  "reason": "Candidate has a real missing optimizer update under the prospectively required zero-skip and exact-update gate. Later E12 completion or any AUC cannot erase this engineering failure.",
+  "decision": {
+    "retain_fixed12_training": true,
+    "stop_or_modify_training": false,
+    "release_or_adopt": false,
+    "early_epoch_rescue": false,
+    "relax_skip_gate_or_extend_historical_exception": false,
+    "fold1_or_control_fit_start": false,
+    "primary_evaluation_or_model_selection": false
+  },
+  "scaler_growth_root_cause_proven": false,
+  "AUC_primary_BCE_checkpoint_prediction_labels_or_quality_values_used": false,
+  "new_API_Submit_Save_tests_fit_source_policy_docs_ledger_changes": 0,
+  "future_work_boundary": "Any future numerical-stability investigation needs a distinct prospective matched-pair protocol and root review; this record authorizes no new experiment."
+}

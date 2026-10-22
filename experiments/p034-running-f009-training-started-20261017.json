@@ -1,0 +1,80 @@
+{
+  "at_utc": "2026-10-17T02:02:19.004038+00:00",
+  "status": "P033_FORMAL_PENDING_P034_VISIBLE_RUNNING_F009_FOLD0_TRAINING_RUNNING",
+  "goal": "own Public >=0.960 remains unachieved",
+  "own_best": {
+    "Public": "0.957",
+    "submission": 57225898,
+    "preserved": true
+  },
+  "P033": {
+    "submission": 57290868,
+    "latest_observation": "artifacts/research/20261017-p033-formal-submit-v1/poll-20261017T020010514397Z/get-submission.json",
+    "official_score_and_status_fields_present": false,
+    "resubmitted": false
+  },
+  "P034": {
+    "ref": "rsraki/p034-success20-v2-20261017-d1e6187ac3",
+    "kernel": 139135231,
+    "version": 1,
+    "official_status": "RUNNING",
+    "source_sha256": "d1e6187ac3db5d5cf76eedb4b0df8ae9d1d6ed4e4b4a096f1cabb11882806d1b",
+    "new_source": "artifacts/kaggle/p034-p029m-f006-success20-20261017-v2/source.ipynb",
+    "only_change": "native integration failure contract; N_valid ranks on successful study cells; failed parent strings retained; partial singleton and FP32-constant guard",
+    "original_parent_and_4models_and89_source_and9Inputs_fixed": true,
+    "global_native_error_or_timeout_fallback_not_fixed": true,
+    "qualification": {
+      "unittest": 62,
+      "fail_error_skip": 0,
+      "independent_packaged_oracle_cells": 54876,
+      "FP32_mismatches": 0,
+      "GPU_partial_numeric_values": 12498,
+      "GPU_FP32_mismatches": 0
+    },
+    "independent_review": "artifacts/research/20261017-p034-independent-audit-v1/p034-p029m-f006-success20-20261017-v2-verification.json",
+    "saved_source_and_Input_readback": "artifacts\\research\\20261017-p034-execution-v1\\launch-v2\\saved-readback-audit.json",
+    "Save_calls": 1,
+    "formal_Submit_calls": 0
+  },
+  "F009": {
+    "run": "artifacts/runs/f009-gamma-late-cosine-fold0-20261017-v1",
+    "policy": "artifacts\\research\\20261017-f009-gamma-preparation-v1\\prospective-policy.json",
+    "policy_sha256": "d51a5ce6bc681a820f55c53c303d2bd769084366a8d93581f10a7e87dfea1eec",
+    "root_review": "artifacts\\research\\20261017-f009-gamma-preparation-v1\\root-execution-v1\\root-review.json",
+    "preflight": {
+      "exit": 0,
+      "train_studies": 3386,
+      "valid_studies": 821,
+      "cache_studies": 4207
+    },
+    "manual_launch": "artifacts\\research\\20261017-f009-gamma-preparation-v1\\root-execution-v1\\manual-training-start.json",
+    "launcher_pid": 16948,
+    "actual_GPU_python_pid_observed": 22392,
+    "unified_exec_session": 12150,
+    "fit_started": true,
+    "completion_or_new_weak_gain_verified": false,
+    "GPU_QA_checks": [
+      19,
+      6,
+      6
+    ],
+    "CPU_tests": 32,
+    "control": "same F006 fold0 E12",
+    "only_factor": "train-only study-common gamma0.85..1.15 dedicated RNG; seed20261002 unchanged",
+    "candidate_selection": "fixed E12; fold1 only if predefined fixed10AUC gain and BCE not worse and engineering pass",
+    "Gold_fit_selection_evaluation": false,
+    "no_raw_DICOM_bulk_download": true
+  },
+  "research": {
+    "public_frontier": "artifacts/research/20261017-public-frontier-v1/frontier-summary.json",
+    "observed_score_sorted_Code_rows": 100,
+    "max_author_score": 0.958,
+    "author958_count": 4,
+    "observed_author_ge960_count": 0,
+    "new_foundation_models": "artifacts/research/20261017-independent-model-research-v1/static-audit.json",
+    "foundation_model_weight_download": 0,
+    "MRI_CORE_missing_keys": "requires actual checkpoint audit; missing neck not established",
+    "OrthoDiffusion": "3D continuous16-slice contract not reproduced by currenttripletcache; not adopted"
+  },
+  "no_new_accuracy_claim": true
+}

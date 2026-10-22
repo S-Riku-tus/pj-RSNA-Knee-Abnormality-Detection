@@ -1,0 +1,67 @@
+{
+  "at_UTC": "2026-10-19T21:31:37.641388+00:00",
+  "status": "ALL4_ACCEPTED_P038_AND_P040_COMPLETE0957_P041_P042_PENDING",
+  "accepted_additional_of4": 4,
+  "remaining_user_formal": 0,
+  "no_additional_submission_after_daily_reset": true,
+  "current_best_own_Public": "0.958",
+  "target_at_least0959_achieved": false,
+  "target_strictly_above0960_achieved": false,
+  "terminal": {
+    "P038": {
+      "ref": 57391696,
+      "Public": "0.957",
+      "status": "COMPLETE",
+      "canonical": {
+        "path": "experiments/P038-terminal-binding-independent-20261019.json",
+        "sha256": "a4998ff261e914d0884048736e86e7ee47d0324d57b2dfc7c293063822424ce5",
+        "bytes": 4130
+      }
+    },
+    "P040": {
+      "ref": 57402883,
+      "Public": "0.957",
+      "status": "COMPLETE",
+      "kernel": 139586868,
+      "version": 1,
+      "official_scriptVersionId": 360007491,
+      "canonical": {
+        "path": "experiments/P040-formal-COMPLETE0957-independent-binding-20261020.json",
+        "sha256": "38244472b9b689b85636f3e2f2b9b04a53300ed8e1c6103965067eb155e95c3e",
+        "bytes": 2811
+      }
+    }
+  },
+  "pending": {
+    "P041": {
+      "ref": 57402914,
+      "kernel": 139586937,
+      "version": 1,
+      "Public": null
+    },
+    "P042": {
+      "ref": 57403458,
+      "kernel": 139595447,
+      "version": 1,
+      "Public": null
+    }
+  },
+  "decision": "P040 vector-only candidate does not improve ownPublic958; retain original P033 vector baseline. Continue both remaining official results. No hidden precision or Reader effect inferred from P038/P040 ties.",
+  "interpretation_limits": [
+    "Official Public is shown at three decimal places; do not infer exact underlying equality or confidence intervals.",
+    "P040 changes four fusion weights in one predeclared vector factor; the whole vector result does not isolate any individual target weight.",
+    "P038 combined recipe957 plus P040 vector-only957 cannot establish Reader harm/benefit or a clean two-by-two factorial due recipe/runtime differences.",
+    "Visible three-UID numerical/provenance qualification proves implementation contract only; no hidden score guarantee."
+  ],
+  "prospective_interpretation": {
+    "path": "artifacts/research/20261020-four-results-prospective-interpretation-v1/declaration.json",
+    "sha256": "f59f76e32f9153b88998567c2a501165676129bb5c0b7f6e0b29afdff03d9fbd",
+    "bytes": 2702
+  },
+  "F010": {
+    "path": "experiments/F010-fixed12-final-engineering-HOLD-20261020.json",
+    "sha256": "859970709d6353c4c93b81443f8ed24f0321aba46696349af4a9a4da1f283561",
+    "bytes": 2567
+  },
+  "no_model_or_label_read_no_new_Save_Submit": true
+}

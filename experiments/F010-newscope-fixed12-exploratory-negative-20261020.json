@@ -1,0 +1,56 @@
+{
+  "at_UTC": "2026-10-20T03:39:34.471608+00:00",
+  "status": "EXPLORATORY_FIXED12_NO_SUPPORT_FOR_LAST4_OLD_HOLD_RETAINED",
+  "policy": {
+    "path": "artifacts/research/20261020-F010-fixed12-exploratory-diagnostic-v1/policy.json",
+    "bytes": 2445,
+    "sha256": "3aebcaab16ba5d7eb9d2e16365945891c214dcf42eece1ea8ec059af8c1183b4"
+  },
+  "diagnostic": {
+    "path": "artifacts/research/20261020-F010-fixed12-exploratory-diagnostic-v1/diagnose.py",
+    "bytes": 10220,
+    "sha256": "146249d681c890ece5f3b20112256ec1cde6b110861e4808abaa8823be8d04c1"
+  },
+  "result": {
+    "path": "artifacts/research/20261020-F010-fixed12-exploratory-diagnostic-v1/result.json",
+    "bytes": 11289,
+    "sha256": "5aef1c6ac6c5bc5621ee83c88e57bde5f8287e49187671573e8bbf573cc53073"
+  },
+  "tests": {
+    "stdlib_unittest": 3,
+    "result": "PASS",
+    "scope": "exact known counters and all-other-original metadata AST preservation"
+  },
+  "weak_fixed10_mean": {
+    "control": 0.8831284034612052,
+    "candidate": 0.8789945104193387
+  },
+  "weak_fixed10_delta": -0.004133893041866543,
+  "paired_group_bootstrap_report_only": {
+    "valid_resamples": 1000,
+    "undefined_resamples": 0,
+    "percentile_95_interval": [
+      -0.013539201969468152,
+      0.005372340495381104
+    ]
+  },
+  "counters": {
+    "control": {
+      "updates": 2544,
+      "opportunities": 2544,
+      "AMP_skips": 0
+    },
+    "candidate": {
+      "updates": 2543,
+      "opportunities": 2544,
+      "AMP_skips": 1
+    }
+  },
+  "old_engineering_HOLD_unchanged": true,
+  "old_engineering_qualified": false,
+  "adoption_release_fold1_Submit_eligible": false,
+  "own_Gold_reads": 0,
+  "otherfold_label_interpretations": 0,
+  "Public_gain_established": false,
+  "decision": "Current fixedE12 diagnostic does not support repeating last4 capacity experiment; prioritize teacher-quality and other independent diversity. Wide CI includes0; do not claim proven true harm. No checkpoint/target/alpha rescue. Existing GPU job preserved."
+}

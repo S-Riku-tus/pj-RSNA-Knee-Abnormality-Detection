@@ -1,0 +1,274 @@
+{
+  "schema_version": "F009_P039_parent_fixed20_two_CLS_conditional_transport_comparison_v1",
+  "declared_at_UTC": "2026-10-17T09:01:46.700547+00:00",
+  "status": "CONDITIONAL_FUTURE_COMPARISON_PLAN_ONLY_NOT_MODEL_RELEASE",
+  "goal": {
+    "own_confirmed_Public_best": "0.958",
+    "target_Public": "0.960",
+    "achieved": false
+  },
+  "declaration_timing": {
+    "fold0_result_already_known": true,
+    "fold1_fit_already_started": true,
+    "fold1_recorded_epochs": 2,
+    "fold1_metric_values_projected_inspected_or_used_for_this_plan": false,
+    "before_first_recorded_fold1_metric": false,
+    "before_final_fixed_E12_comparison": true,
+    "fully_prefit_preregistration": false,
+    "run_snapshot_counter_scope": {
+      "path": "artifacts/runs/f009-gamma-late-cosine-fold1-20261017-v1/run.json",
+      "bytes": 71458,
+      "sha256": "1c857d86c0d8c2f15f0b5af849b7c6f6284abb0b851b60b4c161cb959b231ca5",
+      "counters_only": [
+        {
+          "epoch": 1,
+          "optimizer_steps": 208,
+          "optimizer_step_opportunities": 208,
+          "amp_skipped_steps": 0,
+          "elapsed_seconds": 1712.8406644999923
+        },
+        {
+          "epoch": 2,
+          "optimizer_steps": 208,
+          "optimizer_step_opportunities": 208,
+          "amp_skipped_steps": 0,
+          "elapsed_seconds": 3430.0505111000093
+        }
+      ]
+    }
+  },
+  "explicit_departure_from_old_transport_plan": {
+    "old_summary": {
+      "path": "artifacts/research/20261017-f009-future-transport-design-v1/summary.json",
+      "bytes": 3477,
+      "sha256": "38493a05aca50151f992cfc06cdc1c9145bdb258635641cef2857b6679bec597"
+    },
+    "old_serving_plan": {
+      "path": "artifacts/research/20261017-f009-serving-transport-plan-v1/plan.json",
+      "bytes": 11689,
+      "sha256": "51742dc60d11769b9c616fda71083ce032afd142611c8ec24b7134922ff54b51"
+    },
+    "old_files_not_modified": true,
+    "old_parent": "P029M957 with whole-extension parent rollback allowed",
+    "new_control": "Already qualified P039 V1 with ownP033958 parent and fatal whole-extension/no-active contract. P039 ownPublic itself is still unknown.",
+    "reason": "Preserve the strongest own confirmed parent and compare the gamma-trained CLS pair to the already qualified corresponding F006 native20 control. This choice follows confirmed ownP033958, not fold1 performance."
+  },
+  "frozen_control": {
+    "ref": "rsraki/p039-p033-native20-20261017-v2",
+    "kernelId": 139182563,
+    "version": 1,
+    "source": {
+      "path": "artifacts/kaggle/p039-p033-native20-20261017-v2/source.ipynb",
+      "bytes": 564930,
+      "sha256": "6453b3d09787abab07205d832c0176f0e78d050127e98d83c9f835bc5f799452"
+    },
+    "manifest": {
+      "path": "artifacts/kaggle/p039-p033-native20-20261017-v2/manifest.json",
+      "bytes": 28440,
+      "sha256": "a5b6109cdfba4c198550daa53efcfc029325f94ebe97de721278b8f31d18043e"
+    },
+    "policy": {
+      "path": "artifacts/kaggle/p039-p033-native20-20261017-v2/policy.json",
+      "bytes": 1020,
+      "sha256": "573ea6d2d1f7cc57844fc6018c07f751657d7b5b5c637603230f1a55b9af5d54"
+    },
+    "parent_source_sha256": "57284b71d271c3d4bf09595a6acade490ea911c8f7438a595724f260f3f28ccb",
+    "parent_eight_code_cell_sha256": [
+      "411e9598b806757de14adf8de6e586eae3209c0460797f8e24eeb65fdf960536",
+      "3858126b82681ba469934c84a79f360eb199df59c16159b7a168df94e415cb37",
+      "d08db7bd194a78dac8c923a50048d098dd297223cc971e0fec40ba996d840e78",
+      "0b0545b46407a46d5a4ebd6a1a941b24103e62844feffda96d6fc37a48cff090",
+      "10e20e388df7fed2aaecc900cfdebb294735eea8965924748d31d4db28d6d823",
+      "93b631c8b857a0f8f02671cf3e3833043f964f536cce6d46e44118d9550a6a0c",
+      "68f70dd31cc3544cb5734313d06538355a34b122ff430a32820756175c9c9dd9",
+      "a2c0b0d7294d76171d7c461962ca5b44f1148f2bc6fe30bb936ab1673dd2cde1"
+    ],
+    "parent_class_weights": {
+      "raptor": 0.5,
+      "ours": 0.5,
+      "raptor_per_class": {
+        "Medial OA": 0.5,
+        "Lateral OA": 0.2,
+        "PF OA": 0.6,
+        "Synovitis": 0.8,
+        "Baker's": 0.35
+      },
+      "a224": 0.35
+    },
+    "parent_R6_fourfold_TTA": true,
+    "parent_Raptor224_mirror_probability_TTA": false,
+    "actual_visible_audit": {
+      "path": "artifacts/research/20261017-p039-execution-v1/root-actual-output-audit-v1.json",
+      "bytes": 12663,
+      "sha256": "c05934ae1a97211c463d3d4082ba5ceadeb01c649cc81cdd5ab32e350bcc9eb9"
+    }
+  },
+  "intended_intervention": {
+    "only_deployment_role_replacements": [
+      "CLS:0 F006selectedE12 -> actualqualifiedF009fixedE12fold0",
+      "CLS:1 F006selectedE12 -> actualqualifiedF009fixedE12fold1"
+    ],
+    "training_factor": "Same study-common gamma already fixed in existing F009 config; no new gamma range/seed/fold/target/epoch/alpha search.",
+    "replace_both_or_hold": true,
+    "old_REG_fingerprints": {
+      "REG:0": {
+        "model_class": "rsna_knee.regional_triplet_model.RegionalTripletMIL",
+        "checkpoint_sha256": "8ff42302a8a54e8e8caa3e089f176c73144bc79c5577f0990c6efeba47d881ad",
+        "frozen_prefix_sha256": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+        "encoder_suffix_tensor_sha256": "278f20295b1729faa80deea972685f038b3edffde2ed37e0523ffa183324818e",
+        "head_tensor_sha256": "1b5bcabba082ef67f197037214884162efae4195c62386dc102224b9f4583f8c",
+        "CPU_receipt_sha256": "3e441a7f6b712e02698ac6ffdd03af0e22188a9ccc1014c55b2bf941d1adb2fa",
+        "run_json_sha256": "a46f9e82f0105727a35bd770c0b903f74f121e8f9e2193d488a60b427a042e36",
+        "selected_epoch": 8,
+        "weak_bce": 0.28030224999122455
+      },
+      "REG:1": {
+        "model_class": "rsna_knee.regional_triplet_model.RegionalTripletMIL",
+        "checkpoint_sha256": "eb640d7662cfaeb7df2d998a5f0f219494ccc0494abea91d0e95d7bbb1ac0714",
+        "frozen_prefix_sha256": "67a05dff5f621b78dc8b16cee95a56aea314437806637950ad8336a4ab522347",
+        "encoder_suffix_tensor_sha256": "c9ac9728d1145a253144c0383c3dd3a6cf742e541822eb5a2b10823b1ec981b6",
+        "head_tensor_sha256": "2785d46eb7be0164a3d1fdd245945210e10ee34fc60dc18835ec02478d16cd62",
+        "CPU_receipt_sha256": "addb97d372643e848c858e39154cbc9e805a6efc1c6cbf7c963b8e189111a237",
+        "run_json_sha256": "9367b74d0346d18a7e8daee6508a9ba411233509529ef2e15f19901ceec06b70",
+        "selected_epoch": 10,
+        "weak_bce": 0.2779688899362838
+      }
+    },
+    "old_REG_transport_refs": {
+      "REG:0": {
+        "input_root": "/kaggle/input/datasets/rsraki/n392rg-f0-8e978296019046e3a9fff8fcb6a4901f",
+        "dataset_ref": "rsraki/n392rg-f0-8e978296019046e3a9fff8fcb6a4901f/1",
+        "manifest_sha": "205cbc3c2ca006f80c6af0755c0dca22d332a4e1bdc6c1fd8f0555c6f8962de9",
+        "archive_sha": "dcce9e2629fb1be4940b0dbaf96108cbd36779df97c6621212beb54b97be02ee",
+        "bundle_sha": "1520eba01499b6c456f88013bfde35ebd76574a87fa6381ffeeee441f3361c37",
+        "root_permission": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261012-p018-regional-bytes-root-v1\\fold0-transport-permission.json",
+        "root_permission_sha": "84afcab13cf48bf4424d6c23d77687099c1238ebceaf7c2dae288af6ac65acd8",
+        "peer_review": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261010-f005-regional-transport-independent-review-v1\\review.json",
+        "peer_sha": "6102ea4107e18243cf2d7f73acdfe92e56e59dce30f358ad2d2be321b516345b"
+      },
+      "REG:1": {
+        "input_root": "/kaggle/input/datasets/rsraki/n392rg-f1-82087594dae443ab82a701d9750b661a",
+        "dataset_ref": "rsraki/n392rg-f1-82087594dae443ab82a701d9750b661a/1",
+        "manifest_sha": "fdf6f6f433659c586ee8a2b392a206fd1b54c1556cd84f4b3dd339db3a9a1c72",
+        "archive_sha": "fcd685be3cb030b87892939b0b82b03fe5eb6c2ba44659bd88dfd8e4f1bd87f5",
+        "bundle_sha": "088df29f855afd0e69814b48e8b63383cac339e5376c09f6aeee8d1903fd7760",
+        "root_permission": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261012-p018-regional-bytes-root-v1\\fold1-transport-permission.json",
+        "root_permission_sha": "6f1b852cd7af7c3054adc9e55424ffd21f8636fca1e0417b9ab551cbef6277a4",
+        "peer_review": "C:\\Users\\Casper4\\Python\\ueki\\shibasaki\\pj-RSNA-Knee-Abnormality-Detection\\artifacts\\research\\20261010-f005-regional-transport-independent-review-v1\\review.json",
+        "peer_sha": "6102ea4107e18243cf2d7f73acdfe92e56e59dce30f358ad2d2be321b516345b"
+      }
+    },
+    "logical_native_models": 4,
+    "two_T4_replica_objects": 8,
+    "native_aggregation": "Same four full native model forwards and FP32 fold and family means; no shared-prefix forward; immutable inputs.",
+    "native_alpha": 0.2,
+    "native_targets": [
+      "ACL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ],
+    "parent_only_targets": [
+      "MCL",
+      "Synovitis"
+    ],
+    "numeric_contract": {
+      "native_weight": 0.2,
+      "parent_reranked": false,
+      "final_reranked": false,
+      "FP32_separate_multiply_add": true,
+      "native_rank_population": "N_valid_successful_studies",
+      "failed_native_cells_retain_parent_text": true,
+      "partial_constant_native_contributes": false
+    },
+    "integration_contract": {
+      "native_weight": 0.2,
+      "parent_reranked": false,
+      "final_reranked": false,
+      "FP32_separate_multiply_add": true,
+      "structural_failure_disables_entire_native_column": false,
+      "native_rank_population": "N_valid_successful_studies",
+      "failed_native_cells_retain_parent_text": true,
+      "partial_constant_native_contributes": false,
+      "complete_coverage_matches_P032_numeric_contract": true,
+      "native_child_timeout_or_exception_retains_parent_CSV_and_records_no_comparison": false,
+      "whole_notebook_budget_seconds": 30600,
+      "final_reserve_seconds": 300,
+      "diagnostic_native_budget_limit_seconds": 3600,
+      "serving_native_budget_limit_seconds": 28800,
+      "old_S6_parent_gate_or_two_controller_cleanup_not_reused": true,
+      "whole_extension_failure_restores_parent_artifact_but_raises": true,
+      "all_native_disabled_is_fatal": true
+    },
+    "unchanged_UID_executor": "Owned perUID children, 180seconds UID bound, same workers/queues/reap/cleanup/union and remaining-time budgets."
+  },
+  "immutable_local_evaluation": {
+    "policy": {
+      "path": "experiments/f009-fold1-fixed12-joint-screen-premetric-amendment-v2-20261017.json",
+      "bytes": 11987,
+      "sha256": "bf53e1828784df4d0da793cea6014f055ca9e5948dc5013cf368b646dd328a90"
+    },
+    "wrapper": {
+      "path": "artifacts/research/20261017-f009-fold1-amended-evaluator-v2/evaluate_amended.py",
+      "bytes": 14657,
+      "sha256": "bcf9fbe5dad5c7f1faae6761548b1d8786d5a24d1c25525f5e9f5d2ea289bcce"
+    },
+    "fold0_and_fold1_standalone_F006_controls_unchanged": true,
+    "both_fold_fixed10_AUC_deltas_strictly_positive_required": true,
+    "fixed_epoch": 12,
+    "seed": 20261002,
+    "candidate_all_epochs_zero_AMP_skips_required": true,
+    "only_legacy_control_exception": "Exact historical F1control E10skip1; unchanged candidate2496 vs oldcontrol2495 updates disclosure.",
+    "legacy_v1_HOLD_unchanged": true,
+    "BCE_CI_REG50": "Report only; no rescue/selection.",
+    "parent_choice_changes_weak_evaluator_or_threshold": false
+  },
+  "required_before_actual_new_candidate": [
+    "Actual completedF1 E12 and unchanged one-time amended evaluation; root reviews six bound qualification documents. Nonpositive eitherfold or engineering failure => HOLD; no singlefold rescue.",
+    "Fresh strictCPUv2 actual proofs for both E12 checkpoints, actual source/config/run/index/generic/tensor validation; sealer3 fresh localpair. Existing preparation alone does not qualify actualmodels.",
+    "New mixed-role runtime binder/constructor/source registry and new metadata-bound class/source/tensor fingerprints; retain exact oldCOMMON/REG. Do not silently use oldCOMMON class for F009.",
+    "All14 pinned F009 modules (core8+support6) and generatedinit included where needed; derive exact new whole-runtime inventory, do not assert old89 or call this a new15th scientificmodule.",
+    "Fresh descriptors/bundle/transport bytes SHA; new two CLS privateInput refs+versions, same oldREG refs and parentInputs; no MRI/cache/Report/weakGoldlabels in payload. Planned9Inputs is a structural target, actualinventory must be verified.",
+    "AfterGPUfree actual artificialforward/evalgamma0+RNGunchanged/model+storageindependence/FP32 aggregation and submit-contract checks; no localGPUtest while currentfit runs.",
+    "Manual authorized private transport upload and Save only after concrete source review; new diagnostic on the same192 cohort and visible submission run, actual mountedsource/weights/class fingerprints and native participation, independently recomputed FP32/mask/ranks/textretention. No silent parent-only successful candidate.",
+    "Only after actual engineering/runtime qualification root fresh-checks quota, goal, savedversion/Inputs/status/duplicate; manual formalSubmit then own officialscore record."
+  ],
+  "prepared_consumers": {
+    "CPUv2": {
+      "path": "src/rsna_knee/f009_cpu_proof_v2.py",
+      "bytes": 30911,
+      "sha256": "fc2fbf7ab581bc6258817ac9fb189de966ce8b2d074b531e7bf3b642d1fe0705"
+    },
+    "sealer3": {
+      "path": "src/rsna_knee/f009_pair_stage_v3.py",
+      "bytes": 22626,
+      "sha256": "cc7c77f012c320452f0a3232196d77f38da077a6a91e1576903d6967bda157e7"
+    },
+    "namespace": {
+      "path": "src/rsna_knee/f009_source_namespace.py",
+      "bytes": 11862,
+      "sha256": "cd2b5fd71355801b67f4f4596487d42728e4974f84b10eac15155ef35c6e5526"
+    }
+  },
+  "submission_order_unchanged": "ExistingqualifiedP039 first, existingqualifiedP038 second whenallowed and own<0.960; this F009 candidate remains conditional on actualjointPASS and newKaggle qualification. No automatic jobs or permission inferred from this plan alone.",
+  "limitations": [
+    "This is a fixed CLS-pair replacement comparison, not proof of a clean randomized gamma-only effect. Old F006 E12 was historically selected across epochs; new F009 E12 is fixed prospectively and oldF1control updatecount differs.",
+    "Bothfold positive repeatedweak holdouts do not establish parent-independent OOF, patient independence, native hiddencoverage, Public gain or0.960.",
+    "OwnGold fit/select0. Known externalRaptorGold58 selection exposure stays disclosed.",
+    "CurrentF1 is live; no actualfinalcomparison, CPbody, CPUreconstruction, localpair, transport, newruntime or Publicqualification is produced by this declaration."
+  ],
+  "actions_this_plan": {
+    "new_source_config_evaluator_changes": 0,
+    "training_starts_or_stops": 0,
+    "model_MRI_CPbody_GPU_API_access": 0,
+    "automatic_upload_Save_Submit_code": 0,
+    "actual_new_candidate_Submit": 0
+  },
+  "independent_source_review": "native_runtime_diagnosis read-only review approved comparison consistency; warned14modules+init15files, timingpostrecordedE2, historicalselection differences. No actualF1 or CPbody accessed by reviewer."
+}

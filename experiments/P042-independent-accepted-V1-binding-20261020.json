@@ -1,0 +1,57 @@
+{
+  "at_UTC": "2026-10-19T16:40:34.252723+00:00",
+  "state": {
+    "raw_status_present": true,
+    "raw_status": "RUNNING",
+    "typed_status": "RUNNING",
+    "raw_failure": null,
+    "raw_omitted_status_is_SDK_default_not_error": false
+  },
+  "changed_since_previous": false,
+  "binding": {
+    "checks": {
+      "accepted_id_version_and_own_ref": true,
+      "full_source_JSON_exact": true,
+      "source_SHA_frozen": true,
+      "private_GPU_T4_offline_TPUoff": true,
+      "exact_Docker": true,
+      "exact_Input4_refs": true
+    },
+    "all_checks_passed": true,
+    "owner": "rsraki",
+    "id": 139595447,
+    "version": 1,
+    "actual_Input_mounted_version_ids_observed": false,
+    "accepted_response_pin": {
+      "path": "artifacts/research/20261020-p042-root-visible-execution-after-slot-release-v2/save-response-raw.json",
+      "sha256": "83a68ca1747e2c58625ecbe32cb44a90c1bd368d30518bfbf3b2caa1b2d9cba8"
+    },
+    "metadata_lastRunTime_not_execution_clock_evidence": "2026-10-16T16:40:33.324101600Z"
+  },
+  "read_only_calls": 2,
+  "new_Save_Submit_cancel_upload_GPU": 0,
+  "receipts": [
+    {
+      "label": "P042-saved-V1",
+      "at_UTC": "2026-10-19T16:40:34.034739+00:00",
+      "http": 200,
+      "bytes": 228659,
+      "sha256": "427a6ebab5d76d45f30a262fc36d5528f6993b0794b4a3df044d14c3f52c9070"
+    },
+    {
+      "label": "P042-status-V1",
+      "at_UTC": "2026-10-19T16:40:34.251166+00:00",
+      "http": 200,
+      "bytes": 20,
+      "sha256": "8a320f75d49b24da756707eb933391ebbd38a94fbad259c43663a4626c585475"
+    }
+  ],
+  "schema_version": "P042_independent_accepted_V1_binding_v1",
+  "submission_not_performed": true,
+  "actual_numeric_not_yet_qualified": true,
+  "evidence_summary": {
+    "path": "artifacts/research/20261020-p042-independent-admission-monitor-v1/poll-20261019T164032736412Z/summary.json",
+    "bytes": 1598,
+    "sha256": "819071b1d22ec60d029dff0aa3ef0e71dc6067eeb86a3d81ccda65b586f688ae"
+  }
+}

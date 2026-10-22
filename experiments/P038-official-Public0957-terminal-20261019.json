@@ -1,0 +1,59 @@
+{
+  "schema_version": "P038_official_terminal_change_monitor_v1",
+  "at_UTC": "2026-10-19T14:57:05.859288+00:00",
+  "observed_UTC": "2026-10-19T14:56:53.709720+00:00",
+  "submission_ref": 57391696,
+  "owner": "rsraki",
+  "state": {
+    "raw_status_present": true,
+    "raw_status": "COMPLETE",
+    "raw_score_present": true,
+    "Public": "0.957",
+    "error": null,
+    "totalBytes": 379742
+  },
+  "best_known_own_Public": "0.958",
+  "new_Save_Submit_upload_GPU": 0,
+  "P040": {
+    "raw_status_present": false,
+    "raw_status": null,
+    "raw_failure": null,
+    "typed_status": "QUEUED",
+    "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+  },
+  "P041": {
+    "raw_status_present": false,
+    "raw_status": null,
+    "raw_failure": null,
+    "typed_status": "QUEUED",
+    "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+  },
+  "main3_monitor_continues": true,
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T145652734112Z/P03857391696.json",
+      "bytes": 615,
+      "sha256": "e3abf54db4a0fa6579f85fda09ba4eb99db7122d1e8c5069a93d9a4c5a318c41"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T145652734112Z/P040.json",
+      "bytes": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T145652734112Z/P041.json",
+      "bytes": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T145652734112Z/receipts.json",
+      "bytes": 618,
+      "sha256": "de3dda438755894a05d377e14169d583a0616a80f63823f51820c607688465ef"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T145652734112Z/summary.json",
+      "bytes": 1329,
+      "sha256": "c0fbdceb43edcb89c9ebd38387bc99250ebd0b34a272942042e0720f7804cade"
+    }
+  ]
+}

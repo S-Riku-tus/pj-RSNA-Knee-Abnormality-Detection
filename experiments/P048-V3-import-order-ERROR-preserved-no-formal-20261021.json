@@ -1,0 +1,19 @@
+{
+  "at_UTC": "2026-10-21T04:05:31.172537+00:00",
+  "status": "ERROR_NO_FORMAL_SUBMIT",
+  "kernelId": 139939696,
+  "saved_version": 1,
+  "source_SHA": "18781d35d41fba78c2368e51d4f0df6d200048548d0c90ba27e63fe9333a5138",
+  "evidence": {
+    "path": "artifacts/research/20261021-P048-root-visible-execution-v1/poll-20261021T032305413266Z/summary.json",
+    "bytes": 2128,
+    "SHA": "b2dd756cade805a2f2e4628ec2a0a7ce83ebf8df8da6aeea78c9090954048dcf"
+  },
+  "cause": "prepare_package imported source14 trainer/Torch before original regional bootstrap cuBLAS environment guard. Guard preserved; fixed by lazy import after bootstrap and old strict4modelCPU guard.",
+  "restored_parent_csv_submitted": false,
+  "native_complete": false,
+  "Save_Submit_in_this_record": 0,
+  "formal_Submit_total": 0,
+  "fix": "V4 changes only f013_p039_bridge.py runtime member; scientific model/config/math unchanged",
+  "old_HOLD_unchanged": true
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": "P040P041_queued_P038_latest_readonly_monitor30m_v3",
+  "at_UTC": "2026-10-19T13:20:00.171889+00:00",
+  "interval_starting_baseline_UTC": "2026-10-19T12:50:14.933369+00:00",
+  "first_new_poll_UTC": "2026-10-19T12:52:51.755510+00:00",
+  "last_UTC": "2026-10-19T13:19:39.403577+00:00",
+  "observations": 13,
+  "total_observations_since_start": 93,
+  "selector": "latest: version_label omitted",
+  "main3_state_changes": 0,
+  "all_HTTP200": true,
+  "latest_states": {
+    "P040": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P041": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_failure": null,
+      "typed_status": "QUEUED",
+      "interpretation": "raw_status_omitted_SDK_default_QUEUED_not_failure"
+    },
+    "P038": {
+      "raw_status_present": false,
+      "raw_status": null,
+      "raw_score_present": false,
+      "Public": null,
+      "error": null,
+      "totalBytes": 0
+    }
+  },
+  "requested_temporary_D002_watch": {
+    "at_UTC": "2026-10-19T13:04:20.890926+00:00",
+    "ref": "rsraki/d002-rsna-stage-cpu-20261019-v2",
+    "kernel_id": 139616178,
+    "known_saved_version": 1,
+    "selector": "latest, version_label omitted",
+    "state": {
+      "raw_status_present": true,
+      "raw_status": "RUNNING",
+      "typed_status": "RUNNING",
+      "failure": null
+    },
+    "changed_since_previous": false,
+    "terminal": false,
+    "deadline_UTC": "2026-10-19T13:34:00+00:00",
+    "receipt": {
+      "at_UTC": "2026-10-19T13:04:20.882990+00:00",
+      "http": 200,
+      "bytes": 20,
+      "sha256": "8a320f75d49b24da756707eb933391ebbd38a94fbad259c43663a4626c585475"
+    },
+    "extra_D002_read_calls": 1,
+    "Save_Submit_GPU": 0,
+    "CPU_completion_is_not_GPU_science_or_Input_version_qualification": true
+  },
+  "D002_watch_stopped_on_root_terminal_report": {
+    "schema_version": "D002_watch_stopped_on_root_official_terminal_report_v1",
+    "root_reported_terminal_at_JST": "2026-10-19T22:04:46+09:00",
+    "root_reported_status": "COMPLETE",
+    "source": "artifacts/research/20261019-d002-root-private-cpu-execution-v2/diagnostic-output-read-v1",
+    "independent_watcher_last_observed_status": "RUNNING",
+    "independent_watcher_D002_status_calls": 1,
+    "new_confirmation_Get_performed": false,
+    "stop_requested_by_root": true,
+    "main3_monitoring_continues": true
+  },
+  "raw_QUEUED_omission_not_failure": true,
+  "missing_Public_not_zero": true,
+  "next30minute_interval_authorized_by_root": true,
+  "activity": {
+    "Save": 0,
+    "Submit": 0,
+    "upload": 0,
+    "GPU_start": 0,
+    "extra_D002_status": 1
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T125250235024Z/summary.json",
+      "bytes": 1301,
+      "sha256": "24c548b44973f4754a048dbf4e4fe76d829f8c9c867913a8a86186cd04937cb8"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T125500889264Z/summary.json",
+      "bytes": 1301,
+      "sha256": "569165a7958b8eeaf3109a7586c05c4f36dc2395976a0650d2e163a8f9ec00f5"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T125708816203Z/summary.json",
+      "bytes": 1301,
+      "sha256": "b83b7665c7fc5b337489eb84394b411dfea90d099cc2b0dcdd469a9f91fee00e"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T125925397472Z/summary.json",
+      "bytes": 1301,
+      "sha256": "02f4148cabb6058ce59511bab3b9dc77914c5af0ddcca0da42b4869e53901b9b"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T130133379641Z/summary.json",
+      "bytes": 1301,
+      "sha256": "21022b81f73285f01e299e5bec6e19e70a31399be27d2101c8ad6ded0640236a"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T130419066070Z/summary.json",
+      "bytes": 1301,
+      "sha256": "b43cad9e838e97357e881a487a6a49fa0de816fc48f5081fdd29680b981f598e"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T130626602239Z/summary.json",
+      "bytes": 1301,
+      "sha256": "251a628883b7b9ae001b6687dde45c5e5c9cea40830b50685792dc079775e069"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T130845978265Z/summary.json",
+      "bytes": 1301,
+      "sha256": "e19d8171d6276f75e344eaed59efb8f18491dab3ad2e8542436a54f0e2813a84"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T131054336503Z/summary.json",
+      "bytes": 1301,
+      "sha256": "6c6a8c85dd58dd37f3d1e909f5cdada5df0519af606d8fb2c01dd927dc1928e9"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T131303558036Z/summary.json",
+      "bytes": 1301,
+      "sha256": "36111b808542bc80b3d330911d990e18ad3413ba94bfee03746972003ce3f586"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T131511956569Z/summary.json",
+      "bytes": 1301,
+      "sha256": "1f41c41c94146af078d73df2c91ac86357a554571c6c0d72ee72e0a96c79b694"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T131729232494Z/summary.json",
+      "bytes": 1301,
+      "sha256": "7eb716c7252ad2123ad95a694027240ef43be91291d1cbd24d97bdfb5d33c00b"
+    },
+    {
+      "path": "artifacts/research/20261019-p040-p041-readonly-monitor-latest-v2/poll-20261019T131937865408Z/summary.json",
+      "bytes": 1301,
+      "sha256": "6a690087a8205a5b6b1a64e9d1afb60653be5d159c59cb6762a101f56d34a768"
+    }
+  ]
+}

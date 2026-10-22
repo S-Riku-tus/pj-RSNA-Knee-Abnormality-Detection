@@ -1,0 +1,101 @@
+{
+  "at_utc": "2026-10-17T02:49:20.761743+00:00",
+  "status": "P035_FORMAL57292346_ACCEPTED_FOUR_RESULTS_PENDING",
+  "own_best": {
+    "submission": 57225898,
+    "Public": "0.957",
+    "preserved": true
+  },
+  "goal": "own Public>=0.960 not achieved",
+  "P035_submission": 57292346,
+  "P035_ref": "rsraki/p035-isolated20-20261017-0b67f4d7b8",
+  "formal_root_review": {
+    "at_utc": "2026-10-17T02:47:48.141035+00:00",
+    "authorization": "User explicitly authorizes continued verified actual experiments and formal submissions toward ownPublic>=0.960",
+    "source_sha256": "0b67f4d7b8131b5855421e456b108c89b6a407e8a680441fd6f1b11d555ab9ea",
+    "kernel_id": 139138353,
+    "version": 1,
+    "official_visible_status": "COMPLETE",
+    "current_all4codecells_9Inputs_Docker_private_T4_offline_match": true,
+    "duplicate_submission_found": false,
+    "proofs": [
+      {
+        "path": "artifacts/research/20261017-p035-visible-independent-audit-v1/verification.json",
+        "sha256": "75a40d9e592cd5ae8ee4550e20075abcdd1e5f81c8f246f3707cda7e01d71a6d"
+      },
+      {
+        "path": "artifacts/research/20261017-p035-visible-second-independent-v1/audit.json",
+        "sha256": "e49e9a724c5140161d7e96dc36a12c78b5e4c407678b05e8c914db5ac881ec64"
+      },
+      {
+        "path": "artifacts/research/20261017-p035-diagnostic-independent-audit-v1/verification.json",
+        "sha256": "a06f71aa25909e673f88a7be970243367844194328050510ef0a41e92927a4ba"
+      },
+      {
+        "path": "artifacts/research/20261017-p035-diagnostic-independent-audit-v1/p032-p035-comparison.json",
+        "sha256": "564f7d8a3f98ff7467ba8dceaaac6ed2f54c89b42139c091ad5cb72a1384033f"
+      }
+    ],
+    "visible": {
+      "S": 3,
+      "F_structural": 0,
+      "F_operational": 0,
+      "four_fold_forwards": 12,
+      "final_FP32_and_strings_checked": 36,
+      "native_cells": 30,
+      "final_sha256": "cbb1351e91501caa53e45bae472595f0f36b3009e99a43ca820daad64f5b2831"
+    },
+    "diag192": {
+      "S": 192,
+      "F_structural": 0,
+      "F_operational": 0,
+      "four_fold_forwards": 768,
+      "FP32_values_checked": 2304,
+      "old_P032_same_cohort_and_4model_bits_mismatches": 0,
+      "old_seconds": 464.035937106,
+      "new_seconds": 869.21933452,
+      "worker_seconds_max": 21.53093851199992,
+      "deadline_seconds": 180,
+      "all_owned_reaped_and_cleaned": true
+    },
+    "risks": "New perUID spawn slower1.873x on this192; hidden whole9h and Public efficacy unverified; source-bound reader task exceptions remain fatal and outer parent fallback retained; upstream publicGold exposure inherited, ownGoldfit/select0",
+    "old3formals_not_resubmitted": true,
+    "new_formal_Submit_calls_planned": 1,
+    "limits_before": {
+      "numToday": 3,
+      "numTotal": 33,
+      "numAllowedNow": 2
+    },
+    "request_sha256": "7dbc66e00b309b0d6abc1901cbf6cc2fd645bf9c5333e00b6eec96a3b31ad529"
+  },
+  "review_sha256": "3d607daca0bcd3af60a681890b0b1f14cccc3eb0d53eb1dd8502b515dc5a2132",
+  "accepted_raw": "artifacts\\research\\20261017-p035-formal-submit-v1\\submit-response-raw.json",
+  "official_Get_ref_owner_description_filename_match": true,
+  "official_Get_url": "raw submission URL; not independent kernel identity evidence",
+  "new_four": {
+    "P033": 57290868,
+    "P034": 57291440,
+    "P036": 57291580,
+    "P035": 57292346
+  },
+  "official_snapshot": "artifacts\\research\\20261017-four-formal-observer-v1\\poll-20261017T024821156798Z",
+  "new_score_status_fields_absent": true,
+  "official_limits": {
+    "numToday": 4,
+    "numTotal": 34,
+    "numAllowedNow": 1
+  },
+  "F009": {
+    "run": "artifacts/runs/f009-gamma-late-cosine-fold0-20261017-v1",
+    "status": "running",
+    "last_observed_epochs": 1,
+    "unified_session": 12150,
+    "actual_python_pid": 22392,
+    "evaluation_policy": "experiments/f009-evaluation-policy-v2-prescore-20261017.json",
+    "decision": "finish fixedE12; no interim adoption"
+  },
+  "P037": "GoodV26 multi-factor public958 fixed recipe prepared offline; CPU preflight-only ready, independent review pending; newSave/Submit0",
+  "new_formal_Submit_calls": 1,
+  "old_three_Submit_retries": 0,
+  "own_new_accuracy_gain_claimed": false
+}
