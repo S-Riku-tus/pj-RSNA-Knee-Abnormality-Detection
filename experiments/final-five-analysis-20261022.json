@@ -1,0 +1,160 @@
+{
+  "schema": "final_five_readonly_research_and_exploratory_csv_analysis_v1",
+  "at_UTC": "2026-10-22T05:03:10.052910+00:00",
+  "official_observed_at_UTC": "2026-10-22T04:51:48.410831+00:00",
+  "own_Public_best": 0.958,
+  "P048_official_ref": 57464683,
+  "P048_official_Public": 0.958,
+  "owned_submissions": 44,
+  "scored": 34,
+  "scoring_exceptions": 10,
+  "pending": 0,
+  "remaining_submissions_observed": 5,
+  "final_selection_max": 2,
+  "deadline_JST": "2026-10-23T08:59:00+09:00",
+  "goal959_verified": false,
+  "next_priority": "P048 native alpha .20 to .10 only",
+  "proxy_scope": "Reused weak fixed10 on809/855; heldout R6+native proxy; not P033 whole OOF or official12/Public estimate; no patient independence assertion",
+  "seed": 20261002,
+  "weak_folds": [
+    0,
+    1
+  ],
+  "FP32_alpha20_to10_deltas": [
+    0.0009419653969195974,
+    0.001625455546772847
+  ],
+  "FP64_alpha20_to10_deltas": [
+    0.0009663165698573506,
+    0.001615765328910057
+  ],
+  "fixed_E10E11E12_snapshot_deltas": [
+    -0.0009552912957024873,
+    -0.0003465919687846153
+  ],
+  "snapshot_decision": "reject both negative; no further epoch set search",
+  "CNN_state": {
+    "F014": "failed MemoryError;3 completed epochs;noE12/fold1",
+    "F015": "failed MemoryError;0 completed epochs;noE12/fold1"
+  },
+  "planned_only": [
+    {
+      "id": "P049",
+      "parent": "P048 V4",
+      "factor": "native_alpha",
+      "from": 0.2,
+      "to": 0.1
+    },
+    {
+      "id": "P050",
+      "parent": "P033",
+      "factor": "one prespecified class coefficient vector",
+      "Raptor_weights": {
+        "Lateral OA": 0.25,
+        "PF OA": 0.55,
+        "Synovitis": 0.75,
+        "Baker's": 0.4,
+        "all_other": 0.5
+      }
+    },
+    {
+      "id": "P051",
+      "parent": "P049 planned",
+      "factor": "exact P041 Reader end overlay after P049 output",
+      "condition": "deprioritize if P049 official<=.957; separate current execution qualification required"
+    },
+    {
+      "id": "P052",
+      "parent": "P033",
+      "factor": "A224",
+      "from": 0.35,
+      "to": 0.2
+    },
+    {
+      "id": "P053",
+      "parent": "P033",
+      "factor": "A224",
+      "from": 0.35,
+      "to": 0.5,
+      "reservation": true
+    }
+  ],
+  "new_training_realMRI_newforward_modeldownload_tensorload_upload_Save_Submit_finalSelection": 0,
+  "own_Gold_numeric_fit_or_selection": 0,
+  "environment": {
+    "python": "3.12.13 (main, Jun 11 2026, 04:05:29) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "win32"
+  },
+  "evidence": [
+    {
+      "path": "artifacts/research/20261022-final-readonly-state-v1/observation-20261022T045148409831Z/summary.json",
+      "bytes": 7897,
+      "sha256": "f921cfd68a49ccf8dce182fd74a4afe830a9617f1eac87ca78ebbb2d4b9e1f3c"
+    },
+    {
+      "path": "artifacts/research/20261022-final-readonly-state-v1/observation-20261022T045148409831Z/owned-Get-57464683.json",
+      "bytes": 711,
+      "sha256": "d7daa8e67f19ada2cb26a261bd4325646b0b43d659acb0961bd55e0b88ab5707"
+    },
+    {
+      "path": "artifacts/research/20261022-final-readonly-state-v1/observation-20261022T045148409831Z/owned-full-list.json",
+      "bytes": 22539,
+      "sha256": "6a8d35a3bdd0b00069d7f316fd19ed1282b4817877b9ab217b14e5df35947ccd"
+    },
+    {
+      "path": "artifacts/research/20261022-final-readonly-state-v1/observation-20261022T045148409831Z/owned-limits.json",
+      "bytes": 33,
+      "sha256": "b49c92449aca7773be4b41cf0f434da9d3d387846167c4e459976bcd1aba1b9f"
+    },
+    {
+      "path": "artifacts/research/20261022-native-r6-proxy-v1/root-reproduction-v1/proxy.json",
+      "bytes": 52836,
+      "sha256": "e37f99f675cead2b05e5dbadf6dc4bfa727dfc5d4b4d7b338e866bbd48b6d049"
+    },
+    {
+      "path": "artifacts/research/20261022-native-r6-proxy-v1/root-reproduction-v1/snapshot.json",
+      "bytes": 5801,
+      "sha256": "f2358f3f84a39e9c2274954ce0566fd771390ce7e94fce3fc031482cdeebdd38"
+    },
+    {
+      "path": "artifacts/research/20261022-native-r6-proxy-v1/root-reproduction-v1/inputs.json",
+      "bytes": 26999,
+      "sha256": "bb67c782857f3917e8d9530d6a7646c856c06d4105aa2ae3e044b7019563f309"
+    },
+    {
+      "path": "docs/goal959-analysis-20261022.md",
+      "bytes": 13460,
+      "sha256": "2c8b9f6282c7dc0d88b5ce402ce2fae3667103b782307b09247149da925241e2"
+    },
+    {
+      "path": "docs/audit-handoff-history-20261022.md",
+      "bytes": 15882,
+      "sha256": "e7a2a61d782a9b243b75ec4fab226d058d9e2372aa99c1abce6fddca154cf3bb"
+    },
+    {
+      "path": "docs/audit-handoff-public-20261022.md",
+      "bytes": 11459,
+      "sha256": "91eb92f2818c8eb4e3f8d4d6cbac087b9b04b3f6c7875d936d68e296c5211d7d"
+    },
+    {
+      "path": "docs/audit-handoff-validation-20261022.md",
+      "bytes": 15581,
+      "sha256": "9424b403faa293ce4cbb89ed36de62ddb0b928fc8c3d7a891fb79d4d58de9375"
+    },
+    {
+      "path": "artifacts/research/20261022-public-final-audit-v1/score_descending.json",
+      "bytes": 382626,
+      "sha256": "85c705ff7f018a4511adb789f4f02633eab4c1573e4c8ca1609947e8d250c187"
+    },
+    {
+      "path": "artifacts/research/20261022-public-final-audit-v1/top958-version-comparison.json",
+      "bytes": 1139,
+      "sha256": "f53d17dd59b6db5e65d809b9c4998cb22d4edacef501ac5d35b6e5755c41ea07"
+    },
+    {
+      "path": "artifacts/research/20261022-public-final-audit-v1/all-competition-pages.json",
+      "bytes": 58974,
+      "sha256": "9eeba58a4c7bb147bd9c83e91f4f702dd01432af9b8286952402da0ec26b388d"
+    }
+  ]
+}

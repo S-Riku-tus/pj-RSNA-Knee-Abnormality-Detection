@@ -1,5 +1,19 @@
 # RSNA Knee プロジェクトの現在地
 
+**2026-10-22 14:32 JST・GPU解放後の再分析：既存native20→10%案の優先を維持し、Tinyの新規2fold学習を条件付きで再検討します。実学習は開始していません。** [追加分析](docs/gpu-free-analysis-20261022.md)。14:25のRTX 4090は851/24,564MiB・2%、物理RAM空17.71GiB・commit空30.74GiBでした。旧Tinyの失敗はホストcommit枯渇で、学習可能性を一律に外す理由は弱まりました。旧runの推論checkpointにはoptimizer/scaler/RNGがなく、E3から厳密には再開できません。
+
+人工入力だけのGPU競合測定では、Tinyの92有効窓forward/backward中央値が単独0.08351秒、2process各0.23706/0.23700秒、144窓は0.12818秒→0.36700/0.36659秒でした。重み不変・optimizer更新0、計測process終了済みです。GPU部分は約2.8倍遅く、並列が実epochを短縮するかは画像キャッシュI/O込みでは未測定です。新規学習を行うならTiny一案へ絞り、実epoch速度で00:30までの固定E12両fold完了を見込める場合だけ最終候補の経路とする計画です。CNNのKaggle接続には未実装部分があり、その完成・両fold/既存REGとの補完性・CSV資格が必要です。
+
+学習窓48→24案はmetadataとmaskの独立集計で有効窓386,196→294,684（23.7%削減）にとどまり、学習時間半減の案ではありません。F013 encoderごとの最終特徴cacheは未作成で、手元F007 cacheは旧F005 E8/E9由来です。公開train/eval samplingとtwo-stage学習も調査しましたが、今回の主学習案へ追加の前処理・teacher・head変更を重ねません。今回は追加調査、checkpoint命令列/metadataの監査、人工GPU計測までで、実MRI・実学習・重み取得・外部アップロード・Save/Submitは0です。
+
+**2026-10-22更新：公式Public最高0.958、目標0.959は未達。P048 ref57464683はCOMPLETE／0.958で、13:51:48 JSTの本人Get/List/limitsは残5枠・全44件終端（34件採点、10件例外）でした。** [今回の統合分析と5候補](docs/goal959-analysis-20261022.md)、[公式観測](artifacts/research/20261022-final-readonly-state-v1/observation-20261022T045148409831Z/summary.json)。以下の過去の採点待ち・残枠・学習中は各時点の履歴です。
+
+全実験台帳405記録と正式44提出を照合し、[履歴監査](docs/audit-handoff-history-20261022.md)へまとめました。[当日の公開調査](docs/audit-handoff-public-20261022.md)は公式スコア上位100件の作者最高0.958、最高6件のsource/Input不変を確認し、再現可能な新公開0.959以上を今回の範囲では発見していません。当日Rulesで日次5件・最終選択最大2件、締切10月23日08:59 JSTを再確認しました。
+
+[既存CSVの補完性診断](docs/audit-handoff-validation-20261022.md)では、R6＋F013 native家族50%の比率20→10%がweak10でbank0 +0.000941965／bank1 +0.001625456、FP64でも両bank正でした。rootの別Python環境でも同じ数値を再現しました。Raptorを含むP033全体のOOFではなく、実親の分布・2fold平均・公式12所見との差があるため、Public改善の予測には使いません。まずP048の比率だけを10%へ減らす案を優先し、所見別配合の逆方向、Readerとの組合せ、A224両側を残りの探索候補とします。最後3epoch平均は両fold負で棄却しました。
+
+F014 Tiny／F015 Smallは実runでMemoryErrorによるfailed、TinyはE3完了・Smallは完了epoch0で、E12・fold1はありません。ホストcommit枯渇の証拠があり、両CNNは現有の最終候補から外します。今回は読み取り調査と保存CSV診断だけを行い、新学習・実MRI推論・モデル取得・外部アップロード・Save・Submit・最終選択操作は0です。既存GPU処理と旧runを維持しています。
+
 **2026-10-21 13:25 JST・公式bestは0.958、目標0.959は未達です。P048 V4（正式ref57464683）は同一IDのGetで採点待ち（status/Publicともnull）を確認し、本日の残りは4枠です。ConvNeXt TinyとSmallは両方fold0の固定E12学習中です。** 以下の過去時刻の記述は履歴です。
 
 Tinyはlauncher PID20048／実Python PID26668／exec82461、Smallはlauncher PID7792／実Python PID26468／exec48503で生存を確認しました。既存ユーザー処理PID19472の自然終了後に開始し、停止・優先度変更はしていません。[Smallの開始記録](experiments/F015-ConvNeXtSmall-artificial-qualified-fold0-running-20261021.json)では公式generic重みのSHA確認、実RTX4090の人工12項目PASS（全144window forward/backward・厳密復元・prefix不変・使用量1,108MiB）、元F006/Tinyと同一の3,386学習/821検証・入力hashを確認しました。Tinyの保護source16も不変です。開始前の空きはVRAM21,564MiB、RAM16.88GiBでした。Tinyの256件間隔が3回連続210秒超、fold見込み12時間超、または空きRAM4GiB未満なら、SmallだけをSTOP_REQUESTEDで停止する条件を事前固定しました。精度を見て並行候補を選んだわけではありません。

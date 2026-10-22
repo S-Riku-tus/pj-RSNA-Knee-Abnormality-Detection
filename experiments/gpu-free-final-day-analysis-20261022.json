@@ -1,0 +1,57 @@
+{
+  "schema": "gpu_free_final_day_research_and_synthetic_capacity_analysis_v1",
+  "at_UTC": "2026-10-22T05:33:35.343942+00:00",
+  "scope": "Research and synthetic GPU timings; no real MRI forward or fitting",
+  "own_public_best_last_verified": 0.958,
+  "official_quota_last_verified": 5,
+  "official_observed_at_UTC": "2026-10-22T04:51:48.410831+00:00",
+  "deadline_JST": "2026-10-23T08:59:00+09:00",
+  "GPU_memory_released_confirmed": true,
+  "primary_inference_candidate_unchanged": "P048 native alpha .20 to .10",
+  "learning_recommendation": "At most one Tiny twofold fresh fixedE12 scope; only if measured real-epoch budget and host memory allow. Keep existing candidate work independent.",
+  "parallel_GPU_only_speed": "per-process slowdown2.84/2.86; total throughput~70%ofsingle. Not actualepoch slowdown.",
+  "unmeasured": "Actual twofold realdata epoch time, host I/O contention, learning efficacy and serving turnaround.",
+  "resume_supported": false,
+  "new_learning_or_clinical_data_used": false,
+  "CNN_serving_runtime_ready": false,
+  "proposed_time_budget": {
+    "start_JST": "2026-10-22T15:00 to15:30",
+    "fixedE12_bothfold_ready_before_JST": "2026-10-23T00:30",
+    "formal_submit_target_JST": "2026-10-23T01:00 to02:00",
+    "policy": "Operating targets only; not KaggleSLA or completionguarantee"
+  },
+  "reserved_slots_for_new_learning": 1,
+  "trainbag24_forward_reduction": 0.23695739986949627,
+  "new_training_realMRI_forward_weight_download_upload_Save_Submit": 0,
+  "synthetic_measured_forward_backward_cycles": 144,
+  "local_links_checked": 8,
+  "immutable_source_input_hashes_checked": 13,
+  "sources": [
+    {
+      "path": "docs/gpu-free-analysis-20261022.md",
+      "bytes": 16377,
+      "sha256": "8c1670a9a30f2831d59a1ccc420951d7b2262f0b8013f2de8b41775d19948790"
+    },
+    {
+      "path": "artifacts/research/20261022-gpu-free-root-analysis-v1/evidence.json",
+      "bytes": 6312,
+      "sha256": "de903c8798cf88de02c9ca6a19f702a4f8555b02692b0f8b064e2db5a28578bd"
+    },
+    {
+      "path": "artifacts/research/20261022-gpu-free-root-analysis-v1/concurrency_benchmark.py",
+      "bytes": 6852,
+      "sha256": "cf4351e7b9d2b6a65e033a142fc54f419d2aa1ebf5e7a79f6a660a8246fa0e98"
+    },
+    {
+      "path": "artifacts/research/20261022-gpu-free-root-analysis-v1/synthetic-concurrency-v1/summary.json",
+      "bytes": 9162,
+      "sha256": "4218f40a6dffb9e9cb33217aa993b27a24da75f158f29d121799722c7247c0e5"
+    }
+  ],
+  "web_primary_sources": [
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/749359",
+    "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/746792",
+    "https://github.com/mmatmath/rsna-knee-two-stage",
+    "https://docs.pytorch.org/tutorials/beginner/saving_loading_models.html"
+  ]
+}

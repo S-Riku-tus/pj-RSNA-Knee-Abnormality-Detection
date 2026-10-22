@@ -1,5 +1,23 @@
 # 準備内容の検証範囲
 
+**2026-10-22 14:32 JST・GPU解放後の追加分析と人工計測を完了。実学習・実画像forwardは未開始です。** [分析全文](gpu-free-analysis-20261022.md)、[実測/入力hash](../artifacts/research/20261022-gpu-free-root-analysis-v1/evidence.json)。旧Tiny E3/F006 E12/F013 E12のcheckpointはpickle命令列と生成sourceを照合し、optimizer・scaler・RNG・Generator状態の不在を確認しました。tensorはこのcheckpoint監査ではロードせず、旧run・重みを改変していません。
+
+[人工GPU並列計測](../artifacts/research/20261022-gpu-free-root-analysis-v1/synthetic-concurrency-v1/summary.json)は既存generic Tiny重みのSHA・元config・元constructorを使い、1/2process、92/144有効窓、warm3＋計測24回のforward/backwardを比較しました。92窓の中央値0.08351秒→各0.23706/0.23700秒、144窓0.12818秒→各0.36700/0.36659秒で、GPU連続処理は2processの総throughputが約70%です。全parameterの計測前後digest一致、finite出力/勾配、optimizer作成/更新0、実画像・ラベル読取0、全helper終了を確認しました。人工勾配・padding・同期・キャッシュI/O不在の限界があり、実epoch並列の有利/不利や8–10時間完了を証明しません。
+
+GPU空きと物理/commitメモリの回復は新学習を再検討する材料です。新規両foldの先行固定は旧fold0→fold1の節約運用を別scopeで変更する提案で、旧policyを上書きしません。両fold固定E12と現在のREG/F013家族対照、R6 native10 proxy、source/有限性/復元/serving/CSVは別に確認する必要があります。CNN previewは実行を拒否する未実装runtimeで、現時点の提出資格ではありません。
+
+減窓の追加独立集計は画像/feature値を使わずmask.npyのhash一致4,207件から有効窓数だけを計算し、元pixel summaryの集計と完全一致しました。最大24窓で削減23.7%、検証全窓込みのforward件数比約81%。I/O/逆伝播を含む速度測定ではなく、精度改善も未測定です。新しい学習・実MRIデコード・モデル取得・外部書込み・Save/Submitは行っていません。
+
+**2026-10-22更新：本人の公式最高0.958・目標0.959未達、P048 ref57464683も正式COMPLETE／0.958です。13:51:48 JSTのGet/List/limitsで全44件終端（34件採点、10件例外）、残5枠を確認しました。** [今回の本人公式観測](../artifacts/research/20261022-final-readonly-state-v1/observation-20261022T045148409831Z/summary.json)は3読取すべてHTTP200、raw・byte数・SHA保存、同一refのGet/Listスコア一致を確認しています。以前のpending・残枠・学習中は履歴です。[統合分析](goal959-analysis-20261022.md)。
+
+[全履歴監査](audit-handoff-history-20261022.md)は台帳405記録と全44提出を照合しました。[公開調査](audit-handoff-public-20261022.md)は公式一覧・Notebook版/Input・当日Discussion・Rules/Timelineを読み取り、作者値と本人値を分けています。日次最大5件、最終選択最大2件、10月23日08:59 JST、Internet OFF・9時間以内を当日再確認しました。公式上位100件の作者最高0.958、上位6件のsource/Input不変はこの取得範囲での結果で、全公開資産や非公開手法の不存在証明ではありません。
+
+[再現可能なCSV診断](audit-handoff-validation-20261022.md)では、R6の既存809/855検査と各検査を除外するF006/F013/REG予測をUID結合し、予告した比率0/10/20/30/35%と家族別の全表を保存しました。F013家族50%の20→10%差はFP32で+0.000941965／+0.001625456、FP64で+0.000966317／+0.001615765です。30/35%は両bank負。標準ライブラリのみでbyte hash・UID・mask・group・writer指標・元R6資格を照合し、Torch・tensorロード・MRI・fit・networkなしです。[rootの別Python3.12再現](../artifacts/research/20261022-native-r6-proxy-v1/root-reproduction-v1/proxy.json)も同じ数値でした。代理親は順位化した単一除外foldのR6で、実際の非再順位化P033親やnative2fold平均とは異なります。再利用weak固定10所見の探索であり、全親OOF・公式12所見改善・統計的有意差・患者独立性・Public増分を主張しません。
+
+固定E10/E11/E12 snapshot平均の保存CSV診断はREG固定50%でfold0 −0.000955291／fold1 −0.000346592となり棄却しました。6CSV/checkpointのbyte hash、index、UID、全writer所見指標が一致し、macro加算順の差は最大3.3e-16です。別epoch集合を探索せず、旧F009 HOLDは維持します。F014/F015は実run/logでホストMemoryErrorのfailed、Tiny E3／Small完了0epoch、E12・fold1なしと確認し、候補資格なしと訂正します。
+
+今回のP049〜P053は計画識別名で、source生成・Save・実候補MRI・正式Submitを通過した新提出ではありません。P049案はP048 native20→10%だけ、失敗セルとMCL/Synovitisの元文字列保持、既存FP32積和・順位母集団・親/最終非再順位化を維持する方針です。実装・実出力資格と正式採点は今後の別段階で、今回の新学習・モデル取得・外部アップロード・Save/Submit・最終選択操作は0です。
+
 **2026-10-21 13:25 JST・公式bestは0.958、目標0.959は未達です。P048 V4（正式ref57464683）は同一IDのGetで採点待ち（status/Publicともnull）を確認し、本日の残りは4枠です。ConvNeXt TinyとSmallは両方fold0の固定E12学習中です。** 以下の過去時刻の記述は履歴です。
 
 Tinyはlauncher PID20048／実Python PID26668／exec82461、Smallはlauncher PID7792／実Python PID26468／exec48503で生存を確認しました。既存ユーザー処理PID19472の自然終了後に開始し、停止・優先度変更はしていません。[Smallの開始記録](../experiments/F015-ConvNeXtSmall-artificial-qualified-fold0-running-20261021.json)では公式generic重みのSHA確認、実RTX4090の人工12項目PASS（全144window forward/backward・厳密復元・prefix不変・使用量1,108MiB）、元F006/Tinyと同一の3,386学習/821検証・入力hashを確認しました。Tinyの保護source16も不変です。開始前の空きはVRAM21,564MiB、RAM16.88GiBでした。Tinyの256件間隔が3回連続210秒超、fold見込み12時間超、または空きRAM4GiB未満なら、SmallだけをSTOP_REQUESTEDで停止する条件を事前固定しました。精度を見て並行候補を選んだわけではありません。
