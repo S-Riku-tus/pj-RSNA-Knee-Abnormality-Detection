@@ -1,0 +1,176 @@
+{
+  "at_UTC": "2026-10-22T06:27:10.541370+00:00",
+  "状態": "目標0.959未達。P050正式受理・採点待ち、P049/P052可視RUNNING、Tiny両fold固定E12を新scopeで実行中。",
+  "本人": "rsraki",
+  "公式最高": 0.958,
+  "公式残枠_15時16分確認": 4,
+  "正式提出": [
+    {
+      "候補": "P050",
+      "ref": 57512319,
+      "scriptVersionId": 361027273,
+      "kernel": 140159065,
+      "version": 1,
+      "Public": null
+    }
+  ],
+  "可視実行": [
+    {
+      "候補": "P049修正版",
+      "kernel": 140158980,
+      "version": 1,
+      "source_SHA": "465beec9a8ee9d7b013a1ca88545471ee749e6c7dfd970d140346b12f47ea5e0"
+    },
+    {
+      "候補": "P052",
+      "kernel": 140160594,
+      "version": 1,
+      "source_SHA": "98c6e7876408dd388a49c20addb918fda4920a947ba9db7ae8f53dcef2fbd55e"
+    }
+  ],
+  "失敗保存": "P049初回kernel140158616はZIP形式でモデル前ERROR、正式提出なし。guard維持して無圧縮ZIPへ修正。",
+  "本人の最終選択に関する回答": {
+    "URL": "https://www.kaggle.com/code/rsraki/p050-p033-vector-reverse-20261022-v1?scriptVersionId=361027273",
+    "対応ref": 57512319,
+    "範囲": "本人回答として記録。SDKから選択状態自体は未確認。選択済みの件数や他の枠は不明。操作は行っていない。"
+  },
+  "F016": {
+    "scope_policy": "artifacts/research/20261022-F016-tiny-fresh-twofold-v1/policy.json",
+    "seed": 20261002,
+    "固定epoch": 12,
+    "両fold": {
+      "0": {
+        "run": "artifacts/runs/f016-convnext-tiny-fold0-fresh-20261022-v1",
+        "status": "running",
+        "完了epoch数": 1,
+        "完了記録_精度を含まない": [
+          {
+            "epoch": 1,
+            "elapsed_seconds": 2022.6867239000276,
+            "optimizer_steps": 212,
+            "optimizer_step_opportunities": 212,
+            "amp_skipped_steps": 0
+          }
+        ]
+      },
+      "1": {
+        "run": "artifacts/runs/f016-convnext-tiny-fold1-fresh-20261022-v1",
+        "status": "running",
+        "完了epoch数": 1,
+        "完了記録_精度を含まない": [
+          {
+            "epoch": 1,
+            "elapsed_seconds": 2018.818478000001,
+            "optimizer_steps": 208,
+            "optimizer_step_opportunities": 208,
+            "amp_skipped_steps": 0
+          }
+        ]
+      }
+    }
+  },
+  "実行条件": "新規Tinyだけ。両fold先行予算は結果前に固定。最初2完全epoch以降の遅い速度で00:30完了予算を確認し、超過なら自分の両runを停止。途中救済なし。物理空6GiB/commit空10GiB未満3連続でも停止。",
+  "CNN資格の限界": "新namespaceの既存E0人工CPU12確認のみPASS。実E12/REG結合/現2T4/MRI/hidden未確認。package/CPU/Notebook生成器は実E12資格不在を拒否。",
+  "本人Gold数値によるfit_checkpoint_係数選択": 0,
+  "患者独立性": "未確認",
+  "上流公開Gold": "従来監査を継承、本人非利用と別",
+  "新規元DICOM一括取得": 0,
+  "新datasetUpload": 0,
+  "手動Save呼出": 4,
+  "手動正式Submit呼出": 1,
+  "自動upload_Submitコード追加": false,
+  "検証": {
+    "native10_stdlib": 7,
+    "新scope_Reader_CNNguard_stdlib": 6,
+    "新namespace_E0_CPU": 12,
+    "Ruff": "今回の追加ファイルPASS"
+  },
+  "文字コード訂正": "v1はPowerShell入力ASCII変換による日本語key衝突がある無効記録。このv2と日本語文書を正本とする。今回追加した台帳5行の説明を訂正。公式P050の説明rawは保存。source/CSV/hash/公式ref/版は影響なし。",
+  "pins": [
+    {
+      "path": "artifacts/research/20261022-P050-visible-execution-v1/root-independent-actual-audit.json",
+      "bytes": 2005,
+      "sha256": "b3a4e05be3478cc7967cdd04a371d8c966c192e10f43fef572dd63a79b006fe3"
+    },
+    {
+      "path": "artifacts/research/20261022-P050-formal-submit-v1/summary.json",
+      "bytes": 451,
+      "sha256": "5f5737c0d94761bdabfbb77a3267a48f8734e82213c0ba2dee7702246b5baf2f"
+    },
+    {
+      "path": "artifacts/research/20261022-F016-tiny-fresh-twofold-v1/policy.json",
+      "bytes": 5366,
+      "sha256": "9d2c5ebba900ebdb274ef57452e90b2ff069d87cda21bf9bfbe2692b44f05f19"
+    },
+    {
+      "path": "artifacts/research/20261022-F016-new-namespace-CPU-qa-v1/result.json",
+      "bytes": 2398,
+      "sha256": "4ac4542cab7ecb0a5b2569411c405f6e375ba6f040aa5dbc2cb555e0777c12bb"
+    },
+    {
+      "path": "artifacts/research/20261022-Japanese-record-encoding-correction-v1/correction.json",
+      "bytes": 1363,
+      "sha256": "1c71272e43fb3fa24d939ff4c609176a6527b4cbef73bc8572eeaf3cf942bd1c"
+    },
+    {
+      "path": "scripts/prepare_p049_native10.py",
+      "bytes": 7280,
+      "sha256": "cae6045293af4350de826c557619ba2c881fe0c064b9c9a979ff11db3d3d1543"
+    },
+    {
+      "path": "scripts/prepare_final_p033_coefficients.py",
+      "bytes": 4658,
+      "sha256": "f07f0ad8a1e45437bb210885833ee21e7de0e8a578c5611fed27fce445015f98"
+    },
+    {
+      "path": "scripts/observe_final_candidate.py",
+      "bytes": 6714,
+      "sha256": "f2f4d05ad9454d5f8b28a6119948e2ef825343fd70314dc108d465ec8b177bf8"
+    },
+    {
+      "path": "scripts/check_final_candidate_outputs.py",
+      "bytes": 12178,
+      "sha256": "32887c029daf351bde5b6273759dacc1bcfec24e57c7ca1fc201a6bf62717838"
+    },
+    {
+      "path": "scripts/observe_final_submissions.py",
+      "bytes": 4811,
+      "sha256": "d6b0d62b34fcfebe9b9446c8ea0ab1756b39c2c2ff40788a475dc85edaa6c8d4"
+    },
+    {
+      "path": "scripts/check_f016_fixed12.py",
+      "bytes": 9132,
+      "sha256": "f1a24b41b824b478b146dbd04891976a22687c632721eb462ecef49018269701"
+    },
+    {
+      "path": "scripts/prepare_f016_serving_package.py",
+      "bytes": 4991,
+      "sha256": "4ca19f15dca2ca853184a63c44417fc481141e053e343155e1e21ca77a6c16cf"
+    },
+    {
+      "path": "scripts/f016_cnn_serving_runtime.py",
+      "bytes": 19484,
+      "sha256": "6f4a6c7a617aaf374f5c6ff2659bb28c48557f9b63ab3f720e759437476e8c84"
+    },
+    {
+      "path": "scripts/qualify_f016_package_cpu.py",
+      "bytes": 6166,
+      "sha256": "5e9d27e69ba85c1689110ffafec701c04312b6258bd7cbbd6401ec1ad2a3f0bf"
+    },
+    {
+      "path": "scripts/prepare_p053_f016_native10.py",
+      "bytes": 8192,
+      "sha256": "125668fd2fc9d0381018d61861908697cd23223a8df1b76ed9859447b1388c86"
+    },
+    {
+      "path": "scripts/prepare_p051_native10_reader.py",
+      "bytes": 6310,
+      "sha256": "320abfa692a453e7a9a6e7c761310823671fb3dd9ed387db95dd5bef688e7a6a"
+    },
+    {
+      "path": "scripts/final_day_resources.py",
+      "bytes": 1406,
+      "sha256": "83353a8c60fdb90f28917d062137a954134311cc462556db5165ecd0bbdc35b5"
+    }
+  ]
+}

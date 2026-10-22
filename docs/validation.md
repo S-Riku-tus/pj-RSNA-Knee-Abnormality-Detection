@@ -1,5 +1,21 @@
 # 準備内容の検証範囲
 
+**2026-10-22 16:18 JST：再照会は最高0.958・P050未返却・残4件です。** [Get/List/limits](../artifacts/research/20261022-final-live-state-v2/observation-20261022T071806958844Z/summary.json)。本人refとsource版は一致し、未返却を正常採点に数えていません。P049の公式live logはHTTP応答前にReadTimeout、RUNNING表示から内部段階を推定しません。CNN専用runtimeのモデル種別とgeneric factory回数を元DINO 1＋CNN 2として記録・検算するよう修正し、関連stdlib6試験とRuff PASS。元source16・実学習・既存候補sourceは変更していません。
+
+**2026-10-22 15:52 JST：F016の最初2完全epochで時間・資源条件を確認し、固定E12を継続します。精度の採否は未実施です。** [時間判定](../artifacts/research/20261022-F016-first-two-epochs-time-review-v1/decision.json)。fold0 2022.687／2003.891秒、fold1 2018.818／1997.595秒。遅い直近2epochによる見込み21:30頃は00:30予算内で、現在メモリも下限以上。実E12・全CNN servingの資格ではありません。[詳細](final-day-execution-20261022.md)。P049/P052可視RUNNING、P050正式57512319未返却、15:43公式最高.958・残4。元run/元source16/旧HOLDは維持しています。
+
+今回のPowerShellパイプで日本語説明が`?`化したため、今回追加台帳5行の説明を訂正し、正本JSONをv2へ保存しました。公式P050説明rawは保存し、ファイル由来Notebook/CSVの検算済みhashは不変です。Reader source追加・失敗拒否と新CNN接続境界を含むstdlib6試験、native10の7試験、E0新namespace CPU12確認を通過。CNNの実E12 CPU/package/Notebook生成器は未資格入力を拒否する段階で、現GPU/MRIは今後の検証です。
+
+**2026-10-22 15:11 JST：P050の今回の可視実行・独立検算を通過し、正式ref57512319を受理しました。** kernel140159065/V1、script361027273、source SHA `28da44616824dd78d6e8395fa4c6b970fe4c57465bffa4b0f8d86989f9e2d6e4`。3検査の全親枝成功・13列/UID・36値FP32・保存科学セル/Inputラベル/Dockerを照合。15:04公式Get/List/limitsは45件・34採点・10例外・未返却1・残4で、Publicは未返却、最高.958を維持し.959未達です。[実行記録](final-day-execution-20261022.md)。P049修正版とP052は可視RUNNING、P051はsourceだけです。
+
+F016新scope監査器は未完E1を教師/予測数値比較前に拒否。元Cのsource/入力/group/mask/全12epoch/counter/writer条件を新runに適用し、旧順序policyの通過と呼びません。実F013+REG50%家族と同じ809/855 R6native10代理を別に比較する条件を事前固定しています。新namespaceの既存E0人工checkpoint CPU復元12確認、未合格package拒否・原REG保存・Reader失敗拒否等のstdlib5試験とRuff PASS。実F016 E12・全8モデルT4・実MRI・hidden/精度は未検証です。
+
+**2026-10-22 14:52 JST・最終候補を実装し可視検証へ進みました。** [実行記録](final-day-execution-20261022.md)。14:40本人Get/List/limitsは44件・34正常採点・10例外・未返却0・最高.958・残5を再確認。初期Git差分なし、GPU/メモリ/OS process名を実測。WDDMのGUI列挙を学習processと混同せず、既存processは停止していません。
+
+P049は内包16中3runtimeだけをnative20→10へ変更。独立Fraction/FP32、tie、成功母集団、文字列保持、不正値拒否、runtime受理guard/receipt、実際の元restorerでの16ファイル復元を含むstdlib7試験とRuff PASS。初回ZIP形式ERRORは保存しguardを維持して修正、修正版kernel140158980/V1はSave受理・可視待ちです。P050 kernel140159065/V1は7科学セルbyte同一・最後のベクトルだけ変更、P052 A224=.20もsource準備済み。正式Submit/公式改善はまだありません。
+
+F016の新規Tiny2foldを14:42 JST開始。元train/CUDA/source資格を維持し、旧run/旧順序policyを上書きせず両foldの予算を新policyへ事前固定。各E1の進捗は実更新48/48まで確認、完了epoch速度・E12精度・CNN servingは未確認。時間/資源監視は自分のrunだけを停止対象とし、途中checkpointは提出候補にしません。本人Gold数値利用0、患者独立性未確認、上流公開Gold接触は従来監査を継承します。
+
 **2026-10-22 14:32 JST・GPU解放後の追加分析と人工計測を完了。実学習・実画像forwardは未開始です。** [分析全文](gpu-free-analysis-20261022.md)、[実測/入力hash](../artifacts/research/20261022-gpu-free-root-analysis-v1/evidence.json)。旧Tiny E3/F006 E12/F013 E12のcheckpointはpickle命令列と生成sourceを照合し、optimizer・scaler・RNG・Generator状態の不在を確認しました。tensorはこのcheckpoint監査ではロードせず、旧run・重みを改変していません。
 
 [人工GPU並列計測](../artifacts/research/20261022-gpu-free-root-analysis-v1/synthetic-concurrency-v1/summary.json)は既存generic Tiny重みのSHA・元config・元constructorを使い、1/2process、92/144有効窓、warm3＋計測24回のforward/backwardを比較しました。92窓の中央値0.08351秒→各0.23706/0.23700秒、144窓0.12818秒→各0.36700/0.36659秒で、GPU連続処理は2processの総throughputが約70%です。全parameterの計測前後digest一致、finite出力/勾配、optimizer作成/更新0、実画像・ラベル読取0、全helper終了を確認しました。人工勾配・padding・同期・キャッシュI/O不在の限界があり、実epoch並列の有利/不利や8–10時間完了を証明しません。

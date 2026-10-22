@@ -1,5 +1,15 @@
 # RSNA Knee プロジェクトの現在地
 
+**2026-10-22 16:18 JST：公式Get/List/limitsを再照合し、正式45件・正常採点34・例外10・未返却1、最高0.958・残4件を確認しました。** [観測](artifacts/research/20261022-final-live-state-v2/observation-20261022T071806958844Z/summary.json)。P050はref57512319/script361027273のままPublic未返却。P049/P052は可視RUNNING、内部ログ読取は再度timeoutで進行段階未確認です。Tinyは両fold E3、資源条件内で固定E12を継続。CNN専用runtimeの復元回数を元DINO 1回＋CNN 2回として記録・検算するよう点検しました。実E12・現T4/MRIの資格はまだありません。
+
+**2026-10-22 15:52 JST：Tiny新scope F016の両fold E2完了。実epoch約33.3〜33.7分でE12見込み21:30頃となり、事前の00:30予算・メモリ条件を満たすため継続します。精度はE12で判定します。** [実行記録](docs/final-day-execution-20261022.md)。P050 ref57512319は採点待ち、15:43再照会で本人最高.958・残4・未返却1。P049 native10修正版とP052 A224=.20は可視RUNNING、内部ログは未取得です。P051はsource準備だけ。実CNN E12/package/T4/MRIの資格はまだありません。今回追加した台帳5行の日本語説明を文字コード訂正し、[引継ぎ正本v2](experiments/final-day-execution-20261022-v2.json)を保存しました。最終選択は本人回答でP050 URLを受領しましたが、選択状態自体はSDK未確認・操作なしです。
+
+**2026-10-22 15:11 JST：P050を正式提出57512319（script361027273）として受理、採点待ち。本人最高0.958・目標0.959未達・残4件です。** [実行記録](docs/final-day-execution-20261022.md)。P049 native10修正版は可視RUNNING、P052 A224=.20もkernel140160594/V1で可視RUNNING。P051はsource準備だけ。新規Tiny両foldはE1、完走epochと時間判定はこれからです。CNN専用接続コードと固定E12/家族/R6代理監査器を準備し、新namespaceのE0人工CPU復元12確認・未合格/Reader失敗拒否等のstdlib5試験を通過しました。実E12・REG結合・Kaggle推論の資格はまだありません。
+
+**2026-10-22 14:52 JST・引継ぎ後に実行開始。公式再照会は最高0.958・残5件・未返却0件、0.959未達です。** [今回の実行記録](docs/final-day-execution-20261022.md)。P049 native10修正版（kernel140158980/V1）とP050反対ベクトル（140159065/V1）を手動Saveし可視検証中、正式Submitはまだ0。P049初回はZIP形式でモデル前ERRORのため保存し、元と同じ無圧縮ZIPへ修正・厳密restorer実展開を含む7試験PASS。P052 A224=.20はsource準備済み。
+
+新scope F016としてTiny一案のfold0/1各固定E12を14:42 JSTに初期重みから開始。旧F014/F015・policyは維持。source/config/generic重み/既存GPU資格を照合、両fold先行予算・精度/時間/メモリ条件を結果前に固定しました。現在E1。直近2完全epochによる00:30完了見込み・物理空6GiB/commit空10GiBの余裕を維持できなければ自分の両runを停止し、途中epochを提出しません。CNN servingは未完成。以下の未開始記録は各時点の履歴です。
+
 **2026-10-22 14:32 JST・GPU解放後の再分析：既存native20→10%案の優先を維持し、Tinyの新規2fold学習を条件付きで再検討します。実学習は開始していません。** [追加分析](docs/gpu-free-analysis-20261022.md)。14:25のRTX 4090は851/24,564MiB・2%、物理RAM空17.71GiB・commit空30.74GiBでした。旧Tinyの失敗はホストcommit枯渇で、学習可能性を一律に外す理由は弱まりました。旧runの推論checkpointにはoptimizer/scaler/RNGがなく、E3から厳密には再開できません。
 
 人工入力だけのGPU競合測定では、Tinyの92有効窓forward/backward中央値が単独0.08351秒、2process各0.23706/0.23700秒、144窓は0.12818秒→0.36700/0.36659秒でした。重み不変・optimizer更新0、計測process終了済みです。GPU部分は約2.8倍遅く、並列が実epochを短縮するかは画像キャッシュI/O込みでは未測定です。新規学習を行うならTiny一案へ絞り、実epoch速度で00:30までの固定E12両fold完了を見込める場合だけ最終候補の経路とする計画です。CNNのKaggle接続には未実装部分があり、その完成・両fold/既存REGとの補完性・CSV資格が必要です。
